@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+        <link rel="canonical" href="{{ .URL }}">
+        {{ if .Description}}
+        <meta name="description" content="{{ .Description }}">
+        {{ end }}
+        {{ if .Keywords}}
+        <meta name="keywords" content="{{ .Keywords }}">
+        {{ end }}
+        <link rel="stylesheet" href="{{ "/_/css/site.css" | relURL }}">
+    </head>
+<head>
+
+<body class="article">
+    <nav class="navbar">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="{{ .Site.BaseURL | relURL }}">Apache Camel</a>
+          <button class="navbar-burger" data-target="topbar-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <div id="topbar-nav" class="navbar-menu">
+          <div class="navbar-end">
+            {{ range .Site.Menus.main }}
+              {{ if .HasChildren }}
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="#">{{ .Name }}</a>
+                    <div class="navbar-dropdown">
+                      {{ range .Children }}
+                      <a class="navbar-item" href="{{ .URL | relURL }}">{{ .Name }}</a>
+                      {{ end }}
+                    </div>
+                </div>
+              {{ else }}
+                <a class="navbar-item" href="{{ .URL | relURL }}">{{ .Name }}</a>
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      </nav>
+    </header>
