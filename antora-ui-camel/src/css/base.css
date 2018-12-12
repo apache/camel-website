@@ -1,0 +1,58 @@
+:root {
+  --color-text: #222;
+  --color-navbar-bg: #0a0a0a;
+  --color-navbar-bg-focus: #000;
+  --color-navbar-text: #fff;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Droid Serif", "DejaVu Serif", serif;
+  font-size: 1.1em;
+  text-size-adjust: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 1.2em;
+  }
+}
+
+body {
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code,
+kbd,
+pre {
+  color: #585ac2;
+  font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
+}
+
+b,
+dt,
+strong,
+th {
+  font-weight: 500;
+}

@@ -1,0 +1,24 @@
+site:
+  title: Apache Camel
+  url: https://camel.apache.org/
+  start_page: manual::index.adoc
+
+content:
+  sources:
+  - url: ./../camel
+    branches: website-test
+    start_path: docs/user-manual
+  - url: ./../camel
+    branches: website-test
+    start_path: docs/components
+
+ui:
+  bundle:
+    url: ./antora-ui-camel/build/ui-bundle.zip
+
+asciidoc:
+  attributes:
+    product-name: 'Apache Camel'
+
+output:
+  dir: ./static
