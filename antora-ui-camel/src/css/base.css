@@ -1,8 +1,9 @@
 :root {
-  --color-text: #222;
-  --color-navbar-bg: #0a0a0a;
-  --color-navbar-bg-focus: #000;
-  --color-navbar-text: #fff;
+  --color-text: #000;
+  --color-navbar-bg: #fff;
+  --color-navbar-bg-focus: #ed8225;
+  --color-navbar-text: #ed8225;
+  --color-navbar-text-link-hover: #fff;
 }
 
 html,
@@ -18,14 +19,15 @@ body {
 
 html {
   box-sizing: border-box;
-  font-family: "Droid Serif", "DejaVu Serif", serif;
-  font-size: 1.1em;
+  font-family: "Open Sans", "DejaVu Serif", serif;
+  font-size: 1em;
   text-size-adjust: 100%;
 }
 
 @media screen and (min-width: 1024px) {
   html {
-    font-size: 1.2em;
+    font-family: "Open Sans", "DejaVu Serif", serif;
+    font-size: 1em;
   }
 }
 
@@ -37,10 +39,11 @@ body {
 
 a {
   text-decoration: none;
+  color: #ed8225;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 code,

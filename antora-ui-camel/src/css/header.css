@@ -1,5 +1,5 @@
 :root {
-  --navbar-height: 3.25rem;
+  --navbar-height: 4.25rem;
 }
 
 html.is-clipped--navbar {
@@ -13,7 +13,7 @@ body {
 .navbar {
   background-color: var(--color-navbar-bg);
   color: var(--color-navbar-text);
-  font-size: 0.83333rem;
+  font-size: 1rem;
   height: var(--navbar-height);
   position: fixed;
   top: 0;
@@ -30,6 +30,7 @@ body {
 .navbar-brand .navbar-item:first-child a {
   color: var(--color-navbar-text);
   font-size: 1.15rem;
+  width: 180px;
 }
 
 .navbar-brand .separator {
@@ -45,7 +46,7 @@ body {
   .navbar-end > a.navbar-item:hover,
   .navbar-end .navbar-link:hover {
     background-color: var(--color-navbar-bg-focus);
-    color: var(--color-navbar-text);
+    color: var(--color-navbar-text-link-hover);
   }
 
   .navbar-end .navbar-link::after {
@@ -54,7 +55,7 @@ body {
 
   .navbar-item.has-dropdown:hover .navbar-link {
     background-color: var(--color-navbar-bg-focus);
-    color: var(--color-navbar-text);
+    color: var(--color-navbar-text-link-hover);
   }
 }
 
@@ -63,6 +64,12 @@ body {
   display: flex;
   flex-shrink: 0;
   height: var(--navbar-height);
+  background-image: url('../img/logo-camel-medium.png');
+  background-repeat: no-repeat;
+  background-size: 160px;
+  background-position-x: 10px;
+  background-position-y: 10px;
+  width: 180px;
 }
 
 .navbar-burger {
