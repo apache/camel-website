@@ -5,10 +5,10 @@ site:
 
 content:
   sources:
-  - url: ./../camel
+  - url: https://gitbox.apache.org/repos/asf/camel.git
     branches: website-test
     start_path: docs/user-manual
-  - url: ./../camel
+  - url: https://gitbox.apache.org/repos/asf/camel.git
     branches: website-test
     start_path: docs/components
 
