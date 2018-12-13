@@ -2,3 +2,8 @@ node_modules
 public
 static
 
+.idea
+*.iml
+.project
+.classpath
+.metadata

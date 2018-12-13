@@ -27,3 +27,10 @@ relativeURLs = true
     weight = 2
     identifier = "components"
     url = "/manual/latest/"
+
+[[menu.main]]
+    name = "Camel K"
+    parent = "docs"
+    weight = 3
+    identifier = "camel-k"
+    url = "/camel-k/latest/"
