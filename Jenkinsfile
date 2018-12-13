@@ -31,6 +31,7 @@ pipeline {
                 docker {
                     label "$NODE"
                     image "$NODE_IMAGE"
+                    reuseNode true
                 }
             }
 
@@ -57,7 +58,6 @@ pipeline {
                 }
             }
         }
-
 
         stage('Deploy') {
             steps {
