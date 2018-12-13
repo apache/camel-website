@@ -25,6 +25,12 @@ pipeline {
         label "$NODE"
     }
 
+    options {
+        buildDiscarder(
+            logRotator(artifactNumToKeepStr: '5', numToKeepStr: '10')
+        )
+    }
+
     stages {
         stage('Build') {
             agent {
