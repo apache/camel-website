@@ -60,6 +60,10 @@ pipeline {
         }
 
         stage('Deploy') {
+            when {
+                branch 'master'
+            }
+
             steps {
                 dir('deploy/staging') {
                     deleteDir()
