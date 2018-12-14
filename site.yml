@@ -23,5 +23,8 @@ asciidoc:
   attributes:
     product-name: 'Apache Camel'
 
+urls:
+  redirect_facility: disabled
+
 output:
   dir: ./static

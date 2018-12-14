@@ -17,8 +17,7 @@
  * under the License.
  */
 def NODE = 'git-websites'
-def NODE_IMAGE = 'node:11'
-def YARN_OPTS = '--non-interactive --frozen-lockfile --json --cache-folder $WORKSPACE/.yarn --modules-folder node_modules'
+def NODE_IMAGE = 'circleci/node:11-browsers'
 
 pipeline {
     agent {
@@ -41,27 +40,14 @@ pipeline {
                 }
             }
 
-            stages {
-                stage('Theme') {
-                    steps {
-                        sh "cd antora-ui-camel && yarn $YARN_OPTS install"
-                        sh "cd antora-ui-camel && yarn $YARN_OPTS gulp pack"
-                    }
-                }
+            environment {
+                ANTORA_CACHE_DIR  = "$WORKSPACE/.antora-cache"
+                YARN_CACHE_FOLDER = "$WORKSPACE/.yarn-cache"
+            }
 
-                stage('Documentation') {
-                    steps {
-                        sh "yarn $YARN_OPTS install"
-                        sh "yarn $YARN_OPTS antora generate --cache-dir $WORKSPACE/.antora --clean --redirect-facility disabled site.yml"
-                    }
-                }
-
-                stage('Website') {
-                    steps {
-                        sh "yarn $YARN_OPTS install"
-                        sh "yarn $YARN_OPTS hugo"
-                    }
-                }
+            steps {
+                sh "yarn --non-interactive --frozen-lockfile install"
+                sh "yarn --non-interactive build"
             }
         }
 
