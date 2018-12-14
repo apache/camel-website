@@ -9,7 +9,7 @@ relativeURLs = true
     identifier = "news"
     url = "/news/"
 
- [[menu.main]]
+[[menu.main]]
     name = "Documentation"
     identifier = "docs"
     weight = 2
