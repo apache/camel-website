@@ -41,27 +41,13 @@ pipeline {
                 }
             }
 
-            stages {
-                stage('Theme') {
-                    steps {
-                        sh "cd antora-ui-camel && yarn $YARN_OPTS install"
-                        sh "cd antora-ui-camel && yarn $YARN_OPTS gulp pack"
-                    }
-                }
+            environment {
+                ANTORA_CACHE_DIR = "$WORKSPACE/.antora"
+            }
 
-                stage('Documentation') {
-                    steps {
-                        sh "yarn $YARN_OPTS install"
-                        sh "yarn $YARN_OPTS antora generate --cache-dir $WORKSPACE/.antora --clean --redirect-facility disabled site.yml"
-                    }
-                }
-
-                stage('Website') {
-                    steps {
-                        sh "yarn $YARN_OPTS install"
-                        sh "yarn $YARN_OPTS hugo"
-                    }
-                }
+            steps {
+                sh "yarn install"
+                sh "yarn $YARN_OPTS build"
             }
         }
 
