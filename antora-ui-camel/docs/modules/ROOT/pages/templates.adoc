@@ -111,6 +111,15 @@ If this is an aspect page, the canonical URL is the URL of the primary (non-aspe
 | page.layout
 | The page layout for the current page.
 
+| page.next
+| The next logical page in the navigation tree.
+
+| page.previous
+| The previous logical page in the navigation tree.
+
+| page.parent
+| The parent page in the navigation tree. Will resolve to grandparent if parent item is not a page.
+
 | uiRootPath
 | The path to the root directory of the UI.
 
