@@ -1,7 +1,7 @@
 {
   "scripts": {
     "theme": "(cd antora-ui-camel && yarn install && yarn gulp pack)",
-    "documentation": "antora --redirect-facility disabled site.yml",
+    "documentation": "antora --pull site.yml",
     "website": "hugo --minify",
     "critical": "gulp critical",
     "minify": "gulp minify",
