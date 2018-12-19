@@ -28,10 +28,19 @@ pipeline {
         buildDiscarder(
             logRotator(artifactNumToKeepStr: '5', numToKeepStr: '10')
         )
+
+        checkoutToSubdirectory('camel-website')
+    }
+
+    environment {
+        HOME              = "$WORKSPACE"
+        ANTORA_CACHE_DIR  = "$WORKSPACE/.antora-cache"
+        YARN_CACHE_FOLDER = "$WORKSPACE/.yarn-cache"
+        HUGO_VERSION      = "0.52.0"
     }
 
     stages {
-        stage('Build') {
+        stage('Theme') {
             agent {
                 docker {
                     label "$NODE"
@@ -40,15 +49,24 @@ pipeline {
                 }
             }
 
-            environment {
-                ANTORA_CACHE_DIR  = "$WORKSPACE/.antora-cache"
-                YARN_CACHE_FOLDER = "$WORKSPACE/.yarn-cache"
-                HUGO_VERSION      = "0.52.0"
+            steps {
+                sh "cd $WORKSPACE/camel-website/antora-ui-camel && yarn --non-interactive --frozen-lockfile install"
+                sh "cd $WORKSPACE/camel-website/antora-ui-camel && yarn --non-interactive gulp bundle"
+            }
+        }
+
+        stage('Website') {
+            agent {
+                docker {
+                    label "$NODE"
+                    image "$NODE_IMAGE"
+                    reuseNode true
+                }
             }
 
             steps {
-                sh "yarn --non-interactive --frozen-lockfile install"
-                sh "yarn --non-interactive build"
+                sh "cd $WORKSPACE/camel-website && yarn --non-interactive --frozen-lockfile install"
+                sh "cd $WORKSPACE/camel-website && yarn --non-interactive build"
             }
         }
 
@@ -62,7 +80,7 @@ pipeline {
                     deleteDir()
                     sh 'git clone -b asf-site https://gitbox.apache.org/repos/asf/camel-website.git .'
                     sh 'git rm -r *'
-                    sh "cp -R $WORKSPACE/public/* ."
+                    sh "cp -R $WORKSPACE/camel-website/public/* ."
                     sh 'git add .'
                     sh 'git commit -m "Website updated to $(git rev-parse --short HEAD)"'
                     sh 'git push origin asf-site'
