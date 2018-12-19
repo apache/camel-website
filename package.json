@@ -2,12 +2,11 @@
   "version": "1.0.0-SNAPSHOT",
   "license": "Apache-2.0",
   "scripts": {
-    "theme": "(cd antora-ui-camel && yarn install && yarn gulp bundle)",
     "documentation": "antora --clean --fetch site.yml",
     "website": "hugo --minify",
     "critical": "gulp critical",
     "minify": "gulp minify",
-    "build": "run-s theme documentation website minify critical"
+    "build": "run-s documentation website minify critical"
   },
   "devDependencies": {
     "@antora/cli": "^2.0.0",
