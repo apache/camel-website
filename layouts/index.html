@@ -1,48 +1,54 @@
 {{ partial "header.html" . }}
 
-<div class="container">
-    <div class="columns">
-        <div class="column col-5 col-offset-1">
+<div class="container pb-5">
+    <div class="row">
+        <div class="col-md-6">
             <h1 class="title">Integration that you want!</h1>
-            <h2 class="subtitle muted">Camel empowers you to define routing and mediation rules in a variety of domain-specific languages.</h2>
-            <p class="mt-60"><a href="#" class="primary-btn">Get started</a>
+            <h2 class="subtitle text-muted mb-5">Camel empowers you to define routing and mediation rules in a variety of domain-specific languages.</h2>
+            <p class="mt-5"><a href="#" class="primary-btn">Get started</a>
             </p>
         </div>
-        <div class="column col-5 col-offset-1 logo">
-            <img src="./_/img/logo-d.svg" class="logo-big"/>
+        <div class="col-md-6 pt-5">
+            <img class="img-fluid logo-big" src="./_/img/logo-d.svg"/>
         </div>
     </div>
 </div>
 
 <section class="bg-grey">
-    <div class="container centered">
-        <h1 class="title">Apache Camel provides support</h1>
-        <h2 class="subtitle muted">Bean Binding and seamless integration with popular frameworks such as CDI, Spring, Blueprint and Guice</h2>
-        <div class="divider centered"></div>
+    <div class="container text-center pt-4">
+        <h3>Apache Camel provides support</h3>
+        <p class="text-muted lead">Bean Binding and seamless integration with popular frameworks such as CDI, Spring, Blueprint and Guice</p>
+        <p class="divider m-auto"></p>
     </div>
-    <div class="container">
-        <div class="columns">
-            <div class="column col-4">
-                <div class="card centered">
-                    <div class="card-title"><h3>Enterprise Integration Patterns</h3></div>
-                    <div class="card-text muted">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <div class="container pb-5 pt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title font-weight-bold text-center">Enterprise Integration Patterns</div>
+                        <div class="card-text text-muted">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="column col-4">
-                <div class="card centered">
-                    <div class="card-title"><h3>Components</h3></div>
-                    <div class="card-text muted">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title font-weight-bold text-center">Components</div>
+                        <div class="card-text text-muted">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="column col-4">
-                <div class="card centered">
-                    <div class="card-title"><h3>Data Format</h3></div>
-                    <div class="card-text muted">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title font-weight-bold text-center">Data Format</div>
+                        <div class="card-text text-muted">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -52,46 +58,46 @@
 
 <section>
     <div class="container">
-        <div class="columns">
-            <div class="column col-5">
-                <h1 class="title">Running Apache Camel</h1>
-                <h2 class="subtitle muted">The following projects can leverage Apache Camel as a routing and mediation engine</h2>
+        <div class="row">
+            <div class="col-md-5 pt-5">
+                <h3>Running Apache Camel</h3>
+                <p class="text-muted lead">The following projects can leverage Apache Camel as a routing and mediation engine</p>
                 <div class="divider"></div>
             </div>
-            <div class="column col-7 mt-60">
-                <h3>Apache ServiceMix</h3>
-                <p class="muted">Popular distributed open source ESB and JBI container.</p>
-                <h3>Apache ActiveMQ</h3>
-                <p class="muted">Mature, widely used open source message broker.</p>
-                <h3>Apache CXF</h3>
-                <p class="muted">Smart web services suite (JAX-WS and JAX-RS).</p>
-                <h3>Apache Karaf</h3>
-                <p class="muted">Small OSGi based runtime in which applications can be deployed</p>
-                <h3>Apache Mina</h3>
-                <p class="muted">High-performance NIO-driven networking framework.</p>
+            <div class="col-md-7 pt-5 pb-5">
+                <h5>Apache ServiceMix</h5>
+                <p class="text-muted">Popular distributed open source ESB and JBI container.</p>
+                <h5>Apache ActiveMQ</h5>
+                <p class="text-muted">Mature, widely used open source message broker.</p>
+                <h5>Apache CXF</h5>
+                <p class="text-muted">Smart web services suite (JAX-WS and JAX-RS).</p>
+                <h5>Apache Karaf</h5>
+                <p class="text-muted">Small OSGi based runtime in which applications can be deployed</p>
+                <h5>Apache Mina</h5>
+                <p class="text-muted">High-performance NIO-driven networking framework.</p>
             </div>
         </div>
     </div>
 </section>
 
 <section class="bg-grey">
-    <div class="container centered">
-        <h1 class="title">Camel K</h1>
-        <h2 class="subtitle muted">Apache Camel K is a lightweight integration framework built from Apache Camel that runs
-            natively on Kubernetes and is specifically designed for serverless and microservice architectures.</h2>
-        <p class="mt-60"><a href="#" class="primary-btn">Get started</a></p>
+    <div class="container text-center pt-4">
+        <h3>Camel K</h3>
+        <p class="text-muted lead">Apache Camel K is a lightweight integration framework built from Apache Camel that runs
+            natively on Kubernetes and is specifically designed for serverless and microservice architectures.</p>
+        <p class="pt-5 pb-5"><a href="#" class="primary-btn">Get started</a></p>
     </div>
 </section>
 
 
 <section>
     <div class="container">
-        <div class="columns">
-            <div class="column col-7">
-                <h1 class="title">Apache & OpenSource</h1>
-                <h2 class="subtitle muted">Camel is your project!</h2>
+        <div class="row">
+            <div class="col-md-7">
+                <h3>Apache & OpenSource</h3>
+                <p class="text-muted lead">Camel is your project!</p>
 
-                <p class="muted">
+                <p class="text-muted">
                     Camel is an <a href="https://www.apache.org">Apache Software Foundation</a> project, available under the Apache v2 license.<br/>
                     It's a complete open community, always listening proposals and comments.<br/>
                     <a href="community.html">Sources</a>, <a href="community.html">mailing lists</a>, <a href="community.html">issue tracker</a>: it's fully open, you can access directly.<br/>
@@ -102,7 +108,7 @@
                     <a href="community.html">How To Contribute</a>
                 </p>
             </div>
-            <div class="column col-5 logo">
+            <div class="col-md-5 logo pt-5">
                 <img src="./_/img/apache-logo.png" class="img-fluid"/>
             </div>
         </div>
@@ -110,32 +116,38 @@
 </section>
 
 <section class="bg-orange">
-    <div class="container centered text-white">
+    <div class="container text-white text-center">
         <h1 class="title">Latest news</h1>
     </div>
-    <div class="container">
-        <div class="columns">
-            <div class="column col-4">
+    <div class="container pt-5 pb-5">
+        <div class="row">
+            <div class="col-md-4">
                 <div class="card">
-                    <div class="card-title"><h4>Release </h4></div>
-                    <div class="card-text muted">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    <div class="card-body">
+                        <div class="card-title font-weight-bold">Release</div>
+                        <div class="card-text text-muted">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="column col-4">
+            <div class="col-md-4">
                 <div class="card">
-                    <div class="card-title"><h4>Component</h4></div>
-                    <div class="card-text muted">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    <div class="card-body">
+                        <div class="card-title font-weight-bold">Component</div>
+                        <div class="card-text text-muted">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="column col-4">
+            <div class="col-md-4">
                 <div class="card">
-                    <div class="card-title"><h4>Event</h4></div>
-                    <div class="card-text muted">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    <div class="card-body">
+                        <div class="card-title font-weight-bold">Event</div>
+                        <div class="card-text text-muted">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
                     </div>
                 </div>
             </div>
