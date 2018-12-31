@@ -6,23 +6,23 @@ endif::[]
 :idprefix:
 :idseparator: -
 // URIs:
-:uri-nvm: https://github.com/creationix/nvm
-:uri-node: https://nodejs.org
-:uri-gulp: http://gulpjs.com
-:uri-yarn: https://yarnpkg.com
-:uri-git: https://git-scm.com
-:uri-git-dl: {uri-git}/downloads
-:uri-nvm-install: {uri-nvm}#installation
+:url-nvm: https://github.com/creationix/nvm
+:url-node: https://nodejs.org
+:url-gulp: http://gulpjs.com
+:url-yarn: https://yarnpkg.com
+:url-git: https://git-scm.com
+:url-git-dl: {url-git}/downloads
+:url-node-releases: https://nodejs.org/en/about/releases/
 // These prerequisite instructions are less detailed than Antora's prerequisite instructions, I don't know if this is a concern or not.
 
 An Antora UI project is based on tools built atop Node.js (aka Node), namely:
 
-* {uri-node}[Node] (command: `node`)
- ** {uri-nvm}[nvm] (optional, but strongly recommended)
-* {uri-gulp}[Gulp] (command: `gulp`)
-* {uri-yarn}[Yarn] (command: `yarn`)
+* {url-node}[Node] (command: `node`)
+ ** {url-nvm}[nvm] (optional, but strongly recommended)
+* {url-gulp}[Gulp] (command: `gulp`)
+* {url-yarn}[Yarn] (command: `yarn`)
 
-You also need {uri-git}[git] (command: `git`) to pull down the project and push updates to it.
+You also need {url-git}[git] (command: `git`) to pull down the project and push updates to it.
 
 == git
 
@@ -30,27 +30,28 @@ First, make sure you have git installed.
 
  $ git --version
 
-If not, {uri-git-dl}[download and install] the git package for your system.
+If not, {url-git-dl}[download and install] the git package for your system.
 
-== Node 8
+== Node
 
-Next, make sure that you have Node 8 installed.
-While you can install Node from the official packages, we strongly recommend that you use {uri-nvm}[nvm] (Node Version Manager) to install and manage Node.
-Follow the {uri-nvm-install}[nvm installation instructions] to set up nvm on your machine.
+You need Node installed on your machine to use Antora, including the default UI.
+Antora follows Node's release schedule, so we advise that you choose an active long term support (LTS) release of Node.
+We recommend using the latest active Node LTS version.
+While you can use other versions of Node, Antora is only tested against LTS releases.
 
-Once you've installed nvm, open a new terminal and install Node 8 using the following command:
+To check whether you have Node installed, and which version, open a terminal and type:
 
- $ nvm install 8
+ $ node --version
 
-You can switch to this version of Node at any time using the following command:
+You should see a version string, such as:
 
- $ nvm use 8
+ v10.14.2
 
-To make Node 8 the default in new terminals, type:
+If the command fails with an error, it means you don't have Node installed.
+The best way to install Node is to use nvm (Node Version Manager).
+Refer to xref:antora:install:linux-requirements.adoc#install-nvm[Install nvm and Node (Linux)], xref:antora:install:macos-requirements.adoc#install-nvm[Install nvm and Node (macOS)], or xref:antora:install:windows-requirements.adoc#install-nvm[Install nvm and Node (Windows)] for instructions.
 
- $ nvm alias default 8
-
-Now that you have Node 8 installed, you can proceed with installing the Gulp CLI and Yarn.
+Once you have Node installed, you can proceed with installing Gulp's CLI and Yarn.
 
 == Gulp CLI
 

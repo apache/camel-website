@@ -1,12 +1,12 @@
 'use strict'
 
-const { PluginError } = require('gulp-util')
+const { obj: map } = require('through2')
+const PluginError = require('plugin-error')
 const prettierEslint = require('prettier-eslint')
-const map = require('map-stream')
 
 module.exports = () => {
   const report = { changed: 0, unchanged: 0 }
-  return map(format).on('end', () => {
+  return map(format).on('finish', () => {
     if (report.changed > 0) {
       const changed = 'formatted '
         .concat(report.changed)
@@ -23,12 +23,12 @@ module.exports = () => {
     }
   })
 
-  function format (file, next) {
+  function format (file, enc, next) {
     if (file.isNull()) return next()
     if (file.isStream()) return next(new PluginError('gulp-prettier-eslint', 'Streaming not supported'))
 
     const input = file.contents.toString()
-    const output = prettierEslint({ text: input })
+    const output = prettierEslint({ text: input, filePath: file.path })
 
     if (input === output) {
       report.unchanged += 1
