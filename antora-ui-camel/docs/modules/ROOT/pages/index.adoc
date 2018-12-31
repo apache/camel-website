@@ -49,7 +49,7 @@ Handlebars (file extension: `.hbs`)::
 Templates contain placeholders (i.e., mustache expressions like `+{{{page.title}}}+`) into which content is injected from a model.
 They also accommodate simple logic expressions for repeating content or including it conditionally (e.g., `+{{#each navigation}}+`) as well as partials (e.g., `+{{> header}}+`).
 
-Gulp (script file: [.path]_gulpfile.js_)::
+Gulp (script file: [.path]_gulpfile.js/index.js_)::
 {uri-gulp}[Gulp] is a build tool for JavaScript projects.
 It configures a collection of tasks that can be used to perform automated tasks such as compiling files, running a preview server, or publishing a release.
 
@@ -91,7 +91,9 @@ Here's how the files are structured in the UI project:
 [.output]
 ....
 README.adoc
-gulpfile.js
+gulpfile.js/
+  index.js
+  ...
 package.json
 yarn.lock
 src/
@@ -123,16 +125,6 @@ src/
 preview-site-src/
   index.html
   ui-model.yml
-tasks/
-  lib/
-    gulp-prettier-eslint.js
-  build.js
-  build-preview.js
-  format.js
-  lint-css.js
-  lint-js.js
-  pack.js
-  preview.js
 ....
 
 A Gulp build is used to compile and assemble the UI project files into a UI bundle.

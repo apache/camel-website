@@ -10,8 +10,10 @@ site:
     - &latest_version_abc
       url: '#' 
       version: '1.1'
+      displayVersion: '1.1'
     - url: '#' 
       version: '1.0'
+      displayVersion: '1.0'
     latestVersion: *latest_version_abc
   - &component
     name: xyz
@@ -21,13 +23,17 @@ site:
     - &latest_version_xyz
       url: /xyz/6.0/index.html
       version: '6.0'
+      displayVersion: '6.0'
     - &component_version
       url: '#' 
       version: '5.2'
+      displayVersion: '5.2'
     - url: '#' 
       version: '5.1'
+      displayVersion: '5.1'
     - url: '#' 
       version: '5.0'
+      displayVersion: '5.0'
     latestVersion: *latest_version_xyz
   - name: 123
     title: Project 123
@@ -36,10 +42,13 @@ site:
     - &latest_version_123
       url: '#' 
       version: '2.2'
+      displayVersion: '2.2'
     - url: '#' 
       version: '2.1'
+      displayVersion: '2.1'
     - url: '#' 
       version: '2.0'
+      displayVersion: '2.0'
     latestVersion: *latest_version_123
 page:
   title: Brand&#8217;s Hardware &amp; Software Requirements
@@ -47,6 +56,7 @@ page:
   component: *component
   componentVersion: *component_version
   version: '5.2'
+  displayVersion: '5.2'
   module: ROOT
   home: false
   editUrl: http://example.com/project-xyz/blob/master/index.adoc
@@ -59,12 +69,16 @@ page:
     urlType: internal
   versions:
   - version: '6.0'
+    displayVersion: '6.0'
     url: '#'
   - version: '5.2'
+    displayVersion: '5.2'
     url: '#'
   - version: '5.1'
+    displayVersion: '5.1'
     url: '#'
   - version: '5.0'
+    displayVersion: '5.0'
     missing: true
     url: '#'
   navigation:

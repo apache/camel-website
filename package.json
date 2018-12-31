@@ -2,7 +2,7 @@
   "version": "1.0.0-SNAPSHOT",
   "license": "Apache-2.0",
   "scripts": {
-    "theme": "(cd antora-ui-camel && yarn install && yarn gulp pack)",
+    "theme": "(cd antora-ui-camel && yarn install && yarn gulp bundle)",
     "documentation": "antora --pull site.yml",
     "website": "hugo --minify",
     "critical": "gulp critical",

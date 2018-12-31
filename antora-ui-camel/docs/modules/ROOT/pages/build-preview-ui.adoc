@@ -26,45 +26,42 @@ The next two sections explain how to use these modes.
 
 To build the UI once for preview, then stop, execute the `build-preview` task using the following command:
 
- $ gulp build:preview
+ $ gulp preview:build
 
 This task pre-compiles the UI files into the [.path]_public_ directory.
 To view the preview pages, navigate to the HTML pages in the [.path]_public_ directory using your browser (e.g., [.path]_public/index.html_).
 
 === Build Continuously
 
-To avoid the need to run the `build-preview` task over and over, you can use the `preview` command instead to have it run continuously.
+To avoid the need to run the `preview:build` task over and over, you can use the `preview` command instead to have it run continuously.
 This task also launches a local HTTP server so updates get synchronized with the browser (i.e., "`live reload`").
 
 To launch the preview server, execute the following command:
 
  $ gulp preview
 
-You'll see two URLs listed in the output of this command:
+You'll see a URL listed in the output of this command:
 
 ....
-[BS] Access URLs:
- ----------------------------------
-    Local: http://localhost:5252
- External: http://192.168.1.7:5252
- ----------------------------------
-[BS] Serving files from: build
-[BS] Watching files...
+[12:59:28] Starting 'preview:serve'...
+[12:59:28] Starting server...
+[12:59:28] Server started http://localhost:5252
+[12:59:28] Running server
 ....
 
-Navigate to the first one to see the preview site.
+Navigate to the URL to view the preview site.
 While this command is running, any changes you make to the source files will be instantly reflected in the browser.
-This works by monitoring the project for changes, running the `build` task if a change is detected, and sending the updates to the browser.
+This works by monitoring the project for changes, running the `preview:build` task if a change is detected, and sending the updates to the browser.
 
 Press kbd:[Ctrl+C] to stop the preview server and end the continuous build.
 
 == Package for Previewing
 
-If you need to package the UI in order to preview the UI on the real site in local development, run the following command:
+If you need to bundle the UI in order to preview the UI on the real site in local development, run the following command:
 
- $ gulp pack
+ $ gulp bundle
 
-The `pack` command also invokes the `lint` command to check that the CSS and JavaScript follow the coding standards.
+The `bundle` command also invokes the `lint` command to check that the CSS and JavaScript follow the coding standards.
 
 The UI bundle will be available at [.path]_build/ui-bundle.zip_.
-You can then point Antora at this bundle using the `--ui-bundle` command-line option.
+You can then point Antora at this bundle using the `--ui-bundle-url` command-line option.
