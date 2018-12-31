@@ -7,3 +7,5 @@ static
 .project
 .classpath
 .metadata
+.pnp
+.pnp.js
