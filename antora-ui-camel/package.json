@@ -50,5 +50,8 @@
     "typeface-open-sans": "^0.0.54",
     "vinyl-buffer": "~1.0",
     "vinyl-fs": "~3.0"
+  },
+  "installConfig": {
+    "pnp": true
   }
 }
