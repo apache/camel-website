@@ -16,6 +16,7 @@ const postcssCalc = require('postcss-calc')
 const postcssImport = require('postcss-import')
 const postcssUrl = require('postcss-url')
 const postcssVar = require('postcss-custom-properties')
+const resolve = require('resolve')
 const uglify = require('gulp-uglify')
 const vfs = require('vinyl-fs')
 
@@ -28,7 +29,7 @@ module.exports = (src, dest, preview) => () => {
         filter: '**/~typeface-*/files/*',
         url: (asset) => {
           const relpath = asset.pathname.substr(1)
-          const abspath = ospath.resolve('node_modules', relpath)
+          const abspath = resolve.sync(relpath)
           const basename = ospath.basename(abspath)
           const destpath = ospath.join(dest, 'font', basename)
           if (!fs.pathExistsSync(destpath)) fs.copySync(abspath, destpath)

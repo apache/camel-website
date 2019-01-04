@@ -36,6 +36,7 @@
     "js-yaml": "~3.12",
     "merge-stream": "~1.0",
     "plugin-error": "^1.0.1",
+    "postcss": "~7.0",
     "postcss-calc": "~7.0",
     "postcss-custom-properties": "~8.0",
     "postcss-import": "~12.0",
@@ -43,15 +44,19 @@
     "prettier-eslint": "~8.8",
     "require-directory": "~2.1",
     "require-from-string": "~2.0",
+    "resolve": "~1.9",
     "stylelint": "~9.9",
     "stylelint-config-standard": "~18.2",
     "through2": "~3.0",
     "typeface-droid-sans-mono": "^0.0.44",
     "typeface-droid-serif": "^0.0.44",
     "typeface-open-sans": "^0.0.54",
-    "undertaker": "^1.2.0",
+    "undertaker": "~1.2",
     "vinyl-buffer": "~1.0",
     "vinyl-fs": "~3.0"
+  },
+  "resolutions": {
+    "resolve": "~1.9"
   },
   "installConfig": {
     "pnp": true
