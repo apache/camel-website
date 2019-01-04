@@ -64,12 +64,6 @@ body {
   display: flex;
   flex-shrink: 0;
   height: var(--navbar-height);
-  background-image: url('../img/logo-camel-medium.png');
-  background-repeat: no-repeat;
-  background-size: 160px;
-  background-position-x: 10px;
-  background-position-y: 10px;
-  width: 180px;
 }
 
 .navbar-burger {

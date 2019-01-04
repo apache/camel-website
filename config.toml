@@ -4,33 +4,151 @@ title = "Apache Camel"
 relativeURLs = true
 
 [[menu.main]]
-    name = "News"
+    name = "Home"
     weight = 1
+    identifier = "home"
+    url = "/"
+
+[[menu.main]]
+    name = "News"
+    weight = 2
     identifier = "news"
     url = "/news/"
 
 [[menu.main]]
+    name = "Projects"
+    weight = 3
+    identifier = "projects"
+
+[[menu.main]]
+    name = "Camel K"
+    parent = "projects"
+    weight = 1
+    identifier = "project-camel-k"
+    url = "/projects/camel-k/"
+
+[[menu.main]]
     name = "Documentation"
     identifier = "docs"
-    weight = 2
+    weight = 4
+
+[[menu.main]]
+    name = "Getting started"
+    parent = "docs"
+    weight = 1
+    identifier = "getting-started"
+    url = "/docs/getting-started/"
 
 [[menu.main]]
     name = "User manual"
     parent = "docs"
-    weight = 1
+    weight = 2
     identifier = "manual"
     url = "/manual/latest/"
 
 [[menu.main]]
     name = "Component reference"
     parent = "docs"
-    weight = 2
+    weight = 3
     identifier = "components"
     url = "/components/latest/"
 
 [[menu.main]]
     name = "Camel K"
     parent = "docs"
-    weight = 3
+    weight = 4
     identifier = "camel-k"
     url = "/camel-k/latest/"
+
+[[menu.main]]
+    name = "Community"
+    identifier = "community"
+    weight = 5
+
+[[menu.main]]
+    name = "Support"
+    parent = "community"
+    weight = 1
+    identifier = "community-support"
+    url = "/community/support/"
+
+[[menu.main]]
+    name = "Contributing"
+    parent = "community"
+    weight = 2
+    identifier = "community-contributing"
+    url = "/community/contributing/"
+
+[[menu.main]]
+    name = "User stories"
+    parent = "community"
+    weight = 3
+    identifier = "community-user-stories"
+    url = "/community/user-stories/"
+
+[[menu.main]]
+    name = "Article"
+    parent = "community"
+    weight = 4
+    identifier = "community-article"
+    url = "/community/article/"
+
+[[menu.main]]
+    name = "Team"
+    parent = "community"
+    weight = 5
+    identifier = "community-team"
+    url = "/community/team/"
+
+[[menu.main]]
+    name = "Camel extra"
+    parent = "community"
+    weight = 6
+    identifier = "community-camel-extra"
+    url = "/community/camel-extra/"
+
+[[menu.main]]
+    name = "Download"
+    weight = 6
+    identifier = "download"
+    url = "/download/"
+
+[[menu.main]]
+    name = "About"
+    identifier = "about"
+    weight = 7
+
+[[menu.main]]
+    name = "Apache events"
+    parent = "about"
+    weight = 1
+    identifier = "about-apache-events"
+    url = "https://www.apache.org/events/current-event.html"
+
+[[menu.main]]
+    name = "License"
+    parent = "about"
+    weight = 2
+    identifier = "about-license"
+    url = "https://www.apache.org/licenses/"
+
+[[menu.main]]
+    name = "Security"
+    parent = "about"
+    weight = 3
+    identifier = "about-security"
+    url = "https://www.apache.org/security/"
+
+[[menu.main]]
+    name = "Sponsorship"
+    parent = "about"
+    weight = 4
+    identifier = "about-sponsorship"
+    url = "https://www.apache.org/foundation/sponsorship.html"
+
+[[menu.main]]
+    name = "Thanks"
+    parent = "about"
+    weight = 5
+    identifier = "about-thanks"
+    url = "https://www.apache.org/foundation/thanks.html"
