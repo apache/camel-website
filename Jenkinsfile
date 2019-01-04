@@ -17,7 +17,6 @@
  * under the License.
  */
 def NODE = 'git-websites'
-def NODE_IMAGE = 'circleci/node:11-browsers'
 
 pipeline {
     agent {
@@ -42,9 +41,9 @@ pipeline {
     stages {
         stage('Theme') {
             agent {
-                docker {
+                dockerfile {
+                    dir 'camel-website'
                     label "$NODE"
-                    image "$NODE_IMAGE"
                     reuseNode true
                 }
             }
@@ -57,9 +56,9 @@ pipeline {
 
         stage('Website') {
             agent {
-                docker {
+                dockerfile {
+                    dir 'camel-website'
                     label "$NODE"
-                    image "$NODE_IMAGE"
                     reuseNode true
                 }
             }
