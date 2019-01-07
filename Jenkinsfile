@@ -49,7 +49,7 @@ pipeline {
             }
 
             steps {
-                sh "yarn --cwd $WORKSPACE/camel-website/antora-ui-camel --non-interactive --frozen-lockfile"
+                sh "cd $WORKSPACE/camel-website/antora-ui-camel && yarn --non-interactive --frozen-lockfile"
             }
         }
 
@@ -63,7 +63,7 @@ pipeline {
             }
 
             steps {
-                sh "yarn --cwd $WORKSPACE/camel-website --non-interactive --frozen-lockfile"
+                sh "cd $WORKSPACE/camel-website && yarn --non-interactive --frozen-lockfile"
             }
         }
 
