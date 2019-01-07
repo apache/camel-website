@@ -10,6 +10,9 @@
   "engines": {
     "node": ">= 8.0.0"
   },
+  "scripts": {
+    "install": "gulp"
+  },
   "devDependencies": {
     "autoprefixer": "~9.4",
     "browserify": "~16.2",

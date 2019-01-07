@@ -49,8 +49,7 @@ pipeline {
             }
 
             steps {
-                sh "cd $WORKSPACE/camel-website/antora-ui-camel && yarn --non-interactive --frozen-lockfile install"
-                sh "cd $WORKSPACE/camel-website/antora-ui-camel && yarn --non-interactive gulp"
+                sh "yarn --cwd $WORKSPACE/camel-website/antora-ui-camel --non-interactive --frozen-lockfile"
             }
         }
 
@@ -64,8 +63,7 @@ pipeline {
             }
 
             steps {
-                sh "cd $WORKSPACE/camel-website && yarn --non-interactive --frozen-lockfile install"
-                sh "cd $WORKSPACE/camel-website && yarn --non-interactive build"
+                sh "yarn --cwd $WORKSPACE/camel-website --non-interactive --frozen-lockfile"
             }
         }
 
@@ -86,11 +84,5 @@ pipeline {
                 }
             }
        }
-    }
-
-    post {
-        always {
-            cleanWs()
-        }
     }
 }
