@@ -1,9 +1,9 @@
 {{ partial "header.html" . }}
 
 <div class="container pb-5">
-    <div class="row">
-        {{ .Content }}
-    </div>
+    <h1>{{ .Title }}</h1>
+
+    {{ .Content }}
 </div>
 
 {{ partial "footer.html" . }}
