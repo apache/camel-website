@@ -1470,6 +1470,7 @@ mark,
   width: 100%;
   margin-bottom: 1rem;
   background-color: transparent;
+  border-collapse: collapse;
 }
 
 .table th,
@@ -1482,6 +1483,7 @@ mark,
 .table thead th {
   vertical-align: bottom;
   border-bottom: 2px solid #dee2e6;
+  font-weight: bold;
 }
 
 .table tbody + tbody {
