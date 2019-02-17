@@ -36,7 +36,6 @@ pipeline {
     }
 
     environment {
-        HOME              = "$WORKSPACE"
         ANTORA_CACHE_DIR  = "$WORKSPACE/.antora-cache"
         YARN_CACHE_FOLDER = "$WORKSPACE/.yarn-cache"
         HUGO_VERSION      = "0.52.0"
@@ -52,6 +51,10 @@ pipeline {
                 }
             }
 
+            environment {
+                HOME = "$WORKSPACE"
+            }
+
             steps {
                 sh "cd $WORKSPACE/camel-website/antora-ui-camel && yarn --non-interactive --frozen-lockfile"
             }
@@ -64,6 +67,10 @@ pipeline {
                     label "$NODE"
                     reuseNode true
                 }
+            }
+
+            environment {
+                HOME = "$WORKSPACE"
             }
 
             steps {
