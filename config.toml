@@ -77,7 +77,7 @@ relativeURLs = true
     parent = "community"
     weight = 2
     identifier = "community-contributing"
-    url = "/community/contributing/"
+    url = "https://github.com/apache/camel/blob/master/CONTRIBUTING.md"
 
 [[menu.main]]
     name = "User stories"
