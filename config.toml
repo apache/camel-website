@@ -87,11 +87,11 @@ relativeURLs = true
     url = "/community/user-stories/"
 
 [[menu.main]]
-    name = "Article"
+    name = "Articles"
     parent = "community"
     weight = 4
-    identifier = "community-article"
-    url = "/community/article/"
+    identifier = "community-articles"
+    url = "/community/articles/"
 
 [[menu.main]]
     name = "Team"
