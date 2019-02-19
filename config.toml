@@ -94,16 +94,23 @@ relativeURLs = true
     url = "/community/articles/"
 
 [[menu.main]]
-    name = "Team"
+    name = "Books"
     parent = "community"
     weight = 5
+    identifier = "community-books"
+    url = "/community/books/"
+
+[[menu.main]]
+    name = "Team"
+    parent = "community"
+    weight = 6
     identifier = "community-team"
     url = "/community/team/"
 
 [[menu.main]]
     name = "Camel extra"
     parent = "community"
-    weight = 6
+    weight = 7
     identifier = "community-camel-extra"
     url = "/community/camel-extra/"
 
