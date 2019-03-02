@@ -1,0 +1,12 @@
+#!/bin/sh
+
+mkdir -p deploy/staging
+cd deploy/staging
+
+git clone -b asf-site https://github.com/repos/asf/camel-website.git .
+git rm -r *
+cp -R $GITHUB_WORKSPACE/public/* .
+git add .
+git commit -m "Website updated to $(git rev-parse --short HEAD)"
+git push origin asf-site
+
