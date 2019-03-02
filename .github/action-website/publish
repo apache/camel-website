@@ -6,6 +6,8 @@ mkdir -p deploy/staging
 cd deploy/staging
 
 git clone -b asf-site https://github.com/apache/camel-website.git .
+git config user.email dev@camel.apache.org
+git config user.name $GITHUB_ACTOR
 git rm -r *
 cp -R $GITHUB_WORKSPACE/public/* .
 git add .
