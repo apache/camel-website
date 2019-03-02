@@ -4,12 +4,14 @@ workflow "Build and publish the website" {
 }
 
 action "Build theme" {
-  uses = "borales/actions-yarn@1bf615491daf339f333dcbfe4aef4337c042abd4"
+  uses = "./action-website/"
+  runs = "yarn"
   args = "--non-interactive --frozen-lockfile --cwd antora-ui-camel"
 }
 
 action "Build website" {
-  uses = "borales/actions-yarn@1bf615491daf339f333dcbfe4aef4337c042abd4"
+  uses = "./action-website/"
   needs = ["Build theme"]
+  runs = "yarn"
   args = "--non-interactive --frozen-lockfile"
 }
