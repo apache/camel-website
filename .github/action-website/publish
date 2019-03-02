@@ -1,9 +1,11 @@
-#!/bin/sh
+#!/bin/bash
+
+set -euxo pipefail
 
 mkdir -p deploy/staging
 cd deploy/staging
 
-git clone -b asf-site https://github.com/repos/asf/camel-website.git .
+git clone -b asf-site https://github.com/apache/camel-website.git .
 git rm -r *
 cp -R $GITHUB_WORKSPACE/public/* .
 git add .

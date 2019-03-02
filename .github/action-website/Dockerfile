@@ -21,5 +21,5 @@ RUN set -ex \
     libxtst6 \
   && rm -rf /var/lib/apt/lists/*
 
-ADD publish
+ADD publish /usr/local/bin 
 
