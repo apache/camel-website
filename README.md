@@ -21,3 +21,5 @@ To build the website run:
     $ yarn build // to perform the build
 
 This should generate the website in the `public` folder.
+
+__TEST__
