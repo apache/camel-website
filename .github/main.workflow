@@ -1,6 +1,9 @@
 workflow "Build and publish the website" {
   on = "push"
-  resolves = ["Publish to staging"]
+  resolves = [
+    "Publish to staging",
+    "Publish preview",
+  ]
 }
 
 action "Build theme" {
@@ -26,5 +29,21 @@ action "Publish to staging" {
   uses = "./.github/action-website"
   needs = ["Filter on master branch"]
   runs = "publish"
+  args = "staging"
   secrets = ["GITHUB_TOKEN"]
 }
+
+action "Filter on pull request" {
+  uses = "actions/bin/filter@d820d56839906464fb7a57d1b4e1741cf5183efa"
+  needs = ["Build website"]
+  args = "ref refs/pulls/*"
+}
+
+action "Publish preview" {
+  uses = "./.github/action-website"
+  needs = ["Filter on pull request"]
+  runs = "publish"
+  args = "preview"
+  secrets = ["GITHUB_TOKEN"]
+}
+

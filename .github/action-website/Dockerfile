@@ -19,6 +19,7 @@ RUN set -ex \
     libx11-xcb1 \
     libxss1 \
     libxtst6 \
+    jq \
   && rm -rf /var/lib/apt/lists/*
 
 ADD publish /usr/local/bin 

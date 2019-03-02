@@ -1,13 +1,27 @@
 #!/bin/bash
 
+
+case "$1" in
+    staging)
+        DEST_DIR=.
+        ;;
+    preview)
+        DEST_DIR=PR-$(jq .number $GITHUB_EVENT_PATH)
+        ;;
+    *)
+        echo "Usage: $0 (staging|preview)"
+        exit 1
+esac
+
 set -euxo pipefail
 
-mkdir -p deploy/staging
-cd deploy/staging
+PUBLISH_DIR=$(mktemp -d /tmp/publish.XXXXXXXX)
+cd $PUBLISH_DIR
 
 git clone -b asf-site https://github.com/apache/camel-website.git .
 git config user.email dev@camel.apache.org
 git config user.name $GITHUB_ACTOR
+cd $DEST_DIR
 git rm -r *
 cp -R $GITHUB_WORKSPACE/public/* .
 git add .
