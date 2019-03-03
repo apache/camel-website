@@ -16,9 +16,15 @@ action "Build website" {
   args = "--non-interactive --frozen-lockfile"
 }
 
+action "On master branch" {
+  uses = "actions/bin/filter@d820d56839906464fb7a57d1b4e1741cf5183efa"
+  needs = ["Build website"]
+  args = "branch master"
+}
+
 action "Publish" {
   uses = "./.github/action-website"
-  needs = ["Build website"]
+  needs = ["On master branch"]
   runs = "publish"
   secrets = ["GITHUB_TOKEN"]
 }

@@ -2,28 +2,17 @@
 
 set -euxo pipefail
 
-is_pull_request=$(jq -r .pull_request $GITHUB_EVENT_PATH)
-ref=$(jq -r .ref $GITHUB_EVENT_PATH)
-
-if [ "$is_pull_request" != "null" ]; then
-    DEST_DIR="preview/PR/$(jq .pull_request.number $GITHUB_EVENT_PATH)"
-elif [ "$ref" != "ref/heads/master" ]; then
-    DEST_DIR="preview/branch/${ref##*/}"
-else
-    DEST_DIR=.
-fi
+REV=$(cd "$GITHUB_WORKSPACE" && git rev-parse --short HEAD)
 
 PUBLISH_DIR=$(mktemp -d /tmp/publish.XXXXXXXX)
 cd $PUBLISH_DIR
 
 git clone -b asf-site https://github.com/apache/camel-website.git .
 git config user.email dev@camel.apache.org
-git config user.name $GITHUB_ACTOR
-mkdir -p $DEST_DIR
-cd $DEST_DIR
+git config user.name "$GITHUB_ACTOR"
 git rm -r --ignore-unmatch *
-cp -Rvn $GITHUB_WORKSPACE/public/* .
+cp -Rvn "${GITHUB_WORKSPACE}/public/"* .
 git add .
-git commit -m "Website updated to $(git rev-parse --short HEAD)"
+git commit -m "Website updated to ${REV}"
 git push origin asf-site
 
