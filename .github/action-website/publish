@@ -2,17 +2,53 @@
 
 set -euxo pipefail
 
-REV=$(cd "$GITHUB_WORKSPACE" && git rev-parse --short HEAD)
+IS_PULL_REQUEST=$(jq -r .pull_request $GITHUB_EVENT_PATH)
+REF=$(jq -r .ref $GITHUB_EVENT_PATH)
+ENVIRONMENT="preview"
+TRANSIENT="true"
+
+if [ "$IS_PULL_REQUEST" != "null" ]; then
+    DEST_DIR="preview/PR/$(jq .pull_request.number $GITHUB_EVENT_PATH)"
+elif [ "$REF" != "ref/heads/master" ]; then
+    DEST_DIR="preview/branch/${REF##*/}"
+else
+    DEST_DIR=.
+    ENVIRONMENT="staging"
+    TRANSIENT="false"
+fi
 
 PUBLISH_DIR=$(mktemp -d /tmp/publish.XXXXXXXX)
 cd $PUBLISH_DIR
 
 git clone -b asf-site https://github.com/apache/camel-website.git .
 git config user.email dev@camel.apache.org
-git config user.name "$GITHUB_ACTOR"
+git config user.name $GITHUB_ACTOR
+mkdir -p $DEST_DIR
+cd $DEST_DIR
 git rm -r --ignore-unmatch *
-cp -Rvn "${GITHUB_WORKSPACE}/public/"* .
+cp -Rvn $GITHUB_WORKSPACE/public/* .
 git add .
-git commit -m "Website updated to ${REV}"
+git commit -m "Website updated to $(git rev-parse --short HEAD)"
 git push origin asf-site
 
+URI=https://api.github.com
+API_HEADER="Accept: application/vnd.github.ant-man-preview+json"
+AUTH_HEADER="Authorization: token ${GITHUB_TOKEN}"
+
+IFS='' read -r -d '' DEPLOYMENT_JSON<<"EOF"
+{
+  "ref": "${REF}",
+  "auto_merge": false,
+  "environment": "${ENVIRONMENT}"
+  "description": "Website built and deployed to ${ENVIRONMENT} environment",
+  "transient": ${TRANSIENT},
+  "payload": "https://apache.camel.com/staging/${DEST_DIR}",
+  "description": "Deploy request from hubot"
+}
+EOF
+
+curl -XPOST -sSL \
+    -H "${AUTH_HEADER}" \
+    -H "${API_HEADER}" \
+    -d "${DEPLOYMENT_JSON}" \
+    "${URI}/repos/apache/camel-website"
