@@ -6,7 +6,7 @@
     "website": "hugo --minify",
     "critical": "gulp critical",
     "minify": "gulp minify",
-    "install": "run-s documentation website minify critical"
+    "build": "run-s documentation website minify critical"
   },
   "devDependencies": {
     "@antora/cli": "^2.0.0",
