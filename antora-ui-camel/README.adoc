@@ -1,13 +1,15 @@
-= Antora Default UI
+= Apache Camel UI
+// Variables:
+:current-release: v001
+:ui-module-name: antora-ui-camel
 // Settings:
 :experimental:
 :hide-uri-scheme:
 // Project URLs:
-:url-project: https://gitlab.com/antora/antora-ui-default
-:url-preview: https://antora.gitlab.io/antora-ui-default
-:url-ci-pipelines: {url-project}/pipelines
+:url-project: https://github.com/apache/camel-website
 :img-ci-status: {url-project}/badges/master/pipeline.svg
 // External URLs:
+:url-camel: https://camel.apache.org/
 :url-antora: https://antora.org
 :url-git: https://git-scm.com
 :url-git-dl: {url-git}/downloads
@@ -18,33 +20,30 @@
 :url-nvm-install: {url-nvm}#installation
 :url-yarn: https://yarnpkg.com
 
-image:{img-ci-status}[CI Status (GitLab CI), link={url-ci-pipelines}]
+This project represents the Apache Camel UI theme that is used in the {url-camel}[Apache Camel website] documentation site.
+The website is generated with {url-antora}[Antora] and this is the UI theme for that.
 
-This project is an archetype that demonstrates how to produce a UI bundle for use in a documentation site generated with {url-antora}[Antora].
-You can see a preview of the default UI at {url-preview}.
+== Use the Camel UI
 
-== Use the Default UI
-
-If you want to use the default UI for your Antora-generated site, add the following UI configuration to your playbook:
+If you want to use this UI theme in your Antora-generated site, add the following UI configuration to your playbook:
 
 [source,yaml,subs=attributes+]
 ----
 ui:
   bundle:
-    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    url: {url-project}/releases/download/{current-release}/ui-bundle.zip
     snapshot: true
 ----
 
-Read on to learn how to use your own build of the default UI.
+Read on to learn how to use your own build of the this UI theme.
 
 == Quickstart
 
-This section offers a basic tutorial for learning how to preview the default UI and bundle it for use with Antora.
-A more comprehensive tutorial will be made available in the documentation.
+This section offers a basic tutorial for learning how to preview the UI and bundle it for use with Antora.
 
 === Prerequisites
 
-To preview and bundle the default UI, you need the following software on your computer:
+To preview and bundle the UI, you need the following software on your computer:
 
 * {url-git}[git] (command: `git`)
 * {url-node}[Node] (command: `node`)
@@ -68,7 +67,8 @@ Next, make sure that you have Node.js (herein "`Node`") installed.
 If this command fails with an error, you don't have Node installed.
 If the command doesn't report a Node LTS version (e.g., v10.14.2), you don't have a suitable version of Node installed.
 
-While you can install Node from the official packages, we strongly recommend that you use {url-nvm}[nvm] (Node Version Manager) to install and manage Node.
+While you can install Node from the official packages, we strongly recommend that you use {url-nvm}[nvm]
+(Node Version Manager) to install and manage Node.
 Follow the {url-nvm-install}[nvm installation instructions] to set up nvm on your machine.
 
 Once you've installed nvm, open a new terminal and install Node 10 using the following command:
@@ -102,21 +102,21 @@ You should install Yarn globally (which resolves to a location in your user dire
 
  $ npm install -g yarn
 
-Now that you have the prerequisites installed, you can fetch and build the default UI project.
+Now that you have the prerequisites installed, you can fetch and build the Apache Camel UI project.
 
 === Clone and Initialize the UI Project
 
-Clone the default UI project using git:
+Clone the Camel UI project using git:
 
 [subs=attributes+]
  $ git clone {url-project} &&
-   cd "`basename $_`"
+   cd camel-website/{ui-module-name}
 
-The example above clones Antora's default UI project and then switches to the project folder on your filesystem.
+The command above clones the Apache Camel Website project and then switches to the UI project folder on your filesystem.
 Stay in this project folder in order to initialize the project using Yarn.
 
 Use Yarn to install the project's dependencies.
-In your terminal, execute the following command (while inside the project folder):
+In your terminal, execute the following command (while inside the `{ui-module-name} project folder):
 
  $ yarn install
 
@@ -131,7 +131,7 @@ This folder contains HTML file fragments that provide a representative sample of
 
 To build the UI and preview it in a local web server, run the `preview` command:
 
- $ gulp preview
+ $ yarn preview
 
 You'll see a URL listed in the output of this command:
 
@@ -145,7 +145,8 @@ You'll see a URL listed in the output of this command:
 Navigate to that URL to view the preview site.
 
 While this command is running, any changes you make to the source files will be instantly reflected in the browser.
-This works by monitoring the project for changes, running the `preview:build` task if a change is detected, and sending the updates to the browser.
+This works by monitoring the project for changes, running the `preview:build` task if a change is detected, and sending
+the updates to the browser.
 
 Press kbd:[Ctrl+C] to stop the preview server and end the continuous build.
 
@@ -153,7 +154,7 @@ Press kbd:[Ctrl+C] to stop the preview server and end the continuous build.
 
 If you need to bundle the UI in order to preview the UI on the real site in local development, run the following command:
 
- $ gulp bundle
+ $ yarn build
 
 The UI bundle will be available at [.path]_build/ui-bundle.zip_.
 You can then point Antora at this bundle using the `--ui-bundle-url` command-line option.
@@ -164,11 +165,15 @@ If you have the preview running, and you want to bundle without causing the prev
 
 == Copyright and License
 
-Copyright (C) 2017-2018 OpenDevise Inc. and the Antora Project.
+=== Software
 
-Use of this software is granted under the terms of the https://www.mozilla.org/en-US/MPL/2.0/[Mozilla Public License Version 2.0] (MPL-2.0).
-See link:LICENSE[] to find the full license text.
+The software in this repository (build scripts, JavaScript files, Handlebars templates, foundation CSS, utility icons, etc)
+is part of the {url-antora}[Antora project] and therefore copyright for these parts and the underlying source code belongs
+to {url-opendevise}[OpenDevise Inc] and the {url-antora}[Antora project].
 
-== Authors
+As such, use of the software is granted under the terms of the
+https://www.mozilla.org/en-US/MPL/2.0/[Mozilla Public License Version 2.0] (MPL-2.0). See link:LICENSE[] to find the full license text.
 
-Development of Antora is led and sponsored by {url-opendevise}[OpenDevise Inc].
+=== Branding and Design
+
+Copyright (C) 2019 Red Hat, Inc.

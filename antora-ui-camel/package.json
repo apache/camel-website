@@ -10,6 +10,10 @@
   "engines": {
     "node": ">= 8.0.0"
   },
+  "scripts": {
+    "build": "gulp bundle",
+    "preview": "gulp preview"
+  },
   "devDependencies": {
     "autoprefixer": "~9.4",
     "browserify": "~16.2",
