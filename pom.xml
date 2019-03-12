@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   Copyright (C) 2016 Red Hat, Inc.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <groupId>org.apache</groupId>
+    <artifactId>apache</artifactId>
+    <version>21</version>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.apache.camel</groupId>
+  <artifactId>camel-website</artifactId>
+  <version>0.0.1</version>
+  <packaging>pom</packaging>
+
+  <name>Apache Camel Website</name>
+
+  <properties>
+    <!-- unify the encoding for all the modules -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+    <node.version>v10.15.3</node.version>
+    <yarn.version>v1.14.0</yarn.version>
+
+    <theme.basedir>antora-ui-camel</theme.basedir>
+    <skip.theme>false</skip.theme>
+  </properties>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+        <plugin>
+          <groupId>com.github.eirslett</groupId>
+          <artifactId>frontend-maven-plugin</artifactId>
+          <version>1.7.5</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-clean-plugin</artifactId>
+        <configuration>
+          <excludeDefaultDirectories>true</excludeDefaultDirectories>
+          <filesets>
+            <fileset>
+              <directory>${project.build.directory}</directory>
+            </fileset>
+            <fileset>
+              <directory>node</directory>
+            </fileset>
+            <fileset>
+              <directory>.pnp</directory>
+            </fileset>
+            <fileset>
+              <directory>public</directory>
+            </fileset>
+            <fileset>
+              <directory>static</directory>
+            </fileset>
+            <fileset>
+              <directory>${theme.basedir}/.pnp</directory>
+            </fileset>
+            <fileset>
+              <directory>${theme.basedir}/public</directory>
+            </fileset>
+            <fileset>
+              <directory>${theme.basedir}/build</directory>
+            </fileset>
+          </filesets>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>com.github.eirslett</groupId>
+        <artifactId>frontend-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>install node and npm</id>
+            <goals>
+              <goal>install-node-and-npm</goal>
+            </goals>
+            <configuration>
+              <nodeVersion>${node.version}</nodeVersion>
+            </configuration>
+          </execution>
+          <execution>
+            <id>install yarn</id>
+            <goals>
+              <goal>install-node-and-yarn</goal>
+            </goals>
+            <configuration>
+              <nodeVersion>${node.version}</nodeVersion>
+              <yarnVersion>${yarn.version}</yarnVersion>
+            </configuration>
+          </execution>
+          <execution>
+            <id>theme install</id>
+            <goals>
+              <goal>yarn</goal>
+            </goals>
+            <configuration>
+              <skip>${skip.theme}</skip>
+              <arguments>install --no-progress --force</arguments>
+              <workingDirectory>${theme.basedir}</workingDirectory>
+              <installDirectory>${project.basedir}</installDirectory>
+            </configuration>
+          </execution>
+          <execution>
+            <id>theme build</id>
+            <goals>
+              <goal>yarn</goal>
+            </goals>
+            <configuration>
+              <skip>${skip.theme}</skip>
+              <arguments>build</arguments>
+              <workingDirectory>${theme.basedir}</workingDirectory>
+              <installDirectory>${project.basedir}</installDirectory>
+            </configuration>
+          </execution>
+          <execution>
+            <id>yarn install</id>
+            <goals>
+              <goal>yarn</goal>
+            </goals>
+            <configuration>
+              <arguments>install --no-progress --force</arguments>
+            </configuration>
+          </execution>
+          <execution>
+            <id>yarn build</id>
+            <goals>
+              <goal>yarn</goal>
+            </goals>
+            <configuration>
+              <arguments>build</arguments>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

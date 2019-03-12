@@ -19,10 +19,14 @@ Tools used to generate the website:
    Asciidoc documents from different sources in the [Camel](https://github.com/apache/camel) 
    and [Camel K](https://github.com/apache/camel-k) repositories where user manual and component 
    reference documentation resides and renders them for inclusion in this website.
+ - [Maven](https://maven.apache.org/) (optional) a build tool used to run the complete website generating process
 
-## Building the website
+## Build with Node and yarn
 
-You can build the website locally using the tools `Node.js` and `yarn`.
+You can build the website locally using the tools `Node.js` and `yarn`. 
+
+If you can not use these tools on your local machine for some reason you can also build the website using Maven as 
+described in section ["Build with Maven"](#build-with-maven).
 
 ### Preparing the tools
 
@@ -51,7 +55,7 @@ You will need Yarn installed, which is the preferred package manager for the Nod
 
 You should install Yarn globally using the following command:
 
- $ npm install -g yarn
+    $ npm install -g yarn
 
 `npm` is the Node package manager that comes with the default Node installation. So when you have Node installed you 
 should also be able to use the `npm` command.
@@ -95,6 +99,66 @@ To build the website go to the project root folder and run:
 This should fetch doc sources for [Camel](https://github.com/apache/camel) and [Camel K](https://github.com/apache/camel-k) 
 and generate the website with Hugo. You should see the generated website in the `public` folder.
 
+## Build with Maven
+
+The project provides a simple way to build the website sources locally using the build tool [Maven](https://maven.apache.org/).
+
+The Maven build automatically downloads the tool binaries such as `node` and `yarn` for you. You do not need to install 
+those tools on your host then. The binaries are added to the local project sources only and generate the website content.
+
+As the Maven build uses pinned versions of `node` and `yarn` that are tested to build the website you most likely avoid 
+build errors due to incompatible versions of `Node.js` tooling installed on your machine.
+
+### Preparing Maven
+
+Make sure that you have Maven installed.
+
+    $ mvn --version
+
+If this command fails with an error, you do not have Maven installed.
+
+Please install Maven using your favorite package manager (like [Homebrew](https://brew.sh/)) or from 
+official [Maven binaries](https://maven.apache.org/install.html)
+    
+### Building from scratch    
+    
+When building everything from scratch the build executes following steps:
+
+- Download `yarn` and `Node.js` binaries to the local project
+- Load required libraries to the local project using `yarn`
+- Build the Antora Camel UI theme ([antora-ui-camel](antora-ui-camel))
+- Fetch the doc sources from [Camel](https://github.com/apache/camel) 
+  and [Camel K](https://github.com/apache/camel-k) github reporsitories
+- Build the website content using Hugo
+
+You can do all of this with one single command:
+
+    $ mvn package
+
+The whole process takes up to five minutes (time to grab some coffee!)
+
+When the build is finished you should see the generated website in the `public` folder.
+
+### Rebuild website
+
+When rebuilding the website you can optimize the build process as some of the steps are only required for a fresh
+build from scratch. You can skip the ui theme rendering (unless you have changes in the theme itself).
+
+    $ mvn package -Dskip.theme
+
+This should save you some minutes in the build process. You can find the updated website content in the `public` folder.
+
+### Clean build
+
+When rebuilding the website the process uses some cached content (e.g. the fetched doc sources for 
+[Camel](https://github.com/apache/camel) and [Camel K](https://github.com/apache/camel-k) or the Antora ui theme). 
+If you want to start from scratch for some reason you can simply add the `clean` operation to the build which removes 
+all generated sources in the project first.
+
+    $ mvn clean package
+    
+Of course this then takes some more time than an optimized rebuild (time to grab another coffee!).
+
 ## Contribute changes
 
 The Apache Camel website is composed of different sources. So where to add and contribute changes in particular?
@@ -106,7 +170,7 @@ The Apache Camel website is composed of different sources. So where to add and c
 The site main menu is defined in the top level configuration [config.toml](config.toml). You can add/change 
 menu items there.
 
-#### Website content
+#### Content
 
 The basic website content is located in [content](content). You can find several different folders representing different
 areas of the website:
