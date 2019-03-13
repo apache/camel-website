@@ -99,6 +99,21 @@ To build the website go to the project root folder and run:
 This should fetch doc sources for [Camel](https://github.com/apache/camel) and [Camel K](https://github.com/apache/camel-k) 
 and generate the website with Hugo. You should see the generated website in the `public` folder.
 
+## Preview website locally
+
+You can preview the Apache Camel website on your local machine once you have the generated website available in 
+the `public` folder.
+
+Hugo can start a simple web server serving the generated site content so you can view it in your favorite browser. 
+
+Simply call
+
+    $ yarn preview
+    
+and you will be provided with a web server running the site on [http://localhost:1313/](http://localhost:1313/) 
+
+Point your favorite browser to `http://localhost:1313/` and you will see the Apache Camel website.
+
 ## Build with Maven
 
 The project provides a simple way to build the website sources locally using the build tool [Maven](https://maven.apache.org/).
