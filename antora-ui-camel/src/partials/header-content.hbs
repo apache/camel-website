@@ -1,7 +1,7 @@
 <header class="header">
-  <nav class="navbar">
+  <nav class="navbar shadow border-bottom">
     <div class="navbar-brand">
-      <a class="navbar-item" href="{{or site.url (or siteRootUrl siteRootPath)}}">{{site.title}}</a>
+      <a class="navbar-item nav-logo" href="{{or site.url (or siteRootUrl siteRootPath)}}" title="{{site.title}}"></a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -10,35 +10,45 @@
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item" href="#">Home</a>
+        <a class="navbar-item" href="/">Home</a>
+        <a class="navbar-item" href="/news/">News</a>
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Products</a>
+          <a class="navbar-link" href="#">Projects</a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="#">Product A</a>
-            <a class="navbar-item" href="#">Product B</a>
-            <a class="navbar-item" href="#">Product C</a>
+            <a class="navbar-item" href="/projects/camel-k/">Camel K</a>
           </div>
         </div>
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Services</a>
+          <a class="navbar-link" href="#">Documentation</a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="#">Service A</a>
-            <a class="navbar-item" href="#">Service B</a>
-            <a class="navbar-item" href="#">Service C</a>
+            <a class="navbar-item" href="/docs/getting-started/">Getting started</a>
+            <a class="navbar-item" href="/manual/latest/">User manual</a>
+            <a class="navbar-item" href="/components/latest/">Component reference</a>
+            <a class="navbar-item" href="/camel-k/latest/">Camel K</a>
           </div>
         </div>
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Resources</a>
+          <a class="navbar-link" href="#">Community</a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="#">Resource A</a>
-            <a class="navbar-item" href="#">Resource B</a>
-            <a class="navbar-item" href="#">Resource C</a>
+            <a class="navbar-item" href="/community/support/">Support</a>
+            <a class="navbar-item" href="https://github.com/apache/camel/blob/master/CONTRIBUTING.md">Contributing</a>
+            <a class="navbar-item" href="/community/user-stories/">User stories</a>
+            <a class="navbar-item" href="/community/articles/">Articles</a>
+            <a class="navbar-item" href="/community/books/">Books</a>
+            <a class="navbar-item" href="/community/team/">Team</a>
+            <a class="navbar-item" href="/community/camel-extra/">Camel extra</a>
           </div>
         </div>
-        <div class="navbar-item">
-          <span class="control">
-            <a class="button is-primary" href="#">Download</a>
-          </span>
+        <a class="navbar-item" href="/download/">Download</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">About</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.apache.org/events/current-event.html">Apache events</a>
+            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
+            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
+            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
+            <a class="navbar-item" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+          </div>
         </div>
       </div>
     </div>
