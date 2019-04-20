@@ -1,6 +1,6 @@
 site:
   title: Apache Camel
-  url: https://camel.apache.org/
+  url: https://camel.apache.org/staging/
   start_page: manual::index.adoc
 
 content:
@@ -18,10 +18,6 @@ content:
 ui:
   bundle:
     url: ./antora-ui-camel/build/ui-bundle.zip
-
-asciidoc:
-  attributes:
-    product-name: 'Apache Camel'
 
 urls:
   redirect_facility: disabled
