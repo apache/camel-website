@@ -10,46 +10,26 @@
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item" href="/">Home</a>
-        <a class="navbar-item" href="/news/">News</a>
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Projects</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="/projects/camel-k/">Camel K</a>
-          </div>
-        </div>
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Documentation</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="/docs/getting-started/">Getting started</a>
-            <a class="navbar-item" href="/manual/latest/">User manual</a>
-            <a class="navbar-item" href="/components/latest/">Component reference</a>
-            <a class="navbar-item" href="/camel-k/latest/">Camel K</a>
-          </div>
-        </div>
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Community</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="/community/support/">Support</a>
-            <a class="navbar-item" href="https://github.com/apache/camel/blob/master/CONTRIBUTING.md">Contributing</a>
-            <a class="navbar-item" href="/community/user-stories/">User stories</a>
-            <a class="navbar-item" href="/community/articles/">Articles</a>
-            <a class="navbar-item" href="/community/books/">Books</a>
-            <a class="navbar-item" href="/community/team/">Team</a>
-            <a class="navbar-item" href="/community/camel-extra/">Camel extra</a>
-          </div>
-        </div>
-        <a class="navbar-item" href="/download/">Download</a>
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">About</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://www.apache.org/events/current-event.html">Apache events</a>
-            <a class="navbar-item" href="https://www.apache.org/licenses/">License</a>
-            <a class="navbar-item" href="https://www.apache.org/security/">Security</a>
-            <a class="navbar-item" href="https://www.apache.org/foundation/sponsorship.html">Sponsorship</a>
-            <a class="navbar-item" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
-          </div>
-        </div>
+        {{#withMenuData}}
+          {{#each items}}
+              {{#if children}}
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link" href="{{or site.url (or siteRootUrl siteRootPath)}}{{url}}">{{name}}</a>
+              {{else}}
+              <a class="navbar-item" href="{{or site.url (or siteRootUrl siteRootPath)}}{{url}}">{{name}}</a>
+              {{/if}}
+              {{#if children}}
+              <div class="navbar-dropdown">
+              {{#each children}}
+                <a class="navbar-item" href="{{or site.url (or siteRootUrl siteRootPath)}}{{url}}">{{name}}</a>
+              {{/each}}
+              </div>
+              {{/if}}
+              {{#if children}}
+              </div>
+              {{/if}}
+          {{/each}}
+        {{/withMenuData}}
       </div>
     </div>
   </nav>
