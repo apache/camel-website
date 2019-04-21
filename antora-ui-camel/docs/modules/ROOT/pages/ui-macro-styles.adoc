@@ -1,7 +1,4 @@
 = UI Macro Styles
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
 Asciidoctor supports xref:antora:asciidoc:ui-macros.adoc[three UI element representations] out of the box, which are made from corresponding inline UI macros.
 

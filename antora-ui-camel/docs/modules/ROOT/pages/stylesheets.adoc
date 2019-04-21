@@ -1,7 +1,4 @@
 = Work with the CSS Stylesheets
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 // Settings:
 :idprefix:
 :idseparator: -

@@ -60,6 +60,8 @@ page:
   module: ROOT
   home: false
   editUrl: http://example.com/project-xyz/blob/master/index.adoc
+  origin:
+    private: false
   breadcrumbs:
   - content: Quickstart
     url: '#'

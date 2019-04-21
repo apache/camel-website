@@ -1,7 +1,4 @@
 = UI Element Style Guide
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
 When creating a UI theme for Antora, there are certain elements in the UI that require support from the CSS to work correctly.
 This list includes elements in the shell (i.e., frame) and in the document content.

@@ -61,7 +61,16 @@ module.exports = (src, dest, preview) => () => {
       .pipe(uglify()),
     vfs.src('css/site.css', opts).pipe(postcss(postcssPlugins)),
     vfs.src('font/*.woff*(2)', opts),
-    vfs.src('img/**/*.{jpg,ico,png,svg}', opts).pipe(imagemin()),
+    vfs
+      .src('img/**/*.{jpg,ico,png,svg}', opts)
+      .pipe(
+        imagemin([
+          imagemin.gifsicle(),
+          imagemin.jpegtran(),
+          imagemin.optipng(),
+          imagemin.svgo({ plugins: [{ removeViewBox: false }] }),
+        ])
+      ),
     vfs.src('helpers/*.js', opts),
     vfs.src('layouts/*.hbs', opts),
     vfs.src('partials/*.hbs', opts)

@@ -1,7 +1,4 @@
 = Sidebar Styles
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
 This page describes the in-page sidebar block styles, not the styles for the navigation sidebar.
 

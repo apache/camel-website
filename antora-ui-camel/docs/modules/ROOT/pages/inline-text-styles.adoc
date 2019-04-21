@@ -1,7 +1,4 @@
 = Inline Text Styles
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 :example-caption!:
 
 ////
@@ -60,7 +57,7 @@ How xref:antora:asciidoc:monospace.adoc[inline monospace text] is displayed depe
 A monospace <code>word</code>, or a monospace <code>phrase of text</code>.
 ----
 
-Since `<strong>` is a semantic HTML element, it automatically inherits default styling (`font-family: monospace`) from the browser.
+Since `<code>` is a semantic HTML element, it automatically inherits default styling (`font-family: monospace`) from the browser.
 If you want to override the browser styles, you'll need to define properties on the `code` selector in the stylesheet for your UI.
 
 In the default UI, the `code` element is styled using the fixed-width font loaded by the stylesheet (Roboto Mono).

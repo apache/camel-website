@@ -5,7 +5,7 @@ const task = require('./lib/task')
 
 const bundleName = 'ui'
 const buildDir = 'build'
-const previewSrcDir = 'preview-site-src'
+const previewSrcDir = 'preview-src'
 const previewDestDir = 'public'
 const srcDir = 'src'
 const destDir = `${previewDestDir}/_`
@@ -73,7 +73,7 @@ const bundleTask = task({
 
 const previewPagesTask = task({
   name: 'preview:pages',
-  call: previewPages(srcDir, destDir, previewSrcDir, previewDestDir, livereload),
+  call: previewPages(srcDir, previewSrcDir, previewDestDir, livereload),
 })
 
 const previewBuildTask = task({
