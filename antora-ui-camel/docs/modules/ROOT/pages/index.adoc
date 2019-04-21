@@ -93,7 +93,8 @@ Here's how the files are structured in the UI project:
 README.adoc
 gulpfile.js/
   index.js
-  ...
+  lib/
+  tasks/
 package.json
 yarn.lock
 src/
@@ -122,7 +123,7 @@ src/
     ...
     vendor/
       highlight.js
-preview-site-src/
+preview-src/
   index.html
   ui-model.yml
 ....

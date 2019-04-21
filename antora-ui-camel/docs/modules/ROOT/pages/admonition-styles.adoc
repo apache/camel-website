@@ -1,7 +1,4 @@
 = Admonition Styles
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
 An xref:antora:asciidoc:admonitions.adoc[admonition], also known as a notice, helps draw attention to content with a special label or icon.
 

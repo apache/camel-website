@@ -1,7 +1,4 @@
 = Build a UI Project for Local Preview
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 // Settings:
 :idprefix:
 :idseparator: -
@@ -10,7 +7,7 @@ endif::[]
 == Build Preview Site
 
 Once you've modified the site UI, the first thing you'll want to do is check out how it looks.
-That's what the files in the [.path]_preview-site-src/_ folder are for.
+That's what the files in the [.path]_preview-src/_ folder are for.
 This folder contains HTML file fragments that provide a representative sample of content from the site.
 The preview saves you from having to generate the whole site just to test the UI.
 These files should give you an idea of how the UI will look when applied to the actual site.
@@ -24,7 +21,7 @@ The next two sections explain how to use these modes.
 
 === Build Once
 
-To build the UI once for preview, then stop, execute the `build-preview` task using the following command:
+To build the UI once for preview, then stop, execute the following command:
 
  $ gulp preview:build
 
@@ -33,7 +30,7 @@ To view the preview pages, navigate to the HTML pages in the [.path]_public_ dir
 
 === Build Continuously
 
-To avoid the need to run the `preview:build` task over and over, you can use the `preview` command instead to have it run continuously.
+To avoid the need to run the `preview:build` task over and over while developing, you can use the `preview` command instead to have it run continuously.
 This task also launches a local HTTP server so updates get synchronized with the browser (i.e., "`live reload`").
 
 To launch the preview server, execute the following command:
@@ -65,3 +62,9 @@ The `bundle` command also invokes the `lint` command to check that the CSS and J
 
 The UI bundle will be available at [.path]_build/ui-bundle.zip_.
 You can then point Antora at this bundle using the `--ui-bundle-url` command-line option.
+
+If you have the preview running, and you want to bundle without causing the preview to be clobbered, use:
+
+ $ gulp bundle:pack
+
+The UI bundle will again be available at [.path]_build/ui-bundle.zip_.

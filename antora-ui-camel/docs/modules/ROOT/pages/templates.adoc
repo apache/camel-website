@@ -1,7 +1,4 @@
 = Work with the Handlebars Templates
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 // Settings:
 :idprefix:
 :idseparator: -
@@ -97,10 +94,15 @@ Each entry has the properties url, string, and missing.
 | A collection of navigation links for the current page.
 Each navigation item contains the property `content` as well as the optional properties `url` and (child) `items`.
 
+| page.url
+| The URL for the current page.
+This value is a root-relative path.
+It's often used as the base URL to generate relative URLs from this page.
+
 | page.canonicalUrl
 | The canonical URL for the current page.
 If there are older versions of the page, the canonical URL is the URL of the latest version.
-If this is an aspect page, the canonical URL is the URL of the primary (non-aspect) page.
+//If this is an aspect page, the canonical URL is the URL of the primary (non-aspect) page.
 
 | page.editUrl
 | The URL to edit the current page, typically on GitHub.

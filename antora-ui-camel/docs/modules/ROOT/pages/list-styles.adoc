@@ -1,7 +1,4 @@
 = List Styles
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
 == Ordered list numeration
 
