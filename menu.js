@@ -18,8 +18,10 @@ const createMenu = item => {
 const menuData = mainMenu.filter(item => typeof(item.parent) === 'undefined').map(createMenu);
 
 Handlebars.registerHelper('withMenuData', (options) => {
-  return options.fn({
-    items: menuData
+  return options.fn(this, {
+    data: {
+      items: menuData
+    }
   });
 });
 

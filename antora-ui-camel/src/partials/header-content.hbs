@@ -1,7 +1,7 @@
 <header class="header">
   <nav class="navbar shadow border-bottom">
     <div class="navbar-brand">
-      <a class="navbar-item nav-logo" href="{{or site.url (or siteRootUrl siteRootPath)}}" title="{{site.title}}"></a>
+      <a class="navbar-item nav-logo" href="{{siteRootPath}}" title="{{site.title}}"></a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -11,17 +11,17 @@
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
         {{#withMenuData}}
-          {{#each items}}
+          {{#each @items}}
               {{#if children}}
               <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link" href="{{or site.url (or siteRootUrl siteRootPath)}}{{url}}">{{name}}</a>
+                <a class="navbar-link" href="{{../../siteRootPath}}{{url}}">{{name}}</a>
               {{else}}
-              <a class="navbar-item" href="{{or site.url (or siteRootUrl siteRootPath)}}{{url}}">{{name}}</a>
+              <a class="navbar-item" href="{{../../siteRootPath}}{{url}}">{{name}}</a>
               {{/if}}
               {{#if children}}
               <div class="navbar-dropdown">
               {{#each children}}
-                <a class="navbar-item" href="{{or site.url (or siteRootUrl siteRootPath)}}{{url}}">{{name}}</a>
+                <a class="navbar-item" href="{{../../../siteRootPath}}{{url}}">{{name}}</a>
               {{/each}}
               </div>
               {{/if}}
