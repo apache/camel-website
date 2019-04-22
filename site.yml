@@ -1,6 +1,6 @@
 site:
   title: Apache Camel
-  url: https://camel.apache.org/staging/
+  url: https://camel.apache.org/staging
   start_page: manual::index.adoc
 
 content:
