@@ -7,7 +7,8 @@
     "critical": "gulp critical",
     "minify": "gulp minify",
     "build": "run-s documentation website minify critical",
-    "preview": "hugo server -D"
+    "preview": "hugo server -D",
+    "check": "link-checker --disable-external --mkdocs --allow-hash-href public"
   },
   "devDependencies": {
     "@antora/cli": "~2.0",
@@ -16,6 +17,7 @@
     "gulp": "~4.0",
     "gulp-htmlmin": "~5.0",
     "hugo-cli": "~0.9",
+    "link-checker": "^1.2.1",
     "npm-run-all": "~4.1",
     "opal-runtime": "1.0.11"
   },
