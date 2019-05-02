@@ -2,6 +2,7 @@ baseURL = "https://camel.apache.org/"
 languageCode = "en-us"
 title = "Apache Camel"
 relativeURLs = true
+disablePathToLower = true
 
 [[menu.main]]
     name = "Home"
@@ -144,7 +145,7 @@ relativeURLs = true
     parent = "about"
     weight = 3
     identifier = "about-security"
-    url = "https://www.apache.org/security/"
+    url = "/security/"
 
 [[menu.main]]
     name = "Sponsorship"

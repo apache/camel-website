@@ -195,7 +195,20 @@ areas of the website:
 - [news](content/news): News, blogs, posts
 - [community](content/community): Support, contributing, articles, etc.
 - [projects](content/projects): Subproject information (e.g. Camel K)
+- [security](content/security): Security information and advisories
 
+#### Adding new security advisory content
+
+Use the `security-advisory` archetype to create a new markdown content file in `content/security`:
+
+    $ yarn run hugo new --kind security-advisory security/CVE-YYYY-NNNNN # replace YYYY-NNNNN with the CVE number
+
+This will create a `content/security/CVE-YYYY-NNNNN.md` file which you need to edit to and fill in the required parameters.
+The content of the created markdown file is added to the _Notes_ section.
+
+Place the signed PGP advisory in plain text as `content/security/CVE-YYYY-NNNNN.txt.asc`.
+
+Make sure that you set the `draft: false` property to have the page published.
 
 #### Layout and templates
 
@@ -226,3 +239,4 @@ change there.
 Your changes in these repositories will automatically get visible on the website after a site rebuild.
 
 [1]: antora-ui-camel/src/img/logo32-d.png "Apache Camel"
+
