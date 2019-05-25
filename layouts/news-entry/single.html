@@ -1,0 +1,14 @@
+{{ partial "header.html" . }}
+
+<div class="container pb-5">
+  <h4>Apache Camel News: {{ .Params.title }}</h4>
+  <h5>Date</h5>
+  {{ dateFormat "Monday, Jan 1, 2006" .Params.date }}
+  <h5>Author</h5>
+  {{ .Params.author }}
+  <h5>Description</h5>
+  {{ .Params.description }}
+  {{ .Content }}
+</div>
+
+{{ partial "footer.html" . }}

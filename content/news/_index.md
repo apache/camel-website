@@ -1,1 +1,5 @@
-new Post!
+---
+title: "Apache Camel News"
+---
+
+# Apache Camel news
