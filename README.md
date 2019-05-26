@@ -38,7 +38,7 @@ Make sure that you have Node.js (herein "`Node`") installed.
 
 If this command fails with an error, you do not have Node installed.
 
-This project requires the Node LTS version 10 (e.g., v10.15.2). 
+This project requires the Node LTS version 10 (e.g., v10.15.3). 
 
 Please make sure to have a suitable version of Node installed. You have several options to install
 Node on your machine.
@@ -46,6 +46,11 @@ Node on your machine.
 - Install using the Node version manager [nvm](https://github.com/creationix/nvm)
 - Install using [Homebrew](https://brew.sh/) and [Node formulae](https://formulae.brew.sh/formula/node)
 - Install from official [Node packages](https://nodejs.org/en/download/)
+
+Note - If you have different Node version other than Node LTS version 10 you can use following command to make 
+Node LTS version 10 as default Node version.
+    
+    $ nvm alias default 10
 
 Now that you have Node 10 installed, you can proceed with checking the Yarn installation.
 
@@ -59,6 +64,21 @@ You should install Yarn globally using the following command:
 
 `npm` is the Node package manager that comes with the default Node installation. So when you have Node installed you 
 should also be able to use the `npm` command.
+
+Note - Since Yarn Documentation is not recommending install Yarn using npm you can refer 
+Yarn official documentation from here to see how to install Yarn to your Operating system. https://yarnpkg.com/en/docs/install 
+
+#### Hugo 
+
+One last thing is to make sure that you have `Hugo` installed.
+
+    $ which hugo
+
+If this command fails with an error, you do not have Hugo installed.
+
+If you haven't install `Hugo` you need to install Hugo in to your Operating system from link bellow.
+
+https://gohugo.io/getting-started/installing/
 
 Now that you have the prerequisites installed, you can fetch and build the camel-website project.
 
@@ -74,7 +94,7 @@ project folder on your filesystem.
 ## Build the Antora Camel UI theme
 
 First step is to build the Antora ui theme used for the Apache Camel website. The theme sources are located 
-in [antora-ui-camel](antora-ui-camel). 
+inside [Project root folder/antora-ui-camel](antora-ui-camel). 
 
 In that folder execute:
 
@@ -88,7 +108,7 @@ never come back.
 
 ## Build the website content   
 
-Building the website requires the built Antora Camel UI theme bundle. Please check that 
+Building the website requires the built Antora Camel UI theme bundle from above. Please check that 
 the theme bundle exists in [antora-ui-camel/build/ui-bundle.zip](antora-ui-camel).
 
 To build the website go to the project root folder and run:
@@ -239,4 +259,5 @@ change there.
 Your changes in these repositories will automatically get visible on the website after a site rebuild.
 
 [1]: antora-ui-camel/src/img/logo32-d.png "Apache Camel"
+
 
