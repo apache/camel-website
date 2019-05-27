@@ -1,3 +1,2 @@
 RewriteEngine on
 RewriteRule "security-advisories.data/(.+)$" "security/$1" [R=permanent,L]
-
