@@ -6,14 +6,15 @@ title: "Download"
 
 Grab these releases while they are hot!
 
-*  The latest release for Camel 2.23.x is [Camel 2.23.1 Release](https://camel.apache.org/camel-2231-release.html).
-*  The latest release for Camel 2.22.x is [Camel 2.22.3 Release](https://camel.apache.org/camel-2223-release.html).
-*  The latest release for Camel 2.21.x is [Camel 2.21.5 Release](https://camel.apache.org/camel-2215-release.html).
+*  The latest release for Camel 2.24.x is [Camel 2.24.0 Release](/releases/release-2.24.0).
+*  The latest release for Camel 2.23.x is [Camel 2.23.1 Release](/releases/release-2.23.1).
+*  The latest release for Camel 2.22.x is [Camel 2.22.3 Release](/releases/release-2.22.3).
+*  The latest release for Camel 2.21.x is [Camel 2.21.5 Release](/releases/release-2.21.5).
 *  Camel versions 2.20.x and older are no longer actively developed.
 
 ## Older Releases
 
-See [Download Archives](download/archives.html)
+See [Download Archives](/releases)
 
 ## Getting the latest distributions
 

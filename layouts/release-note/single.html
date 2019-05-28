@@ -1,0 +1,74 @@
+{{ partial "header.html" . }}
+
+<div class="container pb-5">
+  <h4>Apache Camel {{ .Params.version }} Release</h4>
+  <h5>New and Noteworthy</h5>
+  {{ .Content }}
+  <h5>API breaking</h5>
+  {{ .Params.apiBreaking }}
+  <h5>Known issues</h5>
+  {{ .Params.knownIssues }}
+  <h4>Getting the Binaries using Maven</h4>
+  <h5>Binary Distributions</h5>
+  <table class="table">
+    <thead>
+    <tr>
+      <td>Description</td>
+      <td>Download Link</td>
+      <td>PGP Signature file of download</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Windows Distribution</td>
+      <td><a href="http://www.apache.org/dyn/closer.cgi/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.zip">apache-camel-{{ .Params.version }}.zip</a></td>
+      <td><a href="http://www.apache.org/dyn/closer.cgi/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.zip.asc">apache-camel-{{ .Params.version }}.zip.asc</a></td>
+    </tr>
+    <tr>
+      <td>Unix/Linux/Cygwin Distribution</td>
+      <td><a href="http://www.apache.org/dyn/closer.cgi/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.tar.gz">apache-camel-{{ .Params.version }}.tar.gz</a></td>
+      <td><a href="http://www.apache.org/dyn/closer.cgi/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.tar.gz.asc">apache-camel-{{ .Params.version }}.tar.gz.asc</a></td>
+    </tr>
+    </tbody>
+  </table>
+  <h4>Source Distributions</h4>
+  <table class="table">
+    <thead>
+    <tr>
+      <td>Description</td>
+      <td>Download Link</td>
+      <td>PGP Signature file of download</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Source (zip)</td>
+      <td><a href="http://www.apache.org/dyn/closer.cgi/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}-src.zip">apache-camel-{{ .Params.version }}-src.zip</a></td>
+      <td><a href="http://www.apache.org/dyn/closer.cgi/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}-src.zip.asc">apache-camel-{{ .Params.version }}-src.zip.asc</a></td>
+    </tr>
+    </tbody>
+  </table>
+
+  <h5>Git tag checkout</h5>
+  <pre>
+    git clone https://git-wip-us.apache.org/repos/asf/camel.git
+    cd camel
+    git checkout camel-{{ .Params.version }}
+  </pre>
+  <h5>Getting the Binaries using Maven</h5>
+  To use this release in your maven project, the proper dependency configuration that you should use in your Maven POM is:
+  <pre><code>
+  {{ htmlUnescape "<dependency>" }}
+  {{ htmlUnescape "  <groupId>org.apache.camel</groupId>" }}
+  {{ htmlUnescape "  <artifactId>camel-core</artifactId>" }}
+  {{ htmlUnescape "  <version>" }}{{ .Params.version }}{{ htmlUnescape "</version>" }}
+  {{ htmlUnescape "</dependency>" }}
+  </code></pre>
+
+  <h5>Changelog</h5>
+  For a more detailed view of new features and bug fixes, see the:<br/>
+  <a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12311211&version={{ .Params.jiraVersionId }}">Release notes for {{ .Params.version }}</a>
+</div>
+
+{{ partial "footer.html" . }}
+htmlEscape
