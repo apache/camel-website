@@ -59,7 +59,7 @@ disablePathToLower = true
     parent = "docs"
     weight = 4
     identifier = "camel-k"
-    url = "/camel-k/latest/"
+    url = "/projects/camel-k/"
 
 [[menu.main]]
     name = "Community"
