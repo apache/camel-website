@@ -6,7 +6,7 @@ title: "Download"
 
 Grab these releases while they are hot!
 
-*  The latest release for Camel 2.24.x is [Camel 2.24.0 Release](/releases/release-2.24.0).
+*  The latest release for Camel 2.24.x is [Camel 2.24.0 Release](/releases/release-2.24.0/).
 *  The latest release for Camel 2.23.x is [Camel 2.23.1 Release](/releases/release-2.23.1).
 *  The latest release for Camel 2.22.x is [Camel 2.22.3 Release](/releases/release-2.22.3).
 *  The latest release for Camel 2.21.x is [Camel 2.21.5 Release](/releases/release-2.21.5).
@@ -14,7 +14,7 @@ Grab these releases while they are hot!
 
 ## Older Releases
 
-See [Download Archives](/releases)
+See [Download Archives](/releases/)
 
 ## Getting the latest distributions
 
@@ -59,7 +59,7 @@ To use this release in your maven project, the proper dependency configuration t
 
 ### Getting past releases
 
-See the [Download Archives](/download-archives) for all time releases.
+See the [Download Archives](/download-archives/) for all time releases.
 
 ## Maven 2 Repositories
 
