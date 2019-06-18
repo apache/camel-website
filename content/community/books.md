@@ -2,7 +2,7 @@
 title: "Books"
 ---
 
-This page lists the known books about Apache Camel. If you happen to know a book which is not listed then please contact us, for example using the [Mailing Lists](/community/mailing-list).
+This page lists the known books about Apache Camel. If you happen to know a book which is not listed then please contact us, for example using the [Mailing Lists](/community/mailing-list/).
 
 *   [Camel in Action 2nd edition](http://manning.com/ibsen2/)
 *   [Camel in Action](http://www.manning.com/ibsen)

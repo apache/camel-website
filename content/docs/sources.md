@@ -36,4 +36,4 @@ https://github.com/apache/camel/
 
 ## Building the code
 
-To then build the code see [Building](/docs/building).
+To then build the code see [Building](/docs/building/).

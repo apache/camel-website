@@ -4,7 +4,7 @@ title: "Building"
 
 ## Building Camel from Source
 
-Camel uses [Maven](http://maven.apache.org/) as its build and management tool. If you don't fancy using Maven you can use your IDE directly or [Download](/download) a distribution or JAR.
+Camel uses [Maven](http://maven.apache.org/) as its build and management tool. If you don't fancy using Maven you can use your IDE directly or [Download](/download/) a distribution or JAR.
 
 ## Prequisites
 

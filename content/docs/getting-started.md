@@ -2,7 +2,7 @@
 title: "Getting started"
 ---
 
-First you need to [Download](/download) the Camel distribution or you could grab the [Sources](/docs/sources) and try [Building](/docs/building) it yourself.
+First you need to [Download](/download/) the Camel distribution or you could grab the [Sources](/docs/sources/) and try [Building](/docs/building/) it yourself.
 
 Then come back here and you might want to read the following documentation before continuing:
 

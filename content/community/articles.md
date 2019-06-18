@@ -332,7 +332,7 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   [Developer Interview with Claus Ibsen](http://blog.eisele.net/2014/08/developer-interviews-di-2-claus-ibsen.html) - Video interview August 2014 with Claus Ibsen about Apache Camel, Camel tooling, and about the upcoming Camel release.
 *   [Java Pub House - Episode 62\. Hm, what's the best to travel this holiday? on Apache CAMEL, of course!](http://www.javapubhouse.com/2017/01/episode-62-hm-whats-best-to-travel-this.html) - Podcast from January 2017 talking about what is Apache Camel and sharing real life experience from using it on multiple projects.
 
-### [Books](/community/books)
+### [Books](/community/books/)
 
 *   Camel Design Patterns by Bilgin Ibryam (LeanPub, January 2016)
 *   Apache Camel Developer's Cookbook _by Scott Cranton and Jakub Korab_ (Packt Publishing, December 2013)
