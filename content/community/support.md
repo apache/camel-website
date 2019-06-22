@@ -13,7 +13,7 @@ If you are in doubt, we appreciate asking the [mailing list](/community/mailing-
 Please read the section below (How to get help), and follow the bullets advised there first:
 
 * [Issue tracker](https://issues.apache.org/jira/browse/CAMEL)
-* [FAQ](community/faq/)
+* [FAQ](../../manual/latest/faq.html)
 
 ### Reporting bugs - Please read this first
 
@@ -34,7 +34,7 @@ A list of deprecated components is listed on the github page at: https://github.
 
 ### How to get help
 
-Before you report a problem, you may wish to read the [FAQ](community/faq).
+Before you report a problem, you may wish to read the [FAQ](../../manual/latest/faq.html).
 When you report an issue, please be sure to include as much information as possible. The more we know, the easier it is to reach an effective solution quickly.
 
 *What version do you use*
@@ -60,7 +60,7 @@ What version of Camel do you use! Remember to include this information.
 We can help you much quicker if you try the following
 
 *  provide us with a JUnit test case that demonstrates your issue. e.g. if you think you've found a bug, can you create a test case to demonstrate the bug?
-*  [submit a patch](/community/contributing/) fixing the bug! (We also buy you beer when we meet you if you submit bug fixes (smile) )
+*  [submit a patch](https://github.com/apache/camel/blob/master/CONTRIBUTING.md) fixing the bug! (We also buy you beer when we meet you if you submit bug fixes (smile) )
 *  for memory leak or performance related issues, if you can run a profiler on your test case and attach the output as a file (or zipped file if it's huge) to the JIRA we can normally fix things much faster. e.g. you could run jmap/jhat, JProfiler or YourKit on your code and send us the output. To find memory leaks it's quicker to resolve if you can tell us what classes are taking up all of the RAM; we can normally figure out what's wrong from that.
 
 ## Commercial Support
