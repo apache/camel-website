@@ -354,7 +354,7 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   [Linkedin Apache Camel group](http://www.linkedin.com/groups?mostPopular=&gid=2447439) - Linkedin group for the Apache Camel project.
 *   [Google Plus Apache Camel community](https://plus.google.com/u/0/communities/106271384875356488225) - G+ community for the Apache Camel project.
 *   [EIP printable flashcards](http://fusesource.com/fuse/enterprise-integration-patterns/) - A 6 page PDF with printable EIP cards.
-*   There are several companies that provide extra documentation, examples, tutorials, etc... See the [Commercial Camel Offerings](commercial-camel-offerings.html) page for more details.
+*   There are several companies that provide extra documentation, examples, tutorials, etc... See the [Commercial Camel Offerings](../../manual/latest/commercial-camel-offerings.html) page for more details.
 *   [Apache Camel Reference Card at DZone](http://refcardz.dzone.com/refcardz/enterprise-integration) _by Claus Ibsen_
 *   [The Top Twelve Integration Patterns for Apache Camel Reference Card at DZone](http://refcardz.dzone.com/refcardz/apache-camel-update) _by Claus Ibsen_
 *   [Essential Camel Components Reference Card at DZone](http://refcardz.dzone.com/refcardz/essential-camel-components) _by Christian Posta_
