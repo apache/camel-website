@@ -66,4 +66,4 @@ We can help you much quicker if you try the following
 ## Commercial Support
 
 This is an open source project, so the amount of time we have available to help resolve your issue is often limited as all help is provided on a volunteer basis. 
-If you want to get priority help, need to get up to speed quickly, require some training or mentoring, or need full 24 x 7 production support you could contact one of the following companies with [Commercial Camel Offerings](/community/commercial-camel-offerings/).
+If you want to get priority help, need to get up to speed quickly, require some training or mentoring, or need full 24 x 7 production support you could contact one of the following companies with [Commercial Camel Offerings](../../manual/latest/commercial-camel-offerings.html).
