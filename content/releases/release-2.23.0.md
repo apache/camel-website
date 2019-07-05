@@ -3,7 +3,16 @@ date: 2018-11-24
 draft: false 
 type: release-note
 version: 2.23.0
-preview: "Welcome to the Apache Camel 2.23.0 release which is a new minor release and resolved 262 issues
+preview: "Major release for 2.23.x"
+apiBreaking: "
+* The HttpBinding interface has new methods for setting fileNameExtWhiteList option.
+* The copy, copyFrom methods on org.apache.camel.Message now also copy over reference to the
+exchange"
+knownIssues: ""
+jiraVersionId: 12343345
+---
+
+Welcome to the Apache Camel 2.23.0 release which is a new minor release and resolved 262 issues
 including new features, improvements and bux fixes.
 
 * Upgraded to Spring Boot 2.1.
@@ -41,13 +50,4 @@ digits.
 mode, would not acknowledge the temporary queue (which is needed to make request/reply possible)
 * Fixed various HTTP consumer components may not return all allowed HTTP verbs in Allow header for
 OPTIONS requests (such as when using rest-dsl)
-* Fixed thread-safety issue with FluentProducerTemplate"
-
-apiBreaking: "- The HttpBinding interface has new methods for setting fileNameExtWhiteList option.
-- The copy, copyFrom methods on org.apache.camel.Message now also copy over reference to the
-exchange"
-knownIssues: ""
-jiraVersionId: 12343345
----
-
-This is a major release for 2.23.x
+* Fixed thread-safety issue with FluentProducerTemplate
