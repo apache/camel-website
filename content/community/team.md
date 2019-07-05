@@ -143,6 +143,7 @@ If you have been contributing to the Apache Camel project, and you want your nam
 | Ning Li | |
 | Noah Nordrum | |
 | Oliver Belikan | |
+| Otavio Prado | |
 | Ozgur Cetinturk | |
 | Paul Smith | |
 | Paul Wai | |
