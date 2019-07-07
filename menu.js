@@ -25,3 +25,12 @@ Handlebars.registerHelper('withMenuData', (options) => {
   });
 });
 
+Handlebars.registerHelper('hasPrefix', function(str, options) {
+  str = Handlebars.Utils.escapeExpression(str);
+  var matches = new RegExp(/http\S+/);
+  if (matches.test(str)) {
+    return options.fn(this);
+  }else {
+    return options.inverse(this);
+  }
+});
