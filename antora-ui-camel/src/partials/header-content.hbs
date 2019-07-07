@@ -14,14 +14,14 @@
           {{#each @items}}
               {{#if children}}
               <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link" href="{{../../siteRootPath}}{{url}}">{{name}}</a>
+                <a class="navbar-link">{{name}}</a>
               {{else}}
-              <a class="navbar-item" href="{{../../siteRootPath}}{{url}}">{{name}}</a>
+              <a class="navbar-item" href="{{siteRootPath}}{{url}}">{{name}}</a>
               {{/if}}
               {{#if children}}
               <div class="navbar-dropdown">
               {{#each children}}
-                <a class="navbar-item" href="{{../../../siteRootPath}}{{url}}">{{name}}</a>
+                <a class="navbar-item" href="{{siteRootPath}}{{url}}">{{name}}</a>
               {{/each}}
               </div>
               {{/if}}
