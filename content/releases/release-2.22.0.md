@@ -4,7 +4,7 @@ draft: false
 type: release-note
 version: 2.22.0
 preview: "Major release for 2.22.x"
-apiBreaking: ""
+apiBreaking: "The RestProducerFactory has an API change where the RestConfiguration is provided as parameter as well."
 knownIssues: ""
 jiraVersionId: 12342707
 ---
