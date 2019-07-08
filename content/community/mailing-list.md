@@ -17,10 +17,10 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 {{< bootstrap-table "table table-hover text-left" >}}
 | List Name  | Address | Subscribe | Unsubscribe | Archive | Nabble (Online Forums) | Comment |
 |------------|---------|-----------|-------------|---------|------------------------|---------|
-| Camel User List  | users@camel.apache.org | [subscribe](users@camel.apache.org) | [unsubscribe](users@camel.apache.org) | [Archives](http://mail-archives.apache.org/mod_mbox/camel-users/) | [Nabble](http://camel.465427.n5.nabble.com/Camel-Users-f465428.html) | Use this list for your Camel questions. |
-| Camel Developer List  | dev@camel.apache.org | [subscribe](dev@camel.apache.org) | [unsubscribe](dev@camel.apache.org) | [Archives](http://mail-archives.apache.org/mod_mbox/camel-dev/) | [Nabble](http://camel.465427.n5.nabble.com/Camel-Development-f479097.html) | |
-| Camel Commits List  | commits@camel.apache.org | [subscribe](commits@camel.apache.org) | [unsubscribe](commits@camel.apache.org) | [Archives](http://mail-archives.apache.org/mod_mbox/camel-commits/) | [Nabble](http://camel.465427.n5.nabble.com/Camel-Commits-f498405.html) | |
-| Camel Issues List  | issues@camel.apache.org | [subscribe](issues@camel.apache.org) | [unsubscribe](issues@camel.apache.org) | [Archives](http://mail-archives.apache.org/mod_mbox/camel-issues/) | | |
+| Camel User List  | users@camel.apache.org | [subscribe](mailto:users@camel.apache.org) | [unsubscribe](mailto:users@camel.apache.org) | [Archives](http://mail-archives.apache.org/mod_mbox/camel-users/) | [Nabble](http://camel.465427.n5.nabble.com/Camel-Users-f465428.html) | Use this list for your Camel questions. |
+| Camel Developer List  | dev@camel.apache.org | [subscribe](mailto:dev@camel.apache.org) | [unsubscribe](mailto:dev@camel.apache.org) | [Archives](http://mail-archives.apache.org/mod_mbox/camel-dev/) | [Nabble](http://camel.465427.n5.nabble.com/Camel-Development-f479097.html) | |
+| Camel Commits List  | commits@camel.apache.org | [subscribe](mailto:commits@camel.apache.org) | [unsubscribe](mailto:commits@camel.apache.org) | [Archives](http://mail-archives.apache.org/mod_mbox/camel-commits/) | [Nabble](http://camel.465427.n5.nabble.com/Camel-Commits-f498405.html) | |
+| Camel Issues List  | issues@camel.apache.org | [subscribe](mailto:issues@camel.apache.org) | [unsubscribe](mailto:issues@camel.apache.org) | [Archives](http://mail-archives.apache.org/mod_mbox/camel-issues/) | | |
 {{< /bootstrap-table >}}
 
 There were various discussions before these mailing lists were setup on the ActiveMQ Mailing Lists such as these [threads](http://www.nabble.com/forum/Search.jtp?forum=2354&local=y&query=%5Bcamel%5D)
