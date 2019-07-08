@@ -35,7 +35,7 @@ See [Download Archives](/releases/)
 
 {{< bootstrap-table "table table-hover text-left" >}}
 | Description | Download Link | PGP Signature file of download | SHA512 Checksum file of download |
-|-------------|---------------|--------------------------------|-------------------------------|--------------------------------|
+|-------------|---------------|--------------------------------|-------------------------------|
 | Source (zip - 2.23.x branch) | [apache-camel-2.23.3-src.zip](http://www.apache.org/dyn/closer.lua?filename=camel/apache-camel/2.23.3/apache-camel-2.23.3-src.zip&action=download) | [apache-camel-2.23.3-src.zip.asc](https://www.apache.org/dist/camel/apache-camel/2.23.3/apache-camel-2.23.3-src.zip.asc) | [apache-camel-2.23.3-src.zip.sha512](https://www.apache.org/dist/camel/apache-camel/2.23.3/apache-camel-2.23.3-src.zip.sha512) |
 | Source (zip - 2.22.x branch) | [apache-camel-2.22.5-src.zip](http://www.apache.org/dyn/closer.lua?filename=camel/apache-camel/2.22.5/apache-camel-2.22.5-src.zip&action=download) | [apache-camel-2.22.5-src.zip.asc](https://www.apache.org/dist/camel/apache-camel/2.22.5/apache-camel-2.22.5-src.zip.asc) | [apache-camel-2.22.5-src.zip.sha512](https://www.apache.org/dist/camel/apache-camel/2.22.5/apache-camel-2.22.5-src.zip.sha512) |
 | Source (zip - 2.21.x branch) | [apache-camel-2.21.5-src.zip](http://www.apache.org/dyn/closer.lua?filename=camel/apache-camel/2.21.5/apache-camel-2.21.5-src.zip&action=download) | [apache-camel-2.21.5-src.zip.asc](https://www.apache.org/dist/camel/apache-camel/2.21.5/apache-camel-2.21.5-src.zip.asc) | [apache-camel-2.21.5-src.zip.sha512](https://www.apache.org/dist/camel/apache-camel/2.21.5/apache-camel-2.21.5-src.zip.sha512) | 
