@@ -102,7 +102,7 @@ pipeline {
                     deleteDir()
                     sh 'git clone -b asf-site https://gitbox.apache.org/repos/asf/camel-website.git .'
                     sh 'git rm -r *'
-                    sh "cp -R $WORKSPACE/camel-website/public/* ."
+                    sh "cp -R $WORKSPACE/camel-website/public/. ."
                     sh 'git add .'
                     sh 'git commit -m "Website updated to $(git rev-parse --short HEAD)"'
                     sh 'git push origin asf-site'
