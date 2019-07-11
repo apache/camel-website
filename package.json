@@ -4,16 +4,14 @@
   "scripts": {
     "documentation": "antora --require ./menu.js --clean --fetch site.yml",
     "website": "hugo --minify",
-    "critical": "gulp critical",
     "minify": "gulp minify",
-    "build": "run-s documentation website minify critical",
+    "build": "run-s documentation website minify",
     "preview": "hugo server -D",
     "check": "link-checker --disable-external --mkdocs --allow-hash-href public"
   },
   "devDependencies": {
     "@antora/cli": "~2.0",
     "@antora/site-generator-default": "~2.0",
-    "critical": "~1.3",
     "gulp": "~4.0",
     "gulp-htmlmin": "~5.0",
     "hugo-cli": "~0.9",
