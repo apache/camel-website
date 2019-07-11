@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Apache Camel"
 relativeURLs = true
 disablePathToLower = true
+staticDir = ["static", "documentation"]
 
 [[menu.main]]
     name = "Home"

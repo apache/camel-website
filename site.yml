@@ -23,4 +23,4 @@ urls:
   redirect_facility: disabled
 
 output:
-  dir: ./static
+  dir: ./documentation
