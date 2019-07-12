@@ -7,6 +7,7 @@ gulp.task('minify', () => {
       collapseBooleanAttributes: true,
       collapseWhitespace: true,
       collapseInlineTagWhitespace: true,
+      conservativeCollapse: true,
       useShortDoctype: true
     }))
     .pipe(gulp.dest('public'));
