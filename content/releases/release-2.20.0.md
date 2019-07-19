@@ -32,8 +32,7 @@ these is expected in Camel 2.21 release.
 * The JMS component now includes JMS 2.0 functionality to
 use shared (durable and non-durable) topic.
 * The
-https://github.com/apache/camel/blob/master/tooling/maven/camel-maven-plugin/src/main/docs/camel-maven-plugin.adoc[Camel
-Maven Plugin] can now validate for duplicate route ids in your source
+Camel Maven Plugin can now validate for duplicate route ids in your source
 code.
 * Splitted Twitter component into 4, now
 directmessage, seach, streaming and timeline has its own endpoint and
@@ -91,10 +90,10 @@ the respective components.
 * Introduced an experimental _Route Controller SPI_ which is aimed to
 provide more fine-grained control of routes, out of the box Camel
 provides the following implementations:
-** _SupervisingRouteController_ which delays startup of the routes after
+* _SupervisingRouteController_ which delays startup of the routes after
 the camel context is properly started and attempt to restart routes that
 have not been starter successfully
-** _ClusteredRouteController_ which leverages _Cluster SPI_ to start
+* _ClusteredRouteController_ which leverages _Cluster SPI_ to start
 routes only when the context is elected as leader
 
 Fixed these issues
