@@ -1,5 +1,5 @@
 ---
-date: 2017-11-10
+date: 2017-06-11
 draft: false 
 type: release-note
 version: 2.19.1
