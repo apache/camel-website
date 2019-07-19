@@ -9,4 +9,4 @@ knownIssues: ""
 jiraVersionId: 12341590
 ---
 
-This release is a minor update of the 2.21.x branch.
+This release is a minor update of the 2.20.x branch.
