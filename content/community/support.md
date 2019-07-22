@@ -2,7 +2,7 @@
 title: "Support"
 ---
 
-## Getting help
+## Getting help
 
 If you are experiencing problems using Camel then please report your problem to our mailing list. This allows the entire community to help with your problem. 
 If indeed a bug has been identified in the Camel software, then document the problem in our [Issue Tracker](https://issues.apache.org/jira/browse/CAMEL). 
