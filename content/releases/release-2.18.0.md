@@ -4,7 +4,7 @@ draft: false
 type: release-note
 version: 2.18.0
 preview: "Major release for 2.18.x"
-apiBreaking: "Removed the deprecated vtdxml language. You can use the generic language("vtdxml") instead"
+apiBreaking: "Removed the deprecated vtdxml language. You can use the generic language (vtdxml) instead"
 knownIssues: ""
 jiraVersionId: 12334759
 ---
