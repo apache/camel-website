@@ -2,18 +2,23 @@
   "version": "1.0.0-SNAPSHOT",
   "license": "Apache-2.0",
   "scripts": {
-    "documentation": "antora --require ./menu.js --clean --fetch site.yml",
-    "website": "hugo --minify",
-    "minify": "gulp minify",
-    "build": "run-s documentation website minify",
+    "build:documentation": "antora --require ./menu.js --clean --fetch site.yml",
+    "build:website": "hugo --minify",
+    "build:minify": "gulp minify",
+    "build": "run-s build:*",
     "preview": "hugo server -D",
-    "check": "link-checker --disable-external --mkdocs --allow-hash-href public"
+    "check:xref": "antora --generator @antora/xref-validator site.yml",
+    "check:links": "link-checker --disable-external --mkdocs --allow-hash-href public",
+    "check:html": "html-validate 'public/**/*.html'",
+    "checks": "run-s check:*"
   },
   "devDependencies": {
     "@antora/cli": "~2.0",
     "@antora/site-generator-default": "~2.0",
+    "@antora/xref-validator": "gitlab:antora/xref-validator",
     "gulp": "~4.0",
     "gulp-htmlmin": "~5.0",
+    "html-validate": "^1.2.0",
     "hugo-cli": "~0.9",
     "link-checker": "^1.2.1",
     "npm-run-all": "~4.1",

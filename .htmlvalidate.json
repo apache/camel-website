@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "htmlvalidate:recommended"
+  ],
+  "rules": {
+    "attr-quotes": "off",
+    "wcag/h30": "off",
+    "no-inline-style": "off",
+    "element-required-attributes": "off",
+    "prefer-tbody": "off"
+  }
+}
+

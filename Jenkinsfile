@@ -80,6 +80,24 @@ pipeline {
             }
         }
 
+        stage('Checks') {
+            agent {
+                dockerfile {
+                    dir 'camel-website'
+                    label "$NODE"
+                    reuseNode true
+                }
+            }
+
+            environment {
+                HOME = "$WORKSPACE"
+            }
+
+            steps {
+                sh "cd $WORKSPACE/camel-website && yarn --non-interactive --frozen-lockfile checks"
+            }
+        }
+
         stage('Preview') {
             when {
                 not {
