@@ -18,8 +18,8 @@ fixes.
 the camel-example-java8.
 We love feedback on this DSL and expect to improved the API over the
 next couple of releases.
-* The XSD schema for <camelContext> and its other configuration elements
-are now also documented (before it was only <routes> and <rests>). The
+* The XSD schema for `<camelContext>` and its other configuration elements
+are now also documented (before it was only `<routes>` and `<rests>`). The
 XSD schema now also documents the default values of all the options.
 * Introduced `FluentProducerTemplate` using fluent builder style as a
 alternative to ProducerTemplate
@@ -115,7 +115,7 @@ or a list of entities as the result. 
 using Simple language parameters, now avoids an intermediate
 conversion of the parameters to a String value. This ensures the passed
 in values when calling the bean method is using the parameter type as-is
-from <<simple-language,Simple>>.
+from Simple language.
 * Camel CDI now supports importing Camel XML
 configuration files
 * Camel CDI does not deploy an empty Camel context bean
@@ -166,7 +166,7 @@ used when querying the catalog. There is a `camel-catalog-maven` module
 that is able to download catalog JARs from Maven central.
 * A new Camel Attachment interface was added that allows propagating
 headers for attachments. Camel CXF, Camel
-Mail (including the <<mime-multipart-dataformat,MIME-Multipart>>data
+Mail (including the MIME-Multipart data
 format), and Camel-Jetty set and consume attachment
 headers.
 * Improved bean method call to validate if method name

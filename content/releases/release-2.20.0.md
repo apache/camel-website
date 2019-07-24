@@ -25,7 +25,7 @@ files (application.properties|yaml file) when you configure any of the
 Camel starter components.
 * Camel Spring Boot now also supports using
 Spring (auto) configuration to configure CamelContext when using Spring
-XML files with <camelContext>. 
+XML files with `<camelContext>`. 
 * Worked to make Apache Camel more ready and compatible with the
 upcoming Spring Boot 2 and Spring Framework 5. Officially support for
 these is expected in Camel 2.21 release.
@@ -182,11 +182,11 @@ explicit.
 explicit configure a registry to be used, or turn it on via management
 agent, or set the statics level to extended mode.
 * Camel with Spring XML routes will no longer register endpoints in the
-Spring registry from Camel routes where <from> or <to> have endpoints
+Spring registry from Camel routes where `<from>` or `<to>` have endpoints
 assigned with an explicit id attribute. The
-option registerEndpointIdsFromRoute can be set to true on <camelContext>
+option registerEndpointIdsFromRoute can be set to true on `<camelContext>`
 to be backwards compatible. However this registration is deprecated,
-instead you should use <endpoint> to register Camel endpoints with id's
+instead you should use `<endpoint>` to register Camel endpoints with id's
 in Spring registry.
 * camel-spring-dm has been removed as it was not working properly anyway
 and was deprecated some releases ago. For XML DSL with OSGi use
