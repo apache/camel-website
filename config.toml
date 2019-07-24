@@ -4,6 +4,7 @@ title = "Apache Camel"
 relativeURLs = true
 disablePathToLower = true
 staticDir = ["static", "documentation"]
+disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [[menu.main]]
     name = "Home"
