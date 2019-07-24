@@ -176,9 +176,9 @@ API breaking
 * The groovy DSL from camel-groovy has been moved into its own
 camel-groovy-dsl module. The camel-groovy now only contains the Camel
 Language
-* Camel-spring-LDAP now uses java.util.function.BiFunction<L, Q, S>
+* Camel-spring-LDAP now uses `java.util.function.BiFunction<L, Q, S>`
 instead
-of org.apache.camel.component.springldap.LdapOperationsFunction<Q, S>
+of `org.apache.camel.component.springldap.LdapOperationsFunction<Q, S>`
 * The deprecated APIs from camel-spring-boot has been removed as part of
 upgrading and supporting Spring Boot 1.5.x
 * The `getComponentDocumentation` method on `CamelContext` is deprecated
