@@ -3,20 +3,20 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ "apple-touch-icon-57x57.png" | relURL }}" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ "apple-touch-icon-114x114.png" | relURL }}" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ "apple-touch-icon-72x72.png" | relURL }}" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "apple-touch-icon-144x144.png" | relURL }}" />
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ "apple-touch-icon-60x60.png" | relURL }}" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ "apple-touch-icon-120x120.png" | relURL }}" />
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ "apple-touch-icon-76x76.png" | relURL }}" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ "apple-touch-icon-152x152.png" | relURL }}" />
-    <link rel="icon" type="image/png" href="{{ "favicon-196x196.png" | relURL }}" sizes="196x196" />
-    <link rel="icon" type="image/png" href="{{ "favicon-96x96.png" | relURL }}" sizes="96x96" />
-    <link rel="icon" type="image/png" href="{{ "favicon-32x32.png" | relURL }}" sizes="32x32" />
-    <link rel="icon" type="image/png" href="{{ "favicon-16x16.png" | relURL }}" sizes="16x16" />
-    <link rel="icon" type="image/png" href="{{ "favicon-128.png" | relURL }}" sizes="128x128" />
-    <meta name="application-name" content="Apache Camel"/>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ "apple-touch-icon-57x57.png" | relURL }}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ "apple-touch-icon-114x114.png" | relURL }}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ "apple-touch-icon-72x72.png" | relURL }}">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "apple-touch-icon-144x144.png" | relURL }}">
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ "apple-touch-icon-60x60.png" | relURL }}">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ "apple-touch-icon-120x120.png" | relURL }}">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ "apple-touch-icon-76x76.png" | relURL }}">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ "apple-touch-icon-152x152.png" | relURL }}">
+    <link rel="icon" type="image/png" href="{{ "favicon-196x196.png" | relURL }}" sizes="196x196">
+    <link rel="icon" type="image/png" href="{{ "favicon-96x96.png" | relURL }}" sizes="96x96">
+    <link rel="icon" type="image/png" href="{{ "favicon-32x32.png" | relURL }}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ "favicon-16x16.png" | relURL }}" sizes="16x16">
+    <link rel="icon" type="image/png" href="{{ "favicon-128.png" | relURL }}" sizes="128x128">
+    <meta name="application-name" content="Apache Camel">
     <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
     <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
     <link rel="canonical" href="{{ .URL }}">
@@ -32,8 +32,8 @@
 <body class="article">
     <nav class="navbar shadow border-bottom">
         <div class="navbar-brand">
-            <a class="navbar-item nav-logo" href="{{ .Site.BaseURL | relURL }}" title="{{ .Site.Title }}"></a>
-            <button class="navbar-burger" data-target="topbar-nav">
+            <a class="navbar-item nav-logo" href="{{ .Site.BaseURL | relURL }}" title="{{ .Site.Title }}"><span>{{ .Site.Title }}</span></a>
+            <button class="navbar-burger" data-target="topbar-nav" type="button">
                 <span></span>
                 <span></span>
                 <span></span>

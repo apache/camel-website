@@ -24,7 +24,7 @@
     <h3>Using Maven</h3>
 
 
-    <p>To use this release in your maven project, the proper dependency configuration that you should use in your Maven POM is:
+    <p>To use this release in your maven project, the proper dependency configuration that you should use in your Maven POM is:</p>
 
     <pre><code class="xml">&lt;dependency&gt;
   &lt;groupId&gt;org.apache.camel&lt;/groupId&gt;
@@ -55,7 +55,7 @@
             {{ if (and (le $cnt 3) (or (eq $major "") (ne $major $this_major ))) }}
                 <tbody>
                     <tr>
-                      <td rowspan="2"><strong>{{ .Params.version }}</strong><br/><small>{{ if eq $major "" }}feature{{ else }}bugfix{{ end }}</small></td>
+                      <td rowspan="2"><strong>{{ .Params.version }}</strong><br><small>{{ if eq $major "" }}feature{{ else }}bugfix{{ end }}</small></td>
                         <td>Windows Distribution</td>
                         <td><a href="http://www.apache.org/dyn/closer.lua?filename=camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.zip&action=download">apache-camel-{{ .Params.version }}.zip</a></td>
                         <td><a href="https://www.apache.org/dist/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.zip.asc">apache-camel-{{ .Params.version }}.zip.asc</a></td>
@@ -95,7 +95,7 @@
             {{ if (and (le $cnt 3) (or (eq $major "") (ne $major $this_major ))) }}
                 <tbody>
                     <tr>
-                      <td><strong>{{ .Params.version }}</strong><br/><small>{{ if eq $major "" }}feature{{ else }}bugfix{{ end }}</small></td>
+                      <td><strong>{{ .Params.version }}</strong><br><small>{{ if eq $major "" }}feature{{ else }}bugfix{{ end }}</small></td>
                         <td>Source ZIP file</td>
                         <td><a href="http://www.apache.org/dyn/closer.lua?filename=camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}-src.zip&action=download">apache-camel-{{ .Params.version }}-src.zip</a></td>
                         <td><a href="https://www.apache.org/dist/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}-src.zip.asc">apache-camel-{{ .Params.version }}-src.zip.asc</a></td>
