@@ -2185,10 +2185,10 @@ http-cache-semantics@^4.0.0:
   resolved "https://registry.yarnpkg.com/http-cache-semantics/-/http-cache-semantics-4.0.3.tgz#495704773277eeef6e43f9ab2c2c7d259dda25c5"
   integrity sha512-TcIMG3qeVLgDr1TEd2XvHaTnMPwYQUQMIBLy+5pLSDKYFc7UIqj39w8EGzZkaxoLv/l2K8HaI0t5AVA+YYgUew==
 
-hugo-cli@~0.9:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/hugo-cli/-/hugo-cli-0.9.0.tgz#75ecd276fb7aba451770f44ce2f1e479dd278271"
-  integrity sha512-m1kQf0rNAveRy/jZZF7LugJ1HaBC6UdgbtznNesyV6JpAbQQq5s90VjObhKip+DxoheZTpCepD5MUpcSpUSYTQ==
+hugo-cli@~0.11:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/hugo-cli/-/hugo-cli-0.11.0.tgz#ae10973b7b9b0ffd7ba47d8c8ca5a50250726aea"
+  integrity sha512-Gu2s535ASZuV4HOi1hJ1HmNG4zN4Jb30UHcMPzYgTa1Bx2v/urG+vb6c4J0DeYfj4YzpopjFW8w9c0iy51DwPQ==
   dependencies:
     chalk "^2.4.1"
     decompress "^4.0.0"
