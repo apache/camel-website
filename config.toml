@@ -5,6 +5,7 @@ relativeURLs = true
 disablePathToLower = true
 staticDir = ["static", "documentation"]
 disableKinds = ["taxonomy", "taxonomyTerm"]
+enableRobotsTXT = true
 
 [[menu.main]]
     name = "Home"

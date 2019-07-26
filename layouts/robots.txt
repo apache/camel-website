@@ -1,0 +1,7 @@
+User-agent: *
+
+Sitemap: {{.Site.BaseURL}}sitemap.xml
+Sitemap: {{.Site.BaseURL}}sitemap-camel-k.xml
+Sitemap: {{.Site.BaseURL}}sitemap-components.xml
+Sitemap: {{.Site.BaseURL}}sitemap-manual.xml
+
