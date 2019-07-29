@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema elementFormDefault="qualified" version="1.0" targetNamespace="http://activemq.apache.org/camel/schema/spring" xmlns:tns="http://activemq.apache.org/camel/schema/spring" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="aggregator" type="tns:aggregatorType"/>
+
+  <xs:element name="artixDS" type="tns:artixDSDataFormat"/>
+
+  <xs:element name="batchResequencerConfig" type="tns:batchResequencerConfig"/>
+
+  <xs:element name="bean" type="tns:beanRef"/>
+
+  <xs:element name="beanPostProcessor" type="tns:camelBeanPostProcessor"/>
+
+  <xs:element name="camelContext" type="tns:camelContextFactoryBean"/>
+
+  <xs:element name="camelTemplate" type="tns:camelTemplateFactoryBean"/>
+
+  <xs:element name="catch" type="tns:catchType"/>
+
+  <xs:element name="choice" type="tns:choiceType"/>
+
+  <xs:element name="delayer" type="tns:delayerType"/>
+
+  <xs:element name="el" type="tns:elExpression"/>
+
+  <xs:element name="endpoint" type="tns:endpointFactoryBean"/>
+
+  <xs:element name="export" type="tns:camelServiceExporterType"/>
+
+  <xs:element name="expression" type="tns:languageExpression"/>
+
+  <xs:element name="filter" type="tns:filterType"/>
+
+  <xs:element name="finally" type="tns:finallyType"/>
+
+  <xs:element name="from" type="tns:fromType"/>
+
+  <xs:element name="groovy" type="tns:groovyExpression"/>
+
+  <xs:element name="header" type="tns:headerExpression"/>
+
+  <xs:element name="idempotentConsumer" type="tns:idempotentConsumerType"/>
+
+  <xs:element name="intercept" type="tns:interceptType"/>
+
+  <xs:element name="interceptor" type="tns:interceptorRef"/>
+
+  <xs:element name="javaScript" type="tns:javaScriptExpression"/>
+
+  <xs:element name="jaxb" type="tns:jaxbDataFormat"/>
+
+  <xs:element name="marshal" type="tns:marshalType"/>
+
+  <xs:element name="multicast" type="tns:multicastType"/>
+
+  <xs:element name="ognl" type="tns:ognlExpression"/>
+
+  <xs:element name="onException" type="tns:exceptionType"/>
+
+  <xs:element name="otherwise" type="tns:otherwiseType"/>
+
+  <xs:element name="php" type="tns:phpExpression"/>
+
+  <xs:element name="policy" type="tns:policyRef"/>
+
+  <xs:element name="proceed" type="tns:proceedType"/>
+
+  <xs:element name="process" type="tns:processorRef"/>
+
+  <xs:element name="proxy" type="tns:camelProxyFactoryType"/>
+
+  <xs:element name="python" type="tns:pythonExpression"/>
+
+  <xs:element name="recipientList" type="tns:recipientListType"/>
+
+  <xs:element name="redeliveryPolicy" type="tns:redeliveryPolicyType"/>
+
+  <xs:element name="resequencer" type="tns:resequencerType"/>
+
+  <xs:element name="route" type="tns:routeType"/>
+
+  <xs:element name="routes" type="tns:routesType"/>
+
+  <xs:element name="ruby" type="tns:rubyExpression"/>
+
+  <xs:element name="serialization" type="tns:serializationDataFormat"/>
+
+  <xs:element name="serviceActivation" type="tns:serviceActivationType"/>
+
+  <xs:element name="simple" type="tns:simpleExpression"/>
+
+  <xs:element name="splitter" type="tns:splitterType"/>
+
+  <xs:element name="sql" type="tns:sqlExpression"/>
+
+  <xs:element name="streamResequencerConfig" type="tns:streamResequencerConfig"/>
+
+  <xs:element name="thread" type="tns:threadType"/>
+
+  <xs:element name="throttler" type="tns:throttlerType"/>
+
+  <xs:element name="to" type="tns:toType"/>
+
+  <xs:element name="try" type="tns:tryType"/>
+
+  <xs:element name="unmarshal" type="tns:unmarshalType"/>
+
+  <xs:element name="when" type="tns:whenType"/>
+
+  <xs:element name="xmlBeans" type="tns:xmlBeansDataFormat"/>
+
+  <xs:element name="xpath" type="tns:xPathExpression"/>
+
+  <xs:element name="xquery" type="tns:xQueryExpression"/>
+
+  <xs:complexType name="aggregatorType">
+    <xs:complexContent>
+      <xs:extension base="tns:expressionNode">
+        <xs:sequence>
+          <xs:element name="batchSize" type="xs:int"/>
+          <xs:element name="batchTimeout" type="xs:long"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="expressionNode">
+    <xs:complexContent>
+      <xs:extension base="tns:processorType">
+        <xs:sequence>
+          <xs:element ref="tns:interceptor" maxOccurs="unbounded" minOccurs="0"/>
+          <xs:choice maxOccurs="1" minOccurs="1">
+            <xs:element ref="tns:el"/>
+            <xs:element ref="tns:groovy"/>
+            <xs:element ref="tns:header"/>
+            <xs:element ref="tns:javaScript"/>
+            <xs:element ref="tns:expression"/>
+            <xs:element ref="tns:ognl"/>
+            <xs:element ref="tns:php"/>
+            <xs:element ref="tns:python"/>
+            <xs:element ref="tns:ruby"/>
+            <xs:element ref="tns:simple"/>
+            <xs:element ref="tns:sql"/>
+            <xs:element ref="tns:xpath"/>
+            <xs:element ref="tns:xquery"/>
+          </xs:choice>
+          <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element ref="tns:aggregator"/>
+            <xs:element ref="tns:bean"/>
+            <xs:element ref="tns:catch"/>
+            <xs:element ref="tns:choice"/>
+            <xs:element ref="tns:when"/>
+            <xs:element ref="tns:otherwise"/>
+            <xs:element ref="tns:delayer"/>
+            <xs:element ref="tns:onException"/>
+            <xs:element ref="tns:filter"/>
+            <xs:element ref="tns:finally"/>
+            <xs:element ref="tns:idempotentConsumer"/>
+            <xs:element ref="tns:intercept"/>
+            <xs:element ref="tns:marshal"/>
+            <xs:element ref="tns:multicast"/>
+            <xs:element ref="tns:policy"/>
+            <xs:element ref="tns:proceed"/>
+            <xs:element ref="tns:process"/>
+            <xs:element ref="tns:recipientList"/>
+            <xs:element ref="tns:resequencer"/>
+            <xs:element ref="tns:route"/>
+            <xs:element ref="tns:splitter"/>
+            <xs:element ref="tns:thread"/>
+            <xs:element ref="tns:throttler"/>
+            <xs:element ref="tns:to"/>
+            <xs:element ref="tns:try"/>
+            <xs:element ref="tns:unmarshal"/>
+          </xs:choice>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="processorType" abstract="true">
+    <xs:attribute name="inheritErrorHandler" type="xs:boolean"/>
+  </xs:complexType>
+
+  <xs:complexType name="interceptorType" abstract="true"/>
+
+  <xs:complexType name="expressionType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="id" type="xs:ID"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="beanRef">
+    <xs:complexContent>
+      <xs:extension base="tns:outputType">
+        <xs:sequence/>
+        <xs:attribute name="ref" type="xs:string" use="required"/>
+        <xs:attribute name="method" type="xs:string"/>
+        <xs:attribute name="beanType" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="outputType">
+    <xs:complexContent>
+      <xs:extension base="tns:processorType">
+        <xs:sequence>
+          <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element ref="tns:aggregator"/>
+            <xs:element ref="tns:bean"/>
+            <xs:element ref="tns:catch"/>
+            <xs:element ref="tns:choice"/>
+            <xs:element ref="tns:when"/>
+            <xs:element ref="tns:otherwise"/>
+            <xs:element ref="tns:delayer"/>
+            <xs:element ref="tns:onException"/>
+            <xs:element ref="tns:filter"/>
+            <xs:element ref="tns:finally"/>
+            <xs:element ref="tns:idempotentConsumer"/>
+            <xs:element ref="tns:intercept"/>
+            <xs:element ref="tns:marshal"/>
+            <xs:element ref="tns:multicast"/>
+            <xs:element ref="tns:policy"/>
+            <xs:element ref="tns:proceed"/>
+            <xs:element ref="tns:process"/>
+            <xs:element ref="tns:recipientList"/>
+            <xs:element ref="tns:resequencer"/>
+            <xs:element ref="tns:route"/>
+            <xs:element ref="tns:splitter"/>
+            <xs:element ref="tns:thread"/>
+            <xs:element ref="tns:throttler"/>
+            <xs:element ref="tns:to"/>
+            <xs:element ref="tns:try"/>
+            <xs:element ref="tns:unmarshal"/>
+          </xs:choice>
+          <xs:element ref="tns:interceptor" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="catchType">
+    <xs:complexContent>
+      <xs:extension base="tns:processorType">
+        <xs:sequence>
+          <xs:element ref="tns:interceptor" maxOccurs="unbounded" minOccurs="0"/>
+          <xs:element name="exception" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+          <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element ref="tns:aggregator"/>
+            <xs:element ref="tns:bean"/>
+            <xs:element ref="tns:catch"/>
+            <xs:element ref="tns:choice"/>
+            <xs:element ref="tns:when"/>
+            <xs:element ref="tns:otherwise"/>
+            <xs:element ref="tns:delayer"/>
+            <xs:element ref="tns:onException"/>
+            <xs:element ref="tns:filter"/>
+            <xs:element ref="tns:finally"/>
+            <xs:element ref="tns:idempotentConsumer"/>
+            <xs:element ref="tns:intercept"/>
+            <xs:element ref="tns:marshal"/>
+            <xs:element ref="tns:multicast"/>
+            <xs:element ref="tns:policy"/>
+            <xs:element ref="tns:proceed"/>
+            <xs:element ref="tns:process"/>
+            <xs:element ref="tns:recipientList"/>
+            <xs:element ref="tns:resequencer"/>
+            <xs:element ref="tns:route"/>
+            <xs:element ref="tns:splitter"/>
+            <xs:element ref="tns:thread"/>
+            <xs:element ref="tns:throttler"/>
+            <xs:element ref="tns:to"/>
+            <xs:element ref="tns:try"/>
+            <xs:element ref="tns:unmarshal"/>
+          </xs:choice>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="choiceType">
+    <xs:complexContent>
+      <xs:extension base="tns:processorType">
+        <xs:sequence>
+          <xs:element ref="tns:interceptor" maxOccurs="unbounded" minOccurs="0"/>
+          <xs:element ref="tns:when" maxOccurs="unbounded" minOccurs="0"/>
+          <xs:element ref="tns:otherwise" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="whenType">
+    <xs:complexContent>
+      <xs:extension base="tns:expressionNode">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="otherwiseType">
+    <xs:complexContent>
+      <xs:extension base="tns:outputType">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="delayerType">
+    <xs:complexContent>
+      <xs:extension base="tns:expressionNode">
+        <xs:sequence>
+          <xs:element name="delay" type="xs:long" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="exceptionType">
+    <xs:complexContent>
+      <xs:extension base="tns:processorType">
+        <xs:sequence>
+          <xs:element ref="tns:interceptor" maxOccurs="unbounded" minOccurs="0"/>
+          <xs:element name="exception" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+          <xs:element ref="tns:redeliveryPolicy" minOccurs="0"/>
+          <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element ref="tns:aggregator"/>
+            <xs:element ref="tns:bean"/>
+            <xs:element ref="tns:catch"/>
+            <xs:element ref="tns:choice"/>
+            <xs:element ref="tns:when"/>
+            <xs:element ref="tns:otherwise"/>
+            <xs:element ref="tns:delayer"/>
+            <xs:element ref="tns:onException"/>
+            <xs:element ref="tns:filter"/>
+            <xs:element ref="tns:finally"/>
+            <xs:element ref="tns:idempotentConsumer"/>
+            <xs:element ref="tns:intercept"/>
+            <xs:element ref="tns:marshal"/>
+            <xs:element ref="tns:multicast"/>
+            <xs:element ref="tns:policy"/>
+            <xs:element ref="tns:proceed"/>
+            <xs:element ref="tns:process"/>
+            <xs:element ref="tns:recipientList"/>
+            <xs:element ref="tns:resequencer"/>
+            <xs:element ref="tns:route"/>
+            <xs:element ref="tns:splitter"/>
+            <xs:element ref="tns:thread"/>
+            <xs:element ref="tns:throttler"/>
+            <xs:element ref="tns:to"/>
+            <xs:element ref="tns:try"/>
+            <xs:element ref="tns:unmarshal"/>
+          </xs:choice>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="redeliveryPolicyType">
+    <xs:sequence>
+      <xs:element name="maximumRedeliveries" type="xs:int" minOccurs="0"/>
+      <xs:element name="initialRedeliveryDelay" type="xs:long" minOccurs="0"/>
+      <xs:element name="backOffMultiplier" type="xs:double" minOccurs="0"/>
+      <xs:element name="useExponentialBackOff" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="collisionAvoidanceFactor" type="xs:double" minOccurs="0"/>
+      <xs:element name="useCollisionAvoidance" type="xs:boolean" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="filterType">
+    <xs:complexContent>
+      <xs:extension base="tns:expressionNode">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="finallyType">
+    <xs:complexContent>
+      <xs:extension base="tns:outputType">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="fromType">
+    <xs:attribute name="uri" type="xs:string"/>
+    <xs:attribute name="ref" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="idempotentConsumerType">
+    <xs:complexContent>
+      <xs:extension base="tns:expressionNode">
+        <xs:sequence/>
+        <xs:attribute name="messageIdRepositoryRef" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="identifiedType" abstract="true">
+    <xs:attribute name="id" type="xs:ID"/>
+  </xs:complexType>
+
+  <xs:complexType name="interceptType">
+    <xs:complexContent>
+      <xs:extension base="tns:outputType">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="interceptorRef">
+    <xs:complexContent>
+      <xs:extension base="tns:interceptorType">
+        <xs:sequence/>
+        <xs:attribute name="ref" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="marshalType">
+    <xs:complexContent>
+      <xs:extension base="tns:outputType">
+        <xs:sequence>
+          <xs:choice maxOccurs="1" minOccurs="1">
+            <xs:element ref="tns:artixDS"/>
+            <xs:element ref="tns:jaxb"/>
+            <xs:element ref="tns:serialization"/>
+            <xs:element ref="tns:xmlBeans"/>
+          </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="ref" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="dataFormatType"/>
+
+  <xs:complexType name="multicastType">
+    <xs:complexContent>
+      <xs:extension base="tns:outputType">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="nodeFactory"/>
+
+  <xs:complexType name="policyRef">
+    <xs:complexContent>
+      <xs:extension base="tns:outputType">
+        <xs:sequence/>
+        <xs:attribute name="ref" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="proceedType">
+    <xs:complexContent>
+      <xs:extension base="tns:processorType">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="processorRef">
+    <xs:complexContent>
+      <xs:extension base="tns:outputType">
+        <xs:sequence/>
+        <xs:attribute name="ref" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="recipientListType">
+    <xs:complexContent>
+      <xs:extension base="tns:expressionNode">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="resequencerType">
+    <xs:complexContent>
+      <xs:extension base="tns:processorType">
+        <xs:sequence>
+          <xs:element ref="tns:interceptor" maxOccurs="unbounded" minOccurs="0"/>
+          <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element ref="tns:el"/>
+            <xs:element ref="tns:groovy"/>
+            <xs:element ref="tns:header"/>
+            <xs:element ref="tns:javaScript"/>
+            <xs:element ref="tns:expression"/>
+            <xs:element ref="tns:ognl"/>
+            <xs:element ref="tns:php"/>
+            <xs:element ref="tns:python"/>
+            <xs:element ref="tns:ruby"/>
+            <xs:element ref="tns:simple"/>
+            <xs:element ref="tns:sql"/>
+            <xs:element ref="tns:xpath"/>
+            <xs:element ref="tns:xquery"/>
+          </xs:choice>
+          <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element ref="tns:aggregator"/>
+            <xs:element ref="tns:bean"/>
+            <xs:element ref="tns:catch"/>
+            <xs:element ref="tns:choice"/>
+            <xs:element ref="tns:when"/>
+            <xs:element ref="tns:otherwise"/>
+            <xs:element ref="tns:delayer"/>
+            <xs:element ref="tns:onException"/>
+            <xs:element ref="tns:filter"/>
+            <xs:element ref="tns:finally"/>
+            <xs:element ref="tns:idempotentConsumer"/>
+            <xs:element ref="tns:intercept"/>
+            <xs:element ref="tns:marshal"/>
+            <xs:element ref="tns:multicast"/>
+            <xs:element ref="tns:policy"/>
+            <xs:element ref="tns:proceed"/>
+            <xs:element ref="tns:process"/>
+            <xs:element ref="tns:recipientList"/>
+            <xs:element ref="tns:resequencer"/>
+            <xs:element ref="tns:route"/>
+            <xs:element ref="tns:splitter"/>
+            <xs:element ref="tns:thread"/>
+            <xs:element ref="tns:throttler"/>
+            <xs:element ref="tns:to"/>
+            <xs:element ref="tns:try"/>
+            <xs:element ref="tns:unmarshal"/>
+          </xs:choice>
+          <xs:element name="batch-config" type="tns:batchResequencerConfig" minOccurs="0"/>
+          <xs:element name="stream-config" type="tns:streamResequencerConfig" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="batchResequencerConfig">
+    <xs:attribute name="batchSize" type="xs:int"/>
+    <xs:attribute name="batchTimeout" type="xs:long"/>
+  </xs:complexType>
+
+  <xs:complexType name="streamResequencerConfig">
+    <xs:attribute name="capacity" type="xs:int"/>
+    <xs:attribute name="timeout" type="xs:long"/>
+  </xs:complexType>
+
+  <xs:complexType name="routeType">
+    <xs:complexContent>
+      <xs:extension base="tns:processorType">
+        <xs:sequence>
+          <xs:element ref="tns:interceptor" maxOccurs="unbounded" minOccurs="0"/>
+          <xs:element ref="tns:from" maxOccurs="unbounded" minOccurs="0"/>
+          <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element ref="tns:aggregator"/>
+            <xs:element ref="tns:bean"/>
+            <xs:element ref="tns:catch"/>
+            <xs:element ref="tns:choice"/>
+            <xs:element ref="tns:when"/>
+            <xs:element ref="tns:otherwise"/>
+            <xs:element ref="tns:delayer"/>
+            <xs:element ref="tns:onException"/>
+            <xs:element ref="tns:filter"/>
+            <xs:element ref="tns:finally"/>
+            <xs:element ref="tns:idempotentConsumer"/>
+            <xs:element ref="tns:intercept"/>
+            <xs:element ref="tns:marshal"/>
+            <xs:element ref="tns:multicast"/>
+            <xs:element ref="tns:policy"/>
+            <xs:element ref="tns:proceed"/>
+            <xs:element ref="tns:process"/>
+            <xs:element ref="tns:recipientList"/>
+            <xs:element ref="tns:resequencer"/>
+            <xs:element ref="tns:route"/>
+            <xs:element ref="tns:splitter"/>
+            <xs:element ref="tns:thread"/>
+            <xs:element ref="tns:throttler"/>
+            <xs:element ref="tns:to"/>
+            <xs:element ref="tns:try"/>
+            <xs:element ref="tns:unmarshal"/>
+          </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="group" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="routesType">
+    <xs:sequence>
+      <xs:element ref="tns:route" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element ref="tns:serviceActivation" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="inheritErrorHandlerFlag" type="xs:boolean"/>
+  </xs:complexType>
+
+  <xs:complexType name="serviceActivationType">
+    <xs:sequence>
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element ref="tns:el"/>
+        <xs:element ref="tns:groovy"/>
+        <xs:element ref="tns:header"/>
+        <xs:element ref="tns:javaScript"/>
+        <xs:element ref="tns:expression"/>
+        <xs:element ref="tns:ognl"/>
+        <xs:element ref="tns:php"/>
+        <xs:element ref="tns:python"/>
+        <xs:element ref="tns:ruby"/>
+        <xs:element ref="tns:simple"/>
+        <xs:element ref="tns:sql"/>
+        <xs:element ref="tns:xpath"/>
+        <xs:element ref="tns:xquery"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="group" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="splitterType">
+    <xs:complexContent>
+      <xs:extension base="tns:expressionNode">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="threadType">
+    <xs:complexContent>
+      <xs:extension base="tns:processorType">
+        <xs:sequence>
+          <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element ref="tns:aggregator"/>
+            <xs:element ref="tns:bean"/>
+            <xs:element ref="tns:catch"/>
+            <xs:element ref="tns:choice"/>
+            <xs:element ref="tns:when"/>
+            <xs:element ref="tns:otherwise"/>
+            <xs:element ref="tns:delayer"/>
+            <xs:element ref="tns:onException"/>
+            <xs:element ref="tns:filter"/>
+            <xs:element ref="tns:finally"/>
+            <xs:element ref="tns:idempotentConsumer"/>
+            <xs:element ref="tns:intercept"/>
+            <xs:element ref="tns:marshal"/>
+            <xs:element ref="tns:multicast"/>
+            <xs:element ref="tns:policy"/>
+            <xs:element ref="tns:proceed"/>
+            <xs:element ref="tns:process"/>
+            <xs:element ref="tns:recipientList"/>
+            <xs:element ref="tns:resequencer"/>
+            <xs:element ref="tns:route"/>
+            <xs:element ref="tns:splitter"/>
+            <xs:element ref="tns:thread"/>
+            <xs:element ref="tns:throttler"/>
+            <xs:element ref="tns:to"/>
+            <xs:element ref="tns:try"/>
+            <xs:element ref="tns:unmarshal"/>
+          </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="coreSize" type="xs:int" use="required"/>
+        <xs:attribute name="daemon" type="xs:boolean" use="required"/>
+        <xs:attribute name="keepAliveTime" type="xs:long" use="required"/>
+        <xs:attribute name="maxSize" type="xs:int" use="required"/>
+        <xs:attribute name="name" type="xs:string"/>
+        <xs:attribute name="priority" type="xs:int" use="required"/>
+        <xs:attribute name="stackSize" type="xs:long" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="throttlerType">
+    <xs:complexContent>
+      <xs:extension base="tns:processorType">
+        <xs:sequence>
+          <xs:element ref="tns:interceptor" maxOccurs="unbounded" minOccurs="0"/>
+          <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element ref="tns:aggregator"/>
+            <xs:element ref="tns:bean"/>
+            <xs:element ref="tns:catch"/>
+            <xs:element ref="tns:choice"/>
+            <xs:element ref="tns:when"/>
+            <xs:element ref="tns:otherwise"/>
+            <xs:element ref="tns:delayer"/>
+            <xs:element ref="tns:onException"/>
+            <xs:element ref="tns:filter"/>
+            <xs:element ref="tns:finally"/>
+            <xs:element ref="tns:idempotentConsumer"/>
+            <xs:element ref="tns:intercept"/>
+            <xs:element ref="tns:marshal"/>
+            <xs:element ref="tns:multicast"/>
+            <xs:element ref="tns:policy"/>
+            <xs:element ref="tns:proceed"/>
+            <xs:element ref="tns:process"/>
+            <xs:element ref="tns:recipientList"/>
+            <xs:element ref="tns:resequencer"/>
+            <xs:element ref="tns:route"/>
+            <xs:element ref="tns:splitter"/>
+            <xs:element ref="tns:thread"/>
+            <xs:element ref="tns:throttler"/>
+            <xs:element ref="tns:to"/>
+            <xs:element ref="tns:try"/>
+            <xs:element ref="tns:unmarshal"/>
+          </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="maximumRequestsPerPeriod" type="xs:long"/>
+        <xs:attribute name="timePeriodMillis" type="xs:long" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="toType">
+    <xs:complexContent>
+      <xs:extension base="tns:processorType">
+        <xs:sequence>
+          <xs:element ref="tns:interceptor" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="uri" type="xs:string"/>
+        <xs:attribute name="ref" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="tryType">
+    <xs:complexContent>
+      <xs:extension base="tns:outputType">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="unmarshalType">
+    <xs:complexContent>
+      <xs:extension base="tns:outputType">
+        <xs:sequence>
+          <xs:choice maxOccurs="1" minOccurs="1">
+            <xs:element ref="tns:artixDS"/>
+            <xs:element ref="tns:jaxb"/>
+            <xs:element ref="tns:serialization"/>
+            <xs:element ref="tns:xmlBeans"/>
+          </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="ref" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="artixDSDataFormat">
+    <xs:complexContent>
+      <xs:extension base="tns:dataFormatType">
+        <xs:sequence/>
+        <xs:attribute name="elementTypeName" type="xs:string"/>
+        <xs:attribute name="format" type="xs:string"/>
+        <xs:attribute name="elementType" type="xs:string"/>
+        <xs:attribute name="contentType" type="tns:artixDSContentType"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="jaxbDataFormat">
+    <xs:complexContent>
+      <xs:extension base="tns:dataFormatType">
+        <xs:sequence/>
+        <xs:attribute name="prettyPrint" type="xs:boolean"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="serializationDataFormat">
+    <xs:complexContent>
+      <xs:extension base="tns:dataFormatType">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="xmlBeansDataFormat">
+    <xs:complexContent>
+      <xs:extension base="tns:dataFormatType">
+        <xs:sequence/>
+        <xs:attribute name="prettyPrint" type="xs:boolean"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="elExpression">
+    <xs:simpleContent>
+      <xs:extension base="tns:expressionType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="groovyExpression">
+    <xs:simpleContent>
+      <xs:extension base="tns:expressionType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="headerExpression">
+    <xs:simpleContent>
+      <xs:extension base="tns:expressionType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="javaScriptExpression">
+    <xs:simpleContent>
+      <xs:extension base="tns:expressionType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="languageExpression">
+    <xs:simpleContent>
+      <xs:extension base="tns:expressionType">
+        <xs:attribute name="language" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="ognlExpression">
+    <xs:simpleContent>
+      <xs:extension base="tns:expressionType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="phpExpression">
+    <xs:simpleContent>
+      <xs:extension base="tns:expressionType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="pythonExpression">
+    <xs:simpleContent>
+      <xs:extension base="tns:expressionType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="rubyExpression">
+    <xs:simpleContent>
+      <xs:extension base="tns:expressionType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="simpleExpression">
+    <xs:simpleContent>
+      <xs:extension base="tns:expressionType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="sqlExpression">
+    <xs:simpleContent>
+      <xs:extension base="tns:expressionType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="xPathExpression">
+    <xs:simpleContent>
+      <xs:extension base="tns:expressionType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="xQueryExpression">
+    <xs:simpleContent>
+      <xs:extension base="tns:expressionType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="camelBeanPostProcessor"/>
+
+  <xs:complexType name="camelContextFactoryBean">
+    <xs:complexContent>
+      <xs:extension base="tns:identifiedType">
+        <xs:sequence>
+          <xs:element name="package" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+          <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element ref="tns:beanPostProcessor"/>
+            <xs:element ref="tns:proxy"/>
+            <xs:element ref="tns:export"/>
+            <xs:element name="jmxAgent" type="xs:anyType"/>
+          </xs:choice>
+          <xs:element ref="tns:endpoint" maxOccurs="unbounded" minOccurs="0"/>
+          <xs:element ref="tns:route" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="useJmx" type="xs:boolean"/>
+        <xs:attribute name="mbeanServer" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="camelProxyFactoryType">
+    <xs:complexContent>
+      <xs:extension base="tns:identifiedType">
+        <xs:sequence/>
+        <xs:attribute name="serviceUrl" type="xs:string"/>
+        <xs:attribute name="serviceInterface" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="camelServiceExporterType">
+    <xs:complexContent>
+      <xs:extension base="tns:identifiedType">
+        <xs:sequence/>
+        <xs:attribute name="uri" type="xs:string"/>
+        <xs:attribute name="serviceRef" type="xs:string"/>
+        <xs:attribute name="serviceInterface" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="endpointFactoryBean">
+    <xs:complexContent>
+      <xs:extension base="tns:identifiedType">
+        <xs:sequence/>
+        <xs:attribute name="uri" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="camelTemplateFactoryBean">
+    <xs:attribute name="defaultEndpoint" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:simpleType name="artixDSContentType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TagValuePair"/>
+      <xs:enumeration value="Sax"/>
+      <xs:enumeration value="Xml"/>
+      <xs:enumeration value="Java"/>
+      <xs:enumeration value="Text"/>
+      <xs:enumeration value="Binary"/>
+      <xs:enumeration value="Auto"/>
+      <xs:enumeration value="Default"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+
