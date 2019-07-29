@@ -1,10 +1,9 @@
 ---
-title: "Apache Camel Releases - {{ .Name | title }}"
-url: /releases/{{ .Name }}.html
 date: {{ .Date }}
 draft: true
 type: release-note
-version: ""
+version: "{{ replace .File.BaseFileName "release-" "" }}"
+title: "Release {{ replace .File.BaseFileName "release-" "" }}"
 preview: ""
 apiBreaking: ""
 knownIssues: ""

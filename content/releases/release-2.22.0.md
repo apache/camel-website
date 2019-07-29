@@ -3,6 +3,7 @@ date: 2018-06-29
 draft: false 
 type: release-note
 version: 2.22.0
+title: "Release 2.22.0"
 preview: "Major release for 2.22.x"
 apiBreaking: "The RestProducerFactory has an API change where the RestConfiguration is provided as parameter as well."
 knownIssues: ""

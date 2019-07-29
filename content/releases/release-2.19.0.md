@@ -3,6 +3,7 @@ date: 2017-04-30
 draft: false 
 type: release-note
 version: 2.19.0
+title: "Release 2.19.0"
 preview: "Major release for 2.19.x"
 apiBreaking: ""
 knownIssues: ""

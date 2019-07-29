@@ -3,6 +3,7 @@ date: 2016-10-05
 draft: false 
 type: release-note
 version: 2.18.0
+title: "Release 2.18.0"
 preview: "Major release for 2.18.x"
 apiBreaking: "Removed the deprecated vtdxml language. You can use the generic language (vtdxml) instead"
 knownIssues: ""

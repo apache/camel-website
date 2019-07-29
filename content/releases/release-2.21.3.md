@@ -3,6 +3,7 @@ date: 2018-10-21
 draft: false 
 type: release-note
 version: 2.21.3
+title: "Release 2.21.3"
 preview: "Minor update of the 2.21.x branch"
 apiBreaking: ""
 knownIssues: ""

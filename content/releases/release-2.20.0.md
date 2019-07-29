@@ -3,6 +3,7 @@ date: 2017-10-07
 draft: false 
 type: release-note
 version: 2.20.0
+title: "Release 2.20.0"
 preview: "Major release for 2.20.x"
 apiBreaking: ""
 knownIssues: ""

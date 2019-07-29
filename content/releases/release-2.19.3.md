@@ -3,6 +3,7 @@ date: 2017-09-10
 draft: false 
 type: release-note
 version: 2.19.3
+title: "Release 2.19.3"
 preview: "Minor update of the 2.19.x branch"
 apiBreaking: ""
 knownIssues: ""
