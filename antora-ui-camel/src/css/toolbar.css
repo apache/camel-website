@@ -8,7 +8,7 @@
   background-color: #fafafa;
   box-shadow: 0 1px 0 #e1e1e1;
   display: flex;
-  font-size: 0.75rem;
+  font-size: 1rem;
   height: var(--toolbar-height);
   justify-content: flex-start;
   position: sticky;

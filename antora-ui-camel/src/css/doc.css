@@ -75,7 +75,7 @@
 
 /* what about td/th code? */
 .doc p code {
-  font-size: 0.9em;
+  font-size: 1em;
   background-color: #fafafa;
   padding: 0.075rem 0.25rem 0.125rem;
   border-radius: 0.2rem;
@@ -84,7 +84,7 @@
 
 .doc pre {
   /* color: #000; */
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin: 0;
 }
@@ -105,7 +105,7 @@
 
 .doc table.tableblock {
   border-collapse: collapse;
-  font-size: 0.8em;
+  font-size: 1rem;
   margin: 2rem 0;
   /* enable table-layout: fixed if you want the table width to be enforced strictly */
   /* alternative is to wrap table in div and set overflow-x: auto on the wrapper */
@@ -164,7 +164,7 @@
 
 .doc .admonitionblock p,
 .doc .admonitionblock td.content {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .doc .admonitionblock td.content > :first-child {
@@ -192,9 +192,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 0.75rem;
+  font-size: 1rem;
   padding: 0 0.5rem;
-  height: 1.25rem;
+  height: 1.5rem;
   line-height: 1;
   font-weight: 500;
   text-transform: uppercase;
@@ -275,7 +275,7 @@
 }
 
 .doc p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin: 0;
 }
 
@@ -297,7 +297,7 @@
   background-color: #f0f0f0;
   border-left: 5px solid #ddd;
   color: #4a4a4a;
-  font-size: 0.9em;
+  font-size: 1em;
   margin: 0;
   padding: 0.75em 1em;
 }
@@ -369,7 +369,7 @@
 .doc .openblock .title {
   /* color: #4a4a4a; */
   color: #191919;
-  font-size: 0.925rem;
+  font-size: 1rem;
   font-style: italic;
   letter-spacing: -0.005em;
   padding-bottom: 0.075rem;
@@ -479,7 +479,7 @@
 }
 
 .doc .colist {
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .doc .colist > table tr > td:first-of-type {

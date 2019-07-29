@@ -8,7 +8,7 @@
   top: var(--navbar-height);
   left: 0;
   width: 100%;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   z-index: 1;
 }
 
@@ -19,13 +19,13 @@
 @media screen and (min-width: 769px) {
   .navigation-container {
     width: 16rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .navigation-container {
-    font-size: 0.8125rem;
+    font-size: 1rem;
     flex: none;
     display: block;
     position: static;
