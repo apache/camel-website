@@ -2,12 +2,17 @@
   "extends": [
     "htmlvalidate:recommended"
   ],
+  "plugins": [
+    "./rules.js"
+  ],
   "rules": {
     "attr-quotes": "off",
     "wcag/h30": "off",
     "no-inline-style": "off",
     "element-required-attributes": "off",
-    "prefer-tbody": "off"
+    "prefer-tbody": "off",
+    "long-title": "off",
+    "camel/title": "error"
   }
 }
 
