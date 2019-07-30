@@ -1,7 +1,7 @@
 ;(function () {
   'use strict'
 
-  var toggle = document.querySelector('.page-versions .versions-menu-toggle')
+  var toggle = document.querySelector('.page-versions .version-menu-toggle')
   if (!toggle) return
 
   var selector = document.querySelector('.page-versions')
@@ -12,7 +12,7 @@
     e.stopPropagation()
   })
 
-  window.addEventListener('click', function () {
+  document.documentElement.addEventListener('click', function () {
     selector.classList.remove('is-active')
   })
 })()

@@ -1,7 +1,9 @@
 footer.footer {
-  padding: 0.5rem 1rem;
-  min-height: 200px;
-  text-align: center;
+  background-color: var(--footer-background);
+  color: var(--footer-font-color);
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  line-height: var(--footer-line-height);
+  padding: 1.5rem;
 }
 
 .footer p {
@@ -9,5 +11,5 @@ footer.footer {
 }
 
 .footer a {
-  color: #ed8225;
+  color: var(--footer-link-font-color);
 }

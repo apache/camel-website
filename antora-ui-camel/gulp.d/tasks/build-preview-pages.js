@@ -30,15 +30,15 @@ module.exports = (src, previewSrc, previewDest, sink = () => map(), layouts = {}
       )
     ),
   ])
-    .then(([baseUiModel]) => Object.assign(baseUiModel, { env: process.env }))
+    .then(([baseUiModel]) => ({ ...baseUiModel, env: process.env }))
     .then((baseUiModel) =>
       vfs
         .src('**/*.adoc', { base: previewSrc, cwd: previewSrc })
         .pipe(
           map((file, enc, next) => {
             const siteRootPath = path.relative(ospath.dirname(file.path), ospath.resolve(previewSrc))
-            const uiModel = Object.assign({}, baseUiModel)
-            uiModel.page = Object.assign({}, uiModel.page)
+            const uiModel = { ...baseUiModel }
+            uiModel.page = { ...uiModel.page }
             uiModel.siteRootPath = siteRootPath
             uiModel.siteRootUrl = path.join(siteRootPath, 'index.html')
             uiModel.uiRootPath = path.join(siteRootPath, '_')

@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{detag (or page.title 'Page Not Found')}}{{#if site.title}} :: {{site.title}}{{/if}}</title>
-    <link rel="stylesheet" href="{{uiRootPath}}/css/site.css">
-{{> head}}
+{{> head defaultPageTitle="Page Not Found"}}
   </head>
   <body class="status-404">
 {{> header}}
-{{> main}}
+{{> body}}
 {{> footer}}
   </body>
 </html>

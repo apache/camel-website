@@ -1,7 +1,7 @@
 <header class="header">
   <nav class="navbar shadow border-bottom">
     <div class="navbar-brand">
-      <a class="navbar-item nav-logo" href="{{siteRootPath}}" title="{{site.title}}"><span>{{site.title}}</span></a>
+      <a class="navbar-item nav-logo" href="{{or site.url (or siteRootUrl siteRootPath)}}"><span>{{site.title}}</span></a>
       <button class="navbar-burger" data-target="topbar-nav" type="button">
         <span></span>
         <span></span>

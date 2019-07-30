@@ -1,16 +1,3 @@
-:root {
-  --color-text: #000;
-  --color-navbar-bg: #fff;
-  --color-navbar-bg-focus: #ed8225;
-  --color-navbar-text: #ed8225;
-  --color-navbar-text-link-hover: #fff;
-  --breakpoint-xs: 0;
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
-}
-
 html,
 body {
   height: 100%;
@@ -24,47 +11,63 @@ body {
 
 html {
   box-sizing: border-box;
-  font-family: "Open Sans", "DejaVu Serif", serif;
-  font-size: 1em;
-  text-size-adjust: 100%;
-}
-
-@-ms-viewport {
-  width: device-width;
+  font-size: var(--body-font-size);
+  -webkit-text-size-adjust: 100%;
 }
 
 @media screen and (min-width: 1024px) {
   html {
-    font-family: "Open Sans", "DejaVu Serif", serif;
-    font-size: 1em;
+    font-size: var(--body-font-size--desktop);
   }
 }
 
 body {
-  color: var(--color-text);
-  line-height: 1.6;
+  background: var(--body-background);
+  color: var(--body-font-color);
+  font-family: var(--body-font-family);
+  line-height: var(--body-line-height);
   margin: 0;
 }
 
 a {
   text-decoration: none;
-  color: #ed8225;
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 code,
 kbd,
 pre {
-  color: #585ac2;
-  font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
+  color: var(--code-font-color);
+  font-family: var(--monospace-font-family);
 }
 
 b,
 dt,
 strong,
 th {
-  font-weight: 500;
+  font-weight: var(--body-font-weight-bold);
+}
+
+em em { /* stylelint-disable-line */
+  font-style: normal;
+}
+
+strong strong { /* stylelint-disable-line */
+  font-weight: normal;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1em;
+  line-height: var(--body-line-height);
+  margin: 0;
+}
+
+button::-moz-focus-inner {
+  border: none;
+  padding: 0;
 }
