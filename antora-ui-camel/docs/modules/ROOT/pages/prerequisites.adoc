@@ -6,18 +6,16 @@
 :url-nvm: https://github.com/creationix/nvm
 :url-node: https://nodejs.org
 :url-gulp: http://gulpjs.com
-:url-yarn: https://yarnpkg.com
 :url-git: https://git-scm.com
 :url-git-dl: {url-git}/downloads
 :url-node-releases: https://nodejs.org/en/about/releases/
 // These prerequisite instructions are less detailed than Antora's prerequisite instructions, I don't know if this is a concern or not.
 
-An Antora UI project is based on tools built atop Node.js (aka Node), namely:
+An Antora UI project is based on tools built atop Node.js, namely:
 
-* {url-node}[Node] (command: `node`)
+* {url-node}[Node.js] (commands: `node` and `npm`)
  ** {url-nvm}[nvm] (optional, but strongly recommended)
-* {url-gulp}[Gulp] (command: `gulp`)
-* {url-yarn}[Yarn] (command: `yarn`)
+* {url-gulp}[Gulp CLI] (command: `gulp`)
 
 You also need {url-git}[git] (command: `git`) to pull down the project and push updates to it.
 
@@ -29,26 +27,26 @@ First, make sure you have git installed.
 
 If not, {url-git-dl}[download and install] the git package for your system.
 
-== Node
+== Node.js
 
-You need Node installed on your machine to use Antora, including the default UI.
-Antora follows Node's release schedule, so we advise that you choose an active long term support (LTS) release of Node.
-We recommend using the latest active Node LTS version.
-While you can use other versions of Node, Antora is only tested against LTS releases.
+You need Node.js installed on your machine to use Antora, including the default UI.
+Antora follows the Node.js release schedule, so we advise that you choose an active long term support (LTS) release of Node.js.
+We recommend using the latest active Node.js LTS version.
+While you can use other versions of Node.js, Antora is only tested against LTS releases.
 
-To check whether you have Node installed, and which version, open a terminal and type:
+To check whether you have Node.js installed, and which version, open a terminal and type:
 
  $ node --version
 
 You should see a version string, such as:
 
- v10.14.2
+ v10.15.3
 
-If the command fails with an error, it means you don't have Node installed.
-The best way to install Node is to use nvm (Node Version Manager).
-Refer to xref:antora:install:linux-requirements.adoc#install-nvm[Install nvm and Node (Linux)], xref:antora:install:macos-requirements.adoc#install-nvm[Install nvm and Node (macOS)], or xref:antora:install:windows-requirements.adoc#install-nvm[Install nvm and Node (Windows)] for instructions.
+If the command fails with an error, it means you don't have Node.js installed.
+The best way to install Node.js is to use nvm (Node Version Manager).
+Refer to xref:antora:install:linux-requirements.adoc#install-nvm[Install nvm and Node.js (Linux)], xref:antora:install:macos-requirements.adoc#install-nvm[Install nvm and Node.js (macOS)], or xref:antora:install:windows-requirements.adoc#install-nvm[Install nvm and Node.js (Windows)] for instructions.
 
-Once you have Node installed, you can proceed with installing Gulp's CLI and Yarn.
+Once you have Node.js installed, you can proceed with installing the Gulp CLI.
 
 == Gulp CLI
 
@@ -58,16 +56,4 @@ You should install the Gulp CLI globally (which resolves to a location in your u
 
  $ npm install -g gulp-cli
 
-== Yarn
-
-Finally, you'll need Yarn, which is the preferred package manager for the Node ecosystem.
-You'll need to use the `npm` command to install Yarn, though this is the last time you'll use the `npm` command.
-You should install Yarn globally (which resolves to a location in your user directory if you're using nvm) using the following command:
-
- $ npm install -g yarn
-
-Verify Yarn is installed by checking the version:
-
- $ yarn --version
-
-Now that you have Node, Yarn, and Gulp installed, you're ready to set up the project.
+Now that you have Node.js and Gulp installed, you're ready to set up the project.

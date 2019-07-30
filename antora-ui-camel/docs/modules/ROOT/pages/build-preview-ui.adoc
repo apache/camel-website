@@ -13,7 +13,7 @@ The preview saves you from having to generate the whole site just to test the UI
 These files should give you an idea of how the UI will look when applied to the actual site.
 
 The pages in the preview site are assembled using the Handlebars templates and link to the pre-compiled asset files (emulating the behavior of the site generator).
-Thus, to look at then, you need to run them through the UI build.
+Thus, to look at them, you need to run them through the UI build.
 
 There are two preview modes available.
 You can run the build once and examine the result or you can run the build continuously so you can see changes as you make them.

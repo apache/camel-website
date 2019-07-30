@@ -2,6 +2,7 @@
   display: none;
   margin-right: 0.7rem;
   position: relative;
+  line-height: 1;
 }
 
 @media screen and (min-width: 1024px) {
@@ -10,47 +11,36 @@
   }
 }
 
-.page-versions.is-active {
-  color: #333;
-}
-
-.page-versions .versions-menu-toggle {
+.page-versions .version-menu-toggle {
   color: inherit;
-  font-family: inherit;
-  font-size: inherit;
   background: url(../img/chevron.svg) no-repeat;
   background-position: right 0.5rem top 50%;
   background-size: auto 0.75em;
-  border: 1px solid transparent;
-  outline: none;
-  cursor: pointer;
-  padding: 0.35rem 1.5rem 0.35rem 0.5rem;
-  position: relative;
-  z-index: 1;
-}
-
-.page-versions .versions-menu-toggle::-moz-focus-inner {
   border: none;
+  outline: none;
+  line-height: inherit;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  position: relative;
+  z-index: var(--z-index-page-version-menu);
 }
 
-.page-versions .versions-menu {
+.page-versions .version-menu {
   border: 1px solid transparent;
-  background-color: #f0f0f0;
-  padding: 1.3rem 0.5rem 0.35rem;
+  background-color: var(--page-version-menu-background);
+  padding: 1.25rem 0.5rem 0.5rem;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
 }
 
-.page-versions:not(.is-active) .versions-menu {
+.page-versions:not(.is-active) .version-menu {
   display: none;
 }
 
 .page-versions .version {
   display: block;
-  line-height: 1;
-  padding-top: 0.6em;
+  padding-top: 0.5rem;
 }
 
 .page-versions .version.is-current {
@@ -58,7 +48,7 @@
 }
 
 .page-versions .version.is-missing {
-  color: #8e8e8e;
+  color: var(--page-version-missing-font-color);
   font-style: italic;
   text-decoration: none;
 }
