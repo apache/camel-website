@@ -37,15 +37,16 @@
   /* navbar */
   --navbar-background: var(--color-white);
   --navbar-font-color: var(--color-camel-orange);
-  --navbar-hover-font-color: var(--color-white);
-  --navbar-hover-background: var(--color-camel-orange);
+  --navbar-hover-font-color: var(--color-camel-orange);
+  --navbar-hover-background: var(--color-white);
   --navbar-button-background: var(--color-white);
   --navbar-button-border-color: var(--panel-border-color);
   --navbar-button-font-color: var(--body-font-color);
   --navbar-menu-border-color: var(--panel-border-color);
   --navbar-menu-background: var(--color-white);
   --navbar-menu-font-color: var(--body-font-color);
-  --navbar-menu-hover-background: var(--color-smoke-30);
+  --navbar-menu-hover-background: var(--color-white);
+  --navbar-menu-hover-decoration-color: var(--color-camel-orange);
   /* nav */
   --nav-background: var(--panel-background);
   --nav-border-color: var(--color-gray-10);
