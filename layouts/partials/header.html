@@ -32,7 +32,7 @@
 <body class="article">
     <nav class="navbar">
         <div class="navbar-brand">
-            <a class="navbar-item nav-logo" href="{{ .Site.BaseURL | relURL }}" title="{{ .Site.Title }}"><span>{{ .Site.Title }}</span></a>
+            <a class="nav-logo" href="{{ .Site.BaseURL | relURL }}" title="{{ .Site.Title }}"><span>{{ .Site.Title }}</span></a>
             <div id="topbar-nav" class="navbar-menu">
                 <div class="navbar-end">
                     {{ range .Site.Menus.main }}

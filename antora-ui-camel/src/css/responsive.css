@@ -1,10 +1,11 @@
 .nav-logo {
   background-image: url('../img/logo-camel-medium.png');
   background-repeat: no-repeat;
-  background-size: 160px;
-  background-position-x: 10px;
-  background-position-y: 10px;
-  width: 180px;
+  background-size: contain;
+  width: 10rem;
+  margin: 10px 1rem 0.9rem 10px;
+  padding: 0;
+  align-items: flex-start;
 }
 
 .nav-logo span {
