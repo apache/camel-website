@@ -99,6 +99,7 @@
 
 .doc p,
 .doc :not(td) > .content,
+.doc :not(td) > p,
 .doc .tableblock thead {
   hyphens: auto;
 }
