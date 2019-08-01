@@ -18,7 +18,7 @@ This page lists the known books about Apache Camel. If you happen to know a book
 
 [Camel in Action 2nd edition](https://www.manning.com/books/camel-in-action-second-edition) by [Claus Ibsen](http://davsclaus.blogspot.com/) and [Jonathan Anstey](http://janstey.blogspot.com/). Published by [Manning](http://www.manning.com/) in 2018.
 
-![Camel in Action 2nd edition book cover](/_/img/cia2-cover-small.jpg)
+![Camel in Action 2nd edition book cover](/img/books/camel_in_action_2nd.jpg)
 
 [Camel in Action, Second Edition](https://www.manning.com/books/camel-in-action-second-edition) is the most complete Camel book on the market. Written by core developers of Camel and the authors of the highly acclaimed first edition, this book distills their experience and practical insights so that you can tackle integration tasks like a pro.
 
@@ -26,7 +26,7 @@ This page lists the known books about Apache Camel. If you happen to know a book
 
 [Camel in Action](http://www.manning.com/ibsen/) by [Claus Ibsen](http://davsclaus.blogspot.com/) and [Jonathan Anstey](http://janstey.blogspot.com/). Published by [Manning](http://www.manning.com) in December 2010.
 
-![Camel in Action book cover](/_/img/cia_small.jpg)
+![Camel in Action book cover](/img/books/camel_in_action.jpg)
 
 [_Camel in Action_](http://manning.com/ibsen) is a Camel tutorial full of small examples showing how to work with the integration patterns. It starts with core concepts like sending, receiving, routing, and transforming data. It then shows you the entire lifecycle and goes in depth on how to test, deal with errors, scale, deploy, and even monitor your app—details you can find only in the Camel code itself. Written by the developers of Camel, this book distills their experience and practical insights so that you can tackle integration tasks like a pro.
 
@@ -34,7 +34,7 @@ This page lists the known books about Apache Camel. If you happen to know a book
 
 [Apache Camel Developer's Cookbook](http://www.packtpub.com/apache-camel-developers-cookbook/book) by [Scott Cranton](http://twitter.com/scottcranton) and [Jakub Korab](http://jakubkorab.net). Published by [Packt publishing](http://www.packtpub.com/) in December 2013.
 
-![Apache Camel Developer's Cookbook book cover](/_/img/CamelCookbookCover.png)
+![Apache Camel Developer's Cookbook book cover](/img/books/camel_developers_cookbook.png)
 
 _[Apache Camel Developer's Cookbook](http://www.packtpub.com/apache-camel-developers-cookbook/book)_ is a collection of over 100 how-to recipes for working with Apache Camel. It is intended for use by busy developers who may not necessarily have time to learn the whole framework in order to be productive. It does this without sacrificing any of the detail needed to build performant, reliable system integrations. Developers new to Apache Camel will find useful information on how to set up Camel in both regular Java and Spring-based applications, through to the ins-and-outs of the various Enterprise Integration Patterns (EIPs) (how they are affected by multithreading, transactions etc.), payload transformations and testing. Experienced developers will also benefit from coverage of parallel and asynchronous processing, error handling and compensation, transactions and idempotency, monitoring and debugging, as well as Camel’s support for security. All recipes are backed by fully unit-tested example code in both the Java and XML DSLs, all of which is available on github at [CamelCookbook/camel-cookbook-examples](http://github.com/CamelCookbook/camel-cookbook-examples).
 
@@ -42,7 +42,7 @@ _[Apache Camel Developer's Cookbook](http://www.packtpub.com/apache-camel-develo
 
 [Camel Design Patterns](https://leanpub.com/camel-design-patterns) by [Bilgin Ibryam](http://www.ofbizian.com/). Published by [LeanPub](https://leanpub.com/) in start of 2016.
 
-![Camel Design Patterns book cover](/_/img/large.jpg)
+![Camel Design Patterns book cover](/img/books/camel_design_patterns.jpg)
 
 Patterns, Principles, and Practices for designing Apache Camel applications. A developer friendly guide with real world use cases and practical tips for designing and architecting Apache Camel applications.
 
@@ -56,7 +56,7 @@ Driven by real world experiences, this book consolidates most commonly used patt
 
 [Mastering Apache Camel](https://www.packtpub.com/application-development/mastering-apache-camel) by [Jean-Baptiste Onofré](https://twitter.com/jbonofre). Published by [Packt publishing](http://www.packtpub.com/) in June 2015.
 
-![Mastering Apache Camel book cover](/_/img/3151EN_Mastering_Apache_Camel.jpg)
+![Mastering Apache Camel book cover](/img/books/mastering_camel.jpg)
 
 This book will provide you with the skills you need to efficiently create routes using Apache Camel.
 
@@ -66,7 +66,7 @@ After briefly introducing the key features and core concepts of Camel, the book 
 
 [Apache Camel Essentials](https://www.packtpub.com/application-development/apache-camel-essentials) by Prajod Surendran V, Gnanaguru Sattanathan, Naveen Raj. Published by [Packt publishing](http://www.packtpub.com/) in August 2016.
 
-![Apache Camel Essentials book cover](/_/img/B03507_MockupCover_Normal.jpg)
+![Apache Camel Essentials book cover](/img/books/camel_essentials.jpg)
 
 This book offers you a small learning curve to get the most out of enterprise Camel integrations. At the beginning of the book, you will learn about the installation and setup of Apache Camel and discover more about Camel concepts such as the development environment, routing, deployment strategies, and dependencies. After that, you will learn how to configure Camel endpoints using DSL and Spring XML, and also learn how to use Camel for web service integrations. Later on in the book, you will learn how to execute multiple Camel projects across a wide spectrum of business use cases. You will round off your Camel journey with coverage of social media integration and discover the best ways to implement Camel in your system.
 
@@ -74,7 +74,7 @@ This book offers you a small learning curve to get the most out of enterprise Ca
 
 [Instant Apache Camel Message Routing](http://www.packtpub.com/apache-camel-message-routing/book) by [Bilgin Ibryam](http://ofbizian.com/). Published by [Packt publishing](http://www.packtpub.com/) in August 2013.
 
-![Instant Apache Camel Message Routing book cover](/_/img/3477OSmall.jpg)
+![Instant Apache Camel Message Routing book cover](/img/books/instant_camel_message_routing.jpg)
 
 [_Instant Apache Camel Message Routing_](http://www.packtpub.com/apache-camel-message-routing/book) will help you to get started with Camel and Enterprise Integration Patterns in matter of hours. It is a short, focused and practical guide to Apache Camel that provides a high level overview of the Camel architecture and message routing principles. It introduces a number of integration patterns, complete with diagrams, common use cases, and examples about how to use them.  
 The book is easy to read and ideal for developers who want to get started with Camel and message routing quickly.
@@ -83,7 +83,7 @@ The book is easy to read and ideal for developers who want to get started with C
 
 [Instant Apache Camel Messaging System](http://www.packtpub.com/apache-camel-messaging-system/book) by Evgeniy Sharapov. Published by [Packt publishing](http://www.packtpub.com/) in September 2013.
 
-![Instant Apache Camel Messaging System book cover](/_/img/5347OSmall.jpg)
+![Instant Apache Camel Messaging System book cover](/img/books/instant_camel_messaging_system.jpg)
 
 [_Instant Apache Camel Messaging System_](http://www.packtpub.com/apache-camel-messaging-system/book) is a practical, hands-on guide that provides you with step-by-step instructions which will help you to take advantage of the Apache Camel integration framework using Maven, the Spring Framework, and the TDD approach.
 
@@ -93,7 +93,7 @@ Instant Apache Camel Messaging System introduces you to Apache Camel and provide
 
 [Enterprise Integration Patterns](http://www.enterpriseintegrationpatterns.com/) by Gregor Hohpe and Bobby Woolf. Published by Addison Wesley in October 2003.
 
-![Enterprise Integration Patterns book cover](/_/img/eip_book_cover.jpg)
+![Enterprise Integration Patterns book cover](/img/books/enterprise_integration_patterns.jpg)
 
 This is known as the EIP book which distills 65 EIP patterns, which Apache Camel implements. If you want to learn the EIP patterns better then this is a great book.
 
