@@ -26,6 +26,13 @@ enableRobotsTXT = true
     url = "/projects/camel-k/"
 
 [[menu.main]]
+    name = "Camel Quarkus"
+    parent = "projects"
+    weight = 2
+    identifier = "project-camel-quarkus"
+    url = "/projects/camel-quarkus/"
+
+[[menu.main]]
     name = "Documentation"
     identifier = "docs"
     weight = 4
@@ -57,6 +64,13 @@ enableRobotsTXT = true
     weight = 4
     identifier = "camel-k"
     url = "/camel-k/latest/"
+
+[[menu.main]]
+    name = "Camel Quarkus"
+    parent = "docs"
+    weight = 5
+    identifier = "camel-quarkus"
+    url = "/camel-quarkus/latest/"
 
 [[menu.main]]
     name = "Community"
