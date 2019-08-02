@@ -26,7 +26,7 @@
     {{ if .Keywords}}
     <meta name="keywords" content="{{ .Keywords }}">
     {{ end }}
-    <link rel="stylesheet" href="{{ "/_/css/site.css" | relURL }}">
+    <link rel="stylesheet" href="{{ path.Join "_" (index .Site.Data "rev-manifest" "css/site.css") | relURL }}">
 </head>
 
 <body class="article">

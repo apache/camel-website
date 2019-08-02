@@ -46,9 +46,9 @@
             their respective owners.
         </div>
     </footer>
-    <script src="{{ "/_/js/site.js" | relURL }}"></script>
-    <script src="{{ "/_/js/vendor/highlight.js" | relURL }}"></script>
-    <script src="{{ "/_/js/vendor/svg4everybody.js" | relURL }}"></script>
+    <script src="{{ path.Join "_" (index .Site.Data "rev-manifest" "js/site.js") | relURL }}"></script>
+    <script src="{{ path.Join "_" (index .Site.Data "rev-manifest" "js/vendor/highlight.js") | relURL }}"></script>
+    <script src="{{ path.Join "_" (index .Site.Data "rev-manifest" "js/vendor/svg4everybody.js") | relURL }}"></script>
     <script type='application/ld+json'>
         {
           "@context": "http://schema.org",

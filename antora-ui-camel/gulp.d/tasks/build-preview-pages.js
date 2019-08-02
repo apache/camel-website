@@ -1,6 +1,7 @@
 'use strict'
 
 const asciidoctor = require('asciidoctor.js')()
+const data = require('gulp-data')
 const fs = require('fs-extra')
 const handlebars = require('handlebars')
 const { obj: map } = require('through2')
@@ -8,6 +9,7 @@ const merge = require('merge-stream')
 const ospath = require('path')
 const path = ospath.posix
 const requireFromString = require('require-from-string')
+const template = require('gulp-template')
 const vfs = require('vinyl-fs')
 const yaml = require('js-yaml')
 
@@ -26,6 +28,7 @@ module.exports = (src, previewSrc, previewDest, sink = () => map(), layouts = {}
         compileLayouts(src, layouts),
         registerPartials(src),
         registerHelpers(src),
+        registerTemplatedHelpers(src),
         copyImages(previewSrc, previewDest)
       )
     ),
@@ -85,6 +88,16 @@ function registerHelpers (src) {
       next()
     })
   )
+}
+
+function registerTemplatedHelpers (src) {
+  return vfs.src('helpers/*.js.template', { base: src, cwd: src })
+    .pipe(data(() => ({ manifest: fs.readFileSync('./public/_/data/rev-manifest.json').toString() })))
+    .pipe(template())
+    .pipe(map((file, enc, next) => {
+      handlebars.registerHelper(file.stem.replace('.js', ''), requireFromString(file.contents.toString()))
+      next()
+    }))
 }
 
 function compileLayouts (src, layouts) {

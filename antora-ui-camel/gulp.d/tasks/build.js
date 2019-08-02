@@ -5,6 +5,7 @@ const browserify = require('browserify')
 const buffer = require('vinyl-buffer')
 const concat = require('gulp-concat')
 const cssnano = require('cssnano')
+const data = require('gulp-data')
 const fs = require('fs-extra')
 const imagemin = require('gulp-imagemin')
 const { obj: map } = require('through2')
@@ -16,6 +17,9 @@ const postcssCalc = require('postcss-calc')
 const postcssImport = require('postcss-import')
 const postcssUrl = require('postcss-url')
 const postcssVar = require('postcss-custom-properties')
+const rename = require('gulp-rename')
+const rev = require('gulp-rev')
+const template = require('gulp-template')
 const uglify = require('gulp-uglify')
 const vfs = require('vinyl-fs')
 
@@ -43,11 +47,14 @@ module.exports = (src, dest, preview) => () => {
     preview ? () => {} : cssnano({ preset: 'default' }),
   ]
 
+  let manifest
+
   return merge(
     vfs
       .src('js/+([0-9])-*.js', { ...opts, sourcemaps })
       .pipe(uglify())
-      .pipe(concat('js/site.js')),
+      .pipe(concat('js/site.js'))
+      .pipe(rev()),
     vfs
       .src('js/vendor/*.js', { ...opts, read: false })
       .pipe(
@@ -68,8 +75,11 @@ module.exports = (src, dest, preview) => () => {
         })
       )
       .pipe(buffer())
-      .pipe(uglify()),
-    vfs.src('css/site.css', { ...opts, sourcemaps }).pipe(postcss(postcssPlugins)),
+      .pipe(uglify())
+      .pipe(rev()),
+    vfs.src('css/site.css', { ...opts, sourcemaps })
+      .pipe(postcss(postcssPlugins))
+      .pipe(rev()),
     vfs.src('font/*.{ttf,woff*(2)}', opts),
     vfs
       .src('img/**/*.{jpg,ico,png,svg}', opts)
@@ -90,4 +100,17 @@ module.exports = (src, dest, preview) => () => {
     vfs.src('layouts/*.hbs', opts),
     vfs.src('partials/*.hbs', opts)
   ).pipe(vfs.dest(dest, { sourcemaps: sourcemaps && '.' }))
+    .pipe(rev.manifest())
+    .pipe(vfs.dest(path.join(dest, 'data')))
+    .pipe(map((file, enc, next) => {
+      manifest = file.contents.toString()
+      next(null, null)
+    }))
+    .pipe(vfs.src('helpers/*.js.template', opts))
+    .pipe(data(() => ({ manifest: manifest })))
+    .pipe(template())
+    .pipe(rename((path) => {
+      path.extname = '' // strip .template
+    }))
+    .pipe(vfs.dest(dest))
 }
