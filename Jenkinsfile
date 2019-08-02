@@ -38,7 +38,6 @@ pipeline {
     environment {
         ANTORA_CACHE_DIR  = "$WORKSPACE/.antora-cache"
         YARN_CACHE_FOLDER = "$WORKSPACE/.yarn-cache"
-        HUGO_VERSION      = "0.52.0"
     }
 
     stages {

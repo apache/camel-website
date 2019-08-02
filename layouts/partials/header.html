@@ -19,7 +19,7 @@
     <meta name="application-name" content="Apache Camel">
     <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
     <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
-    <link rel="canonical" href="{{ .URL }}">
+    <link rel="canonical" href="{{ .RelPermalink }}">
     {{ if .Description}}
     <meta name="description" content="{{ .Description }}">
     {{ end }}
