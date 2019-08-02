@@ -1,118 +1,127 @@
 {{ partial "header.html" . }}
 
-<div class="container pb-5">
-    <h1>{{ .Title }}</h1>
+<div class="body">
+    <main role="main">
+        <article class="static doc">
+            <h1>{{ .Title }}</h1>
 
-    <h2>Latest releases</h2>
+            <h2>Latest releases</h2>
 
-    <p>Apache Camel community provides support for the latest three major versions. Latest version receives new features, next two supported versions receive only bug fixes.</p>
+            <p>Apache Camel community provides support for the latest three major versions. Latest version receives new features, next two supported versions receive only bug fixes.</p>
 
-    <ul>
-    {{ $releases := ((where .Site.Pages "Type" "release-note").ByParam "version").Reverse }}
-    {{ $major := "" }}
-    {{ $cnt := 1 }}
-    {{ range $releases }}
-        {{ $this_major := .Params.version | replaceRE "\\.\\d+$" "" }}
-        {{ if (and (le $cnt 3) (or (eq $major "") (ne $major $this_major ))) }}
-            <li>The latest {{ if eq $major "" }}feature{{ else }}bugfix{{ end }} release of Camel {{ $this_major }}.x is <a href="{{ .RelPermalink }}">{{ .Params.version }}</a></li>
-            {{ $cnt = add $cnt 1 }}
-        {{ end }}
-        {{ $major = .Params.version | replaceRE "\\.\\d+$" "" }}
-    {{ end }}
-    </ul>
-
-    <h3>Using Maven</h3>
-
-
-    <p>To use this release in your maven project, the proper dependency configuration that you should use in your Maven POM is:</p>
-
-    <pre><code class="xml">&lt;dependency&gt;
-  &lt;groupId&gt;org.apache.camel&lt;/groupId&gt;
-  &lt;artifactId&gt;camel-core&lt;/artifactId&gt;
-  &lt;version&gt;{{ range (first 1 ((where .Site.Pages "Type" "release-note").ByParam "version").Reverse) }}{{ .Params.version }}{{ end }}&lt;/version&gt;
-&lt;/dependency&gt;</code></pre>
-
-    <h3>Getting the latest distributions</h3>
-
-    <h4>Binary Distribution</h4>
-
-    {{ $releases := ((where .Site.Pages "Type" "release-note").ByParam "version").Reverse }}
-    {{ $major := "" }}
-    {{ $cnt := 1 }}
-    <table class="table table-hover text-left">
-        <thead class="thead-light">
-            <tr>
-                <th>Version</th>
-                <th>Description</th>
-                <th>Download Link</th>
-                <th>PGP Signature file of download</th>
-                <th>SHA512 Checksum file of download</th>
-            </tr>
-        </thead>
-
-        {{ range $releases }}
-            {{ $this_major := .Params.version | replaceRE "\\.\\d+$" "" }}
-            {{ if (and (le $cnt 3) (or (eq $major "") (ne $major $this_major ))) }}
-                <tbody>
-                    <tr>
-                      <td rowspan="2"><strong>{{ .Params.version }}</strong><br><small>{{ if eq $major "" }}feature{{ else }}bugfix{{ end }}</small></td>
-                        <td>Windows Distribution</td>
-                        <td><a href="http://www.apache.org/dyn/closer.lua?filename=camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.zip&action=download">apache-camel-{{ .Params.version }}.zip</a></td>
-                        <td><a href="https://www.apache.org/dist/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.zip.asc">apache-camel-{{ .Params.version }}.zip.asc</a></td>
-                        <td><a href="https://www.apache.org/dist/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.zip.sha512">apache-camel-{{ .Params.version }}.zip.sha512</a></td>
-                    </tr>
-                    <tr>
-                        <td>Unix/Linux/Cygwin Distribution</td>
-                        <td><a href="http://www.apache.org/dyn/closer.lua?filename=camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.tar.gz&action=download">apache-camel-{{ .Params.version }}.tar.gz</a></td>
-                        <td><a href="https://www.apache.org/dist/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.tar.gz.asc">apache-camel-{{ .Params.version }}.tar.gz.asc</a></td>
-                        <td><a href="https://www.apache.org/dist/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.tar.gz.sha512">apache-camel-{{ .Params.version }}.tar.gz.sha512</a></td>
-                    </tr>
-                </tbody>
-                {{ $cnt = add $cnt 1 }}
+            <ul>
+            {{ $releases := ((where .Site.Pages "Type" "release-note").ByParam "version").Reverse }}
+            {{ $major := "" }}
+            {{ $cnt := 1 }}
+            {{ range $releases }}
+                {{ $this_major := .Params.version | replaceRE "\\.\\d+$" "" }}
+                {{ if (and (le $cnt 3) (or (eq $major "") (ne $major $this_major ))) }}
+                    <li>The latest {{ if eq $major "" }}feature{{ else }}bugfix{{ end }} release of Camel {{ $this_major }}.x is <a href="{{ .RelPermalink }}">{{ .Params.version }}</a></li>
+                    {{ $cnt = add $cnt 1 }}
+                {{ end }}
+                {{ $major = .Params.version | replaceRE "\\.\\d+$" "" }}
             {{ end }}
-            {{ $major = .Params.version | replaceRE "\\.\\d+$" "" }}
-        {{ end }}
-    </table>
+            </ul>
 
-    <h4>Source Distribution</h4>
+            <h3>Using Maven</h3>
 
-    {{ $releases := ((where .Site.Pages "Type" "release-note").ByParam "version").Reverse }}
-    {{ $major := "" }}
-    {{ $cnt := 1 }}
-    <table class="table table-hover text-left">
-        <thead class="thead-light">
-            <tr>
-                <th>Version</th>
-                <th>Description</th>
-                <th>Download Link</th>
-                <th>PGP Signature file of download</th>
-                <th>SHA512 Checksum file of download</th>
-            </tr>
-        </thead>
 
-        {{ range $releases }}
-            {{ $this_major := .Params.version | replaceRE "\\.\\d+$" "" }}
-            {{ if (and (le $cnt 3) (or (eq $major "") (ne $major $this_major ))) }}
-                <tbody>
+            <p>To use this release in your maven project, the proper dependency configuration that you should use in your Maven POM is:</p>
+
+            <div class="listingblock">
+                <div class="content">
+                    <pre><code class="xml">&lt;dependency&gt;
+              &lt;groupId&gt;org.apache.camel&lt;/groupId&gt;
+              &lt;artifactId&gt;camel-core&lt;/artifactId&gt;
+              &lt;version&gt;{{ range (first 1 ((where .Site.Pages "Type" "release-note").ByParam "version").Reverse) }}{{ .Params.version }}{{ end }}&lt;/version&gt;
+            &lt;/dependency&gt;</code></pre>
+                </div>
+            </div>
+
+            <h2>Getting the latest distributions</h2>
+
+            <h3>Binary Distribution</h3>
+
+            {{ $releases := ((where .Site.Pages "Type" "release-note").ByParam "version").Reverse }}
+            {{ $major := "" }}
+            {{ $cnt := 1 }}
+            <table class="tableblock frame-all grid-all stretch">
+                <thead>
                     <tr>
-                      <td><strong>{{ .Params.version }}</strong><br><small>{{ if eq $major "" }}feature{{ else }}bugfix{{ end }}</small></td>
-                        <td>Source ZIP file</td>
-                        <td><a href="http://www.apache.org/dyn/closer.lua?filename=camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}-src.zip&action=download">apache-camel-{{ .Params.version }}-src.zip</a></td>
-                        <td><a href="https://www.apache.org/dist/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}-src.zip.asc">apache-camel-{{ .Params.version }}-src.zip.asc</a></td>
-                        <td><a href="https://www.apache.org/dist/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}-src.zip.sha512">apache-camel-{{ .Params.version }}-src.zip.sha512</a></td>
+                        <th>Version</th>
+                        <th>Description</th>
+                        <th>Download Link</th>
+                        <th>PGP Signature file of download</th>
+                        <th>SHA512 Checksum file of download</th>
                     </tr>
-                </tbody>
-                {{ $cnt = add $cnt 1 }}
-            {{ end }}
-            {{ $major = .Params.version | replaceRE "\\.\\d+$" "" }}
-        {{ end }}
-    </table>
+                </thead>
 
-    <h2>Older releases</h2>
+                {{ range $releases }}
+                    {{ $this_major := .Params.version | replaceRE "\\.\\d+$" "" }}
+                    {{ if (and (le $cnt 3) (or (eq $major "") (ne $major $this_major ))) }}
+                        <tbody>
+                            <tr>
+                              <td rowspan="2"><strong>{{ .Params.version }}</strong><br><small>{{ if eq $major "" }}feature{{ else }}bugfix{{ end }}</small></td>
+                                <td>Windows Distribution</td>
+                                <td><a href="http://www.apache.org/dyn/closer.lua?filename=camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.zip&action=download">apache-camel-{{ .Params.version }}.zip</a></td>
+                                <td><a href="https://www.apache.org/dist/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.zip.asc">apache-camel-{{ .Params.version }}.zip.asc</a></td>
+                                <td><a href="https://www.apache.org/dist/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.zip.sha512">apache-camel-{{ .Params.version }}.zip.sha512</a></td>
+                            </tr>
+                            <tr>
+                                <td>Unix/Linux/Cygwin Distribution</td>
+                                <td><a href="http://www.apache.org/dyn/closer.lua?filename=camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.tar.gz&action=download">apache-camel-{{ .Params.version }}.tar.gz</a></td>
+                                <td><a href="https://www.apache.org/dist/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.tar.gz.asc">apache-camel-{{ .Params.version }}.tar.gz.asc</a></td>
+                                <td><a href="https://www.apache.org/dist/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.tar.gz.sha512">apache-camel-{{ .Params.version }}.tar.gz.sha512</a></td>
+                            </tr>
+                        </tbody>
+                        {{ $cnt = add $cnt 1 }}
+                    {{ end }}
+                    {{ $major = .Params.version | replaceRE "\\.\\d+$" "" }}
+                {{ end }}
+            </table>
 
-    All releases are listed on the <a href="{{ "/releases/" | relURL}}">Releases</a> archive, here you will also find releases that are no longer supported.
+            <h3>Source Distribution</h3>
 
-    {{ .Content }}
+            {{ $releases := ((where .Site.Pages "Type" "release-note").ByParam "version").Reverse }}
+            {{ $major := "" }}
+            {{ $cnt := 1 }}
+            <table class="tableblock frame-all grid-all stretch">
+                <thead>
+                    <tr>
+                        <th>Version</th>
+                        <th>Description</th>
+                        <th>Download Link</th>
+                        <th>PGP Signature file of download</th>
+                        <th>SHA512 Checksum file of download</th>
+                    </tr>
+                </thead>
+
+                {{ range $releases }}
+                    {{ $this_major := .Params.version | replaceRE "\\.\\d+$" "" }}
+                    {{ if (and (le $cnt 3) (or (eq $major "") (ne $major $this_major ))) }}
+                        <tbody>
+                            <tr>
+                              <td><strong>{{ .Params.version }}</strong><br><small>{{ if eq $major "" }}feature{{ else }}bugfix{{ end }}</small></td>
+                                <td>Source ZIP file</td>
+                                <td><a href="http://www.apache.org/dyn/closer.lua?filename=camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}-src.zip&action=download">apache-camel-{{ .Params.version }}-src.zip</a></td>
+                                <td><a href="https://www.apache.org/dist/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}-src.zip.asc">apache-camel-{{ .Params.version }}-src.zip.asc</a></td>
+                                <td><a href="https://www.apache.org/dist/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}-src.zip.sha512">apache-camel-{{ .Params.version }}-src.zip.sha512</a></td>
+                            </tr>
+                        </tbody>
+                        {{ $cnt = add $cnt 1 }}
+                    {{ end }}
+                    {{ $major = .Params.version | replaceRE "\\.\\d+$" "" }}
+                {{ end }}
+            </table>
+
+            <h3>Older releases</h3>
+
+            All releases are listed on the <a href="{{ "/releases/" | relURL}}">Releases</a> archive, here you will also find releases that are no longer supported.
+
+            {{ .Content }}
+
+        </article>
+    </main>
 </div>
 
 {{ partial "footer.html" . }}

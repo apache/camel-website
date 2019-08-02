@@ -1,30 +1,36 @@
 {{ partial "header.html" . }}
 
-<div class="container pb-5">
-  <h4>Apache Camel security advisory: {{ .Params.cve }}</h4>
-  <h5>Severity</h5>
-  {{ .Params.severity }}
-  <h5>Summary</h5>
-  {{ .Params.summary }}
-  <h5>Versions affected</h5>
-  {{ .Params.affected }}
-  <h5>Versions fixed</h5>
-  {{ .Params.fixed }}
-  <h5>Description</h5>
-  {{ .Params.description }}
-  {{ with .Content }}
-  <h5>Notes</h5>
-  {{ . }}
-  {{ end }}
-  <h5>Mitigation</h5>
-  {{ .Params.mitigation | markdownify }}
-  <h5>Credit</h5>
-  {{ .Params.credit }}
-  <h5>References</h5>
-  <dl>
-    <dt>PGP signed advisory data: <a href="{{ .Params.cve }}.txt.asc">{{ .Params.cve }}.txt.asc</a></dt>
-    <dt>Mitre CVE Entry: <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4330">https://cve.mitre.org/cgi-bin/cvename.cgi?name={{ .Params.cve }}</a></dt>
-  </dl>
+<div class="body">
+    <main role="main">
+        <article class="static doc">
+
+            <h2>Apache Camel security advisory: {{ .Params.cve }}</h2>
+            <h3>Severity</h3>
+            {{ .Params.severity }}
+            <h3>Summary</h3>
+            {{ .Params.summary }}
+            <h3>Versions affected</h3>
+            {{ .Params.affected }}
+            <h3>Versions fixed</h3>
+            {{ .Params.fixed }}
+            <h3>Description</h3>
+            {{ .Params.description }}
+            {{ with .Content }}
+            <h3>Notes</h3>
+            {{ . }}
+            {{ end }}
+            <h3>Mitigation</h3>
+            {{ .Params.mitigation | markdownify }}
+            <h3>Credit</h3>
+            {{ .Params.credit }}
+            <h3>References</h3>
+            <dl>
+              <dt>PGP signed advisory data: <a href="{{ .Params.cve }}.txt.asc">{{ .Params.cve }}.txt.asc</a></dt>
+              <dt>Mitre CVE Entry: <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4330">https://cve.mitre.org/cgi-bin/cvename.cgi?name={{ .Params.cve }}</a></dt>
+            </dl>
+
+        </article>
+    </main>
 </div>
 
 {{ partial "footer.html" . }}

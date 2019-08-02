@@ -1,4 +1,6 @@
-footer.footer {
+footer {
+  display: flex;
+  justify-content: center;
   background-color: var(--footer-background);
   color: var(--footer-font-color);
   font-size: calc(15 / var(--rem-base) * 1rem);
@@ -6,10 +8,56 @@ footer.footer {
   padding: 1.5rem;
 }
 
-.footer p {
-  margin: 0.5rem 0;
+footer .footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: var(--static-max-width--desktop);
 }
 
-.footer a {
+footer .footer p {
+  flex-basis: 100%;
+  margin: 0.5rem 0;
+  padding: 0 1rem;
+}
+
+footer .footer a {
   color: var(--footer-link-font-color);
+}
+
+footer .footer figure.logo {
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+}
+
+footer .footer figure.logo img {
+  width: 6rem;
+  height: 100%;
+}
+
+footer .footer dl {
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+footer .footer dl dt {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+footer .footer dl dd {
+  margin: 0;
+}
+
+@media screen and (max-width: 1023px) {
+  footer .footer figure.logo {
+    display: none;
+  }
 }

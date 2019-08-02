@@ -28,6 +28,7 @@
   text-transform: uppercase;
 }
 
+.static > h1:first-child,
 .doc > h1.page:first-child {
   font-size: calc(36 / var(--rem-base) * 1rem);
   margin: 1.5rem 0;
@@ -615,4 +616,8 @@ kbd,
   font-size: 1.1em;
   font-weight: var(--body-font-weight-bold);
   line-height: calc(1 / 1.1);
+}
+
+.stretch {
+  width: 100%;
 }

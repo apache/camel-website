@@ -1,36 +1,42 @@
 {{ partial "header.html" . }}
 
-<div class="container pb-5">
-  {{ .Content }}
+<div class="body">
+    <main role="main">
+        <article class="static doc">
 
-  <table class="table">
-    <caption>Security advisories by year</caption>
-    <thead>
-      <tr>
-        <td>Reference</td>
-        <td>Affected</td>
-        <td>Fixed</td>
-        <td>CVSS score</td>
-        <td>Description</td>
-      </tr>
-    </thead>
-    <tbody>
-  {{ range .Pages.GroupByDate "2006" "desc" }}
-      <tr>
-        <th colspan="5" scope="row"><strong>{{ .Key }}</strong></th>
-      </tr>
-      {{ range .Pages }}
-      <tr>
-        <td><a href="{{ .RelPermalink }}">{{ .Params.cve }}</a></td>
-        <td>{{ .Params.affected }}</td>
-        <td>{{ .Params.fixed }}</td>
-        <td>{{ .Params.severity }}</td>
-        <td>{{ .Params.summary }}</td>
-      </tr>
-      {{ end }}
-  {{ end }}
-    </tbody>
-  </table>
+            {{ .Content }}
+
+            <table class="tableblock frame-all grid-all stretch">
+              <caption>Security advisories by year</caption>
+              <thead>
+                <tr>
+                  <td>Reference</td>
+                  <td>Affected</td>
+                  <td>Fixed</td>
+                  <td>CVSS score</td>
+                  <td>Description</td>
+                </tr>
+              </thead>
+              <tbody>
+            {{ range .Pages.GroupByDate "2006" "desc" }}
+                <tr>
+                  <th colspan="5" scope="row"><strong>{{ .Key }}</strong></th>
+                </tr>
+                {{ range .Pages }}
+                <tr>
+                  <td><a href="{{ .RelPermalink }}">{{ .Params.cve }}</a></td>
+                  <td>{{ .Params.affected }}</td>
+                  <td>{{ .Params.fixed }}</td>
+                  <td>{{ .Params.severity }}</td>
+                  <td>{{ .Params.summary }}</td>
+                </tr>
+                {{ end }}
+            {{ end }}
+              </tbody>
+            </table>
+
+        </article>
+    </main>
 </div>
 
 {{ partial "footer.html" . }}

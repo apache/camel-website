@@ -267,3 +267,23 @@ html.is-clipped--nav {
   content: " (latest)";
 }
 */
+
+.nav-logo {
+  background-image: url('../img/logo-camel-medium.png');
+  background-repeat: no-repeat;
+  background-size: 160px;
+  background-position-x: 10px;
+  background-position-y: 10px;
+  width: 180px;
+}
+
+.nav-logo span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
