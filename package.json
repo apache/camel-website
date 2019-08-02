@@ -2,11 +2,13 @@
   "version": "1.0.0-SNAPSHOT",
   "license": "Apache-2.0",
   "scripts": {
-    "build:documentation": "antora --require ./menu.js --clean --fetch site.yml",
-    "build:website": "hugo --minify",
+    "build:antora": "antora --require ./menu.js --clean --fetch site.yml",
+    "build:hugo": "hugo --minify",
     "build:minify": "gulp minify",
     "build": "run-s build:*",
-    "preview": "hugo server -D",
+    "preview": "run-s preview:*",
+    "preview:antora": "antora --require ./menu.js site.yml",
+    "preview:hugo": "hugo server -D",
     "check:xref": "antora --generator @antora/xref-validator site.yml",
     "check:links": "link-checker --disable-external --mkdocs --allow-hash-href public",
     "check:html": "html-validate 'public/*/**/*.html' 'public/!(google)*.html'",
@@ -18,9 +20,9 @@
     "@antora/xref-validator": "gitlab:antora/xref-validator",
     "gulp": "~4.0",
     "gulp-htmlmin": "~5.0",
-    "html-validate": "^1.2.0",
+    "html-validate": "~1.2",
     "hugo-cli": "~0.11",
-    "link-checker": "^1.2.1",
+    "link-checker": "~1.2",
     "npm-run-all": "~4.1",
     "opal-runtime": "1.0.11"
   },
@@ -29,6 +31,8 @@
   },
   "dependencies": {
     "handlebars": "~4.1",
-    "toml": "~3.0"
+    "toml": "~3.0",
+    "unzipper": "~0.10",
+    "yaml": "~1.6"
   }
 }

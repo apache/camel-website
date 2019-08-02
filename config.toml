@@ -171,3 +171,10 @@ enableRobotsTXT = true
     weight = 5
     identifier = "about-thanks"
     url = "https://www.apache.org/foundation/thanks.html"
+
+[module]
+
+  [[module.mounts]]
+    source = "documentation/_/data"
+    target = "data"
+
