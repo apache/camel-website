@@ -71,3 +71,11 @@ button::-moz-focus-inner {
   border: none;
   padding: 0;
 }
+
+mark {
+  background: var(--color-highlight);
+}
+
+.text-center {
+  text-align: center;
+}

@@ -19,15 +19,16 @@
   --color-asf-dark-blue: #303284;
   --color-asf-moderate-blue: #585ac2;
   --color-camel-orange: #ed8225;
+  --color-highlight: #fffcdd;
   /* fonts */
   --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
   --body-font-size: 1.0625em; /* 17px */
   --body-font-size--desktop: 1.125em; /* 18px */
   --body-font-size--print: 0.9375em; /* 15px */
   --body-line-height: 1.15;
-  --body-font-color: var(--color-jet-70);
+  --body-font-color: var(--color-jet-50);
   --body-font-family: "Open Sans", sans-serif;
-  --body-font-weight-bold: 500;
+  --body-font-weight-bold: bold;
   --monospace-font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
   --monospace-font-weight-bold: 500;
   /* base */
@@ -108,6 +109,10 @@
   --quote-attribution-font-color: var(--color-gray-30);
   --sidebar-background: var(--color-smoke-70);
   --table-border-color: var(--panel-border-color);
+  /* static */
+  --static-margin: 0 auto;
+  /* frontpage */
+  --frontpage-max-width: calc(1140 / var(--rem-base) * 1rem);
   /* footer */
   --footer-line-height: var(--doc-line-height);
   --footer-background: var(--color-smoke-90);
@@ -126,6 +131,8 @@
   --nav-width: calc(270 / var(--rem-base) * 1rem);
   --doc-max-width: calc(720 / var(--rem-base) * 1rem);
   --doc-max-width--desktop: calc(828 / var(--rem-base) * 1rem);
+  --static-max-width: calc(720 / var(--rem-base) * 1rem);
+  --static-max-width--desktop: calc(1140 / var(--rem-base) * 1rem);
   /* stacking */
   --z-index-nav: 1;
   --z-index-toolbar: 2;

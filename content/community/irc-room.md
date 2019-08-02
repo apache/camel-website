@@ -10,11 +10,11 @@ You can hang out on IRC in the #apache-camel room at freenode with other Apache 
 
 Here are the connection details. 
 
-{{< bootstrap-table "table table-hover text-left" >}}
+{{< table >}}
 | server  | port | room |
 |---------|------|------|
 | irc.freenode.net | 6667 | #apache-camel
-{{< /bootstrap-table >}}
+{{< /table >}}
 
 ### Gitter Room
 

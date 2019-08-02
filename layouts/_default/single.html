@@ -1,7 +1,15 @@
 {{ partial "header.html" . }}
 
-<div class="container pb-5">
-  {{ .Content }}
+<div class="body">
+    <main role="main">
+        <article class="static doc">
+
+          <h1>{{ .Title }}</h1>
+
+{{ .Content }}
+
+        </article>
+    </main>
 </div>
 
 {{ partial "footer.html" . }}

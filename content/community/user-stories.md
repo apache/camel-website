@@ -4,7 +4,7 @@ title: "User Stories"
 
 This page is intended as a place to collect user stories and feedback on Apache Camel. If you are using or have tried Apache Camel please add an entry or comment; or post to the mailing list.
 
-{{< bootstrap-table "table table-hover text-left" >}}
+{{< table >}}
 | Company, Product, or Project  | Description |
 |-------------------------------|-------------|
 |[Apache ActiveMQ](http://activemq.apache.org)|Uses Camel to add [Enterprise Integration Patterns](../../manual/latest/enterprise-integration-patterns.html) support into the [ActiveMQ broker](http://activemq.apache.org/enterprise-integration-patterns.html). If you run an out of the box ActiveMQ broker, look in *conf/camel.xml* and you'll see *camelContext* with some example routing rules. Can be used to bridge ActiveMQ with any of the camel [Components](../../manual/latest/component.html).|
@@ -63,10 +63,10 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |[Assimbly Gateway](https://github.com/assimbly/gateway)|A message gateway based on Apache Camel|
 |[Yeoman generator-camel-project](https://www.npmjs.com/package/generator-camel-project)|This project uses the Yeoman framework and node.js to generate the scaffold for Apache Camel projects as well as a simple template that can be used as a starting point.|
 |[Camel-graph](https://github.com/avvero/camel-graph)|Camel-graph is a route graph viewer for ServiceMix and Camel applications, visualising your route topologies with metrics.
-{{< /bootstrap-table >}}
+{{< /table >}}
 
 
-{{< bootstrap-table "table table-hover text-left" >}}
+{{< table >}}
 | User Groups  | Description |
 |--------------|-------------|
 |[Apache Camel User Group Denmark](https://groups.google.com/group/camel-user-group-denmark)|A danish user group for Apache Camel.|
@@ -74,10 +74,10 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |[Linkedin Apache Camel Group](http://www.linkedin.com/groups?gid=2447439&trk=hb_side_g)|The Apache Camel group in linkedin.|
 |[Google+ Apache Camel Group](https://plus.google.com/communities/106271384875356488225)|The Apache Camel group in google+|
 |[Apache Camel User Group Japan](https://jcug-oss.github.io/)|A Japanese user group for Apache Camel.|
-{{< /bootstrap-table >}}
+{{< /table >}}
 
 
-{{< bootstrap-table "table table-hover text-left" >}}
+{{< table >}}
 | External Camel Components  | Description |
 |--------------|-------------|
 |[camel-apama](https://github.com/gerco/camel-apama)|A Camel component for [Progress Apama](http://web.progress.com/en/apama/index.html)|
@@ -98,4 +98,4 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |[camel-spring-amqp](https://github.com/Bluelock/camel-spring-amqp)|A Camel component to integrate with Spring AMQP to communicate with for example RabbitMQ.|
 |[camel-kamon](https://github.com/osinka/camel-kamon)|Kamon metrics and traces for Apache Camel routes, processors|
 |[camel-spring-cloud-stream](https://github.com/donovanmuller/)|A component to integrate with Spring Cloud Stream|
-{{< /bootstrap-table >}}
+{{< /table >}}

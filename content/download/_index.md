@@ -8,8 +8,8 @@ The KEYS used to sign the release can be found [here](https://www.apache.org/dis
 
 ## Maven 2 Repositories
 
-{{< bootstrap-table "table table-hover text-left" >}}
+{{< table >}}
 | Description | Download Link |
 |-------------|---------------|
 |Apache Camel Releases | https://repository.apache.org/content/repositories/releases/org/apache/camel/apache-camel/ |
-{{< /bootstrap-table >}}
+{{< /table >}}

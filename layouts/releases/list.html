@@ -1,25 +1,23 @@
 {{ partial "header.html" . }}
 
-<div class="container pb-5">
-  {{ .Content }}
+{{ .Content }}
 
-  <table class="table">
-    <caption>Releases by version</caption>
-    <thead>
-      <tr>
-        <td>Version</td>
-        <td>Preview</td>
-      </tr>
-    </thead>
-    <tbody>
-    {{ range .Pages }}
-      <tr>
-        <td><a href="{{ .RelPermalink }}">{{ .Params.version }}</a></td>
-        <td>{{ .Params.preview }}</td>
-      </tr>
-    {{ end }}
-    </tbody>
-  </table>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+  <caption>Releases by version</caption>
+  <thead>
+    <tr>
+      <td>Version</td>
+      <td>Preview</td>
+    </tr>
+  </thead>
+  <tbody>
+  {{ range .Pages }}
+    <tr>
+      <td><a href="{{ .RelPermalink }}">{{ .Params.version }}</a></td>
+      <td>{{ .Params.preview }}</td>
+    </tr>
+  {{ end }}
+  </tbody>
+</table>
 
 {{ partial "footer.html" . }}

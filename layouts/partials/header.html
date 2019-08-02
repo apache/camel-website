@@ -30,36 +30,38 @@
 </head>
 
 <body class="article">
-    <nav class="navbar">
-        <div class="navbar-brand">
-            <a class="nav-logo" href="{{ .Site.BaseURL | relURL }}" title="{{ .Site.Title }}"><span>{{ .Site.Title }}</span></a>
-            <div id="topbar-nav" class="navbar-menu">
-                <div class="navbar-end">
-                    {{ range .Site.Menus.main }}
-                    {{ if .HasChildren }}
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link" href="#">{{ .Name }}</a>
-                        <div class="navbar-dropdown">
-                            {{ range .Children }}
-                            <a class="navbar-item" href="{{ .URL | relURL }}">{{ .Name }}</a>
-                            {{ end }}
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <a class="nav-logo" href="{{ .Site.BaseURL | relURL }}" title="{{ .Site.Title }}"><span>{{ .Site.Title }}</span></a>
+                <div id="topbar-nav" class="navbar-menu">
+                    <div class="navbar-end">
+                        {{ range .Site.Menus.main }}
+                        {{ if .HasChildren }}
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link" href="#">{{ .Name }}</a>
+                            <div class="navbar-dropdown">
+                                {{ range .Children }}
+                                <a class="navbar-item" href="{{ .URL | relURL }}">{{ .Name }}</a>
+                                {{ end }}
+                            </div>
                         </div>
+                        {{ else }}
+                        <a class="navbar-item" href="{{ .URL | relURL }}">{{ .Name }}</a>
+                        {{ end }}
+                        {{ end }}
                     </div>
-                    {{ else }}
-                    <a class="navbar-item" href="{{ .URL | relURL }}">{{ .Name }}</a>
-                    {{ end }}
-                    {{ end }}
                 </div>
+                <div class="navbar-tools">
+                  <a href="https://github.com/apache/camel/" title="Collaborate on GitHub"><svg class="brand-icon"><use href="{{ "_/img/brand-logos.svg#github" | relURL }}" /></svg></a>
+                  <a href="https://gitter.im/apache/apache-camel" title="Chat on Gitter"><svg class="brand-icon"><use href="{{ "/_/img/brand-logos.svg#gitter" | relURL }}" /></svg></a>
+                  <a href="https://twitter.com/ApacheCamel" title="Follow Apache Camel on Twitter"><svg class="brand-icon"><use href="{{ "/_/img/brand-logos.svg#twitter" | relURL }}" /></svg></a>
+                </div>
+                <button class="navbar-burger" data-target="topbar-nav" type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <div class="navbar-tools">
-              <a href="https://github.com/apache/camel/" title="Collaborate on GitHub"><svg class="brand-icon"><use href="{{ "_/img/brand-logos.svg#github" | relURL }}" /></svg></a>
-              <a href="https://gitter.im/apache/apache-camel" title="Chat on Gitter"><svg class="brand-icon"><use href="{{ "/_/img/brand-logos.svg#gitter" | relURL }}" /></svg></a>
-              <a href="https://twitter.com/ApacheCamel" title="Follow Apache Camel on Twitter"><svg class="brand-icon"><use href="{{ "/_/img/brand-logos.svg#twitter" | relURL }}" /></svg></a>
-            </div>
-            <button class="navbar-burger" data-target="topbar-nav" type="button">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
+        </nav>
+    </header>
