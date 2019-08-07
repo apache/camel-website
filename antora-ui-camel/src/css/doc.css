@@ -93,13 +93,17 @@
   margin: 0;
 }
 
+.doc .table-wrapper {
+  overflow-x: scroll;
+}
+
 .doc .tableblock p {
   font-size: inherit;
 }
 
-.doc p,
-.doc :not(td) > .content,
 .doc :not(td) > p,
+.doc :not(td) > .content,
+.doc .tableblock td:not(:first-child) > p,
 .doc .tableblock thead {
   hyphens: auto;
 }
