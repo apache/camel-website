@@ -251,7 +251,7 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   [Where am I? Collecting GPS data with Apache Camel](https://dzone.com/articles/where-am-i-collecting-gps-data-with-apache-camel) DZone article by Henryk Konsek (2015)
 *   [Alarm system based on Raspberry PI 3, Groovy and Apache Camel](https://github.com/igor-suhorukov/alarm-system) by Igor Suhorukov (2016)
 *   [Open Source IoT Gateway: A Tale Of Eclipse Kura, Apache Camel, And Rhiot](https://www.youtube.com/watch?v=DPiD7bnnaJk) - video from the Henryk Konsek talk at DevNation 2016.
-*   [Getting started with Apache Camel and Internet of Things](Getting started with Apache Camel and the Internet of Things) - article from Joseph Butler from February 2017.
+*   [Getting started with Apache Camel and Internet of Things](https://developers.redhat.com/blog/2016/11/17/getting-started-with-apache-camel-and-the-internet-of-things/) - article from Joseph Butler from February 2017.
 
 #### Camel and Microservices/Cloud
 
