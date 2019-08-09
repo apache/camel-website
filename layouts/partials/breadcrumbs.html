@@ -5,7 +5,7 @@
 {{ range $index, $element := split $url "/" }}
 {{ $.Scratch.Add "path" $element }}
 {{ $.Scratch.Add "path" "/" }}
-{{ if ne $element "" }}
+  {{ if ne $element "" }}
     {{ $.Scratch.Add "breadcrumb" (slice (dict "url" ($.Scratch.Get "path") "name" . "position" (add $index 2))) }}
   {{ end }}
 {{ end }}
