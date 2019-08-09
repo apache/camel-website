@@ -1,0 +1,42 @@
+{{#if page.breadcrumbs}}{ 
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+    
+    {{#each page.breadcrumbs}} 
+    {{!-- {{#if (and ./title (not (or ./root (eq @root.page.breadcrumbs.0.content ./title))))}}{ 
+        "@type": "ListItem",
+        "position": {{ @index }},
+        "item": "{{{ concat url ./url }}}",
+        "name": "{{{ ./title }}}" }
+    {{/if}} --}}
+    {{#if (and ./url (eq ./urlType 'internal'))~}}{ 
+        "@type": "ListItem",
+        "position": {{ @index }},
+        "item": "{{{ concat url ./url }}}",
+        "name": "{{{ ./content }}}" }
+    {{/if}}
+    {{/each}}
+    ] }
+{{/if}}
+
+
+{{!-- {{#gt (length breadcrumbs) 1}}
+
+<script type="application/ld+json" id="wsa-schema-breadcrumbs"> { 
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "#BreadcrumbList",
+    "itemListElement": [ 
+    {{#each breadcrumbs}}
+    {{#unless @last}}
+    {{#unless @FIRST}},
+    {{/unless}} 
+    { "@type": "ListItem",
+    "position": {{add @index 1}},
+    "item": { "@id": "{{{concat url '#Breadcrumb'}}}", 
+    "name": {{{json name}}} } } 
+    {{/unless}} 
+    {{/each}} ] } 
+</script>
+{{/gt}} --}}
