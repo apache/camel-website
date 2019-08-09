@@ -18,7 +18,7 @@
         "@type": "ListItem",
         "position": {{ .position }},
         "item": {
-          "@id": "{{ .url }}",
+          "@id": {{ .url }},
           "name": "{{ .name }}"
         }
     }{{ end }}]
