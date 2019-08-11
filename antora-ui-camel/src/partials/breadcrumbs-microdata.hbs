@@ -1,42 +1,35 @@
-{{#if page.breadcrumbs}}{ 
-    "@context": "http://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-    
-    {{#each page.breadcrumbs}} 
-    {{!-- {{#if (and ./title (not (or ./root (eq @root.page.breadcrumbs.0.content ./title))))}}{ 
-        "@type": "ListItem",
-        "position": {{ @index }},
-        "item": "{{{ concat url ./url }}}",
-        "name": "{{{ ./title }}}" }
-    {{/if}} --}}
-    {{#if (and ./url (eq ./urlType 'internal'))~}}{ 
-        "@type": "ListItem",
-        "position": {{ @index }},
-        "item": "{{{ concat url ./url }}}",
-        "name": "{{{ ./content }}}" }
-    {{/if}}
-    {{/each}}
-    ] }
-{{/if}}
-
-
-{{!-- {{#gt (length breadcrumbs) 1}}
-
-<script type="application/ld+json" id="wsa-schema-breadcrumbs"> { 
-    "@context": "http://schema.org",
-    "@type": "BreadcrumbList",
-    "@id": "#BreadcrumbList",
-    "itemListElement": [ 
-    {{#each breadcrumbs}}
+{ 
+"@context": "http://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "{{{site.title}}}",
+    "item": "{{{site.url}}}"
+    },
+    {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "{{{page.component.title}}}",
+    "item": "{{{add site.url page.component.url}}}"
+    },
+    {{#if page.breadcrumbs}}
+    {{#each page.breadcrumbs}}
+    {
+    "@type": "ListItem",
+    "position": {{add @index 3}},
+    "name": "{{{ ./content }}}",
+    {{~#if (and ./url (eq ./urlType 'internal'))~}}
+    {{!-- "itme": "{{{relativize @root.page.url ./url}}}" --}}
+    "item": "{{{add ../site.url ./url}}}"
+    {{~else~}}
+    "item": "{{{add ../site.url ../page.component.url}}}"
+    {{~/if~}}
+    }
     {{#unless @last}}
-    {{#unless @FIRST}},
-    {{/unless}} 
-    { "@type": "ListItem",
-    "position": {{add @index 1}},
-    "item": { "@id": "{{{concat url '#Breadcrumb'}}}", 
-    "name": {{{json name}}} } } 
-    {{/unless}} 
-    {{/each}} ] } 
-</script>
-{{/gt}} --}}
+    ,
+    {{/unless}}
+    {{/each}}
+    {{/if}}
+    ]
+}
