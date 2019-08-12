@@ -94,7 +94,7 @@
 }
 
 .doc .table-wrapper {
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .doc .tableblock p {
