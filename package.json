@@ -30,6 +30,7 @@
     "pnp": true
   },
   "dependencies": {
+    "atomic-algolia": "^0.3.17",
     "handlebars": "~4.1",
     "toml": "~3.0",
     "unzipper": "~0.10",

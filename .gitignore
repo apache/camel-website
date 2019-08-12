@@ -12,3 +12,4 @@ documentation
 .pnp
 .pnp.js
 .settings
+.env_example
