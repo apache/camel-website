@@ -1,7 +1,7 @@
 {{ $url := replace .Permalink .Site.BaseURL "" }}
 {{ $.Scratch.Add "path" .Site.BaseURL }}
 
-{{ $.Scratch.Add "breadcrumb" (slice (dict "url" .Site.BaseURL "name" "home" "position" 1 )) }}
+{{ $.Scratch.Add "breadcrumb" (slice (dict "url" .Site.BaseURL "name" .Site.Title "position" 1 )) }}
 {{ range $index, $element := split $url "/" }}
   {{ $.Scratch.Add "path" $element }}
   {{ $.Scratch.Add "path" "/" }}
