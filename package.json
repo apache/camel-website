@@ -12,7 +12,8 @@
     "check:xref": "antora --generator @antora/xref-validator site.yml",
     "check:links": "link-checker --disable-external --mkdocs --allow-hash-href public",
     "check:html": "html-validate 'public/*/**/*.html' 'public/!(google)*.html'",
-    "checks": "run-s check:*"
+    "checks": "run-s check:*",
+    "algolia": "atomic-algolia"
   },
   "devDependencies": {
     "@antora/cli": "~2.0",
