@@ -25,9 +25,9 @@ Packed with <mark>several hundred components</mark> that are used to access data
 
 {{< div "box" >}}
 {{< div >}}
-## Portability
+## Runtimes
 
-<mark>Runs everywhere</mark>: embedded as a library, within OSGi containers or in the JEE application servers and in the clouds. Enjoy seamless integration with popular frameworks such as **CDI**, **Spring**, **Spring Boot** and **Blueprint**.
+<mark>Runs everywhere</mark>: standalone, embedded as a library, within OSGi containers or in the JEE application servers and in the clouds. Enjoy seamless integration with popular frameworks such as **CDI**, **Spring**, **Spring Boot** and **OSGi Blueprint**.
 {{< /div >}}
 {{< /div >}}
 
