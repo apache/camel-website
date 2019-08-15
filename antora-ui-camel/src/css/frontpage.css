@@ -65,6 +65,40 @@ header.frontpage svg {
   z-index: -1;
 }
 
+header.frontpage svg path {
+  fill: none;
+}
+
+header.frontpage svg path:nth-child(1) {
+  stroke: #ffddab;
+  stroke-width: 10;
+  stroke-opacity: 0.6;
+}
+
+header.frontpage svg path:nth-child(2) {
+  stroke: #9d1609;
+  stroke-width: 10;
+  stroke-opacity: 0.3;
+}
+
+header.frontpage svg path:nth-child(3) {
+  stroke: #f1b35b;
+  stroke-width: 15;
+  stroke-opacity: 0.6;
+}
+
+header.frontpage svg path:nth-child(4) {
+  stroke: #641a00;
+  stroke-width: 5;
+  stroke-opacity: 0.3;
+}
+
+header.frontpage svg path:nth-child(5) {
+  stroke: #e26810;
+  stroke-width: 5;
+  stroke-opacity: 0.6;
+}
+
 section.frontpage {
   color: var(--doc-font-color);
   font-size: var(--doc-font-size);
