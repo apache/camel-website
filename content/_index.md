@@ -58,37 +58,6 @@ Apache Camel K is a lightweight integration framework built from Apache Camel th
 Apache Camel Quarkus is a set of extensions for [Quarkus](https://quarkus.io) is a Java platform offering fast boot times and low memory footprint. It targets both stock JVMs (OpenJDK in the first place) and [GraalVM](https://www.graalvm.org/).
 
 <a class="significant" href="./camel-quarkus/latest/">Read the docs</a>
-
-{{< /section >}}
-
-{{< section "frontpage integrations" >}}
-
-{{< div >}}
-# Integrated with Apache Camel
-
-The following projects can leverage Apache Camel as a routing and mediation engine
-{{< /div >}}
-
-{{< div >}}
-[Apache ActiveMQ](https://activemq.apache.org/)
-
-Mature, widely used open source message broker.
-
-[Apache CXF](https://cxf.apache.org/)
-
-Smart web services suite (JAX-WS and JAX-RS).
-
-[Apache Karaf](https://karaf.apache.org/)
-
-Small OSGi based runtime in which applications can be deployed.
-
-[Apache Mina](https://mina.apache.org/)
-
-High-performance NIO-driven networking framework.
-
-[Apache ServiceMix](https://servicemix.apache.org/)
-
-Popular distributed open source ESB and JBI container.
 {{< /div >}}
 
 {{< /section >}}
