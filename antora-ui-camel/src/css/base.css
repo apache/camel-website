@@ -9,6 +9,10 @@ body {
   box-sizing: inherit;
 }
 
+*::selection {
+  background: var(--color-highlight);
+}
+
 html {
   box-sizing: border-box;
   font-size: var(--body-font-size);
