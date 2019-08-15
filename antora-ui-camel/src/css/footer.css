@@ -61,3 +61,17 @@ footer .footer dl dd {
     display: none;
   }
 }
+
+.edit {
+  max-width: var(--static-max-width--desktop);
+  margin: auto;
+  text-align: right;
+}
+
+.edit a {
+  display: inline-block;
+  padding: 0.4rem;
+  background-color: var(--footer-background);
+  color: black;
+  border-radius: 0.4rem 0.4rem  0 0;
+}

@@ -80,7 +80,7 @@ Camel is an [Apache Software Foundation](https://www.apache.org) project, availa
 
 [Sources](./community/sources/), [mailing lists](./community/mailing-list/), [issue tracker](./community/support/): it's fully open, you can access directly.
 
-We also love contributions: don't hesitate to [contribute](https://github.com/apache/camel/blob/master/CONTRIBUTING.md).
+We also love contributions: don't hesitate to [contribute](https://github.com/apache/camel/blob/master/CONTRIBUTING.md). You can contribute by <a href="https://github.com/apache/camel-website/edit/master/content{{ .File.Path }}">editing this page</a>!
 
 [Be Involved In The Community](https://github.com/apache/camel/blob/master/CONTRIBUTING.md) | [How To Contribute](https://github.com/apache/camel/blob/master/CONTRIBUTING.md)
 
