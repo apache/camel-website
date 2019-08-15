@@ -27,9 +27,12 @@
     <meta name="keywords" content="{{ .Keywords }}">
     {{ end }}
     <link rel="stylesheet" href="{{ path.Join "_" (index .Site.Data "rev-manifest" "css/site.css") | relURL }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.0/themes/algolia.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/selectize@0.12.6/dist/css/selectize.css">
+    <link rel="stylesheet" href="/css/search.css">
 </head>
 
-<body class="article">
+<d class="article">
     <header class="header">
         <nav class="navbar">
             <div class="navbar-brand">
@@ -51,6 +54,10 @@
                         {{ end }}
                         {{ end }}
                     </div>
+                </div>
+                <div class="search-bar">
+                    <div id="autocomplete"></div>
+                    <div id="hits"></div>
                 </div>
                 <div class="navbar-tools">
                   <a href="https://github.com/apache/camel/" title="Collaborate on GitHub"><svg class="brand-icon"><use href="{{ "_/img/brand-logos.svg#github" | relURL }}" /></svg></a>
