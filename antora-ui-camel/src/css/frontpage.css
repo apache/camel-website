@@ -27,6 +27,8 @@ header.frontpage p {
 
 .frontpage a:hover {
   color: var(--color-white);
+  text-decoration: none;
+  box-shadow: 0 0 1.5rem var(--color-glow);
 }
 
 .frontpage a:active {
@@ -35,14 +37,13 @@ header.frontpage p {
 
 .frontpage a.significant {
   margin: 1rem;
-  padding: 0.4rem 1rem;
+  padding: 0.8rem 1.5rem;
   background: var(--color-camel-orange);
   color: var(--color-white);
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   outline: none;
-  border: 1px solid var(--color-white);
   display: inline-block;
   white-space: nowrap;
 }
