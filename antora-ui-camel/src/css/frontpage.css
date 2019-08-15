@@ -67,6 +67,7 @@ header.frontpage svg {
 
 header.frontpage svg path {
   fill: none;
+  animation: sparkle 5s ease alternate infinite;
 }
 
 header.frontpage svg path:nth-child(1) {
@@ -79,24 +80,38 @@ header.frontpage svg path:nth-child(2) {
   stroke: #9d1609;
   stroke-width: 10;
   stroke-opacity: 0.3;
+  animation-delay: -1s;
 }
 
 header.frontpage svg path:nth-child(3) {
   stroke: #f1b35b;
   stroke-width: 15;
   stroke-opacity: 0.6;
+  animation-delay: -2.5s;
 }
 
 header.frontpage svg path:nth-child(4) {
   stroke: #641a00;
   stroke-width: 5;
   stroke-opacity: 0.3;
+  animation-delay: -3s;
 }
 
 header.frontpage svg path:nth-child(5) {
   stroke: #e26810;
   stroke-width: 5;
   stroke-opacity: 0.6;
+  animation-delay: -6s;
+}
+
+@keyframes sparkle {
+  0% {
+    stroke-opacity: 0.3;
+  }
+
+  100% {
+    stroke-opacity: 0.6;
+  }
 }
 
 section.frontpage {
