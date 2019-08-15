@@ -42,27 +42,34 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 {{< /section >}}
 
 {{< section "frontpage projects" >}}
+{{< div "project" >}}
+# Camel
 
+**Apache Camel** is extensibly documented with helpful guides on getting started and detailed reference documentation.
+
+<a class="significant" href="./manual/latest/">Read the manual</a>
+<a class="significant" href="./components/latest/">Component reference</a>
+{{< /div >}}
+
+{{< div "project" >}}
 # Camel K
 
-Apache Camel K is a lightweight integration framework built from Apache Camel that runs natively on [Kubernetes](https://kubernetes.io/) and is specifically designed for **serverless** and **microservice architectures**.
+**Apache Camel K** is a lightweight integration framework built from Apache Camel that runs natively on [Kubernetes](https://kubernetes.io/) and is specifically designed for **serverless** and **microservice architectures**.
 
 <a class="significant" href="./camel-k/latest/">Read the docs</a>
+{{< /div >}}
 
-{{< /section >}}
-
-{{< section "frontpage projects" >}}
-
+{{< div "project" >}}
 # Camel Quarkus
 
-Apache Camel Quarkus is a set of extensions for [Quarkus](https://quarkus.io) is a Java platform offering fast boot times and low memory footprint. It targets both stock JVMs (OpenJDK in the first place) and [GraalVM](https://www.graalvm.org/).
+**Apache Camel Quarkus** is a set of extensions for [Quarkus](https://quarkus.io) is a Java platform offering fast boot times and low memory footprint. It targets both stock JVMs (OpenJDK in the first place) and [GraalVM](https://www.graalvm.org/).
 
 <a class="significant" href="./camel-quarkus/latest/">Read the docs</a>
 {{< /div >}}
 
 {{< /section >}}
 
-{{< section "frontpage columns" >}}
+{{< section "frontpage columns apache" >}}
 
 # Apache &amp; OpenSource
 

@@ -35,11 +35,11 @@ header.frontpage p {
 
 .frontpage a.significant {
   margin: 1rem;
-  padding: 0.7rem 1.5rem;
+  padding: 0.4rem 1rem;
   background: var(--color-camel-orange);
   color: var(--color-white);
   border-radius: 8px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   outline: none;
   border: 1px solid var(--color-white);
@@ -81,32 +81,34 @@ section.frontpage.columns {
 
 section.frontpage.projects {
   display: flex;
+  flex-direction: column;
   border-top: 1px solid var(--color-smoke-50);
 }
 
-section.frontpage.projects h1 {
-  white-space: nowrap;
-  padding: 1rem 0;
-}
-
-section.frontpage.integrations {
+section.frontpage.projects .project {
   display: flex;
-  border-top: 1px solid var(--color-smoke-50);
+  flex-direction: row;
 }
 
-section.frontpage.integrations h1 {
+section.frontpage.projects .project h1 {
   white-space: nowrap;
   padding: 1rem 0;
-  text-align: left;
+  flex: 1;
 }
 
-section.frontpage.integrations div {
+section.frontpage.projects .project p {
+  flex: 1;
+  margin: 1rem;
+}
+
+section.frontpage.projects .project a.significant {
+  margin: 0.5rem 0;
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+}
+
+section.frontpage.apache {
   padding: 1rem;
-}
-
-section.frontpage.integrations a {
-  color: var(--heading-font-color);
-  font-size: 1.4rem;
 }
 
 section.frontpage h1,
@@ -171,5 +173,13 @@ section.frontpage h1 {
 
   .box {
     min-width: 51vw;
+  }
+
+  section.frontpage.projects .project {
+    flex-direction: column;
+  }
+
+  section.frontpage.projects .project p:nth-child(3) {
+    text-align: center;
   }
 }
