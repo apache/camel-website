@@ -28,7 +28,6 @@ header.frontpage p {
 .frontpage a:hover {
   color: var(--color-white);
   text-decoration: none;
-  box-shadow: 0 0 1.5rem var(--color-glow);
 }
 
 .frontpage a:active {
@@ -50,6 +49,7 @@ header.frontpage p {
 
 .frontpage a.significant:hover {
   color: var(--color-white);
+  box-shadow: 0 0 1.5rem var(--color-glow);
 }
 
 .frontpage a.significant:active {
