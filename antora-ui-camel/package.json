@@ -41,7 +41,7 @@
     "gulp-rev": "~9.0",
     "gulp-stylelint": "~9.0",
     "gulp-template": "~5.0",
-    "gulp-uglify": "~3.0",
+    "gulp-terser": "^1.2.0",
     "gulp-vinyl-zip": "~2.1 >=2.1.2",
     "handlebars": "~4.1",
     "highlight.js": "~9.15",
