@@ -20,7 +20,7 @@ const postcssVar = require('postcss-custom-properties')
 const rename = require('gulp-rename')
 const rev = require('gulp-rev')
 const template = require('gulp-template')
-const uglify = require('gulp-uglify')
+const terser = require('gulp-terser')
 const vfs = require('vinyl-fs')
 
 module.exports = (src, dest, preview) => () => {
@@ -52,7 +52,7 @@ module.exports = (src, dest, preview) => () => {
   return merge(
     vfs
       .src('js/+([0-9])-*.js', { ...opts, sourcemaps })
-      .pipe(uglify())
+      .pipe(terser())
       .pipe(concat('js/site.js'))
       .pipe(rev()),
     vfs
@@ -75,7 +75,7 @@ module.exports = (src, dest, preview) => () => {
         })
       )
       .pipe(buffer())
-      .pipe(uglify())
+      .pipe(terser())
       .pipe(rev()),
     vfs.src('css/site.css', { ...opts, sourcemaps })
       .pipe(postcss(postcssPlugins))
