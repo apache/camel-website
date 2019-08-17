@@ -1,10 +1,12 @@
 /* global $ instantsearch algoliasearch */
 
+// algolia search client
 const searchClient = algoliasearch(
   'NF2UGSG10Y',
   'cb696d6060df9f04ee84c4f6e15fd3b4'
 )
 
+// custom widget for autocomplete
 const autocomplete = instantsearch.connectors.connectAutocomplete(
   ({ indices, refine, widgetParams }, isFirstRendering) => {
     const { container, onSelectChange } = widgetParams
@@ -14,7 +16,7 @@ const autocomplete = instantsearch.connectors.connectAutocomplete(
 
       container.find('select').selectize({
         options: [],
-        valueField: 'title',
+        valueField: 'permalink',
         labelField: 'title',
         highlight: false,
         onType: refine,
@@ -39,23 +41,26 @@ const autocomplete = instantsearch.connectors.connectAutocomplete(
 
     indices.forEach((index) => {
       select.selectize.clearOptions()
-      index.results.hits.forEach((h) => select.selectize.addOption(h))
+      index.results.hits.forEach((hit) => select.selectize.addOption(hit))
       select.selectize.refreshOptions(select.selectize.isOpen)
     })
   }
 )
 
+// suggestions instance
 const suggestions = instantsearch({
   indexName: 'Apache Camel-website',
   searchClient,
 })
 
+// to set number of suggestions to show at a time
 suggestions.addWidget(
   instantsearch.widgets.configure({
     hitsPerPage: 5,
   })
 )
 
+// to show suggestions
 suggestions.addWidget(
   autocomplete({
     container: $('#autocomplete'),
@@ -65,34 +70,34 @@ suggestions.addWidget(
   })
 )
 
+// instant search instance
 const search = instantsearch({
   indexName: 'Apache Camel-website',
   searchClient,
 })
 
+// to set number of results to show at a time
 search.addWidget(
   instantsearch.widgets.configure({
     hitsPerPage: 10,
   })
 )
 
-// search.addWidget(
-//   instantsearch.widgets.hits({
-//     container: '#hits',
-//     templates: {
-//       item: `
-//         <div>
-//           <header class="hit-name">
-//             {{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}
-//           </header>
-//           <p class="hit-description">
-//             {{#helpers.highlight}}{ "attribute": "description" }{{/helpers.highlight}}
-//           </p>
-//         </div>
-//       `,
-//     },
-//   })
-// );
+//to show search results
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '#hits',
+    templates: {
+      item: `
+        <div>
+          <header class="hit-name">
+            {{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}
+          </header>
+        </div>
+      `,
+    },
+  })
+)
 
-suggestions.start()
-search.start()
+suggestions.start() // method to actually start the suggestions
+search.start() // method to actually start the search

@@ -1,13 +1,9 @@
-h1 {
-  margin-bottom: 1rem;
-}
-
 em {
   background: cyan;
   font-style: normal;
 }
 
-.search-bar {
+.container {
   max-width: 960px;
   margin: 0 auto;
   padding: 1em;
