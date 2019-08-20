@@ -1,10 +1,26 @@
 /* global $ instantsearch algoliasearch */
 
 // algolia search client
-const searchClient = algoliasearch(
+const algoliaClient = algoliasearch(
   'NF2UGSG10Y',
   'cb696d6060df9f04ee84c4f6e15fd3b4'
 )
+
+const searchClient = {
+  search (requests) {
+    if (requests.every(({ params }) => !params.query)) {
+      return Promise.resolve({
+        results: requests.map(() => ({
+          hits: [],
+          nbHits: 0,
+          processingTimeMS: 0,
+        })),
+      })
+    }
+
+    return algoliaClient.search(requests)
+  },
+}
 
 // custom widget for autocomplete
 const autocomplete = instantsearch.connectors.connectAutocomplete(
@@ -49,7 +65,7 @@ const autocomplete = instantsearch.connectors.connectAutocomplete(
 
 // suggestions instance
 const suggestions = instantsearch({
-  indexName: 'Apache Camel-website',
+  indexName: 'hugo_camel_website',
   searchClient,
 })
 
@@ -72,7 +88,7 @@ suggestions.addWidget(
 
 // instant search instance
 const search = instantsearch({
-  indexName: 'Apache Camel-website',
+  indexName: 'hugo_camel_website',
   searchClient,
 })
 
@@ -88,13 +104,20 @@ search.addWidget(
   instantsearch.widgets.hits({
     container: '#hits',
     templates: {
+      empty: `
+      {{#query}}
+        No results for <q>{{query}}</q>
+      {{/query}}
+    `,
       item: `
-        <div>
-          <header class="hit-name">
+      <article>
+        <h1>
+          <a href="{{ permalink }}">
             {{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}
-          </header>
-        </div>
-      `,
+          </a>
+        </h1>
+      </article>
+    `,
     },
   })
 )
