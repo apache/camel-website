@@ -79,6 +79,7 @@ If you have been contributing to the Apache Camel project, and you want your nam
 | Aaron Crickenberger | |
 | Al Maw | |
 | Aleksi Kallio | |
+| Alexander Azarov | |
 | Andrew Deason | |
 | Andy Depue | |
 | Axel Hohaus | |
