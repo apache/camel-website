@@ -58,6 +58,7 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 | Roman Kalukiewicz | romkal | |
 | Scott England-Sullivan | sully6768 | Red Hat |
 | Stan Lewis | slewis | Red Hat |
+| Tadayoshi Sato | tsato | Red Hat |
 | Tomohisa Igarashi | igarashitm | Red Hat |
 | Tracy Snell | tjsnell | Juice Labs |
 | Willem Jiang | ningjiang | Huawei |
