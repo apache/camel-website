@@ -27,6 +27,7 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 | Colm O hEigeartaigh | coheigea | Talend |
 | David Jencks | djencks | IBM |
 | Daniel Kulp | dkulp | Talend |
+| Dmitry Volodin | dmvolod | Red Hat |
 | Franz Forsthofer | forsthofer | SAP |
 | Freeman Fang | ffang | Red Hat |
 | Gary Tully | gtully | Red Hat |
