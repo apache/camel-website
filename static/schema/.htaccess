@@ -1,0 +1,6 @@
+# Enable directory indexes for /schema/...
+# see https://issues.apache.org/jira/browse/CAMEL-13890
+
+<IfModule mod_autoindex.c>
+    Options Indexes
+</IfModule>
