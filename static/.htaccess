@@ -626,9 +626,9 @@ Redirect 301 /expression.html /manual/latest/expression.html
 Redirect 301 /facebook.html /components/latest/facebook-component.html
 Redirect 301 /faq.html /manual/latest/faq.html
 Redirect 301 /file-language.html /manual/latest/file-language.html
-Redirect 301 /file.html /manual/latest/file-language.html
+Redirect 301 /file.html /components/latest/file-component.html
 # Possible candidates for previous URL: [/components/latest/file-component.html, /manual/latest/file-language.html]
-Redirect 301 /file2.html /manual/latest/file-language.html
+Redirect 301 /file2.html /components/latest/file-component.html
 # Possible candidates for previous URL: [/components/latest/file-component.html, /manual/latest/file-language.html]
 Redirect 301 /flatpack-dataformat.html /components/latest/flatpack-dataformat.html
 Redirect 301 /flatpack.html /components/latest/flatpack-component.html
