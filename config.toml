@@ -12,6 +12,19 @@ enableRobotsTXT = true
     organizationLogo = "https://camel.apache.org/_/img/logo-d.svg"
     organizationDescription = "Apache Camel ™ is a versatile open-source integration framework based on known Enterprise Integration Patterns. Camel empowers you to define routing and mediation rules in a variety of domain-specific languages, including a Java-based Fluent API, Spring or Blueprint XML Configuration files, and a Scala DSL."
 
+[outputFormats.Algolia]
+baseName = "algolia"
+isPlainText = true
+mediaType = "application/json"
+notAlternative = true
+
+[params.algolia]
+vars = ["title", "description", "summary", "date", "lastmod", "permalink"]
+params = ["categories", "tags"]
+
+[outputs]
+home = ["HTML", "RSS", "Algolia"]
+
 [[menu.main]]
     name = "News"
     weight = 2
