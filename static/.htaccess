@@ -552,7 +552,7 @@ Redirect 301 /cometd.html /components/latest/cometd-component.html
 Redirect 301 /commercial-camel-offerings.html /manual/latest/commercial-camel-offerings.html
 Redirect 301 /component.html /manual/latest/component.html
 Redirect 301 /componentconfiguration.html /manual/latest/componentconfiguration.html
-Redirect 301 /components.html /camel-k/latest/configuration/components.html
+Redirect 301 /components.html /components/latest/
 Redirect 301 /configuring-camel.html /manual/latest/configuring-camel.html
 Redirect 301 /configuring-route-startup-ordering-and-autostartup.html /manual/latest/configuring-route-startup-ordering-and-autostartup.html
 Redirect 301 /console-example.html /manual/latest/console-example.html
