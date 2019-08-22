@@ -786,7 +786,7 @@ Redirect 301 /leveldb.html /components/latest/leveldb.html
 Redirect 301 /lifecycle.html /manual/latest/lifecycle.html
 Redirect 301 /linkedin.html /components/latest/linkedin-component.html
 Redirect 301 /load-balancer.html /manual/latest/loadBalance-eip.html
-Redirect 301 /log.html /manual/latest/log-eip.html
+Redirect 301 /log.html /components/latest/log-component.html
 # Possible candidates for previous URL: [/manual/latest/log-eip.html, /components/latest/log-component.html]
 Redirect 301 /logeip.html /manual/latest/log-eip.html
 Redirect 301 /loop.html /manual/latest/loop-eip.html
