@@ -812,7 +812,7 @@ Redirect 301 /msv.html /components/latest/msv-component.html
 Redirect 301 /multicast.html /manual/latest/multicast-eip.html
 Redirect 301 /mustache.html /components/latest/mustache-component.html
 Redirect 301 /mvel-component.html /components/latest/mvel-component.html
-Redirect 301 /mvel.html /components/latest/mvel-component.html
+Redirect 301 /mvel.html /components/latest/mvel-language.html
 # Possible candidates for previous URL: [/components/latest/mvel-component.html, /components/latest/mvel-language.html]
 Redirect 301 /mybatis.html /components/latest/mybatis-component.html
 Redirect 301 /nagios.html /components/latest/nagios-component.html
@@ -848,7 +848,7 @@ Redirect 301 /quickfix.html /components/latest/quickfix-component.html
 Redirect 301 /rabbitmq.html /components/latest/rabbitmq-component.html
 Redirect 301 /recipient-list.html /manual/latest/recipientList-eip.html
 Redirect 301 /ref-language.html /manual/latest/ref-language.html
-Redirect 301 /ref.html /manual/latest/ref-language.html
+Redirect 301 /ref.html /components/latest/ref-component.html
 # Possible candidates for previous URL: [/components/latest/ref-component.html, /manual/latest/ref-language.html]
 Redirect 301 /registry.html /manual/latest/registry.html
 Redirect 301 /request-reply.html /manual/latest/requestReply-eip.html
