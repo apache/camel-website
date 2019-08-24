@@ -40,7 +40,7 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 | Ioannis Canellos | iocanel | Red Hat |
 | Jacek Laskowski | jlaskowski | | 
 | James Carman | jcarman | Savoir Technologies |
-| Jan Bednář | janbednar | CGI IT Czech Republic |
+| Jan Bednar | janbednar | CGI IT Czech Republic |
 | Jean-Baptiste Onofré | jbonofre | Talend |
 | Jeff Genender | jgenender | Savoir Technologies |
 | Johan Edstrom | joed | Savoir Technologies |
