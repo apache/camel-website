@@ -97,10 +97,12 @@ html.is-clipped--nav {
 }
 
 .nav-panel-menu input.search {
+  position: absolute;
+  width: 14.3rem;
   border: 1px solid var(--nav-background);
-  padding: 0.3rem 0.5rem 0.3rem 1.7rem;
-  margin: 0.45rem 0.75rem;
-  background: no-repeat 0.2rem/1.2rem url(../img/search.svg);
+  padding: 0.5rem 1.23rem 0.5rem 1.7rem;
+  margin: 0;
+  background: var(--panel-background) no-repeat 0.3rem/1.2rem url(../img/search.svg);
   z-index: var(--z-index-nav-search);
   font-size: calc(17 / var(--rem-base) * 1rem);
   font-family: var(--body-font-family);
@@ -114,6 +116,7 @@ html.is-clipped--nav {
 }
 
 .nav-menu {
+  top: 2.5rem;
   flex-grow: 1;
   min-height: 0;
   width: 100%;
