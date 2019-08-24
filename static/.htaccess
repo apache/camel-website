@@ -238,7 +238,7 @@ ErrorDocument 404 /404.html
 # Redirect 301 /design-notes.html
 # Redirect 301 /detour.html
 # Redirect 301 /discussion-forums.html
-# Redirect 301 /documentation.html
+Redirect 301 /documentation.html /manual/latest/
 # Redirect 301 /download-archives.html
 # Redirect 301 /dsl-function-template.html
 # Redirect 301 /durable-subscriber.html
@@ -624,6 +624,7 @@ Redirect 301 /endpoint-annotations.html /manual/latest/endpoint-annotations.html
 Redirect 301 /endpoint.html /manual/latest/endpoint.html
 Redirect 301 /endpointcompleter.html /manual/latest/endpoint-completer.html
 Redirect 301 /enterprise-integration-patterns.html /manual/latest/enterprise-integration-patterns.html
+Redirect 301 /enterprise-integration-patterns /manual/latest/enterprise-integration-patterns.html
 Redirect 301 /error-handler.html /manual/latest/error-handler.html
 Redirect 301 /error-handling-in-camel.html /manual/latest/error-handling-in-camel.html
 Redirect 301 /etcd.html /components/latest/etcd-component.html
