@@ -6,6 +6,6 @@
 {{> breadcrumbs}}
 {{> page-versions}}
   {{#if (and page.editUrl (not page.origin.private))}}
-  <div class="edit-this-page"><a href="{{page.editUrl}}">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="{{editPageUrl page}}">Edit this Page</a></div>
   {{/if}}
 </div>
