@@ -31,10 +31,10 @@
             <div class="listingblock">
                 <div class="content">
                     <pre><code class="xml">&lt;dependency&gt;
-              &lt;groupId&gt;org.apache.camel&lt;/groupId&gt;
-              &lt;artifactId&gt;camel-core&lt;/artifactId&gt;
-              &lt;version&gt;{{ range (first 1 ((where .Site.Pages "Type" "release-note").ByParam "version").Reverse) }}{{ .Params.version }}{{ end }}&lt;/version&gt;
-            &lt;/dependency&gt;</code></pre>
+  &lt;groupId&gt;org.apache.camel&lt;/groupId&gt;
+  &lt;artifactId&gt;camel-core&lt;/artifactId&gt;
+  &lt;version&gt;{{ range (first 1 ((where .Site.Pages "Type" "release-note").ByParam "version").Reverse) }}{{ .Params.version }}{{ end }}&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
                 </div>
             </div>
 
