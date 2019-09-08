@@ -78,6 +78,13 @@ enableRobotsTXT = true
     url = "/camel-quarkus/latest/"
 
 [[menu.main]]
+    name = "Enterprise Integration Patterns"
+    parent = "docs"
+    weight = 6
+    identifier = "eip"
+    url = "/manual/latest/enterprise-integration-patterns.html"
+
+[[menu.main]]
     name = "Community"
     identifier = "community"
     weight = 5
@@ -182,4 +189,3 @@ enableRobotsTXT = true
   [[module.mounts]]
     source = "documentation/_/data"
     target = "data"
-
