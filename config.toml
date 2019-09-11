@@ -85,6 +85,13 @@ enableRobotsTXT = true
     url = "/manual/latest/enterprise-integration-patterns.html"
 
 [[menu.main]]
+    name = "Camel 3 Migration Guide"
+    parent = "docs"
+    weight = 7
+    identifier = "camel-3-migration-guide"
+    url = "/manual/latest/camel-3-migration-guide.html"
+
+[[menu.main]]
     name = "Community"
     identifier = "community"
     weight = 5
