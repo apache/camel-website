@@ -2,7 +2,7 @@
 title: "Support"
 ---
 
-== Mailing Lists
+## Mailing Lists
 
 *Use Camel User List*
 
