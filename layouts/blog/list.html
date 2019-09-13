@@ -1,0 +1,21 @@
+{{ partial "header.html" . }}
+
+<div class="body">
+    <main role="main" class="doc blog list">
+        <aside>
+            <h3>Categories</h3>
+            {{ range .Site.Taxonomies.categories.Alphabetical }}
+                <p><a class="category" href="{{ "/categories/" | relURL }}{{ .Name | urlize }}/">{{ .Name | upper }}<span>{{ .Count }}</span></a></p>
+            {{ end }}
+        </aside>
+        <div>
+            {{ $pages := ($.Paginator 3).Pages }}
+            {{ range $pages }}
+                {{ .Render "summary" }}
+            {{ end }}
+            {{ template "_internal/pagination.html" . }}
+        </div>
+    </main>
+</div>
+
+{{ partial "footer.html" . }}

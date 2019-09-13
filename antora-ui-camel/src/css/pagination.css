@@ -1,0 +1,37 @@
+.pagination {
+  margin: var(--static-margin);
+  max-width: var(--static-max-width);
+  list-style: none;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .pagination {
+    max-width: var(--static-max-width--desktop);
+  }
+}
+
+.page-item {
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+
+.page-item a {
+  color: var(--color-gray-10);
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.page-item.disabled a {
+  color: var(--color-smoke-90);
+}
+
+.page-item.active {
+  border-radius: 3px;
+  background: var(--color-asf-moderate-blue);
+}
+
+.page-item.active a {
+  color: var(--color-white);
+}
