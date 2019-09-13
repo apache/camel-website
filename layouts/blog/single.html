@@ -1,0 +1,9 @@
+{{ partial "header.html" . }}
+
+<div class="body">
+    <main role="main blog">
+        {{ .Render "post" }}
+    </main>
+</div>
+
+{{ partial "footer.html" . }}

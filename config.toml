@@ -4,7 +4,7 @@ title = "Apache Camel"
 relativeURLs = true
 disablePathToLower = true
 staticDir = ["static", "documentation"]
-disableKinds = ["taxonomy", "taxonomyTerm"]
+disableKinds = ["taxonomyTerm"]
 enableRobotsTXT = true
 
 [params]
@@ -13,10 +13,10 @@ enableRobotsTXT = true
     organizationDescription = "Apache Camel ™ is a versatile open-source integration framework based on known Enterprise Integration Patterns. Camel empowers you to define routing and mediation rules in a variety of domain-specific languages, including a Java-based Fluent API, Spring or Blueprint XML Configuration files, and a Scala DSL."
 
 [[menu.main]]
-    name = "News"
+    name = "Blog"
     weight = 2
-    identifier = "news"
-    url = "/news/"
+    identifier = "blog"
+    url = "/blog/"
 
 [[menu.main]]
     name = "Projects"

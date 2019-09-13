@@ -1,0 +1,11 @@
+{{ partial "header.html" . }}
+
+<div class="body">
+    <main role="main">
+        {{ range .Pages }}
+            {{ .Render "summary" }}
+        {{ end }}
+    </main>
+</div>
+
+{{ partial "footer.html" . }}

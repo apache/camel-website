@@ -1,0 +1,15 @@
+<article class="blog doc">
+
+    <header>
+        <h1><a href="{{.Page.RelPermalink}}">{{ .Title }}</a></h1>
+    </header>
+    <p>{{ .Summary }}</p>
+    <p><a class="continue" href="{{ .RelPermalink }}">Continue reading &#10095;</a></p>
+    <p>
+        {{ if .Params.categories }}
+            {{ range .Params.categories }}<a class="category" href="{{ "/categories/" | relURL }}{{ . | urlize }}/">{{ upper . }}</a>{{ end }}
+        {{end}}
+        &#11825; <time itemprop="published" datetime="{{ dateFormat "2006-01-02" .PublishDate }}" title="{{ dateFormat "Monday, January 2, 2006" .PublishDate }}">{{ dateFormat "January 2, 2006" .PublishDate }}</time> &#11825; <span rel="author">{{ .Params.author }}</span>
+    </p>
+
+</article>

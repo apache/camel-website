@@ -1,10 +1,10 @@
 ---
 title: "RELEASE 2.24.2"
-url: /news/release-2-24-2.html
+url: /blog/release-2-24-2.html
 date: 2019-09-13
 draft: false 
-type: news-entry
 author: Gregor Zurowski
+categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new patch release Camel 2.24.2"
 ---
 
