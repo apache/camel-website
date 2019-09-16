@@ -1,5 +1,5 @@
 ---
-title: "Apache Camel News"
+title: "News"
 ---
 
 # Apache Camel news
