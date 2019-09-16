@@ -8,7 +8,7 @@ RewriteRule "security-advisories.data/(.+)$" "security/$1" [R=permanent,L]
 ErrorDocument 404 /404.html
 
 # Redirect /news/... to /blog/...
-RewriteRule "news(/.*)$" "blog$1" [R=permanent]
+RewriteRule "news(/.*)$" "/blog$1" [R=permanent,L]
 
 # Redirect known links from old website. Not mapped links are commented out. Feel free to edit, if you find something missing.
 # Redirect 301 /EclipseMilo
