@@ -139,13 +139,6 @@ enableRobotsTXT = true
     url = "/community/team/"
 
 [[menu.main]]
-    name = "Camel extra"
-    parent = "community"
-    weight = 7
-    identifier = "community-camel-extra"
-    url = "/community/camel-extra/"
-
-[[menu.main]]
     name = "Download"
     weight = 6
     identifier = "download"

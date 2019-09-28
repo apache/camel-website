@@ -62,7 +62,8 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |[API Tracker 4j](https://abi-laboratory.pro/java/tracker/timeline/camel-core) of camel-core|The review of API changes for the Camel Core library since Camel 2.16 which is updated several times per week.|
 |[Assimbly Gateway](https://github.com/assimbly/gateway)|A message gateway based on Apache Camel|
 |[Yeoman generator-camel-project](https://www.npmjs.com/package/generator-camel-project)|This project uses the Yeoman framework and node.js to generate the scaffold for Apache Camel projects as well as a simple template that can be used as a starting point.|
-|[Camel-graph](https://github.com/avvero/camel-graph)|Camel-graph is a route graph viewer for ServiceMix and Camel applications, visualising your route topologies with metrics.
+|[Camel-graph](https://github.com/avvero/camel-graph)|Camel-graph is a route graph viewer for ServiceMix and Camel applications, visualising your route topologies with metrics.|
+|[Camel Extra project](https://camel-extra.github.io/)|contains a number of extension components which due to GPL/LGPL licensing cannot be hosted at Apache.
 {{< /table >}}
 
 
