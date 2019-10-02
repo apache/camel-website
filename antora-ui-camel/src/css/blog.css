@@ -83,9 +83,14 @@ article.blog p {
   width: auto;
 }
 
-.blog .post-content img.featured {
+.blog .post-content img {
   width: 100%;
   height: auto;
+}
+
+.blog .post-content figcaption {
+  font-size: 0.8rem;
+  text-align: center;
 }
 
 @media screen and (min-width: 1024px) {

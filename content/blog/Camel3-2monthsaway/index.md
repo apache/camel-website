@@ -11,11 +11,11 @@ As I am busy myself then I just wanted to write a short blog post to keep the co
 The latest deadline is to release Camel 3.0 before December 19th 2019 as it was exactly on that day 1 year ago, we switched the master branch to become the work branch for Apache Camel 3. That means the total development time for Camel 3 would be 1 year.
 Here is a illustration that highlights the timeline of Camel 3:
 
-![Camel 3 timeline](camel3-progress.png)
+{{< image "camel3-progress.png" "Camel 3 timeline" >}}
 
 That is not all Apache Camel, is now a family of 3 projects (at this moment). So working on Camel 3 is not all we do. [Camel K](https://github.com/apache/camel-k/) and [Camel Quarkus](https://github.com/apache/camel-quarkus) are very promising for cloud-native integration (microservices and serverless).
 
-![Camel 3 projects](camel3-projects.png)
+{{< image "camel3-projects.png" "Camel 3 projects" >}}
 
 These projects have their own lifecycle. Will will post more details about these projects, and what’s new in Camel 3 in the following months leading up to the final release of Camel 3. So stay tuned.
 
