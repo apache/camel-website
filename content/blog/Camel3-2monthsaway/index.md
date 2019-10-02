@@ -6,7 +6,7 @@ categories: ["Roadmap"]
 preview: Status update on Camel 3 only 2 months away
 ---
 
-The Camel team is busy working on the last set of work for Apache Camel 3. Today the 2nd release candidate was built and published on a staging repository for [early adapters to give it a try](https://mail-archives.apache.org/mod_mbox/camel-dev/201910.mbox/%3CCADL1oAqjZVvbJ1cnxqzdcUk%2BkuyCMdyc7w8agZuoN6SYZjPDnA%40mail.gmail.com%3E).
+The Camel team is busy working on the last set of work for Apache Camel 3. Today the 2nd release candidate was built and published on a staging repository for [early adopters to give it a try](https://mail-archives.apache.org/mod_mbox/camel-dev/201910.mbox/%3CCADL1oAqjZVvbJ1cnxqzdcUk%2BkuyCMdyc7w8agZuoN6SYZjPDnA%40mail.gmail.com%3E).
 
 As I am busy myself then I just wanted to write a short blog post to keep the community posted that Apache Camel 3 is on the way, and that we expect it to be released by end of this year (sometime in November or December).
 
