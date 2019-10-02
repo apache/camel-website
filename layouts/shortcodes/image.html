@@ -1,0 +1,9 @@
+{{ $filename := (.Get 0) }}
+{{ $title := (.Get 1) }}
+{{ $image := .Page.Resources.GetMatch $filename}}
+{{ with $image.Resize "800x q95 Gaussian" }}
+<figure>
+  <a href="{{ $image.RelPermalink }}" title="{{ $title }} (Click to enlarge)"><img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $title }}"></a>
+  <figcaption>{{ $title }} (Click to enlarge)</figcaption>
+</figure>
+{{ end }} 
