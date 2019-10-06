@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 3.0.0-RC2"
 url: /blog/release-3-0-0-RC2.html
-date: 2019-09-02
+date: 2019-10-06
 draft: false
 author: Gregor Zurowski
 categories: ["Releases"]
