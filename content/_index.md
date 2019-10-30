@@ -1,6 +1,6 @@
 ---
 title: Home
-description: Camel is an open source integration framework that empowers you to quickly and easily integrate various systems consuming or producing data. 
+description: Camel is an open source integration framework that empowers you to quickly and easily integrate various systems consuming or producing data.
 ---
 
 {{< section "frontpage columns" >}}
@@ -76,13 +76,13 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 {{< div "split" >}}
 **Camel is your project!**
 
-Camel is an [Apache Software Foundation](https://www.apache.org) project, available under the [Apache v2 license](https://apache.org/licenses/LICENSE-2.0). It's a complete open community, always listening proposals and comments. 
+Camel is an [Apache Software Foundation](https://www.apache.org) project, available under the [Apache v2 license](https://apache.org/licenses/LICENSE-2.0). It's a complete open community, always listening proposals and comments.
 
 [Sources](./community/sources/), [mailing lists](./community/mailing-list/), [issue tracker](./community/support/): it's fully open, you can access directly.
 
-We also love contributions: don't hesitate to [contribute](https://github.com/apache/camel/blob/master/CONTRIBUTING.md). You can contribute by <a href="https://github.com/apache/camel-website/edit/master/content{{ .File.Path }}">editing this page</a>!
+We also love contributions: don't hesitate to [contribute](./manual/latest/contributing.html). You can contribute by <a href="https://github.com/apache/camel-website/edit/master/content{{ .File.Path }}">editing this page</a>!
 
-[Be Involved In The Community](https://github.com/apache/camel/blob/master/CONTRIBUTING.md) | [How To Contribute](https://github.com/apache/camel/blob/master/CONTRIBUTING.md)
+[Be Involved In The Community](./manual/latest/contributing.html) | [How To Contribute](./manual/latest/contributing.html)
 
 {{< /div >}}
 

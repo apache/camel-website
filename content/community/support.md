@@ -4,9 +4,9 @@ title: "Support"
 
 ## Getting help
 
-If you are experiencing problems using Camel then please report your problem to our mailing list. This allows the entire community to help with your problem. 
-If indeed a bug has been identified in the Camel software, then document the problem in our [Issue Tracker](https://issues.apache.org/jira/browse/CAMEL). 
-Please refrain from immediately opening a ticket in the issue tracker unless you are certain it's a problem in the Camel software. 
+If you are experiencing problems using Camel then please report your problem to our mailing list. This allows the entire community to help with your problem.
+If indeed a bug has been identified in the Camel software, then document the problem in our [Issue Tracker](https://issues.apache.org/jira/browse/CAMEL).
+Please refrain from immediately opening a ticket in the issue tracker unless you are certain it's a problem in the Camel software.
 
 If you are in doubt, we appreciate asking the [mailing list](/community/mailing-list/), [IRC chat](/community/irc-room/), or [Gitter](https://gitter.im/apache/apache-camel) chat first.
 
@@ -24,12 +24,12 @@ Also on the mailing lists there is more people active to help you better.
 
 ### Alternative discussion forums
 
-There's a number of sites outside Apache that offer discussion forums on Camel. For example, [Stack Overflow](http://stackoverflow.com/) is a popular Q & A site with a dedicated [Apache Camel forum](http://stackoverflow.com/questions/tagged/apache-camel). 
+There's a number of sites outside Apache that offer discussion forums on Camel. For example, [Stack Overflow](http://stackoverflow.com/) is a popular Q & A site with a dedicated [Apache Camel forum](http://stackoverflow.com/questions/tagged/apache-camel).
 You are also likely to find helpful discussions on technical blogs, on [Google](https://www.google.com/search?q=apache+camel), or even on [Twitter](https://twitter.com/#!/search/apache%20camel).
 
 ### Using deprecated components
 
-Deprecated components are not supported and issues such as bugs may not be fixed. We encourage users to migrate away from using any deprecated component. 
+Deprecated components are not supported and issues such as bugs may not be fixed. We encourage users to migrate away from using any deprecated component.
 A list of deprecated components is listed on the github page at: https://github.com/apache/camel/tree/master/components#components
 
 ### How to get help
@@ -60,10 +60,10 @@ What version of Camel do you use! Remember to include this information.
 We can help you much quicker if you try the following
 
 *  provide us with a JUnit test case that demonstrates your issue. e.g. if you think you've found a bug, can you create a test case to demonstrate the bug?
-*  [submit a patch](https://github.com/apache/camel/blob/master/CONTRIBUTING.md) fixing the bug! (We also buy you beer when we meet you if you submit bug fixes (smile) )
+*  [submit a patch](../../manual/latest/contributing.html) fixing the bug! (We also buy you beer when we meet you if you submit bug fixes (smile) )
 *  for memory leak or performance related issues, if you can run a profiler on your test case and attach the output as a file (or zipped file if it's huge) to the JIRA we can normally fix things much faster. e.g. you could run jmap/jhat, JProfiler or YourKit on your code and send us the output. To find memory leaks it's quicker to resolve if you can tell us what classes are taking up all of the RAM; we can normally figure out what's wrong from that.
 
 ## Commercial Support
 
-This is an open source project, so the amount of time we have available to help resolve your issue is often limited as all help is provided on a volunteer basis. 
+This is an open source project, so the amount of time we have available to help resolve your issue is often limited as all help is provided on a volunteer basis.
 If you want to get priority help, need to get up to speed quickly, require some training or mentoring, or need full 24 x 7 production support you could contact one of the following companies with [Commercial Camel Offerings](../../manual/latest/commercial-camel-offerings.html).
