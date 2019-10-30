@@ -108,7 +108,7 @@ enableRobotsTXT = true
     parent = "community"
     weight = 2
     identifier = "community-contributing"
-    url = "https://github.com/apache/camel/blob/master/CONTRIBUTING.md"
+    url = "/manual/latest/contributing.html"
 
 [[menu.main]]
     name = "User stories"
