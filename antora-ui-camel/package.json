@@ -60,7 +60,7 @@
     "svg4everybody": "^2.1.9",
     "through2": "~3.0",
     "typeface-droid-sans-mono": "^0.0.44",
-    "typeface-open-sans": "^0.0.54",
+    "@openfonts/open-sans_latin-ext": "^1.44.0",
     "undertaker": "~1.2",
     "vinyl-buffer": "~1.0",
     "vinyl-fs": "~3.0"

@@ -30,7 +30,7 @@ module.exports = (src, dest, preview) => () => {
     postcssImport,
     postcssUrl([
       {
-        filter: '**/~typeface-*/files/*',
+        filter: '**/*.@(woff|woff2)',
         url: (asset) => {
           const relpath = asset.pathname.substr(1)
           const abspath = require.resolve(relpath)
