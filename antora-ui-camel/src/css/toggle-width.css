@@ -1,0 +1,23 @@
+#toggle-width {
+  display: none;
+}
+
+#toggle-width:checked + article {
+  max-width: none;
+}
+
+#toggle-width-label {
+  display: none;
+  cursor: pointer;
+}
+
+#toggle-width-label:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 1024px) {
+  #toggle-width-label {
+    display: block;
+    padding: 0.5rem;
+  }
+}
