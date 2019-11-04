@@ -4,6 +4,7 @@
   <a href="{{relativize page.url site.homeUrl}}" class="home-link{{#if page.home}} is-current{{/if}}"></a>
   {{/if}}
 {{> breadcrumbs}}
+{{> toggle-width }}
 {{> page-versions}}
   {{#if (and page.editUrl (not page.origin.private))}}
   <div class="edit-this-page"><a href="{{editPageUrl page}}">Edit this Page</a></div>
