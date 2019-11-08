@@ -52,6 +52,7 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 | Martin Krasser | krasserm | |
 | Nicky Sandhu | nsandhu | |
 | Onder Sezgin | onders | |
+| Omar Al-Safi | oalsafi | Talend |
 | Quinn Stevenson | quinn | |
 | Raul Kripalani | raulk | |
 | Rich Newcomb | rnewcomb | |
