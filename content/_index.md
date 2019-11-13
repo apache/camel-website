@@ -11,7 +11,7 @@ description: Camel is an open source integration framework that empowers you to 
 {{< div >}}
 ## Patterns
 
-Based on <mark>Enterprise Integration Patterns</mark> to help you solve your integration problem by applying best practices out of the box. Camel supports most of the Enterprise Integration Patterns from the excellent book by Gregor Hohpe and Bobby Woolf.
+Based on <mark>Enterprise Integration Patterns</mark> (EIP) to help you solve your integration problem by applying best practices out of the box. Camel supports most of the Enterprise Integration Patterns from the excellent book by Gregor Hohpe and Bobby Woolf, and newer integration patterns from **microservice architectures**.
 {{< /div >}}
 {{< /div >}}
 
@@ -27,7 +27,7 @@ Packed with <mark>several hundred components</mark> that are used to access data
 {{< div >}}
 ## Runtimes
 
-<mark>Runs everywhere</mark>: standalone, embedded as a library, within OSGi containers or in the JEE application servers and in the clouds. Enjoy seamless integration with popular frameworks such as **CDI**, **Spring**, **Spring Boot** and **OSGi Blueprint**.
+<mark>Runs everywhere</mark>: Standalone, embedded as a library, within Spring Boot, OSGi containers, in JEE application servers, and in the clouds. Enjoy seamless integration with popular runtimes such as **Spring Boot**, **Microprofile**, and **Quarkus**.
 {{< /div >}}
 {{< /div >}}
 
@@ -35,7 +35,7 @@ Packed with <mark>several hundred components</mark> that are used to access data
 {{< div >}}
 ## Data Formats
 
-Camel supports around 50 data formats, allowing to <mark>translate messages</mark> in multiple formats.
+Camel supports around 50 data formats, allowing to <mark>translate messages</mark> in multiple formats, and with support from industry standard formats from finance, telco, health-care, and more.
 {{< /div >}}
 {{< /div >}}
 
@@ -45,9 +45,10 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 {{< div "project" >}}
 # Camel
 
-**Apache Camel** is extensibly documented with helpful guides on getting started and detailed reference documentation.
+**Apache Camel** is the swizz army of integration. 
 
-<a class="significant" href="./manual/latest/">Read the manual</a>
+<a class="significant" href="./manual/latest/">Read the docs</a>
+<a class="significant" href="./manual/latest/enterprise-integration-patterns.html">EIP reference</a>
 <a class="significant" href="./components/latest/">Component reference</a>
 {{< /div >}}
 
@@ -62,7 +63,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 {{< div "project" >}}
 # Camel Quarkus
 
-**Apache Camel Quarkus** is a set of extensions for [Quarkus](https://quarkus.io) is a Java platform offering fast boot times and low memory footprint. It targets both stock JVMs (OpenJDK in the first place) and [GraalVM](https://www.graalvm.org/).
+**Apache Camel Quarkus** is a set of extensions for [Quarkus](https://quarkus.io) is a Java platform offering fast boot times and low memory footprint. It targets both stock JVMs and [GraalVM](https://www.graalvm.org/).
 
 <a class="significant" href="./camel-quarkus/latest/">Read the docs</a>
 {{< /div >}}
