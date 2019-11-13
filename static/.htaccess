@@ -1048,6 +1048,7 @@ Redirect 301 /xstream.html /components/latest/xstream-dataformat.html
 Redirect 301 /yammer.html /components/latest/yammer-component.html
 Redirect 301 /zip-file-dataformat.html /components/latest/zipfile-dataformat.html
 Redirect 301 /zookeeper.html /components/latest/zookeeper-component.html
+Redirect 301 /docs/getting-started /manual/latest/getting-started.html
 
 # Disable the pattern matching based on filenames.
 #
