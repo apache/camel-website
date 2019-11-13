@@ -16,8 +16,11 @@ body {
   width: 100%;
   word-wrap: break-word;
   z-index: var(--z-index-navbar);
-  box-shadow: 0 0.5rem 3rem var(--color-smoke-70);
   border-bottom: 1px solid var(--color-smoke-90);
+}
+
+.homepage .navbar {
+  box-shadow: 0 0.5rem 3rem var(--color-smoke-70);
 }
 
 .navbar a {

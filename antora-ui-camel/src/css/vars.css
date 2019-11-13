@@ -34,7 +34,7 @@
   --monospace-font-weight-bold: 500;
   /* base */
   --body-background: var(--color-white);
-  --panel-background: var(--color-smoke-30);
+  --panel-background: var(--color-smoke-10);
   --panel-border-color: var(--color-smoke-90);
   /* navbar */
   --navbar-background: var(--color-white);
@@ -51,17 +51,17 @@
   --navbar-menu-hover-decoration-color: var(--color-camel-orange);
   /* nav */
   --nav-background: var(--panel-background);
-  --nav-border-color: var(--color-gray-10);
+  --nav-border-color: var(--color-smoke-50);
   --nav-line-height: 1.35;
   --nav-heading-font-color: var(--color-asf-dark-blue);
-  --nav-muted-color: var(--color-gray-70);
-  --nav-panel-divider-color: var(--color-smoke-90);
+  --nav-muted-color: var(--color-jet-50);
+  --nav-panel-divider-color: var(--color-smoke-50);
   --nav-secondary-background: var(--color-smoke-70);
   /* toolbar */
   --toolbar-background: var(--panel-background);
   --toolbar-border-color: var(--panel-border-color);
-  --toolbar-font-color: var(--color-gray-70);
-  --toolbar-muted-color: var(--color-gray-30);
+  --toolbar-font-color: var(--color-jet-80);
+  --toolbar-muted-color: var(--color-jet-80);
   --page-version-menu-background: var(--color-smoke-70);
   --page-version-missing-font-color: var(--color-gray-30);
   /* admonitions */
@@ -109,7 +109,7 @@
   --quote-font-color: var(--color-gray-70);
   --quote-attribution-font-color: var(--color-gray-30);
   --sidebar-background: var(--color-smoke-70);
-  --table-border-color: var(--panel-border-color);
+  --table-border-color: var(--color-asf-moderate-blue);
   /* static */
   --static-margin: 0 auto;
   /* frontpage */

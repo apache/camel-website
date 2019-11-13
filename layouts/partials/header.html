@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="{{ path.Join "_" (index .Site.Data "rev-manifest" "css/site.css") | relURL }}">
 </head>
 
-<body class="article">
+<body class="{{ if .Page.IsHome }}homepage {{ end }}article">
     <header class="header">
         <nav class="navbar">
             <div class="navbar-brand">

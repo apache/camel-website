@@ -98,6 +98,10 @@
   overflow-x: auto;
 }
 
+.doc .table-wrapper table {
+  width: 100%;
+}
+
 .doc .tableblock p {
   font-size: inherit;
 }
@@ -219,6 +223,7 @@
 
 .doc .admonitionblock {
   margin: 1.4rem 0 0;
+  box-shadow: inset 0 0 1.75px var(--abstract-border-color);
 }
 
 .doc .admonitionblock p,
