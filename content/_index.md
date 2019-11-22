@@ -45,7 +45,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 {{< div "project" >}}
 # Camel
 
-**Apache Camel** is the swizz army of integration. 
+**Apache Camel** is the *Swiss Army knife* of integration. 
 
 <a class="significant" href="./manual/latest/">Read the docs</a>
 <a class="significant" href="./manual/latest/enterprise-integration-patterns.html">EIP reference</a>
