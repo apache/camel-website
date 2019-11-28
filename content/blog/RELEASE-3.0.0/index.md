@@ -5,7 +5,7 @@ date: 2019-11-28
 draft: false
 author: Gregor Zurowski
 categories: ["Releases"]
-preview: "The Camel community announces the immediate availability of a new release candidate Camel 3.0.0-RC3"
+preview: "The Camel community announces the immediate availability of a new release Camel 3.0.0"
 ---
 
 
