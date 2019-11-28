@@ -27,7 +27,7 @@ Packed with <mark>several hundred components</mark> that are used to access data
 {{< div >}}
 ## Runtimes
 
-<mark>Runs everywhere</mark>: Standalone, embedded as a library, within Spring Boot, OSGi containers, in JEE application servers, and in the clouds. Enjoy seamless integration with popular runtimes such as **Spring Boot**, **Microprofile**, and **Quarkus**.
+<mark>Runs everywhere</mark>: Standalone, embedded as a library within Spring Boot, Application Servers, and in the clouds. Enjoy seamless integration with popular runtimes such as **Spring Boot**, **Microprofile**, and **Quarkus**.
 {{< /div >}}
 {{< /div >}}
 
@@ -45,7 +45,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 {{< div "project" >}}
 # Camel
 
-**Apache Camel** is the *Swiss Army knife* of integration. 
+**Apache Camel** is the *Swiss knife* of integration. 
 
 <a class="significant" href="./manual/latest/">Read the docs</a>
 <a class="significant" href="./manual/latest/enterprise-integration-patterns.html">EIP reference</a>
