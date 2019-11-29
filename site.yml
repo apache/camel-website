@@ -9,7 +9,7 @@ content:
       branches: master
       start_path: docs/user-manual
     - url: git@github.com:apache/camel.git
-      branches: master, camel-2.x
+      branches: master, camel-2.x, camel-3.0.x
       start_path: docs/components
     - url: git@github.com:apache/camel-k.git
       branches: master
