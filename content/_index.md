@@ -63,7 +63,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 {{< div "project" >}}
 # Camel Quarkus
 
-**Apache Camel Quarkus** is a set of extensions for [Quarkus](https://quarkus.io) is a Java platform offering fast boot times and low memory footprint. It targets both stock JVMs and [GraalVM](https://www.graalvm.org/).
+**Apache Camel Quarkus** is a set of extensions for [Quarkus](https://quarkus.io), a Java platform offering fast boot times and low memory footprint. It targets both stock JVMs and [GraalVM](https://www.graalvm.org/).
 
 <a class="significant" href="./camel-quarkus/latest/">Read the docs</a>
 {{< /div >}}
@@ -77,7 +77,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 {{< div "split" >}}
 **Camel is your project!**
 
-Camel is an [Apache Software Foundation](https://www.apache.org) project, available under the [Apache v2 license](https://apache.org/licenses/LICENSE-2.0). It's a complete open community, always listening proposals and comments.
+Camel is an [Apache Software Foundation](https://www.apache.org) project, available under the [Apache v2 license](https://apache.org/licenses/LICENSE-2.0). It's a complete open community, always listening to proposals and comments.
 
 [Sources](./community/sources/), [mailing lists](./community/mailing-list/), [issue tracker](./community/support/): it's fully open, you can access directly.
 
