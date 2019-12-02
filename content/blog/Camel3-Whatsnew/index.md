@@ -69,6 +69,7 @@ The camel-core has been modularized from 1 JAR to 33 JARs. The core functionalit
 | camel-util |
 | camel-util-json |
 
+
 For Camel end users then only a few JARs is relevant. 
 
 **camel-api** contains the public API for Camel (eg interfaces such as CamelContext, Endpoint, Exchange, Message, and son on).
@@ -102,6 +103,7 @@ The components that resided in camel-core has also be externalized into individu
 | camel-zip-deflater |
 | camel-language |
 | camel-seda |
+
 
 Camel end users can then pick and choose exactly only what they need, or keep using everything.
 
