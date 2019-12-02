@@ -6,6 +6,7 @@ disablePathToLower = true
 staticDir = ["static", "documentation"]
 disableKinds = ["taxonomyTerm"]
 enableRobotsTXT = true
+timeout = 300000
 
 [params]
     socialProfiles = ["https://twitter.com/ApacheCamel"]
