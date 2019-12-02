@@ -49,29 +49,59 @@ Camel 3 is the first official release that supports Java 11. Java 8 will still b
 
 The camel-core has been modularized from 1 JAR to 33 JARs. The core functionality has been splitup into:
 
-| JAR | JAR | JAR |
-|---- |---- |----
-| **camel-api** | camel-core-osgi | camel-management-api |
-| camel-base | camel-core-xml | camel-management-impl |
-| camel-caffeine-lrucache | camel-endpointdsl | **camel-support** |
-| camel-cloud | camel-headersmap | camel-util |
-| camel-core | camel-jaxp | camel-util-json |
-| camel-core-engine | camel-main | 
+| Artifact |
+|---- |
+| **camel-api** | 
+| camel-base |
+| camel-caffeine-lrucache |
+| camel-cloud | 
+| camel-core |
+| camel-core-engine |
+| camel-core-osgi 
+| camel-core-xml |
+| camel-endpointdsl |
+| camel-headersmap |
+| camel-jaxp |
+| camel-main | 
+| camel-management-api |
+| camel-management-impl |
+| **camel-support** |
+| camel-util |
+| camel-util-json |
 
-For Camel end users then only a few JARs is relevant. **camel-api** contains the public API for Camel (eg interfaces such as CamelContext, Endpoint, Exchange, Message, and son on). **camel-support** contains the base classes and `RouteBuilder` which you would use to build Camel routes and applications. This JAR is also contains necessary base classes for building custom Camel components, and other kinds of plugins.
+For Camel end users then only a few JARs is relevant. 
+
+**camel-api** contains the public API for Camel (eg interfaces such as CamelContext, Endpoint, Exchange, Message, and son on).
+
+**camel-support** contains the base classes and `RouteBuilder` which you would use to build Camel routes and applications. This JAR is also contains necessary base classes for building custom Camel components, and other kinds of plugins.
 
 The components that resided in camel-core has also be externalized into individual components:
 
-| JAR | JAR | JAR |
-|---- |---- |----
-| came-bean | camel-log | camel-stub |
-| camel-browse | camel-mock | camel-timer |
-| camel-controlbus | camel-properties | camel-validator |
-| camel-dataformat | camel-ref | camel-vm |
-| camel-direct | camel-rest | camel-xpath |
-| camel-directvm | camel-saga | camel-xslt | 
-| camel-file | camel-scheduler | camel-zip-deflater |
-| camel-language | camel-seda | |
+| Artifact |
+|---- |
+| came-bean |
+| camel-log |
+| camel-stub |
+| camel-browse |
+| camel-mock |
+| camel-timer |
+| camel-controlbus |
+| camel-properties |
+| camel-validator |
+| camel-dataformat |
+| camel-ref |
+| camel-vm |
+| camel-direct |
+| camel-rest |
+| camel-xpath |
+| camel-directvm |
+| camel-saga |
+| camel-xslt | 
+| camel-file |
+| camel-scheduler |
+| camel-zip-deflater |
+| camel-language |
+| camel-seda |
 
 Camel end users can then pick and choose exactly only what they need, or keep using everything.
 
