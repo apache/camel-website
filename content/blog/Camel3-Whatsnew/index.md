@@ -80,7 +80,7 @@ The components that resided in camel-core has also be externalized into individu
 
 | Artifact |
 |---- |
-| came-bean |
+| camel-bean |
 | camel-log |
 | camel-stub |
 | camel-browse |
