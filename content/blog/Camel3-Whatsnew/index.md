@@ -72,7 +72,7 @@ The camel-core has been modularized from 1 JAR to 33 JARs. The core functionalit
 
 For Camel end users then only a few JARs is relevant. 
 
-**camel-api** contains the public API for Camel (eg interfaces such as CamelContext, Endpoint, Exchange, Message, and son on).
+**camel-api** contains the public API for Camel (eg interfaces such as CamelContext, Endpoint, Exchange, Message, and so on).
 
 **camel-support** contains the base classes and `RouteBuilder` which you would use to build Camel routes and applications. This JAR is also contains necessary base classes for building custom Camel components, and other kinds of plugins.
 
@@ -125,20 +125,20 @@ We have also done many smaller optimizations in the core, to reduce the number o
 Another area of improvement is to reduce Java reflections. In Camel 2 then all the configuration of Camel components, endpoints, and routes are reflection based. In Camel 3
 we have source code generated Java code for configuration that allows us to use direct Java calls instead of reflections. 
 
-Another similar area is Camel's type converters which in Camel 2 are Java reflection based (you could build custom type converts that was not reflection based. In Camel 3 we also generate Java source code which means that type converting is direct Java calls at runtime.
+Another similar area is Camel's type converters which in Camel 2 are Java reflection based (you could build custom type converts that were not reflection based). In Camel 3 we also generate Java source code which means that type converting is direct Java calls at runtime.
 
 We have also moved initialization logic to earlier phases when it was possible. For example there is a new build phase which allows Camel to do special initialization during building your project (this requires Camel Quarkus).
 
-All this optimization improves the startup performance of Camel and reduces the memory overhead. With Camel Quarkus you can native compiled your Camel application and make it startup in 30 milli seconds and consume only 10mb of memory (RSS) with a full blow HTTP REST server and health-checks and metrics.
+All this optimization improves the startup performance of Camel and reduces the memory overhead. With Camel Quarkus you can natively compile your Camel application and make it startup in 30 milli seconds and consume only 10mb of memory (RSS) with a full blown HTTP REST server and health-checks and metrics.
 
 {{< image "camel3-quarkus.png" "Camel 3 Quarkus native compiled" >}}
 
-There are still a few items still on the agenda that we want to work on in Camel 3.x to further optimize Camel core.
+There are still a few items on the agenda that we want to work on in Camel 3.x to further optimize Camel core.
 
 
 ### 6) Type Safe Endpoint DSL
 
-Camel end users whom has configured endpoints using URI strings, would all have experience the problem when you make a configuration mistake in the endpoint, which then makes Camel fail on startup.
+Camel end users whom has configured endpoints using URI strings, would all have experienced the problem when you make a configuration mistake in the endpoint, which then makes Camel fail on startup.
 
 In Camel 3, we have a new type-safe DSL for endpoints which you can use in Java routes.
 You can continue to use the classic URI strings, but if you want to try the endpoint DSL, then you need to add `camel-endpointdsl` to your classpath. Then you should extend `EndpointRouteBuilder` instead of `RouteBuilder` to access the endpoint DSL.
@@ -182,7 +182,7 @@ More components to come in upcoming Camel releases. These microprofile component
 
 ### 10) Miscellaneous improvements
 
-Camel 3 now supports JUnit 5 for unit tests, with the test components that has -junit5 as suffix.
+Camel 3 now supports JUnit 5 for unit tests, with the test components that have -junit5 as suffix.
 
 The Camel `Registry` is now also writeable, so you can add beans to the registry at runtime, or from unit tests etc.
 
@@ -197,7 +197,7 @@ We have of course cleaned up the code base, such as removing all deprecated APIs
 
 Internally we have also adjusted the route model, to make it easier to extend into new DSLs; and there is a YAML DSL on the way which was initiated in Camel K.
 
-In terms of backwards compatibility then Camel 3 is mostly compatibility for regular Camel applications. However if you are using some of the more advanced and other plugins in Camel then migration is needed. Also custom components must be migrated and recompiled. There are other adjustments such as Spring Boot users must use `org.apache.camel.springboot` as groupId instead of `org.apache.camel` etc. All details can be seen in the [migration guide](https://camel.apache.org/manual/latest/camel-3-migration-guide.html).
+In terms of backwards compatibility then Camel 3 is mostly compatibility for regular Camel applications. However if you are using some of the more advanced features and other plugins in Camel then migration is needed. Also custom components must be migrated and recompiled. There are other adjustments such as Spring Boot users must use `org.apache.camel.springboot` as groupId instead of `org.apache.camel` etc. All details can be seen in the [migration guide](https://camel.apache.org/manual/latest/camel-3-migration-guide.html).
 
 
 Good luck with your migration if you decide to continue your Camel journey. And for new users to Camel then good luck getting onboard.
