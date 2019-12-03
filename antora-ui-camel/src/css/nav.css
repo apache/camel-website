@@ -289,10 +289,10 @@ html.is-clipped--nav {
 .nav-logo {
   background-image: url('../img/logo-camel-medium.png');
   background-repeat: no-repeat;
-  background-size: 160px;
+  background-size: 9.5rem;
   background-position-x: 10px;
   background-position-y: 10px;
-  width: 180px;
+  width: 11rem;
 }
 
 .nav-logo span {
