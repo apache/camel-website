@@ -1,0 +1,18 @@
+.breaking {
+  display: flex;
+  justify-content: center;
+  color: var(--color-camel-orange);
+  padding: 1rem;
+  padding-top: 0.5rem;
+  text-shadow: -1px -1px 1px hsla(0, 50%, 100%, 0.8), 1px -1px 1px hsla(0, 50%, 100%, 0.8), -1px 1px 1px hsla(0, 50%, 100%, 0.8), 1px 1px 1px hsla(0, 50%, 100%, 0.8);
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.breaking a {
+  color: var(--color-camel-orange);
+  text-decoration: underline;
+}

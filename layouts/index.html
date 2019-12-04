@@ -1,5 +1,7 @@
 {{ partial "header.html" . }}
 
+{{ with .Site.GetPage "/_breaking-news.md" }}{{.Render}}{{ end }}
+
 <header class="frontpage">
   <h1>Integration you want</h1>
   <svg viewBox="0 0 500 70" preserveAspectRatio="none">
