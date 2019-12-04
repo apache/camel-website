@@ -25,6 +25,20 @@ header.frontpage p {
   color: var(--body-font-color);
 }
 
+header.frontpage a {
+  color: var(--heading-font-color);
+  text-decoration: underline;
+}
+
+header.frontpage a:hover {
+  color: var(--heading-font-color);
+  text-decoration: underline;
+}
+
+header.frontpage a:active {
+  color: var(--heading-font-color);
+}
+
 .frontpage a:hover {
   color: var(--color-white);
   text-decoration: none;
