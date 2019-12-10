@@ -86,11 +86,18 @@ timeout = 300000
     url = "/manual/latest/enterprise-integration-patterns.html"
 
 [[menu.main]]
-    name = "Camel 3 Migration Guide"
+    name = "Camel 2.x to 3.0 Migration Guide"
     parent = "docs"
     weight = 7
     identifier = "camel-3-migration-guide"
     url = "/manual/latest/camel-3-migration-guide.html"
+
+[[menu.main]]
+    name = "Camel 3.x Migration Guide"
+    parent = "docs"
+    weight = 8
+    identifier = "camel-3x-migration-guide"
+    url = "/manual/latest/camel-3x-migration-guide.html"
 
 [[menu.main]]
     name = "Community"
