@@ -1,12 +1,12 @@
 ---
-title: "Apache Camel Kafka Connector: Introducing the last project in the ecosystem"
+title: "Apache Camel Kafka Connector: Introducing the latest project in the ecosystem"
 date: 2019-12-14
 author: Andrea Cosentino
-categories: ["Apache"]
+categories: ["Roadmap"]
 preview: Introducing Camel-Kafka-connector
 ---
 
-In the last weeks the Apache Camel community introduced a new subproject in the ecosystem: Camel-Kafka-Connector. This project born as a PoC exploring the possibility of leveraging the Apache Camel components as Kafka source and sink connectors.
+The Apache Camel community introduces a new subproject in the ecosystem: Camel-Kafka-Connector. This project born as a PoC exploring the possibility of leveraging the Apache Camel components as Kafka source and sink connectors.
 The main idea behind the project is reusing the Camel Components' flexibility in a simple way, through a configuration file mixing Kafka Connect configuration and Camel route definitions and options.
 
 ### What is Kafka Connect?
