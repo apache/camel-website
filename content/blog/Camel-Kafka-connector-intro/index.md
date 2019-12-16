@@ -13,9 +13,10 @@ The main idea behind the project is reusing the Camel Components' flexibility in
 
 It is an Apache Kafka's framework that defines a standardized way to stream data in and out a kafka broker. In Kafka connect a user can define source and sink connectors to stream data, respectively, in and out a kafka broker.
 This framework features:
-- Distributed and standalone mode
-- Rest interface
-- Automatic offset management
+
+- _Distributed and standalone mode_
+- _Rest interface_
+- _Automatic offset management_
 
 ### Kafka connect key concepts
 
