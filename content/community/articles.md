@@ -302,6 +302,8 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   [Podcast James Strachan - Mr Apache Camel](http://thecloudevangelist.com/cloud-software/podcast-james-strachan-mr-apache-camel/) - Podcast from February 2013 with James Strachan about Apache Camel, integration and the cloud.
 *   [Developer Interview with Claus Ibsen](http://blog.eisele.net/2014/08/developer-interviews-di-2-claus-ibsen.html) - Video interview August 2014 with Claus Ibsen about Apache Camel, Camel tooling, and about the upcoming Camel release.
 *   [Java Pub House - Episode 62\. Hm, what's the best to travel this holiday? on Apache CAMEL, of course!](http://www.javapubhouse.com/2017/01/episode-62-hm-whats-best-to-travel-this.html) - Podcast from January 2017 talking about what is Apache Camel and sharing real life experience from using it on multiple projects.
+*    [JBoss Asylum #47 - What do you call a Camel with 3 humps](https://asylum.libsyn.com/podcast-46-what-do-you-call-a-camel-with-3-humps) Claus Ibsen and Luca Burgazzoli sits down and talk about what is coming in Camel 3 on topics like Camel K and Camel Quarkus.
+
 
 ### [Books](/community/books/)
 
