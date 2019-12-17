@@ -6,8 +6,6 @@ categories: ["Tooling"]
 preview: Language Support for Apache Camel - VS Code extension 0.0.20
 ---
 
-Disclaimer: this article has been first published on [developers.redhat.com](https://developers.redhat.com/blog/2019/12/16/vs-code-language-support-for-apache-camel-0-0-20-release/)
-
 During the past months, several noticeable new features have been added to improve the developer experience of application based on Apache Camel. These updates are available in the [0.0.20 release of Visual Studio (VS) Code extension](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-apache-camel).
 
 Before going into the list of updates in detail, I want to note that I mentioned in the title the VS Code Extension release because VS Code extension is covering the broader set of new features. Don't worry if you are using another IDE, though, most features are also available in all other IDEs that support the Camel Language Server (Eclipse Desktop, Eclipse Che, and more).
@@ -38,7 +36,6 @@ For unknown component parameter keys, there is also a quick fix provided if a co
 
 If you are using Camel components that are not part of Camel core catalog, it is now possible to provide the Camel component definition to have it fully supported by the tooling. The Camel component definition is defined as JSON. The JSON file can be found in the jar of the Camel component. The preference can be specified through *File -> Preferences -> Settings -> Apache Camel Tooling -> Extra-components -> Edit in settings.json*.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/U015RzlgFNM" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Properties file support
 
@@ -48,4 +45,4 @@ Camel allows you to configure general component properties using a Properties fi
 
 ### What's next?
 
-This is very opened for the future. There will surely be improvements directed to Apache Camel K support. The Fuse Tooling team is awaiting your feedback on [JIRA](https://issues.redhat.com/browse/FUSETOOLS2), on one of the [Camel Tooling GitHub repository](https://github.com/camel-tooling). or whatever channel you prefer. it will help drive the future roadmap.
+This is very opened for the future. There will surely be improvements directed to Apache Camel K support. You can provide feedback on the [Camel Tooling GitHub repository](https://github.com/camel-tooling), it will help drive the future roadmap.
