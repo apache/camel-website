@@ -1,4 +1,4 @@
-# Apache Camel Website ![Logo][1]
+# Apache Camel Website <img alt="Apache Camel" src="antora-ui-camel/src/img/logo-d.svg" height="30 px">
 
 This is a site generator project for Apache Camel. It generates static HTML and
 resources that are to be published.
@@ -188,10 +188,6 @@ change there.
 - [Camel K docs](https://github.com/apache/camel-k/tree/antora/docs)
 
 Your changes in these repositories will automatically get visible on the website after a site rebuild.
-
-[1]: antora-ui-camel/src/img/logo32-d.png "Apache Camel"
-
-
 
 ## Build with Maven
 
