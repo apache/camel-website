@@ -8,7 +8,7 @@ preview: Summary of the Apache Camel project in 2019
 
 It's the time of the year where we take a look back at 2019, and compile a brief summary of the Apache Camel project.
 
-{{< image "camel-sunset.jpeg" "Camel Sunset" >}}
+{{< image "camel-sunset.jpg" "Camel Sunset" >}}
 
 The big news of 2019 was the much anticipated release of Apache Camel 3.
 
