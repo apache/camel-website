@@ -19,6 +19,7 @@ It was also in 2019 that the Camel project became a faimily of projects by intro
 - Camel K
 - Camel Quarkus
 
+
 Making Apache Camel a trilogy. But it does not stop there; in early 2020 three will become five when we release:
 
 - Camel Kafka Connector
