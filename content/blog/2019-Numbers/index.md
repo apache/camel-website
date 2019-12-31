@@ -12,7 +12,7 @@ It's the time of the year where we take a look back at 2019, and compile a brief
 
 The big news of 2019 was the much anticipated release of Apache Camel 3.
 
-== Family of projects
+## Family of projects
 
 It was also in 2019 that the Camel project became a faimily of projects by introducing:
 
@@ -24,7 +24,7 @@ Making Apache Camel a trilogy. But it does not stop there; in early 2020 three w
 - Camel Kafka Connector
 - Camel Spring Boot (moved out from main repository)
 
-== Camel 2019 in Numbers
+## Camel 2019 in Numbers
 
 Number of Camel releases in 2019: 21
 Number of Camel K and Camel Quarkus releases in 2019: 15
