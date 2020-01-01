@@ -59,6 +59,8 @@ Number of closed pull requests at end of 2019: **3434**
 
 Number of closed pull requests in 2019: **482**
 
+Number of Twitter followers at end of 2019: **1033**
+
 The Apache Software Foundation recently posted a summary of the most active projects in 2019 and Apache Camel was ranked in the top 5 by commits and github traffic.
 
 Happy New Year and 2020 is going to be a great year for Apache Camel with Camel Kafka Connector, Camel K and Camel Quarkus all in the works and to be released as production ready 1.0 releases.
