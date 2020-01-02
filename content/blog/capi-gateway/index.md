@@ -12,7 +12,7 @@ In the team we worked already a couple of times with Apache Camel, and i persona
 
 Recently i was challenged to find alternatives to the existing API Gateway infrastructure, and immediately started to search for products implemented on top of Apache Camel.
 
-Not being able to find any solution with all we need to offer, i decided to work on a small POC with the following features: 
+Not being able to find any solution with all we need to offer, i decided to work on a small POC with the following features:
 * Easy to customize API Gateway (since we have several customers, with a wide scope of needs and technologies, we need to be able to easily build custom components on top of an API Gateway core.) Ex.: Customize processors, Integrate with externals IdP, Implement custom API Manager Interface.)
 * Light and easy to install.
 * Decoupled components, Observality, Metrics, Database, API Manager Interface, Authorization and Gateway.
@@ -32,7 +32,7 @@ SO, WHY APACHE CAMEL?
 * DSL Language.
 * Know-how in the team.
 * It supports all the integration patterns that you can remember.
- 
+
 As part of the POC, i've decided already to combine other technologies:
 
 * Spring Boot
@@ -73,15 +73,15 @@ Let's then go for some technical details...
                 .end()
                 .setId(routeID);
 ```
-                
-The *toEndpoint* contains the default configuration: 
+
+The *toEndpoint* contains the default configuration:
 
      throwExceptionOnFailure=false //we will catch the exceptions
      connectTimeout=...
      bridgeEndpoint=true
      copyHeaders=true
      connectionClose=true
-     
+
 Since we want to be able to catch Network, IO exceptions we also do this on the route definition:
 
 ```
@@ -93,7 +93,7 @@ Since we want to be able to catch Network, IO exceptions we also do this on the 
             .removeHeader(...) //remove some core headers
             .end();
 ```
-            
+
 All information about a running API can be found in the shared cache. This allows the component that manages API's to know if an API must be suspended, or temporarily blocked (due to failed attempts and/or number of calls exceeding the defined threshold.)
 Information about a running API, includes:
 * Route ID
@@ -109,7 +109,7 @@ Information about a running API, includes:
 * Suspended info (type [ERROR, THROTTLING] and reason)
 
 Main components Managing enabled Routes:
-* @Component @Scheduled *ThrottlingInspector* - Periodically checks the traffic on the deployed API Path level 
+* @Component @Scheduled *ThrottlingInspector* - Periodically checks the traffic on the deployed API Path level
 * @Component @Scheduled *Running API's* - Periodically checks for API errors, candidates routes to suspend.
 
 ## Example of an API definition
@@ -137,7 +137,7 @@ Main components Managing enabled Routes:
     }
 ```
 
-With the following configuration your service will be available at: 
+With the following configuration your service will be available at:
 
 ```
     https://localhost:8380/gateway/context-name/
@@ -164,7 +164,7 @@ You can define your own paths, in case you dont have a Swagger Endpoint (Swagger
         "blockIfInError" : false,
         //no swagger definition present, you need to define the available paths.
         "swagger" : false,
-        "paths" : [ 
+        "paths" : [
             {
             "verb" : "GET",
             "path" : "/services/path"
@@ -189,19 +189,19 @@ Example of  client (with the password: web-client-secret)
         "secretRequired" : true,
         "clientSecret" : "$2a$10$oQBqS4ZOEiIGVNiZnB0nMuFw/n/Od57IG/uy4nFuOJxLtHE/Z5jDC",
         "scoped" : false,
-        "scope" : [ 
+        "scope" : [
             "read-foo"
         ],
-        "authorizedGrantTypes" : [ 
-            "refresh_token", 
-            "client_credentials", 
+        "authorizedGrantTypes" : [
+            "refresh_token",
+            "client_credentials",
         ],
         "registeredRedirectUri" : [],
-        "authorities" : [ 
+        "authorities" : [
             {
                 "role" : "ROLE_USER",
                 "_class" : "org.springframework.security.core.authority.SimpleGrantedAuthority"
-            }, 
+            },
             {
                 "role" : "ROLE_PUBLISHER",
                 "_class" : "org.springframework.security.core.authority.SimpleGrantedAuthority"
@@ -219,15 +219,15 @@ If you wish to enable security for your API (api.secured = true), then you will 
 Your API ID will be added as an authority in the authorities list of your client.
 
 ```
-    "authorities" : [ 
+    "authorities" : [
         {
             "role" : "ROLE_USER",
             "_class" : "org.springframework.security.core.authority.SimpleGrantedAuthority"
-        }, 
+        },
         {
             "role" : "ROLE_PUBLISHER",
             "_class" : "org.springframework.security.core.authority.SimpleGrantedAuthority"
-        }, 
+        },
         {
             "role" : "YOUR API ID",
             "_class" : "org.springframework.security.core.authority.SimpleGrantedAuthority"
@@ -252,7 +252,7 @@ Your API ID will be added as an authority in the authorities list of your client
 
 * Go to: http://localhost:8080/swagger-ui.html
 * Authenticate with the token you obtained from the previous step. (Don't forget to specify: Bearer _the token_)
-* Publish your first API: 
+* Publish your first API:
 ```
          curl -X POST "http://localhost:8080/route/simple-rest" -H "accept: application/json" -H "Content-Type: application/json" -d "<your-api>" (see Example of an API definition)
 ```
@@ -266,8 +266,8 @@ Docker compose will create instances of Grafana, Prometheus and Zipkin, but if y
 * api.gateway.grafana.endpoint=http://localhost:8080/grafana
 
 ## Some load results (Calling a protected service)
-#### Using apache benchmark on a 1 node docker container with SSL 
-    
+#### Using apache benchmark on a 1 node docker container with SSL
+
     Results for 20k calls 1000 concurrency level:
     Server Hostname:        localhost
     Server Port:            8380
