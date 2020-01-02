@@ -1,6 +1,6 @@
 ---
 title: "CAPI Gateway: Using Apache Camel at the European Commission"
-date: 2019-12-02
+date: 2020-01-02
 author: Rodrigo Coehlo
 categories: ["Guest Posts"]
 preview: CAPI Gateway
@@ -48,7 +48,7 @@ Let's then go for some technical details...
 
 ## Architecture Overview
 
-![Architecture Overview](https://rodrigo.at/CAPI-Gateway.png)
+![Architecture Overview](./CAPI-Gateway.png)
 
 ## Basic Route Definition
 
