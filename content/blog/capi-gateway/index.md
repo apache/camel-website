@@ -1,7 +1,7 @@
 ---
 title: "CAPI Gateway: Using Apache Camel at the European Commission"
 date: 2020-01-02
-author: Rodrigo Coehlo
+author: Rodrigo Coelho
 categories: ["Guest Posts"]
 preview: CAPI Gateway
 ---
