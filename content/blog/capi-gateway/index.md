@@ -13,6 +13,7 @@ In the team we worked already a couple of times with Apache Camel, and i persona
 Recently i was challenged to find alternatives to the existing API Gateway infrastructure, and immediately started to search for products implemented on top of Apache Camel.
 
 Not being able to find any solution with all we need to offer, i decided to work on a small POC with the following features:
+
 * Easy to customize API Gateway (since we have several customers, with a wide scope of needs and technologies, we need to be able to easily build custom components on top of an API Gateway core.) Ex.: Customize processors, Integrate with externals IdP, Implement custom API Manager Interface.)
 * Light and easy to install.
 * Decoupled components, Observality, Metrics, Database, API Manager Interface, Authorization and Gateway.
@@ -25,6 +26,7 @@ Not being able to find any solution with all we need to offer, i decided to work
 * Authorization integration with Keycloak.
 
 SO, WHY APACHE CAMEL?
+
 * Open Source.
 * Big and active community.
 * Fast and relyable.
@@ -96,6 +98,7 @@ Since we want to be able to catch Network, IO exceptions we also do this on the 
 
 All information about a running API can be found in the shared cache. This allows the component that manages API's to know if an API must be suspended, or temporarily blocked (due to failed attempts and/or number of calls exceeding the defined threshold.)
 Information about a running API, includes:
+
 * Route ID
 * Secured
 * Zipkin Service Name and Prometheus Metrics Name
@@ -109,6 +112,7 @@ Information about a running API, includes:
 * Suspended info (type [ERROR, THROTTLING] and reason)
 
 Main components Managing enabled Routes:
+
 * @Component @Scheduled *ThrottlingInspector* - Periodically checks the traffic on the deployed API Path level
 * @Component @Scheduled *Running API's* - Periodically checks for API errors, candidates routes to suspend.
 
