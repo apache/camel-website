@@ -1,7 +1,7 @@
 ---
 title: "Custom Web API Component"
 date: 2020-01-07
-draft: false 
+draft: false
 author: "Federico Valeri"
 categories: ["Usecases"]
 preview: "Build your own custom Web API Component from scratch."
@@ -15,7 +15,7 @@ Creating a new component is actually pretty simple and, as a benefit, you will a
 
 This minimal, yet complete, example will focus on all the steps required to create and contribute your own Web API component to the Apache Camel codebase.
 
-As prerequisites you just need OpenJDK 1.8 and Maven 3.5+. 
+As prerequisites you just need OpenJDK 1.8 and Maven 3.5+.
 [Download the complete source code](camel-chuck.zip).
 
 ## API endpoint
@@ -61,7 +61,7 @@ Now we need to create the project object module (POM) for Maven build (use the s
 ```sh
 $ cat <<EOF > pom.xml
 <?xml version="1.0" encoding="UTF-8" ?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 <modelVersion>4.0.0</modelVersion>
 
@@ -199,7 +199,7 @@ public class ChuckProducer extends DefaultAsyncProducer {
 }
 ```
 
-In the process method of the Producer we return false to signal that the processing will be executed asynchronously. Look at the repository for the full source code, but these are the only classes needed to start building a new component. 
+In the process method of the Producer we return false to signal that the processing will be executed asynchronously. Look at the repository for the full source code, but these are the only classes needed to start building a new component.
 
 ### API service
 
@@ -252,11 +252,11 @@ public interface ApiService {
 }
 ```
 
-You can check the implementation of this interface which uses the AsyncHttpClient to actually do the HTTP request. The most interesting part is the ChuckAsyncHandler inner class, that gets the response and handles the Camel Exchange object (message container). 
+You can check the implementation of this interface which uses the AsyncHttpClient to actually do the HTTP request. The most interesting part is the ChuckAsyncHandler inner class, that gets the response and handles the Camel Exchange object (message container).
 
 ### Unit and integration tests
 
-A component would not be complete without a good set of unit and integration tests. This is also an easy task to do thanks to the CamelTestSupport which has some nice abstractions that allows you to create and test your routes. 
+A component would not be complete without a good set of unit and integration tests. This is also an easy task to do thanks to the CamelTestSupport which has some nice abstractions that allows you to create and test your routes.
 
 In this case we add the [Wiremock](https://github.com/tomakehurst/wiremock) dependency, which is a tool for HTTP response stubbing:
 
