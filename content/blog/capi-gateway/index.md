@@ -3,7 +3,7 @@ title: "CAPI Gateway: Using Apache Camel at the European Commission"
 date: 2020-01-02
 author: Rodrigo Coelho
 categories: ["Usecases"]
-preview: CAPI Gateway
+preview: How an API Gateway is implemented using Camel at the European Comission
 ---
 
 I've been working at the European Commission for the last 4 years as a Software Architect, working for a unit responsible for developing reusable components, and advocating open source software. In this context, we organized already a couple of Hackathons and Bug bounties open to all the open source communities.
@@ -50,7 +50,7 @@ Let's then go for some technical details...
 
 ## Architecture Overview
 
-![Architecture Overview](./CAPI-Gateway.png)
+{{< image "CAPI-Gateway.png" "Architecture Overview" >}}
 
 ## Basic Route Definition
 
@@ -268,9 +268,11 @@ $ curl -X POST "http://localhost:8080/route/simple-rest" -H "accept: application
 
 Docker Compose will create instances of Grafana, Prometheus and Zipkin, but if you wish to use already existing instances you just need to change this environment variables:
 
-* api.gateway.prometheus.endpoint=http://prometheus:9090
-* api.gateway.zipkin.endpoint=http://zipkin:9411/api/v2/spans
-* api.gateway.grafana.endpoint=http://localhost:8080/grafana
+```
+api.gateway.prometheus.endpoint=http://prometheus:9090
+api.gateway.zipkin.endpoint=http://zipkin:9411/api/v2/spans
+api.gateway.grafana.endpoint=http://localhost:8080/grafana
+```
 
 ## Some load results (Calling a protected service)
 #### Using apache benchmark on a 1 node docker container with SSL
