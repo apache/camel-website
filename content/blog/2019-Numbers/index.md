@@ -8,8 +8,6 @@ preview: Summary of the Apache Camel project in 2019
 
 It's the time of the year where we take a look back at 2019, and compile a brief summary of the Apache Camel project.
 
-{{< image "camel-sunset.jpg" "Camel Sunset" >}}
-
 The big news of 2019 was the much anticipated release of Apache Camel 3.
 
 ## Family of projects
@@ -64,8 +62,6 @@ Number of Twitter followers at end of 2019: **1033**
 The Apache Software Foundation recently posted a summary of the most active projects in 2019 and Apache Camel was ranked in the top 5 by commits and github traffic.
 
 Happy New Year and 2020 is going to be a great year for Apache Camel with Camel Kafka Connector, Camel K and Camel Quarkus all in the works and to be released as production ready 1.0 releases.
-
-
 
 ```
 #1 git shortlog -ns --since 2019-01-01 --until 2020-01-01 | cut -c1-7 | awk '{ SUM += $1} END { print SUM }'

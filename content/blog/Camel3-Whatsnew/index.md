@@ -1,14 +1,12 @@
 ---
-title: "Apache Camel 3 Whats New (top 10)"
+title: "Apache Camel 3 What's New (top 10)"
 date: 2019-12-02
 author: Claus Ibsen
 categories: ["Releases"]
-preview: Top 10 of whats new in Apache Camel 3
+preview: Top 10 of what's new in Apache Camel version 3
 ---
 
 Apache Camel 3 was released last thursday November 28th 2019, which also happens to be the day of the US Thanksgiving. This was not intentionally but we can say its a big thanks from us to the community with a brand new major version of Camel - this does not come often by. In fact its 10 years since Camel 2 hit the streets. So this 3rd generation is long overdue.
-
-{{< image "camel3-3humps.png" "Apache Camel 3" >}}
 
 
 This blog post highlights the noteworthy new features and improvements in Camel v3.
@@ -27,7 +25,6 @@ Apache Camel, is now a family of projects (3 at this time of writing).
 
 The Camel code-base is very large, and we have setup sub-projects for new innovative projects using Camel. The first sub-project was to run Camel as cloud-native on Kubernetes in a serverless manner which became Camel K. Then Camel Quarkus came to make Java and Camel with very fast startup and very small memory footprint primary for container based deployments. 
 
-
 ### 2) New Website
 
 {{< image "camel3-website.png" "Camel 3 website" >}}
@@ -39,11 +36,9 @@ For Camel 3.x we will continue to improve the website and the documentation. Thi
 
 Zoran had some fun with the new look and feel and he added a little gem; if you stare at the front page, then you should see a little animation of the curved bezel ;)
 
-
 ### 3) Java 11
 
 Camel 3 is the first official release that supports Java 11. Java 8 will still be supported for the first number of 3.x releases, but is expected to be dropped later in 2020. However we wanted to provide Java 8 support to help migrate Camel 2.x users whom may be restricted to Java 8 for some time to come.
-
 
 ### 4) Modularized camel-core
 
@@ -68,7 +63,6 @@ The camel-core has been modularized from 1 JAR to 33 JARs. The core functionalit
 | **camel-support** |
 | camel-util |
 | camel-util-json |
-
 
 For Camel end users then only a few JARs is relevant. 
 
@@ -115,7 +109,6 @@ When you use `camel-core-engine` you get the minimum set of JARs that makes a fu
 
 `camel-core` contains 33 JARs and `camel-core-engine` contains 12 JARs.
 
-
 ### 5) Faster startup and lower footprint
 
 We have reduced the size of core Camel and the number of classes loaded. For example in Camel 2 about 5200 classes was loaded, which has been reduced to about 4300 loaded classes in Camel 3.
@@ -134,7 +127,6 @@ All this optimization improves the startup performance of Camel and reduces the 
 {{< image "camel3-quarkus.png" "Camel 3 Quarkus native compiled" >}}
 
 There are still a few items on the agenda that we want to work on in Camel 3.x to further optimize Camel core.
-
 
 ### 6) Type Safe Endpoint DSL
 
@@ -155,7 +147,6 @@ from(timer("click").period(3000).fixedRate(true))
 
 You can also find a [little example](https://github.com/apache/camel/tree/master/examples/camel-example-cafe-endpointdsl) in the source code.
 
-
 ### 7) Reactive Routing Engine
 
 The routing engine in Camel has internally been reactive'fied and all EIPs has been retrofitted to work in a reactive manner. However this is internal only, and the Camel API for both end users and component developers are based on existing callback behavior.
@@ -164,7 +155,6 @@ We will later introduce and work on a client-side facing reactive API after we h
 
 Camel already have integration with reactive frameworks such as Vert.X, RxJava and Reactor Core in the dedicated Camel components.
 
-
 ### 8) Camel Main
 
 We have introduced `camel-main` as a standalone JAR that makes it easier to run just Camel.
@@ -172,13 +162,11 @@ There are a [couple of examples](https://github.com/apache/camel/blob/master/exa
 
 We also use `camel-main` to have common code to configure and bootstrap Camel for standalone, Spring Boot, Camel K, and Camel Quarkus. This allows us to share the same code, and configuration options.
 
-
 ### 9) Camel Microprofile
 
 Camel 3 now integrates better with Eclipse Microprofile and we have Camel components for Microprofile configuration, metrics, health checks, and fault tolerance (on the way).
 
 More components to come in upcoming Camel releases. These microprofile components are also used by Camel Quarkus.
-
 
 ### 10) Miscellaneous improvements
 
@@ -190,7 +178,6 @@ You can also configure endpoints (producer) to lazy start. By default Camel work
 
 Camel also allows to configure your routes to be supervised during startup, which allows Camel to more intelligently start routes in a more safe manner, by restarting routes that failed.
 
-
 ### 11) Migrating to Camel 3
 
 We have of course cleaned up the code base, such as removing all deprecated APIs and components. We have also adjusted some APIs to make them easier to use from end users, and more Java 8 lambda friendly.
@@ -198,6 +185,5 @@ We have of course cleaned up the code base, such as removing all deprecated APIs
 Internally we have also adjusted the route model, to make it easier to extend into new DSLs; and there is a YAML DSL on the way which was initiated in Camel K.
 
 In terms of backwards compatibility then Camel 3 is mostly compatibility for regular Camel applications. However if you are using some of the more advanced features and other plugins in Camel then migration is needed. Also custom components must be migrated and recompiled. There are other adjustments such as Spring Boot users must use `org.apache.camel.springboot` as groupId instead of `org.apache.camel` etc. All details can be seen in the [migration guide](https://camel.apache.org/manual/latest/camel-3-migration-guide.html).
-
 
 Good luck with your migration if you decide to continue your Camel journey. And for new users to Camel then good luck getting onboard.

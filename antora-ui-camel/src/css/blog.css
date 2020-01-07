@@ -85,12 +85,18 @@ article.blog p {
 
 .blog .post-content img {
   width: 100%;
+  max-width: 800px;
   height: auto;
 }
 
 .blog .post-content figcaption {
   font-size: 0.8rem;
   text-align: center;
+}
+
+.blog .post-content pre {
+  max-width: 800px;
+  white-space: pre-wrap;
 }
 
 @media screen and (min-width: 1024px) {
@@ -104,6 +110,7 @@ article.blog p {
 
   .blog .post aside {
     width: 30rem;
+    min-width: 12rem;
   }
 
   .blog a.arrow {

@@ -15,5 +15,3 @@ And at the end we have some bits about what's coming next in Camel 3.1.
 
 [The podcast](http://asylum.libsyn.com/podcast-46-what-do-you-call-a-camel-with-3-humps) is about 80 minutes so embrace yourself with patience.
 
-{{< image "camel-podcast.jpeg" "Camel Podcast" >}}
-
