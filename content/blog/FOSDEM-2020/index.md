@@ -14,9 +14,13 @@ preview: Camel will be in full force at FOSDEM 2020
 
 FOSDEM 2020 is on 1st (from 9:30 to 19:00) and 2nd (from 9:00 to 18:00) of February.
 
+Camel social event is on Saturday, 1st of February from 20:00
+
 # Where
 
-[Université libre de Bruxelles](https://fosdem.org/2020/practical/transportation/), Campus du Solbosch, Avenue Franklin D. Roosevelt 50, 1050 Bruxelles, Belgium.
+FOSDEM is at [Université libre de Bruxelles](https://fosdem.org/2020/practical/transportation/), Campus du Solbosch, Avenue Franklin D. Roosevelt 50, 1050 Bruxelles, Belgium.
+
+Camel social event is at [À la Mort Subite](https://www.alamortsubite.com/en/), [rue Montagne-aux-Herbes Potagères 7](https://www.openstreetmap.org/node/4480414658)
 
 # Why
 
@@ -26,7 +30,6 @@ First, at the _Integration Process Community_ [stand](https://fosdem.org/2020/st
 
 The Camel BoF session at FOSDEM 2019 was very well received last year and we're repeating it: the [Camel birds of a feather](https://fosdem.org/2020/schedule/event/bof_apache_camel/) will be on Saturday from 11 to 12 in the room [H.3242](https://fosdem.org/2020/schedule/buildings/#h). Let's meet, discuss and exchange ideas. Anyone wishing to share can present on any topic relating to Apache Camel is welcome to do so, though please be mindful of the time - we have one hour in this session and would like that everyone would have the chance to participate.
 
-Lastly, we're planning on having a social event on Saturday a chance to wind down and discuss more in one of many Belgian pubs. Watch this space for details on that.
+On Saturday evening, first day of FOSDEM, we have the social event, a chance to wind down and discuss more about Camel at À la Mort Subite a old traditional pub and brewery in the Brussels city center.
 
 I hope to see many of you at FOSDEM 2020!
-
