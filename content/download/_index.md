@@ -4,12 +4,5 @@ title: "Download"
 
 ### Keys
 
-The KEYS used to sign the release can be found [here](https://www.apache.org/dist/camel/apache-camel/KEYS).
+You can verify your download by following these [procedures](http://www.apache.org/info/verification.html) and using these [KEYS](https://www.apache.org/dist/camel/apache-camel/KEYS).
 
-## Maven 2 Repositories
-
-{{< table >}}
-| Description | Download Link |
-|-------------|---------------|
-|Apache Camel Releases | https://repository.apache.org/content/repositories/releases/org/apache/camel/apache-camel/ |
-{{< /table >}}

@@ -22,22 +22,7 @@
                 {{ $major = .Params.version | replaceRE "\\.\\d+$" "" }}
             {{ end }}
             </ul>
-
-            <h3>Using Maven</h3>
-
-
-            <p>To use this release in your maven project, the proper dependency configuration that you should use in your Maven POM is:</p>
-
-            <div class="listingblock">
-                <div class="content">
-                    <pre><code class="xml">&lt;dependency&gt;
-  &lt;groupId&gt;org.apache.camel&lt;/groupId&gt;
-  &lt;artifactId&gt;camel-core&lt;/artifactId&gt;
-  &lt;version&gt;{{ range (first 1 ((where .Site.Pages "Type" "release-note").ByParam "version").Reverse) }}{{ .Params.version }}{{ end }}&lt;/version&gt;
-&lt;/dependency&gt;</code></pre>
-                </div>
-            </div>
-
+ 
             <h2>Getting the latest distributions</h2>
 
             <h3>Binary Distribution</h3>
