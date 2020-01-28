@@ -84,6 +84,10 @@ Articles are divided into several sections. As the lists grow, further sectionin
 *   [Easy integration between services with Apache Camel](https://blog.codecentric.de/en/2018/08/easy-integration-between-services-with-apache-camel/) - By Jan Martijn Roetman from August 2018 blogs about his experience with Apache Camel  and explain a bit what I think Apache Camel is and why it is useful. I will also give some code examples.
 *   [Auto-generating news and publishing it to WordPress with Apache Camel](https://developers.redhat.com/blog/2018/08/27/camel-wordpress-integration/) - By Ricardo Zanini from August 2018 blogs about how to generate news posts using NLG (Natural Language Generation) and post to WordPress via Apache Camel.
 *   [Streamline Software Integration: An Apache Camel Tutorial](https://www.toptal.com/apache/apache-camel-tutorial) - A longer article and tutorial on introducing Apache Camel and using Camel with microservices, testing, Kubernetes, and much more. The tutorial is based on the Camel 2.22 release.  
+*   [Getting started with Camel 3](http://www.mastertheboss.com/other/camel/getting-started-with-camel-3) - by Francesco Marchioni. A quick introduction to Camel 3 with a basic application example using a Camel Main class
+*   [Routing Camel messages to Artemis embedded in WildFly ](http://www.mastertheboss.com/other/camel/routing-camel-messages-to-artemis-embedded-in-wildfly) - by Francesco Marchioni. Shows how to route JMS messages from a Camel route to ArtemisMQ embedded in WildFly
+*   [Camel Cheatsheet](http://www.mastertheboss.com/other/camel/camel-cheatsheet) - A cheatsheet for Camel developers
+*   [Create a Custom Camel logging handler for WildFly ](http://www.mastertheboss.com/jboss-server/jboss-log/create-a-custom-camel-logging-handler-for-wildfly) - by Francesco Marchioni. Shows how to use a Camel based logging handler in WildFly
 
 These examples show usage of several different components and other concepts such as error handling.
 
@@ -352,6 +356,7 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   [Robert James Liguori's Blog](https://archive.fo/XKA0Z) - (archived) Blogs about Java and supporting resources including Apache Camel.
 *   [Willem Jiang's Blog](http://willemjiang.blogspot.com/) - Willem also writes about Camel in English and Chinese.
 *   [Souciance Eqdam Rashti](https://soucianceeqdamrashti.wordpress.com/) - Blogs about integration and Apache Camel in English. 
+*   [Mastertheboss](http://www.mastertheboss.com) - Contains several tutorials for Camel 2 and 3 in English. 
 
 ### Twitterers
 
