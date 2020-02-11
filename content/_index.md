@@ -68,6 +68,14 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 <a class="significant" href="./camel-quarkus/latest/">Read the docs</a>
 {{< /div >}}
 
+{{< div "project" >}}
+# Camel Kafka Connector
+
+**Apache Camel Kafka Connector** embeds Camel within [Kafka Connect](https://kafka.apache.org/documentation/#connect), enabling declarative use of Camel components as sources or sinks to Kafka topics.
+
+<a class="significant" href="./camel-kafka-connector/latest/">Read the docs</a>
+{{< /div >}}
+
 {{< /section >}}
 
 {{< section "frontpage columns apache" >}}
