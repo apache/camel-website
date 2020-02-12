@@ -39,6 +39,13 @@ timeout = 300000
     url = "/projects/camel-quarkus/"
 
 [[menu.main]]
+    name = "Camel Kafka Connector"
+    parent = "projects"
+    weight = 3
+    identifier = "project-camel-kafka-connector"
+    url = "/projects/camel-kafka-connector/"    
+
+[[menu.main]]
     name = "Documentation"
     identifier = "docs"
     weight = 4
