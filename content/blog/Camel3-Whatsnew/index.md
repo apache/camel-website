@@ -158,7 +158,7 @@ Camel already have integration with reactive frameworks such as Vert.X, RxJava a
 ### 8) Camel Main
 
 We have introduced `camel-main` as a standalone JAR that makes it easier to run just Camel.
-There are a [couple of examples](https://github.com/apache/camel/blob/master/examples/camel-example-main/readme.adoc) with the source code that demonstrates how to do that.
+There are a [couple of examples](https://github.com/apache/camel-examples/blob/master/examples/camel-example-main/readme.adoc) with the source code that demonstrates how to do that.
 
 We also use `camel-main` to have common code to configure and bootstrap Camel for standalone, Spring Boot, Camel K, and Camel Quarkus. This allows us to share the same code, and configuration options.
 
