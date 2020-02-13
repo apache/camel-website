@@ -43,7 +43,14 @@ timeout = 300000
     parent = "projects"
     weight = 3
     identifier = "project-camel-kafka-connector"
-    url = "/projects/camel-kafka-connector/"    
+    url = "/projects/camel-kafka-connector/"
+
+[[menu.main]]
+    name = "Camel Spring Boot"
+    parent = "projects"
+    weight = 4
+    identifier = "project-camel-spring-boot"
+    url = "/camel-spring-boot/latest/"
 
 [[menu.main]]
     name = "Documentation"
