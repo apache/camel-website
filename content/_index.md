@@ -76,6 +76,14 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 <a class="significant" href="./camel-kafka-connector/latest/">Read the docs</a>
 {{< /div >}}
 
+{{< div "project" >}}
+# Camel Spring Boot
+
+**Apache Camel Spring Boot** run Camel on [Spring Boot](https://spring.io/projects/spring-boot).
+
+<a class="significant" href="./camel-spring-boot/latest/">Read the docs</a>
+{{< /div >}}
+
 {{< /section >}}
 
 {{< section "frontpage columns apache" >}}
