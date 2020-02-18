@@ -127,4 +127,11 @@ pipeline {
             }
        }
     }
+
+    // temporary to clean the workspace, to be removed to help with caching
+    post {
+        always {
+            cleanWs()
+        }
+    }
 }
