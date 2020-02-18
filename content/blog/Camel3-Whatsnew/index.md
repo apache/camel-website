@@ -111,12 +111,11 @@ When you use `camel-core-engine` you get the minimum set of JARs that makes a fu
 
 ### 5) Faster startup and lower footprint
 
-We have reduced the size of core Camel and the number of classes loaded. For example in Camel 2 about 5200 classes was loaded, which has been reduced to about 4300 loaded classes in Camel 3.
+We have reduced the size of core Camel and the number of classes loaded. For example in Camel 2 about 5200 classes were loaded, which has been reduced to about 4300 loaded classes in Camel 3.
 
-We have also done many smaller optimizations in the core, to reduce the number of allocated Java objects, and speeup initialization and other means. We have used JVM profiling tools to assist and find the bottlenecks.
+We have also done many smaller optimizations in the core, to reduce the number of allocated Java objects, and speed-up initialization and other means. We have used JVM profiling tools to assist and find the bottlenecks.
 
-Another area of improvement is to reduce Java reflections. In Camel 2 then all the configuration of Camel components, endpoints, and routes are reflection based. In Camel 3
-we have source code generated Java code for configuration that allows us to use direct Java calls instead of reflections. 
+Another area of improvement is to reduce Java reflections. In Camel 2 all the configuration of Camel components, endpoints, and routes are reflection based. In Camel 3 we have source code generated Java code for configuration that allows us to use direct Java calls instead of reflection. 
 
 Another similar area is Camel's type converters which in Camel 2 are Java reflection based (you could build custom type converts that were not reflection based). In Camel 3 we also generate Java source code which means that type converting is direct Java calls at runtime.
 
@@ -130,7 +129,7 @@ There are still a few items on the agenda that we want to work on in Camel 3.x t
 
 ### 6) Type Safe Endpoint DSL
 
-Camel end users whom has configured endpoints using URI strings, would all have experienced the problem when you make a configuration mistake in the endpoint, which then makes Camel fail on startup.
+Camel end users whom have configured endpoints using URI strings, would all have experienced the problem when you make a configuration mistake in the endpoint, which then makes Camel fail on startup.
 
 In Camel 3, we have a new type-safe DSL for endpoints which you can use in Java routes.
 You can continue to use the classic URI strings, but if you want to try the endpoint DSL, then you need to add `camel-endpointdsl` to your classpath. Then you should extend `EndpointRouteBuilder` instead of `RouteBuilder` to access the endpoint DSL.
@@ -153,7 +152,7 @@ The routing engine in Camel has internally been reactive'fied and all EIPs has b
 
 We will later introduce and work on a client-side facing reactive API after we have jumped to Java 11 as minimum version (then we can support Java 9 flowable API). 
 
-Camel already have integration with reactive frameworks such as Vert.X, RxJava and Reactor Core in the dedicated Camel components.
+Camel already has integrations with reactive frameworks such as Vert.X, RxJava and Reactor Core in the dedicated Camel components.
 
 ### 8) Camel Main
 
