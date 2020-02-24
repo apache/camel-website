@@ -23,8 +23,12 @@
         <div class="post-content">
             {{ $featured := (.Resources.ByType "image").GetMatch "*featured*" }}
             {{ with $featured }}
-                {{ $featured := .Resize "800x q95 Gaussian" }}
-                <img class="featured" alt="Blog post featured image" src="{{ $featured.RelPermalink }}" width="{{ $featured.Width }}" height="{{ $featured.Height }}">
+              {{ if ne $featured.MediaType.SubType "svg" }}
+                  {{ $featured := .Resize "800x q95 Gaussian" }}
+                  <img class="featured" alt="Blog post featured image" src="{{ $featured.RelPermalink }}" width="{{ $featured.Width }}" height="{{ $featured.Height }}">
+              {{ else }}
+                  <img class="featured" alt="Blog post featured image" src="{{ $featured.RelPermalink }}" width="800">
+              {{ end }}
             {{ end }}
             {{ .Content }}
         </div>
