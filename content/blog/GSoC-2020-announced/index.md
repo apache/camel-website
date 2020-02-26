@@ -49,7 +49,7 @@ subject: GSoC 2020 mentor request for <mentor name>
 Camel PMC,
 
 please acknowledge my request to become a mentor for Google Summer of
-Code 2018 projects for Apache Camel.
+Code 2020 projects for Apache Camel.
 
 I would like to receive the mentor invite to <mentor email address>
 ```
