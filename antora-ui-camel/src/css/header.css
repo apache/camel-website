@@ -311,11 +311,22 @@ body {
   background: no-repeat 0.2rem/1.2rem url(../img/search.svg);
 }
 
+.navbar-search input:focus-within {
+  transform: scale(1.025);
+  border-bottom: 1px solid #ed8225;
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    box-shadow: none;
+    transform: none;
+  }
+}
+
 #search_results {
   top: 3rem;
   background: #fffe;
   padding: 0.5rem;
   text-align: left;
+  box-shadow: 0.1px 0.2em 2.5em #c4c4c4;
 }
 
 .results-hidden #search_results {
