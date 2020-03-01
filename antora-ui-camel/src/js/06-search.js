@@ -33,7 +33,11 @@ window.addEventListener('load', () => {
           const d = {}
           d.url = hit.url
           d.breadcrumbs = Object.values(hit.hierarchy).slice(1).filter((lvl) => lvl !== null).join(' &raquo; ')
-          d.snippet = hit._snippetResult.content.value
+          if (hit._snippetResult !== undefined) {
+            d.snippet = hit._snippetResult.content.value
+          } else {
+            d.snippet = ''
+          }
 
           const section = hit.hierarchy.lvl0
           data[section] = data[section] || []
