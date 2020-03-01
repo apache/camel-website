@@ -49,21 +49,27 @@ window.addEventListener('load', () => {
         return data
       })
       .then((data) => {
-        return `
-        <dl>
-          ${Object.keys(data).map((section) => `
-            <dt>${section}</dt>
-            ${data[section].map((hit) => `
-              <a href="${hit.url}">
-                <dd>
-                  <header>${hit.breadcrumbs}</header>
-                  <summary>${hit.snippet}</summary>
-                </dd>
-              </a>
-            `).join('')}
-          `).join('')}
-        </dl>
-        `
+        if (Object.entries(data).length === 0 && data.constructor === Object) {
+          return `
+            <header>Nothing Found</header>
+            `
+        } else {
+          return `
+            <dl>
+              ${Object.keys(data).map((section) => `
+                <dt>${section}</dt>
+                ${data[section].map((hit) => `
+                  <a href="${hit.url}">
+                    <dd>
+                      <header>${hit.breadcrumbs}</header>
+                      <summary>${hit.snippet}</summary>
+                    </dd>
+                  </a>
+                `).join('')}
+              `).join('')}
+            </dl>
+            `
+        }
       })
       .then((markup) => {
         results.innerHTML = markup
