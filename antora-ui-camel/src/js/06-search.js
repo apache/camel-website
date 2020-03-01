@@ -80,10 +80,10 @@ window.addEventListener('load', () => {
         container.className = 'navbar-search'
       })
   }, 150))
-  window.addEventListener('keyup', (key) => {
-    if (key.which === 27) {
+  window.addEventListener('mouseup', debounce((element) => {
+    if (element.target !== container && element.target.parentNode !== container) {
       container.className = 'navbar-search results-hidden'
       results.innerHTML = ''
     }
-  })
+  }), 150)
 })
