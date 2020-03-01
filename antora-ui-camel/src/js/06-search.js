@@ -65,8 +65,8 @@ window.addEventListener('load', () => {
                 ${data[section].map((hit) => `
                   <a href="${hit.url}">
                     <dd>
-                      <header>${hit.breadcrumbs}</header>
-                      <summary>${hit.snippet}</summary>
+                      <header class="result_header">${hit.breadcrumbs}</header>
+                      <summary class="result_summary">${hit.snippet}</summary>
                     </dd>
                   </a>
                 `).join('')}
