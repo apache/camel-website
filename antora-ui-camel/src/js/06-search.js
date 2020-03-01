@@ -19,13 +19,17 @@ window.addEventListener('load', () => {
     }
   }
 
-  search.addEventListener('keyup', debounce(() => {
+  search.addEventListener('keyup', debounce((key) => {
     if (search.value.trim() === '') {
       container.className = 'navbar-search results-hidden'
       results.innerHTML = ''
       return
     }
-
+    if (key.which === 27) {
+      container.className = 'navbar-search results-hidden'
+      results.innerHTML = ''
+      return
+    }
     index.search(search.value)
       .then((results) => {
         const hits = results.hits
@@ -76,4 +80,10 @@ window.addEventListener('load', () => {
         container.className = 'navbar-search'
       })
   }, 150))
+  window.addEventListener('keyup', (key) => {
+    if (key.which === 27) {
+      container.className = 'navbar-search results-hidden'
+      results.innerHTML = ''
+    }
+  })
 })
