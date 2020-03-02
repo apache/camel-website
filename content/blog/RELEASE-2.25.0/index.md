@@ -13,7 +13,7 @@ The Camel community announces the immediate availability of Camel 2.25.0, a new 
 
 Please note that Camel 2.25.x is the last minor release for Camel 2.
 
-The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the [release notes](https://issues.apache.org/jira/secure/ReleaseNote.jspa?version=12345517&projectId=12311211).
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the  [resolved issues](/releases/release-2.25.0/#resolved).
 
 Many thanks to all who made this release possible.
 

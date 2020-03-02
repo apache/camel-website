@@ -1,0 +1,13 @@
+.release dl {
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+
+.release dt {
+  grid-column-start: 1;
+}
+
+.release dd {
+  grid-column-start: 2;
+  margin-left: 1rem;
+}
