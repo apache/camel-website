@@ -1,7 +1,7 @@
 ;(function () {
   'use strict'
 
-  const algoliasearch = require('algoliasearch')
+  const algoliasearch = require('algoliasearch/lite')
 
   window.addEventListener('load', () => {
     const client = algoliasearch('BH4D9OD16A', '16e3a9155a136e4962dc4c206f8278bd')
