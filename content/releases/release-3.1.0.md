@@ -7,7 +7,7 @@ title: "Release 3.1.0"
 preview: "New minor release"
 apiBreaking: ""
 knownIssues: ""
-jiraVersionId: 12311211
+jiraVersionId: 12346526
 ---
 
 This release is the new Camel 3.1.0 major release.

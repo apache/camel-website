@@ -1,23 +1,31 @@
 {{ partial "header.html" . }}
 
-{{ .Content }}
+<main class="main">
+  <article class="static doc">
 
-<table class="tableblock frame-all grid-all stretch">
-  <caption>Releases by version</caption>
-  <thead>
-    <tr>
-      <td>Version</td>
-      <td>Description</td>
-    </tr>
-  </thead>
-  <tbody>
-  {{ range .Pages }}
-    <tr>
-      <td><a href="{{ .RelPermalink }}">{{ .Params.version }}</a></td>
-      <td>{{ .Params.preview }}</td>
-    </tr>
-  {{ end }}
-  </tbody>
-</table>
+    {{ .Content }}
+
+    <table class="tableblock frame-all grid-all stretch">
+      <caption>Releases by version</caption>
+      <thead>
+        <tr>
+          <td>Version</td>
+          <td>Release date</td>
+          <td>Description</td>
+        </tr>
+      </thead>
+      <tbody>
+      {{ range .Pages }}
+        <tr>
+          <td><a href="{{ .RelPermalink }}">{{ .Params.version }}</a></td>
+          <td>{{ .Date | dateFormat "2006-01-02" }}</td>
+          <td>{{ .Params.preview }}</td>
+        </tr>
+      {{ end }}
+      </tbody>
+    </table>
+
+  </article>
+</main>
 
 {{ partial "footer.html" . }}

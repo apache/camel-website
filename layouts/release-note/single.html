@@ -1,72 +1,128 @@
 {{ partial "header.html" . }}
+<main role="main">
+  <article class="static doc release">
+    <h1 id="release"><a class="anchor" href="#release"></a>Apache Camel {{ .Params.version }} Release</h1>
+    <h2 id="whats_new"><a class="anchor" href="#whats_new"></a>New and Noteworthy</h2>
+    {{ .Content }}
+    <h2 id="binaries"><a class="anchor" href="#binaries"></a>Getting the Binaries</h2>
+    <h3 id="maven"><a class="anchor" href="#maven"></a>Getting the Binaries using Maven</h3>
+    <p>To use this release in your <a href="https://maven.apache.org">Apache Maven</a> <code>pom.xml</code>, import the Camel Bill of Materials (BOM) and then include the <code>camel-core</code> and any other components needed without specifying the version.</p>
+    <aside>
+      <p><mark>Note:</mark> <code>camel-bom</code> is available from Camel 2.20.0 onward.</p>
+      <p>Replace the <code>COMPONENT</code> with the artifact outlined in the <a href="/components/latest/">component documentation</a></p>
+    </aside>
+    <pre><code>{{ htmlUnescape (printf `<dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-bom</artifactId>
+      <version>%s</version>
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
+  </dependencies>
+</dependencyManagement>
 
-<h1>Apache Camel {{ .Params.version }} Release</h1>
-<h2>New and Noteworthy</h2>
-{{ .Content }}
-<h2>API breaking</h2>
-{{ .Params.apiBreaking }}
-<h2>Known issues</h2>
-{{ .Params.knownIssues }}
-<h2>Getting the Binaries using Maven</h2>
-<h3>Binary Distributions</h3>
-<table class="tableblock frame-all grid-all stretch">
-  <thead>
-  <tr>
-    <td>Description</td>
-    <td>Download Link</td>
-    <td>PGP Signature file of download</td>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>Windows Distribution</td>
-    <td><a href="http://www.apache.org/dyn/closer.cgi/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.zip">apache-camel-{{ .Params.version }}.zip</a></td>
-    <td><a href="http://www.apache.org/dyn/closer.cgi/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.zip.asc">apache-camel-{{ .Params.version }}.zip.asc</a></td>
-  </tr>
-  <tr>
-    <td>Unix/Linux/Cygwin Distribution</td>
-    <td><a href="http://www.apache.org/dyn/closer.cgi/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.tar.gz">apache-camel-{{ .Params.version }}.tar.gz</a></td>
-    <td><a href="http://www.apache.org/dyn/closer.cgi/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.tar.gz.asc">apache-camel-{{ .Params.version }}.tar.gz.asc</a></td>
-  </tr>
-  </tbody>
-</table>
-<h4>Source Distributions</h4>
-<table class="tableblock frame-all grid-all stretch">
-  <thead>
-  <tr>
-    <td>Description</td>
-    <td>Download Link</td>
-    <td>PGP Signature file of download</td>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>Source (zip)</td>
-    <td><a href="http://www.apache.org/dyn/closer.cgi/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}-src.zip">apache-camel-{{ .Params.version }}-src.zip</a></td>
-    <td><a href="http://www.apache.org/dyn/closer.cgi/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}-src.zip.asc">apache-camel-{{ .Params.version }}-src.zip.asc</a></td>
-  </tr>
-  </tbody>
-</table>
+<dependencies>
+  <dependency>
+    <groupId>org.apache.camel</groupId>
+    <artifactId>camel-core</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.camel</groupId>
+    <artifactId>camel-COMPONENT</artifactId>
+  </dependency>
+</dependencies>
+` .Params.version) }}</code></pre>
+    <p>To use this release in a Spring Boot application, use the <code>camel-spring-boot-dependencies</code> Bill of Materials (BOM):
+    <aside>
+      <p><mark>Note:</mark> for Camel 3.0.0 and newer releases the <code>groupId</code> for Camel Spring Boot support changed from <code>org.apache.camel</code> to <code>org.apache.camel.springbooot</code>, so be sure to check that the appropriate <code>groupId</code> is used for the Camel version.</p>
+      <p>Replace the <code>COMPONENT</code> with the artifact outlined in the <a href="/components/latest/">component documentation</a></p>
+    </aside>
+    <pre><code>{{ htmlUnescape (printf `<dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.camel.springboot</groupId>
+      <artifactId>camel-spring-boot-dependencies</artifactId>
+      <version>%s</version>
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
+  </dependencies>
+</dependencyManagement>
 
-<h3>Git tag checkout</h3>
-<pre>
-  git clone https://git-wip-us.apache.org/repos/asf/camel.git
-  cd camel
-  git checkout camel-{{ .Params.version }}
-</pre>
-<h5>Getting the Binaries using Maven</h5>
-To use this release in your maven project, the proper dependency configuration that you should use in your Maven POM is:
-<pre><code>
-{{ htmlUnescape "<dependency>" }}
-{{ htmlUnescape "  <groupId>org.apache.camel</groupId>" }}
-{{ htmlUnescape "  <artifactId>camel-core</artifactId>" }}
-{{ htmlUnescape "  <version>" }}{{ .Params.version }}{{ htmlUnescape "</version>" }}
-{{ htmlUnescape "</dependency>" }}
-</code></pre>
+<dependencies>
+  <dependency>
+    <groupId>org.apache.camel.springboot</groupId>
+    <artifactId>camel-COMPONENT-starter</artifactId>
+  </dependency>
+</dependencies>
+` .Params.version) }}</code></pre>
+    <h3 id="binary_distribution"><a class="anchor" href="#binary_distribution"></a>Binary Distributions</h3>
+    <p>Binary distribution contains all the artifacts Apache Camel project distributes in binary form</p>
+    <table class="tableblock frame-all grid-all stretch">
+      <thead>
+      <tr>
+        <td>Description</td>
+        <td>Download Link</td>
+        <td>PGP Signature file of download</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Windows Distribution</td>
+        <td><a href="http://www.apache.org/dyn/closer.cgi/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.zip">apache-camel-{{ .Params.version }}.zip</a></td>
+        <td><a href="http://www.apache.org/dyn/closer.cgi/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.zip.asc">apache-camel-{{ .Params.version }}.zip.asc</a></td>
+      </tr>
+      <tr>
+        <td>Unix/Linux/Cygwin Distribution</td>
+        <td><a href="http://www.apache.org/dyn/closer.cgi/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.tar.gz">apache-camel-{{ .Params.version }}.tar.gz</a></td>
+        <td><a href="http://www.apache.org/dyn/closer.cgi/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}.tar.gz.asc">apache-camel-{{ .Params.version }}.tar.gz.asc</a></td>
+      </tr>
+      </tbody>
+    </table>
+    <h2 id="sources"><a class="anchor" href="#sources"></a>Sources</h2>
+    <h3 id="source_distribution"><a class="anchor" href="#source_distribution"></a>Source distribution</h3>
+    <p>Source distribution contains all the artifacts Apache Camel project distributes in source form</p>
+    <table class="tableblock frame-all grid-all stretch">
+      <thead>
+      <tr>
+        <td>Description</td>
+        <td>Download Link</td>
+        <td>PGP Signature file of download</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Source (zip)</td>
+        <td><a href="http://www.apache.org/dyn/closer.cgi/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}-src.zip">apache-camel-{{ .Params.version }}-src.zip</a></td>
+        <td><a href="http://www.apache.org/dyn/closer.cgi/camel/apache-camel/{{ .Params.version }}/apache-camel-{{ .Params.version }}-src.zip.asc">apache-camel-{{ .Params.version }}-src.zip.asc</a></td>
+      </tr>
+      </tbody>
+    </table>
 
-<h3>Changelog</h3>
-For a more detailed view of new features and bug fixes, see the:<br/>
-<a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12311211&version={{ .Params.jiraVersionId }}">Release notes for {{ .Params.version }}</a>
+    <h3 id="git"><a class="anchor" href="#git"></a>Git tag checkout</h3>
+    <p>Release is tagged with <code>camel-{{ .Params.version }}</code> in the Git, to fetch it use:</p>
+    <pre>git clone https://git-wip-us.apache.org/repos/asf/camel.git
+cd camel
+git checkout camel-{{ .Params.version }}</pre>
 
+    <h2 id="resolved"><a class="anchor" href="#resolved"></a>Resolved issues</h2>
+    <p>Here is a list of all the issues that have been resolved for this release</p>
+    {{ $issues_json := getJSON "https://issues.apache.org/jira/rest/api/latest/search?jql=fixVersion=" (string .Params.jiraVersionId) "&fields=issuetype,summary" }}
+    {{ $issues := dict }}
+    {{ range $issues_json.issues }}
+      {{ $issues_by_type := (or (index $issues .fields.issuetype.name) slice) | append (dict "issue" .key "summary" .fields.summary) }}
+      {{ $issues = merge $issues (dict .fields.issuetype.name $issues_by_type ) }}
+    {{ end }}
+    {{ range $type, $data := $issues }}
+    <h3>{{ $type }} ({{ len $data }})</h3>
+    <dl>
+      {{ range $data }}
+      <dt><a href="https://issues.apache.org/jira/browse/{{ .issue }}">{{ .issue }}</a></dt><dd>{{ .summary }}</dd>
+      {{ end }}
+    </dl>
+    {{ end }}
+  </article>
+</main role="main">
 {{ partial "footer.html" . }}
-htmlEscape

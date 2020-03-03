@@ -13,7 +13,7 @@ The Camel community announces the immediate availability of Camel 3.0.0, a new m
 
 Please read our [migration guide](https://camel.apache.org/manual/latest/camel-3-migration-guide.html) the describes how to upgrade Camel 2.x applications to Camel 3.0.
 
-The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the [release notes](https://issues.apache.org/jira/secure/ReleaseNote.jspa?version=12315691&projectId=12311211).
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the  [resolved issues](/releases/release-3.0.0/#resolved).
 
 Many thanks to all who made this release possible.
 

@@ -13,7 +13,7 @@ The Camel community announces the immediate availability of the new patch releas
 This release contains 25 fixes and improvements applied in the past weeks by the community on the camel-2.24.x branch.
 It is the last planned patched release for the camel-2.24.x branch.
 
-The artifacts are published and ready for you to download either from the Apache mirrors or from the Central Maven repository. For more details please take a look at the [release notes](https://issues.apache.org/jira/secure/ReleaseNote.jspa?version=12346260&projectId=12311211).
+The artifacts are published and ready for you to download either from the Apache mirrors or from the Central Maven repository. For more details please take a look at the [resolved issues](/releases/release-2.24.3/#resolved).
 
 Many thanks to all who made this release possible.
 

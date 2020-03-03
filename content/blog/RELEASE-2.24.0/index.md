@@ -11,7 +11,7 @@ preview: "The Camel community announces the immediate availability of the new mi
 
 The Camel community announces the immediate availability of the new minor release Camel 2.24.0. This release contains 156 fixes and improvements. An overview of the changes is available here.
 
-The artifacts are published and ready for you to download either from the Apache mirrors or from the Central Maven repository. For more details please take a look at the release notes.
+The artifacts are published and ready for you to download either from the Apache mirrors or from the Central Maven repository. For more details please take a look at the [resolved issues](/releases/release-2.24.0/#resolved).
 
 Many thanks to all who made this release possible.
 
