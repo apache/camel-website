@@ -18,6 +18,7 @@
     "preview": "gulp preview"
   },
   "devDependencies": {
+    "@openfonts/open-sans_latin-ext": "^1.44.0",
     "asciidoctor.js": "1.5.9",
     "autoprefixer": "~9.6",
     "browser-pack-flat": "~3.4",
@@ -60,7 +61,6 @@
     "svg4everybody": "^2.1.9",
     "through2": "~3.0",
     "typeface-droid-sans-mono": "^0.0.44",
-    "@openfonts/open-sans_latin-ext": "^1.44.0",
     "undertaker": "~1.2",
     "vinyl-buffer": "~1.0",
     "vinyl-fs": "~3.0"
@@ -71,5 +71,7 @@
   "installConfig": {
     "pnp": true
   },
-  "dependencies": {}
+  "dependencies": {
+    "algoliasearch": "^4.0.3"
+  }
 }
