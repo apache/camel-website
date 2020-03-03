@@ -10,7 +10,7 @@
             <p>Apache Camel community provides support for the latest three major versions. Latest version receives new features, next two supported versions receive only bug fixes.</p>
 
             <ul>
-            {{ $releases := ((where .Site.Pages "Type" "release-note").ByParam "version").Reverse }}
+            {{ $releases := ((where (where .Site.Pages "Type" "release-note") ".Params.rc" "ne" "true").ByParam "version").Reverse }}
             {{ $major := "" }}
             {{ $cnt := 1 }}
             {{ range $releases }}
@@ -27,7 +27,6 @@
 
             <h3>Binary Distribution</h3>
 
-            {{ $releases := ((where .Site.Pages "Type" "release-note").ByParam "version").Reverse }}
             {{ $major := "" }}
             {{ $cnt := 1 }}
             <table class="tableblock frame-all grid-all stretch">
@@ -67,7 +66,6 @@
 
             <h3>Source Distribution</h3>
 
-            {{ $releases := ((where .Site.Pages "Type" "release-note").ByParam "version").Reverse }}
             {{ $major := "" }}
             {{ $cnt := 1 }}
             <table class="tableblock frame-all grid-all stretch">
