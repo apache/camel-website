@@ -35,7 +35,9 @@
         results.innerHTML = ''
         return
       }
-      index.search(search.value)
+      index.search(search.value, {
+        hitsPerPage: 10,
+      })
         .then((results) => {
           const hits = results.hits
           const data = hits.reduce((data, hit) => {
