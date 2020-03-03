@@ -38,10 +38,10 @@
             </p>
         </div>
     </footer>
+    <script async src="{{ path.Join "_" (index .Site.Data "rev-manifest" "js/vendor/highlight.js") | relURL }}"></script>
+    <script async src="{{ path.Join "_" (index .Site.Data "rev-manifest" "js/vendor/svg4everybody.js") | relURL }}"></script>
+    <script src="{{ path.Join "_" (index .Site.Data "rev-manifest" "js/vendor/algoliasearch.js") | relURL }}"></script>
     <script src="{{ path.Join "_" (index .Site.Data "rev-manifest" "js/site.js") | relURL }}"></script>
-    <script src="{{ path.Join "_" (index .Site.Data "rev-manifest" "js/vendor/highlight.js") | relURL }}"></script>
-    <script src="{{ path.Join "_" (index .Site.Data "rev-manifest" "js/vendor/svg4everybody.js") | relURL }}"></script>
-    <script async src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
     {{ partial "seo/main" . }}
 
 </body>
