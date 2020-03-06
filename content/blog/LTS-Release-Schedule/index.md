@@ -40,7 +40,7 @@ The tentative release schedule for 2020 is as follows:
 NOTE: The schedule is tentative and subject for change
 (for example date's may slip into the following month). 
 
-So for 2020 we have planned 2 LTS releases, Camel 3.3.x and 3.6.x where we will release
+So for 2020, we have planned 2 LTS releases, Camel 3.3.x and 3.6.x where we will release
 patch releases. The LTS releases are generally supported for 1-year
 (latest 2 LTS releases are active supported)
 
