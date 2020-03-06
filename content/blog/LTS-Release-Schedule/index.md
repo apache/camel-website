@@ -11,7 +11,7 @@ The Apache Camel project is moving to release schedule with LTS (Long Term Suppo
 
 The plan is to have 2 yearly LTS releases and then non-LTS releases in between.
 
-This allows the Camel project to innovate and move much faster (non-LTS).
+This allows the Camel project to innovate and move much faster in non-LTS releases.
 
 And as well to offer production stable branches (LTS) where end users can stay on
 for a longer period of time and get CVEs and important/critical bug fixes only.
