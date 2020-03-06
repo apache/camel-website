@@ -3,6 +3,7 @@
   font-size: var(--doc-font-size);
   line-height: var(--doc-line-height);
   margin: var(--doc-margin);
+  max-width: var(--doc-max-width);
   padding: 0 1rem 4rem;
 }
 
@@ -10,6 +11,7 @@
   .doc {
     font-size: var(--doc-font-size--desktop);
     margin: var(--doc-margin--desktop);
+    max-width: var(--doc-max-width--desktop);
   }
 }
 
