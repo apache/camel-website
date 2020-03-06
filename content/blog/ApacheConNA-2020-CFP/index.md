@@ -16,7 +16,7 @@ open](https://apachecon.com/acna2020/cfp) and the wider Camel community
 members are encouraged to submit. Look for the **Camel/Integration** track
 when submitting.
 
-We're most interested to see talks that offer learning experience to the
+We're most interested to see talks that offer a learning experience to the
 attendees, so talks that present new parts of the Camel ecosystem (Camel K,
 Camel Quarkus, Camel Kafka Connector), talks showing off lessons learned, use
 cases, and visions on where software integration is heading in the future.

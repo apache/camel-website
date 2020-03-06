@@ -12,7 +12,7 @@ The big news of 2019 was the much anticipated release of Apache Camel 3.
 
 ## Family of projects
 
-It was also in 2019 that the Camel project became a faimily of projects by introducing:
+It was also in 2019 that the Camel project became a family of projects by introducing:
 
 - Camel K
 - Camel Quarkus

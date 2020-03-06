@@ -21,7 +21,7 @@ This framework features:
 ### Kafka connect key concepts
 
 - _Connector_: generally refer to a source/sink implemented using kafka connect framework.
-- _SinkConnector_ / _SourceConnector_: are responsible to setting up the connector and partitiong the work by creating SinkTask / SourceTask.
+- _SinkConnector_ / _SourceConnector_: are responsible to setting up the connector and partitioning the work by creating SinkTask / SourceTask.
 - _SinkTask_ / _SourceTask_: are responsible to handle the actual work.
 - _Key_ / _value converter_: a component able to convert the key or value of a kafka message from a format to another.
 - _Transformer_: a component able to manipulate a message.
