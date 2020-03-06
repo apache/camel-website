@@ -44,7 +44,7 @@ So for 2020, we have planned 2 LTS releases, Camel 3.3.x and 3.6.x where we will
 patch releases. The LTS releases are generally supported for 1-year
 (latest 2 LTS releases are actively supported)
 
-For each Camel release we will clearly mark in the release notes whether its a LTS or non-LTS release.
+For each Camel release, we will mark in the release notes whether its a LTS or non-LTS release.
 
 ## Java 8 and 11
 
