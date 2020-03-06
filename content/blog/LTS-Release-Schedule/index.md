@@ -22,7 +22,7 @@ For non-LTS releases then we plan to not release patch releases, for example the
 not be 3.1.1, 3.1.2 patch releases for the non-LTS release of Camel 3.1.0.
 
 Other projects like Java JDK have moved to LTS and non-TLS releases as well. So we are doing the same,
-but our LTS is limited to 1-year schedule (typically same timeframe for Camel 2.x).
+but our LTS is limited to a 1-year schedule (typically same timeframe for Camel 2.x).
 
 ## Release Schedule
 
