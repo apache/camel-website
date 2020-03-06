@@ -1,6 +1,6 @@
 ---
 title: "Apache Camel 2020 Release Schedule"
-date: 2020-3-6
+date: 2020-03-06
 author: Claus Ibsen
 draft: false
 categories: ["Roadmap"]
