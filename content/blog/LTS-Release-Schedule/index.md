@@ -7,7 +7,7 @@ categories: ["Roadmap"]
 preview: Apache Camel 2020 Release Schedule
 ---
 
-The Apache Camel project is moving to release schedule with LTS (Long Term Support) and non-LTS releases.
+The Apache Camel project is moving to release schedule with Long Term Support (LTS) and non-LTS releases.
 
 The plan is to have 2 yearly LTS releases and then non-LTS releases in between.
 
