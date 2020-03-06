@@ -15,7 +15,7 @@ This allows the Camel project to innovate and move much faster in non-LTS releas
 
 And as well to offer production stable branches (LTS) where end users can stay on
 for a longer period of time and get CVEs and important/critical bug fixes only.
-On these LTS branches we plan to avoid introducing new features, improvements etc, and
+On these LTS branches, we plan to avoid introducing new features, improvements etc, and
 keep changes with production in-mind only. However exceptions can be made.
 
 For non-LTS releases then we plan to not release patch releases, for example there will
