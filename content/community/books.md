@@ -48,9 +48,9 @@ Patterns, Principles, and Practices for designing Apache Camel applications. A d
 
 There are great books about Apache Camel already, but this book is a little bit different. Here is why.
 
-Throughout the building of a Camel application, there are many levels of design decisions to be made. Knowing the Camel framework and the Enterprise Integration Patterns (EIPs) is a must, but not enough to architect a real world integration application. Mastering such applications requires understanding of EIPs, Messaging, Microservices and SOA principles, and distributed system concepts as a whole.
+Throughout the building of a Camel application, there are many levels of design decisions to be made. Knowing the Camel framework and the Enterprise Integration Patterns (EIPs) is a must, but not enough to architect a real world integration application. Mastering such applications requires an understanding of EIPs, Messaging, Microservices and SOA principles, and distributed system concepts as a whole.
 
-Driven by real world experiences, this book consolidates most commonly used patterns and principles for designing Camel applications. For each pattern, there is a problem description with a context, a proposed solution, and Camel specifics and tips around the implementation. Patterns range from individual Camel route design for happy path scenarios, to error handling and prevention practices, to principles used in deployment of multiple routes and applications for scalability and high availability purposes.
+Driven by real world experiences, this book consolidates the most commonly used patterns and principles for designing Camel applications. For each pattern, there is a problem description with a context, a proposed solution, and Camel specifics and tips around the implementation. Patterns range from individual Camel route design for happy path scenarios, to error handling and prevention practices, to principles used in the deployment of multiple routes and applications for scalability and high availability purposes.
 
 ### Mastering Apache Camel
 
@@ -76,7 +76,7 @@ This book offers you a small learning curve to get the most out of enterprise Ca
 
 ![Instant Apache Camel Message Routing book cover](/img/books/instant_camel_message_routing.jpg)
 
-[_Instant Apache Camel Message Routing_](http://www.packtpub.com/apache-camel-message-routing/book) will help you to get started with Camel and Enterprise Integration Patterns in matter of hours. It is a short, focused and practical guide to Apache Camel that provides a high level overview of the Camel architecture and message routing principles. It introduces a number of integration patterns, complete with diagrams, common use cases, and examples about how to use them.  
+[_Instant Apache Camel Message Routing_](http://www.packtpub.com/apache-camel-message-routing/book) will help you to get started with Camel and Enterprise Integration Patterns in the matter of hours. It is a short, focused and practical guide to Apache Camel that provides a high level overview of the Camel architecture and message routing principles. It introduces a number of integration patterns, complete with diagrams, common use cases, and examples about how to use them.  
 The book is easy to read and ideal for developers who want to get started with Camel and message routing quickly.
 
 ### Instant Apache Camel Messaging System
