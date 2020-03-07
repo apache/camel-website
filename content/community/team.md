@@ -27,6 +27,7 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 | Colm O hEigeartaigh | coheigea | Talend |
 | David Jencks | djencks | IBM |
 | Daniel Kulp | dkulp | Talend |
+| Denis Istomin | distomin | |
 | Dmitry Volodin | dmvolod | Red Hat |
 | Franz Forsthofer | forsthofer | SAP |
 | Freeman Fang | ffang | Red Hat |
@@ -35,7 +36,7 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 | Gregor Zurowski | gzurowski | Sotheby's |
 | Guillaume Nodet | gnodet | Red Hat |
 | Hadrian Zbarcea | hadrian | |
-| Henryk Konsek | hekonsek | Red Hat |
+| Henryk Konsek | hekonsek | |
 | Hiram Chirino | chirino | Red Hat |
 | Ioannis Canellos | iocanel | Red Hat |
 | Jacek Laskowski | jlaskowski | | 
@@ -55,6 +56,8 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 | Omar Al-Safi | oalsafi | Talend |
 | Quinn Stevenson | quinn | |
 | Raul Kripalani | raulk | |
+| Pascal Schumacher | pascalschumacher | | 
+| Peter Palaga | ppalaga | Red Hat |
 | Rich Newcomb | rnewcomb | |
 | Richard Kettelerij | rickette | Avisi BV |
 | Rob Davies | rajdavies | |
@@ -65,7 +68,7 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 | Tomohisa Igarashi | igarashitm | Red Hat |
 | Tracy Snell | tjsnell | Juice Labs |
 | Willem Jiang | ningjiang | Huawei |
-| William Tam | wtam | Progress Software |
+| William Tam | wtam | Red Hat |
 | Zoran Regvart | zregvart | Red Hat |
 {{< /table >}}
 
