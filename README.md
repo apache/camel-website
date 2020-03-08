@@ -48,10 +48,18 @@ Node on your machine.
 - Install using [Homebrew](https://brew.sh/) and [Node formulae](https://formulae.brew.sh/formula/node)
 - Install from official [Node packages](https://nodejs.org/en/download/)
 
+An easy step to step guide to install nvm and install node v10.0.0 on your local system is as follows: 
+
+    $ touch ~/.bash_profile
+    $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
+    $ source ~/.nvm/nvm.sh
+    $ nvm install 10.0.0
+
+
 Note - If you have different Node version other than Node LTS version 10 you can use following command to make
 Node LTS version 10 as default Node version.
 
-    $ nvm alias default 10
+    $ nvm use 10.0.0
 
 Now that you have Node 10 installed, you can proceed with checking the Yarn installation.
 
