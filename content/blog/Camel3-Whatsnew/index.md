@@ -44,27 +44,27 @@ Camel 3 is the first official release that supports Java 11. Java 8 will still b
 
 The camel-core has been modularized from 1 JAR to 33 JARs. The core functionality has been splitup into:
 
-| Artifact |
-|---- |
-| **camel-api** | 
-| camel-base |
-| camel-caffeine-lrucache |
-| camel-cloud | 
-| camel-core |
-| camel-core-engine |
-| camel-core-osgi 
-| camel-core-xml |
-| camel-endpointdsl |
-| camel-headersmap |
-| camel-jaxp |
-| camel-main | 
-| camel-management-api |
-| camel-management-impl |
-| **camel-support** |
-| camel-util |
-| camel-util-json |
+**Artifact**
 
-For Camel end users then only a few JARs are relevant. 
+- camel-api
+- camel-base
+- camel-caffeine-lrucache
+- camel-cloud
+- camel-core
+- camel-core-engine
+- camel-core-osgi
+- camel-core-xml
+- camel-endpointdsl
+- camel-headersmap
+- camel-jaxp
+- camel-main
+- camel-management-api
+- camel-management-impl
+- camel-support
+- camel-util
+- camel-util-json
+
+For Camel end users then only a few JARs are relevant.
 
 **camel-api** contains the public API for Camel (eg interfaces such as CamelContext, Endpoint, Exchange, Message, and so on).
 
@@ -72,32 +72,31 @@ For Camel end users then only a few JARs are relevant.
 
 The components that resided in camel-core has also be externalized into individual components:
 
-| Artifact |
-|---- |
-| camel-bean |
-| camel-log |
-| camel-stub |
-| camel-browse |
-| camel-mock |
-| camel-timer |
-| camel-controlbus |
-| camel-properties |
-| camel-validator |
-| camel-dataformat |
-| camel-ref |
-| camel-vm |
-| camel-direct |
-| camel-rest |
-| camel-xpath |
-| camel-directvm |
-| camel-saga |
-| camel-xslt | 
-| camel-file |
-| camel-scheduler |
-| camel-zip-deflater |
-| camel-language |
-| camel-seda |
+**Artifact**
 
+- camel-bean
+- camel-log
+- camel-stub
+- camel-browse
+- camel-mock
+- camel-timer
+- camel-controlbus
+- camel-properties
+- camel-validator
+- camel-dataformat
+- camel-ref
+- camel-vm
+- camel-direct
+- camel-rest
+- camel-xpath
+- camel-directvm
+- camel-saga
+- camel-xslt
+- camel-file
+- camel-scheduler
+- camel-zip-deflater
+- camel-language
+- camel-seda
 
 Camel end users can then pick and choose exactly only what they need, or keep using everything.
 
