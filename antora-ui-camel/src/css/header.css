@@ -368,3 +368,6 @@ body {
     margin: 1rem 0.8rem;
   }
 }
+.is-current-page > .navbar-item {
+  font-weight: 700;
+} 
