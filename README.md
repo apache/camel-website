@@ -59,7 +59,7 @@ An easy step to step guide to install nvm and install node v10.0.0 on your local
 Note - If you have different Node version other than Node LTS version 10 you can use following command to make
 Node LTS version 10 as default Node version.
 
-    $ nvm use 10.0.0
+    $ nvm alias default 10
 
 Now that you have Node 10 installed, you can proceed with checking the Yarn installation.
 
