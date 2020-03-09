@@ -19,10 +19,7 @@ With the affordance of hindsight, we now see some improvements that can be made 
 
 We're looking for an intern interested in working on multiple aspects of the website: design (HTML and CSS), static site generation ([Hugo](https://gohugo.io/), [Antora](https://antora.org/)), web development (JavaScript). We also welcome any content improvement such as corrections to the existing documentation or adding new documentation to the project. One example could be migrating the blog content from the Confluence wiki to the new Hugo based blog.
 
-We offer smaller tasks to start with, but feel free to look at other issues or propose some simple changes yourself:
-
-* [CAMEL-13881](https://issues.apache.org/jira/browse/CAMEL-13881): Article containers right margin is larger than the left margin
-* [CAMEL-13888](https://issues.apache.org/jira/browse/CAMEL-13888): open foreign links in a new window (tab)
+We offer [smaller tasks to start with](https://issues.apache.org/jira/issues/?filter=12348381), but feel free to look at other issues or propose some simple changes yourself.
 
 We'd like to see some concept designs or designs of project websites that would inspire the redesign. We firmly believe in having automated checks for issues (broken links, malformed HTML), it would be good to see a check added for usability and website performance.
 
