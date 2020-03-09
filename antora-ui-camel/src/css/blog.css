@@ -106,7 +106,7 @@ article.blog p {
 }
 
 .blog .post .post-content tr:nth-child(even) {
-  background: #f4f5f7;
+  background: var(--color-smoke-50);
 }
 
 .blog .post .post-content td {
@@ -115,7 +115,7 @@ article.blog p {
 
 .blog .post .post-content th {
   padding: 0.7rem;
-  background: #e1e4e9;
+  background: var(--color-smoke-90);
 }
 
 @media screen and (min-width: 1024px) {
