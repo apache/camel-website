@@ -106,7 +106,7 @@ article.blog p {
 }
 
 .blog .post .post-content tr:nth-child(even) {
-  background: var(--color-smoke-50);
+  background: #f4f5f7;
 }
 
 .blog .post .post-content td {
@@ -115,7 +115,7 @@ article.blog p {
 
 .blog .post .post-content th {
   padding: 0.7rem;
-  background: var(--color-smoke-90);
+  background: #e1e4e9;
 }
 
 @media screen and (min-width: 1024px) {
@@ -151,29 +151,5 @@ article.blog p {
 
   .blog.list {
     flex-direction: row;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-
-  th,
-  td {
-    padding: 0.875rem;
-  }
-
-  table,
-  th,
-  td {
-    border: 1px solid gray;
-  }
-
-  th {
-    background: var(--color-camel-orange);
-  }
-
-  tr:nth-child(even) {
-    background: var(--color-gray-10);
   }
 }
