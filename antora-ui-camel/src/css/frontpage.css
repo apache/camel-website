@@ -81,13 +81,13 @@ header.frontpage svg {
 
 header.frontpage svg path {
   fill: none;
-  animation: sparkle 5s ease alternate infinite;
+  animation: sparkle 2s ease alternate infinite;
 }
 
 header.frontpage svg path:nth-child(1) {
   stroke: #ffddab;
   stroke-width: 10;
-  stroke-opacity: 0.6;
+  stroke-opacity: 0.9;
 }
 
 header.frontpage svg path:nth-child(2) {
@@ -101,13 +101,13 @@ header.frontpage svg path:nth-child(3) {
   stroke: #f1b35b;
   stroke-width: 15;
   stroke-opacity: 0.6;
-  animation-delay: -2.5s;
+  animation-delay: -3.5s;
 }
 
 header.frontpage svg path:nth-child(4) {
   stroke: #641a00;
   stroke-width: 5;
-  stroke-opacity: 0.3;
+  stroke-opacity: 0.4;
   animation-delay: -3s;
 }
 
@@ -120,7 +120,7 @@ header.frontpage svg path:nth-child(5) {
 
 @keyframes sparkle {
   0% {
-    stroke-opacity: 0.3;
+    stroke-opacity: 0.2;
   }
 
   100% {
