@@ -32,7 +32,8 @@ header.frontpage a {
 
 header.frontpage a:hover {
   color: var(--heading-font-color);
-  text-decoration: underline;
+  text-decoration: none;
+  transform: translateY(-3px);
 }
 
 header.frontpage a:active {
@@ -62,8 +63,9 @@ header.frontpage a:active {
 }
 
 .frontpage a.significant:hover {
-  color: var(--color-white);
-  box-shadow: 0 0 1.5rem var(--color-glow);
+  color: var(--color-camel-orange);
+  background: var(--color-white);
+  border: 1px solid var(--color-camel-orange);
 }
 
 .frontpage a.significant:active {
@@ -170,6 +172,7 @@ section.frontpage.projects .project a.significant {
   padding: 0.4rem 1rem;
   font-size: 0.8rem;
 }
+
 
 section.frontpage.apache {
   padding: 1rem;
