@@ -121,6 +121,14 @@ and you will be provided with a web server running the site on [http://localhost
 
 Point your favorite browser to `http://localhost:1313/` and you will see the Apache Camel website.
 
+Changes that are made to the content managed by Hugo (i.e. content, layouts, config.toml) are applied automatically and reloaded in the browser. To make changes to the content managed by Antora, a rebuild needs to be done. The same is true for the CSS changes in the `antora-ui-camel`. To rebuild you can run, in another terminal window, from the root directory of the website:
+
+    $ (cd antora-ui-camel && yarn build) && yarn antora --require ./menu.js site.yml
+
+This will build the `antora-ui-camel` which holds all the CSS and JavaScript, and then rebuild the documentation, resulting in an updated content in the `documentation` directory.
+
+To iterate quickly, it's easier to make changes directly in the browser tooling and then bring the changes over to the CSS files after the fact.
+
 ## Contribute changes
 
 The Apache Camel website is composed of different sources. So where to add and contribute changes in particular?
