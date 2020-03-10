@@ -232,7 +232,7 @@ section.frontpage h1 {
   }
 
   header.frontpage svg {
-    display: none;
+    display: visible;
   }
 
   .box {
