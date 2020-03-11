@@ -83,7 +83,7 @@ timeout = 300000
     parent = "docs"
     weight = 4
     identifier = "api-documentation"
-    url = "https://www.javadoc.io/doc/org.apache.camel/camel-api/latest/index.html" 
+    url = "https://www.javadoc.io/doc/org.apache.camel/camel-api/latest" 
 
 [[menu.main]]
     name = "Camel K"
