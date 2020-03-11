@@ -363,6 +363,26 @@ body {
   fill: var(--navbar-font-color);
 }
 
+@media screen and (max-width: 607px) {
+  .navbar-tools {
+    display: none;
+  }
+  
+  .nav-logo {
+    background-image: url('../img/logo-d.svg');
+    background-repeat: no-repeat;
+    background-size: 3.5rem;
+    background-position-x: 7px;
+    background-position-y: 3.7px;
+    width: 9rem;
+    position: relative;
+  }
+
+  .nav-logo span {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1023px) {
   .navbar-tools {
     align-items: end;
