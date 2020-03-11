@@ -163,7 +163,7 @@ body {
   margin: 0.25rem 0;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1023px) and (min-width: 480px) {
   .navbar-brand .navbar-item {
     display: flex;
     align-items: flex-start;
@@ -178,6 +178,24 @@ body {
   .navbar-menu.is-active {
     display: block;
     position: absolute;
+    height: calc(90vh - 6rem);
+    box-shadow: 0 16px 16px 0 rgba(10, 10, 10, 0.1);
+    overflow-y: auto;
+    top: 4rem;
+    left: auto;
+    right: 0;
+  }
+
+  .navbar-menu a.navbar-item:hover,
+  .navbar-menu .navbar-link:hover {
+    background-color: var(--navbar-menu-hover-background);
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .navbar-menu.is-active {
+    display: block;
+    position: absolute;
     height: calc(100vh - 4rem);
     box-shadow: 0 16px 16px 0 rgba(10, 10, 10, 0.1);
     overflow-y: auto;
@@ -186,9 +204,9 @@ body {
     right: 0;
   }
 
-  .navbar-menu a.navbar-item:hover,
-  .navbar-menu .navbar-link:hover {
-    background-color: var(--navbar-menu-hover-background);
+  .navbar-menu {
+    background: var(--navbar-menu-background);
+    padding: 0.5rem 0;
   }
 }
 
