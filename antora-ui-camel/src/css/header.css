@@ -177,11 +177,12 @@ body {
 
   .navbar-menu.is-active {
     display: block;
-    position: fixed;
-    height: 100%;
+    position: absolute;
+    height: calc(100vh - 4rem);
     box-shadow: 0 16px 16px 0 rgba(10, 10, 10, 0.1);
     overflow-y: auto;
     top: 4rem;
+    left: 0;
     right: 0;
   }
 
@@ -370,5 +371,16 @@ body {
 
   .navbar-tools .brand-icon {
     margin: 1rem 0.8rem;
+  }
+}
+
+/* Styling for mobile use */
+@media (max-width: 610px) {
+  #search {
+    display: none;
+  }
+
+  #social-media {
+    display: none;
   }
 }
