@@ -367,7 +367,6 @@ body {
   .navbar-tools {
     display: none;
   }
-  
   .nav-logo {
     background-image: url('../img/logo-d.svg');
     background-repeat: no-repeat;
@@ -394,7 +393,7 @@ body {
   }
 }
 
-/* Styling for mobile use */
+/* Styling for mobile  */
 @media (max-width: 610px) {
   #search {
     display: none;
