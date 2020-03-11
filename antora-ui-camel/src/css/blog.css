@@ -67,16 +67,16 @@ article.blog p {
 }
 
 .blog a.arrow {
-  font-size: 1rem;
+  font-size: 2rem;
   text-decoration: none;
 }
 
 .blog a.arrow.prev::after {
-  content: "\00A0previous";
+  content: "\00A0";
 }
 
 .blog a.arrow.next::before {
-  content: "next\00A0";
+  content: "\00A0";
 }
 
 .blog .post .post-content {
