@@ -305,8 +305,8 @@ body {
 .navbar-search input {
   border: 0;
   border-bottom: 1px solid var(--nav-panel-divider-color);
-  margin-top: -1rem;
-  padding: 2.1rem;
+  margin-top: 1rem;
+  padding: 0.3rem 0.5rem 0.3rem 1.7rem;
   font-family: Open Sans, sans-serif;
   caret-color: #ed8225;
   background: no-repeat 0.2rem/1.2rem url(../img/search.svg);
@@ -323,7 +323,7 @@ body {
 }
 
 #search_results {
-  top: 4rem;
+  top: 3.31rem;
   background: #fffe;
   padding: 0.5rem;
   text-align: left;
