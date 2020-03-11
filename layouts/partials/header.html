@@ -42,12 +42,16 @@
                             <a class="navbar-link" href="#">{{ .Name }}</a>
                             <div class="navbar-dropdown">
                                 {{ range .Children }}
+                                {{ if strings.HasPrefix .URL "https" }}
+                                <a class="navbar-item" href="{{ .URL | relURL }}" target="_blank" rel="noopener">{{ .Name }}</a>
+                                {{ else }}
                                 <a class="navbar-item" href="{{ .URL | relURL }}">{{ .Name }}</a>
+                                {{ end }}
                                 {{ end }}
                             </div>
                         </div>
                         {{ else }}
-                        <a class="navbar-item" href="{{ .URL | relURL }}">{{ .Name }}</a>
+                        <a class="navbar-item" href="{{ .URL | relURL }}" >{{ .Name }}</a>
                         {{ end }}
                         {{ end }}
                     </div>
