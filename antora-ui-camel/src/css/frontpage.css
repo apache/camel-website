@@ -91,7 +91,7 @@ header.frontpage svg path:nth-child(1) {
 }
 
 header.frontpage svg path:nth-child(2) {
-  stroke: #9d1609;
+  stroke: #f1210e;
   stroke-width: 10;
   stroke-opacity: 0.3;
   animation-delay: -1s;
@@ -105,7 +105,7 @@ header.frontpage svg path:nth-child(3) {
 }
 
 header.frontpage svg path:nth-child(4) {
-  stroke: #641a00;
+  stroke: #ff6933;
   stroke-width: 5;
   stroke-opacity: 0.4;
   animation-delay: -3s;
