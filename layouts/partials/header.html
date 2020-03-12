@@ -39,7 +39,7 @@
                         {{ range .Site.Menus.main }}
                         {{ if .HasChildren }}
                         <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link" href="#">{{ .Name }}</a>
+                            <a class="navbar-link navbar-topics" href="#">{{ .Name }}</a>
                             <div class="navbar-dropdown">
                                 {{ range .Children }}
                                 {{ if strings.HasPrefix .URL "https" }}
@@ -51,7 +51,7 @@
                             </div>
                         </div>
                         {{ else }}
-                        <a class="navbar-item" href="{{ .URL | relURL }}" >{{ .Name }}</a>
+
                         {{ end }}
                         {{ end }}
                     </div>

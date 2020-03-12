@@ -8,9 +8,9 @@
             {{#each @items}}
                 {{#if children}}
                 <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link" href="#">{{name}}</a>
+                <a class="navbar-link navbar-topics" href="#">{{name}}</a>
                 {{else}}
-                <a class="navbar-item" href="{{../../siteRootPath}}{{url}}">{{name}}</a>
+                <a class="navbar-item navbar-topics" href="{{../../siteRootPath}}{{url}}">{{name}}</a>
                 {{/if}}
                 {{#if children}}
                 <div class="navbar-dropdown">
