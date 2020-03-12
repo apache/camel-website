@@ -19,6 +19,7 @@
   --color-asf-dark-blue: #303284;
   --color-asf-moderate-blue: #585ac2;
   --color-camel-orange: #ed8225;
+  --color-camel-brown: #5a3411;
   --color-highlight: #fffcdd;
   --color-glow: #fff7a3;
   /* fonts */
@@ -37,7 +38,7 @@
   --panel-background: var(--color-smoke-10);
   --panel-border-color: var(--color-smoke-90);
   /* navbar */
-  --navbar-background: var(--color-white);
+  --navbar-background: var(--color-asf-dark-blue);
   --navbar-font-color: var(--color-camel-orange);
   --navbar-hover-font-color: var(--color-camel-orange);
   --navbar-hover-background: var(--color-white);

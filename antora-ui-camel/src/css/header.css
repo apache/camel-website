@@ -351,6 +351,7 @@ body {
 .navbar-search input {
   border: 0;
   border-bottom: 1px solid var(--nav-panel-divider-color);
+  color: var(--color-white);
   margin-top: 1rem;
   padding: 0.3rem 0.5rem 0.3rem 1.7rem;
   font-family: Open Sans, sans-serif;
