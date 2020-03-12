@@ -367,6 +367,7 @@ body {
   .navbar-tools {
     display: none;
   }
+  
   .nav-logo {
     background-image: url('../img/logo-d.svg');
     background-repeat: no-repeat;
