@@ -18,6 +18,12 @@ a.category {
   text-decoration: none;
 }
 
+li > a.category {
+  display: block;
+  margin: 0.2rem;
+  line-height: 2;
+}
+
 a.category:hover {
   color: var(--color-white);
 }

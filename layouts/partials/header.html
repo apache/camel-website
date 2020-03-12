@@ -39,7 +39,7 @@
                         {{ range .Site.Menus.main }}
                         {{ if .HasChildren }}
                         <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link" href="#">{{ .Name }}</a>
+                            <a class="navbar-link navbar-topics" href="#">{{ .Name }}</a>
                             <div class="navbar-dropdown">
                                 {{ range .Children }}
                                 {{ if strings.HasPrefix .URL "https" }}
@@ -51,7 +51,7 @@
                             </div>
                         </div>
                         {{ else }}
-                        <a class="navbar-item" href="{{ .URL | relURL }}" >{{ .Name }}</a>
+
                         {{ end }}
                         {{ end }}
                     </div>
@@ -61,7 +61,7 @@
                     <input id="search" class="search" placeholder="Search" autocomplete="off">
                     <div id="search_results"></div>
                 </div>
-                <div class="navbar-tools">
+                <div id="social-media" class="navbar-tools">
                   <a href="https://github.com/apache/camel/" title="Collaborate on GitHub"><svg class="brand-icon"><use href="{{ "_/img/brand-logos.svg#github" | relURL }}" /></svg></a>
                   <a href="https://gitter.im/apache/apache-camel" title="Chat on Gitter"><svg class="brand-icon"><use href="{{ "/_/img/brand-logos.svg#gitter" | relURL }}" /></svg></a>
                   <a href="https://twitter.com/ApacheCamel" title="Follow Apache Camel on Twitter"><svg class="brand-icon"><use href="{{ "/_/img/brand-logos.svg#twitter" | relURL }}" /></svg></a>

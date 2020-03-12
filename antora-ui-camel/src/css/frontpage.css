@@ -11,7 +11,7 @@ header.frontpage h1 {
   font-size: 5rem;
   font-weight: bolder;
   color: var(--heading-font-color);
-  margin-top: 5rem;
+  margin-top: 3rem;
   text-align: center;
   text-transform: none;
   text-shadow: -1px -1px 1px #fff5, 1px -1px 1px #fff5, -1px 1px 1px #fff5, 1px 1px 1px #fff5;
@@ -226,13 +226,19 @@ section.frontpage h1 {
   max-width: 100%;
 }
 
+@media screen and (max-width: 626px) {
+  .split {
+    flex: 100%;
+  }
+}
+
 @media screen and (max-width: 1023px) {
   header.frontpage h1 {
-    font-size: 15vw;
+    font-size: 9vw;
   }
 
   header.frontpage svg {
-    display: none;
+    height: 10rem;
   }
 
   .box {
