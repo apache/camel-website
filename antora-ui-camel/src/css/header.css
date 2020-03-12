@@ -170,6 +170,20 @@ body {
     flex-flow: column;
   }
 
+  .navbar-item.navbar-topics,
+  .navbar-link.navbar-topics {
+    color: var(--navbar-font-color);
+  }
+
+  .navbar-item {
+    font-weight: bold;
+  }
+
+  .navbar-dropdown .navbar-item:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--navbar-hover-font-color);
+  }
+
   .navbar-menu {
     background: var(--navbar-menu-background);
     padding: 0.5rem 0;
@@ -202,6 +216,20 @@ body {
     top: 4rem;
     left: 0;
     right: 0;
+  }
+
+  .navbar-item.navbar-topics,
+  .navbar-link.navbar-topics {
+    color: var(--navbar-font-color);
+  }
+
+  .navbar-item {
+    font-weight: bold;
+  }
+
+  .navbar-dropdown .navbar-item:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--navbar-hover-font-color);
   }
 
   .navbar-menu {
