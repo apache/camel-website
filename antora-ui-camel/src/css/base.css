@@ -79,7 +79,7 @@ button::-moz-focus-inner {
 }
 
 mark {
-  background: var(--color-highlight);
+  color: var(--color-camel-orange);
 }
 
 .text-center {
