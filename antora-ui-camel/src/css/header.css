@@ -178,11 +178,11 @@ body {
   .navbar-menu.is-active {
     display: block;
     position: absolute;
-    height: calc(100vh - 4rem);
+    height: calc(90vh - 6rem);
     box-shadow: 0 16px 16px 0 rgba(10, 10, 10, 0.1);
     overflow-y: auto;
     top: 4rem;
-    left: 0;
+    left: auto;
     right: 0;
   }
 
