@@ -431,13 +431,13 @@ body {
   }
 }
 
-@media (max-width: 610px) {
+@media screen and (max-width: 610px) {
   #search_mobile {
     display: visible;
   }
 }
 
-@media (min-width: 611px) {
+@media screen and (min-width: 611px) {
   #search_mobile {
     display: none;
   }
