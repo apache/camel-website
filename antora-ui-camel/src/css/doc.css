@@ -635,3 +635,59 @@ kbd,
 .stretch {
   width: 100%;
 }
+
+@media screen and (min-width: 1024px) {
+  #preamble + .sect1,
+  .doc .sect1 + .sect1 {
+    margin-top: 2rem;
+    overflow-wrap: break-word;
+  }
+
+  code,
+  kbd,
+  pre {
+    font-size: 3.5vw;
+  }
+
+  .release dl {
+    overflow: scroll;
+  }
+}
+
+/* On screens that are 992px or less */
+@media screen and (max-width: 992px) {
+  #preamble + .sect1,
+  .doc .sect1 + .sect1 {
+    margin-top: 2rem;
+    overflow-wrap: break-word;
+  }
+
+  code,
+  kbd,
+  pre {
+    font-size: 3.5vw;
+  }
+
+  .release dl {
+    overflow: scroll;
+  }
+}
+
+/* On screens that are 600px or less */
+@media screen and (max-width: 600px) {
+  #preamble + .sect1,
+  .doc .sect1 + .sect1 {
+    margin-top: 2rem;
+    overflow-wrap: break-word;
+  }
+
+  code,
+  kbd,
+  pre {
+    font-size: 3.5vw;
+  }
+
+  .release dl {
+    overflow: scroll;
+  }
+}
