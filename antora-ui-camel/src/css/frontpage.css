@@ -226,6 +226,12 @@ section.frontpage h1 {
   max-width: 100%;
 }
 
+@media screen and (max-width: 626px) {
+  .split {
+    flex: 100%;
+  }
+}
+
 @media screen and (max-width: 1023px) {
   header.frontpage h1 {
     font-size: 9vw;

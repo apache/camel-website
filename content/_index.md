@@ -91,6 +91,11 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 # Apache &amp; OpenSource
 
 {{< div "split" >}}
+![20 years of Apache Software foundation](/img/apache-20.png)
+{{< /div >}}
+
+{{< div "split" >}}
+
 **Camel is your project!**
 
 Camel is an [Apache Software Foundation](https://www.apache.org) project, available under the [Apache v2 license](https://apache.org/licenses/LICENSE-2.0). It's a complete open community, always listening to proposals and comments.
@@ -101,10 +106,6 @@ We also love contributions: don't hesitate to [contribute](./manual/latest/contr
 
 [Be Involved In The Community](./manual/latest/contributing.html) | [How To Contribute](./manual/latest/contributing.html)
 
-{{< /div >}}
-
-{{< div "split" >}}
-![20 years of Apache Software foundation](/img/apache-20.png)
 {{< /div >}}
 
 {{< /section >}}
