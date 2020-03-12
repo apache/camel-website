@@ -80,6 +80,8 @@ button::-moz-focus-inner {
 
 mark {
   color: var(--color-camel-orange);
+  font-weight: bold;
+  background: var(--color-white);
 }
 
 .text-center {
