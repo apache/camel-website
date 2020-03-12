@@ -362,6 +362,12 @@ body {
   fill: var(--navbar-font-color);
 }
 
+@media (min-width: 320px) and (max-width: 768px) {
+  .navbar-search {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1023px) {
   .navbar-tools {
     align-items: end;
