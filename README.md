@@ -40,14 +40,14 @@ An easy step to step guide to install chocolatey on your local system is as foll
 
 2. Install with cmd.exe 
 
-```> @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command " [System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"```
+        > @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command " [System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 
 3. Install with PowerShell.exe 
     * With PowerShell, there is an additional step. You must ensure Get-ExecutionPolicy is not Restricted. We suggest using Bypass to bypass the policy to get things installed or AllSigned for quite a bit more security. 
-    
+
         1. Run Get-ExecutionPolicy. If it returns Restricted, then run Set-ExecutionPolicy AllSigned or Set-ExecutionPolicy Bypass -Scope Process.
         
-        ```> Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))```
+            > Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 #### Node
 
@@ -83,17 +83,16 @@ Node LTS version 10 as default Node version.
 
 ### Installation of nvm on Windows 
 
+Note - The following steps need to be ran on cmd as administrator only. 
+
 An easy step to step guide to install nvm and install node v10.0.0 on your local system is as follows: 
-1. Install on cmd.exe and run cmd as administrator. 
-
-`> choco install nvm`
-
-`> nvm install 10.0.0`
+    > choco install nvm
+    > nvm install 10.0.0
 
 Note - If you have different Node version other than Node LTS version 10 you can use following command to make
 Node LTS version 10 as default Node version.
 
-`> nvm use 10.0.0`
+    > nvm use 10.0.0
 
 
 Now that you have Node 10 installed, you can proceed with checking the Yarn installation.
