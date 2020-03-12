@@ -411,7 +411,9 @@ body {
 
 @media screen and (max-width: 1023px) {
   .navbar-tools {
-    align-items: end;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
     padding: 0.5rem 0;
   }
 
