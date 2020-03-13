@@ -119,6 +119,24 @@ article.blog p {
   background: var(--color-smoke-90);
 }
 
+.avatar {
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+#publishDate {
+  position: relative;
+  bottom: 35px;
+}
+
+.date-and-name {
+  position: relative;
+  bottom: 105px;
+  left: 110px;
+}
+
 @media screen and (min-width: 1024px) {
   .blog {
     max-width: var(--static-max-width--desktop);

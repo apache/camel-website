@@ -634,15 +634,3 @@ kbd,
 .stretch {
   width: 100%;
 }
-
-.avatar {
-  vertical-align: middle;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-
-#publishDate {
-  position: relative;
-  bottom: 35px;
-}
