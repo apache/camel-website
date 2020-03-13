@@ -419,14 +419,3 @@ body {
     margin: 1rem 0.8rem;
   }
 }
-
-/* Styling for mobile use */
-@media (max-width: 610px) {
-  #search {
-    display: none;
-  }
-
-  #social-media {
-    display: none;
-  }
-}
