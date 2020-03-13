@@ -634,9 +634,3 @@ kbd,
 .stretch {
   width: 100%;
 }
-/* for mobile screens */
-@media screen and (max-width: 1023px) {
-  .doc aside {
-    display: none;
-  }
-}
