@@ -85,27 +85,27 @@ header.frontpage svg path {
 }
 
 header.frontpage svg path:nth-child(1) {
-  stroke: #ffddab;
+  stroke: #ffebcc;
   stroke-width: 10;
   stroke-opacity: 0.9;
 }
 
 header.frontpage svg path:nth-child(2) {
-  stroke: #f23726;
+  stroke: #911408;
   stroke-width: 10;
   stroke-opacity: 0.3;
   animation-delay: -1s;
 }
 
 header.frontpage svg path:nth-child(3) {
-  stroke: #f1b35b;
+  stroke: #ff6933;
   stroke-width: 15;
   stroke-opacity: 0.6;
   animation-delay: -3.5s;
 }
 
 header.frontpage svg path:nth-child(4) {
-  stroke: #ff7c4d;
+  stroke: #f07c28;
   stroke-width: 5;
   stroke-opacity: 0.4;
   animation-delay: -3s;
