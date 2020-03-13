@@ -40,6 +40,16 @@
   .doc > h1.page:first-child {
     margin-top: 2.5rem;
   }
+
+  .release dl {
+    overflow: scroll;
+  }
+
+  code,
+  kbd,
+  pre {
+    overflow-wrap: break-word;
+  }
 }
 
 #preamble + .sect1,
@@ -57,6 +67,7 @@
 
 .doc h3:not(.discrete) {
   font-weight: var(--alt-heading-font-weight);
+  overflow-wrap: break-word;
 }
 
 .doc h1 .anchor,
@@ -114,6 +125,7 @@
 .doc .tableblock td:not(:first-child) > p,
 .doc .tableblock thead {
   hyphens: auto;
+  overflow-wrap: break-word;
 }
 
 .doc a {
@@ -636,48 +648,10 @@ kbd,
   width: 100%;
 }
 
-@media screen and (min-width: 1024px) {
-  #preamble + .sect1,
-  .doc .sect1 + .sect1 {
-    margin-top: 2rem;
-    overflow-wrap: break-word;
-  }
-
-  code,
-  kbd,
-  pre {
-    font-size: 3.5vw;
-  }
-
-  .release dl {
-    overflow: scroll;
-  }
-}
-
-/* On screens that are 992px or less */
-@media screen and (max-width: 992px) {
-  #preamble + .sect1,
-  .doc .sect1 + .sect1 {
-    margin-top: 2rem;
-    overflow-wrap: break-word;
-  }
-
-  code,
-  kbd,
-  pre {
-    font-size: 3.5vw;
-  }
-
-  .release dl {
-    overflow: scroll;
-  }
-}
-
-/* On screens that are 600px or less */
+/* for mobile screens */
 @media screen and (max-width: 600px) {
   #preamble + .sect1,
   .doc .sect1 + .sect1 {
-    margin-top: 2rem;
     overflow-wrap: break-word;
   }
 
