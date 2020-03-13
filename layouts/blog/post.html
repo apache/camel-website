@@ -9,8 +9,15 @@
     <div class="post">
         <aside>
             <div class="summary">{{ .Params.preview }}</div>
-            <time itemprop="published" datetime="{{ dateFormat "2006-01-02" .PublishDate }}" title="{{ dateFormat "Monday, January 2, 2006" .PublishDate }}">{{ dateFormat "January 2, 2006" .PublishDate }}</time>
-            <p>by <span rel="author">{{ .Params.author }}</span></p>
+            <table>
+                <tr>
+                    <td rowspan="2"> <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar"> </td>
+                    <td><p>by <span rel="author">{{ .Params.author }}</span></p></td>
+                </tr>
+                <tr id = "publishDate">
+                    <td><time itemprop="published" datetime="{{ dateFormat "2006-01-02" .PublishDate }}" title="{{ dateFormat "Monday, January 2, 2006" .PublishDate }}">{{ dateFormat "January 2, 2006" .PublishDate }}</time></td>
+                </tr>
+            </table>
             <p>
             {{ if .PrevInSection }}
             <a class="arrow prev" href="{{ .PrevInSection.RelPermalink }}" title="Previous post: {{ .PrevInSection.Title }}">&#10094;</a>
