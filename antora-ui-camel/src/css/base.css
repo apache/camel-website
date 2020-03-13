@@ -13,6 +13,7 @@ body {
 
 *::selection {
   background: var(--color-highlight);
+  color: var(--color-white);
 }
 
 html {
