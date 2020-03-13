@@ -634,7 +634,7 @@ kbd,
 .stretch {
   width: 100%;
 }
-
+/* for mobile screens */
 @media screen and (max-width: 600px) {
   .doc aside {
     width: auto;
