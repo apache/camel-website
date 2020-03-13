@@ -40,16 +40,6 @@
   .doc > h1.page:first-child {
     margin-top: 2.5rem;
   }
-
-  .release dl {
-    overflow: scroll;
-  }
-
-  code,
-  kbd,
-  pre {
-    overflow-wrap: break-word;
-  }
 }
 
 #preamble + .sect1,
@@ -649,7 +639,7 @@ kbd,
 }
 
 /* for mobile screens */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 626px) {
   #preamble + .sect1,
   .doc .sect1 + .sect1 {
     overflow-wrap: break-word;
@@ -660,8 +650,15 @@ kbd,
   pre {
     font-size: 3.5vw;
   }
+}
 
-  .release dl {
-    overflow: scroll;
+@media screen and (max-width: 1023px) and (min-width: 480px) {
+  .doc > h1.page:first-child,
+  .static > h1:first-child {
+    font-size: inherit;
+  }
+
+  .doc h2:not(.discrete) {
+    overflow-wrap: break-word;
   }
 }

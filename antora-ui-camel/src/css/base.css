@@ -85,3 +85,19 @@ mark {
 .text-center {
   text-align: center;
 }
+
+@media screen and (min-width: 769px) {
+  code,
+  kbd,
+  pre {
+    overflow-wrap: break-word;
+  }
+}
+
+@media screen and (max-width: 626px) {
+  code,
+  kbd,
+  pre {
+    font-size: 3.5vw;
+  }
+}
