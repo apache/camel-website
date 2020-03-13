@@ -635,8 +635,8 @@ kbd,
   width: 100%;
 }
 /* for mobile screens */
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 600px) {
   .doc aside {
-    display: none;
+    width: auto;
   }
 }
