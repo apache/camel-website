@@ -28,6 +28,7 @@
   line-height: 1.3;
   margin: 1rem 0 0;
   text-transform: uppercase;
+  word-break: break-word;
 }
 
 .static > h1:first-child,
@@ -56,6 +57,7 @@
 
 .doc h3:not(.discrete) {
   font-weight: var(--alt-heading-font-weight);
+  word-break: break-word;
 }
 
 .doc h1 .anchor,
@@ -94,6 +96,7 @@
 
 .doc p {
   margin: 0;
+  word-break: break-word;
 }
 
 .doc .table-wrapper {
@@ -117,6 +120,7 @@
 
 .doc a {
   color: var(--link-font-color);
+  word-break: break-word;
 }
 
 .doc a:hover {
@@ -134,6 +138,7 @@
   border-radius: 0.2rem;
   font-size: calc(14 / var(--rem-base) * 1rem);
   padding: 0.075rem 0.25rem 0.125rem;
+  word-break: break-word;
 }
 
 .doc pre {

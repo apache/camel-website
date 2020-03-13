@@ -1,6 +1,7 @@
 .release dl {
   display: grid;
   grid-template-columns: max-content auto;
+  word-break: break-word;
 }
 
 .release dt {

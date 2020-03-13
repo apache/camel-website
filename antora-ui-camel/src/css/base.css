@@ -46,6 +46,7 @@ kbd,
 pre {
   color: var(--code-font-color);
   font-family: var(--monospace-font-family);
+  word-break: break-word;
 }
 
 b,
