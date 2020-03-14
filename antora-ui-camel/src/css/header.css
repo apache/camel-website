@@ -36,17 +36,19 @@ body {
 
   .navbar-end > a.navbar-item:hover,
   .navbar-end .navbar-link:hover {
-    background: var(--navbar-hover-background);
-    color: var(--navbar-hover-font-color);
+    color: var(--color-asf-dark-blue);
   }
 
   .navbar-end .navbar-link::after {
     border-color: var(--navbar-font-color);
   }
 
+  .navbar-item.has-dropdown:hover .navbar-link::after {
+    border-color: var(--color-asf-dark-blue);
+  }
+
   .navbar-item.has-dropdown:hover .navbar-link {
-    background: var(--navbar-hover-background);
-    color: var(--navbar-hover-font-color);
+    color: var(--color-asf-dark-blue);
   }
 }
 
