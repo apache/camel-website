@@ -249,6 +249,10 @@ section.frontpage h1 {
     flex-direction: column;
   }
 
+  section.frontpage.projects .project p:nth-child(2) {
+    text-align: center;
+  }
+
   section.frontpage.projects .project p:nth-child(3) {
     text-align: center;
   }
