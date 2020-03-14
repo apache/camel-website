@@ -85,7 +85,7 @@ body {
   left: 50%;
   margin-left: -7px;
   position: absolute;
-  top: 50%;
+  top: 60%;
   width: 15px;
 }
 
@@ -411,22 +411,20 @@ body {
 
 @media screen and (max-width: 1023px) {
   .navbar-tools {
-    align-items: end;
-    padding: 0.5rem 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0.3 0.5rem;
   }
 
   .navbar-tools .brand-icon {
-    margin: 1rem 0.8rem;
+    margin: 0.25  rem;
   }
 }
 
 /* Styling for mobile use */
 @media (max-width: 610px) {
   #search {
-    display: none;
-  }
-
-  #social-media {
     display: none;
   }
 }
