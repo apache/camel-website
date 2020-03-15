@@ -51,23 +51,41 @@ header.frontpage a:active {
 .frontpage a.significant {
   margin: 1rem;
   padding: 0.8rem 1.5rem;
-  background: var(--color-camel-orange);
   color: var(--color-white);
+  background: var(--color-camel-orange);
   border-radius: 8px;
   font-size: 1.2rem;
   font-weight: bold;
+  position: relative;
   outline: none;
   display: inline-block;
   white-space: nowrap;
 }
 
-.frontpage a.significant:hover {
-  color: var(--color-white);
-  box-shadow: 0 0 1.5rem var(--color-glow);
+.frontpage a.significant::after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: -1;
+  border-radius: 8px;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background: var(--color-camel-orange);
 }
 
+.frontpage a.significant:hover,
 .frontpage a.significant:active {
   color: var(--color-white);
+  background: none;
+}
+
+.frontpage a.significant:hover::after,
+.frontpage a.significant:active::after {
+  height: 100%;
 }
 
 header.frontpage svg {
@@ -163,6 +181,7 @@ section.frontpage.projects .project h1 {
 section.frontpage.projects .project p {
   flex: 1;
   margin: 1rem;
+  text-align: left;
 }
 
 section.frontpage.projects .project a.significant {
@@ -247,6 +266,10 @@ section.frontpage h1 {
 
   section.frontpage.projects .project {
     flex-direction: column;
+  }
+
+  section.frontpage.projects .project p {
+    text-align: center;
   }
 
   section.frontpage.projects .project p:nth-child(3) {
