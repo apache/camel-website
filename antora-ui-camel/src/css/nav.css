@@ -287,10 +287,22 @@ html.is-clipped--nav {
 */
 
 .nav-logo {
-  background-image: url('../img/logo-camel-medium.png');
+  background-image: url("../img/logo-camel-medium.png");
   background-repeat: no-repeat;
   background-size: 9.5rem;
   background-position-x: 10px;
   background-position-y: 10px;
   width: 11rem;
+}
+
+aside.nav .nav-menu li a:hover {
+  color: #ed8225 !important;
+  text-decoration: underline;
+  text-decoration-color: #ed8225 !important;
+}
+
+aside.nav .nav-menu .nav-text:hover {
+  color: #ed8225 !important;
+  text-decoration: underline;
+  text-decoration-color: #ed8225 !important;
 }
