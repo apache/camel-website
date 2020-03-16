@@ -154,3 +154,10 @@ article.blog p {
     flex-direction: row;
   }
 }
+
+/* for mobile screens */
+@media screen and (max-width: 1023px) {
+  .blog aside {
+    display: none;
+  }
+}
