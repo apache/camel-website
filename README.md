@@ -228,9 +228,9 @@ You need to rebuild the Antora UI theme in order to see your changes reflected l
 The Apache Camel website includes documentation sources from other github repositories. Content sources are defined in
 [site.yml](site.yml).
 
-At the moment these sources are documentation sources form [Camel](https://github.com/apache/camel)
+At the moment these are the documentation sources from [Camel](https://github.com/apache/camel)
 and [Camel K](https://github.com/apache/camel-k). These are basically the component reference docs and the Camel user
-manual. In case you want to change something here please go to the respective github repository and contribute your
+manual. In case you want to change something here, please go to the respective github repository and contribute your
 change there.
 
 - [Camel components](https://github.com/apache/camel/tree/master/docs/components)
