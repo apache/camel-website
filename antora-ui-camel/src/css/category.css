@@ -24,6 +24,10 @@ li > a.category {
   line-height: 2;
 }
 
+li > a.category:hover {
+  transform: translateX(10px);
+}
+
 a.category:hover {
   color: var(--color-white);
 }
