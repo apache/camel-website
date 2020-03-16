@@ -31,6 +31,21 @@ described in section ["Build with Maven"](#build-with-maven).
 
 ### Preparing the tools
 
+### Chocolatey
+
+For windows users, a beginning step to install yarn and nvm on your local system is through installing chocolatey. 
+
+An easy step to step guide to install chocolatey on your local system is as follows: 
+1. Open cmd/powershell and run it as administrator. 
+
+2. Install with cmd.exe 
+
+        > @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command " [System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+
+3. Install with PowerShell.exe 
+
+        > Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
 #### Node
 
 Make sure that you have Node.js (herein "`Node`") installed.
@@ -43,6 +58,8 @@ This project requires the Node LTS version 10 (e.g., v10.15.3).
 
 Please make sure to have a suitable version of Node installed. You have several options to install
 Node on your machine.
+
+### Installation of nvm on Linux/Mac OS
 
 - Install using the Node version manager [nvm](https://github.com/creationix/nvm)
 - Install using [Homebrew](https://brew.sh/) and [Node formulae](https://formulae.brew.sh/formula/node)
@@ -59,13 +76,30 @@ An easy step to step guide to install nvm and install node v10.0.0 on your local
 Note - If you have different Node version other than Node LTS version 10 you can use following command to make
 Node LTS version 10 as default Node version.
 
-    $ nvm alias default 10
+    $ nvm use 10.0.0
+
+### Installation of nvm on Windows 
+
+Note - The following steps need to be ran on cmd as administrator only. 
+
+An easy step to step guide to install nvm and install node v10.0.0 on your local system is as follows: 
+
+    > choco install nvm
+    > nvm install 10.0.0
+
+Note - If you have different Node version other than Node LTS version 10 you can use following command to make
+Node LTS version 10 as default Node version.
+
+    > nvm use 10.0.0
+
 
 Now that you have Node 10 installed, you can proceed with checking the Yarn installation.
 
 #### Yarn
 
 Follow [the documentation on installing](https://yarnpkg.com/en/docs/install) Yarn for your Operating system.
+
+> Note: For windows users, run on cmd as administrator and install yarn through chocolatey.
 
 #### Clone and Initialize the project
 
@@ -194,9 +228,9 @@ You need to rebuild the Antora UI theme in order to see your changes reflected l
 The Apache Camel website includes documentation sources from other github repositories. Content sources are defined in
 [site.yml](site.yml).
 
-At the moment these sources are documentation sources form [Camel](https://github.com/apache/camel)
+At the moment these are the documentation sources from [Camel](https://github.com/apache/camel)
 and [Camel K](https://github.com/apache/camel-k). These are basically the component reference docs and the Camel user
-manual. In case you want to change something here please go to the respective github repository and contribute your
+manual. In case you want to change something here, please go to the respective github repository and contribute your
 change there.
 
 - [Camel components](https://github.com/apache/camel/tree/master/docs/components)
@@ -264,4 +298,3 @@ all generated sources in the project first.
     $ mvn clean package
 
 Of course this then takes some more time than an optimized rebuild (time to grab another coffee!).
-
