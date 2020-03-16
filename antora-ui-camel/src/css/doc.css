@@ -644,12 +644,6 @@ kbd,
   .doc .sect1 + .sect1 {
     overflow-wrap: break-word;
   }
-
-  code,
-  kbd,
-  pre {
-    font-size: 3.5vw;
-  }
 }
 
 @media screen and (max-width: 1023px) and (min-width: 480px) {

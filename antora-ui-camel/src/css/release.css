@@ -12,18 +12,6 @@
   margin-left: 1rem;
 }
 
-@media screen and (min-width: 769px) {
-  .release dl {
-    overflow: scroll;
-  }
-}
-
-@media screen and (max-width: 626px) {
-  .release dl {
-    overflow: scroll;
-  }
-}
-
 @media screen and (max-width: 1023px) and (min-width: 480px) {
   .release dl {
     overflow: scroll;
