@@ -88,11 +88,13 @@ html.is-clipped--nav {
   left: 0;
 }
 
-.nav-panel-menu::-webkit-scrollbar {
+.nav-panel-menu::-webkit-scrollbar,
+.nav-list::-webkit-scrollbar {
   width: 0.25rem;
 }
 
-.nav-panel-menu::-webkit-scrollbar-thumb {
+.nav-panel-menu::-webkit-scrollbar-thumb,
+.nav-list::-webkit-scrollbar-thumb {
   background-color: var(--nav-border-color);
 }
 
@@ -145,6 +147,11 @@ html.is-clipped--nav {
   margin-bottom: 0.5rem;
 }
 
+.nav-list .nav-list .nav-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
 .nav-item {
   list-style: none;
   margin-top: 0.5em;
@@ -184,6 +191,13 @@ html.is-clipped--nav {
 .is-current-page > .nav-link,
 .is-current-page > .nav-text {
   font-weight: var(--body-font-weight-bold);
+}
+
+.nav-link:hover,
+.nav-text:hover {
+  color: var(--color-camel-orange);
+  font-weight: var(--body-font-weight-bold);
+  text-decoration: underline;
 }
 
 .nav-panel-explore {
