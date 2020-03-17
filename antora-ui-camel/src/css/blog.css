@@ -54,12 +54,12 @@ article.blog p {
 }
 
 .blog .post aside time {
-  color: var(--color-gray-50);
+  color: #555;
 }
 
 .blog .post aside p {
   line-height: 3rem;
-  color: var(--color-gray-50);
+  color: #555;
 }
 
 .blog .post aside {

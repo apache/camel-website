@@ -8,10 +8,10 @@ a.category:first-child {
 }
 
 a.category {
-  background-color: var(--color-camel-orange);
+  background-color: #ec7813;
   border-radius: 0.2rem;
   margin-left: 1px;
-  color: var(--color-white);
+  color: #41250c;
   padding: 0.2rem 0.5rem;
   font-weight: bold;
   font-size: 0.65rem;
