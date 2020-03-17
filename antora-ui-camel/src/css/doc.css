@@ -634,3 +634,18 @@ kbd,
 .stretch {
   width: 100%;
 }
+
+@media screen and (max-width: 1023px) and (min-width: 480px) {
+  .doc p code,
+  .doc thead code {
+    font-size: calc(12px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
+  }
+}
+
+@media screen and (max-width: 626px) {
+  .doc p code,
+  .doc thead code {
+    font-size: 0.9rem;
+    overflow-wrap: break-word;
+  }
+}
