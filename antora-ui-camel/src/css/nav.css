@@ -33,6 +33,7 @@
   position: relative;
   top: var(--toolbar-height);
   height: var(--nav-height);
+  border-right: 1px solid var(nav-border-color);
 }
 
 @media screen and (min-width: 769px) {
@@ -121,7 +122,7 @@ html.is-clipped--nav {
   top: 2.5rem;
   min-height: 0;
   width: 100%;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0;
   line-height: var(--nav-line-height);
   position: relative;
 }
@@ -131,7 +132,8 @@ html.is-clipped--nav {
   font-size: inherit;
   font-weight: var(--body-font-weight-bold);
   margin: 0;
-  padding: 0.25em 0 0.125em;
+  text-transform: uppercase;
+  padding: 0.25em 0.75rem 0.125em;
 }
 
 .nav-menu a {
@@ -154,7 +156,11 @@ html.is-clipped--nav {
 
 .nav-item {
   list-style: none;
-  margin-top: 0.5em;
+  padding: 0.6rem 0;
+}
+
+.nav-menu > .nav-list > .nav-item > .nav-list > .nav-item {
+  border-bottom: 1px solid var(--nav-border-color);
 }
 
 /* adds some breathing room below a nested list */
@@ -174,10 +180,12 @@ html.is-clipped--nav {
 
 .nav-item-toggle {
   background: transparent url(../img/caret.svg) no-repeat center / 50%;
+  transform: rotate(90deg);
   border: none;
   outline: none;
   line-height: inherit;
   position: absolute;
+  right: 0;
   height: calc(var(--nav-line-height) * 1em);
   width: calc(var(--nav-line-height) * 1em);
   margin-top: -0.05em;
@@ -185,7 +193,7 @@ html.is-clipped--nav {
 }
 
 .nav-item.is-active > .nav-item-toggle {
-  transform: rotate(90deg);
+  transform: rotate(270deg);
 }
 
 .is-current-page > .nav-link,
@@ -195,7 +203,6 @@ html.is-clipped--nav {
 
 .nav-link:hover,
 .nav-text:hover {
-  color: var(--color-camel-orange);
   font-weight: var(--body-font-weight-bold);
   text-decoration: underline;
 }

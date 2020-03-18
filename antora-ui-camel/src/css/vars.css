@@ -50,8 +50,8 @@
   --navbar-menu-hover-background: var(--color-white);
   --navbar-menu-hover-decoration-color: var(--color-camel-orange);
   /* nav */
-  --nav-background: var(--panel-background);
-  --nav-border-color: var(--color-smoke-70);
+  --nav-background: var(--color-smoke-30);
+  --nav-border-color: var(--color-smoke-90);
   --nav-line-height: 1.35;
   --nav-heading-font-color: var(--color-asf-dark-blue);
   --nav-muted-color: var(--color-jet-50);

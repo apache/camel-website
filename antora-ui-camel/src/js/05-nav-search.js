@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         }
       } else {
-        navLinks[i].style.display = 'none'
+        navLinks[i].parentNode.style.display = 'none'
         replacement = text
       }
       navLinks[i].innerHTML = replacement
