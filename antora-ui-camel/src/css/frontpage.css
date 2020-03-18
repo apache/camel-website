@@ -49,7 +49,6 @@ header.frontpage a:active {
 }
 
 .frontpage a.significant {
-  text-decoration: none;
   margin: 1rem;
   padding: .8rem 1.5rem;
   background: #ed8225;
@@ -59,22 +58,17 @@ header.frontpage a:active {
   font-weight: 700;
   outline: none;
   display: inline-block;
-  white-space: nowrap
+  white-space: nowrap;
 }
 
 .frontpage a.significant:hover {
-  text-decoration: none;
-  background: #f09342;
   color: #fff;
   -webkit-box-shadow: 0 0 1.5rem #fff7a3;
-  box-shadow: 0 0 1.5rem #fff7a3
+  box-shadow: 0 0 1.5rem #fff7a3;
 }
 
 .frontpage a.significant:active {
-  background: #f09342;
   color: #fff;
-  transform: translateY(4px);
-  box-shadow: 0 5px #bfbfbf
 }
 
 header.frontpage svg {
