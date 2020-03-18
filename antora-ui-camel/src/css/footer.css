@@ -1,6 +1,7 @@
 footer {
   display: flex;
   justify-content: center;
+  position: relative;
   background-color: var(--footer-background);
   color: var(--footer-font-color);
   font-size: calc(15 / var(--rem-base) * 1rem);
@@ -64,7 +65,10 @@ footer .footer dl dd {
 
 .edit {
   max-width: var(--static-max-width--desktop);
-  margin: auto;
+  position: relative;
+  margin-top: 10em;
+  margin-left: auto;
+  margin-right: auto;
   text-align: right;
 }
 
