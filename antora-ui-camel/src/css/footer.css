@@ -63,7 +63,7 @@ footer .footer dl dd {
 }
 
 .edit {
-  max-width: var(--static-max-width--desktop);
+  max-width: var(--static-max-margin--desktop);
   margin: auto;
   text-align: right;
 }
