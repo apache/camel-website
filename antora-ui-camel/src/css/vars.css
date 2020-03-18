@@ -134,6 +134,7 @@
   --doc-max-width--desktop: calc(828 / var(--rem-base) * 1rem);
   --static-max-width: calc(720 / var(--rem-base) * 1rem);
   --static-max-width--desktop: calc(1140 / var(--rem-base) * 1rem);
+  --static-max-margin--desktop: calc(1140 * 1rem);
   /* stacking */
   --z-index-nav: 1;
   --z-index-toolbar: 2;
