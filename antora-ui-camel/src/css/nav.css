@@ -156,7 +156,7 @@ html.is-clipped--nav {
 
 .nav-item {
   list-style: none;
-  padding: 0.6rem 0;
+  padding: 0.6rem 0.3rem 0.6rem 0;
 }
 
 .nav-menu > .nav-list > .nav-item > .nav-list > .nav-item {
