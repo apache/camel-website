@@ -116,7 +116,7 @@
 }
 
 .doc a {
-  color: var(--link-font-color);
+  color:#303284;
 }
 
 .doc a:hover {
