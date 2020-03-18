@@ -21,6 +21,7 @@
   --color-camel-orange: #ed8225;
   --color-highlight: #fffcdd;
   --color-glow: #fff7a3;
+  --color-camel-orange-dark: hsl(28, 100%, 50%);
   /* fonts */
   --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
   --body-font-size: 1.0625em; /* 17px */

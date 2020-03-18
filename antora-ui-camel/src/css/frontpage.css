@@ -64,6 +64,11 @@ header.frontpage a:active {
 .frontpage a.significant:hover {
   color: var(--color-white);
   box-shadow: 0 0 1.5rem var(--color-glow);
+  -webkit-transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+  background: var(--color-camel-orange-dark);
 }
 
 .frontpage a.significant:active {
