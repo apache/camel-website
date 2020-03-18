@@ -39,4 +39,4 @@ asciidoc:
     - ./extensions/table.js
     - ./extensions/inline-styles.js
   attributes:
-    camel-quarkus-last-release: 1.0.0-M4
+    camel-quarkus-last-release: 1.0.0-M5
