@@ -4,6 +4,7 @@ url: /blog/release-2-23-4.html
 date: 2019-09-22
 draft: false 
 author: Gregor Zurowski
+github_user: zurowski
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new patch release Camel 2.23.4"
 ---

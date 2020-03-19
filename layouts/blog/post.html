@@ -10,22 +10,20 @@
         <aside>
             <div class="summary">{{ .Params.preview }}</div>
             <div class="info">
-                {{ if .Params.github_handle }}
+                {{ $avatar := newScratch }}
+                {{ $avatar.Set "url" "_/img/avatar.svg" }}
+
+                {{ if .Params.github_user }}
+                    {{ $userData := getJSON "https://api.github.com/users/" .Params.github_user }}
+                    {{ $avatar.Set "url" $userData.avatar_url }}
+                {{ end }}
                     <div class="post-avatar">
-                        {{ $urlPre := "https://api.github.com" }}
-                        {{ $gist := getJSON $urlPre "/users/" .Params.github_handle }}
-                        {{ with $gist }}
-                            <img src="{{ .avatar_url }}" alt="Avatar" class="avatar">
-                        {{ end }}
+                            <img src="{{ $avatar.Get "url" | relURL }}" class="avatar">
                     </div>
                 <div class="date-and-name">
                     <p>by <span rel="author">{{ .Params.author }}</span></p>
-                    <time itemprop="published" datetime="{{ dateFormat "2006-01-02" .PublishDate }}" title="{{ dateFormat "Monday, January 2, 2006" .PublishDate }}">{{ dateFormat "January 2, 2006" .PublishDate }}</time>
+                    <time class="publish-date" itemprop="published" datetime="{{ dateFormat "2006-01-02" .PublishDate }}" title="{{ dateFormat "Monday, January 2, 2006" .PublishDate }}">{{ dateFormat "January 2, 2006" .PublishDate }}</time>
                 </div>
-                {{ else }}
-                    <time itemprop="published" datetime="{{ dateFormat "2006-01-02" .PublishDate }}" title="{{ dateFormat "Monday, January 2, 2006" .PublishDate }}">{{ dateFormat "January 2, 2006" .PublishDate }}</time>
-                    <p>by <span rel="author">{{ .Params.author }}</span></p>
-                {{ end }}
             </div>
             <p>
             {{ if .PrevInSection }}

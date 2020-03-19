@@ -4,6 +4,7 @@ url: /blog/release-2-25-0.html
 date: 2020-01-23
 draft: false
 author: Gregor Zurowski
+github_user: zurowski
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of Camel 2.25.0"
 ---

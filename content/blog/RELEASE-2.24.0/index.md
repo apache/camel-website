@@ -4,6 +4,7 @@ url: /blog/release-2-24-0.html
 date: 2019-05-12
 draft: false 
 author: Gregor Zurowski
+github_user: zurowski
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new minor release Camel 2.24.0"
 ---

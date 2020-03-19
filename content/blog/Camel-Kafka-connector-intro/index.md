@@ -2,6 +2,7 @@
 title: "Apache Camel Kafka Connector: Introducing the latest project in the ecosystem"
 date: 2019-12-14
 author: Andrea Cosentino
+github_user: oscerd
 categories: ["Roadmap"]
 preview: Introducing Camel-Kafka-connector
 ---
