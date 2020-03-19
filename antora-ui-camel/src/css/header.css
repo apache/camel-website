@@ -1,6 +1,3 @@
-:root{
-    --navbar-background: #ffffff;
-}
 html.is-clipped--navbar {
   overflow-y: hidden;
 }

@@ -1,6 +1,3 @@
-:root{
-    --toolbar-background: #ECECEC;
-}
 .toolbar {
   color: var(--toolbar-font-color);
   align-items: center;

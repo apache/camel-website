@@ -1,9 +1,5 @@
-:root{
-    --body-bg-color: #fae6fa;
-}
 @media screen and (min-width: 1024px) {
   .body {
     display: flex;
-    background: var(--body-bg-color);
   }
 }

@@ -1,6 +1,4 @@
-:root{
-    --panels-bg-color: #FFFFFF;
-}
+
 .nav-container {
   position: fixed;
   top: var(--navbar-height);
@@ -57,10 +55,6 @@
   display: flex;
   flex-direction: column;
   height: inherit;
-}
-.panels{
-  background-color: var(--panels-bg-color);
-    
 }
 
 html.is-clipped--nav {

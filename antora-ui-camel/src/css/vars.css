@@ -58,7 +58,7 @@
   --nav-panel-divider-color: var(--color-smoke-50);
   --nav-secondary-background: var(--color-smoke-70);
   /* toolbar */
-  --toolbar-background: var(--panel-background);
+  --toolbar-background: var(--color-smoke-90);;
   --toolbar-border-color: var(--panel-border-color);
   --toolbar-font-color: var(--color-jet-80);
   --toolbar-muted-color: var(--color-jet-80);
