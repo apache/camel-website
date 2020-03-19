@@ -126,18 +126,18 @@ body {
   color: var(--navbar-menu-font-color);
   display: block;
   line-height: var(--doc-line-height);
-  padding: 0.5rem 0.5rem;
+  /* padding: 0.5rem 0.5rem; */
   position: relative;
 }
 
 .navbar-item {
   flex: none;
-  margin-bottom: 1px;
-  padding-right: 1.5rem;
+  margin: 1rem;
+  /* padding-right: 1.5rem; */
 }
 
 .navbar-item.has-dropdown {
-  padding: 0;
+  /* padding: 0; */
 }
 
 .navbar-item .icon {
@@ -147,12 +147,12 @@ body {
 }
 
 .navbar-link {
-  padding-right: 2.5em;
+  /* padding-right: 2.5em; */
 }
 
 .navbar-dropdown .navbar-item {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  /* padding-left: 1.5rem; */
+  /* padding-right: 1.5rem; */
   font-weight: normal;
 }
 
@@ -280,8 +280,7 @@ body {
     position: absolute;
     transform: rotate(-45deg);
     width: 0.5em;
-    margin-top: 0.6em;
-    right: 1.7em;
+    right: -0.6rem;
     top: 50%;
   }
 
@@ -303,7 +302,7 @@ body {
   }
 
   .navbar-dropdown .navbar-item {
-    padding: 0.5rem 1rem;
+    /* padding: 0.5rem 1rem; */
     white-space: nowrap;
   }
 
