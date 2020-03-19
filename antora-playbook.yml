@@ -1,13 +1,22 @@
 site:
   title: Apache Camel
   url: https://camel.apache.org
-  start_page: manual::index.adoc
+  start_page: latest@manual::index.adoc
 
 content:
   sources:
     - url: git@github.com:apache/camel.git
       branches: master
       start_path: docs/user-manual
+    - url: git@github.com:apache/camel.git
+      branches: master
+      start_path: core/camel-core-engine/src/main/docs
+    - url: git@github.com:apache/camel.git
+      branches: master
+      start_path: core/camel-core-languages/src/main/docs
+    - url: git@github.com:apache/camel.git
+      branches: master
+      start_path: core/camel-xml-jaxp/src/main/docs
     - url: git@github.com:apache/camel.git
       branches: master, camel-2.x, camel-3.0.x
       start_path: docs/components
