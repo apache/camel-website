@@ -53,9 +53,11 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 
 {{< /section >}}
 
-{{< section "frontpage projects" >}}
+{{< section "frontpage columns" >}}
+
 {{< div "project" >}}
-# Camel
+
+### Camel
 
 **Apache Camel** is the *Swiss knife* of integration. 
 
@@ -65,7 +67,8 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 {{< /div >}}
 
 {{< div "project" >}}
-# Camel K
+
+### Camel K
 
 **Apache Camel K** is a lightweight integration framework built from Apache Camel that runs natively on [Kubernetes](https://kubernetes.io/) and is specifically designed for **serverless** and **microservice architectures**.
 
@@ -73,7 +76,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 {{< /div >}}
 
 {{< div "project" >}}
-# Camel Quarkus
+### Camel Quarkus
 
 **Apache Camel Quarkus** is a set of extensions for [Quarkus](https://quarkus.io), a Java platform offering fast boot times and low memory footprint. It targets both stock JVMs and [GraalVM](https://www.graalvm.org/).
 
@@ -81,7 +84,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 {{< /div >}}
 
 {{< div "project" >}}
-# Camel Kafka Connector
+### Camel Kafka Connector
 
 **Apache Camel Kafka Connector** embeds Camel within [Kafka Connect](https://kafka.apache.org/documentation/#connect), enabling declarative use of Camel components as sources or sinks to Kafka topics.
 
@@ -89,7 +92,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 {{< /div >}}
 
 {{< div "project" >}}
-# Camel Spring Boot
+### Camel Spring Boot
 
 **Apache Camel Spring Boot** run Camel on [Spring Boot](https://spring.io/projects/spring-boot).
 
