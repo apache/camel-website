@@ -51,7 +51,7 @@ header.frontpage a:active {
 .frontpage a.significant,
 .frontpage a.front-significant {
   margin: 0.5rem 0.5rem 0.5rem 0;
-  padding: 0.5rem 0.9rem;
+  padding: 0.3rem 0.6rem;
   background: var(--color-camel-orange);
   color: var(--color-white);
   border-radius: 20px;
