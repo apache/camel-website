@@ -111,7 +111,7 @@ timeout = 300000
     parent = "docs"
     weight = 8
     identifier = "eip"
-    url = "/manual/latest/enterprise-integration-patterns.html"
+    url = "/components/latest/eips/enterprise-integration-patterns.html"
 
 [[menu.main]]
     name = "Camel 2.x to 3.0 Migration Guide"
