@@ -226,6 +226,12 @@ section.frontpage h1 {
   max-width: 100%;
 }
 
+@media screen and (max-width: 626px) {
+  .split {
+    flex: 100%;
+  }
+}
+
 @media screen and (max-width: 1023px) {
   header.frontpage h1 {
     font-size: 9vw;
@@ -241,6 +247,10 @@ section.frontpage h1 {
 
   section.frontpage.projects .project {
     flex-direction: column;
+  }
+
+  section.frontpage.projects .project p:nth-child(2) {
+    text-align: center;
   }
 
   section.frontpage.projects .project p:nth-child(3) {

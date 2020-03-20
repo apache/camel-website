@@ -50,7 +50,7 @@
   --navbar-menu-hover-background: var(--color-white);
   --navbar-menu-hover-decoration-color: var(--color-camel-orange);
   /* nav */
-  --nav-background: var(--panel-background);
+  --nav-background: var(--color-smoke-90);
   --nav-border-color: var(--color-smoke-50);
   --nav-line-height: 1.35;
   --nav-heading-font-color: var(--color-asf-dark-blue);
@@ -58,7 +58,7 @@
   --nav-panel-divider-color: var(--color-smoke-50);
   --nav-secondary-background: var(--color-smoke-70);
   /* toolbar */
-  --toolbar-background: var(--color-smoke-90);;
+  --toolbar-background: var(--color-smoke-90);
   --toolbar-border-color: var(--panel-border-color);
   --toolbar-font-color: var(--color-jet-80);
   --toolbar-muted-color: var(--color-jet-80);

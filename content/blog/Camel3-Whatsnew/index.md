@@ -14,6 +14,7 @@ This blog post highlights the noteworthy new features and improvements in Camel 
 ### 1) Camel is now a family of projects
 
 Apache Camel, is now a family of projects (3 at this time of writing).
+
 - [Camel 3](https://github.com/apache/camel):
   **Integration Framework** _Swiss knife of integration_
 - [Camel K](https://github.com/apache/camel-k/):
