@@ -9,4 +9,16 @@ document.addEventListener('DOMContentLoaded', function () {
       document.documentElement.classList.toggle('is-clipped--navbar')
     })
   })
+
+  var menuDropDowns = Array.prototype.slice.call(document.querySelectorAll('.has-dropdown'), 0)
+  menuDropDowns.forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      var dropDownMenu = el.querySelectorAll('.navbar-dropdown')[0]
+      if (dropDownMenu.style.display === 'block') {
+        dropDownMenu.style.display = 'none'
+      } else {
+        dropDownMenu.style.display = 'block'
+      }
+    })
+  })
 })
