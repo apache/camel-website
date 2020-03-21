@@ -8,10 +8,10 @@ header.frontpage {
 }
 
 header.frontpage h1 {
-  font-size: 5rem;
+  font-size: 3.5rem;
   font-weight: bolder;
   color: var(--heading-font-color);
-  margin-top: 3rem;
+  margin-top: 5rem;
   text-align: center;
   text-transform: none;
   text-shadow: -1px -1px 1px #fff5, 1px -1px 1px #fff5, -1px 1px 1px #fff5, 1px 1px 1px #fff5;
@@ -19,7 +19,8 @@ header.frontpage h1 {
 
 header.frontpage p {
   hyphens: none;
-  margin-top: 3rem;
+  margin-top: 4rem;
+  font-size: 24px;
   text-align: center;
   line-height: 1.5;
   color: var(--body-font-color);
@@ -50,20 +51,24 @@ header.frontpage a:active {
 
 .frontpage a.significant {
   margin: 1rem;
-  padding: 0.8rem 1.5rem;
+  padding: 0.9rem 1.6rem;
   background: var(--color-camel-orange);
   color: var(--color-white);
   border-radius: 8px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   outline: none;
   display: inline-block;
   white-space: nowrap;
+  transition: all 0.6s ease-in-out;
+  text-decoration: none;
 }
 
 .frontpage a.significant:hover {
   color: var(--color-white);
   box-shadow: 0 0 1.5rem var(--color-glow);
+  background-color: var(--heading-font-color);
+  text-decoration: none;
 }
 
 .frontpage a.significant:active {
