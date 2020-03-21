@@ -156,7 +156,9 @@ section.frontpage.projects .project {
 
 section.frontpage.projects .project h1 {
   white-space: nowrap;
-  padding: 1rem 0;
+  padding: 0;
+  font-size: 22px;
+  text-align: left;
   flex: 1;
 }
 
