@@ -414,3 +414,22 @@ body {
     display: none;
   }
 }
+
+@media screen and (min-width: 610px) {
+  #search_mobile {
+    display: none;
+  }
+}
+
+#search_results_mobile {
+  top: 3.31rem;
+  background: #fffe;
+  padding: 0.5rem;
+  text-align: left;
+  box-shadow: 0.1px 0.2em 2.5em #c4c4c4;
+  position: absolute;
+  margin-right: 10px;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
