@@ -188,6 +188,10 @@ section.frontpage h6 {
   text-transform: uppercase;
 }
 
+section.frontpage h2 {
+  font-size: 22px;
+}
+
 section.frontpage a {
   color: var(--link-font-color);
 }
@@ -207,7 +211,8 @@ section.frontpage h1 {
 }
 
 .box div {
-  padding: 1rem;
+  padding: 1.8rem;
+  text-align: center;
   margin: 1rem;
   border: 1px solid var(--color-smoke-50);
   height: 100%;
@@ -215,6 +220,10 @@ section.frontpage h1 {
 
 .box div img {
   width: 27rem;
+}
+
+.icons8 {
+  width: 100px !important;
 }
 
 .split {
