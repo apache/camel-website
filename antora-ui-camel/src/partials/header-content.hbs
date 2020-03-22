@@ -11,22 +11,11 @@
                 <a class="navbar-link navbar-topics" href="#">{{name}}</a>
                 {{else}}
                 <a class="navbar-item navbar-topics" href="{{../../siteRootPath}}{{url}}">{{name}}</a>
-                {{/if}}
-<!--
-                {{#if children}}
-                <div class="navbar-dropdown">
-                {{#each children}}
-                  {{#hasPrefix url }}
-                  <a class="navbar-item" href="{{url}}">{{name}}</a>
-                  {{else}}
-                  <a class="navbar-item" href="{{../../../siteRootPath}}{{url}}">{{name}}</a>
-                  {{/hasPrefix}}
-                {{/each}}
-                </div>
--->
-                {{/if}}
+                {{/if}}           
                 {{#if children}}
                 </div>
+                {{else}}
+                <a class="navbar-item navbar-topics" href="{{url}}">{{name}}</a>
                 {{/if}}
             {{/each}}
           {{/withMenuData}}

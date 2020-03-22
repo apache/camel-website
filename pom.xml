@@ -79,9 +79,6 @@
               <directory>public</directory>
             </fileset>
             <fileset>
-              <directory>static</directory>
-            </fileset>
-            <fileset>
               <directory>${theme.basedir}/.pnp</directory>
             </fileset>
             <fileset>
