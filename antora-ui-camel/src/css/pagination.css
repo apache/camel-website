@@ -18,13 +18,13 @@
 }
 
 .page-item a {
-  color: #767676;
+  color: var(--color-dark-grey);
   font-weight: bold;
   padding: 0.5rem;
 }
 
 .page-item.disabled a {
-  color: #767676;
+  color: var(--color-dark-grey);
 }
 
 .page-item.active {
