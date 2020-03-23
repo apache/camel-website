@@ -7,7 +7,7 @@
     "build:minify": "gulp minify",
     "build": "run-s build:*",
     "preview": "run-s preview:*",
-    "preview:antora": "antora --require ./menu.js antora-playbook.yml",
+    "preview:antora": "antora --clean --fetch antora-playbook.yml",
     "preview:hugo": "hugo server -D",
     "check:xref": "antora --generator @antora/xref-validator antora-playbook.yml",
     "check:links": "link-checker --disable-external --mkdocs --allow-hash-href public",
