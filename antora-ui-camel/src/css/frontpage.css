@@ -188,10 +188,6 @@ section.frontpage h6 {
   text-transform: uppercase;
 }
 
-section.frontpage h2 {
-  font-size: 22px;
-}
-
 section.frontpage a {
   color: var(--link-font-color);
 }

@@ -12,7 +12,7 @@ description: Camel is an open source integration framework that empowers you to 
 
 <img src="./img/functions/svg/activity-outline.svg" alt="pattern icon" class="evaIcons"/>
 
-## Patterns
+### Patterns
 
 Based on <mark>Enterprise Integration Patterns</mark> (EIP) to help you solve your integration problem by applying best practices out of the box. Camel supports most of the Enterprise Integration Patterns from the excellent book by Gregor Hohpe and Bobby Woolf, and newer integration patterns from **microservice architectures**.
 {{< /div >}}
@@ -23,7 +23,7 @@ Based on <mark>Enterprise Integration Patterns</mark> (EIP) to help you solve yo
 
 <img src="./img/functions/svg/grid-outline.svg" alt="component icon" class="evaIcons"/>
 
-## Components
+### Components
 
 Packed with <mark>several hundred components</mark> that are used to access databases, message queues, APIs or basically anything under the sun. Helping you integrate with everything.
 {{< /div >}}
@@ -34,7 +34,7 @@ Packed with <mark>several hundred components</mark> that are used to access data
 
 <img src="./img/functions/svg/settings-2-outline.svg" alt="runtime icon" class="evaIcons"/>
 
-## Runtimes
+### Runtimes
 
 <mark>Runs everywhere</mark>: Standalone, embedded as a library within Spring Boot, Application Servers, and in the clouds. Enjoy seamless integration with popular runtimes such as **Spring Boot**, **Microprofile**, and **Quarkus**.
 {{< /div >}}
@@ -45,7 +45,7 @@ Packed with <mark>several hundred components</mark> that are used to access data
 
 <img src="./img/functions/svg/funnel-outline.svg" alt="data icon" class="evaIcons"/>
 
-## Data Formats
+### Data Formats
 
 Camel supports around 50 data formats, allowing to <mark>translate messages</mark> in multiple formats, and with support from industry standard formats from finance, telco, health-care, and more.
 {{< /div >}}
