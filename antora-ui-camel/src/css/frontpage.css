@@ -59,16 +59,19 @@ header.frontpage a:active {
   outline: none;
   display: inline-block;
   white-space: nowrap;
+  box-shadow: 0 4px #8e480b;
 }
 
 .frontpage a.significant:hover {
-  color: #fff;
-  -webkit-box-shadow: 0 0 1.5rem #fff7a3;
-  box-shadow: 0 0 1.5rem #fff7a3;
+  color: var(--color-white);
+  box-shadow: 0 3px #8e480b;
+  transform: translateY(2px);
 }
 
 .frontpage a.significant:active {
-  color: #fff;
+  color: var(--color-white);
+  box-shadow: 0 3px #8e480b;
+  transform: translateY(2px);
 }
 
 header.frontpage svg {
