@@ -10,7 +10,7 @@ description: Camel is an open source integration framework that empowers you to 
 {{< div "box" >}}
 {{< div >}}
 
-<img src="./img/functions/pattern.png" alt="pattern icon" class="icons8"/>
+<img src="./img/functions/svg/activity-outline.svg" alt="pattern icon" class="evaIcons"/>
 
 ## Patterns
 
@@ -21,7 +21,7 @@ Based on <mark>Enterprise Integration Patterns</mark> (EIP) to help you solve yo
 {{< div "box" >}}
 {{< div >}}
 
-<img src="./img/functions/component.png" alt="component icon" class="icons8"/>
+<img src="./img/functions/svg/grid-outline.svg" alt="component icon" class="evaIcons"/>
 
 ## Components
 
@@ -32,7 +32,7 @@ Packed with <mark>several hundred components</mark> that are used to access data
 {{< div "box" >}}
 {{< div >}}
 
-<img src="./img/functions/runtime.png" alt="runtime icon" class="icons8"/>
+<img src="./img/functions/svg/settings-2-outline.svg" alt="runtime icon" class="evaIcons"/>
 
 ## Runtimes
 
@@ -43,7 +43,7 @@ Packed with <mark>several hundred components</mark> that are used to access data
 {{< div "box" >}}
 {{< div >}}
 
-<img src="./img/functions/data.png" alt="data icon" class="icons8"/>
+<img src="./img/functions/svg/funnel-outline.svg" alt="data icon" class="evaIcons"/>
 
 ## Data Formats
 

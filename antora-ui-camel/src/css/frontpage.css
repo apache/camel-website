@@ -222,8 +222,9 @@ section.frontpage h1 {
   width: 27rem;
 }
 
-.icons8 {
-  width: 100px !important;
+.evaIcons {
+  width: 60px !important;
+  filter: invert(24%) sepia(38%) saturate(1353%) hue-rotate(200deg) brightness(89%) contrast(99%);
 }
 
 .split {
