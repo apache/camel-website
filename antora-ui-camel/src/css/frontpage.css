@@ -11,7 +11,7 @@ header.frontpage h1 {
   font-size: 3.5rem;
   font-weight: bolder;
   color: var(--heading-font-color);
-  margin-top: 5rem;
+  margin-top: 7rem;
   text-align: center;
   text-transform: none;
   text-shadow: -1px -1px 1px #fff5, 1px -1px 1px #fff5, -1px 1px 1px #fff5, 1px 1px 1px #fff5;
