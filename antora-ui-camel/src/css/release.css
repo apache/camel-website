@@ -1,6 +1,7 @@
 .release dl {
   display: grid;
   grid-template-columns: max-content auto;
+  overflow: scroll;
 }
 
 .release dt {
@@ -10,10 +11,4 @@
 .release dd {
   grid-column-start: 2;
   margin-left: 1rem;
-}
-
-@media screen and (max-width: 1023px) and (min-width: 480px) {
-  .release dl {
-    overflow: scroll;
-  }
 }

@@ -48,6 +48,7 @@ kbd,
 pre {
   color: var(--code-font-color);
   font-family: var(--monospace-font-family);
+  overflow-wrap: break-word;
 }
 
 b,
@@ -84,12 +85,4 @@ mark {
 
 .text-center {
   text-align: center;
-}
-
-@media screen (max-width: 1023px) and (min-width: 480px) {
-  code,
-  kbd,
-  pre {
-    overflow-wrap: break-word;
-  }
 }

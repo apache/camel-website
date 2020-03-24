@@ -53,6 +53,7 @@
   margin-left: -1rem;
   margin-right: -1rem;
   padding: 0.4rem 1rem 0.1rem;
+  overflow-wrap: break-word;
 }
 
 .doc h3:not(.discrete) {
@@ -650,9 +651,5 @@ kbd,
   .doc > h1.page:first-child,
   .static > h1:first-child {
     font-size: inherit;
-  }
-
-  .doc h2:not(.discrete) {
-    overflow-wrap: break-word;
   }
 }
