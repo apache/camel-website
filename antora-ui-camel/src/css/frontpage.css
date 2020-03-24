@@ -160,8 +160,9 @@ section.frontpage.projects .project {
 
 section.frontpage.projects .project h1 {
   white-space: nowrap;
-  padding: 1rem 0;
-  flex: 1;
+  padding: 1rem;
+  flex: 1.2;
+  text-align: right;
 }
 
 section.frontpage.projects .project p {
@@ -187,7 +188,7 @@ section.frontpage h5,
 section.frontpage h6 {
   font-weight: var(--heading-font-weight);
   color: var(--heading-font-color);
-  line-height: 1.3;
+  line-height: 0;
   margin: 1rem 0 0;
   text-transform: uppercase;
 }
@@ -258,6 +259,9 @@ section.frontpage h1 {
   }
 
   section.frontpage.projects .project p:nth-child(3) {
+    text-align: center;
+  }
+  section.frontpage.projects .project h1 {
     text-align: center;
   }
 }
