@@ -247,7 +247,7 @@ section.frontpage h1 {
   }
 
   .box {
-    min-width: 51vw;
+    min-width: 51vw; 
   }
 
   section.frontpage.projects .project {
