@@ -46,6 +46,8 @@ title: "Articles"
 *   [A Look Back at Enterprise Integration Patterns and Their Use into Today's Serverless Cloud Computing](https://www.youtube.com/watch?v=EbTZ5nSJQwI) - 1h video from Devoxx Poland 2018 by Bruno Borges with l<span style="color: rgb(20,23,26);">ots of demos on **Apache Camel**<span style="color: rgb(20,23,26);">, Azure Functions, and quick look into Kafka and Azure Event Hubs.
 *   [Camel microservices with Spring Boot and Kubernetes](https://vimeo.com/289646198) - 6o min video from JavaZone (September 2018) where Claus gave a presentation. Source code and slides are [available here](https://github.com/davsclaus/camel-riders-in-the-cloud/tree/javazone).
 *   [Camel microservices with Spring Boot and Kubernetes](https://www.youtube.com/watch?v=G8h7oCGsTVQ&t=10s) - 50 min video from Voxxed Days Ticino (October 2018) where Claus gave a presentation. Source code and slides are [available here](https://github.com/davsclaus/camel-riders-in-the-cloud/tree/ticino).
+*    [Best Practices for Middleware and Integration Architecture Modernization with Apache Camel](https://www.youtube.com/watch?v=d1Hr78a7Lww) - 30 min video about 
+Apache Camel v3 focused on Camel K, Camel Quarkus and Camel Kafka Connector.
 
 ### Articles
 
