@@ -5,7 +5,9 @@ title: "Team"
 This page lists who we are. By all means add yourself to the list - lets sort it in alphabetical order
 
 # Committers
+{{< committers >}}
 
+<<<<<<< HEAD
 When posting to the mailing lists, use plain text mails. Do not use HTML mails. HTML mails is more likely to be targeted as spam mails and will be rejected; as well it's not easily readable by others.
 
 {{< table >}}
@@ -73,104 +75,9 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 {{< /table >}}
 
 ## Contributors
+=======
 
-Adding your name to the list below.
+## Contributors
+{{< contributors >}}
+>>>>>>>  Pullin Contributors Data From JSON APIs
 
-If you have been contributing to the Apache Camel project, and you want your name added to the list below. Then you can get in touch with the Camel team from the [Mailing Lists](../mailing-list/) and ask to be added.
-
-{{< table >}}
-| Name  | Organisation |
-|-------|--------------|
-| Aaron Crickenberger | |
-| Al Maw | |
-| Aleksi Kallio | |
-| Alexander Azarov | |
-| Andrew Deason | |
-| Andy Depue | |
-| Axel Hohaus | |
-| Arjan Moraal | |
-| Arno Noordover | het CAK |
-| Barry Kaplan | |
-| Brett Meyer| 3RiverDev, Savoir Technologies |
-| Brian Diesenhaus | |
-| Brian Guan | |
-| Brian Madigan | |
-| Bruno Barin | |
-| Bruno Borges | |
-| Bryan Schmidt | |
-| Chris Kingsbury | TradingScreen |
-| Christoph Emmersberger | |
-| Christopher G. Stach II | |
-| Charles Anthony | |
-| Christian Posta | Red Hat |
-| Claus Straube | |
-| Dan Checkoway | |
-| Dennis Byrne | Thoughtworks |
-| Erik Onnen | |
-| Fabrizio Spataro | Bizmate |
-| Fernando Ribeiro | |
-| Gert Vanthienen | |
-| Glen Klyuzner | Tullib |
-| Hakan Guleryuz | ASPone |
-| James Chamberlain | |
-| James Zhang | |
-| Jamie McCrindle | |
-| Jason Anderson | |
-| Jason Carreira | |
-| Jason Sherman | |
-| Jérôme Delagnes | |
-| Jeff Sparkes | |
-| Jeff Lansing | SYS Technologies |
-| Joe Fernandez | TTM |
-| John Heitmann | |
-| Jonathan Cook | BBC |
-| Juraj Tomasov | |
-| Kevin Ross | |
-| Kranti Parisa | |
-| Leo Pechersky | |
-| Li Ma | |
-| Lars Heinemann | Red Hat |
-| Lauri Lehmijoki | |
-| Lauri Kimmel | |
-| Marco Buss | product + concept |
-| Marco Luebcke | |
-| Mark Bucayan | |
-| Mark Timmings | |
-| Mario Siegenthaler | |
-| Mathieu Lalonde | |
-| Mats Henricson | |
-| Matt Hoffman | |
-| Matthew Vincent | |
-| Mathew Kuppe | 360 Treasury Systems |
-| Mike Perham | |
-| Mitko Kolev | InterComponentWare AG |
-| Neil Clayton | Royal Bank of Scotland |
-| Neil Thorne | |
-| Nick Reid | Evolution | |
-| Niklas Gustavsson | |
-| Ning Li | |
-| Noah Nordrum | |
-| Oliver Belikan | |
-| Otavio Prado | |
-| Ozgur Cetinturk | |
-| Paul Smith | |
-| Paul Wai | |
-| Pawel Tucholski | |
-| Peter Henning | |
-| Przemyslaw Budzik | |
-| Radek Sedmak | |
-| Reuben Garrett | |
-| Robert Liguori | Solentus |
-| Robin Roos | Dresdner Kleinwort Wasserstein |
-| Ross Mason | |
-| Sachin Handiekar | |
-| Sami Dalouche | |
-| Sanjiv Jivan | |
-| Steven Marcus | |
-| Taariq Levack | |
-| Taylor Gautier | |
-| Thomas Heller | |
-| Trevor Pounds | |
-| Viral Gohel | Red Hat |
-| Xueqiang Mi | |
-{{< /table >}}

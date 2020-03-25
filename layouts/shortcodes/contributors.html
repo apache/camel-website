@@ -1,0 +1,26 @@
+{{ $urlPre := "https://api.github.com/repos" }}
+{{ $username := "Apache" }}
+{{ $repo := "camel-website"}}
+{{ $token := " enter generated token here"}}
+{{ $scope := "all"}}
+{{ $collaborators := getJSON $urlPre "/" $username "/" $repo "/collaborators?access_token=" $token  }}
+
+<table class="tableblock frame-all grid-all stretch">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Organisation</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{range $collaborators}}
+        {{$user := getJSON .url}}
+        {{if $user.name  }}
+        <tr>
+            <td> {{$user.name}} </td>
+            <td> {{$user.company}} </td>
+        </tr>
+        {{end}}
+        {{end}}
+    </tbody>
+</table>
