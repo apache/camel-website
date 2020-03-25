@@ -145,12 +145,14 @@ section.frontpage.columns {
   display: flex;
   flex-wrap: wrap;
   border-top: 1px solid var(--color-smoke-50);
+  padding-top: 3rem;
 }
 
 section.frontpage.projects {
   display: flex;
   flex-direction: column;
   border-top: 1px solid var(--color-smoke-50);
+  padding-top: 3rem;
 }
 
 section.frontpage.projects .project {
@@ -176,7 +178,7 @@ section.frontpage.projects .project a.significant {
 }
 
 section.frontpage.apache {
-  padding: 1rem;
+  padding-top: 3rem;
 }
 
 section.frontpage h1,
@@ -207,7 +209,7 @@ section.frontpage h1 {
 
 .box {
   flex: 50%;
-  padding: 1rem 0;
+  padding: 1.2rem 0;
 }
 
 .box div {
