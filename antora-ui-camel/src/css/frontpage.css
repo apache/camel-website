@@ -238,6 +238,16 @@ section.frontpage h1 {
   .box-new {
     flex: 100%;
   }
+
+  section.frontpage.columns,
+  section.frontpage.projects,
+  section.frontpage.apache {
+    padding-top: 1rem;
+  }
+
+  .box {
+    padding: 1rem 0;
+  }
 }
 
 @media screen and (max-width: 1023px) {
