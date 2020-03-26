@@ -2,28 +2,25 @@
 {{ $path :=  "/json/foundation" }}
 {{ $group :=  getJSON $urlPre $path "/groups.json"}}
 {{ $name := getJSON $urlPre $path "/people_name.json" }}
-{{$orgnisations := getJSON "" "data/teamdata.json" }}
-<br>
+{{$orgnisations := getJSON "data/teamdata.json" }}
+
 <table class="tableblock frame-all grid-all stretch">
-<thead>
-  <tr>
-    <th>Name</th>
-    <th>ID</th>
-    <th>Organisation</th>
-  </tr>
-</thead>
-<tbody>
-  {{range $group.camel}}
-  {{ $id:= . }} 
-<tr>
-  <td>{{index $name $id}}</td>
-  <td>{{$id}}</td>
-  <td>{{index $orgnisations  $id}} </td>
-</tr>
-{{end}}
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>ID</th>
+      <th>Organisation</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{range $group.camel}}
+    {{ $id:= . }}
+    <tr>
+      <td>{{index $name $id}}</td>
+      <td>{{$id}}</td>
+      <td>{{index $orgnisations  $id}} </td>
+    </tr>
+    {{end}}
 
-</tbody>
+  </tbody>
 </table>
-
-
-

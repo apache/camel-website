@@ -77,7 +77,7 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 ## Contributors
 =======
 
-## Contributors
+# Contributors
 {{< contributors >}}
 >>>>>>>  Pullin Contributors Data From JSON APIs
 
