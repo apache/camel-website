@@ -1,32 +1,29 @@
-{{ $urlPre := "https://api.github.com/repos" }}
-{{ $username := "Apache" }}
-{{ $repo := "camel-website"}}
-{{ $token := ""}}
+
+{{ $token := "" }}
 <!-- Enter token here -->
-{{ $scope := "all"}}
 {{ if eq $token "" }}
 <p>Unable to get contributors details[set token]</p>
-{{else}}
-{{ $collaborators := getJSON $urlPre "/" $username "/" $repo "/collaborators?access_token=" $token  }}
+{{ else }}
+{{ $collaborators := getJSON "https://api.github.com/repos/Apache/camel-website/collaborators?access_token=" $token  }}
 
 <table class="tableblock frame-all grid-all stretch">
     <thead>
         <tr>
             <th>Name</th>
-            <th>Organisation</th>
+            <th>Organization</th>
         </tr>
     </thead>
     <tbody>
 
-        {{range $collaborators}}
-        {{$user := getJSON .url}}
-        {{if $user.name  }}
+        {{ range $collaborators }}
+        {{ $user := getJSON .url }}
+        {{ if $user.name  }}
         <tr>
-            <td> {{$user.name}} </td>
-            <td> {{$user.company}} </td>
+            <td> {{ $user.name }} </td>
+            <td> {{ $user.company }} </td>
         </tr>
-        {{end}}
-        {{end}}
+        {{ end }}
+        {{ end }}
     </tbody>
 </table>
 {{end}}
