@@ -29,7 +29,7 @@ timeout = 300000
     name = "Documentation"
     identifier = "docs"
     weight = 4
-    url = "/documentations/"
+    url = "/docs/"
 
 [[menu.main]]
     name = "Community"
