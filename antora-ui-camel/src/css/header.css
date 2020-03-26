@@ -415,12 +415,6 @@ body {
   }
 }
 
-@media screen and (min-width: 610px) {
-  #search_mobile {
-    display: none;
-  }
-}
-
 #search_results_mobile {
   top: 3.31rem;
   background: #fffe;
