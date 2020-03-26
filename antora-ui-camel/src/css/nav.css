@@ -159,10 +159,6 @@ html.is-clipped--nav {
   padding: 0.6rem 0.3rem 0.6rem 0;
 }
 
-.nav-menu > .nav-list > .nav-item > .nav-list > .nav-item {
-  border-bottom: 1px solid var(--nav-border-color);
-}
-
 /* adds some breathing room below a nested list */
 .nav-item-toggle ~ .nav-list {
   padding-bottom: 0.125rem;
@@ -203,7 +199,6 @@ html.is-clipped--nav {
 
 .nav-link:hover,
 .nav-text:hover {
-  font-weight: var(--body-font-weight-bold);
   text-decoration: underline;
 }
 
