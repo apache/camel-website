@@ -20,7 +20,7 @@
             {{ end }}
             </p>
         </aside>
-        <div class="post-content">
+        <div class="post-content table-wrapper">
             {{ $featured := (.Resources.ByType "image").GetMatch "*featured*" }}
             {{ with $featured }}
               {{ if ne $featured.MediaType.SubType "svg" }}
