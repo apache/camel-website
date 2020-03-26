@@ -97,7 +97,6 @@ article.blog p {
 
 .blog .post-content pre {
   max-width: 800px;
-  white-space: pre-wrap;
 }
 
 .blog .post .post-content table {
