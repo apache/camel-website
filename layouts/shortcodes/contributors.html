@@ -1,8 +1,11 @@
 {{ $urlPre := "https://api.github.com/repos" }}
-{{ $username := "Apache" }}
+{{ $username := "CynthiaOmovoiye" }}
 {{ $repo := "camel-website"}}
-{{ $token := " enter generated token here"}}
+{{ $token := "enter token"}}
 {{ $scope := "all"}}
+{{ if eq $token "enter token" }}
+    <P>no token set</P>
+{{else}}
 {{ $collaborators := getJSON $urlPre "/" $username "/" $repo "/collaborators?access_token=" $token  }}
 
 <table class="tableblock frame-all grid-all stretch">
@@ -13,6 +16,7 @@
         </tr>
     </thead>
     <tbody>
+
         {{range $collaborators}}
         {{$user := getJSON .url}}
         {{if $user.name  }}
@@ -22,5 +26,7 @@
         </tr>
         {{end}}
         {{end}}
+        {{end}}
+        
     </tbody>
 </table>
