@@ -6,7 +6,7 @@ This page provides an overview of all kinds of documentations available for Apac
 
 ## User Manual
 
-The [User Manual](/manual/latest) is a comprehensive guide meant to help you with the key concepts of Apache Camel and software integration, from how to [begin contributing](/manual/latest/contributing.html) to Apache Camel, to [architecture](/manual/latest/architecture.html) or [integration patterns](/components/latest/eips/enterprise-integration-patterns.html).
+The [User Manual](/manual/latest/) is a comprehensive guide meant to help you with the key concepts of Apache Camel and software integration, from how to [begin contributing](/manual/latest/contributing.html) to Apache Camel, to [architecture](/manual/latest/architecture.html) or [integration patterns](/components/latest/eips/enterprise-integration-patterns.html).
 
  - [How to Get Started](/manual/latest/getting-started.html)
  - [Enterprise Integration Patterns](/components/latest/eips/enterprise-integration-patterns.html)
