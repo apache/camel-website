@@ -52,6 +52,12 @@ footer .footer dl dt {
   margin-bottom: 0.5rem;
 }
 
+.stroke {
+  display: inline-block;
+  border-bottom: 2px solid white;
+  width: 3rem;
+}
+
 footer .footer dl dd {
   margin: 0;
 }
@@ -72,6 +78,6 @@ footer .footer dl dd {
   display: inline-block;
   padding: 0.4rem;
   background-color: var(--footer-background);
-  color: black;
+  color: var(--color-white);
   border-radius: 0.4rem 0.4rem  0 0;
 }

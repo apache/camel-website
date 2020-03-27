@@ -396,7 +396,7 @@ body {
 .navbar-tools {
   display: flex;
   align-items: flex-end;
-  justify-content: flex-end;
+  justify-content: center;
   line-height: 1.6;
   padding: 0.5rem;
   font-weight: bold;

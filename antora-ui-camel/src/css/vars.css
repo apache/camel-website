@@ -116,9 +116,9 @@
   --frontpage-max-width: calc(1140 / var(--rem-base) * 1rem);
   /* footer */
   --footer-line-height: var(--doc-line-height);
-  --footer-background: var(--color-smoke-90);
-  --footer-font-color: var(--color-gray-70);
-  --footer-link-font-color: var(--color-jet-80);
+  --footer-background: var(--color-asf-dark-blue);
+  --footer-font-color: var(--color-white);
+  --footer-link-font-color: var(--color-smoke-10);
   /* dimensions */
   --navbar-height: calc(73 / var(--rem-base) * 1rem);
   --toolbar-height: calc(45 / var(--rem-base) * 1rem);
