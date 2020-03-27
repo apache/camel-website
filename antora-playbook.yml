@@ -45,6 +45,9 @@ content:
     - url: git@github.com:apache/camel-spring-boot.git
       branches: master
       start_path: docs
+    - url: git@github.com:apache/camel-karaf.git
+      branches: master
+      start_path: docs
 
 ui:
   bundle:
