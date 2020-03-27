@@ -413,6 +413,14 @@ body {
   #search {
     display: none;
   }
+  
+  #search_mobile {
+    display: visible;
+  }
+}
+
+#search_mobile {
+  display: none;
 }
 
 #search_results_mobile {
