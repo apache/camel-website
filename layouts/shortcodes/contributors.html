@@ -1,29 +1,33 @@
 
-{{ $token := "" }}
-<!-- Enter token here -->
-{{ if eq $token "" }}
-<p>Unable to get contributors details[set token]</p>
-{{ else }}
-{{ $collaborators := getJSON "https://api.github.com/repos/Apache/camel-website/collaborators?access_token=" $token  }}
+{{ $contributors := getJSON "https://api.github.com/repos/Apache/camel-website/contributors?per_page=100&anon=1" }}
 
 <table class="tableblock frame-all grid-all stretch">
     <thead>
         <tr>
+            <th>Avatar</th>
             <th>Name</th>
+            <th>username</th>
             <th>Organization</th>
         </tr>
     </thead>
     <tbody>
-
-        {{ range $collaborators }}
-        {{ $user := getJSON .url }}
-        {{ if $user.name  }}
-        <tr>
-            <td> {{ $user.name }} </td>
-            <td> {{ $user.company }} </td>
-        </tr>
-        {{ end }}
+        {{ range $contributors }}
+            {{ if .url }}
+                {{ $user := getJSON .url }}
+                <tr>
+                    <td><img width="50px" height="50px" src= "{{ .avatar_url }}"/></td>
+                    <td> {{ $user.name }} </td>
+                    <td> {{ $user.login }} </td>
+                    <td> {{ $user.company }} </td>
+                </tr>
+            {{ else if (not .url )  }}
+                <tr>
+                    <td></td>
+                    <td>{{ .name }}</td>
+                    <td> </td>
+                    <td> {{ .email }} </td>
+                </tr>
+            {{ end }}
         {{ end }}
     </tbody>
 </table>
-{{end}}
