@@ -1,5 +1,5 @@
 .blog {
-  max-width: 70vw;
+  max-width: var(--static-max-width);
   margin: var(--static-margin);
 }
 
@@ -121,7 +121,7 @@ article.blog p {
 
 @media screen and (min-width: 1024px) {
   .blog {
-    max-width: 70vw;
+    max-width: var(--static-max-width--desktop);
   }
 
   .blog .post {

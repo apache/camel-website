@@ -12,6 +12,7 @@ footer .footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: var(--static-max-width--desktop);
 }
 
 footer .footer p {
@@ -62,6 +63,7 @@ footer .footer dl dd {
 }
 
 .edit {
+  max-width: var(--static-max-width--desktop);
   margin: auto;
   text-align: right;
 }
