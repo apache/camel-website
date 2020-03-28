@@ -121,20 +121,20 @@ article.blog p {
 
 .blog .avatar {
   vertical-align: middle;
-  width: 100px;
-  height: 100px;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
 }
 
 .blog .date-and-name {
   position: relative;
-  bottom: 6em;
-  left: 7em;
+  bottom: 5rem;
+  left: 6rem;
 }
 
 .blog .publish-date {
   position: relative;
-  bottom: 2em;
+  bottom: 2rem;
 }
 
 @media screen and (min-width: 1024px) {

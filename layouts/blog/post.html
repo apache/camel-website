@@ -18,7 +18,7 @@
                     {{ $avatar.Set "url" $userData.avatar_url }}
                 {{ end }}
                     <div class="post-avatar">
-                            <img src="{{ $avatar.Get "url" | relURL }}" class="avatar">
+                            <img src="{{ $avatar.Get "url" | relURL }}" class="avatar" alt = "avatar image" >
                     </div>
                 <div class="date-and-name">
                     <p>by <span rel="author">{{ .Params.author }}</span></p>
