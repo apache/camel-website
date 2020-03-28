@@ -1,6 +1,6 @@
 {
   "version": "1.0.0-SNAPSHOT",
-  "license": "Apache-2.0", 
+  "license": "Apache-2.0",
   "scripts": {
     "build:antora": "antora --clean --fetch antora-playbook.yml",
     "build:hugo": "hugo --cacheDir ${HUGO_CACHE_DIR:-$(pwd)/.hugo_data}",
