@@ -65,13 +65,15 @@ header.frontpage a:active {
 .frontpage a.significant:hover {
   color: var(--color-white);
   box-shadow: 0 3px #8e480b;
-  transform: translateY(2px);
+  transform: rotateX(10deg);
+  animation: one 2s infinite;
 }
 
 .frontpage a.significant:active {
   color: var(--color-white);
   box-shadow: 0 3px #8e480b;
-  transform: translateY(2px);
+  transform: rotateX(10deg);
+  animation: one 2s infinite;
 }
 
 header.frontpage svg {
