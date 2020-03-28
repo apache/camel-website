@@ -131,7 +131,7 @@ body {
 
 .navbar-item {
   flex: none;
-  margin: 1rem;
+  padding: 1rem 2rem 1rem 0;
 }
 
 .navbar-item .icon {
@@ -346,7 +346,7 @@ body {
     position: absolute;
     transform: rotate(-45deg);
     width: 0.5em;
-    right: -0.6rem;
+    right: -0.8rem;
     top: 50%;
   }
 
@@ -376,7 +376,7 @@ body {
   }
 
   .navbar-dropdown a.navbar-item {
-    padding-right: 3rem;
+    padding: 0.6rem 2rem 0.6rem 1rem;
   }
 
   .navbar-dropdown.is-right {
