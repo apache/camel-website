@@ -225,7 +225,7 @@ body {
     transform: rotate(-45deg);
     width: 0.5em;
     right: 0;
-    top: 40%;
+    top: 4.5px;
   }
 }
 
@@ -300,7 +300,7 @@ body {
     margin-top: 0.6em;
     margin-right: 1rem;
     right: 0;
-    top: 40%;
+    top: -2.5px;
   }
 }
 
