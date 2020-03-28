@@ -71,7 +71,7 @@ footer .footer dl dd {
   margin-left: 80%;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1181px) {
   .edit {
     max-width: var(--static-max-width--desktop);
     margin: auto;
