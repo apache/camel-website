@@ -205,11 +205,6 @@ body {
     padding: 0.5rem 0;
   }
 
-  .navbar-menu a.navbar-item:hover,
-  .navbar-menu .navbar-link:hover {
-    background-color: var(--navbar-menu-hover-background);
-  }
-
   .navbar-link::after {
     border-width: 0 0 2px 2px;
     border-style: solid;
@@ -295,7 +290,6 @@ body {
     position: absolute;
     transform: rotate(-45deg);
     width: 0.5em;
-    margin-top: 0.6em;
     margin-right: 1rem;
     right: 0;
     top: 40%;
