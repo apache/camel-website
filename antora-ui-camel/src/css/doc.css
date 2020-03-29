@@ -134,6 +134,7 @@
   border-radius: 0.2rem;
   font-size: calc(14 / var(--rem-base) * 1rem);
   padding: 0.075rem 0.25rem 0.125rem;
+  overflow-wrap: break-word;
 }
 
 .doc pre {
@@ -638,14 +639,6 @@ kbd,
 @media screen and (max-width: 1023px) and (min-width: 480px) {
   .doc p code,
   .doc thead code {
-    font-size: calc(12px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
-  }
-}
-
-@media screen and (max-width: 626px) {
-  .doc p code,
-  .doc thead code {
-    font-size: 0.9rem;
-    overflow-wrap: break-word;
+    font-size: var(--body-font-size);
   }
 }
