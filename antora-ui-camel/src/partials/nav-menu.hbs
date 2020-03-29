@@ -1,7 +1,11 @@
 {{#if page.navigation}}
 <div class="nav-panel-menu is-active" data-panel="menu">
-
+  {{#if (eq page.component.name 'components')}}
   <input class="search" placeholder="Quick lookup">
+  {{/if}}
+  {{#if (eq page.component.name 'faq')}}
+  <input class="search" placeholder="Quick lookup">
+  {{/if}}
   <nav class="nav-menu">
     <h3 class="title"><a href="{{relativize page.url page.componentVersion.url}}">{{page.component.title}}</a></h3>
 {{> nav-tree navigation=page.navigation}}
