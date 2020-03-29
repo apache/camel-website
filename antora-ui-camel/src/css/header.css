@@ -129,11 +129,6 @@ body {
   position: relative;
 }
 
-.navbar-item {
-  flex: none;
-  padding: 1rem 2rem 1rem 0;
-}
-
 .navbar-item .icon {
   width: 1.1rem;
   height: 1.1rem;
@@ -195,6 +190,8 @@ body {
 
   .navbar-item {
     font-weight: bold;
+    flex: none;
+    margin: 1rem;
   }
 
   .navbar-dropdown .navbar-item:hover,
@@ -273,6 +270,8 @@ body {
 
   .navbar-item {
     font-weight: bold;
+    flex: none;
+    margin: 1rem;
   }
 
   .navbar-dropdown .navbar-item:hover,
@@ -321,6 +320,10 @@ body {
     align-items: flex-end;
     display: flex;
     font-weight: bold;
+  }
+
+  .navbar-item {
+    padding: 1rem 2rem 1rem 0;
   }
 
   .navbar-item.has-dropdown {
