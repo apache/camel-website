@@ -89,11 +89,15 @@ html.is-clipped--nav {
 }
 
 .nav-panel-menu::-webkit-scrollbar {
-  width: 0.25rem;
+  width: 0.29rem;
 }
 
 .nav-panel-menu::-webkit-scrollbar-thumb {
-  background-color: var(--nav-border-color);
+  background-color: #e3dcdc;
+}
+
+.nav-panel-menu::-webkit-scrollbar-thumb:hover {
+  background-color: #afa7a7;
 }
 
 .nav-panel-menu input.search {
