@@ -106,6 +106,10 @@ article.blog p {
   margin-bottom: 1rem;
 }
 
+.blog .post .post-content .direct {
+  display: none;
+}
+
 .blog .post .post-content tr:nth-child(even) {
   background: var(--color-smoke-50);
 }
@@ -159,5 +163,11 @@ article.blog p {
 @media screen and (max-width: 1023px) {
   .blog aside {
     display: none;
+  }
+
+  .blog .post .post-content .direct {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
   }
 }
