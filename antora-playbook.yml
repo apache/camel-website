@@ -8,6 +8,10 @@ content:
     - url: git@github.com:apache/camel.git
       branches: master
       start_path: docs/user-manual
+# faq
+    - url: git@github.com:apache/camel.git
+      branches: master
+      start_path: docs/faq  
 # eip
     - url: git@github.com:apache/camel.git
       branches: master
