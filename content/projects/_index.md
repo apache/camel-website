@@ -28,3 +28,10 @@ For more information, please refer to the [Camel Quarkus Documentation](/camel-q
 Camel support for Spring Boot provides auto-configuration of the Camel and starters for many Camel components. Our opinionated auto-configuration of the Camel context auto-detects Camel routes available in the Spring context and registers the key Camel utilities (like producer template, consumer template and the type converter) as beans. 
 
 For more information, please refer to the [Camel Spring Boot Starters Manual](/camel-spring-boot/latest/).
+
+## Apache Camel Karaf
+
+Makes running Apache Camel in [OSGi](https://www.osgi.org/) container nicely using [Apache Karaf](https://karaf.apache.org/).
+
+For more information checkout the [Camel Karaf manual](/camel-karaf/latest/).
+
