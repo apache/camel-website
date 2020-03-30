@@ -9,8 +9,8 @@
   --color-gray-10: #c1c1c1;
   --color-gray-30: #8e8e8e;
   --color-gray-50: #808080;
+  --color-gray-60: #555;
   --color-gray-70: #5d5d5d;
-  --color-gray-90: #555;
   --color-jet-20: #4a4a4a;
   --color-jet-30: #424242;
   --color-jet-50: #333;
@@ -19,10 +19,7 @@
   --color-black: #000;
   --color-asf-dark-blue: #303284;
   --color-asf-moderate-blue: #585ac2;
-  --color-bistre: #41250c;
-  --color-camel-orange: #ed8225;
-  --color-camel-vivid-orange: #e97826;
-  --color-dark-gray: #767676;
+  --color-camel-orange: #e97826;
   --color-highlight: #fffcdd;
   --color-glow: #fff7a3;
   /* fonts */

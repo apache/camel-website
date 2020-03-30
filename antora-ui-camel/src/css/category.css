@@ -8,7 +8,7 @@ a.category:first-child {
 }
 
 a.category {
-  background-color: var(--color-camel-vivid-orange);
+  background-color: var(--color-camel-orange);
   border-radius: 0.2rem;
   margin-left: 1px;
   color: var(--color-white);
