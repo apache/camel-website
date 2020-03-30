@@ -101,7 +101,7 @@ pipeline {
         stage('Preview') {
             when {
                 not {
-                    branch 'origin/master'
+                    branch 'master'
                 }
             }
 
@@ -112,7 +112,7 @@ pipeline {
 
         stage('Deploy') {
             when {
-                branch 'origin/master'
+                branch 'master'
             }
 
             steps {
