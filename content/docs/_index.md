@@ -21,6 +21,7 @@ Apache Camel encompasses several sub-projects for additional platforms or ways t
 - [Camel-K](/camel-k/latest/)
 - [Camel Quarkus](/camel-quarkus/latest/)
 - [Camel Kafka Connector](/camel-kafka-connector/latest/)
+- [Camel Karaf](/camel-karaf-connector/latest/)
 - [API documentation](https://www.javadoc.io/doc/org.apache.camel/camel-api/latest/index.html)
 
 ## Components
