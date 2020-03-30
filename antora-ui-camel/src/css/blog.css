@@ -58,8 +58,12 @@ article.blog p {
 }
 
 .blog .post aside p {
-  line-height: 3rem;
+  padding-top: 1.5rem;
   color: var(--color-gray-50);
+}
+
+.blog .post aside p span[rel="author"] {
+  display: inline-block;
 }
 
 .blog .post aside {
@@ -159,4 +163,14 @@ article.blog p {
   .blog aside {
     display: none;
   }
+}
+
+.blog ul,
+.blog ol {
+  padding-bottom: 1rem;
+}
+
+.blog li ul,
+.blog li ol {
+  padding-bottom: 0;
 }

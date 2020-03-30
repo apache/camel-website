@@ -10,7 +10,12 @@
         <aside>
             <div class="summary">{{ .Params.preview }}</div>
             <time itemprop="published" datetime="{{ dateFormat "2006-01-02" .PublishDate }}" title="{{ dateFormat "Monday, January 2, 2006" .PublishDate }}">{{ dateFormat "January 2, 2006" .PublishDate }}</time>
-            <p>by <span rel="author">{{ .Params.author }}</span></p>
+            <p>by {{ if reflect.IsSlice .Params.author }}
+              <span rel="author">{{ delimit .Params.author "</span>, <span rel=\"author\">"}}</span>
+            {{ else }}
+              <span rel="author">{{ .Params.author }}</span>
+            {{ end }}
+            </p>
             <p>
             {{ if .PrevInSection }}
             <a class="arrow prev" href="{{ .PrevInSection.RelPermalink }}" title="Previous post: {{ .PrevInSection.Title }}">&#10094;</a>
@@ -20,7 +25,7 @@
             {{ end }}
             </p>
         </aside>
-        <div class="post-content table-wrapper">
+        <div class="post-content">
             {{ $featured := (.Resources.ByType "image").GetMatch "*featured*" }}
             {{ with $featured }}
               {{ if ne $featured.MediaType.SubType "svg" }}
