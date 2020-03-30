@@ -13,6 +13,7 @@ body {
 
 *::selection {
   background: var(--color-highlight);
+  color: var(--color-white);
 }
 
 html {
@@ -80,7 +81,9 @@ button::-moz-focus-inner {
 }
 
 mark {
-  background: var(--color-highlight);
+  color: var(--color-camel-orange);
+  font-weight: bold;
+  background: var(--color-white);
 }
 
 .text-center {
