@@ -235,7 +235,7 @@ section.frontpage h1 {
 @media screen and (max-width: 626px) {
   .split {
     flex: 100%;
-    margin: 3%;
+    margin-left: 0.75rem;
   }
 
   section.frontpage.columns,
