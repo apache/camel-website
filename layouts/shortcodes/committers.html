@@ -1,24 +1,22 @@
-
-{{ $groups :=  getJSON "https://projects.apache.org/json/foundation/groups.json"}}
+{{ $groups :=  getJSON "https://projects.apache.org/json/foundation/groups.json" }}
 {{ $people_names := getJSON "https://projects.apache.org/json/foundation/people_name.json" }}
 {{ $team_data := getJSON "data/teamdata.json" }}
 
-<table class="tableblock frame-all grid-all stretch">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>ID</th>
-      <th>Organization</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{ range $id := $groups.camel }}
-    <tr>
-      <td>{{ index $people_names $id }}</td>
-      <td>{{ $id }}</td>
-      <td>{{ index $team_data  $id }} </td>
-    </tr>
-    {{ end }}
-
-  </tbody>
+<table class="tableblock stretch">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Organization</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range $id := $groups.camel }}
+        <tr>
+          <td>{{ index $people_names $id }}</td>
+          <td>{{ $id }}</td>
+          <td>{{ index $team_data  $id }} </td>
+        </tr>
+      {{ end }}
+    </tbody>
 </table>

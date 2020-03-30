@@ -12,6 +12,7 @@ timeout = 300000
     socialProfiles = ["https://twitter.com/ApacheCamel"]
     organizationLogo = "https://camel.apache.org/_/img/logo-d.svg"
     organizationDescription = "Apache Camel ™ is a versatile open-source integration framework based on known Enterprise Integration Patterns. Camel empowers you to define routing and mediation rules in a variety of domain-specific languages, including a Java-based Fluent API, Spring or Blueprint XML Configuration files, and a Scala DSL."
+    token = "3656a8b91e08cbd62a3d92ba09360a8d0f233216"
 
 [[menu.main]]
     name = "Blog"

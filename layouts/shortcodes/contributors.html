@@ -1,7 +1,4 @@
-
-{{ $contributors := getJSON "https://api.github.com/repos/Apache/camel-website/contributors?per_page=100&anon=1" }}
-
-<table class="tableblock frame-all grid-all stretch">
+<table class="tableblock stretch">
     <thead>
         <tr>
             <th>Avatar</th>
@@ -11,23 +8,41 @@
         </tr>
     </thead>
     <tbody>
-        {{ range $contributors }}
-            {{ if .url }}
-                {{ $user := getJSON .url }}
-                <tr>
-                    <td><img width="50px" height="50px" src= "{{ .avatar_url }}"/></td>
-                    <td> {{ $user.name }} </td>
-                    <td> {{ $user.login }} </td>
-                    <td> {{ $user.company }} </td>
-                </tr>
-            {{ else if (not .url )  }}
-                <tr>
-                    <td></td>
-                    <td>{{ .name }}</td>
-                    <td> </td>
-                    <td> {{ .email }} </td>
-                </tr>
+        {{ range  $count := (seq 10) }}
+            {{ $page := string $count }}
+                {{ $git_contributors := getJSON "https://api.github.com/repos/apache/camel/contributors?per_page=100&anon=1&page=" $page "&access_token=" $.Site.Params.token }}
+                {{ range  $git_contributors }}
+                    {{ if .url }}
+                        {{ $user_url := getJSON .url }}
+                        {{ if $user_url.name }}
+                            <tr>
+                                <td> <img width="50px" height="50px" src="{{ .avatar_url }}"/></td>
+                                <td> {{ $user_url.name }} </td>
+                                <td> {{ $user_url.login }} </td>
+                                <td> {{ $user_url.company }} </td>
+                    
+                            </tr>
+                            
+                        {{ else }}
+                            <tr>
+                                <td> <img width="50px" height="50px" src="{{ .avatar_url }}"/></td>
+                                <td></td>
+                                <td> {{ $user_url.login }} </td>
+                                <td> {{ $user_url.company }} </td>
+                            </tr>
+                    
+                            {{ end }}
+                    {{ else }}
+                        <tr>
+                            <td></td>
+                            <td>{{ .name}}</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    
+                {{ end }}
             {{ end }}
-        {{ end }}
+            {{ end }}
+        
     </tbody>
 </table>
