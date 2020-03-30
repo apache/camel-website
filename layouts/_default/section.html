@@ -1,9 +1,9 @@
 {{ partial "header.html" . }}
 
-    <article class="static doc">
+     <article class="static doc {{ .Page.Section }}">
 
         <h1>{{ .Title }} </h1>
-    
+
         {{ .Content }}
 
     </article>
