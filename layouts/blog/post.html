@@ -4,7 +4,7 @@
         {{ if .Params.categories }}
             {{ range .Params.categories }}<a class="category" href="{{ "/categories/" | relURL }}{{ . | urlize }}/">{{ upper . }}</a>{{ end }}
         {{ end }}
-        <h1><a href="{{.Page.Permalink}}">{{ .Title }}</a></h1>
+        <h1>{{ .Title }}</h1>
     </header>
     <div class="post">
         <aside>
