@@ -6,7 +6,7 @@ This page is intended as a place to collect user stories and feedback on Apache 
 
 {{< table >}}
 | Company, Product, or Project  | Description |
-|-------------------------------|-------------|
+|:------------------------------|------------|
 |[Apache ActiveMQ](http://activemq.apache.org)|Uses Camel to add [Enterprise Integration Patterns](../../components/latest/eips/enterprise-integration-patterns.html) support into the [ActiveMQ broker](http://activemq.apache.org/enterprise-integration-patterns.html). If you run an out of the box ActiveMQ broker, look in *conf/camel.xml* and you'll see *camelContext* with some example routing rules. Can be used to bridge ActiveMQ with any of the camel [Components](../../manual/latest/component.html).|
 |[Apache ServiceMix](http://servicemix.apache.org/home.html)|Uses Camel as a routing engine as a [JBI service](http://servicemix.apache.org/servicemix-camel.html) unit for use either in [JBI](http://servicemix.apache.org/docs/4.4.x/jbi/components/index.html) or OSGi to route between JBI endpoints. See the [tutorial](http://servicemix.apache.org/3-beginner-using-apache-camel-inside-servicemix.html) or [example](http://servicemix.apache.org/camel-example.html)|
 |[Apache Ignite](https://ignite.apache.org/)|Apache Ignite In-Memory Data Fabric is a high-performance, integrated and distributed in-memory platform for computing and transacting on large-scale data sets in real-time, orders of magnitude faster than possible with traditional disk-based or flash technologies.It uses Camel for its universal streamer.|
@@ -69,7 +69,7 @@ This page is intended as a place to collect user stories and feedback on Apache 
 
 {{< table >}}
 | User Groups  | Description |
-|--------------|-------------|
+|:-------------|:------------|
 |[Apache Camel User Group Denmark](https://groups.google.com/group/camel-user-group-denmark)|A danish user group for Apache Camel.|
 |[Apache Camel User Group Tunisia](http://groups.google.com/group/apache-camel-user-group-tunisia)|A tunisian user group for Apache Camel.|
 |[Linkedin Apache Camel Group](http://www.linkedin.com/groups?gid=2447439&trk=hb_side_g)|The Apache Camel group in linkedin.|
@@ -80,7 +80,7 @@ This page is intended as a place to collect user stories and feedback on Apache 
 
 {{< table >}}
 | External Camel Components  | Description |
-|--------------|-------------|
+|:---------------------------|:------------|
 |[camel-apama](https://github.com/gerco/camel-apama)|A Camel component for [Progress Apama](http://web.progress.com/en/apama/index.html)|
 |[camel-arangdodb](https://github.com/bbonnin/camel-arangodb)|Camel component for accessing ArangoDB|
 |[camel-beanstalk](http://github.com/osinka/camel-beanstalk)|Apache Camel component for beanstalk.|
