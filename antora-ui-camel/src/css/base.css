@@ -1,6 +1,8 @@
 html,
 body {
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 *,
@@ -46,6 +48,7 @@ kbd,
 pre {
   color: var(--code-font-color);
   font-family: var(--monospace-font-family);
+  overflow-wrap: break-word;
 }
 
 b,

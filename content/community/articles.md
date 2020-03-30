@@ -30,16 +30,7 @@ title: "Articles"
 *   [Introduction to messaging with ActiveMQ](http://www.java-tv.com/2009/07/24/introduction-to-messaging-with-apache-activemq/)(EN) at [Øredev 2008 conference](https://oredev.org/) _by_ _[Bruce Snyder](http://bsnyderblog.blogspot.com/)_
 *   ScreenCast: an introduction to [Apache Camel](http://activemq.apache.org/camel/) and the use of [Enterprise Integration Patterns](http://activemq.apache.org/camel/enterprise-integration-patterns.html) in [Jame's Blog](http://macstrac.blogspot.com/2013/06/introducing-apache-camel-based-open.html) _by_ _[James Strachan](http://macstrac.blogspot.com/)_
 *   [Videos de las charlas de la 9a reunión de JavaMexico (**Spanish**)](http://www.springhispano.org/?q=node/564) _by Domingo Suarez_
-*    [Facebook integration Apache Camel](https://www.youtube.com/watch?v=evx5y1BnT8c)(EN) - 15 min screenshot showing how to integrate Camel with Facebook. This screenshot is part of a series, with new videos coming up.
-*   [Advanced AEM Search - Consuming External Content and Enriching Content with Apache Camel](https://www.gastongonzalez.com/tech-blog/2016/8/1/advanced-aem-search-consuming-external-content-and-enriching-content-with-apache-camel)(EN) - 45 min video from 2016 by Gaston Gonzales.
-*    [How to use Heroku and Apache Camel to create open source integrations with SalesForce](https://www.youtube.com/watch?v=8yHM1J9qHWw)(EN) - 30 min video from 2017.
-*   [Camel microservices with Spring Boot and Kubernetes](https://www.youtube.com/watch?v=dSROap0arRE&feature=youtu.be)(EN) - 55 min video from JPoint Moscow 2018, where Claus gave a presentation.
-*   [Camel microservices with Spring Boot and Kubernetes](https://www.youtube.com/watch?v=I5jdLFdWi6w)(EN) - 45 min video from JEEConf Kiev 2018, where Claus gave a presentation.
-*  [Spring Tips - Apache Camel](https://spring.io/blog/2018/05/23/spring-tips-apache-camel)(EN) - 1 hour video from May 2018 by [Josh Long](https://twitter.com/starbuxman) from Pivotal, whom take a look at using Apache Camel on Spring Boot.
-*   [A Look Back at Enterprise Integration Patterns and Their Use into Today's Serverless Cloud Computing](https://www.youtube.com/watch?v=EbTZ5nSJQwI)(EN) - 1h video from Devoxx Poland 2018 by Bruno Borges with l<span style="color: rgb(20,23,26);">ots of demos on **Apache Camel**<span style="color: rgb(20,23,26);">, Azure Functions, and quick look into Kafka and Azure Event Hubs.
-*   [Camel microservices with Spring Boot and Kubernetes](https://vimeo.com/289646198)(EN) - 6o min video from JavaZone (September 2018) where Claus gave a presentation. Source code and slides are [available here](https://github.com/davsclaus/camel-riders-in-the-cloud/tree/javazone).
-*   [Camel microservices with Spring Boot and Kubernetes](https://www.youtube.com/watch?v=G8h7oCGsTVQ&t=10s)(EN) - 50 min video from Voxxed Days Ticino (October 2018) where Claus gave a presentation. Source code and slides are [available here](https://github.com/davsclaus/camel-riders-in-the-cloud/tree/ticino).
-*  [Leverage Enterprise Integration Patterns with Apache Camel and Twitter by Bruno Borges](https://www.youtube.com/watch?v=i_g91CzHgxg)(EN) 
+
 
 ### Articles
 
