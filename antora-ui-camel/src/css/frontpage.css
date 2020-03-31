@@ -206,6 +206,10 @@ section.frontpage h1 {
   text-align: center;
 }
 
+section.frontpage h2 {
+  text-align:center;
+}
+
 .box {
   flex: 50%;
   padding: 1.2rem 0;
