@@ -3,13 +3,12 @@
         <tr>
             <th>Avatar</th>
             <th>Name</th>
-            <th>username</th>
             <th>Organization</th>
         </tr>
     </thead>
     <tbody>
-        {{ range  $count := (seq 10) }}
-            {{ $page := string $count }}
+        {{ range  $page_count := (seq 10) }}
+            {{ $page := string $page_count }}
                 {{ $git_contributors := getJSON "https://api.github.com/repos/apache/camel/contributors?per_page=100&anon=1&page=" $page "&access_token=" $.Site.Params.token }}
                 {{ range  $git_contributors }}
                     {{ if .url }}
@@ -18,31 +17,23 @@
                             <tr>
                                 <td> <img width="50px" height="50px" src="{{ .avatar_url }}"/></td>
                                 <td> {{ $user_url.name }} </td>
-                                <td> {{ $user_url.login }} </td>
                                 <td> {{ $user_url.company }} </td>
                     
                             </tr>
-                            
-                        {{ else }}
+
+                            {{ else }}
                             <tr>
                                 <td> <img width="50px" height="50px" src="{{ .avatar_url }}"/></td>
-                                <td></td>
                                 <td> {{ $user_url.login }} </td>
                                 <td> {{ $user_url.company }} </td>
+                    
                             </tr>
-                    
                             {{ end }}
-                    {{ else }}
-                        <tr>
-                            <td></td>
-                            <td>{{ .name}}</td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    
                 {{ end }}
             {{ end }}
             {{ end }}
         
     </tbody>
 </table>
+
+
