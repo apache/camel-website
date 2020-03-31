@@ -54,12 +54,12 @@ article.blog p {
 }
 
 .blog .post aside time {
-  color: var(--color-gray-50);
+  color: var(--color-gray-60);
 }
 
 .blog .post aside p {
   padding-top: 1.5rem;
-  color: var(--color-gray-50);
+  color: var(--color-gray-60);
 }
 
 .blog .post aside p span[rel="author"] {
