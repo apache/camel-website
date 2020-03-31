@@ -2,32 +2,32 @@
 title: "Articles"
 ---
 
-### Camel Videos (Lang: EN(GLISH), FRENCH, Norwegian, Russian, Spannish)
+### Camel Videos (Lang: English, French, Norwegian, Russian, Spannish)
 
-*    [Camel Riders in the Cloud](https://developers.redhat.com/video/youtube/zuEYtMvHN6g/)(EN) - A 30 minute video from March 2018 where Claus presents using Camel with microservices and containers as cloud native applications, and the best practices around this.
-*   [Agile Integration with Apache Camel microservices in containers on Kubernetes](https://www.youtube.com/watch?v=9FN4DuBJy8M)(EN) - A 45 minute video from fall 2017 where Claus presents at CodeEurope in Poland
-*  [Containerised Integration with Apache Camel](https://www.youtube.com/watch?v=Xkg_AGLV32A&feature=youtu.be)(EN) - A 70 minute video from August 2017 where Claus Ibsen present how developers can get started with Kubernetes/OpenShift on a local cluster and build and run Camel microservices in the cluster.
-*   [Apache Camel - The Integration Library](https://www.youtube.com/watch?v=fxpS9pf6TVk&list=PLUDjw7NbNcoyOyhrIIw9cChAHWdaCxIob&index=17)(EN) - A 50 minute video from September 2016 where Claus Ibsen presents Apache Camel at the JDKIO 2016 conference.
-*   [Apache Camel First Steps](https://www.youtube.com/watch?v=jZE-YSHK_gw&sns=tw)(EN) - A 10 minute video from December 2015 where Vivian van Zyl gives a high level overview of Apache Camel and demonstrates how to start using Camel with live code demo.
-*   [Fabric8 Camel Microservices for Docker and Kubernetes](https://www.youtube.com/watch?v=ouJ3SQHnQ6I&feature=youtu.be&a)(EN) - A 55 minute video from [Riga Dev Day](http://rigadevday.lv/#/index) 2016 conference where Claus Ibsen talks about developing Camel microservices ready for the container platforms.
-*   [Developing Microservices with Apache Camel](https://www.youtube.com/watch?v=91UiQgazt3g)(EN) - Video from November 2015 at the MSA Day in New York where Claus Ibsen talks developing Camel based microservices for docker containers running on Kubernetes. [Slides are here](http://www.slideshare.net/davsclaus/developing-microservices-with-apache-camel).
-*   [JavaOne 2015 Riding a Camel through the JEEHara](https://www.youtube.com/watch?v=nqQaR7vUxfg&index=13&list=PLPIzp-E1msrZz6RNdbDiK0nKuxAUZPs77)(EN) - Video from JavaOne 2015 where Markus Eisele introduces Apache Camel and how to use it with JEE.
-*   [Apache Camel in the clouds](https://www.youtube.com/watch?v=jbj1TJ_2XBQ&feature=youtu.be&a)(EN) - Video from Devnexus 2015 where Markus Eisele talk about Apache Camel in the clouds running on openshift
-*   [GeeCON 2015: Markus Eisele - Wild Flies and a Camel - Java EE Integration](https://vimeo.com/130993910)(EN) - Video from GeeCon 2015 where Markus Eisele talks about Apache Camel and how Camel can work with Wildfly
-*   [Hvordan få en kamel til å danse (September 2014)](https://vimeo.com/105743314)(Norwegian) by Per Jørgen Walstrøm & Audun Fauchald Strand - (JavaZone 2014) in Norwegian
-*   [Integration using Apache Camel and Groovy (June 2014)](http://www.youtube.com/watch?v=_pEwoztbfYI&feature=youtu.be&a)(EN) by Claus Ibsen, presenting Camel, Groovy, and [hawtio](http://hawt.io/) at [gr8conf](http://gr8conf.eu/#/) 2014.
-*   [Effective System Integrations with Apache Camel (March 2014)](https://skillsmatter.com/skillscasts/5074-effective-system-integrations-with-apache-camel)(EN) by Jakub Korab
-*   [Getting started with Apache Camel video from BarcelonaJUG (January 2014)](http://www.youtube.com/watch?v=lOxUs_JleSs&feature=youtu.be&a)(EN) by Claus Ibsen
-*   [Camel in the cloud demo from CamelOne 2013](http://vimeo.com/68442425)(EN) - Video presentation from CamelOne 2013 demonstrating Camel in the cloud using [Fuse Fabric](https://fabric8.io/) and [hawtio](http://hawt.io/)
-*   [Riding the Apache Camel into the cloud](http://www.infoq.com/presentations/Riding-Apache-Camel-Cloud)(EN) _James Strachan_ (QCon 2012)
-*   [Migrating akka-camel module to Akka 2.x](http://skillsmatter.com/podcast/scala/akka-2-x)(EN) _by Peter Gabryanczy_ (ScalaDays 2012)
-*   [Confident Data Transfers with Apache Camel Security](http://www.youtube.com/watch?v=YiG5_rGLapU)(EN) _by Dominik Schadow_ (JavaOne 2012)
-*   [Using Apache Camel and Java EE in an OSGi World](http://www.java-tv.com/2012/02/28/using-apache-camel-and-java-ee-in-an-osgi-world/)(EN) _by Jeff Genender and Johan Edstrom_ (JavaOne 2011)
-*   [Er Apache Camel riktig valg for deg? Lytt til erfarne Camel spotters](http://vimeo.com/28760446)(Norwegian)  _by Rune Peter Bjørnstad, and Bjørn Nordlund_(September 2011)
-*   [In the brain of James Strachan, riding the Camel](http://skillsmatter.com/podcast/design-architecture/riding-camel/JS-2327)(EN) - _by_ _[James Strachan](http://macstrac.blogspot.com/)_ (August 2011)
-*   [What Riding the Camel can make integration easier for you](http://vimeo.com/28760458)(EN) _by_ _[Claus Ibsen](http://davsclaus.blogspot.com)_ (September 2011)
-*   [Un plongeon dans les frameworks d'intégration Java: Apache Camel et Spring Integration](https://www.youtube.com/watch?v=gkUzmbwJr8k)(FRENCH) _by Guillaume Giamarchi and Grégory Boissinot_ (October 2013)
-*   [Introduction to messaging with ActiveMQ](http://www.java-tv.com/2009/07/24/introduction-to-messaging-with-apache-activemq/)(EN) at [Øredev 2008 conference](https://oredev.org/) _by_ _[Bruce Snyder](http://bsnyderblog.blogspot.com/)_
+*    [Camel Riders in the Cloud](https://developers.redhat.com/video/youtube/zuEYtMvHN6g/) (English) - A 30 minute video from March 2018 where Claus presents using Camel with microservices and containers as cloud native applications, and the best practices around this.
+*   [Agile Integration with Apache Camel microservices in containers on Kubernetes](https://www.youtube.com/watch?v=9FN4DuBJy8M) (English) - A 45 minute video from fall 2017 where Claus presents at CodeEurope in Poland
+*  [Containerised Integration with Apache Camel](https://www.youtube.com/watch?v=Xkg_AGLV32A&feature=youtu.be) (English) - A 70 minute video from August 2017 where Claus Ibsen present how developers can get started with Kubernetes/OpenShift on a local cluster and build and run Camel microservices in the cluster.
+*   [Apache Camel - The Integration Library](https://www.youtube.com/watch?v=fxpS9pf6TVk&list=PLUDjw7NbNcoyOyhrIIw9cChAHWdaCxIob&index=17) (English) - A 50 minute video from September 2016 where Claus Ibsen presents Apache Camel at the JDKIO 2016 conference.
+*   [Apache Camel First Steps](https://www.youtube.com/watch?v=jZE-YSHK_gw&sns=tw) (English) - A 10 minute video from December 2015 where Vivian van Zyl gives a high level overview of Apache Camel and demonstrates how to start using Camel with live code demo.
+*   [Fabric8 Camel Microservices for Docker and Kubernetes](https://www.youtube.com/watch?v=ouJ3SQHnQ6I&feature=youtu.be&a) (English) - A 55 minute video from [Riga Dev Day](http://rigadevday.lv/#/index) 2016 conference where Claus Ibsen talks about developing Camel microservices ready for the container platforms.
+*   [Developing Microservices with Apache Camel](https://www.youtube.com/watch?v=91UiQgazt3g) (English) - Video from November 2015 at the MSA Day in New York where Claus Ibsen talks developing Camel based microservices for docker containers running on Kubernetes. [Slides are here](http://www.slideshare.net/davsclaus/developing-microservices-with-apache-camel).
+*   [JavaOne 2015 Riding a Camel through the JEEHara](https://www.youtube.com/watch?v=nqQaR7vUxfg&index=13&list=PLPIzp-E1msrZz6RNdbDiK0nKuxAUZPs77) (English) - Video from JavaOne 2015 where Markus Eisele introduces Apache Camel and how to use it with JEE.
+*   [Apache Camel in the clouds](https://www.youtube.com/watch?v=jbj1TJ_2XBQ&feature=youtu.be&a) (English) - Video from Devnexus 2015 where Markus Eisele talk about Apache Camel in the clouds running on openshift
+*   [GeeCON 2015: Markus Eisele - Wild Flies and a Camel - Java EE Integration](https://vimeo.com/130993910) (English) - Video from GeeCon 2015 where Markus Eisele talks about Apache Camel and how Camel can work with Wildfly
+*   [Hvordan få en kamel til å danse (September 2014)](https://vimeo.com/105743314) (Norwegian) by Per Jørgen Walstrøm & Audun Fauchald Strand - (JavaZone 2014) in Norwegian
+*   [Integration using Apache Camel and Groovy (June 2014)](http://www.youtube.com/watch?v=_pEwoztbfYI&feature=youtu.be&a) (English) by Claus Ibsen, presenting Camel, Groovy, and [hawtio](http://hawt.io/) at [gr8conf](http://gr8conf.eu/#/) 2014.
+*   [Effective System Integrations with Apache Camel (March 2014)](https://skillsmatter.com/skillscasts/5074-effective-system-integrations-with-apache-camel) (English) by Jakub Korab
+*   [Getting started with Apache Camel video from BarcelonaJUG (January 2014)](http://www.youtube.com/watch?v=lOxUs_JleSs&feature=youtu.be&a) (English) by Claus Ibsen
+*   [Camel in the cloud demo from CamelOne 2013](http://vimeo.com/68442425) (English) - Video presentation from CamelOne 2013 demonstrating Camel in the cloud using [Fuse Fabric](https://fabric8.io/) and [hawtio](http://hawt.io/)
+*   [Riding the Apache Camel into the cloud](http://www.infoq.com/presentations/Riding-Apache-Camel-Cloud) (English) _James Strachan_ (QCon 2012)
+*   [Migrating akka-camel module to Akka 2.x](http://skillsmatter.com/podcast/scala/akka-2-x) (English) _by Peter Gabryanczy_ (ScalaDays 2012)
+*   [Confident Data Transfers with Apache Camel Security](http://www.youtube.com/watch?v=YiG5_rGLapU) (English) _by Dominik Schadow_ (JavaOne 2012)
+*   [Using Apache Camel and Java EE in an OSGi World](http://www.java-tv.com/2012/02/28/using-apache-camel-and-java-ee-in-an-osgi-world/) (English) _by Jeff Genender and Johan Edstrom_ (JavaOne 2011)
+*   [Er Apache Camel riktig valg for deg? Lytt til erfarne Camel spotters](http://vimeo.com/28760446) (Norwegian)  _by Rune Peter Bjørnstad, and Bjørn Nordlund_(September 2011)
+*   [In the brain of James Strachan, riding the Camel](http://skillsmatter.com/podcast/design-architecture/riding-camel/JS-2327) (English) - _by_ _[James Strachan](http://macstrac.blogspot.com/)_ (August 2011)
+*   [What Riding the Camel can make integration easier for you](http://vimeo.com/28760458) (English) _by_ _[Claus Ibsen](http://davsclaus.blogspot.com)_ (September 2011)
+*   [Un plongeon dans les frameworks d'intégration Java: Apache Camel et Spring Integration](https://www.youtube.com/watch?v=gkUzmbwJr8k) (FRENCH) _by Guillaume Giamarchi and Grégory Boissinot_ (October 2013)
+*   [Introduction to messaging with ActiveMQ](http://www.java-tv.com/2009/07/24/introduction-to-messaging-with-apache-activemq/) (English) at [Øredev 2008 conference](https://oredev.org/) _by_ _[Bruce Snyder](http://bsnyderblog.blogspot.com/)_
 *   ScreenCast: an introduction to [Apache Camel](http://activemq.apache.org/camel/) and the use of [Enterprise Integration Patterns](http://activemq.apache.org/camel/enterprise-integration-patterns.html) in [Jame's Blog](http://macstrac.blogspot.com/2013/06/introducing-apache-camel-based-open.html) _by_ _[James Strachan](http://macstrac.blogspot.com/)_
 *   [Videos de las charlas de la 9a reunión de JavaMexico (**Spanish**)](http://www.springhispano.org/?q=node/564) _by Domingo Suarez_
 
