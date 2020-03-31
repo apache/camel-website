@@ -7,6 +7,7 @@ This page lists who we are. By all means add yourself to the list - lets sort it
 # Committers
 
 When posting to the mailing lists, use plain text mails. Do not use HTML mails. HTML mails is more likely to be targeted as spam mails and will be rejected; as well it's not easily readable by others.
+
 {{< committers >}}
 
 
