@@ -31,14 +31,6 @@
               {{ end }}
             {{ end }}
             {{ .Content }}
-            <p class="direct">
-                {{ if .PrevInSection }}
-                <a class="arrow prev" href="{{ .PrevInSection.RelPermalink }}" title="Previous post: {{ .PrevInSection.Title }}">&#10094;</a>
-                {{ end }}
-                {{ if .NextInSection }}
-                <a class="arrow next" href="{{ .NextInSection.RelPermalink }}" title="Next post: {{ .NextInSection.Title }}">&#10095;</a>
-                {{ end }}
-            </p>
         </div>
     </div>
 
