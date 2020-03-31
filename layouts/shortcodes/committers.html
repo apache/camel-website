@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 {{ $groups :=  getJSON "https://projects.apache.org/json/foundation/groups.json" }}
 {{ $people_names := getJSON "https://projects.apache.org/json/foundation/people_name.json" }}
 {{ $team_data := getJSON "data/teamdata.json" }}
@@ -21,31 +21,3 @@
       {{ end }}
     </tbody>
 </table>
-=======
-{{ $urlPre := "https://projects.apache.org" }}
-{{ $path :=  "/json/foundation" }}
-{{ $group :=  getJSON $urlPre $path "/groups.json"}}
-{{ $name := getJSON $urlPre $path "/people_name.json" }}
-{{$orgnisations := getJSON "data/teamdata.json" }}
-
-<table class="tableblock frame-all grid-all stretch">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>ID</th>
-      <th>Organisation</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{range $group.camel}}
-    {{ $id:= . }}
-    <tr>
-      <td>{{index $name $id}}</td>
-      <td>{{$id}}</td>
-      <td>{{index $orgnisations  $id}} </td>
-    </tr>
-    {{end}}
-
-  </tbody>
-</table>
->>>>>>> ff6de2af5118c1126028f209690dd9649f95cc23

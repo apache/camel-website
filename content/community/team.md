@@ -5,7 +5,7 @@ title: "Team"
 This page lists who we are. By all means add yourself to the list - lets sort it in alphabetical order
 
 # Committers
-<<<<<<< HEAD
+
 When posting to the mailing lists, use plain text mails. Do not use HTML mails. HTML mails is more likely to be targeted as spam mails and will be rejected; as well it's not easily readable by others.
 {{< committers >}}
 
@@ -20,11 +20,3 @@ If you have been contributing to the Apache Camel project, and you want your nam
 
 {{< contributors >}}
 
-=======
-{{< committers >}}
-
-
-# Contributors
-{{< contributors >}}
-
->>>>>>> ff6de2af5118c1126028f209690dd9649f95cc23
