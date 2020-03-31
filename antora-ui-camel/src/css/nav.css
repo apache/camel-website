@@ -93,11 +93,11 @@ html.is-clipped--nav {
 }
 
 .nav-panel-menu::-webkit-scrollbar-thumb {
-  background-color: #e3dcdc;
+  background-color: var(--nav-scrollbar-color);
 }
 
 .nav-panel-menu::-webkit-scrollbar-thumb:hover {
-  background-color: #afa7a7;
+  background-color: var(--nav-scroll-thumb-color);
 }
 
 .nav-panel-menu input.search {
