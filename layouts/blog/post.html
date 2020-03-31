@@ -4,13 +4,18 @@
         {{ if .Params.categories }}
             {{ range .Params.categories }}<a class="category" href="{{ "/categories/" | relURL }}{{ . | urlize }}/">{{ upper . }}</a>{{ end }}
         {{ end }}
-        <h1><a href="{{.Page.Permalink}}">{{ .Title }}</a></h1>
+        <h1>{{ .Title }}</h1>
     </header>
     <div class="post">
         <aside>
             <div class="summary">{{ .Params.preview }}</div>
             <time itemprop="published" datetime="{{ dateFormat "2006-01-02" .PublishDate }}" title="{{ dateFormat "Monday, January 2, 2006" .PublishDate }}">{{ dateFormat "January 2, 2006" .PublishDate }}</time>
-            <p>by <span rel="author">{{ .Params.author }}</span></p>
+            <p>by {{ if reflect.IsSlice .Params.author }}
+              <span rel="author">{{ delimit .Params.author "</span>, <span rel=\"author\">"}}</span>
+            {{ else }}
+              <span rel="author">{{ .Params.author }}</span>
+            {{ end }}
+            </p>
             <p>
             {{ if .PrevInSection }}
             <a class="arrow prev" href="{{ .PrevInSection.RelPermalink }}" title="Previous post: {{ .PrevInSection.Title }}">&#10094;</a>

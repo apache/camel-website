@@ -28,6 +28,7 @@
   line-height: 1.3;
   margin: 1rem 0 0;
   text-transform: uppercase;
+  word-wrap: break-word;
 }
 
 .static > h1:first-child,
@@ -53,10 +54,12 @@
   margin-left: -1rem;
   margin-right: -1rem;
   padding: 0.4rem 1rem 0.1rem;
+  overflow-wrap: break-word;
 }
 
 .doc h3:not(.discrete) {
   font-weight: var(--alt-heading-font-weight);
+  overflow-wrap: break-word;
 }
 
 .doc h1 .anchor,
@@ -114,10 +117,12 @@
 .doc .tableblock td:not(:first-child) > p,
 .doc .tableblock thead {
   hyphens: auto;
+  overflow-wrap: break-word;
 }
 
 .doc a {
   color: var(--link-font-color);
+  word-break: break-word;
 }
 
 .doc a:hover {
@@ -171,6 +176,7 @@
 .doc .verseblock,
 .doc .quoteblock {
   margin: 1rem 0 0;
+  word-break: break-word;
 }
 
 .doc table.tableblock {
@@ -634,4 +640,19 @@ kbd,
 
 .stretch {
   width: 100%;
+}
+
+/* for mobile screens */
+@media screen and (max-width: 626px) {
+  #preamble + .sect1,
+  .doc .sect1 + .sect1 {
+    overflow-wrap: break-word;
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 480px) {
+  .doc > h1.page:first-child,
+  .static > h1:first-child {
+    font-size: inherit;
+  }
 }
