@@ -1,6 +1,7 @@
 .release dl {
   display: grid;
   grid-template-columns: max-content auto;
+  overflow: scroll;
 }
 
 .release dt {
