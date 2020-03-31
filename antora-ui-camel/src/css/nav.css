@@ -88,17 +88,17 @@ html.is-clipped--nav {
   left: 0;
 }
 
-.nav-panel-menu::-webkit-scrollbar {
+.nav-menu::-webkit-scrollbar {
   width: 0.25rem;
 }
 
-.nav-panel-menu::-webkit-scrollbar-thumb {
+.nav-menu::-webkit-scrollbar-thumb {
   background-color: var(--nav-border-color);
 }
 
 .nav-panel-menu input.search {
   position: absolute;
-  width: 96%;
+  width: 100%;
   border: 1px solid var(--nav-background);
   padding: 0.6rem 1.23rem 0.5rem 1.7rem;
   margin: 0;
