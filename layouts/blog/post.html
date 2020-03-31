@@ -4,22 +4,28 @@
         {{ if .Params.categories }}
             {{ range .Params.categories }}<a class="category" href="{{ "/categories/" | relURL }}{{ . | urlize }}/">{{ upper . }}</a>{{ end }}
         {{ end }}
-        <h1><a href="{{.Page.Permalink}}">{{ .Title }}</a></h1>
+        <h1>{{ .Title }}</h1>
     </header>
     <div class="post">
         <aside>
             <div class="summary">{{ .Params.preview }}</div>
             <div class="info">
-                {{ if .Params.github_user }}
-                    {{ $userData := getJSON "https://api.github.com/users/" .Params.github_user }}
-                    <img src="{{ $userData.avatar_url }}" class="avatar" alt="{{ .Params.author }}">
+                <p>{{ if reflect.IsSlice .Params.author }}
+                        <p>by <span rel="author">{{ delimit .Params.author "</span>, <span rel=\"author\">"}}</span></p>
+                        <time itemprop="published" datetime="{{ dateFormat "2006-01-02" .PublishDate }}" title="{{ dateFormat "Monday, January 2, 2006" .PublishDate }}">{{ dateFormat "January 2, 2006" .PublishDate }}</time>
                 {{ else }}
-                    <img src="{{ "/_/img/avatar.svg" | relURL }} " class="avatar" alt="{{ .Params.author }}">
+                    {{ if .Params.github_user }}
+                        {{ $userData := getJSON "https://api.github.com/users/" .Params.github_user }}
+                            <img src="{{ $userData.avatar_url }}" class="avatar" alt="{{ .Params.author }}">
+                    {{ else }}
+                        <img src="{{ "/_/img/avatar.svg" | relURL }} " class="avatar" alt="{{ .Params.author }}">
+                    {{ end }}
+                    <div class="date-and-name">
+                        <p class="avatar-user">by <span rel="author">{{ .Params.author }}</span></p>
+                        <time class="publish-date" itemprop="published" datetime="{{ dateFormat "2006-01-02" .PublishDate }}" title="{{ dateFormat "Monday, January 2, 2006" .PublishDate }}">{{ dateFormat "January 2, 2006" .PublishDate }}</time>
+                    </div>
                 {{ end }}
-                <div class="date-and-name">
-                    <p>by <span rel="author">{{ .Params.author }}</span></p>
-                    <time class="publish-date" itemprop="published" datetime="{{ dateFormat "2006-01-02" .PublishDate }}" title="{{ dateFormat "Monday, January 2, 2006" .PublishDate }}">{{ dateFormat "January 2, 2006" .PublishDate }}</time>
-                </div>
+                </p>    
             </div>
             <p>
             {{ if .PrevInSection }}

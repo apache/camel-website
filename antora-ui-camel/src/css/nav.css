@@ -98,9 +98,9 @@ html.is-clipped--nav {
 
 .nav-panel-menu input.search {
   position: absolute;
-  width: 14.3rem;
+  width: 100%;
   border: 1px solid var(--nav-background);
-  padding: 0.5rem 1.23rem 0.5rem 1.7rem;
+  padding: 0.6rem 1.23rem 0.5rem 1.7rem;
   margin: 0;
   background: var(--nav-background) no-repeat 0.3rem/1.2rem url(../img/search.svg);
   z-index: var(--z-index-nav-search);
@@ -122,6 +122,7 @@ html.is-clipped--nav {
   padding: 0.5rem 0.75rem;
   line-height: var(--nav-line-height);
   position: relative;
+  word-break: break-word;
 }
 
 .nav-menu h3.title {
@@ -293,15 +294,4 @@ html.is-clipped--nav {
   background-position-x: 10px;
   background-position-y: 10px;
   width: 11rem;
-}
-
-.nav-logo span {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
 }

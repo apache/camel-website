@@ -58,8 +58,12 @@ article.blog p {
 }
 
 .blog .post aside p {
-  line-height: 3rem;
+  padding-top: 1.5rem;
   color: var(--color-gray-50);
+}
+
+.blog .post aside p span[rel="author"] {
+  display: inline-block;
 }
 
 .blog .post aside {
@@ -97,7 +101,6 @@ article.blog p {
 
 .blog .post-content pre {
   max-width: 800px;
-  white-space: pre-wrap;
 }
 
 .blog .post .post-content table {
@@ -130,6 +133,11 @@ article.blog p {
   position: relative;
   bottom: 5rem;
   left: 6rem;
+}
+
+.blog .avatar-user {
+  position: relative;
+  bottom: 1rem;
 }
 
 .blog .publish-date {
@@ -171,4 +179,21 @@ article.blog p {
   .blog.list {
     flex-direction: row;
   }
+}
+
+/* for mobile screens */
+@media screen and (max-width: 1023px) {
+  .blog aside {
+    display: none;
+  }
+}
+
+.blog ul,
+.blog ol {
+  padding-bottom: 1rem;
+}
+
+.blog li ul,
+.blog li ol {
+  padding-bottom: 0;
 }

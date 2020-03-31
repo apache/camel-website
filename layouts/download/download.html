@@ -29,6 +29,7 @@
 
             {{ $major := "" }}
             {{ $cnt := 1 }}
+            <div class="table-wrapper">
             <table class="tableblock frame-all grid-all stretch">
                 <thead>
                     <tr>
@@ -63,11 +64,13 @@
                     {{ $major = .Params.version | replaceRE "\\.\\d+$" "" }}
                 {{ end }}
             </table>
+            </div>
 
             <h3>Source Distribution</h3>
 
             {{ $major := "" }}
             {{ $cnt := 1 }}
+            <div class="table-wrapper">
             <table class="tableblock frame-all grid-all stretch">
                 <thead>
                     <tr>
@@ -96,7 +99,7 @@
                     {{ $major = .Params.version | replaceRE "\\.\\d+$" "" }}
                 {{ end }}
             </table>
-
+            </div>
             <h3>Older releases</h3>
 
             All releases are listed on the <a href="{{ "/releases/" | relURL}}">Releases</a> archive, here you will also find releases that are no longer supported.
