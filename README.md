@@ -298,3 +298,10 @@ all generated sources in the project first.
     $ mvn clean package
 
 Of course this then takes some more time than an optimized rebuild (time to grab another coffee!).
+
+
+## Pull request previews are powered by Netlify
+
+This website is hosted by Apache Software foundation. Pull request previews and checks are powered by Netlify.
+
+![](https://www.netlify.com/img/global/badges/netlify-light.svg "Deploys by Netlify")
