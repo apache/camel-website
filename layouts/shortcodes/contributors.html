@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <table class="tableblock stretch">
     <thead>
         <tr>
@@ -37,3 +38,37 @@
 </table>
 
 
+=======
+{{ $urlPre := "https://api.github.com/repos" }}
+{{ $username := "Apache" }}
+{{ $repo := "camel-website"}}
+{{ $token := ""}}
+<!-- Enter token here -->
+{{ $scope := "all"}}
+{{ if eq $token "" }}
+<p>Unable to get contributors details[set token]</p>
+{{else}}
+{{ $collaborators := getJSON $urlPre "/" $username "/" $repo "/collaborators?access_token=" $token  }}
+
+<table class="tableblock frame-all grid-all stretch">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Organisation</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {{range $collaborators}}
+        {{$user := getJSON .url}}
+        {{if $user.name  }}
+        <tr>
+            <td> {{$user.name}} </td>
+            <td> {{$user.company}} </td>
+        </tr>
+        {{end}}
+        {{end}}
+    </tbody>
+</table>
+{{end}}
+>>>>>>> ff6de2af5118c1126028f209690dd9649f95cc23

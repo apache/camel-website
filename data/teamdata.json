@@ -2,7 +2,11 @@
     "ammulder": "Chariot Solutions",
     "ay": "SAP",
     "acosentino": "Red Hat",
+<<<<<<< HEAD
     "astefanutti": " Red Hat",
+=======
+    " astefanutti": " Red Hat",
+>>>>>>> ff6de2af5118c1126028f209690dd9649f95cc23
     "bvahdat": "Cyberlogic Consulting GmbH",
     "boday": "Initek Consulting",
     "bibryam": "Red Hat",
@@ -33,7 +37,13 @@
     "jbonofre": "Talend",
     "jgenender": "Savoir Technologies",
     "joed": "Savoir Technologies",
+<<<<<<< HEAD
     "janstey": "Red Hat",
+=======
+    "": " Red Hat",
+    "janstey": "Red Hat",
+    "Red Hat": "",
+>>>>>>> ff6de2af5118c1126028f209690dd9649f95cc23
     "jstrachan": "",
     "lburgazzoli": "Red Hat",
     "krasserm": "",
@@ -56,4 +66,8 @@
     "ningjiang": "Huawei",
     "wtam": "Red Hat",
     "zregvart": "Red Hat"
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ff6de2af5118c1126028f209690dd9649f95cc23
