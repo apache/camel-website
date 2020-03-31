@@ -46,6 +46,8 @@ title: "Articles"
 *   [A Look Back at Enterprise Integration Patterns and Their Use into Today's Serverless Cloud Computing](https://www.youtube.com/watch?v=EbTZ5nSJQwI) - 1h video from Devoxx Poland 2018 by Bruno Borges with l<span style="color: rgb(20,23,26);">ots of demos on **Apache Camel**<span style="color: rgb(20,23,26);">, Azure Functions, and quick look into Kafka and Azure Event Hubs.
 *   [Camel microservices with Spring Boot and Kubernetes](https://vimeo.com/289646198) - 6o min video from JavaZone (September 2018) where Claus gave a presentation. Source code and slides are [available here](https://github.com/davsclaus/camel-riders-in-the-cloud/tree/javazone).
 *   [Camel microservices with Spring Boot and Kubernetes](https://www.youtube.com/watch?v=G8h7oCGsTVQ&t=10s) - 50 min video from Voxxed Days Ticino (October 2018) where Claus gave a presentation. Source code and slides are [available here](https://github.com/davsclaus/camel-riders-in-the-cloud/tree/ticino).
+*    [Best Practices for Middleware and Integration Architecture Modernization with Apache Camel](https://www.youtube.com/watch?v=d1Hr78a7Lww) - 30 min video about 
+Apache Camel v3 focused on Camel K, Camel Quarkus and Camel Kafka Connector.
 
 ### Articles
 
@@ -238,7 +240,7 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   [Apache Camel and Scala](http://www.kai-waehner.de/blog/2011/06/23/apache-camel-and-scala-a-powerful-combination/): A powerful Combination _by Kai Wähner_
 *   [A little Scala DSL example](http://davsclaus.blogspot.com/2011/12/apache-camel-little-scala-dsl-example.html) - A little blog post showing how to use the Camel Scala DSL levering Scala functions directly in the DSL.
 *   [Apache Camel’s Scala DSL explored](https://www.avisi.nl/blog/2013/01/07/apache-camels-scala-dsl-explored) - A blog post using Camel and Scala to build a powerful solution to decouple systems. Using HTTP, JSon and Scala case classes in a nice way.
-*   [Using Apache Camel with Scala and the Camel Scala DSL](http://www.hascode.com/2013/02/using-apache-camel-with-scala-and-the-camel-scala-dsl/) - A tutorial from Feb 2013 on using Camel and Scala DSL with a number of examples using the [EIP](../../manual/latest/enterprise-integration-patterns.html)s and Camel [Components](../../manual/latest/component.html), and with source code.
+*   [Using Apache Camel with Scala and the Camel Scala DSL](http://www.hascode.com/2013/02/using-apache-camel-with-scala-and-the-camel-scala-dsl/) - A tutorial from Feb 2013 on using Camel and Scala DSL with a number of examples using the [EIP](../../components/latest/eips/enterprise-integration-patterns.html)s and Camel [Components](../../manual/latest/component.html), and with source code.
 *   [Apache Camel with Scala testing styles](http://siliconsenthil.in/blog/2013/07/07/apache-camel-with-scala-testing-styles/) - A blog post on different approaches of camel testing with ScalaTest.
 *   [Apache Camel with Scala: Extending DSL](http://siliconsenthil.in/blog/2013/07/11/apache-camel-with-scala-extending-dsl/) - A blog post extending the Camel Scala DSL
 

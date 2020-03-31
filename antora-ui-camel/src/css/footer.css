@@ -6,6 +6,7 @@ footer {
   font-size: calc(15 / var(--rem-base) * 1rem);
   line-height: var(--footer-line-height);
   padding: 1.5rem;
+  flex-shrink: 0;
 }
 
 footer .footer {
@@ -66,6 +67,18 @@ footer .footer dl dd {
   max-width: var(--static-max-width--desktop);
   margin: auto;
   text-align: right;
+  flex: initial;
+  margin-left: 80%;
+}
+
+@media screen and (max-width: 640px) {
+  .edit {
+    max-width: var(--static-max-width--desktop);
+    margin: auto;
+    text-align: right;
+    flex: initial;
+    margin-right: 0;
+  }
 }
 
 .edit a {

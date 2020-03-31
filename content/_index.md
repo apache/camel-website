@@ -48,7 +48,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 **Apache Camel** is the *Swiss knife* of integration. 
 
 <a class="significant" href="./manual/latest/">Read the docs</a>
-<a class="significant" href="./manual/latest/enterprise-integration-patterns.html">EIP reference</a>
+<a class="significant" href="./components/latest/eips/enterprise-integration-patterns.html">EIP reference</a>
 <a class="significant" href="./components/latest/">Component reference</a>
 {{< /div >}}
 
@@ -82,6 +82,14 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 **Apache Camel Spring Boot** run Camel on [Spring Boot](https://spring.io/projects/spring-boot).
 
 <a class="significant" href="./camel-spring-boot/latest/">Read the docs</a>
+{{< /div >}}
+
+{{< div "project" >}}
+# Camel Karaf
+
+**Apache Camel Karaf** run Camel in [OSGi](https://www.osgi.org/) container using [Apache Karaf](https://karaf.apache.org/).
+
+<a class="significant" href="./camel-karaf/latest/">Read the docs</a>
 {{< /div >}}
 
 {{< /section >}}
