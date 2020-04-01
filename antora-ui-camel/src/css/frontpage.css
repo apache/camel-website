@@ -160,8 +160,11 @@ section.frontpage.projects .project {
 }
 
 section.frontpage.projects .project h1 {
-  padding: 1rem 0;
-  flex: 1;
+  white-space: nowrap;
+  padding: 1rem;
+  flex: 1.2;
+  text-align: right;
+  line-height: 0;
 }
 
 section.frontpage.projects .project p {
@@ -262,6 +265,10 @@ section.frontpage h2 {
 
   .box {
     min-width: 51vw;
+  }
+
+  section.frontpage.projects .project h1 {
+    text-align: center;
   }
 
   section.frontpage.projects .project {
