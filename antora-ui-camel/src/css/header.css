@@ -128,11 +128,6 @@ body {
   position: relative;
 }
 
-.navbar-item {
-  flex: none;
-  padding: 1rem 2rem 1rem 0;
-}
-
 .navbar-item .icon {
   width: 1.1rem;
   height: 1.1rem;
@@ -366,6 +361,10 @@ body {
     left: 0;
     min-width: 100%;
     position: absolute;
+  }
+
+  .navbar-item.has-dropdown.is-hoverable:hover {
+    background: var(--color-white);
   }
 
   .navbar-dropdown .navbar-item {
