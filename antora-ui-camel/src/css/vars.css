@@ -21,8 +21,6 @@
   --color-camel-orange: #ed8225;
   --color-highlight: #fffcdd;
   --color-glow: #fff7a3;
-  /* svg filter */
-  --filter-darkblue: invert(24%) sepia(38%) saturate(1353%) hue-rotate(200deg) brightness(89%) contrast(99%);
   /* fonts */
   --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
   --body-font-size: 1.0625em; /* 17px */

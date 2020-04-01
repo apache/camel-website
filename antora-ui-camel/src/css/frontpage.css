@@ -218,10 +218,10 @@ section.frontpage h1 {
   width: 27rem;
 }
 
-.packedFunctionalityIcon {
-  width: 3.75rem !important;
-  height: 3.75rem !important;
-  filter: var(--filter-darkblue);
+.box .feature-icon {
+  width: 3.75rem;
+  height: 3.75rem;
+  filter: invert(24%) sepia(38%) saturate(1353%) hue-rotate(200deg) brightness(89%) contrast(99%);
 }
 
 .split {
