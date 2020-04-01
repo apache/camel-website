@@ -219,7 +219,8 @@ section.frontpage h2 {
 }
 
 .box div {
-  padding: 1rem;
+  padding: 1.8rem;
+  text-align: center;
   margin: 1rem;
   border: 1px solid var(--color-smoke-50);
   height: 100%;
@@ -227,6 +228,12 @@ section.frontpage h2 {
 
 .box div img {
   width: 27rem;
+}
+
+.box .feature-icon {
+  width: 3.75rem;
+  height: 3.75rem;
+  filter: invert(24%) sepia(38%) saturate(1353%) hue-rotate(200deg) brightness(89%) contrast(99%);
 }
 
 .split {
