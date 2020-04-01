@@ -64,14 +64,12 @@ footer .footer dl dd {
 }
 
 .edit {
-  max-width: var(--static-max-width--desktop);
-  margin: auto;
+  max-width: 96%;
   text-align: right;
   flex: initial;
-  margin-left: 80%;
 }
 
-@media screen and (max-width: 1181px) {
+@media screen and (max-width: 640px) {
   .edit {
     max-width: var(--static-max-width--desktop);
     margin: auto;
