@@ -52,7 +52,7 @@ footer .footer dl dt {
   margin-bottom: 0.5rem;
 }
 
-.stroke {
+footer .footer .stroke {
   display: inline-block;
   border-bottom: 2px solid var(--footer-font-color);
   width: 3rem;
