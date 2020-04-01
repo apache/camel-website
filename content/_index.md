@@ -41,75 +41,67 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 
 {{< /section >}}
 
-{{< section "frontpage projects-new" >}}
+{{< section "frontpage camelProjects" >}}
 # Apache Camel 3 - Projects
-{{< div "box-new" >}}
+{{< div "projectDetails" >}}
 {{< div >}}
 <a class="" href="./camel-k/latest/">
-![Camel K](/img/projects/camel-k.jpg)
+![Camel K](/img/projects/camel-k.svg)
 ## Camel K
 </a>
 
-Camel on Kubernetes & knative 
+**Apache Camel K** is a lightweight integration framework built from Apache Camel that runs natively on [Kubernetes](https://kubernetes.io/) and is specifically designed for **serverless** and **microservice architectures**.
 {{< /div >}}
 {{< /div >}}
-{{< div "box-new" >}}
+{{< div "projectDetails" >}}
 {{< div >}}
 <a class="" href="./manual/latest/">
-![Camel](/img/projects/camel.jpg)
+![Camel](/img/projects/camel.svg)
 ## Camel
 </a>
 
-Swiss Knife of Integration 
+**Apache Camel** is the *Swiss knife* of integration.
 {{< /div >}}
 {{< /div >}}
-{{< div "box-new" >}}
+{{< div "projectDetails" >}}
 {{< div >}}
 <a class="" href="./camel-quarkus/latest/">
-![Camel Quarkus](/img/projects/camel-q.jpg)
+![Camel Quarkus](/img/projects/camel-quakas.svg)
 ## Camel Quarkus
 </a>
 
-Optimized JVM & Native complied Java (GraalVM) 
+**Apache Camel Quarkus** is a set of extensions for [Quarkus](https://quarkus.io), a Java platform offering fast boot times and low memory footprint. It targets both stock JVMs and [GraalVM](https://www.graalvm.org/). 
 {{< /div >}}
 {{< /div >}}
-{{< div "box-new" >}}
+{{< div "projectDetails" >}}
 {{< div >}}
 <a class="" href="./manual/latest/">
-![Camel Karaf](/img/projects/camel-kaf.jpg)
+![Camel Karaf](/img/projects/camel-karaf.svg)
 ## Camel Karaf
 </a>
 
-Camel on Apache Karaf/OSGi
+**Apache Camel Karaf** run Camel in [OSGi](https://www.osgi.org/) container using [Apache Karaf](https://karaf.apache.org/).
 {{< /div >}}
 {{< /div >}}
-{{< div "box-new" >}}
+{{< div "projectDetails" >}}
 {{< div >}}
 <a class="" href="./camel-spring-boot/latest/">
-![Camel Spring Boot](/img/projects/camel-s.jpg)
+![Camel Spring Boot](/img/projects/camel-spring.svg)
 ## Camel Spring Boot
 </a>
 
-Camel on Spring Boot
+**Apache Camel Spring Boot** run Camel on [Spring Boot](https://spring.io/projects/spring-boot).
 {{< /div >}}
 {{< /div >}}
-{{< div "box-new" >}}
+{{< div "projectDetails" >}}
 {{< div >}}
 <a class="" href="./camel-kafka-connector/latest/">
-![Camel Kafka Connector](/img/projects/camel-kC.jpg)
+![Camel Kafka Connector](/img/projects/camel-connector.svg)
 ## Camel Kafka Connector
 </a>
 
-Kafka Connector with Camel
+**Apache Camel Kafka Connector** embeds Camel within [Kafka Connect](https://kafka.apache.org/documentation/#connect), enabling declarative use of Camel components as sources or sinks to Kafka topics.
 {{< /div >}}
-{{< /div >}}
-
-{{< div "project" >}}
-# Camel Karaf
-
-**Apache Camel Karaf** run Camel in [OSGi](https://www.osgi.org/) container using [Apache Karaf](https://karaf.apache.org/).
-
-<a class="significant" href="./camel-karaf/latest/">Read the docs</a>
 {{< /div >}}
 
 {{< /section >}}

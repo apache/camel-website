@@ -232,11 +232,8 @@ section.frontpage h1 {
 }
 
 @media screen and (max-width: 626px) {
-  .split {
-    flex: 100%;
-  }
-
-  .box-new {
+  .split,
+  .projectDetails {
     flex: 100%;
   }
 
@@ -277,47 +274,36 @@ section.frontpage h1 {
   }
 }
 
-section.frontpage.projects-new {
+section.frontpage.camelProjects {
   display: flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
   flex-wrap: wrap;
 }
 
-.box-new {
-  -webkit-box-flex: 33%;
-  -ms-flex: 33%;
+.projectDetails {
   flex: 33%;
   padding: 0.5rem 0;
 }
 
-.box-new div {
+.projectDetails div {
   padding: 0.5rem;
   margin: 0.5rem;
   height: 100%;
 }
 
-.box-new img {
+.projectDetails img {
   margin: 0 auto;
   display: block;
+  width: 60%;
 }
 
-section.frontpage .box-new h2 {
+section.frontpage .projectDetails h2 {
   text-align: center;
   text-transform: capitalize;
   width: 100%;
-  color: var(--color-black);
+  color: var(--heading-font-color);
 }
 
-section.frontpage .box-new p {
+section.frontpage .projectDetails p {
   font-style: italic;
   text-align: center;
-}
-
-section.frontpage.projects .project h2 {
-  white-space: nowrap;
-  padding: 1rem 0;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
 }
