@@ -4,7 +4,7 @@
   <a href="{{relativize page.url site.homeUrl}}" class="home-link{{#if page.home}} is-current{{/if}}"></a>
   {{/if}}
 {{> breadcrumbs}}
-{{> BackToTop }}
+<div class="top"><a href="#top">Back To Top </a></div>
 {{> toggle-width }}
 {{> page-versions}}
   {{#if (and page.editUrl (not page.origin.private))}}
