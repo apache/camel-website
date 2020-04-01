@@ -161,7 +161,7 @@ body {
 
   .navbar-dropdown {
     background-color: var(--navbar-menu-background);
-    top: 100%;
+    top: 98%;
     left: 0;
     min-width: 100%;
   }
@@ -361,10 +361,6 @@ body {
     left: 0;
     min-width: 100%;
     position: absolute;
-  }
-
-  .navbar-item.has-dropdown.is-hoverable:hover {
-    background: var(--color-white);
   }
 
   .navbar-dropdown .navbar-item {
