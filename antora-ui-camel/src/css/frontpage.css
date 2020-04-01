@@ -160,6 +160,7 @@ section.frontpage.projects .project {
 }
 
 section.frontpage.projects .project h1 {
+  text-align: right;
   padding: 0 1rem;
   flex: 1;
 }
@@ -203,7 +204,7 @@ section.frontpage a:hover {
 
 section.frontpage h1 {
   width: 100%;
-  text-align: right;
+  text-align: center;
 }
 
 section.frontpage h2 {
