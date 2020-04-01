@@ -160,11 +160,8 @@ section.frontpage.projects .project {
 }
 
 section.frontpage.projects .project h1 {
-  white-space: nowrap;
-  padding: 1rem;
-  flex: 1.2;
-  text-align: right;
-  line-height: 0;
+  padding: 0 1rem;
+  flex: 1;
 }
 
 section.frontpage.projects .project p {
@@ -206,7 +203,7 @@ section.frontpage a:hover {
 
 section.frontpage h1 {
   width: 100%;
-  text-align: center;
+  text-align: right;
 }
 
 section.frontpage h2 {
@@ -248,7 +245,7 @@ section.frontpage h2 {
 @media screen and (max-width: 626px) {
   .split {
     flex: 100%;
-    margin-left: 0.75rem;
+    margin: 0 2rem;
   }
 
   section.frontpage.columns,
@@ -269,6 +266,17 @@ section.frontpage h2 {
 
   header.frontpage svg {
     height: 10rem;
+  }
+
+  .split {
+    padding: 0 2rem;
+    flex: 100%;
+  }
+
+  .split img {
+    max-width: 70%;
+    display: block;
+    margin: auto;
   }
 
   .box {
