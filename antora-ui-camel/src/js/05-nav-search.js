@@ -6,9 +6,12 @@ document.addEventListener('DOMContentLoaded', function () {
   if (!navSearch) {
     return
   }
-
+  var navToggle = document.querySelectorAll('.nav-item-toggle')
   var navLinks = document.querySelectorAll('.nav-link')
   navSearch.addEventListener('keyup', function () {
+    navToggle.forEach(function (navToggle) {
+      navToggle.style.display = navSearch.value === '' ? 'block' : 'none'
+    })
     var tokens = navSearch.value.split('')
     var term = new RegExp(tokens.map(tokenize).join(''), 'i')
     for (var i = 0; i < navLinks.length; i++) {

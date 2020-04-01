@@ -4,16 +4,20 @@
             <figure class="logo">
                 <img class="logo" src="/_/img/logo-d.svg" alt="Apache Camel Logo" aria-label="white silhouette of a camel in front of a sand dune">
             </figure>
+            
             <dl>
                 <dt>Overview</dt>
+                <span class="stroke"></span>
                 <dd><a href="/blog/">Blog</a></dd>
                 <dd><a href="/components/latest/">Components</a></dd>
                 <dd><a href="/download/">Download</a></dd>
                 <dd><a href="/manual/latest/getting-started.html">Getting started</a></dd>
                 <dd><a href="/manual/latest/faq.html">FAQ</a></dd>
             </dl>
+
             <dl>
                 <dt>Community</dt>
+                <span class="stroke"></span>
                 <dd><a href="/community/support/">Support</a></dd>
                 <dd><a href="/manual/latest/contributing.html">Contributing</a></dd>
                 <dd><a href="/community/user-stories/">User stories</a></dd>
@@ -21,8 +25,10 @@
                 <dd><a href="/community/books/">Books</a></dd>
                 <dd><a href="/community/team/">Team</a></dd>
             </dl>
+            
             <dl>
                 <dt>About</dt>
+                <span class="stroke"></span>
                 <dd><a href="/acknowledgments/">Acknowledgments</a></d>
                 <dd><a target="_blank" href="https://www.apache.org/events/current-event.html" title="Apache Events">Apache Events</a></dd>
                 <dd><a target="_blank" href="https://www.apache.org/licenses/" title="License">License</a></dd>
@@ -30,12 +36,17 @@
                 <dd><a target="_blank" href="https://www.apache.org/foundation/sponsorship.html" title="Sponsorship">Sponsorship</a></dd>
                 <dd><a target="_blank" href="https://www.apache.org/foundation/thanks.html" title="Thanks">Thanks</a></dd>
             </dl>
+            
             <p>
                 &copy; 2004-{{ now.Format "2006" }} The <a href="https://apache.org">Apache Software Foundation</a>.<br>
                 Apache Camel, Camel, Apache, the Apache feather logo, and the Apache Camel project logo are trademarks of
                 The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of
                 their respective owners.
+                {{ if and (not .Page.Section) (eq (getenv "HUGO_ENV") "netlify") }}
+                    <a href="https://netlify.com">This site is powered by Netlify</a>
+                {{ end }}
             </p>
+    
         </div>
     </footer>
     <script src="{{ path.Join "_" (index .Site.Data "rev-manifest" "js/vendor/alogliasearch.js") | relURL }}"></script>

@@ -73,8 +73,6 @@ mvn clean install -Pfastinstall,sourcecheck
 
 ## Doing a Quick Build
 
-### Available as of Camel 2.6
-
 The following skips building the manual, the distro and does not execute the unit tests.
 
 ```
@@ -99,20 +97,10 @@ If you want to build jar files with the source code, that for instance Eclipse c
 mvn clean source:jar install -Pfastinstall
 ```
 
-## Working with karaf features
+## Working with Karaf features
 
-If you change anything in the features.xml from platform/karaf you can run a validation step to ensure the generated features.xml file is correct. You can do this running the following maven goal from the platform directory.
+If you change anything in the features.xml from platform/karaf (in camel-karaf project) you can run a validation step to ensure the generated features.xml file is correct. You can do this running the following maven goal from the platform directory.
 
 ```
 mvn clean install -Pvalidate
-```
-
-## Executing unit tests using Ekstazi
-
-Normally, when you execute the unit tests during your development cycle for a particular component, you are executing all the tests each time. This may become inefficient, when you are changing one class and the effect of this change is limited within the component having many unit tests. Ekstazi is a regression testing tool that can keep track of the test results and the changed classes so that unaffected tests can be skipped during the subsequent testing. For more details of Ekstazi, please refer to the Ekstazi page at http://www.ekstazi.org.
-
-To use Ekstazi, you can run the tests with the maven profile ekstazi.
-
-```
-mvn test -Pekstazi
 ```

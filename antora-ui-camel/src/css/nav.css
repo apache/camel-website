@@ -88,12 +88,16 @@ html.is-clipped--nav {
   left: 0;
 }
 
-.nav-menu::-webkit-scrollbar {
-  width: 0.25rem;
+.nav-panel-menu::-webkit-scrollbar {
+  width: 0.29rem;
 }
 
-.nav-menu::-webkit-scrollbar-thumb {
-  background-color: var(--nav-border-color);
+.nav-panel-menu::-webkit-scrollbar-thumb {
+  background-color: var(--nav-scrollbar-color);
+}
+
+.nav-panel-menu::-webkit-scrollbar-thumb:hover {
+  background-color: var(--nav-scroll-thumb-color);
 }
 
 .nav-panel-menu input.search {

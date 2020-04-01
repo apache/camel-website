@@ -9,6 +9,7 @@
   --color-gray-10: #c1c1c1;
   --color-gray-30: #8e8e8e;
   --color-gray-50: #808080;
+  --color-gray-60: #555;
   --color-gray-70: #5d5d5d;
   --color-jet-20: #4a4a4a;
   --color-jet-30: #424242;
@@ -17,9 +18,9 @@
   --color-jet-80: #191919;
   --color-black: #000;
   --color-asf-dark-blue: #303284;
-  --color-asf-moderate-blue: #585ac2;
-  --color-camel-orange: #ed8225;
-  --color-highlight: #fffcdd;
+  --color-asf-moderate-blue: #4f51ae;
+  --color-camel-orange: #e97826;
+  --color-highlight: #cf7428;
   --color-glow: #fff7a3;
   /* fonts */
   --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
@@ -47,11 +48,12 @@
   --navbar-menu-border-color: var(--panel-border-color);
   --navbar-menu-background: var(--color-white);
   --navbar-menu-font-color: var(--body-font-color);
-  --navbar-menu-hover-background: var(--color-white);
-  --navbar-menu-hover-decoration-color: var(--color-camel-orange);
+  --navbar-menu-hover-background: var(--color-smoke-70);
   /* nav */
   --nav-background: var(--panel-background);
   --nav-border-color: var(--color-smoke-50);
+  --nav-scrollbar-color: var(--color-smoke-90);
+  --nav-scroll-thumb-color: var(--color-gray-30);
   --nav-line-height: 1.35;
   --nav-heading-font-color: var(--color-asf-dark-blue);
   --nav-muted-color: var(--color-jet-50);

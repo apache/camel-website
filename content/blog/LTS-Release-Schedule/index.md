@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 2020 Release Schedule"
 date: 2020-03-06
-author: Claus Ibsen
+authors: [davsclaus]
 draft: false
 categories: ["Roadmap"]
 preview: The Apache Camel project is moving to release schedule with Long Term Support (LTS) and non-LTS releases.
@@ -28,15 +28,16 @@ but our LTS is limited to a 1-year schedule (typically same timeframe for Camel 
 
 The tentative release schedule for 2020 is as follows:
 
- Release | Date     | LTS | EOL      | Java  
----------|----------|-----|----------|------
- 3.1.0   | Feb 2020 | No  |          | 8, 11
- 3.2.0   | Apr 2020 | No  |          | 8, 11
- 3.3.0   | Jun 2020 | Yes | Jun 2021 | 8, 11
- 3.4.0   | Aug 2020 | No  |          | 11
- 3.5.0   | Oct 2020 | No  |          | 11
- 3.6.0   | Dec 2020 | Yes | Dec 2021 | 11
-
+{{< table >}}
+| Release | Date     | LTS | EOL      | Java  
+|---------|----------|-----|----------|------
+| 3.1.0   | Feb 2020 | No  |          | 8, 11
+| 3.2.0   | Apr 2020 | No  |          | 8, 11
+| 3.3.0   | Jun 2020 | Yes | Jun 2021 | 8, 11
+| 3.4.0   | Aug 2020 | No  |          | 11
+| 3.5.0   | Oct 2020 | No  |          | 11
+| 3.6.0   | Dec 2020 | Yes | Dec 2021 | 11
+{{< /table >}}
 
 **NOTE:** The schedule is tentative and subject for change
 (for example date's may slip into the following month). 

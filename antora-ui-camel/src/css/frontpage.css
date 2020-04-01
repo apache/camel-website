@@ -58,7 +58,6 @@ header.frontpage a:active {
   font-weight: bold;
   outline: none;
   display: inline-block;
-  white-space: nowrap;
   box-shadow: 0 4px #8e480b;
 }
 
@@ -162,8 +161,10 @@ section.frontpage.projects .project {
 
 section.frontpage.projects .project h1 {
   white-space: nowrap;
-  padding: 1rem 0;
-  flex: 1;
+  padding: 1rem;
+  flex: 1.2;
+  text-align: right;
+  line-height: 0;
 }
 
 section.frontpage.projects .project p {
@@ -192,6 +193,7 @@ section.frontpage h6 {
   line-height: 1.3;
   margin: 1rem 0 0;
   text-transform: uppercase;
+  word-wrap: break-word;
 }
 
 section.frontpage a {
@@ -207,13 +209,18 @@ section.frontpage h1 {
   text-align: center;
 }
 
+section.frontpage h2 {
+  text-align: center;
+}
+
 .box {
   flex: 50%;
   padding: 1.2rem 0;
 }
 
 .box div {
-  padding: 1rem;
+  padding: 1.8rem;
+  text-align: center;
   margin: 1rem;
   border: 1px solid var(--color-smoke-50);
   height: 100%;
@@ -221,6 +228,12 @@ section.frontpage h1 {
 
 .box div img {
   width: 27rem;
+}
+
+.box .feature-icon {
+  width: 3.75rem;
+  height: 3.75rem;
+  filter: invert(24%) sepia(38%) saturate(1353%) hue-rotate(200deg) brightness(89%) contrast(99%);
 }
 
 .split {
@@ -259,6 +272,10 @@ section.frontpage h1 {
 
   .box {
     min-width: 51vw;
+  }
+
+  section.frontpage.projects .project h1 {
+    text-align: center;
   }
 
   section.frontpage.projects .project {
