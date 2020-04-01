@@ -1,4 +1,6 @@
-    <div class="edit"><a title="Improve this document, receive free virtual hugs &hearts;" href="https://github.com/apache/camel-website/edit/master/content/{{ .File.Path | replaceRE "^/" "" }}">Edit this Page</a></div>
+    {{ with .File }}
+        <div class="edit"><a title="Improve this document, receive free virtual hugs &hearts;" href="https://github.com/apache/camel-website/edit/master/content/{{ .Path | replaceRE "^/" "" }}">Edit this Page</a></div>
+    {{ end }}
     <footer>
         <div class="footer">
             <figure class="logo">
