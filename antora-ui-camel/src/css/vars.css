@@ -52,6 +52,8 @@
   /* nav */
   --nav-background: var(--panel-background);
   --nav-border-color: var(--color-smoke-50);
+  --nav-scrollbar-color: var(--color-smoke-90);
+  --nav-scroll-thumb-color: var(--color-gray-30);
   --nav-line-height: 1.35;
   --nav-heading-font-color: var(--color-asf-dark-blue);
   --nav-muted-color: var(--color-jet-50);

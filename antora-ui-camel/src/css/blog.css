@@ -122,6 +122,22 @@ article.blog p {
   background: var(--color-smoke-90);
 }
 
+.blog .post aside figure img {
+  margin-right: 1rem;
+  vertical-align: middle;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.blog .post aside figure {
+  margin: 1rem 0;
+}
+
+.blog .post aside figure figcaption {
+  display: inline;
+}
+
 @media screen and (min-width: 1024px) {
   .blog {
     max-width: var(--static-max-width--desktop);
@@ -133,7 +149,7 @@ article.blog p {
 
   .blog .post aside {
     width: 30rem;
-    min-width: 12rem;
+    min-width: 16rem;
   }
 
   .blog a.arrow {

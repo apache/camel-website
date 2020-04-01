@@ -3,7 +3,7 @@ title: "RELEASE 3.0.0-RC1"
 url: /blog/release-3-0-0-RC1.html
 date: 2019-09-02
 draft: false
-author: Gregor Zurowski
+authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of a new release candidate Camel 3.0.0-RC1"
 ---
