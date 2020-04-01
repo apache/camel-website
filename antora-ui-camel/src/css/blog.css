@@ -122,22 +122,20 @@ article.blog p {
   background: var(--color-smoke-90);
 }
 
-.blog .avatar {
+.blog .post aside figure img {
+  margin-right: 1rem;
   vertical-align: middle;
-  width: 6rem;
-  height: 6rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
 }
 
-.blog .date-and-name {
-  position: relative;
-  bottom: 5rem;
-  left: 6rem;
+.blog .post aside figure {
+  margin: 1rem 0;
 }
 
-.blog .publish-date {
-  position: relative;
-  bottom: 2rem;
+.blog .post aside figure figcaption {
+  display: inline;
 }
 
 @media screen and (min-width: 1024px) {
@@ -151,7 +149,7 @@ article.blog p {
 
   .blog .post aside {
     width: 30rem;
-    min-width: 12rem;
+    min-width: 16rem;
   }
 
   .blog a.arrow {

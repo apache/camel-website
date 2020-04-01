@@ -1,8 +1,7 @@
 ---
 title: "Apache Camel 3 is only 2 months away"
 date: 2019-10-02
-author: Claus Ibsen
-github_user: davsclaus
+authors: [davsclaus]
 categories: ["Roadmap"]
 preview: Status update on Camel 3 only 2 months away
 ---

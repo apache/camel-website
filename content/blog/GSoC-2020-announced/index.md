@@ -1,8 +1,7 @@
 ---
 title: "Google Summer of Code 2020 announced"
 date: 2020-02-24T14:00:00
-author: Zoran Regvart
-github_user: zregvart
+authors: [zregvart]
 categories: ["GSoC"]
 preview: Google Summer of Code 2020 announced, we're looking for ideas and mentors
 ---

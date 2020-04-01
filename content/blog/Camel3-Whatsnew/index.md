@@ -1,8 +1,7 @@
 ---
 title: "Apache Camel 3 What's New (top 10)"
 date: 2019-12-02
-author: Claus Ibsen
-github_user: davsclaus
+authors: [davsclaus]
 categories: ["Releases"]
 preview: Top 10 of what's new in Apache Camel version 3
 ---

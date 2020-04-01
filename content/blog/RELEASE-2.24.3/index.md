@@ -3,8 +3,7 @@ title: "RELEASE 2.24.3"
 url: /blog/release-2-24-3.html
 date: 2019-12-26
 draft: false 
-author: Gregor Zurowski
-github_user: zurowski
+authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new patch release Camel 2.24.3"
 ---

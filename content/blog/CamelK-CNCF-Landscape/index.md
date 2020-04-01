@@ -1,8 +1,7 @@
 ---
 title: "Camel K on CNCF Serverless Landscape"
 date: 2019-10-18
-author: Claus Ibsen
-github_user: davsclaus
+authors: [davsclaus]
 categories: ["CamelK"]
 preview: Apache Camel K is now added to the CNCF Interactive Serverless Landscape
 ---

@@ -3,8 +3,7 @@ title: "RELEASE 3.1.0"
 url: /blog/release-3-1-0.html
 date: 2020-02-27
 draft: false
-author: Gregor Zurowski
-github_user: zurowski
+authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new Camel 3.1.0 release"
 ---

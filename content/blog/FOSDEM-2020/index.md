@@ -1,8 +1,7 @@
 ---
 title: "Camel at FOSDEM 2020"
 date: 2020-01-08T13:30:00+01:00
-author: Zoran Regvart
-github_user: zregvart
+authors: [zregvart]
 categories: ["Events"]
 preview: Camel will be in full force at FOSDEM 2020
 ---
