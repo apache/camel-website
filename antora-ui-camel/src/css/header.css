@@ -431,6 +431,7 @@ body {
   left: 90%;
   height: 1rem;
   display: none;
+  cursor: pointer;
 }
 
 #search_results {
