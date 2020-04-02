@@ -1,7 +1,7 @@
 ---
 title: "Camel 2019 in Numbers"
 date: 2019-12-31
-author: Claus Ibsen
+authors: [davsclaus]
 categories: ["Roadmap"]
 preview: Summary of the Apache Camel project in 2019
 ---

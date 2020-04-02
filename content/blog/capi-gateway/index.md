@@ -1,7 +1,7 @@
 ---
 title: "CAPI Gateway: Using Apache Camel at the European Commission"
 date: 2020-01-02
-author: Rodrigo Coelho
+authors: [rodrigoserracoelho]
 categories: ["Usecases"]
 preview: How an API Gateway is implemented using Camel at the European Comission
 ---
