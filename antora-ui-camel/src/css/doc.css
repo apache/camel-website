@@ -198,7 +198,7 @@
   padding: 0.5rem;
 }
 
-.doc table.tableblock th {
+.doc table.tableblock thead {
   border-bottom: 2.5px solid var(--table-border-color);
 }
 
@@ -661,4 +661,9 @@ kbd,
   .doc thead code {
     font-size: var(--body-font-size);
   }
+}
+
+table.tableblock thead {
+  background: var(--color-smoke-90);
+  font-weight: var(--body-font-weight-bold);
 }
