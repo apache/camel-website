@@ -181,12 +181,13 @@ areas of the website:
 
 - [docs](content/docs): Getting started, user manual, component reference
 - [download](content/download): Download Camel artifacts
-- [news](content/news): News, blogs, posts
+- [news](content/news): News
 - [community](content/community): Support, contributing, articles, etc.
 - [projects](content/projects): Subproject information (e.g. Camel K)
 - [security](content/security): Security information and advisories
 - [releases](content/releases): Release notes
-
+- [blog](content/blog): Blogs
+- [misc](content/misc): Acknowledgements
 #### Adding new security advisory content
 
 Use the `security-advisory` archetype to create a new markdown content file in `content/security`:
