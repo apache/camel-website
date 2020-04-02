@@ -176,7 +176,7 @@ menu items there.
 
 #### Content
 
-The basic website content is located in [content](content). You can find several different directorys representing different
+The basic website content is located in [content](content). You can find several different directories representing different
 areas of the website:
 
 - [docs](content/docs): Getting started, user manual, component reference
