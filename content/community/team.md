@@ -18,7 +18,7 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 ## Contributors
 Adding your name to the list below.
 
-If you have been contributing to the Apache Camel project, and you want your name added to the list below. Then you can get in touch with the Camel team from the <a href="../mailing-list/">Mailing Lists</a> and ask to be added.
+If you have been contributing to the Apache Camel project, and you want your name added to the list below. Then you can get in touch with the Camel team from the [Mailing Lists](../mailing-list/) and ask to be added.
 
 {{< contributors >}}
 
