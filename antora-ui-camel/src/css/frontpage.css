@@ -248,6 +248,7 @@ section.frontpage h2 {
 @media screen and (max-width: 626px) {
   .split {
     flex: 100%;
+    margin-left: 0.75rem;
   }
 
   section.frontpage.columns,
