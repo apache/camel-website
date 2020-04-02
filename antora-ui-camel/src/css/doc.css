@@ -200,6 +200,7 @@
 
 .doc table.tableblock th {
   border-bottom: 2.5px solid var(--table-border-color);
+  text-align: left;
 }
 
 .doc table.tableblock td {
