@@ -4,7 +4,7 @@ header.frontpage {
   flex-flow: column;
   align-items: center;
   margin: 0 auto;
-  max-width: 70vw;
+  max-width: 60rem;
 }
 
 header.frontpage h1 {
