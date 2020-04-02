@@ -5,7 +5,15 @@ const path = require('path')
 const toml = require('toml')
 const matches = /http\S+/
 
-const data = fs.readFileSync(path.join(process.cwd(), 'config.toml'), 'utf8')
+let configPath = path.join(process.cwd(), 'config.toml')
+try {
+  fs.accessSync(configPath)
+} catch (err) {
+  configPath = path.resolve(process.cwd(), '../config.toml')
+  fs.accessSync(configPath)
+}
+
+const data = fs.readFileSync(configPath, 'utf8')
 const hugoConfig = toml.parse(data)
 const mainMenu = hugoConfig.menu.main
 
