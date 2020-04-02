@@ -140,6 +140,7 @@
   border-radius: 0.2rem;
   font-size: calc(14 / var(--rem-base) * 1rem);
   padding: 0.075rem 0.25rem 0.125rem;
+  overflow-wrap: break-word;
 }
 
 .doc pre {
@@ -199,6 +200,7 @@
 
 .doc table.tableblock th {
   border-bottom: 2.5px solid var(--table-border-color);
+  text-align: left;
 }
 
 .doc table.tableblock td {
@@ -658,5 +660,10 @@ kbd,
   .doc > h1.page:first-child,
   .static > h1:first-child {
     font-size: inherit;
+  }
+
+  .doc p code,
+  .doc thead code {
+    font-size: var(--body-font-size);
   }
 }

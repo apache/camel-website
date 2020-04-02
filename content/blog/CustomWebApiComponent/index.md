@@ -2,7 +2,7 @@
 title: "Custom Web API Component"
 date: 2020-01-07
 draft: false
-author: "Federico Valeri"
+authors: [fvaleri]
 categories: ["Usecases"]
 preview: "Build your own custom Web API Component from scratch."
 ---

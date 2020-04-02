@@ -54,12 +54,12 @@ article.blog p {
 }
 
 .blog .post aside time {
-  color: var(--color-gray-50);
+  color: var(--color-gray-60);
 }
 
 .blog .post aside p {
   padding-top: 1.5rem;
-  color: var(--color-gray-50);
+  color: var(--color-gray-60);
 }
 
 .blog .post aside p span[rel="author"] {
@@ -122,6 +122,22 @@ article.blog p {
   background: var(--color-smoke-90);
 }
 
+.blog .post aside figure img {
+  margin-right: 1rem;
+  vertical-align: middle;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.blog .post aside figure {
+  margin: 1rem 0;
+}
+
+.blog .post aside figure figcaption {
+  display: inline;
+}
+
 @media screen and (min-width: 1024px) {
   .blog {
     max-width: var(--static-max-width--desktop);
@@ -133,7 +149,7 @@ article.blog p {
 
   .blog .post aside {
     width: 30rem;
-    min-width: 12rem;
+    min-width: 16rem;
   }
 
   .blog a.arrow {
@@ -160,7 +176,7 @@ article.blog p {
 
 /* for mobile screens */
 @media screen and (max-width: 1023px) {
-  .blog aside {
+  .blog.list aside {
     display: none;
   }
 }

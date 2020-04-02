@@ -2,7 +2,7 @@
 title: "Outreachy update"
 date: 2020-03-30
 draft: false
-author: ["Maria Arias de Reyna Dominguez", "Zoran Regvart"]
+authors: ["delawen", "zregvart"]
 categories: ["Outreachy"]
 preview: "Some updates on Outreachy internship program"
 ---
