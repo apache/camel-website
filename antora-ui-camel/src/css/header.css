@@ -425,6 +425,14 @@ body {
   }
 }
 
+#search-cancel {
+  position: relative;
+  bottom: 45%;
+  left: 90%;
+  height: 1rem;
+  display: none;
+}
+
 #search_results {
   top: 3.31rem;
   background: #fffe;
@@ -482,6 +490,10 @@ body {
 /* Styling for mobile use */
 @media (max-width: 610px) {
   #search {
+    display: none;
+  }
+
+  #search-cancel {
     display: none;
   }
 }
