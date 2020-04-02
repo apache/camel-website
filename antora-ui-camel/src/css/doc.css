@@ -203,7 +203,6 @@
 }
 
 .doc table.tableblock td {
-  border-top: 1px solid var(--table-border-color);
   border-bottom: 1px solid var(--table-border-color);
 }
 
