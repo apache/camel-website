@@ -75,6 +75,9 @@ footer .footer dl dd {
 }
 
 .footer-tools {
+  position: relative;
+  top: -2rem;
+  height: 0;
   text-align: right;
 }
 
@@ -84,4 +87,5 @@ footer .footer dl dd {
   background-color: var(--footer-background);
   color: black;
   border-radius: 0.4rem 0.4rem  0 0;
+  height: 2rem;
 }
