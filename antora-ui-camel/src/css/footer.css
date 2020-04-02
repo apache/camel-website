@@ -74,25 +74,11 @@ footer .footer dl dd {
   }
 }
 
-.edit {
-  max-width: var(--static-max-width--desktop);
-  margin: auto;
+.footer-tools {
   text-align: right;
-  flex: initial;
-  margin-left: 80%;
 }
 
-@media screen and (max-width: 640px) {
-  .edit {
-    max-width: var(--static-max-width--desktop);
-    margin: auto;
-    text-align: right;
-    flex: initial;
-    margin-right: 0;
-  }
-}
-
-.edit a {
+.footer-tools a {
   display: inline-block;
   padding: 0.4rem;
   background-color: var(--footer-background);
