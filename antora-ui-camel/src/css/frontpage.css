@@ -246,7 +246,7 @@ section.frontpage h2 {
 @media screen and (max-width: 626px) {
   .split {
     flex: 100%;
-    margin: 0 2rem;
+    margin: 0 1rem;
   }
 
   section.frontpage.columns,
@@ -270,7 +270,7 @@ section.frontpage h2 {
   }
 
   .split {
-    padding: 0 2rem;
+    margin: 0 1rem;
     flex: 100%;
   }
 
