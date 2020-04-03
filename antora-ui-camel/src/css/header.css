@@ -32,6 +32,8 @@ body {
   .navbar-end > .navbar-item,
   .navbar-end .navbar-link {
     color: var(--navbar-font-color);
+    text-transform: uppercase;
+    font-weight: bold;
   }
 
   .navbar-end > a.navbar-item:hover,
