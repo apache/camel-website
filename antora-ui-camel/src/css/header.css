@@ -181,7 +181,7 @@ body {
     left: 0;
     min-width: 100%;
   }
-  
+
   .has-dropdown:not(.is-active) > .navbar-dropdown {
     display: none;
   }
@@ -327,7 +327,7 @@ body {
     justify-content: flex-end;
     margin-left: auto;
   }
-  
+
   .navbar-dropdown {
     background-color: var(--navbar-menu-background);
     border: 1px solid var(--navbar-menu-border-color);
@@ -339,6 +339,7 @@ body {
     min-width: 100%;
     position: absolute;
   }
+
   .navbar-dropdown .navbar-item {
     white-space: nowrap;
   }
