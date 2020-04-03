@@ -420,6 +420,7 @@ body {
   font-family: Open Sans, sans-serif;
   caret-color: #ed8225;
   background: no-repeat 0.2rem/1.2rem url(../img/search.svg);
+  width: 8.75rem;
 }
 
 .navbar-search input:focus-within {
@@ -486,8 +487,15 @@ body {
   }
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1230px) {
+  .navbar-end {
+    justify-content: flex-end;
+    margin-left: 1rem;
+  }
+}
+
 /* Styling for mobile use */
-@media (max-width: 610px) {
+@media (max-width: 1175px) {
   #search {
     display: none;
   }
