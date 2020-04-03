@@ -413,6 +413,15 @@ body {
   }
 }
 
+#search-cancel {
+  position: relative;
+  bottom: 1.4rem;
+  left: 10.6rem;
+  height: 1.1rem;
+  display: none;
+  cursor: pointer;
+}
+
 #search_results {
   top: 3.31rem;
   background: #fffe;
@@ -470,6 +479,10 @@ body {
 /* Styling for mobile use */
 @media (max-width: 610px) {
   #search {
+    display: none;
+  }
+
+  #search-cancel {
     display: none;
   }
 }
