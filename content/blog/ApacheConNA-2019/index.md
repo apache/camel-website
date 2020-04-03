@@ -1,7 +1,7 @@
 ---
 title: "Camel at ApacheCon North America 2019"
 date: 2019-09-10T16:45:32+02:00
-author: Zoran Regvart
+authors: [zregvart]
 categories: ["Events"]
 preview: Plenty of Camel at the ApacheCon 2019 in Las Vegas
 ---
