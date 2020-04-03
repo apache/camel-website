@@ -140,6 +140,7 @@ body {
 
 .navbar-dropdown .navbar-item {
   font-weight: normal;
+  text-transform: capitalize;
 }
 
 .navbar-divider {
@@ -192,7 +193,6 @@ body {
   .navbar-dropdown .navbar-item:hover,
   a.navbar-item.navbar-topics:hover,
   a.navbar-link.navbar-topics:hover {
-    text-decoration: underline;
     text-decoration-color: var(--navbar-hover-font-color);
   }
 
@@ -253,7 +253,6 @@ body {
   .navbar-dropdown .navbar-item:hover,
   a.navbar-item.navbar-topics:hover,
   a.navbar-link.navbar-topics:hover {
-    text-decoration: underline;
     text-decoration-color: var(--navbar-hover-font-color);
   }
 
@@ -308,7 +307,6 @@ body {
 
   .navbar-item.has-dropdown:last-of-type .navbar-dropdown {
     left: auto;
-    right: 0;
   }
 
   .navbar-item.is-hoverable:hover .navbar-dropdown {
@@ -350,7 +348,8 @@ body {
   }
 
   .navbar-dropdown a.navbar-item:hover {
-    background-color: var(--navbar-menu-hover-background);
+    font-weight: 700;
+    text-transform: capitalize;
   }
 }
 
