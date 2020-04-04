@@ -152,6 +152,7 @@ body {
 .navbar-dropdown .navbar-item {
   font-weight: normal;
   text-transform: capitalize;
+  transition: text-shadow 0.3s;
 }
 
 .navbar-divider {
@@ -358,8 +359,8 @@ body {
   }
 
   .navbar-dropdown a.navbar-item:hover {
-    font-weight: 700;
     text-transform: capitalize;
+    text-shadow: 0 0 1.25px #333, 0 0 1.25px #333;
   }
 }
 
