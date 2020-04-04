@@ -135,7 +135,7 @@ body {
 }
 
 .navbar-dropdown {
-  position: absolute;
+  
   display: none;
   top: calc(100% - 1px);
   background-color: var(--navbar-menu-background);
