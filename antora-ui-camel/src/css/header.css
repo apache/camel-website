@@ -455,7 +455,6 @@ body {
 #search_results a:hover {
   text-decoration: underline;
   text-decoration-color: var(--color-gray-10);
-  padding-top: 0.3rem;
 }
 
 .result_summary {
