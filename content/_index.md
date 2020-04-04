@@ -54,18 +54,18 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 {{< /section >}}
 
 {{< section "frontpage camelProjects" >}}
-# Apache Camel 3 - Projects
-{{< div "projectDetails" >}}
+# Platforms Camel runs on
+{{< div "platforms" >}}
 {{< div >}}
-<a class="" href="./camel-k/latest/">
-![Camel K](/img/projects/camel-k.svg)
+<a class="" href="./camel-k/latest/"> 
+![Camel k](/img/projects/camel-k.svg)
 ## Camel K
 </a>
 
 **Apache Camel K** is a lightweight integration framework built from Apache Camel that runs natively on [Kubernetes](https://kubernetes.io/) and is specifically designed for **serverless** and **microservice architectures**.
 {{< /div >}}
 {{< /div >}}
-{{< div "projectDetails" >}}
+{{< div "platforms" >}}
 {{< div >}}
 <a class="" href="./manual/latest/">
 ![Camel](/img/projects/camel.svg)
@@ -75,17 +75,17 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 **Apache Camel** is the *Swiss knife* of integration.
 {{< /div >}}
 {{< /div >}}
-{{< div "projectDetails" >}}
+{{< div "platforms" >}}
 {{< div >}}
 <a class="" href="./camel-quarkus/latest/">
-![Camel Quarkus](/img/projects/camel-quakas.svg)
+![Camel Quarkus](/img/projects/camel-quarkas.svg)
 ## Camel Quarkus
 </a>
 
 **Apache Camel Quarkus** is a set of extensions for [Quarkus](https://quarkus.io), a Java platform offering fast boot times and low memory footprint. It targets both stock JVMs and [GraalVM](https://www.graalvm.org/). 
 {{< /div >}}
 {{< /div >}}
-{{< div "projectDetails" >}}
+{{< div "platforms" >}}
 {{< div >}}
 <a class="" href="./manual/latest/">
 ![Camel Karaf](/img/projects/camel-karaf.svg)
@@ -95,17 +95,17 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 **Apache Camel Karaf** run Camel in [OSGi](https://www.osgi.org/) container using [Apache Karaf](https://karaf.apache.org/).
 {{< /div >}}
 {{< /div >}}
-{{< div "projectDetails" >}}
+{{< div "platforms" >}}
 {{< div >}}
 <a class="" href="./camel-spring-boot/latest/">
-![Camel Spring Boot](/img/projects/camel-spring.svg)
+![Camel Spring Boot](/img/projects/camel-spring-boot.svg)
 ## Camel Spring Boot
 </a>
 
 **Apache Camel Spring Boot** run Camel on [Spring Boot](https://spring.io/projects/spring-boot).
 {{< /div >}}
 {{< /div >}}
-{{< div "projectDetails" >}}
+{{< div "platforms" >}}
 {{< div >}}
 <a class="" href="./camel-kafka-connector/latest/">
 ![Camel Kafka Connector](/img/projects/camel-connector.svg)
