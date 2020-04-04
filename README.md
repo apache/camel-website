@@ -141,6 +141,7 @@ In case `yarn build` throws the error: **JavaScript heap out of memory**, the is
 
 ```shell
 $ export NODE_OPTIONS="--max_old_space_size=4096"
+```
 This should fetch doc sources for [Camel](https://github.com/apache/camel) and [Camel K](https://github.com/apache/camel-k)
 and generate the website with Hugo. You should see the generated website in the `public` directory.
 
