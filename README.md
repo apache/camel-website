@@ -138,7 +138,7 @@ To build the website go to the project root directory and run:
     $ yarn build   # to perform the build
 
 In case `yarn build` throws the error: **JavaScript heap out of memory**, make the following change within `package.json` 
-and the issue will be resolved : 
+and the issue will be resolved: 
 ```
 "build": "run-s --max_old_space_size=4096 build:*"
 ```
