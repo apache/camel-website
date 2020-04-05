@@ -14,3 +14,8 @@ resources
 .pnp.js
 .settings
 .hugo_data
+.yarn
+yarn.lock
+yarn-error.log
+
+

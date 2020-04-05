@@ -1,0 +1,47 @@
+<div class="toolbar" role="navigation">  
+    <button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+        <ul id="result"></ul>     
+  </nav>
+  <div> <label id="toggle-width-label" for="toggle-width">Wide / Narrow</label> </div>
+
+</div>
+{{ $url := replace .Permalink .Site.BaseURL "" }}
+        {{ $local := newScratch }}
+        {{ $local.Add "path" .Site.BaseURL }}
+        {{ $local.Add "breadcrumb" (slice (dict "url" .Site.BaseURL "name" .Site.Title "position" 1 )) }}
+        {{ range $index, $element := split $url "/" }}
+          {{ $local.Add "path" $element }}
+          {{ $local.Add "path" "/" }}
+          {{ if ne $element "" }}
+            {{ $local.Add "breadcrumb" (slice (dict "url" ($local.Get "path") "name" . "position" (add $index 2))) }}
+          {{ end }}
+        {{ end }}
+
+
+    <script type="application/ld+json" id="lddata">
+        {
+          "@context": "http://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [{{ range $local.Get "breadcrumb" }}{{ if ne .position 1 }},{{ end }}{
+                "@type": "ListItem",
+                "position": {{ .position }},
+                "item": {
+                  "url": {{ .url }},
+                  "name": "{{ .name }}"
+                }
+            }{{ end }}]
+        }
+        </script>
+        <script>
+                var data=$("#lddata").html();
+                console.log(data);
+                 var json=JSON.parse(data);
+                 console.log(json.itemListElement[0].item.url);
+                 for (var i=0; i<json.itemListElement.length;i++)
+                 {
+                    $("#result").append('<a href="'+ json.itemListElement[i].item.url + '">' +  " <li>"+json.itemListElement[i].item.name+"</li>"+"/ ");
+                 }
+                 
+              </script>
+

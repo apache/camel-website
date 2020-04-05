@@ -1,3 +1,7 @@
 /build/
 /node_modules/
 /public/
+.yarn
+yarn.lock
+yarn-error.log
+
