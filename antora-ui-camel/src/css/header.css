@@ -156,6 +156,11 @@ body {
   margin: 0.25rem 0;
 }
 
+.algolia-docsearch-suggestion--highlight {
+  font-weight: bold;
+  color: black;
+}
+
 @media screen and (max-width: 1023px) and (min-width: 480px) {
   .navbar-menu.is-active {
     display: block;
