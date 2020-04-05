@@ -22,6 +22,7 @@
   --color-camel-orange: #e97826;
   --color-highlight: #cf7428;
   --color-glow: #fff7a3;
+  --color-wheat: #f5deb3;
   /* fonts */
   --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
   --body-font-size: 1.0625em; /* 17px */
@@ -49,6 +50,7 @@
   --navbar-menu-background: var(--color-white);
   --navbar-menu-font-color: var(--body-font-color);
   --navbar-menu-hover-background: var(--color-smoke-70);
+  --navbar-search-result-separator: var(--color-wheat);
   /* nav */
   --nav-background: var(--panel-background);
   --nav-border-color: var(--color-smoke-50);

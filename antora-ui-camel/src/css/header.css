@@ -156,11 +156,6 @@ body {
   margin: 0.25rem 0;
 }
 
-.algolia-docsearch-suggestion--highlight {
-  font-weight: bold;
-  color: black;
-}
-
 @media screen and (max-width: 1023px) and (min-width: 480px) {
   .navbar-menu.is-active {
     display: block;
@@ -449,8 +444,8 @@ body {
   padding: 0.5rem;
   color: var(--color-camel-orange);
   text-transform: uppercase;
-  border-top: 1px solid wheat;
-  border-bottom: 1px solid wheat;
+  border-top: 1px solid var(--navbar-search-result-separator);
+  border-bottom: 1px solid var(--navbar-search-result-separator);
 }
 
 #search_results a {
@@ -465,6 +460,11 @@ body {
 .result_summary {
   color: var(--color-jet-50);
   padding-top: 0.3rem;
+}
+
+.algolia-docsearch-suggestion--highlight {
+  font-weight: bold;
+  color: var(--color-jet-50);
 }
 
 .results-hidden #search_results {
