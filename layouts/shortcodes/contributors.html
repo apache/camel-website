@@ -1,5 +1,5 @@
 
-<table class="tableblock stretch">
+<table class="tableblock stretch community">
     <thead>
         <tr>
             <th>Avatar</th>
@@ -8,23 +8,28 @@
         </tr>
     </thead>
     <tbody>
-        {{ range  $page_count := (seq 10) }}
-            {{ $page := string $page_count }}
-                {{ $git_contributors := getJSON "https://api.github.com/repos/apache/camel/contributors?per_page=100&anon=1&page=" $page "&access_token=" $.Site.Params.token }}
+<!--we're looping over 100 numbers in order to fetch paged data from GitHub API,
+     we're invoking GitHub API only if we received all results per page (100) from the last page-->
+        {{  $page_count := (seq 100) }}
+        {{ $last_contributors := 100 }}
+        {{ range $page, $tmp := $page_count }}
+        {{ if eq $last_contributors 100 }}
+                {{ $git_contributors := getJSON "https://api.github.com/repos/apache/camel/contributors?per_page=100&anon=1&page=" ($page | string)}}
+                {{ $last_contributors = len $git_contributors }}
                 {{ range  $git_contributors }}
                     {{ with .url }}
                         {{ $user_url := getJSON . }}
                             <tr>
-                                <td> <img class="git-img" src="{{ $user_url.avatar_url }}"/></td>
+                                <td> <img class="avatar" src="{{ $user_url.avatar_url }}"/></td>
                                 <td> {{ $user_url.name | default $user_url.login }} </td>
                                 <td> {{ $user_url.company }} </td>
                     
-                            </tr>
-
+                            </tr>              
+        {{ end }}
+        {{ end }}
                 {{ end }}
-            {{ end }}
-            {{ end }}
-        
+                        {{ end }}
+              
     </tbody>
 </table>
 

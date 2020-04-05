@@ -644,10 +644,6 @@ kbd,
   width: 100%;
 }
 
-.git-img {
-  width: 50px;
-  height: 50px;
-}
 /* for mobile screens */
 @media screen and (max-width: 626px) {
   #preamble + .sect1,
