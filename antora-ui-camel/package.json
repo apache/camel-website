@@ -72,6 +72,8 @@
     "pnp": true
   },
   "dependencies": {
-    "algoliasearch": "^4.0.3"
+    "algoliasearch": "^4.0.3",
+    "stylelint-config-recommended": "^3.0.0",
+    "toml": "^3.0.0"
   }
 }
