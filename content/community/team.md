@@ -10,7 +10,7 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 
 {{< table >}}
 | Name                   | ID               | Organisation               |
-|:-----------------------|:-----------------|:---------------------------|
+|------------------------|------------------|----------------------------|
 | Aaron Mulder           | ammulder         | Chariot Solutions          |
 | Akitoshi Yoshida       | ay               | SAP                        |
 | Andrea Cosentino       | acosentino       | Red Hat                    |
@@ -80,7 +80,7 @@ If you have been contributing to the Apache Camel project, and you want your nam
 
 {{< table >}}
 | Name                    | Organisation                   |
-|:------------------------|:-------------------------------|
+|-------------------------|--------------------------------|
 | Aaron Crickenberger     |                                |
 | Al Maw                  |                                |
 | Aleksi Kallio           |                                |

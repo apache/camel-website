@@ -1,7 +1,7 @@
 ---
 title: "CFP for ApacheCon North America 2020"
 date: 2020-02-24T12:00:00
-author: Zoran Regvart
+authors: [zregvart]
 categories: ["Events"]
 preview: ApacheCon 2020 in New Orleans
 ---

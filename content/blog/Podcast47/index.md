@@ -1,7 +1,7 @@
 ---
 title: "JBoss Asylum Podcast about Apache Camel 3"
 date: 2019-12-17
-author: Claus Ibsen
+authors: [davsclaus]
 categories: ["Podcasts"]
 preview: JBoss Community Asylum Podcast epiosode 47 about Apache Camel 3
 ---

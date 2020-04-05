@@ -1,7 +1,7 @@
 ---
 title: "Camel AWS2 Components are here: what are the changes for end users?"
 date: 2020-03-06
-author: Andrea Cosentino
+authors: [oscerd]
 categories: ["Apache"]
 preview: Camel AWS2 Components are here
 ---

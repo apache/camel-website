@@ -140,6 +140,7 @@
   border-radius: 0.2rem;
   font-size: calc(14 / var(--rem-base) * 1rem);
   padding: 0.075rem 0.25rem 0.125rem;
+  overflow-wrap: break-word;
 }
 
 .doc pre {
@@ -197,12 +198,12 @@
   padding: 0.5rem;
 }
 
-.doc table.tableblock th {
+.doc table.tableblock thead {
   border-bottom: 2.5px solid var(--table-border-color);
+  text-align: left;
 }
 
 .doc table.tableblock td {
-  border-top: 1px solid var(--table-border-color);
   border-bottom: 1px solid var(--table-border-color);
 }
 
@@ -655,4 +656,14 @@ kbd,
   .static > h1:first-child {
     font-size: inherit;
   }
+
+  .doc p code,
+  .doc thead code {
+    font-size: var(--body-font-size);
+  }
+}
+
+table.tableblock thead {
+  background: var(--color-smoke-90);
+  font-weight: var(--body-font-weight-bold);
 }
