@@ -12,3 +12,7 @@
   grid-column-start: 2;
   margin-left: 1rem;
 }
+
+.release .tableblock tbody tr:nth-child(2n) {
+  background: var(--color-smoke-50);
+}

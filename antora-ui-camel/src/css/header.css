@@ -134,6 +134,17 @@ body {
   display: block;
 }
 
+.navbar-dropdown {
+  position: absolute;
+  display: none;
+  top: calc(100% - 1px);
+  background-color: var(--navbar-menu-background);
+  border: 1px solid var(--navbar-menu-border-color);
+  border-top: none;
+  border-radius: 0 0 0.25rem 0.25rem;
+  left: 0;
+}
+
 .navbar-dropdown .navbar-item {
   font-weight: normal;
 }
@@ -157,13 +168,6 @@ body {
     right: 0;
     margin-left: 50%;
     padding: 1rem 2rem;
-  }
-
-  .navbar-dropdown {
-    background-color: var(--navbar-menu-background);
-    top: 100%;
-    left: 0;
-    min-width: 100%;
   }
 
   .has-dropdown:not(.is-active) > .navbar-dropdown {
@@ -234,11 +238,7 @@ body {
   }
 
   .navbar-dropdown {
-    background-color: var(--navbar-menu-background);
     display: none;
-    top: 100%;
-    left: 0;
-    min-width: 100%;
   }
 
   .has-dropdown:not(.is-active) > .navbar-dropdown {
@@ -348,19 +348,7 @@ body {
 
   .navbar-end {
     justify-content: flex-end;
-    margin-left: auto;
-  }
-
-  .navbar-dropdown {
-    background-color: var(--navbar-menu-background);
-    border: 1px solid var(--navbar-menu-border-color);
-    border-top: none;
-    border-radius: 0 0 0.25rem 0.25rem;
-    display: none;
-    top: 100%;
-    left: 0;
-    min-width: 100%;
-    position: absolute;
+    margin-left: 2rem;
   }
 
   .navbar-dropdown .navbar-item {
@@ -413,6 +401,7 @@ body {
   font-family: Open Sans, sans-serif;
   caret-color: #ed8225;
   background: no-repeat 0.2rem/1.2rem url(../img/search.svg);
+  width: 8.75rem;
 }
 
 .navbar-search input:focus-within {
@@ -423,6 +412,15 @@ body {
     box-shadow: none;
     transform: none;
   }
+}
+
+#search-cancel {
+  position: relative;
+  bottom: 1.4rem;
+  left: 10.6rem;
+  height: 1.1rem;
+  display: none;
+  cursor: pointer;
 }
 
 #search_results {
@@ -479,9 +477,20 @@ body {
   }
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1230px) {
+  .navbar-end {
+    justify-content: flex-end;
+    margin-left: 1rem;
+  }
+}
+
 /* Styling for mobile use */
-@media (max-width: 610px) {
+@media (max-width: 1175px) {
   #search {
+    display: none;
+  }
+
+  #search-cancel {
     display: none;
   }
 }

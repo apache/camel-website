@@ -9,6 +9,7 @@
     const search = document.querySelector('#search')
     const container = search.parentNode
     const results = document.querySelector('#search_results')
+    const cancel = document.querySelector('#search-cancel')
 
     function debounce (fn, wait) {
       var timeout
@@ -28,6 +29,7 @@
       if (search.value.trim() === '') {
         container.className = 'navbar-search results-hidden'
         results.innerHTML = ''
+        cancel.style.display = 'none'
         return
       }
       if (key.which === 27) {
@@ -35,6 +37,7 @@
         results.innerHTML = ''
         return
       }
+      cancel.style.display = 'block'
       index.search(search.value, {
         hitsPerPage: 10,
       })
@@ -93,5 +96,11 @@
         results.innerHTML = ''
       }
     }), 150)
+    cancel.addEventListener('click', function () {
+      container.className = 'navbar-search results-hidden'
+      results.innerHTML = ''
+      search.value = ''
+      cancel.style.display = 'none'
+    })
   })
 })()
