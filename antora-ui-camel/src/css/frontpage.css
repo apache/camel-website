@@ -247,7 +247,7 @@ section.frontpage h2 {
 
 @media screen and (max-width: 626px) {
   .split,
-  .frontpage .platforms {
+  .homepage .frontpage .platforms {
     flex: 100%;
   }
 
@@ -259,6 +259,11 @@ section.frontpage h2 {
 
   .box {
     padding: 1rem 0;
+  }
+
+  .homepage .frontpage .platforms .ProjectImageRight {
+    right: 15%;
+    z-index: 1;
   }
 }
 
@@ -290,6 +295,10 @@ section.frontpage h2 {
   section.frontpage.projects .project p:nth-child(3) {
     text-align: center;
   }
+
+  .frontpage .platforms {
+    flex: 50%;
+  }
 }
 
 section.frontpage.camelProjects {
@@ -297,57 +306,57 @@ section.frontpage.camelProjects {
   flex-wrap: wrap;
 }
 
-.platforms {
+.frontpage .platforms {
   flex: 33%;
   padding: 0.5rem 0;
 }
 
-.platforms div {
-  padding: 0.5rem;
-  margin: 0.5rem;
-  height: 100%;
+.frontpage .platforms div {
+  padding: 0 1rem;
 }
 
-.platforms img {
-  margin: 0 auto;
-  display: block;
-  width: 60%;
-}
-
-section.frontpage .platforms h2 {
+.frontpage .platforms h2 {
   text-align: center;
   text-transform: capitalize;
   width: 100%;
   color: var(--heading-font-color);
 }
 
-section.frontpage .platforms p {
+.frontpage .platforms p {
   text-align: center;
 }
 
-.main-blk {
-  width: 500px;
-  height: 500px;
+.frontpage .platforms .ProjectImages {
   position: relative;
+  width: 100%;
+  height: 180px;
 }
 
-.half-circle {
+.frontpage .platforms .camelImage,
+.frontpage .platforms .ProjectImageRight {
+  width: 6rem;
+  height: 180px;
   position: absolute;
-  width: 250px;
-  top: 0;
-  right: 0;
-  overflow: hidden;
 }
 
-.half-circle img {
-  left: -250px;
+.frontpage .platforms .ProjectImages img {
+  margin: 10px -3px;
+  padding: 0;
+}
+
+.frontpage .platforms .ProjectImageRight {
+  right: 10%;
+  z-index: 1;
+}
+
+.frontpage .platforms .camelImage {
+  left: 25%;
+}
+
+.frontpage .platforms .camelImagelogo {
+  width: 6rem;
+  margin: 0 auto;
   position: relative;
-}
-
-.other-half-circle {
-  position: absolute;
-  width: 250px;
-  top: 0;
-  left: 0;
-  overflow: hidden;
+  left: 33%;
+  height: 180px;
 }

@@ -57,8 +57,11 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 # Platforms Camel runs on
 {{< div "platforms" >}}
 {{< div >}}
+{{< div "ProjectImages">}}
 <a class="" href="./camel-k/latest/"> 
-![Camel k](/img/projects/camel-k.svg)
+<img src="./_/img/logo-d.svg" class="camelImage" alt="Apache Camel Logo">
+<img src="./_/img/knative.svg" class="ProjectImageRight" alt="Apache Camel K">
+{{< /div >}}
 ## Camel K
 </a>
 
@@ -67,8 +70,10 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 {{< /div >}}
 {{< div "platforms" >}}
 {{< div >}}
-<a class="" href="./manual/latest/">
-![Camel](/img/projects/camel.svg)
+{{< div "ProjectImages">}}
+<a class="" href="./camel-k/latest/"> 
+<img src="./_/img/logo-d.svg" class="camelImagelogo" alt="Apache Camel Logo">
+{{< /div >}}
 ## Camel
 </a>
 
@@ -77,8 +82,11 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 {{< /div >}}
 {{< div "platforms" >}}
 {{< div >}}
-<a class="" href="./camel-quarkus/latest/">
-![Camel Quarkus](/img/projects/camel-quarkas.svg)
+{{< div "ProjectImages">}}
+<a class="" href="./camel-k/latest/"> 
+<img src="./_/img/logo-d.svg" class="camelImage" alt="Apache Camel Logo">
+<img src="./_/img/quarkus.svg" class="ProjectImageRight" alt="Camel Quarkus">
+{{< /div >}}
 ## Camel Quarkus
 </a>
 
@@ -87,8 +95,11 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 {{< /div >}}
 {{< div "platforms" >}}
 {{< div >}}
-<a class="" href="./manual/latest/">
-![Camel Karaf](/img/projects/camel-karaf.svg)
+{{< div "ProjectImages">}}
+<a class="" href="./camel-k/latest/"> 
+<img src="./_/img/logo-d.svg" class="camelImage" alt="Apache Camel Logo">
+<img src="./_/img/apache-karaf.svg" class="ProjectImageRight" alt="Camel Karaf">
+{{< /div >}}
 ## Camel Karaf
 </a>
 
@@ -97,8 +108,11 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 {{< /div >}}
 {{< div "platforms" >}}
 {{< div >}}
-<a class="" href="./camel-spring-boot/latest/">
-![Camel Spring Boot](/img/projects/camel-spring-boot.svg)
+{{< div "ProjectImages">}}
+<a class="" href="./camel-k/latest/"> 
+<img src="./_/img/logo-d.svg" class="camelImage" alt="Apache Camel Logo">
+<img src="./_/img/spring-boot.svg" class="ProjectImageRight" alt="Camel Spring Boot">
+{{< /div >}}
 ## Camel Spring Boot
 </a>
 
@@ -107,8 +121,11 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 {{< /div >}}
 {{< div "platforms" >}}
 {{< div >}}
-<a class="" href="./camel-kafka-connector/latest/">
-![Camel Kafka Connector](/img/projects/camel-connector.svg)
+{{< div "ProjectImages">}}
+<a class="" href="./camel-k/latest/"> 
+<img src="./_/img/logo-d.svg" class="camelImage" alt="Apache Camel Logo">
+<img src="./_/img/apache-kafka.svg" class="ProjectImageRight" alt="Camel Kafka Connector">
+{{< /div >}}
 ## Camel Kafka Connector
 </a>
 
