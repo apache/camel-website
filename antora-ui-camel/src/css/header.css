@@ -180,6 +180,8 @@ body {
 
   .has-dropdown.is-active > .navbar-dropdown {
     display: block;
+    position: relative;
+    border: none;
   }
 
   .has-dropdown.is-active > .navbar-link::after {
@@ -237,10 +239,6 @@ body {
     padding: 1rem 2rem;
   }
 
-  .navbar-dropdown {
-    display: none;
-  }
-
   .has-dropdown:not(.is-active) > .navbar-dropdown {
     display: none;
   }
@@ -251,6 +249,8 @@ body {
 
   .has-dropdown.is-active > .navbar-dropdown {
     display: block;
+    position: relative;
+    border: none;
   }
 
   .has-dropdown.is-active > .navbar-link::after {
