@@ -71,7 +71,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 {{< div "platforms" >}}
 {{< div >}}
 {{< div "ProjectImages">}}
-<a class="" href="./camel-k/latest/"> 
+<a class="" href="./manual/latest/"> 
 <img src="./_/img/logo-d.svg" class="camelImagelogo" alt="Apache Camel Logo">
 {{< /div >}}
 ## Camel
@@ -83,7 +83,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 {{< div "platforms" >}}
 {{< div >}}
 {{< div "ProjectImages">}}
-<a class="" href="./camel-k/latest/"> 
+<a class="" href="./camel-quarkus/latest/"> 
 <img src="./_/img/logo-d.svg" class="camelImage" alt="Apache Camel Logo">
 <img src="./_/img/quarkus.svg" class="ProjectImageRight" alt="Camel Quarkus">
 {{< /div >}}
@@ -96,7 +96,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 {{< div "platforms" >}}
 {{< div >}}
 {{< div "ProjectImages">}}
-<a class="" href="./camel-k/latest/"> 
+<a class="" href="./camel-karaf/latest/"> 
 <img src="./_/img/logo-d.svg" class="camelImage" alt="Apache Camel Logo">
 <img src="./_/img/apache-karaf.svg" class="ProjectImageRight" alt="Camel Karaf">
 {{< /div >}}
@@ -109,7 +109,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 {{< div "platforms" >}}
 {{< div >}}
 {{< div "ProjectImages">}}
-<a class="" href="./camel-k/latest/"> 
+<a class="" href="./camel-spring-boot/latest/"> 
 <img src="./_/img/logo-d.svg" class="camelImage" alt="Apache Camel Logo">
 <img src="./_/img/spring-boot.svg" class="ProjectImageRight" alt="Camel Spring Boot">
 {{< /div >}}
@@ -122,7 +122,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 {{< div "platforms" >}}
 {{< div >}}
 {{< div "ProjectImages">}}
-<a class="" href="./camel-k/latest/"> 
+<a class="" href="./camel-kafka-connector/latest/"> 
 <img src="./_/img/logo-d.svg" class="camelImage" alt="Apache Camel Logo">
 <img src="./_/img/apache-kafka.svg" class="ProjectImageRight" alt="Camel Kafka Connector">
 {{< /div >}}
