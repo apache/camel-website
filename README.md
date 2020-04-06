@@ -137,6 +137,11 @@ To build the website go to the project root directory and run:
     $ yarn install # needed only once, or if dependencies change
     $ yarn build   # to perform the build
 
+In case `yarn build` throws the error: **JavaScript heap out of memory**, the issue can be resolved by increasing the memory used by node.js by setting `NODE_OPTIONS` environment variable to include `--max_old_space_size`, for example to increase the old space to 4GB do:
+
+```shell
+$ export NODE_OPTIONS="--max_old_space_size=4096"
+```
 This should fetch doc sources for [Camel](https://github.com/apache/camel) and [Camel K](https://github.com/apache/camel-k)
 and generate the website with Hugo. You should see the generated website in the `public` directory.
 
