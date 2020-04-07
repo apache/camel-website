@@ -1,6 +1,6 @@
 [build]
   command = "(cd antora-ui-camel && yarn --non-interactive --frozen-lockfile install && yarn --non-interactive --frozen-lockfile build) && yarn --non-interactive --frozen-lockfile install && yarn --non-interactive --frozen-lockfile build"
-  environment = { HUGO_ENV = "netlify" }
+  environment = { CAMEL_ENV = "netlify" }
 
 [build.processing]
   skip_processing = false
