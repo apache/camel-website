@@ -10,7 +10,7 @@
     "preview:antora": "antora --clean --fetch antora-playbook.yml",
     "preview:hugo": "hugo server -D",
     "check:xref": "antora --generator @antora/xref-validator antora-playbook.yml",
-    "check:links": "link-checker --disable-external --mkdocs --allow-hash-href public",
+    "check:links": "link-checker --disable-external --mkdocs --allow-hash-href public --url-ignore='#top'",
     "check:html": "html-validate 'public/*/**/*.html' 'public/!(google)*.html'",
     "checks": "run-s check:*"
   },

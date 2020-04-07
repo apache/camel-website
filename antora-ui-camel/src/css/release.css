@@ -1,7 +1,6 @@
 .release dl {
   display: grid;
   grid-template-columns: max-content auto;
-  overflow: scroll;
 }
 
 .release dt {
@@ -11,4 +10,16 @@
 .release dd {
   grid-column-start: 2;
   margin-left: 1rem;
+}
+
+.release .tableblock tbody tr:nth-child(2n) {
+  background: var(--color-smoke-50);
+}
+
+/* for mobile screens */
+@media screen and (max-width: 626px) {
+  .release aside {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
