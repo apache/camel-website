@@ -53,55 +53,84 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 
 {{< /section >}}
 
-{{< section "frontpage projects" >}}
-{{< div "project" >}}
-# Camel
-
-**Apache Camel** is the *Swiss knife* of integration. 
-
-<a class="significant" href="./manual/latest/">Read the docs</a>
-<a class="significant" href="./components/latest/eips/enterprise-integration-patterns.html">EIP reference</a>
-<a class="significant" href="./components/latest/">Component reference</a>
+{{< section "frontpage camelProjects" >}}
+# Platforms Camel runs on
+{{< div "platforms" >}}
+{{< div >}}
+{{< div "ProjectImages">}}
+<a class="" href="./camel-k/latest/"> 
+<img src="./_/img/logo-d.svg" class="camelImage" alt="Apache Camel Logo">
+<img src="./_/img/knative.svg" class="ProjectImageRight" alt="Apache Camel K">
 {{< /div >}}
-
-{{< div "project" >}}
-# Camel K
+## Camel K
+</a>
 
 **Apache Camel K** is a lightweight integration framework built from Apache Camel that runs natively on [Kubernetes](https://kubernetes.io/) and is specifically designed for **serverless** and **microservice architectures**.
-
-<a class="significant" href="./camel-k/latest/">Read the docs</a>
 {{< /div >}}
-
-{{< div "project" >}}
-# Camel Quarkus
-
-**Apache Camel Quarkus** is a set of extensions for [Quarkus](https://quarkus.io), a Java platform offering fast boot times and low memory footprint. It targets both stock JVMs and [GraalVM](https://www.graalvm.org/).
-
-<a class="significant" href="./camel-quarkus/latest/">Read the docs</a>
 {{< /div >}}
-
-{{< div "project" >}}
-# Camel Kafka Connector
-
-**Apache Camel Kafka Connector** embeds Camel within [Kafka Connect](https://kafka.apache.org/documentation/#connect), enabling declarative use of Camel components as sources or sinks to Kafka topics.
-
-<a class="significant" href="./camel-kafka-connector/latest/">Read the docs</a>
+{{< div "platforms" >}}
+{{< div >}}
+{{< div "ProjectImages">}}
+<a class="" href="./manual/latest/"> 
+<img src="./_/img/logo-d.svg" class="camelImagelogo" alt="Apache Camel Logo">
 {{< /div >}}
+## Camel
+</a>
 
-{{< div "project" >}}
-# Camel Spring Boot
-
-**Apache Camel Spring Boot** run Camel on [Spring Boot](https://spring.io/projects/spring-boot).
-
-<a class="significant" href="./camel-spring-boot/latest/">Read the docs</a>
+**Apache Camel** is the *Swiss knife* of integration.
 {{< /div >}}
+{{< /div >}}
+{{< div "platforms" >}}
+{{< div >}}
+{{< div "ProjectImages">}}
+<a class="" href="./camel-quarkus/latest/"> 
+<img src="./_/img/logo-d.svg" class="camelImage" alt="Apache Camel Logo">
+<img src="./_/img/quarkus.svg" class="ProjectImageRight" alt="Camel Quarkus">
+{{< /div >}}
+## Camel Quarkus
+</a>
 
-{{< div "project" >}}
-# Camel Karaf
+**Apache Camel Quarkus** is a set of extensions for [Quarkus](https://quarkus.io), a Java platform offering fast boot times and low memory footprint. It targets both stock JVMs and [GraalVM](https://www.graalvm.org/). 
+{{< /div >}}
+{{< /div >}}
+{{< div "platforms" >}}
+{{< div >}}
+{{< div "ProjectImages">}}
+<a class="" href="./camel-karaf/latest/"> 
+<img src="./_/img/logo-d.svg" class="camelImage" alt="Apache Camel Logo">
+<img src="./_/img/apache-karaf.svg" class="ProjectImageRight" alt="Camel Karaf">
+{{< /div >}}
+## Camel Karaf
+</a>
 
 **Apache Camel Karaf** run Camel in [OSGi](https://www.osgi.org/) container using [Apache Karaf](https://karaf.apache.org/).
+{{< /div >}}
+{{< /div >}}
+{{< div "platforms" >}}
+{{< div >}}
+{{< div "ProjectImages">}}
+<a class="" href="./camel-spring-boot/latest/"> 
+<img src="./_/img/logo-d.svg" class="camelImage" alt="Apache Camel Logo">
+<img src="./_/img/spring-boot.svg" class="ProjectImageRight" alt="Camel Spring Boot">
+{{< /div >}}
+## Camel Spring Boot
+</a>
 
-<a class="significant" href="./camel-karaf/latest/">Read the docs</a>
+**Apache Camel Spring Boot** run Camel on [Spring Boot](https://spring.io/projects/spring-boot).
+{{< /div >}}
+{{< /div >}}
+{{< div "platforms" >}}
+{{< div >}}
+{{< div "ProjectImages">}}
+<a class="" href="./camel-kafka-connector/latest/"> 
+<img src="./_/img/logo-d.svg" class="camelImage" alt="Apache Camel Logo">
+<img src="./_/img/apache-kafka.svg" class="ProjectImageRight" alt="Camel Kafka Connector">
+{{< /div >}}
+## Camel Kafka Connector
+</a>
+
+**Apache Camel Kafka Connector** embeds Camel within [Kafka Connect](https://kafka.apache.org/documentation/#connect), enabling declarative use of Camel components as sources or sinks to Kafka topics.
+{{< /div >}}
 {{< /div >}}
 
 {{< /section >}}
