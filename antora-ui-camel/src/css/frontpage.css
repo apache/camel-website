@@ -149,31 +149,35 @@ section.frontpage.columns {
 
 section.frontpage.projects {
   display: flex;
-  flex-direction: column;
-  border-top: 1px solid var(--color-smoke-50);
+  flex-flow: wrap;
   padding-top: 3rem;
+  border-top: 1px solid var(--color-smoke-50);
 }
 
 section.frontpage.projects .project {
   display: flex;
-  flex-direction: row;
+  flex: 1 0 33%;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
 
-section.frontpage.projects .project h1 {
-  text-align: right;
-  padding: 0 1rem;
-  flex: 1;
+section.frontpage.projects .project a img {
+  display: inline-block;
+  width: auto;
+  height: 5rem;
 }
 
-section.frontpage.projects .project p {
-  flex: 1;
-  margin: 1rem;
+section.frontpage.projects .project .links {
+  white-space: nowrap;
 }
 
-section.frontpage.projects .project a.significant {
-  margin: 0.5rem 0;
-  padding: 0.4rem 1rem;
-  font-size: 0.8rem;
+section.frontpage.projects .project a img + img {
+  padding-left: 1rem;
+}
+
+section.frontpage.projects .project h1 + p {
+  height: 100%;
 }
 
 section.frontpage.apache {
@@ -220,7 +224,6 @@ section.frontpage h2 {
   padding: 1.8rem;
   text-align: center;
   margin: 1rem;
-  border: 1px solid var(--color-smoke-50);
   height: 100%;
 }
 
@@ -245,7 +248,7 @@ section.frontpage h2 {
 
 @media screen and (max-width: 626px) {
   .split,
-  .homepage .frontpage .platforms {
+  .frontpage {
     flex: 100%;
     margin: 0 1rem;
   }
@@ -260,9 +263,8 @@ section.frontpage h2 {
     padding: 1rem 0;
   }
 
-  .homepage .frontpage .platforms .ProjectImageRight {
-    right: 15%;
-    z-index: 1;
+  section.frontpage.projects .project {
+    flex: 100%;
   }
 }
 
@@ -289,84 +291,4 @@ section.frontpage h2 {
   .box {
     min-width: 51vw;
   }
-
-  section.frontpage.projects .project h1 {
-    text-align: center;
-  }
-
-  section.frontpage.projects .project {
-    flex-direction: column;
-  }
-
-  section.frontpage.projects .project p:nth-child(2) {
-    text-align: center;
-  }
-
-  section.frontpage.projects .project p:nth-child(3) {
-    text-align: center;
-  }
-
-  .frontpage .platforms {
-    flex: 50%;
-  }
-}
-
-section.frontpage.camelProjects {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.frontpage .platforms {
-  flex: 33%;
-  padding: 0.5rem 0;
-}
-
-.frontpage .platforms div {
-  padding: 0 1rem;
-}
-
-.frontpage .platforms h2 {
-  text-align: center;
-  text-transform: capitalize;
-  width: 100%;
-  color: var(--heading-font-color);
-}
-
-.frontpage .platforms p {
-  text-align: center;
-}
-
-.frontpage .platforms .ProjectImages {
-  position: relative;
-  width: 100%;
-  height: 180px;
-}
-
-.frontpage .platforms .camelImage,
-.frontpage .platforms .ProjectImageRight {
-  width: 6rem;
-  height: 180px;
-  position: absolute;
-}
-
-.frontpage .platforms .ProjectImages img {
-  margin: 10px -3px;
-  padding: 0;
-}
-
-.frontpage .platforms .ProjectImageRight {
-  right: 10%;
-  z-index: 1;
-}
-
-.frontpage .platforms .camelImage {
-  left: 25%;
-}
-
-.frontpage .platforms .camelImagelogo {
-  width: 6rem;
-  margin: 0 auto;
-  position: relative;
-  left: 33%;
-  height: 180px;
 }
