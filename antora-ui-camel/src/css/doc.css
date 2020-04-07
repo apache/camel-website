@@ -198,12 +198,12 @@
   padding: 0.5rem;
 }
 
-.doc table.tableblock th {
+.doc table.tableblock thead {
   border-bottom: 2.5px solid var(--table-border-color);
+  text-align: left;
 }
 
 .doc table.tableblock td {
-  border-top: 1px solid var(--table-border-color);
   border-bottom: 1px solid var(--table-border-color);
 }
 
@@ -661,4 +661,9 @@ kbd,
   .doc thead code {
     font-size: var(--body-font-size);
   }
+}
+
+table.tableblock thead {
+  background: var(--color-smoke-90);
+  font-weight: var(--body-font-weight-bold);
 }

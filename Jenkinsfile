@@ -39,6 +39,7 @@ pipeline {
         ANTORA_CACHE_DIR  = "$WORKSPACE/.antora-cache"
         YARN_CACHE_FOLDER = "$WORKSPACE/.yarn-cache"
         HUGO_CACHE_DIR    = "$WORKSPACE/.hugo-cache"
+        CAMEL_ENV         = 'production'
     }
 
     stages {

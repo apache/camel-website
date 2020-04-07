@@ -60,6 +60,7 @@
     "stylelint-config-standard": "~18.3",
     "svg4everybody": "^2.1.9",
     "through2": "~3.0",
+    "toml": "^3.0.0",
     "typeface-droid-sans-mono": "^0.0.44",
     "undertaker": "~1.2",
     "vinyl-buffer": "~1.0",
