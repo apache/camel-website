@@ -667,3 +667,7 @@ table.tableblock thead {
   background: var(--color-smoke-90);
   font-weight: var(--body-font-weight-bold);
 }
+
+.doc table.tableblock td:nth-child(1) {
+  font-weight: var(--body-font-weight-bold);
+}
