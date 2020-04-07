@@ -2,10 +2,5 @@
 /node_modules/
 /public/
 .yarn
-<<<<<<< HEAD
-yarn.lock
-yarn-error.log
-=======
 yarn-error.log
 
->>>>>>> master

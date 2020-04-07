@@ -30,16 +30,5 @@
   },
   "installConfig": {
     "pnp": true
-<<<<<<< HEAD
-  },
-  "dependencies": {
-    "algoliasearch": "^4.0.3",
-    "handlebars": "~4.1",
-    "hugo": "^0.0.3",
-    "toml": "~3.0",
-    "unzipper": "~0.10",
-    "yaml": "~1.6"
-=======
->>>>>>> upstream/master
   }
 }
