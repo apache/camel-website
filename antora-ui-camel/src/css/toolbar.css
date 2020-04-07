@@ -9,7 +9,7 @@
   justify-content: flex-start;
   position: sticky;
   top: var(--navbar-height);
-  z-index: var(--z-index-toolbar);
+  z-index: -1;
 }
 
 .toolbar a {
