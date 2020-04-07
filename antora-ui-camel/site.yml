@@ -1,0 +1,11 @@
+site:
+  title: Antora Docs
+content:
+  sources:
+  - url: ./workspace/antora
+    branches: master
+    start_path: docs
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true

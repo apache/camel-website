@@ -1,0 +1,227 @@
+baseURL = "https://camel.apache.org/"
+languageCode = "en-us"
+title = "Apache Camel"
+relativeURLs = true
+disablePathToLower = true
+staticDir = ["static", "documentation"]
+disableKinds = ["taxonomyTerm"]
+enableRobotsTXT = true
+timeout = 300000
+
+[params]
+    socialProfiles = ["https://twitter.com/ApacheCamel"]
+    organizationLogo = "https://camel.apache.org/_/img/logo-d.svg"
+    organizationDescription = "Apache Camel ™ is a versatile open-source integration framework based on known Enterprise Integration Patterns. Camel empowers you to define routing and mediation rules in a variety of domain-specific languages, including a Java-based Fluent API, Spring or Blueprint XML Configuration files, and a Scala DSL."
+
+[[menu.main]]
+    name = "Blog"
+    weight = 2
+    identifier = "blog"
+    url = "/blog/"
+
+[[menu.main]]
+    name = "Projects"
+    weight = 3
+    identifier = "projects"
+
+[[menu.main]]
+    name = "Camel K"
+    parent = "projects"
+    weight = 1
+    identifier = "project-camel-k"
+    url = "/projects/camel-k/"
+
+[[menu.main]]
+    name = "Camel Quarkus"
+    parent = "projects"
+    weight = 2
+    identifier = "project-camel-quarkus"
+    url = "/projects/camel-quarkus/"
+
+[[menu.main]]
+    name = "Camel Kafka Connector"
+    parent = "projects"
+    weight = 3
+    identifier = "project-camel-kafka-connector"
+    url = "/projects/camel-kafka-connector/"
+
+[[menu.main]]
+    name = "Camel Spring Boot"
+    parent = "projects"
+    weight = 4
+    identifier = "project-camel-spring-boot"
+    url = "/camel-spring-boot/latest/"
+
+[[menu.main]]
+    name = "Documentation"
+    identifier = "docs"
+    weight = 4
+
+[[menu.main]]
+    name = "Getting started"
+    parent = "docs"
+    weight = 1
+    identifier = "getting-started"
+    url = "/manual/latest/getting-started.html"
+
+[[menu.main]]
+    name = "User manual"
+    parent = "docs"
+    weight = 2
+    identifier = "manual"
+    url = "/manual/latest/"
+
+[[menu.main]]
+    name = "Component reference"
+    parent = "docs"
+    weight = 3
+    identifier = "components"
+    url = "/components/latest/"
+
+[[menu.main]]
+    name = "API Documentation"
+    parent = "docs"
+    weight = 4
+    identifier = "api-documentation"
+    url = "https://www.javadoc.io/doc/org.apache.camel/camel-api/latest/index.html" 
+
+[[menu.main]]
+    name = "Camel K"
+    parent = "docs"
+    weight = 5
+    identifier = "camel-k"
+    url = "/camel-k/latest/"
+
+[[menu.main]]
+    name = "Camel Quarkus"
+    parent = "docs"
+    weight = 6
+    identifier = "camel-quarkus"
+    url = "/camel-quarkus/latest/"
+
+[[menu.main]]
+    name = "Camel Kafka Connector"
+    parent = "docs"
+    weight = 7
+    identifier = "camel-kafka-connector"
+    url = "/camel-kafka-connector/latest/"
+
+[[menu.main]]
+    name = "Enterprise Integration Patterns"
+    parent = "docs"
+    weight = 8
+    identifier = "eip"
+    url = "/manual/latest/enterprise-integration-patterns.html"
+
+[[menu.main]]
+    name = "Camel 2.x to 3.0 Migration Guide"
+    parent = "docs"
+    weight = 9
+    identifier = "camel-3-migration-guide"
+    url = "/manual/latest/camel-3-migration-guide.html"
+
+[[menu.main]]
+    name = "Camel 3.x Upgrade Guide"
+    parent = "docs"
+    weight = 10
+    identifier = "camel-3x-upgrade-guide"
+    url = "/manual/latest/camel-3x-upgrade-guide.html"
+
+[[menu.main]]
+    name = "Community"
+    identifier = "community"
+    weight = 5
+
+[[menu.main]]
+    name = "Support"
+    parent = "community"
+    weight = 1
+    identifier = "community-support"
+    url = "/community/support/"
+
+[[menu.main]]
+    name = "Contributing"
+    parent = "community"
+    weight = 2
+    identifier = "community-contributing"
+    url = "/manual/latest/contributing.html"
+
+[[menu.main]]
+    name = "User stories"
+    parent = "community"
+    weight = 3
+    identifier = "community-user-stories"
+    url = "/community/user-stories/"
+
+[[menu.main]]
+    name = "Articles"
+    parent = "community"
+    weight = 4
+    identifier = "community-articles"
+    url = "/community/articles/"
+
+[[menu.main]]
+    name = "Books"
+    parent = "community"
+    weight = 5
+    identifier = "community-books"
+    url = "/community/books/"
+
+[[menu.main]]
+    name = "Team"
+    parent = "community"
+    weight = 6
+    identifier = "community-team"
+    url = "/community/team/"
+
+[[menu.main]]
+    name = "Download"
+    weight = 6
+    identifier = "download"
+    url = "/download/"
+
+[[menu.main]]
+    name = "About"
+    identifier = "about"
+    weight = 7
+
+[[menu.main]]
+    name = "Apache events"
+    parent = "about"
+    weight = 1
+    identifier = "about-apache-events"
+    url = "https://www.apache.org/events/current-event.html"
+
+[[menu.main]]
+    name = "License"
+    parent = "about"
+    weight = 2
+    identifier = "about-license"
+    url = "https://www.apache.org/licenses/"
+
+[[menu.main]]
+    name = "Security"
+    parent = "about"
+    weight = 3
+    identifier = "about-security"
+    url = "/security/"
+
+[[menu.main]]
+    name = "Sponsorship"
+    parent = "about"
+    weight = 4
+    identifier = "about-sponsorship"
+    url = "https://www.apache.org/foundation/sponsorship.html"
+
+[[menu.main]]
+    name = "Thanks"
+    parent = "about"
+    weight = 5
+    identifier = "about-thanks"
+    url = "https://www.apache.org/foundation/thanks.html"
+
+[module]
+
+  [[module.mounts]]
+    source = "documentation/_/data"
+    target = "data"
