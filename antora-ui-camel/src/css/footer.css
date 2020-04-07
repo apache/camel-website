@@ -76,9 +76,9 @@ footer .footer dl dd {
 
 .footer-tools {
   position: relative;
+  top: -2rem;
   height: 0;
   text-align: right;
-  top: -2rem;
 }
 
 .footer-tools a {
