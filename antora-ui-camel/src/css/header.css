@@ -416,8 +416,8 @@ body {
 
 #search-cancel {
   position: relative;
-  bottom: calc(50% - var(--body-font-size--desktop) / 7.5);
-  left: calc(100% - var(--body-font-size--desktop) / 0.9);
+  bottom: calc(50% - 0.15rem);
+  left: calc(100% - 1.25rem);
   height: 1rem;
   display: none;
   cursor: pointer;
