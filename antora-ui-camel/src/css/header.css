@@ -180,6 +180,8 @@ body {
 
   .has-dropdown.is-active > .navbar-dropdown {
     display: block;
+    position: relative;
+    border: none;
   }
 
   .has-dropdown.is-active > .navbar-link::after {
@@ -237,10 +239,6 @@ body {
     padding: 1rem 2rem;
   }
 
-  .navbar-dropdown {
-    display: none;
-  }
-
   .has-dropdown:not(.is-active) > .navbar-dropdown {
     display: none;
   }
@@ -251,6 +249,8 @@ body {
 
   .has-dropdown.is-active > .navbar-dropdown {
     display: block;
+    position: relative;
+    border: none;
   }
 
   .has-dropdown.is-active > .navbar-link::after {
@@ -419,9 +419,9 @@ body {
 
 #search-cancel {
   position: relative;
-  bottom: 1.4rem;
-  left: 10.6rem;
-  height: 1.1rem;
+  bottom: calc(50% - 0.15rem);
+  left: calc(100% - 1.25rem);
+  height: 1rem;
   display: none;
   cursor: pointer;
 }
@@ -429,7 +429,6 @@ body {
 #search_results {
   top: 3.38rem;
   background: #fffe;
-  padding: 0.5rem;
   text-align: left;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
   position: absolute;
@@ -440,11 +439,35 @@ body {
 
 .result_header {
   font-weight: 600;
+  color: var(--color-asf-dark-blue);
+  padding-right: 0.5rem;
+}
+
+#search_results dt {
+  padding: 0.5rem;
+  color: var(--color-camel-orange);
+  text-transform: uppercase;
+  border-top: 1px solid var(--navbar-search-result-separator);
+  border-bottom: 1px solid var(--navbar-search-result-separator);
+}
+
+#search_results a {
+  padding: 0.5rem;
+}
+
+#search_results a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-gray-10);
 }
 
 .result_summary {
-  padding: 0.5rem;
-  color: black;
+  color: var(--color-jet-50);
+  padding-top: 0.3rem;
+}
+
+.algolia-docsearch-suggestion--highlight {
+  font-weight: bold;
+  color: var(--color-jet-50);
 }
 
 .results-hidden #search_results {

@@ -137,6 +137,11 @@ To build the website go to the project root directory and run:
     $ yarn install # needed only once, or if dependencies change
     $ yarn build   # to perform the build
 
+In case `yarn build` throws the error: **JavaScript heap out of memory**, the issue can be resolved by increasing the memory used by node.js by setting `NODE_OPTIONS` environment variable to include `--max_old_space_size`, for example to increase the old space to 4GB do:
+
+```shell
+$ export NODE_OPTIONS="--max_old_space_size=4096"
+```
 This should fetch doc sources for [Camel](https://github.com/apache/camel) and [Camel K](https://github.com/apache/camel-k)
 and generate the website with Hugo. You should see the generated website in the `public` directory.
 
@@ -157,7 +162,7 @@ Point your favorite browser to `http://localhost:1313/` and you will see the Apa
 
 Changes that are made to the content managed by Hugo (i.e. content, layouts, config.toml) are applied automatically and reloaded in the browser. To make changes to the content managed by Antora, a rebuild needs to be done. The same is true for the CSS changes in the `antora-ui-camel`. To rebuild you can run, in another terminal window, from the root directory of the website:
 
-    $ (cd antora-ui-camel && yarn build) && yarn antora --require ./menu.js site.yml
+    $ (cd antora-ui-camel && yarn build) && yarn antora  --clean --fetch antora-playbook.yml
 
 This will build the `antora-ui-camel` which holds all the CSS and JavaScript, and then rebuild the documentation, resulting in an updated content in the `documentation` directory.
 
