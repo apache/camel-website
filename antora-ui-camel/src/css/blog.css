@@ -46,6 +46,7 @@ article.blog p {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
+  padding-bottom: 2rem;
 }
 
 .blog .post aside .summary {
@@ -145,6 +146,7 @@ article.blog p {
 
   .blog .post {
     flex-direction: row;
+    padding-bottom: 2rem;
   }
 
   .blog .post aside {

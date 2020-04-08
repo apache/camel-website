@@ -239,7 +239,7 @@ section.frontpage h2 {
 
 .split {
   flex: 50%;
-  padding: 1rem 0;
+  padding: 1rem 0 2rem 0;
 }
 
 .split img {
