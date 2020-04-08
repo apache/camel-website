@@ -46,7 +46,12 @@
           const data = hits.reduce((data, hit) => {
             const d = {}
             d.url = hit.url
-            d.breadcrumbs = Object.values(hit.hierarchy).slice(1).filter((lvl) => lvl !== null).join(' &raquo; ')
+            var breadcrumbs = Object.values(hit.hierarchy).slice(1).filter((lvl) => lvl !== null).join(' &raquo; ')
+            if (breadcrumbs !== '') {
+              d.breadcrumbs = breadcrumbs
+            } else {
+              d.breadcrumbs = hit.hierarchy.lvl0
+            }
             if (hit._snippetResult !== undefined) {
               d.snippet = hit._snippetResult.content.value
             } else {
@@ -65,7 +70,7 @@
         .then((data) => {
           if (Object.entries(data).length === 0 && data.constructor === Object) {
             return `
-              <header>Nothing Found</header>
+              <header class="no_search_results">Nothing Found</header>
               `
           } else {
             return `
