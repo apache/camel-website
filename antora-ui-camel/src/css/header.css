@@ -462,6 +462,11 @@ body {
   padding-top: 0.3rem;
 }
 
+.no_search_results {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
 .algolia-docsearch-suggestion--highlight {
   font-weight: bold;
   color: var(--color-jet-50);
