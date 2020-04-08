@@ -671,3 +671,7 @@ table.tableblock thead {
 .doc table.tableblock td:nth-child(1) {
   font-weight: var(--body-font-weight-bold);
 }
+
+.doc .sect1 table.tableblock td:nth-child(2) {
+  font-weight: bold;
+}
