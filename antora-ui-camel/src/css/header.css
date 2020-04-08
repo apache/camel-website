@@ -211,6 +211,8 @@ body {
 
   .has-dropdown.is-active > .navbar-dropdown {
     display: block;
+    position: relative;
+    border: none;
   }
 
   .navbar-item.navbar-topics,
@@ -248,7 +250,7 @@ body {
     right: 0;
     padding: 1rem 2rem;
   }
-
+  
   .navbar-dropdown {
     display: none;
     top: 105%;
@@ -266,6 +268,8 @@ body {
 
   .has-dropdown.is-active > .navbar-dropdown {
     display: block;
+    position: relative;
+    border: none;
   }
 
   .has-dropdown.is-active > .navbar-link::after {
@@ -348,7 +352,7 @@ body {
 
   .navbar-end {
     justify-content: flex-end;
-    margin-left: auto;
+    margin-left: 2rem;
   }
 
   .navbar-dropdown {
@@ -414,6 +418,7 @@ body {
   font-family: Open Sans, sans-serif;
   caret-color: #ed8225;
   background: no-repeat 0.2rem/1.2rem url(../img/search.svg);
+  width: 8.75rem;
 }
 
 .navbar-search input:focus-within {
@@ -426,12 +431,20 @@ body {
   }
 }
 
+#search-cancel {
+  position: relative;
+  bottom: 1.4rem;
+  left: 10.6rem;
+  height: 1.1rem;
+  display: none;
+  cursor: pointer;
+}
+
 #search_results {
   top: 3.31rem;
   background: #fffe;
-  padding: 0.5rem;
   text-align: left;
-  box-shadow: 0.1px 0.2em 2.5em #c4c4c4;
+  border: 1px solid var(--color-gray-10);
   position: absolute;
   margin-right: 10px;
   overflow-y: auto;
@@ -440,11 +453,35 @@ body {
 
 .result_header {
   font-weight: 600;
+  color: var(--color-asf-dark-blue);
+  padding-right: 0.5rem;
+}
+
+#search_results dt {
+  padding: 0.5rem;
+  color: var(--color-camel-orange);
+  text-transform: uppercase;
+  border-top: 1px solid var(--navbar-search-result-separator);
+  border-bottom: 1px solid var(--navbar-search-result-separator);
+}
+
+#search_results a {
+  padding: 0.5rem;
+}
+
+#search_results a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-gray-10);
 }
 
 .result_summary {
-  padding: 0.5rem;
-  color: black;
+  color: var(--color-jet-50);
+  padding-top: 0.3rem;
+}
+
+.algolia-docsearch-suggestion--highlight {
+  font-weight: bold;
+  color: var(--color-jet-50);
 }
 
 .results-hidden #search_results {
@@ -480,9 +517,20 @@ body {
   }
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1230px) {
+  .navbar-end {
+    justify-content: flex-end;
+    margin-left: 1rem;
+  }
+}
+
 /* Styling for mobile use */
-@media (max-width: 610px) {
+@media (max-width: 1175px) {
   #search {
+    display: none;
+  }
+
+  #search-cancel {
     display: none;
   }
 }

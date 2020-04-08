@@ -1,7 +1,13 @@
 const gulp = require('gulp');
 const htmlmin = require('gulp-htmlmin');
+const env = process.env.CAMEL_ENV || 'development'
 
-gulp.task('minify', () => {
+gulp.task('minify', (done) => {
+  if (env !== 'production') {
+    done();
+    return;
+  }
+
   return gulp.src('public/**/*.html')
     .pipe(htmlmin({
       collapseBooleanAttributes: true,

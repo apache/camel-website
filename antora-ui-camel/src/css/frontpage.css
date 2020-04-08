@@ -149,31 +149,35 @@ section.frontpage.columns {
 
 section.frontpage.projects {
   display: flex;
-  flex-direction: column;
-  border-top: 1px solid var(--color-smoke-50);
+  flex-flow: wrap;
   padding-top: 3rem;
+  border-top: 1px solid var(--color-smoke-50);
 }
 
 section.frontpage.projects .project {
   display: flex;
-  flex-direction: row;
+  flex: 1 0 33%;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
 
-section.frontpage.projects .project h1 {
-  text-align: right;
-  padding: 0 1rem;
-  flex: 1;
+section.frontpage.projects .project a img {
+  display: inline-block;
+  width: auto;
+  height: 5rem;
 }
 
-section.frontpage.projects .project p {
-  flex: 1;
-  margin: 1rem;
+section.frontpage.projects .project .links {
+  white-space: nowrap;
 }
 
-section.frontpage.projects .project a.significant {
-  margin: 0.5rem 0;
-  padding: 0.4rem 1rem;
-  font-size: 0.8rem;
+section.frontpage.projects .project a img + img {
+  padding-left: 1rem;
+}
+
+section.frontpage.projects .project h1 + p {
+  height: 100%;
 }
 
 section.frontpage.apache {
@@ -220,7 +224,6 @@ section.frontpage h2 {
   padding: 1.8rem;
   text-align: center;
   margin: 1rem;
-  border: 1px solid var(--color-smoke-50);
   height: 100%;
 }
 
@@ -236,7 +239,7 @@ section.frontpage h2 {
 
 .split {
   flex: 50%;
-  padding: 1rem 0;
+  padding: 1rem 0 2rem 0;
 }
 
 .split img {
@@ -244,7 +247,8 @@ section.frontpage h2 {
 }
 
 @media screen and (max-width: 626px) {
-  .split {
+  .split,
+  .frontpage {
     flex: 100%;
     margin: 0 1rem;
   }
@@ -257,6 +261,10 @@ section.frontpage h2 {
 
   .box {
     padding: 1rem 0;
+  }
+
+  section.frontpage.projects .project {
+    flex: 100%;
   }
 }
 
@@ -282,21 +290,5 @@ section.frontpage h2 {
 
   .box {
     min-width: 51vw;
-  }
-
-  section.frontpage.projects .project h1 {
-    text-align: center;
-  }
-
-  section.frontpage.projects .project {
-    flex-direction: column;
-  }
-
-  section.frontpage.projects .project p:nth-child(2) {
-    text-align: center;
-  }
-
-  section.frontpage.projects .project p:nth-child(3) {
-    text-align: center;
   }
 }
