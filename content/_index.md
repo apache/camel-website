@@ -71,14 +71,14 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 
 {{< div "project" >}}
 
-[![Camel](/_/img/logo-d.svg)](/camel/latest/)
+[![Camel](/_/img/logo-d.svg)](/manual/latest/)
 
 # Camel
 
 **Apache Camel** is the *Swiss knife* of integration. 
 
 {{< div "links" >}}
-[Documentation](/manual/latest) | [Components](/components/latest/) | [Patterns](/components/latest/eips/enterprise-integration-patterns.html)
+[Documentation](/manual/latest/) | [Components](/components/latest/) | [Patterns](/components/latest/eips/enterprise-integration-patterns.html)
 {{< /div >}}
 
 {{< /div >}}
