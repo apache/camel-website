@@ -33,31 +33,31 @@ Configuring Camel via Camel Main (standalone), Quarkus, Spring Boot etc via appl
 
 The `@ProjectInject` annotation is now capable of auto creating POJO beans from external configurations and inject into your code. The use-cases are for configurations where you want both external configurations and code; for example:
 
-----
-    @BindToRegistry
-    public static AmazonS3 minioClient(
-            @PropertyInject("minio") MinioConfig config) {
-    
-        var endpoint = new AwsClientBuilder.EndpointConfiguration(config.getAddress(), "US_EAST_1");
-        var credentials = new BasicAWSCredentials(config.getAccessKey(), config.getSecretKey());
-        var credentialsProvider = new AWSStaticCredentialsProvider(credentials);
-    
-        return AmazonS3ClientBuilder
-            .standard()
-            .withEndpointConfiguration(endpoint)
-            .withCredentials(credentialsProvider)
-            .withPathStyleAccessEnabled(true)
-            .build();
-    }
-----
+```java
+@BindToRegistry
+public static AmazonS3 minioClient(
+        @PropertyInject("minio") MinioConfig config) {
+
+    var endpoint = new AwsClientBuilder.EndpointConfiguration(config.getAddress(), "US_EAST_1");
+    var credentials = new BasicAWSCredentials(config.getAccessKey(), config.getSecretKey());
+    var credentialsProvider = new AWSStaticCredentialsProvider(credentials);
+
+    return AmazonS3ClientBuilder
+        .standard()
+        .withEndpointConfiguration(endpoint)
+        .withCredentials(credentialsProvider)
+        .withPathStyleAccessEnabled(true)
+        .build();
+}
+```
 
 And `minio` is a POJO class that is configured with options from `application.properties`:
 
-----
-    minio.address = http://my-minio.com
-    minio.access-key = ...
-    minio.secret-key = ...
-----
+```
+minio.address = http://my-minio.com
+minio.access-key = ...
+minio.secret-key = ...
+```
 
 All the components now include all their options that can be configured (incl nested). Before these options was only available when using Camel on Spring Boot. They are now generally available and can therefore be configured everywhere, such as Camel Main, Camel Quarkus, Camel Kafka Connector, and via Component DSL. 
 
