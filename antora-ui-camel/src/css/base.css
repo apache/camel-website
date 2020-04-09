@@ -1,8 +1,6 @@
 html,
 body {
   height: 100%;
-  display: flex;
-  flex-direction: column;
   scroll-padding-top: var(--body-top);
 }
 
