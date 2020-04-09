@@ -123,6 +123,7 @@
   --footer-background: var(--color-smoke-90);
   --footer-font-color: var(--color-gray-70);
   --footer-link-font-color: var(--color-jet-80);
+  --footer-height: 23rem; /* empirically corresponding current design of the foooter */
   /* dimensions */
   --navbar-height: calc(73 / var(--rem-base) * 1rem);
   --toolbar-height: calc(45 / var(--rem-base) * 1rem);
