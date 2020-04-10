@@ -23,6 +23,7 @@
     "@antora/playbook-builder": "2.3.0-beta.2",
     "@antora/site-generator-default": "2.3.0-beta.2",
     "@antora/xref-validator": "gitlab:antora/xref-validator",
+    "@djencks/asciidoctor-antora-indexer": "^0.0.2",
     "escape-string-regexp": "~2.0",
     "gulp": "~4.0",
     "gulp-htmlmin": "~5.0",
