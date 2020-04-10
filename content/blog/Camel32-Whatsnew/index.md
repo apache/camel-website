@@ -29,14 +29,13 @@ We also did some internal optimizations around creating endpoints and avoid exce
 
 There were also some optimizations in the type converter and inners of Camel that makes Camel quicker and reduced number of methods executed during routing.
 
-Configuring Camel via Camel Main (standalone), Quarkus, Spring Boot etc via application.properties now allows to configure using wildcards (*) to configure bulk components. For example to specify AWS credential on all AWS components.
+Configuring Camel via Camel Main (standalone), Quarkus, Spring Boot etc via `application.properties` now allows to configure using wildcards (*) to configure bulk components. For example to specify AWS credential on all AWS components.
 
-The `@ProjectInject` annotation is now capable of auto creating POJO beans from external configurations and inject into your code. The use-cases are for configurations where you want both external configurations and code; for example:
+The `@ProjectInject` annotation is now capable of auto creating POJO beans from external configurations and inject into your code. The use-cases are for configurations where you want both external configurations and code; for example `MinioConfig` as the POJO while setting up a `AmazonS3` bean instance in the code:
 
 ```java
 @BindToRegistry
-public static AmazonS3 minioClient(
-        @PropertyInject("minio") MinioConfig config) {
+public static AmazonS3 minioClient(@PropertyInject("minio") MinioConfig config) {
 
     var endpoint = new AwsClientBuilder.EndpointConfiguration(config.getAddress(), "US_EAST_1");
     var credentials = new BasicAWSCredentials(config.getAccessKey(), config.getSecretKey());
@@ -54,9 +53,9 @@ public static AmazonS3 minioClient(
 And `minio` is a POJO class that is configured with options from `application.properties`:
 
 ```
-minio.address = http://my-minio.com
-minio.access-key = ...
-minio.secret-key = ...
+camel.beans.minio.address = http://my-minio.com
+camel.beans.minio.access-key = ...
+camel.beans.minio.secret-key = ...
 ```
 
 All the components now include all their options that can be configured (incl nested). Before these options was only available when using Camel on Spring Boot. They are now generally available and can therefore be configured everywhere, such as Camel Main, Camel Quarkus, Camel Kafka Connector, and via Component DSL. 
@@ -68,7 +67,7 @@ All the AWS components is now completed as a set of components that uses the AWS
 Running Camel on OSGi with Apache Karaf has been moved out to its own sub-project camel-karaf.
 This has been done for other runtimes as well such as Spring Boot or Quarkus.
 
-And then all the usual stuff with 3rd party dependency upgrades, new components, and other improvements.
+And then all the usual stuff with 3rd party dependency upgrades, bug fixes, new components, and other improvements.
 
 But in this blog we wanted to spill out details about the heavy work that are ongoing to make Camel awesome for today and tomorrows modern Java workloads.
 
