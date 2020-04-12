@@ -68,5 +68,5 @@ asciidoc:
     - ./extensions/table.js
     - ./extensions/inline-styles.js
   attributes:
-    camel-quarkus-last-release: 1.0.0-M5
+    camel-quarkus-last-release: 1.0.0-M6
     eip-vc: latest@components
