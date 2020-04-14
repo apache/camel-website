@@ -15,7 +15,12 @@
     "checks": "run-s check:*"
   },
   "devDependencies": {
+    "@antora/asciidoc-loader": "2.3.0-beta.2",
     "@antora/cli": "2.3.0-beta.2",
+    "@antora/content-aggregator": "2.3.0-beta.2",
+    "@antora/content-classifier": "2.3.0-beta.2",
+    "@antora/document-converter": "2.3.0-beta.2",
+    "@antora/playbook-builder": "2.3.0-beta.2",
     "@antora/site-generator-default": "2.3.0-beta.2",
     "@antora/xref-validator": "gitlab:antora/xref-validator",
     "escape-string-regexp": "~2.0",
@@ -27,6 +32,13 @@
     "npm-run-all": "~4.1",
     "opal-runtime": "1.0.11",
     "toml": "~3.0"
+  },
+  "resolutions": {
+    "@antora/asciidoc-loader": "2.3.0-beta.2",
+    "@antora/content-aggregator": "2.3.0-beta.2",
+    "@antora/content-classifier": "2.3.0-beta.2",
+    "@antora/document-converter": "2.3.0-beta.2",
+    "@antora/playbook-builder": "2.3.0-beta.2"
   },
   "installConfig": {
     "pnp": true

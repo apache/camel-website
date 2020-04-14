@@ -2,13 +2,6 @@
 # yarn lockfile v1
 
 
-"@antora/asciidoc-loader@2.2.0", "@antora/asciidoc-loader@~2.2":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@antora/asciidoc-loader/-/asciidoc-loader-2.2.0.tgz#93b7825bfd7271415f188393a990671f4fadfe4a"
-  integrity sha512-dwKXao6eqbAh8O7OS1ZUgVHmbfl38z7RzBCM6DbTb1VODk1HGIgp6gxauGmy5rBvjrJTtz7M1Dxs+BzBApeyMw==
-  dependencies:
-    asciidoctor.js "1.5.9"
-
 "@antora/asciidoc-loader@2.3.0-beta.2":
   version "2.3.0-beta.2"
   resolved "https://registry.yarnpkg.com/@antora/asciidoc-loader/-/asciidoc-loader-2.3.0-beta.2.tgz#62612b055eaa6576426b45495df7679bf6e08274"
@@ -44,24 +37,6 @@
     vinyl "~2.2"
     vinyl-fs "~3.0"
 
-"@antora/content-aggregator@~2.2":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@antora/content-aggregator/-/content-aggregator-2.2.0.tgz#7fb6db98102dc97793a7cf66a346a4ba070f7751"
-  integrity sha512-Dd3jvjIty75G5X04lf6XFK8wKwKo1bfJfafsvwwJuApILASt0Nrv+Z3O+rfc4MhaswgZNqVBrEcSJW9BJxXPtw==
-  dependencies:
-    "@antora/expand-path-helper" "~1.0"
-    cache-directory "~2.0"
-    fs-extra "~8.1"
-    isomorphic-git "0.70.4"
-    js-yaml "~3.13"
-    lodash "~4.17"
-    matcher "~2.0"
-    mime-types "~2.1"
-    multi-progress "~2.0"
-    through2 "~3.0"
-    vinyl "~2.2"
-    vinyl-fs "~3.0"
-
 "@antora/content-classifier@2.3.0-beta.2":
   version "2.3.0-beta.2"
   resolved "https://registry.yarnpkg.com/@antora/content-classifier/-/content-classifier-2.3.0-beta.2.tgz#b696f40be27b8c2923ebb0976302047ff61fe032"
@@ -70,27 +45,12 @@
     "@antora/asciidoc-loader" "2.3.0-beta.2"
     vinyl "~2.2"
 
-"@antora/content-classifier@~2.2":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@antora/content-classifier/-/content-classifier-2.2.0.tgz#bc6206f575105a6c62a9d75e1fb0dd3c91503905"
-  integrity sha512-cVoL7aR619FNFN3bKiiFhLinaFktQ06OmMG+QMJW0tNRaeI1ATYtrpUvwG5KVuciwDZFKp+GboRUoud0OGLfJQ==
-  dependencies:
-    lodash "~4.17"
-    vinyl "~2.2"
-
 "@antora/document-converter@2.3.0-beta.2":
   version "2.3.0-beta.2"
   resolved "https://registry.yarnpkg.com/@antora/document-converter/-/document-converter-2.3.0-beta.2.tgz#9bc0a91eac02fbb3088242fd9bf1adfd38f9e3ac"
   integrity sha512-wy0+czRQC/yoOR75jw+Za4LlWTdlNmni/tap726dqUbf2A5/fHTc5OkNaVnUdWiQMnB9UBelp56GXJoa0UChOQ==
   dependencies:
     "@antora/asciidoc-loader" "2.3.0-beta.2"
-
-"@antora/document-converter@~2.2":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@antora/document-converter/-/document-converter-2.2.0.tgz#8ca696c62be22555569bc25db5a3be4613ec3a00"
-  integrity sha512-Ka3moJL5HRoaHUz6U1s9M36WGJg8vUmlQziUpKsC96GbgWyiNXIvNwvQN9kdAW0AXR1CNpIcZ8sl7ygIaa7pLA==
-  dependencies:
-    "@antora/asciidoc-loader" "2.2.0"
 
 "@antora/expand-path-helper@~1.0":
   version "1.0.0"
@@ -119,18 +79,6 @@
   dependencies:
     "@iarna/toml" "~2.2"
     camelcase-keys "~6.2"
-    convict "~5.2"
-    deep-freeze-node "~1.1"
-    js-yaml "~3.13"
-    json5 "~2.1"
-
-"@antora/playbook-builder@~2.2":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@antora/playbook-builder/-/playbook-builder-2.2.0.tgz#782275ffafdfb0b44ed8d5a941e495d8100789e2"
-  integrity sha512-GIbkyCnwdTJVHYwSEG4d6Px2Uh/zBiwLXK7zGsaMY4/DmbYBKzNK4xpt7fHXvIw2IyH9GA1XRQ7+vpBSg8VP8w==
-  dependencies:
-    "@iarna/toml" "~2.2"
-    camelcase-keys "~6.1"
     convict "~5.2"
     deep-freeze-node "~1.1"
     js-yaml "~3.13"
@@ -199,14 +147,8 @@
     vinyl-fs "~3.0"
 
 "@antora/xref-validator@gitlab:antora/xref-validator":
-  version "1.0.0-alpha.5"
-  resolved "https://gitlab.com/antora/xref-validator/repository/archive.tar.gz?ref=04536c7589848a3c720773ee00b59044c9c1b4cc"
-  dependencies:
-    "@antora/asciidoc-loader" "~2.2"
-    "@antora/content-aggregator" "~2.2"
-    "@antora/content-classifier" "~2.2"
-    "@antora/document-converter" "~2.2"
-    "@antora/playbook-builder" "~2.2"
+  version "1.0.0-alpha.6"
+  resolved "https://gitlab.com/antora/xref-validator/repository/archive.tar.gz?ref=38a12fe000235f67180770899164000d6ffd34b4"
 
 "@babel/code-frame@^7.0.0":
   version "7.8.3"
@@ -708,15 +650,6 @@ camel-case@3.0.x:
   dependencies:
     no-case "^2.2.0"
     upper-case "^1.1.1"
-
-camelcase-keys@~6.1:
-  version "6.1.2"
-  resolved "https://registry.yarnpkg.com/camelcase-keys/-/camelcase-keys-6.1.2.tgz#531a289aeea93249b63ec1249db9265f305041f7"
-  integrity sha512-QfFrU0CIw2oltVvpndW32kuJ/9YOJwUnmWrjlXt1nnJZHCaS9i6bfOpg9R4Lw8aZjStkJWM+jc0cdXjWBgVJSw==
-  dependencies:
-    camelcase "^5.3.1"
-    map-obj "^4.0.0"
-    quick-lru "^4.0.1"
 
 camelcase-keys@~6.2:
   version "6.2.2"
@@ -2610,27 +2543,6 @@ isobject@^3.0.0, isobject@^3.0.1:
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
   integrity sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
 
-isomorphic-git@0.70.4:
-  version "0.70.4"
-  resolved "https://registry.yarnpkg.com/isomorphic-git/-/isomorphic-git-0.70.4.tgz#b1b10d0e76c608a623a7113fba4705d7ff9f1e36"
-  integrity sha512-Nk/iD4iEL35zY1B4l2PgPOJpVgTQzVH9W0oRkKc3vDbMjcfvs7nle4Y8NRghXIG27Z6KQVSTi/om6lTbzpfl+A==
-  dependencies:
-    async-lock "^1.1.0"
-    clean-git-ref "^2.0.1"
-    crc-32 "^1.2.0"
-    diff3 "0.0.3"
-    git-apply-delta "0.0.7"
-    globalyzer "^0.1.4"
-    globrex "^0.1.2"
-    ignore "^5.1.4"
-    marky "^1.2.1"
-    minimisted "^2.0.0"
-    pako "^1.0.10"
-    pify "^4.0.1"
-    readable-stream "^3.4.0"
-    sha.js "^2.4.9"
-    simple-get "^3.0.2"
-
 isomorphic-git@0.78.5:
   version "0.78.5"
   resolved "https://registry.yarnpkg.com/isomorphic-git/-/isomorphic-git-0.78.5.tgz#013f8f8c280b8e0f8bb10ffa251eb87e9bb1190b"
@@ -2708,11 +2620,11 @@ json5@2.1.0:
     minimist "^1.2.0"
 
 json5@~2.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/json5/-/json5-2.1.1.tgz#81b6cb04e9ba496f1c7005d07b4368a2638f90b6"
-  integrity sha512-l+3HXD0GEI3huGq1njuqtzYK8OYJyXMkOLtQ53pjWh89tvWS2h6l+1zMkYWqlb57+SiQodKZyvMEFb2X+KrFhQ==
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/json5/-/json5-2.1.3.tgz#c9b0f7fa9233bfe5807fe66fcf3a5617ed597d43"
+  integrity sha512-KXPvOm8K9IJKFM0bmdn8QXh7udDh1g/giieX0NLCaMnb4hEiVFqnop2ImTXCc5e0/oHz3LTqmHGtExn5hfMkOA==
   dependencies:
-    minimist "^1.2.0"
+    minimist "^1.2.5"
 
 jsonfile@^4.0.0:
   version "4.0.0"
@@ -2880,7 +2792,7 @@ lodash.clonedeep@4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
   integrity sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8=
 
-lodash@^4.15.0, lodash@^4.17.14, lodash@^4.17.15, lodash@~4.17:
+lodash@^4.15.0, lodash@^4.17.14, lodash@^4.17.15:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
@@ -2952,13 +2864,6 @@ matchdep@^2.0.0:
     micromatch "^3.0.4"
     resolve "^1.4.0"
     stack-trace "0.0.10"
-
-matcher@~2.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/matcher/-/matcher-2.0.0.tgz#85fe38d97670dbd2a46590cf099401e2ffb4755c"
-  integrity sha512-nlmfSlgHBFx36j/Pl/KQPbIaqE8Zf0TqmSMjsuddHDg6PMSVgmyW9HpkLs0o0M1n2GIZ/S2BZBLIww/xjhiGng==
-  dependencies:
-    escape-string-regexp "^2.0.0"
 
 matcher@~2.1:
   version "2.1.0"
@@ -3056,10 +2961,10 @@ minimist@0.0.8:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
   integrity sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=
 
-minimist@^1.2.0:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.4.tgz#40357ef9582f8cd42ba8eaa274ddcf27f0c979b7"
-  integrity sha512-wTiNDqe4D2rbTJGZk1qcdZgFtY0/r+iuE6GDT7V0/+Gu5MLpIDm4+CssDECR79OJs/OxLPXMzdxy153b5Qy3hg==
+minimist@^1.2.0, minimist@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
+  integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
 
 minimisted@^2.0.0:
   version "2.0.0"
