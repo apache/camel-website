@@ -69,6 +69,7 @@ pipeline {
                     dir 'camel-website'
                     label "$NODE"
                     reuseNode true
+                    args '-u root'
                 }
             }
 
@@ -88,6 +89,7 @@ pipeline {
                     dir 'camel-website'
                     label "$NODE"
                     reuseNode true
+                    args '-u root'
                 }
             }
 
