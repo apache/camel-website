@@ -173,6 +173,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@djencks/asciidoctor-antora-indexer@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@djencks/asciidoctor-antora-indexer/-/asciidoctor-antora-indexer-0.0.2.tgz#ad1a14b3a58895a2202e456e24ec039fa9da43d3"
+  integrity sha512-1PhltF2Pfj8CrcV3BWe52bG+iZ1BKe1DJSk1EXM56Yn7hFoCnLfvA7i2b+NQy6wIjMwTVM5LVrv2sl50LF4EFQ==
+  dependencies:
+    picomatch "~2.1"
+
 "@iarna/toml@~2.2":
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/@iarna/toml/-/toml-2.2.3.tgz#f060bf6eaafae4d56a7dac618980838b0696e2ab"
@@ -3465,6 +3472,11 @@ pend@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/pend/-/pend-1.2.0.tgz#7a57eb550a6783f9115331fcf4663d5c8e007a50"
   integrity sha1-elfrVQpng/kRUzH89GY9XI4AelA=
+
+picomatch@~2.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.1.1.tgz#ecdfbea7704adb5fe6fb47f9866c4c0e15e905c5"
+  integrity sha512-OYMyqkKzK7blWO/+XZYP6w8hH0LDvkBvdvKukti+7kqYFCiEAk+gI3DWnryapc0Dau05ugGTy0foQ6mqn4AHYA==
 
 picomatch@~2.2:
   version "2.2.2"
