@@ -178,6 +178,7 @@ section.frontpage.projects .project a img + img {
 
 section.frontpage.projects .project h1 + p {
   height: 100%;
+  text-align: center;
 }
 
 section.frontpage.apache {
