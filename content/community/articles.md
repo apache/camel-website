@@ -4,12 +4,12 @@ title: "Articles"
 
 ### Camel Videos (Lang: English, French, Norwegian, Russian, Spannish)
 
-*    [How to quickly run 100 Camels with Apache Camel, Quarkus and GraalVM](https://www.youtube.com/watch?v=4lXSf8DBQkQ) - A 10 minute video from April 2020 where Claus shows how to run Camel in both JVM and Native compiled mode and compare startup speed and memory usage.
-*    [Best Practices for Middleware and Integration Architecture Modernization with Apache Camel](https://www.youtube.com/watch?v=d1Hr78a7Lww) - A 30 minute video from March 2020 where Claus presents Camel 3 and focused on Camel K and Camel Quarkus.
-*    [Metamorphosis: When Kafka meets Camel](https://www.youtube.com/watch?v=hJUl7R2dN00) - A 40 minute video from DevConf.CZ in January 2020 where Otavio Piske and Jakub Scholz introduce Camel and Kafka Connector and talk about how they can work together. 
-*    [Camel Riders in the Cloud](https://developers.redhat.com/video/youtube/zuEYtMvHN6g/) (English) - A 30 minute video from March 2018 where Claus presents using Camel with microservices and containers as cloud native applications, and the best practices around this.
+*   [How to quickly run 100 Camels with Apache Camel, Quarkus and GraalVM](https://www.youtube.com/watch?v=4lXSf8DBQkQ) - A 10 minute video from April 2020 where Claus shows how to run Camel in both JVM and Native compiled mode and compare startup speed and memory usage.
+*   [Best Practices for Middleware and Integration Architecture Modernization with Apache Camel](https://www.youtube.com/watch?v=d1Hr78a7Lww) - A 30 minute video from March 2020 where Claus presents Camel 3 and focused on Camel K and Camel Quarkus.
+*   [Metamorphosis: When Kafka meets Camel](https://www.youtube.com/watch?v=hJUl7R2dN00) - A 40 minute video from DevConf.CZ in January 2020 where Otavio Piske and Jakub Scholz introduce Camel and Kafka Connector and talk about how they can work together. 
+*   [Camel Riders in the Cloud](https://developers.redhat.com/video/youtube/zuEYtMvHN6g/) (English) - A 30 minute video from March 2018 where Claus presents using Camel with microservices and containers as cloud native applications, and the best practices around this.
 *   [Agile Integration with Apache Camel microservices in containers on Kubernetes](https://www.youtube.com/watch?v=9FN4DuBJy8M) (English) - A 45 minute video from fall 2017 where Claus presents at CodeEurope in Poland
-*  [Containerised Integration with Apache Camel](https://www.youtube.com/watch?v=Xkg_AGLV32A&feature=youtu.be) (English) - A 70 minute video from August 2017 where Claus Ibsen present how developers can get started with Kubernetes/OpenShift on a local cluster and build and run Camel microservices in the cluster.
+*   [Containerised Integration with Apache Camel](https://www.youtube.com/watch?v=Xkg_AGLV32A&feature=youtu.be) (English) - A 70 minute video from August 2017 where Claus Ibsen present how developers can get started with Kubernetes/OpenShift on a local cluster and build and run Camel microservices in the cluster.
 *   [Apache Camel - The Integration Library](https://www.youtube.com/watch?v=fxpS9pf6TVk&list=PLUDjw7NbNcoyOyhrIIw9cChAHWdaCxIob&index=17) (English) - A 50 minute video from September 2016 where Claus Ibsen presents Apache Camel at the JDKIO 2016 conference.
 *   [Apache Camel First Steps](https://www.youtube.com/watch?v=jZE-YSHK_gw&sns=tw) (English) - A 10 minute video from December 2015 where Vivian van Zyl gives a high level overview of Apache Camel and demonstrates how to start using Camel with live code demo.
 *   [Fabric8 Camel Microservices for Docker and Kubernetes](https://www.youtube.com/watch?v=ouJ3SQHnQ6I&feature=youtu.be&a) (English) - A 55 minute video from [Riga Dev Day](http://rigadevday.lv/#/index) 2016 conference where Claus Ibsen talks about developing Camel microservices ready for the container platforms.
@@ -45,8 +45,8 @@ Articles are divided into several sections. As the lists grow, further sectionin
 *   [Tutorial: Integrating with Apache Camel](https://jaxenter.com/tutorial-integrating-with-apache-camel-106759.html) _by_ _[Charles Moulliard](https://twitter.com/cmoulliard)_
 *   [Simple DSL OSGi bundle example](http://www.andrejkoelewijn.com/blog/2008/10/19/simple-camel-dsl-osgi-bundle-example/) _by_ _[Andrej Koelewijn](http://www.andrejkoelewijn.com/)_
 *   [CamelOne 2012 leature series](http://camelone.org/camelone-2012/) - All the videos from the [CamelOne 2012 conference](http://fusesource.com/apache-camel-conference-2012) (May 2012) 
-*  [JEEConf 2011 - What riding the Camel can do to make integration easier for you](http://jeeconf.com/program/camel/)(Russian) _by Claus Ibsen_ (May 2011).
-*  [CamelOne 2011 conference](http://camelone.org/camelone-2012/) (May 2011)
+*   [JEEConf 2011 - What riding the Camel can do to make integration easier for you](http://jeeconf.com/program/camel/)(Russian) _by Claus Ibsen_ (May 2011).
+*   [CamelOne 2011 conference](http://camelone.org/camelone-2012/) (May 2011)
 *   [Realization of EAI Patterns with Apache Camel](https://www.researchgate.net/publication/37686328_Realization_of_EAI_Patterns_with_Apache_Camel) _by Pascal Kolb_
 *   [Navigating the Integration Landscape - Claus Ibsen on Apache Camel](http://java.dzone.com/articles/interview-claus-ibsen-about) Claus Ibsen was interviewed at DZone discussing the integration landscape
 *   [Enterprise Integration Pattern with Apache Camel 2.0](http://onjavahell.blogspot.com/2009/05/taking-apache-camel-for-ride.html) _by Julien Dechmann_
@@ -298,7 +298,7 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   [Podcast James Strachan - Mr Apache Camel](http://thecloudevangelist.com/cloud-software/podcast-james-strachan-mr-apache-camel/) - Podcast from February 2013 with James Strachan about Apache Camel, integration and the cloud.
 *   [Developer Interview with Claus Ibsen](http://blog.eisele.net/2014/08/developer-interviews-di-2-claus-ibsen.html) - Video interview August 2014 with Claus Ibsen about Apache Camel, Camel tooling, and about the upcoming Camel release.
 *   [Java Pub House - Episode 62\. Hm, what's the best to travel this holiday? on Apache CAMEL, of course!](http://www.javapubhouse.com/2017/01/episode-62-hm-whats-best-to-travel-this.html) - Podcast from January 2017 talking about what is Apache Camel and sharing real life experience from using it on multiple projects.
-*    [JBoss Asylum #47 - What do you call a Camel with 3 humps](https://asylum.libsyn.com/podcast-46-what-do-you-call-a-camel-with-3-humps) Claus Ibsen and Luca Burgazzoli sits down and talk about what is coming in Camel 3 on topics like Camel K and Camel Quarkus.
+*   [JBoss Asylum #47 - What do you call a Camel with 3 humps](https://asylum.libsyn.com/podcast-46-what-do-you-call-a-camel-with-3-humps) Claus Ibsen and Luca Burgazzoli sits down and talk about what is coming in Camel 3 on topics like Camel K and Camel Quarkus.
 
 
 ### [Books](/community/books/)
