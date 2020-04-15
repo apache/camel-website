@@ -6,35 +6,30 @@ site:
 content:
   sources:
 
+# manual
     - url: git@github.com:apache/camel.git
       branches: master
-      start_paths:
-        # manual
-        - docs/user-manual
-        # eip
-        - core/camel-core-engine/src/main/docs
-        # languages
-        - core/camel-core-languages/src/main/docs
-        - core/camel-xml-jaxp/src/main/docs
-        # main components doc
-        - docs/components
+      start_path: docs/user-manual
 
+# component reference
+## eip
     - url: git@github.com:apache/camel.git
-      branches: camel-3.2.x
-      start_paths:
-        # languages
-        - core/camel-core-languages/src/main/docs
-        - core/camel-xml-jaxp/src/main/docs
-        # main components doc
-        - docs/components
-
+      branches: master, camel-3.2.x
+      start_path: core/camel-core-engine/src/main/docs
+## core languages
+    - url: git@github.com:apache/camel.git
+      branches: master, camel-3.2.x
+      start_path: core/camel-core-languages/src/main/docs
+    - url: git@github.com:apache/camel.git
+      branches: master, camel-3.2.x
+      start_path: core/camel-xml-jaxp/src/main/docs
     - url: git@github.com:apache/camel.git
       branches: camel-2.x
-      start_paths:
-        # main components doc
-        - docs/components
-        # languages
-        - camel-core/src/main/docs
+      start_path: camel-core/src/main/docs
+## main components/dataformats doc
+    - url: git@github.com:apache/camel.git
+      branches: master, camel-3.2.x, camel-2.x
+      start_path: docs/components
 
 # sub-projects
     - url: git@github.com:apache/camel-k.git
@@ -67,7 +62,6 @@ asciidoc:
   extensions:
     - ./extensions/table.js
     - ./extensions/inline-styles.js
-    - "@djencks/asciidoctor-antora-indexer"
   attributes:
-    camel-quarkus-last-release: 1.0.0-M6
+    camel-quarkus-last-release: 1.0.0-M5
     eip-vc: latest@components
