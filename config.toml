@@ -9,7 +9,6 @@ enableRobotsTXT = true
 timeout = 300000
 
 [blackfriday]
-    hrefTargetBlank = true
     nofollowLinks = true
     noreferrerLinks = true
 
