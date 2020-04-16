@@ -8,6 +8,10 @@ disableKinds = ["taxonomyTerm"]
 enableRobotsTXT = true
 timeout = 300000
 
+[blackfriday]
+    nofollowLinks = true
+    noreferrerLinks = true
+
 [params]
     socialProfiles = ["https://twitter.com/ApacheCamel"]
     organizationLogo = "https://camel.apache.org/_/img/logo-d.svg"
