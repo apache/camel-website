@@ -419,7 +419,7 @@ body {
 
 #search-cancel {
   position: relative;
-  bottom: calc(50% - 0.15rem);
+  bottom: calc(50% - 0.02rem);
   left: calc(100% - 1.25rem);
   height: 1rem;
   display: none;
