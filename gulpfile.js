@@ -2,6 +2,7 @@ const cheerio = require('gulp-cheerio');
 const env = process.env.CAMEL_ENV || 'development';
 const gulp = require('gulp');
 const htmlmin = require('gulp-htmlmin');
+const imagemin = require('gulp-imagemin');
 
 /**
  * We minify all HTML files using htmlmin, this is to make them smaller in size
@@ -50,6 +51,30 @@ gulp.task('sitemap', (done) => {
 <loc>https://camel.apache.org/sitemap-website.xml</loc>
 </sitemap>`)
     ))
+    .pipe(gulp.dest('public'));
+});
+
+/*
+ * Optimizes images within `public` directory using imagemin.
+ */
+gulp.task('imagemin', (done) => {
+  if (env !== 'production') {
+    done();
+    return;
+  }
+
+  return gulp.src('public/**/*.{svg,png,gif,jpg,jpeg}')
+    .pipe(imagemin([
+      imagemin.gifsicle({ interlaced: true }),
+      imagemin.mozjpeg({ quality: 75, progressive: true }),
+      imagemin.optipng({ optimizationLevel: 5 }),
+      imagemin.svgo({ plugins: [
+        { removeViewBox: false },
+        { cleanupIDs: { remove: false } },
+        { removeTitle: false },
+        { removeDesc: false }
+      ] })
+    ]))
     .pipe(gulp.dest('public'));
 });
 

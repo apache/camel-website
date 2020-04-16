@@ -61,6 +61,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gulp", "npm:4.0.2"],
             ["gulp-cheerio", "npm:1.0.0"],
             ["gulp-htmlmin", "npm:5.0.1"],
+            ["gulp-imagemin", "virtual:8ebdd0bb2a9a795387792241e0fb8b61ac82df4777303c6a7b59069d9d737a2fc482e6509846ffa7155b225e9248c869f6b6500381ae0d084a9c93deb4cf3dbf#npm:7.1.0"],
             ["html-validate", "npm:3.0.0"],
             ["hugo-extended", "npm:0.73.0"],
             ["netlify-cli", "npm:2.69.11"],
@@ -4360,6 +4361,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gulp", "npm:4.0.2"],
             ["gulp-cheerio", "npm:1.0.0"],
             ["gulp-htmlmin", "npm:5.0.1"],
+            ["gulp-imagemin", "virtual:8ebdd0bb2a9a795387792241e0fb8b61ac82df4777303c6a7b59069d9d737a2fc482e6509846ffa7155b225e9248c869f6b6500381ae0d084a9c93deb4cf3dbf#npm:7.1.0"],
             ["html-validate", "npm:3.0.0"],
             ["hugo-extended", "npm:0.73.0"],
             ["netlify-cli", "npm:2.69.11"],
@@ -9404,6 +9406,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["strip-final-newline", "npm:2.0.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:4.1.0", {
+          "packageLocation": "./.yarn/cache/execa-npm-4.1.0-cc675b4189-79bd736acd.zip/node_modules/execa/",
+          "packageDependencies": [
+            ["execa", "npm:4.1.0"],
+            ["cross-spawn", "npm:7.0.3"],
+            ["get-stream", "npm:5.2.0"],
+            ["human-signals", "npm:1.1.1"],
+            ["is-stream", "npm:2.0.0"],
+            ["merge-stream", "npm:2.0.0"],
+            ["npm-run-path", "npm:4.0.1"],
+            ["onetime", "npm:5.1.0"],
+            ["signal-exit", "npm:3.0.2"],
+            ["strip-final-newline", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["execall", [
@@ -10575,6 +10593,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["logalot", "npm:2.1.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:5.1.0", {
+          "packageLocation": "./.yarn/unplugged/gifsicle-npm-5.1.0-f8d5da3bd1/node_modules/gifsicle/",
+          "packageDependencies": [
+            ["gifsicle", "npm:5.1.0"],
+            ["bin-build", "npm:3.0.0"],
+            ["bin-wrapper", "npm:4.1.0"],
+            ["execa", "npm:4.1.0"],
+            ["logalot", "npm:2.1.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["git-apply-delta", [
@@ -11113,6 +11142,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+        ["npm:7.1.0", {
+          "packageLocation": "./.yarn/cache/gulp-imagemin-npm-7.1.0-a327c340b5-ef3ccbf72f.zip/node_modules/gulp-imagemin/",
+          "packageDependencies": [
+            ["gulp-imagemin", "npm:7.1.0"]
+          ],
+          "linkType": "SOFT",
+        }],
         ["virtual:40e0eba2b2747b78b17285b5a80d54e9bed0c51acd01aa1fab2b869ee61f21c6d6cda6fee2acf095fea1709035ac613a1bc772c8e59bb0339d7af2ceea528de8#npm:6.2.0", {
           "packageLocation": "./.yarn/$$virtual/gulp-imagemin-virtual-5105d82ce5/0/cache/gulp-imagemin-npm-6.2.0-449b81e33c-be4a7d1b61.zip/node_modules/gulp-imagemin/",
           "packageDependencies": [
@@ -11124,6 +11160,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["imagemin", "npm:7.0.1"],
             ["imagemin-gifsicle", "npm:6.0.1"],
             ["imagemin-jpegtran", "npm:6.0.0"],
+            ["imagemin-optipng", "npm:7.1.0"],
+            ["imagemin-svgo", "npm:7.1.0"],
+            ["plugin-error", "npm:1.0.1"],
+            ["plur", "npm:3.1.1"],
+            ["pretty-bytes", "npm:5.4.1"],
+            ["through2-concurrent", "npm:2.0.0"]
+          ],
+          "packagePeers": [
+            "@types/gulp",
+            "gulp"
+          ],
+          "linkType": "HARD",
+        }],
+        ["virtual:8ebdd0bb2a9a795387792241e0fb8b61ac82df4777303c6a7b59069d9d737a2fc482e6509846ffa7155b225e9248c869f6b6500381ae0d084a9c93deb4cf3dbf#npm:7.1.0", {
+          "packageLocation": "./.yarn/$$virtual/gulp-imagemin-virtual-2548a6b89b/0/cache/gulp-imagemin-npm-7.1.0-a327c340b5-ef3ccbf72f.zip/node_modules/gulp-imagemin/",
+          "packageDependencies": [
+            ["gulp-imagemin", "virtual:8ebdd0bb2a9a795387792241e0fb8b61ac82df4777303c6a7b59069d9d737a2fc482e6509846ffa7155b225e9248c869f6b6500381ae0d084a9c93deb4cf3dbf#npm:7.1.0"],
+            ["@types/gulp", null],
+            ["chalk", "npm:3.0.0"],
+            ["fancy-log", "npm:1.3.3"],
+            ["gulp", "npm:4.0.2"],
+            ["imagemin", "npm:7.0.1"],
+            ["imagemin-gifsicle", "npm:7.0.0"],
+            ["imagemin-mozjpeg", "npm:8.0.0"],
             ["imagemin-optipng", "npm:7.1.0"],
             ["imagemin-svgo", "npm:7.1.0"],
             ["plugin-error", "npm:1.0.1"],
@@ -11994,6 +12054,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["is-gif", "npm:3.0.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:7.0.0", {
+          "packageLocation": "./.yarn/cache/imagemin-gifsicle-npm-7.0.0-d09409d42a-bde8711fc2.zip/node_modules/imagemin-gifsicle/",
+          "packageDependencies": [
+            ["imagemin-gifsicle", "npm:7.0.0"],
+            ["execa", "npm:1.0.0"],
+            ["gifsicle", "npm:5.1.0"],
+            ["is-gif", "npm:3.0.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["imagemin-jpegtran", [
@@ -12004,6 +12074,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["exec-buffer", "npm:3.2.0"],
             ["is-jpg", "npm:2.0.0"],
             ["jpegtran-bin", "npm:4.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["imagemin-mozjpeg", [
+        ["npm:8.0.0", {
+          "packageLocation": "./.yarn/cache/imagemin-mozjpeg-npm-8.0.0-6204a869d2-a900e2ce96.zip/node_modules/imagemin-mozjpeg/",
+          "packageDependencies": [
+            ["imagemin-mozjpeg", "npm:8.0.0"],
+            ["execa", "npm:1.0.0"],
+            ["is-jpg", "npm:2.0.0"],
+            ["mozjpeg", "npm:6.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -15235,6 +15317,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cp-file", "npm:6.2.0"],
             ["make-dir", "npm:3.1.0"],
             ["path-exists", "npm:3.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["mozjpeg", [
+        ["npm:6.0.1", {
+          "packageLocation": "./.yarn/unplugged/mozjpeg-npm-6.0.1-6c9f4d611e/node_modules/mozjpeg/",
+          "packageDependencies": [
+            ["mozjpeg", "npm:6.0.1"],
+            ["bin-build", "npm:3.0.0"],
+            ["bin-wrapper", "npm:4.1.0"],
+            ["logalot", "npm:2.1.0"]
           ],
           "linkType": "HARD",
         }]

@@ -3187,6 +3187,7 @@ __metadata:
     gulp: ~4.0
     gulp-cheerio: ~1.0
     gulp-htmlmin: ~5.0
+    gulp-imagemin: ^7.1.0
     html-validate: ~3.0
     hugo-extended: ^0.73.0
     netlify-cli: ^2.69.11
@@ -7714,6 +7715,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"execa@npm:^4.0.0":
+  version: 4.1.0
+  resolution: "execa@npm:4.1.0"
+  dependencies:
+    cross-spawn: ^7.0.0
+    get-stream: ^5.0.0
+    human-signals: ^1.1.1
+    is-stream: ^2.0.0
+    merge-stream: ^2.0.0
+    npm-run-path: ^4.0.0
+    onetime: ^5.1.0
+    signal-exit: ^3.0.2
+    strip-final-newline: ^2.0.0
+  checksum: 79bd736acd63aa7c0afb32cc99af21cfd70db696580686c7cd56c177857b93b78bc0b9bb2b4410f377f46c71c566c8e723987e71ef0bc9b23791bfbced02f75c
+  languageName: node
+  linkType: hard
+
 "execall@npm:^2.0.0":
   version: 2.0.0
   resolution: "execall@npm:2.0.0"
@@ -8794,6 +8812,20 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"gifsicle@npm:^5.0.0":
+  version: 5.1.0
+  resolution: "gifsicle@npm:5.1.0"
+  dependencies:
+    bin-build: ^3.0.0
+    bin-wrapper: ^4.0.0
+    execa: ^4.0.0
+    logalot: ^2.0.0
+  bin:
+    gifsicle: cli.js
+  checksum: 39304e6c986b5b3580c708f5607d4330131d4404fa1894f54d7853a6f750eb08043a772991c1c824f974b3c40b9c723d0cb81ea471ef48268380168cd98cfe1b
+  languageName: node
+  linkType: hard
+
 "git-apply-delta@npm:0.0.7":
   version: 0.0.7
   resolution: "git-apply-delta@npm:0.0.7"
@@ -9275,6 +9307,39 @@ fsevents@~2.1.2:
     plugin-error: ^1.0.1
     through2: ^2.0.3
   checksum: 7532a37affc5143680aee09049173c421457a1f0b83180d1b1e31fc36fb768a25c6640a7900a31a4988af2cf5aa5bce49089b6e17a1b73675cf094363a42d746
+  languageName: node
+  linkType: hard
+
+"gulp-imagemin@npm:^7.1.0":
+  version: 7.1.0
+  resolution: "gulp-imagemin@npm:7.1.0"
+  dependencies:
+    chalk: ^3.0.0
+    fancy-log: ^1.3.2
+    imagemin: ^7.0.0
+    imagemin-gifsicle: ^7.0.0
+    imagemin-mozjpeg: ^8.0.0
+    imagemin-optipng: ^7.0.0
+    imagemin-svgo: ^7.0.0
+    plugin-error: ^1.0.1
+    plur: ^3.0.1
+    pretty-bytes: ^5.3.0
+    through2-concurrent: ^2.0.0
+  peerDependencies:
+    gulp: ">=4"
+  dependenciesMeta:
+    imagemin-gifsicle:
+      optional: true
+    imagemin-mozjpeg:
+      optional: true
+    imagemin-optipng:
+      optional: true
+    imagemin-svgo:
+      optional: true
+  peerDependenciesMeta:
+    gulp:
+      optional: true
+  checksum: ef3ccbf72f9c0904d481c2aa766d968eea205f6c57c2ff16c44126515ee3dee174db6f9a0192f0a6838db20fae772245b7ceb1c27c29465cb764db73e83f4bcd
   languageName: node
   linkType: hard
 
@@ -10081,6 +10146,17 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"imagemin-gifsicle@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "imagemin-gifsicle@npm:7.0.0"
+  dependencies:
+    execa: ^1.0.0
+    gifsicle: ^5.0.0
+    is-gif: ^3.0.0
+  checksum: bde8711fc2caa1f5d8a15284bbd5e6b0c1b9931cd7e4b601b9b40af25e86632ac9d8064e0ae467a91cb042211b9a9f4fcfa612a5d812f06686216dcae2ee5fc6
+  languageName: node
+  linkType: hard
+
 "imagemin-jpegtran@npm:^6.0.0":
   version: 6.0.0
   resolution: "imagemin-jpegtran@npm:6.0.0"
@@ -10089,6 +10165,17 @@ fsevents@~2.1.2:
     is-jpg: ^2.0.0
     jpegtran-bin: ^4.0.0
   checksum: 3e8f1758de0be74f82484c715849a2976896fe64e1d29c89fb8a4516f52af2af65ec1360896a8895c500790d515a7cda3ab98db0b29bba929ed36bc69bd05d88
+  languageName: node
+  linkType: hard
+
+"imagemin-mozjpeg@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "imagemin-mozjpeg@npm:8.0.0"
+  dependencies:
+    execa: ^1.0.0
+    is-jpg: ^2.0.0
+    mozjpeg: ^6.0.0
+  checksum: a900e2ce96d1abf7445ab16c499335fbd3362796f2891bb79a75fc56f34ad0d4d6c5f2df1633e5f91b8de75938ac4d282104192b7da70564a31c0ae863e6a8bc
   languageName: node
   linkType: hard
 
@@ -12190,7 +12277,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"logalot@npm:^2.0.0":
+"logalot@npm:^2.0.0, logalot@npm:^2.1.0":
   version: 2.1.0
   resolution: "logalot@npm:2.1.0"
   dependencies:
@@ -12982,6 +13069,19 @@ fsevents@~2.1.2:
     make-dir: ^3.0.0
     path-exists: ^3.0.0
   checksum: f6edd23b27280095ddbffc4608e4067c5b55b6bf1ecc43e54580779f6eb2bcd7b8e0ab178c408c4b70bf614bdb43a63f2cde3c05ea1f260916d6d272e46bc014
+  languageName: node
+  linkType: hard
+
+"mozjpeg@npm:^6.0.0":
+  version: 6.0.1
+  resolution: "mozjpeg@npm:6.0.1"
+  dependencies:
+    bin-build: ^3.0.0
+    bin-wrapper: ^4.0.0
+    logalot: ^2.1.0
+  bin:
+    mozjpeg: cli.js
+  checksum: 35eba4f50e1b105b13e3cc1d63e8e162a08d22d4ec0469b37bce0ab8262aa0437408176c1524c27c9f29352f9bb79f225fee4451a5bba658e3a2dbbaf698edd3
   languageName: node
   linkType: hard
 
