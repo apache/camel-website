@@ -176,13 +176,6 @@ article.blog p {
   }
 }
 
-/* for mobile screens */
-@media screen and (max-width: 1023px) {
-  .blog.list aside {
-    display: none;
-  }
-}
-
 .blog ul,
 .blog ol {
   padding-bottom: 1rem;
