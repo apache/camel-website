@@ -1,8 +1,12 @@
 {{ partial "header.html" . }}
 
 <div class="body">
-    <main role="main" class="doc blog list">
-        <aside>
+    <div class="toolbar" role="navigation"> 
+        <button class="nav-toggle">
+        </button>
+    </div>
+    <main role="main" class="nav-container doc blog list">
+        <aside class="nav">
             <h3>Categories</h3>
             <ul>
             {{ range .Site.Taxonomies.categories.Alphabetical }}
@@ -10,6 +14,8 @@
             {{ end }}
             </ul>
         </aside>
+    </main>
+        <main role="main" class="doc blog list">
         <div>
             {{ $pages := ($.Paginator 3).Pages }}
             {{ range $pages }}
