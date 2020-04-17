@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  scroll-padding-top: var(--body-top);
 }
 
 *,
@@ -11,6 +12,7 @@ body {
 
 *::selection {
   background: var(--color-highlight);
+  color: var(--color-white);
 }
 
 html {
@@ -46,6 +48,7 @@ kbd,
 pre {
   color: var(--code-font-color);
   font-family: var(--monospace-font-family);
+  overflow-wrap: break-word;
 }
 
 b,
@@ -77,7 +80,9 @@ button::-moz-focus-inner {
 }
 
 mark {
-  background: var(--color-highlight);
+  color: var(--color-camel-orange);
+  font-weight: bold;
+  background: var(--color-white);
 }
 
 .text-center {

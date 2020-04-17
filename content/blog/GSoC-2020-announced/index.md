@@ -1,7 +1,7 @@
 ---
 title: "Google Summer of Code 2020 announced"
 date: 2020-02-24T14:00:00
-author: Zoran Regvart
+authors: [zregvart]
 categories: ["GSoC"]
 preview: Google Summer of Code 2020 announced, we're looking for ideas and mentors
 ---
@@ -26,10 +26,10 @@ challenges, typical areas of contribution are improvements to existing
 [components](/components/latest/), adding [new
 components](http://localhost:1313/manual/latest/writing-components.html) or
 doing improvements to the core of Camel. There are exciting developments if
-you're interested in Kubernetes in the [Camel K](/projects/camel-k/), fast
+you're interested in Kubernetes in the [Camel K](/projects/#apache-camel-k), fast
 startup and low memory footprint in [Camel
-Quarkus](/projects/camel-quarkus/), or stream processing in [Camel
-Kafka](/projects/camel-kafka-connector/) subprojects. Also look for issues
+Quarkus](/projects/#apache-camel-extensions-for-quarkus), or stream processing in [Camel
+Kafka](/projects/#apache-camel-kafka-connector) subprojects. Also look for issues
 labeled with
 [`help-wanted`](https://issues.apache.org/jira/issues/?jql=project%20%3D%20CAMEL%20AND%20status%20%3D%20Open%20AND%20labels%20%3D%20help-wanted%20ORDER%20BY%20priority%20DESC%2C%20updated%20DESC)
 for easy issues to get started with to gain some experience contributing to

@@ -1,16 +1,37 @@
 site:
   title: Apache Camel
   url: https://camel.apache.org
-  start_page: manual::index.adoc
+  start_page: latest@manual::index.adoc
 
 content:
   sources:
+
+# manual
     - url: git@github.com:apache/camel.git
       branches: master
       start_path: docs/user-manual
+
+# component reference
+## eip
     - url: git@github.com:apache/camel.git
-      branches: master, camel-2.x, camel-3.0.x
+      branches: master, camel-3.2.x
+      start_path: core/camel-core-engine/src/main/docs
+## core languages
+    - url: git@github.com:apache/camel.git
+      branches: master, camel-3.2.x
+      start_path: core/camel-core-languages/src/main/docs
+    - url: git@github.com:apache/camel.git
+      branches: master, camel-3.2.x
+      start_path: core/camel-xml-jaxp/src/main/docs
+    - url: git@github.com:apache/camel.git
+      branches: camel-2.x
+      start_path: camel-core/src/main/docs
+## main components/dataformats doc
+    - url: git@github.com:apache/camel.git
+      branches: master, camel-3.2.x, camel-2.x
       start_path: docs/components
+
+# sub-projects
     - url: git@github.com:apache/camel-k.git
       branches: master
       start_path: docs
@@ -21,6 +42,9 @@ content:
       branches: master
       start_path: docs
     - url: git@github.com:apache/camel-spring-boot.git
+      branches: master
+      start_path: docs
+    - url: git@github.com:apache/camel-karaf.git
       branches: master
       start_path: docs
 
@@ -39,4 +63,5 @@ asciidoc:
     - ./extensions/table.js
     - ./extensions/inline-styles.js
   attributes:
-    camel-quarkus-last-release: 1.0.0-M4
+    camel-quarkus-last-release: 1.0.0-M5
+    eip-vc: latest@components

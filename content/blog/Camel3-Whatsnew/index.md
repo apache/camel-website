@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 3 What's New (top 10)"
 date: 2019-12-02
-author: Claus Ibsen
+authors: [davsclaus]
 categories: ["Releases"]
 preview: Top 10 of what's new in Apache Camel version 3
 ---
@@ -14,6 +14,7 @@ This blog post highlights the noteworthy new features and improvements in Camel 
 ### 1) Camel is now a family of projects
 
 Apache Camel, is now a family of projects (3 at this time of writing).
+
 - [Camel 3](https://github.com/apache/camel):
   **Integration Framework** _Swiss knife of integration_
 - [Camel K](https://github.com/apache/camel-k/):

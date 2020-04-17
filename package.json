@@ -2,38 +2,46 @@
   "version": "1.0.0-SNAPSHOT",
   "license": "Apache-2.0",
   "scripts": {
-    "build:antora": "antora --require ./menu.js --clean --fetch site.yml",
+    "build:antora": "antora --clean --fetch antora-playbook.yml",
     "build:hugo": "hugo --cacheDir ${HUGO_CACHE_DIR:-$(pwd)/.hugo_data}",
     "build:minify": "gulp minify",
     "build": "run-s build:*",
     "preview": "run-s preview:*",
-    "preview:antora": "antora --require ./menu.js site.yml",
+    "preview:antora": "antora --clean --fetch antora-playbook.yml",
     "preview:hugo": "hugo server -D",
-    "check:xref": "antora --generator @antora/xref-validator site.yml",
-    "check:links": "link-checker --disable-external --mkdocs --allow-hash-href public",
+    "check:xref": "antora --generator @antora/xref-validator antora-playbook.yml",
+    "check:links": "link-checker --disable-external --mkdocs --allow-hash-href public --url-ignore='#top'",
     "check:html": "html-validate 'public/*/**/*.html' 'public/!(google)*.html'",
     "checks": "run-s check:*"
   },
   "devDependencies": {
-    "@antora/cli": "~2.1",
-    "@antora/site-generator-default": "~2.1",
+    "@antora/asciidoc-loader": "2.3.0-beta.2",
+    "@antora/cli": "2.3.0-beta.2",
+    "@antora/content-aggregator": "2.3.0-beta.2",
+    "@antora/content-classifier": "2.3.0-beta.2",
+    "@antora/document-converter": "2.3.0-beta.2",
+    "@antora/playbook-builder": "2.3.0-beta.2",
+    "@antora/site-generator-default": "2.3.0-beta.2",
     "@antora/xref-validator": "gitlab:antora/xref-validator",
+    "@djencks/asciidoctor-antora-indexer": "^0.0.2",
+    "escape-string-regexp": "~2.0",
     "gulp": "~4.0",
     "gulp-htmlmin": "~5.0",
     "html-validate": "~1.2",
     "hugo-cli": "~0.11",
     "link-checker": "~1.2",
     "npm-run-all": "~4.1",
-    "opal-runtime": "1.0.11"
+    "opal-runtime": "1.0.11",
+    "toml": "~3.0"
+  },
+  "resolutions": {
+    "@antora/asciidoc-loader": "2.3.0-beta.2",
+    "@antora/content-aggregator": "2.3.0-beta.2",
+    "@antora/content-classifier": "2.3.0-beta.2",
+    "@antora/document-converter": "2.3.0-beta.2",
+    "@antora/playbook-builder": "2.3.0-beta.2"
   },
   "installConfig": {
     "pnp": true
-  },
-  "dependencies": {
-    "algoliasearch": "^4.0.3",
-    "handlebars": "~4.1",
-    "toml": "~3.0",
-    "unzipper": "~0.10",
-    "yaml": "~1.6"
   }
 }

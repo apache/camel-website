@@ -6,6 +6,8 @@ footer {
   font-size: calc(15 / var(--rem-base) * 1rem);
   line-height: var(--footer-line-height);
   padding: 1.5rem;
+  flex-shrink: 0;
+  min-height: var(--footer-height);
 }
 
 footer .footer {
@@ -49,7 +51,18 @@ footer .footer dl {
 footer .footer dl dt {
   font-size: 1.25rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+footer .footer dl dt::after {
+  content: "";
+  display: block;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 3rem;
+  background: var(--footer-font-color);
 }
 
 footer .footer dl dd {
@@ -62,16 +75,18 @@ footer .footer dl dd {
   }
 }
 
-.edit {
-  max-width: var(--static-max-width--desktop);
-  margin: auto;
+.footer-tools {
+  position: relative;
+  top: -2rem;
+  height: 0;
   text-align: right;
 }
 
-.edit a {
+.footer-tools a {
   display: inline-block;
   padding: 0.4rem;
   background-color: var(--footer-background);
   color: black;
   border-radius: 0.4rem 0.4rem  0 0;
+  height: 2rem;
 }

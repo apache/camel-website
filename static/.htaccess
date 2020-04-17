@@ -483,9 +483,9 @@ Redirect 301 /documentation.html /manual/latest/
 # Redirect 301 /zip-dataformat.html
 Redirect 301 /activemq.html /components/latest/activemq-component.html
 Redirect 301 /advanced-configuration-of-camelcontext-using-spring.html /manual/latest/advanced-configuration-of-camelcontext-using-spring.html
-Redirect 301 /aggregator.html /manual/latest/aggregate-eip.html
-Redirect 301 /aggregator2 /manual/latest/aggregate-eip.html
-Redirect 301 /aggregator2.html /manual/latest/aggregate-eip.html
+Redirect 301 /aggregator.html /components/latest/eips/aggregate-eip.html
+Redirect 301 /aggregator2 /components/latest/eips/aggregate-eip.html
+Redirect 301 /aggregator2.html /components/latest/eips/aggregate-eip.html
 Redirect 301 /ahc-ws.html /components/latest/ahc-ws-component.html
 Redirect 301 /ahc.html /components/latest/ahc-component.html
 Redirect 301 /amqp /components/latest/amqp-component.html
@@ -498,7 +498,7 @@ Redirect 301 /asynchronous-routing-engine.html /manual/latest/asynchronous-routi
 Redirect 301 /atmosphere-websocket.html /components/latest/atmosphere-websocket-component.html
 Redirect 301 /atom.html /components/latest/atom-component.html
 Redirect 301 /avro.html /components/latest/avro-component.html
-# Possible candidates for previous URL: [/components/latest/avro-component.html, /components/latest/avro-dataformat.html]
+# Possible candidates for previous URL: [/components/latest/avro-component.html, /components/latest/dataformats/avro-dataformat.html]
 Redirect 301 /aws-cw.html /components/latest/aws-cw-component.html
 Redirect 301 /aws-ddb.html /components/latest/aws-ddb-component.html
 Redirect 301 /aws-ddbstream.html /components/latest/aws-ddbstream-component.html
@@ -514,22 +514,22 @@ Redirect 301 /backlogdebugger.html /manual/latest/backlogdebugger.html
 Redirect 301 /backlogtracer.html /manual/latest/backlog-tracer.html
 Redirect 301 /bam-example.html /manual/latest/bam-example.html
 Redirect 301 /bam.html /manual/latest/bam.html
-Redirect 301 /barcode-data-format.html /components/latest/barcode-dataformat.html
-Redirect 301 /base64.html /components/latest/base64-dataformat.html
+Redirect 301 /barcode-data-format.html /components/latest/dataformats/barcode-dataformat.html
+Redirect 301 /base64.html /components/latest/dataformats/base64-dataformat.html
 Redirect 301 /batch-consumer.html /manual/latest/batch-consumer.html
-Redirect 301 /bean /manual/latest/bean-eip.html
-# Possible candidates for previous URL: [/manual/latest/bean-eip.html, /components/latest/bean-component.html, /components/latest/bean-language.html]
+Redirect 301 /bean /components/latest/eips/bean-eip.html
+# Possible candidates for previous URL: [/manual/latest/bean-eip.html, /components/latest/bean-component.html, /components/latest/languages/bean-language.html]
 Redirect 301 /bean-binding.html /manual/latest/bean-binding.html
 Redirect 301 /bean-injection.html /manual/latest/bean-injection.html
 Redirect 301 /bean-integration.html /manual/latest/bean-integration.html
-Redirect 301 /bean-language.html /components/latest/bean-language.html
+Redirect 301 /bean-language.html /components/latest/languages/bean-language.html
 Redirect 301 /bean-validator.html /components/latest/bean-validator-component.html
-Redirect 301 /bean.html /manual/latest/bean-eip.html
-# Possible candidates for previous URL: [/manual/latest/bean-eip.html, /components/latest/bean-component.html, /components/latest/bean-language.html]
-Redirect 301 /beanio.html /components/latest/beanio-dataformat.html
+Redirect 301 /bean.html /components/latest/eips/bean-eip.html
+# Possible candidates for previous URL: [/manual/latest/bean-eip.html, /components/latest/bean-component.html, /components/latest/languages/bean-language.html]
+Redirect 301 /beanio.html /components/latest/dataformats/beanio-dataformat.html
 Redirect 301 /beanstalk.html /components/latest/beanstalk-component.html
 Redirect 301 /binding.html /manual/latest/binding.html
-Redirect 301 /bindy.html /components/latest/bindy-dataformat.html
+Redirect 301 /bindy.html /components/latest/dataformats/bindy-dataformat.html
 Redirect 301 /blueprint.html /components/latest/blueprint.html
 Redirect 301 /book-getting-started.html /manual/latest/book-getting-started.html
 Redirect 301 /books.html /manual/latest/books.html
@@ -558,7 +558,7 @@ Redirect 301 /cdi /components/latest/cdi.html
 Redirect 301 /cdi.html /components/latest/cdi.html
 Redirect 301 /cep.html /manual/latest/cep.html
 Redirect 301 /chunk.html /components/latest/chunk-component.html
-Redirect 301 /claim-check.html /manual/latest/claimCheck-eip.html
+Redirect 301 /claim-check.html /components/latest/eips/claimCheck-eip.html
 Redirect 301 /class.html /components/latest/class-component.html
 Redirect 301 /classloader-issue-of-servicemix-camel-component.html /manual/latest/faq/classloader-issue-of-servicemix-camel-component.html
 Redirect 301 /cmis.html /components/latest/cmis-component.html
@@ -570,25 +570,25 @@ Redirect 301 /components.html /components/latest/
 Redirect 301 /configuring-camel.html /manual/latest/configuring-camel.html
 Redirect 301 /configuring-route-startup-ordering-and-autostartup.html /manual/latest/configuring-route-startup-ordering-and-autostartup.html
 Redirect 301 /console-example.html /manual/latest/console-example.html
-Redirect 301 /constant.html /manual/latest/constant-language.html
+Redirect 301 /constant.html /components/latest/languages/constant-language.html
 Redirect 301 /consul-component.html /components/latest/consul-component.html
-Redirect 301 /content-based-router.html /manual/latest/content-based-router-eip.html
-Redirect 301 /content-enricher.html /manual/latest/content-enricher.html
-Redirect 301 /content-filter.html /manual/latest/content-filter-eip.html
+Redirect 301 /content-based-router.html /components/latest/eips/content-based-router-eip.html
+Redirect 301 /content-enricher.html /components/latest/eips/content-enricher.html
+Redirect 301 /content-filter.html /components/latest/eips/content-filter-eip.html
 Redirect 301 /contributing.html /manual/latest/contributing.html
 Redirect 301 /controlbus /components/latest/controlbus-component.html
 Redirect 301 /controlbus-component.html /components/latest/controlbus-component.html
 Redirect 301 /controlbus.html /components/latest/controlbus-component.html
-Redirect 301 /convertbodyto.html /manual/latest/convertBodyTo-eip.html
-Redirect 301 /correlation-identifier.html /manual/latest/correlation-identifier.html
+Redirect 301 /convertbodyto.html /components/latest/eips/convertBodyTo-eip.html
+Redirect 301 /correlation-identifier.html /components/latest/eips/correlation-identifier.html
 Redirect 301 /couchbase.html /components/latest/couchbase-component.html
 Redirect 301 /couchdb.html /components/latest/couchdb-component.html
 Redirect 301 /creating-a-new-camel-component.html /manual/latest/writing-components.html
 Redirect 301 /creating-a-new-spring-based-camel-route.html /manual/latest/creating-a-new-spring-based-camel-route.html
 Redirect 301 /cronscheduledroutepolicy.html /manual/latest/cronscheduledroutepolicy.html
 Redirect 301 /crypto.html /components/latest/crypto-component.html
-# Possible candidates for previous URL: [/components/latest/crypto-component.html, /components/latest/crypto-dataformat.html]
-Redirect 301 /csv.html /components/latest/csv-dataformat.html
+# Possible candidates for previous URL: [/components/latest/crypto-component.html, /components/latest/dataformats/crypto-dataformat.html]
+Redirect 301 /csv.html /components/latest/dataformats/csv-dataformat.html
 Redirect 301 /cxf /components/latest/cxf-component.html
 Redirect 301 /cxf.html /components/latest/cxf-component.html
 Redirect 301 /cxfrs /components/latest/cxfrs-component.html
@@ -599,7 +599,7 @@ Redirect 301 /dataformat-component /components/latest/dataformat-component.html
 Redirect 301 /dataformat-component-2.html /components/latest/dataformat-component.html
 Redirect 301 /dataformat-component.html /components/latest/dataformat-component.html
 Redirect 301 /dataset.html /components/latest/dataset-component.html
-Redirect 301 /dead-letter-channel.html /manual/latest/dead-letter-channel.html
+Redirect 301 /dead-letter-channel.html /components/latest/eips/dead-letter-channel.html
 Redirect 301 /debugger.html /manual/latest/debugger.html
 Redirect 301 /defaulterrorhandler.html /manual/latest/defaulterrorhandler.html
 Redirect 301 /delay-interceptor.html /manual/latest/delay-interceptor.html
@@ -617,22 +617,22 @@ Redirect 301 /dozer-type-conversion.html /manual/latest/dozer-type-conversion.ht
 Redirect 301 /dozer.html /components/latest/dozer-component.html
 Redirect 301 /dropbox.html /components/latest/dropbox-component.html
 Redirect 301 /dsl.html /manual/latest/dsl.html
-Redirect 301 /dynamic-router.html /manual/latest/dynamicRouter-eip.html
-# Possible candidates for previous URL: [/manual/latest/dynamicRouter-eip.html, /manual/latest/dynamic-router.html]
+Redirect 301 /dynamic-router.html /components/latest/eips/dynamicRouter-eip.html
+# Possible candidates for previous URL: [/manual/latest/dynamicRouter-eip.html, /components/latest/eips/dynamic-router.html]
 Redirect 301 /ehcache.html /components/latest/ehcache-component.html
-Redirect 301 /eip /manual/latest/enterprise-integration-patterns.html
-Redirect 301 /eip.html /manual/latest/enterprise-integration-patterns.html
+Redirect 301 /eip /components/latest/eips/enterprise-integration-patterns.html
+Redirect 301 /eip.html /components/latest/eips/enterprise-integration-patterns.html
 Redirect 301 /elsql.html /components/latest/elsql-component.html
 Redirect 301 /endpoint-annotations.html /manual/latest/endpoint-annotations.html
 Redirect 301 /endpoint.html /manual/latest/endpoint.html
 Redirect 301 /endpointcompleter.html /manual/latest/endpoint-completer.html
-Redirect 301 /enterprise-integration-patterns.html /manual/latest/enterprise-integration-patterns.html
-Redirect 301 /enterprise-integration-patterns /manual/latest/enterprise-integration-patterns.html
+Redirect 301 /enterprise-integration-patterns.html /components/latest/eips/enterprise-integration-patterns.html
+Redirect 301 /enterprise-integration-patterns /components/latest/eips/enterprise-integration-patterns.html
 Redirect 301 /error-handler.html /manual/latest/error-handler.html
 Redirect 301 /error-handling-in-camel.html /manual/latest/error-handling-in-camel.html
 Redirect 301 /etcd.html /components/latest/etcd-component.html
-Redirect 301 /event-driven-consumer.html /manual/latest/eventDrivenConsumer-eip.html
-Redirect 301 /event-message.html /manual/latest/event-message.html
+Redirect 301 /event-driven-consumer.html /components/latest/eips/eventDrivenConsumer-eip.html
+Redirect 301 /event-message.html /components/latest/eips/event-message.html
 Redirect 301 /eventadmin.html /components/latest/eventadmin-component.html
 Redirect 301 /examples.html /manual/latest/examples.html
 Redirect 301 /exception-beandefinitionstoreexception.html /manual/latest/faq/exception-beandefinitionstoreexception.html
@@ -642,24 +642,24 @@ Redirect 301 /exception-orgapachecamelnosuchendpointexception.html /manual/lates
 Redirect 301 /exception-orgxmlsaxsaxparseexception.html /manual/latest/faq/exception-orgxmlsaxsaxparseexception.html
 Redirect 301 /exchange-pattern.html /manual/latest/exchange-pattern.html
 Redirect 301 /exchange.html /manual/latest/exchange.html
-Redirect 301 /exchangeproperty.html /manual/latest/exchangeProperty-language.html
+Redirect 301 /exchangeproperty.html /components/latest/languages/exchangeProperty-language.html
 Redirect 301 /exec.html /components/latest/exec-component.html
 Redirect 301 /expression.html /manual/latest/expression.html
 Redirect 301 /facebook.html /components/latest/facebook-component.html
 Redirect 301 /faq.html /manual/latest/faq.html
-Redirect 301 /file-language.html /manual/latest/file-language.html
+Redirect 301 /file-language.html /components/latest/languages/file-language.html
 Redirect 301 /file.html /components/latest/file-component.html
-# Possible candidates for previous URL: [/components/latest/file-component.html, /manual/latest/file-language.html]
+# Possible candidates for previous URL: [/components/latest/file-component.html, /components/latest/languages/file-language.html]
 Redirect 301 /file2.html /components/latest/file-component.html
-# Possible candidates for previous URL: [/components/latest/file-component.html, /manual/latest/file-language.html]
-Redirect 301 /flatpack-dataformat.html /components/latest/flatpack-dataformat.html
+# Possible candidates for previous URL: [/components/latest/file-component.html, /components/latest/languages/file-language.html]
+Redirect 301 /flatpack-dataformat.html /components/latest/dataformats/flatpack-dataformat.html
 Redirect 301 /flatpack.html /components/latest/flatpack-component.html
-# Possible candidates for previous URL: [/components/latest/flatpack-component.html, /components/latest/flatpack-dataformat.html]
+# Possible candidates for previous URL: [/components/latest/flatpack-component.html, /components/latest/dataformats/flatpack-dataformat.html]
 Redirect 301 /flink.html /components/latest/flink-component.html
 Redirect 301 /fluent-builders.html /manual/latest/fluent-builders.html
 Redirect 301 /fop.html /components/latest/fop-component.html
 Redirect 301 /freemarker.html /components/latest/freemarker-component.html
-Redirect 301 /from.html /manual/latest/from-eip.html
+Redirect 301 /from.html /components/latest/eips/from-eip.html
 Redirect 301 /ftp.html /components/latest/ftp-component.html
 Redirect 301 /ftp2 /components/latest/ftp-component.html
 Redirect 301 /ftp2.html /components/latest/ftp-component.html
@@ -676,21 +676,21 @@ Redirect 301 /googlemail.html /components/latest/google-mail-component.html
 Redirect 301 /gora.html /components/latest/gora-component.html
 Redirect 301 /graceful-shutdown.html /manual/latest/graceful-shutdown.html
 Redirect 301 /grape.html /components/latest/grape-component.html
-Redirect 301 /groovy /components/latest/groovy-language.html
-# Possible candidates for previous URL: [/camel-k/latest/languages/groovy.html, /components/latest/groovy-language.html]
+Redirect 301 /groovy /components/latest/languages/groovy-language.html
+# Possible candidates for previous URL: [/camel-k/latest/languages/groovy.html, /components/latest/languages/groovy-language.html]
 Redirect 301 /groovy-dsl.html /manual/latest/groovy-dsl.html
-Redirect 301 /groovy.html /components/latest/groovy-language.html
-# Possible candidates for previous URL: [/camel-k/latest/languages/groovy.html, /components/latest/groovy-language.html]
+Redirect 301 /groovy.html /components/latest/languages/groovy-language.html
+# Possible candidates for previous URL: [/camel-k/latest/languages/groovy.html, /components/latest/languages/groovy-language.html]
 Redirect 301 /guava-eventbus.html /components/latest/guava-eventbus-component.html
 Redirect 301 /guice.html /manual/latest/guice.html
 Redirect 301 /hbase.html /components/latest/hbase-component.html
 Redirect 301 /hdfs.html /components/latest/hdfs-component.html
 Redirect 301 /hdfs2.html /components/latest/hdfs-component.html
-Redirect 301 /header.html /manual/latest/header-language.html
+Redirect 301 /header.html /components/latest/languages/header-language.html
 Redirect 301 /hiding-middleware.html /manual/latest/hiding-middleware.html
 Redirect 301 /hipchat.html /components/latest/hipchat-component.html
-Redirect 301 /hl7-dataformat.html /components/latest/hl7-dataformat.html
-Redirect 301 /hl7.html /components/latest/hl7-dataformat.html
+Redirect 301 /hl7-dataformat.html /components/latest/dataformats/hl7-dataformat.html
+Redirect 301 /hl7.html /components/latest/dataformats/hl7-dataformat.html
 Redirect 301 /how-can-i-create-a-custom-component-or-endpoint.html /manual/latest/faq/how-can-i-create-a-custom-component-or-endpoint.html
 Redirect 301 /how-can-i-get-the-remote-connection-ip-address-from-the-camel-cxf-consumer-.html /manual/latest/faq/how-can-i-get-the-remote-connection-ip-address-from-the-camel-cxf-consumer-.html
 Redirect 301 /how-can-i-get-the-source-code.html /manual/latest/faq/how-can-i-get-the-source-code.html
@@ -759,14 +759,14 @@ Redirect 301 /how-to-validate-the-camel-1x-context-xml-from-apache-camel-web-sit
 Redirect 301 /http-session-handling.html /manual/latest/http-session-handling.html
 Redirect 301 /http.html /components/latest/http-component.html
 Redirect 301 /http4.html /components/latest/http-component.html
-Redirect 301 /hystrix-eip.html /manual/latest/hystrix-eip.html
-Redirect 301 /ical.html /components/latest/ical-dataformat.html
-Redirect 301 /idempotent-consumer.html /manual/latest/idempotentConsumer-eip.html
+Redirect 301 /hystrix-eip.html /components/latest/eips/hystrix-eip.html
+Redirect 301 /ical.html /components/latest/dataformats/ical-dataformat.html
+Redirect 301 /idempotent-consumer.html /components/latest/eips/idempotentConsumer-eip.html
 Redirect 301 /if-i-use-servicemix-when-should-i-use-camel.html /manual/latest/faq/if-i-use-servicemix-when-should-i-use-camel.html
 Redirect 301 /ignite.html /components/latest/ignite.html
 Redirect 301 /infinispan.html /components/latest/infinispan-component.html
 Redirect 301 /injector.html /manual/latest/injector.html
-Redirect 301 /intercept.html /manual/latest/intercept.html
+Redirect 301 /intercept.html /components/latest/eips/intercept.html
 Redirect 301 /inversion-of-control-with-smart-defaults.html /manual/latest/inversion-of-control-with-smart-defaults.html
 Redirect 301 /irc-room.html /manual/latest/irc-room.html
 # Possible candidates for previous URL: [/community/irc-room, /manual/latest/irc-room.html]
@@ -775,12 +775,12 @@ Redirect 301 /ironmq.html /components/latest/ironmq-component.html
 Redirect 301 /is-camel-an-esb.html /manual/latest/faq/is-camel-an-esb.html
 Redirect 301 /is-camel-ioc-friendly.html /manual/latest/faq/is-camel-ioc-friendly.html
 Redirect 301 /is-there-an-ide.html /manual/latest/faq/is-there-an-ide.html
-Redirect 301 /jackson-xml.html /components/latest/jacksonxml-dataformat.html
+Redirect 301 /jackson-xml.html /components/latest/dataformats/jacksonxml-dataformat.html
 Redirect 301 /jasypt.html /components/latest/jasypt.html
 Redirect 301 /java-dsl.html /manual/latest/java-dsl.html
 Redirect 301 /java-script.html /camel-k/latest/languages/javascript.html
 Redirect 301 /javascript.html /camel-k/latest/languages/javascript.html
-Redirect 301 /jaxb.html /components/latest/jaxb-dataformat.html
+Redirect 301 /jaxb.html /components/latest/dataformats/jaxb-dataformat.html
 Redirect 301 /jbpm.html /components/latest/jbpm-component.html
 Redirect 301 /jcache.html /components/latest/jcache-component.html
 Redirect 301 /jclouds.html /components/latest/jclouds-component.html
@@ -799,7 +799,7 @@ Redirect 301 /jndi.html /manual/latest/jndi.html
 Redirect 301 /jolt.html /components/latest/jolt-component.html
 Redirect 301 /jpa.html /components/latest/jpa-component.html
 Redirect 301 /json.html /manual/latest/json.html
-Redirect 301 /jsonpath.html /components/latest/jsonpath-language.html
+Redirect 301 /jsonpath.html /components/latest/languages/jsonpath-language.html
 Redirect 301 /jt400.html /components/latest/jt400-component.html
 Redirect 301 /kafka.html /components/latest/kafka-component.html
 Redirect 301 /karaf.html /manual/latest/karaf.html
@@ -813,24 +813,24 @@ Redirect 301 /ldap.html /components/latest/ldap-component.html
 Redirect 301 /leveldb.html /components/latest/leveldb.html
 Redirect 301 /lifecycle.html /manual/latest/lifecycle.html
 Redirect 301 /linkedin.html /components/latest/linkedin-component.html
-Redirect 301 /load-balancer.html /manual/latest/loadBalance-eip.html
+Redirect 301 /load-balancer.html /components/latest/eips/loadBalance-eip.html
 Redirect 301 /log /components/latest/log-component.html
 # Possible candidates for previous URL: [/manual/latest/log-eip.html, /components/latest/log-component.html]
 Redirect 301 /log.html /components/latest/log-component.html
 # Possible candidates for previous URL: [/manual/latest/log-eip.html, /components/latest/log-component.html]
-Redirect 301 /logeip.html /manual/latest/log-eip.html
-Redirect 301 /loop.html /manual/latest/loop-eip.html
+Redirect 301 /logeip.html /components/latest/eips/log-eip.html
+Redirect 301 /loop.html /components/latest/eips/loop-eip.html
 Redirect 301 /lucene.html /components/latest/lucene-component.html
 Redirect 301 /lumberjack.html /components/latest/lumberjack-component.html
-Redirect 301 /lzf-data-format.html /components/latest/lzf-dataformat.html
+Redirect 301 /lzf-data-format.html /components/latest/dataformats/lzf-dataformat.html
 Redirect 301 /mail.html /components/latest/mail-component.html
 Redirect 301 /mailing-lists.html /manual/latest/mailing-lists.html
 Redirect 301 /memory-leak-when-adding-and-removing-routes-at-runtime.html /manual/latest/faq/memory-leak-when-adding-and-removing-routes-at-runtime.html
-Redirect 301 /message-endpoint.html /manual/latest/message-endpoint.html
-Redirect 301 /message-translator.html /manual/latest/message-translator.html
-Redirect 301 /message.html /manual/latest/message.html
+Redirect 301 /message-endpoint.html /components/latest/eips/message-endpoint.html
+Redirect 301 /message-translator.html /components/latest/eips/message-translator.html
+Redirect 301 /message.html /components/latest/eips/message.html
 Redirect 301 /metrics-component.html /components/latest/metrics-component.html
-Redirect 301 /mime-multipart.html /components/latest/mime-multipart-dataformat.html
+Redirect 301 /mime-multipart.html /components/latest/dataformats/mime-multipart-dataformat.html
 Redirect 301 /mina.html /components/latest/mina-component.html
 Redirect 301 /mina2.html /components/latest/mina-component.html
 Redirect 301 /mllp.html /components/latest/mllp-component.html
@@ -839,11 +839,11 @@ Redirect 301 /mongodb-gridfs.html /components/latest/mongodb-gridfs-component.ht
 Redirect 301 /mongodb.html /components/latest/mongodb-component.html
 Redirect 301 /mqtt.html /components/latest/mqtt-component.html
 Redirect 301 /msv.html /components/latest/msv-component.html
-Redirect 301 /multicast.html /manual/latest/multicast-eip.html
+Redirect 301 /multicast.html /components/latest/eips/multicast-eip.html
 Redirect 301 /mustache.html /components/latest/mustache-component.html
 Redirect 301 /mvel-component.html /components/latest/mvel-component.html
-Redirect 301 /mvel.html /components/latest/mvel-language.html
-# Possible candidates for previous URL: [/components/latest/mvel-component.html, /components/latest/mvel-language.html]
+Redirect 301 /mvel.html /components/latest/languages/mvel-language.html
+# Possible candidates for previous URL: [/components/latest/mvel-component.html, /components/latest/languages/mvel-language.html]
 Redirect 301 /mybatis.html /components/latest/mybatis-component.html
 Redirect 301 /nagios.html /components/latest/nagios-component.html
 Redirect 301 /nats.html /components/latest/nats-component.html
@@ -853,7 +853,7 @@ Redirect 301 /netty4 /components/latest/netty-component.html
 Redirect 301 /netty4-http.html /components/latest/netty-http-component.html
 Redirect 301 /netty4.html /components/latest/netty-component.html
 Redirect 301 /news.html /news
-Redirect 301 /ognl.html /components/latest/ognl-language.html
+Redirect 301 /ognl.html /components/latest/languages/ognl-language.html
 Redirect 301 /olingo2.html /components/latest/olingo2-component.html
 Redirect 301 /oncompletion.html /manual/latest/oncompletion.html
 Redirect 301 /openshift.html /camel-k/latest/installation/openshift.html
@@ -866,28 +866,31 @@ Redirect 301 /pgevent.html /components/latest/pgevent-component.html
 Redirect 301 /pluggable-class-resolvers.html /manual/latest/pluggable-class-resolvers.html
 Redirect 301 /pojo-consuming.html /manual/latest/pojo-consuming.html
 Redirect 301 /pojo-producing.html /manual/latest/pojo-producing.html
-Redirect 301 /polling-consumer /manual/latest/polling-consumer.html
-Redirect 301 /polling-consumer.html /manual/latest/polling-consumer.html
+Redirect 301 /polling-consumer /components/latest/eips/polling-consumer.html
+Redirect 301 /polling-consumer.html /components/latest/eips/polling-consumer.html
 Redirect 301 /predicate.html /manual/latest/predicate.html
 Redirect 301 /processor.html /manual/latest/processor.html
 Redirect 301 /producertemplate.html /manual/latest/producertemplate.html
+Redirect 301 /projects/camel-k /projects/#apache-camel-k
+Redirect 301 /projects/camel-quarkus /projects/#apache-camel-extensions-for-quarkus
+Redirect 301 /projects/camel-kafka-connector /projects/#apache-camel-kafka-connector
 Redirect 301 /properties /components/latest/properties-component.html
 Redirect 301 /properties-2.html /components/latest/properties-component.html
 Redirect 301 /properties.html /components/latest/properties-component.html
-Redirect 301 /protobuf.html /components/latest/protobuf-dataformat.html
-Redirect 301 /publish-subscribe-channel.html /manual/latest/publish-subscribe-channel.html
+Redirect 301 /protobuf.html /components/latest/dataformats/protobuf-dataformat.html
+Redirect 301 /publish-subscribe-channel.html /components/latest/eips/publish-subscribe-channel.html
 Redirect 301 /quartz.html /components/latest/quartz-component.html
 Redirect 301 /quartz2 /components/latest/quartz-component.html
 Redirect 301 /quartz2.html /components/latest/quartz-component.html
 Redirect 301 /quickfix.html /components/latest/quickfix-component.html
 Redirect 301 /rabbitmq.html /components/latest/rabbitmq-component.html
-Redirect 301 /recipient-list.html /manual/latest/recipientList-eip.html
-Redirect 301 /ref-language.html /manual/latest/ref-language.html
+Redirect 301 /recipient-list.html /components/latest/eips/recipientList-eip.html
+Redirect 301 /ref-language.html /components/latest/languages/ref-language.html
 Redirect 301 /ref.html /components/latest/ref-component.html
-# Possible candidates for previous URL: [/components/latest/ref-component.html, /manual/latest/ref-language.html]
+# Possible candidates for previous URL: [/components/latest/ref-component.html, /components/latest/languages/ref-language.html]
 Redirect 301 /registry.html /manual/latest/registry.html
-Redirect 301 /request-reply.html /manual/latest/requestReply-eip.html
-Redirect 301 /resequencer.html /manual/latest/resequence-eip.html
+Redirect 301 /request-reply.html /components/latest/eips/requestReply-eip.html
+Redirect 301 /resequencer.html /components/latest/eips/resequence-eip.html
 Redirect 301 /rest-dsl /manual/latest/rest-dsl.html
 Redirect 301 /rest-dsl-2.html /manual/latest/rest-dsl.html
 Redirect 301 /rest-dsl.html /manual/latest/rest-dsl.html
@@ -898,9 +901,9 @@ Redirect 301 /restlet.html /components/latest/restlet-component.html
 Redirect 301 /routebuilder.html /manual/latest/route-builder.html
 Redirect 301 /routepolicy.html /manual/latest/route-policy.html
 Redirect 301 /routes.html /manual/latest/routes.html
-Redirect 301 /routing-slip.html /manual/latest/routingSlip-eip.html
+Redirect 301 /routing-slip.html /components/latest/eips/routingSlip-eip.html
 Redirect 301 /rss.html /components/latest/rss-component.html
-# Possible candidates for previous URL: [/components/latest/rss-component.html, /components/latest/rss-dataformat.html]
+# Possible candidates for previous URL: [/components/latest/rss-component.html, /components/latest/dataformats/rss-dataformat.html]
 Redirect 301 /running-camel-standalone.html /manual/latest/faq/running-camel-standalone.html
 Redirect 301 /running-examples.html /manual/latest/running-examples.html
 Redirect 301 /salesforce.html /components/latest/salesforce-component.html
@@ -910,19 +913,19 @@ Redirect 301 /scala-dsl.html /manual/latest/scala-dsl.html
 Redirect 301 /scheduledroutepolicy.html /manual/latest/scheduledroutepolicy.html
 Redirect 301 /scheduler.html /components/latest/scheduler-component.html
 Redirect 301 /schematron.html /components/latest/schematron-component.html
-Redirect 301 /script.html /manual/latest/script-eip.html
+Redirect 301 /script.html /components/latest/eips/script-eip.html
 Redirect 301 /scripting-languages.html /manual/latest/scripting-languages.html
 Redirect 301 /security.html /security
 Redirect 301 /seda /components/latest/seda-component.html
 Redirect 301 /seda.html /components/latest/seda-component.html
-Redirect 301 /servicecall-eip.html /manual/latest/serviceCall-eip.html
+Redirect 301 /servicecall-eip.html /components/latest/eips/serviceCall-eip.html
 Redirect 301 /servicenow.html /components/latest/servicenow-component.html
 Redirect 301 /servicepool.html /manual/latest/servicepool.html
 Redirect 301 /servlet.html /components/latest/servlet-component.html
 Redirect 301 /should-i-deploy-camel-inside-the-activemq-broker-or-in-another-application.html /manual/latest/faq/should-i-deploy-camel-inside-the-activemq-broker-or-in-another-application.html
-Redirect 301 /simple /manual/latest/simple-language.html
-Redirect 301 /simple-2.html /manual/latest/simple-language.html
-Redirect 301 /simple.html /manual/latest/simple-language.html
+Redirect 301 /simple /components/latest/languages/simple-language.html
+Redirect 301 /simple-2.html /components/latest/languages/simple-language.html
+Redirect 301 /simple.html /components/latest/languages/simple-language.html
 Redirect 301 /simplescheduledroutepolicy.html /manual/latest/simplescheduledroutepolicy.html
 Redirect 301 /sip.html /components/latest/sip-component.html
 Redirect 301 /sjms /components/latest/sjms-component.html
@@ -933,10 +936,10 @@ Redirect 301 /smpp /components/latest/smpp-component.html
 Redirect 301 /smpp.html /components/latest/smpp-component.html
 Redirect 301 /snmp.html /components/latest/snmp-component.html
 Redirect 301 /solr.html /components/latest/solr-component.html
-Redirect 301 /sort.html /manual/latest/sort-eip.html
+Redirect 301 /sort.html /components/latest/eips/sort-eip.html
 Redirect 301 /spark-rest.html /components/latest/spark-rest-component.html
-Redirect 301 /spel.html /components/latest/spel-language.html
-Redirect 301 /splitter.html /manual/latest/split-eip.html
+Redirect 301 /spel.html /components/latest/languages/spel-language.html
+Redirect 301 /splitter.html /components/latest/eips/split-eip.html
 Redirect 301 /splunk.html /components/latest/splunk-component.html
 Redirect 301 /spring-boot /components/latest/spring-boot.html
 Redirect 301 /spring-boot.html /components/latest/spring-boot.html
@@ -949,7 +952,7 @@ Redirect 301 /spring-remoting.html /manual/latest/spring-remoting.html
 Redirect 301 /spring-security.html /components/latest/spring-security.html
 Redirect 301 /spring-testing.html /manual/latest/spring-testing.html
 Redirect 301 /spring-xml-extensions.html /manual/latest/spring-xml-extensions.html
-Redirect 301 /spring.html /manual/latest/spring.html
+Redirect 301 /spring.html /components/latest/spring.html
 # Possible candidates for previous URL: [/manual/latest/spring.html, /components/latest/spring.html]
 Redirect 301 /springbatch.html /components/latest/spring-batch-component.html
 Redirect 301 /springintegration.html /components/latest/spring-integration-component.html
@@ -965,7 +968,7 @@ Redirect 301 /stub.html /components/latest/stub-component.html
 Redirect 301 /support.html /manual/latest/support.html
 # Possible candidates for previous URL: [/manual/latest/support.html, /community/support]
 Redirect 301 /swagger-java.html /components/latest/swagger-java.html
-Redirect 301 /syslog.html /components/latest/syslog-dataformat.html
+Redirect 301 /syslog.html /components/latest/dataformats/syslog-dataformat.html
 Redirect 301 /team.html /manual/latest/team.html
 # Possible candidates for previous URL: [/manual/latest/team.html, /community/team]
 Redirect 301 /telegram.html /components/latest/telegram-component.html
@@ -974,14 +977,14 @@ Redirect 301 /test.html /components/latest/test.html
 Redirect 301 /testing /manual/latest/testing.html
 Redirect 301 /testing.html /manual/latest/testing.html
 Redirect 301 /threading-model.html /manual/latest/threading-model.html
-Redirect 301 /throttler.html /manual/latest/throttle-eip.html
-Redirect 301 /tidymarkup.html /components/latest/tidyMarkup-dataformat.html
+Redirect 301 /throttler.html /components/latest/eips/throttle-eip.html
+Redirect 301 /tidymarkup.html /components/latest/dataformats/tidyMarkup-dataformat.html
 Redirect 301 /timer.html /components/latest/timer-component.html
-Redirect 301 /tokenizer /manual/latest/tokenize-language.html
-Redirect 301 /tokenizer.html /manual/latest/tokenize-language.html
+Redirect 301 /tokenizer /components/latest/languages/tokenize-language.html
+Redirect 301 /tokenizer.html /components/latest/languages/tokenize-language.html
 Redirect 301 /tracer /manual/latest/tracer.html
 Redirect 301 /tracer.html /manual/latest/tracer.html
-Redirect 301 /transactional-client.html /manual/latest/transactional-client.html
+Redirect 301 /transactional-client.html /components/latest/eips/transactional-client.html
 Redirect 301 /transactionerrorhandler.html /manual/latest/transactionerrorhandler.html
 Redirect 301 /transformer.html /manual/latest/transformer.html
 Redirect 301 /transport.html /manual/latest/transport.html
@@ -999,7 +1002,7 @@ Redirect 301 /using-osgi-blueprint-with-camel.html /manual/latest/using-osgi-blu
 Redirect 301 /using-propertyplaceholder.html /manual/latest/using-propertyplaceholder.html
 Redirect 301 /using-this-pattern.html /manual/latest/using-this-pattern.html
 Redirect 301 /uuidgenerator.html /manual/latest/uuidgenerator.html
-Redirect 301 /validate.html /manual/latest/validate-eip.html
+Redirect 301 /validate.html /components/latest/eips/validate-eip.html
 Redirect 301 /validator.html /manual/latest/validator.html
 # Possible candidates for previous URL: [/manual/latest/validator.html, /components/latest/validator-component.html]
 Redirect 301 /velocity.html /components/latest/velocity-component.html
@@ -1031,22 +1034,22 @@ Redirect 301 /why-is-my-processor-not-showing-up-in-jconsole.html /manual/latest
 Redirect 301 /why-is-the-exception-null-when-i-use-onexception.html /manual/latest/faq/why-is-the-exception-null-when-i-use-onexception.html
 Redirect 301 /why-the-name-camel.html /manual/latest/faq/why-the-name-camel.html
 Redirect 301 /why-use-multiple-camelcontext.html /manual/latest/faq/why-use-multiple-camelcontext.html
-Redirect 301 /wire-tap.html /manual/latest/wireTap-eip.html
-Redirect 301 /wiretap.html /manual/latest/wireTap-eip.html
+Redirect 301 /wire-tap.html /components/latest/eips/wireTap-eip.html
+Redirect 301 /wiretap.html /components/latest/eips/wireTap-eip.html
 Redirect 301 /writing-components.html /manual/latest/writing-components.html
 Redirect 301 /xml-configuration.html /manual/latest/xml-configuration.html
 Redirect 301 /xml-reference.html /manual/latest/xml-reference.html
 Redirect 301 /xml-security-component.html /components/latest/xmlsecurity-component.html
 Redirect 301 /xmpp.html /components/latest/xmpp-component.html
-Redirect 301 /xpath.html /components/latest/xpath-language.html
+Redirect 301 /xpath.html /components/latest/languages/xpath-language.html
 Redirect 301 /xquery.html /components/latest/xquery-component.html
 # Possible candidates for previous URL: [/components/latest/xquery-language.html, /components/latest/xquery-component.html]
 Redirect 301 /xslt.html /components/latest/xslt-component.html
-Redirect 301 /xstream /components/latest/xstream-dataformat.html
-Redirect 301 /xstream-2.html /components/latest/xstream-dataformat.html
-Redirect 301 /xstream.html /components/latest/xstream-dataformat.html
+Redirect 301 /xstream /components/latest/dataformats/xstream-dataformat.html
+Redirect 301 /xstream-2.html /components/latest/dataformats/xstream-dataformat.html
+Redirect 301 /xstream.html /components/latest/dataformats/xstream-dataformat.html
 Redirect 301 /yammer.html /components/latest/yammer-component.html
-Redirect 301 /zip-file-dataformat.html /components/latest/zipfile-dataformat.html
+Redirect 301 /zip-file-dataformat.html /components/latest/dataformats/zipfile-dataformat.html
 Redirect 301 /zookeeper.html /components/latest/zookeeper-component.html
 Redirect 301 /docs/getting-started /manual/latest/getting-started.html
 
@@ -1323,7 +1326,7 @@ AddDefaultCharset utf-8
 
 <IfModule mod_headers.c>
     #                                   (1)                 (2)              (3)                 (4)                     (5)
-    Header set Content-Security-Policy "default-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests; connect-src https://*.algolia.net https://*.algolianet.com" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
+    Header set Content-Security-Policy "default-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests; connect-src https://*.algolia.net https://*.algolianet.com; img-src 'self' https://*.githubusercontent.com" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
 </IfModule>
 
 # ----------------------------------------------------------------------

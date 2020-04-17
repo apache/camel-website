@@ -15,7 +15,50 @@
             {{ range $pages }}
                 {{ .Render "summary" }}
             {{ end }}
-            {{ template "_internal/pagination.html" . }}
+            
+            {{ $page := .Paginator }}
+            {{ if gt $page.TotalPages 1 }}
+            {{ $shouldEllipse := false }}
+            <nav aria-label="page">
+                <ul class="pagination">
+                    {{ if ne $page.PageNumber 1 }}
+                    <li class="page-item">
+                        <a href="{{ $page.First.URL }}" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+                    </li>
+                    {{ end }}
+
+                    {{ if $page.HasPrev  }}
+                    <li class="page-item">
+                        <a href="{{ $page.Prev.URL }}" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+                    </li>
+                    {{ end }}
+
+                    {{ range $page.Pagers }}
+                        {{ if eq . $page }}
+                        <li class="page-item active"><a href="{{ .URL }}" class="page-link">{{ .PageNumber }}</a></li>
+                        {{ else if and (ge .PageNumber (sub $page.PageNumber 2)) (le .PageNumber (add $page.PageNumber 2)) }}
+                        {{ $shouldEllipse = false }}
+                        <li class="page-item"><a href="{{ .URL }}" class="page-link">{{ .PageNumber }}</a></li>
+                        {{ else if eq $shouldEllipse false }}
+                        {{ $shouldEllipse = true }}
+                        <li class="page-item disabled"><a class="page-link">&hellip;</a></li>
+                        {{ end }}
+                    {{ end }}
+
+                    {{ if $page.HasNext }}
+                    <li class="page-item">
+                        <a href="{{ $page.Next.URL }}" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+                    </li>
+                    {{ end }}
+
+                    {{ if ne $page.PageNumber $page.TotalPages }}
+                    <li class="page-item">
+                        <a href="{{ $page.Last.URL }}" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </nav>
+            {{ end }}
         </div>
     </main>
 </div>
