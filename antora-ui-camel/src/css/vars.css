@@ -120,7 +120,7 @@
   --footer-font-color: var(--color-gray-70);
   --footer-link-font-color: var(--color-jet-80);
   /* dimensions */
-  --vw-base--desktop: calc(100 / 1300);   /* used to compute rem value from desired viewport size i.e. 1300 */
+  --vw-base--desktop: calc(100 / 1300);   /* used to compute vw value from desired viewport size i.e. 1300 */
   --navbar-height: calc(73 / var(--rem-base) * 1rem);
   --toolbar-height: calc(45 / var(--rem-base) * 1rem);
   --drawer-height: var(--toolbar-height);
