@@ -321,6 +321,7 @@ body {
 
   .navbar-item.has-dropdown {
     align-items: stretch;
+    padding-right: 2.8rem;
   }
 
   .navbar-item.has-dropdown:last-of-type .navbar-dropdown {
