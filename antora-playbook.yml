@@ -22,6 +22,8 @@ content:
     - url: git@github.com:apache/camel.git
       branches: camel-3.2.x
       start_paths:
+        # eip
+        - core/camel-core-engine/src/main/docs
         # languages
         - core/camel-core-languages/src/main/docs
         - core/camel-xml-jaxp/src/main/docs
