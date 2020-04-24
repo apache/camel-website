@@ -18,10 +18,11 @@ The [User Manual](/manual/latest/) is a comprehensive guide meant to help you wi
 
 Apache Camel encompasses several sub-projects for additional platforms or ways to run Camel. Check out the individual sub-project manuals here :
 
-- [Camel-K](/camel-k/latest/)
+- [Camel K](/camel-k/latest/)
 - [Camel Quarkus](/camel-quarkus/latest/)
 - [Camel Kafka Connector](/camel-kafka-connector/latest/)
 - [Camel Karaf](/camel-karaf/latest/)
+- [Camel Spring Boot](/camel-spring-boot/latest/)
 - [API documentation](https://www.javadoc.io/doc/org.apache.camel/camel-api/latest/index.html)
 
 ## Components
