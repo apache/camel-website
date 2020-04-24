@@ -2,38 +2,45 @@
 
     <header>
         {{ if .Params.categories }}
-            {{ range .Params.categories }}<a class="category" href="{{ "/categories/" | relURL }}{{ . | urlize }}/">{{ upper . }}</a>{{ end }}
+        {{ range .Params.categories }}<a class="category"
+            href="{{ "/categories/" | relURL }}{{ . | urlize }}/">{{ upper . }}</a>{{ end }}
         {{ end }}
         <h1>{{ .Title }}</h1>
     </header>
     <div class="post">
         <aside>
             <div class="summary">{{ .Params.preview }}</div>
-            Posted on <time itemprop="published" datetime="{{ dateFormat "2006-01-02" .PublishDate }}" title="{{ dateFormat "Monday, January 2, 2006" .PublishDate }}">{{ dateFormat "January 2, 2006" .PublishDate }}</time>, by {{ range $author := .Params.authors }}
-                {{ with getJSON "https://api.github.com/users/" $author }}
-                    <figure>
-                        <img src="{{ .avatar_url }}" alt="{{ .name }}"><figcaption rel="author">{{ .name }}</figcaption>
-                    </figure>
-                {{ end }}
+            Posted on <time itemprop="published" datetime="{{ dateFormat "2006-01-02" .PublishDate }}"
+                title="{{ dateFormat "Monday, January 2, 2006" .PublishDate }}">{{ dateFormat "January 2, 2006" .PublishDate }}</time>,
+            by {{ range $author := .Params.authors }}
+            {{ with getJSON "https://api.github.com/users/" $author }}
+            <figure>
+                <img src="{{ .avatar_url }}" alt="{{ .name }}">
+                <figcaption rel="author">{{ .name }}</figcaption>
+            </figure>
+            {{ end }}
             {{ end }}
             <p>
-            {{ if .PrevInSection }}
-            <a class="arrow prev" href="{{ .PrevInSection.RelPermalink }}" title="Previous post: {{ .PrevInSection.Title }}">&#10094;</a>
-            {{ end }}
-            {{ if .NextInSection }}
-            <a class="arrow next" href="{{ .NextInSection.RelPermalink }}" title="Next post: {{ .NextInSection.Title }}">&#10095;</a>
-            {{ end }}
+                {{ if .PrevInSection }}
+                <a class="arrow prev" href="{{ .PrevInSection.RelPermalink }}"
+                    title="Previous post: {{ .PrevInSection.Title }}">&#10094;</a>
+                {{ end }}
+                {{ if .NextInSection }}
+                <a class="arrow next" href="{{ .NextInSection.RelPermalink }}"
+                    title="Next post: {{ .NextInSection.Title }}">&#10095;</a>
+                {{ end }}
             </p>
         </aside>
         <div class="post-content">
             {{ $featured := (.Resources.ByType "image").GetMatch "*featured*" }}
             {{ with $featured }}
-              {{ if ne $featured.MediaType.SubType "svg" }}
-                  {{ $featured := .Resize "800x q95 Gaussian" }}
-                  <img class="featured" alt="Blog post featured image" src="{{ $featured.RelPermalink }}" width="{{ $featured.Width }}" height="{{ $featured.Height }}">
-              {{ else }}
-                  <img class="featured" alt="Blog post featured image" src="{{ $featured.RelPermalink }}" width="800">
-              {{ end }}
+            {{ if ne $featured.MediaType.SubType "svg" }}
+            {{ $featured := .Resize "800x q95 Gaussian" }}
+            <img class="featured" alt="Blog post featured image" src="{{ $featured.RelPermalink }}"
+                width="{{ $featured.Width }}" height="{{ $featured.Height }}">
+            {{ else }}
+            <img class="featured" alt="Blog post featured image" src="{{ $featured.RelPermalink }}" width="800">
+            {{ end }}
             {{ end }}
             {{ .Content }}
         </div>
