@@ -36,7 +36,7 @@ Packed with <mark>several hundred components</mark> that are used to access data
 
 ### Runtimes
 
-<mark>Runs everywhere</mark>: Standalone, embedded as a library within Spring Boot, Application Servers, and in the clouds. Enjoy seamless integration with popular runtimes such as **Spring Boot**, **Microprofile**, and **Quarkus**.
+<mark>Runs everywhere</mark>: Standalone, embedded as a library within Spring Boot, Quarkus, Application Servers, and in the clouds. 
 {{< /div >}}
 {{< /div >}}
 
@@ -61,7 +61,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 
 # Camel K
 
-**Apache Camel K** is a lightweight integration framework built from Apache Camel that runs natively on [Kubernetes](https://kubernetes.io/) and is specifically designed for **serverless** and **microservice architectures**.
+**Apache Camel K** is a lightweight integration framework built from Apache Camel that runs natively on [Kubernetes](https://kubernetes.io/) and is specifically designed for serverless architectures.
 
 {{< div "links" >}}
 [Documentation](/camel-k/latest/)
