@@ -71,5 +71,4 @@ asciidoc:
     - ./extensions/inline-styles.js
     - "@djencks/asciidoctor-antora-indexer"
   attributes:
-    camel-quarkus-last-release: 1.0.0-M6
     eip-vc: latest@components
