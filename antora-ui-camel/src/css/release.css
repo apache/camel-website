@@ -10,7 +10,7 @@
 .release dd {
   grid-column-start: 2;
   margin-left: 1rem;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 .release .tableblock tbody tr:nth-child(2n) {
