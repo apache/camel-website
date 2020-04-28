@@ -42,6 +42,9 @@ content:
     - url: git@github.com:apache/camel-k.git
       branches: master
       start_path: docs
+    - url: git@github.com:apache/camel-k-runtime.git
+      branches: master
+      start_path: docs
     - url: git@github.com:apache/camel-quarkus.git
       branches: master
       start_path: docs
