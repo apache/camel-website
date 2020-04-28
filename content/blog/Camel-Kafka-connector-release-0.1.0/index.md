@@ -1,6 +1,6 @@
 ---
 title: "Apache Camel Kafka Connector 0.1.0 Released"
-date: 2019-12-14
+date: 2020-04-28
 authors: ["oscerd","valdar"]
 categories: ["Releases"]
 preview: Camel-Kafka-connector release 0.1.0
