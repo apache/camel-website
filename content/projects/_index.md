@@ -2,12 +2,17 @@
 title: Apache Camel Projects
 ---
 
+<img src="/_/img/logo-d.svg" alt="Camel logo" class="title-image" height="100"/>
+<img src="/_/img/knative.svg" alt="Knative logo" class="title-image"/>
+
 ## Apache Camel K
 
 Apache Camel K is a lightweight integration framework built from Apache Camel that runs natively on Kubernetes and is specifically designed for serverless and microservice architectures. Users of Camel K can instantly run integration code written in Camel DSL on their preferred cloud (Kubernetes or OpenShift).
 
 For more information checkout the [Camel K manual](/camel-k/latest/) and join the community on on the [Camel Users mailing list](/community/mailing-list/) and have a look at the [Camel K GitHub repository](https://github.com/apache/camel-k/).
 
+<img src="/_/img/logo-d.svg" alt="Camel logo" class="title-image"/>
+<img src="/_/img/apache-kafka.svg" alt="Kafka logo" class="title-image"/>
 
 ## Apache Camel Kafka Connector
 
@@ -15,6 +20,8 @@ Camel Kafka Connector allows you to use all Camel [components](/components/lates
 
 For more information checkout the [Camel Kafka Connector manual](/camel-kafka-connector/latest/) and join the community on the [Camel Users mailing list](/community/mailing-list/) or chat on [Gitter chat](https://gitter.im/apache/camel-kafka-connector) and have a look at the [Camel Kafka Connector GitHub repository](https://github.com/apache/camel-kafka-connector/).
 
+<img src="/_/img/logo-d.svg" alt="Camel logo" class="title-image"/>
+<img src="/_/img/quarkus.svg" alt="Quarkus logo" class="title-image"/>
 
 ## Apache Camel extensions for Quarkus
 
@@ -22,12 +29,17 @@ This project hosts the efforts to port and package the 280+ Camel components as 
 
 For more information, please refer to the [Camel Quarkus Documentation](/camel-quarkus/latest/) or check the [Camel Quarkus code](https://github.com/apache/camel-quarkus/) on GitHub.
 
+<img src="/_/img/logo-d.svg" alt="Camel logo" class="title-image"/>
+<img src="/_/img/spring-boot.svg" alt="Spring-boot logo" class="title-image"/>
 
 ## Apache Camel Spring Boot Starters
 
 Camel support for Spring Boot provides auto-configuration of the Camel and starters for many Camel components. Our opinionated auto-configuration of the Camel context auto-detects Camel routes available in the Spring context and registers the key Camel utilities (like producer template, consumer template and the type converter) as beans. 
 
 For more information, please refer to the [Camel Spring Boot Starters Manual](/camel-spring-boot/latest/).
+
+<img src="/_/img/logo-d.svg" alt="Camel logo" class="title-image"/>
+<img src="/_/img/apache-karaf.svg" alt="Apache-karaf logo" class="title-image"/>
 
 ## Apache Camel Karaf
 
