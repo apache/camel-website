@@ -21,7 +21,7 @@ See this [external blog post](http://www.davsclaus.com/2020/03/apache-camel-31-f
 
 Another work is to make Camel reflection free (99%). We now source code generate configurer classes that is capable of configuring and setting properties on all components, data formats, and other areas in Camel. We missed some parts of Rest-DSL and Circuit Breakers which has been implemented for Camel 3.3. See this [external blog post](http://www.davsclaus.com/2020/03/apache-camel-32-reflection-free.html) for more details.
 
-Camel core has also been further optimize to do more of its bootstrapping in an earlier phase where pssible. This makes Camel faster and ligther on Quarkus and GraalVM. This work will continue in the next release, as there are some Camel components that can be optimized more as well.
+Camel core has also been further optimize to do more of its bootstrapping in an earlier phase where possible. This makes Camel faster and ligther on Quarkus and GraalVM. This work will continue in the next release, as there are some Camel components that can be optimized more as well.
 
 There is an ongoing experiment for a lightweight CamelContext that is locked-down and immutable which is an effort to make Camel even quicker and faster for Quarkus and GraalVM; where dynamism at runtime is not needed (for example adding new routes).
 
@@ -71,4 +71,4 @@ And then all the usual stuff with 3rd party dependency upgrades, bug fixes, new 
 
 But in this blog we wanted to spill out details about the heavy work that are ongoing to make Camel awesome for today and tomorrows modern Java workloads.
 
-PS: And we have also worked on the website, which keep getting better and better.
+PS: And we have also worked on the website, which keeps getting better and better.
