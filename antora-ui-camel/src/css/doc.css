@@ -328,11 +328,6 @@
   max-width: 100%;
 }
 
-.title-image {
-  height: 2rem;
-  float: left;
-}
-
 #preamble .abstract blockquote {
   background: var(--abstract-background);
   border-left: 5px solid var(--abstract-border-color);
