@@ -4,6 +4,7 @@ title: "Articles"
 
 ### Camel Videos (Lang: English, French, Norwegian, Russian, Spannish)
 
+*   [4K–Kubernetes with Knative, Kafka, and Kamel](https://www.youtube.com/watch?v=kYM6hoh2ahI) - DevNation Tech Talk from April 2020 where Kamesh Sampath celebrats his book launch of the Knative Cookbook, and runs a fast-paced live code demonstration of the coolest Knative-based techniques that we can imagine that include Kafka and Kamel.
 *   [How to quickly run 100 Camels with Apache Camel, Quarkus and GraalVM](https://www.youtube.com/watch?v=4lXSf8DBQkQ) - A 10 minute video from April 2020 where Claus shows how to run Camel in both JVM and Native compiled mode and compare startup speed and memory usage.
 *   [Best Practices for Middleware and Integration Architecture Modernization with Apache Camel](https://www.youtube.com/watch?v=d1Hr78a7Lww) - A 30 minute video from March 2020 where Claus presents Camel 3 and focused on Camel K and Camel Quarkus.
 *   [Metamorphosis: When Kafka meets Camel](https://www.youtube.com/watch?v=hJUl7R2dN00) - A 40 minute video from DevConf.CZ in January 2020 where Otavio Piske and Jakub Scholz introduce Camel and Kafka Connector and talk about how they can work together. 
