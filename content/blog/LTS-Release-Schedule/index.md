@@ -31,30 +31,36 @@ The tentative release schedule for 2020 is as follows:
 {{< table >}}
 | Release | Date     | LTS | EOL      | Java  
 |---------|----------|-----|----------|------
+| 2.25.0  | Jan 2020 | Yes | Jan 2021 | 8
 | 3.1.0   | Feb 2020 | No  |          | 8, 11
 | 3.2.0   | Apr 2020 | No  |          | 8, 11
-| 3.3.0   | Jun 2020 | Yes | Jun 2021 | 8, 11
-| 3.4.0   | Aug 2020 | No  |          | 11
-| 3.5.0   | Oct 2020 | No  |          | 11
-| 3.6.0   | Dec 2020 | Yes | Dec 2021 | 11
+| 3.3.0   | May 2020 | No  |          | 8, 11
+| 3.4.0   | Jun 2020 | Yes | Jun 2021 | 8, 11
+| 3.5.0   | Aug 2020 | No  |          | 11
+| 3.6.0   | Oct 2020 | No  |          | 11
+| 3.7.0   | Dec 2020 | Yes | Dec 2021 | 11, 14?
 {{< /table >}}
 
 **NOTE:** The schedule is tentative and subject for change
 (for example date's may slip into the following month). 
 
-So for 2020, we have planned 2 LTS releases, Camel 3.3.x and 3.6.x where we will release
-patch releases. The LTS releases are generally supported for 1-year
-(latest 2 LTS releases are actively supported)
+So for 2020, we have planned 2 LTS releases, Camel 3.4.x and 3.7.x where we will release
+patch releases. The LTS releases has support for 1-year.
 
-For each Camel release, we will mark in the release notes whether its a LTS or non-LTS release.
+For each Camel release, we will mark in the release notes whether it's a LTS or non-LTS release.
 
 ## Java 8 and 11
 
 Java 8 is planned to be dropped after the first Camel 3 LTS release (currently
-planned as Camel 3.3). 
+planned as Camel 3.4). 
 
-Java 8 was originally intended to be dropped entirely for Camel 3,
+Java 8 was in the beginning planned to be dropped entirely for Camel 3,
 but we wanted to allow end users to migrate from Camel 2.x to 3.x without having
 to also upgrade from Java 8 to 11 at the same time. So this means that users
 can safely migrate from Camel 2.x to Camel 3.3.x and stay on Java 8 and have this supported
-until June 2021. But we encourage Camel users to move to Java 11 when possible.
+until June 2021. We encourage Camel users to move to Java 11 when possible.
+
+## Java 14
+
+We have not yet started working on support for Java 14. However after the first LTS release
+where we drop Java 8, then this will give us space to work on support for Java 14.
