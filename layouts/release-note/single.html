@@ -109,7 +109,7 @@ git checkout camel-{{ .Params.version }}</pre>
 
     <h2 id="resolved"><a class="anchor" href="#resolved"></a>Resolved issues</h2>
     <p>Here is a list of all the issues that have been resolved for this release</p>
-    {{ $issues_json := getJSON "https://issues.apache.org/jira/rest/api/latest/search?jql=fixVersion=" (string .Params.jiraVersionId) "&fields=issuetype,summary" }}
+    {{ $issues_json := getJSON "https://issues.apache.org/jira/rest/api/latest/search?jql=fixVersion=" (string .Params.jiraVersionId) "&fields=issuetype,summary&maxResults=1000" }}
     {{ $issues := dict }}
     {{ range $issues_json.issues }}
       {{ $issues_by_type := (or (index $issues .fields.issuetype.name) slice) | append (dict "issue" .key "summary" .fields.summary) }}
