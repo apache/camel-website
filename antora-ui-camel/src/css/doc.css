@@ -667,3 +667,36 @@ table.tableblock thead {
   background: var(--color-smoke-90);
   font-weight: var(--body-font-weight-bold);
 }
+
+/* Status badges used in Camel Quarkus extension pages */
+div.badges p {
+  text-align: right;
+}
+
+div.badges span {
+  color: var(--color-white);
+  padding: 0.15rem 0.3rem 0.15rem 0.3rem;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 0.8rem;
+}
+
+div.badges span.badge-key {
+  background-color: var(--color-gray-60);
+  border-radius: 0.2rem 0 0 0.2rem;
+}
+
+div.badges span.badge-version {
+  background-color: var(--note-color);
+  border-radius: 0 0.2rem 0.2rem 0;
+}
+
+div.badges span.badge-supported {
+  background-color: var(--tip-color);
+  border-radius: 0 0.2rem 0.2rem 0;
+}
+
+div.badges span.badge-unsupported {
+  background-color: var(--important-color);
+  border-radius: 0 0.2rem 0.2rem 0;
+}
