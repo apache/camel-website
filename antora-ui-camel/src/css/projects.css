@@ -1,0 +1,59 @@
+.subproject {
+  display: inline-flex;
+  border: 1px solid var(--color-smoke-90);
+  width: 46%;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.subproject > a > img {
+  display: inline-block;
+  width: auto;
+  height: 5rem;
+}
+
+.subproject .links {
+  white-space: nowrap;
+}
+
+.subproject > a > img + img {
+  padding-left: 1rem;
+}
+
+.subproject h1 + p {
+  height: 100%;
+  text-align: center;
+}
+
+.subproject-description {
+  padding: 1rem;
+  text-align: center;
+}
+
+.subproject-links {
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.subproject-links img {
+  display: inline-flex;
+  margin: 0 0.25rem;
+  width: 2rem;
+  height: 2rem;
+  filter: invert(24%) sepia(38%) saturate(1353%) hue-rotate(200deg) brightness(89%) contrast(99%);
+}
+
+@media screen and (max-width: 1023px) {
+  .subproject {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .subproject-description {
+    height: 10rem;
+  }
+}

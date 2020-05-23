@@ -652,11 +652,6 @@ kbd,
 }
 
 @media screen and (max-width: 1023px) and (min-width: 480px) {
-  .doc > h1.page:first-child,
-  .static > h1:first-child {
-    font-size: inherit;
-  }
-
   .doc p code,
   .doc thead code {
     font-size: var(--body-font-size);
