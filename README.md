@@ -135,7 +135,10 @@ the theme bundle exists in [antora-ui-camel/build/ui-bundle.zip](antora-ui-camel
 To build the website go to the project root directory and run:
 
     $ yarn install # needed only once, or if dependencies change
+    $ yarn format  # to format the code
     $ yarn build   # to perform the build
+
+In case `yarn build` raises error, run `yarn format` to format the code and re-run `yarn build` to build your bundle successfully.
 
 In case `yarn build` throws the error: **JavaScript heap out of memory**, the issue can be resolved by increasing the memory used by node.js by setting `NODE_OPTIONS` environment variable to include `--max_old_space_size`, for example to increase the old space to 4GB do:
 
