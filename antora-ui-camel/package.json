@@ -15,6 +15,7 @@
   ],
   "scripts": {
     "build": "gulp bundle",
+    "format": "gulp format",
     "preview": "gulp preview"
   },
   "devDependencies": {

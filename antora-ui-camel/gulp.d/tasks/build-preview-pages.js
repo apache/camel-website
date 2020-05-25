@@ -91,13 +91,16 @@ function registerHelpers (src) {
 }
 
 function registerTemplatedHelpers (src) {
-  return vfs.src('helpers/*.js.template', { base: src, cwd: src })
+  return vfs
+    .src('helpers/*.js.template', { base: src, cwd: src })
     .pipe(data(() => ({ manifest: fs.readFileSync('./public/_/data/rev-manifest.json').toString() })))
     .pipe(template())
-    .pipe(map((file, enc, next) => {
-      handlebars.registerHelper(file.stem.replace('.js', ''), requireFromString(file.contents.toString()))
-      next()
-    }))
+    .pipe(
+      map((file, enc, next) => {
+        handlebars.registerHelper(file.stem.replace('.js', ''), requireFromString(file.contents.toString()))
+        next()
+      })
+    )
 }
 
 function compileLayouts (src, layouts) {

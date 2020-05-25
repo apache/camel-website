@@ -25,7 +25,7 @@ const createMenu = (item) => {
   }
 }
 
-const menuData = mainMenu.filter((item) => (typeof (item.parent) === 'undefined')).map(createMenu)
+const menuData = mainMenu.filter((item) => typeof item.parent === 'undefined').map(createMenu)
 
 module.exports = (options) => {
   const siteRootPath = options.data.root.siteRootPath
