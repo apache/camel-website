@@ -82,23 +82,21 @@ module.exports = (src, dest, preview) => () => {
       .pipe(postcss(postcssPlugins))
       .pipe(rev()),
     vfs.src('font/*.{ttf,woff*(2)}', opts),
-    vfs
-      .src('img/**/*.{jpg,ico,png,svg}', opts)
-      .pipe(
-        imagemin([
-          imagemin.gifsicle(),
-          imagemin.jpegtran(),
-          imagemin.optipng(),
-          imagemin.svgo({
-            plugins: [
-              { removeViewBox: false },
-              { cleanupIDs: { remove: false } },
-              { removeTitle: false },
-              { removeDesc: false },
-            ],
-          }),
-        ])
-      ),
+    vfs.src('img/**/*.{jpg,ico,png,svg}', opts).pipe(
+      imagemin([
+        imagemin.gifsicle(),
+        imagemin.jpegtran(),
+        imagemin.optipng(),
+        imagemin.svgo({
+          plugins: [
+            { removeViewBox: false },
+            { cleanupIDs: { remove: false } },
+            { removeTitle: false },
+            { removeDesc: false },
+          ],
+        }),
+      ])
+    ),
     vfs.src('helpers/*.js', opts),
     vfs.src('layouts/*.hbs', opts),
     vfs.src('partials/*.hbs', opts)

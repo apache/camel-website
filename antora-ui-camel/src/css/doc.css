@@ -84,7 +84,7 @@
 .doc h4 .anchor::before,
 .doc h5 .anchor::before,
 .doc h6 .anchor::before {
-  content: "\00a7";
+  content: '\00a7';
 }
 
 .doc h1:hover .anchor,
@@ -419,11 +419,11 @@
 }
 
 .doc ul.checklist i.fa-check-square-o::before {
-  content: "\2713";
+  content: '\2713';
 }
 
 .doc ul.checklist i.fa-square-o::before {
-  content: "\274f";
+  content: '\274f';
 }
 
 .doc .dlist .dlist,
@@ -590,12 +590,12 @@ b.button {
 }
 
 b.button::before {
-  content: "[";
+  content: '[';
   padding-right: 0.25em;
 }
 
 b.button::after {
-  content: "]";
+  content: ']';
   padding-left: 0.25em;
 }
 
@@ -633,7 +633,7 @@ kbd,
 }
 
 .menuseq i.caret::before {
-  content: "\203a";
+  content: '\203a';
   font-size: 1.1em;
   font-weight: var(--body-font-weight-bold);
   line-height: calc(1 / 1.1);

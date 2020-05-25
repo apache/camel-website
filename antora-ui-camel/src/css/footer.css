@@ -55,7 +55,7 @@ footer .footer dl dt {
 }
 
 footer .footer dl dt::after {
-  content: "";
+  content: '';
   display: block;
   position: relative;
   bottom: 0;
@@ -87,6 +87,6 @@ footer .footer dl dd {
   padding: 0.4rem;
   background-color: var(--footer-background);
   color: black;
-  border-radius: 0.4rem 0.4rem  0 0;
+  border-radius: 0.4rem 0.4rem 0 0;
   height: 2rem;
 }

@@ -16,7 +16,12 @@ const serverConfig = { host: '0.0.0.0', port: 5252, livereload }
 const task = require('./gulp.d/tasks')
 const glob = {
   all: [srcDir, previewSrcDir],
-  css: `${srcDir}/css/**/*.css`,
+  lintcss: `${srcDir}/css/**/*.css`,
+  formatcss: [
+    `${srcDir}/css/**/*.css`,
+    `!${srcDir}/css/**/typeface-droid-sans-mono.css`,
+    `!${srcDir}/css/**/typeface-open-sans.css`,
+  ],
   js: ['gulpfile.js', 'gulp.d/**/*.js', `${srcDir}/{helpers,js}/**/*.js`],
 }
 
@@ -29,7 +34,7 @@ const cleanTask = createTask({
 const lintCssTask = createTask({
   name: 'lint:css',
   desc: 'Lint the CSS source files using stylelint (standard config)',
-  call: task.lintCss(glob.css),
+  call: task.lintCss(glob.lintcss),
 })
 
 const lintJsTask = createTask({
@@ -44,10 +49,22 @@ const lintTask = createTask({
   call: parallel(lintCssTask, lintJsTask),
 })
 
-const formatTask = createTask({
-  name: 'format',
+const formatCssTask = createTask({
+  name: 'format:css',
+  desc: 'Format the CSS source files using prettify (Standard Style)',
+  call: task.format(glob.formatcss),
+})
+
+const formatJsTask = createTask({
+  name: 'format:js',
   desc: 'Format the JavaScript source files using prettify (JavaScript Standard Style)',
   call: task.format(glob.js),
+})
+
+const formatTask = createTask({
+  name: 'format',
+  desc: 'Format the JavaScript and CSS source files using prettify',
+  call: parallel(formatCssTask, formatJsTask),
 })
 
 const buildTask = createTask({
