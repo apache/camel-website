@@ -8,7 +8,7 @@ preview: "CDC approaches based on Camel and Debezium."
 ---
 
 Change Data Capture (CDC) is a well-established software design pattern for a system that monitors and captures
-the changes in data, so that other software can respond to those changes.
+data changes, so that other software can respond to those events.
 
 Using a CDC engine like [Debezium](https://debezium.io) along with [Camel](https://camel.apache.org) integration
 framework, we can easily build data pipelines to bridge traditional data stores and new cloud-native event-driven
@@ -51,13 +51,23 @@ represents the number of microseconds since Unix Epoch as the server time at whi
 
 Prerequisites: Postgres 11, OpenJDK 1.8 and Maven 3.5+.
 
-[GET CODE HERE](https://github.com/fvaleri/cdc)
+[GET CODE HERE](https://github.com/fvaleri/cdc/tree/blog)
 
 ### External systems setup
 
-First of all, you need to start Postgres (the procedure depends on your specific OS).
+Enable transaction log access and start Postgres.
+```sh
+# postgresql.conf: configure replication slot
+wal_level = logical
+max_wal_senders = 1
+max_replication_slots = 1
+# pg_hba.conf: allow localhost replication to debezium user
+local   cdcdb       cdcadmin                                trust
+host    cdcdb       cdcadmin        127.0.0.1/32            trust
+host    cdcdb       cdcadmin        ::1/128                 trust
+```
 
-Then, there is a simple script to create and initialize the database.
+There is a simple script to create and initialize the database.
 This script can also be used to query the table and produce a stream of changes.
 ```sh
 ./run.sh --database
@@ -65,27 +75,10 @@ This script can also be used to query the table and produce a stream of changes.
 ./run.sh --stream
 ```
 
-Enable Postgres internal transaction log access (required by Debezium).
-```sh
-# postgresql.conf: configure replication slot
-wal_level = logical
-max_wal_senders = 1
-max_replication_slots = 1
-# pg_hba.conf: allow localhost replication to debezium user
-local   replication     cdcadmin                            trust
-host    replication     cdcadmin    127.0.0.1/32            trust
-host    replication     cdcadmin    ::1/128                 trust
-# add replication permission to user and enable previous values
-psql cdcdb
-ALTER ROLE cdcadmin WITH REPLICATION;
-ALTER TABLE cdc.customers REPLICA IDENTITY FULL;
-# restart Postgres
-```
-
-Start Artemis broker and open the [web console](http://localhost:8161/console) to check messages.
+Then, start Artemis broker and open the [web console](http://localhost:8161/console) (login: admin/admin).
 ```sh
 ./run.sh --artemis
-# check status
+# status check
 ps -ef | grep "[A]rtemis" | wc -l
 ```
 
@@ -106,7 +99,7 @@ We need a Kafka cluster up and running (3 ZooKeeper + 3 Kafka). This step also d
 (debezium-connector-postgres, camel-sjms2-kafka-connector) and dependencies.
 ```sh
 ./run.sh --kafka
-# check status
+# status check
 ps -ef | grep "[Q]uorumPeerMain" | wc -l
 ps -ef | grep "[K]afka" | wc -l
 ```
@@ -115,7 +108,7 @@ Now we can start our 3-nodes KafkaConnect cluster in distributed mode (workers t
 values automatically discover each other and form a cluster).
 ```sh
 ./run.sh --connect
-# check status
+# status check
 ps -ef | grep "[C]onnectDistributed" | wc -l
 tail -n100 /tmp/kafka/logs/connect.log
 /tmp/kafka/bin/kafka-topics.sh --zookeeper localhost:2180 --list
@@ -180,11 +173,12 @@ One thing to be aware of is that Debezium offers better performance because of t
 but there is no standard for it, so a change to the database implementation may require a rewrite of the corresponding plugin.
 This also means that every data source has its own procedure to enable access to its internal log.
 
-KafkaConnect single message transformations (SMTs) can be chained (sort of Unix pipeline) and extended with custom implementations,
-but they are actually designed for simple modifications. Long chains of SMTs are hard to maintain and reason about. Moreover, remember
-that tranformations are syncronous and applied at each message, so you can really slowdown the streaming pipeline with heavy processing
-or external service calls.
+Connectors configuration allows you to transform message payload by using single message transformations (SMTs), that can be
+chained (sort of Unix pipeline) and extended with custom implementations. They are actually designed for simple modifications
+and long chains of SMTs are hard to maintain and reason about. Moreover, remember that transformations are synchronous and
+applied on each message, so you can really slowdown the streaming pipeline with heavy processing or external service calls.
 
-In cases where you need to do heavy processing, split, enrich, aggregate records or call external services, you should use a stream
-processing layer between Connectors such as Kafka Streams or Camel. Just remember that Kafka Streams creates internal topics and you
-are forced to put transformed data back into some Kafka topic (data duplication), while this is just an option using Camel.
+In cases where you need to do heavy processing, split, enrich, aggregate records or call external services, you should use a
+stream processing layer between Connectors such as Kafka Streams or plain Camel. Just remember that Kafka Streams creates
+internal topics and you are forced to put transformed data back into some Kafka topic (data duplication), while this is just
+an option using Camel.
