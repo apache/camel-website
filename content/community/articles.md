@@ -2,7 +2,7 @@
 title: "Articles"
 ---
 
-### Camel Videos (Lang: English, French, Norwegian, Russian, Spannish)
+### Camel Videos
 
 *   [Camel K serverless Integration auf Kubernetes (**German**)](https://www.youtube.com/watch?v=ZY9s4zdm_Us) - 25 min video by Perdic8 team in Germany who introduces CamelK and show live demo on Windows how to install, run and use Camel K with their impressions.
 *   [SouJava May 2020: Apache Camel 3 - The next generation of enterprise integration](https://www.youtube.com/watch?v=OP81rLuoq0I) - SouJava talk from May 2020 where Claus Ibsen and Andrea Cosentino presents an hour long session about Apache Camel, Camel v3 and goes more in depth with Camel K, Camel Quarkus and Camel Kafka Connector. At the end of the talk there is a 30 min additional QA session.
@@ -175,6 +175,7 @@ These examples show usage of several different components and other concepts suc
 
 These examples show Camel combined with several tools (e.g. IDE), ESBs, Application Services, and other middleware products such as messaging or OSGi container.
 
+*   [Using Camel and NiFi in one solution](https://medium.com/@raymondmeester/using-camel-and-nifi-in-one-solution-c7668fafe451) blog post how to use Camel inside Apache Nifi.
 *   [Wanna try our Apache Camel developer tools for Enterprise Integration Patterns?](http://macstrac.blogspot.com/2011/01/wanna-try-our-apache-camel-developer.html) _by James Strachan_
 *   [Using NetBeans 7.0 to create a new Apache Camel project](http://coders-unite.blogspot.com/2011/07/using-netbeans-70-to-create-new-project.html) shows how to start from scratch in NetBeans to setup a Apache Camel project (tutorial style with screenshots)
 *   [Using NetBeans 7.0 to create a new Apache Camel project without Spring dependency](http://coders-unite.blogspot.com/2011/07/using-netbeans-70-to-create-apache.html) shows how to start from scratch in NetBeans to setup a Apache Camel project (tutorial style with screenshots) without any Spring dependency
