@@ -670,7 +670,7 @@ table.tableblock thead {
 
 /* Status badges used in Camel Quarkus extension pages */
 div.badges p {
-  text-align: right;
+  text-align: left;
 }
 
 div.badges span {
