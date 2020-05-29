@@ -220,6 +220,7 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   [Integrating Amazon MQ with other AWS services via Apache Camel](https://aws.amazon.com/blogs/compute/integrating-amazon-mq-with-other-aws-services-via-apache-camel/) (April 2018) blog post from Amazon compute blogs showing the steps how to run ActiveMQ and Camel on AWS and integrate with AWS services like S3 and others. 
 *   [Ingesting Filebeat Data Into Your Apache Camel Flow](https://insights.synergistcomputing.com/2018/03/27/ingesting-filebeat-data-into-your-apache-camel-flow/) (June 2018) blog post showing how to use camel-lumberjack to ingest data from Filebeat into your Camel routes.
 *   [Using Jaeger to trace an Apache Camel application](https://medium.com/jaegertracing/using-jaeger-to-trace-an-apache-camel-application-2b8118efbb4d) (August 2018) blog post from Gary Brown showing how to use camel-opentracing and Jaeger to do distributed traces and visualize them in Jaeger UI.
+*   [Quick Integration with Apache Camel and IBM MQ](https://dzone.com/articles/quickly-integrate-apache-camel-and-ibm-mq) article from May 2020 by Chandra Shekhar Pandey showing how to use Apache Camel running on Spring Boot to integrate with IBM MQ and testing it with Docker containers.
 
 #### Camel and Groovy
 
