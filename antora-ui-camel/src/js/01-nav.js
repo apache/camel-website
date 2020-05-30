@@ -91,6 +91,9 @@
     var navStyle = window.getComputedStyle(nav)
     if (navStyle.position === 'sticky') effectiveHeight -= (rect.top - parseFloat(navStyle.top))
     panel.scrollTop = Math.max(0, (el.getBoundingClientRect().height - effectiveHeight) * 0.5 + el.offsetTop)
+    var topPixels = Math.max(0, (el.getBoundingClientRect().height - effectiveHeight) * 0.5 + el.offsetTop)
+    var navMenu = document.getElementsByClassName('nav-menu')[0]
+    navMenu.scrollBy(0, topPixels)
   }
 
   function find (from, selector) {
