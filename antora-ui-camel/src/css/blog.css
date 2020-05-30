@@ -63,7 +63,7 @@ article.blog p {
   color: var(--color-gray-60);
 }
 
-.blog .post aside p span[rel="author"] {
+.blog .post aside p span[rel='author'] {
   display: inline-block;
 }
 
@@ -77,11 +77,11 @@ article.blog p {
 }
 
 .blog a.arrow.prev::after {
-  content: "\00A0previous";
+  content: '\00A0previous';
 }
 
 .blog a.arrow.next::before {
-  content: "next\00A0";
+  content: 'next\00A0';
 }
 
 .blog .post .post-content {
@@ -159,11 +159,11 @@ article.blog p {
   }
 
   .blog a.arrow.prev::after {
-    content: "";
+    content: '';
   }
 
   .blog a.arrow.next::before {
-    content: "";
+    content: '';
   }
 
   .blog .post .post-content {

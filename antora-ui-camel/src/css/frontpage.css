@@ -156,7 +156,7 @@ section.frontpage.projects {
 
 section.frontpage.projects .project {
   display: flex;
-  flex: 1 0 33%;
+  flex: 1 0 30%;
   flex-direction: column;
   align-items: center;
   padding: 1rem;
@@ -291,5 +291,11 @@ section.frontpage h2 {
 
   .box {
     min-width: 51vw;
+  }
+
+  @media screen and (min-width: 627px) {
+    section.frontpage.projects .project {
+      flex: 46%;
+    }
   }
 }

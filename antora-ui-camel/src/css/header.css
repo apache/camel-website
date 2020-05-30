@@ -214,7 +214,7 @@ body {
   .navbar-link::after {
     border-width: 0 0 2px 2px;
     border-style: solid;
-    content: " ";
+    content: ' ';
     display: block;
     height: 0.5em;
     position: absolute;
@@ -283,7 +283,7 @@ body {
   .navbar-link::after {
     border-width: 0 0 2px 2px;
     border-style: solid;
-    content: " ";
+    content: ' ';
     display: block;
     height: 0.5em;
     pointer-events: none;
@@ -336,7 +336,7 @@ body {
   .navbar-link::after {
     border-width: 0 0 2px 2px;
     border-style: solid;
-    content: " ";
+    content: ' ';
     display: block;
     height: 0.5em;
     pointer-events: none;
@@ -505,7 +505,7 @@ body {
   }
 
   .navbar-tools .brand-icon {
-    margin: 0.25  rem;
+    margin: 0.25 rem;
   }
 }
 

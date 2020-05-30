@@ -17,8 +17,8 @@
   }
 
   a.bare,
-  a[href^="#"],
-  a[href^="mailto:"] {
+  a[href^='#'],
+  a[href^='mailto:'] {
     text-decoration: none;
   }
 
