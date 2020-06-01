@@ -160,13 +160,12 @@ body {
   .navbar-menu.is-active {
     display: block;
     position: absolute;
-    height: 100vh;
+    height: 50vh;
     box-shadow: 0 16px 16px 0 rgba(10, 10, 10, 0.1);
     overflow-y: auto;
     top: 4rem;
     left: 0;
     right: 0;
-    margin-left: 50%;
     padding: 1rem 2rem;
   }
 
