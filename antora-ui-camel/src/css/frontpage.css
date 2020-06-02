@@ -216,23 +216,23 @@ section.frontpage h2 {
   text-align: center;
 }
 
-.box {
+.frontpage .box {
   flex: 50%;
   padding: 1.2rem 0;
 }
 
-.box div {
+.frontpage .box div {
   padding: 1.8rem;
   text-align: center;
   margin: 1rem;
   height: 100%;
 }
 
-.box div img {
+.frontpage .box div img {
   width: 27rem;
 }
 
-.box .feature-icon {
+.frontpage .box .feature-icon {
   width: 3.75rem;
   height: 3.75rem;
   filter: invert(24%) sepia(38%) saturate(1353%) hue-rotate(200deg) brightness(89%) contrast(99%);
@@ -260,7 +260,7 @@ section.frontpage h2 {
     padding-top: 1rem;
   }
 
-  .box {
+  .frontpage .box {
     padding: 1rem 0;
   }
 
@@ -289,7 +289,7 @@ section.frontpage h2 {
     margin: auto;
   }
 
-  .box {
+  .frontpage .box {
     min-width: 51vw;
   }
 
