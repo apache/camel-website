@@ -3,7 +3,7 @@
   --color-white: #fff;
   --color-smoke-10: #fefefe;
   --color-smoke-30: #fafafa;
-  --color-smoke-50: #f5f5f6;
+  --color-smoke-50: #f5f5f5;
   --color-smoke-70: #f0f0f0;
   --color-smoke-90: #e1e1e1;
   --color-gray-10: #c1c1c1;
@@ -54,7 +54,6 @@
   /* nav */
   --nav-background: var(--panel-background);
   --nav-border-color: var(--color-smoke-50);
-  --nav-scrollbar-color: var(--color-smoke-90);
   --nav-scroll-thumb-color: var(--color-gray-30);
   --nav-line-height: 1.35;
   --nav-heading-font-color: var(--color-asf-dark-blue);
@@ -68,6 +67,11 @@
   --toolbar-muted-color: var(--color-jet-80);
   --page-version-menu-background: var(--color-smoke-70);
   --page-version-missing-font-color: var(--color-gray-30);
+  /* toc */
+  --toc-font-color: var(--nav-muted-color);
+  --toc-heading-font-color: var(--doc-font-color);
+  --toc-border-color: var(--panel-border-color);
+  --toc-line-height: 1.2;
   /* admonitions */
   --caution-color: #a0439c;
   --caution-on-color: var(--color-white);
@@ -92,6 +96,7 @@
   --section-divider-color: var(--panel-border-color);
   --link-font-color: #585ac2;
   --link_hover-font-color: #104d92;
+  --link_unresolved-font-color: var(--important-color);
   --abstract-background: var(--color-smoke-70);
   --abstract-font-color: var(--color-jet-20);
   --abstract-border-color: var(--panel-border-color);
@@ -135,6 +140,10 @@
   --nav-panel-height: calc(var(--nav-height) - var(--drawer-height));
   --nav-panel-height--desktop: calc(var(--nav-height--desktop) - var(--drawer-height));
   --nav-width: calc(270 / var(--rem-base) * 1rem);
+  --toc-top: calc(var(--body-top) + var(--toolbar-height));
+  --toc-height: calc(100vh - var(--toc-top) - 2.5rem);
+  --toc-width: calc(162 / var(--rem-base) * 1rem);
+  --toc-width--widescreen: calc(216 / var(--rem-base) * 1rem);
   --doc-max-width: calc(720 / var(--rem-base) * 1rem);
   --doc-max-width--desktop: calc(828 / var(--rem-base) * 1rem);
   --static-max-width: calc(720 / var(--rem-base) * 1rem);

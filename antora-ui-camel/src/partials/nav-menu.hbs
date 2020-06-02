@@ -1,11 +1,13 @@
-{{#if page.navigation}}
+{{#with page.navigation}}
 <div class="nav-panel-menu is-active">
-  {{#if (eq page.component.name 'components')}}
+  {{#if (eq @root.page.component.name 'components')}}
   <input class="search" placeholder="Quick lookup">
   {{/if}}
   <nav class="nav-menu" data-panel="menu">
-    <h3 class="title"><a href="{{relativize page.url page.componentVersion.url}}">{{page.component.title}}</a></h3>
-{{> nav-tree navigation=page.navigation}}
+    {{#with @root.page.componentVersion}}
+    <h3 class="title"><a href="{{{relativize ./url}}}">{{./title}}</a></h3>
+    {{/with}}
+{{> nav-tree navigation=this}}
   </nav>
 </div>
-{{/if}}
+{{/with}}

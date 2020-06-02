@@ -9,12 +9,4 @@ document.addEventListener('DOMContentLoaded', function () {
       document.documentElement.classList.toggle('is-clipped--navbar')
     })
   })
-
-  var menuDropDowns = Array.prototype.slice.call(document.querySelectorAll('.has-dropdown'), 0)
-  menuDropDowns.forEach(function (el) {
-    el.addEventListener('click', function (e) {
-      e.stopPropagation()
-      el.classList.toggle('is-active')
-    })
-  })
 })

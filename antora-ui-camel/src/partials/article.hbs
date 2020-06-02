@@ -10,9 +10,10 @@
 If you typed the URL of this page manually, please double check that you entered the address correctly.</p>
 </div>
 {{else}}
-{{#if page.title}}
-<h1 class="page">{{{page.title}}}</h1>
-{{/if}}
+{{#with page.title}}
+<h1 class="page">{{{this}}}</h1>
+{{/with}}
 {{{page.contents}}}
 {{/if}}
+{{> pagination}}
 </article>
