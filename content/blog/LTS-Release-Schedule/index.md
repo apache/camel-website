@@ -57,7 +57,7 @@ planned as Camel 3.4).
 Java 8 was in the beginning planned to be dropped entirely for Camel 3,
 but we wanted to allow end users to migrate from Camel 2.x to 3.x without having
 to also upgrade from Java 8 to 11 at the same time. So this means that users
-can safely migrate from Camel 2.x to Camel 3.3.x and stay on Java 8 and have this supported
+can safely migrate from Camel 2.x to Camel 3.4.x and stay on Java 8 and have this supported
 until June 2021. We encourage Camel users to move to Java 11 when possible.
 
 ## Java 14
