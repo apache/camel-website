@@ -28,6 +28,15 @@ module.exports = (src, dest, preview) => () => {
   const sourcemaps = preview || process.env.SOURCEMAPS === 'true'
   const postcssPlugins = [
     postcssImport,
+    (css, { messages, opts: { file } }) =>
+      Promise.all(
+        messages
+          .reduce((accum, { file: depPath, type }) => (type === 'dependency' ? accum.concat(depPath) : accum), [])
+          .map((importedPath) => fs.stat(importedPath).then(({ mtime }) => mtime))
+      ).then((mtimes) => {
+        const newestMtime = mtimes.reduce((max, curr) => (!max || curr > max ? curr : max))
+        if (newestMtime > file.stat.mtime) file.stat.mtimeMs = +(file.stat.mtime = newestMtime)
+      }),
     postcssUrl([
       {
         filter: '**/*.@(woff|woff2)',
@@ -41,10 +50,12 @@ module.exports = (src, dest, preview) => () => {
         },
       },
     ]),
-    postcssVar({ preserve: preview ? 'preserve-computed' : false }),
+    postcssVar({ preserve: preview }),
     preview ? postcssCalc : () => {},
     autoprefixer,
-    preview ? () => {} : cssnano({ preset: 'default' }),
+    preview
+      ? () => {}
+      : (css, result) => cssnano({ preset: 'default' })(css, result).then(() => postcssPseudoElementFixer(css, result)),
   ]
 
   let manifest
@@ -53,6 +64,7 @@ module.exports = (src, dest, preview) => () => {
     vfs
       .src('js/+([0-9])-*.js', { ...opts, sourcemaps })
       .pipe(terser())
+      // NOTE concat already uses stat from newest combined file
       .pipe(concat('js/site.js'))
       .pipe(rev()),
     vfs
@@ -61,11 +73,22 @@ module.exports = (src, dest, preview) => () => {
         // see https://gulpjs.org/recipes/browserify-multiple-destination.html
         map((file, enc, next) => {
           if (file.relative.endsWith('.bundle.js')) {
-            file.contents = browserify(file.relative, { basedir: src, detectGlobals: false })
+            const mtimePromises = []
+            const bundlePath = file.path
+            browserify(file.relative, { basedir: src, detectGlobals: false })
               .plugin('browser-pack-flat/plugin')
-              .bundle()
-            file.path = file.path.slice(0, file.path.length - 10) + '.js'
-            next(null, file)
+              .on('file', (bundledPath) => {
+                if (bundledPath !== bundlePath) mtimePromises.push(fs.stat(bundledPath).then(({ mtime }) => mtime))
+              })
+              .bundle((bundleError, bundleBuffer) =>
+                Promise.all(mtimePromises).then((mtimes) => {
+                  const newestMtime = mtimes.reduce((max, curr) => (!max || curr > max ? curr : max))
+                  if (newestMtime > file.stat.mtime) file.stat.mtimeMs = +(file.stat.mtime = newestMtime)
+                  if (bundleBuffer !== undefined) file.contents = bundleBuffer
+                  file.path = file.path.slice(0, file.path.length - 10) + '.js'
+                  next(bundleError, file)
+                })
+              )
           } else {
             fs.readFile(file.path, 'UTF-8').then((contents) => {
               file.contents = Buffer.from(contents)
@@ -76,10 +99,12 @@ module.exports = (src, dest, preview) => () => {
       )
       .pipe(buffer())
       .pipe(terser())
+    // NOTE use this statement to bundle a JavaScript library that cannot be browserified, like jQuery
+    //vfs.src(require.resolve('<package-name-or-require-path>'), opts).pipe(concat('js/vendor/<library-name>.js')),
       .pipe(rev()),
     vfs
       .src('css/site.css', { ...opts, sourcemaps })
-      .pipe(postcss(postcssPlugins))
+      .pipe(postcss((file) => ({ plugins: postcssPlugins, options: { file } })))
       .pipe(rev()),
     vfs.src('font/*.{ttf,woff*(2)}', opts),
     vfs.src('img/**/*.{jpg,ico,png,svg}', opts).pipe(
@@ -119,4 +144,10 @@ module.exports = (src, dest, preview) => () => {
       })
     )
     .pipe(vfs.dest(dest))
+}
+
+function postcssPseudoElementFixer (css, result) {
+  css.walkRules(/(?:^|[^:]):(?:before|after)/, (rule) => {
+    rule.selector = rule.selectors.map((it) => it.replace(/(^|[^:]):(before|after)$/, '$1::$2')).join(',')
+  })
 }

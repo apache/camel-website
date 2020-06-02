@@ -27,8 +27,8 @@ function decorateLog (_, app) {
 }
 
 function getLocalIp () {
-  for (let records of Object.values(os.networkInterfaces())) {
-    for (let record of records) {
+  for (const records of Object.values(os.networkInterfaces())) {
+    for (const record of records) {
       if (!record.internal && record.family === 'IPv4') return record.address
     }
   }

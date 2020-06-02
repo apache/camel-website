@@ -2,6 +2,7 @@ antoraVersion: '1.0.0'
 site:
   url: http://localhost:5252
   title: Apache Camel
+  homeUrl: &home_url /xyz/5.2/index.html
   components:
   - name: abc
     title: Project ABC
@@ -51,17 +52,25 @@ site:
       displayVersion: '2.0'
     latestVersion: *latest_version_123
 page:
+  url: *home_url
+  home: true
   title: Brand&#8217;s Hardware &amp; Software Requirements
-  url: /xyz/5.2/index.html
   component: *component
   componentVersion: *component_version
   version: '5.2'
   displayVersion: '5.2'
   module: ROOT
-  home: false
   editUrl: http://example.com/project-xyz/blob/master/index.adoc
   origin:
     private: false
+  previous:
+    content: Quickstart
+    url: '#'
+    urlType: 'internal'
+  next:
+    content: Liber Recusabo
+    url: '#'
+    urlType: 'internal'
   breadcrumbs:
   - content: Quickstart
     url: '#'
@@ -96,9 +105,12 @@ page:
       - content: Brand&#8217;s Hardware &amp; Software Requirements
         url: /xyz/5.2/index.html
         urlType: internal
-      - content: IDE Integration
-        url: '#'
-        urlType: fragment
+      - content: Cu Solet
+        url: '/xyz/5.2/index.html#cu-solet'
+        urlType: internal
+      - content: English + 中文
+        url: '/xyz/5.2/index.html#english+中文'
+        urlType: internal
     - content: Liber Recusabo
       url: '#liber-recusabo'
       urlType: fragment

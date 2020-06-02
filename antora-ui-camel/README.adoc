@@ -16,6 +16,7 @@
 :url-nodejs: https://nodejs.org
 :url-nvm: https://github.com/creationix/nvm
 :url-nvm-install: {url-nvm}#installation
+:url-source-maps: https://developer.mozilla.org/en-US/docs/Tools/Debugger/How_to/Use_a_source_map
 :url-yarn: https://yarnpkg.com
 :url-yarn-install: https://yarnpkg.com/en/docs/install
 
@@ -154,6 +155,22 @@ If you have the preview running, and you want to bundle without causing the prev
  $ gulp bundle:pack
 
 The UI bundle will again be available at [.path]_build/ui-bundle.zip_.
+
+==== Source Maps
+
+The build consolidates all the CSS and client-side JavaScript into combined files, [.path]_site.css_ and [.path]_site.js_, respectively, in order to reduce the size of the bundle.
+{url-source-maps}[Source maps] correlate these combined files with their original sources.
+
+This "`source mapping`" is accomplished by generating additional map files that make this association.
+These map files sit adjacent to the combined files in the build folder.
+The mapping they provide allows the debugger to present the original source rather than the obfuscated file, an essential tool for debugging.
+
+In preview mode, source maps are enabled automatically, so there's nothing you have to do to make use of them.
+If you need to include source maps in the bundle, you can do so by setting the `SOURCEMAPS` environment varible to `true` when you run the bundle command:
+
+ $ SOURCEMAPS=true gulp bundle
+
+In this case, the bundle will include the source maps, which can be used for debuggging your production site.
 
 == Copyright and License
 

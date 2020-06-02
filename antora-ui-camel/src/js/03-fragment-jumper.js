@@ -4,6 +4,10 @@
   var article = document.querySelector('article.doc')
   var toolbar = document.querySelector('.toolbar')
 
+  function decodeFragment (hash) {
+    return hash && (~hash.indexOf('%') ? decodeURIComponent(hash) : hash).slice(1)
+  }
+
   function computePosition (el, sum) {
     if (article.contains(el)) {
       return computePosition(el.offsetParent, el.offsetTop + sum)
@@ -21,8 +25,8 @@
   }
 
   window.addEventListener('load', function jumpOnLoad (e) {
-    var hash, target
-    if ((hash = window.location.hash) && (target = document.getElementById(hash.slice(1)))) {
+    var fragment, target
+    if ((fragment = decodeFragment(window.location.hash)) && (target = document.getElementById(fragment))) {
       jumpToAnchor.bind(target)()
       setTimeout(jumpToAnchor.bind(target), 0)
     }
@@ -30,8 +34,8 @@
   })
 
   Array.prototype.slice.call(document.querySelectorAll('a[href^="#"]')).forEach(function (el) {
-    var hash, target
-    if ((hash = el.hash.slice(1)) && (target = document.getElementById(hash))) {
+    var fragment, target
+    if ((fragment = decodeFragment(el.hash)) && (target = document.getElementById(fragment))) {
       el.addEventListener('click', jumpToAnchor.bind(target))
     }
   })

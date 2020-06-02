@@ -3,12 +3,11 @@
 This page explains how to add new fonts to your UI.
 These instructions assume you've forked the default UI and are able to customize it.
 
-There are two steps involved:
+There are three steps involved:
 
 . Add the font to your UI project
 . Add a font-face declaration to your stylesheet
-
-You can then reference the font family in your stylesheet.
+. Use the new font in your stylesheet
 
 How you reference the font file in the font-face declaration depends on how you decide to manage it.
 You can manage the font with npm or download it manually and add it directly to your UI project.
@@ -41,8 +40,17 @@ Here are the steps involved.
 ----
 +
 The Gulp build recognizes the `~` URL prefix and copies the font from the npm package to the build folder (and hence bundle).
++
+You must define one @font-face for each font weight and style combination (e.g., `font-weight: 500` + `font-style: italic`) from the font that you want to use in your stylesheet.
 
-. Repeat the previous step for each font style and weight you want to use from that package.
+. Import the typeface CSS file you just created into the main stylesheet, [.path]_src/css/site.css_ (adjacent to the other typeface imports):
++
+[source,css]
+----
+@import "typeface-open-sans.css";
+----
+
+. Repeat the previous steps for each font style and weight you want to use from that package.
 . Change the CSS to use your newly imported font:
 +
 [source,css]
@@ -51,6 +59,8 @@ html {
   font-family: "Open Sans", sans;
 }
 ----
++
+TIP: If you're building on the default UI, you may instead want to define or update the font family using a variable defined in [.path]_src/css/vars.css_.
 
 . Test the new font by previewing your UI:
 
@@ -83,8 +93,17 @@ Create this folder if it does not exist.
 ----
 +
 Note that the path is a relative path starting from the [.path]_src/css_ folder to the [.path]_src/font_ folder.
++
+You must define one @font-face for each font weight and style combination (e.g., `font-weight: 500` + `font-style: italic`) from the font that you want to use in your stylesheet.
 
-. Repeat the previous step for each font style and weight you want to use.
+. Import the typeface CSS file you just created into the main stylesheet, [.path]_src/css/site.css_ (adjacent to the other typeface imports):
++
+[source,css]
+----
+@import "typeface-open-sans.css";
+----
+
+. Repeat the previous steps for each font style and weight you want to use.
 . Change the CSS to use your newly imported font:
 +
 [source,css]
@@ -93,6 +112,8 @@ html {
   font-family: "Open Sans", sans;
 }
 ----
++
+TIP: If you're building on the default UI, you may instead want to define or update the font family using a variable defined in [.path]_src/css/vars.css_.
 
 . Test the new font by previewing your UI:
 

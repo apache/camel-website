@@ -43,6 +43,10 @@ a:hover {
   text-decoration: underline;
 }
 
+a:active {
+  background-color: none;
+}
+
 code,
 kbd,
 pre {
@@ -58,13 +62,11 @@ th {
   font-weight: var(--body-font-weight-bold);
 }
 
-em em {
-  /* stylelint-disable-line */
+em em { /* stylelint-disable-line */
   font-style: normal;
 }
 
-strong strong {
-  /* stylelint-disable-line */
+strong strong { /* stylelint-disable-line */
   font-weight: normal;
 }
 
