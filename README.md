@@ -171,6 +171,16 @@ This will build the `antora-ui-camel` which holds all the CSS and JavaScript, an
 
 To iterate quickly, it's easier to make changes directly in the browser tooling and then bring the changes over to the CSS files after the fact.
 
+## CAMEL_ENV environment variable
+
+Setting the `CAMEL_ENV` changes the output of the website build slightly, possible values are `development` (set by default if `CAMEL_ENV` is unset), `production` or `netlify`.
+
+To run the optimizations, which currently consist of running [htmlmin](https://kangax.github.io/html-minifier/) to reduce the size of generated HTML documents, set the `CAMEL_ENV` environment variable to `production`, for example:
+
+    $ CAMEL_ENV=production yarn build
+
+When build is performed on Netlify, we set it to `netlify` to add the link to Netlify required by Netlify's open source policy.
+
 ## Contribute changes
 
 The Apache Camel website is composed of different sources. So where to add and contribute changes in particular?
