@@ -37,6 +37,7 @@
 @media screen and (max-width: 1023px) {
   .projects .project {
     width: 100%;
+    margin: 1rem 0;
   }
 }
 

@@ -61,7 +61,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 
 # Camel K
 
-**Apache Camel K** runs natively on [Kubernetes](https://kubernetes.io/)
+**Apache Camel K** runs natively on [Kubernetes](https://kubernetes.io/).
 
 {{< /div >}}
 
