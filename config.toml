@@ -32,111 +32,41 @@ timeout = 300000
     weight = 2
     identifier = "blog"
     url = "/blog/"
+    pre = "./img/blog-icon.svg"
 
 [[menu.main]]
     name = "Projects"
     weight = 3
     identifier = "projects"
     url = "/projects/"
+    pre = "./img/project.svg"
 
 [[menu.main]]
     name = "Documentation"
     identifier = "docs"
     weight = 4
     url = "/docs/"
+    pre = "./img/docs-icon.svg"
 
 [[menu.main]]
     name = "Community"
     identifier = "community"
     weight = 5
-
-[[menu.main]]
-    name = "Support"
-    parent = "community"
-    weight = 1
-    identifier = "community-support"
-    url = "/community/support/"
-
-[[menu.main]]
-    name = "Contributing"
-    parent = "community"
-    weight = 2
-    identifier = "community-contributing"
-    url = "/manual/latest/contributing.html"
-
-[[menu.main]]
-    name = "User stories"
-    parent = "community"
-    weight = 3
-    identifier = "community-user-stories"
-    url = "/community/user-stories/"
-
-[[menu.main]]
-    name = "Articles"
-    parent = "community"
-    weight = 4
-    identifier = "community-articles"
-    url = "/community/articles/"
-
-[[menu.main]]
-    name = "Books"
-    parent = "community"
-    weight = 5
-    identifier = "community-books"
-    url = "/community/books/"
-
-[[menu.main]]
-    name = "Team"
-    parent = "community"
-    weight = 6
-    identifier = "community-team"
-    url = "/community/team/"
+    pre = "./img/community-icon.svg"
 
 [[menu.main]]
     name = "Download"
     weight = 6
     identifier = "download"
     url = "/download/"
+    pre = "./img/download-icon.svg"
 
 [[menu.main]]
     name = "About"
     identifier = "about"
     weight = 7
+    pre = "./img/about-icon.svg"
 
-[[menu.main]]
-    name = "Apache events"
-    parent = "about"
-    weight = 1
-    identifier = "about-apache-events"
-    url = "https://www.apache.org/events/current-event.html"
-
-[[menu.main]]
-    name = "License"
-    parent = "about"
-    weight = 2
-    identifier = "about-license"
-    url = "https://www.apache.org/licenses/"
-
-[[menu.main]]
-    name = "Security"
-    parent = "about"
-    weight = 3
-    identifier = "about-security"
-    url = "/security/"
-
-[[menu.main]]
-    name = "Sponsorship"
-    parent = "about"
-    weight = 4
-    identifier = "about-sponsorship"
-    url = "https://www.apache.org/foundation/sponsorship.html"
-
-[[menu.main]]
-    name = "Thanks"
-    parent = "about"
-    weight = 5
-    identifier = "about-thanks"
-    url = "https://www.apache.org/foundation/thanks.html"
 
 [module]
 

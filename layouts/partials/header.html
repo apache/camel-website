@@ -47,7 +47,12 @@
                             </div>
                         </div>
                         {{ else }}
-                        <a class="navbar-item navbar-topics" href="{{ .URL | relURL }}">{{ .Name }}</a>
+                        <a class="navbar-item navbar-topics" href="{{ .URL | relURL }}">
+                            <div>
+                            <img class="navbar-icon" src="{{ .Pre }}" /><br>
+                            {{ .Name }}
+                        </div>
+                        </a>
                         {{ end }}
                         {{ end }}
                     </div>
