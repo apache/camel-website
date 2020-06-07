@@ -2,7 +2,7 @@
 title: Apache Camel Projects
 ---
 
-{{< div "box" >}}
+{{< div "project" >}}
 
 [![Camel](/_/img/logo-d.svg)](/manual/latest/)
 
@@ -16,17 +16,16 @@ Apache Camel is the Swiss knife of integration. It is an open source integration
 
 {{< div "links" >}}
 
-[<span><img src="../img/icons/book-icon.svg" />Docs</span>](/manual/latest/)
-[<span><img src="../img/icons/github-icon.svg" />Examples</span>](https://github.com/apache/camel-examples/tree/master/examples)
-[<span><img src="../img/icons/code-icon.svg" />Source</span>](https://github.com/apache/camel/)
-
-
-{{< /div >}}
+[Examples](https://github.com/apache/camel-examples/tree/master/examples) |
+[Documentation](/manual/latest/) | 
+[Source](https://github.com/apache/camel/) 
 
 {{< /div >}}
 
+{{< /div >}}
 
-{{< div "box" >}}
+
+{{< div "project" >}}
 
 [![Camel](/_/img/logo-d.svg)![Knative](/_/img/knative.svg)](/camel-k/latest/)
 
@@ -40,15 +39,15 @@ Apache Camel K is a lightweight integration framework built on Apache Camel that
 
 {{< div "links" >}}
 
-[<span><img src="../img/icons/book-icon.svg" />Docs</span>](/camel-k/latest/)
-[<span><img src="../img/icons/github-icon.svg" />Examples</span>](https://github.com/apache/camel-k-examples)
-[<span><img src="../img/icons/code-icon.svg" />Source</span>](https://github.com/apache/camel-k/)
+[Examples](https://github.com/apache/camel-k-examples) |
+[Documentation](/camel-k/latest/) |
+[Source](https://github.com/apache/camel-k/)
 
 {{< /div >}}
 
 {{< /div >}}
 
-{{< div "box" >}}
+{{< div "project" >}}
 
 [![Camel](/_/img/logo-d.svg)![Kafka](/_/img/apache-kafka.svg)](/camel-kafka-connector/latest/)
 
@@ -62,15 +61,15 @@ Camel Kafka Connector allows you to use all Camel [components](/components/lates
 
 {{< div "links" >}}
 
-[<span><img src="../img/icons/book-icon.svg" />Docs</span>](/camel-kafka-connector/latest/)
-[<span><img src="../img/icons/github-icon.svg" />Examples</span>](https://github.com/apache/camel-kafka-connector-examples)
-[<span><img src="../img/icons/code-icon.svg" />Source</span>](https://github.com/apache/camel-kafka-connector/)
+[Examples](https://github.com/apache/camel-kafka-connector-examples) |
+[Documentation](/camel-kafka-connector/latest/) |
+[Source](https://github.com/apache/camel-kafka-connector/)
 
 {{< /div >}}
 {{< /div >}}
 
 
-{{< div "box" >}}
+{{< div "project" >}}
 
 [![Camel](/_/img/logo-d.svg)![Quarkus](/_/img/quarkus.svg)](/camel-quarkus/latest/)
 
@@ -84,15 +83,15 @@ This project hosts the efforts to port and package the 280+ Camel components as 
 
 {{< div "links" >}}
 
-[<span><img src="../img/icons/book-icon.svg" />Docs</span>](/camel-quarkus/latest/)
-[<span><img src="../img/icons/github-icon.svg" />Examples</span>](https://github.com/apache/camel-quarkus/tree/master/examples)
-[<span><img src="../img/icons/code-icon.svg" />Source</span>](https://github.com/apache/camel-quarkus/)
+[Examples](https://github.com/apache/camel-quarkus/tree/master/examples) |
+[Documentation](/camel-quarkus/latest/) |
+[Source](https://github.com/apache/camel-quarkus/)
 
 {{< /div >}}
 
 {{< /div >}}
 
-{{< div "box" >}}
+{{< div "project" >}}
 
 [![Camel](/_/img/logo-d.svg)![Spring Boot](/_/img/spring-boot.svg)](/camel-spring-boot/latest/)
 
@@ -106,16 +105,16 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 
 {{< div "links" >}}
 
-[<span><img src="../img/icons/book-icon.svg" />Docs</span>](/camel-spring-boot/latest/)
-[<span><img src="../img/icons/github-icon.svg" />Examples</span>](https://github.com/apache/camel-spring-boot-examples)
-[<span><img src="../img/icons/code-icon.svg" />Source</span>](https://github.com/apache/camel-spring-boot)
+[Examples](https://github.com/apache/camel-spring-boot-examples) |
+[Documentation](/camel-spring-boot/latest/) |
+[Source](https://github.com/apache/camel-spring-boot)
 
 {{< /div >}}
 
 {{< /div >}}
 
 
-{{< div "box" >}}
+{{< div "project" >}}
 
 [![Camel](/_/img/logo-d.svg)![Karaf](/_/img/apache-karaf.svg)](/camel-karaf/latest/)
 
@@ -129,9 +128,9 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 
 {{< div "links" >}}
 
-[<span><img src="../img/icons/book-icon.svg" />Docs</span>](/camel-karaf/latest/)
-[<span><img src="../img/icons/github-icon.svg" />Examples</span>](https://github.com/apache/camel-karaf-examples)
-[<span><img src="../img/icons/code-icon.svg" />Source</span>](https://github.com/apache/camel-karaf)
+[Examples](https://github.com/apache/camel-karaf-examples) |
+[Documentation](/camel-karaf/latest/) |
+[Source](https://github.com/apache/camel-karaf)
 
 {{< /div >}}
 

@@ -2,93 +2,52 @@
   text-align: center;
 }
 
-.projects .box {
+.projects .project {
   display: inline-flex;
   border: 1px solid var(--color-smoke-90);
   width: 46%;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   padding: 1rem;
   margin: 1rem;
 }
 
-.projects .box a > img {
+.projects .project a > img {
   display: inline-block;
   width: auto;
   height: 5rem;
 }
 
-.projects .box a > img + img {
+.projects .project a > img + img {
   padding-left: 1rem;
 }
 
-.projects .box .description {
+.projects .project .description {
   padding: 1rem;
   text-align: center;
 }
 
-.projects .box .links {
+.projects .project .links {
   align-items: center;
   margin: 1.5rem 0;
-}
-
-.projects .box .links img {
-  display: inline-flex;
-  margin: 0 0.25rem;
-  width: 1rem;
-  height: 1rem;
-  vertical-align: -0.18rem;
-  filter: invert(24%) sepia(38%) saturate(1353%) hue-rotate(200deg) brightness(89%) contrast(99%);
-}
-
-.projects .box .links span {
-  padding: 0.5rem;
-  margin: 0 0.4rem;
-  border: 1px solid var(--color-gray-10);
-  border-radius: 10rem;
-  color: var(--body-font-color);
-}
-
-.projects .box .links span:hover {
-  color: var(--body-font-color);
-  border: 2px solid var(--color-gray-30);
-}
-
-.projects .box .links a:hover {
-  text-decoration: none;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 1023px) {
-  .projects .box {
+  .projects .project {
     width: 100%;
-    margin: 1rem 0;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .projects .box .links {
-    padding: 0.4rem 0;
-  }
-
-  .projects .box .links span {
-    margin: 0 0.2rem;
-    padding: 0.4rem;
-  }
-
-  .projects .box {
+  .projects .project {
     padding: 1rem 0.4rem;
-  }
-
-  .projects .box .links img {
-    height: 0.8rem;
-    width: 0.8rem;
-    vertical-align: -0.1rem;
-    margin: 0 0.2rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .projects .box .description {
+  .projects .project .description {
     height: 10rem;
   }
 }
