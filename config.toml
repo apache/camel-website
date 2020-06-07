@@ -27,6 +27,9 @@ timeout = 300000
     dir = ":cacheDir/:project"
     maxAge = "12h"
 
+[sitemap]
+  filename = "sitemap-website.xml"
+
 [[menu.main]]
     name = "Blog"
     weight = 2

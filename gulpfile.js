@@ -1,6 +1,7 @@
+const cheerio = require('gulp-cheerio');
+const env = process.env.CAMEL_ENV || 'development';
 const gulp = require('gulp');
 const htmlmin = require('gulp-htmlmin');
-const env = process.env.CAMEL_ENV || 'development'
 
 gulp.task('minify', (done) => {
   if (env !== 'production') {
@@ -16,5 +17,15 @@ gulp.task('minify', (done) => {
       conservativeCollapse: true,
       useShortDoctype: true
     }))
+    .pipe(gulp.dest('public'));
+});
+
+gulp.task('sitemap', (done) => {
+  return gulp.src('public/sitemap.xml')
+    .pipe(cheerio(($, f) =>
+      $('sitemapindex').append(`<sitemap>
+<loc>https://camel.apache.org/sitemap-website.xml</loc>
+</sitemap>`)
+    ))
     .pipe(gulp.dest('public'));
 });
