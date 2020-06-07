@@ -1,0 +1,42 @@
+name: Build and Deploy to Netlify
+on:
+  push:
+  pull_request:
+    types: [opened, synchronize]
+jobs:
+  ci:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache
+          key: ${{ runner.os }}-ci-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-ci-
+            ${{ runner.os }}-
+      - name: Set CACHE_PATH
+        run: echo ::set-env name=CACHE_PATH::$HOME/.cache
+      - name: Build
+        env:
+          ANTORA_CACHE_DIR: ${{ env.CACHE_PATH }}/antora
+          YARN_CACHE_FOLDER: ${{ env.CACHE_PATH }}/yarn
+          HUGO_CACHE_DIR: ${{ env.CACHE_PATH }}/hugo
+          CAMEL_ENV: 'production'
+        run: |
+          (cd antora-ui-camel && yarn --non-interactive --frozen-lockfile install)
+          (cd antora-ui-camel && yarn --non-interactive --frozen-lockfile build)
+          yarn --non-interactive --frozen-lockfile install
+          yarn --non-interactive --frozen-lockfile build
+          yarn --non-interactive --frozen-lockfile checks
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.1.1
+        with:
+          publish-dir: './public'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: ${{ github.event.pull_request.title }}
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
