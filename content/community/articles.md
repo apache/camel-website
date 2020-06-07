@@ -4,6 +4,7 @@ title: "Articles"
 
 ### Camel Videos
 
+*   [What’s new with Apache Camel 3? | DevNation Tech Talk](https://www.youtube.com/watch?v=HS8fPyCkgyU) - 35 min video from June 2020, by Claus and Andrea giving an overview of Camel 3, and focusing on the most exicing innovations with CamelK, Camel Quarkus and Camel Kafka Connector with 3 live demos.
 *   [Camel K serverless Integration auf Kubernetes (**German**)](https://www.youtube.com/watch?v=ZY9s4zdm_Us) - 25 min video by Perdic8 team in Germany who introduces CamelK and show live demo on Windows how to install, run and use Camel K with their impressions.
 *   [SouJava May 2020: Apache Camel 3 - The next generation of enterprise integration](https://www.youtube.com/watch?v=OP81rLuoq0I) - SouJava talk from May 2020 where Claus Ibsen and Andrea Cosentino presents an hour long session about Apache Camel, Camel v3 and goes more in depth with Camel K, Camel Quarkus and Camel Kafka Connector. At the end of the talk there is a 30 min additional QA session.
 *   [4K–Kubernetes with Knative, Kafka, and Kamel](https://www.youtube.com/watch?v=kYM6hoh2ahI) - DevNation Tech Talk from April 2020 where Kamesh Sampath celebrats his book launch of the Knative Cookbook, and runs a fast-paced live code demonstration of the coolest Knative-based techniques that we can imagine that include Kafka and Kamel.
