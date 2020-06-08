@@ -6,7 +6,7 @@ categories: ["Events"]
 preview: ApacheCon 2020 in New Orleans
 ---
 
-As [previous year](../ApacheConNA-2019/) Apache Camel is part of ApacheCon
+As [previous year](/blog/2019/09/ApacheConNA-2019/) Apache Camel is part of ApacheCon
 2020 in North America. This year the conference will be held at the [Sheraton,
 in New Orleans](https://apachecon.com/acna2020/location.html), September 28th
 through October 2nd, 2020.
