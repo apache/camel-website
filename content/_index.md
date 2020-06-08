@@ -14,7 +14,7 @@ description: Camel is an open source integration framework that empowers you to 
 
 ### Patterns
 
-Based on <mark>Enterprise Integration Patterns</mark> (EIP) to help you solve your integration problem by applying best practices out of the box. Camel supports most of the Enterprise Integration Patterns from the excellent book by Gregor Hohpe and Bobby Woolf, and newer integration patterns from **microservice architectures**.
+Based on <mark>Enterprise Integration Patterns</mark> (EIP) to help you solve your integration problem by applying best practices out of the box. Camel supports most of the Enterprise Integration Patterns from the excellent book by Gregor Hohpe and Bobby Woolf, and newer integration patterns from microservice architectures.
 {{< /div >}}
 {{< /div >}}
 
