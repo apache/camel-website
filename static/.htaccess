@@ -1053,6 +1053,46 @@ Redirect 301 /zip-file-dataformat.html /components/latest/dataformats/zipfile-da
 Redirect 301 /zookeeper.html /components/latest/zookeeper-component.html
 Redirect 301 /docs/getting-started /manual/latest/getting-started.html
 
+# old blog posts redirects to not break published links that do not conform with the new blog layout
+Redirect 301 /blog/release-2-24-0.html /blog/2019/05/RELEASE-2.24.0/
+Redirect 301 /blog/ApacheConNA-2019/ /blog/2019/09/ApacheConNA-2019/
+Redirect 301 /blog/release-2-23-4.html /blog/2019/09/RELEASE-2.23.4/
+Redirect 301 /blog/release-2-24-2.html /blog/2019/09/RELEASE-2.24.2/
+Redirect 301 /blog/release-3-0-0-RC1.html /blog/2019/09/RELEASE-3.0.0-RC1/
+Redirect 301 /blog/release-2-24-0.html /blog/2019/05/RELEASE-2.24.0/
+Redirect 301 /blog/Camel3-2monthsaway/ /blog/2019/10/Camel3-2monthsaway/
+Redirect 301 /blog/release-3-0-0-RC2.html /blog/2019/10/RELEASE-3.0.0-RC2/
+Redirect 301 /blog/release-3-0-0-RC3.html /blog/2019/10/RELEASE-3.0.0-RC3/
+Redirect 301 /blog/ASF-Report-2019/ /blog/2019/11/ASF-Report-2019/
+Redirect 301 /blog/release-3-0-0.html /blog/2019/11/RELEASE-3.0.0/
+Redirect 301 /blog/2019-Numbers/ /blog/2019/12/2019-Numbers/
+Redirect 301 /blog/Camel-Kafka-connector-intro/ /blog/2019/12/Camel-Kafka-connector-intro/
+Redirect 301 /blog/Camel3-Whatsnew/ /blog/2019/12/Camel3-Whatsnew/
+Redirect 301 /blog/LanguageSupportTooling-0.0.20/ /blog/2019/12/LanguageSupportTooling-0.0.20/
+Redirect 301 /blog/Podcast47/ /blog/2019/12/Podcast47/
+Redirect 301 /blog/release-2-24-3.html /blog/2019/12/RELEASE-2.24.3/
+Redirect 301 /blog/capi-gateway/ /blog/2020/01/capi-gateway/
+Redirect 301 /blog/CustomWebApiComponent/ /blog/2020/01/CustomWebApiComponent/
+Redirect 301 /blog/FOSDEM-2020/ /blog/2020/01/FOSDEM-2020/
+Redirect 301 /blog/release-2-25-0.html /blog/2020/01/RELEASE-2.25.0/
+Redirect 301 /blog/release-3-0-1.html /blog/2020/01/RELEASE-3.0.1/
+Redirect 301 /blog/ApacheConNA-2020-CFP/ /blog/2020/02/ApacheConNA-2020-CFP/
+Redirect 301 /blog/GSoC-2020-announced/ /blog/2020/02/GSoC-2020-announced/
+Redirect 301 /blog/release-3-1-0.html /blog/2020/02/RELEASE-3.1.0/
+Redirect 301 /blog/Camel3-AWS2-Whatsnew/ /blog/2020/03/Camel3-AWS2-Whatsnew/
+Redirect 301 /blog/LTS-Release-Schedule/ /blog/2020/03/LTS-Release-Schedule/
+Redirect 301 /blog/Outreachy-May2020/ /blog/2020/03/Outreachy-May2020/
+Redirect 301 /blog/Outreachy-May2020-Update/ /blog/2020/03/Outreachy-May2020-Update/
+Redirect 301 /blog/100Camels/ /blog/2020/04/100Camels/
+Redirect 301 /blog/Camel-Kafka-connector-release-0.1.0/ /blog/2020/04/Camel-Kafka-connector-release-0.1.0/
+Redirect 301 /blog/Camel-Quarkus-release-1.0.0-M7/ /blog/2020/04/Camel-Quarkus-release-1.0.0-M7/
+Redirect 301 /blog/Camel32-Whatsnew/ /blog/2020/04/Camel32-Whatsnew/
+Redirect 301 /blog/release-2-25-1.html /blog/2020/04/RELEASE-2.25.1/
+Redirect 301 /blog/release-3-2-0.html /blog/2020/04/RELEASE-3.2.0/
+Redirect 301 /blog/Camel33-Whatsnew/ /blog/2020/05/Camel33-Whatsnew/
+Redirect 301 /blog/CdcWithCamelAndDebezium/ /blog/2020/05/CdcWithCamelAndDebezium/
+Redirect 301 /blog/release-3-3-0.html /blog/2020/05/RELEASE-3.3.0/
+
 # Disable the pattern matching based on filenames.
 #
 # This setting prevents Apache from returning a 404 error as the result
