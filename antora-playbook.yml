@@ -20,7 +20,7 @@ content:
         - docs/components
 
     - url: git@github.com:apache/camel.git
-      branches: camel-3.2.x
+      branches: camel-3.3.x
       start_paths:
         # eip
         - core/camel-core-engine/src/main/docs
