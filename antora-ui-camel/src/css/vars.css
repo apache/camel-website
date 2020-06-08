@@ -145,9 +145,9 @@
   --toc-width: calc(162 / var(--rem-base) * 1rem);
   --toc-width--widescreen: calc(216 / var(--rem-base) * 1rem);
   --doc-max-width: calc(720 / var(--rem-base) * 1rem);
-  --doc-max-width--desktop: calc(828 / var(--rem-base) * 1rem);
+  --doc-max-width--desktop: auto;
   --static-max-width: calc(720 / var(--rem-base) * 1rem);
-  --static-max-width--desktop: calc(1140 / var(--rem-base) * 1rem);
+  --static-max-width--desktop: auto;
   /* stacking */
   --z-index-nav: 1;
   --z-index-toolbar: 2;
