@@ -7,7 +7,7 @@ categories: ["Outreachy"]
 preview: "The Camel community is participating in the Outreachy program, we welcome internship candidates for the May 2020 internship round."
 ---
 
-This year in addition to the [Google Summer of Code](/blog/GSoC-2020-announced/) we're participating in the [Outreachy](https://www.outreachy.org/) internship program as well.
+This year in addition to the [Google Summer of Code](/blog/2020/02/GSoC-2020-announced/) we're participating in the [Outreachy](https://www.outreachy.org/) internship program as well.
 
 For those that might not be aware of the Outreachy, Outreachy is a paid, remote internship program. Outreachy's goal is to support people from groups underrepresented in tech. They help newcomers to free software and open source make their first contributions.
 
