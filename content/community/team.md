@@ -52,6 +52,7 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 | Luca Burgazzoli        | lburgazzoli      | Red Hat                    |
 | Martin Krasser         | krasserm         |                            |
 | Nicky Sandhu           | nsandhu          |                            |
+| Nicola Ferraro         | nicolaferraro    | Red Hat                    |
 | Onder Sezgin           | onders           |                            |
 | Omar Al-Safi           | oalsafi          | Talend                     |
 | Quinn Stevenson        | quinn            |                            |
