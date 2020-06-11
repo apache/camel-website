@@ -57,7 +57,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 
 {{< div "project" >}}
 
-[![Camel](/_/img/logo-d.svg)![Knative](/_/img/knative.svg)](/projects/#camel)
+[![Camel](/_/img/logo-d.svg)![Knative](/_/img/knative.svg)](/projects/#camel-k)
 
 # Camel K
 
