@@ -547,6 +547,20 @@ Redirect 301 /camel-embedded-maven-goal.html /manual/latest/camel-embedded-maven
 Redirect 301 /camel-jar-dependencies.html /manual/latest/camel-jar-dependencies.html
 Redirect 301 /camel-maven-archetypes.html /manual/latest/camel-maven-archetypes.html
 Redirect 301 /camel-maven-plugin.html /manual/latest/camel-maven-plugin.html
+# camel-quarkus start: copied from camel-quarkus/docs/target/site/.htaccess built locally
+Redirect 301 /camel-quarkus/latest/ci.html /camel-quarkus/latest/contributor-guide/ci.html
+Redirect 301 /camel-quarkus/latest/create-new-extension.html /camel-quarkus/latest/contributor-guide/create-new-extension.html
+Redirect 301 /camel-quarkus/latest/extension-documentation.html /camel-quarkus/latest/contributor-guide/extension-documentation.html
+Redirect 301 /camel-quarkus/latest/extension-metadata.html /camel-quarkus/latest/contributor-guide/extension-metadata.html
+Redirect 301 /camel-quarkus/latest/contributor-guide.html /camel-quarkus/latest/contributor-guide/index.html
+Redirect 301 /camel-quarkus/latest/promote-jvm-to-native.html /camel-quarkus/latest/contributor-guide/promote-jvm-to-native.html
+Redirect 301 /camel-quarkus/latest/release-guide.html /camel-quarkus/latest/contributor-guide/release-guide.html
+Redirect 301 /camel-quarkus/latest/cdi.html /camel-quarkus/latest/user-guide/cdi.html
+Redirect 301 /camel-quarkus/latest/examples.html /camel-quarkus/latest/user-guide/examples.html
+Redirect 301 /camel-quarkus/latest/first-steps.html /camel-quarkus/latest/user-guide/first-steps.html
+Redirect 301 /camel-quarkus/latest/user-guide.html /camel-quarkus/latest/user-guide/index.html
+Redirect 301 /camel-quarkus/latest/native-mode.html /camel-quarkus/latest/user-guide/native-mode.html
+# camel-quarkus end
 Redirect 301 /camel-run-maven-goal.html /manual/latest/camel-run-maven-goal.html
 Redirect 301 /camel-test /components/latest/test.html
 Redirect 301 /camel-test.html /components/latest/test.html
