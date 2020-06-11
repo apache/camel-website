@@ -81,7 +81,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 
 # Quarkus
 
-**Apache Camel Quarkus** is a set of extensions for [Quarkus](https://quarkus.io).
+**Apache Camel Quarkus** run Camel on [Quarkus](https://quarkus.io).
 
 {{< /div >}}
 
