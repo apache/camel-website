@@ -77,7 +77,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 
 {{< div "project" >}}
 
-[![Camel](/_/img/logo-d.svg)![Quarkus](/_/img/quarkus.svg)](/projects/#camel-k)
+[![Camel](/_/img/logo-d.svg)![Quarkus](/_/img/quarkus.svg)](/projects/#camel-quarkus)
 
 # Quarkus
 
