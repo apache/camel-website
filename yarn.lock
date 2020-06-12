@@ -174,10 +174,10 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@djencks/asciidoctor-antora-indexer@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@djencks/asciidoctor-antora-indexer/-/asciidoctor-antora-indexer-0.0.2.tgz#ad1a14b3a58895a2202e456e24ec039fa9da43d3"
-  integrity sha512-1PhltF2Pfj8CrcV3BWe52bG+iZ1BKe1DJSk1EXM56Yn7hFoCnLfvA7i2b+NQy6wIjMwTVM5LVrv2sl50LF4EFQ==
+"@djencks/asciidoctor-antora-indexer@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@djencks/asciidoctor-antora-indexer/-/asciidoctor-antora-indexer-0.0.3.tgz#f98cae87ab8103ac8c833076ef2fe4857d1e8022"
+  integrity sha512-TXo+P6nuOIbPFO9dt6cdDlKlNy5G2eWNb/Tk4ulJuInHzz7bQW5/1Fb/4HEwzrHDLmX/Ocri9/ZEaXtytxzJ0g==
   dependencies:
     picomatch "~2.1"
 
