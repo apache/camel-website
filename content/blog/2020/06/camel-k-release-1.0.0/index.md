@@ -23,7 +23,7 @@ run them on any Kubernetes cluster. This way of defining things is common to man
 but a lightweight *integration* platform) and it's technically difficult to provide IDE support, such as code completion and other utilities, 
 to developers.
 
-But now we've it. The integration tooling team has created some cool extensions for VS Code that make the development experience 
+But now we've done it. The integration tooling team has created some cool extensions for VS Code that make the development experience
 with Camel K even more exciting.
 You don't need to remember the Camel DSL syntax, the IDE will give you suggestions and error highlighting.
 
@@ -194,7 +194,7 @@ Let's suppose you've a **[Prometheus](https://prometheus.io/)** instance in your
 kamel run Routes.java -t prometheus.enabled=true
 ```
 
-That's it. No need to setup services an labels to enable scraping. A default prometheus configuration file is also provided for the integration, with sensible defaults. Of course you also have the option to provide [your own configuration](https://camel.apache.org/camel-k/latest/traits/prometheus.html) for advanced use cases.
+That's it. No need to setup services and labels to enable scraping. A default prometheus configuration file is also provided for the integration, with sensible defaults. Of course you also have the option to provide [your own configuration](https://camel.apache.org/camel-k/latest/traits/prometheus.html) for advanced use cases.
 
 Now, let's suppose you want to see what your routes are doing and trace the execution flow of an integration. What you need to do is to install an opentracing compatible application in the namespace, such as **[Jaeger](https://www.jaegertracing.io/)**, and run the integration as:
 
