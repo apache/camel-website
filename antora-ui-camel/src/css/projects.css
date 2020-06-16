@@ -2,6 +2,21 @@
   text-align: center;
 }
 
+.projects .camel-project {
+  width: 96%;
+  display: inline-flex;
+  border: 1px solid var(--color-smoke-90);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 1rem 2rem 1rem;
+  margin: 1rem;
+}
+
+.projects .camel-project .project {
+  border: none;
+}
+
 .projects .project {
   display: inline-flex;
   border: 1px solid var(--color-smoke-90);
@@ -13,7 +28,8 @@
   margin: 1rem;
 }
 
-.projects .project a > img {
+.projects .project a > img,
+.projects .camel-project a > img {
   display: inline-block;
   width: auto;
   height: 5rem;

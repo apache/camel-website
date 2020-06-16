@@ -2,28 +2,50 @@
 title: Apache Camel Projects
 ---
 
-{{< div "project" >}}
+{{< div "camel-project" >}}
 
 [![Camel](/_/img/logo-d.svg)](/manual/latest/)
 
-## Camel 
+## Apache Camel Documentation
+
+{{< div "camel-documentation" >}}
+
+{{< div "project" >}}
+
+### User Manual
 
 {{< div "description" >}}
 
-Apache Camel is the Swiss knife of integration. It is an open source integration framework that is packed with several hundred components that are used to access databases, message queues and APIs, helping you integrate with everything.
+The [User Manual](/manual/latest/) is a comprehensive guide meant to help you with the key concepts of Apache Camel and software integration, from how to [begin contributing](/manual/latest/contributing.html) to Apache Camel, how to [upgrade to Camel 3.x](/manual/latest/camel-3x-upgrade-guide.html), to [architecture](/manual/latest/architecture.html) or [integration patterns](/components/latest/eips/enterprise-integration-patterns.html). 
+
+{{< /div >}}
+
+{{< /div >}}
+
+{{< div "project" >}}
+
+### Components
+
+{{< div "description" >}}
+
+Component references are references used to place a component in an assembly. Apache Camel [Component reference](/components/latest/) list is auto generated from the code to reflect the configuration options and functionality available in a particular Camel version.
+
+{{< /div >}}
 
 {{< /div >}}
 
 {{< div "links" >}}
 
-[Examples](https://github.com/apache/camel-examples/tree/master/examples) |
-[Documentation](/manual/latest/) | 
-[Source](https://github.com/apache/camel/) 
+[Full User Manual](/manual/latest/) |
+[Getting Started](/manual/latest/getting-started.html) | 
+[Component Reference](/components/latest/) | 
+[Source Code](https://github.com/apache/camel/)
 
 {{< /div >}}
 
 {{< /div >}}
 
+{{< /div >}}
 
 {{< div "project" >}}
 
@@ -137,4 +159,22 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 {{< /div >}}
 
 
+{{< div "project" >}}
 
+[![Camel](/_/img/logo-d.svg)](/manual/latest/)
+
+## Camel APIs 
+
+{{< div "description" >}}
+
+Apache Camel provides several APIs for Camel cloud service, Camel cluster support, Camel health check support etc. Apache camel maintains JavaDoc documentation for all APIs. 
+
+{{< /div >}}
+
+{{< div "links" >}}
+
+[API JavaDoc Documentation](https://www.javadoc.io/doc/org.apache.camel/camel-api/latest/index.html)
+
+{{< /div >}}
+
+{{< /div >}}
