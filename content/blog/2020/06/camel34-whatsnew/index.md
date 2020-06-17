@@ -1,0 +1,95 @@
+---
+title: "Apache Camel 3.4 What's New"
+date: 2020-06-19
+authors: [davsclaus]
+categories: ["Releases"]
+preview: Whats included in the Camel 3.4 LTS release.
+---
+
+Apache Camel 3.4 is the first LTS (Long Term Support) release of Camel 3.
+
+This release will be active supported with regular patch releases (important bug and security fixes) for 1-year.
+
+For more details about LTS vs non-LTS releases see this [blog post](https://camel.apache.org/blog/LTS-Release-Schedule/).
+
+
+### So whats in this release?
+
+This release is mostly a more robust and bug fix release. 
+
+We have also continued the work to make Camel more modular and lighter. 
+This time we removed the needed for JAXB in the swagger and openapi modules.
+This helps Camel on GraalVM and native compilation as JAXB is a heavy piece of stack,
+allowing GraalVM to eliminate it more easily.
+
+We continued to remove usage of reflection in Camel and found a few spots more where
+reflection was in use, when configuring nested options.
+
+We also added back support for configuring duration values using the shorthand syntax, 
+such as `timeout=30000` can be specified as `timeout=30s`. We had to remove this in earlier
+versions of Camel 3 due to optimizations. But for Camel 3.4 we wound a new way. 
+
+#### Supervising route controller
+
+The work on the supervising route controller is complete. When Camel startup the default route controller
+is handling starting the routes safely. The default strategy is that if a route fails to startup then Camel
+itself will also fail its startup (fail fast). 
+
+The supervising route controller is a different strategy that allows to startup routes independent from Camel itself.
+This new controller will startup the routes using a background task that can re-scheduled routes that
+have failed to startup to retry starting (with backoff).
+
+We have provided an example using `camel-main` or `camel-spring-boot` which you can find
+[here](https://github.com/apache/camel-examples/tree/master/examples/camel-example-main-health) and
+[here](https://github.com/apache/camel-spring-boot-examples/tree/master/camel-example-spring-boot-health-checks).
+
+You can find more details in the [Route Controller](https://camel.apache.org/manual/latest/route-controller.html) documentation.
+
+#### Health Check
+
+We have reworked Camel's health-check, to work similar across runtimes, whether its standalone, Spring Boot,
+Camel-K, or Quarkus.
+
+We also introduced the concept of readiness and liveness so a health check can be either one or both.
+Each health check can be configured, from `application.properties` the same way, and its all reflection free.
+
+The previous mentioned examples also comes with health-check so make sure to check those.
+See more details in the [Health Check](https://camel.apache.org/manual/latest/health-check.html) documentation.
+
+### Endpoint DSL
+
+The [Endpoint DSL](https://camel.apache.org/manual/latest/Endpoint-dsl.html) had a number of annoying bugs fixed and other improvements.
+Its now also easier to use Endpoint DSL to configure endpoints in POJOs as Java fields in a type safe manner, 
+and which can be used with `FluentProducerTemplate` or in your `RouteBuilder` classes as shown:
+
+```
+public class MyPojo {
+
+    @Produce
+    private FluentProducerTemplate producer;
+
+    private final EndpointProducerBuilder mqtt = paho("sensor").clientId("myClient").userName("scott").password("tiger");
+
+    public void sendToSensor(String data) {
+        producer.withBody(data).to(mqtt).send();
+    }
+
+}    
+```
+
+#### Other Changes
+
+You can now configure Camel's thread pool (profiles) the same way for standalone, Camel K, Camel Quarkus and Spring Boot.
+
+Some of the components (more to come in the future) we have moved initialization logic to an earlier phase when possible
+which allows these components to initialize at build time, which makes Camel startup faster (especially for GraalVM or Quarkus runtimes).
+
+This release supports Spring Boot 2.3.
+
+Only two new components was added to this release:
+
+- AWS2 Athena
+- RestEasy 
+
+For users that are upgrading to this release, then make sure to follow
+the [upgrade guide](https://camel.apache.org/manual/latest/camel-3x-upgrade-guide.html).
