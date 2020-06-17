@@ -117,7 +117,7 @@
   /* static */
   --static-margin: 0 auto;
   /* frontpage */
-  --frontpage-max-width: calc(1350 / var(--rem-base) * 1rem);
+  --frontpage-max-width: calc(1366 / var(--rem-base) * 1rem);
   /* footer */
   --footer-line-height: var(--doc-line-height);
   --footer-background: var(--color-smoke-90);
