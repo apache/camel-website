@@ -111,6 +111,25 @@
   overflow-x: auto;
 }
 
+.doc .table-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.doc .table-wrapper::-webkit-scrollbar-track {
+  background: #c4c4c4;
+  border-radius: 50px;
+}
+
+.doc .table-wrapper::-webkit-scrollbar-thumb {
+  background: rgb(151, 151, 151);
+  border-radius: 50px;
+}
+
+.doc .table-wrapper::-webkit-scrollbar-thumb:hover,
+.doc .table-wrapper::-webkit-scrollbar-thumb:active {
+  background: rgb(107, 107, 107);
+}
+
 .doc .table-wrapper table {
   width: 100%;
 }
@@ -530,6 +549,25 @@
   display: block;
   overflow-x: auto;
   padding: 0.75rem;
+}
+
+.doc pre.highlight code::-webkit-scrollbar {
+  height: 8px;
+}
+
+.doc pre.highlight code::-webkit-scrollbar-track {
+  background: #c4c4c4;
+  border-radius: 50px;
+}
+
+.doc pre.highlight code::-webkit-scrollbar-thumb {
+  background: rgb(151, 151, 151);
+  border-radius: 50px;
+}
+
+.doc pre.highlight code::-webkit-scrollbar-thumb:hover,
+.doc pre.highlight code::-webkit-scrollbar-thumb:active {
+  background: rgb(107, 107, 107);
 }
 
 /* NOTE assume pre.highlight contains code[data-lang] */
