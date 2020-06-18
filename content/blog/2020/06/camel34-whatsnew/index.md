@@ -80,7 +80,7 @@ public class MyPojo {
 
 #### Other Changes
 
-You can now configure Camel's thread pool (profiles) the same way for standalone, Camel K, Camel Quarkus and Spring Boot.
+You can now configure Camel's thread pool (profiles) the same way for standalone, Camel K, Camel Quarkus, and Spring Boot.
 
 Some of the components (more to come in the future) we have moved initialization logic to an earlier phase when possible
 which allows these components to initialize at build time, which makes Camel startup faster (especially for GraalVM or Quarkus runtimes).
