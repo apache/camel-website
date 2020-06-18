@@ -87,7 +87,7 @@ which allows these components to initialize at build time, which makes Camel sta
 
 This release supports Spring Boot 2.3.
 
-Only two new components was added to this release:
+This release also adds two new components:
 
 - AWS2 Athena
 - RestEasy 
