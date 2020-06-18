@@ -16,9 +16,9 @@ For more details about LTS vs non-LTS releases see this [blog post](https://came
 
 ### So what's in this release?
 
-This release is mostly about robustness and bug fixes. 
+This release is mostly about robustness and bug fixes.
 
-We have also continued the work to make Camel more modular and lighter. 
+We have also continued the work to make Camel more modular and lighter.
 This time we removed the dependency on JAXB in the Swagger and OpenAPI modules.
 This helps Camel on GraalVM and native compilation as JAXB is a heavy piece of stack,
 allowing GraalVM to eliminate it more easily.
@@ -26,15 +26,15 @@ allowing GraalVM to eliminate it more easily.
 We continued to remove usage of reflection in Camel and found a few spots more where
 reflection was in use, when configuring nested options.
 
-We also added back support for configuring duration values using the shorthand syntax, 
+We also added back support for configuring duration values using the shorthand syntax,
 such as `timeout=30000` can be specified as `timeout=30s`. We had to remove this in earlier
-versions of Camel 3 due to optimizations. But for Camel 3.4 we found a new way. 
+versions of Camel 3 due to optimizations. But for Camel 3.4 we found a new way.
 
 #### Supervising route controller
 
 The work on the supervising route controller is complete. When Camel starts up the default route controller
 is handling starting the routes safely. The default strategy is that if a route fails to startup then Camel
-itself will also fail its startup (fail fast). 
+itself will also fail its startup (fail fast).
 
 The supervising route controller is a different strategy that allows to startup routes independent from Camel itself.
 This new controller will startup the routes using a background task that can reschedule routes that
