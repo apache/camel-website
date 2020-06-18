@@ -78,8 +78,8 @@ public class MyPojo {
 }    
 ```
 
-You can read more in the manual about [Endpoint DSL](/manual/latest/Endpoint-dsl.html) and
-the [Component DSL](/manual/latest/Component-dsl.html).
+You can read more in the manual about [Endpoint DSL](https://camel.apache.org/manual/latest/Endpoint-dsl.html) and
+the [Component DSL](https://camel.apache.org/manual/latest/component-dsl.html).
 
 #### Spring Boot
 
@@ -96,7 +96,7 @@ This release also adds two new components:
 
 A new maven plugin called `camel-component-maven-plugin` has been added which intents to help
 third party component developers to generate all required metadata and configurations Java files. For more info on how to use it in your project,
-please take a look at the [Camel Component Plugin documentation](/manual/latest/camel-component-maven-plugin.html).
+please take a look at the [Camel Component Plugin documentation](https://camel.apache.org/manual/latest/camel-component-maven-plugin.html).
 
 You can now configure Camel's thread pool (profiles) and Saga/LRA the same way for
 standalone, Camel K, Camel Quarkus, and Spring Boot.
