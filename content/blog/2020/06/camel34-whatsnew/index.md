@@ -1,6 +1,6 @@
 ---
 title: "Apache Camel 3.4 What's New"
-date: 2020-06-19
+date: 2020-06-18
 authors: [davsclaus]
 categories: ["Releases"]
 preview: The long term release version 3.4 of Camel is here, find out what's new.
