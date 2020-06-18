@@ -16,7 +16,7 @@ For more details about LTS vs non-LTS releases see this [blog post](https://came
 
 ### So whats in this release?
 
-This release is mostly a more robust and bug fix release. 
+This release is mostly about robustness and bug fixes. 
 
 We have also continued the work to make Camel more modular and lighter. 
 This time we removed the needed for JAXB in the swagger and openapi modules.
