@@ -60,7 +60,7 @@ See more details in the [Health Check](https://camel.apache.org/manual/latest/he
 ### Endpoint DSL
 
 The [Endpoint DSL](https://camel.apache.org/manual/latest/Endpoint-dsl.html) had a number of annoying bugs fixed and other improvements.
-It is now also easier to use Endpoint DSL to configure endpoints in POJOs as Java fields in a type-safe manner, 
+It is now also easier to use Endpoint DSL to configure endpoints in POJOs as Java fields in a type-safe manner,
 by using `FluentProducerTemplate` and in `RouteBuilder` classes as in this example:
 
 ```
@@ -75,7 +75,7 @@ public class MyPojo {
         producer.withBody(data).to(mqtt).send();
     }
 
-}    
+}
 ```
 
 You can read more in the manual about [Endpoint DSL](https://camel.apache.org/manual/latest/Endpoint-dsl.html) and
@@ -90,7 +90,7 @@ This release supports Spring Boot 2.3.
 This release also adds two new components:
 
 - AWS2 Athena
-- RestEasy 
+- RestEasy
 
 #### Other Changes
 
