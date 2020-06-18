@@ -61,7 +61,7 @@ See more details in the [Health Check](https://camel.apache.org/manual/latest/he
 
 The [Endpoint DSL](https://camel.apache.org/manual/latest/Endpoint-dsl.html) had a number of annoying bugs fixed and other improvements.
 Its now also easier to use Endpoint DSL to configure endpoints in POJOs as Java fields in a type safe manner, 
-and which can be used with `FluentProducerTemplate` or in your `RouteBuilder` classes as shown:
+by using `FluentProducerTemplate` and in `RouteBuilder` classes as in this example:
 
 ```
 public class MyPojo {
