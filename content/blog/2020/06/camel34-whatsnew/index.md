@@ -14,7 +14,7 @@ This release will be actively supported with regular patch releases containing i
 For more details about LTS vs non-LTS releases see this [blog post](https://camel.apache.org/blog/LTS-Release-Schedule/).
 
 
-### So whats in this release?
+### So what's in this release?
 
 This release is mostly about robustness and bug fixes. 
 
