@@ -118,6 +118,25 @@ html.is-clipped--nav {
   overflow-y: auto;
 }
 
+.nav-menu::-webkit-scrollbar {
+  width: 6.75px;
+}
+
+.nav-menu::-webkit-scrollbar-track {
+  background: #d8d7d7;
+  border-radius: 50px;
+}
+
+.nav-menu::-webkit-scrollbar-thumb {
+  background: rgb(170, 170, 170);
+  border-radius: 50px;
+}
+
+.nav-menu::-webkit-scrollbar-thumb:hover,
+.nav-menu::-webkit-scrollbar-thumb:active {
+  background: rgb(136, 136, 136);
+}
+
 .nav-menu h3.title {
   color: var(--nav-heading-font-color);
   font-size: inherit;
