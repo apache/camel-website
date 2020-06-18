@@ -19,7 +19,7 @@ For more details about LTS vs non-LTS releases see this [blog post](https://came
 This release is mostly about robustness and bug fixes. 
 
 We have also continued the work to make Camel more modular and lighter. 
-This time we removed the needed for JAXB in the swagger and openapi modules.
+This time we removed the dependency on JAXB in the Swagger and OpenAPI modules.
 This helps Camel on GraalVM and native compilation as JAXB is a heavy piece of stack,
 allowing GraalVM to eliminate it more easily.
 
