@@ -3,7 +3,8 @@ title: "Apache Camel 3.4 What's New"
 date: 2020-06-19
 authors: [davsclaus]
 categories: ["Releases"]
-preview: Whats included in the Camel 3.4 LTS release.
+preview: The long term release version 3.4 of Camel is here, find out what's new.
+draft: false
 ---
 
 Apache Camel 3.4 is the first LTS (Long Term Support) release of Camel 3.
