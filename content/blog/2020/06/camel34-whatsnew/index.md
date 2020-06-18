@@ -78,6 +78,7 @@ public class MyPojo {
 }    
 ```
 
+You can read more about Endpoint DSL [in the manual](/manual/latest/Endpoint-dsl.html).
 #### Other Changes
 
 You can now configure Camel's thread pool (profiles) the same way for standalone, Camel K, Camel Quarkus, and Spring Boot.
