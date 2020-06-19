@@ -137,6 +137,13 @@ html.is-clipped--nav {
   background: rgb(136, 136, 136);
 }
 
+@media screen and (max-width: 1023px) {
+  .nav-menu::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+}
+
 .nav-menu h3.title {
   color: var(--nav-heading-font-color);
   font-size: inherit;
