@@ -52,7 +52,7 @@ We have reworked Camel's health-check, to work similar across runtimes, whether 
 Camel-K, or Quarkus.
 
 We also introduced the concept of readiness and liveness so a health check can be either one or both.
-Each health check can be configured, from `application.properties` the same way, and its all reflection free.
+Each health check can be configured, from `application.properties` the same way, and it's all reflection free.
 
 The previously mentioned examples also comes with health-check so make sure to check those.
 See more details in the [Health Check](https://camel.apache.org/manual/latest/health-check.html) documentation.
