@@ -37,10 +37,10 @@ timeout = 300000
     url = "/blog/"
 
 [[menu.main]]
-    name = "Projects"
-    weight = 3
-    identifier = "projects"
-    url = "/projects/"
+    name = "Documentation"
+    identifier = "docs"
+    weight = 4
+    url = "/docs/"
 
 [[menu.main]]
     name = "Community"
