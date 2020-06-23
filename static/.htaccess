@@ -885,9 +885,10 @@ Redirect 301 /polling-consumer.html /components/latest/eips/polling-consumer.htm
 Redirect 301 /predicate.html /manual/latest/predicate.html
 Redirect 301 /processor.html /manual/latest/processor.html
 Redirect 301 /producertemplate.html /manual/latest/producertemplate.html
-Redirect 301 /projects/camel-k /projects/#apache-camel-k
-Redirect 301 /projects/camel-quarkus /projects/#apache-camel-extensions-for-quarkus
-Redirect 301 /projects/camel-kafka-connector /projects/#apache-camel-kafka-connector
+Redirect 301 /projects/ /docs/
+Redirect 301 /projects/camel-k /docs/#apache-camel-k
+Redirect 301 /projects/camel-quarkus /docs/#apache-camel-extensions-for-quarkus
+Redirect 301 /projects/camel-kafka-connector /docs/#apache-camel-kafka-connector
 Redirect 301 /properties /components/latest/properties-component.html
 Redirect 301 /properties-2.html /components/latest/properties-component.html
 Redirect 301 /properties.html /components/latest/properties-component.html
