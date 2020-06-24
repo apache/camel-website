@@ -2,7 +2,7 @@
 title: "Support"
 ---
 
-## IRC
+## IRC
 
 You can hang out on IRC in the #apache-camel room at freenode with other Apache Camel developers and users.
 
