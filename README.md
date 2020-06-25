@@ -110,59 +110,28 @@ Clone the Apache Camel Website project using git:
 The command above clones the Apache Camel Website project. After that you can switch to the new
 project directory on your filesystem.
 
-## Build the Antora Camel UI theme
+## Build the Antora Camel UI theme & website content using Makefile
 
-First step is to build the Antora ui theme used for the Apache Camel website. The theme sources are located
-inside [Project root directory/antora-ui-camel](antora-ui-camel). So first switch to that directory:
+1. First step is to install all the packages required for the building of the theme and content. Hence, run:
+    $ make install
 
-    $ cd antora-ui-camel
+2. Second step, we need to build the Antora ui theme used for the Camel Website along with website content 
+which requires the building of the antora theme and begin the preview process. For this to take place, run:
+    $ make all 
 
-In that directory execute:
+* In case, this operation fails during the build up of Antora ui theme, run: `$ make format` to format the code and re-run `$ make all`.
 
-    $ yarn install # needed only once, or if dependencies change
-    $ yarn build   # to perform the ui theme build
-
-You should see the Antora theme bundle generated in in [antora-ui-camel/build/ui-bundle.zip](antora-ui-camel).
-
-The Camel Antora UI theme should not be a subject to change very frequently. So you might execute this once and
-never come back.
-
-## Build the website content
-
-Building the website requires the built Antora Camel UI theme bundle from above. Please check that
-the theme bundle exists in [antora-ui-camel/build/ui-bundle.zip](antora-ui-camel).
-
-To build the website go to the project root directory and run:
-
-    $ yarn install # needed only once, or if dependencies change
-    $ yarn format  # to format the code
-    $ yarn build   # to perform the build
-
-In case `yarn build` raises error, run `yarn format` to format the code and re-run `yarn build` to build your bundle successfully.
-
-In case `yarn build` throws the error: **JavaScript heap out of memory**, the issue can be resolved by increasing the memory used by node.js by setting `NODE_OPTIONS` environment variable to include `--max_old_space_size`, for example to increase the old space to 4GB do:
+* In case, `$ make all` fails and throws the error: **JavaScript heap out of memory**, the issue can be resolved by increasing the memory used by node.js by setting `NODE_OPTIONS` environment variable to include `--max_old_space_size`, for example to increase the old space to 4GB do:
 
 ```shell
 $ export NODE_OPTIONS="--max_old_space_size=4096"
 ```
-This should fetch doc sources for [Camel](https://github.com/apache/camel) and [Camel K](https://github.com/apache/camel-k)
+* This should fetch doc sources for [Camel](https://github.com/apache/camel) and [Camel K](https://github.com/apache/camel-k)
 and generate the website with Hugo. You should see the generated website in the `public` directory.
 
-## Preview website locally
+* Once, the `$ make all` process begins with the preview, you will be provided with a web server running the site on [http://localhost:1313/](http://localhost:1313/). Point your favorite browser to `http://localhost:1313/` and you will see the Apache Camel website.
 
-You can preview the Apache Camel website on your local machine once you have the generated website available in
-the `public` directory.
-
-Hugo can start a simple web server serving the generated site content so you can view it in your favorite browser.
-
-Simply call
-
-    $ yarn preview
-
-and you will be provided with a web server running the site on [http://localhost:1313/](http://localhost:1313/)
-
-Point your favorite browser to `http://localhost:1313/` and you will see the Apache Camel website.
-
+### Note regarding re-building
 Changes that are made to the content managed by Hugo (i.e. content, layouts, config.toml) are applied automatically and reloaded in the browser. To make changes to the content managed by Antora, a rebuild needs to be done. The same is true for the CSS changes in the `antora-ui-camel`. To rebuild you can run, in another terminal window, from the root directory of the website:
 
     $ (cd antora-ui-camel && yarn build) && yarn antora  --clean --fetch antora-playbook.yml
