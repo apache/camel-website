@@ -38,11 +38,9 @@
     }
   })
 
-  nav.querySelector('.context').addEventListener('click', function () {
-    var currentPanel = nav.querySelector('.is-active[data-panel]')
-    var activatePanel = currentPanel.dataset.panel === 'menu' ? 'explore' : 'menu'
+  nav.querySelector('.nav-panel-explore').addEventListener('click', function () {
+    var currentPanel = nav.querySelector('.nav-panel-explore')
     currentPanel.classList.toggle('is-active')
-    nav.querySelector('[data-panel=' + activatePanel + ']').classList.toggle('is-active')
   })
 
   // NOTE prevent text from being selected by double click
