@@ -782,8 +782,6 @@ Redirect 301 /infinispan.html /components/latest/infinispan-component.html
 Redirect 301 /injector.html /manual/latest/injector.html
 Redirect 301 /intercept.html /components/latest/eips/intercept.html
 Redirect 301 /inversion-of-control-with-smart-defaults.html /manual/latest/inversion-of-control-with-smart-defaults.html
-Redirect 301 /irc-room.html /manual/latest/irc-room.html
-# Possible candidates for previous URL: [/community/irc-room, /manual/latest/irc-room.html]
 Redirect 301 /irc.html /components/latest/irc-component.html
 Redirect 301 /ironmq.html /components/latest/ironmq-component.html
 Redirect 301 /is-camel-an-esb.html /manual/latest/faq/is-camel-an-esb.html
