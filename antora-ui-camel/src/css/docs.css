@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.docs .camel-project {
+.camel-project {
   width: calc(100% - 2.5rem);
   display: inline-flex;
   border: 1px solid var(--color-smoke-90);
@@ -13,11 +13,11 @@
   margin: 1rem;
 }
 
-.docs .camel-project .project {
+.camel-project .project {
   border: none;
 }
 
-.docs .project {
+.project {
   display: inline-flex;
   border: 1px solid var(--color-smoke-90);
   width: calc(50% - 2.5rem);
@@ -28,23 +28,23 @@
   margin: 1rem;
 }
 
-.docs .project a > img,
-.docs .camel-project a > img {
+.project a > img,
+.camel-project a > img {
   display: inline-block;
   width: auto;
   height: 5rem;
 }
 
-.docs .project a > img + img {
+.project a > img + img {
   padding-left: 1rem;
 }
 
-.docs .project .description {
+.project .description {
   padding: 1rem;
   text-align: center;
 }
 
-.docs .project .links {
+.project .links {
   align-items: center;
   margin: 1.5rem 0;
   white-space: nowrap;
