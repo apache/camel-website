@@ -313,4 +313,11 @@ html.is-clipped--nav {
   background-position-x: 10px;
   background-position-y: 10px;
   width: 11rem;
+  order: 1;
+}
+
+@media screen and (max-width: 328px) {
+  .nav-logo {
+    width: 10rem;
+  }
 }
