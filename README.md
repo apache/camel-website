@@ -113,11 +113,14 @@ project directory on your filesystem.
 ## Build the Antora Camel UI theme & website content using Makefile
 
 1. First step is to install all the packages required for the building of the theme and content. Hence, run:
-    $ make install
+```shell
+$ make install
+```
 
-2. Second step, we need to build the Antora ui theme used for the Camel Website along with website content 
-which requires the building of the antora theme and begin the preview process. For this to take place, run:
-    $ make all 
+2. Second step, we need to build the Antora ui theme used for the Camel Website along with website content which requires the building of the antora theme and begin the preview process. For this to take place, run:
+```shell
+$ make all
+```
 
 * In case, this operation fails during the build up of Antora ui theme, run: `$ make format` to format the code and re-run `$ make all`.
 
