@@ -43,7 +43,7 @@
 
 @media screen and (min-width: 1024px) {
   .nav {
-    top: var(--navbar-height);
+    top: var(--navbar-mobile-height);
     box-shadow: none;
     position: sticky;
     height: var(--nav-height--desktop);

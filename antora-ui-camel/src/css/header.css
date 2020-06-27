@@ -69,7 +69,7 @@ body {
   position: relative;
   /* width: var(--navbar-height); */
   width: 2rem;
-  top: 0.5rem;
+  top: 0.75rem;
   padding: 0;
   order: 8;
 }

@@ -251,13 +251,18 @@ section.frontpage h2 {
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1277px) {
+  header.frontpage {
+    margin-top: var(--navbar-height);
+  }
+
   header.frontpage h1 {
     font-size: 9vw;
   }
 
   header.frontpage svg {
     height: 10rem;
+    top: 8rem;
   }
 
   .split {

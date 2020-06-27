@@ -1,11 +1,16 @@
 .static {
   margin: var(--static-margin);
-  max-width: var(--static-max-width);
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1278px) {
   .static {
     max-width: var(--static-max-width--desktop);
+  }
+}
+
+@media screen and (max-width: 1277px) {
+  .static {
+    margin-top: 5rem;
   }
 }
 

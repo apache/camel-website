@@ -193,7 +193,7 @@ article.blog p {
   padding: 1rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1278px) {
   .blog .pagination {
     max-width: var(--static-max-width--desktop);
   }
@@ -222,4 +222,14 @@ article.blog p {
 
 .blog .page-item.active a {
   color: var(--color-white);
+}
+
+@media screen and (max-width: 1277px) {
+  article.blog:first-child {
+    margin-top: 5rem;
+  }
+
+  .blog.list aside {
+    margin-top: 4.5rem;
+  }
 }

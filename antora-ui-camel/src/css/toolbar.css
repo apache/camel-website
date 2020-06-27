@@ -12,6 +12,12 @@
   z-index: var(--z-index-toolbar);
 }
 
+@media screen and (max-width: 1023px) {
+  .toolbar {
+    top: var(--navbar-mobile-height);
+  }
+}
+
 .toolbar a {
   color: inherit;
 }
