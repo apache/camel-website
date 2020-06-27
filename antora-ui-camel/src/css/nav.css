@@ -66,21 +66,21 @@ html.is-clipped--nav {
   height: var(--nav-panel-height);
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1278px) {
   .nav-panel-menu {
     height: var(--nav-panel-height--desktop);
-  }
-
-  @media screen and (max-width: 1277px) {
-    .nav-panel-menu {
-      height: calc(var(--nav-panel-height--desktop) - 2rem);
-    }
   }
 }
 
 @media screen and (max-width: 1277px) {
   .nav-panel-menu {
     margin-top: var(--navbar-height);
+  }
+
+  @media screen and (min-width: 1024px) {
+    .nav-panel-menu {
+      height: calc(var(--nav-panel-height--desktop) - 2rem);
+    }
   }
 }
 
