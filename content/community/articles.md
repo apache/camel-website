@@ -172,6 +172,10 @@ These examples show usage of several different components and other concepts suc
 *   [Enterprise integration for Ethereum](https://medium.com/@bibryam/enterprise-integration-for-ethereum-fa67a1577d43) from July 2018 by Bilgin Ibryam explains the Ethereum eco-system and where you can use Camel with the bit-coin and block-chain technologies.
 *   [Camel Aggregation Strategies](http://blog.joshdreagan.com/2018/08/30/camel_aggregation_strategies/) from August 2018 by Josh Reagan whom blogs about how to aggregate data using Camel's AggregationStrategy when using EIPs such as Content Enricher, Splitter or the Aggregator. 
 
+#### Camel K
+
+* [Why Camel K](https://dzone.com/articles/why-camel-k) by Saravanakumar Selvaraj from June 2020 where he briefly hightlights 5 key elements of Camel K 
+
 #### Tooling / Combination with other Products
 
 These examples show Camel combined with several tools (e.g. IDE), ESBs, Application Services, and other middleware products such as messaging or OSGi container.
