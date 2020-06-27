@@ -232,4 +232,10 @@ article.blog p {
   .blog.list aside {
     margin-top: 4.5rem;
   }
+
+  @media screen and (min-width: 1024px) {
+    .blog.list aside {
+      top: var(--navbar-mobile-height);
+    }
+  }
 }
