@@ -1,11 +1,26 @@
-.projects h2 {
+.docs h2 {
   text-align: center;
 }
 
-.projects .project {
+.camel-project {
+  width: calc(100% - 2.2rem);
   display: inline-flex;
   border: 1px solid var(--color-smoke-90);
-  width: 46%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 1rem 2rem 1rem;
+  margin: 1rem;
+}
+
+.camel-project .project {
+  border: none;
+}
+
+.project {
+  display: inline-flex;
+  border: 1px solid var(--color-smoke-90);
+  width: calc(50% - 2.2rem);
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -13,42 +28,43 @@
   margin: 1rem;
 }
 
-.projects .project a > img {
+.project a > img,
+.camel-project a > img {
   display: inline-block;
   width: auto;
   height: 5rem;
 }
 
-.projects .project a > img + img {
+.project a > img + img {
   padding-left: 1rem;
 }
 
-.projects .project .description {
+.project .description {
   padding: 1rem;
   text-align: center;
 }
 
-.projects .project .links {
+.project .links {
   align-items: center;
   margin: 1.5rem 0;
   white-space: nowrap;
 }
 
 @media screen and (max-width: 1023px) {
-  .projects .project {
-    width: 100%;
-    margin: 1rem 0;
+  .docs .project {
+    width: calc(100% - 2.2rem);
+    margin: 1rem;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .projects .project {
+  .docs .project {
     padding: 1rem 0.4rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .projects .project .description {
+  .docs .project .description {
     height: 10rem;
   }
 }
