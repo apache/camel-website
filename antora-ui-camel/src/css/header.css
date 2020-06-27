@@ -429,7 +429,7 @@ body {
 
 #search-cancel {
   position: relative;
-  bottom: calc(50% - 0.15rem);
+  bottom: calc(50% - 0.05rem);
   left: calc(100% - 1.25rem);
   height: 1rem;
   display: none;
@@ -557,7 +557,7 @@ body {
   }
 
   #search-cancel {
-    bottom: calc(50% - 0.5rem);
+    bottom: calc(50% - 0.45rem);
   }
 
   #search_results {
