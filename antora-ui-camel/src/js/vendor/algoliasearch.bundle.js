@@ -25,6 +25,10 @@
       }
     }
 
+    search.addEventListener('click', function (e) {
+      e.stopPropagation()
+    })
+
     search.addEventListener(
       'keyup',
       debounce((key) => {
@@ -120,7 +124,8 @@
       }),
       150
     )
-    cancel.addEventListener('click', function () {
+    cancel.addEventListener('click', function (e) {
+      e.stopPropagation()
       container.className = 'navbar-search results-hidden'
       results.innerHTML = ''
       search.value = ''
