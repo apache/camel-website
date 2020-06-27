@@ -37,9 +37,21 @@
   margin: 1.5rem 0;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1278px) {
   .doc > h1.page:first-child {
     margin-top: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 1277px) {
+  .doc > h1.page:first-child {
+    margin-top: 3rem;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .doc > h1.page:first-child {
+      margin-top: 5rem;
+    }
   }
 }
 
