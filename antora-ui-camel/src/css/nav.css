@@ -118,6 +118,32 @@ html.is-clipped--nav {
   overflow-y: auto;
 }
 
+.nav-menu::-webkit-scrollbar {
+  width: 0.42rem;
+}
+
+.nav-menu::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color);
+  border-radius: 3.125rem;
+}
+
+.nav-menu::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color);
+  border-radius: 3.125rem;
+}
+
+.nav-menu::-webkit-scrollbar-thumb:hover,
+.nav-menu::-webkit-scrollbar-thumb:active {
+  background: var(--scrollbar-thumb-active-color);
+}
+
+@media screen and (max-width: 1023px) {
+  .nav-menu::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+}
+
 .nav-menu h3.title {
   color: var(--nav-heading-font-color);
   font-size: inherit;
