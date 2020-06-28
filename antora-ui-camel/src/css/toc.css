@@ -8,9 +8,9 @@
   top: var(--toc-top);
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1277px) {
+@media screen and (min-width: 1024px) and (max-width: 1174px) {
   .toc.sidebar .toc-menu {
-    margin-top: 2rem;
+    margin-top: 4rem;
     top: var(--toc-mobile-top);
   }
 }
