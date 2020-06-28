@@ -112,22 +112,22 @@
 }
 
 .doc .table-wrapper::-webkit-scrollbar {
-  height: 8px;
+  height: 0.42rem;
 }
 
 .doc .table-wrapper::-webkit-scrollbar-track {
-  background: #c4c4c4;
-  border-radius: 50px;
+  background: var(--scrollbar-track-color);
+  border-radius: 3.125rem;
 }
 
 .doc .table-wrapper::-webkit-scrollbar-thumb {
-  background: rgb(151, 151, 151);
-  border-radius: 50px;
+  background: var(--scrollbar-thumb-color);
+  border-radius: 3.125rem;
 }
 
 .doc .table-wrapper::-webkit-scrollbar-thumb:hover,
 .doc .table-wrapper::-webkit-scrollbar-thumb:active {
-  background: rgb(107, 107, 107);
+  background: var(--scrollbar-thumb-active-color);
 }
 
 .doc .table-wrapper table {
@@ -552,22 +552,22 @@
 }
 
 .doc pre.highlight code::-webkit-scrollbar {
-  height: 8px;
+  height: 0.42rem;
 }
 
 .doc pre.highlight code::-webkit-scrollbar-track {
-  background: #c4c4c4;
-  border-radius: 50px;
+  background: var(--scrollbar-track-color);
+  border-radius: 3.125rem;
 }
 
 .doc pre.highlight code::-webkit-scrollbar-thumb {
-  background: rgb(151, 151, 151);
-  border-radius: 50px;
+  background: var(--scrollbar-thumb-color);
+  border-radius: 3.125rem;
 }
 
 .doc pre.highlight code::-webkit-scrollbar-thumb:hover,
 .doc pre.highlight code::-webkit-scrollbar-thumb:active {
-  background: rgb(107, 107, 107);
+  background: var(--scrollbar-thumb-active-color);
 }
 
 /* NOTE assume pre.highlight contains code[data-lang] */
