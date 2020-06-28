@@ -146,7 +146,7 @@
   --nav-panel-height--desktop: calc(var(--nav-height--desktop) - var(--drawer-height));
   --nav-width: calc(270 / var(--rem-base) * 1rem);
   --toc-top: calc(var(--body-top) + var(--toolbar-height));
-  --toc-mobile-top: calc(1rem + var(--toc-top));
+  --toc-mobile-top: calc(3rem + var(--toc-top));
   --toc-height: calc(100vh - var(--toc-top) - 2.5rem);
   --toc-width: calc(162 / var(--rem-base) * 1rem);
   --toc-width--widescreen: calc(216 / var(--rem-base) * 1rem);
