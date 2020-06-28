@@ -140,29 +140,18 @@ section.frontpage {
   max-width: var(--frontpage-max-width);
 }
 
-section.frontpage.columns {
+section.frontpage.columns,
+section.frontpage.projects,
+section.frontpage.apache {
   display: flex;
   flex-wrap: wrap;
   border-top: 1px solid var(--color-smoke-50);
-  padding: 1rem 0 0;
-}
-
-section.frontpage.projects {
-  border-top: 1px solid var(--color-smoke-50);
-  display: flex;
-  flex-flow: wrap;
-  padding: 1rem;
-  padding-top: 3rem;
+  padding: 2rem 1rem 1rem 1rem;
 }
 
 section.frontpage.projects .project {
-  width: 30%;
-  margin: 1.5%;
+  width: calc(33% - 3rem);
   padding: 1%;
-}
-
-section.frontpage.apache {
-  padding-top: 3rem;
 }
 
 section.frontpage h1,
@@ -190,31 +179,28 @@ section.frontpage a:hover {
 section.frontpage h1 {
   width: 100%;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 section.frontpage h2 {
   text-align: center;
 }
 
-.frontpage .box {
-  flex: 33%;
+section.frontpage.columns .box {
+  width: calc(50% - 3rem);
   flex-direction: column;
-  margin: 1rem;
-  padding: 1.2rem 0.75rem;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  margin: 1.5rem;
   border: 1px solid var(--color-smoke-90);
 }
 
-.frontpage .box div {
-  text-align: center;
-  margin: 1rem;
-  height: 100%;
-}
-
-.frontpage .box div img {
+.section.frontpage.columns .box img {
   width: 27rem;
 }
 
-.frontpage .box .feature-icon {
+section.frontpage.columns .box .feature-icon {
   width: 3.75rem;
   height: 3.75rem;
   filter: invert(24%) sepia(38%) saturate(1353%) hue-rotate(200deg) brightness(89%) contrast(99%);
@@ -230,24 +216,14 @@ section.frontpage h2 {
 }
 
 @media screen and (max-width: 626px) {
-  .split,
-  .frontpage {
-    flex: 100%;
-    margin: 0 1rem;
-  }
-
   section.frontpage.columns,
-  section.frontpage.apache {
+  section.frontpage.apache,
+  section.frontpage.projects {
     padding-top: 1rem;
-  }
-
-  .frontpage .box {
-    padding: 1rem 0;
   }
 
   section.frontpage.projects .project {
     width: 100%;
-    margin: 1.5rem;
   }
 }
 
@@ -271,13 +247,13 @@ section.frontpage h2 {
     margin: auto;
   }
 
-  .frontpage .box {
-    min-width: 51vw;
+  section.frontpage.columns .box {
+    width: 100%;
   }
 
   @media screen and (min-width: 627px) {
     section.frontpage.projects .project {
-      width: 47%;
+      width: calc(50% - 3rem);
     }
   }
 }

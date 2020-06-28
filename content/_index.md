@@ -55,11 +55,13 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 
 {{< section "frontpage projects" >}}
 
+# Apache Camel Projects
+
 {{< div "project" >}}
 
 [![Camel](/_/img/logo-d.svg)![Knative](/_/img/knative.svg)](/docs/#camel-k)
 
-# Camel K
+## Camel K
 
 **Apache Camel K** runs natively on [Kubernetes](https://kubernetes.io/).
 
@@ -69,7 +71,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 
 [![Camel](/_/img/logo-d.svg)](/manual/latest/)
 
-# Camel
+## Camel
 
 **Apache Camel** is the *Swiss knife* of integration. 
 
@@ -79,9 +81,9 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 
 [![Camel](/_/img/logo-d.svg)![Quarkus](/_/img/quarkus.svg)](/docs/#camel-quarkus)
 
-# Quarkus
+## Quarkus
 
-**Apache Camel Quarkus** run Camel on [Quarkus](https://quarkus.io).
+**Apache Camel Quarkus** runs Camel on [Quarkus](https://quarkus.io).
 
 {{< /div >}}
 
@@ -89,7 +91,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 
 [![Camel](/_/img/logo-d.svg)![Kafka](/_/img/apache-kafka.svg)](/docs/#camel-kafka-connector)
 
-# Kafka
+## Kafka
 
 **Apache Camel Kafka Connector** embeds Camel within [Kafka Connect](https://kafka.apache.org/documentation/#connect).
 
@@ -99,9 +101,9 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 
 [![Camel](/_/img/logo-d.svg)![Spring Boot](/_/img/spring-boot.svg)](/docs/#camel-spring-boot)
 
-# Spring Boot
+## Spring Boot
 
-**Apache Camel Spring Boot** run Camel on [Spring Boot](https://spring.io/projects/spring-boot).
+**Apache Camel Spring Boot** runs Camel on [Spring Boot](https://spring.io/projects/spring-boot).
 
 
 {{< /div >}}
@@ -110,9 +112,9 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 
 [![Camel](/_/img/logo-d.svg)![Karaf](/_/img/apache-karaf.svg)](/docs/#camel-karaf)
 
-# Karaf
+## Karaf
 
-**Apache Camel Karaf** run Camel in [OSGi](https://www.osgi.org/) container using [Apache Karaf](https://karaf.apache.org/).
+**Apache Camel Karaf** runs Camel in [OSGi](https://www.osgi.org/) container using [Apache Karaf](https://karaf.apache.org/).
 
 
 {{< /div >}}
