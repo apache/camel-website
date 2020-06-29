@@ -66,21 +66,15 @@ html.is-clipped--nav {
   height: var(--nav-panel-height);
 }
 
-@media screen and (min-width: 1175px) {
+@media screen and (min-width: 1024px) {
   .nav-panel-menu {
     height: var(--nav-panel-height--desktop);
   }
 }
 
-@media screen and (max-width: 1174px) {
+@media screen and (max-width: 1023px) {
   .nav-panel-menu {
     margin-top: var(--navbar-height);
-  }
-
-  @media screen and (min-width: 1024px) {
-    .nav-panel-menu {
-      height: calc(var(--nav-panel-height--desktop) - 2rem);
-    }
   }
 }
 
@@ -324,6 +318,6 @@ html.is-clipped--nav {
   background-size: 9.5rem;
   background-position-x: 10px;
   background-position-y: 10px;
-  width: 10rem;
+  width: 4rem;
   order: 1;
 }

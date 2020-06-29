@@ -251,7 +251,7 @@ section.frontpage h2 {
   }
 }
 
-@media screen and (max-width: 1174px) {
+@media screen and (max-width: 1023px) {
   header.frontpage {
     margin-top: var(--navbar-height);
   }

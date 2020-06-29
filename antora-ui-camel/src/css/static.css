@@ -2,13 +2,13 @@
   margin: var(--static-margin);
 }
 
-@media screen and (min-width: 1175px) {
+@media screen and (min-width: 1024px) {
   .static {
     max-width: var(--static-max-width--desktop);
   }
 }
 
-@media screen and (max-width: 1174px) {
+@media screen and (max-width: 1023px) {
   .static {
     margin-top: 5rem;
   }
