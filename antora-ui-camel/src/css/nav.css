@@ -26,6 +26,13 @@
 
 .nav-container.is-active {
   visibility: visible;
+  padding: 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .nav-category {
+    margin-left: 1rem;
+  }
 }
 
 .nav {
