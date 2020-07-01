@@ -1,17 +1,6 @@
 .static {
   margin: var(--static-margin);
-}
-
-@media screen and (min-width: 1024px) {
-  .static {
-    max-width: var(--static-max-width--desktop);
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  .static {
-    margin-top: 5rem;
-  }
+  max-width: var(--static-max-width--desktop);
 }
 
 /* Antora markup is wrapped in <div>, we need to emulate the same */

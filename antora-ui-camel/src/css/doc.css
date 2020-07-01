@@ -37,18 +37,6 @@
   margin: 1.5rem 0;
 }
 
-@media screen and (min-width: 1024px) {
-  .doc > h1.page:first-child {
-    margin-top: 2.5rem;
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  .doc > h1.page:first-child {
-    margin-top: 5rem;
-  }
-}
-
 #preamble + .sect1,
 .doc .sect1 + .sect1 {
   margin-top: 2rem;

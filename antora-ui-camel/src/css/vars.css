@@ -135,10 +135,12 @@
   --footer-height: 23rem; /* empirically corresponding current design of the foooter */
   /* dimensions */
   --navbar-height: calc(73 / var(--rem-base) * 1rem);
+  --navbar-burger-height: calc(54 / var(--rem-base) * 1rem);
   --navbar-mobile-height: calc(4rem + var(--navbar-height));
   --toolbar-height: calc(45 / var(--rem-base) * 1rem);
   --drawer-height: var(--toolbar-height);
   --body-top: calc(var(--navbar-height) + 1rem);
+  --body-mobile-top: calc(var(--navbar-mobile-height) + 1rem);
   --body-min-height: calc(100vh - var(--navbar-height));
   --nav-height: calc(var(--body-min-height) - var(--toolbar-height));
   --nav-height--desktop: var(--body-min-height);

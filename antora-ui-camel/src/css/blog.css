@@ -225,10 +225,6 @@ article.blog p {
 }
 
 @media screen and (max-width: 1023px) {
-  article.blog:first-child {
-    margin-top: 5rem;
-  }
-
   .blog.list aside {
     margin-top: 4.5rem;
   }
