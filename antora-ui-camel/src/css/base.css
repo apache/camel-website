@@ -4,6 +4,12 @@ body {
   scroll-padding-top: var(--body-top);
 }
 
+@media screen and (max-width: 1023px) {
+  body {
+    scroll-padding-top: var(--body-mobile-top);
+  }
+}
+
 *,
 *::before,
 *::after {
