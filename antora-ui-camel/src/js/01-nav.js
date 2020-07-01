@@ -39,8 +39,10 @@
   })
 
   nav.querySelector('.nav-panel-explore').addEventListener('click', function () {
-    var currentPanel = nav.querySelector('.nav-panel-explore')
-    currentPanel.classList.toggle('is-active')
+    var currentPanel = nav.querySelector('.is-active[data-panel]')
+    var activatePanel = (currentPanel === null || currentPanel.dataset.panel === 'menu') ? 'explore' : 'menu'
+    nav.querySelector(`[data-panel=${activatePanel}]`).classList.toggle('is-active')
+    if (currentPanel !== null) currentPanel.classList.toggle('is-active')
   })
 
   // NOTE prevent text from being selected by double click
