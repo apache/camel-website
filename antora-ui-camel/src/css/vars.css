@@ -41,6 +41,8 @@
   --scrollbar-track-color: var(--color-gray-10);
   --scrollbar-thumb-color: var(--color-gray-30);
   --scrollbar-thumb-active-color: var(--color-gray-50);
+  --scrollbar-thickness: 0.425em; /* 6.8px */
+  --scrollbar-radius: 3.125em; /* 50px */
   /* navbar */
   --navbar-background: var(--color-white);
   --navbar-font-color: var(--color-camel-orange);

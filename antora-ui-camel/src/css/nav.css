@@ -119,17 +119,17 @@ html.is-clipped--nav {
 }
 
 .nav-menu::-webkit-scrollbar {
-  width: 0.42rem;
+  width: var(--scrollbar-thickness);
 }
 
 .nav-menu::-webkit-scrollbar-track {
   background: var(--scrollbar-track-color);
-  border-radius: 3.125rem;
+  border-radius: var(--scrollbar-radius);
 }
 
 .nav-menu::-webkit-scrollbar-thumb {
   background: var(--scrollbar-thumb-color);
-  border-radius: 3.125rem;
+  border-radius: var(--scrollbar-radius);
 }
 
 .nav-menu::-webkit-scrollbar-thumb:hover,
