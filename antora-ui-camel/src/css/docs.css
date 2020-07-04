@@ -58,7 +58,7 @@
 .project .links {
   align-items: center;
   margin: 1.5rem 0;
-  white-space: nowrap;
+  word-break: break-word;
 }
 
 @media screen and (max-width: 1023px) {
@@ -69,6 +69,10 @@
 }
 
 @media screen and (max-width: 480px) {
+  .docs {
+    padding: 0 1rem 4rem;
+  }
+
   .docs .project {
     padding: 1rem 0.4rem;
   }

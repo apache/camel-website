@@ -50,12 +50,19 @@
 }
 
 .doc h2:not(.discrete) {
-  border-bottom: 1px solid var(--section-divider-color);
   margin-top: 1rem;
   margin-left: -1rem;
   margin-right: -1rem;
   padding: 0.4rem 1rem 0.1rem;
   overflow-wrap: break-word;
+}
+
+.doc h2:not(.discrete)::after {
+  content: "";
+  display: block;
+  position: relative;
+  height: 1px;
+  background-color: var(--color-smoke-90);
 }
 
 .doc h3:not(.discrete) {
