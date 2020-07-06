@@ -4,8 +4,8 @@
   const algoliasearch = require('algoliasearch/lite')
 
   window.addEventListener('load', () => {
-    const client = algoliasearch('BH4D9OD16A', '16e3a9155a136e4962dc4c206f8278bd')
-    const index = client.initIndex('apache_camel')
+    const client = algoliasearch('QDOJ4LJQCC', '0fa28c3acc4d5f383b85ae4ad035ac9c')
+    const index = client.initIndex('aashna')
     const search = document.querySelector('#search')
     const container = search.parentNode
     const results = document.querySelector('#search_results')
@@ -53,14 +53,13 @@
             const data = hits.reduce((data, hit) => {
               const d = {}
               d.url = hit.url
-              var breadcrumbs = Object.values(hit.hierarchy)
-                .slice(1)
-                .filter((lvl) => lvl !== null)
-                .join(' &raquo; ')
+              var hierarchy = Object.values(hit.hierarchy).filter((lvl) => lvl !== null)
+              const section = hierarchy[0]
+              var breadcrumbs = hierarchy.slice(1).join(' &raquo; ')
               if (breadcrumbs !== '') {
                 d.breadcrumbs = breadcrumbs
               } else {
-                d.breadcrumbs = hit.hierarchy.lvl0
+                d.breadcrumbs = section
               }
               if (hit._snippetResult !== undefined) {
                 d.snippet = hit._snippetResult.content.value
@@ -68,7 +67,6 @@
                 d.snippet = ''
               }
 
-              const section = hit.hierarchy.lvl0
               data[section] = data[section] || []
               data[section].push(d)
 
