@@ -129,7 +129,7 @@
   --frontpage-max-width: calc(1366 / var(--rem-base) * 1rem);
   /* footer */
   --footer-line-height: var(--doc-line-height);
-  --footer-background: var(--color-smoke-90);
+  --footer-background: var(--color-smoke-50);
   --footer-font-color: var(--color-gray-70);
   --footer-link-font-color: var(--color-jet-80);
   --footer-height: 23rem; /* empirically corresponding current design of the foooter */

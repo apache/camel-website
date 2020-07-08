@@ -19,12 +19,46 @@ footer .footer {
 
 footer .footer p {
   flex-basis: 100%;
-  margin: 0.5rem 0;
+  margin: 3rem 0 0.5rem 0;
   padding: 0 1rem;
 }
 
+footer .footer p.remark::after {
+  content: '';
+  display: block;
+  position: relative;
+  height: 1px;
+  width: 25rem;
+  margin: 2rem auto 1rem auto;
+  background: var(--footer-font-color);
+}
+
 footer .footer a {
-  color: var(--footer-link-font-color);
+  color: var(--footer-font-color);
+}
+
+footer .footer .context {
+  display: inline-block;
+  margin: 0 0 1rem 0;
+}
+
+footer .footer .context a {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+footer .footer .context a::after {
+  content: ' ';
+  display: inline-block;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  margin: 0 1rem;
+  background: var(--footer-font-color);
+}
+
+footer .footer .context:last-child a::after {
+  display: none;
 }
 
 footer .footer figure.logo {
@@ -32,12 +66,11 @@ footer .footer figure.logo {
   flex-grow: 1;
   align-items: flex-start;
   justify-content: center;
-  text-align: center;
+  margin-inline-start: 0;
 }
 
 footer .footer figure.logo img {
   width: 6rem;
-  height: 100%;
 }
 
 footer .footer dl {
@@ -45,7 +78,11 @@ footer .footer dl {
   flex-grow: 1;
   align-items: flex-start;
   justify-content: center;
-  margin-left: 1rem;
+  margin: 3rem 0 0 1rem;
+}
+
+footer .footer dl:first-child {
+  margin-top: 0;
 }
 
 footer .footer dl dt {
@@ -69,7 +106,7 @@ footer .footer dl dd {
   margin: 0;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 874px) {
   footer .footer figure.logo {
     display: none;
   }
@@ -89,4 +126,26 @@ footer .footer dl dd {
   color: black;
   border-radius: 0.4rem 0.4rem 0 0;
   height: 2rem;
+}
+
+footer .footer .break-row-footer {
+  display: block;
+  flex-basis: 100%;
+  height: 0;
+}
+
+footer .footer .navbar-tools {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  line-height: 1.6;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+footer .footer .navbar-tools .brand-icon {
+  height: 2em;
+  width: 1.75em;
+  margin: 0.35rem;
+  fill: var(--navbar-font-color);
 }
