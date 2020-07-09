@@ -131,6 +131,7 @@
   --footer-line-height: var(--doc-line-height);
   --footer-background: var(--color-smoke-50);
   --footer-font-color: var(--color-gray-70);
+  --footer-after-background: var(--color-gray-50);
   --footer-link-font-color: var(--color-jet-80);
   --footer-height: 23rem; /* empirically corresponding current design of the foooter */
   /* dimensions */
