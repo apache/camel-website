@@ -30,7 +30,7 @@ footer .footer p.remark::after {
   height: 1px;
   width: 25rem;
   margin: 2rem auto 1rem auto;
-  background: var(--footer-font-color);
+  background: var(--footer-after-background);
 }
 
 footer .footer a {
@@ -43,7 +43,7 @@ footer .footer .context {
 }
 
 footer .footer .context a {
-  font-size: 18px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -54,7 +54,7 @@ footer .footer .context a::after {
   width: 8px;
   height: 8px;
   margin: 0 1rem;
-  background: var(--footer-font-color);
+  background: var(--footer-after-background);
 }
 
 footer .footer .context:last-child a::after {
@@ -106,12 +106,6 @@ footer .footer dl dd {
   margin: 0;
 }
 
-@media screen and (max-width: 874px) {
-  footer .footer figure.logo {
-    display: none;
-  }
-}
-
 .footer-tools {
   position: relative;
   top: -2rem;
@@ -134,7 +128,7 @@ footer .footer .break-row-footer {
   height: 0;
 }
 
-footer .footer .navbar-tools {
+footer .footer .footer-icons {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
@@ -143,9 +137,41 @@ footer .footer .navbar-tools {
   font-weight: bold;
 }
 
-footer .footer .navbar-tools .brand-icon {
+footer .footer .footer-icons .brand-icon {
   height: 2em;
   width: 1.75em;
   margin: 0.35rem;
   fill: var(--navbar-font-color);
+}
+
+@media screen and (max-width: 750px) {
+  footer .footer dl {
+    flex-basis: 100%;
+    margin-top: 2rem;
+  }
+
+  footer .footer figure.logo {
+    text-align: center;
+  }
+
+  footer .footer figure.logo img {
+    width: 4.5rem;
+  }
+
+  footer .footer p.remark::after {
+    width: auto;
+  }
+
+  footer .footer .context a {
+    font-size: 13.5px;
+  }
+
+  footer .footer .context a::after {
+    width: 5px;
+    height: 5px;
+  }
+
+  footer .footer .footer-icons .brand-icon {
+    height: 1.5rem;
+  }
 }
