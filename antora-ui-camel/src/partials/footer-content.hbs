@@ -3,22 +3,33 @@
     </div>
     <footer>
         <div class="footer">
-            <figure class="logo">
-                <img src="{{siteRootPath}}/_/img/logo-d.svg" class="logo-small mt-60" alt="Apache Camel Logo" aria-label="white silhouette of a camel in front of a sand dune">
-            </figure>
             <dl>
+                <figure class="logo">
+                    <img src="{{siteRootPath}}/_/img/logo-d.svg" class="logo-small mt-60" alt="Apache Camel Logo"
+                        aria-label="white silhouette of a camel in front of a sand dune">
+                </figure>
                 <dt>Overview</dt>
                 <dd><a href="{{siteRootPath}}/blog/">Blog</a></dd>
-                <dd><a href="{{siteRootPath}}/components/latest/">Components</a></dd>
+                <dd><a href="{{siteRootPath}}/docs/">Documentation</a></dd>
+                <dd><a href="{{siteRootPath}}/community/support">COmmunity</a></dd>
                 <dd><a href="{{siteRootPath}}/download/">Download</a></dd>
-                <dd><a href="{{siteRootPath}}/manual/latest/getting-started.html">Getting started</a></dd>
+            </dl>
+            <dl>
+                <dt>Documentation</dt>
+                <dd><a href="{{siteRootPath}}/manual/latest/">User Manual</a></dd>
+                <dd><a href="{{siteRootPath}}/components/latest/index.html">Components</a></dd>
+                <dd><a href="{{siteRootPath}}/camel-k/latest/">Camel-K</a></dd>
+                <dd><a href="{{siteRootPath}}/camel-kafka-connector/latest/">Camel Kafka Connector</a></dd>
+                <dd><a href="{{siteRootPath}}/camel-quarkus/latest/">Camel Quarkus</a></dd>
+                <dd><a href="{{siteRootPath}}/camel-spring-boot/latest/">Camel Spring Boot</a></dd>
+                <dd><a href="{{siteRootPath}}/camel-karaf/latest/">Camel Karaf</a></dd>
                 <dd><a href="{{siteRootPath}}/manual/latest/faq/index.html">FAQ</a></dd>
             </dl>
             <dl>
                 <dt>Community</dt>
-                <dd><a href="https://www.apache.org/foundation/policies/conduct">Code of conduct</a></d>
                 <dd><a href="{{siteRootPath}}/community/support/">Support</a></dd>
                 <dd><a href="{{siteRootPath}}/manual/latest/contributing.html">Contributing</a></dd>
+                <dd><a href="{{siteRootPath}}/manual/latest/mailing-lists.html">Mailing Lists</a></dd>
                 <dd><a href="{{siteRootPath}}/community/user-stories/">User stories</a></dd>
                 <dd><a href="{{siteRootPath}}/community/articles/">Articles</a></dd>
                 <dd><a href="{{siteRootPath}}/community/books/">Books</a></dd>
@@ -33,11 +44,25 @@
                 <dd><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/foundation/sponsorship.html" title="Sponsorship">Sponsorship</a></dd>
                 <dd><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/foundation/thanks.html" title="Thanks">Thanks</a></dd>
             </dl>
-            <p>
+            <p class="remark">
                 &copy; 2004-{{now_year}} The <a href="https://apache.org">Apache Software Foundation</a>.<br>
                 Apache Camel, Camel, Apache, the Apache feather logo, and the Apache Camel project logo are trademarks of
                 The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of
                 their respective owners.
             </p>
+            <div class="resources">
+                <div class="context">
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="context">
+                    <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/foundation/policies/conduct">Code of Conduct</a>
+                </div>
+            </div>
+            <div class="break-row-footer"></div>
+            <div id="social-media" class="footer-icons">
+                <a rel="noopener noreferrer nofollow" href="https://github.com/apache/camel/" title="Collaborate on GitHub"><svg class="brand-icon"><use xlink:href="{{uiRootPath}}/img/brand-logos.svg#github" /></svg></a>
+                <a rel="noopener noreferrer nofollow" href="https://gitter.im/apache/apache-camel" title="Chat on Gitter"><svg class="brand-icon"><use xlink:href="{{uiRootPath}}/img/brand-logos.svg#gitter" /></svg></a>
+                <a rel="noopener noreferrer nofollow" href="https://twitter.com/ApacheCamel" title="Follow Apache Camel on Twitter"><svg class="brand-icon"><use xlink:href="{{uiRootPath}}/img/brand-logos.svg#twitter" /></svg></a>
+            </div>
         </div>
     </footer>
