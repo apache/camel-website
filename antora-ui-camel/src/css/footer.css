@@ -102,6 +102,10 @@ footer .footer dl dt::after {
   background: var(--footer-font-color);
 }
 
+footer .footer .footer-menu {
+  display: block;
+}
+
 footer .footer dl dd {
   margin: 0;
 }
@@ -144,7 +148,12 @@ footer .footer .footer-icons .brand-icon {
   fill: var(--navbar-font-color);
 }
 
-@media screen and (max-width: 750px) {
+footer .footer .show-menu,
+footer .footer .hide-menu {
+  display: none;
+}
+
+@media screen and (max-width: 626px) {
   footer .footer dl {
     flex-basis: 100%;
     margin-top: 2rem;
@@ -173,5 +182,35 @@ footer .footer .footer-icons .brand-icon {
 
   footer .footer .footer-icons .brand-icon {
     height: 1.5rem;
+  }
+
+  footer .footer .show-menu {
+    display: block;
+    float: right;
+    height: 40px;
+    margin-top: -4rem;
+  }
+
+  footer .footer .show-menu.is-active {
+    display: none;
+  }
+
+  footer .footer .hide-menu {
+    display: none;
+  }
+
+  footer .footer .hide-menu.is-active {
+    display: block;
+    float: right;
+    height: 35px;
+    margin-top: -4rem;
+  }
+
+  footer .footer .footer-menu {
+    display: none;
+  }
+
+  footer .footer .footer-menu.is-active {
+    display: block;
   }
 }
