@@ -4,6 +4,7 @@ title: "Articles"
 
 ### Camel Videos
 
+*   [Event-driven serverless applications with Camel K | DevNation Tech Talk](https://www.youtube.com/watch?v=hlUzLC71nAM) - 40 min video from July 2020, by Luca and Nicola presenting Camel K and how Camel fits in the event driven & serverless world with a live demo that shows this all together. 
 *   [What’s new with Apache Camel 3? | DevNation Tech Talk](https://www.youtube.com/watch?v=HS8fPyCkgyU) - 35 min video from June 2020, by Claus and Andrea giving an overview of Camel 3, and focusing on the most exicing innovations with CamelK, Camel Quarkus and Camel Kafka Connector with 3 live demos.
 *   [Apache Camel monitoring with Prometheus and Grafana](https://www.youtube.com/watch?v=0LDgv1nIk-Y) - 10 min video from July 2020 where Alaim Pham demonstrate how to build custom dashboard in Grafana to monitor Camel applications and among others being able to drill down per intance to help with troubleshooting.
 *   [Camel K serverless Integration auf Kubernetes (**German**)](https://www.youtube.com/watch?v=ZY9s4zdm_Us) - 25 min video by Perdic8 team in Germany who introduces CamelK and show live demo on Windows how to install, run and use Camel K with their impressions.
