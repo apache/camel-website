@@ -1,5 +1,6 @@
 ---
-title: "Privacy Policy"
+title: Privacy Policy
+url: /privacy-policy
 ---
 
 ## Apache Camel Privacy Policy

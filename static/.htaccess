@@ -346,7 +346,7 @@ Redirect 301 /documentation.html /manual/latest/
 # Redirect 301 /pojo-messaging-example.html
 # Redirect 301 /pojo.html
 # Redirect 301 /printer.html
-Redirect 301 /privacy-policy.html /privacy-policy
+# Redirect 301 /privacy-policy.html
 # Redirect 301 /processorfactory.html
 # Redirect 301 /property.html
 # Redirect 301 /python.html
