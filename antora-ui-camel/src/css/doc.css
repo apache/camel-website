@@ -1,9 +1,9 @@
 .doc {
   color: var(--doc-font-color);
   font-size: var(--doc-font-size);
+  hyphens: auto;
   line-height: var(--doc-line-height);
-  margin-left: auto;
-  margin-right: auto;
+  margin: var(--doc-margin);
   max-width: var(--doc-max-width);
   padding: 0 1rem 4rem;
 }
@@ -11,9 +11,9 @@
 @media screen and (min-width: 1024px) {
   .doc {
     font-size: var(--doc-font-size--desktop);
-    margin-left: auto;
-    margin-right: auto;
+    margin: var(--doc-margin--desktop);
     max-width: var(--doc-max-width--desktop);
+    min-width: 0;
   }
 }
 
@@ -25,10 +25,10 @@
 .doc h6 {
   color: var(--heading-font-color);
   font-weight: var(--heading-font-weight);
+  hyphens: none;
   line-height: 1.3;
   margin: 1rem 0 0;
   text-transform: uppercase;
-  word-wrap: break-word;
 }
 
 .static > h1:first-child,
@@ -37,15 +37,16 @@
   margin: 1.5rem 0;
 }
 
-@media screen and (min-width: 769px) {
-  .doc > h1.page:first-child {
-    margin-top: 2.5rem;
-  }
-}
-
 #preamble + .sect1,
 .doc .sect1 + .sect1 {
   margin-top: 2rem;
+}
+
+.doc h1.sect0 {
+  background: var(--abstract-background);
+  font-size: 1.8em;
+  margin: 1.5rem -1rem 0;
+  padding: 0.5rem 1rem;
 }
 
 .doc h2:not(.discrete) {
@@ -104,6 +105,25 @@
   overflow-x: auto;
 }
 
+.doc .table-wrapper::-webkit-scrollbar {
+  height: var(--scrollbar-thickness);
+}
+
+.doc .table-wrapper::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color);
+  border-radius: var(--scrollbar-radius);
+}
+
+.doc .table-wrapper::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color);
+  border-radius: var(--scrollbar-radius);
+}
+
+.doc .table-wrapper::-webkit-scrollbar-thumb:hover,
+.doc .table-wrapper::-webkit-scrollbar-thumb:active {
+  background: var(--scrollbar-thumb-active-color);
+}
+
 .doc .table-wrapper table {
   width: 100%;
 }
@@ -117,7 +137,6 @@
 .doc .tableblock td:not(:first-child) > p,
 .doc .tableblock thead {
   hyphens: auto;
-  overflow-wrap: break-word;
 }
 
 .doc a {
@@ -127,6 +146,10 @@
 
 .doc a:hover {
   color: var(--link_hover-font-color);
+}
+
+.doc a.unresolved {
+  color: var(--link_unresolved-font-color);
 }
 
 .doc i.fa {
@@ -165,6 +188,10 @@
   text-decoration: underline;
 }
 
+.doc .line-through {
+  text-decoration: line-through;
+}
+
 .doc .paragraph,
 .doc .dlist,
 .doc .olist,
@@ -175,7 +202,8 @@
 .doc .literalblock,
 .doc .sidebarblock,
 .doc .verseblock,
-.doc .quoteblock {
+.doc .quoteblock,
+.doc .partintro {
   margin: 1rem 0 0;
   word-break: break-word;
 }
@@ -189,22 +217,20 @@
   /* table-layout: fixed; */
 }
 
-.doc table.spread {
+.doc table.stretch {
   width: 100%;
 }
 
-.doc table.tableblock th,
-.doc table.tableblock td {
+.doc table.tableblock thead th {
+  border-bottom: 2.5px solid var(--table-border-color);
   padding: 0.5rem;
 }
 
-.doc table.tableblock thead {
-  border-bottom: 2.5px solid var(--table-border-color);
-  text-align: left;
-}
-
-.doc table.tableblock td {
+.doc table.tableblock td,
+.doc table.tableblock > :not(thead) th {
+  border-top: 1px solid var(--table-border-color);
   border-bottom: 1px solid var(--table-border-color);
+  padding: 0.5rem;
 }
 
 .doc .halign-left {
@@ -460,6 +486,7 @@
   font-size: calc(16 / var(--rem-base) * 1rem);
   font-weight: var(--caption-font-weight);
   font-style: italic;
+  hyphens: none;
   letter-spacing: 0.01em;
   padding-bottom: 0.075rem;
   text-align: left;
@@ -476,7 +503,8 @@
 
 .doc .exampleblock > .content {
   background: var(--example-background);
-  border: 0.1rem solid var(--example-border-color);
+  border: 0.25rem solid var(--example-border-color);
+  border-radius: 0.5rem;
   padding: 0.75rem;
 }
 
@@ -486,6 +514,7 @@
 
 .doc .sidebarblock {
   background: var(--sidebar-background);
+  border-radius: 0.75rem;
   padding: 0.75rem 1.5rem;
 }
 
@@ -516,10 +545,23 @@
   padding: 0.75rem;
 }
 
-.doc aside {
-  float: right;
-  margin-left: 1rem;
-  width: 25rem;
+.doc pre.highlight code::-webkit-scrollbar {
+  height: var(--scrollbar-thickness);
+}
+
+.doc pre.highlight code::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color);
+  border-radius: var(--scrollbar-radius);
+}
+
+.doc pre.highlight code::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color);
+  border-radius: var(--scrollbar-radius);
+}
+
+.doc pre.highlight code::-webkit-scrollbar-thumb:hover,
+.doc pre.highlight code::-webkit-scrollbar-thumb:active {
+  background: var(--scrollbar-thumb-active-color);
 }
 
 /* NOTE assume pre.highlight contains code[data-lang] */
@@ -554,12 +596,18 @@
 
 .doc .colist {
   font-size: calc(16 / var(--rem-base) * 1rem);
-  margin-top: 0.5rem;
+  margin: 0.25rem 0 -0.25rem;
 }
 
-.doc .colist > table tr > td:first-of-type {
-  padding: 0 0.75em;
-  line-height: 1;
+.doc .colist > table > tr > :first-child,
+.doc .colist > table > tbody > tr > :first-child {
+  padding: 0.25em 0.5rem 0;
+  vertical-align: top;
+}
+
+.doc .colist > table > tr > :last-child,
+.doc .colist > table > tbody > tr > :last-child {
+  padding: 0.25rem 0;
 }
 
 .doc .conum[data-value] {
@@ -585,21 +633,21 @@
   display: none;
 }
 
-b.button {
+.doc b.button {
   white-space: nowrap;
 }
 
-b.button::before {
-  content: '[';
+.doc b.button::before {
+  content: "[";
   padding-right: 0.25em;
 }
 
-b.button::after {
-  content: ']';
+.doc b.button::after {
+  content: "]";
   padding-left: 0.25em;
 }
 
-kbd {
+.doc kbd {
   display: inline-block;
   font-size: calc(12 / var(--rem-base) * 1rem);
   background: var(--kbd-background);
@@ -611,36 +659,42 @@ kbd {
   white-space: nowrap;
 }
 
-kbd,
-.keyseq {
+.doc kbd,
+.doc .keyseq {
   line-height: 1;
 }
 
-.keyseq {
+.doc .keyseq {
   font-size: calc(16 / var(--rem-base) * 1rem);
 }
 
-.keyseq kbd {
+.doc .keyseq kbd {
   margin: 0 0.125em;
 }
 
-.keyseq kbd:first-child {
+.doc .keyseq kbd:first-child {
   margin-left: 0;
 }
 
-.keyseq kbd:last-child {
+.doc .keyseq kbd:last-child {
   margin-right: 0;
 }
 
-.menuseq i.caret::before {
-  content: '\203a';
+.doc .menuseq i.caret::before {
+  content: "\203a";
   font-size: 1.1em;
   font-weight: var(--body-font-weight-bold);
   line-height: calc(1 / 1.1);
 }
 
-.stretch {
-  width: 100%;
+.doc a.bare,
+.doc b.button,
+.doc code,
+.doc .path,
+.doc kbd,
+.doc .menuseq,
+.doc .icon i::after {
+  hyphens: none;
 }
 
 /* for mobile screens */
@@ -652,11 +706,6 @@ kbd,
 }
 
 @media screen and (max-width: 1023px) and (min-width: 480px) {
-  .doc > h1.page:first-child,
-  .static > h1:first-child {
-    font-size: inherit;
-  }
-
   .doc p code,
   .doc thead code {
     font-size: var(--body-font-size);

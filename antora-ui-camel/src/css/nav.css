@@ -26,6 +26,13 @@
 
 .nav-container.is-active {
   visibility: visible;
+  padding: 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .nav-category {
+    margin-left: 1rem;
+  }
 }
 
 .nav {
@@ -72,6 +79,12 @@ html.is-clipped--nav {
   }
 }
 
+@media screen and (max-width: 1023px) {
+  .nav-panel-menu {
+    margin-top: var(--navbar-height);
+  }
+}
+
 .nav-panel-menu:not(.is-active) .nav-menu {
   opacity: 0.75;
 }
@@ -85,18 +98,6 @@ html.is-clipped--nav {
   right: 0;
   bottom: 0;
   left: 0;
-}
-
-.nav-menu::-webkit-scrollbar {
-  width: 0.29rem;
-}
-
-.nav-menu::-webkit-scrollbar-thumb {
-  background-color: var(--nav-scrollbar-color);
-}
-
-.nav-menu::-webkit-scrollbar-thumb:hover {
-  background-color: var(--nav-scroll-thumb-color);
 }
 
 .nav-panel-menu input.search {
@@ -123,10 +124,37 @@ html.is-clipped--nav {
   min-height: 0;
   width: 100%;
   padding: 0.5rem 0.75rem;
+  margin-bottom: var(--drawer-height);
   line-height: var(--nav-line-height);
   position: relative;
   word-break: break-word;
   overflow-y: auto;
+}
+
+.nav-menu::-webkit-scrollbar {
+  width: var(--scrollbar-thickness);
+}
+
+.nav-menu::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color);
+  border-radius: var(--scrollbar-radius);
+}
+
+.nav-menu::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color);
+  border-radius: var(--scrollbar-radius);
+}
+
+.nav-menu::-webkit-scrollbar-thumb:hover,
+.nav-menu::-webkit-scrollbar-thumb:active {
+  background: var(--scrollbar-thumb-active-color);
+}
+
+@media screen and (max-width: 1023px) {
+  .nav-menu::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
 }
 
 .nav-menu h3.title {
@@ -297,5 +325,6 @@ html.is-clipped--nav {
   background-size: 9.5rem;
   background-position-x: 10px;
   background-position-y: 10px;
-  width: 11rem;
+  width: 4rem;
+  order: 1;
 }

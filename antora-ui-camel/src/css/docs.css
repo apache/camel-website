@@ -1,0 +1,81 @@
+.docs {
+  padding: 1rem 3rem;
+}
+
+.project h2 {
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.camel-project {
+  width: calc(100% - 3rem);
+  display: inline-flex;
+  border: 1px solid var(--color-smoke-90);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 1rem 2rem 1rem;
+  margin: 1.5rem;
+}
+
+.camel-project .project {
+  border: none;
+  padding: 0;
+}
+
+.project {
+  display: inline-flex;
+  border: 1px solid var(--color-smoke-90);
+  width: calc(50% - 3.2rem);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  margin: 1.5rem;
+}
+
+.project a > img,
+.camel-project a > img {
+  display: inline-block;
+  width: auto;
+  height: 5rem;
+}
+
+.docs .project a > img,
+.docs .camel-project a > img {
+  margin-top: 1rem;
+}
+
+.project a > img + img {
+  padding-left: 1rem;
+}
+
+.project .description {
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.project .links {
+  align-items: center;
+  margin: 1.5rem 0;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 1023px) {
+  .docs .project {
+    width: calc(100% - 3.2rem);
+    margin: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .docs .project {
+    padding: 1rem 0.4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .docs .project .description {
+    height: 10rem;
+  }
+}

@@ -4,12 +4,15 @@ title: "Articles"
 
 ### Camel Videos
 
+*   [What’s new with Apache Camel 3? | DevNation Tech Talk](https://www.youtube.com/watch?v=HS8fPyCkgyU) - 35 min video from June 2020, by Claus and Andrea giving an overview of Camel 3, and focusing on the most exicing innovations with CamelK, Camel Quarkus and Camel Kafka Connector with 3 live demos.
+*   [Apache Camel monitoring with Prometheus and Grafana](https://www.youtube.com/watch?v=0LDgv1nIk-Y) - 10 min video from July 2020 where Alaim Pham demonstrate how to build custom dashboard in Grafana to monitor Camel applications and among others being able to drill down per intance to help with troubleshooting.
 *   [Camel K serverless Integration auf Kubernetes (**German**)](https://www.youtube.com/watch?v=ZY9s4zdm_Us) - 25 min video by Perdic8 team in Germany who introduces CamelK and show live demo on Windows how to install, run and use Camel K with their impressions.
 *   [SouJava May 2020: Apache Camel 3 - The next generation of enterprise integration](https://www.youtube.com/watch?v=OP81rLuoq0I) - SouJava talk from May 2020 where Claus Ibsen and Andrea Cosentino presents an hour long session about Apache Camel, Camel v3 and goes more in depth with Camel K, Camel Quarkus and Camel Kafka Connector. At the end of the talk there is a 30 min additional QA session.
 *   [4K–Kubernetes with Knative, Kafka, and Kamel](https://www.youtube.com/watch?v=kYM6hoh2ahI) - DevNation Tech Talk from April 2020 where Kamesh Sampath celebrats his book launch of the Knative Cookbook, and runs a fast-paced live code demonstration of the coolest Knative-based techniques that we can imagine that include Kafka and Kamel.
 *   [How to quickly run 100 Camels with Apache Camel, Quarkus and GraalVM](https://www.youtube.com/watch?v=4lXSf8DBQkQ) - A 10 minute video from April 2020 where Claus shows how to run Camel in both JVM and Native compiled mode and compare startup speed and memory usage.
 *   [Best Practices for Middleware and Integration Architecture Modernization with Apache Camel](https://www.youtube.com/watch?v=d1Hr78a7Lww) - A 30 minute video from March 2020 where Claus presents Camel 3 and focused on Camel K and Camel Quarkus.
 *   [Metamorphosis: When Kafka meets Camel](https://www.youtube.com/watch?v=hJUl7R2dN00) - A 40 minute video from DevConf.CZ in January 2020 where Otavio Piske and Jakub Scholz introduce Camel and Kafka Connector and talk about how they can work together.
+*   [Devnexus 2020 Configuring Apache Camel for the Cloud](https://www.youtube.com/watch?v=nwDMcRtaaJk) - 50 min video from February 2020 where Bob Paulin talks about the various ways to use and configure Camel on differenet cloud platforms.
 *   [Cloud-native integration: Kubernetes and Camel K](https://www.youtube.com/watch?v=4Xuax4s-LIc) - A 45 minute video from November 2019 by Kamesh Sampath whom presents the CamelK framework and how it helps in deploying Camel DSL code as integrations in Kubernetes/OpenShift. We will dive deeper by making them serverless and on-demand using Knative.
 *   [Camel Riders in the Cloud](https://developers.redhat.com/video/youtube/zuEYtMvHN6g/) (English) - A 30 minute video from March 2018 where Claus presents using Camel with microservices and containers as cloud native applications, and the best practices around this.
 *   [Agile Integration with Apache Camel microservices in containers on Kubernetes](https://www.youtube.com/watch?v=9FN4DuBJy8M) (English) - A 45 minute video from fall 2017 where Claus presents at CodeEurope in Poland
@@ -170,6 +173,10 @@ These examples show usage of several different components and other concepts suc
 *   [Creating a REST API in Apache Camel](https://tomd.xyz/articles/camel-rest/) from June 2018 by Tom Donohue explains the Rest DSL and how to use it with a basic example that is a great tutorial for learning about the Rest DSL. 
 *   [Enterprise integration for Ethereum](https://medium.com/@bibryam/enterprise-integration-for-ethereum-fa67a1577d43) from July 2018 by Bilgin Ibryam explains the Ethereum eco-system and where you can use Camel with the bit-coin and block-chain technologies.
 *   [Camel Aggregation Strategies](http://blog.joshdreagan.com/2018/08/30/camel_aggregation_strategies/) from August 2018 by Josh Reagan whom blogs about how to aggregate data using Camel's AggregationStrategy when using EIPs such as Content Enricher, Splitter or the Aggregator. 
+
+#### Camel K
+
+* [Why Camel K](https://dzone.com/articles/why-camel-k) by Saravanakumar Selvaraj from June 2020 where he briefly hightlights 5 key elements of Camel K 
 
 #### Tooling / Combination with other Products
 

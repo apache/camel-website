@@ -17,6 +17,12 @@
   background: var(--color-smoke-50);
 }
 
+.release aside {
+  float: right;
+  margin-left: 1rem;
+  width: 25rem;
+}
+
 /* for mobile screens */
 @media screen and (max-width: 626px) {
   .release aside {

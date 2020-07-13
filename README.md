@@ -33,16 +33,16 @@ described in section ["Build with Maven"](#build-with-maven).
 
 ### Chocolatey
 
-For windows users, a beginning step to install yarn and nvm on your local system is through installing chocolatey. 
+For windows users, a beginning step to install yarn and nvm on your local system is through installing chocolatey.
 
-An easy step to step guide to install chocolatey on your local system is as follows: 
-1. Open cmd/powershell and run it as administrator. 
+An easy step to step guide to install chocolatey on your local system is as follows:
+1. Open cmd/powershell and run it as administrator.
 
-2. Install with cmd.exe 
+2. Install with cmd.exe
 
         > @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command " [System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 
-3. Install with PowerShell.exe 
+3. Install with PowerShell.exe
 
         > Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
@@ -65,7 +65,7 @@ Node on your machine.
 - Install using [Homebrew](https://brew.sh/) and [Node formulae](https://formulae.brew.sh/formula/node)
 - Install from official [Node packages](https://nodejs.org/en/download/)
 
-An easy step to step guide to install nvm and install node v10.0.0 on your local system is as follows: 
+An easy step to step guide to install nvm and install node v10.0.0 on your local system is as follows:
 
     $ touch ~/.bash_profile
     $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
@@ -78,11 +78,11 @@ Node LTS version 10 as default Node version.
 
     $ nvm use 10.0.0
 
-### Installation of nvm on Windows 
+### Installation of nvm on Windows
 
-Note - The following steps need to be ran on cmd as administrator only. 
+Note - The following steps need to be ran on cmd as administrator only.
 
-An easy step to step guide to install nvm and install node v10.0.0 on your local system is as follows: 
+An easy step to step guide to install nvm and install node v10.0.0 on your local system is as follows:
 
     > choco install nvm
     > nvm install 10.0.0
@@ -171,6 +171,16 @@ This will build the `antora-ui-camel` which holds all the CSS and JavaScript, an
 
 To iterate quickly, it's easier to make changes directly in the browser tooling and then bring the changes over to the CSS files after the fact.
 
+## CAMEL_ENV environment variable
+
+Setting the `CAMEL_ENV` changes the output of the website build slightly, possible values are `development` (set by default if `CAMEL_ENV` is unset), `production` or `netlify`.
+
+To run the optimizations, which currently consist of running [htmlmin](https://kangax.github.io/html-minifier/) to reduce the size of generated HTML documents, set the `CAMEL_ENV` environment variable to `production`, for example:
+
+    $ CAMEL_ENV=production yarn build
+
+When build is performed on Netlify, we set it to `netlify` to add the link to Netlify required by Netlify's open source policy.
+
 ## Contribute changes
 
 The Apache Camel website is composed of different sources. So where to add and contribute changes in particular?
@@ -199,9 +209,11 @@ areas of the website:
 
 Use the `blog` archetype to create a new markdown content file in `content/blog`:
 
-    $ yarn hugp new --kind blog blog/URL-SLUG/index.md # replace URL-SLUG with URL slug for the blog post
+    $ yarn hugo new --kind blog blog/YYYY/MM/PostName/index.md # replace YYYY with the year, MM with the month and PostName with the actual name
 
-Put a nice featured image in `content/blog/URL-SLUG/featured.png` and edit `content/blog/URL-SLUG/index.md` filling in the details.
+Put a nice featured image in `content/blog/YYYY/MM/PostName/featured.png` and edit `content/blog/YYYY/MM/PostName/index.md` filling in the details.
+
+The final generated URL would be something like `https://camel.apache.org/blog/2020/05/MyNewPost/`.
 
 Don't forget to remove `draft: true` to publish the blog post.
 

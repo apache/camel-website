@@ -9,7 +9,6 @@ This page lists the known books about Apache Camel. If you happen to know a book
 *   [Apache Camel Developer's Cookbook](http://www.packtpub.com/apache-camel-developers-cookbook/book)
 *   [Camel Design Patterns](https://leanpub.com/camel-design-patterns)
 *   [Mastering Apache Camel](https://www.packtpub.com/application-development/mastering-apache-camel)
-*   [Apache Camel Essentials](https://www.packtpub.com/application-development/apache-camel-essentials)
 *   [Instant Apache Camel Message Routing](http://www.packtpub.com/apache-camel-message-routing/book)
 *   [Instant Apache Camel Messaging System](http://www.packtpub.com/apache-camel-messaging-system/book)
 *   [Enterprise Integration Patterns](http://www.enterpriseintegrationpatterns.com/)
@@ -61,14 +60,6 @@ Driven by real world experiences, this book consolidates the most commonly used 
 This book will provide you with the skills you need to efficiently create routes using Apache Camel.
 
 After briefly introducing the key features and core concepts of Camel, the book will take you through all the important features and components, starting with routing and processors. You will learn how to use beans in Camel routes, covering everything from supported registries and annotations, to the creation of an OSGi bundle and writing route definitions with Blueprint DSL. Leverage the Enterprise Integration Patterns (EIPs) supported by Camel and implement them in your routes. You will then see how components and endpoints handle exchanges in Camel, and how you can use them to create a complete and powerful mediation framework. You will finally learn how to tackle errors and perform testing to ensure that your integration projects are working successfully.
-
-### Apache Camel Essentials
-
-[Apache Camel Essentials](https://www.packtpub.com/application-development/apache-camel-essentials) by Prajod Surendran V, Gnanaguru Sattanathan, Naveen Raj. Published by [Packt publishing](http://www.packtpub.com/) in August 2016.
-
-![Apache Camel Essentials book cover](/img/books/camel_essentials.jpg)
-
-This book offers you a small learning curve to get the most out of enterprise Camel integrations. At the beginning of the book, you will learn about the installation and setup of Apache Camel and discover more about Camel concepts such as the development environment, routing, deployment strategies, and dependencies. After that, you will learn how to configure Camel endpoints using DSL and Spring XML, and also learn how to use Camel for web service integrations. Later on in the book, you will learn how to execute multiple Camel projects across a wide spectrum of business use cases. You will round off your Camel journey with coverage of social media integration and discover the best ways to implement Camel in your system.
 
 ### Instant Apache Camel Message Routing
 

@@ -8,10 +8,20 @@
             {{#each @items}}
                 {{#if children}}
                 <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link navbar-topics" href="#">{{name}}</a>
+                <a class="navbar-link navbar-topics" href="#">
+                  <div>
+                      <img class="navbar-icon" src="{{pre}}" /><br>
+                      {{name}}
+                  </div>
+                </a>
                 <div class="navbar-dropdown">
                 {{#each children}}
-                  <a class="navbar-item" href="{{url}}">{{name}}</a>
+                  <a class="navbar-item" href="{{url}}">
+                    <div>
+                      <img class="navbar-icon" src="{{pre}}" /><br>
+                      {{name}}
+                  </div>
+                  </a>
                 {{/each}}
                 </div>
                 </div>
@@ -23,6 +33,7 @@
         </div>
       </div>
       <div class="navbar-fill"></div>
+      <div class="break-row"></div>
       <div class="navbar-search results-hidden">
         <input id="search" class="search" placeholder="Search" autocomplete="off">
         <img src= "/_/img/cancel.svg" alt="Clear" id="search-cancel">

@@ -5,10 +5,10 @@
 @import 'body.css';
 @import 'nav.css';
 @import 'main.css';
-@import 'toggle-width.css';
 @import 'toolbar.css';
 @import 'breadcrumbs.css';
 @import 'page-versions.css';
+@import "toc.css";
 @import 'doc.css';
 @import 'static.css';
 @import 'header.css';
@@ -22,3 +22,4 @@
 @import 'release.css';
 @import 'misc.css';
 @import 'community.css';
+@import 'docs.css';

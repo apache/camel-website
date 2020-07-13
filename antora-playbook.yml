@@ -18,9 +18,9 @@ content:
         - core/camel-xml-jaxp/src/main/docs
         # main components doc
         - docs/components
-
+        
     - url: git@github.com:apache/camel.git
-      branches: camel-3.2.x
+      branches: camel-3.4.x
       start_paths:
         # eip
         - core/camel-core-engine/src/main/docs
@@ -51,11 +51,20 @@ content:
     - url: git@github.com:apache/camel-kafka-connector.git
       branches: master
       start_path: docs
+    - url: git@github.com:apache/camel-kafka-connector.git
+      branches: camel-kafka-connector-0.3.x
+      start_path: docs
     - url: git@github.com:apache/camel-spring-boot.git
       branches: master
       start_path: docs
+    - url: git@github.com:apache/camel-spring-boot.git
+      branches: camel-spring-boot-3.4.x
+      start_path: docs
     - url: git@github.com:apache/camel-karaf.git
       branches: master
+      start_path: docs
+    - url: git@github.com:apache/camel-karaf.git
+      branches: camel-karaf-3.4.x
       start_path: docs
 
 ui:

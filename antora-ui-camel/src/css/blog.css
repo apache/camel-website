@@ -14,6 +14,12 @@
   line-height: 2rem;
 }
 
+@media screen and (max-width: 1023px) {
+  .blog.list aside {
+    margin-top: 0;
+  }
+}
+
 .blog.list aside ul {
   list-style: none;
   padding: 0;
@@ -184,4 +190,48 @@ article.blog p {
 .blog li ul,
 .blog li ol {
   padding-bottom: 0;
+}
+
+.blog .pagination {
+  margin: var(--static-margin);
+  max-width: var(--static-max-width);
+  list-style: none;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .blog .pagination {
+    max-width: var(--static-max-width--desktop);
+  }
+}
+
+.blog .page-item {
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+
+.blog .page-item a {
+  color: var(--color-gray-30);
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.blog .page-item.disabled a {
+  color: var(--color-gray-30);
+}
+
+.blog .page-item.active {
+  border-radius: 3px;
+  background: var(--color-asf-moderate-blue);
+}
+
+.blog .page-item.active a {
+  color: var(--color-white);
+}
+
+@media screen and (max-width: 1023px) {
+  .blog.list aside {
+    margin-top: 4.5rem;
+  }
 }
