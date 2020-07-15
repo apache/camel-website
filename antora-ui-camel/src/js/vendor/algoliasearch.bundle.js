@@ -4,8 +4,8 @@
   const algoliasearch = require('algoliasearch/lite')
 
   window.addEventListener('load', () => {
-    const client = algoliasearch('QDOJ4LJQCC', '0fa28c3acc4d5f383b85ae4ad035ac9c')
-    const index = client.initIndex('aashna')
+    const client = algoliasearch('BH4D9OD16A', '16e3a9155a136e4962dc4c206f8278bd')
+    const index = client.initIndex('apache_camel')
     const search = document.querySelector('#search')
     const container = search.parentNode
     const results = document.querySelector('#search_results')
@@ -53,19 +53,15 @@
             const data = hits.reduce((data, hit) => {
               const d = {}
               d.url = hit.url
-              var hierarchy = Object.values(hit.hierarchy).filter((lvl) => lvl !== null)
-              const section = hierarchy[0]
-              var breadcrumbs = hierarchy.slice(1).join(' &raquo; ')
-              if (breadcrumbs !== '') {
-                d.breadcrumbs = breadcrumbs
-              } else {
-                d.breadcrumbs = section
-              }
-              if (hit._snippetResult !== undefined) {
-                d.snippet = hit._snippetResult.content.value
-              } else {
-                d.snippet = ''
-              }
+              var section = hit.hierarchy.lvl1
+              if (hit.hierarchy.lvl0 !== null) section = section + ' [' + hit.hierarchy.lvl0 + ']'
+              var breadcrumbs = Object.values(hit.hierarchy)
+                .slice(2)
+                .filter((lvl) => lvl !== null)
+                .join(' &raquo; ')
+
+              d.breadcrumbs = ((breadcrumbs !== '') ? breadcrumbs : section)
+              d.snippet = hit._snippetResult.content.value + '...'
 
               data[section] = data[section] || []
               data[section].push(d)
