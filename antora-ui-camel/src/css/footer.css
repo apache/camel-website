@@ -153,7 +153,7 @@ footer .footer .hide-menu {
   display: none;
 }
 
-@media screen and (max-width: 626px) {
+@media screen and (max-width: 1023px) {
   footer .footer dl {
     flex-basis: 100%;
     margin-top: 2rem;
