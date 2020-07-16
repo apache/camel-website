@@ -25,13 +25,26 @@
   }
 
   .toc.sidebar .toc-menu ul {
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: thin; /* Firefox */
   }
 
   .toc.sidebar .toc-menu ul::-webkit-scrollbar {
-    width: 0;
-    background: transparent;  /* Chrome/Safari/Webkit */
+    width: var(--scrollbar-thickness); /* Chrome/Safari/Webkit */
+  }
+
+  .toc.sidebar .toc-menu ul::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-color);
+    border-radius: var(--scrollbar-radius);
+  }
+
+  .toc.sidebar .toc-menu ul::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-color);
+    border-radius: var(--scrollbar-radius);
+  }
+
+  .toc.sidebar .toc-menu ul::-webkit-scrollbar-thumb:hover,
+  .toc.sidebar .toc-menu ul::-webkit-scrollbar-thumb:active {
+    background: var(--scrollbar-thumb-active-color);
   }
 }
 
