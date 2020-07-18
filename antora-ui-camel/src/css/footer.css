@@ -153,6 +153,13 @@ footer .footer .hide-menu {
   display: none;
 }
 
+input[type="checkbox"] {
+  width: 0;
+  height: 0;
+  float: right;
+  visibility: hidden;
+}
+
 @media screen and (max-width: 1023px) {
   footer .footer dl {
     flex-basis: 100%;
@@ -185,32 +192,41 @@ footer .footer .hide-menu {
   }
 
   footer .footer .show-menu {
-    display: block;
     float: right;
     height: 40px;
     margin-top: -4rem;
   }
 
-  footer .footer .show-menu.is-active {
-    display: none;
-  }
-
   footer .footer .hide-menu {
-    display: none;
-  }
-
-  footer .footer .hide-menu.is-active {
-    display: block;
     float: right;
     height: 35px;
     margin-top: -4rem;
   }
 
-  footer .footer .footer-menu {
+  input[type="checkbox"] + label img.show-menu {
+    display: block;
+  }
+
+  input[type="checkbox"] ~ label img.hide-menu,
+  input[type="checkbox"] ~ div.footer-menu {
     display: none;
   }
 
-  footer .footer .footer-menu.is-active {
+  input[type="checkbox"]:checked + label img.show-menu {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked ~ label img.hide-menu,
+  input[type="checkbox"]:checked ~ div.footer-menu {
     display: block;
+  }
+
+  input[type="checkbox"]:not(:checked) + label img.show-menu {
+    display: block;
+  }
+
+  input[type="checkbox"]:not(:checked) ~ label .hide-menu,
+  input[type="checkbox"]:not(:checked) ~ div.footer-menu {
+    display: none;
   }
 }
