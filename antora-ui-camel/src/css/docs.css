@@ -62,27 +62,19 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .docs .project {
-    width: calc(100% - 3.2rem);
-    margin: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .camel-project {
-    padding: 0 0 1.5rem 0;
-  }
-
-  .camel-project .camel-documentation .links {
-    padding: 1rem;
-  }
-
   .docs {
-    padding: 0 0 1.5rem 0;
+    padding: 0 1rem 4rem;
   }
 
+  .camel-project,
   .docs .project {
-    padding: 0;
+    width: calc(100% - 1rem);
+    margin: 1.5rem -1.5rem 1.5rem 0.5rem;
+  }
+
+  .camel-project .project {
+    width: calc(100% - 3rem);
+    margin: 1.5rem;
   }
 }
 
