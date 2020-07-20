@@ -6,7 +6,7 @@ site:
 content:
   sources:
 
-    - url: git@github.com:apache/camel.git
+    - url: git@github.com:aashnajena/camel.git
       branches: master
       start_paths:
         # manual
@@ -19,7 +19,7 @@ content:
         # main components doc
         - docs/components
         
-    - url: git@github.com:apache/camel.git
+    - url: git@github.com:aashnajena/camel.git
       branches: camel-3.4.x
       start_paths:
         # eip
@@ -30,7 +30,7 @@ content:
         # main components doc
         - docs/components
 
-    - url: git@github.com:apache/camel.git
+    - url: git@github.com:aashnajena/camel.git
       branches: camel-2.x
       start_paths:
         # main components doc

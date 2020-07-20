@@ -1,4 +1,5 @@
 ---
+title : "Documentation"
 ---
 
 {{< div "camel-project" >}}

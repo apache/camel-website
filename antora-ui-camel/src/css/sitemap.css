@@ -1,0 +1,16 @@
+.sitemap > ul > li > ul,
+ul.sitemap-list {
+  list-style-type: disc;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2;
+  column-gap: 25%;
+  padding-top: 1rem;
+}
+
+@media screen and (max-width: 626px) {
+  .sitemap > ul > li > ul,
+  ul.sitemap-list {
+    columns: 1;
+  }
+}

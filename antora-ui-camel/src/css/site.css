@@ -8,7 +8,7 @@
 @import 'toolbar.css';
 @import 'breadcrumbs.css';
 @import 'page-versions.css';
-@import "toc.css";
+@import 'toc.css';
 @import 'doc.css';
 @import 'static.css';
 @import 'header.css';
@@ -23,3 +23,4 @@
 @import 'misc.css';
 @import 'community.css';
 @import 'docs.css';
+@import 'sitemap.css'

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+{{> head defaultPageTitle="Untitled"}}
+  </head>
+  <body class="article{{#with (or page.attributes.role page.role)}} {{{this}}}{{/with}}">
+    {{> header}}
+    <div class="body">
+        <main role="main" class="nav-container doc blog list">
+                        <aside class="nav">
+                            <div class="nav-category">
+                                <h3>Sitemaps</h3>
+                                <ul>
+                                    <li><a class="category" href="/sitemap/">Camel Website</a></li>
+                                    <li><a class="category" href="/manual/latest/sitemap.html">User Manual</a></li>
+                                    <li><a class="category" href="/components/latest/sitemap.html">Components</a></li>
+                                    <li><a class="category">Camel K</a></li>
+                                    <li><a class="category">Camel Quarkus</a></li>
+                                    <li><a class="category">Camel Kafka</a></li>
+                                    <li><a class="category">Camel Spring Boot</a></li>
+                                    <li><a class="category">Camel Karaf</a></li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </main>  
+        <main class="article">
+            <div class="content">
+                <article class="doc">       
+                    {{#with page.title}}
+                    <h1 class="page">{{{this}}}</h1>
+                    {{/with}}
+                    <div class="sitemap">
+                    {{#each page.navigation}}
+                        {{> sitemap-tree navigation=./items level=1}}
+                    {{/each}}
+                    </div>
+                </article>
+            </div>
+        </main>
+    </div>
+    {{> footer}}
+  </body>
+</html>

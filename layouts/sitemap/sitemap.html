@@ -1,0 +1,55 @@
+{{ partial "header.html" . }}
+
+<div class="body">
+        <main role="main" class="nav-container doc blog list">
+            <aside class="nav">
+                <div class="nav-category">
+                    <h3>Sitemaps</h3>
+                    <ul>
+                        <li><a class="category" href="/sitemap/">Camel Website</a></li>
+                        <li><a class="category" href="/manual/latest/sitemap.html">User Manual</a></li>
+                        <li><a class="category" href="/components/latest/sitemap.html">Components</a></li>
+                        <li><a class="category">Camel K</a></li>
+                        <li><a class="category">Camel Quarkus</a></li>
+                        <li><a class="category">Camel Kafka</a></li>
+                        <li><a class="category">Camel Spring Boot</a></li>
+                        <li><a class="category">Camel Karaf</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </main>
+        <main class="article">
+                <div class="content">
+                    <article class="doc"> 
+            <h1 class="page">{{ .Title }} </h1>
+            {{ range .Site.Sections }}
+                <a href = "{{ .Permalink }}" >
+                    <h2> {{ .Title }} </h2>
+                </a>
+                {{with .Site.GetPage "section" .Section }}
+                    {{ if eq .Section "blog"}}
+                        {{ range .Site.Taxonomies.categories.Alphabetical }}
+                            <h4>{{ .Name }}</h4> 
+                            <ul>
+                            {{range .Pages}}
+                                <li><a href = "{{ .Permalink }}" >{{ .Title }}</a></li>
+                            {{end}}
+                            </ul>
+                        {{ end }}
+                    {{ else }}
+                        <ul class="sitemap-list">
+                            <li><a href = "{{ .Permalink }}" >{{ .Title }}</a></li>
+                            {{range .Pages}}
+                                <li><a href = "{{ .Permalink }}" >{{ .Title }}</a></li>
+                            {{end}}
+                        </ul>
+                    {{ end }}  
+                {{ end }}
+            {{ end }}
+            
+        </article>
+    </div>
+    </main>
+</div>
+
+{{ partial "footer.html" . }}

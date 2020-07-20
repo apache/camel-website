@@ -1,0 +1,28 @@
+{{#if navigation.length}}
+<ul>
+  {{#each navigation}}
+    <li data-depth="{{or ../level 0}}">
+        {{#if ./content}}
+            {{#if (eq ../level 1)}}
+                {{#if ./url}}
+                    <h2><a href="
+                    {{~#if (eq ./urlType 'internal')}}{{{relativize ./url}}}
+                    {{~else}}{{{./url}}}{{~/if}}">{{{./content}}}</a></h2>
+                {{else}}
+                    <h2>{{{./content}}}</h2>
+                {{/if}}
+            {{else}}
+                {{#if ./url}}
+                    <a href="
+                    {{~#if (eq ./urlType 'internal')}}{{{relativize ./url}}}
+                    {{~else}}{{{./url}}}{{~/if}}">{{{./content}}}</a>
+                {{else}}
+                    <p>{{{./content}}}</p>
+                {{/if}}
+            {{/if}}
+        {{/if}}
+        {{> sitemap-tree navigation=./items level=(increment ../level)}}
+    </li>
+  {{/each}}
+</ul>
+{{/if}}
