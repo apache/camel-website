@@ -166,6 +166,10 @@ input[type="checkbox"] {
     margin-top: 2rem;
   }
 
+  footer .footer dl dt {
+    margin-bottom: 0;
+  }
+
   footer .footer figure.logo {
     text-align: center;
   }
@@ -194,13 +198,17 @@ input[type="checkbox"] {
   footer .footer .show-menu {
     float: right;
     height: 40px;
-    margin-top: -4rem;
+    margin-top: -2.5rem;
   }
 
   footer .footer .hide-menu {
     float: right;
     height: 35px;
-    margin-top: -4rem;
+    margin-top: -2.5rem;
+  }
+
+  footer .footer .footer-menu {
+    margin-top: 1rem;
   }
 
   input[type="checkbox"] + label img.show-menu {
