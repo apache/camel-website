@@ -46,48 +46,7 @@ timeout = 300000
     name = "Community"
     identifier = "community"
     weight = 5
-
-[[menu.main]]
-    name = "Support"
-    parent = "community"
-    weight = 1
-    identifier = "community-support"
-    url = "/community/support/"
-
-[[menu.main]]
-    name = "Contributing"
-    parent = "community"
-    weight = 2
-    identifier = "community-contributing"
-    url = "/manual/latest/contributing.html"
-
-[[menu.main]]
-    name = "User stories"
-    parent = "community"
-    weight = 3
-    identifier = "community-user-stories"
-    url = "/community/user-stories/"
-
-[[menu.main]]
-    name = "Articles"
-    parent = "community"
-    weight = 4
-    identifier = "community-articles"
-    url = "/community/articles/"
-
-[[menu.main]]
-    name = "Books"
-    parent = "community"
-    weight = 5
-    identifier = "community-books"
-    url = "/community/books/"
-
-[[menu.main]]
-    name = "Team"
-    parent = "community"
-    weight = 6
-    identifier = "community-team"
-    url = "/community/team/"
+    url = "/community/"
 
 [[menu.main]]
     name = "Download"

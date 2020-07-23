@@ -1,3 +1,63 @@
 .community th {
   text-align: left;
 }
+
+.community {
+  padding: 1rem 3rem;
+}
+
+.section h2 {
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.section {
+  display: inline-flex;
+  border: 1px solid var(--color-smoke-90);
+  width: calc(50% - 3.2rem);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  margin: 1.5rem;
+}
+
+.section a > img {
+  display: inline-block;
+}
+
+.community .section a > img {
+  margin-top: 1rem;
+}
+
+.section a > img + img {
+  padding-left: 1rem;
+}
+
+.section .description {
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.section .links {
+  align-items: center;
+  margin: 1.5rem 0;
+  word-break: break-word;
+}
+
+@media screen and (max-width: 1023px) {
+  .community {
+    padding: 0 1rem 4rem;
+  }
+
+  .community .section {
+    width: calc(100% - 1rem);
+    margin: 1.5rem -1.5rem 1.5rem 0.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .community .section .description {
+    height: 10rem;
+  }
+}
