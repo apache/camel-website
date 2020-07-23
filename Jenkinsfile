@@ -28,8 +28,6 @@ pipeline {
             logRotator(artifactNumToKeepStr: '5', numToKeepStr: '10')
         )
 
-        timestamps()
-
         ansiColor('xterm')
 
         checkoutToSubdirectory('camel-website')
