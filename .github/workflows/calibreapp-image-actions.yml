@@ -16,5 +16,5 @@ jobs:
           jpegProgressive: false
           pngQuality: "80"
           webpQuality: "80"
-          ignorePaths: "node_modules/**,build"
+          ignorePaths: "static"
           
