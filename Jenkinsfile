@@ -100,18 +100,6 @@ pipeline {
             }
         }
 
-        stage('Preview') {
-            when {
-                not {
-                    branch 'master'
-                }
-            }
-
-            steps {
-                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'camel-website/public', reportFiles: 'index.html', reportName: 'Preview', reportTitles: ''])
-            }
-        }
-
         stage('Deploy') {
             when {
                 branch 'master'
