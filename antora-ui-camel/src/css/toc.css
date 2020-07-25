@@ -1,14 +1,17 @@
-.toc-menu {
+.toc-menu,
+.toc-hugo {
   color: var(--toc-font-color);
 }
 
-.toc.sidebar .toc-menu {
+.toc.sidebar .toc-menu,
+.toc-sidebar .toc-hugo {
   margin-right: 0.75rem;
   position: sticky;
   top: var(--toc-top);
 }
 
-.toc .toc-menu h3 {
+.toc .toc-menu h3,
+.toc .toc-hugo h3 {
   color: var(--toc-heading-font-color);
   font-size: calc(16 / var(--rem-base) * 1rem);
   font-weight: var(--body-font-weight-bold);
@@ -17,14 +20,16 @@
   padding-bottom: 0.25rem;
 }
 
-.toc.sidebar .toc-menu h3 {
+.toc.sidebar .toc-menu h3,
+.toc-sidebar .toc-hugo h3 {
   display: flex;
   flex-direction: column;
   height: 2.5rem;
   justify-content: flex-end;
 }
 
-.toc .toc-menu ul {
+.toc .toc-menu ul,
+.toc .toc-hugo ul {
   font-size: calc(15 / var(--rem-base) * 1rem);
   line-height: var(--toc-line-height);
   list-style: none;
@@ -32,22 +37,40 @@
   padding: 0;
 }
 
-.toc.sidebar .toc-menu ul {
+.toc.sidebar .toc-menu ul,
+.toc-sidebar .toc-hugo ul {
   max-height: var(--toc-height);
   overflow-y: auto;
 }
 
+.toc .toc-hugo ul {
+  padding: 0 0 0 2rem;
+}
+
+.toc .toc-hugo ul:first-child {
+  padding: 0;
+  border-left: 2px solid var(--toc-border-color);
+}
+
+.toc .toc-hugo li ul:nth-child(1) {
+  padding-left: 0.25rem;
+  border-left: none;
+}
+
 @media screen and (min-width: 1024px) {
-  .toc .toc-menu h3 {
+  .toc .toc-menu h3,
+  .toc .toc-hugo h3 {
     font-size: calc(15 / var(--rem-base) * 1rem);
   }
 
-  .toc .toc-menu ul {
+  .toc .toc-menu ul,
+  .toc .toc-hugo ul {
     font-size: calc(13.5 / var(--rem-base) * 1rem);
   }
 }
 
-.toc .toc-menu li {
+.toc .toc-menu li,
+.toc .toc-hugo li {
   margin: 0;
 }
 
@@ -59,7 +82,8 @@
   padding-left: 2rem;
 }
 
-.toc .toc-menu a {
+.toc .toc-menu a,
+.toc .toc-hugo a {
   color: inherit;
   border-left: 2px solid var(--toc-border-color);
   display: inline-block;
@@ -67,12 +91,17 @@
   text-decoration: none;
 }
 
+.toc .toc-hugo a {
+  border-left: none;
+}
+
 .sidebar.toc .toc-menu a {
   display: block;
   outline: none;
 }
 
-.toc .toc-menu a:hover {
+.toc .toc-menu a:hover,
+.toc .toc-hugo a:hover {
   color: var(--link-font-color);
 }
 
