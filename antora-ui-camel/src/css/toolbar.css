@@ -12,6 +12,10 @@
   z-index: var(--z-index-toolbar);
 }
 
+.toolbar.hugo {
+  box-shadow: none;
+}
+
 @media screen and (max-width: 1023px) {
   .toolbar {
     top: var(--navbar-mobile-height);

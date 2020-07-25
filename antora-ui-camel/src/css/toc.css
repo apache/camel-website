@@ -43,20 +43,6 @@
   overflow-y: auto;
 }
 
-.toc .toc-hugo ul {
-  padding: 0 0 0 2rem;
-}
-
-.toc .toc-hugo ul:first-child {
-  padding: 0;
-  border-left: 2px solid var(--toc-border-color);
-}
-
-.toc .toc-hugo li ul:nth-child(1) {
-  padding-left: 0.25rem;
-  border-left: none;
-}
-
 @media screen and (min-width: 1024px) {
   .toc .toc-menu h3,
   .toc .toc-hugo h3 {
@@ -74,7 +60,8 @@
   margin: 0;
 }
 
-.toc .toc-menu li[data-level="2"] a {
+.toc .toc-menu li[data-level="2"] a,
+.toc .toc-hugo li[data-level="2"] a {
   padding-left: 1.25rem;
 }
 
@@ -91,10 +78,6 @@
   text-decoration: none;
 }
 
-.toc .toc-hugo a {
-  border-left: none;
-}
-
 .sidebar.toc .toc-menu a {
   display: block;
   outline: none;
@@ -105,12 +88,14 @@
   color: var(--link-font-color);
 }
 
-.toc .toc-menu a.is-active {
+.toc .toc-menu a.is-active,
+.toc .toc-hugo a.is-active {
   border-left-color: var(--link-font-color);
   color: var(--doc-font-color);
 }
 
-.sidebar.toc .toc-menu a:focus {
+.sidebar.toc .toc-menu a:focus,
+.toc-sidebar .toc-hugo a:focus {
   background: var(--panel-background);
 }
 

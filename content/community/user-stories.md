@@ -66,6 +66,7 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |[Camel Extra project](https://camel-extra.github.io/)|contains a number of extension components which due to GPL/LGPL licensing cannot be hosted at Apache.
 {{< /table >}}
 
+## User Groups
 
 {{< table >}}
 | User Groups  | Description |
@@ -77,6 +78,7 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |[Apache Camel User Group Japan](https://jcug-oss.github.io/)|A Japanese user group for Apache Camel.|
 {{< /table >}}
 
+## External Camel Components
 
 {{< table >}}
 | External Camel Components  | Description |
