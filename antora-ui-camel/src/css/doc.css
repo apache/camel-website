@@ -151,6 +151,10 @@
   word-break: break-word;
 }
 
+.doc table.tableblock td a {
+  word-break: normal;
+}
+
 .doc a:hover {
   color: var(--link_hover-font-color);
 }
@@ -359,6 +363,10 @@
 .doc .image > img {
   height: auto;
   max-width: 100%;
+}
+
+.doc table.tableblock td .imageblock img {
+  max-width: 50px;
 }
 
 #preamble .abstract blockquote {
