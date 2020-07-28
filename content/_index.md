@@ -2,52 +2,103 @@
 title: Home
 description: Camel is an open source integration framework that empowers you to quickly and easily integrate various systems consuming or producing data.
 ---
+{{< section "frontpage columns blog-posts" >}}
+
+{{< div "blog-post" >}}
+{{< div "blog-post-date" >}}
+{{< div "date">}}
+26
+{{< /div >}}
+{{< div "month" >}}
+JULY 2020
+{{< /div >}}
+{{< /div >}}
+{{< div "blog-post-content" >}}
+## RELEASE 3.4.2
+<p>The Camel community announces the immediate availability of the new Camel 3.4.2 patch release</p>
+{{< /div >}}
+{{< /div >}}
+
+{{< div "blog-post" >}}
+{{< div "blog-post-date" >}}
+{{< div "date">}}
+18
+{{< /div >}}
+{{< div "month" >}}
+JULY 2020
+{{< /div >}}
+{{< /div >}}
+{{< div "blog-post-content" >}}
+## RELEASE 3.4.1
+<p>The Camel community announces the immediate availability of the new Camel 3.4.1 patch release</p>
+{{< /div >}}
+{{< /div >}}
+
+{{< div "blog-post" >}}
+{{< div "blog-post-date" >}}
+{{< div "date">}}
+07
+{{< /div >}}
+{{< div "month" >}}
+JULY 2020
+{{< /div >}}
+{{< /div >}}
+{{< div "blog-post-content" >}}
+## RELEASE 3.4.0
+<p>The Camel community announces the immediate availability of the new Camel 3.4.0 patch release</p>
+{{< /div >}}
+{{< /div >}}
+
+{{< /section >}}
+
 
 {{< section "frontpage columns" >}}
 
-# Packed with functionality
+# Why Camel?
 
 {{< div "box" >}}
 {{< div >}}
 
-<img src="./img/functions/svg/feature-patterns.svg" alt="pattern icon" class="feature-icon"/>
+## Patterns
 
-### Patterns
-
-Based on <mark>Enterprise Integration Patterns</mark> (EIP) to help you solve your integration problem by applying best practices out of the box. Camel supports most of the Enterprise Integration Patterns from the excellent book by Gregor Hohpe and Bobby Woolf, and newer integration patterns from microservice architectures.
-{{< /div >}}
+Based on Enterprise Integration Patterns(EIP) to help you solve your integration problem by applying best practices out of the box. Camel supports most of the Enterprise Integration Patterns from the excellent book by Gregor Hohpe and Bobby Woolf, and newer integration patterns from microservice architectures.
 {{< /div >}}
 
-{{< div "box" >}}
-{{< div >}}
+<img src="./img/components.svg" alt="pattern icon" class="feature-icon"/>
 
-<img src="./img/functions/svg/feature-components.svg" alt="component icon" class="feature-icon"/>
-
-### Components
-
-Packed with <mark>several hundred components</mark> that are used to access databases, message queues, APIs or basically anything under the sun. Helping you integrate with everything.
-{{< /div >}}
 {{< /div >}}
 
 {{< div "box" >}}
 {{< div >}}
 
-<img src="./img/functions/svg/feature-runtimes.svg" alt="runtime icon" class="feature-icon"/>
+<img src="./img/components.svg" alt="component icon" class="feature-icon"/>
 
-### Runtimes
+## Packed with Components
 
-<mark>Runs everywhere</mark>: Standalone, embedded as a library within Spring Boot, Quarkus, Application Servers, and in the clouds. 
+Packed with several hundred components that are used to access databases, message queues, APIs or basically anything under the sun. Helping you integrate with everything.
 {{< /div >}}
 {{< /div >}}
 
 {{< div "box" >}}
 {{< div >}}
 
-<img src="./img/functions/svg/feature-dataformats.svg" alt="data icon" class="feature-icon"/>
+## Runs Everywhere
 
-### Data Formats
+Standalone, embedded as a library within Spring Boot, Quarkus, Application Servers, and in the clouds.  
+{{< /div >}}
 
-Camel supports around 50 data formats, allowing to <mark>translate messages</mark> in multiple formats, and with support from industry standard formats from finance, telco, health-care, and more.
+<img src="./img/runtimes.svg" alt="runtime icon" class="feature-icon"/>
+
+{{< /div >}}
+
+{{< div "box" >}}
+{{< div >}}
+
+<img src="./img/data-formats.svg" alt="data icon" class="feature-icon"/>
+
+## Supports over 50 Data Formats
+
+Camel supports around 50 data formats, allowing to translate messages in multiple formats, and with support from industry standard formats from finance, telco, health-care, and more.
 {{< /div >}}
 {{< /div >}}
 
