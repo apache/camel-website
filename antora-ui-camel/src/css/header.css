@@ -246,13 +246,33 @@ body {
 
 #search_results {
   top: 3.38rem;
-  background: #fffe;
+  background: #fff;
   text-align: left;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
   position: absolute;
   margin-right: 10px;
   overflow-y: auto;
   max-height: 80vh;
+  scrollbar-width: thin;  /* Firefox */
+}
+
+#search_results::-webkit-scrollbar {
+  width: var(--scrollbar-thickness);
+}
+
+#search_results::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color);
+  border-radius: var(--scrollbar-radius);
+}
+
+#search_results::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color);
+  border-radius: var(--scrollbar-radius);
+}
+
+#search_results::-webkit-scrollbar-thumb:hover,
+#search_results::-webkit-scrollbar-thumb:active {
+  background: var(--scrollbar-thumb-active-color);
 }
 
 .result_header {
@@ -261,15 +281,45 @@ body {
   padding-right: 0.5rem;
 }
 
+#search_results div.result {
+  padding: 0.25rem;
+  pointer-events: none;
+}
+
+#search_results div.result:hover {
+  background: var(--color-smoke-50);
+}
+
+#search_results div.section {
+  display: flex;
+}
+
 #search_results dt {
   padding: 0.5rem;
   color: var(--color-camel-orange);
   text-transform: uppercase;
-  border-top: 1px solid var(--navbar-search-result-separator);
-  border-bottom: 1px solid var(--navbar-search-result-separator);
+  font-weight: 700;
+  flex-basis: calc(100% - 2.25rem);
+}
+
+#search_results dt.version {
+  flex-basis: auto;
+  margin-right: 0.75rem;
+  height: 1.75rem;
+  width: 4.5rem;
+  padding: 0.3rem;
+  border: 2px solid var(--color-camel-orange);
+  border-radius: 25px;
+  text-align: center;
+}
+
+#search_results dd {
+  margin-right: 2rem;
+  word-break: break-word;
 }
 
 #search_results a {
+  pointer-events: auto;
   padding: 0.5rem;
 }
 
@@ -283,9 +333,22 @@ body {
   padding-top: 0.3rem;
 }
 
+#search_results div.footer-search {
+  display: inline-flex;
+  float: right;
+  margin-right: 0.75rem;
+}
+
+div.footer-search h4 {
+  color: var(--color-asf-dark-blue);
+  width: 5rem;
+}
+
 .no_search_results {
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   font-weight: bold;
+  color: var(--color-asf-dark-blue);
+  border-bottom: 2px solid var(--color-smoke-50);
 }
 
 .algolia-docsearch-suggestion--highlight {
