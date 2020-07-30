@@ -1,18 +1,48 @@
 {{ partial "header.html" . }}
 
 <div class="frontpage-header">
-  <div class="brand-image">
-    <img src="./img/camel-gears.svg" />
-  </div>
-  <div>
+  <div class="main-heading">
     <h1>Apache Camel</h1>
     <p>
       Camel is an Open Source integration framework that empowers you
       to quickly and easily integrate various systems consuming or producing data.
     </p>
-    <a class="button-dark" href="#">Get Started</a> <a class="button-light" href="#">What is Camel?</a>
+    <p>
+    <a class="button-dark" href="/manual/latest/getting-started.html">Get Started</a> <a class="button-light" href="#">What is Camel?</a>
+    </p>
   </div>
+  <img src="./img/camel-gears.svg" />
 </div>  
+
+<div class="whats-new">
+  <h2>What's New?</h2>
+</div>
+
+<section class="frontpage columns blog-posts">
+
+{{with .Site.GetPage "taxonomy" "releases"}}
+{{range .Pages | first 3}}
+
+<div class="blog-post">
+  <div class="date">
+    <div class="day">
+        {{ dateFormat "2" .PublishDate}}
+    </div>
+    <div class="month">
+        {{ dateFormat "Jan" .PublishDate}} 
+        {{ dateFormat "2006" .PublishDate}}
+    </div>
+  </div>
+  <div class="content">
+    <h2>{{ .Title }}</h2>
+    <p>{{ .Content }}<a href="{{ .Permalink }}">Read More >></a></p>
+  </div>
+</div>
+
+{{end}}
+{{end}}
+
+</section>
 
 {{ .Content }}
 

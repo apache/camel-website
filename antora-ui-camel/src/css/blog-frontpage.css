@@ -1,44 +1,39 @@
-.blog-posts {
-  background-color: var(--color-smoke-30);
-}
-
-.blog-post-content {
+.blog-post .content {
   padding: 1rem;
   padding-right: 0.5rem;
 }
 
-.blog-post-content h2 {
+.blog-post .content h2 {
   text-align: left;
-  margin-top: 0.7rem;
+  margin: 0;
 }
 
-.blog-post-content p {
-  margin-top: 0.2rem;
+.blog-post .content p {
+  margin: 0.2rem 0;
 }
 
 .blog-post {
   display: flex;
-  flex-direction: row;
-  width: 30.5%;
-  border: 1px solid var(--color-smoke-70);
-  margin: 0 1rem;
+  width: 30vw;
+  margin: 0 1vw;
   border-radius: 1rem;
 }
 
-.blog-post-date {
-  color: var(--camel-asf-dark-blue);
-  padding: 1rem;
+.blog-post .date {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--color-asf-dark-blue);
+  text-transform: uppercase;
 }
 
-.blog-post-date .date {
+.blog-post .date .day {
   font-size: 3.2rem;
   font-weight: bold;
   padding: 0;
   line-height: 1;
 }
 
-.blog-post-date .month {
-  text-align: center;
+.blog-post .date .month {
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 1.2;

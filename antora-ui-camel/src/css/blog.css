@@ -99,6 +99,7 @@ article.blog p {
   width: 100%;
   max-width: 800px;
   height: auto;
+  max-height: 600px;
 }
 
 .blog .post-content figcaption {
@@ -174,7 +175,7 @@ article.blog p {
 
   .blog .post .post-content {
     margin-left: 2rem;
-    width: 100%;
+    width: 60%;
   }
 
   .blog.list {

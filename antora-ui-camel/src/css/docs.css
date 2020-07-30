@@ -2,7 +2,7 @@
   padding: 1rem 3rem;
 }
 
-.project h2 {
+.section h2 {
   text-align: center;
   padding-bottom: 0;
 }
@@ -18,12 +18,12 @@
   margin: 1.5rem;
 }
 
-.camel-project .project {
+.camel-project .section {
   border: none;
   padding: 0;
 }
 
-.project {
+.section {
   display: inline-flex;
   border: 1px solid var(--color-smoke-90);
   width: calc(50% - 3.2rem);
@@ -34,60 +34,52 @@
   margin: 1.5rem;
 }
 
-.project a > img,
+.section a > img,
 .camel-project a > img {
   display: inline-block;
   width: auto;
   height: 5rem;
 }
 
-.docs .project a > img,
+.docs .section a > img,
 .docs .camel-project a > img {
   margin-top: 1rem;
 }
 
-.project a > img + img {
+.section a > img + img {
   padding-left: 1rem;
 }
 
-.project .description {
+.section .description {
   padding: 1.2rem;
   text-align: center;
 }
 
-.project .links {
+.section .links {
   align-items: center;
   margin: 1.5rem 0;
   word-break: break-word;
 }
 
 @media screen and (max-width: 1023px) {
-  .docs .project {
-    width: calc(100% - 3.2rem);
+  .docs {
+    padding: 0 1rem 4rem;
+  }
+
+  .camel-project,
+  .docs .section {
+    width: calc(100% - 1rem);
+    margin: 1.5rem -1.5rem 1.5rem 0.5rem;
+  }
+
+  .camel-project .section {
+    width: calc(100% - 3rem);
     margin: 1.5rem;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .camel-project {
-    padding: 0 0 1.5rem 0;
-  }
-
-  .camel-project .camel-documentation .links {
-    padding: 1rem;
-  }
-
-  .docs {
-    padding: 0 0 1.5rem 0;
-  }
-
-  .docs .project {
-    padding: 0;
-  }
-}
-
 @media screen and (min-width: 1024px) {
-  .docs .project .description {
-    height: 10rem;
+  .docs .section .description {
+    height: 12rem;
   }
 }

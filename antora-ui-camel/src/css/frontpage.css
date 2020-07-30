@@ -1,25 +1,89 @@
 .frontpage-header {
   display: flex;
   flex-direction: row;
-  margin: 2rem;
+  margin: 3rem;
 }
 
-.front-header h1 {
+.frontpage-header img {
+  width: 45vw;
+}
+
+section.frontpage.columns.functionalities {
+  border: none;
+}
+
+section.frontpage a.button-dark,
+section.frontpage a.button-dark:hover {
+  color: white;
+}
+
+section.frontpage.columns.functionalities p,
+.project .content p {
+  margin-bottom: 1.5rem;
+}
+
+section.frontpage.columns.functionalities h2,
+.project .content h2,
+.project .content p {
+  text-align: left;
+  text-transform: none;
+}
+
+section.frontpage.columns.blog-posts {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 1rem 1rem 3rem;
+  max-width: none;
+  border-top: none;
+  background-color: var(--color-smoke-50);
+}
+
+.frontpage-header .main-heading {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+.frontpage-header h1 {
   font-size: 5vw;
   color: var(--color-asf-dark-blue);
+  margin-bottom: 0.5rem;
+}
+
+.frontpage-header p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.whats-new {
+  padding: 0.2rem 0;
+  width: 20%;
+  text-align: center;
+  margin-left: 3rem;
+  background-color: #f5f5f5;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.whats-new h2 {
+  margin-bottom: 0.5rem;
 }
 
 .button-dark {
-  padding: 1rem;
+  padding: 0.7rem 1rem;
   background-color: var(--color-camel-orange);
   color: white;
+  font-weight: bold;
+  margin-right: 0.5rem;
   border-radius: 3rem;
 }
 
 .button-light {
-  padding: 1rem;
-  background-color: var(--color-smoke-50);
-  color: var(--color-smoke-50);
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--color-gray-70);
+  color: var(--color-gray-70);
+  font-weight: bold;
   border-radius: 3rem;
 }
 
@@ -28,22 +92,40 @@ section.frontpage {
   font-size: var(--doc-font-size);
   line-height: var(--doc-line-height);
   margin: 0 auto;
-  margin-top: 4rem;
   max-width: var(--frontpage-max-width);
 }
 
-section.frontpage.columns,
 section.frontpage.projects,
-section.frontpage.apache {
+section.frontpage.apache,
+section.frontpage.functionalities {
   display: flex;
   flex-wrap: wrap;
   border-top: 1px solid var(--color-smoke-50);
   padding: 2rem 1rem 1rem 1rem;
 }
 
+section.frontpage.projects {
+  width: 80%;
+  max-width: none;
+  margin: 0 auto;
+}
+
 section.frontpage.projects .project {
-  width: calc(33% - 3rem);
-  padding: 1%;
+  display: flex;
+  width: 50%;
+  padding: 1rem;
+}
+
+section.frontpage.projects .project .icon {
+  min-width: 6rem;
+  margin-right: 1rem;
+  text-align: center;
+}
+
+section.frontpage.projects .project img {
+  height: 6rem;
+  max-width: 6rem;
+  margin-top: 1rem;
 }
 
 section.frontpage h1,
@@ -72,21 +154,32 @@ section.frontpage h1 {
   width: 100%;
   text-align: center;
   margin-bottom: 1rem;
+  font-size: 2.5rem;
 }
 
 section.frontpage h2 {
   text-align: center;
 }
 
-section.frontpage.columns .box {
-  width: 100%;
-  flex-direction: row;
-  padding: 2rem;
-  margin: 1.5rem;
+section.frontpage.columns.functionalities .box {
+  width: 70%;
+  display: flex;
+  margin: 2vw auto;
 }
 
-.section.frontpage.columns .box img {
-  width: 40%;
+section.frontpage.columns.functionalities .box .content {
+  width: 55vw;
+  margin: 0 1vw;
+}
+
+section.frontpage.columns.functionalities .box .icon {
+  width: 30vw;
+  text-align: center;
+}
+
+.functionalities img {
+  height: 12rem;
+  margin: 0 1vw;
 }
 
 .split {
@@ -96,18 +189,6 @@ section.frontpage.columns .box {
 
 .split img {
   max-width: 100%;
-}
-
-@media screen and (max-width: 626px) {
-  section.frontpage.columns,
-  section.frontpage.apache,
-  section.frontpage.projects {
-    padding-top: 1rem;
-  }
-
-  section.frontpage.projects .project {
-    width: 100%;
-  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -131,13 +212,117 @@ section.frontpage.columns .box {
     margin: auto;
   }
 
-  section.frontpage.columns .box {
+  section.frontpage.columns.functionalities .box,
+  section.frontpage.projects .project,
+  section.frontpage.blog-posts .blog-post {
     width: 100%;
   }
 
-  @media screen and (min-width: 627px) {
-    section.frontpage.projects .project {
-      width: calc(50% - 3rem);
-    }
+  section.frontpage.columns.blog-posts {
+    flex-direction: column;
+  }
+
+  section.frontpage.blog-posts .blog-post .date,
+  section.frontpage.projects .project .icon {
+    min-width: 25%;
+  }
+
+  section.frontpage.functionalities {
+    margin: 0 1.5rem;
+  }
+
+  section.frontpage.projects {
+    margin: 0 auto;
+  }
+
+  section.frontpage.functionalities .icon img {
+    max-width: 25vw;
+    margin: 2vw;
+  }
+
+  section.frontpage.functionalities .content {
+    width: 70vw;
+  }
+
+  .frontpage-header {
+    margin: 0;
+  }
+
+  .frontpage-header p {
+    font-size: 1rem;
+  }
+
+  .frontpage-header .main-heading {
+    width: 62%;
+  }
+
+  .frontpage-header img {
+    width: 30%;
+  }
+
+  .whats-new {
+    width: 100%;
+    margin: 1.5rem 0 0;
+    text-transform: uppercase;
+    border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 626px) {
+  section.frontpage.columns,
+  section.frontpage.apache,
+  section.frontpage.projects {
+    padding-top: 1rem;
+  }
+
+  section.frontpage.projects .project,
+  section.frontpage.columns.functionalities .box.left {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .frontpage-header,
+  section.frontpage.columns.functionalities .box.right {
+    flex-direction: column-reverse;
+    margin: 0;
+  }
+
+  section.frontpage.projects .project h2,
+  section.frontpage.columns.functionalities .box .content h2,
+  section.frontpage.columns.functionalities .box .content p,
+  section.frontpage.projects .project p {
+    text-align: center;
+  }
+
+  section.frontpage.projects .project .icon,
+  section.frontpage.columns.functionalities .box .icon {
+    margin: 0;
+  }
+
+  section.frontpage.columns.functionalities .box .icon img {
+    max-width: 50%;
+  }
+
+  .frontpage-header h1,
+  section.frontpage h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .frontpage-header p {
+    font-size: inherit;
+    text-align: center;
+  }
+
+  .frontpage-header .main-heading,
+  section.frontpage.columns.functionalities .box .content,
+  section.frontpage.columns.functionalities .box .icon {
+    width: 100%;
+    margin: 0;
+  }
+
+  .frontpage-header img {
+    width: 50%;
+    margin: 0 auto;
   }
 }
