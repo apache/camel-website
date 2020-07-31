@@ -12,6 +12,10 @@
   margin: 0.2rem 0;
 }
 
+.blog-post .content a {
+  font-weight: bold;
+}
+
 .blog-post {
   display: flex;
   width: 30vw;

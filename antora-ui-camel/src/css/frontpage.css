@@ -1,11 +1,12 @@
 .frontpage-header {
   display: flex;
   flex-direction: row;
-  margin: 3rem;
+  margin: 2rem 3rem 2.5rem;
 }
 
 .frontpage-header img {
   width: 45vw;
+  max-height: 50vh;
 }
 
 section.frontpage.columns.functionalities {
@@ -192,13 +193,13 @@ section.frontpage.columns.functionalities .box .icon {
 }
 
 @media screen and (max-width: 1023px) {
-  header.frontpage h1 {
-    font-size: 9vw;
+  .frontpage-header h1 {
+    font-size: 3rem;
+    text-align: center;
   }
 
-  header.frontpage svg {
-    height: 10rem;
-    top: 8rem;
+  section.frontpage h1 {
+    font-size: 2.5rem;
   }
 
   .split {
@@ -212,6 +213,7 @@ section.frontpage.columns.functionalities .box .icon {
     margin: auto;
   }
 
+  .frontpage-header .main-heading,
   section.frontpage.columns.functionalities .box,
   section.frontpage.projects .project,
   section.frontpage.blog-posts .blog-post {
@@ -232,7 +234,8 @@ section.frontpage.columns.functionalities .box .icon {
   }
 
   section.frontpage.projects {
-    margin: 0 auto;
+    margin: 0;
+    width: 100%;
   }
 
   section.frontpage.functionalities .icon img {
@@ -244,20 +247,25 @@ section.frontpage.columns.functionalities .box .icon {
     width: 70vw;
   }
 
-  .frontpage-header {
+  .frontpage-header .main-heading {
     margin: 0;
+    padding: 0 2rem;
   }
 
   .frontpage-header p {
-    font-size: 1rem;
+    font-size: inherit;
+    text-align: center;
   }
 
-  .frontpage-header .main-heading {
-    width: 62%;
+  .frontpage-header {
+    flex-direction: column-reverse;
+    margin: 0;
   }
 
   .frontpage-header img {
-    width: 30%;
+    width: 60%;
+    max-height: 45vh;
+    margin: 0 auto;
   }
 
   .whats-new {
@@ -281,7 +289,10 @@ section.frontpage.columns.functionalities .box .icon {
     margin: 0;
   }
 
-  .frontpage-header,
+  section.frontpage.columns.functionalities .box.left {
+    margin-top: 3rem;
+  }
+
   section.frontpage.columns.functionalities .box.right {
     flex-direction: column-reverse;
     margin: 0;
@@ -303,26 +314,21 @@ section.frontpage.columns.functionalities .box .icon {
     max-width: 50%;
   }
 
-  .frontpage-header h1,
   section.frontpage h1 {
     font-size: 2rem;
-    text-align: center;
   }
 
-  .frontpage-header p {
-    font-size: inherit;
-    text-align: center;
+  .frontpage-header h1 {
+    font-size: 2.5rem;
   }
 
-  .frontpage-header .main-heading,
+  .frontpage-header .main-heading {
+    padding: 0 1rem;
+  }
+
   section.frontpage.columns.functionalities .box .content,
   section.frontpage.columns.functionalities .box .icon {
     width: 100%;
     margin: 0;
-  }
-
-  .frontpage-header img {
-    width: 50%;
-    margin: 0 auto;
   }
 }
