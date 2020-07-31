@@ -62,11 +62,13 @@ footer .footer .context:last-child a::after {
 }
 
 footer .footer figure.logo {
+  display: flex;
   flex-direction: row;
   flex-grow: 1;
-  align-items: flex-start;
   justify-content: center;
   margin-inline-start: 0;
+  align-content: center;
+  align-items: center;
 }
 
 footer .footer figure.logo img {
@@ -91,7 +93,7 @@ footer .footer dl dt {
   margin-bottom: 1.5rem;
 }
 
-footer .footer dl dt::after {
+footer .footer dl dt label:first-of-type::after {
   content: '';
   display: block;
   position: relative;
@@ -100,10 +102,6 @@ footer .footer dl dt::after {
   height: 2px;
   width: 3rem;
   background: var(--footer-font-color);
-}
-
-footer .footer .footer-menu {
-  display: block;
 }
 
 footer .footer dl dd {
@@ -126,10 +124,9 @@ footer .footer dl dd {
   height: 2rem;
 }
 
-footer .footer .break-row-footer {
-  display: block;
+footer .resources {
   flex-basis: 100%;
-  height: 0;
+  text-align: center;
 }
 
 footer .footer .footer-icons {
@@ -148,30 +145,55 @@ footer .footer .footer-icons .brand-icon {
   fill: var(--navbar-font-color);
 }
 
-footer .footer .show-menu,
-footer .footer .hide-menu {
+footer .footer input[type="checkbox"],
+footer .footer dl dt label:nth-child(2) {
   display: none;
 }
 
-input[type="checkbox"] {
-  width: 0;
-  height: 0;
-  float: right;
-  visibility: hidden;
-}
-
 @media screen and (max-width: 1023px) {
+  footer {
+    flex-direction: column;
+  }
+
   footer .footer dl {
     flex-basis: 100%;
-    margin-top: 2rem;
+    margin-top: 0;
   }
 
   footer .footer dl dt {
-    margin-bottom: 0;
+    margin-bottom: 1rem;
+    display: flex;
+  }
+
+  footer .footer dl dt label {
+    user-select: none;
+  }
+
+  footer .footer dl dt label:nth-child(1) {
+    flex: 1;
+  }
+
+  footer .footer dl dt label:nth-child(2) {
+    display: block;
+    height: 1.75rem;
+    width: 1.75rem;
+    line-height: 1.75rem;
+    font-size: 1.75rem;
+    transition: 0.2s;
+  }
+
+  footer .footer input[type="checkbox"]:checked + dl dt label:nth-child(2) {
+    transform: rotate(45deg);
+  }
+
+  footer .footer dl dd:first-of-type {
+    margin-top: 1rem;
   }
 
   footer .footer figure.logo {
+    margin: 0.5rem auto;
     text-align: center;
+    flex-basis: 100%;
   }
 
   footer .footer figure.logo img {
@@ -182,59 +204,15 @@ input[type="checkbox"] {
     width: auto;
   }
 
-  footer .footer .context a {
-    font-size: 13.5px;
-  }
-
-  footer .footer .context a::after {
-    width: 5px;
-    height: 5px;
-  }
-
   footer .footer .footer-icons .brand-icon {
     height: 1.5rem;
   }
 
-  footer .footer .show-menu {
-    float: right;
-    height: 40px;
-    margin-top: -2.5rem;
-  }
-
-  footer .footer .hide-menu {
-    float: right;
-    height: 35px;
-    margin-top: -2.5rem;
-  }
-
-  footer .footer .footer-menu {
-    margin-top: 1rem;
-  }
-
-  input[type="checkbox"] + label img.show-menu {
+  footer input[type="checkbox"]:checked + dl dd {
     display: block;
   }
 
-  input[type="checkbox"] ~ label img.hide-menu,
-  input[type="checkbox"] ~ div.footer-menu {
-    display: none;
-  }
-
-  input[type="checkbox"]:checked + label img.show-menu {
-    display: none;
-  }
-
-  input[type="checkbox"]:checked ~ label img.hide-menu,
-  input[type="checkbox"]:checked ~ div.footer-menu {
-    display: block;
-  }
-
-  input[type="checkbox"]:not(:checked) + label img.show-menu {
-    display: block;
-  }
-
-  input[type="checkbox"]:not(:checked) ~ label .hide-menu,
-  input[type="checkbox"]:not(:checked) ~ div.footer-menu {
+  footer input[type="checkbox"] + dl dd {
     display: none;
   }
 }
