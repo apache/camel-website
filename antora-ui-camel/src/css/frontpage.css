@@ -288,6 +288,7 @@ section.frontpage.columns.functionalities .box .icon {
   section.frontpage.columns.functionalities .box.left {
     flex-direction: column;
     margin: 0;
+    padding: 0;
   }
 
   section.frontpage.columns.functionalities p {
@@ -301,6 +302,7 @@ section.frontpage.columns.functionalities .box .icon {
   section.frontpage.columns.functionalities .box.right {
     flex-direction: column-reverse;
     margin: 0;
+    padding: 0;
   }
 
   section.frontpage.columns.blog-posts {
