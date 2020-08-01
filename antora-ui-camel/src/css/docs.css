@@ -39,10 +39,6 @@
   display: inline-block;
   width: auto;
   height: 5rem;
-}
-
-.docs .section a > img,
-.docs .camel-project a > img {
   margin-top: 1rem;
 }
 
@@ -67,7 +63,7 @@
   }
 
   .camel-project,
-  .docs .section {
+  .section {
     width: calc(100% - 1rem);
     margin: 1.5rem -1.5rem 1.5rem 0.5rem;
   }
@@ -79,7 +75,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .docs .section .description {
+  .section .description {
     height: 12rem;
   }
 }

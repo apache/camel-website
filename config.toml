@@ -46,6 +46,7 @@ timeout = 300000
     name = "Community"
     identifier = "community"
     weight = 5
+    url = "/community/"
 
 [[menu.main]]
     name = "Download"

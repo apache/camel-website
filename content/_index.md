@@ -93,7 +93,7 @@ Camel supports around 50 data formats, allowing to translate messages in multipl
 
 # Apache Camel Projects
 
-{{< div "project" >}}
+{{< div "section" >}}
 
 {{< div "icon" >}}
 
@@ -111,7 +111,7 @@ Apache Camel helps you integrate various systems consuming or producing data.
 
 {{< /div >}}
 
-{{< div "project" >}}
+{{< div "section" >}}
 
 {{< div "icon" >}}
 
@@ -129,7 +129,7 @@ Apache Camel K is a lightweight integration framework that runs natively on Kube
 
 {{< /div >}}
 
-{{< div "project" >}}
+{{< div "section" >}}
 
 {{< div "icon" >}}
 
@@ -147,7 +147,7 @@ Apache Camel Quarkus packages 280+ Camel components as Quarkus extensions.
 
 {{< /div >}}
 
-{{< div "project" >}}
+{{< div "section" >}}
 
 {{< div "icon" >}}
 
@@ -166,7 +166,7 @@ Apache Camel Kafka Connector embeds Camel within Kafka Connect.
 
 {{< /div >}}
 
-{{< div "project" >}}
+{{< div "section" >}}
 
 {{< div "icon" >}}
 
@@ -184,7 +184,7 @@ Apache Camel Spring Boot runs Camel on Spring Boot and provides starters for Cam
 
 {{< /div >}}
 
-{{< div "project" >}}
+{{< div "section" >}}
 
 {{< div "icon" >}}
 
