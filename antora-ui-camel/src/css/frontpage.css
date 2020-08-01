@@ -290,13 +290,21 @@ section.frontpage.columns.functionalities .box .icon {
     margin: 0;
   }
 
-  section.frontpage.columns.functionalities .box.left {
-    margin-top: 3rem;
+  section.frontpage.columns.functionalities p {
+    margin: 0;
+  }
+
+  section.frontpage.columns.functionalities .content p {
+    margin: 1rem 0 1.5rem;
   }
 
   section.frontpage.columns.functionalities .box.right {
     flex-direction: column-reverse;
     margin: 0;
+  }
+
+  section.frontpage.columns.blog-posts {
+    padding: 1rem;
   }
 
   section.frontpage.projects .project h2,
@@ -313,6 +321,8 @@ section.frontpage.columns.functionalities .box .icon {
 
   section.frontpage.columns.functionalities .box .icon img {
     max-width: 50%;
+    height: auto;
+    margin-top: 2rem;
   }
 
   section.frontpage h1 {

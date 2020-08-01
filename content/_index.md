@@ -157,7 +157,7 @@ Apache Camel Quarkus packages 280+ Camel components as Quarkus extensions.
 
 {{< div "content" >}}
 
-## Camel Kafka
+## Camel Kafka Connector
 Apache Camel Kafka Connector embeds Camel within Kafka Connect.
 
 <p><a class="button-dark" href="/docs/">Read More</a></p>
