@@ -53,10 +53,10 @@
             const data = hits.reduce((data, hit) => {
               const d = {}
               d.url = hit.url
-              var section = hit.hierarchy.lvl1
-              if (hit.hierarchy.lvl0 !== null) section = section + ' [' + hit.hierarchy.lvl0 + ']'
+              var section = hit.hierarchy.lvl0
+              if (hit.hierarchy.lvl6 !== null) section = section + ' [' + hit.hierarchy.lvl6 + ']'
               var breadcrumbs = Object.values(hit.hierarchy)
-                .slice(2)
+                .slice(1)
                 .filter((lvl) => lvl !== null)
                 .join(' &raquo; ')
 
