@@ -225,7 +225,7 @@ body {
 }
 
 .navbar-search input:focus-within {
-  background-color: #fff;
+  background-color: var(--navbar-background);
   border-color: #eaeaec;
   outline: 0;
 
@@ -246,7 +246,7 @@ body {
 
 #search_results {
   top: 3.38rem;
-  background: #fff;
+  background: var(--navbar-background);
   text-align: left;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
   position: absolute;
@@ -335,8 +335,8 @@ body {
 
 #search_results div.footer-search {
   display: inline-flex;
-  float: right;
-  margin-right: 0.75rem;
+  width: 100%;
+  padding: 0.75rem;
 }
 
 div.footer-search h4 {
