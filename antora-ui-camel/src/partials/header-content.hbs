@@ -16,7 +16,10 @@
                 </div>
                 </div>
                 {{else}}
-                <a class="navbar-item navbar-topics" href="{{url}}">{{name}}</a>
+                <a class="navbar-item-section navbar-item navbar-topics" href="{{url}}">
+                  <img src="/_/img/{{name}}.svg">
+                  {{name}}
+                </a>
                 {{/if}}
             {{/each}}
           {{/withMenuData}}

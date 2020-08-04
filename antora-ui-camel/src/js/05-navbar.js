@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-  var navbar = document.querySelector('nav.navbar')
   var navbarToggles = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0)
   if (navbarToggles.length === 0) return
   navbarToggles.forEach(function (el) {
@@ -11,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   })
 
-  window.addEventListener('scroll', function () {
-    if (this.scrollY <= 30) navbar.classList.remove('scrolled')
-    else navbar.classList.add('scrolled')
+  document.documentElement.dataset.scroll = 0
+  document.addEventListener('scroll', () => {
+    document.documentElement.dataset.scroll = window.scrollY
   })
 })
