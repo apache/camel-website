@@ -87,7 +87,7 @@
     .map(
       (section) => `
                   <div class="result">
-                    <div class="section">
+                    <div class="heading">
                       <dt>${section.split('/')[0]}</dt>
                       <dt class="version">${section.split('/')[1]}</dt>
                     </div>
@@ -116,6 +116,11 @@
           })
           .then((markup) => {
             results.innerHTML = markup
+            Array.from(results.querySelectorAll('.version')).forEach((version) => {
+              if (version.innerHTML === 'undefined') {
+                version.style.display = 'none'
+              }
+            })
             container.className = 'navbar-search'
           })
       }, 150)

@@ -290,8 +290,9 @@ body {
   background: var(--color-smoke-50);
 }
 
-#search_results div.section {
+#search_results div.heading {
   display: flex;
+  flex-wrap: wrap;
 }
 
 #search_results dt {
@@ -299,11 +300,10 @@ body {
   color: var(--color-camel-orange);
   text-transform: uppercase;
   font-weight: 700;
-  flex-basis: calc(100% - 2.25rem);
+  flex-grow: 1;
 }
 
 #search_results dt.version {
-  flex-basis: auto;
   margin-right: 0.75rem;
   height: 1.75rem;
   width: 4.5rem;
@@ -311,6 +311,7 @@ body {
   border: 2px solid var(--color-camel-orange);
   border-radius: 25px;
   text-align: center;
+  flex-grow: 0;
 }
 
 #search_results dd {
