@@ -169,7 +169,9 @@ html:not([data-scroll='0']) .navbar {
     display: block;
     margin-left: calc(50% - 2.5rem);
     margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    height: 5rem;
+    width: 5rem;
   }
 
   .navbar-item.navbar-topics {
