@@ -37,28 +37,12 @@
                 <div id="topbar-nav" class="navbar-menu">
                     <div class="navbar-end">
                         {{ range .Site.Menus.main }}
-                        {{ if .HasChildren }}
-                        <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link navbar-topics" href="#">
-                                <div>
-                                    <img class="navbar-icon" src="{{ .Pre }}" />
-                                    <p>{{ .Name }}</p>
-                                </div>
-                            </a>
-                            <div class="navbar-dropdown">
-                                {{ range .Children }}
-                                <a class="navbar-item" href="{{ .URL | relURL }}">{{ .Name }}</a>
-                                {{ end }}
-                            </div>
-                        </div>
-                        {{ else }}
                         <a class="navbar-item navbar-topics" href="{{ .URL | relURL }}">
                         <div>
                             <img class="navbar-icon" src="{{ .Pre }}" />
                             <p>{{ .Name }}</p>
                         </div>
                         </a>
-                        {{ end }}
                         {{ end }}
                     </div>
                 </div>
