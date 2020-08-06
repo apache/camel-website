@@ -6,7 +6,12 @@
         <div class="navbar-end">
           {{#withMenuData}}
             {{#each @items}}
-                <a class="navbar-item navbar-topics" href="{{url}}">{{name}}</a>
+                <a class="navbar-item navbar-topics" href="{{url}}">
+                  <div>
+                      <img class="navbar-icon" src="{{pre}}" />
+                      <p>{{name}}</p>
+                  </div>
+                </a>
             {{/each}}
           {{/withMenuData}}
         </div>

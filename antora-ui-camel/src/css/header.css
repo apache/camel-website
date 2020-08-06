@@ -123,6 +123,7 @@ body {
   display: block;
   line-height: var(--doc-line-height);
   position: relative;
+  text-transform: uppercase;
 }
 
 .navbar-divider {
@@ -143,7 +144,8 @@ body {
     height: calc(100vh - 8rem);
     overflow-y: auto;
     top: 8rem;
-    padding: 2rem 1rem;
+    text-align: center;
+    padding: 2rem 0;
   }
 
   .navbar-topics {
