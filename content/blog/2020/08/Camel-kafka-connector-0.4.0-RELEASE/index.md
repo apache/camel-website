@@ -1,6 +1,6 @@
 ---
-title: "Camel at ApacheCon @Home 2020"
-date: 2020-07-01
+title: "Camel Kafka Connector 0.4.0 Released"
+date: 2020-08-06
 authors: [oscerd, valdar]
 categories: ["Releases"]
 preview: "Camel Kafka Connector 0.4.0 Released"
