@@ -7,31 +7,43 @@
     <footer>
         <div class="footer">
             <figure class="logo">
-                <img class="logo" src="/_/img/logo-d.svg" alt="Apache Camel Logo" aria-label="white silhouette of a camel in front of a sand dune">
+                <img class="logo" src="/_/img/logo-d.svg" alt="Apache Camel Logo"
+                    aria-label="white silhouette of a camel in front of a sand dune">
             </figure>
-
+            <input id="footer-toggle-overview" type="checkbox" title="Show/Hide Overview section" />
             <dl>
-                <dt>Overview</dt>
+                <dt><label for="footer-toggle-overview">Overview</label><label for="footer-toggle-overview">&#65291;</label></dt>
                 <dd><a href="/blog/">Blog</a></dd>
-                <dd><a href="/components/latest/">Components</a></dd>
-                <dd><a href="/download/">Download</a></dd>
-                <dd><a href="/manual/latest/getting-started.html">Getting started</a></dd>
+                <dd><a href="/docs/">Documentation</a></dd>
+                <dd><a href="/community/support/">Community</a></dd>
+                <dd><a href="/blog/">Download</a></dd>
+            </dl>
+            <input id="footer-toggle-documentation" type="checkbox" title="Show/Hide Documentation section" />
+            <dl>
+                <dt><label for="footer-toggle-documentation">Documentation</label><label for="footer-toggle-documentation">&#65291;</label></dt>
+                <dd><a href="/manual/latest/">User Manual</a></dd>
+                <dd><a href="/components/latest/index.html">Components</a></dd>
+                <dd><a href="/camel-k/latest/">Camel-K</a></dd>
+                <dd><a href="/camel-kafka-connector/latest/">Camel Kafka Connector</a></dd>
+                <dd><a href="/camel-quarkus/latest/">Camel Quarkus</a></dd>
+                <dd><a href="/camel-spring-boot/latest/">Camel Spring Boot</a></dd>
+                <dd><a href="/camel-karaf/latest/">Camel Karaf</a></dd>
                 <dd><a href="/manual/latest/faq/index.html">FAQ</a></dd>
             </dl>
-
+            <input id="footer-toggle-community" type="checkbox" title="Show/Hide Community section" />
             <dl>
-                <dt>Community</dt>
-                <dd><a href="https://www.apache.org/foundation/policies/conduct">Code of conduct</a></d>
+                <dt><label for="footer-toggle-community">Community</label><label for="footer-toggle-community">&#65291;</label></dt>
                 <dd><a href="/community/support/">Support</a></dd>
                 <dd><a href="/manual/latest/contributing.html">Contributing</a></dd>
+                <dd><a href="/manual/latest/mailing-lists.html">Mailing Lists</a></dd>
                 <dd><a href="/community/user-stories/">User stories</a></dd>
                 <dd><a href="/community/articles/">Articles</a></dd>
                 <dd><a href="/community/books/">Books</a></dd>
                 <dd><a href="/community/team/">Team</a></dd>
             </dl>
-
+            <input id="footer-toggle-about" type="checkbox" title="Show/Hide Acknowledgements section" />
             <dl>
-                <dt>About</dt>
+                <dt><label for="footer-toggle-about">About</label><label for="footer-toggle-about">&#65291;</label></dt>
                 <dd><a href="/acknowledgments/">Acknowledgments</a></d>
                 <dd><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/events/current-event.html" title="Apache Events">Apache Events</a></dd>
                 <dd><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/licenses/" title="License">License</a></dd>
@@ -39,8 +51,7 @@
                 <dd><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/foundation/sponsorship.html" title="Sponsorship">Sponsorship</a></dd>
                 <dd><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/foundation/thanks.html" title="Thanks">Thanks</a></dd>
             </dl>
-
-            <p>
+            <p class="remark">
                 &copy; 2004-{{ now.Format "2006" }} The <a href="https://apache.org">Apache Software Foundation</a>.<br>
                 Apache Camel, Camel, Apache, the Apache feather logo, and the Apache Camel project logo are trademarks of
                 The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of
@@ -49,7 +60,19 @@
                     <a href="https://netlify.com">This site is powered by Netlify</a>
                 {{ end }}
             </p>
-
+            <div class="resources">
+                <div class="context">
+                    <a href="/privacy-policy/">Privacy Policy</a>
+                </div>
+                <div class="context">
+                    <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/foundation/policies/conduct">Code of Conduct</a>
+                </div>
+            </div>
+            <div class="footer-icons">
+                <a rel="noopener noreferrer nofollow" href="https://github.com/apache/camel/" title="Collaborate on GitHub"><svg class="brand-icon"><use href="{{ "_/img/brand-logos.svg#github" | relURL }}" /></svg></a>
+                <a rel="noopener noreferrer nofollow" href="https://gitter.im/apache/apache-camel" title="Chat on Gitter"><svg class="brand-icon"><use href="{{ "/_/img/brand-logos.svg#gitter" | relURL }}" /></svg></a>
+                <a rel="noopener noreferrer nofollow" href="https://twitter.com/ApacheCamel" title="Follow Apache Camel on Twitter"><svg class="brand-icon"><use href="{{ "/_/img/brand-logos.svg#twitter" | relURL }}" /></svg></a>
+            </div>
         </div>
     </footer>
     <script src="{{ path.Join "_" (index .Site.Data "rev-manifest" "js/vendor/algoliasearch.js") | relURL }}"></script>

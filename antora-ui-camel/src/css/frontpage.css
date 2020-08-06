@@ -149,9 +149,10 @@ section.frontpage.apache {
   padding: 2rem 1rem 1rem 1rem;
 }
 
-section.frontpage.projects .project {
+section.frontpage.projects .section {
   width: calc(33% - 3rem);
   padding: 1%;
+  margin: 1.5rem;
 }
 
 section.frontpage h1,
@@ -222,7 +223,7 @@ section.frontpage.columns .box .feature-icon {
     padding-top: 1rem;
   }
 
-  section.frontpage.projects .project {
+  section.frontpage.projects .section {
     width: 100%;
   }
 }
@@ -253,7 +254,7 @@ section.frontpage.columns .box .feature-icon {
   }
 
   @media screen and (min-width: 627px) {
-    section.frontpage.projects .project {
+    section.frontpage.projects .section {
       width: calc(50% - 3rem);
     }
   }

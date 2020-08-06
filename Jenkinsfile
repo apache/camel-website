@@ -28,8 +28,6 @@ pipeline {
             logRotator(artifactNumToKeepStr: '5', numToKeepStr: '10')
         )
 
-        timestamps()
-
         ansiColor('xterm')
 
         checkoutToSubdirectory('camel-website')
@@ -99,18 +97,6 @@ pipeline {
 
             steps {
                 sh "cd $WORKSPACE/camel-website && yarn --non-interactive --frozen-lockfile checks"
-            }
-        }
-
-        stage('Preview') {
-            when {
-                not {
-                    branch 'master'
-                }
-            }
-
-            steps {
-                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'camel-website/public', reportFiles: 'index.html', reportName: 'Preview', reportTitles: ''])
             }
         }
 

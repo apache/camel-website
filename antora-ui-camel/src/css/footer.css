@@ -19,25 +19,60 @@ footer .footer {
 
 footer .footer p {
   flex-basis: 100%;
-  margin: 0.5rem 0;
+  margin: 3rem 0 0.5rem 0;
   padding: 0 1rem;
 }
 
+footer .footer p.remark::after {
+  content: '';
+  display: block;
+  position: relative;
+  height: 1px;
+  width: 25rem;
+  margin: 2rem auto 1rem auto;
+  background: var(--footer-after-background);
+}
+
 footer .footer a {
-  color: var(--footer-link-font-color);
+  color: var(--footer-font-color);
+}
+
+footer .footer .context {
+  display: inline-block;
+  margin: 0 0 1rem 0;
+}
+
+footer .footer .context a {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+footer .footer .context a::after {
+  content: ' ';
+  display: inline-block;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  margin: 0 1rem;
+  background: var(--footer-after-background);
+}
+
+footer .footer .context:last-child a::after {
+  display: none;
 }
 
 footer .footer figure.logo {
+  display: flex;
   flex-direction: row;
   flex-grow: 1;
-  align-items: flex-start;
   justify-content: center;
-  text-align: center;
+  margin-inline-start: 0;
+  align-content: center;
+  align-items: center;
 }
 
 footer .footer figure.logo img {
   width: 6rem;
-  height: 100%;
 }
 
 footer .footer dl {
@@ -45,7 +80,11 @@ footer .footer dl {
   flex-grow: 1;
   align-items: flex-start;
   justify-content: center;
-  margin-left: 1rem;
+  margin: 3rem 0 0 1rem;
+}
+
+footer .footer dl:first-child {
+  margin-top: 0;
 }
 
 footer .footer dl dt {
@@ -54,7 +93,7 @@ footer .footer dl dt {
   margin-bottom: 1.5rem;
 }
 
-footer .footer dl dt::after {
+footer .footer dl dt label:first-of-type::after {
   content: '';
   display: block;
   position: relative;
@@ -67,12 +106,6 @@ footer .footer dl dt::after {
 
 footer .footer dl dd {
   margin: 0;
-}
-
-@media screen and (max-width: 1023px) {
-  footer .footer figure.logo {
-    display: none;
-  }
 }
 
 .footer-tools {
@@ -89,4 +122,97 @@ footer .footer dl dd {
   color: black;
   border-radius: 0.4rem 0.4rem 0 0;
   height: 2rem;
+}
+
+footer .resources {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+footer .footer .footer-icons {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  line-height: 1.6;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+footer .footer .footer-icons .brand-icon {
+  height: 2em;
+  width: 1.75em;
+  margin: 0.35rem;
+  fill: var(--navbar-font-color);
+}
+
+footer .footer input[type="checkbox"],
+footer .footer dl dt label:nth-child(2) {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  footer {
+    flex-direction: column;
+  }
+
+  footer .footer dl {
+    flex-basis: 100%;
+    margin-top: 0;
+  }
+
+  footer .footer dl dt {
+    margin-bottom: 1rem;
+    display: flex;
+  }
+
+  footer .footer dl dt label {
+    user-select: none;
+  }
+
+  footer .footer dl dt label:nth-child(1) {
+    flex: 1;
+  }
+
+  footer .footer dl dt label:nth-child(2) {
+    display: block;
+    height: 1.75rem;
+    width: 1.75rem;
+    line-height: 1.75rem;
+    font-size: 1.75rem;
+    transition: 0.2s;
+  }
+
+  footer .footer input[type="checkbox"]:checked + dl dt label:nth-child(2) {
+    transform: rotate(45deg);
+  }
+
+  footer .footer dl dd:first-of-type {
+    margin-top: 1rem;
+  }
+
+  footer .footer figure.logo {
+    margin: 0.5rem auto;
+    text-align: center;
+    flex-basis: 100%;
+  }
+
+  footer .footer figure.logo img {
+    width: 4.5rem;
+  }
+
+  footer .footer p.remark::after {
+    width: auto;
+  }
+
+  footer .footer .footer-icons .brand-icon {
+    height: 1.5rem;
+  }
+
+  footer input[type="checkbox"]:checked + dl dd {
+    display: block;
+  }
+
+  footer input[type="checkbox"] + dl dd {
+    display: none;
+  }
 }

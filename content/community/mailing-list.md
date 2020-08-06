@@ -1,16 +1,14 @@
 ---
-title: "Support"
+title: "Mailing Lists"
 ---
 
-## Mailing Lists
-
-*Use Camel User List*
+## Use Camel User List
 
 You should post and subscriber to the Camel User List for all your questions on using Camel, or how to do X with Camel etc. If in doubt use this list.
 The other list Camel Developer List, is for the Camel team to discus development of the actual Camel project; do not use this list for question on using Camel.
 Again to re-iterate, use the Camel User List, for you Camel questions. This is the correct mailing list, and have the most people there ready for helping you.
 
-*Post plain text mails*
+## Post plain text mails
 
 When posting to the mailing lists, use plain text mails. Do not use HTML mails. HTML mails is more likely to be targeted as spam mails and will be rejected; as well it's not easily readable by others.
 

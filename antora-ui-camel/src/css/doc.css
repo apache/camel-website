@@ -50,12 +50,19 @@
 }
 
 .doc h2:not(.discrete) {
-  border-bottom: 1px solid var(--section-divider-color);
   margin-top: 1rem;
   margin-left: -1rem;
   margin-right: -1rem;
   padding: 0.4rem 1rem 0.1rem;
   overflow-wrap: break-word;
+}
+
+.doc h2:not(.discrete)::after {
+  content: "";
+  display: block;
+  position: relative;
+  height: 1px;
+  background-color: var(--section-divider-color);
 }
 
 .doc h3:not(.discrete) {
@@ -142,6 +149,10 @@
 .doc a {
   color: var(--link-font-color);
   word-break: break-word;
+}
+
+.doc table.tableblock td a {
+  word-break: normal;
 }
 
 .doc a:hover {
@@ -352,6 +363,10 @@
 .doc .image > img {
   height: auto;
   max-width: 100%;
+}
+
+.doc table.tableblock td .imageblock img {
+  max-width: 50px;
 }
 
 #preamble .abstract blockquote {

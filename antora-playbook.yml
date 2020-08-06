@@ -52,7 +52,7 @@ content:
       branches: master
       start_path: docs
     - url: git@github.com:apache/camel-kafka-connector.git
-      branches: camel-kafka-connector-0.3.x
+      branches: camel-kafka-connector-0.4.x
       start_path: docs
     - url: git@github.com:apache/camel-spring-boot.git
       branches: master

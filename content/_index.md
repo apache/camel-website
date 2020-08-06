@@ -57,7 +57,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 
 # Apache Camel Projects
 
-{{< div "project" >}}
+{{< div "section" >}}
 
 [![Camel](/_/img/logo-d.svg)![Knative](/_/img/knative.svg)](/docs/#camel-k)
 
@@ -67,7 +67,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 
 {{< /div >}}
 
-{{< div "project" >}}
+{{< div "section" >}}
 
 [![Camel](/_/img/logo-d.svg)](/manual/latest/)
 
@@ -77,7 +77,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 
 {{< /div >}}
 
-{{< div "project" >}}
+{{< div "section" >}}
 
 [![Camel](/_/img/logo-d.svg)![Quarkus](/_/img/quarkus.svg)](/docs/#camel-quarkus)
 
@@ -87,7 +87,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 
 {{< /div >}}
 
-{{< div "project" >}}
+{{< div "section" >}}
 
 [![Camel](/_/img/logo-d.svg)![Kafka](/_/img/apache-kafka.svg)](/docs/#camel-kafka-connector)
 
@@ -97,7 +97,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 
 {{< /div >}}
 
-{{< div "project" >}}
+{{< div "section" >}}
 
 [![Camel](/_/img/logo-d.svg)![Spring Boot](/_/img/spring-boot.svg)](/docs/#camel-spring-boot)
 
@@ -108,7 +108,7 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 
 {{< /div >}}
 
-{{< div "project" >}}
+{{< div "section" >}}
 
 [![Camel](/_/img/logo-d.svg)![Karaf](/_/img/apache-karaf.svg)](/docs/#camel-karaf)
 

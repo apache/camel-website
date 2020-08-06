@@ -53,22 +53,16 @@
             const data = hits.reduce((data, hit) => {
               const d = {}
               d.url = hit.url
+              var section = hit.hierarchy.lvl0
+              if (hit.hierarchy.lvl6 !== null) section = section + ' [' + hit.hierarchy.lvl6 + ']'
               var breadcrumbs = Object.values(hit.hierarchy)
                 .slice(1)
                 .filter((lvl) => lvl !== null)
                 .join(' &raquo; ')
-              if (breadcrumbs !== '') {
-                d.breadcrumbs = breadcrumbs
-              } else {
-                d.breadcrumbs = hit.hierarchy.lvl0
-              }
-              if (hit._snippetResult !== undefined) {
-                d.snippet = hit._snippetResult.content.value
-              } else {
-                d.snippet = ''
-              }
 
-              const section = hit.hierarchy.lvl0
+              d.breadcrumbs = ((breadcrumbs !== '') ? breadcrumbs : section)
+              d.snippet = hit._snippetResult.content.value + '...'
+
               data[section] = data[section] || []
               data[section].push(d)
 
