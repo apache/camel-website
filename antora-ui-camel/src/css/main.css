@@ -26,7 +26,8 @@
     min-width: 15rem;
   }
 
-  .toc.sidebar .toc-menu ul {
+  .toc.sidebar .toc-menu ul,
+  .toc-sidebar .toc-hugo ul {
     scrollbar-width: thin; /* Firefox */
   }
 
