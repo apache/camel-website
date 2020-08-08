@@ -149,6 +149,16 @@
 .doc a {
   color: var(--link-font-color);
   word-break: break-word;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.doc li a,
+.doc table a,
+.doc .section .links a,
+.doc .camel-project .links a,
+.doc .sect2 h3 a {
+  text-decoration: none;
 }
 
 .doc table.tableblock td a {

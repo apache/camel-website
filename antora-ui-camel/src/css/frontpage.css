@@ -20,6 +20,8 @@ section.frontpage {
 
 section.frontpage a {
   color: var(--link-font-color);
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 section.frontpage a:hover {
@@ -78,6 +80,10 @@ header.frontpage p {
   font-weight: bold;
   margin-right: 0.5rem;
   border-radius: 3rem;
+  outline: none;
+  display: inline-block;
+  box-shadow: 0 4px #8e480b;
+  text-decoration: none;
 }
 
 .frontpage a.button-light {
