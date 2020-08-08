@@ -16,11 +16,24 @@
   text-align: center;
   padding: 1rem 1rem 2rem 1rem;
   margin: 1.5rem;
+  border-radius: 10px;
 }
 
 .camel-project .section {
   border: none;
   padding: 0;
+}
+
+.camel-project .camel-documentation .links {
+  background-color: var(--color-camel-orange);
+  padding: 0.45rem;
+  border-radius: 25px;
+  color: var(--navbar-background);
+}
+
+.camel-project .camel-documentation .links a {
+  color: var(--navbar-background);
+  font-weight: bolder;
 }
 
 .section {
@@ -32,6 +45,7 @@
   text-align: center;
   padding: 1rem;
   margin: 1.5rem;
+  border-radius: 10px;
 }
 
 .section a > img,
@@ -55,6 +69,22 @@
   align-items: center;
   margin: 1.5rem 0;
   word-break: break-word;
+  background-color: var(--color-camel-orange);
+  padding: 0.45rem;
+  border-radius: 25px;
+  color: var(--navbar-background);
+  width: calc(100% - 2rem);
+}
+
+@media screen and (max-width: 626px) {
+  .section .links {
+    width: auto;
+  }
+}
+
+.section .links a {
+  color: var(--navbar-background);
+  font-weight: bolder;
 }
 
 @media screen and (max-width: 1023px) {

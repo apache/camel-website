@@ -35,10 +35,10 @@ Camel is packed with several hundred components that are used to access database
 
 {{< div "links" >}}
 
-[User Manual](/manual/latest/) |
-[Component Reference](/components/latest/) | 
-[Source](https://github.com/apache/camel/) |
-[API Documentation](https://www.javadoc.io/doc/org.apache.camel/camel-api/latest/index.html) |
+[User Manual](/manual/latest/) / 
+[Component Reference](/components/latest/) / 
+[Source](https://github.com/apache/camel/) / 
+[API Documentation](https://www.javadoc.io/doc/org.apache.camel/camel-api/latest/index.html) /
 [Examples](https://github.com/apache/camel-examples/)
 
 {{< /div >}}
@@ -61,8 +61,8 @@ Apache Camel K is a lightweight integration framework built on Apache Camel that
 
 {{< div "links" >}}
 
-[Examples](https://github.com/apache/camel-k-examples) |
-[Documentation](/camel-k/latest/) |
+[Examples](https://github.com/apache/camel-k-examples) / 
+[Documentation](/camel-k/latest/) / 
 [Source](https://github.com/apache/camel-k/)
 
 {{< /div >}}
@@ -83,8 +83,8 @@ Camel Kafka Connector allows you to use all Camel [components](/components/lates
 
 {{< div "links" >}}
 
-[Examples](https://github.com/apache/camel-kafka-connector-examples) |
-[Documentation](/camel-kafka-connector/latest/) |
+[Examples](https://github.com/apache/camel-kafka-connector-examples) / 
+[Documentation](/camel-kafka-connector/latest/) / 
 [Source](https://github.com/apache/camel-kafka-connector/)
 
 {{< /div >}}
@@ -106,8 +106,8 @@ This project hosts the efforts to port and package the 280+ Camel components as 
 
 {{< div "links" >}}
 
-[Examples](https://github.com/apache/camel-quarkus/tree/master/examples) |
-[Documentation](/camel-quarkus/latest/) |
+[Examples](https://github.com/apache/camel-quarkus/tree/master/examples) / 
+[Documentation](/camel-quarkus/latest/) / 
 [Source](https://github.com/apache/camel-quarkus/)
 
 {{< /div >}}
@@ -128,8 +128,8 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 
 {{< div "links" >}}
 
-[Examples](https://github.com/apache/camel-spring-boot-examples) |
-[Documentation](/camel-spring-boot/latest/) |
+[Examples](https://github.com/apache/camel-spring-boot-examples) / 
+[Documentation](/camel-spring-boot/latest/) / 
 [Source](https://github.com/apache/camel-spring-boot)
 
 {{< /div >}}
@@ -151,8 +151,8 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 
 {{< div "links" >}}
 
-[Examples](https://github.com/apache/camel-karaf-examples) |
-[Documentation](/camel-karaf/latest/) |
+[Examples](https://github.com/apache/camel-karaf-examples) / 
+[Documentation](/camel-karaf/latest/) / 
 [Source](https://github.com/apache/camel-karaf)
 
 {{< /div >}}
