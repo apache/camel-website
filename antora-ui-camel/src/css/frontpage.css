@@ -336,6 +336,10 @@ section.frontpage.projects .project img {
     padding: 1rem;
   }
 
+  header.frontpage a.button-light {
+    line-height: 5rem;
+  }
+
   section.frontpage.projects .project,
   section.frontpage.columns.functionalities .box.left {
     flex-direction: column;

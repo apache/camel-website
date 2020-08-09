@@ -144,6 +144,7 @@ body {
     font-weight: bold;
     flex: none;
     margin: 1rem;
+    color: var(--color-camel-orange);
   }
 
   a.navbar-item.navbar-topics:hover {
