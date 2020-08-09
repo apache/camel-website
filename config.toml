@@ -31,25 +31,25 @@ timeout = 300000
   filename = "sitemap-website.xml"
 
 [[menu.main]]
-    name = "Blog"
+    name = "blog"
     weight = 2
     identifier = "blog"
     url = "/blog/"
 
 [[menu.main]]
-    name = "Documentation"
+    name = "documentation"
     identifier = "docs"
     weight = 4
     url = "/docs/"
 
 [[menu.main]]
-    name = "Community"
+    name = "community"
     identifier = "community"
     weight = 5
     url = "/community/"
 
 [[menu.main]]
-    name = "Download"
+    name = "download"
     weight = 6
     identifier = "download"
     url = "/download/"
