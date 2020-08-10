@@ -22,8 +22,6 @@ body {
   width: 100%;
   word-wrap: break-word;
   z-index: var(--z-index-navbar);
-  border-bottom: 1px solid var(--color-smoke-90);
-  box-shadow: 0 0.5rem 3rem var(--color-smoke-70);
 }
 
 .navbar a {
@@ -35,25 +33,12 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
-  .navbar-end > .navbar-item,
-  .navbar-end .navbar-link {
+  .navbar-end > .navbar-item {
     color: var(--navbar-font-color);
+    text-transform: uppercase;
   }
 
-  .navbar-end > a.navbar-item:hover,
-  .navbar-end .navbar-link:hover {
-    color: var(--color-asf-dark-blue);
-  }
-
-  .navbar-end .navbar-link::after {
-    border-color: var(--navbar-font-color);
-  }
-
-  .navbar-item.has-dropdown:hover .navbar-link::after {
-    border-color: var(--color-asf-dark-blue);
-  }
-
-  .navbar-item.has-dropdown:hover .navbar-link {
+  .navbar-end > a.navbar-item:hover {
     color: var(--color-asf-dark-blue);
   }
 }
@@ -128,33 +113,11 @@ body {
   order: 2;
 }
 
-.navbar-item,
-.navbar-link {
+.navbar-item {
   color: var(--navbar-menu-font-color);
   display: block;
   line-height: var(--doc-line-height);
   position: relative;
-}
-
-.navbar-item .icon {
-  width: 1.1rem;
-  height: 1.1rem;
-  display: block;
-}
-
-.navbar-dropdown {
-  position: absolute;
-  display: none;
-  top: calc(100% - 1px);
-  background-color: var(--navbar-menu-background);
-  border: 1px solid var(--navbar-menu-border-color);
-  border-top: none;
-  border-radius: 0 0 0.25rem 0.25rem;
-  left: 0;
-}
-
-.navbar-dropdown .navbar-item {
-  font-weight: normal;
 }
 
 .navbar-divider {
@@ -177,38 +140,14 @@ body {
     padding: 1rem 2rem;
   }
 
-  .has-dropdown:not(.is-active) > .navbar-dropdown {
-    display: none;
-  }
-
-  .has-dropdown:not(.is-active) > .navbar-link::after {
-    transform: rotate(-45deg);
-  }
-
-  .has-dropdown.is-active > .navbar-dropdown {
-    display: block;
-    position: relative;
-    border: none;
-  }
-
-  .has-dropdown.is-active > .navbar-link::after {
-    transform: rotate(135deg);
-  }
-
-  .navbar-item.navbar-topics,
-  .navbar-link.navbar-topics {
-    color: var(--navbar-font-color);
-  }
-
   .navbar-item {
     font-weight: bold;
     flex: none;
     margin: 1rem;
+    color: var(--color-camel-orange);
   }
 
-  .navbar-dropdown .navbar-item:hover,
-  a.navbar-item.navbar-topics:hover,
-  a.navbar-link.navbar-topics:hover {
+  a.navbar-item.navbar-topics:hover {
     text-decoration: underline;
     text-decoration-color: var(--navbar-hover-font-color);
   }
@@ -216,21 +155,6 @@ body {
   .navbar-menu {
     background: var(--navbar-menu-background);
     padding: 0.5rem 0;
-  }
-
-  .navbar-link::after {
-    border-width: 0 0 2px 2px;
-    border-style: solid;
-    content: ' ';
-    display: block;
-    height: 0.5em;
-    pointer-events: none;
-    position: absolute;
-    transform: rotate(-45deg);
-    width: 0.5em;
-    margin-right: 1rem;
-    right: 0;
-    top: 40%;
   }
 }
 
@@ -246,69 +170,16 @@ body {
     display: none;
   }
 
-  .navbar-item,
-  .navbar-link {
+  .navbar-item {
     align-items: flex-end;
     display: flex;
     font-weight: bold;
-  }
-
-  .navbar-item {
     padding: 1rem 1.5rem 1rem 0;
-  }
-
-  .navbar-item.has-dropdown {
-    align-items: stretch;
-    padding-right: 2.8rem;
-  }
-
-  .navbar-item.has-dropdown:last-of-type .navbar-dropdown {
-    left: auto;
-    right: 0;
-  }
-
-  .navbar-item.is-hoverable:hover .navbar-dropdown {
-    display: block;
-  }
-
-  .navbar-link::after {
-    border-width: 0 0 2px 2px;
-    border-style: solid;
-    content: ' ';
-    display: block;
-    height: 0.5em;
-    pointer-events: none;
-    position: absolute;
-    transform: rotate(-45deg);
-    width: 0.5em;
-    right: -0.8rem;
-    top: 50%;
   }
 
   .navbar-end {
     justify-content: flex-end;
     margin-left: 1rem;
-  }
-
-  .navbar-dropdown .navbar-item {
-    white-space: nowrap;
-  }
-
-  .navbar-dropdown .navbar-item:last-child {
-    border-radius: inherit;
-  }
-
-  .navbar-dropdown a.navbar-item {
-    padding: 0.6rem 2rem 0.6rem 1rem;
-  }
-
-  .navbar-dropdown.is-right {
-    left: auto;
-    right: 0;
-  }
-
-  .navbar-dropdown a.navbar-item:hover {
-    background-color: var(--navbar-menu-hover-background);
   }
 }
 

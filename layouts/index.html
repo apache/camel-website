@@ -1,18 +1,46 @@
 {{ partial "header.html" . }}
 
 <header class="frontpage">
-  <h1>&#x1f680; Camel 3.4 is here! <wbr><a href="blog/2020/06/camel34-whatsnew/">What's new?</a></h1>
-  <svg viewBox="0 0 500 70" preserveAspectRatio="none">
-    <path d="M -10,25 C 130,125 330,0 510,5" />
-    <path d="M -10,20 C 130,125 330,0 510,2" />
-    <path d="M -10,15 C 150,115 350,0 510,15" />
-    <path d="M -10,11 C 130,125 330,0 510,20" />
-    <path d="M -10,5 C 130,125 330,0 510,25" />
-  </svg>
-  <p>Camel is an <mark>open source integration framework</mark> that empowers you to quickly and easily integrate various systems consuming or producing data.
-  </p>
-  <a class="significant" href="/manual/latest/getting-started.html">Get started</a>
-</header>
+  <div class="main-heading">
+    <h1>Apache Camel</h1>
+    <p>
+      Camel is an Open Source integration framework that empowers you
+      to quickly and easily integrate various systems consuming or producing data.
+    </p>
+    <p>
+    <a class="button-dark" href="/manual/latest/getting-started.html">Get Started</a> <a class="button-light" href="/manual/latest/faq/what-is-camel.html">What is Camel?</a>
+    </p>
+  </div>
+  <img src="./img/camel-gears.svg" />
+</header>  
+
+<div class="frontpage news">
+  <h2>What's New?</h2>
+</div>
+
+<section class="frontpage columns blog-posts">
+{{with .Site.GetPage "section" "blog"}}
+{{range .Pages | first 3}}
+
+<li class="blog-post">
+  <time class="date">
+    <div class="day">
+        {{ dateFormat "2" .PublishDate}}
+    </div>
+    <div class="month">
+        {{ dateFormat "Jan" .PublishDate}} 
+        {{ dateFormat "2006" .PublishDate}}
+    </div>
+  </time>
+  <div class="content">
+    <h2>{{ .Title }}</h2>
+    <p>{{ .Params.preview }}... <a href="{{ .Permalink }}">Read More</a></p>
+  </div>
+</li>
+
+{{end}}
+{{end}}
+</section>
 
 {{ .Content }}
 
