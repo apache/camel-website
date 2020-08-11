@@ -114,6 +114,13 @@ section.frontpage.columns.blog-posts {
   background-color: var(--color-smoke-50);
 }
 
+section.frontpage.blog-posts ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
 li.blog-post .content {
   padding: 1rem;
   padding-right: 0.5rem;
@@ -136,8 +143,12 @@ li.blog-post .content a {
 li.blog-post {
   display: flex;
   width: 30vw;
-  margin: 0 1vw;
-  border-radius: 1rem;
+  margin: 0;
+  padding-right: 1rem;
+}
+
+li.blog-post:last-child {
+  padding-right: 0;
 }
 
 li.blog-post time.date {
@@ -152,12 +163,14 @@ li.blog-post time.date .day {
   font-weight: bold;
   padding: 0;
   line-height: 1;
+  display: block;
 }
 
 li.blog-post time.date .month {
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 1.2;
+  display: block;
 }
 
 /* common css for columns section */
@@ -276,7 +289,7 @@ section.frontpage.projects .project img {
     margin: 0 auto;
   }
 
-  section.frontpage.columns.blog-posts {
+  section.frontpage.columns.blog-posts ul {
     flex-direction: column;
   }
 
@@ -290,7 +303,8 @@ section.frontpage.projects .project img {
     width: 100%;
   }
 
-  section.frontpage.functionalities .icon img {
+  section.frontpage.functionalities .icon img,
+  section.frontpage.projects .icon img {
     max-width: 25vw;
     margin: 2vw;
   }
@@ -353,13 +367,13 @@ section.frontpage.projects .project img {
     padding: 0;
   }
 
-  section.frontpage.projects .project h2,
+  section.frontpage.projects .project .content h2,
   section.frontpage.projects .project .icon,
   section.frontpage.columns.functionalities .box .content h2,
   section.frontpage.columns.functionalities .box .content,
   section.frontpage.columns.functionalities .box .icon,
   section.frontpage.columns.functionalities p,
-  section.frontpage.projects p {
+  section.frontpage.projects .project .content p {
     text-align: center;
     margin: 0;
     width: 100%;
