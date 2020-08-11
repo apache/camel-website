@@ -418,7 +418,7 @@ div.footer-search h4 {
   }
 
   #search-cancel {
-    bottom: calc(50% - 0.45rem);
+    margin-top: 0.75rem;
   }
 
   #search_results {
