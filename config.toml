@@ -31,28 +31,32 @@ timeout = 300000
   filename = "sitemap-website.xml"
 
 [[menu.main]]
-    name = "blog"
+    name = "Blog"
     weight = 2
     identifier = "blog"
     url = "/blog/"
+    pre = "/_/img/blog.svg"
 
 [[menu.main]]
-    name = "documentation"
+    name = "Documentation"
     identifier = "docs"
-    weight = 4
+    weight = 3
     url = "/docs/"
+    pre = "/_/img/documentation.svg"
 
 [[menu.main]]
-    name = "community"
+    name = "Community"
     identifier = "community"
-    weight = 5
+    weight = 4
     url = "/community/"
+    pre = "/_/img/community.svg"
 
 [[menu.main]]
-    name = "download"
-    weight = 6
+    name = "Download"
+    weight = 5
     identifier = "download"
     url = "/download/"
+    pre = "/_/img/download.svg"
 
 [module]
 
