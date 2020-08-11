@@ -42,7 +42,7 @@ html:not([data-scroll='0']) .navbar {
     color: var(--navbar-font-color);
     text-transform: uppercase;
   }
-  
+
   .navbar-end > .navbar-item::after {
     transition: all ease-in-out 0.2s;
     content: '';
@@ -59,7 +59,7 @@ html:not([data-scroll='0']) .navbar {
   .navbar-item img {
     display: none;
   }
-  
+
   .navbar-end > a.navbar-item:hover {
     color: var(--color-asf-dark-blue);
   }
