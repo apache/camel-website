@@ -61,7 +61,10 @@
                 .join(' / ')
 
               d.breadcrumbs = ((breadcrumbs !== '') ? breadcrumbs : section)
-              d.snippet = hit._snippetResult.content.value.split('&quot;').join('') + '...'
+              d.snippet = hit._snippetResult.content.value
+              if (d.snippet !== undefined || d.snippet !== null) {
+                d.snippet = d.snippet.split('&quot;').join('') + '...'
+              }
 
               data[section] = data[section] || []
               data[section].push(d)
