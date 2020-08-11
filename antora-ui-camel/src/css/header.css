@@ -40,8 +40,9 @@ html:not([data-scroll='0']) .navbar {
 @media screen and (min-width: 1024px) {
   .navbar-end > .navbar-item {
     color: var(--navbar-font-color);
+    text-transform: uppercase;
   }
-
+  
   .navbar-end > .navbar-item::after {
     transition: all ease-in-out 0.2s;
     content: '';
@@ -57,6 +58,10 @@ html:not([data-scroll='0']) .navbar {
 
   .navbar-item img {
     display: none;
+  }
+  
+  .navbar-end > a.navbar-item:hover {
+    color: var(--color-asf-dark-blue);
   }
 }
 
@@ -134,12 +139,6 @@ html:not([data-scroll='0']) .navbar {
   display: block;
   line-height: var(--doc-line-height);
   position: relative;
-}
-
-.navbar-item .icon {
-  width: 1.1rem;
-  height: 1.1rem;
-  display: block;
 }
 
 @media screen and (max-width: 1023px) {

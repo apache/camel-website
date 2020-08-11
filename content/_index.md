@@ -3,52 +3,88 @@ title: Home
 description: Camel is an open source integration framework that empowers you to quickly and easily integrate various systems consuming or producing data.
 ---
 
-{{< section "frontpage columns" >}}
 
-# Packed with functionality
+{{< section "frontpage columns functionalities" >}}
 
-{{< div "box" >}}
-{{< div >}}
+# Why Camel?
 
-<img src="./img/functions/svg/feature-patterns.svg" alt="pattern icon" class="feature-icon"/>
+{{< div "box right" >}}
 
-### Patterns
+{{< div "content">}}
 
-Based on <mark>Enterprise Integration Patterns</mark> (EIP) to help you solve your integration problem by applying best practices out of the box. Camel supports most of the Enterprise Integration Patterns from the excellent book by Gregor Hohpe and Bobby Woolf, and newer integration patterns from microservice architectures.
-{{< /div >}}
-{{< /div >}}
+## Based on Enterprise Integration Patterns
 
-{{< div "box" >}}
-{{< div >}}
+Camel supports most of the Enterprise Integration Patterns from the excellent book by Gregor Hohpe and Bobby Woolf, and newer integration patterns from microservice architectures to help you solve your integration problem by applying best practices out of the box.
 
-<img src="./img/functions/svg/feature-components.svg" alt="component icon" class="feature-icon"/>
+<p><a class="button-dark" href="/components/latest/eips/enterprise-integration-patterns.html">Read more on EIP</a></p>
 
-### Components
-
-Packed with <mark>several hundred components</mark> that are used to access databases, message queues, APIs or basically anything under the sun. Helping you integrate with everything.
-{{< /div >}}
 {{< /div >}}
 
-{{< div "box" >}}
-{{< div >}}
+{{< div "icon" >}}
 
-<img src="./img/functions/svg/feature-runtimes.svg" alt="runtime icon" class="feature-icon"/>
+<img src="./img/patterns.svg" alt="component icon"/>
 
-### Runtimes
-
-<mark>Runs everywhere</mark>: Standalone, embedded as a library within Spring Boot, Quarkus, Application Servers, and in the clouds. 
-{{< /div >}}
 {{< /div >}}
 
-{{< div "box" >}}
-{{< div >}}
-
-<img src="./img/functions/svg/feature-dataformats.svg" alt="data icon" class="feature-icon"/>
-
-### Data Formats
-
-Camel supports around 50 data formats, allowing to <mark>translate messages</mark> in multiple formats, and with support from industry standard formats from finance, telco, health-care, and more.
 {{< /div >}}
+
+
+{{< div "box left" >}}
+
+{{< div "icon" >}}
+
+<img src="./img/runtimes.svg" alt="runtime icon" />
+
+{{< /div >}}
+
+{{< div "content">}}
+
+## Runs Everywhere
+
+Apache Camel is standalone, and can be embedded as a library within Spring Boot, Quarkus, Application Servers, and in the clouds. Camel subprojects focus on making your work easy.
+
+<p><a class="button-dark" href="/docs/">Go to Camel Subprojects</a></p>
+
+{{< /div >}}
+
+{{< /div >}}
+
+{{< div "box right" >}}
+
+{{< div "content">}}
+
+## Packed with Components
+Packed with several hundred components that are used to access databases, message queues, APIs or basically anything under the sun. Helping you integrate with everything.
+
+<p><a class="button-dark" href="/components/latest">Go to Component Reference</a></p>
+
+{{< /div >}}
+
+{{< div "icon" >}}
+
+<img src="./img/components.svg" alt="component icon"/>
+
+{{< /div >}}
+
+{{< /div >}}
+
+{{< div "box left" >}}
+
+{{< div "icon" >}}
+
+<img src="./img/data-formats.svg" alt="data icon"/>
+
+{{< /div >}}
+
+{{< div "content">}}
+
+## Supports over 50 Data Formats
+
+Camel supports around 50 data formats, allowing to translate messages in multiple formats, and with support from industry standard formats from finance, telco, health-care, and more.
+<p><a class="button-dark" href="/components/latest/dataformats/">See Supported Formats</a></p>
+
+{{< /div >}}
+
 {{< /div >}}
 
 {{< /section >}}
@@ -57,65 +93,112 @@ Camel supports around 50 data formats, allowing to <mark>translate messages</mar
 
 # Apache Camel Projects
 
-{{< div "section" >}}
+{{< div "project" >}}
 
-[![Camel](/_/img/logo-d.svg)![Knative](/_/img/knative.svg)](/docs/#camel-k)
+{{< div "icon" >}}
+
+<img src="/_/img/logo-d.svg" alt="data icon"/>
+
+{{< /div >}}
+
+{{< div "content" >}}
+
+## Camel Core
+Apache Camel helps you integrate various systems consuming or producing data.
+<p><a class="button-dark" href="/docs/">Read More</a></p>
+
+{{< /div >}}
+
+{{< /div >}}
+
+{{< div "project" >}}
+
+{{< div "icon" >}}
+
+<img src="/_/img/knative.svg" alt="data icon"/>
+
+{{< /div >}}
+
+{{< div "content" >}}
 
 ## Camel K
-
-**Apache Camel K** runs natively on [Kubernetes](https://kubernetes.io/).
-
-{{< /div >}}
-
-{{< div "section" >}}
-
-[![Camel](/_/img/logo-d.svg)](/manual/latest/)
-
-## Camel
-
-**Apache Camel** is the *Swiss knife* of integration. 
+Apache Camel K is a lightweight integration framework that runs natively on Kubernetes.
+<p><a class="button-dark" href="/docs/">Read More</a></p>
 
 {{< /div >}}
 
-{{< div "section" >}}
+{{< /div >}}
 
-[![Camel](/_/img/logo-d.svg)![Quarkus](/_/img/quarkus.svg)](/docs/#camel-quarkus)
+{{< div "project" >}}
 
-## Quarkus
+{{< div "icon" >}}
 
-**Apache Camel Quarkus** runs Camel on [Quarkus](https://quarkus.io).
+<img src="/_/img/quarkus.svg" alt="data icon"/>
 
 {{< /div >}}
 
-{{< div "section" >}}
+{{< div "content" >}}
 
-[![Camel](/_/img/logo-d.svg)![Kafka](/_/img/apache-kafka.svg)](/docs/#camel-kafka-connector)
-
-## Kafka
-
-**Apache Camel Kafka Connector** embeds Camel within [Kafka Connect](https://kafka.apache.org/documentation/#connect).
+## Camel Quarkus
+Apache Camel Quarkus packages 280+ Camel components as Quarkus extensions.
+<p><a class="button-dark" href="/docs/">Read More</a></p>
 
 {{< /div >}}
 
-{{< div "section" >}}
+{{< /div >}}
 
-[![Camel](/_/img/logo-d.svg)![Spring Boot](/_/img/spring-boot.svg)](/docs/#camel-spring-boot)
+{{< div "project" >}}
 
-## Spring Boot
+{{< div "icon" >}}
 
-**Apache Camel Spring Boot** runs Camel on [Spring Boot](https://spring.io/projects/spring-boot).
-
+<img src="/_/img/apache-kafka.svg" alt="data icon"/>
 
 {{< /div >}}
 
-{{< div "section" >}}
+{{< div "content" >}}
 
-[![Camel](/_/img/logo-d.svg)![Karaf](/_/img/apache-karaf.svg)](/docs/#camel-karaf)
+## Camel Kafka Connector
+Apache Camel Kafka Connector embeds Camel within Kafka Connect.
 
-## Karaf
+<p><a class="button-dark" href="/docs/">Read More</a></p>
 
-**Apache Camel Karaf** runs Camel in [OSGi](https://www.osgi.org/) container using [Apache Karaf](https://karaf.apache.org/).
+{{< /div >}}
 
+{{< /div >}}
+
+{{< div "project" >}}
+
+{{< div "icon" >}}
+
+<img src="/_/img/spring-boot.svg" alt="data icon"/>
+
+{{< /div >}}
+
+{{< div "content" >}}
+
+## Camel Spring Boot
+Apache Camel Spring Boot runs Camel on Spring Boot and provides starters for Camel components.
+<p><a class="button-dark" href="/docs/">Read More</a></p>
+
+{{< /div >}}
+
+{{< /div >}}
+
+{{< div "project" >}}
+
+{{< div "icon" >}}
+
+<img src="/_/img/apache-karaf.svg" alt="data icon"/>
+
+{{< /div >}}
+
+{{< div "content" >}}
+
+## Camel Karaf
+Apache Camel Karaf makes running Apache Camel components to run in the OSGi environment.
+<p><a class="button-dark" href="/docs/">Read More</a></p>
+
+{{< /div >}}
 
 {{< /div >}}
 

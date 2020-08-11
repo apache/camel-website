@@ -114,7 +114,7 @@ This project hosts the efforts to port and package the 280+ Camel components as 
 
 {{< /div >}}
 
-{{< div "section">}}
+{{< div "section" >}}
 
 [![Camel](/_/img/logo-d.svg)![Spring Boot](/_/img/spring-boot.svg)](/camel-spring-boot/latest/)
 
