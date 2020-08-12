@@ -17,7 +17,7 @@ Please read the section below (How to get help), and follow the bullets advised 
 
 ### Reporting bugs - Please read this first
 
-We prefer people to get in touch first using the mailing list, IRC chat or Gitter chat. Or take time to read FAQs, or search in the mailing list archives to find answers.
+We prefer people to get in touch first using the mailing list, or Gitter chat. Or take time to read FAQs, or search in the mailing list archives to find answers.
 Unfortunately some people create a JIRA ticket as first thing. Please don't do that! Only if you are sure it really is a bug etc. JIRA tickets create noise
 for the Camel team to react on issues that are not bugs. But already covered in FAQs, in the mailing lists etc. Or in the existing documentation.
 Also on the mailing lists there is more people active to help you better.
