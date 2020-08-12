@@ -1,17 +1,15 @@
-.toc-menu,
-.toc-hugo {
+.toc-menu {
   color: var(--toc-font-color);
 }
 
 .toc.sidebar .toc-menu,
-.toc-sidebar .toc-hugo {
+.toc-sidebar .toc-menu {
   margin-right: 0.75rem;
   position: sticky;
   top: var(--toc-top);
 }
 
-.toc .toc-menu h3,
-.toc .toc-hugo h3 {
+.toc .toc-menu h3 {
   color: var(--toc-heading-font-color);
   font-size: calc(16 / var(--rem-base) * 1rem);
   font-weight: var(--body-font-weight-bold);
@@ -21,15 +19,14 @@
 }
 
 .toc.sidebar .toc-menu h3,
-.toc-sidebar .toc-hugo h3 {
+.toc-sidebar .toc-menu h3 {
   display: flex;
   flex-direction: column;
   height: 2.5rem;
   justify-content: flex-end;
 }
 
-.toc .toc-menu ul,
-.toc .toc-hugo ul {
+.toc .toc-menu ul {
   font-size: calc(15 / var(--rem-base) * 1rem);
   line-height: var(--toc-line-height);
   list-style: none;
@@ -38,30 +35,27 @@
 }
 
 .toc.sidebar .toc-menu ul,
-.toc-sidebar .toc-hugo ul {
+.toc-sidebar .toc-menu ul {
   max-height: var(--toc-height);
   overflow-y: auto;
 }
 
 @media screen and (min-width: 1024px) {
-  .toc .toc-menu h3,
-  .toc .toc-hugo h3 {
+  .toc .toc-menu h3 {
     font-size: calc(15 / var(--rem-base) * 1rem);
   }
 
-  .toc .toc-menu ul,
-  .toc .toc-hugo ul {
+  .toc .toc-menu ul {
     font-size: calc(13.5 / var(--rem-base) * 1rem);
   }
 }
 
-.toc .toc-menu li,
-.toc .toc-hugo li {
+.toc .toc-menu li {
   margin: 0;
 }
 
 .toc .toc-menu li[data-level="2"] a,
-.toc .toc-hugo ul li ul li ul li a {
+.toc .toc-menu ul li ul li ul li a {
   padding-left: 1.25rem;
 }
 
@@ -69,8 +63,7 @@
   padding-left: 2rem;
 }
 
-.toc .toc-menu a,
-.toc .toc-hugo a {
+.toc .toc-menu a {
   color: inherit;
   border-left: 2px solid var(--toc-border-color);
   display: inline-block;
@@ -83,19 +76,17 @@
   outline: none;
 }
 
-.toc .toc-menu a:hover,
-.toc .toc-hugo a:hover {
+.toc .toc-menu a:hover {
   color: var(--link-font-color);
 }
 
-.toc .toc-menu a.is-active,
-.toc .toc-hugo a.is-active {
+.toc .toc-menu a.is-active {
   border-left-color: var(--link-font-color);
   color: var(--doc-font-color);
 }
 
 .sidebar.toc .toc-menu a:focus,
-.toc-sidebar .toc-hugo a:focus {
+.toc-sidebar .toc-menu a:focus {
   background: var(--panel-background);
 }
 

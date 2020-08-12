@@ -27,12 +27,12 @@
   }
 
   .toc.sidebar .toc-menu ul,
-  .toc-sidebar .toc-hugo ul {
+  .toc-sidebar .toc-menu ul {
     scrollbar-width: thin; /* Firefox */
   }
 
   .toc.sidebar .toc-menu ul::-webkit-scrollbar,
-  .toc-sidebar .toc-hugo ul::-webkit-scrollbar {
+  .toc-sidebar .toc-menu ul::-webkit-scrollbar {
     width: var(--scrollbar-thickness); /* Chrome/Safari/Webkit */
   }
 

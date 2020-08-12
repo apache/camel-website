@@ -2,14 +2,14 @@
 
 <div class="body">
     <main role="main">
-        <div class="toolbar hugo"></div>
+        <div class="static toolbar"></div>
         <div class="content">
             <article class="static doc {{ .Page.Section }}">
                 {{ with .Title }}
                 <h1>{{ . }} </h1>
                 {{ end }}
                 <aside class="toc embedded">
-                    <div class="toc-hugo">
+                    <div class="toc-menu">
                         <h3>Contents</h3>
                         {{ .TableOfContents }}
                     </div>
@@ -17,7 +17,7 @@
                 {{ .Content }}
             </article>
             <aside class="toc toc-sidebar">
-                <div class="toc-hugo">
+                <div class="toc-menu">
                     <h3>Contents</h3>
                     {{ .TableOfContents }}
                 </div>

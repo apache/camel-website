@@ -2,8 +2,8 @@
   'use strict'
 
   var headings = Array.from(document.querySelectorAll('article.doc h1, article.doc h2, article.doc h3'))
-  var links = Array.from(document.querySelectorAll('aside.toc-sidebar .toc-hugo a'))
-  var selectorRange = document.querySelector('.toolbar.hugo')
+  var links = Array.from(document.querySelectorAll('aside.toc-sidebar .toc-menu a'))
+  var selectorRange = document.querySelector('.static.toolbar')
   if (selectorRange) {
     var minRange = selectorRange.getBoundingClientRect().top + selectorRange.getBoundingClientRect().height - 5
     var maxRange = minRange + 25

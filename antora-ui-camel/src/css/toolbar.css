@@ -12,7 +12,7 @@
   z-index: var(--z-index-toolbar);
 }
 
-.toolbar.hugo {
+.static.toolbar {
   box-shadow: none;
 }
 
