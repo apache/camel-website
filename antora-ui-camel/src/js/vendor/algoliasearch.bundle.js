@@ -46,7 +46,7 @@
         cancel.style.display = 'block'
         index
           .search(search.value, {
-            hitsPerPage: 10,
+            hitsPerPage: 5,
           })
           .then((results) => {
             const hits = results.hits
@@ -54,14 +54,17 @@
               const d = {}
               d.url = hit.url
               var section = hit.hierarchy.lvl0
-              if (hit.hierarchy.lvl6 !== null) section = section + ' [' + hit.hierarchy.lvl6 + ']'
+              if (hit.hierarchy.lvl6 !== null) section = section + '/' + hit.hierarchy.lvl6
               var breadcrumbs = Object.values(hit.hierarchy)
                 .slice(1)
                 .filter((lvl) => lvl !== null)
-                .join(' &raquo; ')
+                .join(' / ')
 
               d.breadcrumbs = ((breadcrumbs !== '') ? breadcrumbs : section)
-              d.snippet = hit._snippetResult.content.value + '...'
+              d.snippet = hit._snippetResult.content.value
+              if (d.snippet !== undefined || d.snippet !== null) {
+                d.snippet = d.snippet.split('&quot;').join('') + '...'
+              }
 
               data[section] = data[section] || []
               data[section].push(d)
@@ -74,7 +77,11 @@
           .then((data) => {
             if (Object.entries(data).length === 0 && data.constructor === Object) {
               return `
-              <header class="no_search_results">Nothing Found</header>
+              <header class="no_search_results">No results found for "${search.value}"</header>
+              <div class="footer-search">
+                <h4 id="algolia">Search By</h4>
+                <img src="/_/img/algolia.svg" />
+              </div>
               `
             } else {
               return `
@@ -82,8 +89,12 @@
                 ${Object.keys(data)
     .map(
       (section) => `
-                  <dt>${section}</dt>
-                  ${data[section]
+                  <div class="result">
+                    <div class="heading">
+                      <dt>${section.split('/')[0]}</dt>
+                      <dt class="version">${section.split('/')[1]}</dt>
+                    </div>
+                    ${data[section]
     .map(
       (hit) => `
                     <a href="${hit.url}">
@@ -95,15 +106,24 @@
                   `
     )
     .join('')}
-                `
+                </div>`
     )
     .join('')}
               </dl>
+              <div class="footer-search">
+                <h4 id="algolia">Search By</h4>
+                <img src="/_/img/algolia.svg" />
+              </div>
               `
             }
           })
           .then((markup) => {
             results.innerHTML = markup
+            Array.from(results.querySelectorAll('.version')).forEach((version) => {
+              if (version.innerHTML === 'undefined') {
+                version.style.display = 'none'
+              }
+            })
             container.className = 'navbar-search'
           })
       }, 150)
