@@ -422,7 +422,8 @@ div.footer-search h4 {
   }
 
   #search_results {
+    left: 0;
+    width: 100vw;
     top: var(--navbar-mobile-height);
-    width: calc(100vw - 3rem);
   }
 }
