@@ -20,8 +20,11 @@ section.frontpage {
 
 section.frontpage a {
   color: var(--link-font-color);
-  text-decoration: underline;
-  text-underline-position: under;
+  text-decoration: none;
+  background-image: linear-gradient(to right, #583ac2 50%, transparent 50%);
+  background-position: 0 1.1em;
+  background-repeat: repeat-x;
+  background-size: 7px 1px;
 }
 
 section.frontpage a:hover {
@@ -76,6 +79,9 @@ header.frontpage p {
   white-space: nowrap;
   padding: 0.7rem 1rem;
   background-color: var(--color-camel-orange);
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: 0;
   color: white;
   font-weight: bold;
   margin-right: 0.5rem;
@@ -83,7 +89,6 @@ header.frontpage p {
   outline: none;
   display: inline-block;
   box-shadow: 0 4px #8e480b;
-  text-decoration: none;
 }
 
 .frontpage a.button-light {
