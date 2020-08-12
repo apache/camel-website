@@ -6,18 +6,10 @@
         <div class="navbar-end">
           {{#withMenuData}}
             {{#each @items}}
-                {{#if children}}
-                <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link navbar-topics" href="#">{{name}}</a>
-                <div class="navbar-dropdown">
-                {{#each children}}
-                  <a class="navbar-item" href="{{url}}">{{name}}</a>
-                {{/each}}
-                </div>
-                </div>
-                {{else}}
-                <a class="navbar-item navbar-topics" href="{{url}}">{{name}}</a>
-                {{/if}}
+                <a class="navbar-item-section navbar-item navbar-topics" href="{{url}}">
+                  <img src="{{pre}}">
+                  {{name}}
+                </a>
             {{/each}}
           {{/withMenuData}}
         </div>

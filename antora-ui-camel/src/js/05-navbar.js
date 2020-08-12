@@ -10,11 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   })
 
-  var menuDropDowns = Array.prototype.slice.call(document.querySelectorAll('.has-dropdown'), 0)
-  menuDropDowns.forEach(function (el) {
-    el.addEventListener('click', function (e) {
-      e.stopPropagation()
-      el.classList.toggle('is-active')
-    })
+  document.documentElement.dataset.scroll = 0
+  document.addEventListener('scroll', () => {
+    document.documentElement.dataset.scroll = window.scrollY
   })
 })
