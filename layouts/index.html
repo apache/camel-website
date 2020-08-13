@@ -11,7 +11,7 @@
     <a class="button-dark" href="/manual/latest/getting-started.html">Get Started</a> <a class="button-light" href="/manual/latest/faq/what-is-camel.html">What is Camel?</a>
     </p>
   </div>
-  <img src="./img/camel-gears.svg" />
+  <img alt="Computer with gears depicting data processing" src="./img/camel-gears.svg" />
 </header>  
 
 <div class="frontpage news">
@@ -19,27 +19,28 @@
 </div>
 
 <section class="frontpage columns blog-posts">
-{{with .Site.GetPage "section" "blog"}}
-{{range .Pages | first 3}}
+  <ul>
+    {{with .Site.GetPage "section" "blog"}}
+      {{range .Pages | first 3}}
 
-<li class="blog-post">
-  <time class="date">
-    <div class="day">
-        {{ dateFormat "2" .PublishDate}}
-    </div>
-    <div class="month">
-        {{ dateFormat "Jan" .PublishDate}} 
-        {{ dateFormat "2006" .PublishDate}}
-    </div>
-  </time>
-  <div class="content">
-    <h2>{{ .Title }}</h2>
-    <p>{{ .Params.preview }}... <a href="{{ .Permalink }}">Read More</a></p>
-  </div>
-</li>
-
-{{end}}
-{{end}}
+      <li class="blog-post">
+        <time datetime="{{ dateFormat "2006-01-02" .PublishDate }}" class="date">
+          <data class="day">
+              {{ dateFormat "2" .PublishDate }}
+          </data>
+          <data class="month">
+              {{ dateFormat "Jan" .PublishDate }} 
+              {{ dateFormat "2006" .PublishDate }}
+          </data>
+        </time>
+        <div class="content">
+          <h2>{{ .Title }}</h2>
+          <p>{{ .Params.preview }}... <a href="{{ .Permalink }}">Read More</a></p>
+        </div>
+      </li>
+      {{end}}
+    {{end}}
+  </ul>
 </section>
 
 {{ .Content }}
