@@ -56,7 +56,7 @@ Apache Camel is standalone, and can be embedded as a library within Spring Boot,
 ## Packed with Components
 Packed with several hundred components that are used to access databases, message queues, APIs or basically anything under the sun. Helping you integrate with everything.
 
-<p><a class="button-dark" href="/components/latest">Go to Component Reference</a></p>
+<p><a class="button-dark" href="/components/latest/">Go to Component Reference</a></p>
 
 {{< /div >}}
 
@@ -220,7 +220,7 @@ Camel is an [Apache Software Foundation](https://www.apache.org) project, availa
 
 [Sources](./community/sources/), [mailing lists](./community/mailing-list/), [issue tracker](./community/support/): it's fully open, you can access directly.
 
-We also love contributions: don't hesitate to [contribute](./manual/latest/contributing.html). You can contribute by <a href="https://github.com/apache/camel-website/edit/master/content">editing this page</a>!
+We also love contributions: don't hesitate to [contribute](./manual/latest/contributing.html). You can contribute by <a href="https://github.com/apache/camel-website/edit/master/content/_index.md">editing this page</a>!
 
 [Be Involved In The Community](./manual/latest/contributing.html) | [How To Contribute](./manual/latest/contributing.html)
 
