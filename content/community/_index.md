@@ -15,7 +15,15 @@ If you are experiencing problems using Camel then please report your problem to 
 
 {{< div "links" >}}
 
-[Continue Reading](/community/support/) 
+{{< div >}}
+[![Read](/_/img/read.svg)](/community/support/) 
+{{< /div >}}
+
+{{< div "partition" >}}{{< /div >}}
+
+{{< div >}}
+[Read More](/community/support/) 
+{{< /div >}}
 
 {{< /div >}}
 
@@ -35,7 +43,15 @@ There are many ways you can help make Camel better - please dive in and help!Ide
 
 {{< div "links" >}}
 
-[Continue Reading](/manual/latest/contributing.html) 
+{{< div >}}
+[![Read](/_/img/read.svg)](/manual/latest/contributing.html)
+{{< /div >}}
+
+{{< div "partition" >}}{{< /div >}}
+
+{{< div >}}
+[Read More](/manual/latest/contributing.html) 
+{{< /div >}}
 
 {{< /div >}}
 
@@ -56,7 +72,15 @@ This page is intended as a place to collect user stories and feedback on Apache 
 
 {{< div "links" >}}
 
-[Continue Reading](/community/user-stories/) 
+{{< div >}}
+[![Read](/_/img/read.svg)](/community/user-stories/) 
+{{< /div >}}
+
+{{< div "partition" >}}{{< /div >}}
+
+{{< div >}}
+[Read More](/community/user-stories/) 
+{{< /div >}}
 
 {{< /div >}}
 
@@ -76,12 +100,19 @@ Articles are divided into several sections. As the lists grow, further sectionin
 
 {{< div "links" >}}
 
-[Continue Reading](/community/articles/) 
+{{< div >}}
+[![Read](/_/img/read.svg)](/community/articles/) 
+{{< /div >}}
 
+{{< div "partition" >}}{{< /div >}}
+
+{{< div >}}
+[Read More](/community/articles/) 
 {{< /div >}}
 
 {{< /div >}}
 
+{{< /div >}}
 
 {{< div "section" >}}
 
@@ -97,7 +128,15 @@ This page lists the known books about Apache Camel. If you happen to know a book
 
 {{< div "links" >}}
 
-[Continue Reading](/community/books/) 
+{{< div >}}
+[![Read](/_/img/read.svg)](/community/books/) 
+{{< /div >}}
+
+{{< div "partition" >}}{{< /div >}}
+
+{{< div >}}
+[Read More](/community/books/) 
+{{< /div >}}
 
 {{< /div >}}
 
@@ -117,7 +156,15 @@ This page lists who we are. By all means add yourself to the list - lets sort it
 
 {{< div "links" >}}
 
-[Continue Reading](/community/team/) 
+{{< div >}}
+[![Read](/_/img/read.svg)](/community/team/)
+{{< /div >}}
+
+{{< div "partition" >}}{{< /div >}}
+
+{{< div >}}
+[Read More](/community/team/) 
+{{< /div >}}
 
 {{< /div >}}
 
