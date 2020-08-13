@@ -263,9 +263,11 @@ html:not([data-scroll='0']) .navbar {
 .navbar-search input {
   border: 1px solid var(--nav-panel-divider-color);
   border-radius: 4px 4px;
-  margin-top: 0.75rem;
-  padding: 0.5rem 1.5rem 0.5rem 1.9rem;
+  width: 14rem;
+  margin-top: 0.5rem;
+  padding: 0.4rem 1.5rem 0.4rem 1.9rem;
   font-family: Open Sans, sans-serif;
+  font-size: 1rem;
   caret-color: #ed8225;
   background: no-repeat 0.4rem/1rem url(../img/search.svg);
   background-color: var(--color-smoke-50);
@@ -285,7 +287,7 @@ html:not([data-scroll='0']) .navbar {
 
 #search-cancel {
   position: relative;
-  bottom: calc(50% - 0.05rem);
+  bottom: calc(50% + 0.1rem);
   left: calc(100% - 1.25rem);
   height: 1rem;
   display: none;
