@@ -38,7 +38,7 @@
                     <div class="navbar-end">
                         {{ range .Site.Menus.main }}
                         <a class="navbar-item-section navbar-item navbar-topics" href="{{ .URL | relURL }}">
-                            <img src="{{ .Pre }}">
+                            <img alt="{{ .Name }}" src="{{ .Pre }}">
                             {{ .Name }}
                         </a>
                         {{ end }}
