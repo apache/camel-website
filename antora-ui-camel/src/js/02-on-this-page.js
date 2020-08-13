@@ -10,7 +10,14 @@
   var article = document.querySelector('article.doc')
   var headings
   var headingSelector = []
-  for (var l = 0; l <= levels; l++) headingSelector.push(l ? '.sect' + l + '>h' + (l + 1) + '[id]' : 'h1[id].sect0')
+  var isStatic = article.classList.contains('static')
+  for (var l = 0; l <= levels; l++) {
+    if (isStatic) {
+      headingSelector.push(l ? 'h' + (l + 1) + '[id]' : 'h1[id]')
+    } else {
+      headingSelector.push(l ? '.sect' + l + '>h' + (l + 1) + '[id]' : 'h1[id].sect0')
+    }
+  }
   if (!(headings = find(headingSelector.join(','), article)).length) return sidebar.parentNode.removeChild(sidebar)
 
   var lastActiveFragment

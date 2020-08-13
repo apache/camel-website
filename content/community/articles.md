@@ -2,7 +2,7 @@
 title: "Articles"
 ---
 
-### Camel Videos
+## Camel Videos
 
 *   [Camel 3 : Integration in the Kubernetes and Serverless era | BarcelonaJUG](https://www.crowdcast.io/e/camel-3--integration-in/1) - 90 min webinar from July 2020, by Claus and Andrea giving overview of Camel 3, and focusing on the most exicing innovations with CamelK, Camel Quarkus and Camel Kafka Connector with live demos, and QA at the end.
 *   [Event-driven serverless applications with Camel K | DevNation Tech Talk](https://www.youtube.com/watch?v=hlUzLC71nAM) - 40 min video from July 2020, by Luca and Nicola presenting Camel K and how Camel fits in the event driven & serverless world with a live demo that shows this all together. 
@@ -44,11 +44,11 @@ title: "Articles"
 *   [Videos de las charlas de la 9a reunión de JavaMexico (**Spanish**)](http://www.springhispano.org/?q=node/564) _by Domingo Suarez_
 
 
-### Articles
+## Articles
 
 Articles are divided into several sections. As the lists grow, further sectioning refinements may be necessary.
 
-#### General Articles
+### General Articles
 
 *   [Open Source Integration with Apache Camel](http://java.dzone.com/articles/open-source-integration-apache) _by Jonathan Anstey_
 *   [Tutorial: Integrating with Apache Camel](https://jaxenter.com/tutorial-integrating-with-apache-camel-106759.html) _by_ _[Charles Moulliard](https://twitter.com/cmoulliard)_
@@ -176,11 +176,11 @@ These examples show usage of several different components and other concepts suc
 *   [Enterprise integration for Ethereum](https://medium.com/@bibryam/enterprise-integration-for-ethereum-fa67a1577d43) from July 2018 by Bilgin Ibryam explains the Ethereum eco-system and where you can use Camel with the bit-coin and block-chain technologies.
 *   [Camel Aggregation Strategies](http://blog.joshdreagan.com/2018/08/30/camel_aggregation_strategies/) from August 2018 by Josh Reagan whom blogs about how to aggregate data using Camel's AggregationStrategy when using EIPs such as Content Enricher, Splitter or the Aggregator. 
 
-#### Camel K
+### Camel K
 
 * [Why Camel K](https://dzone.com/articles/why-camel-k) by Saravanakumar Selvaraj from June 2020 where he briefly hightlights 5 key elements of Camel K 
 
-#### Tooling / Combination with other Products
+### Tooling / Combination with other Products
 
 These examples show Camel combined with several tools (e.g. IDE), ESBs, Application Services, and other middleware products such as messaging or OSGi container.
 
@@ -231,7 +231,7 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   [Using Jaeger to trace an Apache Camel application](https://medium.com/jaegertracing/using-jaeger-to-trace-an-apache-camel-application-2b8118efbb4d) (August 2018) blog post from Gary Brown showing how to use camel-opentracing and Jaeger to do distributed traces and visualize them in Jaeger UI.
 *   [Quick Integration with Apache Camel and IBM MQ](https://dzone.com/articles/quickly-integrate-apache-camel-and-ibm-mq) article from May 2020 by Chandra Shekhar Pandey showing how to use Apache Camel running on Spring Boot to integrate with IBM MQ and testing it with Docker containers.
 
-#### Camel and Groovy
+### Camel and Groovy
 
 *   [A Groovy ride on Camel](http://groovy.dzone.com/articles/groovy-ride-camel) _by Jack Hung_ (December 2009)
 *   [Using Groovy and Camel to pool Google Analyst email reports](http://mrhaki.blogspot.com/2009/04/handle-google-analytics-scheduled-e.html) _by Mr. Haki_ (April 2009)
@@ -239,7 +239,7 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   [Send mail with Apache Camel from Grails](http://mrhaki.blogspot.com/2009/04/send-mail-with-apache-camel-from-grails.html) _by Mr. Haki_ (April 2009)
 *   [Groovy and Grape - easiest way to send gtalk message with Apache Camel](http://www.andrejkoelewijn.com/blog/2009/02/28/groovy-and-grape-easiest-way-to-send-gtalk-message-with-apache-camel/) _by Andrej Koelewijn_ (February 2009)
 
-#### Camel and Scala
+### Camel and Scala
 
 *   [Interview with Martin Krasser about camel-scalaz](http://jaxenter.com/scalaz-camel-fully-leveraging-what-scala-and-scalaz-offers-for-functional-programming-34717.html) from Jaxcenter. Scalaz-Camel: fully leveraging 'what Scala and Scalaz offers for functional programming.'
 *   [Apache Camel and Scala](http://www.kai-waehner.de/blog/2011/06/23/apache-camel-and-scala-a-powerful-combination/): A powerful Combination _by Kai Wähner_
@@ -249,11 +249,11 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   [Apache Camel with Scala testing styles](http://siliconsenthil.in/blog/2013/07/07/apache-camel-with-scala-testing-styles/) - A blog post on different approaches of camel testing with ScalaTest.
 *   [Apache Camel with Scala: Extending DSL](http://siliconsenthil.in/blog/2013/07/11/apache-camel-with-scala-extending-dsl/) - A blog post extending the Camel Scala DSL
 
-#### Camel and Clojure
+### Camel and Clojure
 
 *   [Using Apache Camel from Clojure](http://codeabout.blogspot.com/2010/06/using-apache-camel-from-clojure.html)_by Jason Whitlark_ (June 2010)
 
-#### Camel and the IoT (Internet of Things)
+### Camel and the IoT (Internet of Things)
 
 *   [Make Your IoT Gateway WiFi-Aware Using Camel and Kura](http://java.dzone.com/articles/make-your-iot-gateway-wifi) - DZone article by Henryk Konsek (2015)
 *   [IoT gateway dream team - Eclipse Kura and Apache Camel](http://www.slideshare.net/hekonsek/io-t-gateway-dream-team-eclipse-kura-and-apache-camel) - slides from the Henryk Konsek talk for Eclipse IoT Virtual Meetup (2015)
@@ -264,13 +264,13 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   [Open Source IoT Gateway: A Tale Of Eclipse Kura, Apache Camel, And Rhiot](https://www.youtube.com/watch?v=DPiD7bnnaJk) - video from the Henryk Konsek talk at DevNation 2016.
 *   [Getting started with Apache Camel and Internet of Things](https://developers.redhat.com/blog/2016/11/17/getting-started-with-apache-camel-and-the-internet-of-things/) - article from Joseph Butler from February 2017.
 
-#### Camel and Microservices/Cloud
+### Camel and Microservices/Cloud
 
 *   [A Camel running in the Clouds (Part 2)](https://www.linkedin.com/redir/redirect?url=https%3A%2F%2Flburgazzoli%2Egithub%2Eio%2F2017%2F04%2F12%2FA-camel-running-in-the-clouds-part-2%2Ehtml&urlhash=JHUN&_t=tracking_anet) by Luca Burgazzoli (April 2017)
 
 *   [A Camel running in the Clouds](https://lburgazzoli.github.io/2016/12/21/A-camel-running-in-the-clouds.html) by Luca Burgazzoli (December 2016)
 
-#### Comparison to Camel's Competitors
+### Comparison to Camel's Competitors
 
 *   [Apache Camel and other ESBs (Camel vs Mule)](https://stackoverflow.com/questions/3792519/apache-camel-and-other-esb-products) - A question on Stackoverflow originally from 2010 but with a great showcase of what is the status 5 years later according to [Raul's answer](https://stackoverflow.com/questions/3792519/apache-camel-and-other-esb-products/34818263#34818263), and [follow up comments from Claus](http://www.davsclaus.com/2016/01/apache-camel-and-other-esb-products.html).
 *   [Mule vs Spring Integration vs Apache Camel compared by Black Duck Open Hub](http://www.davsclaus.com/2015/12/mule-vs-spring-integration-vs-apache.html) - by Clays Ibsen (December 2015) - How to use Open Hub to compare these projects side by side.
@@ -282,7 +282,7 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   [Spring Integration and Apache Camel](http://java.dzone.com/articles/spring-integration-and-apache) _by Biju Kunjummen_ (December 2009)
 *   [Apache Camel alternatives](http://hillert.blogspot.com/2009/10/apache-camel-alternatives.html) _by Gunnar Hillert_ (October 2009)
 
-### Presentations on Apache Camel
+## Presentations on Apache Camel
 
 *   [Implementing Enterprise Integration Patterns with Apache Camel](http://alt.java-forum-stuttgart.de/jfs/2008/folien/E3.pdf) presentation _by Eduard Hildebrandt_
 *   [Dead Simple Integration with Apache Camel](https://chariotsolutions.com/presentation/dead-simple-integration-with-apache-camel/) _by Aaron Mulder_
@@ -306,7 +306,7 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   [The Forgotten Route: Making Apache Camel Work for You](https://www.youtube.com/watch?v=7r183fGwllg&feature=youtu.be) - Video from ApacheCon 2017 presented by John Saboe. Apache Camel is eight years old, and some say it's effectiveness as the glue between components has diminished. John Saboe says, "Not so!"
 *   [Integrating Applications: The Reactive Way](https://www.youtube.com/watch?v=1JtdUhLf5pE) - Video from JBCNConf presented by Nicola Ferraro. 
 
-### Podcasts
+## Podcasts
 
 *   [James Strachan](http://macstrac.blogspot.com/) was [interviewed](http://briefingsdirect.blogspot.com/2007/08/apache-camel-addresses-need-for.html) _by_ _[Dana Gardner](http://www.zoominfo.com/Search/PersonDetail.aspx?PersonID=338181&QueryID=0b37845a-9e13-492a-92e6-7ac8ac9707b7)_
 *   [Episode 35 - A few beers with Chariot's Open Source Integration Experts](http://techcast.chariotsolutions.com/index.php?post_id=503319) - Chariot TechCast Episode 35 where they talk about: ServiceMix, Camel, FUSE, Mule, Spring Integration, EIP, ESB etc.
@@ -317,7 +317,7 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   [JBoss Asylum #47 - What do you call a Camel with 3 humps](https://asylum.libsyn.com/podcast-46-what-do-you-call-a-camel-with-3-humps) Claus Ibsen and Luca Burgazzoli sits down and talk about what is coming in Camel 3 on topics like Camel K and Camel Quarkus.
 
 
-### [Books](/community/books/)
+## Books
 
 *   Camel Design Patterns by Bilgin Ibryam (LeanPub, January 2016)
 *   Apache Camel Developer's Cookbook _by Scott Cranton and Jakub Korab_ (Packt Publishing, December 2013)
@@ -326,7 +326,7 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   Camel in Action _by Claus Ibsen and Jonathan Anstey_ (Manning, December 2010)
 *   Enterprise Integration Patterns _by Gregor Hohpe and Bobby Woolf_ (Addison Wesley, October 2003)
 
-### Online Training
+## Online Training
 
 *   [Introduction to Apache Camel](http://www.pluralsight.com/courses/apache-camel-intro-integration) - Pluralsight o<span style="color: rgb(34,34,34);">nline <span style="color: rgb(34,34,34);">training course covering the core Camel framework, pattern implementations <span style="color: rgb(34,34,34);">and [hawt.io](http://hawt.io/) 
 *   [Apache Camel Video Tutorial](http://www.nvisia.com/apache-camel-video-tutorial) - A 3 part video series that introduces you to Apache Camel, covers an use-case, and then highlights why you should use Camel.
@@ -334,7 +334,7 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   [Udemy Training: Apache Camel for Beginners - Learn by Coding in Java](https://www.udemy.com/apache-camel-for-beginners-learn-by-coding-in-java/) - Learn Apache Camel framework by coding it in Java. This is purely a coding course where you will be performing ton of code throughout the course. This course will cover integrations with Kafka, Active MQ, Postgres SQL , Rest WebServices and etc.
 *   [Max Munus](http://www.maxmunus.com/page/Apache-Camel) - Provides online training to many different technologies. They provide online training for Apache Camel.
 
-### Other
+## Other
 
 *   [Linkedin Apache Camel group](http://www.linkedin.com/groups?mostPopular=&gid=2447439) - Linkedin group for the Apache Camel project.
 *   [EIP printable flashcards studylib](https://studylib.net/doc/8175313/enterprise-integration-patterns-flashcards), [EIP printable flashcards nanopdf](https://nanopdf.com/download/enterprise-integration-patterns-flashcards_pdf), [EIP printable flashcards docplayer](https://docplayer.net/46191198-Enterprise-integration-patterns-flashcards.html) - A 6 page PDF with printable EIP cards.
@@ -345,7 +345,7 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   The Apache Camel Components Poster ([PDF](https://pdfslide.net/documents/apache-camel-components.html) _by Gliesian LLC._ (October, 2013)
 *   [TrustRadius Apache Camel Reviews](https://www.trustradius.com/products/apache-camel/reviews) - Reviews and ratings from Camel end users on the TrustRadius website. 
 
-### Blogs
+## Blogs
 
 *   [Ashwin Karpe's Blog (OpenSourceKnowledge)](http://opensourceknowledge.blogspot.com/) - Ashwin is a Camel committer and writes about Camel.
 *   [Ben O'Day's Blog](http://benoday.blogspot.com/) - Ben works in the field and sometimes blogs about Camel
@@ -366,14 +366,14 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   [Souciance Eqdam Rashti](https://soucianceeqdamrashti.wordpress.com/) - Blogs about integration and Apache Camel in English. 
 *   [Mastertheboss](http://www.mastertheboss.com) - Contains several tutorials for Camel 2 and 3 in English. 
 
-### Twitterers
+## Twitterers
 
 *   [@davsclaus](http://twitter.com/#!/davsclaus) - Claus Ibsen ([@davsclaus](http://twitter.com/#!/davsclaus)) tweets often about Camel, open source, and integration.
 *   [@bibryam](http://twitter.com/#!/bibryam) - Bilgin Ibryam ([@bibryam](http://twitter.com/#!/bibryam)) tweets often about Camel.
 *   [@jstrachan](https://twitter.com/jstrachan) - James Strachan ([@jstrachan](https://twitter.com/jstrachan)) tweets about Camel, open source and integration.
 *   [@hekonsek](https://twitter.com/hekonsek) - Henryk Konsek ([@hekonsek](https://twitter.com/hekonsek)) tweets about Camel and the Internet Of Things
 
-### Non-English
+## Non-English
 
 *   [Java integration frameworks - Spring Integration vs. Apache Camel](http://www.journaldunet.com/developpeur/java-j2ee/spring-integration-vs-apache-camel/) Article from April 2010 which compares the two frameworks (**in french**).
 *   [3 Articles about Apache Camel to push notifications to Apple devices (in French)](http://blog.xebia.fr/2010/09/30/creer-un-composant-apache-camel-de-connexion-a-lapns-1-sur-3/) _by Alexis Kinsella_
