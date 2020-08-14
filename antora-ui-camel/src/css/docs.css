@@ -34,6 +34,11 @@
   margin: 1.5rem;
 }
 
+.section .logo a,
+.camel-project .logo a {
+  background: none;
+}
+
 .section a > img,
 .camel-project a > img {
   display: inline-block;
