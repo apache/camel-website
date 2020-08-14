@@ -41,6 +41,7 @@ article.blog p {
 
 .blog a.continue {
   font-weight: bold;
+  text-decoration: none;
 }
 
 .blog header h1 {
