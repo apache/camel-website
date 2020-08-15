@@ -1,0 +1,5 @@
+<pre class="{{ .Get 0}}">
+    {{ $content := .Inner | markdownify }}
+    {{ $content | safeHTML }}
+</pre>
+  
