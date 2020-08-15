@@ -1,0 +1,18 @@
+.sitemap h1 {
+  text-align: center;
+}
+
+.sitemap ul.sitemap-list {
+  list-style-type: none;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2;
+  padding: 0;
+  column-gap: 25%;
+}
+
+@media screen and (max-width: 626px) {
+  .sitemap ul.sitemap-list {
+    columns: 1;
+  }
+}

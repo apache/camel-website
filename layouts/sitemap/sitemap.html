@@ -1,0 +1,41 @@
+{{ partial "header.html" . }}
+
+<div class="body">
+    <main class="article">
+        <div class="content">
+            <article class="doc static sitemap"> 
+                <h1 class="page">{{ .Title }} </h1>
+                <a href="/"><h2>Overview</h2></a>
+                <ul class="sitemap-list">
+                    {{ $currentPage := .Permalink }}
+                    {{ range .Site.Sections }}
+                        {{ if not (eq $currentPage .Permalink) }} 
+                        <li><a href = "{{ .Permalink }}" >{{.Title}}</a></li>
+                        {{end}}
+                    {{ end }}
+                    <li><a href = "/community/">Community</a></li>
+                </ul>
+                <a href="/docs/"><h2>Documentation</h2></a>
+                <ul class="sitemap-list">
+                    <li><a href = "/manual/latest/getting-started.html">Getting Started</a></li>
+                    <li><a href = "/manual/latest/">User Manual</a></li>
+                    <li><a href = "/manual/latest/faq/">FAQ</a></li>
+                    <li><a href = "/components/latest/">Component Reference</a></li>
+                    <li><a href = "/components/latest/dataformats/">Data Formats</a></li>
+                    <li><a href = "/components/latest/eips/enterprise-integration-patterns.html">EIP</a></li>
+                </ul>
+                <a href="/docs/"><h2>Sub Projects</h2></a>
+                <ul class="sitemap-list">
+                    <li><a href = "/manual/latest/">Camel Core</a></li>
+                    <li><a href = "/camel-k/latest/">Camel K</a></li>
+                    <li><a href = "/camel-quarkus/latest/">Camel Quarkus</a></li>
+                    <li><a href = "/camel-spring-boot/latest/">Camel Spring Boot</a></li>
+                    <li><a href = "/camel-kafka-connector/latest/">Camel Kafka Connector</a></li>
+                    <li><a href = "/camel-karaf/latest/">Camel Karaf</a></li>
+                </ul>
+            </article>
+        </div>
+    </main>
+</div>
+
+{{ partial "footer.html" . }}
