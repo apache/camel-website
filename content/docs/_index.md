@@ -3,9 +3,7 @@
 
 {{< div "camel-project" >}}
 
-{{< div "logo" >}}
 [![Camel](/_/img/logo-d.svg)](/manual/latest/)
-{{< /div >}}
 
 ## Camel Core
 
@@ -51,9 +49,7 @@ Camel is packed with several hundred components that are used to access database
 
 {{< div "section" >}}
 
-{{< div "logo" >}}
 [![Camel](/_/img/logo-d.svg)![Knative](/_/img/knative.svg)](/camel-k/latest/)
-{{< /div >}}
 
 ## Camel K
 
@@ -75,9 +71,7 @@ Apache Camel K is a lightweight integration framework built on Apache Camel that
 
 {{< div "section" >}}
 
-{{< div "logo" >}}
 [![Camel](/_/img/logo-d.svg)![Kafka](/_/img/apache-kafka.svg)](/camel-kafka-connector/latest/)
-{{< /div >}}
 
 ## Camel Kafka Connector
 
@@ -100,9 +94,7 @@ Camel Kafka Connector allows you to use all Camel [components](/components/lates
 
 {{< div "section" >}}
 
-{{< div "logo" >}}
 [![Camel](/_/img/logo-d.svg)![Quarkus](/_/img/quarkus.svg)](/camel-quarkus/latest/)
-{{< /div >}}
 
 ## Camel Quarkus
 
@@ -124,9 +116,7 @@ This project hosts the efforts to port and package the 280+ Camel components as 
 
 {{< div "section" >}}
 
-{{< div "logo" >}}
 [![Camel](/_/img/logo-d.svg)![Spring Boot](/_/img/spring-boot.svg)](/camel-spring-boot/latest/)
-{{< /div >}}
 
 ## Camel Spring Boot
 
@@ -149,9 +139,7 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 
 {{< div "section" >}}
 
-{{< div "logo" >}}
 [![Camel](/_/img/logo-d.svg)![Karaf](/_/img/apache-karaf.svg)](/camel-karaf/latest/)
-{{< /div >}}
 
 ## Camel Karaf
 

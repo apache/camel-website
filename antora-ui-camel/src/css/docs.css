@@ -34,8 +34,8 @@
   margin: 1.5rem;
 }
 
-.section .logo a,
-.camel-project .logo a {
+.section > a,
+.camel-project > a {
   background: none;
 }
 

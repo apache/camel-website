@@ -81,6 +81,7 @@ article.blog p {
 .blog a.arrow {
   font-size: 1rem;
   text-decoration: none;
+  background: none;
 }
 
 .blog a.arrow.prev::after {

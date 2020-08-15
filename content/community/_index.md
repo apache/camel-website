@@ -3,9 +3,7 @@
 
 {{< div "section" >}}
 
-{{< div "logo" >}}
 [![Camel](/_/img/support.svg)](/community/support/)
-{{< /div >}}
 
 ## Support
 
@@ -25,9 +23,7 @@ If you are experiencing problems using Camel then please report your problem to 
 
 {{< div "section" >}}
 
-{{< div "logo" >}}
 [![Camel](/_/img/contributing.svg)](/manual/latest/contributing.html)
-{{< /div >}}
 
 ## Contributing
 
@@ -48,9 +44,7 @@ There are many ways you can help make Camel better - please dive in and help!Ide
 
 {{< div "section" >}}
 
-{{< div "logo" >}}
 [![Camel](/_/img/user-stories.svg)](/community/user-stories/)
-{{< /div >}}
 
 ## User Stories
 
@@ -70,9 +64,7 @@ This page is intended as a place to collect user stories and feedback on Apache 
 
 {{< div "section" >}}
 
-{{< div "logo" >}}
 [![Camel](/_/img/articles.svg)](/community/articles/)
-{{< /div >}}
 
 ## Articles
 
@@ -93,10 +85,7 @@ Articles are divided into several sections. As the lists grow, further sectionin
 
 {{< div "section" >}}
 
-
-{{< div "logo" >}}
 [![Camel](/_/img/books.svg)](/community/books/)
-{{< /div >}}
 
 ## Books
 
@@ -116,9 +105,7 @@ This page lists the known books about Apache Camel. If you happen to know a book
 
 {{< div "section" >}}
 
-{{< div "logo" >}}
 [![Camel](/_/img/team.svg)](/community/team/)
-{{< /div >}}
 
 ## Team
 
