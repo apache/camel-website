@@ -140,6 +140,17 @@ To build the website go to the project root directory and run:
 
 In case `yarn build` raises error, run `yarn format` to format the code and re-run `yarn build` to build your bundle successfully.
 
+OR
+
+Follow the below instructions to resolve the `yarn format` issue.
+
+```
+$ yarn format
+yarn run v1.22.0
+error Command "format" not found.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+```
+
 In case `yarn build` throws the error: **JavaScript heap out of memory**, the issue can be resolved by increasing the memory used by node.js by setting `NODE_OPTIONS` environment variable to include `--max_old_space_size`, for example to increase the old space to 4GB do:
 
 ```shell
