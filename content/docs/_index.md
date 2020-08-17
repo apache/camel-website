@@ -20,8 +20,6 @@
 
 {{< /div >}}
 
-{{< pre >}}{{< /pre >}}
-
 {{< div "links" >}}
 
 [![Sources](/_/img/github.svg)](https://github.com/apache/camel/) 
@@ -30,8 +28,6 @@
 [Source](https://github.com/apache/camel/)
 
 {{< /div >}} 
-
-{{< pre >}}{{< /pre >}}
 
 {{< div "links" >}}
 
@@ -121,8 +117,6 @@ Apache Camel K is a lightweight integration framework built on Apache Camel that
 
 {{< /div >}}
 
-{{< pre >}}{{< /pre >}}
-
 {{< div "links" >}}
 
 [![Sources](/_/img/github.svg)](https://github.com/apache/camel-k/) 
@@ -131,8 +125,6 @@ Apache Camel K is a lightweight integration framework built on Apache Camel that
 [Source](https://github.com/apache/camel-k/)
 
 {{< /div >}} 
-
-{{< pre >}}{{< /pre >}}
 
 {{< div "links" >}}
 
@@ -170,8 +162,6 @@ Camel Kafka Connector allows you to use all Camel [components](/components/lates
 
 {{< /div >}}
 
-{{< pre >}}{{< /pre >}}
-
 {{< div "links" >}}
 
 [![Sources](/_/img/github.svg)](https://github.com/apache/camel-kafka-connector/) 
@@ -180,8 +170,6 @@ Camel Kafka Connector allows you to use all Camel [components](/components/lates
 [Source](https://github.com/apache/camel-kafka-connector/)
 
 {{< /div >}} 
-
-{{< pre >}}{{< /pre >}}
 
 {{< div "links" >}}
 
@@ -221,8 +209,6 @@ This project hosts the efforts to port and package the 280+ Camel components as 
 
 {{< /div >}}
 
-{{< pre >}}{{< /pre >}}
-
 {{< div "links" >}}
 
 [![Sources](/_/img/github.svg)](https://github.com/apache/camel-quarkus/) 
@@ -231,8 +217,6 @@ This project hosts the efforts to port and package the 280+ Camel components as 
 [Source](https://github.com/apache/camel-quarkus/)
 
 {{< /div >}} 
-
-{{< pre >}}{{< /pre >}}
 
 {{< div "links" >}}
 
@@ -271,8 +255,6 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 
 {{< /div >}}
 
-{{< pre >}}{{< /pre >}}
-
 {{< div "links" >}}
 
 [![Sources](/_/img/github.svg)](https://github.com/apache/camel-spring-boot) 
@@ -281,8 +263,6 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 [Source](https://github.com/apache/camel-spring-boot)
 
 {{< /div >}} 
-
-{{< pre >}}{{< /pre >}}
 
 {{< div "links" >}}
 
@@ -322,8 +302,6 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 
 {{< /div >}}
 
-{{< pre >}}{{< /pre >}}
-
 {{< div "links" >}}
 
 [![Sources](/_/img/github.svg)](https://github.com/apache/camel-karaf) 
@@ -332,8 +310,6 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 [Source](https://github.com/apache/camel-karaf)
 
 {{< /div >}} 
-
-{{< pre >}}{{< /pre >}}
 
 {{< div "links" >}}
 
