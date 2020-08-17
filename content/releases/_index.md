@@ -1,5 +1,5 @@
 ---
-title: "Apache Camel Releases"
+title: "Releases"
 ---
 
 # Apache Camel releases archive

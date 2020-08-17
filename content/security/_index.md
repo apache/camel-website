@@ -1,5 +1,5 @@
 ---
-title: "Apache Camel security information"
+title: "Security"
 ---
 
 # Apache Camel security information
