@@ -15,7 +15,11 @@ If you are experiencing problems using Camel then please report your problem to 
 
 {{< div "links" >}}
 
-[Continue Reading](/community/support/) 
+[![Read](/_/img/read.svg)](/community/support/) 
+
+{{< div "partition" >}}{{< /div >}}
+
+[Read More](/community/support/) 
 
 {{< /div >}}
 
@@ -35,7 +39,11 @@ There are many ways you can help make Camel better - please dive in and help!Ide
 
 {{< div "links" >}}
 
-[Continue Reading](/manual/latest/contributing.html) 
+[![Read](/_/img/read.svg)](/manual/latest/contributing.html)
+
+{{< div "partition" >}}{{< /div >}}
+
+[Read More](/manual/latest/contributing.html) 
 
 {{< /div >}}
 
@@ -56,7 +64,11 @@ This page is intended as a place to collect user stories and feedback on Apache 
 
 {{< div "links" >}}
 
-[Continue Reading](/community/user-stories/) 
+[![Read](/_/img/read.svg)](/community/user-stories/) 
+
+{{< div "partition" >}}{{< /div >}}
+
+[Read More](/community/user-stories/) 
 
 {{< /div >}}
 
@@ -76,12 +88,15 @@ Articles are divided into several sections. As the lists grow, further sectionin
 
 {{< div "links" >}}
 
-[Continue Reading](/community/articles/)
+[![Read](/_/img/read.svg)](/community/articles/) 
+
+{{< div "partition" >}}{{< /div >}}
+
+[Read More](/community/articles/) 
 
 {{< /div >}}
 
 {{< /div >}}
-
 
 {{< div "section" >}}
 
@@ -97,7 +112,11 @@ This page lists the known books about Apache Camel. If you happen to know a book
 
 {{< div "links" >}}
 
-[Continue Reading](/community/books/) 
+[![Read](/_/img/read.svg)](/community/books/) 
+
+{{< div "partition" >}}{{< /div >}}
+
+[Read More](/community/books/) 
 
 {{< /div >}}
 
@@ -117,7 +136,11 @@ This page lists who we are. By all means add yourself to the list - lets sort it
 
 {{< div "links" >}}
 
-[Continue Reading](/community/team/) 
+[![Read](/_/img/read.svg)](/community/team/)
+
+{{< div "partition" >}}{{< /div >}}
+
+[Read More](/community/team/) 
 
 
 {{< /div >}}
