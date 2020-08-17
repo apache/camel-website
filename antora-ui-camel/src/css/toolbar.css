@@ -12,6 +12,12 @@
   z-index: var(--z-index-toolbar);
 }
 
+.static.toolbar {
+  box-shadow: none;
+  margin: 0;
+  max-width: 100vw;
+}
+
 @media screen and (max-width: 1023px) {
   .toolbar {
     top: var(--navbar-mobile-height);
