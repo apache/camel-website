@@ -137,10 +137,6 @@ li.blog-post .content {
   padding-right: 0.5rem;
 }
 
-li.blog-post .content a {
-  background: none;
-}
-
 li.blog-post .content h2 {
   text-align: left;
   margin: 0;
@@ -153,6 +149,7 @@ li.blog-post .content p {
 li.blog-post .content a {
   font-weight: bold;
   white-space: nowrap;
+  background: none;
 }
 
 li.blog-post {
