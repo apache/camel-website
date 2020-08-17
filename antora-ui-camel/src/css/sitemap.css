@@ -9,6 +9,7 @@
   columns: 2;
   padding: 0;
   column-gap: 25%;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 626px) {
