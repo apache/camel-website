@@ -1,3 +1,3 @@
 ---
-title: "Camel Website Sitemap"
+title: "Sitemap"
 ---
