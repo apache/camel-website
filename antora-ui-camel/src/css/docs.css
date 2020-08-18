@@ -56,6 +56,11 @@
   border-radius: 10px;
 }
 
+.section > a,
+.camel-project > a {
+  background: none;
+}
+
 .section a > img,
 .camel-project a > img {
   display: inline-block;
