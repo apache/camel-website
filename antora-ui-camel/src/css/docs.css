@@ -33,7 +33,7 @@
 }
 
 .camel-project .camel-documentation .links {
-  background-color: var(--color-camel-orange);
+  background-color: var(--color-camel-orange-light);
   padding: 0 0.5rem;
   border-radius: 25px;
   color: var(--navbar-background);
@@ -76,6 +76,7 @@
 .section .list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .section .links {
@@ -84,7 +85,7 @@
   align-items: center;
   margin: 1.5rem 0;
   word-break: break-word;
-  background-color: var(--color-camel-orange);
+  background-color: var(--color-camel-orange-light);
   padding: 0 0.5rem;
   border-radius: 25px;
   color: var(--navbar-background);
@@ -99,7 +100,7 @@
 }
 
 .section .list .links {
-  margin: 0.5rem auto 0.5rem 0.5rem;
+  margin: 0.5rem;
 }
 
 .section .links img {
