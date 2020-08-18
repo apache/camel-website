@@ -8,7 +8,6 @@ a.category:first-child {
 }
 
 a.category {
-  background-color: var(--color-camel-orange);
   border-radius: 0.2rem;
   margin-left: 1px;
   color: var(--color-white);
@@ -22,6 +21,15 @@ li > a.category {
   display: block;
   margin: 0.2rem;
   line-height: 2;
+}
+
+a.category,
+li > a.category {
+  background-color: var(--color-camel-orange);
+  background-image: none;
+  background-position: 0;
+  background-repeat: no-repeat;
+  background-size: 0;
 }
 
 a.category:hover {
