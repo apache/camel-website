@@ -322,7 +322,6 @@
   line-height: 1;
   font-weight: var(--admonition-label-font-weight);
   text-transform: uppercase;
-  border-radius: 0 0.45rem 0.45rem 0;
 }
 
 .doc .admonitionblock.caution .icon {
