@@ -18,19 +18,6 @@ section.frontpage {
   max-width: var(--frontpage-max-width);
 }
 
-section.frontpage a {
-  color: var(--link-font-color);
-  text-decoration: none;
-  background-image: linear-gradient(to right, #583ac2 50%, transparent 50%);
-  background-position: 0 1.1em;
-  background-repeat: repeat-x;
-  background-size: 7px 1px;
-}
-
-section.frontpage a:hover {
-  color: var(--link_hover-font-color);
-}
-
 section.frontpage h1 {
   width: 100%;
   text-align: center;
@@ -74,29 +61,28 @@ header.frontpage p {
   line-height: 1.7rem;
 }
 
-.frontpage a.button-dark,
-.frontpage a.button-dark:hover {
+a.button-dark,
+section.frontpage a.button-dark,
+section.frontpage a.button-dark:hover,
+a.button-dark:hover {
   white-space: nowrap;
   padding: 0.7rem 1rem;
   background-color: var(--color-camel-orange);
-  background-image: none;
-  background-repeat: no-repeat;
-  background-position: 0;
   color: white;
   font-weight: bold;
   margin-right: 0.5rem;
   border-radius: 3rem;
   outline: none;
   display: inline-block;
-  box-shadow: 0 4px #8e480b;
 }
 
-.frontpage a.button-light {
+a.button-light {
   padding: 0.7rem 1rem;
   border: 1px solid var(--color-gray-70);
   color: var(--color-gray-70);
   font-weight: bold;
   border-radius: 3rem;
+  margin-right: 0.5rem;
   white-space: nowrap;
 }
 
@@ -219,7 +205,8 @@ section.frontpage.columns.functionalities .box {
   margin: 2vw auto;
 }
 
-section.frontpage.columns.functionalities .box .content {
+section.frontpage.columns.functionalities .box .content,
+.docs .box .content {
   width: 55vw;
   margin: 0 1vw;
 }

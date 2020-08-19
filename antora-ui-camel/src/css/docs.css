@@ -1,60 +1,36 @@
-.docs {
+.docs,
+.community {
   padding: 1rem 3rem;
-}
-
-.section h2 {
-  text-align: center;
-  padding-bottom: 0;
-}
-
-.camel-project {
-  width: calc(100% - 3rem);
-  display: inline-flex;
-  border: 1px solid var(--color-smoke-90);
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 1rem 1rem 2rem 1rem;
-  margin: 1.5rem;
 }
 
-.camel-project .section {
-  border: none;
-  padding: 0;
+.docs .box,
+.community .box {
+  display: flex;
+  margin: 1rem auto;
 }
 
-.section {
-  display: inline-flex;
-  border: 1px solid var(--color-smoke-90);
-  width: calc(50% - 3.2rem);
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 1rem;
-  margin: 1.5rem;
+.docs .box img,
+.community .box img {
+  margin-top: 4rem;
+  height: 8vw;
+  margin-right: 0.5rem;
 }
 
-.section a > img,
-.camel-project a > img {
-  display: inline-block;
-  width: auto;
-  height: 5rem;
-  margin-top: 1rem;
-}
-
-.section a > img + img {
-  padding-left: 1rem;
-}
-
-.section .description {
-  padding: 1.2rem;
+.docs .box .icon {
+  width: 20vw;
   text-align: center;
 }
 
-.section .links {
-  align-items: center;
-  margin: 1.5rem 0;
-  word-break: break-word;
+.docs .box.camel-core .icon {
+  width: 15vw;
+  text-align: center;
+}
+
+.docs .box.camel-core .content,
+.community .box .content {
+  width: 60vw;
 }
 
 @media screen and (max-width: 1023px) {
@@ -62,20 +38,32 @@
     padding: 0 1rem 4rem;
   }
 
-  .camel-project,
-  .section {
-    width: calc(100% - 1rem);
-    margin: 1.5rem -1.5rem 1.5rem 0.5rem;
+  .docs .box,
+  .community .box,
+  .docs .box .content,
+  .community .box .content,
+  .docs .box .icon,
+  .community .box .icon {
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    width: 90%;
   }
 
-  .camel-project .section {
-    width: calc(100% - 3rem);
-    margin: 1.5rem;
+  .docs .box img,
+  .community .box img {
+    height: 6rem;
+    max-width: 25vw;
+    margin: 2.5rem 0.5rem 0;
   }
-}
 
-@media screen and (min-width: 1024px) {
-  .section .description {
-    height: 12rem;
+  .docs .box.right,
+  .community .box.right {
+    flex-direction: column-reverse;
+  }
+
+  .docs .button-light {
+    line-height: 4rem;
   }
 }
