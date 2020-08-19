@@ -53,8 +53,19 @@ Apache Camel K is a lightweight integration framework built on Apache Camel that
 
 [![Camel](/_/img/logo-d.svg)![Knative](/_/img/knative.svg)](/camel-k/latest/)
 
+{{< /div >}} 
+
+{{< div "links" >}}
+
+[![Documentation](/_/img/docs.svg)](/camel-k/latest/) 
+
+{{< div "partition" >}}{{< /div >}}
+
+[Documentation](/camel-k/latest/)
+
 {{< /div >}}
 
+{{< /div >}}
 {{< /div >}}
 
 {{< div "box left" >}}
@@ -76,6 +87,18 @@ Camel Kafka Connector allows you to use all [Camel components](/components/lates
 <a class="button-light" href="https://github.com/apache/camel-kafka-connector/">Source</a>
 <a class="button-light" href="https://github.com/apache/camel-kafka-connector-examples">Examples</a>
 </p>
+
+{{< /div >}} 
+
+{{< div "links" >}}
+
+[![Documentation](/_/img/docs.svg)](/camel-kafka-connector/latest/) 
+
+{{< div "partition" >}}{{< /div >}}
+
+[Documentation](/camel-kafka-connector/latest/)
+
+{{< /div >}}
 
 {{< /div >}}
 
@@ -101,6 +124,18 @@ This project hosts the efforts to port and package the 280+ Camel components as 
 
 [![Camel](/_/img/logo-d.svg)![Quarkus](/_/img/quarkus.svg)](/camel-quarkus/latest/)
 
+{{< /div >}} 
+
+{{< div "links" >}}
+
+[![Documentation](/_/img/docs.svg)](/camel-quarkus/latest/) 
+
+{{< div "partition" >}}{{< /div >}}
+
+[Documentation](/camel-quarkus/latest/)
+
+{{< /div >}}
+
 {{< /div >}}
 
 {{< /div >}}
@@ -125,6 +160,18 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 <a class="button-light" href="https://github.com/apache/camel-spring-boot-examples">Examples</a>
 </p>
 
+{{< /div >}} 
+
+{{< div "links" >}}
+
+[![Documentation](/_/img/docs.svg)](/camel-spring-boot/latest/) 
+
+{{< div "partition" >}}{{< /div >}}
+
+[Documentation](/camel-spring-boot/latest/)
+
+{{< /div >}}
+
 {{< /div >}}
 
 {{< /div >}}
@@ -148,6 +195,18 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 {{< div "icon" >}}
 
 [![Camel](/_/img/logo-d.svg)![Karaf](/_/img/apache-karaf.svg)](/camel-karaf/latest/)
+
+{{< /div >}} 
+
+{{< div "links" >}}
+
+[![Documentation](/_/img/docs.svg)](/camel-karaf/latest/) 
+
+{{< div "partition" >}}{{< /div >}}
+
+[Documentation](/camel-karaf/latest/)
+
+{{< /div >}}
 
 {{< /div >}}
 
