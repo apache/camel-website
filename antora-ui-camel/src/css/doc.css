@@ -150,6 +150,10 @@
   color: var(--link-font-color);
   word-break: break-word;
   text-decoration: none;
+  background-image: linear-gradient(to right, #583ac2 50%, transparent 50%);
+  background-position: 0 1.1em;
+  background-repeat: repeat-x;
+  background-size: 7px 1px;
 }
 
 .doc li a,
