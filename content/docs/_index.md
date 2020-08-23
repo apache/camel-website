@@ -55,17 +55,6 @@ Apache Camel K is a lightweight integration framework built on Apache Camel that
 
 {{< /div >}} 
 
-{{< div "links" >}}
-
-[![Documentation](/_/img/docs.svg)](/camel-k/latest/) 
-
-{{< div "partition" >}}{{< /div >}}
-
-[Documentation](/camel-k/latest/)
-
-{{< /div >}}
-
-{{< /div >}}
 {{< /div >}}
 
 {{< div "box left" >}}
@@ -89,18 +78,6 @@ Camel Kafka Connector allows you to use all [Camel components](/components/lates
 </p>
 
 {{< /div >}} 
-
-{{< div "links" >}}
-
-[![Documentation](/_/img/docs.svg)](/camel-kafka-connector/latest/) 
-
-{{< div "partition" >}}{{< /div >}}
-
-[Documentation](/camel-kafka-connector/latest/)
-
-{{< /div >}}
-
-{{< /div >}}
 
 {{< /div >}}
 
@@ -126,18 +103,6 @@ This project hosts the efforts to port and package the 280+ Camel components as 
 
 {{< /div >}} 
 
-{{< div "links" >}}
-
-[![Documentation](/_/img/docs.svg)](/camel-quarkus/latest/) 
-
-{{< div "partition" >}}{{< /div >}}
-
-[Documentation](/camel-quarkus/latest/)
-
-{{< /div >}}
-
-{{< /div >}}
-
 {{< /div >}}
 
 {{< div "box left" >}}
@@ -162,18 +127,6 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 
 {{< /div >}} 
 
-{{< div "links" >}}
-
-[![Documentation](/_/img/docs.svg)](/camel-spring-boot/latest/) 
-
-{{< div "partition" >}}{{< /div >}}
-
-[Documentation](/camel-spring-boot/latest/)
-
-{{< /div >}}
-
-{{< /div >}}
-
 {{< /div >}}
 
 {{< div "box right" >}}
@@ -197,18 +150,6 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 [![Camel](/_/img/logo-d.svg)![Karaf](/_/img/apache-karaf.svg)](/camel-karaf/latest/)
 
 {{< /div >}} 
-
-{{< div "links" >}}
-
-[![Documentation](/_/img/docs.svg)](/camel-karaf/latest/) 
-
-{{< div "partition" >}}{{< /div >}}
-
-[Documentation](/camel-karaf/latest/)
-
-{{< /div >}}
-
-{{< /div >}}
 
 {{< /div >}}
 

@@ -16,17 +16,9 @@ Title: "Community"
 
 If you are experiencing problems using Camel then please report your problem to our mailing list. This allows the entire community to help with your problem. 
 
-<<<<<<< HEAD
 <p>
 <a class="button-dark" href="/community/support/">Read More</a>
 </p>
-=======
-[![Read](/_/img/read.svg)](/community/support/) 
-
-{{< div "partition" >}}{{< /div >}}
-
-[Read More](/community/support/) 
->>>>>>> c86e67a1b072cd004325a1b7ff80a4d537a97345
 
 {{< /div >}}
 
@@ -47,17 +39,9 @@ If you are experiencing problems using Camel then please report your problem to 
 
 There are many ways you can help make Camel better - please dive in and help!Identify areas you can contribute first. You don’t have to be an expert in an area, the Apache Camel developers are available to offer help and guidance.
 
-<<<<<<< HEAD
 <p>
 <a class="button-dark" href="/manual/latest/contributing.html">Read More</a>
 </p>
-=======
-[![Read](/_/img/read.svg)](/manual/latest/contributing.html)
-
-{{< div "partition" >}}{{< /div >}}
-
-[Read More](/manual/latest/contributing.html) 
->>>>>>> c86e67a1b072cd004325a1b7ff80a4d537a97345
 
 {{< /div >}}
 
@@ -77,17 +61,9 @@ There are many ways you can help make Camel better - please dive in and help!Ide
 
 This page is intended as a place to collect user stories and feedback on Apache Camel. If you are using or have tried Apache Camel please add an entry or comment; or post to the mailing list.
 
-<<<<<<< HEAD
 <p>
 <a class="button-dark" href="/community/user-stories/">Read More</a>
 </p>
-=======
-[![Read](/_/img/read.svg)](/community/user-stories/) 
-
-{{< div "partition" >}}{{< /div >}}
-
-[Read More](/community/user-stories/) 
->>>>>>> c86e67a1b072cd004325a1b7ff80a4d537a97345
 
 {{< /div >}}
 
@@ -111,9 +87,7 @@ Articles are divided into several sections. As the lists grow, further sectionin
 <a class="button-dark" href="/community/articles/">Read More</a>
 </p>
 
-{{< div "partition" >}}{{< /div >}}
-
-[Read More](/community/articles/) 
+{{< /div >}}
 
 {{< /div >}}
 
@@ -129,7 +103,7 @@ Articles are divided into several sections. As the lists grow, further sectionin
 
 ## Books
 
-This page lists the known books about Apache Camel. If you happen to know a book which is not listed then please contact us, for example using the 
+This page lists the known books about Apache Camel. If you happen to know a book which is not listed then please contact us.
 
 <p>
 <a class="button-dark" href="/community/books/">Read More</a>

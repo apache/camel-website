@@ -1,7 +1,8 @@
 .docs,
 .community {
-  padding: 1rem 3rem;
+  padding: 1rem 3rem 2rem;
   display: flex;
+  width: 80%;
   flex-direction: column;
 }
 
@@ -9,6 +10,11 @@
 .community .box {
   display: flex;
   margin: 1rem auto;
+}
+
+.docs .box .content,
+.community .box .content {
+  width: 70%;
 }
 
 .docs .box img,
@@ -19,18 +25,18 @@
 }
 
 .docs .box .icon {
-  width: 20vw;
+  width: 30%;
   text-align: center;
 }
 
-.docs .box.camel-core .icon {
-  width: 15vw;
+.docs .box.camel-core .icon,
+.community .box .icon {
+  width: 20%;
   text-align: center;
 }
 
-.docs .box.camel-core .content,
-.community .box .content {
-  width: 60vw;
+.docs .box.camel-core .content {
+  width: 80%;
 }
 
 @media screen and (max-width: 1023px) {
