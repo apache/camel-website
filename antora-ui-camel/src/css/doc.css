@@ -313,7 +313,7 @@
 }
 
 .doc .admonitionblock .icon {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   font-size: calc(15 / var(--rem-base) * 1rem);
@@ -322,8 +322,6 @@
   line-height: 1;
   font-weight: var(--admonition-label-font-weight);
   text-transform: uppercase;
-  border-radius: 0.45rem;
-  transform: translate(-0.5rem, -50%);
 }
 
 .doc .admonitionblock.caution .icon {
@@ -360,6 +358,7 @@
 .doc .admonitionblock .icon i::after {
   content: attr(title);
   hyphens: none;
+  writing-mode: tb-rl;
 }
 
 .doc .imageblock {

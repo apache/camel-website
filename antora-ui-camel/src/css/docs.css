@@ -35,6 +35,11 @@
   text-align: center;
 }
 
+.box > a,
+.camel-core > a {
+  background: none;
+}
+
 .docs .box.camel-core .content {
   width: 80%;
 }

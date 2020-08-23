@@ -148,6 +148,7 @@ li.blog-post .content p {
 li.blog-post .content a {
   font-weight: bold;
   white-space: nowrap;
+  background: none;
 }
 
 li.blog-post {
