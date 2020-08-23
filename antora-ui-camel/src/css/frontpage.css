@@ -87,9 +87,11 @@ a.button-dark:hover {
   border-radius: 3rem;
   outline: none;
   display: inline-block;
+  background-image: none;
 }
 
-a.button-light {
+a.button-light,
+a.button-light:hover {
   padding: 0.7rem 1rem;
   border: 1px solid var(--color-gray-70);
   color: var(--color-gray-70);
