@@ -21,6 +21,7 @@
 .community .box img {
   margin-top: 4rem;
   height: 8vw;
+  max-width: 6rem;
   margin-right: 0.5rem;
 }
 
