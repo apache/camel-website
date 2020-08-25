@@ -349,6 +349,11 @@ section.frontpage.projects .project img {
     text-transform: uppercase;
     border-radius: 0;
   }
+
+  a.button,
+  section.frontpage a.button {
+    line-height: 3rem;
+  }
 }
 
 /* css for mobile view */

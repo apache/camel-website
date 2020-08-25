@@ -46,8 +46,10 @@ a.button-dark {
 }
 
 @media screen and (max-width: 1023px) {
-  .docs {
+  .docs,
+  .community {
     padding: 0 1rem 4rem;
+    width: 100%;
   }
 
   .docs .box,
