@@ -17,7 +17,7 @@ Title: "Community"
 If you are experiencing problems using Camel then please report your problem to our mailing list. This allows the entire community to help with your problem. 
 
 <p>
-<a class="button-dark" href="/community/support/">Read More</a>
+<a class="button dark" href="/community/support/">Read More</a>
 </p>
 
 {{< /div >}}
@@ -40,7 +40,7 @@ If you are experiencing problems using Camel then please report your problem to 
 There are many ways you can help make Camel better - please dive in and help!Identify areas you can contribute first. You don’t have to be an expert in an area, the Apache Camel developers are available to offer help and guidance.
 
 <p>
-<a class="button-dark" href="/manual/latest/contributing.html">Read More</a>
+<a class="button dark" href="/manual/latest/contributing.html">Read More</a>
 </p>
 
 {{< /div >}}
@@ -62,7 +62,7 @@ There are many ways you can help make Camel better - please dive in and help!Ide
 This page is intended as a place to collect user stories and feedback on Apache Camel. If you are using or have tried Apache Camel please add an entry or comment; or post to the mailing list.
 
 <p>
-<a class="button-dark" href="/community/user-stories/">Read More</a>
+<a class="button dark" href="/community/user-stories/">Read More</a>
 </p>
 
 {{< /div >}}
@@ -84,7 +84,7 @@ This page is intended as a place to collect user stories and feedback on Apache 
 Articles are divided into several sections. As the lists grow, further sectioning refinements may be necessary. The article section includes camel videos and general articles and other categories.
 
 <p>
-<a class="button-dark" href="/community/articles/">Read More</a>
+<a class="button dark" href="/community/articles/">Read More</a>
 </p>
 
 {{< /div >}}
@@ -106,7 +106,7 @@ Articles are divided into several sections. As the lists grow, further sectionin
 This page lists the known books about Apache Camel. If you happen to know a book which is not listed then please contact us.
 
 <p>
-<a class="button-dark" href="/community/books/">Read More</a>
+<a class="button dark" href="/community/books/">Read More</a>
 </p>
 
 {{< /div >}}
@@ -128,7 +128,7 @@ This page lists the known books about Apache Camel. If you happen to know a book
 This page lists who we are. By all means add yourself to the list - lets sort it in alphabetical order. When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 
 <p>
-<a class="button-dark" href="/community/team/">Read More</a>
+<a class="button dark" href="/community/team/">Read More</a>
 </p>
 
 {{< /div >}}
