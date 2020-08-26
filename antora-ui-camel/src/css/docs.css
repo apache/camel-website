@@ -9,7 +9,7 @@
 .docs .box,
 .community .box {
   display: flex;
-  margin: 1rem auto;
+  margin: 1rem 0;
 }
 
 .docs .box .content,
@@ -21,7 +21,7 @@
 .community .box img {
   margin-top: 4rem;
   height: 8vw;
-  max-width: 6rem;
+  max-height: 6rem;
   margin-right: 0.5rem;
 }
 
