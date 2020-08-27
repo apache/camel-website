@@ -74,30 +74,32 @@ header.frontpage p {
   line-height: 1.7rem;
 }
 
-.frontpage a.button-dark,
-.frontpage a.button-dark:hover {
+a.button,
+section.frontpage a.button {
   white-space: nowrap;
-  padding: 0.7rem 1rem;
-  background-color: var(--color-camel-orange);
-  background-image: none;
-  background-repeat: no-repeat;
-  background-position: 0;
-  color: white;
-  font-weight: bold;
   margin-right: 0.5rem;
+  background-image: none;
   border-radius: 3rem;
-  outline: none;
-  display: inline-block;
-  box-shadow: 0 4px #8e480b;
+  font-weight: bold;
+  padding: 0.4rem 1rem;
 }
 
-.frontpage a.button-light {
+header.frontpage a.button {
   padding: 0.7rem 1rem;
+}
+
+a.button.dark,
+section.frontpage a.button.dark,
+section.frontpage a.button.dark:hover,
+a.button.dark:hover {
+  background-color: var(--color-camel-orange);
+  color: white;
+}
+
+a.button.light,
+a.button.light:hover {
   border: 1px solid var(--color-gray-70);
   color: var(--color-gray-70);
-  font-weight: bold;
-  border-radius: 3rem;
-  white-space: nowrap;
 }
 
 /* css for blog section */
@@ -346,6 +348,11 @@ section.frontpage.projects .project img {
     margin: 1.5rem 0 0;
     text-transform: uppercase;
     border-radius: 0;
+  }
+
+  a.button,
+  section.frontpage a.button {
+    line-height: 3rem;
   }
 }
 
