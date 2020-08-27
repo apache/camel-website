@@ -21,6 +21,10 @@ notifications:
 publish:
   whoami: asf-site
 github:
+  labels:
+    - camel
+    - integration
+    - java
   enabled_merge_buttons:
     squash:  true
     merge:   false
