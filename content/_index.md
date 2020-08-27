@@ -16,7 +16,7 @@ description: Camel is an open source integration framework that empowers you to 
 
 Camel supports most of the Enterprise Integration Patterns from the excellent book by Gregor Hohpe and Bobby Woolf, and newer integration patterns from microservice architectures to help you solve your integration problem by applying best practices out of the box.
 
-<p><a class="button-dark" href="/components/latest/eips/enterprise-integration-patterns.html">Read more on EIP</a></p>
+<p><a class="button dark" href="/components/latest/eips/enterprise-integration-patterns.html">Read more on EIP</a></p>
 
 {{< /div >}}
 
@@ -43,7 +43,7 @@ Camel supports most of the Enterprise Integration Patterns from the excellent bo
 
 Apache Camel is standalone, and can be embedded as a library within Spring Boot, Quarkus, Application Servers, and in the clouds. Camel subprojects focus on making your work easy.
 
-<p><a class="button-dark" href="/docs/">Go to Camel Subprojects</a></p>
+<p><a class="button dark" href="/docs/">Go to Camel Subprojects</a></p>
 
 {{< /div >}}
 
@@ -56,7 +56,7 @@ Apache Camel is standalone, and can be embedded as a library within Spring Boot,
 ## Packed with Components
 Packed with several hundred components that are used to access databases, message queues, APIs or basically anything under the sun. Helping you integrate with everything.
 
-<p><a class="button-dark" href="/components/latest/">Go to Component Reference</a></p>
+<p><a class="button dark" href="/components/latest/">Go to Component Reference</a></p>
 
 {{< /div >}}
 
@@ -81,7 +81,7 @@ Packed with several hundred components that are used to access databases, messag
 ## Supports over 50 Data Formats
 
 Camel supports around 50 data formats, allowing to translate messages in multiple formats, and with support from industry standard formats from finance, telco, health-care, and more.
-<p><a class="button-dark" href="/components/latest/dataformats/">See Supported Formats</a></p>
+<p><a class="button dark" href="/components/latest/dataformats/">See Supported Formats</a></p>
 
 {{< /div >}}
 
@@ -105,7 +105,7 @@ Camel supports around 50 data formats, allowing to translate messages in multipl
 
 ## Camel Core
 Apache Camel helps you integrate various systems consuming or producing data.
-<p><a class="button-dark" href="/docs/">Read More</a></p>
+<p><a class="button dark" href="/docs/">Read More</a></p>
 
 {{< /div >}}
 
@@ -123,7 +123,7 @@ Apache Camel helps you integrate various systems consuming or producing data.
 
 ## Camel K
 Apache Camel K is a lightweight integration framework that runs natively on Kubernetes.
-<p><a class="button-dark" href="/docs/">Read More</a></p>
+<p><a class="button dark" href="/docs/">Read More</a></p>
 
 {{< /div >}}
 
@@ -141,7 +141,7 @@ Apache Camel K is a lightweight integration framework that runs natively on Kube
 
 ## Camel Quarkus
 Apache Camel Quarkus packages 280+ Camel components as Quarkus extensions.
-<p><a class="button-dark" href="/docs/">Read More</a></p>
+<p><a class="button dark" href="/docs/">Read More</a></p>
 
 {{< /div >}}
 
@@ -160,7 +160,7 @@ Apache Camel Quarkus packages 280+ Camel components as Quarkus extensions.
 ## Camel Kafka Connector
 Apache Camel Kafka Connector embeds Camel within Kafka Connect.
 
-<p><a class="button-dark" href="/docs/">Read More</a></p>
+<p><a class="button dark" href="/docs/">Read More</a></p>
 
 {{< /div >}}
 
@@ -178,7 +178,7 @@ Apache Camel Kafka Connector embeds Camel within Kafka Connect.
 
 ## Camel Spring Boot
 Apache Camel Spring Boot runs Camel on Spring Boot and provides starters for Camel components.
-<p><a class="button-dark" href="/docs/">Read More</a></p>
+<p><a class="button dark" href="/docs/">Read More</a></p>
 
 {{< /div >}}
 
@@ -196,7 +196,7 @@ Apache Camel Spring Boot runs Camel on Spring Boot and provides starters for Cam
 
 ## Camel Karaf
 Apache Camel Karaf makes running Apache Camel components to run in the OSGi environment.
-<p><a class="button-dark" href="/docs/">Read More</a></p>
+<p><a class="button dark" href="/docs/">Read More</a></p>
 
 {{< /div >}}
 

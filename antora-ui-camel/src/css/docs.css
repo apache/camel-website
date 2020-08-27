@@ -1,154 +1,86 @@
-.docs {
-  padding: 1rem 3rem;
-}
-
-.docs p:empty {
-  display: none;
-}
-
-.section h2 {
-  text-align: center;
-  padding-bottom: 0;
-}
-
-.camel-project {
-  width: calc(100% - 3rem);
-  display: inline-flex;
-  border: 1px solid var(--color-smoke-90);
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 1rem 1rem 2rem 1rem;
-  margin: 1.5rem;
-  border-radius: 10px;
-}
-
-.camel-project .section {
-  border: none;
-  padding: 0;
-}
-
-.camel-project .section.core {
-  width: 100%;
-}
-
-.camel-project .camel-documentation .links {
-  background-color: var(--color-camel-orange-light);
-  padding: 0 0.5rem;
-  border-radius: 25px;
-  color: var(--navbar-background);
-}
-
-.camel-project .camel-documentation .links a {
-  color: var(--navbar-background);
-  font-weight: bolder;
-}
-
-.section {
-  display: inline-flex;
-  border: 1px solid var(--color-smoke-90);
-  width: calc(50% - 3.2rem);
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 1rem;
-  margin: 1.5rem;
-  border-radius: 10px;
-}
-
-.section > a,
-.camel-project > a {
-  background: none;
-}
-
-.section a > img,
-.camel-project a > img {
-  display: inline-block;
-  width: auto;
-  height: 5rem;
-  margin-top: 1rem;
-}
-
-.section a > img + img {
-  padding-left: 1rem;
-}
-
-.section .description {
-  padding: 1.2rem;
-  text-align: center;
-}
-
-.section .list {
+.docs,
+.community {
+  padding: 1rem 3rem 2rem;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  width: 80%;
+  flex-direction: column;
 }
 
-.section .links {
+.docs .box,
+.community .box {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 1.5rem 0;
-  word-break: break-word;
-  background-color: var(--color-camel-orange-light);
-  padding: 0 0.5rem;
-  border-radius: 25px;
-  color: var(--navbar-background);
+  margin: 1rem 0;
 }
 
-.section .list pre {
-  padding: 0;
-  width: 0.5rem;
-  box-shadow: none;
-  overflow-x: hidden;
-  background: none;
+.docs .box .content,
+.community .box .content {
+  width: 70%;
 }
 
-.section .list .links {
-  margin: 0.5rem;
+.docs .box img,
+.community .box img {
+  margin-top: 4rem;
+  height: 8vw;
+  max-height: 6rem;
+  margin-right: 0.5rem;
 }
 
-.section .links img {
-  height: 1.5rem;
-  width: 2rem;
-  margin: 0.35rem 0 0 0.25rem;
+.docs .box .icon {
+  width: 30%;
+  text-align: center;
 }
 
-.section .links p {
-  margin: 0;
+.docs .box.camel-core .icon,
+.community .box .icon {
+  width: 20%;
+  text-align: center;
 }
 
-.section .links .partition {
-  background: #fff;
-  height: 2.5rem;
-  width: 0.1rem;
-  margin: 0 0.5rem;
+.icon a,
+a.button-light,
+a.button-dark {
+  background-image: none;
 }
 
-.section .links a {
-  color: var(--navbar-background);
-  font-weight: bolder;
+.docs .box.camel-core .content {
+  width: 80%;
 }
 
 @media screen and (max-width: 1023px) {
-  .docs {
+  .docs,
+  .community {
     padding: 0 1rem 4rem;
+    width: 100%;
   }
 
-  .camel-project,
-  .section {
-    width: calc(100% - 1rem);
-    margin: 1.5rem -1.5rem 1.5rem 0.5rem;
+  .docs .box,
+  .community .box,
+  .docs .box .content,
+  .community .box .content,
+  .docs .box .icon,
+  .community .box .icon,
+  .docs .box.camel-core .content,
+  .docs .box.camel-core .icon {
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    width: 90%;
   }
 
-  .camel-project .section {
-    width: calc(100% - 3rem);
-    margin: 1.5rem;
+  .docs .box img,
+  .community .box img {
+    height: 6rem;
+    max-width: 25vw;
+    margin: 2.5rem 0.5rem 0;
   }
-}
 
-@media screen and (min-width: 1024px) {
-  .section .description {
-    height: 12rem;
+  .docs .box.right,
+  .community .box.right {
+    flex-direction: column-reverse;
+  }
+
+  .docs .button-light {
+    line-height: 4rem;
   }
 }
