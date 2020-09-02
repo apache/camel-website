@@ -184,6 +184,7 @@ These examples show usage of several different components and other concepts suc
 
 These examples show Camel combined with several tools (e.g. IDE), ESBs, Application Services, and other middleware products such as messaging or OSGi container.
 
+*   [Upgrading to Apache Camel 3 using Windup](https://jpoth.blogspot.com/2020/09/upgrading-to-camel-300-with-windup.html) blog post by John Poth from September 2020 showing how to use Winup to generate migration report of your Camel projects (source code scanning). 
 *   [Using Camel and NiFi in one solution](https://medium.com/@raymondmeester/using-camel-and-nifi-in-one-solution-c7668fafe451) blog post how to use Camel inside Apache Nifi.
 *   [Wanna try our Apache Camel developer tools for Enterprise Integration Patterns?](http://macstrac.blogspot.com/2011/01/wanna-try-our-apache-camel-developer.html) _by James Strachan_
 *   [Using NetBeans 7.0 to create a new Apache Camel project](http://coders-unite.blogspot.com/2011/07/using-netbeans-70-to-create-new-project.html) shows how to start from scratch in NetBeans to setup a Apache Camel project (tutorial style with screenshots)
