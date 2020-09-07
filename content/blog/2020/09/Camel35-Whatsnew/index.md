@@ -51,7 +51,7 @@ We have added a new `LambdaRouteBuilder` which allows to easily define a Camel r
     rb -> rb.from("timer:foo").log("Hello Lambda");
 
 For example users with Spring Boot or Quarkus may want to use dependency injection style to define
-beans and configurations; and now also Camel routes via lambda styles:
+beans and configurations; and now also Camel routes via lambda styles.
 
 For example in a Spring Boot configuration class you can add a Camel route via `@Bean` annotation:
 
@@ -92,7 +92,7 @@ can do built time optimizations that take advantage of the optimized camel core.
 
 We have continued this effort in the Camel components where whenever possible works is moved ahead
 to an earlier phase during startup, that allows enhanced built time optimizations. As there are a lot of Camel
-components then this work will progress over the next couple of Camel releases. 
+components then this work will progress over the next couple of Camel releases.
 
 
 ### Even more reflection free
@@ -124,11 +124,11 @@ However Camel is now capable to know this information by source code generated _
 
         @Configurer
         public class Foo
-        
+
             private Map<Country> countries;
-            
+
             // getter/setter omitted
-        } 
+        }
 
 The `Foo` class has been annotated with `@Configurer` which allows Camel tooling to generate reflection free configurers source code.
 This is what Camel internally uses to do its vast configuration of all its EIPs, components and so on. Now we have exposed
@@ -145,7 +145,7 @@ The work did not stop there. By knowing the value type of the collection types, 
 
 There has been many other smaller improvements in Camels properties bindind. Camel uses this heavily internally during
 startup to configure and setup all of its things such as components, EIPs, routes etc. This work has been streamlined
-across the various runtimes; whether its standalone, Spring Boot, Quarkus, Camel K, Camel Kafka Connector, 
+across the various runtimes; whether its standalone, Spring Boot, Quarkus, Camel K, Camel Kafka Connector,
 or the good old XML routes.
 
 The Camel Kafka Connector project is using property binding in its configuration and therefore is a heavy user of this.
@@ -160,14 +160,14 @@ The fluent `ProducerTemplate` had an issue where it may not be thread-safe. This
 
 There are 8 new components:
 
-- ArangoDB: Perform operations on ArangoDb when used as a Document Database, or as a Graph Database
+- ArangoDB: Perform operations on ArangoDb when used as a Document Database, or as a Graph Database.
 - AWS2-STS: Manage AWS STS cluster instances using AWS SDK version 2.x.
-- Azure Eventhubs: The azure-eventhubs component which integrates Azure Event Hubs using AMQP protocol. 
+- Azure Eventhubs: The azure-eventhubs component which integrates Azure Event Hubs using AMQP protocol.
 - JSonata: JSON to JSON transformation using JSONATA.
 - Minio: Store and retrieve objects from Minio Storage Service using Minio SDK.
-- OAI-PMH: Harvest metadata using OAI-PMH protocol
-- Vert.x HTTP Client: Camel HTTP client support with Vert.x
-- Vert.x WebSocket: Camel WebSocket support with Vert.x
+- OAI-PMH: Harvest metadata using OAI-PMH protocol.
+- Vert.x HTTP Client: Camel HTTP client support with Vert.x.
+- Vert.x WebSocket: Camel WebSocket support with Vert.x.
 
 
 ### Camel-Kafka-connector
@@ -181,5 +181,4 @@ So stay tuned for the next non-LTS release.
 ## Upgrading
 
 Make sure to read the [upgrade guide](https://camel.apache.org/manual/latest/camel-3x-upgrade-guide-3_5.html) if you
-are upgrading to this release from a previous Camel version. 
-
+are upgrading to this release from a previous Camel version.
