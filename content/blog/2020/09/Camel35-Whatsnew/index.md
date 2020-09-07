@@ -12,11 +12,11 @@ This is a non-LTS release which means we will not provide patch releases, but us
 The next planned LTS release is 3.7 scheduled towards end of the year.
 
 
-### So whats in this release?
+## So what's in this release?
 
 This release introduces new set of features and noticeable improvements that will we cover in this blog post.
 
-#### Java 14
+### Java 14
 
 This is the first release that supports Java 14. 
 
@@ -30,7 +30,7 @@ The existing `camel-spring-boot-dependencies` is a much bigger set of BOM that i
 dependencies. For more details see the [following documentation](https://camel.apache.org/camel-spring-boot/latest/#_camel_spring_boot_bom_vs_camel_spring_boot_dependencies_bom).
 
 
-#### JUnit 5
+### JUnit 5
 
 We have finished migrating all the unit tests of Camel itself to JUnit 5. Support for JUnit 4 is still present
 but will eventually be deprecated and removed in the future (when JUnit 5 is widespread adopted).
@@ -67,7 +67,7 @@ See more details at the [LambdaRouteBuilder](https://camel.apache.org/manual/lat
 documentation.
 
 
-#### Parameterize routes
+### Parameterize routes
 
 This is one of the biggest new feature which goes by the name [route templates](https://camel.apache.org/manual/latest/route-template.html).
 A route template is a way of parameterizing a route where you specify parameters that are mandatory,
@@ -85,7 +85,7 @@ See more details at the [route templates](https://camel.apache.org/manual/latest
 and in this [little example](https://github.com/apache/camel-examples/tree/master/examples/camel-example-routetemplate).
 
 
-#### Optimized components startup
+### Optimized components startup
 
 The camel core has been optimized in Camel 3 to be small, slim and fast on startup. This benefits Camel Quarkus which
 can do built time optimizations that take advantage of the optimized camel core.
@@ -95,7 +95,7 @@ to an earlier phase during startup, that allows enhanced built time optimization
 components then this work will progress over the next couple of Camel releases. 
 
 
-#### Even more reflection free
+### Even more reflection free
 
 We continued to remove usage of reflection in Camel and this time we discovered that were some parts
 of API components that could still use reflection. This has now been improved so they are using source code
@@ -104,7 +104,7 @@ generated _configurers_ to configure themselves which means its all just regular
 There were also a few spots in Rest DSL which wasn't reflection free either, this has been corrected.
 
 
-#### Enhanced properties binding
+### Enhanced properties binding
 
 We have also enhanced the _configurers_ to include details about what value types collections contain (eg Map, List, arrays).
 
@@ -151,12 +151,12 @@ or the good old XML routes.
 The Camel Kafka Connector project is using property binding in its configuration and therefore is a heavy user of this.
 
 
-#### FluentProducerTemplate thread-safety
+### FluentProducerTemplate thread-safety
 
 The fluent `ProducerTemplate` had an issue where it may not be thread-safe. This has been corrected.
 
 
-#### New components
+### New components
 
 There are 8 new components:
 
@@ -170,7 +170,7 @@ There are 8 new components:
 - Vert.x WebSocket: Camel WebSocket support with Vert.x
 
 
-#### Camel-Kafka-connector
+### Camel-Kafka-connector
 
 The next Camel-Kafka-connector 0.5.0 (not LTS) will be based on Camel 3.5.0.
 The project will leverage all the new shiny improvements done on the Property Binding.
@@ -178,7 +178,7 @@ With 3.5.0 Camel-Kafka-connector will also get a bunch of new connectors for fre
 So stay tuned for the next non-LTS release.
 
 
-### Upgrading
+## Upgrading
 
 Make sure to read the [upgrade guide](https://camel.apache.org/manual/latest/camel-3x-upgrade-guide-3_5.html) if you
 are upgrading to this release from a previous Camel version. 
