@@ -49,7 +49,7 @@ for an example, or the Camel 3.5 [upgrade guide](https://camel.apache.org/manual
 We have added a new `LambdaRouteBuilder` which allows to easily define a Camel route using Java lambda style:
 
     rb -> rb.from("timer:foo").log("Hello Lambda");
-        
+
 For example users with Spring Boot or Quarkus may want to use dependency injection style to define
 beans and configurations; and now also Camel routes via lambda styles:
 
@@ -158,11 +158,11 @@ The fluent `ProducerTemplate` had an issue where it may not be thread-safe. This
 
 #### New components
 
-There are a 8 new components:
+There are 8 new components:
 
 - ArangoDB: Perform operations on ArangoDb when used as a Document Database, or as a Graph Database
 - AWS2-STS: Manage AWS STS cluster instances using AWS SDK version 2.x.
-- Azure Eventhubs: The azure-eventhubs component that integrates Azure Event Hubs using AMQP protocol. Azure EventHubs is a highly scalable publish-subscribe service that can ingest millions of events per second and stream them to multiple consumers.
+- Azure Eventhubs: The azure-eventhubs component which integrates Azure Event Hubs using AMQP protocol. 
 - JSonata: JSON to JSON transformation using JSONATA.
 - Minio: Store and retrieve objects from Minio Storage Service using Minio SDK.
 - OAI-PMH: Harvest metadata using OAI-PMH protocol
@@ -172,8 +172,10 @@ There are a 8 new components:
 
 #### Camel-Kafka-connector
 
-The next Camel-Kafka-connector 0.5.0 (not LTS) will be based on Camel 3.5.0. The project will leverage all the new shiny improvements done on the Property Binding.
-With 3.5.0 Camel-Kafka-connector will also get a bunch of new connectors for free and this is super cool. So stay tuned for the next non-LTS release.
+The next Camel-Kafka-connector 0.5.0 (not LTS) will be based on Camel 3.5.0.
+The project will leverage all the new shiny improvements done on the Property Binding.
+With 3.5.0 Camel-Kafka-connector will also get a bunch of new connectors for free and this is super cool.
+So stay tuned for the next non-LTS release.
 
 
 ### Upgrading
