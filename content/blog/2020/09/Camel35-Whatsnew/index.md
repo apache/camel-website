@@ -117,7 +117,7 @@ For example given the below configuration:
     camel.beans.foo.countries[de].name = Germany
     camel.beans.foo.countries[de].language = DE
 
-Then the `foo` bean has a property named `country` that is a `java.util.Map` type.
+Then the `foo` bean has a property named `countries` that is a `java.util.Map` type.
 The Map contains element of type `com.foo.MyCountry` that has been explicit configured above.
 
 However Camel is now capable to know this information by source code generated _configuers_:
