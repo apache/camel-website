@@ -120,7 +120,7 @@ For example given the below configuration:
 Then the `foo` bean has a property named `countries` that is a `java.util.Map` type.
 The Map contains element of type `com.foo.MyCountry` that has been explicit configured above.
 
-However Camel is now capable to know this information by source code generated _configuers_:
+However Camel is now capable to know this information by source code generated _configurers_:
 
         @Configurer
         public class Foo
@@ -133,7 +133,7 @@ However Camel is now capable to know this information by source code generated _
 The `Foo` class has been annotated with `@Configurer` which allows Camel tooling to generate reflection free configurers source code.
 This is what Camel internally uses to do its vast configuration of all its EIPs, components and so on. Now we have exposed
 this for end users. Notice how the Map contains the collection type as a generic type with `Map<String, Country>`. That information
-is now generated in the configuers, so Camel knows the value types in the collections. The configuration can therefore be shortened to:
+is now generated in the configurers, so Camel knows the value types in the collections. The configuration can therefore be shortened to:
 
     camel.beans.foo.countries[usa].name = United States of America
     camel.beans.foo.countries[usa].language = EN
