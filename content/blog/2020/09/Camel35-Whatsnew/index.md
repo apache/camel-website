@@ -125,14 +125,14 @@ However Camel is now capable to know this information by source code generated _
         @Configurer
         public class Foo
 
-            private Map<Country> countries;
+            private Map<String, Country> countries;
 
             // getter/setter omitted
         }
 
 The `Foo` class has been annotated with `@Configurer` which allows Camel tooling to generate reflection free configurers source code.
 This is what Camel internally uses to do its vast configuration of all its EIPs, components and so on. Now we have exposed
-this for end users. Notice how the Map contains the collection type as a generic type with `Map<Country>`. That information
+this for end users. Notice how the Map contains the collection type as a generic type with `Map<String, Country>`. That information
 is now generated in the configurers, so Camel knows the value types in the collections. The configuration can therefore be shortened to:
 
     camel.beans.foo.countries[usa].name = United States of America
