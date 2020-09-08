@@ -4,6 +4,7 @@ title: "Articles"
 
 ## Camel Videos
 
+*   [Serverless Integration on Kubernetes with Apache Camel K | KubeCon EU 2020](https://www.youtube.com/watch?v=beJOCndVfaU) - 35 min presentation from August 2020 by Nicola Ferraro presenting Camel K on Kubernetes with Knative at KubeCon conference.
 *   [Camel 3 : Integration in the Kubernetes and Serverless era | BarcelonaJUG](https://www.crowdcast.io/e/camel-3--integration-in/1) - 90 min webinar from July 2020, by Claus and Andrea giving overview of Camel 3, and focusing on the most exicing innovations with CamelK, Camel Quarkus and Camel Kafka Connector with live demos, and QA at the end.
 *   [Event-driven serverless applications with Camel K | DevNation Tech Talk](https://www.youtube.com/watch?v=hlUzLC71nAM) - 40 min video from July 2020, by Luca and Nicola presenting Camel K and how Camel fits in the event driven & serverless world with a live demo that shows this all together. 
 *   [What’s new with Apache Camel 3? | DevNation Tech Talk](https://www.youtube.com/watch?v=HS8fPyCkgyU) - 35 min video from June 2020, by Claus and Andrea giving an overview of Camel 3, and focusing on the most exicing innovations with CamelK, Camel Quarkus and Camel Kafka Connector with 3 live demos.
