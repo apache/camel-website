@@ -8,7 +8,7 @@ If you are experiencing problems using Camel then please report your problem to 
 If indeed a bug has been identified in the Camel software, then document the problem in our [Issue Tracker](https://issues.apache.org/jira/browse/CAMEL).
 Please refrain from immediately opening a ticket in the issue tracker unless you are certain it's a problem in the Camel software.
 
-If you are in doubt, we appreciate asking the [mailing list](/community/mailing-list/) or [Gitter](https://gitter.im/apache/apache-camel) chat first.
+If you are in doubt, we appreciate asking the [mailing list](/community/mailing-list/) or [Zulip](https://camel.zulipchat.com) chat first.
 
 Please read the section below (How to get help), and follow the bullets advised there first:
 
@@ -17,7 +17,7 @@ Please read the section below (How to get help), and follow the bullets advised 
 
 ### Reporting bugs - Please read this first
 
-We prefer people to get in touch first using the mailing list, or Gitter chat. Or take time to read FAQs, or search in the mailing list archives to find answers.
+We prefer people to get in touch first using the mailing list, or Zulip chat. Or take time to read FAQs, or search in the mailing list archives to find answers.
 Unfortunately some people create a JIRA ticket as first thing. Please don't do that! Only if you are sure it really is a bug etc. JIRA tickets create noise
 for the Camel team to react on issues that are not bugs. But already covered in FAQs, in the mailing lists etc. Or in the existing documentation.
 Also on the mailing lists there is more people active to help you better.
