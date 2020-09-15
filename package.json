@@ -2,7 +2,7 @@
   "version": "1.0.0-SNAPSHOT",
   "license": "Apache-2.0",
   "scripts": {
-    "build:antora": "antora --clean --fetch antora-playbook.yml",
+    "build:antora": "antora --clean --fetch antora-playbook.yml --stacktrace",
     "build:hugo": "hugo --cacheDir ${HUGO_CACHE_DIR:-$(pwd)/.hugo_data}",
     "build:minify": "gulp minify",
     "build:sitemap": "gulp sitemap",
@@ -24,7 +24,7 @@
     "@antora/playbook-builder": "2.3.0",
     "@antora/site-generator-default": "2.3.0",
     "@antora/xref-validator": "gitlab:antora/xref-validator",
-    "@djencks/asciidoctor-antora-indexer": "^0.0.3",
+    "@djencks/asciidoctor-antora-indexer": "^0.0.5",
     "escape-string-regexp": "~2.0",
     "gulp": "~4.0",
     "gulp-cheerio": "^1.0.0",
