@@ -13,9 +13,6 @@ content:
         - docs/user-manual
         # eip
         - core/camel-core-engine/src/main/docs
-        # languages
-        - core/camel-core-languages/src/main/docs
-        - core/camel-xml-jaxp/src/main/docs
         # main components doc
         - docs/components
         
