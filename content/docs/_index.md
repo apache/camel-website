@@ -13,7 +13,7 @@ Title: "Documentation"
 {{< div "list" >}}
 {{< div "links" >}}
 
-[![Examples](/_/img/examples.svg)](https://github.com/apache/camel-examples/) 
+[![Examples](/_/img/examples.svg)](https://github.com/apache/camel-examples/)
 
 {{< div "partition" >}}{{< /div >}}
 
@@ -23,16 +23,16 @@ Title: "Documentation"
 
 {{< div "links" >}}
 
-[![Sources](/_/img/github.svg)](https://github.com/apache/camel/) 
+[![Sources](/_/img/github.svg)](https://github.com/apache/camel/)
 {{< div "partition" >}}{{< /div >}}
 
 [Source](https://github.com/apache/camel/)
 
-{{< /div >}} 
+{{< /div >}}
 
 {{< div "links" >}}
 
-[![Documentation](/_/img/docs.svg)](https://www.javadoc.io/doc/org.apache.camel/camel-api/latest/index.html) 
+[![Documentation](/_/img/docs.svg)](https://www.javadoc.io/doc/org.apache.camel/camel-api/latest/index.html)
 
 {{< div "partition" >}}{{< /div >}}
 
@@ -52,13 +52,13 @@ Title: "Documentation"
 
 {{< div "description" >}}
 
-The [User Manual](/manual/latest/) is a comprehensive guide meant to help you with the key concepts of Apache Camel and software integration, from how to [begin contributing](/manual/latest/contributing.html) to Apache Camel, how to [upgrade to Camel 3.x](/manual/latest/camel-3x-upgrade-guide.html), to [architecture](/manual/latest/architecture.html) or [integration patterns](/components/latest/eips/enterprise-integration-patterns.html). 
+The [User Manual](/manual/latest/) is a comprehensive guide meant to help you with the key concepts of Apache Camel and software integration, from how to [begin contributing](/manual/latest/contributing.html) to Apache Camel, how to [upgrade to Camel 3.x](/manual/latest/camel-3x-upgrade-guide.html), to [architecture](/manual/latest/architecture.html) or [integration patterns](/components/latest/eips/enterprise-integration-patterns.html).
 
 {{< /div >}}
 
 {{< div "links" >}}
 
-[![Documentation](/_/img/docs.svg)](/manual/latest/) 
+[![Documentation](/_/img/docs.svg)](/manual/latest/)
 
 {{< div "partition" >}}{{< /div >}}
 
@@ -81,7 +81,7 @@ Camel is packed with several hundred components that are used to access database
 
 {{< div "links" >}}
 
-[![Documentation](/_/img/docs.svg)](/components/latest/) 
+[![Documentation](/_/img/docs.svg)](/components/latest/)
 
 {{< div "partition" >}}{{< /div >}}
 
@@ -93,7 +93,7 @@ Camel is packed with several hundred components that are used to access database
 
 {{< /div >}}
 
-{{< /div >}}    
+{{< /div >}}
 
 {{< div "section" >}}
 
@@ -103,14 +103,14 @@ Camel is packed with several hundred components that are used to access database
 
 {{< div "description" >}}
 
-Apache Camel K is a lightweight integration framework built on Apache Camel that runs natively on [Kubernetes](https://kubernetes.io/) and is specifically designed for serverless and micro service architectures. It allows you to run integration code written in Camel DSL on your cloud. 
+Apache Camel K is a lightweight integration framework built on Apache Camel that runs natively on [Kubernetes](https://kubernetes.io/) and is specifically designed for serverless and micro service architectures. It allows you to run integration code written in Camel DSL on your cloud.
 
 {{< /div >}}
 
 {{< div "list" >}}
 {{< div "links" >}}
 
-[![Examples](/_/img/examples.svg)](https://github.com/apache/camel-k-examples) 
+[![Examples](/_/img/examples.svg)](https://github.com/apache/camel-k-examples)
 
 {{< div "partition" >}}{{< /div >}}
 
@@ -120,16 +120,16 @@ Apache Camel K is a lightweight integration framework built on Apache Camel that
 
 {{< div "links" >}}
 
-[![Sources](/_/img/github.svg)](https://github.com/apache/camel-k/) 
+[![Sources](/_/img/github.svg)](https://github.com/apache/camel-k/)
 {{< div "partition" >}}{{< /div >}}
 
 [Source](https://github.com/apache/camel-k/)
 
-{{< /div >}} 
+{{< /div >}}
 
 {{< div "links" >}}
 
-[![Documentation](/_/img/docs.svg)](/camel-k/latest/) 
+[![Documentation](/_/img/docs.svg)](/camel-k/latest/)
 
 {{< div "partition" >}}{{< /div >}}
 
@@ -148,14 +148,14 @@ Apache Camel K is a lightweight integration framework built on Apache Camel that
 
 {{< div "description" >}}
 
-Camel Kafka Connector allows you to use all Camel [components](/components/latest/) as [Kafka Connect](http://kafka.apache.org/documentation/#connect) connectors, which, as a result, expands Kafka Connect compatibility by allowing all Camel components to be used in the Kafka ecosystem. 
+Camel Kafka Connector allows you to use all Camel [components](/components/latest/) as [Kafka Connect](http://kafka.apache.org/documentation/#connect) connectors, which, as a result, expands Kafka Connect compatibility by allowing all Camel components to be used in the Kafka ecosystem.
 
 {{< /div >}}
 
 {{< div "list" >}}
 {{< div "links" >}}
 
-[![Examples](/_/img/examples.svg)](https://github.com/apache/camel-kafka-connector-examples) 
+[![Examples](/_/img/examples.svg)](https://github.com/apache/camel-kafka-connector-examples)
 
 {{< div "partition" >}}{{< /div >}}
 
@@ -165,16 +165,16 @@ Camel Kafka Connector allows you to use all Camel [components](/components/lates
 
 {{< div "links" >}}
 
-[![Sources](/_/img/github.svg)](https://github.com/apache/camel-kafka-connector/) 
+[![Sources](/_/img/github.svg)](https://github.com/apache/camel-kafka-connector/)
 {{< div "partition" >}}{{< /div >}}
 
 [Source](https://github.com/apache/camel-kafka-connector/)
 
-{{< /div >}} 
+{{< /div >}}
 
 {{< div "links" >}}
 
-[![Documentation](/_/img/docs.svg)](/camel-kafka-connector/latest/) 
+[![Documentation](/_/img/docs.svg)](/camel-kafka-connector/latest/)
 
 {{< div "partition" >}}{{< /div >}}
 
@@ -202,26 +202,26 @@ This project hosts the efforts to port and package the 280+ Camel components as 
 {{< div "list" >}}
 {{< div "links" >}}
 
-[![Examples](/_/img/examples.svg)](https://github.com/apache/camel-quarkus/tree/master/examples) 
+[![Examples](/_/img/examples.svg)](/camel-quarkus/latest/user-guide/examples.html)
 
 {{< div "partition" >}}{{< /div >}}
 
-[Examples](https://github.com/apache/camel-quarkus/tree/master/examples)
+[Examples](/camel-quarkus/latest/user-guide/examples.html)
 
 {{< /div >}}
 
 {{< div "links" >}}
 
-[![Sources](/_/img/github.svg)](https://github.com/apache/camel-quarkus/) 
+[![Sources](/_/img/github.svg)](https://github.com/apache/camel-quarkus/)
 {{< div "partition" >}}{{< /div >}}
 
 [Source](https://github.com/apache/camel-quarkus/)
 
-{{< /div >}} 
+{{< /div >}}
 
 {{< div "links" >}}
 
-[![Documentation](/_/img/docs.svg)](/camel-quarkus/latest/) 
+[![Documentation](/_/img/docs.svg)](/camel-quarkus/latest/)
 
 {{< div "partition" >}}{{< /div >}}
 
@@ -248,7 +248,7 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 {{< div "list" >}}
 {{< div "links" >}}
 
-[![Examples](/_/img/examples.svg)](https://github.com/apache/camel-spring-boot-examples) 
+[![Examples](/_/img/examples.svg)](https://github.com/apache/camel-spring-boot-examples)
 
 {{< div "partition" >}}{{< /div >}}
 
@@ -258,16 +258,16 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 
 {{< div "links" >}}
 
-[![Sources](/_/img/github.svg)](https://github.com/apache/camel-spring-boot) 
+[![Sources](/_/img/github.svg)](https://github.com/apache/camel-spring-boot)
 {{< div "partition" >}}{{< /div >}}
 
 [Source](https://github.com/apache/camel-spring-boot)
 
-{{< /div >}} 
+{{< /div >}}
 
 {{< div "links" >}}
 
-[![Documentation](/_/img/docs.svg)](/camel-spring-boot/latest/) 
+[![Documentation](/_/img/docs.svg)](/camel-spring-boot/latest/)
 
 {{< div "partition" >}}{{< /div >}}
 
@@ -295,7 +295,7 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 {{< div "list" >}}
 {{< div "links" >}}
 
-[![Examples](/_/img/examples.svg)](https://github.com/apache/camel-karaf-examples) 
+[![Examples](/_/img/examples.svg)](https://github.com/apache/camel-karaf-examples)
 
 {{< div "partition" >}}{{< /div >}}
 
@@ -305,16 +305,16 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 
 {{< div "links" >}}
 
-[![Sources](/_/img/github.svg)](https://github.com/apache/camel-karaf) 
+[![Sources](/_/img/github.svg)](https://github.com/apache/camel-karaf)
 {{< div "partition" >}}{{< /div >}}
 
 [Source](https://github.com/apache/camel-karaf)
 
-{{< /div >}} 
+{{< /div >}}
 
 {{< div "links" >}}
 
-[![Documentation](/_/img/docs.svg)](/camel-karaf/latest/) 
+[![Documentation](/_/img/docs.svg)](/camel-karaf/latest/)
 
 {{< div "partition" >}}{{< /div >}}
 
