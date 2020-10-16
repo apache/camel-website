@@ -103,27 +103,27 @@ The request syntax for adding a target to a rule is the following
 {
    "EventBusName": "string",
    "Rule": "string",
-   "Targets": [ 
-      { 
+   "Targets": [
+      {
          "Arn": "string",
-         "BatchParameters": { 
-            "ArrayProperties": { 
+         "BatchParameters": {
+            "ArrayProperties": {
                "Size": number
             },
             "JobDefinition": "string",
             "JobName": "string",
-            "RetryStrategy": { 
+            "RetryStrategy": {
                "Attempts": number
             }
          },
-         "DeadLetterConfig": { 
+         "DeadLetterConfig": {
             "Arn": "string"
          },
-         "EcsParameters": { 
+         "EcsParameters": {
             "Group": "string",
             "LaunchType": "string",
-            "NetworkConfiguration": { 
-               "awsvpcConfiguration": { 
+            "NetworkConfiguration": {
+               "awsvpcConfiguration": {
                   "AssignPublicIp": "string",
                   "SecurityGroups": [ "string" ],
                   "Subnets": [ "string" ]
@@ -133,28 +133,28 @@ The request syntax for adding a target to a rule is the following
             "TaskCount": number,
             "TaskDefinitionArn": "string"
          },
-         "HttpParameters": { 
-            "HeaderParameters": { 
-               "string" : "string" 
+         "HttpParameters": {
+            "HeaderParameters": {
+               "string" : "string"
             },
             "PathParameterValues": [ "string" ],
-            "QueryStringParameters": { 
-               "string" : "string" 
+            "QueryStringParameters": {
+               "string" : "string"
             }
          },
          "Id": "string",
          "Input": "string",
          "InputPath": "string",
-         "InputTransformer": { 
-            "InputPathsMap": { 
-               "string" : "string" 
+         "InputTransformer": {
+            "InputPathsMap": {
+               "string" : "string"
             },
             "InputTemplate": "string"
          },
-         "KinesisParameters": { 
+         "KinesisParameters": {
             "PartitionKeyPath": "string"
          },
-         "RedshiftDataParameters": { 
+         "RedshiftDataParameters": {
             "Database": "string",
             "DbUser": "string",
             "SecretManagerArn": "string",
@@ -162,20 +162,20 @@ The request syntax for adding a target to a rule is the following
             "StatementName": "string",
             "WithEvent": boolean
          },
-         "RetryPolicy": { 
+         "RetryPolicy": {
             "MaximumEventAgeInSeconds": number,
             "MaximumRetryAttempts": number
          },
          "RoleArn": "string",
-         "RunCommandParameters": { 
-            "RunCommandTargets": [ 
-               { 
+         "RunCommandParameters": {
+            "RunCommandTargets": [
+               {
                   "Key": "string",
                   "Values": [ "string" ]
                }
             ]
          },
-         "SqsParameters": { 
+         "SqsParameters": {
             "MessageGroupId": "string"
          }
       }
@@ -220,7 +220,7 @@ public class MyRouteBuilder extends EndpointRouteBuilder {
 }
 ```
 
-In this route we are creating a single rule, called s3-events-rule, by using an eventpattern.json file. The target of this rule is the `arn:aws:sqs:eu-west-1:780410022477:camel-connector-test` and 
+In this route we are creating a single rule, called s3-events-rule, by using an eventpattern.json file. The target of this rule is the `arn:aws:sqs:eu-west-1:780410022477:camel-connector-test` and
 the target Id is `sqs-queue`. This means we are pointing an SQS queue called camel-connector-test.
 All of this will be done on the default event bus, which is the AWS event bus.
 
