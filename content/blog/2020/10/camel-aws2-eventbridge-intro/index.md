@@ -1,6 +1,6 @@
 ---
 title: "Introducing Camel-AWS2-Eventbridge component"
-date: 2020-10-12
+date: 2020-10-17
 authors: ["oscerd"]
 categories: ["Camel"]
 preview: "Camel-AWS2 Eventbridge introduction"
