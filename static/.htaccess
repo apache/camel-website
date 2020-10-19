@@ -1272,6 +1272,7 @@ Redirect 301 /blog/release-3-2-0.html /blog/2020/04/RELEASE-3.2.0/
 Redirect 301 /blog/Camel33-Whatsnew/ /blog/2020/05/Camel33-Whatsnew/
 Redirect 301 /blog/CdcWithCamelAndDebezium/ /blog/2020/05/CdcWithCamelAndDebezium/
 Redirect 301 /blog/release-3-3-0.html /blog/2020/05/RELEASE-3.3.0/
+Redirect 301 /blog/release-3-4-0.html /blog/2020/06/RELEASE-3.4.0/
 
 # Disable the pattern matching based on filenames.
 #

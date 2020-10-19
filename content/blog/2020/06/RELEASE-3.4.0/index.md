@@ -1,6 +1,5 @@
 ---
 title: "RELEASE 3.4.0"
-url: /blog/release-3-4-0.html
 date: 2020-06-18
 draft: false
 authors: [gzurowski]
