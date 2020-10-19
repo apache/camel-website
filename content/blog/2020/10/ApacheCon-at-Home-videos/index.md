@@ -33,19 +33,19 @@ by [Andrea Cosentino](https://twitter.com/oscerd2) and
 
 [Slides](Cosentino_Andrea,_Ibsen_Claus_Whats_new_with_Apache_Camel_3.pdf)
 
-{{< youtube MBTtRE_n5Ng >}}
+{{< youtube id="MBTtRE_n5Ng" class="video" >}}
 
 ### Making Enterprise Integration Patterns Work for You
 
 by [Justin Reock](https://twitter.com/jreock)
 
-{{< youtube reiIjLWaFg8 >}}
+{{< youtube id="reiIjLWaFg8" class="video" >}}
 
 ### Getting started with Apache Camel on Quarkus
 
 by [Alexandre Gallice](https://twitter.com/AlexGallice)
 
-{{< youtube POWsZnGhVHM >}}
+{{< youtube id="POWsZnGhVHM" class="video" >}}
 
 ### Build and Deploy Cloud Native Camel Quarkus Routes With Tekton and Knative
 
@@ -53,7 +53,7 @@ by [Omar Al-Safi](https://twitter.com/omarsmak)
 
 [Slides](Omar_Al-Safi_Build_and_Deploy_Cloud_Native_Camel_Quarkus_Routes_With_Tekton_and_Knative.pptx)
 
-{{< youtube k8OFq6CnySE >}}
+{{< youtube id="k8OFq6CnySE" class="video" >}}
 
 ### Camel Kafka Connectors: when Camel meets Kafka
 
@@ -62,13 +62,13 @@ Guerrero](https://twitter.com/hguerreroo)
 
 [Slides](Tarocchi_Andrea,_Guerrero_Hugo_Camel_Kafka_Connectors_-_when_Camel_meets_Kafka.pdf)
 
-{{< youtube 0THM_HFFWTI >}}
+{{< youtube id="0THM_HFFWTI" class="video" >}}
 
 ### Integrating Postgres with Apache Camel and ActiveMQ
 
 by [Justin Reock](https://twitter.com/jreock)
 
-{{< youtube QZdktRXet2k >}}
+{{< youtube id="QZdktRXet2k" class="video" >}}
 
 ### Camel API Gateway
 
@@ -76,7 +76,7 @@ by [Rodrigo Coelho](https://twitter.com/rcoelho)
 
 [Slides](Rodrigo_Coelho_Open_Source_light_API_Gateway_built_with_Apache_Camel.pptx)
 
-{{< youtube sEKCI8IBCfc >}}
+{{< youtube id="sEKCI8IBCfc" class="video" >}}
 
 ### How to contribute textual tooling for Apache Camel in several IDEs
 
@@ -84,13 +84,13 @@ by [Aurélien Pupier](https://twitter.com/apupier)
 
 [Slides](Pupier_Aurélien_How_to_contribute_textual_tooling_for_Apache_Camel_in_several_IDEs.pdf)
 
-{{< youtube gL3GIzPT36Y >}}
+{{< youtube id="gL3GIzPT36Y" class="video" >}}
 
 ### Serverless Integration Anatomy
 
 by [Christina Lin](https://twitter.com/Christina_wm)
 
-{{< youtube etSwmRP8-Eo >}}
+{{< youtube id="etSwmRP8-Eo" class="video" >}}
 
 ### Testing Camel K integrations with Cloud Native BDD
 
@@ -98,7 +98,7 @@ by [Christoph Deppisch](https://twitter.com/freaky_styley)
 
 [Slides](Deppisch_Christoph_Testing_CamelK_with_Cloud_Native_BDD.pdf)
 
-{{< youtube aYLLtj6TdjM >}}
+{{< youtube id="aYLLtj6TdjM" class="video" >}}
 
 ### "Cloud Native" My Camel
 
@@ -106,13 +106,13 @@ by [Michael Costello](https://mike-costello.github.io/) and [David Gordon](https
 
 [Slides](Costello_Michael_CloudNativeMyCamel.1.00.001.pdf)
 
-{{< youtube HEB8TMmsEDg >}}
+{{< youtube id="HEB8TMmsEDg" class="video" >}}
 
 ### Software Architecture and Architectors: useless VS valuable
 
 by [Andrei Shakirin](https://twitter.com/ashakirin)
 
-{{< youtube SI1WqGST1SI >}}
+{{< youtube id="SI1WqGST1SI" class="video" >}}
 
 ## Panel and lightning talks
 
@@ -128,7 +128,7 @@ Panelists: [Omar Al-Safi](https://twitter.com/omarsmak),
 
 Moderated by [María Arias de Reyna](https://twitter.com/delawen/)
 
-{{< youtube 6EQy1kw03Ig >}}
+{{< youtube id="6EQy1kw03Ig" class="video" >}}
 
 ### Lightning talks
 
@@ -163,4 +163,4 @@ link](https://www.atlasmap.io/)
 **Camel from an outsider: Insights on the way to adoption**, [Jose Raez
 Rodriguez](https://twitter.com/JoshiRaez)
 
-{{< youtube Y40ebvXbQmU >}}
+{{< youtube id="Y40ebvXbQmU" class="video" >}}

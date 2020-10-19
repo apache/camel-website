@@ -1546,7 +1546,7 @@ AddDefaultCharset utf-8
 
 <IfModule mod_headers.c>
     #                                   (1)                 (2)              (3)                 (4)                     (5)
-    Header set Content-Security-Policy "default-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests; connect-src https://*.algolia.net https://*.algolianet.com; img-src 'self' https://*.githubusercontent.com" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
+    Header set Content-Security-Policy "default-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests; connect-src https://*.algolia.net https://*.algolianet.com; img-src 'self' https://*.githubusercontent.com; child-src https://www.youtube-nocookie.com" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
 </IfModule>
 
 # ----------------------------------------------------------------------
@@ -2110,4 +2110,3 @@ FileETag None
     ExpiresByType text/x-cross-domain-policy            "access plus 1 week"
 
 </IfModule>
-
