@@ -3,7 +3,7 @@ title: "Recordings from ApacheCon @Home 2020"
 date: 2020-10-19T11:27:14+02:00
 draft: false
 authors: ["zregvart"]
-categories: ["events"]
+categories: ["Events"]
 preview: "If you missed some of the talks on the Camel/Integration or would like to revisit your favorites, video recordings from ApacheCon @Home 2020 are now available on The Apache Software Foundation YouTube channel."
 ---
 
