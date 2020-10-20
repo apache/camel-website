@@ -105,10 +105,10 @@ to use runtime compile Java in the Camel DSL. A compiled simple language is also
 
 ### Optimized components startup
 
-The camel core has been optimized in Camel 3 to be small, slim and fast on startup. This benefits Camel Quarkus which
+The camel core has been optimized in Camel 3 to be small, slim, and fast on startup. This benefits Camel Quarkus which
 can do built time optimizations that take advantage of the optimized camel core.
 
-We have continued this effort in the Camel components where whenever possible works is moved ahead
+We have continued this effort in the Camel components where whenever possible initialization is moved ahead
 to an earlier phase during startup, that allows enhanced built time optimizations. As there are a lot of Camel
 components then this work will progress over the next couple of Camel releases.
 
