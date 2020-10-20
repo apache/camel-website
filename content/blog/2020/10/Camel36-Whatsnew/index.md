@@ -127,3 +127,9 @@ in the [blog announcement](https://camel.apache.org/blog/2020/10/camel-aws2-even
 
 Make sure to read the [upgrade guide](https://camel.apache.org/manual/latest/camel-3x-upgrade-guide-3_6.html) if you
 are upgrading to this release from a previous Camel version.
+
+
+## Release Notes
+
+You can find more information about this release in the [release notes](https://camel.apache.org/releases/release-3.6.0/),
+with a list of JIRA tickets resolved in the release.
