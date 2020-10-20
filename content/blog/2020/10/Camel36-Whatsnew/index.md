@@ -25,9 +25,9 @@ Support for Spring Boot 2.4 is planned for Camel 3.7.
 
 ### Optimizations
 
-To speedup startup we switched to a new uuid generator. The old (classic) generator was inherited from Apache ActiveMQ which needed to ensure its ids were unique in a network of brokers, and therefore to ensure this the generator was using the hostname as prefix in the id. This required on startup to do a network access to obtain this information which costs a little time. Also depending on networks this can be more restrictive and delay the startup. The new generator is a pure in-memory fast generator that was used by Camel K and Camel Quarkus.
+To speed up the startup we switched to a new UUID generator. The old (classic) generator was inherited from Apache ActiveMQ which needed to ensure its ids were unique in a network of brokers, and therefore to ensure this the generator was using the hostname as the prefix in the id. This required on startup to do network access to obtain this information which costs a little time. Also depending on networks this can be more restrictive and delay the startup. The new generator is a pure in-memory fast generator that was used by Camel K and Camel Quarkus.
 
-We also identified a few other spots during route initialization. For example one small change was to avoid doing some regular expression masking on route endpoints which wasn't necessary anymore.
+We also identified a few other spots during route initialization. For example, one small change was to avoid doing some regular expression masking on route endpoints which weren't necessary anymore.
 
 Now the bigger improvements are in the following areas
 
@@ -37,13 +37,13 @@ We identified on spring runtimes that Camel would query the spring bean registry
 
 #### Singleton languages
 
-Another related problem is that in Camel 3 due to the modularization then some of the languages (bean, simple, and others) have been changed from being a singleton to prototype scoped. This is in fact one of the biggest problems and we had a Camel user report a problem with thread contention in a high concurrent use-case would race for resolving languages (they are prototype scoped). So you would have this problem, and because the language resolver would query the registry first then Spring would throw that no such bean exception, and then Camel would resolve the language via its own classpath resolver. So all together this cost performance. We can see this in the screenshots from the profiler in the following.
+Another related problem is that in Camel 3 due to the modularization then some of the languages (bean, simple, and others) have been changed from being a singleton to prototype scoped. This is one of the biggest problems and we had a Camel user report a problem with thread contention in a high concurrent use-case would race for resolving languages (they are prototype scoped). So you would have this problem, and because the language resolver would query the registry first then Spring would throw `NoSuchBeanDefinitionException`, and then Camel would resolve the language via its own classpath resolver. So all together this cost performance. We can see this in the screenshots from the profiler in the following.
 
 {{< image "350-blocked.png" "Camel 3.5 Blocked Threads" >}}
 
 {{< image "360-blocked.png" "Camel 3.6 Blocked Threads" >}}
 
-The top screenshot is using Camel 3.5 and the bottom 3.6. In the top we can see the threads are blocked in Camels resolveLanguage method. And in 3.6 then its actually the log4j logger that is blocking for writing to the log file. Both applications are using the same Camel application and have been running for about 8 minutes.
+The top screenshot is using Camel 3.5 and the bottom 3.6. At the top, we can see the threads are blocked in Camel's `resolveLanguage` method. And in 3.6 then it's the log4j logger that is blocking for writing to the log file. Both applications are using the same Camel application and have been running for about 8 minutes.
 
 #### Reduce object allocations
 
@@ -66,7 +66,7 @@ Another performance improvement that aids during runtime was that we moved as mu
 
 We also improved the simple language to be a bit smarter in its binary operators (such as header.foo > 100). Now the simple language has stronger types for numeric and boolean types during its parsing, which allows us to know better from the right and left hand side of the binary operator to do type coercion so the types are comparable by the JVM. Before we may end up with falling back to converting to string types on both sides. And there is more to come, I have some ideas how to work on a compiled simple language.
 
-The screenshots below shows a chart with the CPU, object allocations and thrown exceptions.
+The screenshots below show a chart with the CPU, object allocations, and thrown exceptions.
 
 {{< image "350-performance.png" "Camel 3.5 Performance Charts" >}}
 
@@ -75,17 +75,16 @@ The screenshots below shows a chart with the CPU, object allocations and thrown 
 
 As we can see this summarise what was mentioned was done to optimize. The number of exceptions has been reduced to 0 at runtime. There is about 3500 thrown during bootstrap (that is Java JAXB which is used for loading the spring XML file with the Camel routes used for the sample application). We do have a fast XML loader in Camel that is not using JAXB.
 
-Another improvement we did was to build a source code generator for a new UriFactory which allows each component to quickly build dynamic endpoint URIs from a Map of parameters. The previous solution was to use RuntimeCamelCatalog that was more generic and required loading component metadata from json descriptor files. A few components use this to optimize the toD (such as http components). By this change we avoid the runtime catalog as dependency (reduce JAR size) and the source code generated uri factory is much faster (its speedy plain Java). However the sample application used for this blog did not use toD nor the UriFactory.
+Another improvement we did was to build a source code generator for a new `UriFactory` which allows each component to quickly build dynamic endpoint URIs from a `Map` of parameters. The previous solution was to use `RuntimeCamelCatalog` that was more generic and required loading component metadata from JSON descriptor files. A few components use this to optimize the `toD` (such as HTTP components). By this change, we avoid the runtime catalog as a dependency (reduce JAR size) and the source code generated URI factory is much faster (its speedy plain Java). However, the sample application used for this blog did not use `toD` nor the `UriFactory`.
 
 Source from [external blog post](http://www.davsclaus.com/2020/10/apache-camel-36-more-camel-core.html)
 
 
 ### API Components overhaul
 
-There are a number of API based components which are source code generated from _external API_. We have overhauled
-the code generator which now scrapes and includes documentation and keep the documentation up to date as well.
-In addition we also include additional metadata for Camel tooling so they can provide code assistance when Camel
-end users are using these API based components. Some of those external APIs are huge and you can have hundess of APIs.
+There are several API based components which are source code generated from _external API_. We have overhauled	the code generator which now scrapes and includes documentation and keep the documentation up to date as well.
+  
+Also, we include additional metadata for Camel tooling so they can provide code assistance when Camel end-users are using these API based components. Some of those external APIs are huge and you can have hundreds of APIs.
 
 The API based components are: AS2, Box, Braintree, FHir, Google Calendar/Driver/Mail/Sheets, Olingo, Twillio, and Zendesk.
 
