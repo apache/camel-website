@@ -86,7 +86,7 @@ There are several API based components which are source code generated from _ext
   
 Also, we include additional metadata for Camel tooling so they can provide code assistance when Camel end-users are using these API based components. Some of those external APIs are huge and you can have hundreds of APIs.
 
-The API based components are: AS2, Box, Braintree, FHir, Google Calendar/Driver/Mail/Sheets, Olingo, Twillio, and Zendesk.
+The API based components are: [AS2](https://camel.apache.org/components/latest/as2-component.html), [Box](https://camel.apache.org/components/latest/box-component.html), [Braintree](https://camel.apache.org/components/latest/braintree-component.html), [FHIR](https://camel.apache.org/components/latest/fhir-component.html), Google [Calendar](https://camel.apache.org/components/latest/google-calendar-component.html)/[Drive](https://camel.apache.org/components/latest/google-drive-component.html)/[Mail](https://camel.apache.org/components/latest/google-mail-component.html)/[Sheets](https://camel.apache.org/components/latest/google-sheets-component.html), [Olingo](https://camel.apache.org/components/latest/olingo4-component.html), [Twillio](https://camel.apache.org/components/latest/twilio-component.html), and [Zendesk](https://camel.apache.org/components/latest/zendesk-component.html).
 
 
 ### Reduce reflection
