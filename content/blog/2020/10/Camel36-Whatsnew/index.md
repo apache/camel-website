@@ -19,7 +19,7 @@ This release introduces a set of new features and noticeable improvements that w
 
 ### Spring Boot
 
-We have upgraded to latest release at this time which is Spring Boot 2.3.4.
+We have upgraded to the latest release at this time which is Spring Boot 2.3.4.
 Support for Spring Boot 2.4 is planned for Camel 3.7.
 
 
