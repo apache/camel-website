@@ -8,13 +8,13 @@ preview: Details of what we have done in the Camel 3.6 release.
 
 Apache Camel 3.6 has just been released.
 
-This is a non-LTS release which means we will not provide patch releases, but use the release _as-is_.
-The next planned LTS release is 3.7 scheduled towards end of the year.
+This is a non-LTS release which means we will not provide patch releases but use the release _as-is_.
+The next planned LTS release is 3.7 scheduled towards the end of the year.
 
 
 ## So what's in this release?
 
-This release introduces new set of features and noticeable improvements that will we cover in this blog post.
+This release introduces a set of new features and noticeable improvements that will we cover in this blog post.
 
 
 ### Spring Boot
