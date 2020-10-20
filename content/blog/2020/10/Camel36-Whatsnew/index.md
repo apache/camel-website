@@ -94,7 +94,7 @@ The API based components are: AS2, Box, Braintree, FHir, Google Calendar/Driver/
 Yet another release where we reduced using reflections in a few spots in Camel core and in some of the components.
 
 
-### Pre compile languages
+### Language precompilation
 
 As mentioned in the optimization section we moved initialization of languages to an earlier phase.
 Camel now pre compile languages when its applicable, for example JSonPath, and XPath language.
