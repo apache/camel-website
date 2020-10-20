@@ -14,7 +14,7 @@ The next planned LTS release is 3.7 scheduled towards the end of the year.
 
 ## So what's in this release?
 
-This release introduces a set of new features and noticeable improvements that will we cover in this blog post.
+This release introduces a set of new features and noticeable improvements that we will cover in this blog post.
 
 
 ### Spring Boot
@@ -117,9 +117,9 @@ components then this work will progress over the next couple of Camel releases.
 
 This was a historical slow release in terms of new components. In fact there is only 1 new component:
 
-- AWS2-Eventbridge: Manage AWS Eventbridge cluster instances
+- AWS2-EventBridge: Manage AWS EventBridge cluster instances
 
-You can read more about the new AWS Eventbridge component
+You can read more about the new AWS EventBridge component
 in the [blog announcement](https://camel.apache.org/blog/2020/10/camel-aws2-eventbridge-intro/). 
 
 
