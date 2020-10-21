@@ -232,6 +232,7 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   [Ingesting Filebeat Data Into Your Apache Camel Flow](https://insights.synergistcomputing.com/2018/03/27/ingesting-filebeat-data-into-your-apache-camel-flow/) (June 2018) blog post showing how to use camel-lumberjack to ingest data from Filebeat into your Camel routes.
 *   [Using Jaeger to trace an Apache Camel application](https://medium.com/jaegertracing/using-jaeger-to-trace-an-apache-camel-application-2b8118efbb4d) (August 2018) blog post from Gary Brown showing how to use camel-opentracing and Jaeger to do distributed traces and visualize them in Jaeger UI.
 *   [Quick Integration with Apache Camel and IBM MQ](https://dzone.com/articles/quickly-integrate-apache-camel-and-ibm-mq) article from May 2020 by Chandra Shekhar Pandey showing how to use Apache Camel running on Spring Boot to integrate with IBM MQ and testing it with Docker containers.
+*   [Monitoring Camel applications with nJAMS](https://www.youtube.com/watch?v=n8PGES67e40) 10 min video from October 2020 by Abdelghani Faiz covering how nJAMS monitoring tooling now has Camel plugin to do deep monitoring of Camel applications with route visualziation and message capturing.
 
 ### Camel and Groovy
 
