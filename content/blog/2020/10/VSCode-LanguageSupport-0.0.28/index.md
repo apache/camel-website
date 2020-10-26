@@ -17,31 +17,31 @@ Camel [3.6.0](https://camel.apache.org/blog/2020/10/Camel36-Whatsnew/) catalog i
 Previously, the support for [Camel Kafka Connector](https://camel.apache.org/camel-kafka-connector/latest/index.html) was limited to Camel URI in `camel.(sink|source).url` property value.
 This release focused to provide support to the usage of list of properties for each parameters instead of using a potentially long Camel URI. It relies on the new Camel Kafka Connector Catalog.
 
-## Completion for `connector.class` property value
+#### Completion for `connector.class` property value
 
 There is completion for the `connector.class` property value. The display name of the completion item is the simple class name. The fully qualified name is inserted.
 
 ![Completion for connector.class](completionConnectorClass.gif "Completion for connector.class") 
 
-## Completion and hover for component properties
+#### Completion and hover for component properties
  
 There is completion and hover for `camel.sink.*` and `camel.source.*` property keys based on Camel Kafka Connector Catalog.
   
 ![Completion and hover for component properties](completionAndHoverForCamelSinkSourceProperties.gif "Completion and hover for component properties") 
   
-## Completion for Converters
+#### Completion for Converters
 
 Camel Kafka Connector is providing specific Kafka [key](https://kafka.apache.org/documentation/#key.converter) and [value](https://kafka.apache.org/documentation/#value.converter) Converters for some connectors. In this case, they are proposed for completion as property value of `key.converter` and `value.converter`.
 
 ![Completion for Converters](completionConverter.gif "Completion for Converters") 
   
-## Completion for Transformers
+#### Completion for Transformers
 
 Camel Kafka Connector is providing specific [Kafka Transformers](https://kafka.apache.org/documentation/#connect_transforms) for some connectors. In this case, they are proposed for completion as property value of `transforms.*.type`.
 
 ![Completion for Transformers](completionTransformer.gif "Completion for Transformers") 
 
-## Refactor action to convert Camel URI to list of properties
+#### Refactor action to convert Camel URI to list of properties
 
 When a lot of parameters are required to configure the Camel components, using the Camel URI through the `camel.(sink|source).url` can lead to a very long string which is not easy to read. Camel Kafka Connector allows to use a list of properties instead. A refactor action is available to convert a Camel URI to a list of properties.
 
