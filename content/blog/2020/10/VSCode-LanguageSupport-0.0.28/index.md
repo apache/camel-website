@@ -6,7 +6,7 @@ categories: ["Releases","Tooling"]
 preview: "New release of VS Code Language Support for Apache Camel 0.0.28: Camel 3.6.0, Camel Kafka Connector and Camel K Modeline and outline"
 ---
 
-A new release of [VS Code Language Support for Apache Camel](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-apache-camel) 0.0.28 is available. It is providing an interesting set of new features.
+A new release of [VS Code Language Support for Apache Camel](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-apache-camel) 0.0.28 is available. It includes an interesting set of new features.
 
 # Camel 3.6.0 upgrade
 
@@ -15,7 +15,7 @@ Camel [3.6.0](https://camel.apache.org/blog/2020/10/Camel36-Whatsnew/) catalog i
 # Camel Kafka Connector Properties file improvements
 
 Previously, the support for [Camel Kafka Connector](https://camel.apache.org/camel-kafka-connector/latest/index.html) was limited to Camel URI in `camel.(sink|source).url` property value.
-This release focused to provide support to the usage of list of properties for each parameters instead of using a potentially long Camel URI. It relies on the new Camel Kafka Connector Catalog.
+This release adds support for the list of properties provided for each parameter instead of using a potentially long Camel URI. It relies on the new Camel Kafka Connector Catalog.
 
 #### Completion for `connector.class` property value
 
@@ -31,13 +31,13 @@ There is completion and hover for `camel.sink.*` and `camel.source.*` property k
   
 #### Completion for Converters
 
-Camel Kafka Connector is providing specific Kafka [key](https://kafka.apache.org/documentation/#key.converter) and [value](https://kafka.apache.org/documentation/#value.converter) Converters for some connectors. In this case, they are proposed for completion as property value of `key.converter` and `value.converter`.
+Camel Kafka Connector provides specific Kafka [key](https://kafka.apache.org/documentation/#key.converter) and [value](https://kafka.apache.org/documentation/#value.converter) Converters for some connectors. In this case, they are proposed for completion as property value of `key.converter` and `value.converter`.
 
 ![Completion for Converters](completionConverter.gif "Completion for Converters") 
   
 #### Completion for Transformers
 
-Camel Kafka Connector is providing specific [Kafka Transformers](https://kafka.apache.org/documentation/#connect_transforms) for some connectors. In this case, they are proposed for completion as property value of `transforms.*.type`.
+Camel Kafka Connector provides specific [Kafka Transformers](https://kafka.apache.org/documentation/#connect_transforms) for some connectors. In this case, they are proposed for completion as property value of `transforms.*.type`.
 
 ![Completion for Transformers](completionTransformer.gif "Completion for Transformers") 
 
