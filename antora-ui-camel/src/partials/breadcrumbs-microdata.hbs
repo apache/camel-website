@@ -19,10 +19,10 @@
         "position": 3,
         "name": "{{{page.componentVersion.displayVersion}}}",
         "item": "{{{add site.url page.componentVersion.url}}}"
-        },
+        }
         {{#if page.breadcrumbs}}
         {{#each page.breadcrumbs}}
-        {
+        ,{
         "@type": "ListItem",
         "position": {{add @index 4}},
         "name": "{{{ ./content }}}",
