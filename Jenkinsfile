@@ -40,25 +40,6 @@ pipeline {
     }
 
     stages {
-        stage('Theme') {
-            agent {
-                dockerfile {
-                    dir 'camel-website'
-                    label "$NODE"
-                    reuseNode true
-                    args '-u root'
-                }
-            }
-
-            environment {
-                HOME = "$WORKSPACE"
-            }
-
-            steps {
-                sh "cd $WORKSPACE/camel-website/antora-ui-camel && yarn build"
-            }
-        }
-
         stage('Website') {
             agent {
                 dockerfile {
@@ -74,7 +55,7 @@ pipeline {
             }
 
             steps {
-                sh "cd $WORKSPACE/camel-website && yarn build"
+                sh "cd $WORKSPACE/camel-website && yarn build-all"
             }
         }
 

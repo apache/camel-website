@@ -8,6 +8,7 @@
     "build:minify": "gulp minify",
     "build:sitemap": "gulp sitemap",
     "build": "run-s build:antora build:hugo build:sitemap build:minify",
+    "build-all": "yarn workspaces foreach --topological-dev run build",
     "preview": "run-s preview:antora preview:hugo",
     "preview:antora": "antora --clean --fetch antora-playbook.yml",
     "preview:hugo": "hugo server -D",

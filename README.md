@@ -56,7 +56,7 @@ Make sure that you have Node.js (herein "`Node`") installed.
 
 If this command fails with an error, you do not have Node installed.
 
-This project requires the Node LTS version 10 (e.g., v10.15.3).
+This project requires the Node LTS version 14 (e.g., v14.15.0).
 
 Please make sure to have a suitable version of Node installed. You have several options to install
 Node on your machine.
@@ -67,35 +67,35 @@ Node on your machine.
 - Install using [Homebrew](https://brew.sh/) and [Node formulae](https://formulae.brew.sh/formula/node)
 - Install from official [Node packages](https://nodejs.org/en/download/)
 
-An easy step to step guide to install nvm and install node v10.0.0 on your local system is as follows:
+An easy step to step guide to install nvm and install node v14 on your local system is as follows:
 
     $ touch ~/.bash_profile
-    $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
+    $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.36.0/install.sh | bash
     $ source ~/.nvm/nvm.sh
-    $ nvm install 10.0.0
+    $ nvm install 14
 
 
-Note - If you have different Node version other than Node LTS version 10 you can use following command to make
-Node LTS version 10 as default Node version.
+Note - If you have different Node version other than Node LTS version 14 you can use following command to make
+Node LTS version 14 as default Node version.
 
-    $ nvm use 10.0.0
+    $ nvm use 14
 
 ### Installation of nvm on Windows
 
 Note - The following steps need to be ran on cmd as administrator only.
 
-An easy step to step guide to install nvm and install node v10.0.0 on your local system is as follows:
+An easy step to step guide to install nvm and install node v14 on your local system is as follows:
 
     > choco install nvm
-    > nvm install 10.0.0
+    > nvm install 14
 
-Note - If you have different Node version other than Node LTS version 10 you can use following command to make
-Node LTS version 10 as default Node version.
+Note - If you have different Node version other than Node LTS version 14 you can use following command to make
+Node LTS version 14 as default Node version.
 
-    > nvm use 10.0.0
+    > nvm use 14
 
 
-Now that you have Node 10 installed, you can proceed with checking the Yarn installation.
+Now that you have Node 14 installed, you can proceed with checking the Yarn installation.
 
 #### Yarn
 
@@ -112,20 +112,25 @@ Clone the Apache Camel Website project using git:
 The command above clones the Apache Camel Website project. After that you can switch to the new
 project directory on your filesystem.
 
+## Build the website and Antora theme
+
+We're using yarn [workspaces](https://yarnpkg.com/features/workspaces) to build both the theme and the website run `build-all` script, for example:
+
+    $ yarn build-all
+
+That will build the Antora theme (from antora-ui-camel directory) and the website. Result of the build can be seen in the `public` directory.
+
 ## Build the Antora Camel UI theme
 
-First step is to build the Antora ui theme used for the Apache Camel website. The theme sources are located
-inside [Project root directory/antora-ui-camel](antora-ui-camel). So first switch to that directory:
+The theme sources are located inside [Project root directory/antora-ui-camel](antora-ui-camel). So first switch to that directory:
 
     $ cd antora-ui-camel
 
 In that directory execute:
 
-    $ yarn install # needed only once, or if dependencies change
-    $ yarn format  # to format the code
     $ yarn build   # to perform the ui theme build
 
-You should see the Antora theme bundle generated in in [antora-ui-camel/build/ui-bundle.zip](antora-ui-camel).
+You should see the Antora theme bundle generated in in `antora-ui-camel/build/ui-bundle.zip`.
 
 In case `yarn build` raises error, run `yarn format` to format the code and re-run `yarn build` to build your bundle successfully.
 
@@ -139,7 +144,6 @@ the theme bundle exists in [antora-ui-camel/build/ui-bundle.zip](antora-ui-camel
 
 To build the website go to the project root directory and run:
 
-    $ yarn install # needed only once, or if dependencies change
     $ yarn build   # to perform the build
 
 
