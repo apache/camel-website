@@ -82,7 +82,7 @@ by [Rodrigo Coelho](https://twitter.com/rcoelho)
 
 by [Aurélien Pupier](https://twitter.com/apupier)
 
-[Slides](Pupier_Aurélien_How_to_contribute_textual_tooling_for_Apache_Camel_in_several_IDEs.pdf)
+[Slides](Pupier_Aurelien_How_to_contribute_textual_tooling_for_Apache_Camel_in_several_IDEs.pdf)
 
 {{< youtube id="gL3GIzPT36Y" class="video" >}}
 
