@@ -71,5 +71,10 @@
   },
   "dependencies": {
     "algoliasearch": "^4.0.3"
+  },
+  "dependenciesMeta": {
+    "highlight.js@9.18.1": {
+      "unplugged": true
+    }
   }
 }
