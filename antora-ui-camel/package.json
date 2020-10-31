@@ -3,6 +3,7 @@
   "description": "An archetype project that produces a UI for creating documentation sites with Antora",
   "homepage": "https://github.com/apache/camel-website/",
   "license": "MPL-2.0",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/apache/camel-website.git"
@@ -23,7 +24,7 @@
     "asciidoctor.js": "1.5.9",
     "autoprefixer": "~9.7",
     "browser-pack-flat": "~3.4",
-    "browserify": "~16.5",
+    "browserify": "~17",
     "cssnano": "~4.1",
     "eslint": "~6.8",
     "eslint-config-standard": "~14.1",
@@ -67,12 +68,6 @@
     "undertaker": "~1.2",
     "vinyl-buffer": "~1.0",
     "vinyl-fs": "~3.0"
-  },
-  "resolutions": {
-    "resolve": "~1.9"
-  },
-  "installConfig": {
-    "pnp": true
   },
   "dependencies": {
     "algoliasearch": "^4.0.3"
