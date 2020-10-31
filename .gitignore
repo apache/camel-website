@@ -1,6 +1,5 @@
 node
 target
-node_modules
 public
 documentation
 resources
@@ -10,7 +9,14 @@ resources
 .project
 .classpath
 .metadata
-.pnp
-.pnp.js
 .settings
 .hugo_data
+
+**/.yarn/*
+!**/.yarn/build-state.yml
+!**/.yarn/cache
+!**/.yarn/plugins
+!**/.yarn/releases
+!**/.yarn/sdks
+!**/.yarn/unplugged
+!**/.yarn/versions

@@ -35,7 +35,6 @@ pipeline {
 
     environment {
         ANTORA_CACHE_DIR  = "$WORKSPACE/.antora-cache"
-        YARN_CACHE_FOLDER = "$WORKSPACE/.yarn-cache"
         HUGO_CACHE_DIR    = "$WORKSPACE/.hugo-cache"
         CAMEL_ENV         = 'production'
     }
@@ -56,8 +55,7 @@ pipeline {
             }
 
             steps {
-                sh "cd $WORKSPACE/camel-website/antora-ui-camel && yarn --non-interactive --frozen-lockfile install"
-                sh "cd $WORKSPACE/camel-website/antora-ui-camel && yarn --non-interactive --frozen-lockfile build"
+                sh "cd $WORKSPACE/camel-website/antora-ui-camel && yarn build"
             }
         }
 
@@ -76,8 +74,7 @@ pipeline {
             }
 
             steps {
-                sh "cd $WORKSPACE/camel-website && yarn --non-interactive --frozen-lockfile install"
-                sh "cd $WORKSPACE/camel-website && yarn --non-interactive --frozen-lockfile build"
+                sh "cd $WORKSPACE/camel-website && yarn build"
             }
         }
 
@@ -96,7 +93,7 @@ pipeline {
             }
 
             steps {
-                sh "cd $WORKSPACE/camel-website && yarn --non-interactive --frozen-lockfile checks"
+                sh "cd $WORKSPACE/camel-website && yarn checks"
             }
         }
 
