@@ -1200,6 +1200,9 @@ __metadata:
     undertaker: ~1.2
     vinyl-buffer: ~1.0
     vinyl-fs: ~3.0
+  dependenciesMeta:
+    highlight.js@9.18.1:
+      unplugged: true
   languageName: unknown
   linkType: soft
 
