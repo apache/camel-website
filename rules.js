@@ -26,8 +26,28 @@ class HtmlTitle extends Rule {
   }
 }
 
+class RelativeLinks extends Rule {
+  documentation(context) {
+    return {
+      description: "Within the Camel site we should use only relative links"
+    };
+  }
+
+  setup() {
+    this.on("dom:ready", event => {
+      event.document.querySelectorAll('a').forEach(a => {
+        const href = a.getAttribute("href").value;
+        if (href && href.startsWith("https://camel.apache.org")) {
+          this.report(a, `For links within camel.apache.org use relative links, found: ${href}`);
+        }
+      });
+    });
+  }
+}
+
 module.exports = {
   rules: {
-    "camel/title": HtmlTitle
+    "camel/title": HtmlTitle,
+    "camel/relative-links": RelativeLinks
   }
 };
