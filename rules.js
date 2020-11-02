@@ -42,7 +42,7 @@ class RelativeLinks extends Rule {
       anchors.forEach(a => {
         const href = a.getAttribute("href");
         if (href && href.value.startsWith("https://camel.apache.org")) {
-          this.report(a, `For links within camel.apache.org use relative links, found: ${href}`);
+          this.report(a, `For links within camel.apache.org use relative links, found: ${href.value}`);
         }
       });
     });
