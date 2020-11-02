@@ -92,7 +92,7 @@ pipeline {
                     sh "cp -R $WORKSPACE/camel-website/public/. ."
                     sh 'git add .'
                     sh 'git commit -m "Website updated to $GIT_COMMIT"'
-                    sh 'git push origin asf-site'
+                    sh 'git push --force origin asf-site'
                 }
             }
        }
