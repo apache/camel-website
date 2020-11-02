@@ -13,6 +13,7 @@
     "prefer-tbody": "off",
     "long-title": "off",
     "camel/title": "error",
-    "camel/structured-data": "error"
+    "camel/structured-data": "error",
+    "camel/relative-links": "error"
   }
 }
