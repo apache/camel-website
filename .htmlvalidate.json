@@ -12,7 +12,6 @@
     "element-required-attributes": "off",
     "prefer-tbody": "off",
     "long-title": "off",
-    "camel/title": "error",
-    "camel/relative-links": "error"
+    "camel/title": "error"
   }
 }
