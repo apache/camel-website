@@ -35,7 +35,7 @@ class RelativeLinks extends Rule {
 
   setup() {
     this.on("dom:ready", event => {
-      const anchors = event.document.querySelectorAll('a');
+      const anchors = event.document.getElementsByTagName('a');
       if (anchors === null) {
         return;
       }
