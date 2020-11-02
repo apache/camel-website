@@ -1,4 +1,4 @@
-<div class="toolbar" role="navigation">
+<nav class="toolbar">
 {{> nav-toggle}}
   {{#with site.homeUrl}}
   <a href="{{{relativize this}}}" class="home-link{{#if @root.page.home}} is-current{{/if}}"></a>
@@ -10,4 +10,4 @@
   {{else if (and page.editUrl (or env.FORCE_SHOW_EDIT_PAGE_LINK (not page.origin.private)))}}
   <div class="edit-this-page"><a href="{{page.editUrl}}">Edit this Page</a></div>
   {{/if}}
-</div>
+</nav>
