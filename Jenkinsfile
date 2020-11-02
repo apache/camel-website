@@ -55,7 +55,7 @@ pipeline {
             }
 
             steps {
-                sh "cd $WORKSPACE/camel-website && yarn build-all"
+                sh "cd $WORKSPACE/camel-website && yarn clean; yarn build-all"
             }
         }
 
