@@ -8,9 +8,11 @@ disableKinds = ["taxonomyTerm"]
 enableRobotsTXT = true
 timeout = 300000
 
-[blackfriday]
-    nofollowLinks = true
-    noreferrerLinks = true
+[markup]
+defaultMarkdownHandler = "blackfriday"
+    [markup.blackfriday]
+        nofollowLinks = true
+        noreferrerLinks = true
 
 [params]
     socialProfiles = ["https://twitter.com/ApacheCamel"]
