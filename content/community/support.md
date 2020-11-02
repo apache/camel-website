@@ -4,7 +4,7 @@ title: "Support"
 
 ## Getting help
 
-If you are experiencing problems using Camel then please report your problem to our mailing list. This allows the entire community to help with your problem.
+If you are experiencing problems using Camel then please report your problem to our mailing list or Zulip chat. This allows the entire community to help with your problem.
 If indeed a bug has been identified in the Camel software, then document the problem in our [Issue Tracker](https://issues.apache.org/jira/browse/CAMEL).
 Please refrain from immediately opening a ticket in the issue tracker unless you are certain it's a problem in the Camel software.
 
@@ -21,6 +21,8 @@ We prefer people to get in touch first using the mailing list, or Zulip chat. Or
 Unfortunately some people create a JIRA ticket as first thing. Please don't do that! Only if you are sure it really is a bug etc. JIRA tickets create noise
 for the Camel team to react on issues that are not bugs. But already covered in FAQs, in the mailing lists etc. Or in the existing documentation.
 Also on the mailing lists there is more people active to help you better.
+
+Also please avoid sending direct emails to members of the Camel team - we are busy already. And conversations about Camel should happen in the public, and not via private emails.
 
 ### Alternative discussion forums
 
