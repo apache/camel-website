@@ -49,9 +49,47 @@ class RelativeLinks extends Rule {
   }
 }
 
+class StructuredData extends Rule {
+  documentation(context) {
+    return {
+      description: "Validates JSON-LD according to schema.org"
+    };
+  }
+
+  setup() {
+    let start = -1;
+
+    this.on('tag:open', event => {
+      if (event.target.nodeName === 'script') {
+        start = event.target.location.offset;
+      }
+    });
+
+    this.on('tag:close', async event => {
+      const tag = event.previous;
+      if (event.target.nodeName === 'script' && tag.hasAttribute('type') && tag.getAttribute('type').value === 'application/ld+json') {
+        const startIdx = data.indexOf('>', start) + 1;
+        const endIdx = event.target.location.offset - 1; // omit the opening tag angled bracket
+        const content = data.substring(startIdx, endIdx);
+        try {
+          JSON.parse(content);
+        } catch (err) {
+          this.report(tag, `Unable to parse JSON-LD as JSON: ${err}`);
+        }
+      }
+    });
+  }
+}
+
+let data;
+
 module.exports = {
+  setup(source) {
+    data = source.data;
+  },
   rules: {
     "camel/title": HtmlTitle,
-    "camel/relative-links": RelativeLinks
+    "camel/relative-links": RelativeLinks,
+    "camel/structured-data": StructuredData
   }
 };
