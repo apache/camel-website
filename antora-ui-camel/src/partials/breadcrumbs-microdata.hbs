@@ -6,30 +6,31 @@
         "@type": "ListItem",
         "position": 1,
         "name": "{{{site.title}}}",
-        "item": "{{{site.url}}}"
+        "item": "https://camel.apache.org/"
         },
         {
         "@type": "ListItem",
         "position": 2,
         "name": "{{{page.component.title}}}",
-        "item": "{{{add site.url page.component.url}}}"
+        "item": "https://camel.apache.org{{{page.component.url}}}"
         },
         {
         "@type": "ListItem",
         "position": 3,
         "name": "{{{page.componentVersion.displayVersion}}}",
-        "item": "{{{add site.url page.componentVersion.url}}}"
+        "item": "https://camel.apache.org{{{page.componentVersion.url}}}"
         }
         {{#if page.breadcrumbs}}
+        ,
         {{#each page.breadcrumbs}}
-        ,{
+        {
         "@type": "ListItem",
         "position": {{add @index 4}},
         "name": "{{{ ./content }}}",
         {{~#if (and ./url (eq ./urlType 'internal'))~}}
-        "item": "{{{add ../site.url ./url}}}"
+        "item": "https://camel.apache.org{{{./url}}}"
         {{~else~}}
-        "item": "{{{add ../site.url ../page.componentVersion.url}}}"
+        "item": "https://camel.apache.org{{{../page.componentVersion.url}}}"
         {{~/if~}}
         }
         {{#unless @last}}
