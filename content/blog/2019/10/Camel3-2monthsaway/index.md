@@ -22,4 +22,4 @@ That is not all Apache Camel, is now a family of 3 projects (at this moment). So
 
 These projects have their own lifecycle. Will will post more details about these projects, and what’s new in Camel 3 in the following months leading up to the final release of Camel 3. So stay tuned.
 
-PS: If you are migrating Camel 2.x applications to Camel 3, then read the [migration guide](https://camel.apache.org/manual/latest/camel-3-migration-guide.html).
+PS: If you are migrating Camel 2.x applications to Camel 3, then read the [migration guide](/manual/latest/camel-3-migration-guide.html).

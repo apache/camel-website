@@ -10,7 +10,7 @@ preview: "The Camel community announces the immediate availability of a new rele
 
 The Camel community announces the immediate availability of Camel 3.0.0, a new major release with over 1000 new features, improvements and fixes.
 
-Please read our [migration guide](https://camel.apache.org/manual/latest/camel-3-migration-guide.html) the describes how to upgrade Camel 2.x applications to Camel 3.0.
+Please read our [migration guide](/manual/latest/camel-3-migration-guide.html) the describes how to upgrade Camel 2.x applications to Camel 3.0.
 
 The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the  [resolved issues](/releases/release-3.0.0/#resolved).
 

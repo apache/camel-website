@@ -10,11 +10,11 @@ A new release of [VS Code Language Support for Apache Camel](https://marketplace
 
 # Camel 3.6.0 upgrade
 
-Camel [3.6.0](https://camel.apache.org/blog/2020/10/Camel36-Whatsnew/) catalog is now provided by default. The 3.6.0 version is also leveraged internally.
+Camel [3.6.0](/blog/2020/10/Camel36-Whatsnew/) catalog is now provided by default. The 3.6.0 version is also leveraged internally.
 
 # Camel Kafka Connector Properties file improvements
 
-Previously, the support for [Camel Kafka Connector](https://camel.apache.org/camel-kafka-connector/latest/index.html) was limited to Camel URI in `camel.(sink|source).url` property value.
+Previously, the support for [Camel Kafka Connector](/camel-kafka-connector/latest/index.html) was limited to Camel URI in `camel.(sink|source).url` property value.
 This release adds support for the list of properties provided for each parameter instead of using a potentially long Camel URI. It relies on the new Camel Kafka Connector Catalog.
 
 #### Completion for `connector.class` property value

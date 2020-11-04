@@ -11,7 +11,7 @@ Apache Camel 3.4 is the first LTS (Long Term Support) release of Camel 3.
 
 This release will be actively supported with regular patch releases containing important bug and security fixes for 1-year.
 
-For more details about LTS vs non-LTS releases see this [blog post](https://camel.apache.org/blog/LTS-Release-Schedule/).
+For more details about LTS vs non-LTS releases see this [blog post](/blog/LTS-Release-Schedule/).
 
 
 ### So what's in this release?
@@ -44,7 +44,7 @@ We have provided an example using `camel-main` or `camel-spring-boot` which you 
 [here](https://github.com/apache/camel-examples/tree/master/examples/camel-example-main-health) and
 [here](https://github.com/apache/camel-spring-boot-examples/tree/master/camel-example-spring-boot-health-checks).
 
-You can find more details in the [Route Controller](https://camel.apache.org/manual/latest/route-controller.html) documentation.
+You can find more details in the [Route Controller](/manual/latest/route-controller.html) documentation.
 
 #### Health Check
 
@@ -55,11 +55,11 @@ We also introduced the concept of readiness and liveness so a health check can b
 Each health check can be configured, from `application.properties` the same way, and it's all reflection free.
 
 The previously mentioned examples also comes with health-check so make sure to check those.
-See more details in the [Health Check](https://camel.apache.org/manual/latest/health-check.html) documentation.
+See more details in the [Health Check](/manual/latest/health-check.html) documentation.
 
 ### Endpoint DSL
 
-The [Endpoint DSL](https://camel.apache.org/manual/latest/Endpoint-dsl.html) had a number of annoying bugs fixed and other improvements.
+The [Endpoint DSL](/manual/latest/Endpoint-dsl.html) had a number of annoying bugs fixed and other improvements.
 It is now also easier to use Endpoint DSL to configure endpoints in POJOs as Java fields in a type-safe manner,
 by using `FluentProducerTemplate` and in `RouteBuilder` classes as in this example:
 
@@ -78,8 +78,8 @@ public class MyPojo {
 }
 ```
 
-You can read more in the manual about [Endpoint DSL](https://camel.apache.org/manual/latest/Endpoint-dsl.html) and
-the [Component DSL](https://camel.apache.org/manual/latest/component-dsl.html).
+You can read more in the manual about [Endpoint DSL](/manual/latest/Endpoint-dsl.html) and
+the [Component DSL](/manual/latest/component-dsl.html).
 
 #### Spring Boot
 
@@ -96,7 +96,7 @@ This release also adds two new components:
 
 A new maven plugin called `camel-component-maven-plugin` has been added which intents to help
 third party component developers to generate all required metadata and configurations Java files. For more info on how to use it in your project,
-please take a look at the [Camel Component Plugin documentation](https://camel.apache.org/manual/latest/camel-component-maven-plugin.html).
+please take a look at the [Camel Component Plugin documentation](/manual/latest/camel-component-maven-plugin.html).
 
 You can now configure Camel's thread pool (profiles) and Saga/LRA the same way for
 standalone, Camel K, Camel Quarkus, and Spring Boot.
@@ -105,4 +105,4 @@ Some of the components (more to come in the future) we have moved initialization
 which allows these components to initialize at build time, which makes Camel startup faster (especially for GraalVM or Quarkus runtimes).
 
 For users that are upgrading to this release, then make sure to follow
-the [upgrade guide](https://camel.apache.org/manual/latest/camel-3x-upgrade-guide.html).
+the [upgrade guide](/manual/latest/camel-3x-upgrade-guide.html).

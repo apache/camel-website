@@ -14,7 +14,7 @@ Camel uses [Maven](http://maven.apache.org/) as its build and management tool. I
   *  (Maven 3.1.1 or newer is required to build Camel 2.14 onwards)
   *  (Maven 3.2.5 or newer is required to build Camel 2.18 onwards)
   *  (Maven 3.3.3 or newer is required to build Camel 2.20 onwards)
-*  Get the latest [Source](https://camel.apache.org/source.html)
+*  Get the latest [Source](/download/)
 *  Java
   *  (1.7 or 1.8 to build Camel 2.14 onwards)
   *  (1.8 to build Camel 2.18 onwards)

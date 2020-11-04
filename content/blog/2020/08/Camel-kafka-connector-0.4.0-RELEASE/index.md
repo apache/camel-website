@@ -7,7 +7,7 @@ preview: "Camel Kafka Connector 0.4.0 Released"
 draft: false
 ---
 
-We recently released camel-kafka-connector 0.4.0. This is the first release of the latest project in the Camel’s ecosystem, based on an [LTS camel release](https://camel.apache.org/blog/2020/03/LTS-Release-Schedule/). 
+We recently released camel-kafka-connector 0.4.0. This is the first release of the latest project in the Camel’s ecosystem, based on an [LTS camel release](/blog/2020/03/LTS-Release-Schedule/). 
 
  * The main features of this release are:
  * Introduction of aggregation support

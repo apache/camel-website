@@ -8,7 +8,7 @@ preview: Details of what we have done in the Camel 3.3 release.
 
 A few days ago Apache Camel 3.3 was released. This is a continuation of the work we are doing on Camel leading up to the first long term support release (LTS) that will be the next release v3.4.
 
-In case you have missed this, the release model in Camel 3.x is following the principe of LTS and non-LTS releases (like Java JDKs). For more details see this [blog post](https://camel.apache.org/blog/LTS-Release-Schedule/).
+In case you have missed this, the release model in Camel 3.x is following the principe of LTS and non-LTS releases (like Java JDKs). For more details see this [blog post](/blog/LTS-Release-Schedule/).
 
 What this means is that we will not do patch releases for Camel 3.3.x, but move ahead for Camel 3.4.
 

@@ -86,7 +86,7 @@ There are several API based components which are source code generated from _ext
   
 Also, we include additional metadata for Camel tooling so they can provide code assistance when Camel end-users are using these API based components. Some of those external APIs are huge and you can have hundreds of APIs.
 
-The API based components are: [AS2](https://camel.apache.org/components/latest/as2-component.html), [Box](https://camel.apache.org/components/latest/box-component.html), [Braintree](https://camel.apache.org/components/latest/braintree-component.html), [FHIR](https://camel.apache.org/components/latest/fhir-component.html), Google [Calendar](https://camel.apache.org/components/latest/google-calendar-component.html)/[Drive](https://camel.apache.org/components/latest/google-drive-component.html)/[Mail](https://camel.apache.org/components/latest/google-mail-component.html)/[Sheets](https://camel.apache.org/components/latest/google-sheets-component.html), [Olingo](https://camel.apache.org/components/latest/olingo4-component.html), [Twillio](https://camel.apache.org/components/latest/twilio-component.html), and [Zendesk](https://camel.apache.org/components/latest/zendesk-component.html).
+The API based components are: [AS2](/components/latest/as2-component.html), [Box](/components/latest/box-component.html), [Braintree](/components/latest/braintree-component.html), [FHIR](/components/latest/fhir-component.html), Google [Calendar](/components/latest/google-calendar-component.html)/[Drive](/components/latest/google-drive-component.html)/[Mail](/components/latest/google-mail-component.html)/[Sheets](/components/latest/google-sheets-component.html), [Olingo](/components/latest/olingo4-component.html), [Twillio](/components/latest/twilio-component.html), and [Zendesk](/components/latest/zendesk-component.html).
 
 
 ### Reduce reflection
@@ -99,7 +99,7 @@ Yet another release where we reduced using reflections in a few spots in Camel c
 As mentioned in the optimization section we moved initialization of languages to an earlier phase.
 Camel now pre compile languages when its applicable, for example JSonPath, and XPath language.
 
-And speaking of pre-compiled languages then Camel 3.7 introduces the [jOOR language](https://camel.apache.org/components/latest/languages/joor-language.html)
+And speaking of pre-compiled languages then Camel 3.7 introduces the [jOOR language](/components/latest/languages/joor-language.html)
 to use runtime compile Java in the Camel DSL. A compiled simple language is also on the roadmap.
 
 
@@ -120,16 +120,16 @@ This was a historical slow release in terms of new components. In fact there is 
 - AWS2-EventBridge: Manage AWS EventBridge cluster instances
 
 You can read more about the new AWS EventBridge component
-in the [blog announcement](https://camel.apache.org/blog/2020/10/camel-aws2-eventbridge-intro/). 
+in the [blog announcement](/blog/2020/10/camel-aws2-eventbridge-intro/). 
 
 
 ## Upgrading
 
-Make sure to read the [upgrade guide](https://camel.apache.org/manual/latest/camel-3x-upgrade-guide-3_6.html) if you
+Make sure to read the [upgrade guide](/manual/latest/camel-3x-upgrade-guide-3_6.html) if you
 are upgrading to this release from a previous Camel version.
 
 
 ## Release Notes
 
-You can find more information about this release in the [release notes](https://camel.apache.org/releases/release-3.6.0/),
+You can find more information about this release in the [release notes](/releases/release-3.6.0/),
 with a list of JIRA tickets resolved in the release.
