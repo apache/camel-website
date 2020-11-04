@@ -113,7 +113,7 @@ But improvements are not only limited to the Camel core: we're doing much more. 
 
 In Camel K 1.0.0 we support **Camel Quarkus in JVM mode**. A goal is to have also the in-cluster native compilation soon (for some DSL languages, such as YAML), in one of next releases!
 
-To use Quarkus as underlying runtime, you just need to enable the **[Quarkus trait](https://camel.apache.org/camel-k/latest/traits/quarkus.html)** when running an integration:
+To use Quarkus as underlying runtime, you just need to enable the **[Quarkus trait](/camel-k/latest/traits/quarkus.html)** when running an integration:
 
 ```
 kamel run myintegration.groovy -t quarkus.enabled=true
@@ -181,7 +181,7 @@ kamel run Handler.java
 
 The other options are taken automatically from the file modeline. The CLI also displays the full command to let you know what's running.
 
-This kind of configuration is extremely useful in CI/CD scenarios because it allows you to have self-contained integration files and you don't need to change the pipeline to setup additional options. If you're curious about the CI/CD configurations, you can follow the [tutorial about Tekton pipelines](https://camel.apache.org/camel-k/latest/tutorials/tekton/tekton.html) to have more information.
+This kind of configuration is extremely useful in CI/CD scenarios because it allows you to have self-contained integration files and you don't need to change the pipeline to setup additional options. If you're curious about the CI/CD configurations, you can follow the [tutorial about Tekton pipelines](/camel-k/latest/tutorials/tekton/tekton.html) to have more information.
 
 ## Monitoring and Tracing
 
@@ -194,7 +194,7 @@ Let's suppose you've a **[Prometheus](https://prometheus.io/)** instance in your
 kamel run Routes.java -t prometheus.enabled=true
 ```
 
-That's it. No need to setup services and labels to enable scraping. A default prometheus configuration file is also provided for the integration, with sensible defaults. Of course you also have the option to provide [your own configuration](https://camel.apache.org/camel-k/latest/traits/prometheus.html) for advanced use cases.
+That's it. No need to setup services and labels to enable scraping. A default prometheus configuration file is also provided for the integration, with sensible defaults. Of course you also have the option to provide [your own configuration](/camel-k/latest/traits/prometheus.html) for advanced use cases.
 
 Now, let's suppose you want to see what your routes are doing and trace the execution flow of an integration. What you need to do is to install an opentracing compatible application in the namespace, such as **[Jaeger](https://www.jaegertracing.io/)**, and run the integration as:
 
@@ -202,8 +202,8 @@ Now, let's suppose you want to see what your routes are doing and trace the exec
 kamel run Routes.java -t prometheus.enabled=true -t tracing.enabled=true
 ```
 
-That's it again. The Camel K operator will add the [camel-opentracing library](https://camel.apache.org/components/latest/others/opentracing.html) and **connect it to the Jaeger collector that is available in the namespace**.
-Here again, [advanced use cases](https://camel.apache.org/camel-k/latest/traits/tracing.html) are supported.
+That's it again. The Camel K operator will add the [camel-opentracing library](/components/latest/others/opentracing.html) and **connect it to the Jaeger collector that is available in the namespace**.
+Here again, [advanced use cases](/camel-k/latest/traits/tracing.html) are supported.
 
 ## Master routes
 
@@ -241,7 +241,7 @@ So the Camel K operator automatically handles this situation by deploying your i
 
 There are cases when you don't want this feature to be enabled, for example, when your code makes use of in memory caches that is better to keep between executions. In these cases, you can safely turn off the feature by passing the flag `-t cron.enabled=false` to the `kamel run` command.
 
-The Cron feature does not only work with the `timer` component. We've also added a [cron component](https://camel.apache.org/components/latest/cron-component.html) since Camel 3.1 that works really well in combination with the [cron trait](https://camel.apache.org/camel-k/latest/traits/cron.html).
+The Cron feature does not only work with the `timer` component. We've also added a [cron component](/components/latest/cron-component.html) since Camel 3.1 that works really well in combination with the [cron trait](/camel-k/latest/traits/cron.html).
 
 So you can also write the cron expression in the route directly:
 
@@ -264,7 +264,7 @@ The first step is to go to the [Camel K release page](https://github.com/apache/
 
 Installation is done usually using the `kamel install` command, but, depending on the kind of Kubernetes cluster you're using, 
 you may need to execute additional configuration steps.
-The Camel K documentation contains a section about **[installing it on various types of Kubernetes clusters](https://camel.apache.org/camel-k/latest/installation/installation.html)**.
+The Camel K documentation contains a section about **[installing it on various types of Kubernetes clusters](/camel-k/latest/installation/installation.html)**.
 
 If you have trouble or you need to install it on a particular cluster that is not listed, just reach out in the [Gitter chat](https://gitter.im/apache/camel-k) and
 we'll do our best to help you.

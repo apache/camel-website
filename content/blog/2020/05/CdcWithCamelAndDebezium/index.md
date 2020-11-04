@@ -10,7 +10,7 @@ preview: "CDC approaches based on Camel and Debezium."
 Change Data Capture (CDC) is a well-established software design pattern for a system that monitors and captures
 data changes, so that other software can respond to those events.
 
-Using a CDC engine like [Debezium](https://debezium.io) along with [Camel](https://camel.apache.org) integration
+Using a CDC engine like [Debezium](https://debezium.io) along with [Camel]() integration
 framework, we can easily build data pipelines to bridge traditional data stores and new cloud-native event-driven
 architectures.
 

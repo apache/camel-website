@@ -27,7 +27,7 @@ We have upgraded to latest release at this time which is Spring Boot 2.3.3.
 
 A new `camel-spring-boot-bom` BOM has been added that only contains the supported Camel Spring JARs for Spring Boot.
 The existing `camel-spring-boot-dependencies` is a much bigger set of BOM that is curated to align Camel and Spring Boot
-dependencies. For more details see the [following documentation](https://camel.apache.org/camel-spring-boot/latest/#_camel_spring_boot_bom_vs_camel_spring_boot_dependencies_bom).
+dependencies. For more details see the [following documentation](/camel-spring-boot/latest/#_camel_spring_boot_bom_vs_camel_spring_boot_dependencies_bom).
 
 
 ### JUnit 5
@@ -41,7 +41,7 @@ We have also refactored the `camel-test-spring-junit5` for Spring Boot users wit
 that you mark on your unit test class instead of using JUnit 4.x `@RunWith`.
 
 See the [camel-spring-boot-example](https://github.com/apache/camel-spring-boot-examples/tree/master/camel-example-spring-boot)
-for an example, or the Camel 3.5 [upgrade guide](https://camel.apache.org/manual/latest/camel-3x-upgrade-guide-3_5.html#_spring_boot_testing_with_junit_5).
+for an example, or the Camel 3.5 [upgrade guide](/manual/latest/camel-3x-upgrade-guide-3_5.html#_spring_boot_testing_with_junit_5).
 
 
 #### LambdaRouteBuilder
@@ -63,13 +63,13 @@ For example in a Spring Boot configuration class you can add a Camel route via `
 Notice you can only define 1 route per lambda route builder (you can have many `@Bean` methods).
 The regular `RouteBuilder` can define as many routes you want in the same builder.
 
-See more details at the [LambdaRouteBuilder](https://camel.apache.org/manual/latest/lambda-route-builder.html)
+See more details at the [LambdaRouteBuilder](/manual/latest/lambda-route-builder.html)
 documentation.
 
 
 ### Parameterize routes
 
-This is one of the biggest new feature which goes by the name [route templates](https://camel.apache.org/manual/latest/route-template.html).
+This is one of the biggest new feature which goes by the name [route templates](/manual/latest/route-template.html).
 A route template is a way of parameterizing a route where you specify parameters that are mandatory,
 and which are optional, and potential default values and descriptions. Then you can instantiate new routes
 from the route templates by its template id, and the provided parameters.
@@ -81,7 +81,7 @@ This feature will also play a great role in Apache Camel K and the serverless la
 In this world the route templates are used as part of a bigger puzzle which we named _kamelets_. More details
 is coming in a new blog posts.
 
-See more details at the [route templates](https://camel.apache.org/manual/latest/route-template.html) documentation,
+See more details at the [route templates](/manual/latest/route-template.html) documentation,
 and in this [little example](https://github.com/apache/camel-examples/tree/master/examples/camel-example-routetemplate).
 
 
@@ -141,7 +141,7 @@ is now generated in the configurers, so Camel knows the value types in the colle
     camel.beans.foo.countries[de].language = DE
 
 The work did not stop there. By knowing the value type of the collection types, we allow to do reflection free
-[binding collections](https://camel.apache.org/manual/latest/property-binding.html).
+[binding collections](/manual/latest/property-binding.html).
 
 There has been many other smaller improvements in Camels properties binding. Camel uses this heavily internally during
 startup to configure and setup all of its things such as components, EIPs, routes etc. This work has been streamlined
@@ -180,5 +180,5 @@ So stay tuned for the next non-LTS release.
 
 ## Upgrading
 
-Make sure to read the [upgrade guide](https://camel.apache.org/manual/latest/camel-3x-upgrade-guide-3_5.html) if you
+Make sure to read the [upgrade guide](/manual/latest/camel-3x-upgrade-guide-3_5.html) if you
 are upgrading to this release from a previous Camel version.

@@ -27,7 +27,7 @@ The power of Kamelets is that they hide the complexity of connecting to external
 
 Kamelets are also suitable to be used as generic connectors for building UI-based projects that leverage the power of Apache Camel, expanding the possibilities of Apache Camel into new areas.
 
-You can find more information about [Kamelets in the Camel K documentation](https://camel.apache.org/camel-k/latest/kamelets/kamelets.html).
+You can find more information about [Kamelets in the Camel K documentation](/camel-k/latest/kamelets/kamelets.html).
 
 ## What's Next?
 

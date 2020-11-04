@@ -17,7 +17,7 @@ Checkout sample reports for [Camel in Action, Second Edition](http://windup.surg
 
 ## Introduction
 
-Camel 3.0.0 has been released in late 2019 which comes a decade after Camel 2.0.0 was released back in 2009. Camel 3 is a major upgrade from Camel 2 with lots of breaking changes. The Camel team has done a great job [documenting](https://camel.apache.org/manual/latest/camel-3-migration-guide.html) those changes. In order to ease the upgrade, [Matej](https://github.com/mmelko) and I have decided to leverage the open source application migration tool [Windup](https://github.com/windup/windup) and extend it's existing migration [rules](https://github.com/windup/windup-rulesets) by adding Camel 2.x --> Camel 3 [rules](https://github.com/windup/windup-rulesets/tree/master/rules-reviewed/camel3/camel2).
+Camel 3.0.0 has been released in late 2019 which comes a decade after Camel 2.0.0 was released back in 2009. Camel 3 is a major upgrade from Camel 2 with lots of breaking changes. The Camel team has done a great job [documenting](/manual/latest/camel-3-migration-guide.html) those changes. In order to ease the upgrade, [Matej](https://github.com/mmelko) and I have decided to leverage the open source application migration tool [Windup](https://github.com/windup/windup) and extend it's existing migration [rules](https://github.com/windup/windup-rulesets) by adding Camel 2.x --> Camel 3 [rules](https://github.com/windup/windup-rulesets/tree/master/rules-reviewed/camel3/camel2).
 
 ## Running Windup locally
 
@@ -54,7 +54,7 @@ which has been removed in Camel 3, and if so, output a helpful message:
     <perform>
         <hint title="`org.apache.camel:camel-linkedin` artifact has been removed" effort="7" category-id="mandatory" >
             <message>`org.apache.camel:camel-linkedin` artifact has been removed in Apache Camel 3 so it won't be available</message>
-            <link href="https://camel.apache.org/manual/latest/camel-3-migration-guide.html#_removed_components" title="Camel 3 - Migration Guide: Removed components" />
+            <link href="/manual/latest/camel-3-migration-guide.html#_removed_components" title="Camel 3 - Migration Guide: Removed components" />
         </hint>
     </perform>
 </rule>
@@ -101,7 +101,7 @@ As we've seen in the previous section, the rules are only as powerful as you've 
               category-id="mandatory">
             <message>The `getProperties` and `setProperty` methods have been removed from `org.apache.camel.CamelContext`. Please use `getGlobalOptions` and `setGlobalOptions` instead</message>
             <link title="Camel 3 - Migration Guide: CONFIGURING GLOBAL OPTIONS ON CAMELCONTEXT"
-                  href="https://camel.apache.org/manual/latest/camel-3-migration-guide.html#_configuring_global_options_on_camelcontext"/>
+                  href="/manual/latest/camel-3-migration-guide.html#_configuring_global_options_on_camelcontext"/>
         </hint>
     </perform>
 </rule>
@@ -119,7 +119,7 @@ Another problem is string interpolation. When writting a rule that tries to matc
     <perform>
         <hint title="`twitter-streaming` component has been removed" effort="7" category-id="mandatory" >
             <message>`twitter-streaming` component has been deprecated in Apache Camel 2 and removed in Apache Camel 3 because it relied on the deprecated Twitter Streaming API and is no longer functional.</message>
-            <link href="https://camel.apache.org/manual/latest/camel-3-migration-guide.html#_removed_components" title="Camel 3 - Migration Guide: Removed components" />
+            <link href="/manual/latest/camel-3-migration-guide.html#_removed_components" title="Camel 3 - Migration Guide: Removed components" />
         </hint>
     </perform>
 </rule>

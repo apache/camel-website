@@ -12,7 +12,7 @@ The Camel community announces the immediate availability of Camel 3.1.0, a new m
 
 All users of Camel 3.0 are encouraged to upgrade to Camel 3.1 soon because there are some major memory usage optimizations in this release.
 We also plan to retire Camel 3.0 very soon due to this.
-Please read our [Camel 3.x upgrade guide](https://camel.apache.org/manual/latest/camel-3x-upgrade-guide.html) that describes how to upgrade Camel 3.0 applications to Camel 3.1.
+Please read our [Camel 3.x upgrade guide](/manual/latest/camel-3x-upgrade-guide.html) that describes how to upgrade Camel 3.0 applications to Camel 3.1.
 
 The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the  [resolved issues](/releases/release-3.1.0/#resolved).
 
