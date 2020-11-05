@@ -16,31 +16,31 @@ So what is new in Camel Quarkus 1.0.0-CR2?
 
 While we do not have any new extensions this time, the following extensions were promoted from JVM-only to JVM+native:
 
-* [REST OpenApi](/camel-quarkus/latest/extensions/rest-openapi.html)
-* [Avro data format](/camel-quarkus/latest/extensions/avro.html)
-* [MongoDB GridFS](/camel-quarkus/latest/extensions/mongodb-gridfs.html)
-* [Debezium PostgreSQL](/camel-quarkus/latest/extensions/debezium-mysql.html)
-* [Debezium MySQL](/camel-quarkus/latest/extensions/debezium-mysql.html)
+* [REST OpenApi](/camel-quarkus/latest/reference/extensions/rest-openapi.html)
+* [Avro data format](/camel-quarkus/latest/reference/extensions/avro.html)
+* [MongoDB GridFS](/camel-quarkus/latest/reference/extensions/mongodb-gridfs.html)
+* [Debezium PostgreSQL](/camel-quarkus/latest/reference/extensions/debezium-mysql.html)
+* [Debezium MySQL](/camel-quarkus/latest/reference/extensions/debezium-mysql.html)
 
-All supported bits can be seen in the [List of Camel Quarkus extensions](/camel-quarkus/latest/list-of-camel-quarkus-extensions.html).
+All supported bits can be seen in the [List of Camel Quarkus extensions](/camel-quarkus/latest/reference/index.html).
 
 ## New documentation pages
 
 Each Camel Quarkus extension has a separate page now. Most of the content is generated from the data available in
 [Camel Catalog](/manual/latest/camel-catalog.html). This includes some basic description, Maven
 coordinates and links to the involved Camel bits.
-[ActiveMQ](/camel-quarkus/latest/extensions/activemq.html) is an example of such a rudimentary
+[ActiveMQ](/camel-quarkus/latest/reference/extensions/activemq.html) is an example of such a rudimentary
 page.
 
 In some cases, that generated content is combined with manually maintained sections that inform about Camel
-Quarkus specific behavior, limitations, configuration options, etc. See [MicroProfile Health](/camel-quarkus/latest/extensions/microprofile-health.html) as an example.
+Quarkus specific behavior, limitations, configuration options, etc. See [MicroProfile Health](/camel-quarkus/latest/reference/extensions/microprofile-health.html) as an example.
 
 Within a couple of days, [code.quarkus.io](https://code.quarkus.io/) should start to reference the new extension pages
 as "guides" of the individual Camel entries listed there.
 
 ## Camel 3.3.0
 
-Camel was upgraded to [3.3.0](/blog/Camel33-Whatsnew/) bringing less reflection and less JAXP to
+Camel was upgraded to [3.3.0](/blog/2020/05/Camel33-Whatsnew/) bringing less reflection and less JAXP to
 Camel Quarkus, thus improving the disk size, startup time and RAM usage of Camel Quarkus applications.
 
 ## Quarkus 1.5.0.Final
@@ -56,9 +56,8 @@ the last release supporting Java 8.
 
 The Hystrix component was recently deprecated in Camel, so we deprecated it as well. It will be removed in the next
 Camel Quarkus release. Please use
-[Microprofile Fault Tolerance](/camel-quarkus/latest/extensions/microprofile-fault-tolerance.html)
+[Microprofile Fault Tolerance](/camel-quarkus/latest/reference/extensions/microprofile-fault-tolerance.html)
 as a replacement.
 
 Enjoy and give feedback either via [mailing lists](/manual/latest/mailing-lists.html)
 or [GitHub issues](https://github.com/apache/camel-quarkus/issues)!
-

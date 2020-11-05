@@ -12,7 +12,7 @@ Before going into the list of updates in detail, I want to note that I mentioned
 
 ### Camel 3 inside
 
-Camel 3 was [released](/blog/release-3-0-0.html) a few weeks ago, and the Camel Language Server is already relying on it internally. What does that mean for the end user? It means that the default catalog is now using Camel 3.
+Camel 3 was [released](/blog/2019/11/RELEASE-3.0.0/) a few weeks ago, and the Camel Language Server is already relying on it internally. What does that mean for the end user? It means that the default catalog is now using Camel 3.
 
 If you are still based on Camel 2.x, no problem; check out the following awesome feature.
 

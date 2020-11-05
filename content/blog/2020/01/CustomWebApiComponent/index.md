@@ -7,9 +7,9 @@ categories: ["Usecases"]
 preview: "Build your own custom Web API Component from scratch."
 ---
 
-Have you built a new great Web API for your product? Wouldn't be wonderful to have it available as a part of the great [Apache Camel component family](/components/latest)? We would love it.
+Have you built a new great Web API for your product? Wouldn't be wonderful to have it available as a part of the great [Apache Camel component family](/components/latest/)? We would love it.
 
-The community just released [Camel 3](/blog/Camel3-Whatsnew) which is more modular, lightweight and already includes lots of components (300+) to quickly integrate various systems consuming or producing data. All of these components can be used with the same integration domain specific language (DSL) based on the famous [Enterprise Integration Patterns](https://www.enterpriseintegrationpatterns.com) (EIPs).
+The community just released [Camel 3](/blog/2019/12/Camel3-Whatsnew/) which is more modular, lightweight and already includes lots of components (300+) to quickly integrate various systems consuming or producing data. All of these components can be used with the same integration domain specific language (DSL) based on the famous [Enterprise Integration Patterns](https://www.enterpriseintegrationpatterns.com) (EIPs).
 
 Creating a new component is actually pretty simple and, as a benefit, you will also have the possibility to use Camel sub-projects to make your Web API available within different runtimes: [SpringBoot](https://github.com/apache/camel-spring-boot) (auto-config), [Quarkus](https://github.com/apache/camel-quarkus) (Java native compilation) and [Camel-K](https://github.com/apache/camel-k) (serverless work).
 

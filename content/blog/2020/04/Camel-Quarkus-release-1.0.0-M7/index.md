@@ -58,7 +58,7 @@ Components promoted from JVM-only to JVM+native:
 * Openshift Build Config
 * Openshift Builds
 
-All supported bits can be seen in the [List of Camel Quarkus extensions](/camel-quarkus/latest/list-of-camel-quarkus-extensions.html).
+All supported bits can be seen in the [List of Camel Quarkus extensions](/camel-quarkus/latest/reference/index.html).
 
 ## Quarkus 1.4.1
 

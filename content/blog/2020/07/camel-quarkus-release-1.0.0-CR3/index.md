@@ -16,29 +16,29 @@ Here are some highlights of Camel Quarkus 1.0.0-CR3.
 
 The following new extensions were added:
 
-* [AWS 2 Athena](/camel-quarkus/latest/extensions/aws2-athena.html)
-* [Component DSL](/camel-quarkus/latest/extensions/componentdsl.html)
-* [JOLT](/camel-quarkus/latest/extensions/jolt.html)
-* [JTA](/camel-quarkus/latest/extensions/jta.html)
-* [OpenApi Java](/camel-quarkus/latest/extensions/openapi-java.html)
-* [Tika](/camel-quarkus/latest/extensions/tika.html)
-* [Vert.x](/camel-quarkus/latest/extensions/vertx.html)
+* [AWS 2 Athena](/camel-quarkus/latest/reference/extensions/aws2-athena.html)
+* [Component DSL](/camel-quarkus/latest/reference/extensions/componentdsl.html)
+* [JOLT](/camel-quarkus/latest/reference/extensions/jolt.html)
+* [JTA](/camel-quarkus/latest/reference/extensions/jta.html)
+* [OpenApi Java](/camel-quarkus/latest/reference/extensions/openapi-java.html)
+* [Tika](/camel-quarkus/latest/reference/extensions/tika.html)
+* [Vert.x](/camel-quarkus/latest/reference/extensions/vertx.html)
 
 
 The following extensions added native mode support:
 
-* [AWS 2 DynamoDB Streams](/camel-quarkus/latest/extensions/aws2-ddb.html)
-* [AWS 2 Elastic Compute Cloud (EC2)](/camel-quarkus/latest/extensions/aws2-ec2.html)
-* [AWS 2 Elastic Container Service (ECS)](/camel-quarkus/latest/extensions/aws2-ecs.html)
-* [AWS 2 Elastic Kubernetes Service (EKS)](/camel-quarkus/latest/extensions/aws2-eks.html)
-* [AWS 2 Identity and Access Management (IAM)](/camel-quarkus/latest/extensions/aws2-iam.html)
-* [AWS 2 Key Management Service (KMS)](/camel-quarkus/latest/extensions/aws2-kms.html)
-* [AWS 2 Managed Streaming for Apache Kafka (MSK)](/camel-quarkus/latest/extensions/aws2-msk.html)
-* [AWS 2 MQ](/camel-quarkus/latest/extensions/aws2-mq.html)
-* [AWS 2 Simple Email Service (SES)](/camel-quarkus/latest/extensions/aws2-ses.html)
-* [AWS 2 Translate](/camel-quarkus/latest/extensions/aws2-translate.html)
+* [AWS 2 DynamoDB Streams](/camel-quarkus/latest/reference/extensions/aws2-ddb.html)
+* [AWS 2 Elastic Compute Cloud (EC2)](/camel-quarkus/latest/reference/extensions/aws2-ec2.html)
+* [AWS 2 Elastic Container Service (ECS)](/camel-quarkus/latest/reference/extensions/aws2-ecs.html)
+* [AWS 2 Elastic Kubernetes Service (EKS)](/camel-quarkus/latest/reference/extensions/aws2-eks.html)
+* [AWS 2 Identity and Access Management (IAM)](/camel-quarkus/latest/reference/extensions/aws2-iam.html)
+* [AWS 2 Key Management Service (KMS)](/camel-quarkus/latest/reference/extensions/aws2-kms.html)
+* [AWS 2 Managed Streaming for Apache Kafka (MSK)](/camel-quarkus/latest/reference/extensions/aws2-msk.html)
+* [AWS 2 MQ](/camel-quarkus/latest/reference/extensions/aws2-mq.html)
+* [AWS 2 Simple Email Service (SES)](/camel-quarkus/latest/reference/extensions/aws2-ses.html)
+* [AWS 2 Translate](/camel-quarkus/latest/reference/extensions/aws2-translate.html)
 
-All supported extensions can be seen in the [List of Camel Quarkus extensions](/camel-quarkus/latest/list-of-camel-quarkus-extensions.html).
+All supported extensions can be seen in the [List of Camel Quarkus extensions](/camel-quarkus/latest/reference/).
 
 ## Camel 3.4.0
 
