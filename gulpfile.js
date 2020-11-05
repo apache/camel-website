@@ -52,3 +52,10 @@ gulp.task('sitemap', (done) => {
     ))
     .pipe(gulp.dest('public'));
 });
+
+/*
+ * Removes the content from the `public` directory.
+ */
+gulp.task('clean', () => {
+  return require('del')('public');
+});

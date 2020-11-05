@@ -967,6 +967,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"aggregate-error@npm:^3.0.0":
+  version: 3.1.0
+  resolution: "aggregate-error@npm:3.1.0"
+  dependencies:
+    clean-stack: ^2.0.0
+    indent-string: ^4.0.0
+  checksum: 704d2001a303c185e9b836d211f7eef2f4557195a11c3271143b4dcda5f6f263abe746d9b8a06b5871d07870686c7db9c0b2c38e2d3cbc593784eaaee8a29043
+  languageName: node
+  linkType: hard
+
 "ajv@npm:^6.10.0, ajv@npm:^6.10.2, ajv@npm:^6.9.1":
   version: 6.12.0
   resolution: "ajv@npm:6.12.0"
@@ -1231,6 +1241,7 @@ __metadata:
     "@antora/xref-validator": "https://gitlab.com/antora/xref-validator.git#commit=19bfaf88fc7dd39552cfd8b3ac41c55d6d8f9edd"
     "@djencks/asciidoctor-antora-indexer": ^0.0.5
     antora-ui-camel: "workspace:antora-ui-camel"
+    del: ^6.0.0
     escape-string-regexp: ~2.0
     gulp: ~4.0
     gulp-cheerio: ~1.0
@@ -2586,6 +2597,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clean-stack@npm:^2.0.0":
+  version: 2.2.0
+  resolution: "clean-stack@npm:2.2.0"
+  checksum: e291ce2b8c8c59e6449ac9a7a726090264bea6696e5343b21385e16d279c808ca09d73a1abea8fd23a9b7699e6ef5ce582df203511f71c8c27666bf3b2e300c5
+  languageName: node
+  linkType: hard
+
 "cli-cursor@npm:^2.1.0":
   version: 2.1.0
   resolution: "cli-cursor@npm:2.1.0"
@@ -3692,6 +3710,22 @@ __metadata:
   version: 1.0.0
   resolution: "defined@npm:1.0.0"
   checksum: 3f17b8807d66d9eb836eacb943a4df7097201b54e386c44be781e0198890e58b0fb88ced2997de95e9aad3b6ebd8df90547575f6b3fb986bdb8abe3417815bbc
+  languageName: node
+  linkType: hard
+
+"del@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "del@npm:6.0.0"
+  dependencies:
+    globby: ^11.0.1
+    graceful-fs: ^4.2.4
+    is-glob: ^4.0.1
+    is-path-cwd: ^2.2.0
+    is-path-inside: ^3.0.2
+    p-map: ^4.0.0
+    rimraf: ^3.0.2
+    slash: ^3.0.0
+  checksum: da72707c9221154db6d6b05890ac1ae771d1b4ffc2759a6b8fca58e8a8289e07d22b68f68666a6c540dd99f1021b29ef77918dcaf4dbfeb9f99f49bd7fcc6fb5
   languageName: node
   linkType: hard
 
@@ -5863,7 +5897,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"globby@npm:^11.0.0":
+"globby@npm:^11.0.0, globby@npm:^11.0.1":
   version: 11.0.1
   resolution: "globby@npm:11.0.1"
   dependencies:
@@ -5981,6 +6015,13 @@ fsevents@^1.2.7:
   version: 4.2.3
   resolution: "graceful-fs@npm:4.2.3"
   checksum: 67b7e3f6a687c91287f17a2adfcce462406e2aa16ea4440618e1daaecd579ae6362c0b13303f86c77c165ed8074fa8b0868bb0a73173fa3407c2b747e89353f9
+  languageName: node
+  linkType: hard
+
+"graceful-fs@npm:^4.2.4":
+  version: 4.2.4
+  resolution: "graceful-fs@npm:4.2.4"
+  checksum: d095ee4dc6eacc76814cd52d5d185b860119378a6fd4888e7d4e94983095c54d4f6369942a5e3d759cdbdd4e3ee7eaeb27a39ff938c6ee4610894fd9de46b6cb
   languageName: node
   linkType: hard
 
@@ -7357,6 +7398,20 @@ fsevents@^1.2.7:
   version: 1.0.1
   resolution: "is-object@npm:1.0.1"
   checksum: deb32fdb99d599c6b8bbc3028143dc47c3dec1ba2ebabb2f9a5122588cb28b7b26c535de593fa7b8b86716cab1b96761c11c0aba9b812e20efdec1b55f8d0e95
+  languageName: node
+  linkType: hard
+
+"is-path-cwd@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "is-path-cwd@npm:2.2.0"
+  checksum: 900f6e81445b9979705952189d7dbada79dbe6d77be3b5fc95aed3dc1cc9d77de5b286db2d525942a72a717c81aa549509b76705883415fb655183dfefce9541
+  languageName: node
+  linkType: hard
+
+"is-path-inside@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "is-path-inside@npm:3.0.2"
+  checksum: 709ba85a713d25fb058a4c2f62e9e7160bcc1a3e48af2f201045cde027fc1efe61a6e1b5c1cf21b8329f764e3649e160976fde14317c1b848caa9c1f31d5beec
   languageName: node
   linkType: hard
 
@@ -9791,6 +9846,15 @@ fsevents@^1.2.7:
   dependencies:
     p-reduce: ^1.0.0
   checksum: 721c1aaea4ad39ea03e1bb93315a552d58d77ced4d3a23a0efe5ec06ffb41d2f851fab1a381e43253357f79f02c5f954d4e86b4e38d82a8b4f0d6a48034ff511
+  languageName: node
+  linkType: hard
+
+"p-map@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "p-map@npm:4.0.0"
+  dependencies:
+    aggregate-error: ^3.0.0
+  checksum: d51e630d72b7c38bc9e396710e7a068f0b813fe4db6f4a2d1ce2972e7fa11142c763c3aa39bcfd77c0133688c1ebfdd9b38fa3ac4c6ada20b62df26239c5c0e4
   languageName: node
   linkType: hard
 
