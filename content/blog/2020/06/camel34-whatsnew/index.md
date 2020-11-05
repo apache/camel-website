@@ -11,7 +11,7 @@ Apache Camel 3.4 is the first LTS (Long Term Support) release of Camel 3.
 
 This release will be actively supported with regular patch releases containing important bug and security fixes for 1-year.
 
-For more details about LTS vs non-LTS releases see this [blog post](/blog/LTS-Release-Schedule/).
+For more details about LTS vs non-LTS releases see this [blog post](/blog/2020/03/LTS-Release-Schedule/).
 
 
 ### So what's in this release?
