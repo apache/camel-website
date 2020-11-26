@@ -14,7 +14,7 @@
     "preview:antora": "antora --clean --fetch antora-playbook.yml",
     "preview:hugo": "hugo server -D",
     "check:xref": "antora --generator @antora/xref-validator antora-playbook.yml",
-    "check:links": "deadlinks-linux deadlinks --dir public",
+    "check:links": "deadlinks-linux public",
     "check:html": "html-validate 'public/*/**/*.html' 'public/!(google)*.html'",
     "checks": "run-s check:xref check:links check:html"
   },
@@ -29,7 +29,7 @@
     "@antora/site-mapper": "3.0.0-alpha.1",
     "@antora/xref-validator": "https://gitlab.com/antora/xref-validator.git#commit=19bfaf88fc7dd39552cfd8b3ac41c55d6d8f9edd",
     "@djencks/asciidoctor-antora-indexer": "^0.0.5",
-    "@zregvart/cargo-deadlinks": "github-release:zregvart/cargo-deadlinks:0.5.0-zregvart/deadlinks-linux",
+    "@zregvart/cargo-deadlinks": "github-release:deadlinks/cargo-deadlinks:0.6.1/deadlinks-linux",
     "antora-ui-camel": "workspace:antora-ui-camel",
     "del": "^6.0.0",
     "escape-string-regexp": "~2.0",

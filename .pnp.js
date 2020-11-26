@@ -52,7 +52,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@antora/site-mapper", "npm:3.0.0-alpha.1"],
             ["@antora/xref-validator", "https://gitlab.com/antora/xref-validator.git#commit=19bfaf88fc7dd39552cfd8b3ac41c55d6d8f9edd"],
             ["@djencks/asciidoctor-antora-indexer", "npm:0.0.5"],
-            ["@zregvart/cargo-deadlinks", "github-release:zregvart/cargo-deadlinks:0.5.0-zregvart/deadlinks-linux"],
+            ["@zregvart/cargo-deadlinks", "github-release:deadlinks/cargo-deadlinks:0.6.1/deadlinks-linux"],
             ["antora-ui-camel", "workspace:antora-ui-camel"],
             ["del", "npm:6.0.0"],
             ["escape-string-regexp", "npm:2.0.0"],
@@ -1061,10 +1061,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@zregvart/cargo-deadlinks", [
-        ["github-release:zregvart/cargo-deadlinks:0.5.0-zregvart/deadlinks-linux", {
-          "packageLocation": "./.yarn/cache/@zregvart-cargo-deadlinks-github-release-c1bd0491fb-f6b7be7bd3.zip/node_modules/@zregvart/cargo-deadlinks/",
+        ["github-release:deadlinks/cargo-deadlinks:0.6.1/deadlinks-linux", {
+          "packageLocation": "./.yarn/cache/@zregvart-cargo-deadlinks-github-release-33782f9786-524a7b1dc2.zip/node_modules/@zregvart/cargo-deadlinks/",
           "packageDependencies": [
-            ["@zregvart/cargo-deadlinks", "github-release:zregvart/cargo-deadlinks:0.5.0-zregvart/deadlinks-linux"],
+            ["@zregvart/cargo-deadlinks", "github-release:deadlinks/cargo-deadlinks:0.6.1/deadlinks-linux"],
             ["@yarnpkg/fslib", "npm:2.3.0"]
           ],
           "linkType": "HARD",
@@ -1495,7 +1495,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@antora/site-mapper", "npm:3.0.0-alpha.1"],
             ["@antora/xref-validator", "https://gitlab.com/antora/xref-validator.git#commit=19bfaf88fc7dd39552cfd8b3ac41c55d6d8f9edd"],
             ["@djencks/asciidoctor-antora-indexer", "npm:0.0.5"],
-            ["@zregvart/cargo-deadlinks", "github-release:zregvart/cargo-deadlinks:0.5.0-zregvart/deadlinks-linux"],
+            ["@zregvart/cargo-deadlinks", "github-release:deadlinks/cargo-deadlinks:0.6.1/deadlinks-linux"],
             ["antora-ui-camel", "workspace:antora-ui-camel"],
             ["del", "npm:6.0.0"],
             ["escape-string-regexp", "npm:2.0.0"],
