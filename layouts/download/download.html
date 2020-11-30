@@ -22,7 +22,7 @@
                 {{ $major = .Params.version | replaceRE "\\.\\d+$" "" }}
             {{ end }}
             </ul>
- 
+
             <h2>Getting the latest distributions</h2>
 
             <h3>Binary Distribution</h3>
@@ -102,7 +102,7 @@
             </div>
             <h3>Older releases</h3>
 
-            All releases are listed on the <a href="{{ "/releases/" | relURL}}">Releases</a> archive, here you will also find releases that are no longer supported.
+            <p>All releases are listed on the <a href="{{ "/releases/" | relURL}}">Releases archive</a>, here you will also find releases that are no longer supported.</p>
 
             {{ .Content }}
 
