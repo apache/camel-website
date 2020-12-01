@@ -8,6 +8,7 @@ preview: "Minor update of the 3.0.x branch"
 apiBreaking: ""
 knownIssues: ""
 jiraVersionId: 12346544
+category: camel
 ---
 
 This release is a minor update of the 3.0.x branch.

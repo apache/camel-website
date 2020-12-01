@@ -8,6 +8,8 @@ preview: "New minor release 2.25.0"
 apiBreaking: ""
 knownIssues: ""
 jiraVersionId: 12345517
+category: camel
+kind: legacy
 ---
 
 This release is the new Camel 2.25.0 minor release.

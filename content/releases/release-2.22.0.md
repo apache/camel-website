@@ -8,6 +8,8 @@ preview: "Major release for 2.22.x"
 apiBreaking: "The RestProducerFactory has an API change where the RestConfiguration is provided as parameter as well."
 knownIssues: ""
 jiraVersionId: 12342707
+category: camel
+kind: legacy
 ---
 
 Welcome to the 2.22.0 release which resolved 216 issues including new features, improvements and bug fixes.

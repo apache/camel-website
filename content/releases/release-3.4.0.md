@@ -8,6 +8,8 @@ preview: "New LTS release"
 apiBreaking: ""
 knownIssues: ""
 jiraVersionId: 12347798
+category: camel
+kind: lts
 ---
 
 This release is the new Camel 3.4.0 LTS release.

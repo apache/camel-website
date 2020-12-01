@@ -8,6 +8,8 @@ preview: "Minor update of the 2.19.x branch"
 apiBreaking: ""
 knownIssues: ""
 jiraVersionId: 12341575
+category: camel
+kind: legacy
 ---
 
 This release is a minor update of the 2.19.x branch.

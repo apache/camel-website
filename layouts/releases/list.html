@@ -2,29 +2,21 @@
 
 <main class="main">
   <article class="static doc">
-
     {{ .Content }}
 
-    <table class="tableblock frame-all grid-all stretch">
-      <caption>Releases by version</caption>
-      <thead>
-        <tr>
-          <td>Version</td>
-          <td>Release date</td>
-          <td>Description</td>
-        </tr>
-      </thead>
-      <tbody>
-      {{ range .Pages }}
-        <tr>
-          <td><a href="{{ .RelPermalink }}">{{ .Params.version }}</a></td>
-          <td>{{ .Date | dateFormat "2006-01-02" }}</td>
-          <td>{{ .Params.preview }}</td>
-        </tr>
-      {{ end }}
-      </tbody>
-    </table>
+    <p>
+        On this page you'll find archived releases of:
+        <dl>
+            {{ range $category := sort (index .Site.Data "release-categories") ".order" }}
+                <dd><a href="#{{ $category.id }}">Apache {{ $category.name }}</a></dd>
+            {{ end }}
+        </dl>
+    </p>
 
+    {{ range $category := sort (index .Site.Data "release-categories") ".order" }}
+        <h2 id="{{ $category.id }}"><a class="anchor" href="#{{ $category.id }}"></a>Releases of {{ $category.name }}</h2>
+        {{ partial "releases/release-table.html" (where (where $.Site.Pages "Section" "releases") ".Params.category" $category.id) }}
+    {{ end }}
   </article>
 </main>
 

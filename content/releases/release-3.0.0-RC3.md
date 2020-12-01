@@ -9,6 +9,7 @@ preview: "Third release candidate for 3.0.0"
 apiBreaking: ""
 knownIssues: ""
 jiraVersionId: 12346354
+category: camel
 ---
 
 This release the third and final release candidate towards Camel 3.0.0 release.

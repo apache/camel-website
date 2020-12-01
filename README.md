@@ -239,12 +239,29 @@ Make sure that you set the `draft: false` property to have the page published.
 
 #### Adding new release note
 
+##### Release of Apache Camel (core)
+
 Use the `release-note` archetype to create a new markdown content file in `content/releases`:
 
-    $ yarn run hugo new --kind release-note releases/release-x.y.z # replace x.y.z with the release version
+    $ yarn run hugo new --kind release-note releases/release-x.y.z.md # replace x.y.z with the release version
 
 This will create a `content/release-x.y.z.md` file which you need to edit to and fill in the required parameters.
-The content of the created markdown file is added to the _New and Noteworth_ section.
+The content of the created markdown file is added to the _New and Noteworthy_ section.
+
+Make sure that you set the `draft: false` property to have the page published.
+
+##### Sub-project release
+
+Use the `release-{category}` archetype to create a new markdown content file in `content/releases/{category}-{version with underscores}/index.md`.
+
+For `{category} you can use: `k` `k-runtime`, `ckc`, or `q`.
+
+For example, to create Camel Kafka Connector release note:
+
+    $ yarn run hugo new --kind release-ckc releases/ckc-x_y_z # replace x_y_z with the release version (use underscores)
+
+This will create a `content/releases/ckc-x_y_z/index.md` file which you need to edit to and fill in the required parameters.
+The content of the created markdown file is added to the _New and Noteworthy_ section.
 
 Make sure that you set the `draft: false` property to have the page published.
 

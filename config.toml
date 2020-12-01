@@ -66,6 +66,10 @@ defaultMarkdownHandler = "blackfriday"
     source = "documentation/_/data"
     target = "data"
 
+  [[module.mounts]]
+    source = "data"
+    target = "data"
+
 [permalinks]
     blog = "blog/:year/:month/:filename/"
 

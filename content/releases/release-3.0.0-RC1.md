@@ -9,6 +9,7 @@ preview: "First release candidate for 3.0.0"
 apiBreaking: ""
 knownIssues: ""
 jiraVersionId: 12345723
+category: camel
 ---
 
 This release the first release candidate towards Camel 3.0.0 release.

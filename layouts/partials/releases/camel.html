@@ -1,0 +1,78 @@
+<h2 id="maven"><a class="anchor" href="#maven"></a>Getting the Binaries using Maven</h2>
+<p>To use this release in your <a href="https://maven.apache.org">Apache Maven</a> <code>pom.xml</code>, import the Camel Bill of Materials (BOM) and then include the <code>camel-core</code> and any other components needed without specifying the version.</p>
+<aside>
+  <p><mark>Note:</mark> <code>camel-bom</code> is available from Camel 2.20.0 onward.</p>
+  <p>Replace the <code>COMPONENT</code> with the artifact outlined in the <a href="/components/latest/">component documentation</a></p>
+</aside>
+<pre><code>{{ htmlUnescape (printf `<dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-bom</artifactId>
+      <version>%s</version>
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
+  </dependencies>
+</dependencyManagement>
+
+<dependencies>
+  <dependency>
+    <groupId>org.apache.camel</groupId>
+    <artifactId>camel-core</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.camel</groupId>
+    <artifactId>camel-COMPONENT</artifactId>
+  </dependency>
+</dependencies>
+` .Params.version) }}</code></pre>
+<p>To use this release in a Spring Boot application, use the <code>camel-spring-boot-dependencies</code> Bill of Materials (BOM):
+<aside>
+  <p><mark>Note:</mark> for Camel 3.0.0 and newer releases the <code>groupId</code> for Camel Spring Boot support changed from <code>org.apache.camel</code> to <code>org.apache.camel.springbooot</code>, so be sure to check that the appropriate <code>groupId</code> is used for the Camel version.</p>
+  <p>Replace the <code>COMPONENT</code> with the artifact outlined in the <a href="/components/latest/">component documentation</a></p>
+</aside>
+<pre><code>{{ htmlUnescape (printf `<dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.camel.springboot</groupId>
+      <artifactId>camel-spring-boot-dependencies</artifactId>
+      <version>%s</version>
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
+  </dependencies>
+</dependencyManagement>
+
+<dependencies>
+  <dependency>
+    <groupId>org.apache.camel.springboot</groupId>
+    <artifactId>camel-COMPONENT-starter</artifactId>
+  </dependency>
+</dependencies>
+` .Params.version) }}</code></pre>
+
+{{ partial "releases/downloads.html" (dict "Category" (index (index $.Site.Data "release-categories") "camel") "Pages" $.Site.Pages "Version" .Params.version) }}
+
+<h2 id="git"><a class="anchor" href="#git"></a>Git tag checkout</h2>
+<p>Release is tagged with <code>camel-{{ .Params.version }}</code> in the Git, to fetch it use:</p>
+<pre>git clone https://git-wip-us.apache.org/repos/asf/camel.git
+cd camel
+git checkout camel-{{ .Params.version }}</pre>
+
+<h2 id="resolved"><a class="anchor" href="#resolved"></a>Resolved issues</h2>
+<p>Here is a list of all the issues that have been resolved for this release</p>
+{{ $issues_json := getJSON "https://issues.apache.org/jira/rest/api/latest/search?jql=fixVersion=" (string .Params.jiraVersionId) "&fields=issuetype,summary&maxResults=1000" }}
+{{ $issues := dict }}
+{{ range $issues_json.issues }}
+  {{ $issues_by_type := (or (index $issues .fields.issuetype.name) slice) | append (dict "issue" .key "summary" .fields.summary) }}
+  {{ $issues = merge $issues (dict .fields.issuetype.name $issues_by_type ) }}
+{{ end }}
+{{ range $type, $data := $issues }}
+<h3>{{ $type }} ({{ len $data }})</h3>
+<dl>
+  {{ range $data }}
+  <dt><a href="https://issues.apache.org/jira/browse/{{ .issue }}">{{ .issue }}</a></dt><dd>{{ .summary }}</dd>
+  {{ end }}
+</dl>
+{{ end }}

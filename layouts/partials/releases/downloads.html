@@ -1,0 +1,158 @@
+{{/* after 2018-11-10 we started using SHA512 */}}
+{{ $sha1_cutoff := time "2018-11-10" }}
+
+{{/* default base URLs for current releases */}}
+{{ $artifact_base_url := "https://www.apache.org/dyn/closer.lua/" }}
+{{ $meta_base_url := "https://downloads.apache.org/" }}
+
+{{/* an slice of maps with single entry kind and version for each of the downloads (lts, latest, legacy, ...) in a particular category (camel, camel-k, ...), there could be more than one item in the slice with the same kind (e.g. two lts items) */}}
+{{ $versions := slice }}
+
+{{/* all versions from a category (camel, camel-k...) */}}
+{{ $category_releases := where (where (where .Pages "Section" "releases") ".Params.rc" "ne" "true") ".Params.category" $.Category.id }}
+
+{{/* are we featuring a current versions or an archived ones */}}
+{{ $is_current_versions := false }}
+
+{{ range $kind := $.Category.kinds }}
+    {{ if eq $kind.filter "latest" }}
+        {{/* there can be only single latest version, and we sort by version (as strings!) to find it, there could be newer by date versions that are not the latest, e.g. patching a legacy or lts release */}}
+        {{ $released_versions := ($category_releases.ByParam "version").Reverse }}
+        {{ $version := (index $released_versions 0).Param "version" }}
+        {{ $versions = $versions | append (dict $kind.name $version) }}
+    {{ else }}
+        {{/* non-latest versions we need to sort by date of release */}}
+        {{ $released_versions := ($category_releases.ByParam "date").Reverse }}
+        {{ if $kind.last }}
+            {{/* we need to feature more than one of this kind: 0..last - 1*/}}
+
+            {{/* if we need to feature more than one, we don't want the last N of the same major.minor, we want previous N major.minor versions */}}
+            {{ $last_major_minor := "" }}
+            {{ range $idx := (seq 0 (sub $kind.last 1)) }}
+                {{ $version := (index (where $released_versions ".Params.kind" $kind.filter) $idx).Param "version" }}
+                {{ $major_minor := replaceRE "\\.\\d+$" "" $version }}
+                {{ if ne $last_major_minor $major_minor }}
+                    {{ $versions = $versions | append (dict $kind.name $version) }}
+                {{ end }}
+                {{ $last_major_minor = $major_minor }}
+            {{ end }}
+        {{ else }}
+            {{ $version := (index (where $released_versions ".Params.kind" $kind.filter) 0).Param "version" }}
+            {{ $versions = $versions | append (dict $kind.name $version) }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+{{/* if the version we're asked to render ($.Version is specifically set) and that version is contained within $versions, i.e. it will be featured on the downloads page, that version is current */}}
+{{ if $.Version }}
+    {{/* when version is specified, this is included from the release page */}}
+    {{ range $version := $versions }}
+        {{ range $kind, $v := $version }}
+            {{ $v }}
+            {{ if eq $v $.Version }}
+                {{ $is_current_versions = true }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+
+    {{/* we have determined that the $.Version will not be rendered on the downloads page, so we need to link to archive */}}
+    {{ if not $is_current_versions }}
+        {{ $artifact_base_url = "https://archive.apache.org/dist/" }}
+        {{ $meta_base_url = "https://archive.apache.org/dist/" }}
+    {{ end }}
+
+    {{/* we're rendering a specific version, we don't need all collected kinds/versions above */}}
+    {{ $versions = slice (dict "" $.Version) }}
+{{ else }}
+    {{/* no $.Version requested, we're rendering the downloads page, all versions should be current */}}
+    {{ $is_current_versions = true }}
+
+{{ end }}
+
+{{/* the same version can be matched by two kinds (say be latest and lts at the same time), this merges the multiple version entries into single */}}
+{{ $versions_grouped := slice }}
+{{/* check by cartesian product, we don't have much option with the capabilities we have here */}}
+{{ range $version1 := $versions }}
+    {{ $groupped := false }}
+    {{ range $k1, $v1 := $version1 }}
+        {{ range $version2 := $versions }}
+            {{ range $k2, $v2 := $version2 }}
+                {{ if and (eq $v1 $v2) (ne $k1 $k2) }}
+                    {{ $groupped = true }}
+                    {{/* version equals but kind differs, i.e. same version appears in two kinds */}}
+                    {{ $kind := printf "%s, %s" $k1 $k2 }}
+                    {{/* we'll encounter $v1 == $v2 and $v2 == $v1, and we don't want the same version twice */}}
+                    {{ $contained := false }}
+                    {{ range $g := $versions_grouped }}
+                        {{ range $x, $v := $g }}
+                            {{ if eq $v $v1 }}
+                                {{ $contained = true }}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                    {{ if not $contained }}
+                        {{ $versions_grouped = $versions_grouped | append (dict $kind $v1) }}
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+    {{ if not $groupped }}
+        {{/* this version did not belong to multiple kinds, we need to add it */}}
+        {{ $versions_grouped = $versions_grouped | append $version1 }}
+    {{ end }}
+{{ end }}
+
+{{/* subsitute as we did the grouping above */}}
+{{ $versions = $versions_grouped }}
+
+<h2 id="{{ $.Category.id }}"><a class="anchor" href="#{{ $.Category.id }}"></a>{{ $.Category.name }}</h2>
+
+<div class="table-wrapper">
+<table class="tableblock frame-all grid-all stretch">
+    <thead>
+        <tr>
+            <th>Version</th>
+            <th>Description</th>
+            <th>Download Link</th>
+            <th>PGP Signature file of download</th>
+            <th>SHA512 Checksum file of download</th>
+        </tr>
+    </thead>
+
+    {{ range $version := $versions }}
+        <tbody>
+        {{ range $kind, $v := $version }}
+            {{ $release_note := (index (where (where (where $.Pages "Section" "releases") ".Params.category" $.Category.id) ".Params.version" $v) 0) }}
+            {{ $hash_extension := ".sha512" }}
+            {{ if le $release_note.Date $sha1_cutoff }}
+                {{ $hash_extension = ".sha1" }}
+            {{ end }}
+
+            <tr>
+                <td rowspan="{{ len $.Category.downloads }}">
+                  <strong><a href="{{ $release_note.Permalink | relURL }}">{{ $v }}</a></strong>
+                    {{ with $kind }}
+                        <br/>
+                        <small>{{ . }}</small>
+                        <br/>
+                        <small>{{ ((index (where (where (where $.Pages "Section" "releases") ".Params.category" $.Category.id) ".Params.version" $v) 0).Param "date").Format "Jan, 2006" }}</small>
+                    {{ end }}
+                </td>
+                {{ range $idx, $download := $.Category.downloads }}
+                    {{ if ne $idx 0 }}
+                    </tr><tr>
+                    {{ end }}
+                    {{ $path := replace $download.path_format "{version}" $v }}
+                    {{ $filename := replace $download.filename_format "{version}" $v }}
+                    <td>{{ $download.name}}</td>
+                    <td><a href="{{ $artifact_base_url }}{{ $path }}">{{ $filename }}</a></td>
+                    <td><a href="{{ $meta_base_url }}{{ $path }}.asc">{{ $filename }}.asc</a></td>
+                    <td><a href="{{ $meta_base_url }}{{ $path }}{{ $hash_extension }}">{{ $filename }}{{ $hash_extension }}</a></td>
+                {{ end }}
+            </tr>
+        {{ end }}
+        </tbody>
+    {{ end }}
+</table>
+</div>

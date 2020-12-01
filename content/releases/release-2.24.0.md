@@ -8,6 +8,8 @@ preview: "Major release for 2.24.x"
 apiBreaking: ""
 knownIssues: ""
 jiraVersionId: 12344459
+category: camel
+kind: legacy
 ---
 
 This release is a minor update of the 2.24.x branch.

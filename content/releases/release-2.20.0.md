@@ -8,6 +8,8 @@ preview: "Major release for 2.20.x"
 apiBreaking: ""
 knownIssues: ""
 jiraVersionId: 12340219
+category: camel
+kind: legacy
 ---
 
 Welcome to the 2.20.0 release which resolved over 550 issues including

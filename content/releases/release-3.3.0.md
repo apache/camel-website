@@ -8,6 +8,7 @@ preview: "New minor release"
 apiBreaking: ""
 knownIssues: ""
 jiraVersionId: 12347798
+category: camel
 ---
 
 This release is the new Camel 3.3.0 major release.

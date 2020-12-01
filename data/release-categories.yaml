@@ -1,0 +1,100 @@
+# Entry listed here will appear on the downloads and release pages
+# the root key and the `id` property need to match the `category`
+# front matter entry of the release note, `name` will appear in
+# headings and text where applicable, `order` determines the order
+# on the downloads page (maps don't maintain determenistic order).
+#
+# For a category several kinds of releases can be defined under the
+# `kinds` key, `name` will appear next to the download and `filter`
+# defines now to descern different kinds within a category. Filter
+# is checked against `kind` front matter property. The latest
+# by date release matching a filter will be featured on the
+# downloads page. Special filter `latest` includes the latest
+# release by version number, sorting is done by comparing versions
+# as strings. A kind can have `last` property, determining how many
+# versions of a kind should there be, disregarding the patch
+# version.
+#
+# Within each kind of download for a category, there could be
+# several release artifacts listed in the `downloads` key, `name`
+# will be featured next to the download, `path_format` and
+# `filename_format` will be used to generate the link to the
+# artifact and the filename showed in the download link.
+camel:
+  id: 'camel'
+  name: 'Apache Camel'
+  order: 1
+  kinds:
+    - name: 'LTS'
+      last: 2
+      filter: 'lts'
+    - name: 'latest'
+      filter: 'latest'
+    - name: 'legacy'
+      filter: 'legacy'
+  downloads:
+    - name: 'Binary zip'
+      path_format: 'camel/apache-camel/{version}/apache-camel-{version}.zip'
+      filename_format: 'apache-camel-{version}.zip'
+    - name: 'Binary tar.gz'
+      path_format: 'camel/apache-camel/{version}/apache-camel-{version}.tar.gz'
+      filename_format: 'apache-camel-{version}.tar.gz'
+    - name: 'Sources'
+      path_format: 'camel/apache-camel/{version}/apache-camel-{version}-src.zip'
+      filename_format: 'apache-camel-{version}-src.zip'
+camel-k:
+  id: 'camel-k'
+  name: 'Apache Camel-K'
+  order: 2
+  kinds:
+    - name: 'latest'
+      filter: 'latest'
+  downloads:
+    - name: 'Linux 64bit binary'
+      path_format: 'camel/camel-k/{version}/camel-k-client-{version}-linux-64bit.tar.gz'
+      filename_format: 'camel-k-client-{version}-linux-64bit.tar.gz'
+    - name: 'MacOS 64bit binary'
+      path_format: 'camel/camel-k/{version}/camel-k-client-{version}-mac-64bit.tar.gz'
+      filename_format: 'camel-k-client-{version}-mac-64bit.tar.gz'
+    - name: 'Windows 64bit binary'
+      path_format: 'camel/camel-k/{version}/camel-k-client-{version}-windows-64bit.tar.gz'
+      filename_format: 'camel-k-client-{version}-windows-64bit.tar.gz'
+    - name: 'Examples'
+      path_format: 'camel/camel-k/{version}/camel-k-examples-{version}.tar.gz'
+      filename_format: 'camel-k-examples-{version}.tar.gz'
+    - name: 'Sources'
+      path_format: 'camel/camel-k/{version}/camel-k-sources-{version}.tar.gz'
+      filename_format: 'camel-k-sources-{version}.tar.gz'
+camel-k-runtime:
+  id: 'camel-k-runtime'
+  name: 'Apache Camel-K Runtime'
+  order: 3
+  kinds:
+    - name: 'latest'
+      filter: 'latest'
+  downloads:
+    - name: 'Sources'
+      path_format: 'camel/camel-k-runtime/{version}/apache-camel-k-runtime-{version}-source-release.zip'
+      filename_format: 'apache-camel-k-runtime-{version}-source-release.zip'
+camel-kafka-connector:
+  id: 'camel-kafka-connector'
+  name: 'Apache Camel Kafka Connector'
+  order: 4
+  kinds:
+    - name: 'latest'
+      filter: 'latest'
+  downloads:
+    - name: 'Sources'
+      path_format: 'camel/camel-kafka-connector/{version}/apache-camel-kafka-connector-{version}-src.zip'
+      filename_format: 'apache-camel-kafka-connector-{version}-src.zip'
+camel-quarkus:
+  id: 'camel-quarkus'
+  name: 'Apache Camel Quarkus'
+  order: 5
+  kinds:
+    - name: 'latest'
+      filter: 'latest'
+  downloads:
+    - name: 'Sources'
+      path_format: 'camel/camel-quarkus/{version}/apache-camel-quarkus-{version}-src.zip'
+      filename_format: 'apache-camel-quarkus-{version}-src.zip'
