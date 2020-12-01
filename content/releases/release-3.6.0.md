@@ -8,6 +8,7 @@ preview: "New patch release 3.6.0"
 apiBreaking: ""
 knownIssues: ""
 jiraVersionId: 12348664
+category: camel
 ---
 
 This release is the new Camel 3.6.0 patch release.

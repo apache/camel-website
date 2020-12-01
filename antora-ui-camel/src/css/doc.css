@@ -84,6 +84,7 @@
   font-size: 0.8em;
   font-weight: normal;
   padding-top: 0.05em;
+  background-image: none;
 }
 
 .doc h1 .anchor::before,

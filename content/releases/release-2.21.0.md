@@ -8,6 +8,8 @@ preview: "Major release for 2.21.x"
 apiBreaking: "All the AwsEndpoint uri options have been removed: since we are now using AWS client builders, the way we were using the endpoint cannot be used anymore, since clients are immutable now. If you still need to set an AWS endpoint on your client, you can create your client instance and put it in the Camel registry."
 knownIssues: ""
 jiraVersionId: 12341576
+category: camel
+kind: legacy
 ---
 
 Welcome to the 2.21.0 release which resolved 400 issues including new

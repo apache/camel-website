@@ -1,0 +1,3 @@
+{{ range $x, $category := sort (index $.Site.Data "release-categories") "order" }}
+    {{ partial "releases/downloads.html" (dict "Category" (index (index $.Site.Data "release-categories") $category.id) "Pages" $.Site.Pages) }}
+{{ end }}

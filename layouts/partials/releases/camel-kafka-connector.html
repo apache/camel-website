@@ -1,0 +1,28 @@
+<h2>Source Distribution</h2>
+
+<p>
+  Source distribution contains all the artifacts Apache Camel project
+  distributes in source form
+</p>
+
+{{ partial "releases/downloads.html" (dict "Category" (index (index $.Site.Data "release-categories") "camel-kafka-connector") "Pages" $.Site.Pages "Version" .Params.version) }}
+
+<h2 id="git"><a class="anchor" href="#git"></a>Git tag checkout</h2>
+<p>
+  Release is tagged with
+  <code>camel-kafka-connector{{ .Params.version }}</code> in the Git, to fetch
+  it use:
+</p>
+<pre>
+git clone https://git-wip-us.apache.org/repos/asf/camel-kafka-connector.git
+cd camel-kafka-connector
+git checkout camel-kafka-connector-{{ .Params.version }}</pre>
+
+<h2 id="resolved"><a class="anchor" href="#resolved"></a>Resolved issues</h2>
+<p>Here is a list of all the issues that have been resolved for this release</p>
+{{ $issues := getJSON "https://api.github.com/repos/apache/camel-kafka-connector/issues?label=" (string .Params.version) }}
+<dl>
+{{ range $issues }}
+  <dt><a href="{{ .html_url }}">#{{ .number }}</a></dt><dd>{{ .title }}</dd>
+{{ end }}
+</dl>

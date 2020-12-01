@@ -8,6 +8,8 @@ preview: "Major release for 2.18.x"
 apiBreaking: "Removed the deprecated vtdxml language. You can use the generic language (vtdxml) instead"
 knownIssues: ""
 jiraVersionId: 12334759
+category: camel
+kind: legacy
 ---
 
 Welcome to the 2.18.0 release which resolved over 500 issues. This is

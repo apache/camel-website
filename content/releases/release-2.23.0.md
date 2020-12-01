@@ -9,6 +9,8 @@ apiBreaking: "The HttpBinding interface has new methods for setting fileNameExtW
 exchange"
 knownIssues: ""
 jiraVersionId: 12343345
+category: camel
+kind: legacy
 ---
 
 Welcome to the Apache Camel 2.23.0 release which is a new minor release and resolved 262 issues

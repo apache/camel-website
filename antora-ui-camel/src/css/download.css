@@ -1,0 +1,7 @@
+.download tr td:first-child {
+  white-space: nowrap;
+}
+
+.download tr td:first-child small {
+  font-style: italic;
+}

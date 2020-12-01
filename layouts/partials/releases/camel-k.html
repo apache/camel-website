@@ -1,0 +1,19 @@
+{{ partial "releases/downloads.html" (dict "Category" (index (index $.Site.Data "release-categories") "camel-k") "Pages" $.Site.Pages "Version" .Params.version) }}
+
+<h2 id="git"><a class="anchor" href="#git"></a>Git tag checkout</h2>
+<p>
+  Release is tagged with <code>v{{ .Params.version }}</code> in the Git, to fetch it use:
+</p>
+<pre>
+git clone https://git-wip-us.apache.org/repos/asf/camel-k.git
+cd camel-k
+git checkout v{{ .Params.version }}</pre>
+
+<h2 id="resolved"><a class="anchor" href="#resolved"></a>Resolved issues</h2>
+<p>Here is a list of all the issues that have been resolved for this release</p>
+{{ $issues := getJSON "https://api.github.com/repos/apache/camel-k/issues?state=closed&milestone=" (string .Params.milestone ) }}
+<dl>
+{{ range $issues }}
+  <dt><a href="{{ .html_url }}">#{{ .number }}</a></dt><dd>{{ .title }}</dd>
+{{ end }}
+</dl>

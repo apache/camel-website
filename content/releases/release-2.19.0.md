@@ -8,6 +8,8 @@ preview: "Major release for 2.19.x"
 apiBreaking: ""
 knownIssues: ""
 jiraVersionId: 12337871
+category: camel
+kind: legacy
 ---
 
 Welcome to the 2.19.0 release which resolved over 670 issues including
