@@ -1,6 +1,7 @@
 # Redirect security advisories to new location
 RewriteEngine on
-RewriteRule "security-advisories.data/(.+)$" "security/$1" [R=permanent,L]
+RewriteBase "/"
+RewriteRule "^security-advisories.data/(.+)$" "security/$1" [R=permanent,L]
 
 # Customize what Apache returns to the client in case of an error.
 #
@@ -8,7 +9,7 @@ RewriteRule "security-advisories.data/(.+)$" "security/$1" [R=permanent,L]
 ErrorDocument 404 /404.html
 
 # Redirect /news/... to /blog/...
-RewriteRule "news(/.*)$" "/blog$1" [R=permanent,L]
+RewriteRule "^news(/.*)$" "/blog$1" [R=permanent,L]
 
 # Redirect known links from old website. Not mapped links are commented out. Feel free to edit, if you find something missing.
 # Redirect 301 /EclipseMilo
@@ -1273,6 +1274,15 @@ Redirect 301 /blog/Camel33-Whatsnew/ /blog/2020/05/Camel33-Whatsnew/
 Redirect 301 /blog/CdcWithCamelAndDebezium/ /blog/2020/05/CdcWithCamelAndDebezium/
 Redirect 301 /blog/release-3-3-0.html /blog/2020/05/RELEASE-3.3.0/
 Redirect 301 /blog/release-3-4-0.html /blog/2020/06/RELEASE-3.4.0/
+
+# default to latest documentation versions, to make it easier on folk to type in shorter urls
+RewriteRule "^components/$" "/components/latest/" [R=permanent,L]
+RewriteRule "^camel-spring-boot/$" "/camel-spring-boot/latest/" [R=permanent,L]
+RewriteRule "^camel-karaf/$" "/camel-karaf/latest/" [R=permanent,L]
+RewriteRule "^camel-k/$" "/camel-k/latest/" [R=permanent,L]
+RewriteRule "^camel-kafka-connector/$" "/camel-kafka-connector/latest/" [R=permanent,L]
+RewriteRule "^camel-quarkus/$" "/camel-quarkus/latest/" [R=permanent,L]
+RewriteRule "^manual/$" "/manual/latest/" [R=permanent,L]
 
 # Disable the pattern matching based on filenames.
 #
