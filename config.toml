@@ -70,6 +70,27 @@ defaultMarkdownHandler = "blackfriday"
     source = "data"
     target = "data"
 
+[related]
+  includeNewer = false
+  threshold = 80
+  toLower = false
+
+  [[related.indices]]
+    name = "categories"
+    weight = 50
+
+  [[related.indices]]
+    name = "keywords"
+    weight = 100
+
+  [[related.indices]]
+    name = "authors"
+    weight = 50
+
+  [[related.indices]]
+    name = "date"
+    weight = 10
+
 [permalinks]
     blog = "blog/:year/:month/:filename/"
 
