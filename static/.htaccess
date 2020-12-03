@@ -1274,6 +1274,15 @@ Redirect 301 /blog/CdcWithCamelAndDebezium/ /blog/2020/05/CdcWithCamelAndDebeziu
 Redirect 301 /blog/release-3-3-0.html /blog/2020/05/RELEASE-3.3.0/
 Redirect 301 /blog/release-3-4-0.html /blog/2020/06/RELEASE-3.4.0/
 
+# default to latest documentation versions, to make it easier on folk to type in shorter urls
+Redirect 301 /components/ /components/latest/
+Redirect 301 /camel-spring-boot/ /camel-spring-boot/latest/
+Redirect 301 /camel-karaf/ /camel-karaf/latest/
+Redirect 301 /camel-k/ /camel-k/latest/
+Redirect 301 /camel-kafka-connector/ /camel-kafka-connector/latest/
+Redirect 301 /camel-quarkus/ /camel-quarkus/latest/
+Redirect 301 /manual/ /manual/latest/
+
 # Disable the pattern matching based on filenames.
 #
 # This setting prevents Apache from returning a 404 error as the result
