@@ -1,6 +1,5 @@
 ---
 title: "RELEASE 3.5.0"
-url: /blog/release-3-5-0.html
 date: 2020-09-05
 draft: false
 authors: [gzurowski]
@@ -15,5 +14,5 @@ The artifacts are published and ready for you to download from the Central Maven
 
 Many thanks to all who made this release possible.
 
-On behalf of the Camel PMC,  
+On behalf of the Camel PMC,
 Gregor Zurowski

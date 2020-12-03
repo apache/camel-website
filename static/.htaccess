@@ -1274,6 +1274,12 @@ Redirect 301 /blog/Camel33-Whatsnew/ /blog/2020/05/Camel33-Whatsnew/
 Redirect 301 /blog/CdcWithCamelAndDebezium/ /blog/2020/05/CdcWithCamelAndDebezium/
 Redirect 301 /blog/release-3-3-0.html /blog/2020/05/RELEASE-3.3.0/
 Redirect 301 /blog/release-3-4-0.html /blog/2020/06/RELEASE-3.4.0/
+Redirect 301 /blog/release-3-4-1.html /blog/2020/07/RELEASE-3.4.1/
+Redirect 301 /blog/release-3-4-2.html /blog/2020/07/RELEASE-3.4.2/
+Redirect 301 /blog/release-3-4-3.html /blog/2020/08/RELEASE-3.4.3/
+Redirect 301 /blog/release-3-4-4.html /blog/2020/09/RELEASE-3.4.4/
+Redirect 301 /blog/release-3-5-0.html /blog/2020/09/RELEASE-3.5.0/
+Redirect 301 /blog/release-3-6-0.html /blog/2020/09/RELEASE-3.6.0/
 
 # default to latest documentation versions, to make it easier on folk to type in shorter urls
 RewriteRule "^components/$" "/components/latest/" [R=permanent,L]

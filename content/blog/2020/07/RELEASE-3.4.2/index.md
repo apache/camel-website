@@ -1,6 +1,5 @@
 ---
 title: "RELEASE 3.4.2"
-url: /blog/release-3-4-2.html
 date: 2020-07-22
 draft: false
 authors: [gzurowski]
@@ -18,5 +17,5 @@ The artifacts are published and ready for you to download from the Central Maven
 
 Many thanks to all who made this release possible.
 
-On behalf of the Camel PMC,  
+On behalf of the Camel PMC,
 Gregor Zurowski
