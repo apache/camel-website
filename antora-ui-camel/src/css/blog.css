@@ -50,6 +50,11 @@ article.blog p {
   font-weight: bold;
 }
 
+.blog header time {
+  color: var(--color-gray-60);
+  font-style: italc;
+}
+
 .blog .post {
   margin-top: 1rem;
   display: flex;
@@ -237,5 +242,37 @@ article.blog p {
 @media screen and (max-width: 1023px) {
   .blog.list aside {
     margin-top: 4.5rem;
+  }
+}
+
+.blog .related {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--color-camel-orange);
+  margin-top: 3rem;
+}
+
+.blog .related > h3 {
+  min-width: 100%;
+}
+
+.blog .related article {
+  padding-right: 0;
+  width: 50%;
+  margin: 0;
+}
+
+.blog .related article:nth-child(2n) {
+  padding-left: 0;
+}
+
+.blog .related article header h1 {
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 1023px) {
+  .blog .related article {
+    width: 100%;
+    padding-left: 0;
   }
 }
