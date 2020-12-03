@@ -10,7 +10,7 @@ A new release of [VS Code Language Support for Apache Camel](https://marketplace
 
 # API based components support
 
-Camel has several API based components which are source code generated from external API. In [3.6.0](https://camel.apache.org/blog/2020/10/Camel36-Whatsnew/#api-components-overhaul), finer grained information is available through additional metadata (Camel catalog). This release is leveraging these metadata to propose improved completion, documentation and validation for these APU based components.
+Camel has several API based components which are source code generated from external API. In [3.6.0](./../../10/Camel36-Whatsnew/#api-components-overhaul), finer grained information is available through additional metadata (Camel catalog). This release is leveraging these metadata to propose improved completion, documentation and validation for these APU based components.
 
 It is proposing completion for api name:
 
