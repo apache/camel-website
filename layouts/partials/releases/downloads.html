@@ -48,7 +48,6 @@
     {{/* when version is specified, this is included from the release page */}}
     {{ range $version := $versions }}
         {{ range $kind, $v := $version }}
-            {{ $v }}
             {{ if eq $v $.Version }}
                 {{ $is_current_versions = true }}
             {{ end }}
@@ -66,7 +65,6 @@
 {{ else }}
     {{/* no $.Version requested, we're rendering the downloads page, all versions should be current */}}
     {{ $is_current_versions = true }}
-
 {{ end }}
 
 {{/* the same version can be matched by two kinds (say be latest and lts at the same time), this merges the multiple version entries into single */}}
