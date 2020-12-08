@@ -6,7 +6,7 @@ body {
   padding-top: var(--navbar-height);
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   body {
     padding-top: var(--navbar-mobile-height);
   }
@@ -37,7 +37,7 @@ html:not([data-scroll='0']) .navbar {
   padding: 0 0.375rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .navbar-end > .navbar-item {
     color: var(--navbar-font-color);
     text-transform: uppercase;
@@ -137,7 +137,7 @@ html:not([data-scroll='0']) .navbar {
   position: relative;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .navbar-menu.is-active {
     display: block;
     position: absolute;
@@ -205,7 +205,7 @@ html:not([data-scroll='0']) .navbar {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .navbar,
   .navbar-menu,
   .navbar-end {
@@ -427,7 +427,7 @@ div.footer-search h4 {
 }
 
 /* Styling for mobile use */
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .navbar {
     height: var(--navbar-mobile-height);
   }

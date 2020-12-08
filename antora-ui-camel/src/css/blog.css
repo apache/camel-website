@@ -14,7 +14,7 @@
   line-height: 2rem;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .blog.list aside {
     margin-top: 0;
   }
@@ -114,6 +114,9 @@ article.blog p {
   max-width: 800px;
   height: auto;
   max-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .blog .post-content figcaption {
@@ -160,7 +163,7 @@ article.blog p {
   display: inline;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .blog {
     max-width: var(--static-max-width--desktop);
   }
@@ -209,12 +212,11 @@ article.blog p {
 
 .blog .pagination {
   margin: var(--static-margin);
-  max-width: var(--static-max-width);
   list-style: none;
   padding: 1rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .blog .pagination {
     max-width: var(--static-max-width--desktop);
   }
@@ -245,7 +247,7 @@ article.blog p {
   color: var(--color-white);
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .blog.list aside {
     margin-top: 4.5rem;
   }
@@ -276,7 +278,7 @@ article.blog p {
   font-size: 1rem;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .blog .related article {
     width: 100%;
     padding-left: 0;
