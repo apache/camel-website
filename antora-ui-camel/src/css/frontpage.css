@@ -274,7 +274,7 @@ section.frontpage.projects .project img {
 
 /* css for tablet view */
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   header.frontpage h1 {
     font-size: 3rem;
     text-align: center;

@@ -14,7 +14,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .nav-container {
     font-size: calc(15.5 / var(--rem-base) * 1rem);
     flex: none;
@@ -29,7 +29,7 @@
   padding: 0;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .nav-category {
     margin-left: 1rem;
   }
@@ -48,7 +48,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .nav {
     top: var(--navbar-height);
     box-shadow: none;
@@ -73,13 +73,13 @@ html.is-clipped--nav {
   height: var(--nav-panel-height);
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .nav-panel-menu {
     height: var(--nav-panel-height--desktop);
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .nav-panel-menu {
     margin-top: var(--navbar-height);
   }
@@ -150,7 +150,7 @@ html.is-clipped--nav {
   background: var(--scrollbar-thumb-active-color);
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .nav-menu::-webkit-scrollbar {
     width: 0;
     background: transparent;

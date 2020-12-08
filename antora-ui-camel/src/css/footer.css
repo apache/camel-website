@@ -150,7 +150,7 @@ footer .footer dl dt label:nth-child(2) {
   display: none;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   footer {
     flex-direction: column;
   }

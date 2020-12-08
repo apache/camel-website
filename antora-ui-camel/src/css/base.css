@@ -4,7 +4,7 @@ body {
   scroll-padding-top: var(--body-top);
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   body {
     scroll-padding-top: var(--body-mobile-top);
   }
@@ -27,7 +27,7 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   html {
     font-size: var(--body-font-size--desktop);
   }

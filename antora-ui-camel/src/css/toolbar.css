@@ -18,7 +18,7 @@
   max-width: 100vw;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .toolbar {
     top: var(--navbar-mobile-height);
   }
@@ -40,7 +40,7 @@
   margin-right: -0.25rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .nav-toggle {
     display: none;
   }
@@ -70,7 +70,7 @@
   padding-right: 0.5rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .edit-this-page {
     display: block;
   }

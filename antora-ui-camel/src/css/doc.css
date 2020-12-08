@@ -4,11 +4,10 @@
   hyphens: auto;
   line-height: var(--doc-line-height);
   margin: var(--doc-margin);
-  max-width: var(--doc-max-width);
   padding: 0 1rem 4rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .doc {
     font-size: var(--doc-font-size--desktop);
     margin: var(--doc-margin--desktop);
@@ -733,7 +732,7 @@
   }
 }
 
-@media screen and (max-width: 1023px) and (min-width: 480px) {
+@media screen and (max-width: 1024px) and (min-width: 480px) {
   .doc p code,
   .doc thead code {
     font-size: var(--body-font-size);

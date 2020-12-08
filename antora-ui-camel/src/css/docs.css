@@ -46,7 +46,7 @@ a.button-dark {
   width: 80%;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .docs,
   .community {
     padding: 0 1rem 4rem;
