@@ -178,6 +178,29 @@ This will build the `antora-ui-camel` which holds all the CSS and JavaScript, an
 
 To iterate quickly, it's easier to make changes directly in the browser tooling and then bring the changes over to the CSS files after the fact.
 
+## Working on documentation (asciidoc) content
+
+To build the documentation we pull the content of git repositories (see `antora-playbook.yml`), so to make changes locally and have them built or previewed without those changes being merged to Camel git repositories you need to adapt the `antora-playbook.yml` file.
+
+For example to work on the user manual locally change the `content`, `sources` to point to `HEAD` of your local git repository, in this example located in `../camel`:
+
+```yaml
+content:
+  sources:
+
+    - url: ../camel
+      branches: HEAD
+      start_paths:
+        # manual
+        - docs/user-manual
+```
+
+Now you can run `yarn build:antora` or `yarn preview` and see the locally made changes. More details on this you can find in the Antora [documentation](https://docs.antora.org/antora/2.3/playbook/content-source-url/#local-urls).
+
+Typical workflow is to run the `yarn preview` in one command line session and then rebuild the Antora documentation by running `yarn build:antora` for the documentation to be refreshed.
+
+TIP: We pull in several git repositories and build several versions (branches) of documentation from them, time can be saved by removing sources for the documentation not worked on. Though be careful about inter-dependencies, for example several documents in the component reference point to the user manual.
+
 ## CAMEL_ENV environment variable
 
 Setting the `CAMEL_ENV` changes the output of the website build slightly, possible values are `development` (set by default if `CAMEL_ENV` is unset), `production` or `netlify`.
