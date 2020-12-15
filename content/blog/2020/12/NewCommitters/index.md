@@ -1,7 +1,6 @@
 ---
 title: "New committers to Apache Camel"
 date: 2020-12-15T10:40:19+01:00
-draft: true
 authors: ["zregvart"]
 categories: ["Camel","Committers"]
 preview: "Camel community welcomes two new committers to the project!"
