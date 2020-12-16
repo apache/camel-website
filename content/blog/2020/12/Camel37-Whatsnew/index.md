@@ -35,7 +35,8 @@ or compiled once during bootstrap via jOOR.
 
 {{< image "csimple-compiled.png" "Compiled Simple Language" >}}
 
-In a nutshell where compiled simple excels over simple language is primary around dynamic OGNL method calls.
+In a nutshell, compiled simple language excels over simple language when using dynamic
+Object-Graph Navigation Language (OGNL) method calls.
 
 For example profiling the following simple expression
 
@@ -144,9 +145,6 @@ features, and also its robustness and stability.
 
 The [camel-vertx-kafka](https://camel.apache.org/components/latest/vertx-kafka-component.html) component is intended
 to be (more) feature complete with the existing camel-kafka component. We will continue this work for the next couple of Camel releases.
-
-The existing camel-kafka component has a few issues reported, which we want to fix in the upcoming releases,
-and at the same time we can offer this new camel-kafka-component as an alternative and potential a better component in the future.
 
 
 ### DataSonnet
