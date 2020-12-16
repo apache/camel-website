@@ -29,7 +29,7 @@ Then we worked on compiled simple.
 
 ### Compiled Simple
 
-The [csimple language](https://camel.apache.org/components/latest/languages/csimple-language.html)
+The [csimple language](/components/latest/languages/csimple-language.html)
 is parsed into regular Java source code and compiled together with all the other source code,
 or compiled once during bootstrap via jOOR.
 
@@ -85,7 +85,7 @@ then [Claus wrote a blog post](http://www.davsclaus.com/2020/11/apache-camel-37-
 ### Optimized components startup
 
 The camel core has been optimized in Camel 3 to be small, slim, and fast on startup. This benefits
-[Camel Quarkus](https://camel.apache.org/camel-quarkus/latest/) which can do built time optimizations
+[Camel Quarkus](/camel-quarkus/latest/) which can do built time optimizations
 that take advantage of the optimized camel core.
 
 We have continued this effort in the Camel components where whenever possible initialization is moved ahead
@@ -127,7 +127,7 @@ microservice/serverless architectures, with a _closed world_ assumption.
 
 ### Autowiring components
 
-The Camel components is now capable of autowiring by type. For example the [AWS SQS](https://camel.apache.org/components/latest/aws-sqs-component.html) components can automatically
+The Camel components is now capable of autowiring by type. For example the [AWS SQS](/components/latest/aws-sqs-component.html) components can automatically
 lookup in the registry if there is a single instance of `SqsClient`, and then pre configure itself.
 
 We have marked up in the Camel documentation which component options supports this by showing *Autowired* in bold
@@ -145,13 +145,13 @@ We expect more to come from him.
 A new Kafka component has been developed that uses the Vert.X Kafka Java Client which allows us to use all of its
 features, and also its robustness and stability. 
 
-The [camel-vertx-kafka](https://camel.apache.org/components/latest/vertx-kafka-component.html) component is intended
+The [camel-vertx-kafka](/components/latest/vertx-kafka-component.html) component is intended
 to be (more) feature complete with the existing camel-kafka component. We will continue this work for the next couple of Camel releases.
 
 
 ### DataSonnet
 
-The new [camel-datasonnet](https://camel.apache.org/components/latest/languages/datasonnet-language.html) component,
+The new [camel-datasonnet](/components/latest/languages/datasonnet-language.html) component,
 is to be used for data transformation using the [DataSonnet](https://datasonnet.com/) standard.
 
 DataSonnet is an open source JSON-centric, template-based data transformation standard built to rival
@@ -167,7 +167,7 @@ We have upgraded to Spring Boot 2.4.
 
 This release has a number of new components, data formats and languages:
 
-- [AtlasMap](https://camel.apache.org/components/latest/atlasmap-component.html): Transforms the message using an [AtlasMap](https://www.atlasmap.io/) transformation
+- [AtlasMap](/components/latest/atlasmap-component.html): Transforms the message using an [AtlasMap](https://www.atlasmap.io/) transformation
 - Kubernetes Custom Resources: Perform operations on Kubernetes Custom Resources and get notified on Deployment changes
 - Vert.X Kafka: Sent and receive messages to/from an Apache Kafka broker using vert.x Kafka client
 - JSON JSON-B: Marshal POJOs to JSON and back using JSON-B
@@ -185,8 +185,8 @@ are upgrading to this release from a previous Camel version.
 ## More details
 
 The previous LTS release was Camel 3.4. We have blog posts for what's new in
-[Camel 3.5](https://camel.apache.org/blog/2020/10/Camel36-Whatsnew/) and
-[Camel 3.6](https://camel.apache.org/blog/2020/09/Camel35-Whatsnew/) you may want to read
+[Camel 3.5](/blog/2020/10/Camel36-Whatsnew/) and
+[Camel 3.6](/blog/2020/09/Camel35-Whatsnew/) you may want to read
 to cover all news between the two LTS releases.
 
 
