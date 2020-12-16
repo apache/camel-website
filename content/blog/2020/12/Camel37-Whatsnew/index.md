@@ -16,33 +16,68 @@ The next planned LTS release is 3.10 scheduled towards summer 2021.
 
 This release introduces a set of new features and noticeable improvements that we will cover in this blog post.
 
+### Pre compiled languages
 
-### Spring Boot
+We are continued our avenue of making Camel faster and smaller.
+This time we focused on the built-in Simple scripting language.
 
-We have upgraded to the latest release at this time which is Spring Boot 2.4.0.
+First we added the [jOOR language](/components/latest/languages/joor-language.html). jOOR is a small Java tool
+for performing runtime compilation of Java source code in-memory. It has some limitations but generally works well for small
+scripting code (requires Java 11 onwards).
 
-TODO: csimple (and jOOR)
-TODO: salesforce component fixes
-TODO: vertx kafka component
-TODO: optimize more core (direct and event notifier, avoid regexp, faster code)
-TODO: optimize simple (singleton, eager load resource, concat expressions)
-TODO: untangle reifier, model, processor
-TODO: lightweight mode
-TODO: optimize core - base converters in 2 classes, reduce memory overhead
-TODO: optimize routing engine - reduce object allocations
-TODO: reflection free
-TODO: 2 blog posts from davsclaus
-TODO: #autowired by type on component
+Then we worked on compiled simple.
+
+### Compiled Simple
+
+The csimple language is parsed into regular Java source code and compiled together with all the other source code,
+or compiled once during bootstrap via jOOR.
+
+{{< image "csimple-compiled.png" "Compiled Simple Language" >}}
+
+In a nutshell where compiled simple excels over simple language is primary around dynamic OGNL method calls.
+
+For example profiling the following simple expression
+
+    <simple>${exchangeProperty.user.getName} != null && ${exchangeProperty.user.getAge} > 11</simple>
+
+with the equivalent csimple expression:
+
+    <csimple>${exchangeProperty.user} != null && 
+             ${exchangeProperty.user.getName()} != null && 
+             ${exchangeProperty.user.getAge()} > 11</csimple>
+
+yields a dramatic 100 times performance improvement in reduced cpu usage as shown in the screenshot:
+
+{{< image "simple-csimple-performance.png" "Simple vs Compiled Simple" >}}
+
+For more information about the compiled simple language and further break down of performance improvements
+then read [Claus blog post](http://www.davsclaus.com/2020/12/apache-camel-37-compiled-simple.html).
+
+We have provided two small examples that demonstrate csimple as pre compiled and as runtime compiled during bootstrap.
+You can find these two examples from the official Apache Camel examples repository at:
+
+- [csimple pre compiled example](https://github.com/apache/camel-examples/tree/master/examples/camel-example-csimple)
+- [csimple runtime compiled example](https://github.com/apache/camel-examples/tree/master/examples/camel-example-csimple-joor)
 
 
+### Optimized core
 
-### Language precompilation
+We have continued the effort to optimize camel-core. This time a number of smaller improvements in various areas
+such as replacing regular expressions with regular Java code when regular expressions were overkill
+(regexp take up sizeable heap memory).
 
-As mentioned in the optimization section we moved initialization of languages to an earlier phase.
-Camel now pre compile languages when its applicable, for example JSonPath, and XPath language.
+The direct component has been enhanced to avoid synchronization when the producer calls the consumer.
 
-And speaking of pre-compiled languages then Camel 3.7 introduces the [jOOR language](/components/latest/languages/joor-language.html)
-to use runtime compile Java in the Camel DSL. A compiled simple language is also on the roadmap.
+We also enhanced the internals of the event notifier separating startup/stop events from routing events,
+gaining a small performance improvement during routing.
+
+We also reduced the number of objects used during routing which reduced the memory usage.
+
+Another significant win was to bulk together all the type converters from the core, into two classes (source generated).
+This avoids registering individually each type converter into the type converter registry which saves 20kb of heap memory.
+
+If you are more curious about how we did these optimizations and with some performance numbers,
+then [Claus wrote a blog post](http://www.davsclaus.com/2020/11/apache-camel-37-more-camel-core.html).
 
 
 ### Optimized components startup
@@ -53,6 +88,69 @@ can do built time optimizations that take advantage of the optimized camel core.
 We have continued this effort in the Camel components where whenever possible initialization is moved ahead
 to an earlier phase during startup, that allows enhanced built time optimizations. As there are a lot of Camel
 components then this work will progress over the next couple of Camel releases.
+
+
+### Separating Model and EIP processors 
+
+In this release we untangled model, reifier and processors.
+
+This is a great achievement which allows us to take this even further with design time vs runtime.
+
+    Model    ->    Reifier   ->   Processor
+    (startup)      (startup)      (runtime)
+
+The model is the structure of the DSL which you can think of as _design time_ specifying your Camel routes.
+The model is executed once during startup and via the reifier (factory) the runtime EIP processors is cretated.
+After this work is done, the model is essentially not needed anymore.
+
+By separating this into different JARs (camel-core-model, camel-core-reifier, camel-core-processor) then we ensure
+they are separated and this allows us to better do built time optimizations and dead code elimination via Quarkus and GraalVM.
+
+This brings up to lightweight mode.
+
+
+### Lightweight mode
+
+We started an experiment earlier with a lightweight mode. With the separation of the model from the processors,
+then we have a great step forward, which allowed us to make the lightweight mode available for end users to turn on.
+
+In lightweight mode, Camel will after startup, then remove all references to the model, and other bits, that all together
+makes the JVM capable of garbage collecting all model objects and unload model classes. This reduced memory usage.
+
+However after startup, then its no longer possible to dynamic add new routes, so this mode is only intended for
+microservice/serverless architectures, with a _closed world_ environment.
+
+
+### Autowiring components
+
+The Camel components is now capable of autowiring by type. For example the AWS SQS components can automatic
+lookup in the registry if there is single instance of `SqsClient`, and then pre configure itself.
+
+We have marked up in the Camel documentation which component options supports this by showing *Autowired* in bold
+in the description.
+
+
+### Salesforce fixes
+
+Our recent Camel committer Jeremy Ross did great work to improve and fix bugs in the camel-salesforce component.
+We expect more to come from him.
+
+
+### VertX Kafka Component
+
+A new Kafka component has been developed that uses the Vert.X Kafka Java Client which allows us to use all of its features,
+and also its robustness and stability. 
+
+The camel-vertx-kafka component is intended to be feature complete (or more feature complete) with the existing camel-kafka component.
+We will continue this work for the next couple of Camel releases.
+
+The existing camel-kafka component has a few issues reported, which we want to fix in the upcoming releases,
+and at the same time we can offer this new camel-kafka-component as an alternative and potential a better component in the future.
+
+
+### Spring Boot
+
+We have upgraded to the latest release at this time which is Spring Boot 2.4.0.
 
 
 ### New components
