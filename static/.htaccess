@@ -870,7 +870,6 @@ Redirect 301 /hdfs.html /components/latest/hdfs-component.html
 Redirect 301 /hdfs2.html /components/latest/hdfs-component.html
 Redirect 301 /header.html /components/latest/languages/header-language.html
 Redirect 301 /hiding-middleware.html /manual/latest/hiding-middleware.html
-Redirect 301 /hipchat.html /components/latest/hipchat-component.html
 Redirect 301 /hl7-dataformat.html /components/latest/dataformats/hl7-dataformat.html
 Redirect 301 /hl7.html /components/latest/dataformats/hl7-dataformat.html
 Redirect 301 /how-can-i-create-a-custom-component-or-endpoint.html /manual/latest/faq/how-can-i-create-a-custom-component-or-endpoint.html
