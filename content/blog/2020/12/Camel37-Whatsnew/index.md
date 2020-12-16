@@ -18,7 +18,7 @@ This release introduces a set of new features and noticeable improvements that w
 
 ### Pre compiled languages
 
-We are continued our avenue of making Camel faster and smaller.
+We continued our avenue of making Camel faster and smaller.
 This time we focused on the built-in Simple scripting language.
 
 First we added the [jOOR language](/components/latest/languages/joor-language.html). jOOR is a small Java tool
@@ -115,11 +115,11 @@ This brings up to lightweight mode.
 We started an experiment earlier with a lightweight mode. With the separation of the model from the processors,
 then we have a great step forward, which allowed us to make the lightweight mode available for end users to turn on.
 
-In lightweight mode, Camel will after startup, then remove all references to the model, and other bits, that all together
-makes the JVM capable of garbage collecting all model objects and unload model classes. This reduced memory usage.
+In lightweight mode Camel removes all references to the model after startup 
+which causes the JVM to be able to garbage collect all model objects and unload classes, freeing up memory.
 
-However after startup, then its no longer possible to dynamic add new routes, so this mode is only intended for
-microservice/serverless architectures, with a _closed world_ environment.
+After this it's no longer possible to dynamic add new Camel routes. The lightweight mode is intended for
+microservice/serverless architectures, with a _closed world_ assumption.
 
 
 ### Autowiring components
@@ -147,6 +147,14 @@ to be (more) feature complete with the existing camel-kafka component. We will c
 
 The existing camel-kafka component has a few issues reported, which we want to fix in the upcoming releases,
 and at the same time we can offer this new camel-kafka-component as an alternative and potential a better component in the future.
+
+
+### DataSonnet
+
+The new camel-datasonnect component, is to be used for data transformation using the DataSonnet standard.
+
+DataSonnet is an open source JSON-centric, template-based data transformation standard built to rival
+proprietary options available in the market.
 
 
 ### Spring Boot
