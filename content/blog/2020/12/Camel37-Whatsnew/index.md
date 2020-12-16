@@ -29,7 +29,8 @@ Then we worked on compiled simple.
 
 ### Compiled Simple
 
-The csimple language is parsed into regular Java source code and compiled together with all the other source code,
+The [csimple language](https://camel.apache.org/components/latest/languages/csimple-language.html)
+is parsed into regular Java source code and compiled together with all the other source code,
 or compiled once during bootstrap via jOOR.
 
 {{< image "csimple-compiled.png" "Compiled Simple Language" >}}
@@ -138,11 +139,11 @@ We expect more to come from him.
 
 ### VertX Kafka Component
 
-A new Kafka component has been developed that uses the Vert.X Kafka Java Client which allows us to use all of its features,
-and also its robustness and stability. 
+A new Kafka component has been developed that uses the Vert.X Kafka Java Client which allows us to use all of its
+features, and also its robustness and stability. 
 
-The camel-vertx-kafka component is intended to be feature complete (or more feature complete) with the existing camel-kafka component.
-We will continue this work for the next couple of Camel releases.
+The [camel-vertx-kafka](https://camel.apache.org/components/latest/vertx-kafka-component.html) component is intended
+to be (more) feature complete with the existing camel-kafka component. We will continue this work for the next couple of Camel releases.
 
 The existing camel-kafka component has a few issues reported, which we want to fix in the upcoming releases,
 and at the same time we can offer this new camel-kafka-component as an alternative and potential a better component in the future.
@@ -150,7 +151,7 @@ and at the same time we can offer this new camel-kafka-component as an alternati
 
 ### Spring Boot
 
-We have upgraded to the latest release at this time which is Spring Boot 2.4.0.
+We have upgraded to Spring Boot 2.4.
 
 
 ### New components
