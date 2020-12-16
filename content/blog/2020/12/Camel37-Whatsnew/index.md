@@ -43,8 +43,8 @@ For example profiling the following simple expression
 
 with the equivalent csimple expression:
 
-    <csimple>${exchangeProperty.user} != null && 
-             ${exchangeProperty.user.getName()} != null && 
+    <csimple>${exchangeProperty.user} != null &&
+             ${exchangeProperty.user.getName()} != null &&
              ${exchangeProperty.user.getAge()} > 11</csimple>
 
 yields a dramatic 100 times performance improvement in reduced cpu usage as shown in the screenshot:
