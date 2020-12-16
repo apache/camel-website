@@ -84,8 +84,9 @@ then [Claus wrote a blog post](http://www.davsclaus.com/2020/11/apache-camel-37-
 
 ### Optimized components startup
 
-The camel core has been optimized in Camel 3 to be small, slim, and fast on startup. This benefits Camel Quarkus which
-can do built time optimizations that take advantage of the optimized camel core.
+The camel core has been optimized in Camel 3 to be small, slim, and fast on startup. This benefits
+[Camel Quarkus](https://camel.apache.org/camel-quarkus/latest/) which can do built time optimizations
+that take advantage of the optimized camel core.
 
 We have continued this effort in the Camel components where whenever possible initialization is moved ahead
 to an earlier phase during startup, that allows enhanced built time optimizations. As there are a lot of Camel
@@ -106,7 +107,8 @@ The model is executed once during startup and via the reifier (factory) the runt
 After this work is done, the model is essentially not needed anymore.
 
 By separating this into different JARs (camel-core-model, camel-core-reifier, camel-core-processor) then we ensure
-they are separated and this allows us to better do built time optimizations and dead code elimination via Quarkus and GraalVM.
+they are separated and this allows us to better do built time optimizations and dead code elimination
+via [Quarkus](https://quarkus.io/) and/or GraalVM.
 
 This brings up to lightweight mode.
 
