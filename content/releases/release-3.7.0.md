@@ -9,6 +9,7 @@ apiBreaking: ""
 knownIssues: ""
 jiraVersionId: 12349250
 category: camel
+kind: lts
 ---
 
 This release is the new Camel 3.7.0 LTS release.
