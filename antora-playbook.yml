@@ -15,7 +15,7 @@ content:
     - url: git@github.com:apache/camel.git
       branches:
         - master
-        - camel-3.6.x
+        - camel-3.7.x
       start_paths:
         # eip
         - core/camel-core-engine/src/main/docs
