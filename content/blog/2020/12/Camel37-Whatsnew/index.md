@@ -54,7 +54,7 @@ yields a dramatic 100 times performance improvement in reduced cpu usage as show
 For more information about the compiled simple language and further break down of performance improvements
 then read [Claus blog post](http://www.davsclaus.com/2020/12/apache-camel-37-compiled-simple.html).
 
-We have provided two small examples that demonstrate csimple as pre compiled and as runtime compiled during bootstrap.
+We have provided two small examples that demonstrate `csimple` as pre compiled and as runtime compiled during bootstrap.
 You can find these two examples from the official Apache Camel examples repository at:
 
 - [csimple pre compiled example](https://github.com/apache/camel-examples/tree/master/examples/camel-example-csimple)
@@ -101,7 +101,7 @@ This is a great achievement which allows us to take this even further with desig
     (startup)      (startup)      (runtime)
 
 The model is the structure of the DSL which you can think of as _design time_ specifying your Camel routes.
-The model is executed once during startup and via the reifier (factory) the runtime EIP processors is cretated.
+The model is executed once during startup and via the reifier (factory) the runtime EIP processors is created.
 After this work is done, the model is essentially not needed anymore.
 
 By separating this into different JARs (camel-core-model, camel-core-reifier, camel-core-processor) then we ensure
@@ -118,14 +118,14 @@ then we have a great step forward, which allowed us to make the lightweight mode
 In lightweight mode Camel removes all references to the model after startup 
 which causes the JVM to be able to garbage collect all model objects and unload classes, freeing up memory.
 
-After this it's no longer possible to dynamic add new Camel routes. The lightweight mode is intended for
+After this it's no longer possible to dynamically add new Camel routes. The lightweight mode is intended for
 microservice/serverless architectures, with a _closed world_ assumption.
 
 
 ### Autowiring components
 
-The Camel components is now capable of autowiring by type. For example the AWS SQS components can automatic
-lookup in the registry if there is single instance of `SqsClient`, and then pre configure itself.
+The Camel components is now capable of autowiring by type. For example the [AWS SQS](https://camel.apache.org/components/latest/aws-sqs-component.html) components can automatically
+lookup in the registry if there is a single instance of `SqsClient`, and then pre configure itself.
 
 We have marked up in the Camel documentation which component options supports this by showing *Autowired* in bold
 in the description.
@@ -133,7 +133,7 @@ in the description.
 
 ### Salesforce fixes
 
-Our recent Camel committer Jeremy Ross did great work to improve and fix bugs in the camel-salesforce component.
+Our recent Camel committer [Jeremy Ross](https://github.com/jeremyross) did great work to improve and fix bugs in the [camel-salesforce component](https://camel.apache.org/components/latest/salesforce-component.html).
 We expect more to come from him.
 
 
@@ -152,7 +152,7 @@ and at the same time we can offer this new camel-kafka-component as an alternati
 ### DataSonnet
 
 The new [camel-datasonnet](https://camel.apache.org/components/latest/languages/datasonnet-language.html) component,
-is to be used for data transformation using the DataSonnet standard.
+is to be used for data transformation using the [DataSonnet](https://datasonnet.com/) standard.
 
 DataSonnet is an open source JSON-centric, template-based data transformation standard built to rival
 proprietary options available in the market.
@@ -167,7 +167,7 @@ We have upgraded to Spring Boot 2.4.
 
 This release has a number of new components, data formats and languages:
 
-- AtlasMap: Transforms the message using an AtlasMap transformation
+- [AtlasMap](https://camel.apache.org/components/latest/atlasmap-component.html): Transforms the message using an [AtlasMap](https://www.atlasmap.io/) transformation
 - Kubernetes Custom Resources: Perform operations on Kubernetes Custom Resources and get notified on Deployment changes
 - Vert.X Kafka: Sent and receive messages to/from an Apache Kafka broker using vert.x Kafka client
 - JSON JSON-B: Marshal POJOs to JSON and back using JSON-B
