@@ -151,7 +151,8 @@ and at the same time we can offer this new camel-kafka-component as an alternati
 
 ### DataSonnet
 
-The new camel-datasonnect component, is to be used for data transformation using the DataSonnet standard.
+The new [camel-datasonnet](https://camel.apache.org/components/latest/languages/datasonnet-language.html) component,
+is to be used for data transformation using the DataSonnet standard.
 
 DataSonnet is an open source JSON-centric, template-based data transformation standard built to rival
 proprietary options available in the market.
