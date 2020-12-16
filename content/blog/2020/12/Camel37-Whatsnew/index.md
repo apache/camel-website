@@ -11,7 +11,7 @@ Apache Camel 3.7 LTS has just been released.
 This is a LTS release which means we will provide patch releases for one year. The next planned LTS release is 3.10
 scheduled towards summer 2021.
 
-## So what's in this release?
+## So what's in this release
 
 This release introduces a set of new features and noticeable improvements that we will cover in this blog post.
 
@@ -180,5 +180,4 @@ The previous LTS release was Camel 3.4. We have blog posts for what's new in
 
 ## Release Notes
 
-You can find more information about this release in the [release notes](/releases/release-3.7.0/), with a list of JIRA
-tickets resolved in the release.
+You can find more information about this release in the [release notes](/releases/release-3.7.0/), with a list of JIRA tickets resolved in the release.
