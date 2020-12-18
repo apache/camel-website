@@ -52,6 +52,9 @@ content:
       branches:
         - master
       start_path: docs
+    - url: git@github.com:apache/camel-quarkus-examples.git
+      branches: HEAD
+      start_path: docs
     - url: git@github.com:apache/camel-kafka-connector.git
       branches:
         - master
