@@ -6,7 +6,7 @@
   </div>
   {{/if}}
   <ul class="components">
-    {{#each (order_components site.components)}}
+    {{#each (exclude (order_components site.components) 'Camel Quarkus examples')}}
     <li class="component{{#if (eq this @root.page.component)}} is-current{{/if}}">
       <span class="title">{{{./title}}}</span>
       <ul class="versions">

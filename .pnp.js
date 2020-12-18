@@ -51,7 +51,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@antora/site-generator-default", "npm:3.0.0-alpha.1"],
             ["@antora/site-mapper", "npm:3.0.0-alpha.1"],
             ["@antora/xref-validator", "https://gitlab.com/antora/xref-validator.git#commit=19bfaf88fc7dd39552cfd8b3ac41c55d6d8f9edd"],
-            ["@djencks/asciidoctor-antora-indexer", "npm:0.0.5"],
+            ["@djencks/asciidoctor-antora-indexer", "npm:0.0.6"],
+            ["@djencks/asciidoctor-jsonpath", "npm:0.0.1"],
             ["@zregvart/cargo-deadlinks", "github-release:deadlinks/cargo-deadlinks:0.6.1/deadlinks-linux"],
             ["antora-ui-camel", "workspace:antora-ui-camel"],
             ["del", "npm:6.0.0"],
@@ -671,13 +672,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@djencks/asciidoctor-antora-indexer", [
-        ["npm:0.0.5", {
-          "packageLocation": "./.yarn/cache/@djencks-asciidoctor-antora-indexer-npm-0.0.5-df7634ac68-1844873453.zip/node_modules/@djencks/asciidoctor-antora-indexer/",
+        ["npm:0.0.6", {
+          "packageLocation": "./.yarn/cache/@djencks-asciidoctor-antora-indexer-npm-0.0.6-4db3f3a720-70a23e1885.zip/node_modules/@djencks/asciidoctor-antora-indexer/",
           "packageDependencies": [
-            ["@djencks/asciidoctor-antora-indexer", "npm:0.0.5"],
+            ["@djencks/asciidoctor-antora-indexer", "npm:0.0.6"],
             ["camelcase-keys", "npm:6.2.2"],
             ["esprima", "npm:4.0.1"],
             ["picomatch", "npm:2.1.1"],
+            ["static-eval", "npm:2.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@djencks/asciidoctor-jsonpath", [
+        ["npm:0.0.1", {
+          "packageLocation": "./.yarn/cache/@djencks-asciidoctor-jsonpath-npm-0.0.1-6ad9bf8c33-55493d1df5.zip/node_modules/@djencks/asciidoctor-jsonpath/",
+          "packageDependencies": [
+            ["@djencks/asciidoctor-jsonpath", "npm:0.0.1"],
+            ["esprima", "npm:4.0.1"],
+            ["jsonpath", "npm:1.0.2"],
             ["static-eval", "npm:2.1.0"]
           ],
           "linkType": "HARD",
@@ -1494,7 +1507,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@antora/site-generator-default", "npm:3.0.0-alpha.1"],
             ["@antora/site-mapper", "npm:3.0.0-alpha.1"],
             ["@antora/xref-validator", "https://gitlab.com/antora/xref-validator.git#commit=19bfaf88fc7dd39552cfd8b3ac41c55d6d8f9edd"],
-            ["@djencks/asciidoctor-antora-indexer", "npm:0.0.5"],
+            ["@djencks/asciidoctor-antora-indexer", "npm:0.0.6"],
+            ["@djencks/asciidoctor-jsonpath", "npm:0.0.1"],
             ["@zregvart/cargo-deadlinks", "github-release:deadlinks/cargo-deadlinks:0.6.1/deadlinks-linux"],
             ["antora-ui-camel", "workspace:antora-ui-camel"],
             ["del", "npm:6.0.0"],
@@ -5300,6 +5314,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["esprima", [
+        ["npm:1.2.2", {
+          "packageLocation": "./.yarn/cache/esprima-npm-1.2.2-506b351d14-8cb4d8a7f6.zip/node_modules/esprima/",
+          "packageDependencies": [
+            ["esprima", "npm:1.2.2"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:4.0.1", {
           "packageLocation": "./.yarn/cache/esprima-npm-4.0.1-1084e98778-5df45a3d9c.zip/node_modules/esprima/",
           "packageDependencies": [
@@ -8738,6 +8759,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/jsonparse-npm-1.3.1-b6fde74828-6669acd7b3.zip/node_modules/jsonparse/",
           "packageDependencies": [
             ["jsonparse", "npm:1.3.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["jsonpath", [
+        ["npm:1.0.2", {
+          "packageLocation": "./.yarn/unplugged/jsonpath-npm-1.0.2-15a9845dca/node_modules/jsonpath/",
+          "packageDependencies": [
+            ["jsonpath", "npm:1.0.2"],
+            ["esprima", "npm:1.2.2"],
+            ["static-eval", "npm:2.0.2"],
+            ["underscore", "npm:1.7.0"]
           ],
           "linkType": "HARD",
         }]
@@ -13548,6 +13581,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["static-eval", [
+        ["npm:2.0.2", {
+          "packageLocation": "./.yarn/cache/static-eval-npm-2.0.2-047eda8cb5-58a3e85b2e.zip/node_modules/static-eval/",
+          "packageDependencies": [
+            ["static-eval", "npm:2.0.2"],
+            ["escodegen", "npm:1.14.3"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:2.1.0", {
           "packageLocation": "./.yarn/cache/static-eval-npm-2.1.0-d3c8eda113-6c8b0dfdba.zip/node_modules/static-eval/",
           "packageDependencies": [
@@ -14803,6 +14844,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["get-assigned-identifiers", "npm:1.2.0"],
             ["simple-concat", "npm:1.0.0"],
             ["xtend", "npm:4.0.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["underscore", [
+        ["npm:1.7.0", {
+          "packageLocation": "./.yarn/cache/underscore-npm-1.7.0-7d19d583a5-ba1d3ceeb6.zip/node_modules/underscore/",
+          "packageDependencies": [
+            ["underscore", "npm:1.7.0"]
           ],
           "linkType": "HARD",
         }]
