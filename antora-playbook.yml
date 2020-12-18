@@ -87,5 +87,6 @@ asciidoc:
     - ./extensions/table.js
     - ./extensions/inline-styles.js
     - "@djencks/asciidoctor-antora-indexer"
+    - "@djencks/asciidoctor-jsonpath"
   attributes:
     eip-vc: latest@components

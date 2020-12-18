@@ -569,15 +569,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@djencks/asciidoctor-antora-indexer@npm:^0.0.5":
-  version: 0.0.5
-  resolution: "@djencks/asciidoctor-antora-indexer@npm:0.0.5"
+"@djencks/asciidoctor-antora-indexer@npm:^0.0.6":
+  version: 0.0.6
+  resolution: "@djencks/asciidoctor-antora-indexer@npm:0.0.6"
   dependencies:
     camelcase-keys: ^6.2.2
     esprima: ^4.0.1
     picomatch: ~2.1
     static-eval: ^2.1.0
-  checksum: 18448734531eef0e4e9dc28d004bb998e3e86e9215c29663318f2c6186bd80499ac22dbc795048c6cfde83a50f47fe2e4e774e5fc6f9944d0c50a945b25cd322
+  checksum: 70a23e188556933524608702c30635400852e8b0d59940f74d41fdc0220f667510d3d98681f94eb11c8d6fc60209da1216b93667852a36099de35b0b774b69d2
+  languageName: node
+  linkType: hard
+
+"@djencks/asciidoctor-jsonpath@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "@djencks/asciidoctor-jsonpath@npm:0.0.1"
+  dependencies:
+    esprima: ^4.0.1
+    jsonpath: ^1.0.2
+    static-eval: ^2.1.0
+  checksum: 55493d1df5ee743a0e97b4caa033b3cbe19bdb792f4d623a7e0944cca78cd7f8e3f913f782ab4c5f28284756446da6d6103e350c4c64513afdae9dee504ba0e8
   languageName: node
   linkType: hard
 
@@ -1277,7 +1288,8 @@ __metadata:
     "@antora/site-generator-default": ^3.0.0-alpha.1
     "@antora/site-mapper": 3.0.0-alpha.1
     "@antora/xref-validator": "https://gitlab.com/antora/xref-validator.git#commit=19bfaf88fc7dd39552cfd8b3ac41c55d6d8f9edd"
-    "@djencks/asciidoctor-antora-indexer": ^0.0.5
+    "@djencks/asciidoctor-antora-indexer": ^0.0.6
+    "@djencks/asciidoctor-jsonpath": ^0.0.1
     "@zregvart/cargo-deadlinks": "github-release:deadlinks/cargo-deadlinks:0.6.1/deadlinks-linux"
     antora-ui-camel: "workspace:antora-ui-camel"
     del: ^6.0.0
@@ -4342,7 +4354,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"escodegen@npm:^1.11.1":
+"escodegen@npm:^1.11.1, escodegen@npm:^1.8.1":
   version: 1.14.3
   resolution: "escodegen@npm:1.14.3"
   dependencies:
@@ -4719,6 +4731,16 @@ __metadata:
     acorn-jsx: ^5.2.0
     eslint-visitor-keys: ^1.3.0
   checksum: dd2543c293e091532f3d6eda4a09ae49039ac65e69bc072aec952a5db6eb23eeee7617e99cde11414367104208c2dec13f709bbede0528d4f6854ce5cb734960
+  languageName: node
+  linkType: hard
+
+"esprima@npm:1.2.2":
+  version: 1.2.2
+  resolution: "esprima@npm:1.2.2"
+  bin:
+    esparse: ./bin/esparse.js
+    esvalidate: ./bin/esvalidate.js
+  checksum: 8cb4d8a7f61db2a4ba4d58ad5fcf91079e760f7e46bd302a64b5a543f0460a3c642dfc87dd185d7195bdf7a6cc7ffc06a1c690b9ef24237b508255d4ed5251d9
   languageName: node
   linkType: hard
 
@@ -7856,6 +7878,17 @@ fsevents@^1.2.7:
   version: 1.3.1
   resolution: "jsonparse@npm:1.3.1"
   checksum: 6669acd7b39cdc4a4cbb078d1a19d2a07cb81651d5045b907b4d067e5c453d060a274f348b53c51ed817456f1cdfc709a13a76ca47c8304547f03843c043ebcb
+  languageName: node
+  linkType: hard
+
+"jsonpath@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "jsonpath@npm:1.0.2"
+  dependencies:
+    esprima: 1.2.2
+    static-eval: 2.0.2
+    underscore: 1.7.0
+  checksum: 0f85de5b28184780a9ff1e9464e820e67441e59c63e63cd66e5bcf1784f75c51258c7f481222290a52de78c88ecbe21b8a1b413eb733577d31eb158903aaec16
   languageName: node
   linkType: hard
 
@@ -12236,6 +12269,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"static-eval@npm:2.0.2":
+  version: 2.0.2
+  resolution: "static-eval@npm:2.0.2"
+  dependencies:
+    escodegen: ^1.8.1
+  checksum: 58a3e85b2e1ee16e1b779bb1440da71dc515b76d086e811bf31d399b998b0ad42ebd30ac6eef54971708f059f1c393efe2146fceb6c2b413c2ed48e27d5f5a53
+  languageName: node
+  linkType: hard
+
 "static-eval@npm:^2.1.0":
   version: 2.1.0
   resolution: "static-eval@npm:2.1.0"
@@ -13403,6 +13445,13 @@ typescript@^3.2.1:
   bin:
     undeclared-identifiers: bin.js
   checksum: a400b5c7adaa2ffdc340eb5331f72e90f517fdd28da965519ce09378f91169cc1a84e8b7f476143e62f0b98d9bdf7fe7cdc9e9f6ed48768c4d81a839efed17b3
+  languageName: node
+  linkType: hard
+
+"underscore@npm:1.7.0":
+  version: 1.7.0
+  resolution: "underscore@npm:1.7.0"
+  checksum: ba1d3ceeb6144bcbb82ec8fc75149755256bdb7c5d5b6bb2adb4fcb00a27c3eb718ee9e5a4a8868f3d5dcf1f821267532863ea44f8488418c8fe0924b05fae77
   languageName: node
   linkType: hard
 
