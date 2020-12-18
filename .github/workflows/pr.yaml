@@ -15,14 +15,59 @@
 # limitations under the License.
 #
 
-name: Check Yarn cache
+name: Pull request checks and preview
 
-on: pull_request
+on: pull_request_target
 
 jobs:
-  check:
+  check-cache:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2.3.3
     - name: Run check
       run: yarn workspaces foreach install --check-cache
+  build:
+    needs: check-cache
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build
+        run: yarn build-all
+      - uses: actions/upload-artifact@v2
+        with:
+          name: website
+          path: public
+        env:
+          CAMEL_ENV: production
+  preview:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: website
+          path: public
+      - name: Preview on Netlify
+        uses: nwtgck/actions-netlify@v1.1
+        with:
+          publish-dir: 'preview'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: ${{ github.event.number }} ${{ github.event.pull_request.title }}
+          alias: preview-${{ github.event.number }}
+          github-deployment-environment: preview
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+  checks:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/download-artifact@v2
+        with:
+          name: website
+          path: public
+      - name: Checks
+        run: yarn checks
+        env:
+          CAMEL_ENV: production
