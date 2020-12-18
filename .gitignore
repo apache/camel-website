@@ -20,3 +20,5 @@ resources
 !**/.yarn/sdks
 !**/.yarn/unplugged
 !**/.yarn/versions
+
+.pnp
