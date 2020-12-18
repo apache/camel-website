@@ -144,9 +144,13 @@
                     {{ $path := replace $download.path_format "{version}" $v }}
                     {{ $filename := replace $download.filename_format "{version}" $v }}
                     <td>{{ $download.name}}</td>
-                    <td><a href="{{ $artifact_base_url }}{{ $path }}">{{ $filename }}</a></td>
-                    <td><a href="{{ $meta_base_url }}{{ $path }}.asc">{{ $filename }}.asc</a></td>
-                    <td><a href="{{ $meta_base_url }}{{ $path }}{{ $hash_extension }}">{{ $filename }}{{ $hash_extension }}</a></td>
+                    {{ if $path }}
+                        <td><a href="{{ $artifact_base_url }}{{ $path }}">{{ $filename }}</a></td>
+                        <td><a href="{{ $meta_base_url }}{{ $path }}.asc">{{ $filename }}.asc</a></td>
+                        <td><a href="{{ $meta_base_url }}{{ $path }}{{ $hash_extension }}">{{ $filename }}{{ $hash_extension }}</a></td>
+                    {{ else }}
+                         <td colspan="3"><a href="{{ .link }}">{{ replace .title "{version}" $v }}</a></td>
+                    {{ end }}
                 {{ end }}
             </tr>
         {{ end }}
