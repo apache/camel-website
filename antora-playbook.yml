@@ -64,11 +64,13 @@ content:
     - url: git@github.com:apache/camel-spring-boot.git
       branches:
         - master
+        - camel-spring-boot-3.7.x
         - camel-spring-boot-3.4.x
       start_path: docs
     - url: git@github.com:apache/camel-karaf.git
       branches:
         - master
+        - camel-karaf-3.7.x
         - camel-karaf-3.4.x
       start_path: docs
 
