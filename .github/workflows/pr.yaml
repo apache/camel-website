@@ -26,7 +26,7 @@ jobs:
   check-cache:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.3.3
+    - uses: actions/checkout@v2
     - name: Run check
       run: yarn workspaces foreach install --check-cache
   build:
@@ -56,6 +56,7 @@ jobs:
           deploy-message: ${{ github.event.number }} ${{ github.event.pull_request.title }}
           alias: preview-${{ github.event.number }}
           github-deployment-environment: preview
+          enable-commit-comment: false
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
