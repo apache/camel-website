@@ -8,7 +8,7 @@ preview: Details of what we have done in the Camel Kafka Connector 0.7.0 release
 
 Apache Camel Kafka Connector 0.7.0 has just been released.
 
-This is based on the non-LTS release of Apache Camel 3.7.0, this means we will provide patch releases, as Camel 3.7.x is an LTS release.
+This is based on the LTS release of Apache Camel 3.7.0, this means we will provide patch releases, as Camel 3.7.x is an LTS release.
 
 ## So what's in this release?
 
