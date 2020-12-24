@@ -46,6 +46,10 @@ There are situation in which you'll be using a Camel-Kafka-Connector source conn
 
 In the [camel-kafka-connector-examples repository](https://github.com/apache/camel-kafka-connector-examples/tree/master/aws2-s3/aws2-s3-move-bucket-to-bucket) we provided a little example based on 0.7.0 SNAPSHOT version.
 
+### Json marshal/unmarshal present by default in each connector
+
+We added `camel-jackson` in each connector so that is possible to use `json-jackson` marshal/unmarshal out of the box. 
+
 ### New Archetypes
 
 We added two new archetypes:
