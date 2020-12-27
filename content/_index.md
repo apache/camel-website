@@ -6,7 +6,7 @@ description: Camel is an open source integration framework that empowers you to 
 
 {{< section "frontpage columns functionalities" >}}
 
-# Why Camel?
+# Testing preview Why Camel?
 
 {{< div "box right" >}}
 
