@@ -64,7 +64,7 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           PULL_REQUEST_NUMBER: ${{ github.event.pull_request.number }}
-          PULL_REQUEST_URL: ${{ github.event.pull_request.url }}
+          PULL_REQUEST_URL: ${{ github.event.pull_request.html_url }}
       - uses: actions/github-script@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
