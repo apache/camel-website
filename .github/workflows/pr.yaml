@@ -58,7 +58,7 @@ jobs:
           path: public
       - name: Preview on Netlify
         run: |
-          DEPLOY_URL=$(yarn preview:netlify --alias="${GITHUB_SHA}" --message="Preview for ${GITHUB_SHA}" --json 2> /dev/null |jq .deploy_url)
+          DEPLOY_URL=$(yarn preview:netlify --alias="${GITHUB_SHA}" --message="Preview for ${GITHUB_SHA}" --json 2> /dev/null |jq -r .deploy_url)
           echo "DEPLOY_URL=${DEPLOY_URL}" >> $GITHUB_ENV
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
