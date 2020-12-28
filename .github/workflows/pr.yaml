@@ -26,14 +26,19 @@ jobs:
   check-cache:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Run check
-      run: yarn workspaces foreach install --check-cache
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Run check
+        run: yarn workspaces foreach install --check-cache
   build:
     needs: check-cache
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
       - name: Build
         run: yarn build-all
       - uses: actions/upload-artifact@v2
@@ -45,6 +50,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
       - uses: actions/download-artifact@v2
         with:
           name: website
@@ -71,6 +78,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
       - uses: actions/download-artifact@v2
         with:
           name: website
