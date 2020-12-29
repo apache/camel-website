@@ -85,8 +85,8 @@ camel-kafka-connector:
       filter: 'latest'
   downloads:
     - name: 'Sources'
-      path_format: 'camel/camel-kafka-connector/{version}/apache-camel-kafka-connector-{version}-src.zip'
-      filename_format: 'apache-camel-kafka-connector-{version}-src.zip'
+      path_format: 'camel/camel-kafka-connector/{version}/camel-kafka-connector-{version}-src.zip'
+      filename_format: 'camel-kafka-connector-{version}-src.zip'
     - name: 'Binaries'
       title: 'Connectors download list'
       link: '/camel-kafka-connector/latest/connectors.html'
