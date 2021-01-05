@@ -22,7 +22,7 @@ The new connectors introduced in this release are the following:
 - Kubernetes Custom Resources: Perform operations on Kubernetes Custom Resources and get notified on Deployment changes
 - Vert.X Kafka: Sent and receive messages to/from an Apache Kafka broker using vert.x Kafka client
 - JSON JSON-B: Marshal POJOs to JSON and back using JSON-B
-- CSimple: Evaluate a compile simple expression language
+- CSimple: Evaluate a compiled simple expression language
 - DataSonnet: To use DataSonnet scripts in Camel expressions or predicates
 - jOOR: Evaluate a jOOR (Java compiled once at runtime) expression language
 
