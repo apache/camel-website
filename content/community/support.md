@@ -26,7 +26,7 @@ Also please avoid sending direct emails to members of the Camel team - we are bu
 
 ### Reporting security issues
 
-If you have found a security issue in Camel please contact the Apache Software Foundation [security team|https://www.apache.org/security/]. Don't share the details in public (i.e. chat or users/developer mailing lists). We will receive details you send and resolve the issue as soon as possible. We might also contact you requesting further details as needed.
+If you have found a security issue in Camel please contact the Apache Software Foundation [security team](https://www.apache.org/security/). Don't share the details in public (i.e. chat or users/developer mailing lists). We will receive details you send and resolve the issue as soon as possible. We might also contact you requesting further details as needed.
 
 ### Alternative discussion forums
 
