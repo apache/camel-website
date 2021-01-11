@@ -24,6 +24,10 @@ Also on the mailing lists there is more people active to help you better.
 
 Also please avoid sending direct emails to members of the Camel team - we are busy already. And conversations about Camel should happen in the public, and not via private emails.
 
+### Reporting security issues
+
+If you have found a security issue in Camel please contact the Apache Software Foundation [security team|https://www.apache.org/security/]. Don't share the details in public (i.e. chat or users/developer mailing lists). We will receive details you send and resolve the issue as soon as possible. We might also contact you requesting further details as needed.
+
 ### Alternative discussion forums
 
 There's a number of sites outside Apache that offer discussion forums on Camel. For example, [Stack Overflow](http://stackoverflow.com/) is a popular Q & A site with a dedicated [Apache Camel forum](http://stackoverflow.com/questions/tagged/apache-camel).
