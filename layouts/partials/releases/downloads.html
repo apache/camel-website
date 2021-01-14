@@ -128,8 +128,12 @@
             {{ end }}
 
             <tr>
+                {{ if gt (len $.Category.downloads) 1 }}
                 <td rowspan="{{ len $.Category.downloads }}">
-                  <strong><a href="{{ $release_note.Permalink | relURL }}">{{ $v }}</a></strong>
+                {{ else }}
+                <td>
+                {{ end }}
+                    <strong><a href="{{ $release_note.Permalink | relURL }}">{{ $v }}</a></strong>
                     {{ with $kind }}
                         <br/>
                         <small>{{ . }}</small>

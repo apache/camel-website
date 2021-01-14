@@ -1,3 +1,7 @@
+.download thead tr th {
+  text-align: left;
+}
+
 .download tr td:first-child {
   white-space: nowrap;
 }
