@@ -33,12 +33,6 @@ camel:
     - name: 'legacy'
       filter: 'legacy'
   downloads:
-    - name: 'Binary zip'
-      path_format: 'camel/apache-camel/{version}/apache-camel-{version}.zip'
-      filename_format: 'apache-camel-{version}.zip'
-    - name: 'Binary tar.gz'
-      path_format: 'camel/apache-camel/{version}/apache-camel-{version}.tar.gz'
-      filename_format: 'apache-camel-{version}.tar.gz'
     - name: 'Sources'
       path_format: 'camel/apache-camel/{version}/apache-camel-{version}-src.zip'
       filename_format: 'apache-camel-{version}-src.zip'
