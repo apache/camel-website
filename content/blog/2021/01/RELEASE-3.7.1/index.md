@@ -15,4 +15,5 @@ The artifacts are published and ready for you to download from the Central Maven
 Many thanks to all who made this release possible.
 
 On behalf of the Camel PMC,
+
 Gregor Zurowski
