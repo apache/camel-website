@@ -1,5 +1,5 @@
 ---
-date: 2021-08-02
+date: 2021-02-08
 draft: false
 type: release-note
 version: 3.7.2
