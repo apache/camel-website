@@ -219,6 +219,11 @@ html.is-clipped--nav {
   font-weight: var(--body-font-weight-bold);
 }
 
+.nav-link .image > img,
+.breadcrumbs li .image > img {
+  width: 1em;
+}
+
 .nav-panel-explore {
   background: var(--nav-background);
   display: flex;
