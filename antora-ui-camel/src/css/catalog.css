@@ -1,0 +1,26 @@
+.catalog-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalog-entry {
+  width: 250px;
+  min-height: 140px;
+  padding: 15px;
+  margin: 5px;
+  border-style: solid;
+  border-color: #eee;
+  border-width: 2px;
+  text-align: center;
+}
+
+.catalog-entry .image {
+  display: block;
+  text-align: center;
+}
+
+.catalog-entry .image > img {
+  height: 50px;
+  margin: 15px;
+}

@@ -1,0 +1,8 @@
+article h1.page img {
+  width: 1em;
+}
+
+.nav-link .image > img,
+.breadcrumbs li .image > img {
+  width: 1em;
+}

@@ -1,0 +1,20 @@
+{{#if navigation.length}}
+  {{#each navigation}}
+    {{#if ../show}}{{#if ./content}}
+      <div class="catalog-entry">
+        <a href="{{~#if (eq ./urlType 'internal')}}{{{relativize ./url}}}{{~else}}{{{./url}}}{{~/if}}">
+          {{{./content}}}
+        </a>
+      </div>
+    {{/if}}{{/if}}
+    {{#if (eq ./url @root.page.url)}}
+      {{> catalog navigation=./items show='true'}}
+    {{else}}
+      {{#if ../show}}
+        {{> catalog navigation=./items show='true'}}
+      {{else}}
+        {{> catalog navigation=./items}}
+      {{/if}}
+    {{/if}}
+  {{/each}}
+{{/if}}
