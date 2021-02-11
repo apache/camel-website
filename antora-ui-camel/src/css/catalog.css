@@ -1,21 +1,19 @@
-.catalog-container {
-  margin-top: 20px;
+.catalog .container {
+  margin-top: 1.2rem;
   display: flex;
   flex-wrap: wrap;
 }
 
-.catalog-entry {
+.catalog .entry {
   width: 250px;
   min-height: 140px;
   padding: 15px;
   margin: 5px;
-  border-style: solid;
-  border-color: #eee;
-  border-width: 2px;
+  border: 2px solid var(--color-smoke-90);
   text-align: center;
 }
 
-.catalog-entry .image {
+.catalog .entry .icon {
   display: block;
   text-align: center;
 }
