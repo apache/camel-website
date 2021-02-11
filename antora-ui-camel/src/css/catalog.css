@@ -5,20 +5,20 @@
 }
 
 .catalog .entry {
-  width: 250px;
-  min-height: 140px;
-  padding: 15px;
-  margin: 5px;
+  width: 15rem;
+  min-height: 9rem;
+  padding: 1rem;
+  margin: 0.5rem;
   border: 2px solid var(--color-smoke-90);
   text-align: center;
 }
 
-.catalog .entry .icon {
+.catalog .entry .image {
   display: block;
   text-align: center;
 }
 
-.catalog-entry .image > img {
-  height: 50px;
-  margin: 15px;
+.catalog .entry .image > img {
+  height: 3rem;
+  margin: 1rem;
 }
