@@ -1,0 +1,12 @@
+<article class="doc">
+{{#with page.title}}
+<h1 class="page">{{{this}}}</h1>
+{{/with}}
+{{{page.contents}}}
+<div class="catalog-container">
+{{#with page.navigation}}
+{{> catalog navigation=this}}
+{{/with}}
+</div>
+{{> pagination}}
+</article>

@@ -11,6 +11,7 @@ resources
 .metadata
 .settings
 .hugo_data
+.pnp
 
 **/.yarn/*
 !**/.yarn/build-state.yml
