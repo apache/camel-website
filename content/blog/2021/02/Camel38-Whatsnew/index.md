@@ -23,7 +23,7 @@ The logging better reflect that Camel is a tiny framework that has a low footpri
 The level of details can be customized with the __StartupSummaryLevel__ option.
 You can go as low as a __oneline__'r or even turn it __off__.
 
-If the change is too radical, then you can set the option to __classic__ so the loiggin
+If the change is too radical, then you can set the option to __classic__ so the logging
 is as it was previously, and has been for over a decade.
 
 ### Java Flight Recorder
@@ -32,7 +32,7 @@ Camel is now capable of capturing "work steps" during startup that can be record
 This can be used to better diagnose and find where your Camel applications may be slow to startup, for example due to a misbehaving component or custom user code.
 
 The screenshot below shows a recording that has captured a Camel application that takes about 3 seconds to startup.
-Its a very tiny application so we expected it to be faster.
+It's a very tiny application so we expected it to be faster.
 
 {{< image "jdk-mission-control.png" "JDK Mission Control" >}}
 
@@ -44,7 +44,7 @@ There are more details on this [blog post](http://www.davsclaus.com/2021/01/apac
 ### Optimized core
 
 We have continued the optimizations and have separated route startup into an initialization and startup phase.
-This allows Camel to do initialization the routes as part of its own initialization. Meaning the start phase has been reduced
+This allows Camel to perform route initialization as part of its own initialization. Meaning the start phase has been reduced
 in needed work, and allows Camel to startup routes faster.
 
 We will continue this effort for Camel 3.9 and 3.10 to allow routes to be enabled for built-time optimization,
@@ -55,7 +55,7 @@ making Camel faster to startup on frameworks such as Camel Quarkus and Graal VM.
 The dynamic to EIP has been optimized to not rely on an embedded `camel-catalog` at runtime.
 Instead we have source code generated Java code that toD is using when optimizing the routing for you.
 This reduces the footprint as previously toD would have to parse a JSON model to built up an internal model of the endpoint that
-are used dynamically. Instead the component now carries Java source code that is optimized for toD to use.
+is used dynamically. Instead the component now carries Java source code that is optimized for toD to use.
 
 All the messaging components have been improved to take advantage of toD.
 
@@ -67,7 +67,7 @@ as direct Java method calls, eliminating reflection all together.
 
 ### Loading routes from source files
 
-A new `RoutesLoader` system was implemented which allows to plugin custom route loaders for source files.
+A new `RoutesLoader` system was implemented which allows to plug in custom route loaders for source files.
 This is ported from Camel K which is capable of loading routes from Java, XML, Groovy, JavaScript, Kotlin, YAML and other languages.
 
 As a start we ported over the Java loader from Camel K, and improved our own XML loader.
@@ -92,7 +92,7 @@ There is a [little example here](https://github.com/apache/camel-examples/tree/m
 of using Kamelet in vanilla Camel.
 
 We have previously introduced Kamelet, which was created in Camel K.
-We forsee Kamelets play a bigger role and wanted to bring them out to the main Camel project.
+We foresee Kamelets play a bigger role and wanted to bring them out to the main Camel project.
 
 More information about Kamelets to come - stay tuned.
 
@@ -104,16 +104,16 @@ As there are 300+ components then there are many different options that carry se
 We now scan all these components for options marked with `secret=true`
 and generate an up-to-date Java source code directly in the `SensitiveUtils.java`
 which Camel uses for masking. This means that the options being masked is now always current.
-Before the listed options was hardcoded by hand. At this time of writing there are 61
+Before the listed options were hardcoded by hand. At this time of writing there are 61
 unique keys for sensitive data.
 
 ### Spring Boot
 
-We have upgraded to latest Spring Boot 2.4.2.
+We have upgraded to latest Spring Boot 2.4.2 release.
 
 ### Infinispan
 
-The `camel-infinispan` component has been splitup into a client and embedded component.
+The `camel-infinispan` component has been split up into a client and embedded component.
 A reason is that most users would use the client mode, which allows us to offer a dedicated component with a smaller set of dependencies. The embedded component is heavier and has a lot more dependencies to include an Infinispan Server.
 
 ### Salesforce
@@ -125,7 +125,7 @@ new committer Jeremy.
 
 The SJMS component has been overhauled to be more aligned with the Spring based JMS component.
 It no longer has its own connection pool, but allows you to use any of the 3rd party connection pooling
-that are standard practice.
+that is standard practice.
 
 ### RabbitMQ using Spring Client
 
@@ -136,17 +136,16 @@ to integrate with RabbitMQ. RabbitMQ is from the same company as Spring so its l
 
 This release has a number of new components, data formats and languages:
 
-- camel-kamelet - The Kamelet Component provides support for interacting with the Camel Route Template engine
-- camel-azure-storage-datalake - Camel Azure Datalake Gen2 Component
-- camel-paho-mqtt5 - Communicate with MQTT message brokers using Eclipse Paho MQTT v5 Client
-- camel-huaweicloud-smn - Huawei Cloud component to integrate with SimpleNotification services
-- camel-spring-rabbitmq - Send and receive messages from RabbitMQ using Spring RabbitMQ client
-- camel-stich - Stitch is a cloud ETL service that integrates various data sources into a central data warehouse through various integrations
+- `camel-kamelet` - The Kamelet Component provides support for interacting with the Camel Route Template engine
+- `camel-azure-storage-datalake` - Camel Azure Datalake Gen2 Component
+- `camel-paho-mqtt5` - Communicate with MQTT message brokers using Eclipse Paho MQTT v5 Client
+- `camel-huaweicloud-smn` - Huawei Cloud component to integrate with SimpleNotification services
+- `camel-spring-rabbitmq` - Send and receive messages from RabbitMQ using Spring RabbitMQ client
+- `camel-stich` - Stitch is a cloud ETL service that integrates various data sources into a central data warehouse through various integrations
 
 ## Upgrading
 
-Make sure to read the [upgrade guide](/manual/latest/camel-3x-upgrade-guide-3_8.html) if you are upgrading to this
-release from a previous Camel version.
+Make sure to read the [upgrade guide](/manual/latest/camel-3x-upgrade-guide-3_8.html) if you are upgrading from a previous Camel version.
 
 ## Release Notes
 
