@@ -36,6 +36,10 @@
   margin: 1.5rem 0;
 }
 
+.doc > h1.page:first-child img {
+  width: 1rem;
+}
+
 #preamble + .sect1,
 .doc .sect1 + .sect1 {
   margin-top: 2rem;
