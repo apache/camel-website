@@ -11,4 +11,4 @@ jiraVersionId: 12349420
 category: camel
 ---
 
-This release is the new Camel 3.8.0 release.
+This release is the new Camel 3.8.0 minor release.
