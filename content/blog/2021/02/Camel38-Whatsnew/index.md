@@ -1,6 +1,6 @@
 ---
 title: "Apache Camel 3.8 What's New"
-date: 2021-02-12
+date: 2021-02-15
 authors: [davsclaus]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 3.8 release.
