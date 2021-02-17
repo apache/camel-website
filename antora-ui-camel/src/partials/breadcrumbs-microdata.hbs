@@ -26,7 +26,7 @@
         {
         "@type": "ListItem",
         "position": {{add @index 4}},
-        "name": "{{{ ./content }}}",
+        "name": "{{{remove_markup ./content }}}",
         {{~#if (and ./url (eq ./urlType 'internal'))~}}
         "item": "https://camel.apache.org{{{./url}}}"
         {{~else~}}
