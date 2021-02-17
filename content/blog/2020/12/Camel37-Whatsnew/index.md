@@ -123,7 +123,7 @@ microservice/serverless architectures, with a _closed world_ assumption.
 ### Autowiring components
 
 The Camel components is now capable of autowiring by type. For example
-the [AWS SQS](/components/3.8.x/aws-sqs-component.html) components can automatically lookup in the registry if there is
+the [AWS2 SQS](/components/latest/aws2-sqs-component.html) components can automatically lookup in the registry if there is
 a single instance of `SqsClient`, and then pre configure itself.
 
 We have marked up in the Camel documentation which component options supports this by showing *Autowired* in bold in the
