@@ -102,4 +102,5 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |[camel-spring-amqp](https://github.com/Bluelock/camel-spring-amqp)|A Camel component to integrate with Spring AMQP to communicate with for example RabbitMQ.|
 |[camel-kamon](https://github.com/osinka/camel-kamon)|Kamon metrics and traces for Apache Camel routes, processors|
 |[camel-spring-cloud-stream](https://github.com/donovanmuller/)|A component to integrate with Spring Cloud Stream|
+|[camel-rocketmq](https://github.com/TeslaCN/camel-rocketmq)|A component to integrate with Apache RocketMQ|
 {{< /table >}}
