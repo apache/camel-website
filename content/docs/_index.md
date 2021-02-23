@@ -47,6 +47,13 @@ Apache Camel K is a lightweight integration framework built on Apache Camel that
 <a class="button light" href="https://github.com/apache/camel-k-examples">Examples</a>
 </p>
 
+Apache Camel K now leverages a catalog of connectors called "Kamelets" (_Kamel_ route snipp_ets_) that allow creating sources or sinks towards external systems via a 
+simplified interface, hiding all the low level details about how those connections are implemented.
+
+<p>
+<a class="button dark" href="/camel-kamelets/latest/">Kamelet Catalog</a>
+</p>
+
 {{< /div >}}
 
 {{< div "icon" >}}
