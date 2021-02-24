@@ -22,7 +22,7 @@ The most important reason why the new Kamelet catalog is so useful is that it pr
 The console shows a serverless environment where a Knative channel has been created and it's ready to receive and dispatch events to a registered subscribing service.
 From the console, the user can add a new "Event Source" and the UI displays a collection of possibilities: well, starting from Camel K 1.4.0, that collection of sources will display **the official Apache Camel Kamelet catalog**. This means that contributing new Kamelets to the catalog will allow you to enhance the OpenShift catalog of Knative sources, for instance.
 
-But there's nothing in the Kamelet catalog specifically related to OpenShift: **we show this to encourage people to take the same approach** for other platforms (in-house or open source, especially Kubernetes-based) and use cases. One of the advantages of this approach is that, since Kamelets provide a [well defined JSON-schema interface](https://camel.apache.org/camel-k/latest/kamelets/kamelets.html#kamelets-example) for their configuration, they can be made available for any kind of users, including those who don't even know anything about Apache Camel.
+But there's nothing in the Kamelet catalog specifically related to OpenShift: **we show this to encourage people to take the same approach** for other platforms (in-house or open source, especially Kubernetes-based) and use cases. One of the advantages of this approach is that, since Kamelets provide a [well defined JSON-schema interface](/camel-k/latest/kamelets/kamelets.html#kamelets-example) for their configuration, they can be made available for any kind of users, including those who don't even know anything about Apache Camel.
 
 So, no matter if you need ingress/egress for a specific destination (like in the Knative example above) or you're working on an event orchestration/workflow tool, or you're just creating a IFTTT clone: **if you need connectors, look at Kamelets**.
 
@@ -48,5 +48,5 @@ Contributions are welcome for the Kamelet catalog. All you need to do is to foll
 
 Here's a list of relevant resources that you may want to learn before starting creating your own Kamelets:
 
-- [Introduction to Kamelets in Camel K documentation](https://camel.apache.org/camel-k/latest/kamelets/kamelets.html)
+- [Introduction to Kamelets in Camel K documentation](/camel-k/latest/kamelets/kamelets.html)
 - [Kamelets by Nicola Ferraro](https://www.nicolaferraro.me/2020/10/12/kamelets/)
