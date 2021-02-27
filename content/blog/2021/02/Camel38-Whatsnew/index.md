@@ -88,7 +88,7 @@ Speaking of YAML that brings us to the next feature - Kamelets.
 The `camel-kamelet` component has been stabilized as part of Camel K and is now ready
 and have been ported over to the main Camel project.
 
-There is a [little example here](https://github.com/apache/camel-examples/tree/master/examples/camel-example-kamelet)
+There is a [little example here](https://github.com/apache/camel-examples/tree/master/examples/kamelet)
 of using Kamelet in vanilla Camel.
 
 We have previously introduced Kamelet, which was created in Camel K.
