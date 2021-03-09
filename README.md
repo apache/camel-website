@@ -22,7 +22,7 @@ Tools used to generate the website:
    [Camel K](https://github.com/apache/camel-k) and [Camel Quarkus](https://github.com/apache/camel-quarkus)
    repositories where user manual and component reference documentation resides and renders them for inclusion in this
    website.
- - (optional) [Maven](https://maven.apache.org/) a build tool used to run the complete website generating process
+ - (optional) [Maven](https://maven.apache.org/) a build tool used to run the complete website generating process.
 
 ## Build with Node and yarn
 
