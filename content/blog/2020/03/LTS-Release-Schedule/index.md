@@ -36,9 +36,9 @@ The tentative release schedule for 2020 is as follows:
 | 3.2.0   | Apr 2020 | No  |          | 8, 11
 | 3.3.0   | May 2020 | No  |          | 8, 11
 | 3.4.0   | Jun 2020 | Yes | Jun 2021 | 8, 11
-| 3.5.0   | Aug 2020 | No  |          | 11
-| 3.6.0   | Oct 2020 | No  |          | 11
-| 3.7.0   | Dec 2020 | Yes | Dec 2021 | 11, 14?
+| 3.5.0   | Aug 2020 | No  |          | 8, 11
+| 3.6.0   | Oct 2020 | No  |          | 8, 11
+| 3.7.0   | Dec 2020 | Yes | Dec 2021 | 8, 11, 14
 {{< /table >}}
 
 **NOTE:** The schedule is tentative and subject for change
@@ -49,16 +49,14 @@ patch releases. The LTS releases has support for 1-year.
 
 For each Camel release, we will mark in the release notes whether it's a LTS or non-LTS release.
 
-## Java 8 and 11
+## Java 8
 
-Java 8 is planned to be dropped after the first Camel 3 LTS release (currently
-planned as Camel 3.4). 
+Java 8 is still supported, but at some time in the future we will drop Java 8.
+Java 8 is best effort supported as Java 11 is the primary version used for development, testing, and QA.
 
-Java 8 was in the beginning planned to be dropped entirely for Camel 3,
-but we wanted to allow end users to migrate from Camel 2.x to 3.x without having
-to also upgrade from Java 8 to 11 at the same time. So this means that users
-can safely migrate from Camel 2.x to Camel 3.4.x and stay on Java 8 and have this supported
-until June 2021. We encourage Camel users to move to Java 11 when possible.
+## Java 11
+
+Java 11 is the primary supported version.
 
 ## Java 14
 
