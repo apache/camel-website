@@ -63,21 +63,21 @@ Components newly supported in native mode:
 
 We are following the deprecation of the underlying Camel components:
 
-* [AWS EC2 (SDK v1)](/camel-quarkus/latest/reference/extensions/aws-ec2.html)
-* [AWS ECS (SDK v1)](/camel-quarkus/latest/reference/extensions/aws-ecs.html)
-* [AWS EKS (SDK v1)](/camel-quarkus/latest/reference/extensions/aws-eks.html)
-* [AWS IAM (SDK v1)](/camel-quarkus/latest/reference/extensions/aws-iam.html)
-* [AWS Kinesis (SDK v1)](/camel-quarkus/latest/reference/extensions/aws-kinesis.html)
-* [AWS KMS (SDK v1)](/camel-quarkus/latest/reference/extensions/aws-kms.html)
-* [AWS Lambda (SDK v1)](/camel-quarkus/latest/reference/extensions/aws-lambda.html)
-* [AWS S3 (SDK v1)](/camel-quarkus/latest/reference/extensions/aws-s3.html)
-* [AWS SDB (SDK v1)](/camel-quarkus/latest/reference/extensions/aws-sdb.html)
-* [AWS SNS (SDK v1)](/camel-quarkus/latest/reference/extensions/aws-sns.html)
-* [AWS SQS (SDK v1)](/camel-quarkus/latest/reference/extensions/aws-sqs.html)
-* [AWS SWF (SDK v1)](/camel-quarkus/latest/reference/extensions/aws-swf.html)
-* [AWS Translate](/camel-quarkus/latest/reference/extensions/aws-translate.html)
-* [Azure (old SDK)](/camel-quarkus/latest/reference/extensions/azure.html) (there is a new set of Azure SDK v12 extensions which are not deprecated)
-* [Javax Websocket (JSR 356)](/camel-quarkus/latest/reference/extensions/websocket-jsr356.html)
+- AWS EC2 (SDK v1)
+- AWS ECS (SDK v1)
+- AWS EKS (SDK v1)
+- AWS IAM (SDK v1)
+- AWS Kinesis (SDK v1)
+- AWS KMS (SDK v1)
+- AWS Lambda (SDK v1)
+- AWS S3 (SDK v1)
+- AWS SDB (SDK v1)
+- AWS SNS (SDK v1)
+- AWS SQS (SDK v1)
+- AWS SWF (SDK v1)
+- AWS Translate (SDK v1)
+- Azure (old SDK)
+- Javax Websocket (JSR 356)
 
 ## More test coverage for AWS 2 components
 
