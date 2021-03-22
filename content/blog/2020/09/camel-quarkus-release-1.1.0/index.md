@@ -30,7 +30,7 @@ In addition, native support has been added to the following 16 extensions:
 * [AS2](/camel-quarkus/latest/reference/extensions/as2.html)
 * [AWS 2 Lambda](/camel-quarkus/latest/reference/extensions/aws2-lambda.html)
 * [AWS 2 Security Token Service (STS)](/camel-quarkus/latest/reference/extensions/aws2-sts.html)
-* [AWS Identity and Access Management (IAM)](/camel-quarkus/latest/reference/extensions/aws-iam.html)
+* AWS IAM
 * [Dropbox](/camel-quarkus/latest/reference/extensions/dropbox.html)
 * [Flatpack](/camel-quarkus/latest/reference/extensions/flatpack.html)
 * [Git](/camel-quarkus/latest/reference/extensions/git.html)
