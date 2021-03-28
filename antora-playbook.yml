@@ -15,6 +15,7 @@ content:
     - url: git@github.com:apache/camel.git
       branches:
         - master
+        - camel-3.9.x
         - camel-3.8.x
         - camel-3.7.x
       start_paths:
