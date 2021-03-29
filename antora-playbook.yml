@@ -15,6 +15,7 @@ content:
     - url: git@github.com:apache/camel.git
       branches:
         - master
+        - camel-3.9.x
         - camel-3.8.x
         - camel-3.7.x
       start_paths:
@@ -68,6 +69,7 @@ content:
     - url: git@github.com:apache/camel-spring-boot.git
       branches:
         - master
+        - camel-spring-boot-3.9.x
         - camel-spring-boot-3.8.x
         - camel-spring-boot-3.7.x
         - camel-spring-boot-3.4.x
@@ -75,6 +77,7 @@ content:
     - url: git@github.com:apache/camel-karaf.git
       branches:
         - master
+        - camel-karaf-3.9.x
         - camel-karaf-3.8.x
         - camel-karaf-3.7.x
         - camel-karaf-3.4.x
