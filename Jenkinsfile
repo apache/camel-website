@@ -35,7 +35,7 @@ pipeline {
 
     environment {
         ANTORA_CACHE_DIR  = "$WORKSPACE/.antora-cache"
-        HUGO_CACHE_DIR    = "$WORKSPACE/.hugo-cache"
+        HUGO_CACHEDIR     = "$WORKSPACE/.hugo-cache"
         CAMEL_ENV         = 'production'
     }
 
