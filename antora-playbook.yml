@@ -16,7 +16,6 @@ content:
       branches:
         - master
         - camel-3.9.x
-        - camel-3.8.x
         - camel-3.7.x
       start_paths:
         # eip
@@ -70,7 +69,6 @@ content:
       branches:
         - master
         - camel-spring-boot-3.9.x
-        - camel-spring-boot-3.8.x
         - camel-spring-boot-3.7.x
         - camel-spring-boot-3.4.x
       start_path: docs
@@ -78,7 +76,6 @@ content:
       branches:
         - master
         - camel-karaf-3.9.x
-        - camel-karaf-3.8.x
         - camel-karaf-3.7.x
         - camel-karaf-3.4.x
       start_path: docs
