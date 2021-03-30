@@ -70,8 +70,8 @@ For this release we added support for:
 
 This means you can implement Camel routes in different languages and run them together.
 
-This little [example](https://github.com/apache/camel-examples/tree/master/examples/camel-example-routeloader)
-shows using Java and XML routes together. But you can drop a .ktn file in the [myroutes](https://github.com/apache/camel-examples/tree/master/examples/routeloader/src/main/resources/myroutes)
+This little [example](https://github.com/apache/camel-examples/tree/master/examples/routeloader)
+shows using Java and XML routes together. You can drop a .ktn file in the [myroutes](https://github.com/apache/camel-examples/tree/master/examples/routeloader/src/main/resources/myroutes)
 directory and Camel will during startup compile the Kotlin route and add its routes to the running Camel.
 
 Notice that this approach is based on the principe of runtime compiling small route DSL snippets.
