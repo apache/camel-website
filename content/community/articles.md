@@ -319,6 +319,7 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   [Developer Interview with Claus Ibsen](http://blog.eisele.net/2014/08/developer-interviews-di-2-claus-ibsen.html) - Video interview August 2014 with Claus Ibsen about Apache Camel, Camel tooling, and about the upcoming Camel release.
 *   [Java Pub House - Episode 62\. Hm, what's the best to travel this holiday? on Apache CAMEL, of course!](http://www.javapubhouse.com/2017/01/episode-62-hm-whats-best-to-travel-this.html) - Podcast from January 2017 talking about what is Apache Camel and sharing real life experience from using it on multiple projects.
 *   [JBoss Asylum #47 - What do you call a Camel with 3 humps](https://asylum.libsyn.com/podcast-46-what-do-you-call-a-camel-with-3-humps) Claus Ibsen and Luca Burgazzoli sits down and talk about what is coming in Camel 3 on topics like Camel K and Camel Quarkus.
+*   [Jesse Gorzinski on Apache Camel and Open-Source System Lifecycles](https://techchannel.com/SMB/04/2021/jesse-gorzinski-apache-camel) from April 2021 _by_ TechChannel interviews IBM's Jesse Gorzinski, that talks about IBMSi usage of Apache Camel, _vitality_ of open source projects in general, and more
 
 
 ## Books
