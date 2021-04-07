@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Committers on Apache Camel</title>
+    <link>https://camel.apache.org/categories/Committers/</link>
+    <description>Recent content in Committers on Apache Camel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 15 Dec 2020 10:40:19 +0100</lastBuildDate><atom:link href="https://camel.apache.org/categories/Committers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New committers to Apache Camel</title>
+      <link>https://camel.apache.org/blog/2020/12/NewCommitters/</link>
+      <pubDate>Tue, 15 Dec 2020 10:40:19 +0100</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/12/NewCommitters/</guid>
+      <description>We&amp;rsquo;re happy to announce that our little caravan has been enriched by two new committers. The Camel project warmly welcomes Jiri Ondrusek and Jeremy Ross.
+Jiri Ondrusek&amp;rsquo;s has been contributing to Camel, Camel Spring Boot, and Camel Quarkus for a while now, and Jeremy Ross has been doing stellar work on the Salesforce component, his expertise in Salesforce will help us keep up with frequent changes made on that platform.</description>
+    </item>
+    
+  </channel>
+</rss>

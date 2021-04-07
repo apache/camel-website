@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Videos on Apache Camel</title>
+    <link>https://camel.apache.org/categories/Videos/</link>
+    <description>Recent content in Videos on Apache Camel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://camel.apache.org/categories/Videos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Webinar Integrate Systems in the Age of Camel and Quarkus</title>
+      <link>https://camel.apache.org/blog/2021/05/CamelWebinar/</link>
+      <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/05/CamelWebinar/</guid>
+      <description>Yesterday Claus Ibsen presented a webinar where he covered all the latest innovations with Apache Camel with focus on Camel Quarkus, Camel K, and Kamelets. This trio is a powerful combination that takes Camel to another level, which allows non developers and IT professionals, to manage and bind systems together without any Camel knowledge.
+Kamelets being the Apache Camel solution for an app store experience with integration software.
+The webinar is online on youtube and the slides is here.</description>
+    </item>
+    
+    <item>
+      <title>What&#39;s new with Apache Camel 3 webinar</title>
+      <link>https://camel.apache.org/blog/2020/06/whatsnew-camel-3-webinar/</link>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/06/whatsnew-camel-3-webinar/</guid>
+      <description>Apache Camel is a leading open source integration framework that has been around for more than a decade.
+With the release of Apache Camel 3, the Camel family has been extended to include a full range of projects that are tailored to popular platforms including Spring Boot, Quarkus, Kafka, Kubernetes, and others; creating an ecosystem.
+Claus Ibsen and Andrea Cosentino presented What&amp;rsquo;s new in Camel 3, focusing on the most innovative Camel projects at the DevNation Tech Talk on June 5th.</description>
+    </item>
+    
+    <item>
+      <title>How to quickly run 100 Camels with Apache Camel, Quarkus and GraalVM</title>
+      <link>https://camel.apache.org/blog/2020/04/100Camels/</link>
+      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/04/100Camels/</guid>
+      <description>Today I continue me practice on youtube and recorded a 10 minute video on creating a new Camel and Quarkus project that includes Rest and HTTP services with health checks and metrics out of the box.
+Then comparing the memory usage of running the example in JVM mode vs native compiled with GraalVM. Then showing for the finale how to quickly run 100 instances of the example each on their own TCP port and how quick Camel are to startup and service the first requests faster than you can type and click.</description>
+    </item>
+    
+  </channel>
+</rss>

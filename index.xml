@@ -1,0 +1,2492 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Apache Camel</title>
+    <link>https://camel.apache.org/</link>
+    <description>Recent content in Home on Apache Camel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://camel.apache.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ApacheCon Asia Integration Track schedules</title>
+      <link>https://camel.apache.org/blog/2021/07/ApacheCon-Asia-2021/</link>
+      <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/07/ApacheCon-Asia-2021/</guid>
+      <description>ApacheCon Asia 2021 will be held online from 6 August to 8 August. As a track chair of the integration track, I will be presenting the topics related to integration and the conference registration is now open.
+Integration is the method and technology of integrating heterogeneous systems built on different platforms and with different solutions. The most famous application integration project at the ASF is Apache Camel, which has a variety of projects providing a variety of integration solutions.</description>
+    </item>
+    
+    <item>
+      <title>Camel K 1.5 release</title>
+      <link>https://camel.apache.org/blog/2021/07/camel-k-release-1-5/</link>
+      <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/07/camel-k-release-1-5/</guid>
+      <description>Camel K 1.5 version is public since a few days. We&amp;rsquo;re proud to announce this new release containing enhancements and fixes. We&amp;rsquo;ve worked hard to fix the most important issues discovered with an eye on stabilization and performances. This new release is based on Camel Quarkus 2.0 and Apache Camel 3.11.
+Let&amp;rsquo;s find out what&amp;rsquo;s new in Camel K 1.5!
+New Camel Quarkus and Quarkus versions Camel Quarkus runtime has become the building block on which the Integration is materialized.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.7.5</title>
+      <link>https://camel.apache.org/blog/2021/07/RELEASE-3.7.5/</link>
+      <pubDate>Mon, 12 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/07/RELEASE-3.7.5/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.7.5 (LTS), a new patch release with 17 improvements and fixes.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the release notes.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC,
+Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 3.7.5</title>
+      <link>https://camel.apache.org/releases/release-3.7.5/</link>
+      <pubDate>Mon, 12 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.7.5/</guid>
+      <description>This release is the new Camel 3.7.5 LTS release.</description>
+    </item>
+    
+    <item>
+      <title>Camel-K 1.5.0</title>
+      <link>https://camel.apache.org/releases/k-1.5.0/</link>
+      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/k-1.5.0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Camel-K Runtime release 1.8.0</title>
+      <link>https://camel.apache.org/releases/k-runtime-1.8.0/</link>
+      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/k-runtime-1.8.0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Camel-K 1.4.1</title>
+      <link>https://camel.apache.org/releases/k-1.4.1/</link>
+      <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/k-1.4.1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rayvens: a new project powered by Camel K</title>
+      <link>https://camel.apache.org/blog/2021/07/rayvens/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/07/rayvens/</guid>
+      <description>We&amp;rsquo;re happy to learn that a new open source project has been launched to add integration capabilities to AI applications.
+Built on Ray and Apache Camel, Rayvens from @IBMResearch enables data scientists to interface with hundreds of data services with little effort to consume, process, and produce events and data in real time.
+The project perfectly fits the mission of Camel K of bringing event sources and sinks to any platform that needs data.</description>
+    </item>
+    
+    <item>
+      <title>Camel Quarkus 2.0.0 Released</title>
+      <link>https://camel.apache.org/blog/2021/06/camel-quarkus-release-2.0.0/</link>
+      <pubDate>Wed, 30 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/06/camel-quarkus-release-2.0.0/</guid>
+      <description>Camel Quarkus 2.0.0 brings Quarkus 2.0.0.Final and Camel 3.11.0</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel 3.11 What&#39;s New</title>
+      <link>https://camel.apache.org/blog/2021/06/Camel311-Whatsnew/</link>
+      <pubDate>Tue, 29 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/06/Camel311-Whatsnew/</guid>
+      <description>Apache Camel 3.11 has just been released.
+This is a LTS release which will be supported for 1 year with regular patch and security releases.
+This blog post first details the noteworthy changes since the last 3.10 release from last month. For readers that are upgrading from the last 3.7 LTS release then we have added a summary section that highlights all the important new features and changes (3.7 to 3.</description>
+    </item>
+    
+    <item>
+      <title>Camel Quarkus release 2.0.0</title>
+      <link>https://camel.apache.org/releases/q-2.0.0/</link>
+      <pubDate>Mon, 28 Jun 2021 18:00:00 +0100</pubDate>
+      
+      <guid>https://camel.apache.org/releases/q-2.0.0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.11.0</title>
+      <link>https://camel.apache.org/blog/2021/06/RELEASE-3.11.0/</link>
+      <pubDate>Mon, 28 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/06/RELEASE-3.11.0/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.11.0, a new LTS release with 101 new features, improvements and fixes.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the release notes.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC, Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 3.11.0</title>
+      <link>https://camel.apache.org/releases/release-3.11.0/</link>
+      <pubDate>Mon, 28 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.11.0/</guid>
+      <description>This release is the new Camel 3.11.0 LTS minor release.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.4.6</title>
+      <link>https://camel.apache.org/blog/2021/06/RELEASE-3.4.5/</link>
+      <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/06/RELEASE-3.4.5/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.4.6, the last planned patch release for the 3.4 LTS version with 8 new features, improvements and fixes.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the release notes.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC, Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 3.4.6</title>
+      <link>https://camel.apache.org/releases/release-3.4.6/</link>
+      <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.4.6/</guid>
+      <description>This release is the new Camel 3.4.6 patch release.</description>
+    </item>
+    
+    <item>
+      <title>Camel Kafka Connector release 0.10.1</title>
+      <link>https://camel.apache.org/releases/ckc-0.10.1/</link>
+      <pubDate>Sat, 19 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/ckc-0.10.1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ApacheCon Asia and @Home schedules</title>
+      <link>https://camel.apache.org/blog/2021/06/ApacheCon-2021/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/06/ApacheCon-2021/</guid>
+      <description>As we announced earlier this year, we have not one but two Apache conferences featuring Apache Camel on the Integration track.
+ApacheCon Asia is from August 6 - 8, 2021 and has two days of Camel and software integration sessions held in Asia-Pacific timezone. And ApacheCon @Home from September 21 - 23, 2021 also features two days of Camel and software integration sessions with sessions held in Europe-Americas timezone.
+The schedules for the Integration track at ApacheCon Asia, and ApacheCon @Home have been published, and are packed with interesting technology talks and use case presentations.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 2.25.4</title>
+      <link>https://camel.apache.org/blog/2021/05/RELEASE-2.25.4/</link>
+      <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/05/RELEASE-2.25.4/</guid>
+      <description>The Camel community announces the immediate availability of Camel 2.25.4, a new patch release with 10 fixes and improvements.
+The artifacts are published and ready for you to download from Maven Central. For more details please take a look at the release notes.
+Please note that the 2.x major version will reach end-of-life (EOL) by January 2022. We plan to release a final Camel 2.25.5 version around that time and include some final patches and dependency upgrades.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.25.4</title>
+      <link>https://camel.apache.org/releases/release-2.25.4/</link>
+      <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.25.4/</guid>
+      <description>This release is the new Camel 2.25.4 patch release.</description>
+    </item>
+    
+    <item>
+      <title>Webinar Integrate Systems in the Age of Camel and Quarkus</title>
+      <link>https://camel.apache.org/blog/2021/05/CamelWebinar/</link>
+      <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/05/CamelWebinar/</guid>
+      <description>Yesterday Claus Ibsen presented a webinar where he covered all the latest innovations with Apache Camel with focus on Camel Quarkus, Camel K, and Kamelets. This trio is a powerful combination that takes Camel to another level, which allows non developers and IT professionals, to manage and bind systems together without any Camel knowledge.
+Kamelets being the Apache Camel solution for an app store experience with integration software.
+The webinar is online on youtube and the slides is here.</description>
+    </item>
+    
+    <item>
+      <title>Camel Kafka Connector release 0.10.0</title>
+      <link>https://camel.apache.org/releases/ckc-0.10.0/</link>
+      <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/ckc-0.10.0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Apache Camel 3.10 What&#39;s New</title>
+      <link>https://camel.apache.org/blog/2021/05/Camel310-Whatsnew/</link>
+      <pubDate>Fri, 21 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/05/Camel310-Whatsnew/</guid>
+      <description>Apache Camel 3.10 has just been released.
+This is a non-LTS release which means we will not provide patch releases. The next planned LTS release is 3.11 scheduled for June/July 2021.
+So what&amp;rsquo;s in this release This release introduces a set of new features and noticeable improvements that we will cover in this blog post.
+Reduced object allocations We have optimized the remainder of the most complex EIPs to avoid excessive object allocations, and also to support exchange pooling.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.10.0</title>
+      <link>https://camel.apache.org/blog/2021/05/RELEASE-3.10.0/</link>
+      <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/05/RELEASE-3.10.0/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.10.0, a new release with 208 new features, improvements and fixes.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the release notes.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC, Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 3.10.0</title>
+      <link>https://camel.apache.org/releases/release-3.10.0/</link>
+      <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.10.0/</guid>
+      <description>This release is the new Camel 3.10.0 minor release.</description>
+    </item>
+    
+    <item>
+      <title>Kamelet tooling support for Camel URI</title>
+      <link>https://camel.apache.org/blog/2021/05/KameletToolingSupportInCamelURI/</link>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/05/KameletToolingSupportInCamelURI/</guid>
+      <description>Kamelets (Kamel route snippets) are a new concept introduced in Camel K that allow users to connect to external systems via a simplified interface, hiding all the low level details about how those connections are implemented. There are several ways to consume them. One of them is as standard Camel Components. In this case, completion is provided to fill the template id and the parameter names. It is currently based on a fixed set of Kamelets provided by a snapshot of the kamelet catalog.</description>
+    </item>
+    
+    <item>
+      <title>How to Java debug a Camel K integration in VS Code - second iteration</title>
+      <link>https://camel.apache.org/blog/2021/05/JavaDebuggingInVSCode-iteration2/</link>
+      <pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/05/JavaDebuggingInVSCode-iteration2/</guid>
+      <description>Camel K is providing a new feature to Java debug deployed integrations. Before VS Code Tooling for Apache Camel K 0.0.25, more complex steps were required to leverage the VS Code Java debugging capabilities as explained in this previous blogpost.
+I recorded a video which is following the steps in this blogpost.
+Requirements  VS Code Extension Pack for Apache Camel with VS Code Tooling for Apache Camel K 0.</description>
+    </item>
+    
+    <item>
+      <title>Diagramming Camel routes with PlantUML</title>
+      <link>https://camel.apache.org/blog/2021/05/plantuml-diagram/</link>
+      <pubDate>Fri, 14 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/05/plantuml-diagram/</guid>
+      <description>Hello Camel riders!
+I created a tool which allows to draw a PlantUML activity diagram from a running Camel context (not at design time).
+The above image shows what kind of diagram you can expect.
+I find it useful when I need to have a overall view of interactions between all the routes and endpoints, or to have a visual representation for better understanding and documentation.
+You can find all the details on the public GitHub repository.</description>
+    </item>
+    
+    <item>
+      <title>New Camel K Logging Features</title>
+      <link>https://camel.apache.org/blog/2021/05/new-camel-k-logging-features/</link>
+      <pubDate>Mon, 10 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/05/new-camel-k-logging-features/</guid>
+      <description>New Camel K Logging Features for Camel K 1.5</description>
+    </item>
+    
+    <item>
+      <title>Routing multicast output after encountering partial failures</title>
+      <link>https://camel.apache.org/blog/2021/05/multicast-failure-routing/</link>
+      <pubDate>Mon, 10 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/05/multicast-failure-routing/</guid>
+      <description>Problem description Multicast is a powerful EIP which supports parallel execution paths in asynchronous manner. There are various ways a Camel user can configure a multicast EIP. Check out the extensive documentation here 1. One can configure to execute all the child paths independently and continue routing the last reply as the outgoing message (default behavior unless you provide an aggregation strategy) 2. Additionally, you can plug in an implementation of a Camel aggregation strategy with user-defined logic to aggregate the output from each of those child paths before continuing further downstream routing.</description>
+    </item>
+    
+    <item>
+      <title>New release of VS Code Language Support for Apache Camel 0.0.32 and VS Code Tooling for Camel K 0.0.24</title>
+      <link>https://camel.apache.org/blog/2021/05/vscode-camel-release/</link>
+      <pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/05/vscode-camel-release/</guid>
+      <description>A new release of VS Code Language Support for Apache Camel 0.0.32 is available. It includes upgrade of Camel catalogs, connected mode for Kafka topic completion and dependencies support for Camel K Java integration file.
+Camel version upgrades The default Camel catalog has been upgraded from 3.8.0 to 3.9.0.
+The Camel Quarkus catalog has been upgraded from 1.7.0 to 1.8.1.
+The Camel Kafka Connector catalog has been upgraded from 0.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.7.4</title>
+      <link>https://camel.apache.org/blog/2021/05/RELEASE-3.7.4/</link>
+      <pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/05/RELEASE-3.7.4/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.7.4 (LTS), a new patch release with 19 improvements and fixes.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the release notes.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC,
+Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 3.7.4</title>
+      <link>https://camel.apache.org/releases/release-3.7.4/</link>
+      <pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.7.4/</guid>
+      <description>This release is the new Camel 3.7.4 LTS release.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel K 1.4.0 What&#39;s New</title>
+      <link>https://camel.apache.org/blog/2021/04/camel-k-140-Whatsnew/</link>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/04/camel-k-140-Whatsnew/</guid>
+      <description>Apache Camel K 1.4.0 has just been released!
+This is a new major release of Camel K with an improved stability over previous versions, but also adding new features that simplify the overall user experience.
+It is based on Camel 3.9.0 and Camel-Quarkus 1.8.1, providing all improvements that they bring, plus much more. In this blog post, we&amp;rsquo;re going to describe the most important changes.
+Embedded Kamelet catalog Camel K 1.</description>
+    </item>
+    
+    <item>
+      <title>Camel-AWS-S3 - New Streaming upload feature</title>
+      <link>https://camel.apache.org/blog/2021/04/s3-streaming-upload-3.10.0/</link>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/04/s3-streaming-upload-3.10.0/</guid>
+      <description>The S3 Streaming upload feature will arrive on Camel 3.10.0</description>
+    </item>
+    
+    <item>
+      <title>Camel-K 1.4.0</title>
+      <link>https://camel.apache.org/releases/k-1.4.0/</link>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/k-1.4.0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Camel-K Runtime release 1.7.0</title>
+      <link>https://camel.apache.org/releases/k-runtime-1.7.0/</link>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/k-runtime-1.7.0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Camel Quarkus 1.8.1 Released</title>
+      <link>https://camel.apache.org/blog/2021/04/camel-quarkus-release-1.8.1/</link>
+      <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/04/camel-quarkus-release-1.8.1/</guid>
+      <description>The patch release 1.8.1 of Camel Quarkus brings 14 improvements and fixes.</description>
+    </item>
+    
+    <item>
+      <title>Camel Quarkus release 1.8.1</title>
+      <link>https://camel.apache.org/releases/q-1.8.1/</link>
+      <pubDate>Wed, 07 Apr 2021 18:00:00 +0100</pubDate>
+      
+      <guid>https://camel.apache.org/releases/q-1.8.1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Camel Kafka Connector release 0.9.0</title>
+      <link>https://camel.apache.org/releases/ckc-0.9.0/</link>
+      <pubDate>Fri, 02 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/ckc-0.9.0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Camel Quarkus 1.8.0 Released</title>
+      <link>https://camel.apache.org/blog/2021/03/camel-quarkus-release-1.8.0/</link>
+      <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/03/camel-quarkus-release-1.8.0/</guid>
+      <description>The highlights of Camel Quarkus 1.8.0</description>
+    </item>
+    
+    <item>
+      <title>The call for papers is open for two ApacheCons / 两场Apache大会的演讲征集已经开始</title>
+      <link>https://camel.apache.org/blog/2021/03/ApacheCons2021/</link>
+      <pubDate>Tue, 30 Mar 2021 11:22:18 +0200</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/03/ApacheCons2021/</guid>
+      <description>This year we have two Apache conferences featuring Camel, ApacheCon Asia from 6th through 8th of August, and ApacheCon @Home from 21st through 23rd of September, 2021. Both of these conferences will be online.
+If you wish to present at any of these, please submit your talk proposal for the Integration track. The call for presentations is open for both ApacheCon Asia and ApacheCon @Home. You’re welcome to propose a session for both conferences, though be aware of the differences in target audiences based on region, timezone, and language.</description>
+    </item>
+    
+    <item>
+      <title>Camel Quarkus release 1.8.0</title>
+      <link>https://camel.apache.org/releases/q-1.8.0/</link>
+      <pubDate>Mon, 29 Mar 2021 18:00:00 +0100</pubDate>
+      
+      <guid>https://camel.apache.org/releases/q-1.8.0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Apache Camel 3.9 What&#39;s New</title>
+      <link>https://camel.apache.org/blog/2021/03/Camel39-Whatsnew/</link>
+      <pubDate>Mon, 29 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/03/Camel39-Whatsnew/</guid>
+      <description>Apache Camel 3.9 has just been released.
+This is a non-LTS release which means we will not provide patch releases. The next planned LTS release is 3.11 scheduled for June 2021.
+So what&amp;rsquo;s in this release This release introduces a set of new features and noticeable improvements that we will cover in this blog post.
+Reduced object allocations We have optimized the core by dramatically reducing object allocations - in fact the routing engine will produce ZERO or little objects during routing.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.9.0</title>
+      <link>https://camel.apache.org/blog/2021/03/RELEASE-3.9.0/</link>
+      <pubDate>Sun, 28 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/03/RELEASE-3.9.0/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.9.0, a new release with 159 new features, improvements and fixes.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the release notes.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC, Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 3.9.0</title>
+      <link>https://camel.apache.org/releases/release-3.9.0/</link>
+      <pubDate>Sun, 28 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.9.0/</guid>
+      <description>This release is the new Camel 3.9.0 minor release.</description>
+    </item>
+    
+    <item>
+      <title>Camel-K 1.3.2</title>
+      <link>https://camel.apache.org/releases/k-1.3.2/</link>
+      <pubDate>Tue, 23 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/k-1.3.2/</guid>
+      <description>This release is a minor update of the 1.3.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Camel Kafka Connector release 0.7.3</title>
+      <link>https://camel.apache.org/releases/ckc-0.7.3/</link>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/ckc-0.7.3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.7.3</title>
+      <link>https://camel.apache.org/blog/2021/03/RELEASE-3.7.3/</link>
+      <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/03/RELEASE-3.7.3/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.7.3 (LTS), a new patch release with 36 improvements and fixes.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the release notes.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC,
+Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 3.7.3</title>
+      <link>https://camel.apache.org/releases/release-3.7.3/</link>
+      <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.7.3/</guid>
+      <description>This release is the new Camel 3.7.3 LTS release.</description>
+    </item>
+    
+    <item>
+      <title>New release of VS Code Language Support for Apache Camel 0.0.31</title>
+      <link>https://camel.apache.org/blog/2021/03/VSCode-LanguageSupport-0.0.31/</link>
+      <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/03/VSCode-LanguageSupport-0.0.31/</guid>
+      <description>A new release of VS Code Language Support for Apache Camel 0.0.31 is available. It includes upgrade of Camel catalogs and catalog runtime provider selection setting.
+Camel Catalogs upgrades The default Camel catalog has been upgraded from 3.7.0 to 3.8.0.
+The Camel Kafka Connector catalog has been upgraded from 0.7.0 to 0.8.0.
+The Camel Quarkus catalog is provided with version 1.7.0.
+Runtime provider setting Depending on the runtime used, the Camel components can have subtle differences, or even not be compatible.</description>
+    </item>
+    
+    <item>
+      <title>Camel Kafka Connector release 0.8.0</title>
+      <link>https://camel.apache.org/releases/ckc-0.8.0/</link>
+      <pubDate>Thu, 25 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/ckc-0.8.0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Camel Quarkus 1.7.0 Released</title>
+      <link>https://camel.apache.org/blog/2021/02/camel-quarkus-release-1.7.0/</link>
+      <pubDate>Wed, 24 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/02/camel-quarkus-release-1.7.0/</guid>
+      <description>The highlights of Camel Quarkus 1.7.0</description>
+    </item>
+    
+    <item>
+      <title>Kamelet Catalog</title>
+      <link>https://camel.apache.org/blog/2021/02/Kamelet-Catalog/</link>
+      <pubDate>Wed, 24 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/02/Kamelet-Catalog/</guid>
+      <description>We&amp;rsquo;re starting a new initiative at Apache Camel to create a community-driven catalog of reusable Kamelets (Camel route snippets, i.e. connectors) that can be used to stream data from/to external systems into any platform powered by Apache Camel.
+The &amp;ldquo;Apache Camel Kamelet catalog&amp;rdquo; is available here and it already contains a collection of useful Kamelets: we would like to extend it with help of the community.
+Kamelets are currently supported out-of-the-box by the Apache Camel K project and we&amp;rsquo;re working to support them also in Camel core, so that they can run eventually in any Apache Camel subproject, like Camel Kafka Connector (but also camel-quarkus, camel-spring-boot, &amp;hellip;).</description>
+    </item>
+    
+    <item>
+      <title>Camel Quarkus release 1.7.0</title>
+      <link>https://camel.apache.org/releases/q-1.7.0/</link>
+      <pubDate>Fri, 19 Feb 2021 13:10:40 +0100</pubDate>
+      
+      <guid>https://camel.apache.org/releases/q-1.7.0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Camel Kafka Connector release 0.7.2</title>
+      <link>https://camel.apache.org/releases/ckc-0.7.2/</link>
+      <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/ckc-0.7.2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Apache Camel 3.8 What&#39;s New</title>
+      <link>https://camel.apache.org/blog/2021/02/Camel38-Whatsnew/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/02/Camel38-Whatsnew/</guid>
+      <description>Apache Camel 3.8 has just been released.
+This is a non-LTS release which means we will not provide patch releases. The next planned LTS release is 3.10 scheduled for June 2021.
+So what&amp;rsquo;s in this release This release introduces a set of new features and noticeable improvements that we will cover in this blog post.
+Startup and Shutdown Logging A noticeable difference is we changed the logging noise during startup and shutdown of Camel.</description>
+    </item>
+    
+    <item>
+      <title>Camel Quarkus release 1.6.0</title>
+      <link>https://camel.apache.org/releases/q-1.6.0/</link>
+      <pubDate>Sun, 14 Feb 2021 13:10:40 +0100</pubDate>
+      
+      <guid>https://camel.apache.org/releases/q-1.6.0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.8.0</title>
+      <link>https://camel.apache.org/blog/2021/02/RELEASE-3.8.0/</link>
+      <pubDate>Sat, 13 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/02/RELEASE-3.8.0/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.8.0, a new release with 160 new features, improvements and fixes.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the release notes.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC, Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 3.8.0</title>
+      <link>https://camel.apache.org/releases/release-3.8.0/</link>
+      <pubDate>Sat, 13 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.8.0/</guid>
+      <description>This release is the new Camel 3.8.0 minor release.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.7.2</title>
+      <link>https://camel.apache.org/blog/2021/02/RELEASE-3.7.2/</link>
+      <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/02/RELEASE-3.7.2/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.7.2 (LTS), a new patch release with 29 improvements and fixes.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the release notes.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC,
+Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 3.7.2</title>
+      <link>https://camel.apache.org/releases/release-3.7.2/</link>
+      <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.7.2/</guid>
+      <description>This release is the new Camel 3.7.2 LTS release.</description>
+    </item>
+    
+    <item>
+      <title>Camel-K 1.3.1</title>
+      <link>https://camel.apache.org/releases/k-1.3.1/</link>
+      <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/k-1.3.1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Camel Quarkus Configuration Tips</title>
+      <link>https://camel.apache.org/blog/2021/01/camel-quarkus-configuration-tips/</link>
+      <pubDate>Fri, 29 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/01/camel-quarkus-configuration-tips/</guid>
+      <description>Some tips related to configuration in Camel Quarkus</description>
+    </item>
+    
+    <item>
+      <title>Camel Kafka Connector release 0.7.1</title>
+      <link>https://camel.apache.org/releases/ckc-0.7.1/</link>
+      <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/ckc-0.7.1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Camel Quarkus 1.6.0 Released</title>
+      <link>https://camel.apache.org/blog/2021/01/camel-quarkus-release-1.6.0/</link>
+      <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/01/camel-quarkus-release-1.6.0/</guid>
+      <description>The highlights of Camel Quarkus 1.6.0</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.7.1</title>
+      <link>https://camel.apache.org/blog/2021/01/RELEASE-3.7.1/</link>
+      <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/01/RELEASE-3.7.1/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.7.1 (LTS), a new patch release with 29 improvements and fixes.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the release notes.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC,
+Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 3.7.1</title>
+      <link>https://camel.apache.org/releases/release-3.7.1/</link>
+      <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.7.1/</guid>
+      <description>This release is the new Camel 3.7.1 LTS release.</description>
+    </item>
+    
+    <item>
+      <title>How to Java debug a Camel K integration in VS Code with Camel K 1.3.0</title>
+      <link>https://camel.apache.org/blog/2021/01/DebugInVSCodeWithCamelK1.3.0/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/01/DebugInVSCodeWithCamelK1.3.0/</guid>
+      <description>UPDATED ON 17 May 2021: More recent related content available in this blogpost.
+Camel K 1.3.0 is providing a new feature to Java debug deployed integrations. Even if Camel K 1.3.0 is not fully compatible with VS Code Tooling for Apache Camel K extension, it remains possible to leverage the VS Code Java debugging capabilities.
+I recorded a video which is following the steps in this blogpost. I let you choose your preferred way to discover how to java debug your Camel K integration in VS Code.</description>
+    </item>
+    
+    <item>
+      <title>New release of VS Code Language Support for Apache Camel 0.0.30</title>
+      <link>https://camel.apache.org/blog/2021/01/VSCode-LanguageSupport-0.0.30/</link>
+      <pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/01/VSCode-LanguageSupport-0.0.30/</guid>
+      <description>A new release of VS Code Language Support for Apache Camel 0.0.30 is available. It includes upgrade of Camel catalogs and Camel Kafka Connector related improvements.
+Camel Catalogs upgrades The default Camel catalog has been upgraded from 3.6.0 to 3.7.0.
+The Camel Kafka Connector catalog has been upgraded from 0.6.0 to 0.7.0.
+Camel Kafka Connector related improvements Completion for Basic Configuration Some properties are not part of the Camel catalog material, neither of the Kafka Connect framework and applies to all Camel Kafka connectors.</description>
+    </item>
+    
+    <item>
+      <title>Camel-K 1.3.0</title>
+      <link>https://camel.apache.org/releases/k-1.3.0/</link>
+      <pubDate>Tue, 29 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/k-1.3.0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Kafka Connector 0.7.0: What&#39;s New</title>
+      <link>https://camel.apache.org/blog/2020/12/Camel-kafka-connector-070-Whatsnew/</link>
+      <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/12/Camel-kafka-connector-070-Whatsnew/</guid>
+      <description>Apache Camel Kafka Connector 0.7.0 has just been released.
+This is based on the LTS release of Apache Camel 3.7.0, this means we will provide patch releases, as Camel 3.7.x is an LTS release.
+So what&amp;rsquo;s in this release? This release introduce bug fixes, improvements, new features and new connectors obviously
+New connectors The new connectors introduced in this release are the following:
+ AtlasMap: Transforms the message using an AtlasMap transformation Kubernetes Custom Resources: Perform operations on Kubernetes Custom Resources and get notified on Deployment changes Vert.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 2.25.3</title>
+      <link>https://camel.apache.org/blog/2020/12/RELEASE-2.25.3/</link>
+      <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/12/RELEASE-2.25.3/</guid>
+      <description>The Camel community announces the immediate availability of Camel 2.25.3, a new patch release with 11 fixes and improvements.
+The artifacts are published and ready for you to download from Maven Central. For more details please take a look at the release notes.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC, Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 2.25.3</title>
+      <link>https://camel.apache.org/releases/release-2.25.3/</link>
+      <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.25.3/</guid>
+      <description>This release is the new Camel 2.25.3 patch release.</description>
+    </item>
+    
+    <item>
+      <title>Camel Kafka Connector release 0.7.0</title>
+      <link>https://camel.apache.org/releases/ckc-0.7.0/</link>
+      <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/ckc-0.7.0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.4.5</title>
+      <link>https://camel.apache.org/blog/2020/12/RELEASE-3.4.5/</link>
+      <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/12/RELEASE-3.4.5/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.4.5, a new patch release for the 3.4 LTS version with 25 new features, improvements and fixes.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the release notes.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC, Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 3.4.5</title>
+      <link>https://camel.apache.org/releases/release-3.4.5/</link>
+      <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.4.5/</guid>
+      <description>This release is the new Camel 3.4.5 patch release.</description>
+    </item>
+    
+    <item>
+      <title>Camel-K Runtime release 1.6.0</title>
+      <link>https://camel.apache.org/releases/k-runtime-1.6.0/</link>
+      <pubDate>Tue, 22 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/k-runtime-1.6.0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Introducing Idempotency Support in Camel Kafka Connector</title>
+      <link>https://camel.apache.org/blog/2020/12/CKC-idempotency-070/</link>
+      <pubDate>Mon, 21 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/12/CKC-idempotency-070/</guid>
+      <description>In the next Camel Kafka connector release (0.7.0, on vote soon) there will be a new feature: the idempotency support on both source and sink connectors. The aim of this post is giving some hints on how and when to use the idempotency feature.
+What is Idempotency? The Idempotent Consumer from the EIP patterns is used to filter out duplicate messages: it essentially acts like a Message Filter to filter out duplicates, as reported in the Camel documentation</description>
+    </item>
+    
+    <item>
+      <title>Camel Quarkus 1.5.0 Released</title>
+      <link>https://camel.apache.org/blog/2020/12/camel-quarkus-release-1.5.0/</link>
+      <pubDate>Fri, 18 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/12/camel-quarkus-release-1.5.0/</guid>
+      <description>The highlights of Camel Quarkus 1.5.0</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel 3.7 What&#39;s New</title>
+      <link>https://camel.apache.org/blog/2020/12/Camel37-Whatsnew/</link>
+      <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/12/Camel37-Whatsnew/</guid>
+      <description>Apache Camel 3.7 LTS has just been released.
+This is a LTS release which means we will provide patch releases for one year. The next planned LTS release is 3.10 scheduled towards summer 2021.
+So what&amp;rsquo;s in this release This release introduces a set of new features and noticeable improvements that we will cover in this blog post.
+Pre compiled languages We continued our avenue of making Camel faster and smaller.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.7.0</title>
+      <link>https://camel.apache.org/blog/2020/12/RELEASE-3.7.0/</link>
+      <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/12/RELEASE-3.7.0/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.7.0, a new LTS release with 185 new features, improvements and fixes.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the release notes.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC, Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 3.7.0</title>
+      <link>https://camel.apache.org/releases/release-3.7.0/</link>
+      <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.7.0/</guid>
+      <description>This release is the new Camel 3.7.0 LTS release.</description>
+    </item>
+    
+    <item>
+      <title>New committers to Apache Camel</title>
+      <link>https://camel.apache.org/blog/2020/12/NewCommitters/</link>
+      <pubDate>Tue, 15 Dec 2020 10:40:19 +0100</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/12/NewCommitters/</guid>
+      <description>We&amp;rsquo;re happy to announce that our little caravan has been enriched by two new committers. The Camel project warmly welcomes Jiri Ondrusek and Jeremy Ross.
+Jiri Ondrusek&amp;rsquo;s has been contributing to Camel, Camel Spring Boot, and Camel Quarkus for a while now, and Jeremy Ross has been doing stellar work on the Salesforce component, his expertise in Salesforce will help us keep up with frequent changes made on that platform.</description>
+    </item>
+    
+    <item>
+      <title>New release of VS Code Language Support for Apache Camel 0.0.29</title>
+      <link>https://camel.apache.org/blog/2020/12/VSCode-LanguageSupport-0.0.29/</link>
+      <pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/12/VSCode-LanguageSupport-0.0.29/</guid>
+      <description>A new release of VS Code Language Support for Apache Camel 0.0.29 is available. It includes an interesting set of new features and two important bugfixes.
+API based components support Camel has several API based components which are source code generated from external API. In 3.6.0, finer grained information is available through additional metadata (Camel catalog). This release is leveraging these metadata to propose improved completion, documentation and validation for these APU based components.</description>
+    </item>
+    
+    <item>
+      <title>Camel Quarkus release 1.4.0</title>
+      <link>https://camel.apache.org/releases/q-1.4.0/</link>
+      <pubDate>Tue, 01 Dec 2020 13:10:40 +0100</pubDate>
+      
+      <guid>https://camel.apache.org/releases/q-1.4.0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Camel Quarkus release 1.5.0</title>
+      <link>https://camel.apache.org/releases/q-1.5.0/</link>
+      <pubDate>Tue, 01 Dec 2020 13:10:40 +0100</pubDate>
+      
+      <guid>https://camel.apache.org/releases/q-1.5.0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Camel-K Runtime release 1.5.0</title>
+      <link>https://camel.apache.org/releases/k-runtime-1.5.0/</link>
+      <pubDate>Tue, 01 Dec 2020 13:01:58 +0100</pubDate>
+      
+      <guid>https://camel.apache.org/releases/k-runtime-1.5.0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Camel Kafka Connector release 0.6.1</title>
+      <link>https://camel.apache.org/releases/ckc-0.6.1/</link>
+      <pubDate>Mon, 30 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/ckc-0.6.1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Camel-K 1.2.1</title>
+      <link>https://camel.apache.org/releases/k-1.2.1/</link>
+      <pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/k-1.2.1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Camel Quarkus 1.4.0 Released</title>
+      <link>https://camel.apache.org/blog/2020/11/camel-quarkus-release-1.4.0/</link>
+      <pubDate>Mon, 23 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/11/camel-quarkus-release-1.4.0/</guid>
+      <description>Apache Camel Quarkus 1.4.0 has been released!
+We continue to integrate with the latest Camel and Quarkus releases, whilst adding new features and fixing bugs.
+For a full overview of the changes see the 1.4.0 milestone details.
+Here are some of the highlights.
+Major component upgrades  Quarkus 1.10.0  New extensions As ever, we added some new extensions and enhanced existing ones with native support.
+1 new JVM only extension was added:</description>
+    </item>
+    
+    <item>
+      <title>The Camel: mocking more than ever helped by Quarkus friend</title>
+      <link>https://camel.apache.org/blog/2020/10/mocking-beans-with-camel-quarkus/</link>
+      <pubDate>Sat, 31 Oct 2020 17:02:10 +0200</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/10/mocking-beans-with-camel-quarkus/</guid>
+      <description>Even implementing a simple stateless micro-service, one could face situations where testing becomes hard. A lot of tools and techniques could help, but having something at hand quickly is very handy. In this post, I&amp;rsquo;m introducing a Quarkus feature that plays nice with Camel in order to mock beans for test purpose.
+Camel and Quarkus together for mocking beans It&amp;rsquo;s long known that Camel offers great support for Java beans.</description>
+    </item>
+    
+    <item>
+      <title>New release of VS Code Language Support for Apache Camel 0.0.28</title>
+      <link>https://camel.apache.org/blog/2020/10/VSCode-LanguageSupport-0.0.28/</link>
+      <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/10/VSCode-LanguageSupport-0.0.28/</guid>
+      <description>A new release of VS Code Language Support for Apache Camel 0.0.28 is available. It includes an interesting set of new features.
+Camel 3.6.0 upgrade Camel 3.6.0 catalog is now provided by default. The 3.6.0 version is also leveraged internally.
+Camel Kafka Connector Properties file improvements Previously, the support for Camel Kafka Connector was limited to Camel URI in camel.(sink|source).url property value. This release adds support for the list of properties provided for each parameter instead of using a potentially long Camel URI.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel 3.6 What&#39;s New</title>
+      <link>https://camel.apache.org/blog/2020/10/Camel36-Whatsnew/</link>
+      <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/10/Camel36-Whatsnew/</guid>
+      <description>Apache Camel 3.6 has just been released.
+This is a non-LTS release which means we will not provide patch releases but use the release as-is. The next planned LTS release is 3.7 scheduled towards the end of the year.
+So what&amp;rsquo;s in this release? This release introduces a set of new features and noticeable improvements that we will cover in this blog post.
+Spring Boot We have upgraded to the latest release at this time which is Spring Boot 2.</description>
+    </item>
+    
+    <item>
+      <title>Camel Quarkus 1.2.0 and 1.3.0 Released</title>
+      <link>https://camel.apache.org/blog/2020/10/camel-quarkus-release-1.2.0-and-1.3.0/</link>
+      <pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/10/camel-quarkus-release-1.2.0-and-1.3.0/</guid>
+      <description>The highlights of Camel Quarkus 1.2.0 and 1.3.0</description>
+    </item>
+    
+    <item>
+      <title>Recordings from ApacheCon @Home 2020</title>
+      <link>https://camel.apache.org/blog/2020/10/ApacheCon-at-Home-videos/</link>
+      <pubDate>Mon, 19 Oct 2020 11:27:14 +0200</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/10/ApacheCon-at-Home-videos/</guid>
+      <description>This year&amp;rsquo;s ApacheCon was an overwhelming success, with many tracks running in parallel. If you missed some of the talks on the Camel/Integration or would like to revisit your favorites, video recordings from ApacheCon @Home 2020 are now available on The Apache Software Foundation YouTube channel.
+You can watch the content from all three days in one playlist, with over 10 hours of content.
+For convenience, we listed the talks as they appear in the schedule here along with the slides shared by the speakers.</description>
+    </item>
+    
+    <item>
+      <title>Introducing Camel-AWS2-Eventbridge component</title>
+      <link>https://camel.apache.org/blog/2020/10/camel-aws2-eventbridge-intro/</link>
+      <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/10/camel-aws2-eventbridge-intro/</guid>
+      <description>In Camel 3.6.0 we will introduce the camel-aws2-eventbridge among others new cool components. The aim of this blog post is showing what you can do with the Eventbridge AWS Service and the related camel component.
+What is AWS Eventbridge? The definition from the AWS official website is the following:
+Amazon EventBridge is a serverless event bus that makes it easy to connect applications together using data from your own applications, integrated Software-as-a-Service (SaaS) applications, and AWS services.</description>
+    </item>
+    
+    <item>
+      <title>Camel K 1.2.0 Released</title>
+      <link>https://camel.apache.org/blog/2020/10/camel-k-release-1.2.0/</link>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/10/camel-k-release-1.2.0/</guid>
+      <description>Apache Camel K 1.2.0 has been released!
+This version introduces some important features that will play an increasingly bigger role in future releases of Camel K.
+Quarkus as default runtime Camel K 1.2.0 uses camel-quarkus 1.1.0 (Quarkus 1.8.0.Final) as runtime, but Quarkus is no longer an optional runtime for Camel K: Quarkus is now the default runtime.
+This means that users no longer need to enable Quarkus explicitly when running their integrations (using kamel run -t quarkus.</description>
+    </item>
+    
+    <item>
+      <title>Camel at ApacheCon @Home starts tomorrow!</title>
+      <link>https://camel.apache.org/blog/2020/09/ApacheCon-at-Home-starts/</link>
+      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/09/ApacheCon-at-Home-starts/</guid>
+      <description>ApacheCon @Home starts tomorrow, here is how to make the most of it.
+First, if you haven&amp;rsquo;t already registered there is still time, go over to the conference page to do so. It&amp;rsquo;s free (small donation encouraged)!
+Browse the track schedule and use the calendar icon to import the session calendar entry in your calendaring software, this way you&amp;rsquo;ll be reminded when a session you don&amp;rsquo;t want to miss is about to start.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.4.4</title>
+      <link>https://camel.apache.org/blog/2020/09/RELEASE-3.4.4/</link>
+      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/09/RELEASE-3.4.4/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.4.4, a new patch release for the 3.4 LTS version with 31 new features, improvements and fixes.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the release notes.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC, Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 3.4.4</title>
+      <link>https://camel.apache.org/releases/release-3.4.4/</link>
+      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.4.4/</guid>
+      <description>This release is the new Camel 3.4.4 patch release.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.6.0</title>
+      <link>https://camel.apache.org/blog/2020/09/RELEASE-3.6.0/</link>
+      <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/09/RELEASE-3.6.0/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.6.0, a new minor release with 151 new features, improvements and fixes.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the release notes.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC, Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 3.6.0</title>
+      <link>https://camel.apache.org/releases/release-3.6.0/</link>
+      <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.6.0/</guid>
+      <description>This release is the new Camel 3.6.0 patch release.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Kafka Connector 0.5.0: What&#39;s New</title>
+      <link>https://camel.apache.org/blog/2020/09/Camel-kafka-connector-050-Whatsnew/</link>
+      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/09/Camel-kafka-connector-050-Whatsnew/</guid>
+      <description>Apache Camel Kafka Connector 0.5.0 has just been released.
+This is based on the non-LTS release of Apache Camel 3.5.0, this means we will not provide patch releases, but use the release as-is.
+So what&amp;rsquo;s in this release? This release introduce bug fixes, improvements and new connectors obviously
+New connectors The new connectors introduced in this release are the following:
+ ArangoDB: Perform operations on ArangoDb when used as a Document Database, or as a Graph Database.</description>
+    </item>
+    
+    <item>
+      <title>Camel Quarkus 1.1.0 Released</title>
+      <link>https://camel.apache.org/blog/2020/09/camel-quarkus-release-1.1.0/</link>
+      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/09/camel-quarkus-release-1.1.0/</guid>
+      <description>Apache Camel Quarkus 1.1.0 has been released!
+We continue to integrate with the latest Camel and Quarkus releases, whilst adding new features and fixing bugs.
+For a full overview of the changes see the 1.1.0 milestone details.
+Here are some of the highlights.
+Major component upgrades  Camel 3.5.0 Quarkus 1.8.0  New extensions We added a whopping 174 new extensions in this release! This is because Camel Quarkus will shortly become the only and default runtime in our sibling project Camel K.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel 3.5 What&#39;s New</title>
+      <link>https://camel.apache.org/blog/2020/09/Camel35-Whatsnew/</link>
+      <pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/09/Camel35-Whatsnew/</guid>
+      <description>Apache Camel 3.5 has just been released.
+This is a non-LTS release which means we will not provide patch releases, but use the release as-is. The next planned LTS release is 3.7 scheduled towards end of the year.
+So what&amp;rsquo;s in this release? This release introduces new set of features and noticeable improvements that will we cover in this blog post.
+Java 14 This is the first release that supports Java 14.</description>
+    </item>
+    
+    <item>
+      <title>Upgrading to Camel 3.0.0 with Windup</title>
+      <link>https://camel.apache.org/blog/2020/09/windup/</link>
+      <pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/09/windup/</guid>
+      <description>We&amp;rsquo;ll show you how Windup can help you plan and estimate your upgrade to Camel 3</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.5.0</title>
+      <link>https://camel.apache.org/blog/2020/09/RELEASE-3.5.0/</link>
+      <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/09/RELEASE-3.5.0/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.5.0, a new minor release with 240 new features, improvements and fixes.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the release notes.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC, Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 3.5.0</title>
+      <link>https://camel.apache.org/releases/release-3.5.0/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.5.0/</guid>
+      <description>This release is the new Camel 3.5.0 patch release.</description>
+    </item>
+    
+    <item>
+      <title>Camel Quarkus 1.0.1 Released</title>
+      <link>https://camel.apache.org/blog/2020/08/camel-quarkus-release-1.0.1/</link>
+      <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/08/camel-quarkus-release-1.0.1/</guid>
+      <description>Enjoy the first maintenance release in the 1.0.x branch of Camel Quarkus!
+What&amp;rsquo;s inside Highlights:
+ Camel 3.4.3 Quarkus 1.7.1  Details:
+ All changes since 1.0.0  What&amp;rsquo;s next? Camel Quarkus 1.1.0 will be released shortly after Camel 3.5.0. We will possibly release some candidate releases (CRs) depending on the availability of Camel 3.5.0 CRs.
+To get an idea which new extensions are coming, look for the extensions having since = 1.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.4.3</title>
+      <link>https://camel.apache.org/blog/2020/08/RELEASE-3.4.3/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/08/RELEASE-3.4.3/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.4.3, a new patch release for the 3.4 LTS version with 33 new features, improvements and fixes.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the release notes.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC, Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 3.4.3</title>
+      <link>https://camel.apache.org/releases/release-3.4.3/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.4.3/</guid>
+      <description>This release is the new Camel 3.4.3 patch release.</description>
+    </item>
+    
+    <item>
+      <title>Camel Quarkus 1.0.0 Released</title>
+      <link>https://camel.apache.org/blog/2020/08/camel-quarkus-release-1.0.0/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/08/camel-quarkus-release-1.0.0/</guid>
+      <description>Walk through the highlights of the first stable release: Developer joy, Camel component coverage, Bootstrap, CDI, native mode and more!</description>
+    </item>
+    
+    <item>
+      <title>Camel Kafka Connector 0.4.0 Released</title>
+      <link>https://camel.apache.org/blog/2020/08/Camel-kafka-connector-0.4.0-RELEASE/</link>
+      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/08/Camel-kafka-connector-0.4.0-RELEASE/</guid>
+      <description>We recently released camel-kafka-connector 0.4.0. This is the first release of the latest project in the Camel’s ecosystem, based on an LTS camel release.
+ The main features of this release are: Introduction of aggregation support Introduction of marshalling and unmarshalling support on both sink and source connectors Upgrade to the latest Apache Camel release 3.4.2 Addition of new examples in the camel-kafka-connector-examples repository Integration tests added for HDFS (sink), Cassandra/CQL (source), Slack (Source), JDBC (sink) and MongoDB (sink/source).</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.4.2</title>
+      <link>https://camel.apache.org/blog/2020/07/RELEASE-3.4.2/</link>
+      <pubDate>Wed, 22 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/07/RELEASE-3.4.2/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.4.2, a new patch release for the 3.4 LTS version with 6 new features, improvements and fixes.
+The main reason we are releasing this version is that we compiled 3.4.1 with Java 11 which leads to issues as described in this Github issue. Although we already have a fix for this problem (see CAMEL-15309), we found that it would be safer to push out a release compiled with Java 8 so nobody gets affected by this or any similar problems.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 2.25.2</title>
+      <link>https://camel.apache.org/blog/2020/07/RELEASE-2.25.2/</link>
+      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/07/RELEASE-2.25.2/</guid>
+      <description>The Camel community announces the immediate availability of Camel 2.25.2, a new patch release with 10 fixes and improvements.
+The artifacts are published and ready for you to download from Maven Central. For more details please take a look at the release notes.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC, Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 2.25.2</title>
+      <link>https://camel.apache.org/releases/release-2.25.2/</link>
+      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.25.2/</guid>
+      <description>This release is the new Camel 2.25.2 patch release.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.4.1</title>
+      <link>https://camel.apache.org/blog/2020/07/RELEASE-3.4.1/</link>
+      <pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/07/RELEASE-3.4.1/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.4.1, the first patch release for the 3.4 LTS version with 20 new features, improvements and fixes.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the release notes.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC, Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 3.4.1</title>
+      <link>https://camel.apache.org/releases/release-3.4.1/</link>
+      <pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.4.1/</guid>
+      <description>This release is the new Camel 3.4.1 patch release.</description>
+    </item>
+    
+    <item>
+      <title>Release 3.4.2</title>
+      <link>https://camel.apache.org/releases/release-3.4.2/</link>
+      <pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.4.2/</guid>
+      <description>This release is the new Camel 3.4.2 patch release.</description>
+    </item>
+    
+    <item>
+      <title>Command line utility with Camel Quarkus</title>
+      <link>https://camel.apache.org/blog/2020/07/command-line-utility-with-camel-quarkus/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/07/command-line-utility-with-camel-quarkus/</guid>
+      <description>Camel and Camel Quarkus are typically used to create integration applications that run as long living processes, a.k.a. daemons or services. In this blog post, we are going to explain a slightly different use case: using Camel Quarkus in programs that exit by themselves after performing some desired tasks.
+Where can this be useful? The enterprise is full of scheduled batch processing. Say, some system exports some sort of reports daily at 4 a.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Security Advisory - CVE-2020-11994</title>
+      <link>https://camel.apache.org/security/CVE-2020-11994.html</link>
+      <pubDate>Wed, 08 Jul 2020 08:47:42 +0200</pubDate>
+      
+      <guid>https://camel.apache.org/security/CVE-2020-11994.html</guid>
+      <description>Server-Side Template Injection and arbitrary file disclosure on Camel templating components</description>
+    </item>
+    
+    <item>
+      <title>Camel Quarkus 1.0.0-CR3 Released</title>
+      <link>https://camel.apache.org/blog/2020/07/camel-quarkus-release-1.0.0-CR3/</link>
+      <pubDate>Tue, 07 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/07/camel-quarkus-release-1.0.0-CR3/</guid>
+      <description>We are pleased to announce the release 1.0.0-CR3 of Camel Quarkus. Camel Quarkus brings the outstanding integration capabilities of Apache Camel to Quarkus - the toolkit for writing subatomically small and supersonically fast Java, Kotlin and Scala applications.
+Here are some highlights of Camel Quarkus 1.0.0-CR3.
+New extensions The following new extensions were added:
+ AWS 2 Athena Component DSL JOLT JTA OpenApi Java Tika Vert.x  The following extensions added native mode support:</description>
+    </item>
+    
+    <item>
+      <title>Camel at ApacheCon @Home 2020</title>
+      <link>https://camel.apache.org/blog/2020/07/ApacheCon-2020-at-home/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/07/ApacheCon-2020-at-home/</guid>
+      <description>We are pleased to announce that ApacheCon 2020 will be held online, September 29th through October 1st, 2020.
+If you wish to present at the event please submit your talk proposal for the Camel/Integration track when at ApacheCon 2020 website no later than Monday, July 13th by noon in the UTC timezone. Please do not wait for the last minute to submit.
+We are most interested to see talks that offer a learning experience to the attendees, so talks that present new parts of the Camel ecosystem (Camel K, Camel Quarkus, Camel Kafka Connector), talks showing off lessons learned, use cases, and visions on where software integration is heading in the future.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel 3.4 What&#39;s New</title>
+      <link>https://camel.apache.org/blog/2020/06/camel34-whatsnew/</link>
+      <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/06/camel34-whatsnew/</guid>
+      <description>Apache Camel 3.4 is the first LTS (Long Term Support) release of Camel 3.
+This release will be actively supported with regular patch releases containing important bug and security fixes for 1-year.
+For more details about LTS vs non-LTS releases see this blog post.
+So what&amp;rsquo;s in this release? This release is mostly about robustness and bug fixes.
+We have also continued the work to make Camel more modular and lighter.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.4.0</title>
+      <link>https://camel.apache.org/blog/2020/06/RELEASE-3.4.0/</link>
+      <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/06/RELEASE-3.4.0/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.4.0, a new LTS release with 118 new features, improvements and fixes.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the release notes.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC,
+Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 3.4.0</title>
+      <link>https://camel.apache.org/releases/release-3.4.0/</link>
+      <pubDate>Thu, 18 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.4.0/</guid>
+      <description>This release is the new Camel 3.4.0 LTS release.</description>
+    </item>
+    
+    <item>
+      <title>What&#39;s new with Apache Camel 3 webinar</title>
+      <link>https://camel.apache.org/blog/2020/06/whatsnew-camel-3-webinar/</link>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/06/whatsnew-camel-3-webinar/</guid>
+      <description>Apache Camel is a leading open source integration framework that has been around for more than a decade.
+With the release of Apache Camel 3, the Camel family has been extended to include a full range of projects that are tailored to popular platforms including Spring Boot, Quarkus, Kafka, Kubernetes, and others; creating an ecosystem.
+Claus Ibsen and Andrea Cosentino presented What&amp;rsquo;s new in Camel 3, focusing on the most innovative Camel projects at the DevNation Tech Talk on June 5th.</description>
+    </item>
+    
+    <item>
+      <title>Camel K 1.0 is here</title>
+      <link>https://camel.apache.org/blog/2020/06/camel-k-release-1.0.0/</link>
+      <pubDate>Mon, 08 Jun 2020 17:00:00 +0200</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/06/camel-k-release-1.0.0/</guid>
+      <description>Apache Camel K has made a lot of progress since its inception and we&amp;rsquo;re now proud to announce the 1.0 release. We&amp;rsquo;ve been working hard in the past months to add more awesome features to Camel K, but also to improve stability and performance. This post contains a list of cool stuff that you&amp;rsquo;ll find in the 1.0 GA release.
+First of all, if you&amp;rsquo;re living under a rock and it&amp;rsquo;s the first time you hear about Camel K, you can read some introductory blog posts here (1 - introducing camel k, 2 - camel k on knative) or look at the Apache Camel website that contains a Camel K section with a lot of material that is automatically generated from the Github repository.</description>
+    </item>
+    
+    <item>
+      <title>Camel Quarkus 1.0.0-CR2 Released</title>
+      <link>https://camel.apache.org/blog/2020/06/camel-quarkus-release-1.0.0-CR2/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/06/camel-quarkus-release-1.0.0-CR2/</guid>
+      <description>We are pleased to announce the release 1.0.0-CR2 of Camel Quarkus. Camel Quarkus brings the outstanding integration capabilities of Apache Camel to Quarkus - the toolkit for writing subatomically small and supersonically fast Java, Kotlin and Scala applications.
+So what is new in Camel Quarkus 1.0.0-CR2?
+New bits While we do not have any new extensions this time, the following extensions were promoted from JVM-only to JVM+native:
+ REST OpenApi Avro data format MongoDB GridFS Debezium PostgreSQL Debezium MySQL  All supported bits can be seen in the List of Camel Quarkus extensions.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel 3.3 What&#39;s New</title>
+      <link>https://camel.apache.org/blog/2020/05/Camel33-Whatsnew/</link>
+      <pubDate>Sat, 16 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/05/Camel33-Whatsnew/</guid>
+      <description>A few days ago Apache Camel 3.3 was released. This is a continuation of the work we are doing on Camel leading up to the first long term support release (LTS) that will be the next release v3.4.
+In case you have missed this, the release model in Camel 3.x is following the principe of LTS and non-LTS releases (like Java JDKs). For more details see this blog post.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.3.0</title>
+      <link>https://camel.apache.org/blog/2020/05/RELEASE-3.3.0/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/05/RELEASE-3.3.0/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.3.0, a new minor release with 149 new features, improvements and fixes.
+Please read our Camel 3.x upgrade guide that describes how to upgrade Camel 3.2 applications to Camel 3.3.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the release notes.
+Many thanks to all who made this release possible.</description>
+    </item>
+    
+    <item>
+      <title>Release 3.3.0</title>
+      <link>https://camel.apache.org/releases/release-3.3.0/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.3.0/</guid>
+      <description>This release is the new Camel 3.3.0 major release.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Security Advisory - CVE-2020-11971</title>
+      <link>https://camel.apache.org/security/CVE-2020-11971.html</link>
+      <pubDate>Thu, 14 May 2020 14:47:42 +0200</pubDate>
+      
+      <guid>https://camel.apache.org/security/CVE-2020-11971.html</guid>
+      <description>Apache Camel JMX Rebind Flaw Vulnerability</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Security Advisory - CVE-2020-11972</title>
+      <link>https://camel.apache.org/security/CVE-2020-11972.html</link>
+      <pubDate>Thu, 14 May 2020 14:47:42 +0200</pubDate>
+      
+      <guid>https://camel.apache.org/security/CVE-2020-11972.html</guid>
+      <description>Apache Camel RabbitMQ enables Java deserialization by default</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Security Advisory - CVE-2020-11973</title>
+      <link>https://camel.apache.org/security/CVE-2020-11973.html</link>
+      <pubDate>Thu, 14 May 2020 14:47:42 +0200</pubDate>
+      
+      <guid>https://camel.apache.org/security/CVE-2020-11973.html</guid>
+      <description>Apache Camel Netty enables Java deserialization by default</description>
+    </item>
+    
+    <item>
+      <title>CDC with Camel and Debezium</title>
+      <link>https://camel.apache.org/blog/2020/05/CdcWithCamelAndDebezium/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/05/CdcWithCamelAndDebezium/</guid>
+      <description>Change Data Capture (CDC) is a well-established software design pattern for a system that monitors and captures data changes, so that other software can respond to those events.
+Using a CDC engine like Debezium along with [Camel]() integration framework, we can easily build data pipelines to bridge traditional data stores and new cloud-native event-driven architectures.
+The advantages of CDC comparing to a simple poll-based or query-based process are:
+ All changes captured: intermediary changes (updates, deletes) between two runs of the poll loop may be missed.</description>
+    </item>
+    
+    <item>
+      <title>Camel Quarkus 1.0.0-M7 Released</title>
+      <link>https://camel.apache.org/blog/2020/04/Camel-Quarkus-release-1.0.0-M7/</link>
+      <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/04/Camel-Quarkus-release-1.0.0-M7/</guid>
+      <description>The Apache Camel community is pleased to announce the release 1.0.0-M7 of Camel Quarkus. Camel Quarkus ports the outstanding integration capabilities of Apache Camel to Quarkus - the toolkit for writing subatomically small and supersonically fast Java, Kotlin and Scala applications.
+So what is new in Camel Quarkus 1.0.0-M7?
+Java 8 is deprecated Camel Quarkus works well on Java 11 (thanks Luca and James!). We can hardly support Java 8 without Quarkus itself supporting it.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Kafka Connector 0.1.0 Released</title>
+      <link>https://camel.apache.org/blog/2020/04/Camel-Kafka-connector-release-0.1.0/</link>
+      <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/04/Camel-Kafka-connector-release-0.1.0/</guid>
+      <description>The Apache Camel community is pleased to announce the first release (0.1.0) of Camel-Kafka-connector project.
+This release is an early opportunity for the community to try the project and share feedback about usage of the autogenerated connectors as well as features ideas and use cases for the next development iterations.
+The project provides a tiny integration layer between camel and kafka connect frameworks and generate one kafka connector for each existing camel component.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 2.25.1</title>
+      <link>https://camel.apache.org/blog/2020/04/RELEASE-2.25.1/</link>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/04/RELEASE-2.25.1/</guid>
+      <description>The Camel community announces the immediate availability of Camel 2.25.1, a new patch release with 14 fixes and improvements.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the release notes.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC, Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 2.25.1</title>
+      <link>https://camel.apache.org/releases/release-2.25.1/</link>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.25.1/</guid>
+      <description>This release is the new Camel 2.25.1 patch release.</description>
+    </item>
+    
+    <item>
+      <title>How to quickly run 100 Camels with Apache Camel, Quarkus and GraalVM</title>
+      <link>https://camel.apache.org/blog/2020/04/100Camels/</link>
+      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/04/100Camels/</guid>
+      <description>Today I continue me practice on youtube and recorded a 10 minute video on creating a new Camel and Quarkus project that includes Rest and HTTP services with health checks and metrics out of the box.
+Then comparing the memory usage of running the example in JVM mode vs native compiled with GraalVM. Then showing for the finale how to quickly run 100 instances of the example each on their own TCP port and how quick Camel are to startup and service the first requests faster than you can type and click.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel 3.2 What&#39;s New</title>
+      <link>https://camel.apache.org/blog/2020/04/Camel32-Whatsnew/</link>
+      <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/04/Camel32-Whatsnew/</guid>
+      <description>A few days ago Apache Camel 3.2 was released. This is a continuation of the work we are doing on Camel leading up to the first long term support release (LTS) that would be either Camel 3.3 or 3.4.
+In case you have missed this, the release model in Camel 3.x is following the principe of LTS and non-LTS releases (like Java JDKs). For more details see this blog post.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.2.0</title>
+      <link>https://camel.apache.org/blog/2020/04/RELEASE-3.2.0/</link>
+      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/04/RELEASE-3.2.0/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.2.0, a new minor release with over 160 new features, improvements and fixes.
+Please read our Camel 3.x upgrade guide that describes how to upgrade Camel 3.1 applications to Camel 3.2.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the release notes.
+Many thanks to all who made this release possible.</description>
+    </item>
+    
+    <item>
+      <title>Release 3.2.0</title>
+      <link>https://camel.apache.org/releases/release-3.2.0/</link>
+      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.2.0/</guid>
+      <description>This release is the new Camel 3.2.0 major release.</description>
+    </item>
+    
+    <item>
+      <title>Outreachy update</title>
+      <link>https://camel.apache.org/blog/2020/03/Outreachy-May2020-Update/</link>
+      <pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/03/Outreachy-May2020-Update/</guid>
+      <description>The Apache Camel community is excited to have such a great response and effort already put in by the Outreachy applicants. We are grateful to all that contributed with code, ideas, helping others and being a part of our community.
+We received similar inquiries from several applicants, asking help with the timeline for the final application, intern selection criteria and similar. To help answer this and to be transparent to all involved, so each individual can reflect and make informed decisions, here are some of our thoughts.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel 2020 Release Schedule</title>
+      <link>https://camel.apache.org/blog/2020/03/LTS-Release-Schedule/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/03/LTS-Release-Schedule/</guid>
+      <description>The Apache Camel project is moving to release schedule with Long Term Support (LTS) and non-LTS releases.
+The plan is to have 2 yearly LTS releases and then non-LTS releases in between.
+This allows the Camel project to innovate and move much faster in non-LTS releases.
+And as well to offer production stable branches (LTS) where end users can stay on for a longer period of time and get CVEs and important/critical bug fixes only.</description>
+    </item>
+    
+    <item>
+      <title>Camel AWS2 Components are here: what are the changes for end users?</title>
+      <link>https://camel.apache.org/blog/2020/03/Camel3-AWS2-Whatsnew/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/03/Camel3-AWS2-Whatsnew/</guid>
+      <description>In Camel 3.2.0 we&amp;rsquo;ll release the complete set of Camel AWS2 components. In Camel 3.1.0 we already have a bunch of AWS2 components living together with the original AWS components. The aim of this post is giving a full perspective of what will change for the end users and the roadmap for new features.
+New components Except camel-aws-xray, which is a particular component needing much more work to be migrated, all the original AWS components have been migrated to AWS SDK v2.</description>
+    </item>
+    
+    <item>
+      <title>Outreachy internship contributions open</title>
+      <link>https://camel.apache.org/blog/2020/03/Outreachy-May2020/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/03/Outreachy-May2020/</guid>
+      <description>This year in addition to the Google Summer of Code we&amp;rsquo;re participating in the Outreachy internship program as well.
+For those that might not be aware of the Outreachy, Outreachy is a paid, remote internship program. Outreachy&amp;rsquo;s goal is to support people from groups underrepresented in tech. They help newcomers to free software and open source make their first contributions.
+Apache Camel is looking for contributions to the website you&amp;rsquo;re reading this blog post on.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.1.0</title>
+      <link>https://camel.apache.org/blog/2020/02/RELEASE-3.1.0/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/02/RELEASE-3.1.0/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.1.0, a new minor release with over 291 new features, improvements and fixes.
+All users of Camel 3.0 are encouraged to upgrade to Camel 3.1 soon because there are some major memory usage optimizations in this release. We also plan to retire Camel 3.0 very soon due to this. Please read our Camel 3.x upgrade guide that describes how to upgrade Camel 3.</description>
+    </item>
+    
+    <item>
+      <title>Release 3.1.0</title>
+      <link>https://camel.apache.org/releases/release-3.1.0/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.1.0/</guid>
+      <description>This release is the new Camel 3.1.0 major release.</description>
+    </item>
+    
+    <item>
+      <title>Google Summer of Code 2020 announced</title>
+      <link>https://camel.apache.org/blog/2020/02/GSoC-2020-announced/</link>
+      <pubDate>Mon, 24 Feb 2020 14:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/02/GSoC-2020-announced/</guid>
+      <description>A few days ago Google Summer of Code announced that Apache Software Foundation is again elected to participate as a mentor organization.
+We are looking for ideas, students and mentors willing to participate in GSoC 2020. Anyone in the Camel community can propose an idea, look at the JIRA issues labeled gsoc2020 or create new issues with ideas and set the gsoc2020 label. Have a look at the Mentor guide to understand the role of the mentor and the obligations you would take on.</description>
+    </item>
+    
+    <item>
+      <title>CFP for ApacheCon North America 2020</title>
+      <link>https://camel.apache.org/blog/2020/02/ApacheConNA-2020-CFP/</link>
+      <pubDate>Mon, 24 Feb 2020 12:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/02/ApacheConNA-2020-CFP/</guid>
+      <description>As previous year Apache Camel is part of ApacheCon 2020 in North America. This year the conference will be held at the Sheraton, in New Orleans, September 28th through October 2nd, 2020.
+The call for presentations for ApacheCon North America 2020 is now open and the wider Camel community members are encouraged to submit. Look for the Camel/Integration track when submitting.
+We&amp;rsquo;re most interested to see talks that offer a learning experience to the attendees, so talks that present new parts of the Camel ecosystem (Camel K, Camel Quarkus, Camel Kafka Connector), talks showing off lessons learned, use cases, and visions on where software integration is heading in the future.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 2.25.0</title>
+      <link>https://camel.apache.org/blog/2020/01/RELEASE-2.25.0/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/01/RELEASE-2.25.0/</guid>
+      <description>The Camel community announces the immediate availability of Camel 2.25.0, a new minor release with 112 improvements and fixes.
+Please note that Camel 2.25.x is the last minor release for Camel 2.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the resolved issues.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC, Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 2.25.0</title>
+      <link>https://camel.apache.org/releases/release-2.25.0/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.25.0/</guid>
+      <description>This release is the new Camel 2.25.0 minor release.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.0.1</title>
+      <link>https://camel.apache.org/blog/2020/01/RELEASE-3.0.1/</link>
+      <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/01/RELEASE-3.0.1/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.0.1, the first patch release for the 3.0.x branch with 41 improvements and fixes.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the resolved issues.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC, Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 3.0.1</title>
+      <link>https://camel.apache.org/releases/release-3.0.1/</link>
+      <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.0.1/</guid>
+      <description>This release is a minor update of the 3.0.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Camel at FOSDEM 2020</title>
+      <link>https://camel.apache.org/blog/2020/01/FOSDEM-2020/</link>
+      <pubDate>Wed, 08 Jan 2020 13:30:00 +0100</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/01/FOSDEM-2020/</guid>
+      <description>What FOSDEM is free as in beer grassroots event for free software/open source communities to meet, share ideas and collaborate. You&amp;rsquo;ll find over 800 talks spread over 35 rooms of Université libre de Bruxelles campus over the first weekend of February. And building on last year&amp;rsquo;s well-received BoF session Camel is returning to FOSDEM.
+When FOSDEM 2020 is on 1st (from 9:30 to 19:00) and 2nd (from 9:00 to 18:00) of February.</description>
+    </item>
+    
+    <item>
+      <title>Custom Web API Component</title>
+      <link>https://camel.apache.org/blog/2020/01/CustomWebApiComponent/</link>
+      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/01/CustomWebApiComponent/</guid>
+      <description>Have you built a new great Web API for your product? Wouldn&amp;rsquo;t be wonderful to have it available as a part of the great Apache Camel component family? We would love it.
+The community just released Camel 3 which is more modular, lightweight and already includes lots of components (300+) to quickly integrate various systems consuming or producing data. All of these components can be used with the same integration domain specific language (DSL) based on the famous Enterprise Integration Patterns (EIPs).</description>
+    </item>
+    
+    <item>
+      <title>CAPI Gateway: Using Apache Camel at the European Commission</title>
+      <link>https://camel.apache.org/blog/2020/01/capi-gateway/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/01/capi-gateway/</guid>
+      <description>I&amp;rsquo;ve been working at the European Commission for the last 4 years as a Software Architect, working for a unit responsible for developing reusable components, and advocating open source software. In this context, we organized already a couple of Hackathons and Bug bounties open to all the open source communities.
+In the team, we worked already a couple of times with Apache Camel, and I like the elegance and performance compared with other integration frameworks.</description>
+    </item>
+    
+    <item>
+      <title>Camel 2019 in Numbers</title>
+      <link>https://camel.apache.org/blog/2019/12/2019-Numbers/</link>
+      <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2019/12/2019-Numbers/</guid>
+      <description>It&amp;rsquo;s the time of the year where we take a look back at 2019, and compile a brief summary of the Apache Camel project.
+The big news of 2019 was the much anticipated release of Apache Camel 3.
+Family of projects It was also in 2019 that the Camel project became a family of projects by introducing:
+ Camel K Camel Quarkus  Making Apache Camel a trilogy. But it does not stop there; in early 2020 three will become five when we release:</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 2.24.3</title>
+      <link>https://camel.apache.org/blog/2019/12/RELEASE-2.24.3/</link>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2019/12/RELEASE-2.24.3/</guid>
+      <description>The Camel community announces the immediate availability of the new patch release Camel 2.24.3. This release contains 25 fixes and improvements applied in the past weeks by the community on the camel-2.24.x branch. It is the last planned patched release for the camel-2.24.x branch.
+The artifacts are published and ready for you to download either from the Apache mirrors or from the Central Maven repository. For more details please take a look at the resolved issues.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.24.3</title>
+      <link>https://camel.apache.org/releases/release-2.24.3/</link>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.24.3/</guid>
+      <description>This release is a minor update of the 2.24.x branch.</description>
+    </item>
+    
+    <item>
+      <title>JBoss Asylum Podcast about Apache Camel 3</title>
+      <link>https://camel.apache.org/blog/2019/12/Podcast47/</link>
+      <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2019/12/Podcast47/</guid>
+      <description>JBoss Asylm Podcast episode 47: What do you call an Apache Camel with 3 humps
+Claus Ibsen and Luca Burgazzoli sits down with Emanual and Max (hosts) and talks about what is coming in Apache Camel 3 on topics like Camel K and Camel Quarkus. We also cover Camel&amp;rsquo;s place in the modern world with cloud native and serverless workloads. And at the end we have some bits about what&amp;rsquo;s coming next in Camel 3.</description>
+    </item>
+    
+    <item>
+      <title>Language Support for Apache Camel - VS Code extension 0.0.20</title>
+      <link>https://camel.apache.org/blog/2019/12/LanguageSupportTooling-0.0.20/</link>
+      <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2019/12/LanguageSupportTooling-0.0.20/</guid>
+      <description>During the past months, several noticeable new features have been added to improve the developer experience of application based on Apache Camel. These updates are available in the 0.0.20 release of Visual Studio (VS) Code extension.
+Before going into the list of updates in detail, I want to note that I mentioned in the title the VS Code Extension release because VS Code extension is covering the broader set of new features.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Kafka Connector: Introducing the latest project in the ecosystem</title>
+      <link>https://camel.apache.org/blog/2019/12/Camel-Kafka-connector-intro/</link>
+      <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2019/12/Camel-Kafka-connector-intro/</guid>
+      <description>The Apache Camel community introduces a new subproject in the ecosystem: Camel-Kafka-Connector. This project born as a PoC exploring the possibility of leveraging the Apache Camel components as Kafka source and sink connectors. The main idea behind the project is reusing the Camel Components&amp;rsquo; flexibility in a simple way, through a configuration file mixing Kafka Connect configuration and Camel route definitions and options.
+What is Kafka Connect? It is an Apache Kafka&amp;rsquo;s framework that defines a standardized way to stream data in and out a kafka broker.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel 3 What&#39;s New (top 10)</title>
+      <link>https://camel.apache.org/blog/2019/12/Camel3-Whatsnew/</link>
+      <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2019/12/Camel3-Whatsnew/</guid>
+      <description>Apache Camel 3 was released last thursday November 28th 2019, which also happens to be the day of the US Thanksgiving. This was not intentionally but we can say its a big thanks from us to the community with a brand new major version of Camel - this does not come often by. In fact, its 10 years since Camel 2 hit the streets. So this 3rd generation is long overdue.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.0.0</title>
+      <link>https://camel.apache.org/blog/2019/11/RELEASE-3.0.0/</link>
+      <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2019/11/RELEASE-3.0.0/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.0.0, a new major release with over 1000 new features, improvements and fixes.
+Please read our migration guide the describes how to upgrade Camel 2.x applications to Camel 3.0.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the resolved issues.
+Many thanks to all who made this release possible.</description>
+    </item>
+    
+    <item>
+      <title>Release 3.0.0</title>
+      <link>https://camel.apache.org/releases/release-3.0.0/</link>
+      <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.0.0/</guid>
+      <description>This release is the new Camel 3.0.0 major release.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel on top-5 in the ASF annual 2019 report</title>
+      <link>https://camel.apache.org/blog/2019/11/ASF-Report-2019/</link>
+      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2019/11/ASF-Report-2019/</guid>
+      <description>The ASF Annual 2019 Report includes 25 highlights where Apache Camel is referred twice as a top-5 project:
+ 10. Top 5 Apache repositories by number of commits: Camel, Hadoop, HBase, Beam, and Flink; 20. GitHub traffic: Top 5 most active Apache sources &amp;ndash;visits: Spark, Camel, Flink, Kafka, and Airflow;  </description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.0.0-RC3</title>
+      <link>https://camel.apache.org/blog/2019/10/RELEASE-3.0.0-RC3/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2019/10/RELEASE-3.0.0-RC3/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.0.0-RC3, the third release candidate towards a new 3.0.0 major release with 48 improvements and fixes.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the resolved issues.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC, Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 3.0.0-RC3</title>
+      <link>https://camel.apache.org/releases/release-3.0.0-RC3/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.0.0-RC3/</guid>
+      <description>This release the third and final release candidate towards Camel 3.0.0 release.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.0.0-RC2</title>
+      <link>https://camel.apache.org/blog/2019/10/RELEASE-3.0.0-RC2/</link>
+      <pubDate>Sun, 06 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2019/10/RELEASE-3.0.0-RC2/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.0.0-RC2, the second release candidate towards a new 3.0.0 major release with 94 improvements and fixes.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the resolved issues.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC, Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 3.0.0-RC2</title>
+      <link>https://camel.apache.org/releases/release-3.0.0-RC2/</link>
+      <pubDate>Sun, 06 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.0.0-RC2/</guid>
+      <description>This release the second release candidate towards Camel 3.0.0 release.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel 3 is only 2 months away</title>
+      <link>https://camel.apache.org/blog/2019/10/Camel3-2monthsaway/</link>
+      <pubDate>Wed, 02 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2019/10/Camel3-2monthsaway/</guid>
+      <description>The Camel team is busy working on the last set of work for Apache Camel 3. Today the 2nd release candidate was built and published on a staging repository for early adopters to give it a try.
+As I am busy myself then I just wanted to write a short blog post to keep the community posted that Apache Camel 3 is on the way, and that we expect it to be released by end of this year (sometime in November or December).</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 2.23.4</title>
+      <link>https://camel.apache.org/blog/2019/09/RELEASE-2.23.4/</link>
+      <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2019/09/RELEASE-2.23.4/</guid>
+      <description>The Camel community announces the immediate availability of the new patch release Camel 2.23.4, the last planned patch release for the camel-2.23.x branch. This release contains 18 fixes and improvements applied in the past weeks by the community on the camel-2.23.x branch.
+The artifacts are published and ready for you to download either from the Apache mirrors or from the Central Maven repository. For more details please take a look at the resolved issues.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.23.4</title>
+      <link>https://camel.apache.org/releases/release-2.23.4/</link>
+      <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.23.4/</guid>
+      <description>This release is a minor update of the 2.23.x branch.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 2.24.2</title>
+      <link>https://camel.apache.org/blog/2019/09/RELEASE-2.24.2/</link>
+      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2019/09/RELEASE-2.24.2/</guid>
+      <description>The Camel community announces the immediate availability of the new patch release Camel 2.24.2. This release contains 20 fixes and improvements applied in the past weeks by the community on the camel-2.24.x branch.
+The artifacts are published and ready for you to download either from the Apache mirrors or from the Central Maven repository. For more details please take a look at the resolved issues.
+Many thanks to all who made this release possible.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.24.2</title>
+      <link>https://camel.apache.org/releases/release-2.24.2/</link>
+      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.24.2/</guid>
+      <description>This release is a minor update of the 2.24.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Camel at ApacheCon North America 2019</title>
+      <link>https://camel.apache.org/blog/2019/09/ApacheConNA-2019/</link>
+      <pubDate>Tue, 10 Sep 2019 16:45:32 +0200</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2019/09/ApacheConNA-2019/</guid>
+      <description>Apache Camel is part of ApacheCon 2019 in North America this year celebrating the 20th year anniversary of Apache Software Foundation.
+On the Integration track you will find out all about the state of Apache Camel from Claus Ibsen, Sami Adranly will present Camel based data integration platform at Uber called Medley Nicola Ferraro and Andrea Tarocchi will be talking about Camel K and Camel K with Knative, Bob Paulin will make the cloud integration friendly in Configuring Apache Camel for the Cloud and Michael Costello will talk about serverless integration with Camel.</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 3.0.0-RC1</title>
+      <link>https://camel.apache.org/blog/2019/09/RELEASE-3.0.0-RC1/</link>
+      <pubDate>Mon, 02 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2019/09/RELEASE-3.0.0-RC1/</guid>
+      <description>The Camel community announces the immediate availability of Camel 3.0.0-RC1, the first release candidate towards a new 3.0.0 major release with 148 improvements and fixes.
+The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the resolved issues.
+Many thanks to all who made this release possible.
+On behalf of the Camel PMC, Gregor Zurowski</description>
+    </item>
+    
+    <item>
+      <title>Release 3.0.0-RC1</title>
+      <link>https://camel.apache.org/releases/release-3.0.0-RC1/</link>
+      <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-3.0.0-RC1/</guid>
+      <description>This release the first release candidate towards Camel 3.0.0 release.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.24.1</title>
+      <link>https://camel.apache.org/releases/release-2.24.1/</link>
+      <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.24.1/</guid>
+      <description>This release is a minor update of the 2.24.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.23.3</title>
+      <link>https://camel.apache.org/releases/release-2.23.3/</link>
+      <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.23.3/</guid>
+      <description>This release is a minor update of the 2.23.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.22.5</title>
+      <link>https://camel.apache.org/releases/release-2.22.5/</link>
+      <pubDate>Sat, 08 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.22.5/</guid>
+      <description>This release is a minor update of the 2.22.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Security Advisory - CVE-2019-0188</title>
+      <link>https://camel.apache.org/security/CVE-2019-0188.html</link>
+      <pubDate>Mon, 27 May 2019 12:58:33 +0200</pubDate>
+      
+      <guid>https://camel.apache.org/security/CVE-2019-0188.html</guid>
+      <description>Apache Camel-XMLJson vulnerable to XML external entity injection (XXE)</description>
+    </item>
+    
+    <item>
+      <title>RELEASE 2.24.0</title>
+      <link>https://camel.apache.org/blog/2019/05/RELEASE-2.24.0/</link>
+      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2019/05/RELEASE-2.24.0/</guid>
+      <description>The Camel community announces the immediate availability of the new minor release Camel 2.24.0. This release contains 156 fixes and improvements. An overview of the changes is available here.
+The artifacts are published and ready for you to download either from the Apache mirrors or from the Central Maven repository. For more details please take a look at the resolved issues.
+Many thanks to all who made this release possible.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.24.0</title>
+      <link>https://camel.apache.org/releases/release-2.24.0/</link>
+      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.24.0/</guid>
+      <description>This release is a minor update of the 2.24.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Security Advisory - CVE-2019-0194</title>
+      <link>https://camel.apache.org/security/CVE-2019-0194.html</link>
+      <pubDate>Tue, 30 Apr 2019 18:29:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/security/CVE-2019-0194.html</guid>
+      <description>Apache Camel&amp;rsquo;s File is vulnerable to directory traversal</description>
+    </item>
+    
+    <item>
+      <title>Release 2.22.4</title>
+      <link>https://camel.apache.org/releases/release-2.22.4/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.22.4/</guid>
+      <description>This release is a minor update of the 2.22.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.23.2</title>
+      <link>https://camel.apache.org/releases/release-2.23.2/</link>
+      <pubDate>Sat, 06 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.23.2/</guid>
+      <description>This release is a minor update of the 2.23.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.21.5</title>
+      <link>https://camel.apache.org/releases/release-2.21.5/</link>
+      <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.21.5/</guid>
+      <description>This release is a minor update of the 2.21.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.22.3</title>
+      <link>https://camel.apache.org/releases/release-2.22.3/</link>
+      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.22.3/</guid>
+      <description>This release is a minor update of the 2.22.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.23.1</title>
+      <link>https://camel.apache.org/releases/release-2.23.1/</link>
+      <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.23.1/</guid>
+      <description>This release is a minor update of the 2.23.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.21.4</title>
+      <link>https://camel.apache.org/releases/release-2.21.4/</link>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.21.4/</guid>
+      <description>This release is a minor update of the 2.21.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.23.0</title>
+      <link>https://camel.apache.org/releases/release-2.23.0/</link>
+      <pubDate>Sat, 24 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.23.0/</guid>
+      <description>Welcome to the Apache Camel 2.23.0 release which is a new minor release and resolved 262 issues including new features, improvements and bux fixes.
+ Upgraded to Spring Boot 2.1. Additional component level options can now be configured via spring-boot auto-configuration and these options is included in spring-boot component metadata json file descriptor for tooling assistance. Added section with all the spring boot auto configuration options for all the components, data-formats and languages to the documentation.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.22.2</title>
+      <link>https://camel.apache.org/releases/release-2.22.2/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.22.2/</guid>
+      <description>This release is a minor update of the 2.22.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.21.3</title>
+      <link>https://camel.apache.org/releases/release-2.21.3/</link>
+      <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.21.3/</guid>
+      <description>This release is a minor update of the 2.21.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Security Advisory - CVE-2018-8041</title>
+      <link>https://camel.apache.org/security/CVE-2018-8041.html</link>
+      <pubDate>Mon, 17 Sep 2018 10:29:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/security/CVE-2018-8041.html</guid>
+      <description>Apache Camel&amp;rsquo;s Mail is vulnerable to path traversal</description>
+    </item>
+    
+    <item>
+      <title>Release 2.22.1</title>
+      <link>https://camel.apache.org/releases/release-2.22.1/</link>
+      <pubDate>Sun, 02 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.22.1/</guid>
+      <description>This release is a minor update of the 2.22.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Security Advisory - CVE-2018-8027</title>
+      <link>https://camel.apache.org/security/CVE-2018-8027.html</link>
+      <pubDate>Tue, 31 Jul 2018 09:29:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/security/CVE-2018-8027.html</guid>
+      <description>Apache Camel&amp;rsquo;s Core is vulnerable to XXE in XSD validation processor</description>
+    </item>
+    
+    <item>
+      <title>Release 2.20.4</title>
+      <link>https://camel.apache.org/releases/release-2.20.4/</link>
+      <pubDate>Sat, 21 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.20.4/</guid>
+      <description>This release is a minor update of the 2.20.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.21.2</title>
+      <link>https://camel.apache.org/releases/release-2.21.2/</link>
+      <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.21.2/</guid>
+      <description>This release is a minor update of the 2.21.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.22.0</title>
+      <link>https://camel.apache.org/releases/release-2.22.0/</link>
+      <pubDate>Fri, 29 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.22.0/</guid>
+      <description>Welcome to the 2.22.0 release which resolved 216 issues including new features, improvements and bug fixes.
+This release supports only Spring Boot 2. Spring Boot v1 is no longer supported.
+ Camel has upgraded from Spring Boot v1 to v2 and therefore v1 is no longer supported. Upgraded to Spring Framework 5. Camel should work with Spring 4.3.x as well, but going forward Spring 5.x will be the minimum Spring version in future releases.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.21.1</title>
+      <link>https://camel.apache.org/releases/release-2.21.1/</link>
+      <pubDate>Sun, 29 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.21.1/</guid>
+      <description>This release is a minor update of the 2.21.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.20.3</title>
+      <link>https://camel.apache.org/releases/release-2.20.3/</link>
+      <pubDate>Sun, 25 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.20.3/</guid>
+      <description>This release is a minor update of the 2.20.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.19.5</title>
+      <link>https://camel.apache.org/releases/release-2.19.5/</link>
+      <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.19.5/</guid>
+      <description>This release is a minor update of the 2.19.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.21.0</title>
+      <link>https://camel.apache.org/releases/release-2.21.0/</link>
+      <pubDate>Sun, 11 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.21.0/</guid>
+      <description>Welcome to the 2.21.0 release which resolved 400 issues including new features, improvements and bug fixes.
+This release supports only Spring Boot 1.5.x. Support for Spring Boot 2.0.x is coming in Camel version 2.22 which is planned for early summer 2018.
+ Upgraded to JAXB 2.3.0 which is more JDK9 compliant. Added better support for javax.jms.StreamMessage types in JMS component. Optimised JMS to support ActiveMQ Artemis http://activemq.apache.org/artemis/docs/latest/large-messages.html[large messages] so you can send and receive big messages such as GB&amp;rsquo;s in size.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.20.2</title>
+      <link>https://camel.apache.org/releases/release-2.20.2/</link>
+      <pubDate>Mon, 22 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.20.2/</guid>
+      <description>This release is a minor update of the 2.20.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Security Advisory - CVE-2017-12633</title>
+      <link>https://camel.apache.org/security/CVE-2017-12633.html</link>
+      <pubDate>Wed, 15 Nov 2017 10:29:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/security/CVE-2017-12633.html</guid>
+      <description>Apache Camel&amp;rsquo;s Hessian unmarshalling operation is vulnerable to Remote Code Execution attacks</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Security Advisory - CVE-2017-12634</title>
+      <link>https://camel.apache.org/security/CVE-2017-12634.html</link>
+      <pubDate>Wed, 15 Nov 2017 10:29:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/security/CVE-2017-12634.html</guid>
+      <description>Apache Camel&amp;rsquo;s Castor unmarshalling operation is vulnerable to Remote Code Execution attacks</description>
+    </item>
+    
+    <item>
+      <title>Release 2.20.1</title>
+      <link>https://camel.apache.org/releases/release-2.20.1/</link>
+      <pubDate>Fri, 10 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.20.1/</guid>
+      <description>This release is a minor update of the 2.20.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.19.4</title>
+      <link>https://camel.apache.org/releases/release-2.19.4/</link>
+      <pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.19.4/</guid>
+      <description>This release is a minor update of the 2.19.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.20.0</title>
+      <link>https://camel.apache.org/releases/release-2.20.0/</link>
+      <pubDate>Sat, 07 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.20.0/</guid>
+      <description>Welcome to the 2.20.0 release which resolved over 550 issues including new features, improvements and bug fixes.
+ Support for Java 9 as a technical preview. Official support for Java 9 will be forthcoming in the following releases. (source code builds and tests on a Java 9 JVM).  Many internal optimisations in the Camel routing engine, such as reducing thread contention when updating JMX statistics, reducing internal state objects to claim less memory, and reducing the number of allocated objects to reduce overhead on GC etc, and much more.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.18.5</title>
+      <link>https://camel.apache.org/releases/release-2.18.5/</link>
+      <pubDate>Thu, 21 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.18.5/</guid>
+      <description>This release is a minor update of the 2.18.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.19.3</title>
+      <link>https://camel.apache.org/releases/release-2.19.3/</link>
+      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.19.3/</guid>
+      <description>This release is a minor update of the 2.19.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.19.2</title>
+      <link>https://camel.apache.org/releases/release-2.19.2/</link>
+      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.19.2/</guid>
+      <description>This release is a minor update of the 2.19.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.19.1</title>
+      <link>https://camel.apache.org/releases/release-2.19.1/</link>
+      <pubDate>Sun, 11 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.19.1/</guid>
+      <description>This release is a minor update of the 2.19.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.19.0</title>
+      <link>https://camel.apache.org/releases/release-2.19.0/</link>
+      <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.19.0/</guid>
+      <description>Welcome to the 2.19.0 release which resolved over 670 issues including new features, improvements and bug fixes.
+ Introduced Camel Connector&amp;rsquo;s which is a simplified version of a Camel component that has been pre-configured for a specific use-case. Upgraded to Spring Boot 1.5.x. The Camel Maven Plugin now provides the camel:validate goal to parse your Java and XML source code for any Camel routes and report invalid Camel endpoint uri and simple expression errors.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Security Advisory - CVE-2016-8749</title>
+      <link>https://camel.apache.org/security/CVE-2016-8749.html</link>
+      <pubDate>Tue, 28 Mar 2017 14:59:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/security/CVE-2016-8749.html</guid>
+      <description>Apache Camel&amp;rsquo;s Jackson and JacksonXML unmarshalling operation are vulnerable to Remote Code Execution attacks</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Security Advisory - CVE-2017-5643</title>
+      <link>https://camel.apache.org/security/CVE-2017-5643.html</link>
+      <pubDate>Thu, 16 Mar 2017 11:59:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/security/CVE-2017-5643.html</guid>
+      <description>Apache Camel&amp;rsquo;s Validation Component is vulnerable against SSRF via remote DTDs and XXE</description>
+    </item>
+    
+    <item>
+      <title>Release 2.18.3</title>
+      <link>https://camel.apache.org/releases/release-2.18.3/</link>
+      <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.18.3/</guid>
+      <description>This release is a minor update of the 2.18.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.18.4</title>
+      <link>https://camel.apache.org/releases/release-2.18.4/</link>
+      <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.18.4/</guid>
+      <description>This release is a minor update of the 2.18.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Security Advisory - CVE-2017-3159</title>
+      <link>https://camel.apache.org/security/CVE-2017-3159.html</link>
+      <pubDate>Tue, 07 Mar 2017 10:59:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/security/CVE-2017-3159.html</guid>
+      <description>Apache Camel&amp;rsquo;s Snakeyaml unmarshalling operation is vulnerable to Remote Code Execution attacks</description>
+    </item>
+    
+    <item>
+      <title>Release 2.18.2</title>
+      <link>https://camel.apache.org/releases/release-2.18.2/</link>
+      <pubDate>Sun, 22 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.18.2/</guid>
+      <description>This release is a minor update of the 2.18.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.18.1</title>
+      <link>https://camel.apache.org/releases/release-2.18.1/</link>
+      <pubDate>Sun, 27 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.18.1/</guid>
+      <description>This release is a minor update of the 2.18.x branch.</description>
+    </item>
+    
+    <item>
+      <title>Release 2.18.0</title>
+      <link>https://camel.apache.org/releases/release-2.18.0/</link>
+      <pubDate>Wed, 05 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/releases/release-2.18.0/</guid>
+      <description>Welcome to the 2.18.0 release which resolved over 500 issues. This is first release that requires Java 8 and comes with a much-improved Spring Boot support, and ships with numerous new features, improvements and bug fixes.
+ Java DSL with experimental Java8 functional/lambda support. Check out the camel-example-java8. We love feedback on this DSL and expect to improved the API over the next couple of releases. The XSD schema for &amp;lt;camelContext&amp;gt; and its other configuration elements are now also documented (before it was only &amp;lt;routes&amp;gt; and &amp;lt;rests&amp;gt;).</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Security Advisory - CVE-2015-5348</title>
+      <link>https://camel.apache.org/security/CVE-2015-5348.html</link>
+      <pubDate>Fri, 15 Apr 2016 11:59:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/security/CVE-2015-5348.html</guid>
+      <description>Apache Camel&amp;rsquo;s Jetty/Servlet usage is vulnerable to Java object de-serialisation vulnerability.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Security Advisory - CVE-2015-5344</title>
+      <link>https://camel.apache.org/security/CVE-2015-5344.html</link>
+      <pubDate>Wed, 03 Feb 2016 13:59:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/security/CVE-2015-5344.html</guid>
+      <description>Apache Camel&amp;rsquo;s XStream usage is vulnerable to Remote Code Execution attacks.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Security Advisory - CVE-2015-0264</title>
+      <link>https://camel.apache.org/security/CVE-2015-0264.html</link>
+      <pubDate>Wed, 03 Jun 2015 16:59:04 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/security/CVE-2015-0264.html</guid>
+      <description>The XPath handling in Apache Camel for invalid XML Strings or invalid XML GenericFile objects allows remote attackers to read arbitrary files via an XML External Entity (XXE) declaration. The XML External Entity (XXE) will be resolved before the Exception is thrown.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Security Advisory - CVE-2015-0263</title>
+      <link>https://camel.apache.org/security/CVE-2015-0263.html</link>
+      <pubDate>Wed, 03 Jun 2015 16:59:02 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/security/CVE-2015-0263.html</guid>
+      <description>The XML converter setup in Apache Camel allows remote attackers to read arbitrary files via an SAXSource containing an XML External Entity (XXE) declaration.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Security Advisory - CVE-2014-0002</title>
+      <link>https://camel.apache.org/security/CVE-2014-0002.html</link>
+      <pubDate>Fri, 21 Mar 2014 00:38:59 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/security/CVE-2014-0002.html</guid>
+      <description>The Apache Camel XSLT component will resolve entities in XML messages when transforming them using an xslt route.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Security Advisory - CVE-2014-0003</title>
+      <link>https://camel.apache.org/security/CVE-2014-0003.html</link>
+      <pubDate>Fri, 21 Mar 2014 00:38:59 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/security/CVE-2014-0003.html</guid>
+      <description>The Apache Camel XSLT component allows XSL stylesheets to perform calls to external Java methods.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Security Advisory - CVE-2013-4330</title>
+      <link>https://camel.apache.org/security/CVE-2013-4330.html</link>
+      <pubDate>Fri, 04 Oct 2013 13:55:09 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/security/CVE-2013-4330.html</guid>
+      <description>Writing files using FILE or FTP components, can potentially be exploited by a malicious user.</description>
+    </item>
+    
+    <item>
+      <title>Acknowledgments</title>
+      <link>https://camel.apache.org/acknowledgments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/acknowledgments/</guid>
+      <description>Many thanks to the following organizations for helping the Camel project.
+ YourKit GmbH kindly provide free licenses for the YourKit Java Profiler to open source projects. YourKit Java Profiler is primarily used to investigate performance and memory leak issues reported in Apache Camel.
+ Netlify kindly provides pull request builds, checks and previews for this website.</description>
+    </item>
+    
+    <item>
+      <title>Articles</title>
+      <link>https://camel.apache.org/community/articles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/community/articles/</guid>
+      <description>Camel Videos  Integrating systems in the age of Quarkus and Camel 45 min webinar from May 2021 by Claus Ibsen, with quick overview of Camel 3 projects and then focus on Camel Quarkus, Camel K and Kamelets. Mix of slides and live demos (yes with a demo not working perfect) OCB: Integration in OpenShift 1 hour introductory presentation from May 2021 by Zineb Bendhiba, Rachel Jordan-McGeever, and María Arias de Reyna about Camel, Camel Quarkus, Camel K and Kamelets.</description>
+    </item>
+    
+    <item>
+      <title>Books</title>
+      <link>https://camel.apache.org/community/books/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/community/books/</guid>
+      <description>This page lists the known books about Apache Camel. If you happen to know a book which is not listed then please contact us, for example using the Mailing Lists.
+ Camel in Action 2nd edition Camel in Action Apache Camel Developer&amp;rsquo;s Cookbook Camel Design Patterns Mastering Apache Camel Instant Apache Camel Message Routing Instant Apache Camel Messaging System Enterprise Integration Patterns  Camel in Action 2nd edition Camel in Action 2nd edition by Claus Ibsen and Jonathan Anstey.</description>
+    </item>
+    
+    <item>
+      <title>Building</title>
+      <link>https://camel.apache.org/docs/building/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/docs/building/</guid>
+      <description>Building Camel from Source Camel uses Maven as its build and management tool. If you don&amp;rsquo;t fancy using Maven you can use your IDE directly or Download a distribution or JAR.
+Prequisites Required:  Download and install Maven  (Maven 3.1.1 or newer is required to build Camel 2.14 onwards) (Maven 3.2.5 or newer is required to build Camel 2.18 onwards) (Maven 3.3.3 or newer is required to build Camel 2.</description>
+    </item>
+    
+    <item>
+      <title>Camel Extra components</title>
+      <link>https://camel.apache.org/community/camel-extra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/community/camel-extra/</guid>
+      <description>Camel Extra project contains a number of extension components which due to GPL/LGPL licensing cannot be hosted at Apache.</description>
+    </item>
+    
+    <item>
+      <title>Contributing</title>
+      <link>https://camel.apache.org/community/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/community/contributing/</guid>
+      <description>Contributing to Apache Camel First of all, thank you for having an interest in contributing to Apache Camel.
+Here are some guidelines on how to best approach the Apache Camel community and how to best apply yourself. There are many ways you can help make Camel a better piece of software - please dive in and help!
+ Try surfing the documentation - if something confuses you, bring it to our attention or suggest an improvement.</description>
+    </item>
+    
+    <item>
+      <title>Mailing Lists</title>
+      <link>https://camel.apache.org/community/mailing-list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/community/mailing-list/</guid>
+      <description>Use Camel User List You should post and subscribe to the Camel User List for all your questions on using Camel, or how to do X with Camel etc. If in doubt use this list. The Camel Developer List, is for the Camel team to discus development of the actual Camel project; do not use this list for questions on using Camel. Again to re-iterate, use the Camel User List, for your Camel questions.</description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>https://camel.apache.org/privacy-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/privacy-policy/</guid>
+      <description>Apache Camel Privacy Policy The Apache Software Foundation (ASF) is an open source project organized under the auspices of a public benefit corporation. Our challenges and goals are large. For that reason, we have a very permissive (non) privacy policy that mirrors our public mission.
+Please assume that everything you contribute intentionally to The ASF, or any project at The ASF, is public. This includes emails on public lists, wikis, online discussions of all sorts, and software or documentation that you post to this website or our revision control repositories.</description>
+    </item>
+    
+    <item>
+      <title>Sources</title>
+      <link>https://camel.apache.org/community/sources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/community/sources/</guid>
+      <description>## Web Browsing of git
+To browse via the web:
+https://gitbox.apache.org/repos/asf/camel.git ## Web Browing Using FishEye
+A hearty thanks to Atlassian for providing FishEye hosting for Camel. Below is the URL to browse the Subversion repo via FishEye:
+https://fisheye6.atlassian.com/browse/camel-git ## Checking out from git
+git clone https://gitbox.apache.org/repos/asf/camel.git Only project developers can commit to the git via this method. SSH must be installed on your client machine. Enter your site password when prompted.</description>
+    </item>
+    
+    <item>
+      <title>Sources</title>
+      <link>https://camel.apache.org/docs/sources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/docs/sources/</guid>
+      <description>Web Browsing of git To browse via the web:
+https://git-wip-us.apache.org/repos/asf?p=camel.git Web Browsing Using FishEye A hearty thanks to Atlassian for providing FishEye hosting for Camel. Below is the URL to browse the Subversion repo via FishEye:
+https://fisheye6.atlassian.com/browse/camel-git Checking out from git git clone https://git-wip-us.apache.org/repos/asf/camel.git Only project developers can commit to the git via this method. SSH must be installed on your client machine. Enter your site password when prompted.</description>
+    </item>
+    
+    <item>
+      <title>Support</title>
+      <link>https://camel.apache.org/community/support/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/community/support/</guid>
+      <description>Getting help If you are experiencing problems using Camel then please report your problem to our mailing list or Zulip chat. This allows the entire community to help with your problem. If indeed a bug has been identified in the Camel software, then document the problem in our Issue Tracker. Please refrain from immediately opening a ticket in the issue tracker unless you are certain it&amp;rsquo;s a problem in the Camel software.</description>
+    </item>
+    
+    <item>
+      <title>Team</title>
+      <link>https://camel.apache.org/community/team/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/community/team/</guid>
+      <description>This page lists who we are. By all means add yourself to the list - lets sort it in alphabetical order
+Committers When posting to the mailing lists, use plain text mails. Do not use HTML mails. HTML mails is more likely to be targeted as spam mails and will be rejected; as well it&amp;rsquo;s not easily readable by others.
+  Name ID Organisation     Aaron Mulder ammulder Chariot Solutions   Akitoshi Yoshida ay SAP   Andrea Cosentino acosentino Red Hat   Antonin Stefanutti  astefanutti  Red Hat   Babak Vahdat bvahdat Cyberlogic Consulting GmbH   Ben O&amp;rsquo;Day boday Initek Consulting   Bilgin Ibryam bibryam Red Hat   Bob Paulin bob     Bruce Snyder bsnyder     Charles Moulliard cmoulliard Red Hat   Christian Mueller cmueller Amazon Web Services   Christian Posta ceposta Solo   Christian Schneider cschneider    Claus Ibsen davsclaus Red Hat   Colm O hEigeartaigh coheigea Talend   David Jencks djencks IBM    Daniel Kulp dkulp Talend   Denis Istomin distomin    Dmitry Volodin dmvolod Red Hat   Franz Forsthofer forsthofer SAP   Freeman Fang ffang Red Hat   Gary Tully gtully Red Hat   Gert Vanthienen gertv     Gregor Zurowski gzurowski Sotheby&amp;rsquo;s   Guillaume Nodet gnodet Red Hat   Hadrian Zbarcea hadrian    Henryk Konsek hekonsek    Hiram Chirino chirino Red Hat   Ioannis Canellos iocanel Red Hat   Jacek Laskowski jlaskowski     James Carman jcarman Savoir Technologies   Jan Bednar janbednar CGI IT Czech Republic   Jean-Baptiste Onofré jbonofre Talend   Jeff Genender jgenender Savoir Technologies   Johan Edstrom joed Savoir Technologies   John Poth   Red Hat   Jonathan Anstey janstey Red Hat   James Netherton  Red Hat   James Strachan jstrachan    Luca Burgazzoli lburgazzoli Red Hat   Martin Krasser krasserm    Nicky Sandhu nsandhu    Nicola Ferraro nicolaferraro Red Hat   Onder Sezgin onders    Omar Al-Safi oalsafi Talend   Otavio Rodolfo Piske orpiske Red Hat   Quinn Stevenson quinn    Raul Kripalani raulk     Pascal Schumacher pascalschumacher    Peter Palaga ppalaga Red Hat   Rich Newcomb rnewcomb    Richard Kettelerij rickette Avisi BV   Rob Davies rajdavies    Roman Kalukiewicz romkal    Scott England-Sullivan sully6768 Red Hat   Stan Lewis slewis Red Hat   Tadayoshi Sato tsato Red Hat   Tomohisa Igarashi igarashitm Red Hat   Tracy Snell tjsnell  Juice Labs   Willem Jiang ningjiang Huawei   William Tam wtam Red Hat   Zoran Regvart zregvart Red Hat    Contributors Adding your name to the list below.</description>
+    </item>
+    
+    <item>
+      <title>User Stories</title>
+      <link>https://camel.apache.org/community/user-stories/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/community/user-stories/</guid>
+      <description>This page is intended as a place to collect user stories and feedback on Apache Camel. If you are using or have tried Apache Camel please add an entry or comment; or post to the mailing list.
+  Company, Product, or Project Description     Apache ActiveMQ Uses Camel to add Enterprise Integration Patterns support into the ActiveMQ broker. If you run an out of the box ActiveMQ broker, look in conf/camel.</description>
+    </item>
+    
+  </channel>
+</rss>

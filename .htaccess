@@ -1,0 +1,2131 @@
+# Redirect security advisories to new location
+RewriteEngine on
+RewriteBase "/"
+RewriteRule "^security-advisories.data/(.+)$" "security/$1" [R=permanent,L]
+
+# Customize what Apache returns to the client in case of an error.
+#
+# https://httpd.apache.org/docs/current/mod/core.html#errordocument
+ErrorDocument 404 /404.html
+
+# Redirect /news/... to /blog/...
+RewriteRule "^news(/.*)$" "/blog$1" [R=permanent,L]
+
+# Redirect known links from old website. Not mapped links are commented out. Feel free to edit, if you find something missing.
+# Redirect 301 /EclipseMilo
+# Redirect 301 /acknowledgment.html
+# Redirect 301 /activemq-camel-tomcat.html
+# Redirect 301 /activemq-journal.html
+# Redirect 301 /add-new-component-guide.html
+# Redirect 301 /advicewith.html
+# Redirect 301 /aggregate-example.html
+# Redirect 301 /annotation-based-expression-language.html
+# Redirect 301 /aop.html
+# Redirect 301 /apache-spark.html
+# Redirect 301 /artix-data-services.html
+# Redirect 301 /asciidoc.html
+# Redirect 301 /asynchronous-processing.html
+# Redirect 301 /asynchronous-queueing.html
+# Redirect 301 /asyncprocessorawaitmanager.html
+# Redirect 301 /aws.html
+# Redirect 301 /banner.html
+# Redirect 301 /bean-validation.html
+# Redirect 301 /beanshell.html
+# Redirect 301 /better-jms-transport-for-cxf-webservice-using-apache-camel.html
+# Redirect 301 /blueprint-testing.html
+# Redirect 301 /book-architecture.html
+# Redirect 301 /book-component-appendix.html
+# Redirect 301 /book-cookbook.html
+# Redirect 301 /book-dataformat-appendix.html
+# Redirect 301 /book-enterprise-integration-patterns.html
+# Redirect 301 /book-front-cover.html
+# Redirect 301 /book-in-one-page.html
+# Redirect 301 /book-introduction.html
+# Redirect 301 /book-languages-appendix.html
+# Redirect 301 /book-pattern-appendix.html
+# Redirect 301 /book-quickstart.html
+# Redirect 301 /book-table-of-contents.html
+# Redirect 301 /book-tutorials.html
+# Redirect 301 /book.html
+# Redirect 301 /boon.html
+# Redirect 301 /cache.html
+# Redirect 301 /cachereplicationjmsexample.html
+# Redirect 301 /cafe-example.html
+# Redirect 301 /camel-100-release.html
+# Redirect 301 /camel-110-release.html
+# Redirect 301 /camel-120-release.html
+# Redirect 301 /camel-130-release.html
+# Redirect 301 /camel-140-release.html
+# Redirect 301 /camel-150-release.html
+# Redirect 301 /camel-160-release.html
+# Redirect 301 /camel-161-release.html
+# Redirect 301 /camel-162-release.html
+# Redirect 301 /camel-163-release.html
+# Redirect 301 /camel-164-release.html
+# Redirect 301 /camel-20-design.html
+# Redirect 301 /camel-20-m1-release.html
+# Redirect 301 /camel-20-m2-release.html
+# Redirect 301 /camel-20-m3-release.html
+# Redirect 301 /camel-200-release.html
+# Redirect 301 /camel-210-release.html
+# Redirect 301 /camel-2100-release.html
+# Redirect 301 /camel-2101-release.html
+# Redirect 301 /camel-2102-release.html
+# Redirect 301 /camel-2103-release.html
+# Redirect 301 /camel-2104-release.html
+# Redirect 301 /camel-2105-release.html
+# Redirect 301 /camel-2106-release.html
+# Redirect 301 /camel-2107-release.html
+# Redirect 301 /camel-2110-release.html
+# Redirect 301 /camel-2111-release.html
+# Redirect 301 /camel-2112-release.html
+# Redirect 301 /camel-2113-release.html
+# Redirect 301 /camel-2114-release.html
+# Redirect 301 /camel-2120-release.html
+# Redirect 301 /camel-2121-release.html
+# Redirect 301 /camel-2122-release.html
+# Redirect 301 /camel-2123-release.html
+# Redirect 301 /camel-2124-release.html
+# Redirect 301 /camel-2125-release.html
+# Redirect 301 /camel-2130-release.html
+# Redirect 301 /camel-2131-release.html
+# Redirect 301 /camel-2132-release.html
+# Redirect 301 /camel-2133-release.html
+# Redirect 301 /camel-2134-release.html
+# Redirect 301 /camel-2140-release.html
+# Redirect 301 /camel-2141-release.html
+# Redirect 301 /camel-2142-release.html
+# Redirect 301 /camel-2143-release.html
+# Redirect 301 /camel-2144-release.html
+# Redirect 301 /camel-2150-release.html
+# Redirect 301 /camel-2151-release.html
+# Redirect 301 /camel-2152-release.html
+# Redirect 301 /camel-2153-release.html
+# Redirect 301 /camel-2154-release.html
+# Redirect 301 /camel-2155-release.html
+# Redirect 301 /camel-2156-release.html
+# Redirect 301 /camel-2160-release.html
+# Redirect 301 /camel-2161-release.html
+# Redirect 301 /camel-2162-release.html
+# Redirect 301 /camel-2163-release.html
+# Redirect 301 /camel-2164-release.html
+# Redirect 301 /camel-2170-release.html
+# Redirect 301 /camel-2171-release.html
+# Redirect 301 /camel-2172-release.html
+# Redirect 301 /camel-2173-release.html
+# Redirect 301 /camel-2174-release.html
+# Redirect 301 /camel-2175-release.html
+# Redirect 301 /camel-2176-release.html
+# Redirect 301 /camel-2177-release.html
+# Redirect 301 /camel-2180-release.html
+# Redirect 301 /camel-2181-release.html
+# Redirect 301 /camel-2182-release.html
+# Redirect 301 /camel-2183-release.html
+# Redirect 301 /camel-2184-release.html
+# Redirect 301 /camel-2185-release.html
+# Redirect 301 /camel-2190-release.html
+# Redirect 301 /camel-2191-release.html
+# Redirect 301 /camel-2192-release.html
+# Redirect 301 /camel-2193-release.html
+# Redirect 301 /camel-2194-release.html
+# Redirect 301 /camel-2195-release.html
+# Redirect 301 /camel-220-release.html
+# Redirect 301 /camel-2200-release.html
+# Redirect 301 /camel-2201-release.html
+# Redirect 301 /camel-2202-release.html
+# Redirect 301 /camel-2203-release.html
+# Redirect 301 /camel-2204-release.html
+# Redirect 301 /camel-2210-release.html
+# Redirect 301 /camel-2211-release.html
+# Redirect 301 /camel-2212-release.html
+# Redirect 301 /camel-2213-release.html
+# Redirect 301 /camel-2214-release.html
+# Redirect 301 /camel-2215-release.html
+# Redirect 301 /camel-2220-release.html
+# Redirect 301 /camel-2221-release.html
+# Redirect 301 /camel-2222-release.html
+# Redirect 301 /camel-2223-release.html
+# Redirect 301 /camel-2224-release.html
+# Redirect 301 /camel-2225-release.html
+# Redirect 301 /camel-2230-release.html
+# Redirect 301 /camel-2231-release.html
+# Redirect 301 /camel-2232-release.html
+# Redirect 301 /camel-2233-release.html
+# Redirect 301 /camel-2234-release.html
+# Redirect 301 /camel-2240-release.html
+# Redirect 301 /camel-2241-release.html
+# Redirect 301 /camel-2242-release.html
+# Redirect 301 /camel-23-overhaul-of-aggregator-eip.html
+# Redirect 301 /camel-23-threadpool-configuration.html
+# Redirect 301 /camel-230-release.html
+# Redirect 301 /camel-240-release.html
+# Redirect 301 /camel-250-release.html
+# Redirect 301 /camel-260-release.html
+# Redirect 301 /camel-27-roadmap.html
+# Redirect 301 /camel-270-release.html
+# Redirect 301 /camel-271-release.html
+# Redirect 301 /camel-272-release.html
+# Redirect 301 /camel-273-release.html
+# Redirect 301 /camel-274-release.html
+# Redirect 301 /camel-275-release.html
+# Redirect 301 /camel-280-release.html
+# Redirect 301 /camel-281-release.html
+# Redirect 301 /camel-282-release.html
+# Redirect 301 /camel-283-release.html
+# Redirect 301 /camel-284-release.html
+# Redirect 301 /camel-285-release.html
+# Redirect 301 /camel-286-release.html
+# Redirect 301 /camel-29-jmx-and-reducing-spring-dependency.html
+# Redirect 301 /camel-290-release.html
+# Redirect 301 /camel-291-release.html
+# Redirect 301 /camel-292-release.html
+# Redirect 301 /camel-293-release.html
+# Redirect 301 /camel-294-release.html
+# Redirect 301 /camel-295-release.html
+# Redirect 301 /camel-296-release.html
+# Redirect 301 /camel-297-release.html
+# Redirect 301 /camel-298-release.html
+# Redirect 301 /camel-2x-debugger-api.html
+# Redirect 301 /camel-2x-speed-optimizations.html
+# Redirect 301 /camel-30-ideas.html
+# Redirect 301 /camel-30-introduce-an-api-for-components.html
+# Redirect 301 /camel-30-message-store.html
+# Redirect 301 /camel-30-roadmap.html
+# Redirect 301 /camel-300-m1-milestone-1-release.html
+# Redirect 301 /camel-300-m2-milestone-2-release.html
+# Redirect 301 /camel-300-m3-milestone-3-release.html
+# Redirect 301 /camel-300-m4-milestone-4-release.html
+# Redirect 301 /camel-300-m5-milestone-5-release.html
+# Redirect 301 /camel-and-scr.html
+# Redirect 301 /camel-apachecon.html
+# Redirect 301 /camel-cxf-design.html
+# Redirect 301 /camel-dot-maven-goal.html
+# Redirect 301 /camel-dsl.html
+# Redirect 301 /camel-eclipse.html
+# Redirect 301 /camel-endpoint-questions.html
+# Redirect 301 /camel-jboss.html
+# Redirect 301 /camel-jmx.html
+# Redirect 301 /camel-security.html
+# Redirect 301 /camel-transport-for-cxf.html
+# Redirect 301 /camel-xyz-release-template.html
+# Redirect 301 /camel-zipkin.html
+# Redirect 301 /castor.html
+# Redirect 301 /cdi-testing.html
+# Redirect 301 /chronicle-engine.html
+# Redirect 301 /clustering-and-loadbalancing.html
+# Redirect 301 /code-walkthrough.html
+# Redirect 301 /common-problems.html
+# Redirect 301 /community.html
+# Redirect 301 /competing-consumers.html
+# Redirect 301 /component-list-external.html
+# Redirect 301 /component-list-grouped.html
+# Redirect 301 /component-list.html
+# Redirect 301 /composed-message-processor.html
+# Redirect 301 /content-based-routing-on-camel.html
+# Redirect 301 /context.html
+# Redirect 301 /continuous-integration-builds.html
+# Redirect 301 /cookbook.html
+# Redirect 301 /crypto-digital-signatures.html
+# Redirect 301 /custom-dataformat.html
+# Redirect 301 /customizing-xml.html
+# Redirect 301 /cxf-async-example.html
+# Redirect 301 /cxf-bean-component.html
+# Redirect 301 /cxf-example-osgi-blueprint.html
+# Redirect 301 /cxf-example-osgi.html
+# Redirect 301 /cxf-example.html
+# Redirect 301 /cxf-proxy-example.html
+# Redirect 301 /cxf-tomcat-example.html
+# Redirect 301 /data-format-list.html
+# Redirect 301 /database.html
+# Redirect 301 /db4o.html
+# Redirect 301 /delayer.html
+# Redirect 301 /design-notes.html
+# Redirect 301 /detour.html
+# Redirect 301 /discussion-forums.html
+Redirect 301 /documentation.html /manual/latest/
+# Redirect 301 /download-archives.html
+# Redirect 301 /dsl-function-template.html
+# Redirect 301 /durable-subscriber.html
+# Redirect 301 /dynamicrouter-annotation.html
+# Redirect 301 /edi.html
+# Redirect 301 /eip-2.html
+# Redirect 301 /ejb.html
+# Redirect 301 /el.html
+# Redirect 301 /elasticsearch.html
+# Redirect 301 /endpoint-see-also.html
+# Redirect 301 /esper.html
+# Redirect 301 /etl-example.html
+# Redirect 301 /etl.html
+# Redirect 301 /event.html
+# Redirect 301 /eventnotifier-to-log-details-about-all-sent-exchanges.html
+# Redirect 301 /fine-grained-control-over-a-channel.html
+# Redirect 301 /ftp-example.html
+# Redirect 301 /gae.html
+# Redirect 301 /gauth.html
+# Redirect 301 /general-questions.html
+# Redirect 301 /ghttp.html
+# Redirect 301 /glogin.html
+# Redirect 301 /google-summerofcode.html
+# Redirect 301 /groovy-renderer-user-guide.html
+# Redirect 301 /gsec.html
+# Redirect 301 /gsoc-2009.html
+# Redirect 301 /gtask.html
+# Redirect 301 /guaranteed-delivery.html
+# Redirect 301 /guice-dot-maven-goal-.html
+# Redirect 301 /guice-embedded-maven-goal.html
+# Redirect 301 /guice-jms-example.html
+# Redirect 301 /guice-maven-plugin.html
+# Redirect 301 /guice-run-maven-goal.html
+# Redirect 301 /gzip-data-format.html
+# Redirect 301 /hawtdb.html
+# Redirect 301 /hazelcast-component.html
+# Redirect 301 /hazelcast-idempotent-repository-tutorial.html
+# Redirect 301 /hessian.html
+# Redirect 301 /hibernate-example.html
+# Redirect 301 /hibernate.html
+# Redirect 301 /ho-do-i-specify-which-method-to-use-when-using-beans-in-routes.html
+# Redirect 301 /how-can-i-get-help.html
+# Redirect 301 /how-do-i-add-a-component.html
+# Redirect 301 /how-to-run-camel-in-a-osgi-container.html
+# Redirect 301 /how-to-use-camel-as-a-http-proxy-between-a-client-and-server.html
+# Redirect 301 /http-async-example.html
+# Redirect 301 /ibatis.html
+# Redirect 301 /implementing-virtual-topics-on-other-jms-providers.html
+# Redirect 301 /in-progress.html
+# Redirect 301 /includes.html
+# Redirect 301 /javadoc.html
+# Redirect 301 /javaspace.html
+# Redirect 301 /jbi-service-unit-archetype.html
+# Redirect 301 /jbi.html
+# Redirect 301 /jcifs.html
+# Redirect 301 /jibx.html
+# Redirect 301 /jms-questions.html
+# Redirect 301 /jmx-component-example.html
+# Redirect 301 /jsch.html
+# Redirect 301 /juel.html
+# Redirect 301 /jxpath.html
+# Redirect 301 /kestrel.html
+# Redirect 301 /krati.html
+# Redirect 301 /languages-supported.html
+# Redirect 301 /list.html
+# Redirect 301 /load-balance-for-existing-messaging-service.html
+# Redirect 301 /loadbalancing-mina-example.html
+# Redirect 301 /loading-routes-from-xml-files.html
+# Redirect 301 /loan-broker-example.html
+# Redirect 301 /logging-questions.html
+# Redirect 301 /management-example.html
+# Redirect 301 /manual
+# Redirect 301 /manual-downloads.html
+# Redirect 301 /manual.html
+# Redirect 301 /maven-2-snapshot-repository-in-pom.html
+# Redirect 301 /mdc-logging.html
+# Redirect 301 /merging-commits-from-trunk-to-fixes-branch.html
+# Redirect 301 /message-bus
+# Redirect 301 /message-bus.html
+# Redirect 301 /message-channel.html
+# Redirect 301 /message-dispatcher.html
+# Redirect 301 /message-filter.html
+# Redirect 301 /message-history.html
+# Redirect 301 /message-router.html
+# Redirect 301 /messaging-gateway.html
+# Redirect 301 /messaging-mapper.html
+# Redirect 301 /mybatis-example.html
+# Redirect 301 /navigation.html
+# Redirect 301 /neo4j
+# Redirect 301 /netty-http-server-example.html
+# Redirect 301 /nmr.html
+# Redirect 301 /normalizer.html
+# Redirect 301 /notifybuilder.html
+# Redirect 301 /oldlinks.html
+# Redirect 301 /overview.html
+# Redirect 301 /parallel-processing-and-ordering.html
+# Redirect 301 /pdf-documentation-guide.html
+# Redirect 301 /php.html
+# Redirect 301 /pipes-and-filters.html
+# Redirect 301 /pipes-nd-filters.html
+# Redirect 301 /point-to-point-channel.html
+# Redirect 301 /pojo-messaging-example.html
+# Redirect 301 /pojo.html
+# Redirect 301 /printer.html
+# Redirect 301 /privacy-policy.html
+# Redirect 301 /processorfactory.html
+# Redirect 301 /property.html
+# Redirect 301 /python.html
+# Redirect 301 /queue.html
+# Redirect 301 /quicklinks.html
+# Redirect 301 /rcode.html
+# Redirect 301 /recipientlist-annotation.html
+# Redirect 301 /redeliverypolicy.html
+# Redirect 301 /redis.html
+# Redirect 301 /release-guide.html
+# Redirect 301 /reports.html
+# Redirect 301 /return-address.html
+# Redirect 301 /rmi.html
+# Redirect 301 /route-throttling-example.html
+# Redirect 301 /routebox.html
+# Redirect 301 /routingslip-annotation.html
+# Redirect 301 /ruby.html
+# Redirect 301 /running-camel-standalone-and-have-it-keep-running.html
+# Redirect 301 /running-rat.html
+# Redirect 301 /running-unit-tests.html
+# Redirect 301 /rx.html
+# Redirect 301 /sampling.html
+# Redirect 301 /scala-dsl-eip.html
+# Redirect 301 /scala-dsl-getting-started.html
+# Redirect 301 /scalate.html
+# Redirect 301 /scatter-gather.html
+# Redirect 301 /scratch-page.html
+# Redirect 301 /scripting-languages-context.html
+# Redirect 301 /security-advisories.html
+# Redirect 301 /selective-consumer.html
+# Redirect 301 /serialization.html
+# Redirect 301 /service-activator.html
+# Redirect 301 /servlet-tomcat-example.html
+# Redirect 301 /servlet-tomcat-no-spring-example.html
+# Redirect 301 /servletlistener-component.html
+# Redirect 301 /set-up-your-ide.html
+# Redirect 301 /shiro-security.html
+# Redirect 301 /simple-jira-bot.html
+# Redirect 301 /site-update-ideas.html
+# Redirect 301 /site.html
+# Redirect 301 /sitemap.html
+# Redirect 301 /smooks.html
+# Redirect 301 /soa-patterns.html
+# Redirect 301 /soap.html
+# Redirect 301 /source.html
+# Redirect 301 /spring-boot-example.html
+# Redirect 301 /spring-java-config-example.html
+# Redirect 301 /spring-neo4j.html
+# Redirect 301 /spring-security-example.html
+# Redirect 301 /spring-web-services.html
+# Redirect 301 /spring-ws-example.html
+# Redirect 301 /spring-xquery-example.html
+# Redirect 301 /sql-example.html
+# Redirect 301 /sql-stored-procedure.html
+# Redirect 301 /string.html
+# Redirect 301 /swagger.html
+# Redirect 301 /tar-dataformat.html
+# Redirect 301 /testing-a-release-candidate.html
+# Redirect 301 /testing-summary-include.html
+# Redirect 301 /toasync.html
+# Redirect 301 /tokenizer-2.html
+# Redirect 301 /tools.html
+# Redirect 301 /tracer-example.html
+# Redirect 301 /tutorial-axis-camel.html
+# Redirect 301 /tutorial-business-partners.html
+# Redirect 301 /tutorial-example-reportincident-part1.html
+# Redirect 301 /tutorial-example-reportincident-part10955.html
+# Redirect 301 /tutorial-example-reportincident-part11c61.html
+# Redirect 301 /tutorial-example-reportincident-part19ea8.html
+# Redirect 301 /tutorial-example-reportincident-part2.html
+# Redirect 301 /tutorial-example-reportincident-part20955.html
+# Redirect 301 /tutorial-example-reportincident-part21c61.html
+# Redirect 301 /tutorial-example-reportincident-part29ea8.html
+# Redirect 301 /tutorial-example-reportincident-part3.html
+# Redirect 301 /tutorial-example-reportincident-part30955.html
+# Redirect 301 /tutorial-example-reportincident-part31c61.html
+# Redirect 301 /tutorial-example-reportincident-part39ea8.html
+# Redirect 301 /tutorial-example-reportincident-part4.html
+# Redirect 301 /tutorial-example-reportincident-part40955.html
+# Redirect 301 /tutorial-example-reportincident-part41c61.html
+# Redirect 301 /tutorial-example-reportincident-part49ea8.html
+# Redirect 301 /tutorial-example-reportincident-part5.html
+# Redirect 301 /tutorial-example-reportincident-part6.html
+# Redirect 301 /tutorial-example-reportincident.html
+# Redirect 301 /tutorial-for-camel-on-google-app-engine.html
+# Redirect 301 /tutorial-jmsremoting.html
+# Redirect 301 /tutorial-oauth.html
+# Redirect 301 /tutorial-on-using-camel-in-a-web-application.html
+# Redirect 301 /tutorial-osgi-camel-part1.html
+# Redirect 301 /tutorial-osgi-camel-part1367c.html
+# Redirect 301 /tutorial-osgi-camel-part13d1f.html
+# Redirect 301 /tutorial-osgi-camel-part2.html
+# Redirect 301 /tutorial-osgi-camel-part2367c.html
+# Redirect 301 /tutorial-osgi-camel-part23d1f.html
+# Redirect 301 /tutorial-osgi-camel-part2a.html
+# Redirect 301 /tutorial-osgi-camel-part2a367c.html
+# Redirect 301 /tutorial-osgi-camel-part2a3d1f.html
+# Redirect 301 /tutorial-osgi-camel-part2b.html
+# Redirect 301 /tutorial-osgi-camel-part2b367c.html
+# Redirect 301 /tutorial-osgi-camel-part2b3d1f.html
+# Redirect 301 /tutorial-osgi-camel-part2c.html
+# Redirect 301 /tutorial-osgi-camel-part2c367c.html
+# Redirect 301 /tutorial-osgi-camel-part2c3d1f.html
+# Redirect 301 /tutorials.html
+# Redirect 301 /twitter-websocket-blueprint-example.html
+# Redirect 301 /twitter-websocket-example.html
+# Redirect 301 /twitter.html
+# Redirect 301 /univocity-parsers-formats.html
+# Redirect 301 /unsupported-groovy-dsl-features-on-web-console.html
+# Redirect 301 /upgrade-dependency-guide.html
+# Redirect 301 /urlrewrite
+# Redirect 301 /urlrewrite.html
+# Redirect 301 /uses-commons-logging.html
+# Redirect 301 /using-camel-questions.html
+# Redirect 301 /using-camelproxy.html
+# Redirect 301 /using-languages-in-ide.html
+# Redirect 301 /validation.html
+# Redirect 301 /virtualbox.html
+# Redirect 301 /visualisation.html
+# Redirect 301 /vtd-xml.html
+# Redirect 301 /vtdxml.html
+# Redirect 301 /web-console.html
+# Redirect 301 /welcome-franz-forsthofer-as-the-newest-camel-committer.html
+# Redirect 301 /what-is-a-camel-toe.html
+# Redirect 301 /what-languages-are-supported.html
+# Redirect 301 /xmlbeans.html
+# Redirect 301 /xmljson.html
+# Redirect 301 /xmlrpc.html
+# Redirect 301 /xmlsecurity-dataformat.html
+# Redirect 301 /xmltokenizer.html
+# Redirect 301 /xquery-endpoint.html
+# Redirect 301 /yaml-data-format.html
+# Redirect 301 /zeromq.html
+# Redirect 301 /zip-dataformat.html
+Redirect 301 /activemq.html /components/latest/activemq-component.html
+Redirect 301 /advanced-configuration-of-camelcontext-using-spring.html /manual/latest/advanced-configuration-of-camelcontext-using-spring.html
+Redirect 301 /aggregator.html /components/latest/eips/aggregate-eip.html
+Redirect 301 /aggregator2 /components/latest/eips/aggregate-eip.html
+Redirect 301 /aggregator2.html /components/latest/eips/aggregate-eip.html
+Redirect 301 /ahc-ws.html /components/latest/ahc-ws-component.html
+Redirect 301 /ahc.html /components/latest/ahc-component.html
+Redirect 301 /amqp /components/latest/amqp-component.html
+Redirect 301 /amqp.html /components/latest/amqp-component.html
+Redirect 301 /apns.html /components/latest/apns-component.html
+Redirect 301 /architecture.html /manual/latest/architecture.html
+Redirect 301 /articles.html /community/articles
+Redirect 301 /async.html /manual/latest/async.html
+Redirect 301 /asynchronous-routing-engine.html /manual/latest/asynchronous-routing-engine.html
+Redirect 301 /atmosphere-websocket.html /components/latest/atmosphere-websocket-component.html
+Redirect 301 /atom.html /components/latest/atom-component.html
+Redirect 301 /avro.html /components/latest/avro-component.html
+# Possible candidates for previous URL: [/components/latest/avro-component.html, /components/latest/dataformats/avro-dataformat.html]
+Redirect 301 /aws-cw.html /components/latest/aws-cw-component.html
+Redirect 301 /aws-ddb.html /components/latest/aws-ddb-component.html
+Redirect 301 /aws-ddbstream.html /components/latest/aws-ddbstream-component.html
+Redirect 301 /aws-ec2.html /components/latest/aws-ec2-component.html
+Redirect 301 /aws-kinesis.html /components/latest/aws-kinesis-component.html
+Redirect 301 /aws-s3.html /components/latest/aws-s3-component.html
+Redirect 301 /aws-sdb.html /components/latest/aws-sdb-component.html
+Redirect 301 /aws-ses.html /components/latest/aws-ses-component.html
+Redirect 301 /aws-sns.html /components/latest/aws-sns-component.html
+Redirect 301 /aws-sqs.html /components/latest/aws-sqs-component.html
+Redirect 301 /aws-swf.html /components/latest/aws-swf-component.html
+Redirect 301 /backlogdebugger.html /manual/latest/backlogdebugger.html
+Redirect 301 /backlogtracer.html /manual/latest/backlog-tracer.html
+Redirect 301 /bam-example.html /manual/latest/bam-example.html
+Redirect 301 /bam.html /manual/latest/bam.html
+Redirect 301 /barcode-data-format.html /components/latest/dataformats/barcode-dataformat.html
+Redirect 301 /base64.html /components/latest/dataformats/base64-dataformat.html
+Redirect 301 /batch-consumer.html /manual/latest/batch-consumer.html
+Redirect 301 /bean /components/latest/eips/bean-eip.html
+# Possible candidates for previous URL: [/manual/latest/bean-eip.html, /components/latest/bean-component.html, /components/latest/languages/bean-language.html]
+Redirect 301 /bean-binding.html /manual/latest/bean-binding.html
+Redirect 301 /bean-injection.html /manual/latest/bean-injection.html
+Redirect 301 /bean-integration.html /manual/latest/bean-integration.html
+Redirect 301 /bean-language.html /components/latest/languages/bean-language.html
+Redirect 301 /bean-validator.html /components/latest/bean-validator-component.html
+Redirect 301 /bean.html /components/latest/eips/bean-eip.html
+# Possible candidates for previous URL: [/manual/latest/bean-eip.html, /components/latest/bean-component.html, /components/latest/languages/bean-language.html]
+Redirect 301 /beanio.html /components/latest/dataformats/beanio-dataformat.html
+Redirect 301 /beanstalk.html /components/latest/beanstalk-component.html
+Redirect 301 /binding.html /manual/latest/binding.html
+Redirect 301 /bindy.html /components/latest/dataformats/bindy-dataformat.html
+Redirect 301 /blueprint.html /components/latest/blueprint.html
+Redirect 301 /book-getting-started.html /manual/latest/book-getting-started.html
+Redirect 301 /books.html /manual/latest/books.html
+# Possible candidates for previous URL: [/community/books, /manual/latest/books.html]
+Redirect 301 /box.html /components/latest/box-component.html
+Redirect 301 /braintree.html /components/latest/braintree-component.html
+Redirect 301 /browsableendpoint.html /manual/latest/browsable-endpoint.html
+Redirect 301 /browse.html /components/latest/browse-component.html
+Redirect 301 /building.html /manual/latest/building.html
+# Possible candidates for previous URL: [/docs/building, /manual/latest/building.html]
+Redirect 301 /camel-boot.html /manual/latest/camel-boot.html
+Redirect 301 /camel-configuration-utilities.html /manual/latest/camel-configuration-utilities.html
+Redirect 301 /camel-core.html /manual/latest/camel-core.html
+Redirect 301 /camel-embedded-maven-goal.html /manual/latest/camel-embedded-maven-goal.html
+Redirect 301 /camel-jar-dependencies.html /manual/latest/camel-jar-dependencies.html
+Redirect 301 /camel-maven-archetypes.html /manual/latest/camel-maven-archetypes.html
+Redirect 301 /camel-maven-plugin.html /manual/latest/camel-maven-plugin.html
+# camel-quarkus start: copied from camel-quarkus/docs/target/site/.htaccess built locally
+Redirect 301 /camel-quarkus/latest/list-of-camel-quarkus-extensions.html /camel-quarkus/latest/reference/index.html
+Redirect 301 /camel-quarkus/latest/reference/extensions/index.html /camel-quarkus/latest/reference/index.html
+Redirect 301 /camel-quarkus/latest/cdi.html /camel-quarkus/latest/user-guide/cdi.html
+Redirect 301 /camel-quarkus/latest/examples.html /camel-quarkus/latest/user-guide/examples.html
+Redirect 301 /camel-quarkus/latest/first-steps.html /camel-quarkus/latest/user-guide/first-steps.html
+Redirect 301 /camel-quarkus/latest/user-guide.html /camel-quarkus/latest/user-guide/index.html
+Redirect 301 /camel-quarkus/latest/native-mode.html /camel-quarkus/latest/user-guide/native-mode.html
+Redirect 301 /camel-quarkus/latest/ci.html /camel-quarkus/latest/contributor-guide/ci.html
+Redirect 301 /camel-quarkus/latest/create-new-extension.html /camel-quarkus/latest/contributor-guide/create-new-extension.html
+Redirect 301 /camel-quarkus/latest/extension-documentation.html /camel-quarkus/latest/contributor-guide/extension-documentation.html
+Redirect 301 /camel-quarkus/latest/extension-metadata.html /camel-quarkus/latest/contributor-guide/extension-metadata.html
+Redirect 301 /camel-quarkus/latest/contributor-guide.html /camel-quarkus/latest/contributor-guide/index.html
+Redirect 301 /camel-quarkus/latest/promote-jvm-to-native.html /camel-quarkus/latest/contributor-guide/promote-jvm-to-native.html
+Redirect 301 /camel-quarkus/latest/release-guide.html /camel-quarkus/latest/contributor-guide/release-guide.html
+Redirect 301 /camel-quarkus/latest/extensions/activemq.html /camel-quarkus/latest/reference/extensions/activemq.html
+Redirect 301 /camel-quarkus/latest/extensions/ahc-ws.html /camel-quarkus/latest/reference/extensions/ahc-ws.html
+Redirect 301 /camel-quarkus/latest/extensions/ahc.html /camel-quarkus/latest/reference/extensions/ahc.html
+Redirect 301 /camel-quarkus/latest/extensions/amqp.html /camel-quarkus/latest/reference/extensions/amqp.html
+Redirect 301 /camel-quarkus/latest/extensions/attachments.html /camel-quarkus/latest/reference/extensions/attachments.html
+Redirect 301 /camel-quarkus/latest/extensions/avro-rpc.html /camel-quarkus/latest/reference/extensions/avro-rpc.html
+Redirect 301 /camel-quarkus/latest/extensions/avro.html /camel-quarkus/latest/reference/extensions/avro.html
+Redirect 301 /camel-quarkus/latest/extensions/aws-ec2.html /camel-quarkus/latest/reference/extensions/aws-ec2.html
+Redirect 301 /camel-quarkus/latest/extensions/aws-ecs.html /camel-quarkus/latest/reference/extensions/aws-ecs.html
+Redirect 301 /camel-quarkus/latest/extensions/aws-eks.html /camel-quarkus/latest/reference/extensions/aws-eks.html
+Redirect 301 /camel-quarkus/latest/extensions/aws-iam.html /camel-quarkus/latest/reference/extensions/aws-iam.html
+Redirect 301 /camel-quarkus/latest/extensions/aws-kinesis.html /camel-quarkus/latest/reference/extensions/aws-kinesis.html
+Redirect 301 /camel-quarkus/latest/extensions/aws-kms.html /camel-quarkus/latest/reference/extensions/aws-kms.html
+Redirect 301 /camel-quarkus/latest/extensions/aws-lambda.html /camel-quarkus/latest/reference/extensions/aws-lambda.html
+Redirect 301 /camel-quarkus/latest/extensions/aws-s3.html /camel-quarkus/latest/reference/extensions/aws-s3.html
+Redirect 301 /camel-quarkus/latest/extensions/aws-sdb.html /camel-quarkus/latest/reference/extensions/aws-sdb.html
+Redirect 301 /camel-quarkus/latest/extensions/aws-sns.html /camel-quarkus/latest/reference/extensions/aws-sns.html
+Redirect 301 /camel-quarkus/latest/extensions/aws-sqs.html /camel-quarkus/latest/reference/extensions/aws-sqs.html
+Redirect 301 /camel-quarkus/latest/extensions/aws-swf.html /camel-quarkus/latest/reference/extensions/aws-swf.html
+Redirect 301 /camel-quarkus/latest/extensions/aws-translate.html /camel-quarkus/latest/reference/extensions/aws-translate.html
+Redirect 301 /camel-quarkus/latest/extensions/aws2-athena.html /camel-quarkus/latest/reference/extensions/aws2-athena.html
+Redirect 301 /camel-quarkus/latest/extensions/aws2-cw.html /camel-quarkus/latest/reference/extensions/aws2-cw.html
+Redirect 301 /camel-quarkus/latest/extensions/aws2-ddb.html /camel-quarkus/latest/reference/extensions/aws2-ddb.html
+Redirect 301 /camel-quarkus/latest/extensions/aws2-ec2.html /camel-quarkus/latest/reference/extensions/aws2-ec2.html
+Redirect 301 /camel-quarkus/latest/extensions/aws2-ecs.html /camel-quarkus/latest/reference/extensions/aws2-ecs.html
+Redirect 301 /camel-quarkus/latest/extensions/aws2-eks.html /camel-quarkus/latest/reference/extensions/aws2-eks.html
+Redirect 301 /camel-quarkus/latest/extensions/aws2-iam.html /camel-quarkus/latest/reference/extensions/aws2-iam.html
+Redirect 301 /camel-quarkus/latest/extensions/aws2-kms.html /camel-quarkus/latest/reference/extensions/aws2-kms.html
+Redirect 301 /camel-quarkus/latest/extensions/aws2-mq.html /camel-quarkus/latest/reference/extensions/aws2-mq.html
+Redirect 301 /camel-quarkus/latest/extensions/aws2-msk.html /camel-quarkus/latest/reference/extensions/aws2-msk.html
+Redirect 301 /camel-quarkus/latest/extensions/aws2-s3.html /camel-quarkus/latest/reference/extensions/aws2-s3.html
+Redirect 301 /camel-quarkus/latest/extensions/aws2-ses.html /camel-quarkus/latest/reference/extensions/aws2-ses.html
+Redirect 301 /camel-quarkus/latest/extensions/aws2-sns.html /camel-quarkus/latest/reference/extensions/aws2-sns.html
+Redirect 301 /camel-quarkus/latest/extensions/aws2-sqs.html /camel-quarkus/latest/reference/extensions/aws2-sqs.html
+Redirect 301 /camel-quarkus/latest/extensions/aws2-translate.html /camel-quarkus/latest/reference/extensions/aws2-translate.html
+Redirect 301 /camel-quarkus/latest/extensions/azure.html /camel-quarkus/latest/reference/extensions/azure.html
+Redirect 301 /camel-quarkus/latest/extensions/base64.html /camel-quarkus/latest/reference/extensions/base64.html
+Redirect 301 /camel-quarkus/latest/extensions/bean-validator.html /camel-quarkus/latest/reference/extensions/bean-validator.html
+Redirect 301 /camel-quarkus/latest/extensions/bean.html /camel-quarkus/latest/reference/extensions/bean.html
+Redirect 301 /camel-quarkus/latest/extensions/bindy.html /camel-quarkus/latest/reference/extensions/bindy.html
+Redirect 301 /camel-quarkus/latest/extensions/box.html /camel-quarkus/latest/reference/extensions/box.html
+Redirect 301 /camel-quarkus/latest/extensions/braintree.html /camel-quarkus/latest/reference/extensions/braintree.html
+Redirect 301 /camel-quarkus/latest/extensions/caffeine-lrucache.html /camel-quarkus/latest/reference/extensions/caffeine-lrucache.html
+Redirect 301 /camel-quarkus/latest/extensions/cassandraql.html /camel-quarkus/latest/reference/extensions/cassandraql.html
+Redirect 301 /camel-quarkus/latest/extensions/componentdsl.html /camel-quarkus/latest/reference/extensions/componentdsl.html
+Redirect 301 /camel-quarkus/latest/extensions/consul.html /camel-quarkus/latest/reference/extensions/consul.html
+Redirect 301 /camel-quarkus/latest/extensions/controlbus.html /camel-quarkus/latest/reference/extensions/controlbus.html
+Redirect 301 /camel-quarkus/latest/extensions/core-cloud.html /camel-quarkus/latest/reference/extensions/core-cloud.html
+Redirect 301 /camel-quarkus/latest/extensions/core.html /camel-quarkus/latest/reference/extensions/core.html
+Redirect 301 /camel-quarkus/latest/extensions/couchbase.html /camel-quarkus/latest/reference/extensions/couchbase.html
+Redirect 301 /camel-quarkus/latest/extensions/couchdb.html /camel-quarkus/latest/reference/extensions/couchdb.html
+Redirect 301 /camel-quarkus/latest/extensions/cron.html /camel-quarkus/latest/reference/extensions/cron.html
+Redirect 301 /camel-quarkus/latest/extensions/csv.html /camel-quarkus/latest/reference/extensions/csv.html
+Redirect 301 /camel-quarkus/latest/extensions/dataformat.html /camel-quarkus/latest/reference/extensions/dataformat.html
+Redirect 301 /camel-quarkus/latest/extensions/debezium-mongodb.html /camel-quarkus/latest/reference/extensions/debezium-mongodb.html
+Redirect 301 /camel-quarkus/latest/extensions/debezium-mysql.html /camel-quarkus/latest/reference/extensions/debezium-mysql.html
+Redirect 301 /camel-quarkus/latest/extensions/debezium-postgres.html /camel-quarkus/latest/reference/extensions/debezium-postgres.html
+Redirect 301 /camel-quarkus/latest/extensions/debezium-sqlserver.html /camel-quarkus/latest/reference/extensions/debezium-sqlserver.html
+Redirect 301 /camel-quarkus/latest/extensions/direct.html /camel-quarkus/latest/reference/extensions/direct.html
+Redirect 301 /camel-quarkus/latest/extensions/dozer.html /camel-quarkus/latest/reference/extensions/dozer.html
+Redirect 301 /camel-quarkus/latest/extensions/elasticsearch-rest.html /camel-quarkus/latest/reference/extensions/elasticsearch-rest.html
+Redirect 301 /camel-quarkus/latest/extensions/endpointdsl.html /camel-quarkus/latest/reference/extensions/endpointdsl.html
+Redirect 301 /camel-quarkus/latest/extensions/exec.html /camel-quarkus/latest/reference/extensions/exec.html
+Redirect 301 /camel-quarkus/latest/extensions/fhir.html /camel-quarkus/latest/reference/extensions/fhir.html
+Redirect 301 /camel-quarkus/latest/extensions/file-watch.html /camel-quarkus/latest/reference/extensions/file-watch.html
+Redirect 301 /camel-quarkus/latest/extensions/file.html /camel-quarkus/latest/reference/extensions/file.html
+Redirect 301 /camel-quarkus/latest/extensions/ftp.html /camel-quarkus/latest/reference/extensions/ftp.html
+Redirect 301 /camel-quarkus/latest/extensions/github.html /camel-quarkus/latest/reference/extensions/github.html
+Redirect 301 /camel-quarkus/latest/extensions/google-bigquery.html /camel-quarkus/latest/reference/extensions/google-bigquery.html
+Redirect 301 /camel-quarkus/latest/extensions/google-calendar.html /camel-quarkus/latest/reference/extensions/google-calendar.html
+Redirect 301 /camel-quarkus/latest/extensions/google-drive.html /camel-quarkus/latest/reference/extensions/google-drive.html
+Redirect 301 /camel-quarkus/latest/extensions/google-mail.html /camel-quarkus/latest/reference/extensions/google-mail.html
+Redirect 301 /camel-quarkus/latest/extensions/google-pubsub.html /camel-quarkus/latest/reference/extensions/google-pubsub.html
+Redirect 301 /camel-quarkus/latest/extensions/google-sheets.html /camel-quarkus/latest/reference/extensions/google-sheets.html
+Redirect 301 /camel-quarkus/latest/extensions/graphql.html /camel-quarkus/latest/reference/extensions/graphql.html
+Redirect 301 /camel-quarkus/latest/extensions/grok.html /camel-quarkus/latest/reference/extensions/grok.html
+Redirect 301 /camel-quarkus/latest/extensions/groovy.html /camel-quarkus/latest/reference/extensions/groovy.html
+Redirect 301 /camel-quarkus/latest/extensions/grpc.html /camel-quarkus/latest/reference/extensions/grpc.html
+Redirect 301 /camel-quarkus/latest/extensions/gson.html /camel-quarkus/latest/reference/extensions/gson.html
+Redirect 301 /camel-quarkus/latest/extensions/http.html /camel-quarkus/latest/reference/extensions/http.html
+Redirect 301 /camel-quarkus/latest/extensions/hystrix.html /camel-quarkus/latest/reference/extensions/hystrix.html
+Redirect 301 /camel-quarkus/latest/extensions/ical.html /camel-quarkus/latest/reference/extensions/ical.html
+Redirect 301 /camel-quarkus/latest/extensions/infinispan.html /camel-quarkus/latest/reference/extensions/infinispan.html
+Redirect 301 /camel-quarkus/latest/extensions/influxdb.html /camel-quarkus/latest/reference/extensions/influxdb.html
+Redirect 301 /camel-quarkus/latest/extensions/jackson.html /camel-quarkus/latest/reference/extensions/jackson.html
+Redirect 301 /camel-quarkus/latest/extensions/jacksonxml.html /camel-quarkus/latest/reference/extensions/jacksonxml.html
+Redirect 301 /camel-quarkus/latest/extensions/jaxb.html /camel-quarkus/latest/reference/extensions/jaxb.html
+Redirect 301 /camel-quarkus/latest/extensions/jdbc.html /camel-quarkus/latest/reference/extensions/jdbc.html
+Redirect 301 /camel-quarkus/latest/extensions/jira.html /camel-quarkus/latest/reference/extensions/jira.html
+Redirect 301 /camel-quarkus/latest/extensions/jms.html /camel-quarkus/latest/reference/extensions/jms.html
+Redirect 301 /camel-quarkus/latest/extensions/johnzon.html /camel-quarkus/latest/reference/extensions/johnzon.html
+Redirect 301 /camel-quarkus/latest/extensions/jolt.html /camel-quarkus/latest/reference/extensions/jolt.html
+Redirect 301 /camel-quarkus/latest/extensions/jpa.html /camel-quarkus/latest/reference/extensions/jpa.html
+Redirect 301 /camel-quarkus/latest/extensions/json-validator.html /camel-quarkus/latest/reference/extensions/json-validator.html
+Redirect 301 /camel-quarkus/latest/extensions/jsonpath.html /camel-quarkus/latest/reference/extensions/jsonpath.html
+Redirect 301 /camel-quarkus/latest/extensions/jta.html /camel-quarkus/latest/reference/extensions/jta.html
+Redirect 301 /camel-quarkus/latest/extensions/kafka.html /camel-quarkus/latest/reference/extensions/kafka.html
+Redirect 301 /camel-quarkus/latest/extensions/kotlin.html /camel-quarkus/latest/reference/extensions/kotlin.html
+Redirect 301 /camel-quarkus/latest/extensions/kubernetes.html /camel-quarkus/latest/reference/extensions/kubernetes.html
+Redirect 301 /camel-quarkus/latest/extensions/kudu.html /camel-quarkus/latest/reference/extensions/kudu.html
+Redirect 301 /camel-quarkus/latest/extensions/log.html /camel-quarkus/latest/reference/extensions/log.html
+Redirect 301 /camel-quarkus/latest/extensions/lzf.html /camel-quarkus/latest/reference/extensions/lzf.html
+Redirect 301 /camel-quarkus/latest/extensions/mail.html /camel-quarkus/latest/reference/extensions/mail.html
+Redirect 301 /camel-quarkus/latest/extensions/main.html /camel-quarkus/latest/reference/extensions/main.html
+Redirect 301 /camel-quarkus/latest/extensions/master.html /camel-quarkus/latest/reference/extensions/master.html
+Redirect 301 /camel-quarkus/latest/extensions/microprofile-fault-tolerance.html /camel-quarkus/latest/reference/extensions/microprofile-fault-tolerance.html
+Redirect 301 /camel-quarkus/latest/extensions/microprofile-health.html /camel-quarkus/latest/reference/extensions/microprofile-health.html
+Redirect 301 /camel-quarkus/latest/extensions/microprofile-metrics.html /camel-quarkus/latest/reference/extensions/microprofile-metrics.html
+Redirect 301 /camel-quarkus/latest/extensions/mock.html /camel-quarkus/latest/reference/extensions/mock.html
+Redirect 301 /camel-quarkus/latest/extensions/mongodb-gridfs.html /camel-quarkus/latest/reference/extensions/mongodb-gridfs.html
+Redirect 301 /camel-quarkus/latest/extensions/mongodb.html /camel-quarkus/latest/reference/extensions/mongodb.html
+Redirect 301 /camel-quarkus/latest/extensions/mustache.html /camel-quarkus/latest/reference/extensions/mustache.html
+Redirect 301 /camel-quarkus/latest/extensions/netty-http.html /camel-quarkus/latest/reference/extensions/netty-http.html
+Redirect 301 /camel-quarkus/latest/extensions/netty.html /camel-quarkus/latest/reference/extensions/netty.html
+Redirect 301 /camel-quarkus/latest/extensions/nitrite.html /camel-quarkus/latest/reference/extensions/nitrite.html
+Redirect 301 /camel-quarkus/latest/extensions/ognl.html /camel-quarkus/latest/reference/extensions/ognl.html
+Redirect 301 /camel-quarkus/latest/extensions/olingo4.html /camel-quarkus/latest/reference/extensions/olingo4.html
+Redirect 301 /camel-quarkus/latest/extensions/openapi-java.html /camel-quarkus/latest/reference/extensions/openapi-java.html
+Redirect 301 /camel-quarkus/latest/extensions/openstack.html /camel-quarkus/latest/reference/extensions/openstack.html
+Redirect 301 /camel-quarkus/latest/extensions/opentracing.html /camel-quarkus/latest/reference/extensions/opentracing.html
+Redirect 301 /camel-quarkus/latest/extensions/paho.html /camel-quarkus/latest/reference/extensions/paho.html
+Redirect 301 /camel-quarkus/latest/extensions/pdf.html /camel-quarkus/latest/reference/extensions/pdf.html
+Redirect 301 /camel-quarkus/latest/extensions/platform-http.html /camel-quarkus/latest/reference/extensions/platform-http.html
+Redirect 301 /camel-quarkus/latest/extensions/protobuf.html /camel-quarkus/latest/reference/extensions/protobuf.html
+Redirect 301 /camel-quarkus/latest/extensions/pubnub.html /camel-quarkus/latest/reference/extensions/pubnub.html
+Redirect 301 /camel-quarkus/latest/extensions/quartz.html /camel-quarkus/latest/reference/extensions/quartz.html
+Redirect 301 /camel-quarkus/latest/extensions/qute.html /camel-quarkus/latest/reference/extensions/qute.html
+Redirect 301 /camel-quarkus/latest/extensions/rabbitmq.html /camel-quarkus/latest/reference/extensions/rabbitmq.html
+Redirect 301 /camel-quarkus/latest/extensions/reactive-executor.html /camel-quarkus/latest/reference/extensions/reactive-executor.html
+Redirect 301 /camel-quarkus/latest/extensions/reactive-streams.html /camel-quarkus/latest/reference/extensions/reactive-streams.html
+Redirect 301 /camel-quarkus/latest/extensions/ref.html /camel-quarkus/latest/reference/extensions/ref.html
+Redirect 301 /camel-quarkus/latest/extensions/rest-openapi.html /camel-quarkus/latest/reference/extensions/rest-openapi.html
+Redirect 301 /camel-quarkus/latest/extensions/rest.html /camel-quarkus/latest/reference/extensions/rest.html
+Redirect 301 /camel-quarkus/latest/extensions/salesforce.html /camel-quarkus/latest/reference/extensions/salesforce.html
+Redirect 301 /camel-quarkus/latest/extensions/sap-netweaver.html /camel-quarkus/latest/reference/extensions/sap-netweaver.html
+Redirect 301 /camel-quarkus/latest/extensions/scheduler.html /camel-quarkus/latest/reference/extensions/scheduler.html
+Redirect 301 /camel-quarkus/latest/extensions/seda.html /camel-quarkus/latest/reference/extensions/seda.html
+Redirect 301 /camel-quarkus/latest/extensions/servicenow.html /camel-quarkus/latest/reference/extensions/servicenow.html
+Redirect 301 /camel-quarkus/latest/extensions/servlet.html /camel-quarkus/latest/reference/extensions/servlet.html
+Redirect 301 /camel-quarkus/latest/extensions/sjms.html /camel-quarkus/latest/reference/extensions/sjms.html
+Redirect 301 /camel-quarkus/latest/extensions/sjms2.html /camel-quarkus/latest/reference/extensions/sjms2.html
+Redirect 301 /camel-quarkus/latest/extensions/slack.html /camel-quarkus/latest/reference/extensions/slack.html
+Redirect 301 /camel-quarkus/latest/extensions/smallrye-reactive-messaging.html /camel-quarkus/latest/reference/extensions/smallrye-reactive-messaging.html
+Redirect 301 /camel-quarkus/latest/extensions/snakeyaml.html /camel-quarkus/latest/reference/extensions/snakeyaml.html
+Redirect 301 /camel-quarkus/latest/extensions/soap.html /camel-quarkus/latest/reference/extensions/soap.html
+Redirect 301 /camel-quarkus/latest/extensions/sql.html /camel-quarkus/latest/reference/extensions/sql.html
+Redirect 301 /camel-quarkus/latest/extensions/stream.html /camel-quarkus/latest/reference/extensions/stream.html
+Redirect 301 /camel-quarkus/latest/extensions/tagsoup.html /camel-quarkus/latest/reference/extensions/tagsoup.html
+Redirect 301 /camel-quarkus/latest/extensions/tarfile.html /camel-quarkus/latest/reference/extensions/tarfile.html
+Redirect 301 /camel-quarkus/latest/extensions/telegram.html /camel-quarkus/latest/reference/extensions/telegram.html
+Redirect 301 /camel-quarkus/latest/extensions/tika.html /camel-quarkus/latest/reference/extensions/tika.html
+Redirect 301 /camel-quarkus/latest/extensions/timer.html /camel-quarkus/latest/reference/extensions/timer.html
+Redirect 301 /camel-quarkus/latest/extensions/twitter.html /camel-quarkus/latest/reference/extensions/twitter.html
+Redirect 301 /camel-quarkus/latest/extensions/validator.html /camel-quarkus/latest/reference/extensions/validator.html
+Redirect 301 /camel-quarkus/latest/extensions/vertx.html /camel-quarkus/latest/reference/extensions/vertx.html
+Redirect 301 /camel-quarkus/latest/extensions/vm.html /camel-quarkus/latest/reference/extensions/vm.html
+Redirect 301 /camel-quarkus/latest/extensions/websocket-jsr356.html /camel-quarkus/latest/reference/extensions/websocket-jsr356.html
+Redirect 301 /camel-quarkus/latest/extensions/xml-io.html /camel-quarkus/latest/reference/extensions/xml-io.html
+Redirect 301 /camel-quarkus/latest/extensions/xml-jaxb.html /camel-quarkus/latest/reference/extensions/xml-jaxb.html
+Redirect 301 /camel-quarkus/latest/extensions/xml-jaxp.html /camel-quarkus/latest/reference/extensions/xml-jaxp.html
+Redirect 301 /camel-quarkus/latest/extensions/xpath.html /camel-quarkus/latest/reference/extensions/xpath.html
+Redirect 301 /camel-quarkus/latest/extensions/xslt.html /camel-quarkus/latest/reference/extensions/xslt.html
+Redirect 301 /camel-quarkus/latest/extensions/xstream.html /camel-quarkus/latest/reference/extensions/xstream.html
+Redirect 301 /camel-quarkus/latest/extensions/zip-deflater.html /camel-quarkus/latest/reference/extensions/zip-deflater.html
+Redirect 301 /camel-quarkus/latest/extensions/zipfile.html /camel-quarkus/latest/reference/extensions/zipfile.html
+# camel-quarkus end
+# camel-kafka-connect start
+Redirect 301 /camel-kafka-connector/latest/connectors.html /camel-kafka-connector/latest/reference/index.html
+# camel-kafka-connect end
+Redirect 301 /camel-run-maven-goal.html /manual/latest/camel-run-maven-goal.html
+Redirect 301 /camel-test /components/latest/test.html
+Redirect 301 /camel-test.html /components/latest/test.html
+Redirect 301 /camelcontext.html /manual/latest/camelcontext.html
+Redirect 301 /can-i-get-commercial-support.html /manual/latest/faq/can-i-get-commercial-support.html
+Redirect 301 /can-i-use-camel-on-java-14.html /manual/latest/faq/can-i-use-camel-on-java-14.html
+Redirect 301 /cassandra.html /components/latest/cql-component.html
+Redirect 301 /cdi /components/latest/cdi.html
+Redirect 301 /cdi.html /components/latest/cdi.html
+Redirect 301 /cep.html /manual/latest/cep.html
+Redirect 301 /chunk.html /components/latest/chunk-component.html
+Redirect 301 /claim-check.html /components/latest/eips/claimCheck-eip.html
+Redirect 301 /class.html /components/latest/class-component.html
+Redirect 301 /classloader-issue-of-servicemix-camel-component.html /manual/latest/faq/classloader-issue-of-servicemix-camel-component.html
+Redirect 301 /cmis.html /components/latest/cmis-component.html
+Redirect 301 /cometd.html /components/latest/cometd-component.html
+Redirect 301 /commercial-camel-offerings.html /manual/latest/commercial-camel-offerings.html
+Redirect 301 /component.html /manual/latest/component.html
+Redirect 301 /componentconfiguration.html /manual/latest/componentconfiguration.html
+Redirect 301 /components.html /components/latest/
+Redirect 301 /configuring-camel.html /manual/latest/configuring-camel.html
+Redirect 301 /configuring-route-startup-ordering-and-autostartup.html /manual/latest/configuring-route-startup-ordering-and-autostartup.html
+Redirect 301 /console-example.html /manual/latest/console-example.html
+Redirect 301 /constant.html /components/latest/languages/constant-language.html
+Redirect 301 /consul-component.html /components/latest/consul-component.html
+Redirect 301 /content-based-router.html /components/latest/eips/content-based-router-eip.html
+Redirect 301 /content-enricher.html /components/latest/eips/content-enricher.html
+Redirect 301 /content-filter.html /components/latest/eips/content-filter-eip.html
+Redirect 301 /contributing.html /manual/latest/contributing.html
+Redirect 301 /controlbus /components/latest/controlbus-component.html
+Redirect 301 /controlbus-component.html /components/latest/controlbus-component.html
+Redirect 301 /controlbus.html /components/latest/controlbus-component.html
+Redirect 301 /convertbodyto.html /components/latest/eips/convertBodyTo-eip.html
+Redirect 301 /correlation-identifier.html /components/latest/eips/correlation-identifier.html
+Redirect 301 /couchbase.html /components/latest/couchbase-component.html
+Redirect 301 /couchdb.html /components/latest/couchdb-component.html
+Redirect 301 /creating-a-new-camel-component.html /manual/latest/writing-components.html
+Redirect 301 /creating-a-new-spring-based-camel-route.html /manual/latest/creating-a-new-spring-based-camel-route.html
+Redirect 301 /cronscheduledroutepolicy.html /manual/latest/cronscheduledroutepolicy.html
+Redirect 301 /crypto.html /components/latest/crypto-component.html
+# Possible candidates for previous URL: [/components/latest/crypto-component.html, /components/latest/dataformats/crypto-dataformat.html]
+Redirect 301 /csv.html /components/latest/dataformats/csv-dataformat.html
+Redirect 301 /cxf /components/latest/cxf-component.html
+Redirect 301 /cxf.html /components/latest/cxf-component.html
+Redirect 301 /cxfrs /components/latest/cxfrs-component.html
+Redirect 301 /cxfrs.html /components/latest/cxfrs-component.html
+Redirect 301 /data-format.html /manual/latest/data-format.html
+# Possible candidates for previous URL: [/components/latest/dataformat-component.html, /manual/latest/data-format.html]
+Redirect 301 /dataformat-component /components/latest/dataformat-component.html
+Redirect 301 /dataformat-component-2.html /components/latest/dataformat-component.html
+Redirect 301 /dataformat-component.html /components/latest/dataformat-component.html
+Redirect 301 /dataset.html /components/latest/dataset-component.html
+Redirect 301 /dead-letter-channel.html /components/latest/eips/dead-letter-channel.html
+Redirect 301 /debugger.html /manual/latest/debugger.html
+Redirect 301 /defaulterrorhandler.html /manual/latest/defaulterrorhandler.html
+Redirect 301 /delay-interceptor.html /manual/latest/delay-interceptor.html
+Redirect 301 /dependency-injection.html /manual/latest/dependency-injection.html
+Redirect 301 /developers.html /camel-k/latest/developers.html
+Redirect 301 /direct-vm.html /components/latest/direct-vm-component.html
+Redirect 301 /direct.html /components/latest/direct-component.html
+Redirect 301 /disruptor /components/latest/disruptor-component.html
+Redirect 301 /disruptor.html /components/latest/disruptor-component.html
+Redirect 301 /dns.html /components/latest/dns-component.html
+Redirect 301 /docker.html /components/latest/docker-component.html
+Redirect 301 /does-camel-work-on-ibms-jdk.html /manual/latest/faq/does-camel-work-on-ibms-jdk.html
+Redirect 301 /download.html /download
+Redirect 301 /dozer-type-conversion.html /manual/latest/dozer-type-conversion.html
+Redirect 301 /dozer.html /components/latest/dozer-component.html
+Redirect 301 /dropbox.html /components/latest/dropbox-component.html
+Redirect 301 /dsl.html /manual/latest/dsl.html
+Redirect 301 /dynamic-router.html /components/latest/eips/dynamicRouter-eip.html
+# Possible candidates for previous URL: [/manual/latest/dynamicRouter-eip.html, /components/latest/eips/dynamic-router.html]
+Redirect 301 /ehcache.html /components/latest/ehcache-component.html
+Redirect 301 /eip /components/latest/eips/enterprise-integration-patterns.html
+Redirect 301 /eip.html /components/latest/eips/enterprise-integration-patterns.html
+Redirect 301 /elsql.html /components/latest/elsql-component.html
+Redirect 301 /endpoint-annotations.html /manual/latest/endpoint-annotations.html
+Redirect 301 /endpoint.html /manual/latest/endpoint.html
+Redirect 301 /endpointcompleter.html /manual/latest/endpoint-completer.html
+Redirect 301 /enterprise-integration-patterns.html /components/latest/eips/enterprise-integration-patterns.html
+Redirect 301 /enterprise-integration-patterns /components/latest/eips/enterprise-integration-patterns.html
+Redirect 301 /error-handler.html /manual/latest/error-handler.html
+Redirect 301 /error-handling-in-camel.html /manual/latest/error-handling-in-camel.html
+Redirect 301 /etcd.html /components/latest/etcd-component.html
+Redirect 301 /event-driven-consumer.html /components/latest/eips/eventDrivenConsumer-eip.html
+Redirect 301 /event-message.html /components/latest/eips/event-message.html
+Redirect 301 /eventadmin.html /components/latest/eventadmin-component.html
+Redirect 301 /examples.html /manual/latest/examples.html
+Redirect 301 /exception-beandefinitionstoreexception.html /manual/latest/faq/exception-beandefinitionstoreexception.html
+Redirect 301 /exception-clause.html /manual/latest/exception-clause.html
+Redirect 301 /exception-javaxnamingnoinitialcontextexception.html /manual/latest/faq/exception-javaxnamingnoinitialcontextexception.html
+Redirect 301 /exception-orgapachecamelnosuchendpointexception.html /manual/latest/faq/exception-orgapachecamelnosuchendpointexception.html
+Redirect 301 /exception-orgxmlsaxsaxparseexception.html /manual/latest/faq/exception-orgxmlsaxsaxparseexception.html
+Redirect 301 /exchange-pattern.html /manual/latest/exchange-pattern.html
+Redirect 301 /exchange.html /manual/latest/exchange.html
+Redirect 301 /exchangeproperty.html /components/latest/languages/exchangeProperty-language.html
+Redirect 301 /exec.html /components/latest/exec-component.html
+Redirect 301 /expression.html /manual/latest/expression.html
+Redirect 301 /facebook.html /components/latest/facebook-component.html
+Redirect 301 /faq.html /manual/latest/faq.html
+Redirect 301 /file-language.html /components/latest/languages/file-language.html
+Redirect 301 /file.html /components/latest/file-component.html
+# Possible candidates for previous URL: [/components/latest/file-component.html, /components/latest/languages/file-language.html]
+Redirect 301 /file2.html /components/latest/file-component.html
+# Possible candidates for previous URL: [/components/latest/file-component.html, /components/latest/languages/file-language.html]
+Redirect 301 /flatpack-dataformat.html /components/latest/dataformats/flatpack-dataformat.html
+Redirect 301 /flatpack.html /components/latest/flatpack-component.html
+# Possible candidates for previous URL: [/components/latest/flatpack-component.html, /components/latest/dataformats/flatpack-dataformat.html]
+Redirect 301 /flink.html /components/latest/flink-component.html
+Redirect 301 /fluent-builders.html /manual/latest/fluent-builders.html
+Redirect 301 /fop.html /components/latest/fop-component.html
+Redirect 301 /freemarker.html /components/latest/freemarker-component.html
+Redirect 301 /from.html /components/latest/eips/from-eip.html
+Redirect 301 /ftp.html /components/latest/ftp-component.html
+Redirect 301 /ftp2 /components/latest/ftp-component.html
+Redirect 301 /ftp2.html /components/latest/ftp-component.html
+Redirect 301 /ganglia.html /components/latest/ganglia-component.html
+Redirect 301 /geocoder.html /components/latest/geocoder-component.html
+Redirect 301 /getting-started.html /manual/latest/getting-started.html
+# Possible candidates for previous URL: [/docs/getting-started, /manual/latest/getting-started.html]
+Redirect 301 /git.html /components/latest/git-component.html
+Redirect 301 /github.html /components/latest/github-component.html
+Redirect 301 /gmail.html /components/latest/google-mail-component.html
+Redirect 301 /googlecalendar.html /components/latest/google-calendar-component.html
+Redirect 301 /googledrive.html /components/latest/google-drive-component.html
+Redirect 301 /googlemail.html /components/latest/google-mail-component.html
+Redirect 301 /gora.html /components/latest/gora-component.html
+Redirect 301 /graceful-shutdown.html /manual/latest/graceful-shutdown.html
+Redirect 301 /grape.html /components/latest/grape-component.html
+Redirect 301 /groovy /components/latest/languages/groovy-language.html
+# Possible candidates for previous URL: [/camel-k/latest/languages/groovy.html, /components/latest/languages/groovy-language.html]
+Redirect 301 /groovy-dsl.html /manual/latest/groovy-dsl.html
+Redirect 301 /groovy.html /components/latest/languages/groovy-language.html
+# Possible candidates for previous URL: [/camel-k/latest/languages/groovy.html, /components/latest/languages/groovy-language.html]
+Redirect 301 /guava-eventbus.html /components/latest/guava-eventbus-component.html
+Redirect 301 /guice.html /manual/latest/guice.html
+Redirect 301 /hbase.html /components/latest/hbase-component.html
+Redirect 301 /hdfs.html /components/latest/hdfs-component.html
+Redirect 301 /hdfs2.html /components/latest/hdfs-component.html
+Redirect 301 /header.html /components/latest/languages/header-language.html
+Redirect 301 /hiding-middleware.html /manual/latest/hiding-middleware.html
+Redirect 301 /hl7-dataformat.html /components/latest/dataformats/hl7-dataformat.html
+Redirect 301 /hl7.html /components/latest/dataformats/hl7-dataformat.html
+Redirect 301 /how-can-i-create-a-custom-component-or-endpoint.html /manual/latest/faq/how-can-i-create-a-custom-component-or-endpoint.html
+Redirect 301 /how-can-i-get-the-remote-connection-ip-address-from-the-camel-cxf-consumer-.html /manual/latest/faq/how-can-i-get-the-remote-connection-ip-address-from-the-camel-cxf-consumer-.html
+Redirect 301 /how-can-i-get-the-source-code.html /manual/latest/faq/how-can-i-get-the-source-code.html
+Redirect 301 /how-can-i-stop-a-route-from-a-route.html /manual/latest/faq/how-can-i-stop-a-route-from-a-route.html
+Redirect 301 /how-can-webservice-clients-see-remote-faults-with-stacktraces-when-using-camel-cxf.html /manual/latest/faq/how-can-webservice-clients-see-remote-faults-with-stacktraces-when-using-camel-cxf.html
+Redirect 301 /how-do-i-become-a-committer.html /manual/latest/faq/how-do-i-become-a-committer.html
+Redirect 301 /how-do-i-change-the-logging.html /manual/latest/faq/how-do-i-change-the-logging.html
+Redirect 301 /how-do-i-compile-the-code.html /manual/latest/faq/how-do-i-compile-the-code.html
+Redirect 301 /how-do-i-configure-endpoints.html /manual/latest/faq/how-do-i-configure-endpoints.html
+Redirect 301 /how-do-i-configure-password-options-on-camel-endpoints-without-the-value-being-encoded.html /manual/latest/faq/how-do-i-configure-password-options-on-camel-endpoints-without-the-value-being-encoded.html
+Redirect 301 /how-do-i-configure-the-default-maximum-cache-size-for-producercache-or-producertemplate.html /manual/latest/faq/how-do-i-configure-the-default-maximum-cache-size-for-producercache-or-producertemplate.html
+Redirect 301 /how-do-i-configure-the-maximum-endpoint-cache-size-for-camelcontext.html /manual/latest/faq/how-do-i-configure-the-maximum-endpoint-cache-size-for-camelcontext.html
+Redirect 301 /how-do-i-debug-my-route.html /manual/latest/faq/how-do-i-debug-my-route.html
+Redirect 301 /how-do-i-disable-jmx.html /manual/latest/faq/how-do-i-disable-jmx.html
+Redirect 301 /how-do-i-edit-the-website.html /manual/latest/faq/how-do-i-edit-the-website.html
+Redirect 301 /how-do-i-enable-debug-logging.html /manual/latest/faq/how-do-i-enable-debug-logging.html
+Redirect 301 /how-do-i-enable-streams-when-debug-logging-messages-in-camel.html /manual/latest/faq/how-do-i-enable-streams-when-debug-logging-messages-in-camel.html
+Redirect 301 /how-do-i-handle-failures-when-consuming-for-example-from-a-ftp-server.html /manual/latest/faq/how-do-i-handle-failures-when-consuming-for-example-from-a-ftp-server.html
+Redirect 301 /how-do-i-import-rests-from-other-xml-files.html /manual/latest/faq/how-do-i-import-rests-from-other-xml-files.html
+Redirect 301 /how-do-i-import-routes-from-other-xml-files.html /manual/latest/faq/how-do-i-import-routes-from-other-xml-files.html
+Redirect 301 /how-do-i-invoke-camel-routes-from-jbi.html /manual/latest/faq/how-do-i-invoke-camel-routes-from-jbi.html
+Redirect 301 /how-do-i-let-jetty-match-wildcards.html /manual/latest/faq/how-do-i-let-jetty-match-wildcards.html
+Redirect 301 /how-do-i-make-my-jms-endpoint-transactional.html /manual/latest/faq/how-do-i-make-my-jms-endpoint-transactional.html
+Redirect 301 /how-do-i-name-my-routes.html /manual/latest/faq/how-do-i-name-my-routes.html
+Redirect 301 /how-do-i-restart-camelcontext.html /manual/latest/faq/how-do-i-restart-camelcontext.html
+Redirect 301 /how-do-i-retrieve-the-thrown-exception-during-processing-an-exchange.html /manual/latest/faq/how-do-i-retrieve-the-thrown-exception-during-processing-an-exchange.html
+Redirect 301 /how-do-i-retry-failed-messages-forever.html /manual/latest/faq/how-do-i-retry-failed-messages-forever.html
+Redirect 301 /how-do-i-retry-processing-a-message-from-a-certain-point-back-or-an-entire-route.html /manual/latest/faq/how-do-i-retry-processing-a-message-from-a-certain-point-back-or-an-entire-route.html
+Redirect 301 /how-do-i-reuse-the-contexttestsupport-class-in-my-unit-tests.html /manual/latest/faq/how-do-i-reuse-the-contexttestsupport-class-in-my-unit-tests.html
+Redirect 301 /how-do-i-run-activemq-and-camel-in-jboss.html /manual/latest/faq/how-do-i-run-activemq-and-camel-in-jboss.html
+Redirect 301 /how-do-i-run-camel-using-java-webstart.html /manual/latest/faq/how-do-i-run-camel-using-java-webstart.html
+Redirect 301 /how-do-i-set-the-max-chars-when-debug-logging-messages-in-camel.html /manual/latest/faq/how-do-i-set-the-max-chars-when-debug-logging-messages-in-camel.html
+Redirect 301 /how-do-i-set-the-mep-when-interacting-with-jbi.html /manual/latest/faq/how-do-i-set-the-mep-when-interacting-with-jbi.html
+Redirect 301 /how-do-i-specify-time-period-in-a-human-friendly-syntax.html /manual/latest/faq/how-do-i-specify-time-period-in-a-human-friendly-syntax.html
+Redirect 301 /how-do-i-use-a-big-uber-jar.html /manual/latest/faq/how-do-i-use-a-big-uber-jar.html
+Redirect 301 /how-do-i-use-camel-inside-servicemix.html /manual/latest/faq/how-do-i-use-camel-inside-servicemix.html
+Redirect 301 /how-do-i-use-java-14-logging.html /manual/latest/faq/how-do-i-use-java-14-logging.html
+Redirect 301 /how-do-i-use-log4j.html /manual/latest/faq/how-do-i-use-log4j.html
+Redirect 301 /how-do-i-use-spring-property-placeholder-with-camel-xml.html /manual/latest/faq/how-do-i-use-spring-property-placeholder-with-camel-xml.html
+Redirect 301 /how-do-i-use-uris-with-parameters-in-xml.html /manual/latest/faq/how-do-i-use-uris-with-parameters-in-xml.html
+Redirect 301 /how-do-i-write-a-custom-processor-which-sends-multiple-messages.html /manual/latest/faq/how-do-i-write-a-custom-processor-which-sends-multiple-messages.html
+Redirect 301 /how-do-the-direct-event-seda-and-vm-endpoints-compare.html /manual/latest/faq/how-do-the-direct-event-seda-and-vm-endpoints-compare.html
+Redirect 301 /how-do-the-timer-and-quartz-endpoints-compare.html /manual/latest/faq/how-do-the-timer-and-quartz-endpoints-compare.html
+Redirect 301 /how-does-camel-compare-to-mule.html /manual/latest/faq/how-does-camel-compare-to-mule.html
+Redirect 301 /how-does-camel-compare-to-servicemix-eip.html /manual/latest/faq/how-does-camel-compare-to-servicemix-eip.html
+Redirect 301 /how-does-camel-compare-to-servicemix.html /manual/latest/faq/how-does-camel-compare-to-servicemix-eip.html
+# Possible candidates for previous URL: [/manual/latest/faq/how-does-camel-compare-to-servicemix.html, /manual/latest/faq/how-does-camel-compare-to-servicemix-eip.html]
+Redirect 301 /how-does-camel-compare-to-synapse.html /manual/latest/faq/how-does-camel-compare-to-synapse.html
+Redirect 301 /how-does-camel-look-up-beans-and-endpoints.html /manual/latest/faq/how-does-camel-look-up-beans-and-endpoints.html
+Redirect 301 /how-does-camel-work-with-activemq.html /manual/latest/faq/how-does-camel-work-with-activemq.html
+Redirect 301 /how-does-camel-work-with-servicemix.html /manual/latest/faq/how-does-camel-work-with-servicemix.html
+Redirect 301 /how-does-camel-work.html /manual/latest/faq/how-does-camel-work.html
+Redirect 301 /how-does-the-camel-api-compare-to.html /manual/latest/faq/how-does-the-camel-api-compare-to.html
+Redirect 301 /how-does-the-website-work.html /manual/latest/faq/how-does-the-website-work.html
+Redirect 301 /how-should-i-invoke-my-pojos-or-spring-services.html /manual/latest/faq/how-should-i-invoke-my-pojos-or-spring-services.html
+Redirect 301 /how-should-i-package-applications-using-camel-and-activemq.html /manual/latest/faq/how-should-i-package-applications-using-camel-and-activemq.html
+Redirect 301 /how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html /manual/latest/faq/how-to-avoid-importing-bunch-of-cxf-packages-when-start-up-the-camel-cxf-endpoint-from-osgi-platform-.html
+Redirect 301 /how-to-avoid-sending-some-or-all-message-headers.html /manual/latest/faq/how-to-avoid-sending-some-or-all-message-headers.html
+Redirect 301 /how-to-define-a-static-camel-converter-method-in-scala.html /manual/latest/faq/how-to-define-a-static-camel-converter-method-in-scala.html
+Redirect 301 /how-to-remove-the-http-protocol-headers-in-the-camel-message.html /manual/latest/faq/how-to-remove-the-http-protocol-headers-in-the-camel-message.html
+Redirect 301 /how-to-send-the-same-message-to-multiple-endpoints.html /manual/latest/faq/how-to-send-the-same-message-to-multiple-endpoints.html
+Redirect 301 /how-to-switch-the-cxf-consumer-between-http-and-https-without-touching-the-spring-configuration.html /manual/latest/faq/how-to-switch-the-cxf-consumer-between-http-and-https-without-touching-the-spring-configuration.html
+Redirect 301 /how-to-use-a-dynamic-uri-in-to.html /manual/latest/faq/how-to-use-a-dynamic-uri-in-to.html
+Redirect 301 /how-to-use-extra-camel-componets-in-servicemix-camel.html /manual/latest/faq/how-to-use-extra-camel-componets-in-servicemix-camel.html
+Redirect 301 /how-to-validate-the-camel-1x-context-xml-from-apache-camel-web-site.html /manual/latest/faq/how-to-validate-the-camel-1x-context-xml-from-apache-camel-web-site.html
+Redirect 301 /http-session-handling.html /manual/latest/http-session-handling.html
+Redirect 301 /http.html /components/latest/http-component.html
+Redirect 301 /http4.html /components/latest/http-component.html
+Redirect 301 /hystrix-eip.html /components/latest/eips/hystrix-eip.html
+Redirect 301 /ical.html /components/latest/dataformats/ical-dataformat.html
+Redirect 301 /idempotent-consumer.html /components/latest/eips/idempotentConsumer-eip.html
+Redirect 301 /if-i-use-servicemix-when-should-i-use-camel.html /manual/latest/faq/if-i-use-servicemix-when-should-i-use-camel.html
+Redirect 301 /ignite.html /components/latest/ignite.html
+Redirect 301 /infinispan.html /components/latest/infinispan-component.html
+Redirect 301 /injector.html /manual/latest/injector.html
+Redirect 301 /intercept.html /components/latest/eips/intercept.html
+Redirect 301 /inversion-of-control-with-smart-defaults.html /manual/latest/inversion-of-control-with-smart-defaults.html
+Redirect 301 /irc.html /components/latest/irc-component.html
+Redirect 301 /ironmq.html /components/latest/ironmq-component.html
+Redirect 301 /is-camel-an-esb.html /manual/latest/faq/is-camel-an-esb.html
+Redirect 301 /is-camel-ioc-friendly.html /manual/latest/faq/is-camel-ioc-friendly.html
+Redirect 301 /is-there-an-ide.html /manual/latest/faq/is-there-an-ide.html
+Redirect 301 /jackson-xml.html /components/latest/dataformats/jacksonxml-dataformat.html
+Redirect 301 /jasypt.html /components/latest/jasypt.html
+Redirect 301 /java-dsl.html /manual/latest/java-dsl.html
+Redirect 301 /java-script.html /camel-k/latest/languages/javascript.html
+Redirect 301 /javascript.html /camel-k/latest/languages/javascript.html
+Redirect 301 /jaxb.html /components/latest/dataformats/jaxb-dataformat.html
+Redirect 301 /jbpm.html /components/latest/jbpm-component.html
+Redirect 301 /jcache.html /components/latest/jcache-component.html
+Redirect 301 /jclouds.html /components/latest/jclouds-component.html
+Redirect 301 /jcr.html /components/latest/jcr-component.html
+Redirect 301 /jdbc.html /components/latest/jdbc-component.html
+Redirect 301 /jetty.html /components/latest/jetty-component.html
+Redirect 301 /jgroups.html /components/latest/jgroups-component.html
+Redirect 301 /jing.html /components/latest/jing-component.html
+Redirect 301 /jira.html /components/latest/jira-component.html
+Redirect 301 /jms /components/latest/jms-component.html
+Redirect 301 /jms-2.html /components/latest/jms-component.html
+Redirect 301 /jms.html /components/latest/jms-component.html
+Redirect 301 /jmx.html /manual/latest/jmx.html
+# Possible candidates for previous URL: [/manual/latest/jmx.html, /components/latest/jmx-component.html]
+Redirect 301 /jndi.html /manual/latest/jndi.html
+Redirect 301 /jolt.html /components/latest/jolt-component.html
+Redirect 301 /jpa.html /components/latest/jpa-component.html
+Redirect 301 /json.html /manual/latest/json.html
+Redirect 301 /jsonpath.html /components/latest/languages/jsonpath-language.html
+Redirect 301 /jt400.html /components/latest/jt400-component.html
+Redirect 301 /kafka.html /components/latest/kafka-component.html
+Redirect 301 /karaf.html /manual/latest/karaf.html
+Redirect 301 /kubernetes.html /components/latest/kubernetes.html
+Redirect 301 /kura.html /components/latest/kura.html
+Redirect 301 /language-component.html /components/latest/language-component.html
+Redirect 301 /language.html /components/latest/language-component.html
+Redirect 301 /languages.html /manual/latest/languages.html
+# Possible candidates for previous URL: [/manual/latest/languages.html, /camel-k/latest/languages/languages.html]
+Redirect 301 /ldap.html /components/latest/ldap-component.html
+Redirect 301 /leveldb.html /components/latest/leveldb.html
+Redirect 301 /lifecycle.html /manual/latest/lifecycle.html
+Redirect 301 /linkedin.html /components/latest/linkedin-component.html
+Redirect 301 /load-balancer.html /components/latest/eips/loadBalance-eip.html
+Redirect 301 /log /components/latest/log-component.html
+# Possible candidates for previous URL: [/manual/latest/log-eip.html, /components/latest/log-component.html]
+Redirect 301 /log.html /components/latest/log-component.html
+# Possible candidates for previous URL: [/manual/latest/log-eip.html, /components/latest/log-component.html]
+Redirect 301 /logeip.html /components/latest/eips/log-eip.html
+Redirect 301 /loop.html /components/latest/eips/loop-eip.html
+Redirect 301 /lucene.html /components/latest/lucene-component.html
+Redirect 301 /lumberjack.html /components/latest/lumberjack-component.html
+Redirect 301 /lzf-data-format.html /components/latest/dataformats/lzf-dataformat.html
+Redirect 301 /mail.html /components/latest/mail-component.html
+Redirect 301 /mailing-lists.html /manual/latest/mailing-lists.html
+Redirect 301 /memory-leak-when-adding-and-removing-routes-at-runtime.html /manual/latest/faq/memory-leak-when-adding-and-removing-routes-at-runtime.html
+Redirect 301 /message-endpoint.html /components/latest/eips/message-endpoint.html
+Redirect 301 /message-translator.html /components/latest/eips/message-translator.html
+Redirect 301 /message.html /components/latest/eips/message.html
+Redirect 301 /metrics-component.html /components/latest/metrics-component.html
+Redirect 301 /mime-multipart.html /components/latest/dataformats/mime-multipart-dataformat.html
+Redirect 301 /mina.html /components/latest/mina-component.html
+Redirect 301 /mina2.html /components/latest/mina-component.html
+Redirect 301 /mllp.html /components/latest/mllp-component.html
+Redirect 301 /mock.html /components/latest/mock-component.html
+Redirect 301 /mongodb-gridfs.html /components/latest/mongodb-gridfs-component.html
+Redirect 301 /mongodb.html /components/latest/mongodb-component.html
+Redirect 301 /mqtt.html /components/latest/mqtt-component.html
+Redirect 301 /msv.html /components/latest/msv-component.html
+Redirect 301 /multicast.html /components/latest/eips/multicast-eip.html
+Redirect 301 /mustache.html /components/latest/mustache-component.html
+Redirect 301 /mvel-component.html /components/latest/mvel-component.html
+Redirect 301 /mvel.html /components/latest/languages/mvel-language.html
+# Possible candidates for previous URL: [/components/latest/mvel-component.html, /components/latest/languages/mvel-language.html]
+Redirect 301 /mybatis.html /components/latest/mybatis-component.html
+Redirect 301 /nagios.html /components/latest/nagios-component.html
+Redirect 301 /nats.html /components/latest/nats-component.html
+Redirect 301 /netty-http.html /components/latest/netty-http-component.html
+Redirect 301 /netty.html /components/latest/netty-component.html
+Redirect 301 /netty4 /components/latest/netty-component.html
+Redirect 301 /netty4-http.html /components/latest/netty-http-component.html
+Redirect 301 /netty4.html /components/latest/netty-component.html
+Redirect 301 /news.html /news
+Redirect 301 /ognl.html /components/latest/languages/ognl-language.html
+Redirect 301 /olingo2.html /components/latest/olingo2-component.html
+Redirect 301 /oncompletion.html /manual/latest/oncompletion.html
+Redirect 301 /openshift.html /camel-k/latest/installation/openshift.html
+Redirect 301 /optaplanner.html /components/latest/optaplanner-component.html
+Redirect 301 /paho.html /components/latest/paho-component.html
+Redirect 301 /parameter-binding-annotations.html /manual/latest/parameter-binding-annotations.html
+Redirect 301 /pax-logging.html /components/latest/paxlogging-component.html
+Redirect 301 /pdf.html /components/latest/pdf-component.html
+Redirect 301 /pgevent.html /components/latest/pgevent-component.html
+Redirect 301 /pluggable-class-resolvers.html /manual/latest/pluggable-class-resolvers.html
+Redirect 301 /pojo-consuming.html /manual/latest/pojo-consuming.html
+Redirect 301 /pojo-producing.html /manual/latest/pojo-producing.html
+Redirect 301 /polling-consumer /components/latest/eips/polling-consumer.html
+Redirect 301 /polling-consumer.html /components/latest/eips/polling-consumer.html
+Redirect 301 /predicate.html /manual/latest/predicate.html
+Redirect 301 /processor.html /manual/latest/processor.html
+Redirect 301 /producertemplate.html /manual/latest/producertemplate.html
+Redirect 301 /projects/ /docs/
+Redirect 301 /projects/camel-k /docs/#apache-camel-k
+Redirect 301 /projects/camel-quarkus /docs/#apache-camel-extensions-for-quarkus
+Redirect 301 /projects/camel-kafka-connector /docs/#apache-camel-kafka-connector
+Redirect 301 /properties /components/latest/properties-component.html
+Redirect 301 /properties-2.html /components/latest/properties-component.html
+Redirect 301 /properties.html /components/latest/properties-component.html
+Redirect 301 /protobuf.html /components/latest/dataformats/protobuf-dataformat.html
+Redirect 301 /publish-subscribe-channel.html /components/latest/eips/publish-subscribe-channel.html
+Redirect 301 /quartz.html /components/latest/quartz-component.html
+Redirect 301 /quartz2 /components/latest/quartz-component.html
+Redirect 301 /quartz2.html /components/latest/quartz-component.html
+Redirect 301 /quickfix.html /components/latest/quickfix-component.html
+Redirect 301 /rabbitmq.html /components/latest/rabbitmq-component.html
+Redirect 301 /recipient-list.html /components/latest/eips/recipientList-eip.html
+Redirect 301 /ref-language.html /components/latest/languages/ref-language.html
+Redirect 301 /ref.html /components/latest/ref-component.html
+# Possible candidates for previous URL: [/components/latest/ref-component.html, /components/latest/languages/ref-language.html]
+Redirect 301 /registry.html /manual/latest/registry.html
+Redirect 301 /request-reply.html /components/latest/eips/requestReply-eip.html
+Redirect 301 /resequencer.html /components/latest/eips/resequence-eip.html
+Redirect 301 /rest-dsl /manual/latest/rest-dsl.html
+Redirect 301 /rest-dsl-2.html /manual/latest/rest-dsl.html
+Redirect 301 /rest-dsl.html /manual/latest/rest-dsl.html
+Redirect 301 /rest-swagger-component.html /components/latest/rest-swagger-component.html
+Redirect 301 /rest.html /components/latest/rest-component.html
+Redirect 301 /restlet /components/latest/restlet-component.html
+Redirect 301 /restlet.html /components/latest/restlet-component.html
+Redirect 301 /routebuilder.html /manual/latest/route-builder.html
+Redirect 301 /routepolicy.html /manual/latest/route-policy.html
+Redirect 301 /routes.html /manual/latest/routes.html
+Redirect 301 /routing-slip.html /components/latest/eips/routingSlip-eip.html
+Redirect 301 /rss.html /components/latest/rss-component.html
+# Possible candidates for previous URL: [/components/latest/rss-component.html, /components/latest/dataformats/rss-dataformat.html]
+Redirect 301 /running-camel-standalone.html /manual/latest/faq/running-camel-standalone.html
+Redirect 301 /running-examples.html /manual/latest/running-examples.html
+Redirect 301 /salesforce.html /components/latest/salesforce-component.html
+Redirect 301 /sap-netweaver.html /components/latest/sap-netweaver-component.html
+Redirect 301 /scala-dsl-supported-languages.html /manual/latest/scala-dsl-supported-languages.html
+Redirect 301 /scala-dsl.html /manual/latest/scala-dsl.html
+Redirect 301 /scheduledroutepolicy.html /manual/latest/scheduledroutepolicy.html
+Redirect 301 /scheduler.html /components/latest/scheduler-component.html
+Redirect 301 /schematron.html /components/latest/schematron-component.html
+Redirect 301 /script.html /components/latest/eips/script-eip.html
+Redirect 301 /scripting-languages.html /manual/latest/scripting-languages.html
+Redirect 301 /security.html /security
+Redirect 301 /seda /components/latest/seda-component.html
+Redirect 301 /seda.html /components/latest/seda-component.html
+Redirect 301 /servicecall-eip.html /components/latest/eips/serviceCall-eip.html
+Redirect 301 /servicenow.html /components/latest/servicenow-component.html
+Redirect 301 /servicepool.html /manual/latest/servicepool.html
+Redirect 301 /servlet.html /components/latest/servlet-component.html
+Redirect 301 /should-i-deploy-camel-inside-the-activemq-broker-or-in-another-application.html /manual/latest/faq/should-i-deploy-camel-inside-the-activemq-broker-or-in-another-application.html
+Redirect 301 /simple /components/latest/languages/simple-language.html
+Redirect 301 /simple-2.html /components/latest/languages/simple-language.html
+Redirect 301 /simple.html /components/latest/languages/simple-language.html
+Redirect 301 /simplescheduledroutepolicy.html /manual/latest/simplescheduledroutepolicy.html
+Redirect 301 /sip.html /components/latest/sip-component.html
+Redirect 301 /sjms /components/latest/sjms-component.html
+Redirect 301 /sjms-batch.html /components/latest/sjms-batch-component.html
+Redirect 301 /sjms.html /components/latest/sjms-component.html
+Redirect 301 /slack.html /components/latest/slack-component.html
+Redirect 301 /smpp /components/latest/smpp-component.html
+Redirect 301 /smpp.html /components/latest/smpp-component.html
+Redirect 301 /snmp.html /components/latest/snmp-component.html
+Redirect 301 /solr.html /components/latest/solr-component.html
+Redirect 301 /sort.html /components/latest/eips/sort-eip.html
+Redirect 301 /spark-rest.html /components/latest/spark-rest-component.html
+Redirect 301 /spel.html /components/latest/languages/spel-language.html
+Redirect 301 /splitter.html /components/latest/eips/split-eip.html
+Redirect 301 /splunk.html /components/latest/splunk-component.html
+Redirect 301 /spring-boot /components/latest/spring-boot.html
+Redirect 301 /spring-boot.html /components/latest/spring-boot.html
+Redirect 301 /spring-event.html /components/latest/spring-event-component.html
+Redirect 301 /spring-example.html /manual/latest/spring-example.html
+Redirect 301 /spring-java-config.html /components/latest/spring-javaconfig.html
+Redirect 301 /spring-ldap.html /components/latest/spring-ldap-component.html
+Redirect 301 /spring-redis.html /components/latest/spring-redis-component.html
+Redirect 301 /spring-remoting.html /manual/latest/spring-remoting.html
+Redirect 301 /spring-security.html /components/latest/spring-security.html
+Redirect 301 /spring-testing.html /manual/latest/spring-testing.html
+Redirect 301 /spring-xml-extensions.html /manual/latest/spring-xml-extensions.html
+Redirect 301 /spring.html /components/latest/spring.html
+# Possible candidates for previous URL: [/manual/latest/spring.html, /components/latest/spring.html]
+Redirect 301 /springbatch.html /components/latest/spring-batch-component.html
+Redirect 301 /springintegration.html /components/latest/spring-integration-component.html
+Redirect 301 /sql-component.html /components/latest/sql-component.html
+Redirect 301 /sql.html /components/latest/sql-component.html
+Redirect 301 /ssh.html /components/latest/ssh-component.html
+Redirect 301 /stax.html /components/latest/stax-component.html
+Redirect 301 /stomp.html /components/latest/stomp-component.html
+Redirect 301 /stream-caching.html /manual/latest/stream-caching.html
+Redirect 301 /stream.html /components/latest/stream-component.html
+Redirect 301 /stringtemplate.html /components/latest/string-template-component.html
+Redirect 301 /stub.html /components/latest/stub-component.html
+Redirect 301 /support.html /manual/latest/support.html
+# Possible candidates for previous URL: [/manual/latest/support.html, /community/support]
+Redirect 301 /swagger-java.html /components/latest/swagger-java.html
+Redirect 301 /syslog.html /components/latest/dataformats/syslog-dataformat.html
+Redirect 301 /team.html /manual/latest/team.html
+# Possible candidates for previous URL: [/manual/latest/team.html, /community/team]
+Redirect 301 /telegram.html /components/latest/telegram-component.html
+Redirect 301 /templating.html /manual/latest/templating.html
+Redirect 301 /test.html /components/latest/test.html
+Redirect 301 /testing /manual/latest/testing.html
+Redirect 301 /testing.html /manual/latest/testing.html
+Redirect 301 /threading-model.html /manual/latest/threading-model.html
+Redirect 301 /throttler.html /components/latest/eips/throttle-eip.html
+Redirect 301 /tidymarkup.html /components/latest/dataformats/tidyMarkup-dataformat.html
+Redirect 301 /timer.html /components/latest/timer-component.html
+Redirect 301 /tokenizer /components/latest/languages/tokenize-language.html
+Redirect 301 /tokenizer.html /components/latest/languages/tokenize-language.html
+Redirect 301 /tracer /manual/latest/tracer.html
+Redirect 301 /tracer.html /manual/latest/tracer.html
+Redirect 301 /transactional-client.html /components/latest/eips/transactional-client.html
+Redirect 301 /transactionerrorhandler.html /manual/latest/transactionerrorhandler.html
+Redirect 301 /transformer.html /manual/latest/transformer.html
+Redirect 301 /transport.html /manual/latest/transport.html
+Redirect 301 /try-catch-finally.html /manual/latest/try-catch-finally.html
+Redirect 301 /type-converter.html /manual/latest/type-converter.html
+Redirect 301 /undertow.html /components/latest/undertow-component.html
+Redirect 301 /uris.html /manual/latest/uris.html
+Redirect 301 /user-guide.html /camel-quarkus/latest/user-guide.html
+Redirect 301 /user-stories.html /manual/latest/user-stories.html
+# Possible candidates for previous URL: [/community/user-stories, /manual/latest/user-stories.html]
+Redirect 301 /using-camel-core-testsjar.html /manual/latest/faq/using-camel-core-testsjar.html
+Redirect 301 /using-exchange-pattern-annotations.html /manual/latest/using-exchange-pattern-annotations.html
+Redirect 301 /using-getin-or-getout-methods-on-exchange.html /manual/latest/faq/using-getin-or-getout-methods-on-exchange.html
+Redirect 301 /using-osgi-blueprint-with-camel.html /manual/latest/using-osgi-blueprint-with-camel.html
+Redirect 301 /using-propertyplaceholder.html /manual/latest/using-propertyplaceholder.html
+Redirect 301 /using-this-pattern.html /manual/latest/using-this-pattern.html
+Redirect 301 /uuidgenerator.html /manual/latest/uuidgenerator.html
+Redirect 301 /validate.html /components/latest/eips/validate-eip.html
+Redirect 301 /validator.html /manual/latest/validator.html
+# Possible candidates for previous URL: [/manual/latest/validator.html, /components/latest/validator-component.html]
+Redirect 301 /velocity.html /components/latest/velocity-component.html
+Redirect 301 /vertx.html /components/latest/vertx-component.html
+Redirect 301 /vm.html /components/latest/vm-component.html
+Redirect 301 /walk-through-an-example.html /manual/latest/walk-through-an-example.html
+Redirect 301 /walk-through-another-example.html /manual/latest/walk-through-another-example.html
+Redirect 301 /weather.html /components/latest/weather-component.html
+Redirect 301 /websocket.html /components/latest/websocket-component.html
+Redirect 301 /what-are-the-dependencies.html /manual/latest/what-are-the-dependencies.html
+# Possible candidates for previous URL: [/manual/latest/what-are-the-dependencies.html, /manual/latest/faq/what-are-the-dependencies.html]
+Redirect 301 /what-is-a-router.html /manual/latest/faq/what-is-a-router.html
+Redirect 301 /what-is-camel.html /manual/latest/faq/what-is-camel.html
+Redirect 301 /what-is-the-license.html /manual/latest/faq/what-is-the-license.html
+Redirect 301 /what-jars-do-i-need.html /manual/latest/faq/what-jars-do-i-need.html
+Redirect 301 /what-platforms-are-supported.html /manual/latest/faq/what-platforms-are-supported.html
+Redirect 301 /why-can-i-not-use-when-or-otherwise-in-a-java-camel-route.html /manual/latest/faq/why-can-i-not-use-when-or-otherwise-in-a-java-camel-route.html
+Redirect 301 /why-cant-i-use-sign-in-my-password.html /manual/latest/faq/why-cant-i-use-sign-in-my-password.html
+Redirect 301 /why-do-camel-throw-so-many-noclassdeffoundexception-on-startup.html /manual/latest/faq/why-do-camel-throw-so-many-noclassdeffoundexception-on-startup.html
+Redirect 301 /why-do-my-message-lose-its-headers-during-routing.html /manual/latest/faq/why-do-my-message-lose-its-headers-during-routing.html
+Redirect 301 /why-does-camel-use-too-many-threads-with-producertemplate.html /manual/latest/faq/why-does-camel-use-too-many-threads-with-producertemplate.html
+Redirect 301 /why-does-ftp-component-not-download-any-files.html /manual/latest/faq/why-does-ftp-component-not-download-any-files.html
+Redirect 301 /why-does-maven-not-download-dependencies.html /manual/latest/faq/why-does-maven-not-download-dependencies.html
+Redirect 301 /why-does-my-file-consumer-not-pick-up-the-file-and-how-do-i-let-the-file-consumer-use-the-camel-error-handler.html /manual/latest/faq/why-does-my-file-consumer-not-pick-up-the-file-and-how-do-i-let-the-file-consumer-use-the-camel-error-handler.html
+Redirect 301 /why-does-my-jms-route-only-consume-one-message-at-once.html /manual/latest/faq/why-does-my-jms-route-only-consume-one-message-at-once.html
+Redirect 301 /why-does-useoriginalmessage-with-error-handler-not-work-as-expected.html /manual/latest/faq/why-does-useoriginalmessage-with-error-handler-not-work-as-expected.html
+Redirect 301 /why-is-my-message-body-empty.html /manual/latest/faq/why-is-my-message-body-empty.html
+Redirect 301 /why-is-my-processor-not-showing-up-in-jconsole.html /manual/latest/faq/why-is-my-processor-not-showing-up-in-jconsole.html
+Redirect 301 /why-is-the-exception-null-when-i-use-onexception.html /manual/latest/faq/why-is-the-exception-null-when-i-use-onexception.html
+Redirect 301 /why-the-name-camel.html /manual/latest/faq/why-the-name-camel.html
+Redirect 301 /why-use-multiple-camelcontext.html /manual/latest/faq/why-use-multiple-camelcontext.html
+Redirect 301 /wire-tap.html /components/latest/eips/wireTap-eip.html
+Redirect 301 /wiretap.html /components/latest/eips/wireTap-eip.html
+Redirect 301 /writing-components.html /manual/latest/writing-components.html
+Redirect 301 /xml-configuration.html /manual/latest/xml-configuration.html
+Redirect 301 /xml-reference.html /manual/latest/xml-reference.html
+Redirect 301 /xml-security-component.html /components/latest/xmlsecurity-component.html
+Redirect 301 /xmpp.html /components/latest/xmpp-component.html
+Redirect 301 /xpath.html /components/latest/languages/xpath-language.html
+Redirect 301 /xquery.html /components/latest/xquery-component.html
+# Possible candidates for previous URL: [/components/latest/xquery-language.html, /components/latest/xquery-component.html]
+Redirect 301 /xslt.html /components/latest/xslt-component.html
+Redirect 301 /xstream /components/latest/dataformats/xstream-dataformat.html
+Redirect 301 /xstream-2.html /components/latest/dataformats/xstream-dataformat.html
+Redirect 301 /xstream.html /components/latest/dataformats/xstream-dataformat.html
+Redirect 301 /yammer.html /components/latest/yammer-component.html
+Redirect 301 /zip-file-dataformat.html /components/latest/dataformats/zipfile-dataformat.html
+Redirect 301 /zookeeper.html /components/latest/zookeeper-component.html
+Redirect 301 /docs/getting-started /manual/latest/getting-started.html
+
+# old blog posts redirects to not break published links that do not conform with the new blog layout
+Redirect 301 /blog/release-2-24-0.html /blog/2019/05/RELEASE-2.24.0/
+Redirect 301 /blog/ApacheConNA-2019/ /blog/2019/09/ApacheConNA-2019/
+Redirect 301 /blog/release-2-23-4.html /blog/2019/09/RELEASE-2.23.4/
+Redirect 301 /blog/release-2-24-2.html /blog/2019/09/RELEASE-2.24.2/
+Redirect 301 /blog/release-3-0-0-RC1.html /blog/2019/09/RELEASE-3.0.0-RC1/
+Redirect 301 /blog/release-2-24-0.html /blog/2019/05/RELEASE-2.24.0/
+Redirect 301 /blog/Camel3-2monthsaway/ /blog/2019/10/Camel3-2monthsaway/
+Redirect 301 /blog/release-3-0-0-RC2.html /blog/2019/10/RELEASE-3.0.0-RC2/
+Redirect 301 /blog/release-3-0-0-RC3.html /blog/2019/10/RELEASE-3.0.0-RC3/
+Redirect 301 /blog/ASF-Report-2019/ /blog/2019/11/ASF-Report-2019/
+Redirect 301 /blog/release-3-0-0.html /blog/2019/11/RELEASE-3.0.0/
+Redirect 301 /blog/2019-Numbers/ /blog/2019/12/2019-Numbers/
+Redirect 301 /blog/Camel-Kafka-connector-intro/ /blog/2019/12/Camel-Kafka-connector-intro/
+Redirect 301 /blog/Camel3-Whatsnew/ /blog/2019/12/Camel3-Whatsnew/
+Redirect 301 /blog/LanguageSupportTooling-0.0.20/ /blog/2019/12/LanguageSupportTooling-0.0.20/
+Redirect 301 /blog/Podcast47/ /blog/2019/12/Podcast47/
+Redirect 301 /blog/release-2-24-3.html /blog/2019/12/RELEASE-2.24.3/
+Redirect 301 /blog/capi-gateway/ /blog/2020/01/capi-gateway/
+Redirect 301 /blog/CustomWebApiComponent/ /blog/2020/01/CustomWebApiComponent/
+Redirect 301 /blog/FOSDEM-2020/ /blog/2020/01/FOSDEM-2020/
+Redirect 301 /blog/release-2-25-0.html /blog/2020/01/RELEASE-2.25.0/
+Redirect 301 /blog/release-3-0-1.html /blog/2020/01/RELEASE-3.0.1/
+Redirect 301 /blog/ApacheConNA-2020-CFP/ /blog/2020/02/ApacheConNA-2020-CFP/
+Redirect 301 /blog/GSoC-2020-announced/ /blog/2020/02/GSoC-2020-announced/
+Redirect 301 /blog/release-3-1-0.html /blog/2020/02/RELEASE-3.1.0/
+Redirect 301 /blog/Camel3-AWS2-Whatsnew/ /blog/2020/03/Camel3-AWS2-Whatsnew/
+Redirect 301 /blog/LTS-Release-Schedule/ /blog/2020/03/LTS-Release-Schedule/
+Redirect 301 /blog/Outreachy-May2020/ /blog/2020/03/Outreachy-May2020/
+Redirect 301 /blog/Outreachy-May2020-Update/ /blog/2020/03/Outreachy-May2020-Update/
+Redirect 301 /blog/100Camels/ /blog/2020/04/100Camels/
+Redirect 301 /blog/Camel-Kafka-connector-release-0.1.0/ /blog/2020/04/Camel-Kafka-connector-release-0.1.0/
+Redirect 301 /blog/Camel-Quarkus-release-1.0.0-M7/ /blog/2020/04/Camel-Quarkus-release-1.0.0-M7/
+Redirect 301 /blog/Camel32-Whatsnew/ /blog/2020/04/Camel32-Whatsnew/
+Redirect 301 /blog/release-2-25-1.html /blog/2020/04/RELEASE-2.25.1/
+Redirect 301 /blog/release-3-2-0.html /blog/2020/04/RELEASE-3.2.0/
+Redirect 301 /blog/Camel33-Whatsnew/ /blog/2020/05/Camel33-Whatsnew/
+Redirect 301 /blog/CdcWithCamelAndDebezium/ /blog/2020/05/CdcWithCamelAndDebezium/
+Redirect 301 /blog/release-3-3-0.html /blog/2020/05/RELEASE-3.3.0/
+Redirect 301 /blog/release-3-4-0.html /blog/2020/06/RELEASE-3.4.0/
+Redirect 301 /blog/release-3-4-1.html /blog/2020/07/RELEASE-3.4.1/
+Redirect 301 /blog/release-3-4-2.html /blog/2020/07/RELEASE-3.4.2/
+Redirect 301 /blog/release-3-4-3.html /blog/2020/08/RELEASE-3.4.3/
+Redirect 301 /blog/release-3-4-4.html /blog/2020/09/RELEASE-3.4.4/
+Redirect 301 /blog/release-3-5-0.html /blog/2020/09/RELEASE-3.5.0/
+Redirect 301 /blog/release-3-6-0.html /blog/2020/09/RELEASE-3.6.0/
+
+# default to latest documentation versions, to make it easier on folk to type in shorter urls
+RewriteRule "^components/$" "/components/latest/" [R=permanent,L]
+RewriteRule "^camel-spring-boot/$" "/camel-spring-boot/latest/" [R=permanent,L]
+RewriteRule "^camel-karaf/$" "/camel-karaf/latest/" [R=permanent,L]
+RewriteRule "^camel-k/$" "/camel-k/latest/" [R=permanent,L]
+RewriteRule "^camel-kafka-connector/$" "/camel-kafka-connector/latest/" [R=permanent,L]
+RewriteRule "^camel-quarkus/$" "/camel-quarkus/latest/" [R=permanent,L]
+RewriteRule "^manual/$" "/manual/latest/" [R=permanent,L]
+
+# Disable the pattern matching based on filenames.
+#
+# This setting prevents Apache from returning a 404 error as the result
+# of a rewrite when the directory with the same name does not exist.
+#
+# https://httpd.apache.org/docs/current/content-negotiation.html#multiviews
+Options -MultiViews
+
+# Serve resources with the proper media types (f.k.a. MIME types).
+#
+# https://www.iana.org/assignments/media-types/media-types.xhtml
+# https://httpd.apache.org/docs/current/mod/mod_mime.html#addtype
+
+<IfModule mod_mime.c>
+
+  # Data interchange
+
+    AddType application/xml                             xml
+
+
+  # JavaScript
+
+    # Servers should use text/javascript for JavaScript resources.
+    # https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages
+
+    AddType text/javascript                             js
+
+
+  # Media files
+
+    # Serving `.ico` image files with a different media type
+    # prevents Internet Explorer from displaying them as images:
+    # https://github.com/h5bp/html5-boilerplate/commit/37b5fec090d00f38de64b591bcddcb205aadf8ee
+
+    AddType image/x-icon                                cur ico
+
+
+  # Web fonts
+
+    AddType font/woff                                   woff
+    AddType font/woff2                                  woff2
+    AddType application/vnd.ms-fontobject               eot
+    AddType font/ttf                                    ttf
+    AddType font/collection                             ttc
+    AddType font/otf                                    otf
+
+</IfModule>
+
+# ----------------------------------------------------------------------
+# | Character encodings                                                |
+# ----------------------------------------------------------------------
+
+# Serve all resources labeled as `text/html` or `text/plain`
+# with the media type `charset` parameter set to `UTF-8`.
+#
+# https://httpd.apache.org/docs/current/mod/core.html#adddefaultcharset
+
+AddDefaultCharset utf-8
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Serve the following file types with the media type `charset`
+# parameter set to `UTF-8`.
+#
+# https://httpd.apache.org/docs/current/mod/mod_mime.html#addcharset
+
+<IfModule mod_mime.c>
+    AddCharset utf-8 .css .js
+</IfModule>
+
+# ######################################################################
+# # REWRITES                                                           #
+# ######################################################################
+
+# ----------------------------------------------------------------------
+# | Rewrite engine                                                     |
+# ----------------------------------------------------------------------
+
+# (1) Turn on the rewrite engine (this is necessary in order for
+#     the `RewriteRule` directives to work).
+#
+#     https://httpd.apache.org/docs/current/mod/mod_rewrite.html#RewriteEngine
+#
+# (2) Enable the `FollowSymLinks` option if it isn't already.
+#
+#     https://httpd.apache.org/docs/current/mod/core.html#options
+#
+# (3) If your web host doesn't allow the `FollowSymlinks` option,
+#     you need to comment it out or remove it, and then uncomment
+#     the `Options +SymLinksIfOwnerMatch` line (4), but be aware
+#     of the performance impact.
+#
+#     https://httpd.apache.org/docs/current/misc/perf-tuning.html#symlinks
+#
+# (4) Some cloud hosting services will require you set `RewriteBase`.
+#
+#     https://www.rackspace.com/knowledge_center/frequently-asked-question/why-is-modrewrite-not-working-on-my-site
+#     https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewritebase
+#
+# (5) Depending on how your server is set up, you may also need to
+#     use the `RewriteOptions` directive to enable some options for
+#     the rewrite engine.
+#
+#     https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewriteoptions
+#
+# (6) Set %{ENV:PROTO} variable, to allow rewrites to redirect with the
+#     appropriate schema automatically (http or https).
+
+<IfModule mod_rewrite.c>
+
+    # (1)
+    RewriteEngine On
+
+    # (2)
+    # Options +FollowSymlinks
+
+    # (3)
+    # Options +SymLinksIfOwnerMatch
+
+    # (4)
+    # RewriteBase /
+
+    # (5)
+    # RewriteOptions <options>
+
+    # (6)
+    RewriteCond %{HTTPS} =on
+    RewriteRule ^ - [env=proto:https]
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^ - [env=proto:http]
+
+</IfModule>
+
+# ----------------------------------------------------------------------
+# | Forcing `https://`                                                 |
+# ----------------------------------------------------------------------
+
+# Redirect from the `http://` to the `https://` version of the URL.
+#
+# https://wiki.apache.org/httpd/RewriteHTTPToHTTPS
+
+# (1) If you're using cPanel AutoSSL or the Let's Encrypt webroot
+#     method it will fail to validate the certificate if validation
+#     requests are redirected to HTTPS. Turn on the condition(s)
+#     you need.
+#
+#     https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml
+#     https://tools.ietf.org/html/draft-ietf-acme-acme-12
+
+<IfModule mod_rewrite.c>
+   RewriteEngine On
+   RewriteCond %{HTTPS} !=on
+   # (1)
+   # RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/
+   # RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[\w-]+$
+   # RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+# ######################################################################
+# # SECURITY                                                           #
+# ######################################################################
+
+# ----------------------------------------------------------------------
+# | Clickjacking                                                       |
+# ----------------------------------------------------------------------
+
+# Protect website against clickjacking.
+#
+# The example below sends the `X-Frame-Options` response header with
+# the value `DENY`, informing browsers not to display the content of
+# the web page in any frame.
+#
+# This might not be the best setting for everyone. You should read
+# about the other two possible values the `X-Frame-Options` header
+# field can have: `SAMEORIGIN` and `ALLOW-FROM`.
+# https://tools.ietf.org/html/rfc7034#section-2.1.
+#
+# Keep in mind that while you could send the `X-Frame-Options` header
+# for all of your website’s pages, this has the potential downside that
+# it forbids even non-malicious framing of your content (e.g.: when
+# users visit your website using a Google Image Search results page).
+#
+# Nonetheless, you should ensure that you send the `X-Frame-Options`
+# header for all pages that allow a user to make a state changing
+# operation (e.g: pages that contain one-click purchase links, checkout
+# or bank-transfer confirmation pages, pages that make permanent
+# configuration changes, etc.).
+#
+# Sending the `X-Frame-Options` header can also protect your website
+# against more than just clickjacking attacks:
+# https://cure53.de/xfo-clickjacking.pdf.
+#
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
+# https://tools.ietf.org/html/rfc7034
+# https://blogs.msdn.microsoft.com/ieinternals/2010/03/30/combating-clickjacking-with-x-frame-options/
+# https://www.owasp.org/index.php/Clickjacking
+
+<IfModule mod_headers.c>
+    Header set X-Frame-Options "DENY" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
+</IfModule>
+
+# ----------------------------------------------------------------------
+# | Content Security Policy (CSP)                                      |
+# ----------------------------------------------------------------------
+
+# Mitigate the risk of cross-site scripting and other content-injection
+# attacks.
+#
+# This can be done by setting a `Content Security Policy` which
+# whitelists trusted sources of content for your website.
+#
+# There is no policy that fits all websites, you will have to modify
+# the `Content-Security-Policy` directives in the example below depending
+# on your needs.
+#
+# The example policy below aims to:
+#
+#  (1) Restrict all fetches by default to the origin of the current website
+#      by setting the `default-src` directive to `'self'` - which acts as a
+#      fallback to all "Fetch directives" (https://developer.mozilla.org/en-US/docs/Glossary/Fetch_directive).
+#
+#      This is convenient as you do not have to specify all Fetch directives
+#      that apply to your site, for example:
+#      `connect-src 'self'; font-src 'self'; script-src 'self'; style-src 'self'`, etc.
+#
+#      This restriction also means that you must explicitly define from
+#      which site(s) your website is allowed to load resources from.
+#
+#  (2) The `<base>` element is not allowed on the website. This is to
+#      prevent attackers from changing the locations of resources loaded
+#      from relative URLs.
+#
+#      If you want to use the `<base>` element, then `base-uri 'self'`
+#      can be used instead.
+#
+#  (3) Form submissions are only allowed from the current website by
+#      setting: `form-action 'self'`.
+#
+#  (4) Prevents all websites (including your own) from embedding your
+#      webpages within e.g. the `<iframe>` or `<object>` element by
+#      setting `frame-ancestors 'none'`.
+#
+#	   The `frame-ancestors` directive helps avoid "Clickjacking" attacks
+#      and is similar to the `X-Frame-Options` header.
+#
+#      Browsers that support the CSP header will ignore `X-Frame-Options`
+#      if `frame-ancestors` is also specified.
+#
+#  (5) Forces the browser to treat all the resources that are served over
+#      HTTP as if they were loaded securely over HTTPS by setting the
+#      `upgrade-insecure-requests` directive.
+#
+#      Please note that `upgrade-insecure-requests` does not ensure
+#      HTTPS for the top-level navigation. If you want to force the
+#      website itself to be loaded over HTTPS you must include the
+#      `Strict-Transport-Security` header.
+#
+# To make your CSP implementation easier, you can use an online CSP header
+# generator such as:
+# https://report-uri.com/home/generate/
+#
+# It is encouraged that you validate your CSP header using a CSP validator
+# such as:
+# https://csp-evaluator.withgoogle.com
+#
+# https://csp.withgoogle.com/docs/
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
+# https://www.html5rocks.com/en/tutorials/security/content-security-policy/
+# https://www.w3.org/TR/CSP/
+
+<IfModule mod_headers.c>
+    #                                   (1)                 (2)              (3)                 (4)                     (5)
+    Header set Content-Security-Policy "default-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests; connect-src https://*.algolia.net https://*.algolianet.com; img-src 'self' https://*.githubusercontent.com; child-src https://www.youtube-nocookie.com" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
+</IfModule>
+
+# ----------------------------------------------------------------------
+# | File access                                                        |
+# ----------------------------------------------------------------------
+
+# Block access to directories without a default document.
+#
+# You should leave the following uncommented, as you shouldn't allow
+# anyone to surf through every directory on your server (which may
+# includes rather private places such as the CMS's directories).
+
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Block access to all hidden files and directories with the exception of
+# the visible content from within the `/.well-known/` hidden directory.
+#
+# These types of files usually contain user preferences or the preserved
+# state of an utility, and can include rather private places like, for
+# example, the `.git` or `.svn` directories.
+#
+# The `/.well-known/` directory represents the standard (RFC 5785) path
+# prefix for "well-known locations" (e.g.: `/.well-known/manifest.json`,
+# `/.well-known/keybase.txt`), and therefore, access to its visible
+# content should not be blocked.
+#
+# https://www.mnot.net/blog/2010/04/07/well-known
+# https://tools.ietf.org/html/rfc5785
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} "!(^|/)\.well-known/([^./]+./?)+$" [NC]
+    RewriteCond %{SCRIPT_FILENAME} -d [OR]
+    RewriteCond %{SCRIPT_FILENAME} -f
+    RewriteRule "(^|/)\." - [F]
+</IfModule>
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Block access to files that can expose sensitive information.
+#
+# By default, block access to backup and source files that may be
+# left by some text editors and can pose a security risk when anyone
+# has access to them.
+#
+# https://feross.org/cmsploit/
+#
+# (!) Update the `<FilesMatch>` regular expression from below to
+# include any files that might end up on your production server and
+# can expose sensitive information about your website. These files may
+# include: configuration files, files that contain metadata about the
+# project (e.g.: project dependencies), build scripts, etc..
+
+<IfModule mod_authz_core.c>
+    <FilesMatch "(^#.*#|\.(bak|conf|dist|fla|in[ci]|log|orig|psd|sh|sql|sw[op])|~)$">
+        Require all denied
+    </FilesMatch>
+</IfModule>
+
+# ----------------------------------------------------------------------
+# | HTTP Strict Transport Security (HSTS)                              |
+# ----------------------------------------------------------------------
+
+# Force client-side SSL redirection.
+#
+# If a user types `example.com` in their browser, even if the server
+# redirects them to the secure version of the website, that still leaves
+# a window of opportunity (the initial HTTP connection) for an attacker
+# to downgrade or redirect the request.
+#
+# The following header ensures that browser will ONLY connect to your
+# server via HTTPS, regardless of what the users type in the browser's
+# address bar.
+#
+# (!) Be aware that this, once published, is not revokable and you must ensure
+# being able to serve the site via SSL for the duration you've specified
+# in max-age. When you don't have a valid SSL connection (anymore) your
+# visitors will see a nasty error message even when attempting to connect
+# via simple HTTP.
+#
+# (!) Remove the `includeSubDomains` optional directive if the website's
+# subdomains are not using HTTPS.
+#
+# (1) If you want to submit your site for HSTS preload (2) you must
+#     * ensure the `includeSubDomains` directive to be present
+#     * the `preload` directive to be specified
+#     * the `max-age` to be at least 31536000 seconds (1 year) according to the current status.
+#
+#     It is also advised (3) to only serve the HSTS header via a secure connection
+#     which can be done with either `env=https` or `"expr=%{HTTPS} == 'on'"` (4). The
+#     exact way depends on your environment and might just be tried.
+#
+# (2) https://hstspreload.org/
+# (3) https://tools.ietf.org/html/rfc6797#section-7.2
+# (4) https://stackoverflow.com/questions/24144552/how-to-set-hsts-header-from-htaccess-only-on-https/24145033#comment81632711_24145033
+#
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
+# https://tools.ietf.org/html/rfc6797#section-6.1
+# https://www.html5rocks.com/en/tutorials/security/transport-layer-security/
+# https://blogs.msdn.microsoft.com/ieinternals/2014/08/18/strict-transport-security/
+
+<IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=16070400; includeSubDomains" env=HTTPS
+    # (1) or if HSTS preloading is desired (respect (2) for current requirements):
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+    # (4) respectively… (respect (2) for current requirements):
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" "expr=%{HTTPS} == 'on'"
+</IfModule>
+
+# ----------------------------------------------------------------------
+# | Reducing MIME type security risks                                  |
+# ----------------------------------------------------------------------
+
+# Prevent some browsers from MIME-sniffing the response.
+#
+# This reduces exposure to drive-by download attacks and cross-origin
+# data leaks, and should be left uncommented, especially if the server
+# is serving user-uploaded content or content that could potentially be
+# treated as executable by the browser.
+#
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
+# https://blogs.msdn.microsoft.com/ie/2008/07/02/ie8-security-part-v-comprehensive-protection/
+# https://mimesniff.spec.whatwg.org/
+
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# ----------------------------------------------------------------------
+# | Reflected Cross-Site Scripting (XSS) attacks                       |
+# ----------------------------------------------------------------------
+
+# (1) Try to re-enable the cross-site scripting (XSS) filter built
+#     into most web browsers.
+#
+#     The filter is usually enabled by default, but in some cases it
+#     may be disabled by the user. However, in Internet Explorer for
+#     example, it can be re-enabled just by sending the
+#     `X-XSS-Protection` header with the value of `1`.
+#
+# (2) Prevent web browsers from rendering the web page if a potential
+#     reflected (a.k.a non-persistent) XSS attack is detected by the
+#     filter.
+#
+#     By default, if the filter is enabled and browsers detect a
+#     reflected XSS attack, they will attempt to block the attack
+#     by making the smallest possible modifications to the returned
+#     web page.
+#
+#     Unfortunately, in some browsers (e.g.: Internet Explorer),
+#     this default behavior may allow the XSS filter to be exploited,
+#     thereby, it's better to inform browsers to prevent the rendering
+#     of the page altogether, instead of attempting to modify it.
+#
+#     https://hackademix.net/2009/11/21/ies-xss-filter-creates-xss-vulnerabilities
+#
+# (!) Do not rely on the XSS filter to prevent XSS attacks! Ensure that
+#     you are taking all possible measures to prevent XSS attacks, the
+#     most obvious being: validating and sanitizing your website's inputs.
+#
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection
+# https://blogs.msdn.microsoft.com/ie/2008/07/02/ie8-security-part-iv-the-xss-filter/
+# https://blogs.msdn.microsoft.com/ieinternals/2011/01/31/controlling-the-xss-filter/
+# https://www.owasp.org/index.php/Cross-site_Scripting_%28XSS%29
+
+<IfModule mod_headers.c>
+    #                           (1)    (2)
+    Header set X-XSS-Protection "1; mode=block" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
+</IfModule>
+
+# ----------------------------------------------------------------------
+# | Referrer Policy                                                    |
+# ----------------------------------------------------------------------
+
+# A web application uses HTTPS and a URL-based session identifier.
+# The web application might wish to link to HTTPS resources on other
+# web sites without leaking the user's session identifier in the URL.
+#
+# This can be done by setting a `Referrer Policy` which
+# whitelists trusted sources of content for your website.
+#
+# To check your referrer policy, you can use an online service
+# such as: https://securityheaders.io/.
+#
+# https://scotthelme.co.uk/a-new-security-header-referrer-policy/
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
+
+<IfModule mod_headers.c>
+    # no-referrer-when-downgrade (default)
+    # This should be the user agent's default behavior if no policy is
+    # specified.The origin is sent as referrer to a-priori as-much-secure
+    # destination (HTTPS->HTTPS), but isn't sent to a less secure destination
+    # (HTTPS->HTTP).
+    Header set Referrer-Policy "no-referrer-when-downgrade" "expr=%{CONTENT_TYPE} =~ m#text/html#i"
+</IfModule>
+
+# ######################################################################
+# # WEB PERFORMANCE                                                    #
+# ######################################################################
+
+# ----------------------------------------------------------------------
+# | Compression                                                        |
+# ----------------------------------------------------------------------
+
+<IfModule mod_deflate.c>
+
+    # Force compression for mangled `Accept-Encoding` request headers
+    #
+    # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding
+    # https://calendar.perfplanet.com/2010/pushing-beyond-gzipping/
+
+    <IfModule mod_setenvif.c>
+        <IfModule mod_headers.c>
+            SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+            RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+        </IfModule>
+    </IfModule>
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # Compress all output labeled with one of the following media types.
+    #
+    # https://httpd.apache.org/docs/current/mod/mod_filter.html#addoutputfilterbytype
+
+    <IfModule mod_filter.c>
+        AddOutputFilterByType DEFLATE "application/atom+xml" \
+                                      "application/javascript" \
+                                      "application/json" \
+                                      "application/ld+json" \
+                                      "application/manifest+json" \
+                                      "application/rdf+xml" \
+                                      "application/rss+xml" \
+                                      "application/schema+json" \
+                                      "application/geo+json" \
+                                      "application/vnd.ms-fontobject" \
+                                      "application/wasm" \
+                                      "application/x-font-ttf" \
+                                      "application/x-javascript" \
+                                      "application/x-web-app-manifest+json" \
+                                      "application/xhtml+xml" \
+                                      "application/xml" \
+                                      "font/eot" \
+                                      "font/opentype" \
+                                      "font/otf" \
+                                      "image/bmp" \
+                                      "image/svg+xml" \
+                                      "image/vnd.microsoft.icon" \
+                                      "text/cache-manifest" \
+                                      "text/calendar" \
+                                      "text/css" \
+                                      "text/html" \
+                                      "text/javascript" \
+                                      "text/plain" \
+                                      "text/markdown" \
+                                      "text/vcard" \
+                                      "text/vnd.rim.location.xloc" \
+                                      "text/vtt" \
+                                      "text/x-component" \
+                                      "text/x-cross-domain-policy" \
+                                      "text/xml"
+
+    </IfModule>
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # Map the following filename extensions to the specified
+    # encoding type in order to make Apache serve the file types
+    # with the appropriate `Content-Encoding` response header
+    # (do note that this will NOT make Apache compress them!).
+    #
+    # If these files types would be served without an appropriate
+    # `Content-Enable` response header, client applications (e.g.:
+    # browsers) wouldn't know that they first need to uncompress
+    # the response, and thus, wouldn't be able to understand the
+    # content.
+    #
+    # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Encoding
+    # https://httpd.apache.org/docs/current/mod/mod_mime.html#addencoding
+
+    <IfModule mod_mime.c>
+        AddEncoding gzip              svgz
+    </IfModule>
+
+</IfModule>
+
+# ----------------------------------------------------------------------
+# | Brotli pre-compressed content                                      |
+# ----------------------------------------------------------------------
+
+# Serve brotli compressed CSS, JS, HTML, SVG, ICS and JSON files
+# if they exist and if the client accepts br encoding.
+#
+# (!) To make this part relevant, you need to generate encoded
+# files by your own. Enabling this part will not auto-generate
+# brotlied files.
+#
+# Note that some clients (eg. browsers) require a secure connection
+# to request brotli-compressed resources.
+# https://www.chromestatus.com/feature/5420797577396224
+#
+# https://httpd.apache.org/docs/current/mod/mod_brotli.html#precompressed
+
+# <IfModule mod_headers.c>
+
+#     RewriteCond %{HTTP:Accept-Encoding} br
+#     RewriteCond %{REQUEST_FILENAME}\.br -f
+#     RewriteRule \.(css|ics|js|json|html|svg)$ %{REQUEST_URI}.br [L]
+
+#     # Prevent mod_deflate double gzip
+#     RewriteRule \.br$ - [E=no-gzip:1]
+
+#     <FilesMatch "\.br$">
+
+#         <IfModule mod_mime.c>
+#             # Serve correct content types
+#             AddType text/css              css.br
+#             AddType text/calendar         ics.br
+#             AddType text/javascript       js.br
+#             AddType application/json      json.br
+#             AddType text/html             html.br
+#             AddType image/svg+xml         svg.br
+
+#             # Serve correct content charset
+#             AddCharset utf-8 .css.br \
+#                              .ics.br \
+#                              .js.br \
+#                              .json.br
+#         </IfModule>
+
+#         # Force proxies to cache brotlied and non-brotlied files separately
+#         Header append Vary Accept-Encoding
+
+#     </FilesMatch>
+
+#     # Serve correct encoding type
+#     AddEncoding br .br
+
+# </IfModule>
+
+# ----------------------------------------------------------------------
+# | GZip pre-compressed content                                        |
+# ----------------------------------------------------------------------
+
+# Serve gzip compressed CSS, JS, HTML, SVG, ICS and JSON files
+# if they exist and if the client accepts gzip encoding.
+#
+# (!) To make this part relevant, you need to generate encoded
+# files by your own. Enabling this part will not auto-generate
+# gziped files.
+#
+# https://httpd.apache.org/docs/current/mod/mod_deflate.html#precompressed
+#
+# (1)
+# Removing default MIME Type for .gz files allowing to add custom
+# sub-types.
+# You may prefer using less generic extensions such as .html_gz in
+# order to keep default behavior regarding .gz files.
+# https://httpd.apache.org/docs/current/mod/mod_mime.html#removetype
+
+# <IfModule mod_headers.c>
+
+#     RewriteCond %{HTTP:Accept-Encoding} gzip
+#     RewriteCond %{REQUEST_FILENAME}\.gz -f
+#     RewriteRule \.(css|ics|js|json|html|svg)$ %{REQUEST_URI}.gz [L]
+
+#     # Prevent mod_deflate double gzip
+#     RewriteRule \.gz$ - [E=no-gzip:1]
+
+#     <FilesMatch "\.gz$">
+
+#         # Serve correct content types
+#         <IfModule mod_mime.c>
+#             # (1)
+#             RemoveType gz
+
+#             # Serve correct content types
+#             AddType text/css              css.gz
+#             AddType text/calendar         ics.gz
+#             AddType text/javascript       js.gz
+#             AddType application/json      json.gz
+#             AddType text/html             html.gz
+#             AddType image/svg+xml         svg.gz
+
+#             # Serve correct content charset
+#             AddCharset utf-8 .css.gz \
+#                              .ics.gz \
+#                              .js.gz \
+#                              .json.gz
+#         </IfModule>
+
+#         # Force proxies to cache gzipped and non-gzipped files separately
+#         Header append Vary Accept-Encoding
+
+#     </FilesMatch>
+
+#     # Serve correct encoding type
+#     AddEncoding gzip .gz
+
+# </IfModule>
+
+# ----------------------------------------------------------------------
+# | Content transformation                                             |
+# ----------------------------------------------------------------------
+
+# Prevent intermediate caches or proxies (e.g.: such as the ones
+# used by mobile network providers) from modifying the website's
+# content.
+#
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
+# https://tools.ietf.org/html/rfc2616#section-14.9.5
+#
+# (!) If you are using `mod_pagespeed`, please note that setting
+# the `Cache-Control: no-transform` response header will prevent
+# `PageSpeed` from rewriting `HTML` files, and, if the
+# `ModPagespeedDisableRewriteOnNoTransform` directive isn't set
+# to `off`, also from rewriting other resources.
+#
+# https://developers.google.com/speed/pagespeed/module/configuration#notransform
+
+<IfModule mod_headers.c>
+    Header merge Cache-Control "no-transform"
+</IfModule>
+
+# ----------------------------------------------------------------------
+# | ETags                                                              |
+# ----------------------------------------------------------------------
+
+# Remove `ETags` as resources are sent with far-future expires headers.
+#
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag
+# https://developer.yahoo.com/performance/rules.html#etags
+# https://tools.ietf.org/html/rfc7232#section-2.3
+
+# `FileETag None` doesn't work in all cases.
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+
+FileETag None
+
+# ----------------------------------------------------------------------
+# | Cache expiration                                                   |
+# ----------------------------------------------------------------------
+
+# Serve resources with far-future expiration date.
+#
+# (!) If you don't control versioning with filename-based
+# cache busting, you should consider lowering the cache times
+# to something like one week.
+#
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires
+# https://httpd.apache.org/docs/current/mod/mod_expires.html
+
+<IfModule mod_expires.c>
+
+    ExpiresActive on
+    ExpiresDefault                                      "access plus 1 month"
+
+  # CSS
+
+    ExpiresByType text/css                              "access plus 1 year"
+
+
+  # Data interchange
+
+    ExpiresByType application/atom+xml                  "access plus 1 hour"
+    ExpiresByType application/rdf+xml                   "access plus 1 hour"
+    ExpiresByType application/rss+xml                   "access plus 1 hour"
+
+    ExpiresByType application/json                      "access plus 0 seconds"
+    ExpiresByType application/ld+json                   "access plus 0 seconds"
+    ExpiresByType application/schema+json               "access plus 0 seconds"
+    ExpiresByType application/geo+json                  "access plus 0 seconds"
+    ExpiresByType application/xml                       "access plus 0 seconds"
+    ExpiresByType text/calendar                         "access plus 0 seconds"
+    ExpiresByType text/xml                              "access plus 0 seconds"
+
+
+  # Favicon (cannot be renamed!) and cursor images
+
+    ExpiresByType image/vnd.microsoft.icon              "access plus 1 week"
+    ExpiresByType image/x-icon                          "access plus 1 week"
+
+  # HTML
+
+    ExpiresByType text/html                             "access plus 0 seconds"
+
+
+  # JavaScript
+
+    ExpiresByType application/javascript                "access plus 1 year"
+    ExpiresByType application/x-javascript              "access plus 1 year"
+    ExpiresByType text/javascript                       "access plus 1 year"
+
+
+  # Manifest files
+
+    ExpiresByType application/manifest+json             "access plus 1 week"
+    ExpiresByType application/x-web-app-manifest+json   "access plus 0 seconds"
+    ExpiresByType text/cache-manifest                   "access plus 0 seconds"
+
+
+  # Markdown
+
+    ExpiresByType text/markdown                         "access plus 0 seconds"
+
+
+  # Media files
+
+    ExpiresByType audio/ogg                             "access plus 1 month"
+    ExpiresByType image/bmp                             "access plus 1 month"
+    ExpiresByType image/gif                             "access plus 1 month"
+    ExpiresByType image/jpeg                            "access plus 1 month"
+    ExpiresByType image/png                             "access plus 1 month"
+    ExpiresByType image/svg+xml                         "access plus 1 month"
+    ExpiresByType image/webp                            "access plus 1 month"
+    ExpiresByType video/mp4                             "access plus 1 month"
+    ExpiresByType video/ogg                             "access plus 1 month"
+    ExpiresByType video/webm                            "access plus 1 month"
+
+
+  # WebAssembly
+
+    ExpiresByType application/wasm                      "access plus 1 year"
+
+
+  # Web fonts
+
+    # Collection
+    ExpiresByType font/collection                       "access plus 1 month"
+
+    # Embedded OpenType (EOT)
+    ExpiresByType application/vnd.ms-fontobject         "access plus 1 month"
+    ExpiresByType font/eot                              "access plus 1 month"
+
+    # OpenType
+    ExpiresByType font/opentype                         "access plus 1 month"
+    ExpiresByType font/otf                              "access plus 1 month"
+
+    # TrueType
+    ExpiresByType application/x-font-ttf                "access plus 1 month"
+    ExpiresByType font/ttf                              "access plus 1 month"
+
+    # Web Open Font Format (WOFF) 1.0
+    ExpiresByType application/font-woff                 "access plus 1 month"
+    ExpiresByType application/x-font-woff               "access plus 1 month"
+    ExpiresByType font/woff                             "access plus 1 month"
+
+    # Web Open Font Format (WOFF) 2.0
+    ExpiresByType application/font-woff2                "access plus 1 month"
+    ExpiresByType font/woff2                            "access plus 1 month"
+
+
+  # Other
+
+    ExpiresByType text/x-cross-domain-policy            "access plus 1 week"
+
+</IfModule>

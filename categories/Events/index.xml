@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Events on Apache Camel</title>
+    <link>https://camel.apache.org/categories/Events/</link>
+    <description>Recent content in Events on Apache Camel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://camel.apache.org/categories/Events/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ApacheCon Asia Integration Track schedules</title>
+      <link>https://camel.apache.org/blog/2021/07/ApacheCon-Asia-2021/</link>
+      <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/07/ApacheCon-Asia-2021/</guid>
+      <description>ApacheCon Asia 2021 will be held online from 6 August to 8 August. As a track chair of the integration track, I will be presenting the topics related to integration and the conference registration is now open.
+Integration is the method and technology of integrating heterogeneous systems built on different platforms and with different solutions. The most famous application integration project at the ASF is Apache Camel, which has a variety of projects providing a variety of integration solutions.</description>
+    </item>
+    
+    <item>
+      <title>ApacheCon Asia and @Home schedules</title>
+      <link>https://camel.apache.org/blog/2021/06/ApacheCon-2021/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/06/ApacheCon-2021/</guid>
+      <description>As we announced earlier this year, we have not one but two Apache conferences featuring Apache Camel on the Integration track.
+ApacheCon Asia is from August 6 - 8, 2021 and has two days of Camel and software integration sessions held in Asia-Pacific timezone. And ApacheCon @Home from September 21 - 23, 2021 also features two days of Camel and software integration sessions with sessions held in Europe-Americas timezone.
+The schedules for the Integration track at ApacheCon Asia, and ApacheCon @Home have been published, and are packed with interesting technology talks and use case presentations.</description>
+    </item>
+    
+    <item>
+      <title>The call for papers is open for two ApacheCons / 两场Apache大会的演讲征集已经开始</title>
+      <link>https://camel.apache.org/blog/2021/03/ApacheCons2021/</link>
+      <pubDate>Tue, 30 Mar 2021 11:22:18 +0200</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/03/ApacheCons2021/</guid>
+      <description>This year we have two Apache conferences featuring Camel, ApacheCon Asia from 6th through 8th of August, and ApacheCon @Home from 21st through 23rd of September, 2021. Both of these conferences will be online.
+If you wish to present at any of these, please submit your talk proposal for the Integration track. The call for presentations is open for both ApacheCon Asia and ApacheCon @Home. You’re welcome to propose a session for both conferences, though be aware of the differences in target audiences based on region, timezone, and language.</description>
+    </item>
+    
+    <item>
+      <title>Recordings from ApacheCon @Home 2020</title>
+      <link>https://camel.apache.org/blog/2020/10/ApacheCon-at-Home-videos/</link>
+      <pubDate>Mon, 19 Oct 2020 11:27:14 +0200</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/10/ApacheCon-at-Home-videos/</guid>
+      <description>This year&amp;rsquo;s ApacheCon was an overwhelming success, with many tracks running in parallel. If you missed some of the talks on the Camel/Integration or would like to revisit your favorites, video recordings from ApacheCon @Home 2020 are now available on The Apache Software Foundation YouTube channel.
+You can watch the content from all three days in one playlist, with over 10 hours of content.
+For convenience, we listed the talks as they appear in the schedule here along with the slides shared by the speakers.</description>
+    </item>
+    
+    <item>
+      <title>Camel at ApacheCon @Home starts tomorrow!</title>
+      <link>https://camel.apache.org/blog/2020/09/ApacheCon-at-Home-starts/</link>
+      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/09/ApacheCon-at-Home-starts/</guid>
+      <description>ApacheCon @Home starts tomorrow, here is how to make the most of it.
+First, if you haven&amp;rsquo;t already registered there is still time, go over to the conference page to do so. It&amp;rsquo;s free (small donation encouraged)!
+Browse the track schedule and use the calendar icon to import the session calendar entry in your calendaring software, this way you&amp;rsquo;ll be reminded when a session you don&amp;rsquo;t want to miss is about to start.</description>
+    </item>
+    
+    <item>
+      <title>Camel at ApacheCon @Home 2020</title>
+      <link>https://camel.apache.org/blog/2020/07/ApacheCon-2020-at-home/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/07/ApacheCon-2020-at-home/</guid>
+      <description>We are pleased to announce that ApacheCon 2020 will be held online, September 29th through October 1st, 2020.
+If you wish to present at the event please submit your talk proposal for the Camel/Integration track when at ApacheCon 2020 website no later than Monday, July 13th by noon in the UTC timezone. Please do not wait for the last minute to submit.
+We are most interested to see talks that offer a learning experience to the attendees, so talks that present new parts of the Camel ecosystem (Camel K, Camel Quarkus, Camel Kafka Connector), talks showing off lessons learned, use cases, and visions on where software integration is heading in the future.</description>
+    </item>
+    
+    <item>
+      <title>CFP for ApacheCon North America 2020</title>
+      <link>https://camel.apache.org/blog/2020/02/ApacheConNA-2020-CFP/</link>
+      <pubDate>Mon, 24 Feb 2020 12:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/02/ApacheConNA-2020-CFP/</guid>
+      <description>As previous year Apache Camel is part of ApacheCon 2020 in North America. This year the conference will be held at the Sheraton, in New Orleans, September 28th through October 2nd, 2020.
+The call for presentations for ApacheCon North America 2020 is now open and the wider Camel community members are encouraged to submit. Look for the Camel/Integration track when submitting.
+We&amp;rsquo;re most interested to see talks that offer a learning experience to the attendees, so talks that present new parts of the Camel ecosystem (Camel K, Camel Quarkus, Camel Kafka Connector), talks showing off lessons learned, use cases, and visions on where software integration is heading in the future.</description>
+    </item>
+    
+    <item>
+      <title>Camel at FOSDEM 2020</title>
+      <link>https://camel.apache.org/blog/2020/01/FOSDEM-2020/</link>
+      <pubDate>Wed, 08 Jan 2020 13:30:00 +0100</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/01/FOSDEM-2020/</guid>
+      <description>What FOSDEM is free as in beer grassroots event for free software/open source communities to meet, share ideas and collaborate. You&amp;rsquo;ll find over 800 talks spread over 35 rooms of Université libre de Bruxelles campus over the first weekend of February. And building on last year&amp;rsquo;s well-received BoF session Camel is returning to FOSDEM.
+When FOSDEM 2020 is on 1st (from 9:30 to 19:00) and 2nd (from 9:00 to 18:00) of February.</description>
+    </item>
+    
+    <item>
+      <title>Camel at ApacheCon North America 2019</title>
+      <link>https://camel.apache.org/blog/2019/09/ApacheConNA-2019/</link>
+      <pubDate>Tue, 10 Sep 2019 16:45:32 +0200</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2019/09/ApacheConNA-2019/</guid>
+      <description>Apache Camel is part of ApacheCon 2019 in North America this year celebrating the 20th year anniversary of Apache Software Foundation.
+On the Integration track you will find out all about the state of Apache Camel from Claus Ibsen, Sami Adranly will present Camel based data integration platform at Uber called Medley Nicola Ferraro and Andrea Tarocchi will be talking about Camel K and Camel K with Knative, Bob Paulin will make the cloud integration friendly in Configuring Apache Camel for the Cloud and Michael Costello will talk about serverless integration with Camel.</description>
+    </item>
+    
+  </channel>
+</rss>

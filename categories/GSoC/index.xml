@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GSoC on Apache Camel</title>
+    <link>https://camel.apache.org/categories/GSoC/</link>
+    <description>Recent content in GSoC on Apache Camel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 24 Feb 2020 14:00:00 +0000</lastBuildDate><atom:link href="https://camel.apache.org/categories/GSoC/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google Summer of Code 2020 announced</title>
+      <link>https://camel.apache.org/blog/2020/02/GSoC-2020-announced/</link>
+      <pubDate>Mon, 24 Feb 2020 14:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/02/GSoC-2020-announced/</guid>
+      <description>A few days ago Google Summer of Code announced that Apache Software Foundation is again elected to participate as a mentor organization.
+We are looking for ideas, students and mentors willing to participate in GSoC 2020. Anyone in the Camel community can propose an idea, look at the JIRA issues labeled gsoc2020 or create new issues with ideas and set the gsoc2020 label. Have a look at the Mentor guide to understand the role of the mentor and the obligations you would take on.</description>
+    </item>
+    
+  </channel>
+</rss>

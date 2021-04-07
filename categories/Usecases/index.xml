@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Usecases on Apache Camel</title>
+    <link>https://camel.apache.org/categories/Usecases/</link>
+    <description>Recent content in Usecases on Apache Camel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://camel.apache.org/categories/Usecases/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rayvens: a new project powered by Camel K</title>
+      <link>https://camel.apache.org/blog/2021/07/rayvens/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/07/rayvens/</guid>
+      <description>We&amp;rsquo;re happy to learn that a new open source project has been launched to add integration capabilities to AI applications.
+Built on Ray and Apache Camel, Rayvens from @IBMResearch enables data scientists to interface with hundreds of data services with little effort to consume, process, and produce events and data in real time.
+The project perfectly fits the mission of Camel K of bringing event sources and sinks to any platform that needs data.</description>
+    </item>
+    
+    <item>
+      <title>Routing multicast output after encountering partial failures</title>
+      <link>https://camel.apache.org/blog/2021/05/multicast-failure-routing/</link>
+      <pubDate>Mon, 10 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/05/multicast-failure-routing/</guid>
+      <description>Problem description Multicast is a powerful EIP which supports parallel execution paths in asynchronous manner. There are various ways a Camel user can configure a multicast EIP. Check out the extensive documentation here 1. One can configure to execute all the child paths independently and continue routing the last reply as the outgoing message (default behavior unless you provide an aggregation strategy) 2. Additionally, you can plug in an implementation of a Camel aggregation strategy with user-defined logic to aggregate the output from each of those child paths before continuing further downstream routing.</description>
+    </item>
+    
+    <item>
+      <title>CDC with Camel and Debezium</title>
+      <link>https://camel.apache.org/blog/2020/05/CdcWithCamelAndDebezium/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/05/CdcWithCamelAndDebezium/</guid>
+      <description>Change Data Capture (CDC) is a well-established software design pattern for a system that monitors and captures data changes, so that other software can respond to those events.
+Using a CDC engine like Debezium along with [Camel]() integration framework, we can easily build data pipelines to bridge traditional data stores and new cloud-native event-driven architectures.
+The advantages of CDC comparing to a simple poll-based or query-based process are:
+ All changes captured: intermediary changes (updates, deletes) between two runs of the poll loop may be missed.</description>
+    </item>
+    
+    <item>
+      <title>Custom Web API Component</title>
+      <link>https://camel.apache.org/blog/2020/01/CustomWebApiComponent/</link>
+      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/01/CustomWebApiComponent/</guid>
+      <description>Have you built a new great Web API for your product? Wouldn&amp;rsquo;t be wonderful to have it available as a part of the great Apache Camel component family? We would love it.
+The community just released Camel 3 which is more modular, lightweight and already includes lots of components (300+) to quickly integrate various systems consuming or producing data. All of these components can be used with the same integration domain specific language (DSL) based on the famous Enterprise Integration Patterns (EIPs).</description>
+    </item>
+    
+    <item>
+      <title>CAPI Gateway: Using Apache Camel at the European Commission</title>
+      <link>https://camel.apache.org/blog/2020/01/capi-gateway/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/01/capi-gateway/</guid>
+      <description>I&amp;rsquo;ve been working at the European Commission for the last 4 years as a Software Architect, working for a unit responsible for developing reusable components, and advocating open source software. In this context, we organized already a couple of Hackathons and Bug bounties open to all the open source communities.
+In the team, we worked already a couple of times with Apache Camel, and I like the elegance and performance compared with other integration frameworks.</description>
+    </item>
+    
+  </channel>
+</rss>

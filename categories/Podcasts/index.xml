@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Podcasts on Apache Camel</title>
+    <link>https://camel.apache.org/categories/Podcasts/</link>
+    <description>Recent content in Podcasts on Apache Camel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://camel.apache.org/categories/Podcasts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JBoss Asylum Podcast about Apache Camel 3</title>
+      <link>https://camel.apache.org/blog/2019/12/Podcast47/</link>
+      <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2019/12/Podcast47/</guid>
+      <description>JBoss Asylm Podcast episode 47: What do you call an Apache Camel with 3 humps
+Claus Ibsen and Luca Burgazzoli sits down with Emanual and Max (hosts) and talks about what is coming in Apache Camel 3 on topics like Camel K and Camel Quarkus. We also cover Camel&amp;rsquo;s place in the modern world with cloud native and serverless workloads. And at the end we have some bits about what&amp;rsquo;s coming next in Camel 3.</description>
+    </item>
+    
+  </channel>
+</rss>

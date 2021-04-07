@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Camel-Kafka-Connector on Apache Camel</title>
+    <link>https://camel.apache.org/categories/Camel-Kafka-Connector/</link>
+    <description>Recent content in Camel-Kafka-Connector on Apache Camel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://camel.apache.org/categories/Camel-Kafka-Connector/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introducing Idempotency Support in Camel Kafka Connector</title>
+      <link>https://camel.apache.org/blog/2020/12/CKC-idempotency-070/</link>
+      <pubDate>Mon, 21 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/12/CKC-idempotency-070/</guid>
+      <description>In the next Camel Kafka connector release (0.7.0, on vote soon) there will be a new feature: the idempotency support on both source and sink connectors. The aim of this post is giving some hints on how and when to use the idempotency feature.
+What is Idempotency? The Idempotent Consumer from the EIP patterns is used to filter out duplicate messages: it essentially acts like a Message Filter to filter out duplicates, as reported in the Camel documentation</description>
+    </item>
+    
+  </channel>
+</rss>

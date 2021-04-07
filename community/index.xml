@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Community on Apache Camel</title>
+    <link>https://camel.apache.org/community/</link>
+    <description>Recent content in Community on Apache Camel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://camel.apache.org/community/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Articles</title>
+      <link>https://camel.apache.org/community/articles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/community/articles/</guid>
+      <description>Camel Videos  Integrating systems in the age of Quarkus and Camel 45 min webinar from May 2021 by Claus Ibsen, with quick overview of Camel 3 projects and then focus on Camel Quarkus, Camel K and Kamelets. Mix of slides and live demos (yes with a demo not working perfect) OCB: Integration in OpenShift 1 hour introductory presentation from May 2021 by Zineb Bendhiba, Rachel Jordan-McGeever, and María Arias de Reyna about Camel, Camel Quarkus, Camel K and Kamelets.</description>
+    </item>
+    
+    <item>
+      <title>Books</title>
+      <link>https://camel.apache.org/community/books/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/community/books/</guid>
+      <description>This page lists the known books about Apache Camel. If you happen to know a book which is not listed then please contact us, for example using the Mailing Lists.
+ Camel in Action 2nd edition Camel in Action Apache Camel Developer&amp;rsquo;s Cookbook Camel Design Patterns Mastering Apache Camel Instant Apache Camel Message Routing Instant Apache Camel Messaging System Enterprise Integration Patterns  Camel in Action 2nd edition Camel in Action 2nd edition by Claus Ibsen and Jonathan Anstey.</description>
+    </item>
+    
+    <item>
+      <title>Camel Extra components</title>
+      <link>https://camel.apache.org/community/camel-extra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/community/camel-extra/</guid>
+      <description>Camel Extra project contains a number of extension components which due to GPL/LGPL licensing cannot be hosted at Apache.</description>
+    </item>
+    
+    <item>
+      <title>Contributing</title>
+      <link>https://camel.apache.org/community/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/community/contributing/</guid>
+      <description>Contributing to Apache Camel First of all, thank you for having an interest in contributing to Apache Camel.
+Here are some guidelines on how to best approach the Apache Camel community and how to best apply yourself. There are many ways you can help make Camel a better piece of software - please dive in and help!
+ Try surfing the documentation - if something confuses you, bring it to our attention or suggest an improvement.</description>
+    </item>
+    
+    <item>
+      <title>Mailing Lists</title>
+      <link>https://camel.apache.org/community/mailing-list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/community/mailing-list/</guid>
+      <description>Use Camel User List You should post and subscribe to the Camel User List for all your questions on using Camel, or how to do X with Camel etc. If in doubt use this list. The Camel Developer List, is for the Camel team to discus development of the actual Camel project; do not use this list for questions on using Camel. Again to re-iterate, use the Camel User List, for your Camel questions.</description>
+    </item>
+    
+    <item>
+      <title>Sources</title>
+      <link>https://camel.apache.org/community/sources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/community/sources/</guid>
+      <description>## Web Browsing of git
+To browse via the web:
+https://gitbox.apache.org/repos/asf/camel.git ## Web Browing Using FishEye
+A hearty thanks to Atlassian for providing FishEye hosting for Camel. Below is the URL to browse the Subversion repo via FishEye:
+https://fisheye6.atlassian.com/browse/camel-git ## Checking out from git
+git clone https://gitbox.apache.org/repos/asf/camel.git Only project developers can commit to the git via this method. SSH must be installed on your client machine. Enter your site password when prompted.</description>
+    </item>
+    
+    <item>
+      <title>Support</title>
+      <link>https://camel.apache.org/community/support/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/community/support/</guid>
+      <description>Getting help If you are experiencing problems using Camel then please report your problem to our mailing list or Zulip chat. This allows the entire community to help with your problem. If indeed a bug has been identified in the Camel software, then document the problem in our Issue Tracker. Please refrain from immediately opening a ticket in the issue tracker unless you are certain it&amp;rsquo;s a problem in the Camel software.</description>
+    </item>
+    
+    <item>
+      <title>Team</title>
+      <link>https://camel.apache.org/community/team/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/community/team/</guid>
+      <description>This page lists who we are. By all means add yourself to the list - lets sort it in alphabetical order
+Committers When posting to the mailing lists, use plain text mails. Do not use HTML mails. HTML mails is more likely to be targeted as spam mails and will be rejected; as well it&amp;rsquo;s not easily readable by others.
+  Name ID Organisation     Aaron Mulder ammulder Chariot Solutions   Akitoshi Yoshida ay SAP   Andrea Cosentino acosentino Red Hat   Antonin Stefanutti  astefanutti  Red Hat   Babak Vahdat bvahdat Cyberlogic Consulting GmbH   Ben O&amp;rsquo;Day boday Initek Consulting   Bilgin Ibryam bibryam Red Hat   Bob Paulin bob     Bruce Snyder bsnyder     Charles Moulliard cmoulliard Red Hat   Christian Mueller cmueller Amazon Web Services   Christian Posta ceposta Solo   Christian Schneider cschneider    Claus Ibsen davsclaus Red Hat   Colm O hEigeartaigh coheigea Talend   David Jencks djencks IBM    Daniel Kulp dkulp Talend   Denis Istomin distomin    Dmitry Volodin dmvolod Red Hat   Franz Forsthofer forsthofer SAP   Freeman Fang ffang Red Hat   Gary Tully gtully Red Hat   Gert Vanthienen gertv     Gregor Zurowski gzurowski Sotheby&amp;rsquo;s   Guillaume Nodet gnodet Red Hat   Hadrian Zbarcea hadrian    Henryk Konsek hekonsek    Hiram Chirino chirino Red Hat   Ioannis Canellos iocanel Red Hat   Jacek Laskowski jlaskowski     James Carman jcarman Savoir Technologies   Jan Bednar janbednar CGI IT Czech Republic   Jean-Baptiste Onofré jbonofre Talend   Jeff Genender jgenender Savoir Technologies   Johan Edstrom joed Savoir Technologies   John Poth   Red Hat   Jonathan Anstey janstey Red Hat   James Netherton  Red Hat   James Strachan jstrachan    Luca Burgazzoli lburgazzoli Red Hat   Martin Krasser krasserm    Nicky Sandhu nsandhu    Nicola Ferraro nicolaferraro Red Hat   Onder Sezgin onders    Omar Al-Safi oalsafi Talend   Otavio Rodolfo Piske orpiske Red Hat   Quinn Stevenson quinn    Raul Kripalani raulk     Pascal Schumacher pascalschumacher    Peter Palaga ppalaga Red Hat   Rich Newcomb rnewcomb    Richard Kettelerij rickette Avisi BV   Rob Davies rajdavies    Roman Kalukiewicz romkal    Scott England-Sullivan sully6768 Red Hat   Stan Lewis slewis Red Hat   Tadayoshi Sato tsato Red Hat   Tomohisa Igarashi igarashitm Red Hat   Tracy Snell tjsnell  Juice Labs   Willem Jiang ningjiang Huawei   William Tam wtam Red Hat   Zoran Regvart zregvart Red Hat    Contributors Adding your name to the list below.</description>
+    </item>
+    
+    <item>
+      <title>User Stories</title>
+      <link>https://camel.apache.org/community/user-stories/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/community/user-stories/</guid>
+      <description>This page is intended as a place to collect user stories and feedback on Apache Camel. If you are using or have tried Apache Camel please add an entry or comment; or post to the mailing list.
+  Company, Product, or Project Description     Apache ActiveMQ Uses Camel to add Enterprise Integration Patterns support into the ActiveMQ broker. If you run an out of the box ActiveMQ broker, look in conf/camel.</description>
+    </item>
+    
+  </channel>
+</rss>

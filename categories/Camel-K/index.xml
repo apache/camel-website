@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Camel K on Apache Camel</title>
+    <link>https://camel.apache.org/categories/Camel-K/</link>
+    <description>Recent content in Camel K on Apache Camel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://camel.apache.org/categories/Camel-K/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Camel K 1.5 release</title>
+      <link>https://camel.apache.org/blog/2021/07/camel-k-release-1-5/</link>
+      <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/07/camel-k-release-1-5/</guid>
+      <description>Camel K 1.5 version is public since a few days. We&amp;rsquo;re proud to announce this new release containing enhancements and fixes. We&amp;rsquo;ve worked hard to fix the most important issues discovered with an eye on stabilization and performances. This new release is based on Camel Quarkus 2.0 and Apache Camel 3.11.
+Let&amp;rsquo;s find out what&amp;rsquo;s new in Camel K 1.5!
+New Camel Quarkus and Quarkus versions Camel Quarkus runtime has become the building block on which the Integration is materialized.</description>
+    </item>
+    
+    <item>
+      <title>Kamelet tooling support for Camel URI</title>
+      <link>https://camel.apache.org/blog/2021/05/KameletToolingSupportInCamelURI/</link>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/05/KameletToolingSupportInCamelURI/</guid>
+      <description>Kamelets (Kamel route snippets) are a new concept introduced in Camel K that allow users to connect to external systems via a simplified interface, hiding all the low level details about how those connections are implemented. There are several ways to consume them. One of them is as standard Camel Components. In this case, completion is provided to fill the template id and the parameter names. It is currently based on a fixed set of Kamelets provided by a snapshot of the kamelet catalog.</description>
+    </item>
+    
+    <item>
+      <title>How to Java debug a Camel K integration in VS Code - second iteration</title>
+      <link>https://camel.apache.org/blog/2021/05/JavaDebuggingInVSCode-iteration2/</link>
+      <pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/05/JavaDebuggingInVSCode-iteration2/</guid>
+      <description>Camel K is providing a new feature to Java debug deployed integrations. Before VS Code Tooling for Apache Camel K 0.0.25, more complex steps were required to leverage the VS Code Java debugging capabilities as explained in this previous blogpost.
+I recorded a video which is following the steps in this blogpost.
+Requirements  VS Code Extension Pack for Apache Camel with VS Code Tooling for Apache Camel K 0.</description>
+    </item>
+    
+    <item>
+      <title>New Camel K Logging Features</title>
+      <link>https://camel.apache.org/blog/2021/05/new-camel-k-logging-features/</link>
+      <pubDate>Mon, 10 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/05/new-camel-k-logging-features/</guid>
+      <description>New Camel K Logging Features for Camel K 1.5</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel K 1.4.0 What&#39;s New</title>
+      <link>https://camel.apache.org/blog/2021/04/camel-k-140-Whatsnew/</link>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/04/camel-k-140-Whatsnew/</guid>
+      <description>Apache Camel K 1.4.0 has just been released!
+This is a new major release of Camel K with an improved stability over previous versions, but also adding new features that simplify the overall user experience.
+It is based on Camel 3.9.0 and Camel-Quarkus 1.8.1, providing all improvements that they bring, plus much more. In this blog post, we&amp;rsquo;re going to describe the most important changes.
+Embedded Kamelet catalog Camel K 1.</description>
+    </item>
+    
+    <item>
+      <title>Kamelet Catalog</title>
+      <link>https://camel.apache.org/blog/2021/02/Kamelet-Catalog/</link>
+      <pubDate>Wed, 24 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/02/Kamelet-Catalog/</guid>
+      <description>We&amp;rsquo;re starting a new initiative at Apache Camel to create a community-driven catalog of reusable Kamelets (Camel route snippets, i.e. connectors) that can be used to stream data from/to external systems into any platform powered by Apache Camel.
+The &amp;ldquo;Apache Camel Kamelet catalog&amp;rdquo; is available here and it already contains a collection of useful Kamelets: we would like to extend it with help of the community.
+Kamelets are currently supported out-of-the-box by the Apache Camel K project and we&amp;rsquo;re working to support them also in Camel core, so that they can run eventually in any Apache Camel subproject, like Camel Kafka Connector (but also camel-quarkus, camel-spring-boot, &amp;hellip;).</description>
+    </item>
+    
+    <item>
+      <title>How to Java debug a Camel K integration in VS Code with Camel K 1.3.0</title>
+      <link>https://camel.apache.org/blog/2021/01/DebugInVSCodeWithCamelK1.3.0/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/01/DebugInVSCodeWithCamelK1.3.0/</guid>
+      <description>UPDATED ON 17 May 2021: More recent related content available in this blogpost.
+Camel K 1.3.0 is providing a new feature to Java debug deployed integrations. Even if Camel K 1.3.0 is not fully compatible with VS Code Tooling for Apache Camel K extension, it remains possible to leverage the VS Code Java debugging capabilities.
+I recorded a video which is following the steps in this blogpost. I let you choose your preferred way to discover how to java debug your Camel K integration in VS Code.</description>
+    </item>
+    
+    <item>
+      <title>Camel K 1.2.0 Released</title>
+      <link>https://camel.apache.org/blog/2020/10/camel-k-release-1.2.0/</link>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/10/camel-k-release-1.2.0/</guid>
+      <description>Apache Camel K 1.2.0 has been released!
+This version introduces some important features that will play an increasingly bigger role in future releases of Camel K.
+Quarkus as default runtime Camel K 1.2.0 uses camel-quarkus 1.1.0 (Quarkus 1.8.0.Final) as runtime, but Quarkus is no longer an optional runtime for Camel K: Quarkus is now the default runtime.
+This means that users no longer need to enable Quarkus explicitly when running their integrations (using kamel run -t quarkus.</description>
+    </item>
+    
+    <item>
+      <title>Camel K 1.0 is here</title>
+      <link>https://camel.apache.org/blog/2020/06/camel-k-release-1.0.0/</link>
+      <pubDate>Mon, 08 Jun 2020 17:00:00 +0200</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/06/camel-k-release-1.0.0/</guid>
+      <description>Apache Camel K has made a lot of progress since its inception and we&amp;rsquo;re now proud to announce the 1.0 release. We&amp;rsquo;ve been working hard in the past months to add more awesome features to Camel K, but also to improve stability and performance. This post contains a list of cool stuff that you&amp;rsquo;ll find in the 1.0 GA release.
+First of all, if you&amp;rsquo;re living under a rock and it&amp;rsquo;s the first time you hear about Camel K, you can read some introductory blog posts here (1 - introducing camel k, 2 - camel k on knative) or look at the Apache Camel website that contains a Camel K section with a lot of material that is automatically generated from the Github repository.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Miscellaneous on Apache Camel</title>
+    <link>https://camel.apache.org/misc/</link>
+    <description>Recent content in Miscellaneous on Apache Camel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://camel.apache.org/misc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Acknowledgments</title>
+      <link>https://camel.apache.org/acknowledgments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/acknowledgments/</guid>
+      <description>Many thanks to the following organizations for helping the Camel project.
+ YourKit GmbH kindly provide free licenses for the YourKit Java Profiler to open source projects. YourKit Java Profiler is primarily used to investigate performance and memory leak issues reported in Apache Camel.
+ Netlify kindly provides pull request builds, checks and previews for this website.</description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>https://camel.apache.org/privacy-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/privacy-policy/</guid>
+      <description>Apache Camel Privacy Policy The Apache Software Foundation (ASF) is an open source project organized under the auspices of a public benefit corporation. Our challenges and goals are large. For that reason, we have a very permissive (non) privacy policy that mirrors our public mission.
+Please assume that everything you contribute intentionally to The ASF, or any project at The ASF, is public. This includes emails on public lists, wikis, online discussions of all sorts, and software or documentation that you post to this website or our revision control repositories.</description>
+    </item>
+    
+  </channel>
+</rss>

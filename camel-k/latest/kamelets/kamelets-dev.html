@@ -1,0 +1,833 @@
+<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <title>Kamelets Developer Guide :: Apache Camel</title> <meta name="generator" content="Antora 3.0.0-alpha.1"> <link rel="stylesheet" href="../../../_/css/site-a192e92461.css"> <meta name="application-name" content="Apache Camel"> <link rel="manifest" href="../../../site.webmanifest"> <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../../../apple-touch-icon-57x57.png"> <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../apple-touch-icon-114x114.png"> <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../apple-touch-icon-72x72.png"> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../apple-touch-icon-144x144.png"> <link rel="apple-touch-icon-precomposed" sizes="60x60" href="../../../apple-touch-icon-60x60.png"> <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../../apple-touch-icon-120x120.png"> <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../../../apple-touch-icon-76x76.png"> <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../apple-touch-icon-152x152.png"> <link rel="icon" type="image/png" href="../../../favicon-196x196.png" sizes="196x196"> <link rel="icon" type="image/png" href="../../../favicon-96x96.png" sizes="96x96"> <link rel="icon" type="image/png" href="../../../favicon-32x32.png" sizes="32x32"> <link rel="icon" type="image/png" href="../../../favicon-16x16.png" sizes="16x16"> <link rel="icon" type="image/png" href="../../../favicon-128.png" sizes="128x128"> </head> <body class="article"> <header class="header"> <nav class="navbar"> <div class="navbar-brand"> <a class="nav-logo" href="../../.."></a> <div id="topbar-nav" class="navbar-menu"> <div class="navbar-end"> <a class="navbar-item-section navbar-item navbar-topics" href="../../../blog/"> <img alt="Blog" src="/_/img/blog.svg"> Blog </a> <a class="navbar-item-section navbar-item navbar-topics" href="../../../docs/"> <img alt="Documentation" src="/_/img/documentation.svg"> Documentation </a> <a class="navbar-item-section navbar-item navbar-topics" href="../../../community/"> <img alt="Community" src="/_/img/community.svg"> Community </a> <a class="navbar-item-section navbar-item navbar-topics" href="../../../download/"> <img alt="Download" src="/_/img/download.svg"> Download </a> </div> </div> <div class="navbar-fill"></div> <div class="break-row"></div> <div class="navbar-search results-hidden"> <input id="search" class="search" placeholder="Search" autocomplete="off"> <img src="/_/img/cancel.svg" alt="Clear" id="search-cancel"> <div id="search_results"></div> </div> <div class="navbar-tools"> <a rel="noopener noreferrer nofollow" href="https://github.com/apache/camel/" title="Collaborate on GitHub"><svg focusable="false" class="brand-icon"><use xlink:href="../../../_/img/brand-logos.svg#github"/></svg></a> <a rel="noopener noreferrer nofollow" href="https://camel.zulipchat.com" title="Chat on Zulip"><svg focusable="false" class="brand-icon"><use xlink:href="../../../_/img/brand-logos.svg#zulip"/></svg></a> <a rel="noopener noreferrer nofollow" href="https://twitter.com/ApacheCamel" title="Follow Apache Camel on Twitter"><svg focusable="false" class="brand-icon"><use xlink:href="../../../_/img/brand-logos.svg#twitter"/></svg></a> </div> <button class="navbar-burger" data-target="topbar-nav" type="button" aria-label="Menu"> <span></span> <span></span> <span></span> </button> </div> </nav> </header> <a id="top"></a> <div class="body"> <div class="nav-container" data-component="camel-k" data-version="latest"> <aside class="nav"> <div class="panels"> <div class="nav-panel-menu is-active"> <nav class="nav-menu" data-panel="menu"> <h3 class="title"><a href="../index.html">Camel K</a></h3> <ul class="nav-list"> <li class="nav-item" data-depth="0"> <ul class="nav-list"> <li class="nav-item" data-depth="1"> <button class="nav-item-toggle" aria-label="Expand or contract topic"></button> <a class="nav-link" href="../installation/installation.html">Installation</a> <ul class="nav-list"> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../installation/minikube.html">Minikube</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../installation/crc.html">Red Hat CodeReady Containers (CRC)</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../installation/digitalocean.html">DigitalOcean Kubernetes Cluster</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../installation/gke.html">Google Kubernetes Engine (GKE)</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../installation/openshift.html">OpenShift</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../installation/iks.html">IBM Kubernetes Service (IKS)</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../installation/k3s.html">K3s</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../installation/kind.html">Kind</a> </li> <li class="nav-item" data-depth="2"> <button class="nav-item-toggle" aria-label="Expand or contract topic"></button> <a class="nav-link" href="../installation/registry/registry.html">Configuring Registry</a> <ul class="nav-list"> <li class="nav-item" data-depth="3"> <a class="nav-link" href="../installation/registry/digitalocean.html">DigitalOcean</a> </li> <li class="nav-item" data-depth="3"> <a class="nav-link" href="../installation/registry/dockerhub.html">Docker Hub</a> </li> <li class="nav-item" data-depth="3"> <a class="nav-link" href="../installation/registry/github.html">Github Packages</a> </li> <li class="nav-item" data-depth="3"> <a class="nav-link" href="../installation/registry/gcr.html">Gcr.io</a> </li> <li class="nav-item" data-depth="3"> <a class="nav-link" href="../installation/registry/icr.html">IBM Container Registry</a> </li> <li class="nav-item" data-depth="3"> <a class="nav-link" href="../installation/registry/k3s.html">K3s</a> </li> </ul> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../installation/scheduling.html">Pod scheduling</a> </li> </ul> </li> <li class="nav-item" data-depth="1"> <button class="nav-item-toggle" aria-label="Expand or contract topic"></button> <a class="nav-link" href="../running/running.html">Running</a> <ul class="nav-list"> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../running/dev-mode.html">Dev Mode</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../running/run-from-github.html">Run from GitHub</a> </li> </ul> </li> <li class="nav-item" data-depth="1"> <a class="nav-link" href="../tutorials/tutorials.html">Tutorials</a> </li> <li class="nav-item" data-depth="1"> <button class="nav-item-toggle" aria-label="Expand or contract topic"></button> <a class="nav-link" href="../cli/cli.html">CLI</a> <ul class="nav-list"> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../cli/modeline.html">Modeline</a> </li> </ul> </li> <li class="nav-item" data-depth="1"> <button class="nav-item-toggle" aria-label="Expand or contract topic"></button> <a class="nav-link" href="../configuration/configuration.html">Configuration</a> <ul class="nav-list"> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../configuration/build-time-properties.html">Build time properties</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../configuration/components.html">Components</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../configuration/dependencies.html">Dependencies</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../configuration/runtime-properties.html">Properties</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../configuration/runtime-config.html">Runtime configuration</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../configuration/runtime-resources.html">Runtime resources</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../configuration/maven.html">Maven</a> </li> </ul> </li> <li class="nav-item" data-depth="1"> <button class="nav-item-toggle" aria-label="Expand or contract topic"></button> <span class="nav-text">Observability</span> <ul class="nav-list"> <li class="nav-item" data-depth="2"> <button class="nav-item-toggle" aria-label="Expand or contract topic"></button> <a class="nav-link" href="../observability/logging.html">Logging</a> <ul class="nav-list"> <li class="nav-item" data-depth="3"> <a class="nav-link" href="../observability/logging/operator.html">Operator</a> </li> <li class="nav-item" data-depth="3"> <a class="nav-link" href="../observability/logging/integration.html">Integration</a> </li> </ul> </li> <li class="nav-item" data-depth="2"> <button class="nav-item-toggle" aria-label="Expand or contract topic"></button> <a class="nav-link" href="../observability/monitoring.html">Monitoring</a> <ul class="nav-list"> <li class="nav-item" data-depth="3"> <a class="nav-link" href="../observability/monitoring/operator.html">Operator</a> </li> <li class="nav-item" data-depth="3"> <a class="nav-link" href="../observability/monitoring/integration.html">Integration</a> </li> </ul> </li> </ul> </li> <li class="nav-item" data-depth="1"> <button class="nav-item-toggle" aria-label="Expand or contract topic"></button> <span class="nav-text">Scaling</span> <ul class="nav-list"> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../scaling/integration.html">Integration</a> </li> </ul> </li> <li class="nav-item" data-depth="1"> <button class="nav-item-toggle" aria-label="Expand or contract topic"></button> <a class="nav-link" href="../traits/traits.html">Traits</a> <ul class="nav-list"> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/3scale.html">3scale</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/affinity.html">Affinity</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/builder.html">Builder</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/camel.html">Camel</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/container.html">Container</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/cron.html">Cron</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/dependencies.html">Dependencies</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/deployer.html">Deployer</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/deployment.html">Deployment</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/environment.html">Environment</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/error-handler.html">Error Handler</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/gc.html">Gc</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/ingress.html">Ingress</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/istio.html">Istio</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/jolokia.html">Jolokia</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/jvm.html">Jvm</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/kamelets.html">Kamelets</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/knative-service.html">Knative Service</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/knative.html">Knative</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/logging.html">Logging</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/master.html">Master</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/openapi.html">Openapi</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/owner.html">Owner</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/pdb.html">Pdb</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/platform.html">Platform</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/pod.html">Pod</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/prometheus.html">Prometheus</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/pull-secret.html">Pull Secret</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/quarkus.html">Quarkus</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/route.html">Route</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/service-binding.html">Service Binding</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/service.html">Service</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/toleration.html">Toleration</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../traits/tracing.html">Tracing</a> </li> </ul> </li> </ul> </li> <li class="nav-item" data-depth="0"> <ul class="nav-list"> <li class="nav-item" data-depth="1"> <button class="nav-item-toggle" aria-label="Expand or contract topic"></button> <a class="nav-link" href="../languages/languages.html">Languages</a> <ul class="nav-list"> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../languages/groovy.html">Groovy</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../languages/kotlin.html">Kotlin</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../languages/javascript.html">JavaScript</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../languages/java.html">Java</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../languages/jsh.html">Java (JShell)</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../languages/xml.html">XML</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../languages/yaml.html">YAML</a> </li> </ul> </li> </ul> </li> <li class="nav-item" data-depth="0"> <ul class="nav-list"> <li class="nav-item" data-depth="1"> <button class="nav-item-toggle" aria-label="Expand or contract topic"></button> <span class="nav-text">Troubleshooting</span> <ul class="nav-list"> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../troubleshooting/debugging.html">Debugging</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../troubleshooting/operating.html">Operating</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../troubleshooting/known-issues.html">Known Issues</a> </li> </ul> </li> <li class="nav-item" data-depth="1"> <button class="nav-item-toggle" aria-label="Expand or contract topic"></button> <a class="nav-link" href="kamelets.html">Kamelets</a> <ul class="nav-list"> <li class="nav-item" data-depth="2"> <a class="nav-link" href="kamelets-user.html">Kamelets User Guide</a> </li> <li class="nav-item is-current-page" data-depth="2"> <a class="nav-link" href="kamelets-dev.html">Kamelets Developer Guide</a> </li> </ul> </li> <li class="nav-item" data-depth="1"> <button class="nav-item-toggle" aria-label="Expand or contract topic"></button> <a class="nav-link" href="../architecture/architecture.html">Architecture</a> <ul class="nav-list"> <li class="nav-item" data-depth="2"> <button class="nav-item-toggle" aria-label="Expand or contract topic"></button> <a class="nav-link" href="../architecture/operator.html">Operator</a> <ul class="nav-list"> <li class="nav-item" data-depth="3"> <a class="nav-link" href="../architecture/cr/integration-platform.html">IntegrationPlatform</a> </li> <li class="nav-item" data-depth="3"> <a class="nav-link" href="../architecture/cr/integration.html">Integration</a> </li> <li class="nav-item" data-depth="3"> <a class="nav-link" href="../architecture/cr/integration-kit.html">IntegrationKit</a> </li> <li class="nav-item" data-depth="3"> <a class="nav-link" href="../architecture/cr/build.html">Build</a> </li> <li class="nav-item" data-depth="3"> <a class="nav-link" href="../architecture/cr/camel-catalog.html">CamelCatalog</a> </li> </ul> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../architecture/runtime.html">Runtime</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../architecture/traits.html">Traits</a> </li> </ul> </li> <li class="nav-item" data-depth="1"> <a class="nav-link" href="../apis/camel.html">API</a> </li> <li class="nav-item" data-depth="1"> <a class="nav-link" href="../uninstalling.html">Uninstalling</a> </li> <li class="nav-item" data-depth="1"> <button class="nav-item-toggle" aria-label="Expand or contract topic"></button> <a class="nav-link" href="../contributing/developers.html">Contributing</a> <ul class="nav-list"> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../contributing/local-development.html">Local development</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../contributing/local-deployment-olm.html">Local OLM deployment</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="../contributing/e2e.html">Local E2E testing</a> </li> </ul> </li> </ul> </li> </ul> </nav> </div> <div class="nav-panel-explore" data-panel="explore"> <div class="context"> <span class="title">Camel K</span> <span class="version">latest</span> </div> <ul class="components"> <li class="component"> <span class="title">User manual</span> <ul class="versions"> <li class="version"> <a href="../../../manual/latest/index.html">latest</a> </li> </ul> </li> <li class="component"> <span class="title">Camel Components</span> <ul class="versions"> <li class="version"> <a href="../../../components/latest/index.html">latest</a> </li> <li class="version"> <a href="../../../components/3.11.x/index.html">3.11.x (LTS)</a> </li> <li class="version"> <a href="../../../components/3.7.x/index.html">3.7.x (LTS)</a> </li> <li class="version"> <a href="../../../components/3.4.x/index.html">3.4.x (LTS)</a> </li> <li class="version"> <a href="../../../components/2.x/index.html">2.x</a> </li> </ul> </li> <li class="component is-current"> <span class="title">Camel K</span> <ul class="versions"> <li class="version is-current"> <a href="../index.html">latest</a> </li> <li class="version"> <a href="../../1.4.x/index.html">1.4.x</a> </li> </ul> </li> <li class="component"> <span class="title">Camel Kafka Connector</span> <ul class="versions"> <li class="version"> <a href="../../../camel-kafka-connector/latest/index.html">latest</a> </li> <li class="version"> <a href="../../../camel-kafka-connector/0.7.x/index.html">0.7.x</a> </li> <li class="version"> <a href="../../../camel-kafka-connector/0.4.x/index.html">0.4.x</a> </li> </ul> </li> <li class="component"> <span class="title">Kamelet Catalog</span> <ul class="versions"> <li class="version"> <a href="../../../camel-kamelets/latest/index.html">latest</a> </li> </ul> </li> <li class="component"> <span class="title">Camel Karaf</span> <ul class="versions"> <li class="version"> <a href="../../../camel-karaf/latest/index.html">latest</a> </li> <li class="version"> <a href="../../../camel-karaf/3.11.x/index.html">3.11.x (LTS)</a> </li> <li class="version"> <a href="../../../camel-karaf/3.7.x/index.html">3.7.x (LTS)</a> </li> <li class="version"> <a href="../../../camel-karaf/3.4.x/index.html">3.4.x (LTS)</a> </li> </ul> </li> <li class="component"> <span class="title">Camel Quarkus</span> <ul class="versions"> <li class="version"> <a href="../../../camel-quarkus/latest/index.html">latest</a> </li> <li class="version"> <a href="../../../camel-quarkus/2.0.0/index.html">2.0.0</a> </li> </ul> </li> <li class="component"> <span class="title">Camel Spring Boot</span> <ul class="versions"> <li class="version"> <a href="../../../camel-spring-boot/latest/index.html">latest</a> </li> <li class="version"> <a href="../../../camel-spring-boot/3.11.x/index.html">3.11.x (LTS)</a> </li> <li class="version"> <a href="../../../camel-spring-boot/3.7.x/index.html">3.7.x (LTS)</a> </li> <li class="version"> <a href="../../../camel-spring-boot/3.4.x/index.html">3.4.x (LTS)</a> </li> </ul> </li> </ul> </div> </div> </aside> </div> <main class="article"> <nav class="toolbar"> <button class="nav-toggle" aria-label="Toggle submenu"></button> <a href="../../../manual/latest/index.html" class="home-link"></a> <nav class="breadcrumbs" aria-label="breadcrumbs"> <ul> <li><a href="../index.html">Camel K</a></li> <li><a href="kamelets.html">Kamelets</a></li> <li><a href="kamelets-dev.html">Kamelets Developer Guide</a></li> </ul> </nav> <div class="page-versions"> <button class="version-menu-toggle" title="Show other versions of page">latest</button> <div class="version-menu"> <a class="version is-current" href="kamelets-dev.html">latest</a> <a class="version" href="../../1.4.x/kamelets/kamelets-dev.html">1.4.x</a> </div> </div> <div class="edit-this-page"><a href="https://github.com/apache/camel-k/edit/main/docs/modules/ROOT/pages/kamelets/kamelets-dev.adoc">Edit this Page</a></div> </nav> <div class="content"> <article class="doc"> <h1 class="page">Kamelets Developer Guide</h1> <div class="sect1"> <h2 id="kamelets-dev-introduction"><a class="anchor" href="#kamelets-dev-introduction"></a>Introduction</h2> <div class="sectionbody"> <div class="paragraph"> <p>This document guides you through the process of developing a new Kamelet that can be used by any Apache Camel subproject supporting the Kamelet technology stack and shared with others via Kamelet catalogs, such as the official the Apache Camel <a href="../../../camel-kamelets/latest/index.html" class="page">Kamelet Catalog</a>.</p> </div> <div class="paragraph"> <p>We assume that the reader is familiar with the content of the <a href="kamelets-user.html" class="page">Kamelets User Guide</a> and with Camel K <a href="../installation/installation.html" class="page">installation</a> and general usage.</p> </div> </div> </div> <div class="sect1"> <h2 id="_basics"><a class="anchor" href="#_basics"></a>Basics</h2> <div class="sectionbody"> <div class="paragraph"> <p>If you started to learn a bit about Kamelets, you&#8217;ve seen that they can be used to create two kinds of connectors:</p> </div> <div class="ulist"> <ul> <li> <p><strong>Sources</strong>: they produce data that can be injected into a destination</p> </li> <li> <p><strong>Sinks</strong>: they consume data and optionally produce a response</p> </li> </ul> </div> <div class="paragraph"> <p>When creating a new Kamelet, you should first decide first which kind of Kamelet you&#8217;re going to create, which depends on the use case you&#8217;ve in mind. A Kamelet does a <strong>single thing</strong>, so if you want to provide both a source and a sink for your system, they are two Kamelets.</p> </div> <div class="paragraph"> <p>In its essence, a Kamelet consists of a <strong>single YAML file</strong> that contains information on two distinct aspects of the connector:</p> </div> <div class="ulist"> <ul> <li> <p><strong>User view</strong>: this part contains general documentation about the Kamelet, covering also the parameters that need to be configured in order to use it</p> </li> <li> <p><strong>Runtime aspects</strong>: this part tells the Camel runtime how to implement what the Kamelet promises to do. Most of the times it contains a Camel route template in YAML DSL</p> </li> </ul> </div> <div class="admonitionblock note"> <div class="table-wrapper"><table> <tr> <td class="icon"> <i class="fa icon-note" title="Note"></i> </td> <td class="content"> We&#8217;re ignoring here the part around data types of a Kamelet, which is not fundamental for the Kamelet to work and it is still subject to change </td> </tr> </table></div> </div> <div class="paragraph"> <p>We&#8217;ll guide you through the process of creating a simple Kamelet by remapping a Camel component, then we&#8217;ll go through a much more complicated real-world example.</p> </div> </div> </div> <div class="sect1"> <h2 id="_creating_a_simple_kamelet"><a class="anchor" href="#_creating_a_simple_kamelet"></a>Creating a simple Kamelet</h2> <div class="sectionbody"> <div class="paragraph"> <p>Since Apache Camel provides more than 300 components out of the box, it&#8217;s easy to create a Kamelet starting from one of the components already available. Most of the Kamelets available in the official catalog, in fact, are simple ones that contain only a remapping of the Kamelet properties into Camel endpoint parameters. We&#8217;re going to show an example shortly.</p> </div> <div class="paragraph"> <p>Suppose that you want to provide a Kamelet that allows users to search data on Twitter, providing a stream of information about a given keyword. Creating such a Kamelet is a fairly easy task: we can use options of the "camel-twitter" component without adding much processing logic.</p> </div> <div class="paragraph"> <p>So the procedure of writing a simple Kamelet starts with scaffolding a new Kamelet resource, which can be done with the <code>kamel</code> CLI:</p> </div> <div class="listingblock"> <div class="content"> <pre class="highlightjs highlight"><code>kamel init twitter-search-source.kamelet.yaml</code></pre> </div> </div> <div class="paragraph"> <p>This produces a YAML file like the following one:</p> </div> <div class="listingblock"> <div class="title">twitter-search-source.kamelet.yaml</div> <div class="content"> <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">apiVersion: camel.apache.org/v1alpha1
+kind: Kamelet
+metadata:
+  name: twitter-search-source
+  labels:
+    camel.apache.org/kamelet.type: "source"
+spec:
+  definition:
+    title: "Timer"
+    description: "Produces periodic events with a custom payload"
+    required:
+      - message
+    properties:
+      period:
+        title: Period
+        description: The time interval between two events
+        type: integer
+        default: 1000
+      message:
+        title: Message
+        description: The message to generate
+        type: string
+  types:
+    out:
+      mediaType: text/plain
+  flow:
+    from:
+      uri: timer:tick
+      parameters:
+        period: "{{period}}"
+      steps:
+        - set-body:
+            constant: "{{message}}"
+        - to: "kamelet:sink"</code></pre> </div> </div> <div class="paragraph"> <p>We need to change the file to do what we want to achieve, that is, creating a route that searches a given keyword on Twitter.</p> </div> <div class="paragraph"> <p>The route provided in the initial scaffold (timer-to-log) is not what we need, so we change it to the following:</p> </div> <div class="listingblock"> <div class="title">twitter-search-source.kamelet.yaml</div> <div class="content"> <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">apiVersion: camel.apache.org/v1alpha1
+kind: Kamelet
+# ...
+spec:
+# ...
+  flow:
+    from:
+      uri: "twitter-search:{{keywords}}" <i class="conum" data-value="1"></i><b>(1)</b>
+      parameters:
+        accessToken: "{{accessToken}}" <i class="conum" data-value="2"></i><b>(2)</b>
+        accessTokenSecret: "{{accessTokenSecret}}"
+        consumerKey: "{{apiKey}}" <i class="conum" data-value="3"></i><b>(3)</b>
+        consumerSecret: "{{apiKeySecret}}"
+      steps:
+      - marshal: <i class="conum" data-value="4"></i><b>(4)</b>
+          json: {}
+      - to: "kamelet:sink" <i class="conum" data-value="5"></i><b>(5)</b></code></pre> </div> </div> <div class="colist arabic"> <div class="table-wrapper"><table> <tr> <td><i class="conum" data-value="1"></i><b>1</b></td> <td><code>keywords</code> is a path parameter in <a href="../../../components/latest/twitter-search-component.html" class="page">Camel Twitter-search</a></td> </tr> <tr> <td><i class="conum" data-value="2"></i><b>2</b></td> <td>Some endpoint parameters are just mapped 1-1</td> </tr> <tr> <td><i class="conum" data-value="3"></i><b>3</b></td> <td>The Camel component <code>consumerKey</code> is named <code>apiKey</code> to reflect the actual name in the Twitter developer portal</td> </tr> <tr> <td><i class="conum" data-value="4"></i><b>4</b></td> <td>The Camel Twitter component generates Java objects, so we marshal them to JSON</td> </tr> <tr> <td><i class="conum" data-value="5"></i><b>5</b></td> <td>A Source Kamelet sends data to the special endpoint "kamelet:sink", that will be replaced at runtime by a different target</td> </tr> </table></div> </div> <div class="paragraph"> <p>The YAML route template above just uses the <code>twitter-search</code> component to do searches on Twitter. We added a marshalling step to JSON because the output of a Kamelet needs always to be something that can be transferred over the wire.</p> </div> <div class="paragraph"> <p>The Kamelet is almost complete, we just need to document the parameters in a JSON schema format. We specify it in the <code>spec</code> &#8594; <code>definition</code> part:</p> </div> <div class="listingblock"> <div class="title">twitter-search-source.kamelet.yaml</div> <div class="content"> <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">apiVersion: camel.apache.org/v1alpha1
+kind: Kamelet
+metadata:
+  name: twitter-search-source
+# ...
+spec:
+  definition:
+    title: "Twitter Search Source" <i class="conum" data-value="1"></i><b>(1)</b>
+    description: |-
+      Allows to get all tweets on particular keywords from Twitter.
+
+      It requires tokens that can be obtained by creating an application
+      in the Twitter developer portal: https://developer.twitter.com/.
+    required: <i class="conum" data-value="2"></i><b>(2)</b>
+    - keywords
+    - apiKey
+    - apiKeySecret
+    - accessToken
+    - accessTokenSecret
+    properties:
+      keywords: <i class="conum" data-value="3"></i><b>(3)</b>
+        title: Keywords
+        description: The keywords to use in the Twitter search (Supports Twitter standard operators)
+        type: string
+        example: "Apache Camel"
+      apiKey:
+        title: API Key
+        description: The API Key from the Twitter application in the developer portal
+        type: string
+        format: password
+        x-descriptors:
+        - urn:alm:descriptor:com.tectonic.ui:password <i class="conum" data-value="4"></i><b>(4)</b>
+      apiKeySecret:
+        title: API Key Secret
+        description: The API Key Secret from the Twitter application in the developer portal
+        type: string
+        format: password
+        x-descriptors:
+        - urn:alm:descriptor:com.tectonic.ui:password
+      accessToken:
+        title: Access Token
+        description: The Access Token from the Twitter application in the developer portal
+        type: string
+        format: password
+        x-descriptors:
+        - urn:alm:descriptor:com.tectonic.ui:password
+      accessTokenSecret:
+        title: Access Token Secret
+        description: The Access Token Secret from the Twitter application in the developer portal
+        type: string
+        format: password
+        x-descriptors:
+        - urn:alm:descriptor:com.tectonic.ui:password
+# ...</code></pre> </div> </div> <div class="colist arabic"> <div class="table-wrapper"><table> <tr> <td><i class="conum" data-value="1"></i><b>1</b></td> <td>General information about the Kamelet itself in textual format</td> </tr> <tr> <td><i class="conum" data-value="2"></i><b>2</b></td> <td>List of required parameters</td> </tr> <tr> <td><i class="conum" data-value="3"></i><b>3</b></td> <td>A specification for each one of the parameters (flat structure, no nested options allowed)</td> </tr> <tr> <td><i class="conum" data-value="4"></i><b>4</b></td> <td>Optional graphical customization for a specific UI (OpenShift Console)</td> </tr> </table></div> </div> <div class="paragraph"> <p>This is all you need to create a Kamelet so that other users can leverage it. There are a few things remaining, like setting information about the generated objects and other metadata (like the icon and the provider and you&#8217;re done). The final Kamelet can look like the following:</p> </div> <div class="listingblock"> <div class="title">twitter-search-source.kamelet.yaml</div> <div class="content"> <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">apiVersion: camel.apache.org/v1alpha1
+kind: Kamelet
+metadata:
+  name: twitter-search-source
+  annotations:
+    camel.apache.org/kamelet.icon: "data:image/svg+xml;base64,..." # Truncated <i class="conum" data-value="1"></i><b>(1)</b>
+    camel.apache.org/provider: "Apache Software Foundation"
+  labels:
+    camel.apache.org/kamelet.type: "source"
+    camel.apache.org/kamelet.group: "Twitter"
+spec:
+  definition:
+    title: "Twitter Search Source"
+    description: |-
+      Allows to get all tweets on particular keywords from Twitter.
+
+      It requires tokens that can be obtained by creating an application
+      in the Twitter developer portal: https://developer.twitter.com/.
+    required:
+    - keywords
+    - apiKey
+    - apiKeySecret
+    - accessToken
+    - accessTokenSecret
+    properties:
+      keywords:
+        title: Keywords
+        description: The keywords to use in the Twitter search (Supports Twitter standard operators)
+        type: string
+        example: "Apache Camel"
+      apiKey:
+        title: API Key
+        description: The API Key from the Twitter application in the developer portal
+        type: string
+        format: password
+        x-descriptors:
+        - urn:alm:descriptor:com.tectonic.ui:password
+      apiKeySecret:
+        title: API Key Secret
+        description: The API Key Secret from the Twitter application in the developer portal
+        type: string
+        format: password
+        x-descriptors:
+        - urn:alm:descriptor:com.tectonic.ui:password
+      accessToken:
+        title: Access Token
+        description: The Access Token from the Twitter application in the developer portal
+        type: string
+        format: password
+        x-descriptors:
+        - urn:alm:descriptor:com.tectonic.ui:password
+      accessTokenSecret:
+        title: Access Token Secret
+        description: The Access Token Secret from the Twitter application in the developer portal
+        type: string
+        format: password
+        x-descriptors:
+        - urn:alm:descriptor:com.tectonic.ui:password
+  types: <i class="conum" data-value="2"></i><b>(2)</b>
+    out:
+      mediaType: application/json
+  flow: <i class="conum" data-value="3"></i><b>(3)</b>
+    from:
+      uri: "twitter-search:{{keywords}}"
+      parameters:
+        accessToken: "{{accessToken}}"
+        accessTokenSecret: "{{accessTokenSecret}}"
+        consumerKey: "{{apiKey}}"
+        consumerSecret: "{{apiKeySecret}}"
+      steps:
+      - marshal:
+          json: {}
+      - to: "kamelet:sink"</code></pre> </div> </div> <div class="colist arabic"> <div class="table-wrapper"><table> <tr> <td><i class="conum" data-value="1"></i><b>1</b></td> <td>An icon with an appropriate license, better using svg+base64 URL encoding. You can encode icons using services like <a href="https://dopiaza.org/tools/datauri/index.php">this one</a></td> </tr> <tr> <td><i class="conum" data-value="2"></i><b>2</b></td> <td>The types section indicates that the Kamelet is going to produce JSON data. This part of the Kamelet spec is likely to change in the future but is not fundamental for the Kamelet mechanics to work</td> </tr> <tr> <td><i class="conum" data-value="3"></i><b>3</b></td> <td>The previous YAML flow</td> </tr> </table></div> </div> <div class="paragraph"> <p>The Kamelet can be shared on the Catalog and or created on a Kubernetes cluster to let users use it.</p> </div> <div class="sect2"> <h3 id="_trying_it_out"><a class="anchor" href="#_trying_it_out"></a>Trying it out</h3> <div class="paragraph"> <p>A simple way to try it out is to apply it on a cluster, together with a simple binding. Assuming that you have a Kubernetes cluster and you&#8217;re connected to a namespace where the Camel K operator can act, just create the Kamelet:</p> </div> <div class="listingblock"> <div class="content"> <pre class="highlightjs highlight"><code>kubectl apply -f twitter-search-source.kamelet.yaml</code></pre> </div> </div> <div class="paragraph"> <p>Then you can create a binding like the following one to try it out:</p> </div> <div class="listingblock"> <div class="title">twitter-search-source-binding.yaml</div> <div class="content"> <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: twitter-search-source-binding
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: twitter-search-source
+    properties:
+      keywords: "Apache Camel"
+      apiKey: "your own"
+      apiKeySecret: "your own"
+      accessToken: "your own"
+      accessTokenSecret: "your own"
+  sink:
+    uri: "log:info"</code></pre> </div> </div> <div class="paragraph"> <p>This can be created using:</p> </div> <div class="listingblock"> <div class="content"> <pre class="highlightjs highlight"><code>kubectl apply -f twitter-search-source-binding.yaml</code></pre> </div> </div> <div class="paragraph"> <p>Once created, you can see the logs of the binding using:</p> </div> <div class="listingblock"> <div class="content"> <pre class="highlightjs highlight"><code>kamel logs twitter-search-source-binding</code></pre> </div> </div> <div class="paragraph"> <p>If everything goes right, you should get some tweets in the logs after the integration is created.</p> </div> <div class="paragraph"> <p>Refer to the <a href="kamelets-user.html" class="page">Kamelets User Guide</a> for more information on how to use it in different contexts (like Knative, Kafka, etc.).</p> </div> </div> </div> </div> <div class="sect1"> <h2 id="_creating_a_complex_kamelet"><a class="anchor" href="#_creating_a_complex_kamelet"></a>Creating a complex Kamelet</h2> <div class="sectionbody"> <div class="paragraph"> <p>We&#8217;re now going to create a Kamelet with a high degree of complexity, to show how the Kamelet model can be used also to go over the functionality provided by a single Camel Component.</p> </div> <div class="admonitionblock tip"> <div class="table-wrapper"><table> <tr> <td class="icon"> <i class="fa icon-tip" title="Tip"></i> </td> <td class="content"> This example is complicated on purpose and uses several components and EIPs from Apache Camel: luckily your Kamelets will be much simpler than this one. </td> </tr> </table></div> </div> <div class="paragraph"> <p>It will be a Kamelet of type "source", but most of the principles explained here can be taken into account also when developing a Kamelet of type "sink". The technical differences between the two scenarios will be highlighted in the <a href="#creating-sink">"Creating a sink Kamelet"</a> section.</p> </div> <div class="paragraph"> <p>We&#8217;re going to take a real world use case having a moderate complexity: we want to create a source of eartquake events around the world, taking data from the <a href="https://earthquake.usgs.gov/fdsnws/event/1/">USGS APIs</a>.</p> </div> <div class="sect2"> <h3 id="_step_1_write_an_end_to_end_integration"><a class="anchor" href="#_step_1_write_an_end_to_end_integration"></a>Step 1: write an end-to-end integration</h3> <div class="paragraph"> <p>Contrary to what one might expect, the first thing you need to do is to <strong>forget about Kamelets</strong> and just try to write a Camel K integration that consumes the earthquake data.</p> </div> <div class="paragraph"> <p>You may choose the language that you prefer to write the first integration, even writing it directly in YAML. We write it using the Java DSL because that is the language that most Apache Camel users are familiar with and it&#8217;s also supported by the tooling.</p> </div> <div class="admonitionblock tip"> <div class="table-wrapper"><table> <tr> <td class="icon"> <i class="fa icon-tip" title="Tip"></i> </td> <td class="content"> For a great developer experience, we suggest to use <a href="https://code.visualstudio.com/">Visual Studio Code</a> with the <a href="https://marketplace.visualstudio.com/items?itemName=redhat.apache-camel-extension-pack">Camel Extension Pack</a> </td> </tr> </table></div> </div> <div class="paragraph"> <p>We start from scratch by creating an integration file</p> </div> <div class="listingblock"> <div class="content"> <pre class="highlightjs highlight"><code>kamel init Earthquake.java</code></pre> </div> </div> <div class="paragraph"> <p>This will scaffold a Java source file with a timer-to-log integration, that we&#8217;ll edit according to our need. A first version of the integration might look like the following:</p> </div> <div class="listingblock"> <div class="title">Earthquake.java</div> <div class="content"> <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// camel-k: language=java
+
+import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.Exchange;
+
+public class Earthquake extends RouteBuilder {
+  @Override
+  public void configure() throws Exception {
+
+    from("timer:earthquake?period=10000") <i class="conum" data-value="1"></i><b>(1)</b>
+      .setHeader(Exchange.HTTP_METHOD).constant("GET")
+      .to("https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson") <i class="conum" data-value="2"></i><b>(2)</b>
+      .convertBodyTo(String.class)
+      .to("log:info"); <i class="conum" data-value="3"></i><b>(3)</b>
+
+  }
+}</code></pre> </div> </div> <div class="colist arabic"> <div class="table-wrapper"><table> <tr> <td><i class="conum" data-value="1"></i><b>1</b></td> <td>We do a timed poll from the API because there&#8217;s no way to consume it direcly</td> </tr> <tr> <td><i class="conum" data-value="2"></i><b>2</b></td> <td>Look at <a href="https://earthquake.usgs.gov/fdsnws/event/1/" class="bare">https://earthquake.usgs.gov/fdsnws/event/1/</a> for more information about the API. We&#8217;re using the <a href="https://en.wikipedia.org/wiki/GeoJSON">GeoJSON</a> format</td> </tr> <tr> <td><i class="conum" data-value="3"></i><b>3</b></td> <td>The integration ends in a "log:info" endpoint, because we just want to see if we can contact the API and get some results back</td> </tr> </table></div> </div> <div class="paragraph"> <p>In order to run the integration above, if you have a Kubernetes cluster with Camel K installed, you can rely on that using <code>kamel run Earthquake.java</code>, but there&#8217;s a simpler solution that just requires your own machine:</p> </div> <div class="listingblock"> <div class="content"> <pre class="highlightjs highlight"><code>kamel local run Earthquake.java</code></pre> </div> </div> <div class="paragraph"> <p>The <code>local</code> keyword will tell Camel K to use your own machine (you need maven 3.6+ and Java 11+ in order for this to work). The integration will start and begin printing out earthquake data every 10 seconds.</p> </div> <div class="paragraph"> <p>I show an excerpt of what is printed by the integration:</p> </div> <div class="listingblock"> <div class="content"> <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+   "type":"FeatureCollection",
+   "metadata":{
+      "generated":1614860715000,
+      "url":"https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson",
+      "title":"USGS Earthquakes",
+      "status":200,
+      "api":"1.10.3",
+      "count":10762
+   },
+   "features":[
+      {
+         "type":"Feature",
+         "properties":{
+            "mag":2.17,
+            "place":"27km ENE of Pine Valley, CA",
+            "time":1614859396200,
+            "updated":1614860064420,
+            "url":"https://earthquake.usgs.gov/earthquakes/eventpage/ci39808832",
+            "detail":"https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=ci39808832&amp;format=geojson",
+            "status":"automatic",
+            "tsunami":0,
+            "sig":72,
+            "net":"ci",
+            "code":"39808832",
+            "ids":",ci39808832,",
+            "sources":",ci,",
+            "types":",focal-mechanism,nearby-cities,origin,phase-data,scitech-link,",
+            "nst":57,
+            "dmin":0.04475,
+            "rms":0.22,
+            "gap":60,
+            "magType":"ml",
+            "type":"earthquake",
+            "title":"M 2.2 - 27km ENE of Pine Valley, CA"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -116.2648333,
+               32.9236667,
+               3.54
+            ]
+         },
+         "id":"ci39808832"
+      }
+    ]
+}</code></pre> </div> </div> <div class="admonitionblock note"> <div class="table-wrapper"><table> <tr> <td class="icon"> <i class="fa icon-note" title="Note"></i> </td> <td class="content"> We&#8217;ve truncated the list of "features" to just the first one, but it contains a lot more data </td> </tr> </table></div> </div> </div> <div class="sect2"> <h3 id="_step_2_optional_iterate_on_the_integration"><a class="anchor" href="#_step_2_optional_iterate_on_the_integration"></a>Step 2 (optional): iterate on the integration</h3> <div class="paragraph"> <p>Since the integration above produces useful data, its route could be technically used to build a source Kamelet, but there are a few problems we may want to address before publishing it:</p> </div> <div class="olist arabic"> <ol class="arabic"> <li> <p>It produces a lot of data (10762 events, last 30 days by default). We may want to start emitting events of the last e.g. 2 hours by default for this use case: we can add a filter on the query to accomplish this.</p> </li> <li> <p>It produces a collection of features (earthquake events), while you may want to push to the destination the individual features. We can use Camel&#8217;s built-in <code>split</code> and <code>jsonpath</code> support to split the collection into separate entries.</p> </li> <li> <p>It continuously produces the same data: i.e. just wait another 10 seconds and you&#8217;ll get the same data again and again (with a shift of 10 seconds over the last 30 days). A good approach here is to try to filter out duplicates at the source as much as possible. We can think to store the time when the last update has been generated by the server and use it in subsequent queries to only obtain new events. This will not guarantee an "exactly once" semantics, because e.g. if the integration is restarted it will lose the in-memory state and start from the beginning, but it prevents sending an high amount of redundant data if the integration is kept alive. To store the time when last result has been generated by the API, we can use one of the in-memory caches that Camel provides, such as <a href="../../../components/latest/caffeine-cache-component.html" class="page">camel-caffeine-cache</a>.</p> </li> </ol> </div> <div class="admonitionblock warning"> <div class="table-wrapper"><table> <tr> <td class="icon"> <i class="fa icon-warning" title="Warning"></i> </td> <td class="content"> We&#8217;re going to use an in-memory cache because we need to store a single value. When using stateful data repositories, such as caches, it&#8217;s always a good practice to limit their size to a low value and avoid them to increase their size over time </td> </tr> </table></div> </div> <div class="admonitionblock tip"> <div class="table-wrapper"><table> <tr> <td class="icon"> <i class="fa icon-tip" title="Tip"></i> </td> <td class="content"> If an end-to-end "exactly once" semantics is needed, you could later add a stateful idempotent repository in the global integration, but these aspects should be external to the Kamelet definition </td> </tr> </table></div> </div> <div class="paragraph"> <p>Let&#8217;s try sorting out these issues in the route (we publish here the final version):</p> </div> <div class="listingblock"> <div class="title">Earthquake.java</div> <div class="content"> <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// camel-k: language=java
+
+import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.Exchange;
+
+public class Earthquake extends RouteBuilder {
+  @Override
+  public void configure() throws Exception {
+
+    from("timer:earthquake?period=10000")
+      .setHeader("CamelCaffeineAction").constant("GET")
+      .toD("caffeine-cache:cache-${routeId}?key=lastUpdate") <i class="conum" data-value="1"></i><b>(1)</b>
+      .choice()
+        .when().simple("${header.CamelCaffeineActionHasResult}")
+          .setProperty("lastUpdate", body())
+        .otherwise()
+          .setProperty("lastUpdate", simple("${date-with-timezone:now-120m:UTC:yyyy-MM-dd'T'HH:mm:ss.SSS}")) <i class="conum" data-value="2"></i><b>(2)</b>
+      .end()
+      .setHeader(Exchange.HTTP_METHOD).constant("GET")
+      .toD("https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&amp;updatedafter=${exchangeProperty.lastUpdate}&amp;orderby=time-asc") <i class="conum" data-value="3"></i><b>(3)</b>
+      .unmarshal().json()
+      .setProperty("generated", simple("${body[metadata][generated]}")) <i class="conum" data-value="4"></i><b>(4)</b>
+      .setProperty("lastUpdate", simple("${date-with-timezone:exchangeProperty.generated:UTC:yyyy-MM-dd'T'HH:mm:ss.SSS}"))
+      .claimCheck(ClaimCheckOperation.Push) <i class="conum" data-value="5"></i><b>(5)</b>
+      .setBody().exchangeProperty("lastUpdate")
+      .setHeader("CamelCaffeineAction").constant("PUT")
+      .toD("caffeine-cache:cache-${routeId}?key=lastUpdate")
+      .claimCheck(ClaimCheckOperation.Pop)
+      .split().jsonpath("$.features[*]") <i class="conum" data-value="6"></i><b>(6)</b>
+        .marshal().json()
+        .to("log:info") <i class="conum" data-value="7"></i><b>(7)</b>
+      .end();
+
+  }
+}</code></pre> </div> </div> <div class="colist arabic"> <div class="table-wrapper"><table> <tr> <td><i class="conum" data-value="1"></i><b>1</b></td> <td>We start each poll by checking if there has been a previous run (and get the corresponding time)</td> </tr> <tr> <td><i class="conum" data-value="2"></i><b>2</b></td> <td>If it&#8217;s the first run of the integration, we set the clock back to 120m from the current time, to get events of the last 2 hours</td> </tr> <tr> <td><i class="conum" data-value="3"></i><b>3</b></td> <td>We always include the time from which we want to receive updates in the query to the service</td> </tr> <tr> <td><i class="conum" data-value="4"></i><b>4</b></td> <td>The service returns a "generated" field which includes a timestamp when the response has been generated: we&#8217;ll use it in the following requests</td> </tr> <tr> <td><i class="conum" data-value="5"></i><b>5</b></td> <td>We put the current body in the claim check stack to use it for storing the "lastUpdate" field in the cache, then we restore the previous body</td> </tr> <tr> <td><i class="conum" data-value="6"></i><b>6</b></td> <td>Individual records of the response are sent to the destination (which is "log:info" in this phase). In case an exception is thrown while processing a single entry, individual errors are sent to the route error handler and the processing continues</td> </tr> </table></div> </div> <div class="admonitionblock tip"> <div class="table-wrapper"><table> <tr> <td class="icon"> <i class="fa icon-tip" title="Tip"></i> </td> <td class="content"> Don&#8217;t be scared from the complexity of the route, as this is a complicated example by choice: most of the Kamelets in the <a href="../../../camel-kamelets/latest/index.html" class="page">Kamelet Catalog</a> don&#8217;t use any processing logic or EIP </td> </tr> </table></div> </div> <div class="admonitionblock warning"> <div class="table-wrapper"><table> <tr> <td class="icon"> <i class="fa icon-warning" title="Warning"></i> </td> <td class="content"> When writing a route like this, you should always think to errors that might happen in various phases of the execution: here the "lastUpdate" value in the cache is updated after a successful invocation of the API but before the individual exchanges are sent to the destination, so that the source is protected by individual errors on the features (that are sent to the route error handler), but continues to process new data if a single feature can&#8217;t be processed. </td> </tr> </table></div> </div> <div class="paragraph"> <p>This integration (which seems complex at first sight, but it should be still readable) solves the issues identified above by using multiple features available in Apache Camel (caches, "Simple" language, HTTP component, JSON data format, splitter EIP, claim check, JSONPath). Even if it&#8217;s not recommended to write overly-complicated integrations in a Kamelet (i.e. consider writing a plain component if it becomes too complicated and unreadable), you can see here how powerful is the Kamelet model.</p> </div> <div class="admonitionblock tip"> <div class="table-wrapper"><table> <tr> <td class="icon"> <i class="fa icon-tip" title="Tip"></i> </td> <td class="content"> We might have written the integration above in multiple routes connected using "direct:" endpoints, but a Kamelet contains a single route template and the mapping will be easier if the integration is composed of a single route (it&#8217;s also possible to define multiple supporting routes in a Kamelet, but we&#8217;re not going to show how to do it here) </td> </tr> </table></div> </div> </div> <div class="sect2"> <h3 id="_step_3_externalize_parameters"><a class="anchor" href="#_step_3_externalize_parameters"></a>Step 3: externalize parameters</h3> <div class="paragraph"> <p>The next step in the development is answering the following question: if I was a user instantiating this source, what aspects I would like to configure?</p> </div> <div class="paragraph"> <p>For the example above, there are 2 things that a user may want to configure:</p> </div> <div class="ulist"> <ul> <li> <p><code>period</code>: the time interval between polls to the earthquake API. This may seem a technical issue, but it becomes a business issue when contacting APIs that do rate limiting</p> </li> <li> <p><code>lookAhead</code>: the number of minutes before the current time I would like to receive events since (it affects the events received when the source is first started or restarted)</p> </li> </ul> </div> <div class="paragraph"> <p>Those two will become Kamelet parameters as you might expect, but for the time being, let&#8217;s refactor the integration to externalize them as standard Camel K properties:</p> </div> <div class="listingblock"> <div class="title">Earthquake.java</div> <div class="content"> <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// camel-k: language=java property=period=20000 property=lookAhead=120 <i class="conum" data-value="1"></i><b>(1)</b>
+
+import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.model.ClaimCheckOperation;
+import org.apache.camel.Exchange;
+
+public class Earthquake extends RouteBuilder {
+  @Override
+  public void configure() throws Exception {
+
+    from("timer:earthquake?period={{period}}") <i class="conum" data-value="2"></i><b>(2)</b>
+      // ...
+      .choice()
+        .when().simple("${header.CamelCaffeineActionHasResult}")
+          .setProperty("lastUpdate", body())
+        .otherwise()
+          .setProperty("lastUpdate", simple("${date-with-timezone:now-{{lookAhead}}m:UTC:yyyy-MM-dd'T'HH:mm:ss.SSS}")) <i class="conum" data-value="3"></i><b>(3)</b>
+      .end()
+      // ...
+      .end();
+
+  }
+}</code></pre> </div> </div> <div class="colist arabic"> <div class="table-wrapper"><table> <tr> <td><i class="conum" data-value="1"></i><b>1</b></td> <td>Modeline header defines the two parameters with a "development" value</td> </tr> <tr> <td><i class="conum" data-value="2"></i><b>2</b></td> <td>Placeholder <code>{{period}}</code> is used</td> </tr> <tr> <td><i class="conum" data-value="3"></i><b>3</b></td> <td>Placeholder <code>{{lookAhead}}</code> is used</td> </tr> </table></div> </div> <div class="paragraph"> <p>This looks the same as before, but notice that the <code>period</code> and <code>lookAhead</code> parameters are set in the modeline, while the route uses the <code>{{period}}</code> and <code>{{lookAhead}}</code> placeholders instead of the actual values.</p> </div> <div class="paragraph"> <p>As before, this integration can be tested with <code>kamel local run Earthquake.java</code> (the modeline parameters will be automatically added by the kamel CLI).</p> </div> </div> <div class="sect2"> <h3 id="_step_4_optional_translate_into_yaml_dsl"><a class="anchor" href="#_step_4_optional_translate_into_yaml_dsl"></a>Step 4 (optional): translate into YAML DSL</h3> <div class="paragraph"> <p>The integration is now ready to be turned into a Kamelet, but in case you&#8217;ve not written it directly in YAML DSL, you need to convert it before proceeding. The YAML DSL is the default DSL for Kamelets and the reason for that is that it provides multiple advantages over the other DSLs, the most important one being the ability to easily compile YAML integrations into Quarkus-based binary executables in the future, with all the advantages that derive from a point of view of performance and resource utilization.</p> </div> <div class="paragraph"> <p>If we managed to reduce our integration to contain only a Camel route, converting it to YAML is straightforward:</p> </div> <div class="listingblock"> <div class="title">earthquake-source.kamelet.yaml</div> <div class="content"> <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml"># camel-k: language=yaml property=period=20000 property=lookAhead=120 dependency=camel-quarkus:caffeine dependency=camel-quarkus:http
+
+- from:
+    uri: "timer:earthquake"
+    parameters:
+      period: "{{period}}"
+    steps:
+    - set-header:
+        name: CamelCaffeineAction
+        constant: GET
+    - tod: "caffeine-cache:cache-${routeId}?key=lastUpdate"
+    - choice:
+        when:
+        - simple: "${header.CamelCaffeineActionHasResult}"
+          steps:
+          - set-property:
+              name: lastUpdate
+              simple: "${body}"
+        otherwise:
+          steps:
+          - set-property:
+              name: lastUpdate
+              simple: "${date-with-timezone:now-{{lookAhead}}m:UTC:yyyy-MM-dd'T'HH:mm:ss.SSS}"
+    - set-header:
+        name: CamelHttpMethod
+        constant: GET
+    - tod: "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&amp;updatedafter=${exchangeProperty.lastUpdate}&amp;orderby=time-asc"
+    - unmarshal:
+        json: {}
+    - set-property:
+        name: generated
+        simple: "${body[metadata][generated]}"
+    - set-property:
+        name: lastUpdate
+        simple: "${date-with-timezone:exchangeProperty.generated:UTC:yyyy-MM-dd'T'HH:mm:ss.SSS}"
+    - claim-check:
+        operation: Push
+    - set-body:
+        exchange-property: lastUpdate
+    - set-header:
+        name: CamelCaffeineAction
+        constant: PUT
+    - tod: "caffeine-cache:cache-${routeId}?key=lastUpdate"
+    - claim-check:
+        operation: Pop
+    - split:
+        jsonpath: "$.features[*]"
+        steps:
+          - marshal:
+              json: {}
+          - to: "log:info"</code></pre> </div> </div> <div class="paragraph"> <p>If you compare the YAML version of the route to the Java one, you see that they map 1-1.</p> </div> <div class="admonitionblock tip"> <div class="table-wrapper"><table> <tr> <td class="icon"> <i class="fa icon-tip" title="Tip"></i> </td> <td class="content"> The Camel Extension Pack for Visual Studio Code helps you writing the YAML route by providing auto-completion and error highlighting </td> </tr> </table></div> </div> <div class="admonitionblock warning"> <div class="table-wrapper"><table> <tr> <td class="icon"> <i class="fa icon-warning" title="Warning"></i> </td> <td class="content"> Since the YAML DSL is quite new in the Camel ecosystem, it may miss some features available in the Java one, e.g. Camel K is not able to detect some dependencies automatically and we&#8217;ve specified them in the modeline header </td> </tr> </table></div> </div> <div class="paragraph"> <p>This route can be run like the previous one using the <code>kamel</code> CLI:</p> </div> <div class="listingblock"> <div class="content"> <pre class="highlightjs highlight"><code>kamel local run earthquake.yaml</code></pre> </div> </div> </div> <div class="sect2"> <h3 id="_step_5_wrap_it_into_a_kamelet"><a class="anchor" href="#_step_5_wrap_it_into_a_kamelet"></a>Step 5: wrap it into a Kamelet</h3> <div class="paragraph"> <p>We&#8217;re about to write down an "Earthquake Source Kamelet" from the route we&#8217;ve built. As starting point, we may just wrap the previous YAML route into the Kamelet envelope. The result looks like:</p> </div> <div class="listingblock"> <div class="title">earthquake-source.kamelet.yaml</div> <div class="content"> <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">apiVersion: camel.apache.org/v1alpha1
+kind: Kamelet
+metadata:
+  name: earthquake-source
+  labels:
+    camel.apache.org/kamelet.type: "source"
+spec:
+  flow: <i class="conum" data-value="1"></i><b>(1)</b>
+    from:
+      uri: "timer:earthquake"
+      parameters:
+        period: "{{period}}"
+      steps:
+      - set-header:
+          name: CamelCaffeineAction
+          constant: GET
+      - tod: "caffeine-cache:cache-${routeId}?key=lastUpdate"
+      - choice:
+          when:
+          - simple: "${header.CamelCaffeineActionHasResult}"
+            steps:
+            - set-property:
+                name: lastUpdate
+                simple: "${body}"
+          otherwise:
+            steps:
+            - set-property:
+                name: lastUpdate
+                simple: "${date-with-timezone:now-{{lookAhead}}m:UTC:yyyy-MM-dd'T'HH:mm:ss.SSS}"
+      - set-header:
+          name: CamelHttpMethod
+          constant: GET
+      - tod: "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&amp;updatedafter=${exchangeProperty.lastUpdate}&amp;orderby=time-asc"
+      - unmarshal:
+          json: {}
+      - set-property:
+          name: generated
+          simple: "${body[metadata][generated]}"
+      - set-property:
+          name: lastUpdate
+          simple: "${date-with-timezone:exchangeProperty.generated:UTC:yyyy-MM-dd'T'HH:mm:ss.SSS}"
+      - claim-check:
+          operation: Push
+      - set-body:
+          exchange-property: lastUpdate
+      - set-header:
+          name: CamelCaffeineAction
+          constant: PUT
+      - tod: "caffeine-cache:cache-${routeId}?key=lastUpdate"
+      - claim-check:
+          operation: Pop
+      - split:
+          jsonpath: "$.features[*]"
+          steps:
+            - marshal:
+                json: {}
+            - to: "kamelet:sink" <i class="conum" data-value="2"></i><b>(2)</b></code></pre> </div> </div> <div class="colist arabic"> <div class="table-wrapper"><table> <tr> <td><i class="conum" data-value="1"></i><b>1</b></td> <td>Flow contains the (single) route template we have identified before</td> </tr> <tr> <td><i class="conum" data-value="2"></i><b>2</b></td> <td>The old reference to "log:info" has been replaced with "kamelet:sink" here</td> </tr> </table></div> </div> <div class="paragraph"> <p>The only difference between the YAML route embedded in the Kamelet and the one identified before is the final sink, which was "log:info" and now is "kamelet:sink", i.e. a placeholder that will be replaced with something else when the Kamelet is actually used (the user decides what is the destination of the earthquake events).</p> </div> </div> <div class="sect2"> <h3 id="_step_6_describe_the_parameters"><a class="anchor" href="#_step_6_describe_the_parameters"></a>Step 6: describe the parameters</h3> <div class="paragraph"> <p>The Kamelet above is incomplete, we need to define the two parameters we&#8217;ve identified in the template and also give a description to the Kamelet itself. The way to express all this information is via a <a href="https://json-schema.org/">JSON Schema</a> specification in the Kamelet YAML.</p> </div> <div class="listingblock"> <div class="title">earthquake-source.kamelet.yaml</div> <div class="content"> <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">apiVersion: camel.apache.org/v1alpha1
+kind: Kamelet
+metadata:
+  name: earthquake-source
+  labels:
+    camel.apache.org/kamelet.type: "source"
+spec:
+  definition: <i class="conum" data-value="1"></i><b>(1)</b>
+    title: Earthquake Source
+    description: |-
+      Get data about current earthquake events happening in the world using the USGS API
+    properties:
+      period: <i class="conum" data-value="2"></i><b>(2)</b>
+        title: Period between polls
+        description: The interval between fetches to the earthquake API in milliseconds
+        type: integer
+        default: 60000
+      lookAhead: <i class="conum" data-value="3"></i><b>(3)</b>
+        title: Look-ahead minutes
+        description: The amount of minutes to look ahead when starting the integration afresh
+        type: integer
+        default: 120
+  flow:
+    from:
+      uri: "timer:earthquake"
+      # ...</code></pre> </div> </div> <div class="colist arabic"> <div class="table-wrapper"><table> <tr> <td><i class="conum" data-value="1"></i><b>1</b></td> <td>The definition part starts with general information about the Kamelet</td> </tr> <tr> <td><i class="conum" data-value="2"></i><b>2</b></td> <td>Definition of the period parameter (used with the <code>{{period}}</code> placeholder in the route)</td> </tr> <tr> <td><i class="conum" data-value="3"></i><b>3</b></td> <td>Definition of the lookAhead parameter</td> </tr> </table></div> </div> </div> <div class="sect2"> <h3 id="_step_7_add_metadata_and_sugar"><a class="anchor" href="#_step_7_add_metadata_and_sugar"></a>Step 7: add metadata and sugar</h3> <div class="paragraph"> <p>We should complete the Kamelet with all mandatory (also optional) options that are described in <a href="https://github.com/apache/camel-kamelets">the guidelines for contributing Kamelets</a>.</p> </div> <div class="paragraph"> <p>The final result should look like:</p> </div> <div class="listingblock"> <div class="title">earthquake-source.kamelet.yaml</div> <div class="content"> <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">apiVersion: camel.apache.org/v1alpha1
+kind: Kamelet
+metadata:
+  name: earthquake-source
+  annotations:
+    camel.apache.org/kamelet.icon: "data:image/svg+xml;base64..." # truncated <i class="conum" data-value="1"></i><b>(1)</b>
+    camel.apache.org/provider: "Apache Software Foundation"
+  labels:
+    camel.apache.org/kamelet.type: "source"
+    camel.apache.org/requires.runtime: "camel-quarkus" <i class="conum" data-value="2"></i><b>(2)</b>
+spec:
+  definition:
+    title: Earthquake Source
+    description: |-
+      Get data about current earthquake events happening in the world using the USGS API
+    properties:
+      period:
+        title: Period between polls
+        description: The interval between fetches to the earthquake API in milliseconds
+        type: integer
+        default: 60000
+      lookAhead:
+        title: Look-ahead minutes
+        description: The amount of minutes to look ahead when starting the integration afresh
+        type: integer
+        default: 120
+  types: <i class="conum" data-value="3"></i><b>(3)</b>
+    out:
+      mediaType: application/json
+  dependencies: <i class="conum" data-value="4"></i><b>(4)</b>
+    - camel-quarkus:caffeine
+    - camel-quarkus:http
+  flow:
+    from:
+      uri: "timer:earthquake"
+      parameters:
+        period: "{{period}}"
+      steps:
+      - set-header:
+          name: CamelCaffeineAction
+          constant: GET
+      - tod: "caffeine-cache:cache-${routeId}?key=lastUpdate"
+      - choice:
+          when:
+          - simple: "${header.CamelCaffeineActionHasResult}"
+            steps:
+            - set-property:
+                name: lastUpdate
+                simple: "${body}"
+          otherwise:
+            steps:
+            - set-property:
+                name: lastUpdate
+                simple: "${date-with-timezone:now-{{lookAhead}}m:UTC:yyyy-MM-dd'T'HH:mm:ss.SSS}"
+      - set-header:
+          name: CamelHttpMethod
+          constant: GET
+      - tod: "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&amp;updatedafter=${exchangeProperty.lastUpdate}&amp;orderby=time-asc"
+      - unmarshal:
+          json: {}
+      - set-property:
+          name: generated
+          simple: "${body[metadata][generated]}"
+      - set-property:
+          name: lastUpdate
+          simple: "${date-with-timezone:exchangeProperty.generated:UTC:yyyy-MM-dd'T'HH:mm:ss.SSS}"
+      - claim-check:
+          operation: Push
+      - set-body:
+          exchange-property: lastUpdate
+      - set-header:
+          name: CamelCaffeineAction
+          constant: PUT
+      - tod: "caffeine-cache:cache-${routeId}?key=lastUpdate"
+      - claim-check:
+          operation: Pop
+      - split:
+          jsonpath: "$.features[*]"
+          steps:
+            - marshal:
+                json: {}
+            - to: "kamelet:sink"</code></pre> </div> </div> <div class="colist arabic"> <div class="table-wrapper"><table> <tr> <td><i class="conum" data-value="1"></i><b>1</b></td> <td>Add an icon with an appropriate license, better using svg+base64 URL encoding. You can encode icons using services like <a href="https://dopiaza.org/tools/datauri/index.php">this one</a></td> </tr> <tr> <td><i class="conum" data-value="2"></i><b>2</b></td> <td>This marks the Kamelet as dependant on Quarkus since we&#8217;re specifying explicit dependencies on Quarkus artifacts in the <code>spec</code> &#8594; <code>dependencies</code> section</td> </tr> <tr> <td><i class="conum" data-value="3"></i><b>3</b></td> <td>The types section indicates that the Kamelet is going to produce JSON data. This part of the Kamelet spec will be subject of revision but is not fundamental for the Kamelet mechanics to work</td> </tr> <tr> <td><i class="conum" data-value="4"></i><b>4</b></td> <td>Dependencies that we previously specified in the modeline options should be expressed now in the Kamelet spec</td> </tr> </table></div> </div> <div class="paragraph"> <p>The Kamelet is now ready to be used!</p> </div> </div> <div class="sect2"> <h3 id="_trying_it_out_2"><a class="anchor" href="#_trying_it_out_2"></a>Trying it out</h3> <div class="paragraph"> <p>You can install the Kamelet on your Kubernetes instance to see if it can be picked up and used by the Camel K runtime.</p> </div> <div class="paragraph"> <p>We assume that you&#8217;re connected to a Kubernetes cluster and working on a namespace where the Camel K operator is allowed to materialize integrations.</p> </div> <div class="paragraph"> <p>To create the Kamelet, you can execute:</p> </div> <div class="listingblock"> <div class="content"> <pre class="highlightjs highlight"><code>kubectl apply -f earthquake-source.kamelet.yaml</code></pre> </div> </div> <div class="paragraph"> <p>If the Kamelet is valid, this will result in the Kamelet resource being created in the current namespace.</p> </div> <div class="paragraph"> <p>To check if it works, you can create a simple binding:</p> </div> <div class="listingblock"> <div class="title">earthquake-source-binding.yaml</div> <div class="content"> <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: earthquake-source-binding
+spec:
+  source:
+    ref: <i class="conum" data-value="1"></i><b>(1)</b>
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: earthquake-source
+    properties:
+      period: 10000 <i class="conum" data-value="2"></i><b>(2)</b>
+  sink:
+    uri: "log:info" <i class="conum" data-value="3"></i><b>(3)</b></code></pre> </div> </div> <div class="colist arabic"> <div class="table-wrapper"><table> <tr> <td><i class="conum" data-value="1"></i><b>1</b></td> <td>Kubernetes reference to the previously created Kamelet</td> </tr> <tr> <td><i class="conum" data-value="2"></i><b>2</b></td> <td>We redefine the period to speed it up, otherwise the default is used (60000)</td> </tr> <tr> <td><i class="conum" data-value="3"></i><b>3</b></td> <td>We just sink into "log:info", but we&#8217;re free to change it to anything else</td> </tr> </table></div> </div> <div class="admonitionblock note"> <div class="table-wrapper"><table> <tr> <td class="icon"> <i class="fa icon-note" title="Note"></i> </td> <td class="content"> The developer write Camel DSL to make a Kamelet work, but the end-user uses it declaratively without any idea of the complexity of the development process behind it </td> </tr> </table></div> </div> <div class="paragraph"> <p>Creating this resource will tell the operator to materialize the binding using an integration:</p> </div> <div class="listingblock"> <div class="content"> <pre class="highlightjs highlight"><code>kubectl apply -f earthquake-source-binding.yaml</code></pre> </div> </div> <div class="paragraph"> <p>We can check the logs of the integration using:</p> </div> <div class="listingblock"> <div class="content"> <pre class="highlightjs highlight"><code>kamel logs earthquake-source-binding</code></pre> </div> </div> <div class="paragraph"> <p>If everything went well, you should see the events in the log.</p> </div> <div class="paragraph"> <p>Refer to the <a href="kamelets-user.html" class="page">Kamelets User Guide</a> for more information on how to use it in different contexts (like Knative, Kafka, etc.).</p> </div> </div> </div> </div> <div class="sect1"> <h2 id="creating-sink"><a class="anchor" href="#creating-sink"></a>Creating a sink Kamelet</h2> <div class="sectionbody"> <div class="paragraph"> <p>So far we&#8217;ve focused on the steps needed to create Kamelets of type "source", but the same steps can be used for type "sink" Kamelets with some minor changes.</p> </div> <div class="paragraph"> <p>We&#8217;re now going to create a "sink" Kamelet and look at the differences. For this part, we&#8217;ll write a <a href="https://core.telegram.org/">Telegram</a> sink Kamelet.</p> </div> <div class="sect2"> <h3 id="_analyze_the_use_cases"><a class="anchor" href="#_analyze_the_use_cases"></a>Analyze the use cases</h3> <div class="paragraph"> <p>Differently from sources, where you usually generate a single type of data, or even multiple ones depending on some static user parameter, a sink should always take into account that it can be fed dynamically with different type of data.</p> </div> <div class="paragraph"> <p>For example, in the case of a Telegram sink, a user may want to send both textual data, but also images with (or without) a caption.</p> </div> <div class="paragraph"> <p>In order to implement sending different kinds of data, the Kamelet should adapt according to the content that is received as input.</p> </div> <div class="paragraph"> <p>We&#8217;ll start by writing an end-to-end integration, then we&#8217;ll convert it into a Kamelet. This time, we&#8217;ll write routes directly in YAML DSL.</p> </div> <div class="admonitionblock tip"> <div class="table-wrapper"><table> <tr> <td class="icon"> <i class="fa icon-tip" title="Tip"></i> </td> <td class="content"> For this particular use case, I&#8217;ve created a simple integration before to get the Chat ID corresponding to my phone from the bot: more info <a href="../../../components/latest/telegram-component.html" class="page">here</a>. </td> </tr> </table></div> </div> <div class="paragraph"> <p>Let&#8217;s start with a simple integration:</p> </div> <div class="listingblock"> <div class="title">telegram.yaml</div> <div class="content"> <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml"># camel-k: language=yaml property=chatId=158584902 <i class="conum" data-value="1"></i><b>(1)</b>
+
+- from: <i class="conum" data-value="2"></i><b>(2)</b>
+    uri: "direct:endpoint"
+    steps:
+      - to:
+          uri: "telegram:bots"
+          parameters:
+            authorizationToken: "{{authorizationToken}}"
+            chatId: "{{chatId}}"
+      - marshal: <i class="conum" data-value="3"></i><b>(3)</b>
+          json: {}
+
+- from: <i class="conum" data-value="4"></i><b>(4)</b>
+    uri: timer:tick
+    parameters:
+      period: 5000
+    steps:
+    - set-body:
+        constant: Hello
+    - to: direct:endpoint</code></pre> </div> </div> <div class="colist arabic"> <div class="table-wrapper"><table> <tr> <td><i class="conum" data-value="1"></i><b>1</b></td> <td>Setting the <code>chatId</code> property directly in modeline, the <code>authorizationToken</code> will be passed from command line</td> </tr> <tr> <td><i class="conum" data-value="2"></i><b>2</b></td> <td>The route that will become the Kamelet route template</td> </tr> <tr> <td><i class="conum" data-value="3"></i><b>3</b></td> <td>We marhsal the output as JSON because it may be required to be transferred over the wire</td> </tr> <tr> <td><i class="conum" data-value="4"></i><b>4</b></td> <td>A testing route to check if the integration works</td> </tr> </table></div> </div> <div class="paragraph"> <p>The end-to-end integration above should be good as initial scaffolding for the integration. We can run it using the following command:</p> </div> <div class="listingblock"> <div class="content"> <pre class="highlightjs highlight"><code>kamel run telegram.yaml -p authorizationToken=the-token-you-got-from-bot-father</code></pre> </div> </div> <div class="paragraph"> <p>If everything went well, you should get a "Hello" message into your phone every 5 seconds.</p> </div> <div class="paragraph"> <p>Now, let&#8217;s check if we can also send an image, by changing the second route:</p> </div> <div class="listingblock"> <div class="content"> <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml"># first route as before
+# ...
+
+- from:
+    uri: timer:tick
+    parameters:
+      period: 5000
+    steps:
+    - set-header:
+        name: CamelHttpMethod
+        constant: GET
+    - to: https://github.com/apache/camel/raw/7204aa132662ab6cb8e3c5afea8b9b0859eff0e8/docs/img/logo.png
+    - to: direct:endpoint</code></pre> </div> </div> <div class="paragraph"> <p>The intended behavior is that we get the image in our phone via Telegram, but it&#8217;s <strong>throwing an error instead</strong>. This is something that often happens because standard Camel components are not suited to be used out-of-the-box as connectors.</p> </div> <div class="paragraph"> <p>In this case, the Telegram component requires that a <code>CamelTelegramMediaType</code> header is set to <code>PHOTO_PNG</code> in the exchange in order to accept the image, and that the body is converted to <code>byte[]</code>. But we cannot require that who sends the message to the Kamelet obey to all Camel rules. In general we should follow these guidelines:</p> </div> <div class="ulist"> <ul> <li> <p>We SHOULD NOT require that the sender sets Camel-specific bits in the message over the wire (e.g. a <code>CamelTelegramMediaType</code>): we should hide Camel under the covers as much as possible</p> </li> <li> <p>We CAN use the "Content-Type" header to distinguish the type of incoming data</p> </li> <li> <p>We CAN define new headers and allow the users to set them on the incoming message (e.g. when the incoming message is a picture, we can let the sender specify a caption for it in the "text" header)</p> </li> <li> <p>When defining an header, it MUST be documented in the Kamelet definition</p> </li> <li> <p>When defining an header, say "text", we should also account for an additional header named "ce-text": in some contexts, like Knative, only headers allowed by the CloudEvents specification are accepted in the brokers/channels (i.e. a <code>ce-</code> prefix is mandatory)</p> </li> </ul> </div> <div class="paragraph"> <p>When applied to the current use case, the main route can be changed into something like this:</p> </div> <div class="listingblock"> <div class="content"> <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">- from:
+    uri: "direct:endpoint"
+    steps:
+    - choice: <i class="conum" data-value="1"></i><b>(1)</b>
+        when:
+        - simple: "${header[Content-Type]} == 'image/png'"
+          steps:
+          - convert-body-to:
+              type: "byte[]"
+          - set-header:
+              name: CamelTelegramMediaType
+              constant: PHOTO_PNG
+        - simple: "${header[Content-Type]} == 'image/jpeg'"
+          steps:
+          - convert-body-to:
+              type: "byte[]"
+          - set-header:
+              name: CamelTelegramMediaType
+              constant: PHOTO_JPG
+        otherwise:
+          steps:
+          - convert-body-to:
+              type: "java.lang.String"
+    - choice: <i class="conum" data-value="2"></i><b>(2)</b>
+        when:
+        - simple: "${header[text]}"
+          steps:
+          - set-header:
+              name: CamelTelegramMediaTitleCaption
+              simple: "${header[text]}"
+        - simple: "${header[ce-text]}"
+          steps:
+          - set-header:
+              name: CamelTelegramMediaTitleCaption
+              simple: "${header[ce-text]}"
+    - choice: <i class="conum" data-value="3"></i><b>(3)</b>
+        when:
+        - simple: "${header[chat-id]}"
+          steps:
+          - set-header:
+              name: CamelTelegramChatId
+              simple: "${header[chat-id]}"
+        - simple: "${header[ce-chat-id]}"
+          steps:
+          - set-header:
+              name: CamelTelegramChatId
+              simple: "${header[ce-chat-id]}"
+    - to:
+        uri: "telegram:bots"
+        parameters:
+          authorizationToken: "{{authorizationToken}}"
+          chatId: "{{chatId}}"
+    - marshal:
+        json: {}</code></pre> </div> </div> <div class="colist arabic"> <div class="table-wrapper"><table> <tr> <td><i class="conum" data-value="1"></i><b>1</b></td> <td>We do content-type based conversion into appropriate objects for the component</td> </tr> <tr> <td><i class="conum" data-value="2"></i><b>2</b></td> <td>We allow specifying a <code>text</code> or <code>ce-text</code> header to set the image caption</td> </tr> <tr> <td><i class="conum" data-value="3"></i><b>3</b></td> <td>We allow overriding the chat ID using a <code>chat-id</code> or <code>ce-chat-id</code> header</td> </tr> </table></div> </div> <div class="admonitionblock warning"> <div class="table-wrapper"><table> <tr> <td class="icon"> <i class="fa icon-warning" title="Warning"></i> </td> <td class="content"> It&#8217;s not always obvious if it&#8217;s responsibility of the Kamelet to prepare the exchange to be fed into the Camel producer endpoint or if the Camel component should be changed to be more elastic. In this case, it seems appropriate to implement things like content-type base conversion and support for streaming content at component level. The Kamelet above is acceptable for the time being, but it needs to be simplified if such changes land into the component. </td> </tr> </table></div> </div> <div class="paragraph"> <p>Having defined the main route template, we need to document the Kamelet and the parameters. We show here the final Kamelet:</p> </div> <div class="listingblock"> <div class="content"> <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">apiVersion: camel.apache.org/v1alpha1
+kind: Kamelet
+metadata:
+  name: telegram-sink
+  annotations:
+    camel.apache.org/kamelet.icon: "data:image/svg+xml;base64,..." # truncated
+    camel.apache.org/provider: "Apache Software Foundation"
+  labels:
+    camel.apache.org/kamelet.type: "sink"
+    camel.apache.org/kamelet.group: "Telegram"
+spec:
+  definition: <i class="conum" data-value="1"></i><b>(1)</b>
+    title: "Telegram Sink"
+    description: |-
+      Send a message to a Telegram chat using your Telegram bot as sender.
+
+      To create a bot, contact the @botfather account using the Telegram app.
+
+      This sink supports the following message types:
+
+      - Standard text messages
+      - PNG images (`Content-Type` must be set to `image/png`)
+      - JPEG images (`Content-Type` must be set to `image/jpeg`)
+
+      This following message headers are also supported:
+
+      - `text` / `ce-text`: when sending an image, the image caption
+      - `chat-id` / `ce-chat-id`: to override the default chat where messages are sent to
+    required:
+      - authorizationToken
+    properties:
+      authorizationToken:
+        title: Token
+        description: The token to access your bot on Telegram. You you can obtain it from the Telegram @botfather.
+        type: string
+        x-descriptors:
+        - urn:alm:descriptor:com.tectonic.ui:password
+      chatId:
+        title: Chat ID
+        description: The Chat ID where messages should be sent by default
+        type: string
+  types: <i class="conum" data-value="2"></i><b>(2)</b>
+    out:
+      mediaType: application/json
+  flow: <i class="conum" data-value="3"></i><b>(3)</b>
+    from:
+      uri: "kamelet:source"
+      steps:
+      - choice:
+          when:
+          - simple: "${header[Content-Type]} == 'image/png'"
+            steps:
+            - log: h1
+            - convert-body-to:
+                type: "byte[]"
+            - set-header:
+                name: CamelTelegramMediaType
+                constant: PHOTO_PNG
+          - simple: "${header[Content-Type]} == 'image/jpeg'"
+            steps:
+            - convert-body-to:
+                type: "byte[]"
+            - set-header:
+                name: CamelTelegramMediaType
+                constant: PHOTO_JPG
+          otherwise:
+            steps:
+            - convert-body-to:
+                type: "java.lang.String"
+      - choice:
+          when:
+          - simple: "${header[text]}"
+            steps:
+            - set-header:
+                name: CamelTelegramMediaTitleCaption
+                simple: "${header[text]}"
+          - simple: "${header[ce-text]}"
+            steps:
+            - set-header:
+                name: CamelTelegramMediaTitleCaption
+                simple: "${header[ce-text]}"
+      - choice:
+          when:
+          - simple: "${header[chat-id]}"
+            steps:
+            - set-header:
+                name: CamelTelegramChatId
+                simple: "${header[chat-id]}"
+          - simple: "${header[ce-chat-id]}"
+            steps:
+            - set-header:
+                name: CamelTelegramChatId
+                simple: "${header[ce-chat-id]}"
+      - to:
+          uri: "telegram:bots"
+          parameters:
+            authorizationToken: "{{authorizationToken}}"
+            chatId: "{{chatId}}"
+      - marshal:
+          json: {}</code></pre> </div> </div> <div class="colist arabic"> <div class="table-wrapper"><table> <tr> <td><i class="conum" data-value="1"></i><b>1</b></td> <td>JSON schema definition of the Kamelet configuration</td> </tr> <tr> <td><i class="conum" data-value="2"></i><b>2</b></td> <td>The Kamelet has a single possible output of type JSON</td> </tr> <tr> <td><i class="conum" data-value="3"></i><b>3</b></td> <td>The flow identified above as Kamelet route template</td> </tr> </table></div> </div> </div> <div class="sect2"> <h3 id="_try_it_out"><a class="anchor" href="#_try_it_out"></a>Try it out</h3> <div class="paragraph"> <p>To try a sink Kamelet, we should feed it with some data. The best way to do it is to do it directly with another Kamelet.</p> </div> <div class="paragraph"> <p>So, for example, to send a text message to a chat, we may create a binding like the following:</p> </div> <div class="listingblock"> <div class="title">telegram-text-binding.yaml</div> <div class="content"> <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: telegram-text-binding
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: timer-source
+    properties:
+      period: 10000
+      message: Hello first Kamelet!
+  sink:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: telegram-sink
+    properties:
+      authorizationToken: "put-your-own"
+      chatId: "your-chat-id"</code></pre> </div> </div> <div class="paragraph"> <p>You can create the Kamelet with:</p> </div> <div class="listingblock"> <div class="content"> <pre class="highlightjs highlight"><code>kubectl apply -f telegram-sink.kamelet.yaml</code></pre> </div> </div> <div class="paragraph"> <p>Then apply the binding with:</p> </div> <div class="listingblock"> <div class="content"> <pre class="highlightjs highlight"><code>kubectl apply -f telegram-text-binding.yaml</code></pre> </div> </div> <div class="paragraph"> <p>If everything goes well, you should get a "Hello first Kamelet!" message in your phone every 10 seconds.</p> </div> <div class="paragraph"> <p>To check if we can also receive pictures using the above Kamelet, we can create the following binding:</p> </div> <div class="listingblock"> <div class="title">telegram-text-binding.yaml</div> <div class="content"> <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: telegram-image-binding
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: http-source
+    properties:
+      url: "https://github.com/apache/camel/raw/7204aa132662ab6cb8e3c5afea8b9b0859eff0e8/docs/img/logo.png"
+      contentType: "image/png"
+      period: 10000
+  sink:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: telegram-sink
+    properties:
+      authorizationToken: "put-your-own"
+      chatId: "your-chat-id"</code></pre> </div> </div> <div class="paragraph"> <p>This will create a new integration that forwards the Apache Camel logo to your phone every 10 seconds.</p> </div> </div> </div> </div> <div class="sect1"> <h2 id="_testing"><a class="anchor" href="#_testing"></a>Testing</h2> <div class="sectionbody"> <div class="paragraph"> <p>The most obvious way to test a Kamelet is via an e2e tests that verifies if the Kamelet respects its specification.</p> </div> <div class="paragraph"> <p><a href="https://github.com/citrusframework/yaks">YAKS</a> is the framework of choice for such e2e tests. You can find more information and documentation starting from the YAKS github repository. Here we&#8217;ll provide examples for the Kamelets above.</p> </div> <div class="sect2"> <h3 id="_testing_a_source"><a class="anchor" href="#_testing_a_source"></a>Testing a source</h3> <div class="paragraph"> <p>YAKS allows writing a declarative <a href="https://cucumber.io/docs/gherkin/reference/">Gherkin</a> file to specify the behavior of the Kamelet.</p> </div> <div class="paragraph"> <p>Let&#8217;s try to test the earthquake Kamelet above, a Gherkin file for it should look like:</p> </div> <div class="listingblock"> <div class="title">earthquake-source.feature</div> <div class="content"> <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Feature: Kamelet earthquake-source works
+
+  Background:
+    Given Disable auto removal of Kamelet resources
+    Given Disable auto removal of Kubernetes resources
+    Given Camel-K resource polling configuration
+      | maxAttempts          | 60   |
+      | delayBetweenAttempts | 3000 |
+
+  Scenario: Bind Kamelet to service
+    Given create Kubernetes service test-service with target port 8080
+    And bind Kamelet earthquake-source to uri http://test-service.${YAKS_NAMESPACE}.svc.cluster.local/test
+    When create KameletBinding earthquake-source-uri
+    Then KameletBinding earthquake-source-uri should be available
+    And Camel-K integration earthquake-source-uri should be running
+
+  Scenario: Verify binding
+    Given HTTP server "test-service"
+    And HTTP server timeout is 120000 ms
+    Then expect HTTP request header: Content-Type="application/json;charset=UTF-8"
+    And receive POST /test
+    And delete KameletBinding earthquake-source-uri</code></pre> </div> </div> <div class="paragraph"> <p>As you see this is a declarative test that is materialized into something that actually checks that the service generates some data. Checks can be also more detailed than this one, but checking that it generates some JSON data is enough for a "smoke test" that verifies that the Kamelet can be actually used.</p> </div> <div class="paragraph"> <p>The test requires that you&#8217;re connected to a Kubernetes cluster and have also YAKS installed (refer to the <a href="https://citrusframework.org/yaks/reference/html/index.html">YAKS documentation</a> for more information). We&#8217;re also going to use the CLI:</p> </div> <div class="listingblock"> <div class="content"> <pre class="highlightjs highlight"><code># We assume the Kamelet is already installed in the namespace
+yaks test earthquake-source.feature</code></pre> </div> </div> <div class="paragraph"> <p>When testing a source, the backbone of the Gherking file that you&#8217;ll write is similar to the one above. Depending on the source under test, you may need to stimulate the production of some data using additional Gherking steps before verifying that the data has been produced (in our case, it&#8217;s better not to try to stimulate an earthquake :D).</p> </div> </div> <div class="sect2"> <h3 id="_testing_a_sink"><a class="anchor" href="#_testing_a_sink"></a>Testing a sink</h3> <div class="paragraph"> <p>A test for a sink is similar to the one for the source, except that we&#8217;re going to generate data to feed it.</p> </div> <div class="paragraph"> <p>To send data to the Kamelet we may think to bind it to another Kamelet of type <code>webhook-source</code>, that allows us to send data to it via HTTP. Let&#8217;s create a parameterized binding like the following one:</p> </div> <div class="listingblock"> <div class="title">webhook-to-telegram.yaml</div> <div class="content"> <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">apiVersion: camel.apache.org/v1alpha1
+kind: KameletBinding
+metadata:
+  name: webhook-to-telegram
+spec:
+  source:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: webhook-source
+    properties:
+      subpath: message
+  sink:
+    ref:
+      kind: Kamelet
+      apiVersion: camel.apache.org/v1alpha1
+      name: telegram-sink
+    properties:
+      authorizationToken: "${telegram.authorization.token}"
+      chatId: "${telegram.chat.id}"</code></pre> </div> </div> <div class="paragraph"> <p>This will expose an HTTP endpoint that we can use to forward a message to Telegram. It requires that two parameters are set in the YAKS configuration before creation. Those can be set in a simple property file:</p> </div> <div class="listingblock"> <div class="title">telegram-credentials.properties</div> <div class="content"> <pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">telegram.authorization.token=your-own-token
+telegram.chat.id=your-own-chat</code></pre> </div> </div> <div class="paragraph"> <p>Then we&#8217;re ready to define the feature we want to test, i.e. the ability to send a message via the Telegram API.</p> </div> <div class="paragraph"> <p>An example of "smoke test" can be the following one:</p> </div> <div class="listingblock"> <div class="title">telegram-sink.feature</div> <div class="content"> <pre class="highlightjs highlight"><code class="language-gherkin hljs" data-lang="gherkin">Feature: Kamelet telegram-sink works
+
+  Background:
+    Given Disable auto removal of Kamelet resources
+    Given Disable auto removal of Kubernetes resources
+    Given Camel-K resource polling configuration
+      | maxAttempts          | 60   |
+      | delayBetweenAttempts | 3000 |
+
+
+  Scenario: Bind webhook to Kamelet sink
+    Given load variables telegram-credentials.properties
+    And load KameletBinding webhook-to-telegram.yaml
+    Then KameletBinding webhook-to-telegram should be available
+    And Camel-K integration webhook-to-telegram should be running
+
+
+  Scenario: Send a message to the Telegram Chat
+    Given URL: http://webhook-to-telegram.${YAKS_NAMESPACE}.svc.cluster.local
+    And HTTP request timeout is 60000 milliseconds
+    And wait for GET on path / to return 404
+    Given HTTP request headers
+     | Content-Type          | text/plain |
+    And HTTP request body
+    """
+    Hello from YAKS!
+    """
+    When send POST /message
+    Then receive HTTP 200 OK
+    And delete KameletBinding webhook-to-telegram</code></pre> </div> </div> <div class="paragraph"> <p>This test will only check that the Telegram API accept the message created by the test.</p> </div> <div class="paragraph"> <p>This can be run with the following command:</p> </div> <div class="listingblock"> <div class="content"> <pre class="highlightjs highlight"><code># We assume that both the webhook-source and the telegram-sink kamelet are already present in the namespace
+yaks test telegram-sink.feature --resource webhook-to-telegram.yaml --resource telegram-credentials.properties</code></pre> </div> </div> <div class="paragraph"> <p>If everything goes well, you should receive a message during the test execution.</p> </div> <div class="paragraph"> <p>For a more specific test that checks also the content sent to Telegram, you should add additional Gherking steps to get and verify the actual message via other Telegram APIs. We&#8217;re not going in so much details for this example, but the Gherkin file highlighted above is a good approximation of the backbone you&#8217;ll find in tests for Kamelets of type "sink".</p> </div> </div> </div> </div> </article> <aside class="toc sidebar" data-title="Contents" data-levels="2"> <div class="toc-menu"></div> </aside> </div> </main> </div> <div class="footer-tools"> <a href="#top" title="Reach the top of the page">Back to top</a> </div> <footer> <div class="footer"> <figure class="logo"> <img src="../../../_/img/logo-d.svg" class="logo-small mt-60" alt="Apache Camel Logo" aria-label="white silhouette of a camel in front of a sand dune"> </figure> <input id="footer-toggle-overview" type="checkbox" title="Show/Hide Overview section"> <dl> <dt><label for="footer-toggle-overview">Overview</label><label for="footer-toggle-overview">&#65291;</label></dt> <dd><a href="../../../blog/">Blog</a></dd> <dd><a href="../../../docs/">Documentation</a></dd> <dd><a href="../../../community/support/">Community</a></dd> <dd><a href="../../../download/">Download</a></dd> </dl> <input id="footer-toggle-documentation" type="checkbox" title="Show/Hide Documentation section"> <dl> <dt><label for="footer-toggle-documentation">Documentation</label><label for="footer-toggle-documentation">&#65291;</label></dt> <dd><a href="../../../manual/latest/">User Manual</a></dd> <dd><a href="../../../components/latest/index.html">Components</a></dd> <dd><a href="../../../camel-k/latest/">Camel-K</a></dd> <dd><a href="../../../camel-kafka-connector/latest/">Camel Kafka Connector</a></dd> <dd><a href="../../../camel-quarkus/latest/">Camel Quarkus</a></dd> <dd><a href="../../../camel-spring-boot/latest/">Camel Spring Boot</a></dd> <dd><a href="../../../camel-karaf/latest/">Camel Karaf</a></dd> <dd><a href="../../../manual/latest/faq/index.html">FAQ</a></dd> </dl> <input id="footer-toggle-community" type="checkbox" title="Show/Hide Community section"> <dl> <dt><label for="footer-toggle-community">Community</label><label for="footer-toggle-community">&#65291;</label></dt> <dd><a href="../../../community/support/">Support</a></dd> <dd><a href="../../../community/contributing/">Contributing</a></dd> <dd><a href="../../../community/mailing-list/">Mailing Lists</a></dd> <dd><a href="../../../community/user-stories/">User stories</a></dd> <dd><a href="../../../community/articles/">Articles</a></dd> <dd><a href="../../../community/books/">Books</a></dd> <dd><a href="../../../community/team/">Team</a></dd> </dl> <input id="footer-toggle-about" type="checkbox" title="Show/Hide Acknowledgements section"> <dl> <dt><label for="footer-toggle-about">About</label><label for="footer-toggle-about">&#65291;</label></dt> <dd><a href="../../../acknowledgments/">Acknowledgments</a></dd> <dd><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/events/current-event.html" title="Apache Events">Apache Events</a></dd> <dd><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/licenses/" title="License">License</a></dd> <dd><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/security/" title="Security">Security</a></dd> <dd><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/foundation/sponsorship.html" title="Sponsorship">Sponsorship</a></dd> <dd><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/foundation/thanks.html" title="Thanks">Thanks</a></dd> </dl> <p class="remark"> &copy; 2004-2021 The <a href="https://apache.org">Apache Software Foundation</a>.<br> Apache Camel, Camel, Apache, the Apache feather logo, and the Apache Camel project logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners. </p> <div class="resources"> <div class="context"> <a href="../../../privacy-policy/">Privacy Policy</a> </div> <div class="context"> <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/foundation/policies/conduct">Code of Conduct</a> </div> <div class="context"> <a href="../../../sitemap/">Sitemap</a> </div> </div> <div class="footer-icons"> <a rel="noopener noreferrer nofollow" href="https://github.com/apache/camel/" title="Collaborate on GitHub"><svg class="brand-icon" focusable="false"><use xlink:href="../../../_/img/brand-logos.svg#github"/></svg></a> <a rel="noopener noreferrer nofollow" href="https://camel.zulipchat.com" title="Chat on Zulip"><svg class="brand-icon" focusable="false"><use xlink:href="../../../_/img/brand-logos.svg#zulip"/></svg></a> <a rel="noopener noreferrer nofollow" href="https://twitter.com/ApacheCamel" title="Follow Apache Camel on Twitter"><svg class="brand-icon" focusable="false"><use xlink:href="../../../_/img/brand-logos.svg#twitter"/></svg></a> </div> </div> </footer> <script src="../../../_/js/vendor/algoliasearch-8fe81df376.js"></script> <script src="../../../_/js/site-0d18f68ee9.js"></script> <script async src="../../../_/js/vendor/highlight-a988c6fdd9.js"></script> <script async src="../../../_/js/vendor/svg4everybody-195d47ce7d.js"></script> <script type="application/ld+json"> { "@context": "http://schema.org", "@type": "Organization", "name": "Apache Camel", "url": "/", "sameAs": [ "https://twitter.com/ApacheCamel" ], "logo": "../../../_/img/logo-d.svg", "description": "Apache Camel ™ is a versatile open-source integration framework based on known Enterprise Integration Patterns. Camel empowers you to define routing and mediation rules in a variety of domain-specific languages, including a Java-based Fluent API, Spring or Blueprint XML Configuration files, and a Scala DSL." } </script> <script type="application/ld+json"> { "@context": "http://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Apache Camel", "item": "https://camel.apache.org/" }, { "@type": "ListItem", "position": 2, "name": "Camel K", "item": "https://camel.apache.org/camel-k/latest/index.html" }, { "@type": "ListItem", "position": 3, "name": "latest", "item": "https://camel.apache.org/camel-k/latest/index.html" } , { "@type": "ListItem", "position": 4, "name": "Kamelets","item": "https://camel.apache.org/camel-k/latest/kamelets/kamelets.html"} , { "@type": "ListItem", "position": 5, "name": "Kamelets Developer Guide","item": "https://camel.apache.org/camel-k/latest/kamelets/kamelets-dev.html"} ] } </script> </body> </html> 

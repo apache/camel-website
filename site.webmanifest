@@ -1,0 +1,12 @@
+{
+  "short_name": "Apache Camel",
+  "name": "Apache Camel - Integration you want!",
+  "icons": [{
+    "src": "favicon-196x196.png",
+    "type": "image/png",
+    "sizes": "196x196"
+  }],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#fbfbfb",
+  "theme_color": "#fbfbfb"
+}

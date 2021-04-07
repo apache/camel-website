@@ -1,0 +1,7 @@
+# Enable directory indexes for /schema/... and disable redirect to https
+# see https://issues.apache.org/jira/browse/CAMEL-13890
+
+<IfModule mod_autoindex.c>
+    RewriteEngine Off
+    Options +Indexes
+</IfModule>

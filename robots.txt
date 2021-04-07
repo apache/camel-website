@@ -1,0 +1,7 @@
+User-agent: *
+
+Sitemap: https://camel.apache.org/sitemap.xml
+Sitemap: https://camel.apache.org/sitemap-camel-k.xml
+Sitemap: https://camel.apache.org/sitemap-components.xml
+Sitemap: https://camel.apache.org/sitemap-manual.xml
+

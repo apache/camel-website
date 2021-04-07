@@ -1,0 +1,139 @@
+<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../../../../apple-touch-icon-57x57.png"> <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../apple-touch-icon-114x114.png"> <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../apple-touch-icon-72x72.png"> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../apple-touch-icon-144x144.png"> <link rel="apple-touch-icon-precomposed" sizes="60x60" href="../../../../apple-touch-icon-60x60.png"> <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../../../apple-touch-icon-120x120.png"> <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../../../../apple-touch-icon-76x76.png"> <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../../apple-touch-icon-152x152.png"> <link rel="icon" type="image/png" href="../../../../favicon-196x196.png" sizes="196x196"> <link rel="icon" type="image/png" href="../../../../favicon-96x96.png" sizes="96x96"> <link rel="icon" type="image/png" href="../../../../favicon-32x32.png" sizes="32x32"> <link rel="icon" type="image/png" href="../../../../favicon-16x16.png" sizes="16x16"> <link rel="icon" type="image/png" href="../../../../favicon-128.png" sizes="128x128"> <meta name="application-name" content="Apache Camel"> <link rel="manifest" href="../../../../site.webmanifest"> <title>CAPI Gateway: Using Apache Camel at the European Commission - Apache Camel</title> <link rel="canonical" href="../../../../blog/2020/01/capi-gateway/"> <link rel="stylesheet" href="../../../../_/css/site-a192e92461.css"> </head> <body class="article"> <header class="header"> <nav class="navbar"> <div class="navbar-brand"> <a class="nav-logo" href="../../../../" title="Apache Camel"></a> <div id="topbar-nav" class="navbar-menu"> <div class="navbar-end"> <a class="navbar-item-section navbar-item navbar-topics" href="../../../../blog/"> <img alt="Blog" src="../../../../_/img/blog.svg"> Blog </a> <a class="navbar-item-section navbar-item navbar-topics" href="../../../../docs/"> <img alt="Documentation" src="../../../../_/img/documentation.svg"> Documentation </a> <a class="navbar-item-section navbar-item navbar-topics" href="../../../../community/"> <img alt="Community" src="../../../../_/img/community.svg"> Community </a> <a class="navbar-item-section navbar-item navbar-topics" href="../../../../download/"> <img alt="Download" src="../../../../_/img/download.svg"> Download </a> </div> </div> <div class="navbar-fill"></div> <div class="break-row"></div> <div class="navbar-search results-hidden"> <input id="search" class="search" placeholder="Search" autocomplete="off"> <img src="/_/img/cancel.svg" alt="Clear" id="search-cancel"> <div id="search_results"></div> </div> <div class="navbar-tools"> <a rel="noopener noreferrer nofollow" href="https://github.com/apache/camel/" title="Collaborate on GitHub"><svg focusable="false" class="brand-icon"><use href="../../../../_/img/brand-logos.svg#github"/></svg></a> <a rel="noopener noreferrer nofollow" href="https://camel.zulipchat.com" title="Chat on Zulip"><svg focusable="false" class="brand-icon"><use href="../../../../_/img/brand-logos.svg#zulip"/></svg></a> <a rel="noopener noreferrer nofollow" href="https://twitter.com/ApacheCamel" title="Follow Apache Camel on Twitter"><svg focusable="false" class="brand-icon"><use href="../../../../_/img/brand-logos.svg#twitter"/></svg></a> </div> <button class="navbar-burger" data-target="topbar-nav" type="button" aria-label="Menu"> <span></span> <span></span> <span></span> </button> </div> </nav> </header> <a id="top"></a> <div class="body"> <main role="main blog"> <article class="blog doc"> <header> <a class="category" href="../../../../categories/Usecases/">USECASES</a> <h1>CAPI Gateway: Using Apache Camel at the European Commission</h1> </header> <div class="post"> <aside> <div class="summary">How an API Gateway is implemented using Camel at the European Comission</div> Posted on <time itemprop="published" datetime="2020-01-02" title="Thursday, January 2, 2020">January 2, 2020</time>, by <figure> <img src="https://avatars.githubusercontent.com/u/12775411?v=4" alt="Rodrigo Coelho"> <figcaption rel="author">Rodrigo Coelho</figcaption> </figure> <h4>Share this blog</h4> <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fcamel.apache.org%2fblog%2f2020%2f01%2fcapi-gateway%2f" target="_blank" rel="noopener" aria-label="Share on Facebook"> <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg> </div> </div> </a> <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=CAPI%20Gateway%3a%20Using%20Apache%20Camel%20at%20the%20European%20Commission&url=https%3a%2f%2fcamel.apache.org%2fblog%2f2020%2f01%2fcapi-gateway%2f&hashtags=ApacheCamel" target="_blank" rel="noopener" aria-label="Share on Twitter"> <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false"><path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z"/></svg> </div> </div> </a> <a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fcamel.apache.org%2fblog%2f2020%2f01%2fcapi-gateway%2f&title=CAPI%20Gateway%3a%20Using%20Apache%20Camel%20at%20the%20European%20Commission&summary=How%20an%20API%20Gateway%20is%20implemented%20using%20Camel%20at%20the%20European%20Comission&source=https%3A%2F%2Fcamel.apache.org" target="_blank" rel="noopener" aria-label="Share on LinkedIn" title="Share on LinkedIn"> <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false"><path d="M6.5 21.5h-5v-13h5v13zM4 6.5C2.5 6.5 1.5 5.3 1.5 4s1-2.4 2.5-2.4c1.6 0 2.5 1 2.6 2.5 0 1.4-1 2.5-2.6 2.5zm11.5 6c-1 0-2 1-2 2v7h-5v-13h5V10s1.6-1.5 4-1.5c3 0 5 2.2 5 6.3v6.7h-5v-7c0-1-1-2-2-2z"/></svg> </div> </div> </a> <p> <a class="arrow prev" href="../../../../blog/2019/12/2019-Numbers/" title="Previous post: Camel 2019 in Numbers">&#10094;</a> <a class="arrow next" href="../../../../blog/2020/01/CustomWebApiComponent/" title="Next post: Custom Web API Component">&#10095;</a> </p> </aside> <div class="post-content"> <p>I&rsquo;ve been working at the European Commission for the last 4 years as a Software Architect, working for a unit responsible for developing reusable components, and advocating open source software. In this context, we organized already a couple of Hackathons and Bug bounties open to all the open source communities.</p> <p>In the team, we worked already a couple of times with Apache Camel, and I like the elegance and performance compared with other integration frameworks.</p> <p>Recently I was challenged to find alternatives to the existing API Gateway infrastructure and immediately started to search for products implemented on top of Apache Camel.</p> <p>Not being able to find any solution with all we need to offer, I decided to work on a small POC with the following features:</p> <ul> <li>Easy to customize API Gateway (since we have several customers, with a wide scope of needs and technologies, we need to be able to easily build custom components on top of an API Gateway core.) Ex.: Customize processors, Integrate with externals IdP, Implement custom API Manager Interface.)</li> <li>Light and easy to install.</li> <li>Decoupled components, Observability, Metrics, Database, API Manager Interface, Authorization, and Gateway.</li> <li>Traffic management (Applied per API or API Path)</li> <li>Automated traceability. (When a user deploys an API, we create Zipkin traces)</li> <li>Automated Metrics (When a user deploys an API, we create Prometheus metrics)</li> <li>Automated Dashboards (When a user deploys an API, we create Grafana dashboards)</li> <li>Block APIs after failed attempts.</li> <li>REST endpoints to manage your API&rsquo;s, Clients, Subscriptions, Certificates.</li> <li>Authorization integration with Keycloak.</li> </ul> <p>SO, WHY APACHE CAMEL?</p> <ul> <li>Open Source.</li> <li>Big and active community.</li> <li>Fast and reliable.</li> <li>Deep integration with Spring Boot.</li> <li>DSL Language.</li> <li>Know-how in the team.</li> <li>It supports all the integration patterns that you can remember.</li> </ul> <p>As part of the POC, I&rsquo;ve decided already to combine other technologies:</p> <ul> <li>Spring Boot</li> <li>Hazelcast distributed cache</li> <li>Prometheus</li> <li>Grafana</li> <li>Zipkin</li> <li>MongoDB</li> <li>Keycloak</li> </ul> <p>The POC is available, and currently being tested, already working with Apache Camel 3.0.0. Let&rsquo;s then go for some technical details&hellip;</p> <h2 id="architecture-overview">Architecture Overview</h2> <figure> <a href="../../../../blog/2020/01/capi-gateway/CAPI-Gateway.png" title="Architecture Overview (Click to enlarge)"><img src="../../../../blog/2020/01/capi-gateway/CAPI-Gateway_hu1109e52e8a892dffb13e3afe780ccdff_66685_800x0_resize_q95_gaussian_2.png" width="800" height="787" alt="Architecture Overview"></a> <figcaption>Architecture Overview (Click to enlarge)</figcaption> </figure> <h2 id="basic-route-definition">Basic Route Definition</h2> <pre><code>routeDefinition
+  .streamCaching()
+  .setHeader(...) //core headers
+  .process(authenticationProcessor)
+  .choice()
+      .when(...) //check execution of the authentication processor
+      .process(pathProcessor) //evaluates the path
+      .toF(toEndpoint) //proxy to the deployed backend
+      .removeHeader(...) //remove some core headers
+      .process(metricsProcessor) //process metrics
+
+  //api was not authenticated (ex.: expired token)
+  .otherwise()
+      .setHeader(...) //core error headers
+      .toF(apiGatewayErrorEndpoint) //proxy to default error endpoint
+      .removeHeader(...) //remove some core headers
+      .process(metricsProcessor) //process metrics
+      .end()
+      .setId(routeID);</code></pre> <p>The <em>toEndpoint</em> contains the default configuration:</p> <pre><code>throwExceptionOnFailure=false //we will catch the exceptions
+connectTimeout=...
+bridgeEndpoint=true
+copyHeaders=true
+connectionClose=true</code></pre> <p>Since we want to be able to catch Network, IO exceptions we also do this on the route definition:</p> <pre><code>routeDefinition
+  .onException(exceptionClass)
+  .continued(continued)
+  .setHeader(...) //exception headers
+  .toF(apiGatewayErrorEndpoint) //proxy to default error endpoint
+  .removeHeader(...) //remove some core headers
+  .end();</code></pre> <p>All information about a running API can be found in the shared cache. This allows the component that manages APIs to know if an API must be suspended or temporarily blocked (due to failed attempts and/or many calls exceeding the defined threshold.) Information about a running API includes:</p> <ul> <li>Route ID</li> <li>Secured</li> <li>Zipkin Service Name and Prometheus Metrics Name</li> <li>Context</li> <li>Path</li> <li>Verb</li> <li>Failed calls</li> <li>Max allowed failed calls</li> <li>Disabled (temporarily disabled, a candidate to be removed)</li> <li>Removed (removed Route)</li> <li>Suspended info (type [ERROR, THROTTLING] and reason)</li> </ul> <p>Main components Managing enabled Routes:</p> <ul> <li>@Component @Scheduled <em>ThrottlingInspector</em> - Periodically checks the traffic on the deployed API Path level</li> <li>@Component @Scheduled <em>Running API&rsquo;s</em> - Periodically checks for API errors, candidates routes to suspend.</li> </ul> <h2 id="example-of-an-api-definition">Example of an API definition</h2> <pre><code>{
+    &#34;_id&#34; : &#34;XXX-XXX-XXX-XXX&#34;,
+    &#34;endpoint&#34; : &#34;remote.domain.com:8080&#34;,
+    &#34;endpointType&#34; : &#34;HTTPS&#34;,
+    &#34;name&#34; : &#34;Friendly API Name&#34;,
+    &#34;secured&#34; : true,
+    &#34;context&#34; : &#34;context-name&#34;,
+    &#34;swagger&#34; : true,
+    &#34;swaggerEndpoint&#34; : &#34;https://remote.domain.com:8080/v2/api-docs&#34;,
+    &#34;blockIfInError&#34; : true,
+    &#34;maxAllowedFailedCalls&#34; : 10, //after 10 failed calls, the route will be removed
+    &#34;unblockAfter&#34; : true,
+    &#34;unblockAfterMinutes&#34; : 2, //after 2 minutes of being removed, the route is added
+    //100 calls per minute, above this, the route is suspended.
+    &#34;throttlingPolicy&#34; : {
+        &#34;maxCallsAllowed&#34; : &#34;100&#34;,
+        &#34;periodForMaxCalls&#34; : &#34;60000&#34;,
+        &#34;applyPerPath&#34; : true
+    }
+}</code></pre> <p>With the following configuration your service will be available at:</p> <pre><code>https://localhost:8380/gateway/context-name/</code></pre> <p>The following configuration will be applied: * secured: true - Meaning, that the CAPI Gateway expects a Bearer token sign by the authorization server (currently integrating with Keycloak) provided by the CAPI Rest Server. * blockIfInError: true - Means that for instance if you send more than 10 times (maxAllowedFailedCalls) the wrong token your API will be suspended for 2 minutes (unblockAfterMinutes). * throttlingPolicy.maxCallsAllowed: 100 / throttlingPolicy.periodForMaxCalls - You can only call your API/Path 100 times per minute. * throttlingPolicy.applyPerPath: true - If true the policy will be applied by the path and NOT the total amount for the API.</p> <h2 id="optional-configuration">Optional Configuration</h2> <p>You can define custom paths, in case you don&rsquo;t have a Swagger Endpoint (Swagger 2/Open API), so if swagger: false, then CAPI will look for a list of PATH like the below example:</p> <pre><code> {
+     &#34;_id&#34; : &#34;XXX-XXX-XXX-XXX&#34;,
+     &#34;endpoint&#34; : &#34;remote.domain.com:8080&#34;,
+     &#34;endpointType&#34; : &#34;HTTPS&#34;,
+     &#34;name&#34; : &#34;Friendly API Name&#34;,
+     //this time, the API will be available for everyone
+     &#34;secured&#34; : false,
+     &#34;context&#34; : &#34;context-name&#34;,
+     &#34;blockIfInError&#34; : false,
+     //no swagger definition present, you need to define the available paths.
+     &#34;swagger&#34; : false,
+     &#34;paths&#34; : [
+         {
+         &#34;verb&#34; : &#34;GET&#34;,
+         &#34;path&#34; : &#34;/services/path&#34;
+         },
+         {
+         &#34;verb&#34; : &#34;POST&#34;,
+         &#34;path&#34; : &#34;/services/path&#34;
+         }
+     ]
+ }</code></pre> <h2 id="client-consumer-object">Client (consumer) object</h2> <p>This will change after the integration with Keycloak. Example of a client (with the password: web-client-secret)</p> <pre><code>{
+    &#34;_id&#34; : &#34;XXX-XXX-XXX-XXX&#34;,
+    &#34;clientId&#34; : &#34;web-publisher&#34;,
+    &#34;resourceIds&#34; : [],
+    &#34;secretRequired&#34; : true,
+    &#34;clientSecret&#34; : &#34;$2a$10$oQBqS4ZOEiIGVNiZnB0nMuFw/n/Od57IG/uy4nFuOJxLtHE/Z5jDC&#34;,
+    &#34;scoped&#34; : false,
+    &#34;scope&#34; : [
+        &#34;read-foo&#34;
+    ],
+    &#34;authorizedGrantTypes&#34; : [
+        &#34;refresh_token&#34;,
+        &#34;client_credentials&#34;,
+    ],
+    &#34;registeredRedirectUri&#34; : [],
+    &#34;authorities&#34; : [
+        {
+            &#34;role&#34; : &#34;ROLE_USER&#34;,
+            &#34;_class&#34; : &#34;org.springframework.security.core.authority.SimpleGrantedAuthority&#34;
+        },
+        {
+            &#34;role&#34; : &#34;ROLE_PUBLISHER&#34;,
+            &#34;_class&#34; : &#34;org.springframework.security.core.authority.SimpleGrantedAuthority&#34;
+        }
+        // All the API&#39;s you subscribe will be an authority
+    ],
+    &#34;accessTokenValiditySeconds&#34; : 60,
+    &#34;refreshTokenValiditySeconds&#34; : 14400,
+    &#34;autoApprove&#34; : false
+}</code></pre> <h2 id="consuming-your-api">Consuming your API</h2> <p>If you wish to enable security for your API (api.secured = true), then you will need to define a <em>client</em>. Your API ID will be added as an authority in the authorities list of your client.</p> <pre><code>&#34;authorities&#34; : [
+    {
+        &#34;role&#34; : &#34;ROLE_USER&#34;,
+        &#34;_class&#34; : &#34;org.springframework.security.core.authority.SimpleGrantedAuthority&#34;
+    },
+    {
+        &#34;role&#34; : &#34;ROLE_PUBLISHER&#34;,
+        &#34;_class&#34; : &#34;org.springframework.security.core.authority.SimpleGrantedAuthority&#34;
+    },
+    {
+        &#34;role&#34; : &#34;YOUR API ID&#34;,
+        &#34;_class&#34; : &#34;org.springframework.security.core.authority.SimpleGrantedAuthority&#34;
+    }
+]</code></pre> <h2 id="play-with-capi-gateway">Play with CAPI Gateway</h2> <ul> <li>Clone the project.</li> <li><p>Execute</p> <pre><code>$ sudo docker-compose up -d</code></pre></li> <li><p>If you are starting a new MongoDB instance, a default CAPI Client will be created for you.</p></li> <li><p>Request your first access token:</p> <pre><code>$ curl -X POST https://localhost:8080/oauth/token -H &#39;Authorization: Basic d2ViLXB1Ymxpc2hlcjp3ZWItY2xpZW50LXNlY3JldA==&#39; -H &#39;Content-Type: multipart/form-data;&#39; -F grant_type=client_credentials -F &#39;response_type=access_token&#39;</code></pre></li> <li><p>Go to <a href="http://localhost:8080/swagger-ui.html" rel="nofollow noreferrer">http://localhost:8080/swagger-ui.html</a></p></li> <li><p>Authenticate with the token you obtained from the previous step. (Don&rsquo;t forget to specify: Bearer <em>the token</em>)</p></li> <li><p>Publish your first API:</p> <pre><code>$ curl -X POST &#34;http://localhost:8080/route/simple-rest&#34; -H &#34;accept: application/json&#34; -H &#34;Content-Type: application/json&#34; -d &#34;&lt;your-api&gt;&#34; (see Example of an API definition)</code></pre></li> <li><p>Imagine that your context was: test and one of your GET path was /user you can then test: <a href="http://localhost:8380/gateway/test/user" rel="nofollow noreferrer">http://localhost:8380/gateway/test/user</a></p></li> </ul> <p>Docker Compose will create instances of Grafana, Prometheus and Zipkin, but if you wish to use already existing instances you just need to change this environment variables:</p> <pre><code>api.gateway.prometheus.endpoint=http://prometheus:9090
+api.gateway.zipkin.endpoint=http://zipkin:9411/api/v2/spans
+api.gateway.grafana.endpoint=http://localhost:8080/grafana</code></pre> <h2 id="some-load-results-calling-a-protected-service">Some load results (Calling a protected service)</h2> <h4 id="using-apache-benchmark-on-a-1-node-docker-container-with-ssl">Using apache benchmark on a 1 node docker container with SSL</h4> <pre><code>Results for 20k calls 1000 concurrency level:
+Server Hostname:        localhost
+Server Port:            8380
+SSL/TLS Protocol:       TLSv1.2,ECDHE-RSA-AES256-GCM-SHA384,2048,256
+Server Temp Key:        ECDH P-256 256 bits
+TLS Server Name:        localhost
+
+Document Path:          /gateway/myctx/internal/12345
+Document Length:        33 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   65.563 seconds
+Complete requests:      20000
+Failed requests:        0
+Total transferred:      6560000 bytes
+HTML transferred:       660000 bytes
+Requests per second:    305.05 [#/sec] (mean)
+Time per request:       3278.129 [ms] (mean)
+Time per request:       3.278 [ms] (mean, across all concurrent requests)
+Transfer rate:          97.71 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        7 2431 1388.0   2260   18381
+Processing:     5  798 883.7    684   13862
+Waiting:        3  796 883.3    681   13862
+Total:         58 3229 1683.6   3091   18639</code></pre> <p>It would be amazing to have feedback from the Apache Camel Community. If you have any questions, feel free to contact me. The repo is located at <a href="https://github.com/rodrigoserracoelho/capi-gateway" rel="nofollow noreferrer">https://github.com/rodrigoserracoelho/capi-gateway</a></p> <div class="related"> </div> </div> </div> </article> </main> </div> <div class="footer-tools"> <a title="Improve this document, receive free virtual hugs &hearts;" href="https://github.com/apache/camel-website/edit/main/content/blog/2020/01/capi-gateway/index.md">Edit this Page</a> <a href="#top" title="Reach the top of the page">Back to top</a> </div> <footer> <div class="footer"> <figure class="logo"> <img class="logo" src="../../../../_/img/logo-d.svg" alt="Apache Camel Logo" aria-label="white silhouette of a camel in front of a sand dune"> </figure> <input id="footer-toggle-overview" type="checkbox" title="Show/Hide Overview section"> <dl> <dt><label for="footer-toggle-overview">Overview</label><label for="footer-toggle-overview">&#65291;</label></dt> <dd><a href="../../../../blog/">Blog</a></dd> <dd><a href="../../../../docs/">Documentation</a></dd> <dd><a href="../../../../community/support/">Community</a></dd> <dd><a href="../../../../download/">Download</a></dd> </dl> <input id="footer-toggle-documentation" type="checkbox" title="Show/Hide Documentation section"> <dl> <dt><label for="footer-toggle-documentation">Documentation</label><label for="footer-toggle-documentation">&#65291;</label></dt> <dd><a href="../../../../manual/latest/">User Manual</a></dd> <dd><a href="../../../../components/latest/index.html">Components</a></dd> <dd><a href="../../../../camel-k/latest/">Camel-K</a></dd> <dd><a href="../../../../camel-kafka-connector/latest/">Camel Kafka Connector</a></dd> <dd><a href="../../../../camel-quarkus/latest/">Camel Quarkus</a></dd> <dd><a href="../../../../camel-spring-boot/latest/">Camel Spring Boot</a></dd> <dd><a href="../../../../camel-karaf/latest/">Camel Karaf</a></dd> <dd><a href="../../../../manual/latest/faq/index.html">FAQ</a></dd> </dl> <input id="footer-toggle-community" type="checkbox" title="Show/Hide Community section"> <dl> <dt><label for="footer-toggle-community">Community</label><label for="footer-toggle-community">&#65291;</label></dt> <dd><a href="../../../../community/support/">Support</a></dd> <dd><a href="../../../../community/contributing/">Contributing</a></dd> <dd><a href="../../../../community/mailing-list">Mailing Lists</a></dd> <dd><a href="../../../../community/user-stories/">User stories</a></dd> <dd><a href="../../../../community/articles/">Articles</a></dd> <dd><a href="../../../../community/books/">Books</a></dd> <dd><a href="../../../../community/team/">Team</a></dd> </dl> <input id="footer-toggle-about" type="checkbox" title="Show/Hide Acknowledgements section"> <dl> <dt><label for="footer-toggle-about">About</label><label for="footer-toggle-about">&#65291;</label></dt> <dd><a href="../../../../acknowledgments/">Acknowledgments</a></dd> <dd><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/events/current-event.html" title="Apache Events">Apache Events</a></dd> <dd><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/licenses/" title="License">License</a></dd> <dd><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/security/" title="Security">Security</a></dd> <dd><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/foundation/sponsorship.html" title="Sponsorship">Sponsorship</a></dd> <dd><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/foundation/thanks.html" title="Thanks">Thanks</a></dd> </dl> <p class="remark"> &copy; 2004-2021 The <a href="https://apache.org">Apache Software Foundation</a>.<br> Apache Camel, Camel, Apache, the Apache feather logo, and the Apache Camel project logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners. </p> <div class="resources"> <div class="context"> <a href="../../../../privacy-policy/">Privacy Policy</a> </div> <div class="context"> <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/foundation/policies/conduct">Code of Conduct</a> </div> <div class="context"> <a href="../../../../sitemap/">Sitemap</a> </div> </div> <div class="footer-icons"> <a rel="noopener noreferrer nofollow" href="https://github.com/apache/camel/" title="Collaborate on GitHub"><svg class="brand-icon" focusable="false"><use href="../../../../_/img/brand-logos.svg#github"/></svg></a> <a rel="noopener noreferrer nofollow" href="https://camel.zulipchat.com" title="Chat on Zulip"><svg class="brand-icon" focusable="false"><use href="../../../../_/img/brand-logos.svg#zulip"/></svg></a> <a rel="noopener noreferrer nofollow" href="https://twitter.com/ApacheCamel" title="Follow Apache Camel on Twitter"><svg class="brand-icon" focusable="false"><use href="../../../../_/img/brand-logos.svg#twitter"/></svg></a> </div> </div> </footer> <script src="../../../../_/js/vendor/algoliasearch-8fe81df376.js"></script> <script src="../../../../_/js/site-0d18f68ee9.js"></script> <script async src="../../../../_/js/vendor/highlight-a988c6fdd9.js"></script> <script async src="../../../../_/js/vendor/svg4everybody-195d47ce7d.js"></script> <script type="application/ld+json"> { "@context": "http://schema.org", "@type": "Organization", "name": "Apache Camel", "url": "https:\/\/camel.apache.org\/" , "sameAs": ["https://twitter.com/ApacheCamel"] , "logo": "https:\/\/camel.apache.org\/_\/img\/logo-d.svg" , "description": "Apache Camel ™ is a versatile open-source integration framework based on known Enterprise Integration Patterns. Camel empowers you to define routing and mediation rules in a variety of domain-specific languages, including a Java-based Fluent API, Spring or Blueprint XML Configuration files, and a Scala DSL." } </script> <script type="application/ld+json"> { "@context": "http://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1 , "item": { "@id": "https://camel.apache.org/", "name": "Apache Camel" } },{ "@type": "ListItem", "position": 2 , "item": { "@id": "https://camel.apache.org/blog/", "name": "blog" } },{ "@type": "ListItem", "position": 3 , "item": { "@id": "https://camel.apache.org/blog/2020/", "name": "2020" } },{ "@type": "ListItem", "position": 4 , "item": { "@id": "https://camel.apache.org/blog/2020/01/", "name": "01" } },{ "@type": "ListItem", "position": 5 , "item": { "@id": "https://camel.apache.org/blog/2020/01/capi-gateway/", "name": "capi-gateway" } }] } </script> </body> </html> 

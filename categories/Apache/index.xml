@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apache on Apache Camel</title>
+    <link>https://camel.apache.org/categories/Apache/</link>
+    <description>Recent content in Apache on Apache Camel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://camel.apache.org/categories/Apache/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ApacheCon Asia Integration Track schedules</title>
+      <link>https://camel.apache.org/blog/2021/07/ApacheCon-Asia-2021/</link>
+      <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/07/ApacheCon-Asia-2021/</guid>
+      <description>ApacheCon Asia 2021 will be held online from 6 August to 8 August. As a track chair of the integration track, I will be presenting the topics related to integration and the conference registration is now open.
+Integration is the method and technology of integrating heterogeneous systems built on different platforms and with different solutions. The most famous application integration project at the ASF is Apache Camel, which has a variety of projects providing a variety of integration solutions.</description>
+    </item>
+    
+    <item>
+      <title>ApacheCon Asia and @Home schedules</title>
+      <link>https://camel.apache.org/blog/2021/06/ApacheCon-2021/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/06/ApacheCon-2021/</guid>
+      <description>As we announced earlier this year, we have not one but two Apache conferences featuring Apache Camel on the Integration track.
+ApacheCon Asia is from August 6 - 8, 2021 and has two days of Camel and software integration sessions held in Asia-Pacific timezone. And ApacheCon @Home from September 21 - 23, 2021 also features two days of Camel and software integration sessions with sessions held in Europe-Americas timezone.
+The schedules for the Integration track at ApacheCon Asia, and ApacheCon @Home have been published, and are packed with interesting technology talks and use case presentations.</description>
+    </item>
+    
+    <item>
+      <title>The call for papers is open for two ApacheCons / 两场Apache大会的演讲征集已经开始</title>
+      <link>https://camel.apache.org/blog/2021/03/ApacheCons2021/</link>
+      <pubDate>Tue, 30 Mar 2021 11:22:18 +0200</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/03/ApacheCons2021/</guid>
+      <description>This year we have two Apache conferences featuring Camel, ApacheCon Asia from 6th through 8th of August, and ApacheCon @Home from 21st through 23rd of September, 2021. Both of these conferences will be online.
+If you wish to present at any of these, please submit your talk proposal for the Integration track. The call for presentations is open for both ApacheCon Asia and ApacheCon @Home. You’re welcome to propose a session for both conferences, though be aware of the differences in target audiences based on region, timezone, and language.</description>
+    </item>
+    
+    <item>
+      <title>Camel AWS2 Components are here: what are the changes for end users?</title>
+      <link>https://camel.apache.org/blog/2020/03/Camel3-AWS2-Whatsnew/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/03/Camel3-AWS2-Whatsnew/</guid>
+      <description>In Camel 3.2.0 we&amp;rsquo;ll release the complete set of Camel AWS2 components. In Camel 3.1.0 we already have a bunch of AWS2 components living together with the original AWS components. The aim of this post is giving a full perspective of what will change for the end users and the roadmap for new features.
+New components Except camel-aws-xray, which is a particular component needing much more work to be migrated, all the original AWS components have been migrated to AWS SDK v2.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel on top-5 in the ASF annual 2019 report</title>
+      <link>https://camel.apache.org/blog/2019/11/ASF-Report-2019/</link>
+      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2019/11/ASF-Report-2019/</guid>
+      <description>The ASF Annual 2019 Report includes 25 highlights where Apache Camel is referred twice as a top-5 project:
+ 10. Top 5 Apache repositories by number of commits: Camel, Hadoop, HBase, Beam, and Flink; 20. GitHub traffic: Top 5 most active Apache sources &amp;ndash;visits: Spark, Camel, Flink, Kafka, and Airflow;  </description>
+    </item>
+    
+  </channel>
+</rss>

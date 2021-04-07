@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<sitemap>
+<loc>https://camel.apache.org/sitemap-camel-k.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://camel.apache.org/sitemap-camel-kafka-connector.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://camel.apache.org/sitemap-camel-kamelets.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://camel.apache.org/sitemap-camel-karaf.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://camel.apache.org/sitemap-camel-quarkus.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://camel.apache.org/sitemap-camel-spring-boot.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://camel.apache.org/sitemap-components.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://camel.apache.org/sitemap-manual.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://camel.apache.org/sitemap-website.xml</loc>
+</sitemap></sitemapindex>

@@ -1,0 +1,166 @@
+<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <title>Apicurio connector Archetypes :: Apache Camel</title> <meta name="generator" content="Antora 3.0.0-alpha.1"> <link rel="stylesheet" href="../../_/css/site-a192e92461.css"> <meta name="application-name" content="Apache Camel"> <link rel="manifest" href="../../site.webmanifest"> <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../../apple-touch-icon-57x57.png"> <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../apple-touch-icon-114x114.png"> <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../apple-touch-icon-72x72.png"> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../apple-touch-icon-144x144.png"> <link rel="apple-touch-icon-precomposed" sizes="60x60" href="../../apple-touch-icon-60x60.png"> <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../apple-touch-icon-120x120.png"> <link rel="apple-touch-icon-precomposed" sizes="76x76" href="../../apple-touch-icon-76x76.png"> <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../apple-touch-icon-152x152.png"> <link rel="icon" type="image/png" href="../../favicon-196x196.png" sizes="196x196"> <link rel="icon" type="image/png" href="../../favicon-96x96.png" sizes="96x96"> <link rel="icon" type="image/png" href="../../favicon-32x32.png" sizes="32x32"> <link rel="icon" type="image/png" href="../../favicon-16x16.png" sizes="16x16"> <link rel="icon" type="image/png" href="../../favicon-128.png" sizes="128x128"> </head> <body class="article"> <header class="header"> <nav class="navbar"> <div class="navbar-brand"> <a class="nav-logo" href="../.."></a> <div id="topbar-nav" class="navbar-menu"> <div class="navbar-end"> <a class="navbar-item-section navbar-item navbar-topics" href="../../blog/"> <img alt="Blog" src="/_/img/blog.svg"> Blog </a> <a class="navbar-item-section navbar-item navbar-topics" href="../../docs/"> <img alt="Documentation" src="/_/img/documentation.svg"> Documentation </a> <a class="navbar-item-section navbar-item navbar-topics" href="../../community/"> <img alt="Community" src="/_/img/community.svg"> Community </a> <a class="navbar-item-section navbar-item navbar-topics" href="../../download/"> <img alt="Download" src="/_/img/download.svg"> Download </a> </div> </div> <div class="navbar-fill"></div> <div class="break-row"></div> <div class="navbar-search results-hidden"> <input id="search" class="search" placeholder="Search" autocomplete="off"> <img src="/_/img/cancel.svg" alt="Clear" id="search-cancel"> <div id="search_results"></div> </div> <div class="navbar-tools"> <a rel="noopener noreferrer nofollow" href="https://github.com/apache/camel/" title="Collaborate on GitHub"><svg focusable="false" class="brand-icon"><use xlink:href="../../_/img/brand-logos.svg#github"/></svg></a> <a rel="noopener noreferrer nofollow" href="https://camel.zulipchat.com" title="Chat on Zulip"><svg focusable="false" class="brand-icon"><use xlink:href="../../_/img/brand-logos.svg#zulip"/></svg></a> <a rel="noopener noreferrer nofollow" href="https://twitter.com/ApacheCamel" title="Follow Apache Camel on Twitter"><svg focusable="false" class="brand-icon"><use xlink:href="../../_/img/brand-logos.svg#twitter"/></svg></a> </div> <button class="navbar-burger" data-target="topbar-nav" type="button" aria-label="Menu"> <span></span> <span></span> <span></span> </button> </div> </nav> </header> <a id="top"></a> <div class="body"> <div class="nav-container" data-component="camel-kafka-connector" data-version="0.7.x"> <aside class="nav"> <div class="panels"> <div class="nav-panel-menu is-active"> <nav class="nav-menu" data-panel="menu"> <h3 class="title"><a href="index.html">Camel Kafka Connector</a></h3> <ul class="nav-list"> <li class="nav-item" data-depth="0"> <ul class="nav-list"> <li class="nav-item" data-depth="1"> <button class="nav-item-toggle" aria-label="Expand or contract topic"></button> <a class="nav-link" href="about.html">What is it?</a> <ul class="nav-list"> <li class="nav-item" data-depth="2"> <a class="nav-link" href="basic-concepts.html">Basic concepts</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="basic-configuration.html">Basic configuration</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="aggregation.html">Aggregation</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="idempotency.html">Idempotency</a> </li> </ul> </li> <li class="nav-item" data-depth="1"> <button class="nav-item-toggle" aria-label="Expand or contract topic"></button> <a class="nav-link" href="archetypes.html">Archetypes</a> <ul class="nav-list"> <li class="nav-item" data-depth="2"> <a class="nav-link" href="archetype-connector.html">Extensible connector archetype</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="archetype-dataformat-connector.html">Extensible Dataformat connector archetype</a> </li> <li class="nav-item is-current-page" data-depth="2"> <a class="nav-link" href="archetype-apicurio-connector.html">Extensible Apicurio connector archetype</a> </li> </ul> </li> <li class="nav-item" data-depth="1"> <button class="nav-item-toggle" aria-label="Expand or contract topic"></button> <a class="nav-link" href="getting-started.html">Getting started</a> <ul class="nav-list"> <li class="nav-item" data-depth="2"> <a class="nav-link" href="try-it-out-locally.html">Try it locally</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="try-it-out-on-kubernetes.html">Try it on Kubernetes</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="try-it-out-on-openshift-with-strimzi.html">Try it on OpenShift cluster</a> </li> <li class="nav-item" data-depth="2"> <a class="nav-link" href="getting-started-with-packages.html">Packages documentation</a> </li> </ul> </li> <li class="nav-item" data-depth="1"> <a class="nav-link" href="connectors.html">Connectors list</a> </li> <li class="nav-item" data-depth="1"> <a class="nav-link" href="camel-compatibility-matrix.html">Apache Camel compatibility matrix</a> </li> <li class="nav-item" data-depth="1"> <a class="nav-link" href="download.html">Camel Kafka Connector Download</a> </li> <li class="nav-item" data-depth="1"> <a class="nav-link" href="testing.html">Testing</a> </li> <li class="nav-item" data-depth="1"> <a class="nav-link" href="troubleshooting.html">Troubleshooting</a> </li> <li class="nav-item" data-depth="1"> <a class="nav-link" href="contributing.html">Contributing</a> </li> </ul> </li> </ul> </nav> </div> <div class="nav-panel-explore" data-panel="explore"> <div class="context"> <span class="title">Camel Kafka Connector</span> <span class="version">0.7.x</span> </div> <ul class="components"> <li class="component"> <span class="title">User manual</span> <ul class="versions"> <li class="version"> <a href="../../manual/latest/index.html">latest</a> </li> </ul> </li> <li class="component"> <span class="title">Camel Components</span> <ul class="versions"> <li class="version"> <a href="../../components/latest/index.html">latest</a> </li> <li class="version"> <a href="../../components/3.11.x/index.html">3.11.x (LTS)</a> </li> <li class="version"> <a href="../../components/3.7.x/index.html">3.7.x (LTS)</a> </li> <li class="version"> <a href="../../components/3.4.x/index.html">3.4.x (LTS)</a> </li> <li class="version"> <a href="../../components/2.x/index.html">2.x</a> </li> </ul> </li> <li class="component"> <span class="title">Camel K</span> <ul class="versions"> <li class="version"> <a href="../../camel-k/latest/index.html">latest</a> </li> <li class="version"> <a href="../../camel-k/1.4.x/index.html">1.4.x</a> </li> </ul> </li> <li class="component is-current"> <span class="title">Camel Kafka Connector</span> <ul class="versions"> <li class="version"> <a href="../latest/index.html">latest</a> </li> <li class="version is-current"> <a href="index.html">0.7.x</a> </li> <li class="version"> <a href="../0.4.x/index.html">0.4.x</a> </li> </ul> </li> <li class="component"> <span class="title">Kamelet Catalog</span> <ul class="versions"> <li class="version"> <a href="../../camel-kamelets/latest/index.html">latest</a> </li> </ul> </li> <li class="component"> <span class="title">Camel Karaf</span> <ul class="versions"> <li class="version"> <a href="../../camel-karaf/latest/index.html">latest</a> </li> <li class="version"> <a href="../../camel-karaf/3.11.x/index.html">3.11.x (LTS)</a> </li> <li class="version"> <a href="../../camel-karaf/3.7.x/index.html">3.7.x (LTS)</a> </li> <li class="version"> <a href="../../camel-karaf/3.4.x/index.html">3.4.x (LTS)</a> </li> </ul> </li> <li class="component"> <span class="title">Camel Quarkus</span> <ul class="versions"> <li class="version"> <a href="../../camel-quarkus/latest/index.html">latest</a> </li> <li class="version"> <a href="../../camel-quarkus/2.0.0/index.html">2.0.0</a> </li> </ul> </li> <li class="component"> <span class="title">Camel Spring Boot</span> <ul class="versions"> <li class="version"> <a href="../../camel-spring-boot/latest/index.html">latest</a> </li> <li class="version"> <a href="../../camel-spring-boot/3.11.x/index.html">3.11.x (LTS)</a> </li> <li class="version"> <a href="../../camel-spring-boot/3.7.x/index.html">3.7.x (LTS)</a> </li> <li class="version"> <a href="../../camel-spring-boot/3.4.x/index.html">3.4.x (LTS)</a> </li> </ul> </li> </ul> </div> </div> </aside> </div> <main class="article"> <nav class="toolbar"> <button class="nav-toggle" aria-label="Toggle submenu"></button> <a href="../../manual/latest/index.html" class="home-link"></a> <nav class="breadcrumbs" aria-label="breadcrumbs"> <ul> <li><a href="index.html">Camel Kafka Connector</a></li> <li><a href="archetypes.html">Archetypes</a></li> <li><a href="archetype-apicurio-connector.html">Extensible Apicurio connector archetype</a></li> </ul> </nav> <div class="page-versions"> <button class="version-menu-toggle" title="Show other versions of page">0.7.x</button> <div class="version-menu"> <a class="version is-missing" href="../latest/index.html">latest</a> <a class="version is-current" href="archetype-apicurio-connector.html">0.7.x</a> <a class="version is-missing" href="../0.4.x/index.html">0.4.x</a> </div> </div> <div class="edit-this-page"><a href="https://github.com/apache/camel-kafka-connector/edit/camel-kafka-connector-0.7.x/docs/modules/ROOT/pages/archetype-apicurio-connector.adoc">Edit this Page</a></div> </nav> <div class="content"> <article class="doc"> <h1 class="page">Apicurio connector Archetypes</h1> <div class="paragraph"> <p>In camel-kafka-connector we provide the camel-kafka-connector-extensible-apicurio-archetype for extending the features of a connector with a apicurio bits and make it extensible.</p> </div> <div class="paragraph"> <p>You can create a camel-kafka-connector project ready to be extended.</p> </div> <div class="paragraph"> <p>You can do that through the following command.</p> </div> <div class="listingblock"> <div class="content"> <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">&gt; mvn archetype:generate  -DarchetypeGroupId=org.apache.camel.kafkaconnector.archetypes  -DarchetypeArtifactId=camel-kafka-connector-extensible-apicurio-archetype  -DarchetypeVersion=0.7.0-SNAPSHOT
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------&lt; org.apache.maven:standalone-pom &gt;-------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO]
+[INFO] &gt;&gt;&gt; maven-archetype-plugin:3.1.2:generate (default-cli) &gt; generate-sources @ standalone-pom &gt;&gt;&gt;
+[INFO]
+[INFO] &lt;&lt;&lt; maven-archetype-plugin:3.1.2:generate (default-cli) &lt; generate-sources @ standalone-pom &lt;&lt;&lt;
+[INFO]
+[INFO]
+[INFO] --- maven-archetype-plugin:3.1.2:generate (default-cli) @ standalone-pom ---
+[INFO] Generating project in Interactive mode
+[INFO] Archetype repository not defined. Using the one from [org.apache.camel.kafkaconnector.archetypes:camel-kafka-connector-extensible-apicurio-archetype:0.7.0-SNAPSHOT] found in catalog local
+Define value for property 'groupId': org.apache.camel.kafkaconnector.extended
+Define value for property 'artifactId': myconnector-extended
+Define value for property 'version' 1.0-SNAPSHOT: :
+Define value for property 'package' org.apache.camel.kafkaconnector.extended: :
+Define value for property 'camel-kafka-connector-name': camel-aws2-s3-kafka-connector
+[INFO] Using property: camel-kafka-connector-version = 0.7.0-SNAPSHOT
+Confirm properties configuration:
+groupId: org.apache.camel.kafkaconnector.extended
+artifactId: myconnector-extended
+version: 1.0-SNAPSHOT
+package: org.apache.camel.kafkaconnector.extended
+camel-kafka-connector-name: camel-aws2-s3-kafka-connector
+camel-kafka-connector-version: 0.7.0-SNAPSHOT
+ Y: : Y
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Archetype: camel-kafka-connector-extensible-apicurio-archetype:0.7.0-SNAPSHOT
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: groupId, Value: org.apache.camel.kafkaconnector.extended
+[INFO] Parameter: artifactId, Value: myconnector-extended
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] Parameter: package, Value: org.apache.camel.kafkaconnector.extended
+[INFO] Parameter: packageInPathFormat, Value: org/apache/camel/kafkaconnector/extended
+[INFO] Parameter: package, Value: org.apache.camel.kafkaconnector.extended
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] Parameter: groupId, Value: org.apache.camel.kafkaconnector.extended
+[INFO] Parameter: camel-kafka-connector-name, Value: camel-aws2-s3-kafka-connector
+[INFO] Parameter: camel-kafka-connector-version, Value: 0.7.0-SNAPSHOT
+[INFO] Parameter: artifactId, Value: myconnector-extended
+[INFO] Project created from Archetype in dir: /home/workspace/myconnector-extended
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  30.376 s
+[INFO] Finished at: 2020-12-01T08:01:09+01:00
+[INFO] ------------------------------------------------------------------------</code></pre> </div> </div> <div class="paragraph"> <p>In the pom of the created project you can add the dependencies you need.</p> </div> <div class="paragraph"> <p>This is the resulting POM</p> </div> <div class="listingblock"> <div class="content"> <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"&gt;
+
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+  &lt;parent&gt;
+     &lt;groupId&gt;org.apache.camel.kafkaconnector&lt;/groupId&gt;
+     &lt;artifactId&gt;parent&lt;/artifactId&gt;
+     &lt;version&gt;0.7.0-SNAPSHOT&lt;/version&gt;
+  &lt;/parent&gt;
+
+  &lt;groupId&gt;org.apache.camel.kafkaconnector.extended&lt;/groupId&gt;
+  &lt;artifactId&gt;myconnector-extended&lt;/artifactId&gt;
+  &lt;packaging&gt;jar&lt;/packaging&gt;
+  &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+
+  &lt;name&gt;A Camel Kafka Connector extended&lt;/name&gt;
+
+  &lt;properties&gt;
+    &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+    &lt;project.reporting.outputEncoding&gt;UTF-8&lt;/project.reporting.outputEncoding&gt;
+    &lt;camel-kafka-connector-version&gt;${project.version}&lt;/camel-kafka-connector-version&gt;
+    &lt;apicurio.registry.version&gt;1.3.1.Final&lt;/apicurio.registry.version&gt;
+    &lt;resteasy.version&gt;4.5.6.Final&lt;/resteasy.version&gt;
+  &lt;/properties&gt;
+
+    &lt;dependencies&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.apache.kafka&lt;/groupId&gt;
+      &lt;artifactId&gt;connect-api&lt;/artifactId&gt;
+      &lt;scope&gt;provided&lt;/scope&gt;
+      &lt;version&gt;${kafka.version}&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.apache.kafka&lt;/groupId&gt;
+      &lt;artifactId&gt;connect-transforms&lt;/artifactId&gt;
+      &lt;scope&gt;provided&lt;/scope&gt;
+      &lt;version&gt;${kafka.version}&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.apache.camel.kafkaconnector&lt;/groupId&gt;
+      &lt;artifactId&gt;camel-kafka-connector&lt;/artifactId&gt;
+      &lt;version&gt;0.7.0-SNAPSHOT&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.apache.camel.kafkaconnector&lt;/groupId&gt;
+      &lt;artifactId&gt;camel-aws2-s3-kafka-connector&lt;/artifactId&gt;
+      &lt;version&gt;0.7.0-SNAPSHOT&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.jboss.resteasy&lt;/groupId&gt;
+      &lt;artifactId&gt;resteasy-client&lt;/artifactId&gt;
+      &lt;version&gt;${resteasy.version}&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+       &lt;groupId&gt;io.apicurio&lt;/groupId&gt;
+       &lt;artifactId&gt;apicurio-registry-rest-client&lt;/artifactId&gt;
+       &lt;version&gt;${apicurio.registry.version}&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;!-- Add your optional dependencies here --&gt;
+  &lt;/dependencies&gt;
+  &lt;build&gt;
+    &lt;plugins&gt;
+      &lt;plugin&gt;
+        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+        &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+        &lt;version&gt;3.0.0-M4&lt;/version&gt;
+        &lt;configuration&gt;
+          &lt;failIfNoTests&gt;false&lt;/failIfNoTests&gt;
+        &lt;/configuration&gt;
+      &lt;/plugin&gt;
+      &lt;plugin&gt;
+        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+        &lt;artifactId&gt;maven-jar-plugin&lt;/artifactId&gt;
+        &lt;version&gt;3.1.0&lt;/version&gt;
+        &lt;configuration&gt;
+          &lt;archive&gt;
+            &lt;manifest&gt;
+              &lt;addDefaultImplementationEntries&gt;true&lt;/addDefaultImplementationEntries&gt;
+              &lt;addDefaultSpecificationEntries&gt;true&lt;/addDefaultSpecificationEntries&gt;
+            &lt;/manifest&gt;
+          &lt;/archive&gt;
+        &lt;/configuration&gt;
+      &lt;/plugin&gt;
+      &lt;plugin&gt;
+        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+        &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+        &lt;version&gt;2.5.1&lt;/version&gt;
+        &lt;inherited&gt;true&lt;/inherited&gt;
+        &lt;configuration&gt;
+          &lt;source&gt;1.8&lt;/source&gt;
+          &lt;target&gt;1.8&lt;/target&gt;
+        &lt;/configuration&gt;
+      &lt;/plugin&gt;
+      &lt;plugin&gt;
+        &lt;artifactId&gt;maven-assembly-plugin&lt;/artifactId&gt;
+        &lt;version&gt;2.5.3&lt;/version&gt;
+        &lt;configuration&gt;
+          &lt;descriptors&gt;
+            &lt;descriptor&gt;src/main/assembly/package.xml&lt;/descriptor&gt;
+          &lt;/descriptors&gt;
+        &lt;/configuration&gt;
+        &lt;executions&gt;
+          &lt;execution&gt;
+            &lt;id&gt;make-assembly&lt;/id&gt;
+            &lt;phase&gt;package&lt;/phase&gt;
+            &lt;goals&gt;
+              &lt;goal&gt;single&lt;/goal&gt;
+            &lt;/goals&gt;
+          &lt;/execution&gt;
+        &lt;/executions&gt;
+      &lt;/plugin&gt;
+    &lt;/plugins&gt;
+  &lt;/build&gt;
+
+&lt;/project&gt;</code></pre> </div> </div> <div class="paragraph"> <p>Now, you are able to add whatever you need in the project, at the end you&#8217;ll need just to build and you&#8217;ll get a zipped or tar.gz connector.</p> </div> </article> <aside class="toc sidebar" data-title="Contents" data-levels="2"> <div class="toc-menu"></div> </aside> </div> </main> </div> <div class="footer-tools"> <a href="#top" title="Reach the top of the page">Back to top</a> </div> <footer> <div class="footer"> <figure class="logo"> <img src="../../_/img/logo-d.svg" class="logo-small mt-60" alt="Apache Camel Logo" aria-label="white silhouette of a camel in front of a sand dune"> </figure> <input id="footer-toggle-overview" type="checkbox" title="Show/Hide Overview section"> <dl> <dt><label for="footer-toggle-overview">Overview</label><label for="footer-toggle-overview">&#65291;</label></dt> <dd><a href="../../blog/">Blog</a></dd> <dd><a href="../../docs/">Documentation</a></dd> <dd><a href="../../community/support/">Community</a></dd> <dd><a href="../../download/">Download</a></dd> </dl> <input id="footer-toggle-documentation" type="checkbox" title="Show/Hide Documentation section"> <dl> <dt><label for="footer-toggle-documentation">Documentation</label><label for="footer-toggle-documentation">&#65291;</label></dt> <dd><a href="../../manual/latest/">User Manual</a></dd> <dd><a href="../../components/latest/index.html">Components</a></dd> <dd><a href="../../camel-k/latest/">Camel-K</a></dd> <dd><a href="../../camel-kafka-connector/latest/">Camel Kafka Connector</a></dd> <dd><a href="../../camel-quarkus/latest/">Camel Quarkus</a></dd> <dd><a href="../../camel-spring-boot/latest/">Camel Spring Boot</a></dd> <dd><a href="../../camel-karaf/latest/">Camel Karaf</a></dd> <dd><a href="../../manual/latest/faq/index.html">FAQ</a></dd> </dl> <input id="footer-toggle-community" type="checkbox" title="Show/Hide Community section"> <dl> <dt><label for="footer-toggle-community">Community</label><label for="footer-toggle-community">&#65291;</label></dt> <dd><a href="../../community/support/">Support</a></dd> <dd><a href="../../community/contributing/">Contributing</a></dd> <dd><a href="../../community/mailing-list/">Mailing Lists</a></dd> <dd><a href="../../community/user-stories/">User stories</a></dd> <dd><a href="../../community/articles/">Articles</a></dd> <dd><a href="../../community/books/">Books</a></dd> <dd><a href="../../community/team/">Team</a></dd> </dl> <input id="footer-toggle-about" type="checkbox" title="Show/Hide Acknowledgements section"> <dl> <dt><label for="footer-toggle-about">About</label><label for="footer-toggle-about">&#65291;</label></dt> <dd><a href="../../acknowledgments/">Acknowledgments</a></dd> <dd><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/events/current-event.html" title="Apache Events">Apache Events</a></dd> <dd><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/licenses/" title="License">License</a></dd> <dd><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/security/" title="Security">Security</a></dd> <dd><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/foundation/sponsorship.html" title="Sponsorship">Sponsorship</a></dd> <dd><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/foundation/thanks.html" title="Thanks">Thanks</a></dd> </dl> <p class="remark"> &copy; 2004-2021 The <a href="https://apache.org">Apache Software Foundation</a>.<br> Apache Camel, Camel, Apache, the Apache feather logo, and the Apache Camel project logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners. </p> <div class="resources"> <div class="context"> <a href="../../privacy-policy/">Privacy Policy</a> </div> <div class="context"> <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.apache.org/foundation/policies/conduct">Code of Conduct</a> </div> <div class="context"> <a href="../../sitemap/">Sitemap</a> </div> </div> <div class="footer-icons"> <a rel="noopener noreferrer nofollow" href="https://github.com/apache/camel/" title="Collaborate on GitHub"><svg class="brand-icon" focusable="false"><use xlink:href="../../_/img/brand-logos.svg#github"/></svg></a> <a rel="noopener noreferrer nofollow" href="https://camel.zulipchat.com" title="Chat on Zulip"><svg class="brand-icon" focusable="false"><use xlink:href="../../_/img/brand-logos.svg#zulip"/></svg></a> <a rel="noopener noreferrer nofollow" href="https://twitter.com/ApacheCamel" title="Follow Apache Camel on Twitter"><svg class="brand-icon" focusable="false"><use xlink:href="../../_/img/brand-logos.svg#twitter"/></svg></a> </div> </div> </footer> <script src="../../_/js/vendor/algoliasearch-8fe81df376.js"></script> <script src="../../_/js/site-0d18f68ee9.js"></script> <script async src="../../_/js/vendor/highlight-a988c6fdd9.js"></script> <script async src="../../_/js/vendor/svg4everybody-195d47ce7d.js"></script> <script type="application/ld+json"> { "@context": "http://schema.org", "@type": "Organization", "name": "Apache Camel", "url": "/", "sameAs": [ "https://twitter.com/ApacheCamel" ], "logo": "../../_/img/logo-d.svg", "description": "Apache Camel ™ is a versatile open-source integration framework based on known Enterprise Integration Patterns. Camel empowers you to define routing and mediation rules in a variety of domain-specific languages, including a Java-based Fluent API, Spring or Blueprint XML Configuration files, and a Scala DSL." } </script> <script type="application/ld+json"> { "@context": "http://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Apache Camel", "item": "https://camel.apache.org/" }, { "@type": "ListItem", "position": 2, "name": "Camel Kafka Connector", "item": "https://camel.apache.org/camel-kafka-connector/latest/index.html" }, { "@type": "ListItem", "position": 3, "name": "0.7.x", "item": "https://camel.apache.org/camel-kafka-connector/0.7.x/index.html" } , { "@type": "ListItem", "position": 4, "name": "Archetypes","item": "https://camel.apache.org/camel-kafka-connector/0.7.x/archetypes.html"} , { "@type": "ListItem", "position": 5, "name": "Extensible Apicurio connector archetype","item": "https://camel.apache.org/camel-kafka-connector/0.7.x/archetype-apicurio-connector.html"} ] } </script> </body> </html> 

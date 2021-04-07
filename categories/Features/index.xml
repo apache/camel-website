@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Features on Apache Camel</title>
+    <link>https://camel.apache.org/categories/Features/</link>
+    <description>Recent content in Features on Apache Camel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://camel.apache.org/categories/Features/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New Camel K Logging Features</title>
+      <link>https://camel.apache.org/blog/2021/05/new-camel-k-logging-features/</link>
+      <pubDate>Mon, 10 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/05/new-camel-k-logging-features/</guid>
+      <description>New Camel K Logging Features for Camel K 1.5</description>
+    </item>
+    
+    <item>
+      <title>Camel-AWS-S3 - New Streaming upload feature</title>
+      <link>https://camel.apache.org/blog/2021/04/s3-streaming-upload-3.10.0/</link>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2021/04/s3-streaming-upload-3.10.0/</guid>
+      <description>The S3 Streaming upload feature will arrive on Camel 3.10.0</description>
+    </item>
+    
+  </channel>
+</rss>

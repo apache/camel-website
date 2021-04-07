@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Roadmap on Apache Camel</title>
+    <link>https://camel.apache.org/categories/Roadmap/</link>
+    <description>Recent content in Roadmap on Apache Camel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://camel.apache.org/categories/Roadmap/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apache Camel 2020 Release Schedule</title>
+      <link>https://camel.apache.org/blog/2020/03/LTS-Release-Schedule/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2020/03/LTS-Release-Schedule/</guid>
+      <description>The Apache Camel project is moving to release schedule with Long Term Support (LTS) and non-LTS releases.
+The plan is to have 2 yearly LTS releases and then non-LTS releases in between.
+This allows the Camel project to innovate and move much faster in non-LTS releases.
+And as well to offer production stable branches (LTS) where end users can stay on for a longer period of time and get CVEs and important/critical bug fixes only.</description>
+    </item>
+    
+    <item>
+      <title>Camel 2019 in Numbers</title>
+      <link>https://camel.apache.org/blog/2019/12/2019-Numbers/</link>
+      <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2019/12/2019-Numbers/</guid>
+      <description>It&amp;rsquo;s the time of the year where we take a look back at 2019, and compile a brief summary of the Apache Camel project.
+The big news of 2019 was the much anticipated release of Apache Camel 3.
+Family of projects It was also in 2019 that the Camel project became a family of projects by introducing:
+ Camel K Camel Quarkus  Making Apache Camel a trilogy. But it does not stop there; in early 2020 three will become five when we release:</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel Kafka Connector: Introducing the latest project in the ecosystem</title>
+      <link>https://camel.apache.org/blog/2019/12/Camel-Kafka-connector-intro/</link>
+      <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2019/12/Camel-Kafka-connector-intro/</guid>
+      <description>The Apache Camel community introduces a new subproject in the ecosystem: Camel-Kafka-Connector. This project born as a PoC exploring the possibility of leveraging the Apache Camel components as Kafka source and sink connectors. The main idea behind the project is reusing the Camel Components&amp;rsquo; flexibility in a simple way, through a configuration file mixing Kafka Connect configuration and Camel route definitions and options.
+What is Kafka Connect? It is an Apache Kafka&amp;rsquo;s framework that defines a standardized way to stream data in and out a kafka broker.</description>
+    </item>
+    
+    <item>
+      <title>Apache Camel 3 is only 2 months away</title>
+      <link>https://camel.apache.org/blog/2019/10/Camel3-2monthsaway/</link>
+      <pubDate>Wed, 02 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://camel.apache.org/blog/2019/10/Camel3-2monthsaway/</guid>
+      <description>The Camel team is busy working on the last set of work for Apache Camel 3. Today the 2nd release candidate was built and published on a staging repository for early adopters to give it a try.
+As I am busy myself then I just wanted to write a short blog post to keep the community posted that Apache Camel 3 is on the way, and that we expect it to be released by end of this year (sometime in November or December).</description>
+    </item>
+    
+  </channel>
+</rss>

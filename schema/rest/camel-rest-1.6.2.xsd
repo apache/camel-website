@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema elementFormDefault="qualified" version="1.0" targetNamespace="http://activemq.apache.org/camel/schema/rest" xmlns:tns="http://activemq.apache.org/camel/schema/rest" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="endpointLink" type="tns:endpointLink"/>
+
+  <xs:element name="endpoints" type="tns:endpoints"/>
+
+  <xs:complexType name="endpointLink">
+    <xs:attribute name="uri" type="xs:string"/>
+    <xs:attribute name="href" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="endpoints">
+    <xs:sequence>
+      <xs:element name="endpoint" type="tns:endpointLink" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
