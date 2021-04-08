@@ -54,7 +54,7 @@ content:
       start_path: docs
     - url: git@github.com:apache/camel-quarkus.git
       branches:
-        - master
+        - main
       start_path: docs
     - url: git@github.com:apache/camel-quarkus-examples.git
       branches: HEAD
