@@ -27,4 +27,4 @@ Apache Camel is a project with a great community, we are here to help, mentor an
 
 As part of the application process, all applicants must make at least one contribution to be accepted as an intern for this project. Only applicants who make a contribution will be eligible to be accepted as interns.
 
-Look at the [contributing to Camel page](/manual/latest/contributing.html) for details on how to get started contributing and how to reach out to the Camel community via various communication channels. And look at the [README](https://github.com/apache/camel-website/blob/master/README.md) in the Camel Website repository on how to get started with the website itself.
+Look at the [contributing to Camel page](/manual/latest/contributing.html) for details on how to get started contributing and how to reach out to the Camel community via various communication channels. And look at the [README](https://github.com/apache/camel-website/blob/main/README.md) in the Camel Website repository on how to get started with the website itself.

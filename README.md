@@ -1,4 +1,4 @@
-![Jenkins](https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fci-builds.apache.org%2Fjob%2FCamel%2Fjob%2FCamel.website%2Fjob%2Fmaster%2F&label=Master%20build)
+![Jenkins](https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fci-builds.apache.org%2Fjob%2FCamel%2Fjob%2FCamel.website%2Fjob%2Fmain%2F&label=Master%20build)
 
 # Apache Camel Website <img alt="Apache Camel" src="antora-ui-camel/src/img/logo-d.svg" height="30 px">
 
