@@ -43,5 +43,7 @@
 }
 
 .catalog .item .image img {
-  width: 4rem;
+  height: 3rem;
+  width: auto;
+  max-width: 60%;
 }
