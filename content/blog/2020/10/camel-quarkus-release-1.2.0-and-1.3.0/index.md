@@ -68,7 +68,7 @@ With Camel Quarkus 1.3.0, we got very close to supporting all components require
   versions are now kept in separate columns on our
   [Extensions reference pages](/camel-quarkus/latest/reference/index.html)
 * We have added a section about defining
-  [Camel routes in XML](/camel-quarkus/latest/user-guide/bootstrap.html)
+  [Camel routes in XML](/camel-quarkus/latest/user-guide/defining-camel-routes.html)
 * We now have a [Change log](https://github.com/apache/camel-quarkus/blob/master/CHANGELOG.md) updated by the CI.
 
 ## What's next?

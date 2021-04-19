@@ -68,7 +68,7 @@ If you rather come from the CDI side and you never wrote Camel integrations befo
 bootstrap and configure your routes using CDI. You can configure Camel using CDI even if you have Camel Main in your
 application.
 
-See the [Bootstrap section](/camel-quarkus/latest/user-guide/bootstrap.html) of the User guide
+See the [defining Camel routes](/camel-quarkus/latest/user-guide/defining-camel-routes.html) section of the User guide
 for more details.
 
 ## CDI
