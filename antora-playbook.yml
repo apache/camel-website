@@ -7,14 +7,14 @@ content:
   sources:
 
     - url: git@github.com:apache/camel.git
-      branches: master
+      branches: main
       start_paths:
         # manual
         - docs/user-manual
 
     - url: git@github.com:apache/camel.git
       branches:
-        - master
+        - main
         - camel-3.9.x
         - camel-3.7.x
       start_paths:
@@ -44,13 +44,13 @@ content:
 
 # sub-projects
     - url: git@github.com:apache/camel-k.git
-      branches: master
+      branches: main
       start_path: docs
     - url: git@github.com:apache/camel-k-runtime.git
-      branches: master
+      branches: main
       start_path: docs
     - url: git@github.com:apache/camel-kamelets.git
-      branches: master
+      branches: main
       start_path: docs
     - url: git@github.com:apache/camel-quarkus.git
       branches:
@@ -67,14 +67,14 @@ content:
       start_path: docs
     - url: git@github.com:apache/camel-spring-boot.git
       branches:
-        - master
+        - main
         - camel-spring-boot-3.9.x
         - camel-spring-boot-3.7.x
         - camel-spring-boot-3.4.x
       start_path: docs
     - url: git@github.com:apache/camel-karaf.git
       branches:
-        - master
+        - main
         - camel-karaf-3.9.x
         - camel-karaf-3.7.x
         - camel-karaf-3.4.x
