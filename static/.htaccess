@@ -1669,7 +1669,7 @@ AddDefaultCharset utf-8
 # https://blogs.msdn.microsoft.com/ieinternals/2014/08/18/strict-transport-security/
 
 <IfModule mod_headers.c>
-    Header always set Strict-Transport-Security "max-age=16070400; includeSubDomains"
+    Header always set Strict-Transport-Security "max-age=16070400; includeSubDomains" env=HTTPS
     # (1) or if HSTS preloading is desired (respect (2) for current requirements):
     # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
     # (4) respectively… (respect (2) for current requirements):
