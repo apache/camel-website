@@ -15,15 +15,15 @@ It is based on Camel 3.9.0 and Camel-Quarkus 1.8.1, providing all improvements t
 
 ## Embedded Kamelet catalog
 
-Camel K 1.4.0 comes with an embedded [Kamelet catalog](https://camel.apache.org/camel-kamelets/latest/) containing multiple connectors ready for use.
+Camel K 1.4.0 comes with an embedded [Kamelet catalog](/camel-kamelets/latest/) containing multiple connectors ready for use.
 
 When installing the operator into a namespace (but also globally in the cluster), the operator installs all the kamelets from the catalog ([version 0.2.1](https://github.com/apache/camel-kamelets/tree/v0.2.1)), so that any integration can use them directly.
 
-Users can bind them to a specific destination by writing a YAML binding file, as explained in the [specific documentation related to each Kamelet](https://camel.apache.org/camel-kamelets/latest/aws-sqs-source.html#_knative_source).
+Users can bind them to a specific destination by writing a YAML binding file, as explained in the [specific documentation related to each Kamelet](/camel-kamelets/latest/aws-sqs-source.html#_knative_source).
 
 Or, you can use the new `kamel bind` command (see below).
 
-**Note:** it's easy to write your own Kamelet and publish it to the Apache Catalog. Take a look at the [Kamelets developer guide](https://camel.apache.org/camel-k/latest/kamelets/kamelets-dev.html).
+**Note:** it's easy to write your own Kamelet and publish it to the Apache Catalog. Take a look at the [Kamelets developer guide](/camel-k/latest/kamelets/kamelets-dev.html).
 
 ## Kamel bind command
 
@@ -36,7 +36,7 @@ kamel bind earthquake-source channel:earthquakes
 ```
 
 This command creates the KameletBinding resource for you and the Camel K operator does the rest to bring that data into your channel.
-Data is produced using the [Earthquake Source](https://camel.apache.org/camel-kamelets/latest/earthquake-source.html) Kamelet available in the embedded Katalog.
+Data is produced using the [Earthquake Source](/camel-kamelets/latest/earthquake-source.html) Kamelet available in the embedded Katalog.
 
 You can use any other Kamelet from the catalog using the `kamel bind` command.
 
@@ -86,7 +86,7 @@ to be present for the same service. We've also changed the way channels and brok
 to bind integrations to multiple channels and even create sequences of integrations attached to channels without any issue (e.g. [#2190](https://github.com/apache/camel-k/pull/2190), [#2115](https://github.com/apache/camel-k/pull/2115)).
 
 We've improved **installation options**, letting you configure things that may be important in a production environment, like [setting toleration](https://github.com/apache/camel-k/pull/2114) or using a [secured maven repository](https://github.com/apache/camel-k/pull/2180).
-At the same time, we've fixed compatibility with recent dev environments, e.g. letting you [smoothly install Camel K in K3S](https://camel.apache.org/camel-k/latest/installation/registry/k3s.html).
+At the same time, we've fixed compatibility with recent dev environments, e.g. letting you [smoothly install Camel K in K3S](/camel-k/latest/installation/registry/k3s.html).
 
 We also kept doing changes to continuously improve speed. In the runtime side of Camel K, we now use the [Quarkus fast-jar format](https://github.com/apache/camel-k/pull/1931) to reduce boot times. In the operator side, it's possible to install Camel K globally in a cluster and have much faster build times by [sharing base images across the cluster](https://github.com/apache/camel-k/pull/2058).
 
