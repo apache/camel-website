@@ -40,13 +40,13 @@ Data is produced using the [Earthquake Source](/camel-kamelets/latest/earthquake
 
 You can use any other Kamelet from the catalog using the `kamel bind` command.
 
-You can also target any other Kubernetes reference that is supported by Camel K, for example, sink into a [Strimzi KafkaTopic](https://strimzi.io/), using a full qualified reference, for example:
+You can also target any other Kubernetes reference that is supported by Camel K, for example, sink into a [Strimzi KafkaTopic](https://strimzi.io/), using a fully qualified reference, for example:
 
 ```
 kamel bind earthquake-source kafka.strimzi.io/v1beta1:KafkaTopic:mytopic
 ```
 
-Of course the command also supports plain Camel URIs, that are useful especially when you're developing a new Kamelet. For example you can write:
+Of course, the command also supports plain Camel URIs, which are useful especially when you're developing a new Kamelet. For example, you can write:
 
 ```
 kamel bind earthquake-source log:info?showHeaders=true
@@ -82,12 +82,12 @@ share it with developers to have much better insights.
 We focused a lot on stability and improved compatibility with other tools of the ecosystem.
 
 **Knative support** (0.22.0) has been improved by fixing compatibility issues that sometimes caused multiple revisions
-to be present for the same service. We've also changed the way channels and brokers are bound to the integrations, so that now it's possible
+to be present for the same service. We've also changed the way channels and brokers are bound to the integrations. Now it's possible
 to bind integrations to multiple channels and even create sequences of integrations attached to channels without any issue (e.g. [#2190](https://github.com/apache/camel-k/pull/2190), [#2115](https://github.com/apache/camel-k/pull/2115)).
 
 We've improved **installation options**, letting you configure things that may be important in a production environment, like [setting toleration](https://github.com/apache/camel-k/pull/2114) or using a [secured maven repository](https://github.com/apache/camel-k/pull/2180).
 At the same time, we've fixed compatibility with recent dev environments, e.g. letting you [smoothly install Camel K in K3S](/camel-k/latest/installation/registry/k3s.html).
 
-We also kept doing changes to continuously improve speed. In the runtime side of Camel K, we now use the [Quarkus fast-jar format](https://github.com/apache/camel-k/pull/1931) to reduce boot times. In the operator side, it's possible to install Camel K globally in a cluster and have much faster build times by [sharing base images across the cluster](https://github.com/apache/camel-k/pull/2058).
+We also kept doing changes to continuously improve speed. On the runtime side of Camel K, we now use the [Quarkus fast-jar format](https://github.com/apache/camel-k/pull/1931) to reduce boot times. And last but not least on the operator side, it's possible to install Camel K globally in a cluster and have much faster build times by [sharing base images across the cluster](https://github.com/apache/camel-k/pull/2058).
 
 The list of important changes in the [1.4.0 release](https://github.com/apache/camel-k/releases/tag/v1.4.0) is too long for this blog post. There have **never been so many contributors** as in this release and we **thank them all for their awesome work!**
