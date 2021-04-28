@@ -1,0 +1,71 @@
+#
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+name: Publish preview
+
+on:
+  workflow_run:
+    workflows: ["Pull request checks"]
+    types:
+      - completed
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    if: github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion == 'success'
+    steps:
+      - name: Download pull request artifact
+        uses: actions/github-script@v4
+        with:
+          script: |
+            const artifacts = await github.actions.listWorkflowRunArtifacts({
+               owner: context.repo.owner,
+               repo: context.repo.repo,
+               run_id: ${{ github.event.workflow_run.id }},
+            });
+            const websiteArtifact = artifacts.data.artifacts.filter((artifact) => {
+              return artifact.name == 'website'
+            })[0];
+            var download = await github.actions.downloadArtifact({
+               owner: context.repo.owner,
+               repo: context.repo.repo,
+               artifact_id: websiteArtifact.id,
+               archive_format: 'zip',
+            });
+            const fs = require('fs');
+            fs.writeFileSync('${{github.workspace}}/website.zip', Buffer.from(download.data));
+      - name: Unzip website artifact
+        run: unzip website.zip
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Preview on Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          DEPLOY_URL=$(yarn preview:netlify --alias="pr-$(cat pull_request/number)" --message="Preview for $(cat pull_request/html_url)" --json 2> /dev/null |jq -r .deploy_url)
+          echo "DEPLOY_URL=${DEPLOY_URL}" >> $GITHUB_ENV
+      - uses: actions/github-script@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `🚀 Preview for ${context.payload.pull_request.head.sha} is available at ${process.env.DEPLOY_URL}`
+            })

@@ -15,76 +15,34 @@
 # limitations under the License.
 #
 
-name: Pull request checks and preview
+name: Pull request checks
 
-on: pull_request_target
+on: pull_request
 
 env:
   CAMEL_ENV: production
 
 jobs:
-  check-cache:
+  checks:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          persist-credentials: false
-      - name: Run check
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Check cache
         run: yarn workspaces foreach install --check-cache
-  build:
-    needs: check-cache
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          persist-credentials: false
       - name: Build
         run: yarn build-all
-      - uses: actions/upload-artifact@v2
-        with:
-          name: website
-          path: public
-  preview:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          persist-credentials: false
-      - uses: actions/download-artifact@v2
-        with:
-          name: website
-          path: public
-      - name: Preview on Netlify
-        run: |
-          DEPLOY_URL=$(yarn preview:netlify --alias="pr-${PULL_REQUEST_NUMBER}" --message="Preview for ${PULL_REQUEST_URL}" --json 2> /dev/null |jq -r .deploy_url)
-          echo "DEPLOY_URL=${DEPLOY_URL}" >> $GITHUB_ENV
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          PULL_REQUEST_NUMBER: ${{ github.event.pull_request.number }}
-          PULL_REQUEST_URL: ${{ github.event.pull_request.html_url }}
-      - uses: actions/github-script@v3
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            github.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: `🚀 Preview for ${context.payload.pull_request.head.sha} is available at ${process.env.DEPLOY_URL}`
-            })
-  checks:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          persist-credentials: false
-      - uses: actions/download-artifact@v2
-        with:
-          name: website
-          path: public
-      - name: Checks
+      - name: Run checks
         run: yarn checks
+      - name: Store pull request data
+        run: |
+          mkdir pull_request
+          echo ${{ github.event.pull_request.number }} > ./pull_request/number
+          echo ${{ github.event.pull_request.html_url }} > ./pull_request/html_url
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: website
+          path: |
+            public
+            pull_request
