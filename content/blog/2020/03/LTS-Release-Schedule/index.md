@@ -31,7 +31,7 @@ The tentative release schedule for 2020 is as follows:
 {{< table >}}
 | Release | Date     | LTS | EOL      | Java  
 |---------|----------|-----|----------|------
-| 2.25.0  | Jan 2020 | Yes | Jan 2021 | 8
+| 2.25.0  | Jan 2020 | Yes | Jan 2022 | 8
 | 3.1.0   | Feb 2020 | No  |          | 8, 11
 | 3.2.0   | Apr 2020 | No  |          | 8, 11
 | 3.3.0   | May 2020 | No  |          | 8, 11
