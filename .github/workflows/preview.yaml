@@ -59,12 +59,13 @@ jobs:
         run: |
           DEPLOY_URL=$(yarn preview:netlify --alias="pr-$(cat pull_request/number)" --message="Preview for $(cat pull_request/html_url)" --json 2> /dev/null |jq -r .deploy_url)
           echo "DEPLOY_URL=${DEPLOY_URL}" >> $GITHUB_ENV
+          echo "ISSUE_NUMBER=$(cat pull_request/number)" >> $GITHUB_ENV
       - uses: actions/github-script@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             github.issues.createComment({
-              issue_number: context.issue.number,
+              issue_number: Number(process.env.ISSUE_NUMBER),
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: `🚀 Preview is available at ${process.env.DEPLOY_URL}`
