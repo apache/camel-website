@@ -17,7 +17,7 @@
 
 name: Pull request checks and preview
 
-on: pull_request
+on: pull_request_target
 
 env:
   CAMEL_ENV: production
@@ -27,6 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        if: ${{ github.event_name == 'pull_request_target' }}
         with:
           persist-credentials: false
       - name: Run check
