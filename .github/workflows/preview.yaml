@@ -28,6 +28,8 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion == 'success'
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Download pull request artifact
         uses: actions/github-script@v4
         with:
@@ -49,9 +51,7 @@ jobs:
             const fs = require('fs');
             fs.writeFileSync('${{github.workspace}}/website.zip', Buffer.from(download.data));
       - name: Unzip website artifact
-        run: unzip website.zip
-      - name: Checkout
-        uses: actions/checkout@v2
+        run: unzip -q website.zip
       - name: Preview on Netlify
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
@@ -67,5 +67,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `🚀 Preview for ${context.payload.pull_request.head.sha} is available at ${process.env.DEPLOY_URL}`
+              body: `🚀 Preview is available at ${process.env.DEPLOY_URL}`
             })
