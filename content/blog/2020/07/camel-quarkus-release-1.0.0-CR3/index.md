@@ -51,5 +51,5 @@ with JAXB dependencies having been removed from the OpenAPI components. There's 
 Quarkus was upgraded to 1.6.0.Final.
 
 
-Enjoy! Feel free to give feedback via the [mailing lists](/manual/latest/mailing-lists.html)
+Enjoy! Feel free to give feedback via the [mailing lists](/community/mailing-list/)
 or [GitHub issues](https://github.com/apache/camel-quarkus/issues).

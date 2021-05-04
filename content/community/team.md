@@ -16,12 +16,13 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 | Andrea Cosentino       | acosentino       | Red Hat                    |
 | Antonin Stefanutti     | astefanutti      | Red Hat                    |
 | Babak Vahdat           | bvahdat          | Cyberlogic Consulting GmbH |
-| Ben O'Day              |  boday           | Initek Consulting          |
+| Ben O'Day              | boday            | Initek Consulting          |
 | Bilgin Ibryam          | bibryam          | Red Hat                    |
+| Bob Paulin             | bob              |                            |
 | Bruce Snyder           | bsnyder          |                            |
 | Charles Moulliard      | cmoulliard       | Red Hat                    |
 | Christian Mueller      | cmueller         | Amazon Web Services        |
-| Christian Posta        | ceposta          | Red Hat                    |
+| Christian Posta        | ceposta          | Solo                       |
 | Christian Schneider    | cschneider       |                            |
 | Claus Ibsen            | davsclaus        | Red Hat                    |
 | Colm O hEigeartaigh    | coheigea         | Talend                     |
@@ -47,7 +48,7 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 | Johan Edstrom          | joed             | Savoir Technologies        |
 | John Poth              |                  | Red Hat                    |
 | Jonathan Anstey        | janstey          | Red Hat                    |
-| James Netherton        | Red Hat          |                            |
+| James Netherton        |                  | Red Hat                    |
 | James Strachan         | jstrachan        |                            |
 | Luca Burgazzoli        | lburgazzoli      | Red Hat                    |
 | Martin Krasser         | krasserm         |                            |
@@ -55,6 +56,7 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 | Nicola Ferraro         | nicolaferraro    | Red Hat                    |
 | Onder Sezgin           | onders           |                            |
 | Omar Al-Safi           | oalsafi          | Talend                     |
+| Otavio Rodolfo Piske   | orpiske          | Red Hat                    |
 | Quinn Stevenson        | quinn            |                            |
 | Raul Kripalani         | raulk            |                            |
 | Pascal Schumacher      | pascalschumacher |                            |
@@ -91,8 +93,9 @@ If you have been contributing to the Apache Camel project, and you want your nam
 | Axel Hohaus             |                                |
 | Arjan Moraal            |                                |
 | Arno Noordover          | het CAK                        |
+| Bahaa Zaid              |                                |
 | Barry Kaplan            |                                |
-| Brett Meyer             | 3RiverDev, Savoir Technologies |
+| Brett Meyer             | Impact Upgrade                 |
 | Brian Diesenhaus        |                                |
 | Brian Guan              |                                |
 | Brian Madigan           |                                |
@@ -104,9 +107,11 @@ If you have been contributing to the Apache Camel project, and you want your nam
 | Christopher G. Stach II |                                |
 | Charles Anthony         |                                |
 | Christian Posta         | Red Hat                        |
+| Christopher Köster      |                                |
 | Claus Straube           |                                |
 | Dan Checkoway           |                                |
-| Dennis Byrne            | Thoughtworks                   |  
+| Dennis Byrne            | Thoughtworks                   |
+| Dimitrios Liapis        |                                |
 | Erik Onnen              |                                |
 | Fabrizio Spataro        | Bizmate                        |
 | Fernando Ribeiro        |                                |
@@ -122,6 +127,8 @@ If you have been contributing to the Apache Camel project, and you want your nam
 | Jérôme Delagnes         |                                |
 | Jeff Sparkes            |                                |
 | Jeff Lansing            | SYS Technologies               |
+| Jeremy Ross             | Elevation Solutions            |
+| Jeremy Volkman          |                                |
 | Joe Fernandez           | TTM                            |
 | John Heitmann           |                                |
 | Jonathan Cook           | BBC                            |
@@ -135,9 +142,10 @@ If you have been contributing to the Apache Camel project, and you want your nam
 | Lauri Kimmel            |                                |
 | Marco Buss              | product + concept              |
 | Marco Luebcke           |                                |
+| Mario Siegenthaler      |                                |
 | Mark Bucayan            |                                |
 | Mark Timmings           |                                |
-| Mario Siegenthaler      |                                |
+| Martin Bramwell         |                                |
 | Mathieu Lalonde         |                                |
 | Mats Henricson          |                                |
 | Matt Hoffman            |                                |
