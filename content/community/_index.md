@@ -14,10 +14,31 @@ Title: "Community"
 
 ## Support
 
-If you are experiencing problems using Camel then please report your problem to our mailing list. This allows the entire community to help with your problem. 
-
+If you are experiencing problems using Camel there are several channels available to seek help from the community.
 <p>
 <a class="button dark" href="/community/support/">Read More</a>
+</p>
+
+{{< /div >}}
+
+{{< /div >}}
+
+{{< div "box" >}}
+
+{{< div "icon" >}}
+
+[![Camel](/_/img/support.svg)](/community/mailing-list/)
+
+{{< /div >}}
+
+{{< div "content" >}}
+
+## Mailing List
+
+One way to get help is to use the Camel mailing lists. This allows the entire community to help with your problem. 
+
+<p>
+<a class="button dark" href="/community/mailing-list/">Read More</a>
 </p>
 
 {{< /div >}}

@@ -303,7 +303,7 @@ You need to rebuild the Antora UI theme in order to see your changes reflected l
 ### Changes for Camel and Camel K docs
 
 The Apache Camel website includes documentation sources from other github repositories. Content sources are defined in
-[site.yml](site.yml).
+[antora-playbook.yml](antora-playbook.yml).
 
 At the moment these are the documentation sources from [Camel](https://github.com/apache/camel)
 and [Camel K](https://github.com/apache/camel-k). These are basically the component reference docs and the Camel user

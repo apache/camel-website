@@ -64,5 +64,5 @@ All supported bits can be seen in the [List of Camel Quarkus extensions](/camel-
 
 Quarkus was upgraded to 1.4.1 (from 1.3.2 in Camel Quarkus 1.0.0-M6).
 
-Enjoy and give feedback either via [mailing lists](/manual/latest/mailing-lists.html)
+Enjoy and give feedback either via [mailing lists](/community/mailing-list/)
 or [GitHub issues](https://github.com/apache/camel-quarkus/issues)!

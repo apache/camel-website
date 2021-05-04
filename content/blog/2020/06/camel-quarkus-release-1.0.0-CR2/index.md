@@ -59,5 +59,5 @@ Camel Quarkus release. Please use
 [Microprofile Fault Tolerance](/camel-quarkus/latest/reference/extensions/microprofile-fault-tolerance.html)
 as a replacement.
 
-Enjoy and give feedback either via [mailing lists](/manual/latest/mailing-lists.html)
+Enjoy and give feedback either via [mailing lists](/community/mailing-list/)
 or [GitHub issues](https://github.com/apache/camel-quarkus/issues)!
