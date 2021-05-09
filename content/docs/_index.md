@@ -13,7 +13,7 @@ Title: "Documentation"
 
 ## Camel Core
 
-The [User Manual](/manual/latest/) is a comprehensive guide meant to help you with the key concepts of Apache Camel and software integration, from how to [begin contributing](/manual/latest/contributing.html) to Apache Camel, how to [upgrade to Camel 3.x](/manual/latest/camel-3x-upgrade-guide.html), to [architecture](/manual/latest/architecture.html) or [integration patterns](/components/latest/eips/enterprise-integration-patterns.html).
+The [User Manual](/manual/latest/) is a comprehensive guide meant to help you with the key concepts of Apache Camel and software integration, from how to [get started](/manual/latest/getting-started.html) with Apache Camel, how to [upgrade to Camel 3.x](/manual/latest/camel-3x-upgrade-guide.html), to [architecture](/manual/latest/architecture.html) or [integration patterns](/components/latest/eips/enterprise-integration-patterns.html).
 
 <p>
 <a class="button dark" href="/manual/latest/">Documentation</a>

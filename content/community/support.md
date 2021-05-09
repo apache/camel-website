@@ -66,7 +66,7 @@ What version of Camel do you use? Remember to include this information.
 We can help you much quicker if you try the following
 
 *  provide us with a JUnit test case that demonstrates your issue. e.g. if you think you've found a bug, can you create a test case to demonstrate the bug?
-*  [submit a patch](/manual/latest/contributing.html) fixing the bug! (We also buy you beer when we meet you if you submit bug fixes (smile) )
+*  [submit a patch](/community/contributing/) fixing the bug! (We also buy you beer when we meet you if you submit bug fixes (smile) )
 *  for memory leak or performance related issues, if you can run a profiler on your test case and attach the output as a file (or zipped file if it's huge) to the JIRA we can normally fix things much faster. For example, you could run jmap/jhat, JProfiler or YourKit on your code and send us the output. To find memory leaks it's quicker to resolve if you can tell us what classes are taking up all of the RAM; we can normally figure out what's wrong from that.
 
 ## Commercial Support

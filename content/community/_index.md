@@ -50,7 +50,7 @@ One way to get help is to use the Camel mailing lists. This allows the entire co
 
 {{< div "icon" >}}
 
-[![Camel](/_/img/contributing.svg)](/manual/latest/contributing.html)
+[![Camel](/_/img/contributing.svg)](/community/contributing/)
 
 {{< /div >}}
 

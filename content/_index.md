@@ -220,9 +220,9 @@ Camel is an [Apache Software Foundation](https://www.apache.org) project, availa
 
 [Sources](./community/sources/), [mailing lists](./community/mailing-list/), [issue tracker](./community/support/): it's fully open, you can access directly.
 
-We also love contributions: don't hesitate to [contribute](./manual/latest/contributing.html). You can contribute by <a href="https://github.com/apache/camel-website/edit/main/content/_index.md">editing this page</a>!
+We also love contributions: don't hesitate to [contribute](./community/contributing/). You can contribute by <a href="https://github.com/apache/camel-website/edit/main/content/_index.md">editing this page</a>!
 
-[Be Involved In The Community](./manual/latest/contributing.html) | [How To Contribute](./manual/latest/contributing.html)
+[Be Involved In The Community](./community/contributing/) | [How To Contribute](./community/contributing/)
 
 {{< /div >}}
 
