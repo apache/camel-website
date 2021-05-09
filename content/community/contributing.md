@@ -4,7 +4,7 @@ First of all, thank you for having an interest in contributing to Apache Camel.
 Here are some guidelines on how to best approach the Apache Camel community and how to best apply yourself.
 There are many ways you can help make Camel a better piece of software - please dive in and help!
 
-- Try surfing the documentation - if something confuses you, [bring it to our attention](/manual/latest/improving-the-documentation.html).
+- Try surfing the documentation - if something confuses you, [bring it to our attention or suggest an improvement](#working-on-the-documentation).
 - Download the code & try it out and see what you think.
 - Browse the source code. Got an itch to scratch, want to tune some operation, or add some feature?
 - Want to do some hacking on Camel? Try surfing our [issue tracker](https://issues.apache.org/jira/browse/CAMEL) for open issues or features that need to be implemented. Take ownership of a particular issue, and try to fix it.
@@ -13,21 +13,9 @@ There are many ways you can help make Camel a better piece of software - please 
 
 Identify areas you can contribute first. You don't have to be an expert in an area, the Apache Camel developers are available to offer help and guidance.
 
-Introduce yourself on the developer's mailing list (see below), tell us what area of work or problem you wish to address in Camel. Create a draft of your solution, this can be simple 1-2 sentences on the change you wish to make. Try to be as specific as you can: include a short description of your intent, what you tried and what didn't work, or what you need help with. The best way of approaching the developers is by describing what you would like to work on and asking specific questions on how to get started. We'll do our best to guide you and help you make your contribution. 
+Introduce yourself on the [developer's mailing list] (#getting-in-touch), tell us what area of work or problem you wish to address in Camel. Create a draft of your solution, this can be simple 1-2 sentences on the change you wish to make. Try to be as specific as you can: include a short description of your intent, what you tried and what didn't work, or what you need help with. The best way of approaching the developers is by describing what you would like to work on and asking specific questions on how to get started. We'll do our best to guide you and help you make your contribution. 
 
 We also participate in Google Summer of Code and Outreachy programs; for information about those look at those program websites. If you wish to participate in either of those follow the guidelines and schedule set by those programs. If you are unsure please reach out via official communication channels of those programs, or ask on the developer's mailing list for help.
-
-## Table of Contents
-
-- [Getting in touch](#getting-in-touch)
-- [If you find a bug or problem](#if-you-find-a-bug-or-problem)
-- [Working on the code](#working-on-the-code)
-- [Testing the changes](#testing-the-changes)
-- [Running checkstyle](#running-checkstyle)
-- [Creating patches](#creating-patches)
-- [Submitting your contribution](#submitting-your-contribution)
-- [Becoming a committer](#becoming-a-committer)
-
 
 ## Getting in touch
 
@@ -49,6 +37,10 @@ For examples, take a look at some of the existing [unit test cases](https://gith
 
 **NOTE:** you will need to register to create or comment on JIRA issues. The "Log In" link in the upper right will allow you to login with an existing account or sign up for an account.
 
+## Working on the documentation
+
+Documentation is extremely important to help users make the most of Apache Camel and it's probably the area that needs the most help!
+So if you are interested in helping the documentation effort; whether it's just to fix a page here or there, correct a link or even write a tutorial or improve existing documentation please do dive in and help! Most of the documentation is managed in the same repositories as the related source code so the process is similar to working on the code. For more details please refer to [Improving the documentation in the User Manual](/manual/latest/improving-the-documentation.html).
 
 ## Working on the code
 
