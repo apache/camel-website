@@ -61,7 +61,7 @@ One way to get help is to use the Camel mailing lists. This allows the entire co
 There are many ways you can help make Camel better - please dive in and help!Identify areas you can contribute first. You don’t have to be an expert in an area, the Apache Camel developers are available to offer help and guidance.
 
 <p>
-<a class="button dark" href="/manual/latest/contributing.html">Read More</a>
+<a class="button dark" href="/community/contributing/">Read More</a>
 </p>
 
 {{< /div >}}
