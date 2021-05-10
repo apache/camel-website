@@ -192,4 +192,6 @@ public class SimpleFlowMergeAggregator implements AggregationStrategy {
 2021-05-06 12:46:22.133  INFO 2576 --- [ #4 - Multicast] route1                                   : Another log
 ```
 
+With the new aggregator implementation, you can now see the exchange getting routed down to the remaining processors.
+
 Hope this article helps users who hit upon this issue. 
