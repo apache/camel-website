@@ -96,7 +96,7 @@ On executing the same, we see following logs
 2021-05-06 12:43:21.576  INFO 13956 --- [ #3 - Multicast] c.e.d.m.SimpleFlowMergeAggregator        : Inside aggregator DATA_FROM_PATH_2
 ```
 
-## What could take you by by a surprise?
+## What could take you by a surprise?
 
 - When the multicast completes aggregating exchanges from child branches, one might intermittently note that it stops routing the remaining processors (those 2 additional log and a transform step in above example). On running a debugger, you will notice this happens in a special scenario when the very first exchange which arrives in the aggregator (from first completed child branch) had encountered an exception during its course or/and was handled via onException flows. On the flip side, if the first exchange was a successful and even though all the remaining ones experienced a failure, it still continued routing the remaining processors/steps.
 
