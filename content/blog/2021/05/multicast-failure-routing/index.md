@@ -1,7 +1,7 @@
 ---
 title: "Routing multicast output after encountering partial failures"
 date: 2021-05-10
-draft: true
+draft: false
 authors: [hokutor]
 categories: ["Usecases"]
 preview: "Routing multicast output after encountering partial failures"
