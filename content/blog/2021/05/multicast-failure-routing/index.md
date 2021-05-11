@@ -11,13 +11,13 @@ preview: "Routing multicast output after encountering partial failures"
 
 Multicast is a powerful EIP which supports parallel execution paths in asynchronous manner. There are various ways a camel user can configure a multicast EIP. Check out the extensive documentation [here](https://camel.apache.org/components/3.4.x/eips/multicast-eip.html)
 1. One can configure to execute all the child paths independently and continue routing the last reply as the outgoing message (default behavior unless you provide an aggregation strategy)
-2. Additionally, you can also plugin an implementation of [camel aggregation strategy]( https://github.com/apache/camel/blob/camel-3.7.x/core/camel-api/src/main/java/org/apache/camel/AggregationStrategy.java ) which helps to define user logic to aggregate the output from each of those child path and continue routing the aggregated results 
+2. Additionally, you can plug in an implementation of [camel aggregation strategy]( https://github.com/apache/camel/blob/camel-3.7.x/core/camel-api/src/main/java/org/apache/camel/AggregationStrategy.java ) with user defined logic to aggregate the output from each of those child path before continuing further downstream routing. 
 
-For the use case discussed here, we need to aggregate the computed results from all parallel child before it gets routed to the downstream processors in the flow. The idea is to keep routing the aggregated results if atleast one child route completed successfully without an exception. We would also want to stop routing further if all the child exchanges experienced failures.
+For the use case discussed below, the requirement is to aggregate the computed results from all parallel child before it gets routed to the downstream processors in the flow. The idea is to keep routing the aggregated results if atleast one child route completes successfully without an exception. We also want to stop routing further if all the child exchanges experienced failures.
 
 ## Use case 
 
-Check out the following routes 
+Check out the following camel routes 
 
 ```java
 @Override
@@ -58,7 +58,7 @@ public void configure() throws Exception {
 ````
 
 
-In the aggregation strategy, we decided to aggregate the incoming body into a java list.
+Following strategy aggregates the output of each multicast child route as a java list
 
 ```java
 public class SimpleFlowMergeAggregator implements AggregationStrategy {
