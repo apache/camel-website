@@ -110,12 +110,14 @@ The Pipeline stops routing to next processor under following 3 conditions
 - If previous processors have [marked route stop](https://github.com/apache/camel/blob/6dff85675e9b73e8a528bc2683935ec3c1ed26b7/core/camel-core-processor/src/main/java/org/apache/camel/processor/Pipeline.java#L74) on the exchange object.
 - There are [no more processors](https://github.com/apache/camel/blob/6dff85675e9b73e8a528bc2683935ec3c1ed26b7/core/camel-core-processor/src/main/java/org/apache/camel/processor/Pipeline.java#L76) in the pipeline
 - [PipelineHelper.continueProcessing()](https://github.com/apache/camel/blob/6dff85675e9b73e8a528bc2683935ec3c1ed26b7/core/camel-core-processor/src/main/java/org/apache/camel/processor/PipelineHelper.java#L41) returns false. On further study of the helper method, you might realized it returns false (not to route further) if any of [these states](https://github.com/apache/camel/blob/6dff85675e9b73e8a528bc2683935ec3c1ed26b7/core/camel-core-processor/src/main/java/org/apache/camel/processor/PipelineHelper.java#L43-L44) on the exchange is flagged as true. Such flagging happens when an exchange encounters java exception during the course of routing and gets handled in an exception handler which mark exception as handled. <br>
-
+ 
 Well, what if you still want to continue routing?
 - From our above aggregator, you will notice that the very first exchange which arrives in aggregator becomes the base exchange on which the aggregator continues to pile up body content (with incoming results from other child routes). Infact, a lot of camel users follow this pattern of writing an aggregator strategy. Unfortunately, if done this way, [the states set by exception handlers](https://github.com/apache/camel/blob/6dff85675e9b73e8a528bc2683935ec3c1ed26b7/core/camel-core-processor/src/main/java/org/apache/camel/processor/PipelineHelper.java#L43-L44) get carried forward to the next evaluation point in [Pipeline](https://github.com/apache/camel/blob/camel-3.7.x/core/camel-core-processor/src/main/java/org/apache/camel/processor/Pipeline.java#L79) and qualify to stop routing. 
 <br>
 
-Following aggregator is implemented to achieve the following
+## Solution 
+
+There are many ways a user could neutralize the states set by the exception handling framework. However, for the scope of this article, we chose the following strategy. 
 - If first child route exchange never encountered an exception, then continue processing the rest of aggregation cycle as usual.
 - If the first child encountered an excetion, then introspect the incoming exchanges for success case. If found, shift the base to be the first succeess exchange and move the aggregated results on to it and continue the rest of aggregation lifecycle as usual.
 
