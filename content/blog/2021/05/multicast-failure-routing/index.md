@@ -103,7 +103,7 @@ On executing the same, we see following logs
 
 ## Analysis
 
-To understand this better, lets deep dive into the open source codebase. Notice the [Pipeline class]( https://github.com/apache/camel/blob/6dff85675e9b73e8a528bc2683935ec3c1ed26b7/core/camel-core-processor/src/main/java/org/apache/camel/processor/Pipeline.java ). PipelineProcessor (part of camel core framework processors) performs an evaluation after every user processors (user added steps in a camel flow) on whether it should continue routing to the next processor.
+To understand this better, lets deep dive into the open source codebase. Notice the [Pipeline class](https://github.com/apache/camel/blob/main/core/camel-core-processor/src/main/java/org/apache/camel/processor/Pipeline.java). PipelineProcessor (part of camel core framework processors) performs an evaluation after every user processors (user added steps in a camel flow) on whether it should continue routing to the next processor.
 This decision is made inside Pipeline class on [this if block](https://github.com/apache/camel/blob/6dff85675e9b73e8a528bc2683935ec3c1ed26b7/core/camel-core-processor/src/main/java/org/apache/camel/processor/Pipeline.java#L79) <br>
 
 The Pipeline stops routing to next processor under following 3 conditions
