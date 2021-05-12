@@ -2,7 +2,7 @@
 title: "Routing multicast output after encountering partial failures"
 date: 2021-05-10
 draft: false
-authors: [Reji Mathews, Hokutor]
+authors: [hokutor]
 categories: ["Usecases"]
 preview: "Routing multicast output after encountering partial failures"
 ---
