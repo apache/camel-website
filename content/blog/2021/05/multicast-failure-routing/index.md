@@ -17,7 +17,7 @@ For the use case discussed below, the requirement is to aggregate the computed r
 
 ## Use case 
 
-Check out the following camel routes 
+Check out the following Camel routes 
 
 ```java
 @Override
