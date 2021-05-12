@@ -188,7 +188,7 @@ public final class PipelineHelper {
 }
 ```
  
-Well, now lets re-visit our use case. What if you still want to continue routing?
+Well, now let's re-visit our use case. What if you still want to continue routing?
 - From our above aggregator, you will notice that the very first exchange which arrives in aggregator becomes the base exchange on which the aggregator continues to pile up body content (with incoming results from other child routes). In fact, a lot of Camel users follow this pattern of writing an aggregator strategy. Unfortunately, if done this way, the state variables set on the Exchange object during exception handling get carried forward to the next evaluation point in Pipeline and qualify to stop routing. 
 <br>
 
