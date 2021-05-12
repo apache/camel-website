@@ -16,7 +16,7 @@
     "preview:hugo": "hugo server -D",
     "check:xref": "antora --generator @antora/xref-validator antora-playbook.yml",
     "check:links": "deadlinks-linux public",
-    "check:html": "html-validate 'public/*/**/*.html' 'public/!(google)*.html'",
+    "check:html": "html-validate public",
     "checks": "run-s check:xref check:links check:html"
   },
   "devDependencies": {
@@ -39,7 +39,7 @@
     "gulp": "~4.0",
     "gulp-cheerio": "~1.0",
     "gulp-htmlmin": "~5.0",
-    "html-validate": "~3.0",
+    "html-validate": "~4",
     "hugo-extended": "^0.73.0",
     "netlify-cli": "^2.69.11",
     "npm-run-all": "~4",
