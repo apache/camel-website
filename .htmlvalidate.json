@@ -7,13 +7,19 @@
   ],
   "rules": {
     "attr-quotes": "off",
-    "wcag/h30": "off",
-    "no-inline-style": "off",
-    "element-required-attributes": "off",
-    "prefer-tbody": "off",
-    "long-title": "off",
-    "camel/title": "error",
+    "camel/relative-links": "error",
     "camel/structured-data": "error",
-    "camel/relative-links": "error"
+    "camel/title": "error",
+    "doctype-style": [
+      "error",
+      {
+        "style": "lowercase"
+      }
+    ],
+    "element-required-attributes": "off",
+    "long-title": "off",
+    "no-inline-style": "off",
+    "prefer-tbody": "off",
+    "wcag/h30": "off"
   }
 }
