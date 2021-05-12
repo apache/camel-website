@@ -273,4 +273,4 @@ public class SimpleFlowMergeAggregator implements AggregationStrategy {
 
 With the new aggregator implementation, you can now see the exchange getting routed down to the remaining processors.
 
-Hope this article helps users who hit upon this issue. 
+Hope this article helps users who encounter this issue.
