@@ -103,7 +103,7 @@ On executing the same, we see following logs
 
 ## Analysis
 
-To understand this better, lets deep dive into the open source codebase. Check out PipelineProcessor.java (part of camel-core-processors module). Following section of code in the class Pipeline performs an evaluation after every user processors (user added steps in a camel flow) on whether it should continue routing to the next processor.
+To understand this better let's deep dive into the open source codebase. Check out `PipelineProcessor.java` (part of `camel-core-processors` module). The following section of code in the class `Pipeline` evaluates after every user processor (user added steps in a Camel flow) on whether it should continue routing to the next processor.
 ```java
         @Override
         public void run() {
