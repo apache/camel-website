@@ -2,7 +2,7 @@
 title: "Routing multicast output after encountering partial failures"
 date: 2021-05-10
 draft: false
-authors: [hokutor]
+authors: [hokutor, mathewsreji]
 categories: ["Usecases"]
 preview: "Routing multicast output after encountering partial failures"
 ---
@@ -103,16 +103,93 @@ On executing the same, we see following logs
 
 ## Analysis
 
-To understand this better, lets deep dive into the open source codebase. Notice the [Pipeline class](https://github.com/apache/camel/blob/main/core/camel-core-processor/src/main/java/org/apache/camel/processor/Pipeline.java). PipelineProcessor (part of camel core framework processors) performs an evaluation after every user processors (user added steps in a camel flow) on whether it should continue routing to the next processor.
-This decision is made inside Pipeline class on [this if block](https://github.com/apache/camel/blob/6dff85675e9b73e8a528bc2683935ec3c1ed26b7/core/camel-core-processor/src/main/java/org/apache/camel/processor/Pipeline.java#L79) <br>
+To understand this better, lets deep dive into the open source codebase. Check out PipelineProcessor.java (part of camel-core-processors module). Following section of code in the class Pipeline performs an evaluation after every user processors (user added steps in a camel flow) on whether it should continue routing to the next processor.
+```java
+        @Override
+        public void run() {
+            boolean stop = exchange.isRouteStop();
+            int num = index;
+            boolean more = num < size;
+            boolean first = num == 0;
+
+            if (!stop && more && (first || continueProcessing(exchange, "so breaking out of pipeline", LOG))) {
+
+                // prepare for next run
+                if (exchange.hasOut()) {
+                    exchange.setIn(exchange.getOut());
+                    exchange.setOut(null);
+                }
+
+                // get the next processor
+                AsyncProcessor processor = processors.get(index++);
+
+                processor.process(exchange, this);
+            } else {
+                // copyResults is needed in case MEP is OUT and the message is not an OUT message
+                ExchangeHelper.copyResults(exchange, exchange);
+
+                // logging nextExchange as it contains the exchange that might have altered the payload and since
+                // we are logging the completion if will be confusing if we log the original instead
+                // we could also consider logging the original and the nextExchange then we have *before* and *after* snapshots
+                if (LOG.isTraceEnabled()) {
+                    LOG.trace("Processing complete for exchangeId: {} >>> {}", exchange.getExchangeId(), exchange);
+                }
+
+                AsyncCallback cb = callback;
+                taskFactory.release(this);
+                reactiveExecutor.schedule(cb);
+            }
+        }
+    }
+```
+This decision is made inside the if block <br>
+```if (!stop && more && (first || continueProcessing(exchange, "so breaking out of pipeline", LOG)))```
 
 The Pipeline stops routing to next processor under following 3 conditions
-- If previous processors have [marked route stop](https://github.com/apache/camel/blob/6dff85675e9b73e8a528bc2683935ec3c1ed26b7/core/camel-core-processor/src/main/java/org/apache/camel/processor/Pipeline.java#L74) on the exchange object.
-- There are [no more processors](https://github.com/apache/camel/blob/6dff85675e9b73e8a528bc2683935ec3c1ed26b7/core/camel-core-processor/src/main/java/org/apache/camel/processor/Pipeline.java#L76) in the pipeline
-- [PipelineHelper.continueProcessing()](https://github.com/apache/camel/blob/6dff85675e9b73e8a528bc2683935ec3c1ed26b7/core/camel-core-processor/src/main/java/org/apache/camel/processor/PipelineHelper.java#L41) returns false. On further study of the helper method, you might realized it returns false (not to route further) if any of [these states](https://github.com/apache/camel/blob/6dff85675e9b73e8a528bc2683935ec3c1ed26b7/core/camel-core-processor/src/main/java/org/apache/camel/processor/PipelineHelper.java#L43-L44) on the exchange is flagged as true. Such flagging happens when an exchange encounters java exception during the course of routing and gets handled in an exception handler which mark exception as handled. <br>
+- If previous processors have marked route stop on the exchange object. 
+```boolean stop = exchange.isRouteStop();```
+- There are no more processors in the pipeline
+```boolean more = num < size;```
+- PipelineHelper.continueProcessing() evaluates to ```false``` when an exchange encounters any java exception during the course of routing and gets handled via exception handling routines. Refer the implementation code below <br>
+```java
+public final class PipelineHelper {
+    public static boolean continueProcessing(Exchange exchange, String message, Logger log) {
+        ExtendedExchange ee = (ExtendedExchange) exchange;
+        boolean stop = ee.isFailed() || ee.isRollbackOnly() || ee.isRollbackOnlyLast()
+                || (ee.isErrorHandlerHandledSet() && ee.isErrorHandlerHandled());
+        if (stop) {
+            if (log.isDebugEnabled()) {
+                StringBuilder sb = new StringBuilder();
+                sb.append("Message exchange has failed: ").append(message).append(" for exchange: ").append(exchange);
+                if (exchange.isRollbackOnly() || exchange.isRollbackOnlyLast()) {
+                    sb.append(" Marked as rollback only.");
+                }
+                if (exchange.getException() != null) {
+                    sb.append(" Exception: ").append(exchange.getException());
+                }
+                if (ee.isErrorHandlerHandledSet() && ee.isErrorHandlerHandled()) {
+                    sb.append(" Handled by the error handler.");
+                }
+                log.debug(sb.toString());
+            }
+
+            return false;
+        }
+        if (ee.isRouteStop()) {
+            if (log.isDebugEnabled()) {
+                log.debug("ExchangeId: {} is marked to stop routing: {}", exchange.getExchangeId(), exchange);
+            }
+            return false;
+        }
+
+        return true;
+    }
+
+}
+```
  
-Well, what if you still want to continue routing?
-- From our above aggregator, you will notice that the very first exchange which arrives in aggregator becomes the base exchange on which the aggregator continues to pile up body content (with incoming results from other child routes). Infact, a lot of camel users follow this pattern of writing an aggregator strategy. Unfortunately, if done this way, [the states set by exception handlers](https://github.com/apache/camel/blob/6dff85675e9b73e8a528bc2683935ec3c1ed26b7/core/camel-core-processor/src/main/java/org/apache/camel/processor/PipelineHelper.java#L43-L44) get carried forward to the next evaluation point in [Pipeline](https://github.com/apache/camel/blob/camel-3.7.x/core/camel-core-processor/src/main/java/org/apache/camel/processor/Pipeline.java#L79) and qualify to stop routing. 
+Well, now lets re-visit our use case. What if you still want to continue routing?
+- From our above aggregator, you will notice that the very first exchange which arrives in aggregator becomes the base exchange on which the aggregator continues to pile up body content (with incoming results from other child routes). Infact, a lot of camel users follow this pattern of writing an aggregator strategy. Unfortunately, if done this way, the state variables set on the Exchange object during exception handling get carried forward to the next evaluation point in Pipeline and qualify to stop routing. 
 <br>
 
 ## Solution 
