@@ -254,7 +254,7 @@ public class SimpleFlowMergeAggregator implements AggregationStrategy {
         return false;
     }
 }
-````
+```
 
 ```log
 2021-05-06 12:46:19.122  INFO 2576 --- [qtp174245837-45] route1                                   : received request
