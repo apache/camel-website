@@ -9,7 +9,7 @@ preview: "Routing multicast output after encountering partial failures"
 
 ## Problem description
 
-Multicast is a powerful EIP which supports parallel execution paths in asynchronous manner. There are various ways a camel user can configure a multicast EIP. Check out the extensive documentation [here](/components/latest/eips/multicast-eip.html)
+Multicast is a powerful EIP which supports parallel execution paths in asynchronous manner. There are various ways a Camel user can configure a multicast EIP. Check out the extensive documentation [here](/components/latest/eips/multicast-eip.html)
 1. One can configure to execute all the child paths independently and continue routing the last reply as the outgoing message (default behavior unless you provide an aggregation strategy)
 2. Additionally, you can plug in an implementation of [camel aggregation strategy](https://github.com/apache/camel/blob/main/core/camel-api/src/main/java/org/apache/camel/AggregationStrategy.java) with user defined logic to aggregate the output from each of those child path before continuing further downstream routing. 
 
