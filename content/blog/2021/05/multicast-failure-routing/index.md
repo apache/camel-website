@@ -196,7 +196,7 @@ Well, now lets re-visit our use case. What if you still want to continue routing
 
 There are many ways a user could neutralize the states set by the exception handling framework. However, for the scope of this article, we chose the following strategy. 
 - If the first child route exchange never encountered an exception, then continue processing the rest of the aggregation cycle as usual.
-- If the first child encountered an excetion, then introspect the incoming exchanges for success case. If found, shift the base to be the first succeess exchange and move the aggregated results on to it and continue the rest of aggregation lifecycle as usual.
+- If the first child encountered an exception, then introspect the incoming exchanges for success case. If found, shift the base to be the first successful exchange and move the aggregated results on to it and continue the rest of the aggregation lifecycle as usual.
 
 Updated AggregationStrategy
 ```java
