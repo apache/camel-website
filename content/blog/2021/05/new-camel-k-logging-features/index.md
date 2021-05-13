@@ -13,7 +13,7 @@ usefulness to our community, we recently worked on logging improvements for diff
 parts of Camel K and the integrations it generated.
 
 During the 1.5 development release we dedicated some time to review the logging capabilities
-of Camel K. This version introduces a new [logging trait](https://camel.apache.org/camel-k/latest/traits/logging.html) that simplifies access to the logging configuration available on the runtime.
+of Camel K. This version introduces a new [logging trait](/camel-k/latest/traits/logging.html) that simplifies access to the logging configuration available on the runtime.
 
 ## Colorized logs
 
@@ -88,7 +88,6 @@ running integrations in an autonomous way.
 
 Do you have any suggestions about how we could improve usability and make Camel K operate
 even more autonomously? [Let us know](https://github.com/apache/camel-k/issues).
-
 
 
 
