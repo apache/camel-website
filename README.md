@@ -376,6 +376,44 @@ all generated sources in the project first.
 
 Of course this then takes some more time than an optimized rebuild (time to grab another coffee!).
 
+# Checks, publishing the website
+
+The content of the website, as built by the [Camel.website](https://ci-builds.apache.org/job/Camel/job/Camel.website/job/main/)
+job, is served from the [asf-site](https://github.com/apache/camel-website/tree/asf-site) branch and served by [ASF
+Infrastrucuture team](https://infra.apache.org/project-site.html).
+
+For the site to be published a number of checks need to pass, these include two levels of link checking:
+[Antora xref](https://gitlab.com/antora/xref-validator) and [HTML link checker](https://github.com/deadlinks/cargo-deadlinks);
+[HTML validation](https://html-validate.org/). In local development those checks can be run with `yarn checks`,
+to increase the local turnaround time some lengthy checks are not run unless `CAMEL_ENV=production` environment
+variable is set. To run all checks use:
+
+    $ CAMEL_ENV=production yarn checks
+
+Publishing the website is done by [ASF Jenkins](https://ci-builds.apache.org/job/Camel/job/Camel.website/job/main/)
+this includes running all the checks. It is common that a check might fail there that hasn't failed when the
+change was made, this could be for any number of reasons, but most commonly there was a change in one of
+the subproject's documentation, and most common issue is an introduction of a broken or absolute link towards
+`camel.apache.org` domnain.
+
+The configuration of the HTML validation rules is in `.htmlvalidate.json`, with exclusions of checks listed in
+`.htmlvalidateignore` file, custom rules are in `rules.js` for mandating relative links to camel.apache.org domain,
+JSON-LD schema validation, and mandating that the HTML title be set.
+
+Some of the content for the website is derived from the data received from GitHub API, even though we cache the
+data, GitHub API rate limits can cause build failures. Until we can use authenticated requests against the GitHub
+API (see https://github.com/gohugoio/hugo/issues/5617), a API "proxy" can be/is used to add authentication to
+the requests as authenticated users receive a higher GitHub API limit. To use the proxy following environment
+variables need to be set (and are set in the production build, see `Jenkinsfile`):
+
+ - `HUGO_PARAMS_GitHubAPI=http://localhost:22635`
+ - `GITHUB_USR=<GitHub username>`
+ - `GITHUB_PSW=<GitHub token>`
+
+When those environment variables are set, requests are sent to `localhost:22635` instead of `api.github.com`
+where the request is modified to set the correct `Host` header and to add the `Authorization` header for
+authenticated access. The proxy is defined in the `github-proxy.js`, and since it's run in the backround
+any logs from the proxy can be found in `.github-proxy.log` file.
 
 ## Pull request previews are powered by Netlify
 

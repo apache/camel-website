@@ -18,6 +18,7 @@ defaultMarkdownHandler = "blackfriday"
     socialProfiles = ["https://twitter.com/ApacheCamel"]
     organizationLogo = "https://camel.apache.org/_/img/logo-d.svg"
     organizationDescription = "Apache Camel ™ is a versatile open-source integration framework based on known Enterprise Integration Patterns. Camel empowers you to define routing and mediation rules in a variety of domain-specific languages, including a Java-based Fluent API, Spring or Blueprint XML Configuration files, and a Scala DSL."
+    GitHubAPI = "https://api.github.com"
 
 [caches]
 

@@ -21,3 +21,4 @@ resources
 !**/.yarn/sdks
 !**/.yarn/unplugged
 !**/.yarn/versions
+*.github-proxy.*
