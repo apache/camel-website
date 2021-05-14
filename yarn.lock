@@ -3219,6 +3219,7 @@ __metadata:
     gulp-cheerio: ~1.0
     gulp-htmlmin: ~5.0
     html-validate: ~4
+    http-proxy: ~1.18
     hugo-extended: ^0.73.0
     netlify-cli: ^2.69.11
     npm-run-all: ~4
@@ -9912,7 +9913,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"http-proxy@npm:^1.18.0, http-proxy@npm:^1.18.1":
+"http-proxy@npm:^1.18.0, http-proxy@npm:^1.18.1, http-proxy@npm:~1.18":
   version: 1.18.1
   resolution: "http-proxy@npm:1.18.1"
   dependencies:

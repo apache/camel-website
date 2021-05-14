@@ -11,7 +11,7 @@ git checkout {{ .Params.version }}</pre>
 
 <h2 id="resolved"><a class="anchor" href="#resolved"></a>Resolved issues</h2>
 <p>Here is a list of all the issues that have been resolved for this release</p>
-{{ $issues := getJSON "https://api.github.com/repos/apache/camel-quarkus/issues?state=closed&milestone=" (string .Params.milestone ) }}
+{{ $issues := getJSON $.Site.Params.GitHubAPI "/repos/apache/camel-quarkus/issues?state=closed&milestone=" (string .Params.milestone ) }}
 <dl>
 {{ range $issues }}
   <dt><a href="{{ .html_url }}">#{{ .number }}</a></dt><dd>{{ .title }}</dd>

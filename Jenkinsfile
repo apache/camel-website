@@ -35,9 +35,11 @@ pipeline {
     }
 
     environment {
-        ANTORA_CACHE_DIR  = "$WORKSPACE/.antora-cache"
-        HUGO_CACHEDIR     = "$WORKSPACE/.hugo-cache"
-        CAMEL_ENV         = 'production'
+        ANTORA_CACHE_DIR      = "$WORKSPACE/.antora-cache"
+        CAMEL_ENV             = 'production'
+        GITHUB                = credentials('399061d0-5ab5-4142-a186-a52081fef742') // asf-ci credential
+        HUGO_CACHEDIR         = "$WORKSPACE/.hugo-cache"
+        HUGO_PARAMS_GitHubAPI = 'http://localhost:22635'
     }
 
     stages {
