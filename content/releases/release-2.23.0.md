@@ -5,8 +5,7 @@ type: release-note
 version: 2.23.0
 title: "Release 2.23.0"
 preview: "Major release for 2.23.x"
-apiBreaking: "The HttpBinding interface has new methods for setting fileNameExtWhiteList option. The copy, copyFrom methods on org.apache.camel.Message now also copy over reference to the
-exchange"
+apiBreaking: "The HttpBinding interface has new methods for setting fileNameExtWhiteList option. The copy, copyFrom methods on org.apache.camel.Message now also copy over reference to the exchange"
 knownIssues: ""
 jiraVersionId: 12343345
 category: camel
