@@ -1,22 +1,18 @@
 ---
-title: "How to Java debug a Camel K integration in VS Code with Camel K 1.3.0"
-date: 2021-01-20
+title: "How to Java debug a Camel K integration in VS Code - second iteration"
+date: 2021-05-17
 authors: [apupier]
 categories: ["Tooling","Camel K"]
-preview: "How to Java debug a Camel K integration in VS Code with Camel K 1.3.0"
+preview: "How to Java debug a Camel K integration in VS Code - second iteration"
 ---
 
-UPDATED ON 17 May 2021: More recent related content available in [this blogpost](/blog/2021/05/JavaDebuggingInVSCode-iteration2).
+Camel K is providing a new feature to Java debug deployed integrations. Before VS Code Tooling for Apache Camel K 0.0.25, more complex steps were required to leverage the VS Code Java debugging capabilities as explained in [this previous blogpost](/blog/2021/01/DebugInVSCodeWithCamelK1.3.0/).
 
-Camel K 1.3.0 is providing a new feature to Java debug deployed integrations. Even if Camel K 1.3.0 is [not fully compatible](https://github.com/apache/camel-k/issues/1872) with VS Code Tooling for Apache Camel K extension, it remains possible to leverage the VS Code Java debugging capabilities.
-
-I recorded a [video](https://youtu.be/cFPuxd1Je3c) which is following the steps in this blogpost. I let you choose your preferred way to discover how to java debug your Camel K integration in VS Code.
+I recorded a [video](https://youtu.be/pFj21YvzZm0) which is following the steps in this blogpost.
 
 # Requirements
 
-- [VS Code Extension Pack for Apache Camel](https://marketplace.visualstudio.com/items?itemName=redhat.apache-camel-extension-pack)
-- Uncheck _Camelk -> Integrations: Auto-upgrade_ in _File -> Preferences -> Settings -> Extensions -> Apache Camel K Tooling_
-- [Camel K 1.3.0 binary](/download/#camel-k) available on command-line
+- [VS Code Extension Pack for Apache Camel](https://marketplace.visualstudio.com/items?itemName=redhat.apache-camel-extension-pack) with VS Code Tooling for Apache Camel K 0.0.25+
 - Camel K deployed to a cluster. In this demo, we will use a Camel K instance deployed on minikube.
 
 # How to java debug
@@ -62,26 +58,11 @@ You can then start the integration:
 
 Note: If starting in --dev, it will allow to automatically reload the Integration. But take care, debugger will need to be restarted on each change. Meaning that the next two steps will need to be repeated.
 
-#### Start debugger on runtime
+#### Debug
 
-- Open terminal: _terminal -> New Terminal_
-- Call _kamel debug demo_ (replace _demo_ by the integration name that appears in _Apache Camel K Integrations_ view if you choose a different name.
+In Integrations view, wait that the integration is running, then right-click on the integration and select _Start Java debugger on Camel K Integration_.
 
-![Start debugger on runtime](4-startDebuggerOnRuntime.gif)
-
-Note: Take care to use the kamel 1.3.0 binaries.
-
-#### Attach debugger
-
-- In the left panel, select the _Run & Debug_ container
-- Click on _create a launch.json_
-- Remove the default _configuration_
-- Use completion to pick the _Java: Attach_
-- Provide a meaningful name
-- Update port, by default Camel K is using _5005_
-- Click on the green triangle to _Start debugging_
-
-![Attach debugger](5-AttachDebugger.gif)
+![Debug Integration](./4-CamelK-JavaDebug-fromRightClick.gif)
 
 #### Enjoy
 
