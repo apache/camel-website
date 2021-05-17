@@ -51,10 +51,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@antora/site-generator-default", "npm:3.0.0-alpha.1"],
             ["@antora/site-mapper", "npm:3.0.0-alpha.1"],
             ["@antora/xref-validator", "https://gitlab.com/antora/xref-validator.git#commit=19bfaf88fc7dd39552cfd8b3ac41c55d6d8f9edd"],
+            ["@deadlinks/cargo-deadlinks", "github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux"],
             ["@djencks/asciidoctor-antora-indexer", "npm:0.0.6"],
             ["@djencks/asciidoctor-jsonpath", "npm:0.0.1"],
             ["@oclif/errors", "npm:1.3.4"],
-            ["@zregvart/cargo-deadlinks", "github-release:deadlinks/cargo-deadlinks:0.6.1/deadlinks-linux"],
             ["antora-ui-camel", "workspace:antora-ui-camel"],
             ["del", "npm:6.0.0"],
             ["escape-string-regexp", "npm:2.0.0"],
@@ -2428,6 +2428,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@deadlinks/cargo-deadlinks", [
+        ["github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux", {
+          "packageLocation": "./.yarn/cache/@deadlinks-cargo-deadlinks-github-release-a8ddbf1b3b-43e25c5351.zip/node_modules/@deadlinks/cargo-deadlinks/",
+          "packageDependencies": [
+            ["@deadlinks/cargo-deadlinks", "github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux"],
+            ["@yarnpkg/fslib", "npm:2.3.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@djencks/asciidoctor-antora-indexer", [
         ["npm:0.0.6", {
           "packageLocation": "./.yarn/cache/@djencks-asciidoctor-antora-indexer-npm-0.0.6-4db3f3a720-70a23e1885.zip/node_modules/@djencks/asciidoctor-antora-indexer/",
@@ -3889,16 +3899,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["@zregvart/cargo-deadlinks", [
-        ["github-release:deadlinks/cargo-deadlinks:0.6.1/deadlinks-linux", {
-          "packageLocation": "./.yarn/cache/@zregvart-cargo-deadlinks-github-release-33782f9786-524a7b1dc2.zip/node_modules/@zregvart/cargo-deadlinks/",
-          "packageDependencies": [
-            ["@zregvart/cargo-deadlinks", "github-release:deadlinks/cargo-deadlinks:0.6.1/deadlinks-linux"],
-            ["@yarnpkg/fslib", "npm:2.3.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["JSONStream", [
         ["npm:1.3.5", {
           "packageLocation": "./.yarn/cache/JSONStream-npm-1.3.5-1987f2e6dd-e9849f8a52.zip/node_modules/JSONStream/",
@@ -4378,10 +4378,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@antora/site-generator-default", "npm:3.0.0-alpha.1"],
             ["@antora/site-mapper", "npm:3.0.0-alpha.1"],
             ["@antora/xref-validator", "https://gitlab.com/antora/xref-validator.git#commit=19bfaf88fc7dd39552cfd8b3ac41c55d6d8f9edd"],
+            ["@deadlinks/cargo-deadlinks", "github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux"],
             ["@djencks/asciidoctor-antora-indexer", "npm:0.0.6"],
             ["@djencks/asciidoctor-jsonpath", "npm:0.0.1"],
             ["@oclif/errors", "npm:1.3.4"],
-            ["@zregvart/cargo-deadlinks", "github-release:deadlinks/cargo-deadlinks:0.6.1/deadlinks-linux"],
             ["antora-ui-camel", "workspace:antora-ui-camel"],
             ["del", "npm:6.0.0"],
             ["escape-string-regexp", "npm:2.0.0"],

@@ -1556,6 +1556,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@deadlinks/cargo-deadlinks@github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux":
+  version: 0.8.0
+  resolution: "@deadlinks/cargo-deadlinks@github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux"
+  dependencies:
+    "@yarnpkg/fslib": 2.3.0
+  bin:
+    deadlinks-linux: exec.js
+  checksum: 43e25c5351d9a217ca93fabf0d28e8863daf4de12b945ca5769a90827603e105eea276758069d98338ec99d398e1adc4c860be63106ee7cf75fadb9eb1ee416a
+  languageName: node
+  linkType: hard
+
 "@djencks/asciidoctor-antora-indexer@npm:^0.0.6":
   version: 0.0.6
   resolution: "@djencks/asciidoctor-antora-indexer@npm:0.0.6"
@@ -2760,17 +2771,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zregvart/cargo-deadlinks@github-release:deadlinks/cargo-deadlinks:0.6.1/deadlinks-linux":
-  version: 0.6.1
-  resolution: "@zregvart/cargo-deadlinks@github-release:deadlinks/cargo-deadlinks:0.6.1/deadlinks-linux"
-  dependencies:
-    "@yarnpkg/fslib": 2.3.0
-  bin:
-    deadlinks-linux: exec.js
-  checksum: 524a7b1dc294cad30ad7846d98448f013a78ccd6dc9b827b753b3f090ff7409dd3d4358744bedaa5bcc8324a1e13e9783478d2905b6c99637e756dce32f405ff
-  languageName: node
-  linkType: hard
-
 "JSONStream@npm:^1.0.3, JSONStream@npm:^1.3.2":
   version: 1.3.5
   resolution: "JSONStream@npm:1.3.5"
@@ -3208,10 +3208,10 @@ __metadata:
     "@antora/site-generator-default": ^3.0.0-alpha.1
     "@antora/site-mapper": 3.0.0-alpha.1
     "@antora/xref-validator": "https://gitlab.com/antora/xref-validator.git#commit=19bfaf88fc7dd39552cfd8b3ac41c55d6d8f9edd"
+    "@deadlinks/cargo-deadlinks": "github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux"
     "@djencks/asciidoctor-antora-indexer": ^0.0.6
     "@djencks/asciidoctor-jsonpath": ^0.0.1
     "@oclif/errors": ^1.3.4
-    "@zregvart/cargo-deadlinks": "github-release:deadlinks/cargo-deadlinks:0.6.1/deadlinks-linux"
     antora-ui-camel: "workspace:antora-ui-camel"
     del: ^6.0.0
     escape-string-regexp: ~2.0
