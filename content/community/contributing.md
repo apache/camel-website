@@ -1,3 +1,7 @@
+---
+title: Contributing
+---
+
 ## Contributing to Apache Camel
 First of all, thank you for having an interest in contributing to Apache Camel.
 
