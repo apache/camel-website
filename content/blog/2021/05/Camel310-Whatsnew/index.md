@@ -100,7 +100,7 @@ Camel now supports Debezium 1.5.
 ### Quarkus
 
 This release is preparing for supporting the upcoming Quarkus 2.0 release.
-Camel is now upgraded to support VertX and the MicroProfile v4 specification.
+Camel is now upgraded to support Vert.X and the MicroProfile v4 specification.
 
 ### Spring Boot
 
