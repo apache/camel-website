@@ -6,7 +6,7 @@ categories: ["Releases"]
 preview: Details of what we have done in the Camel 3.10 release.
 ---
 
-Apache Camel 3.10 has just been released.
+Apache Camel 3.10 has just been [released](/blog/2021/05/RELEASE-3.10.0/).
 
 This is a non-LTS release which means we will not provide patch releases.
 The next planned LTS release is 3.11 scheduled for June/July 2021.
@@ -18,11 +18,11 @@ This release introduces a set of new features and noticeable improvements that w
 ### Reduced object allocations
 
 We have optimized the remainder of the most complex EIPs to avoid excessive object allocations,
-and also to support _exchange pooling_.
+and also to support [exchange pooling](/manual/latest/exchange-pooling.html).
 
 The only EIP which is less optimized is the Aggregate EIP which also is the most complex EIP implementation in Camel.
 
-We also optimized the remainder of the Camel components to support _exchange pooling_.
+We also optimized the remainder of the Camel components to support [exchange pooling](/manual/latest/exchange-pooling.html).
 
 ### Optimized core
 
@@ -37,18 +37,18 @@ We did not introduce a new DSL language, but we have improved the YAML DSL to be
 YAML DSL fully support Kamelets and so far all the ready to use Kamelets from the
 [Apache Camel Kamelet Catalog](https://github.com/apache/camel-kamelets) are in YAML.
 
-You can now also tell Camel to dump all the routes during startup as XML. This allows to diagnose
-your routes, which comes handy if you write routes in different DSL's and you have some kind
+You can now also tell Camel to dump all the routes during startup as XML (`camel.main.dump-routes = true`).
+This allows to diagnose your routes, which comes handy if you write routes in different DSL's and you have some kind
 of problem. Then the XML dump is a _view_ of the routes from Camel point of view.
 
 ### Kamelets
 
-We have done significant work to _kamelets_ in this release.
+We have done significant work to [Kamelets](/camel-k/latest/kamelets/kamelets-user.html) in this release.
 
 Kamelets (route templates) are now more flexible and more isolated, which really helps
 to build more sophisticated Kamelets that are plug and play ready in any Camel runtime.
 
-A Kamelet can now specify _local beans_ that are only present when the kamelet is creating
+A Kamelet can now specify [local beans](/manual/latest/route-template.html) that are only present when the kamelet is creating
 the runtime route that it represents. The Kamelet can even embed Java, Groovy, Kotlin (or other language)
 as source code for creating the _local beans_. This gives more power to Kamelets, such as the AWS kamelets
 that is self contained and can create _local beans_ for the AWS Client that is needed for connectivity with AWS cloud platform.
@@ -65,20 +65,20 @@ the official [Apache Camel Kamelet Catalog](https://github.com/apache/camel-kame
 In the Kafka world then it's common to use Avro or Protobuf serialization.
 In this release we added support for Jackson based dataformats for Avro and Protobuf.
 
-The `camel-kafka` component has been made more roboust during stopping to better
-handle errors thrown by Kafka during client shutdown.
+The [camel-kafka](/components/latest/kafka-component.html) component has been made more
+robust during stopping to better handle errors thrown by Kafka during client shutdown.
 
 The components are upgraded to Kafka 2.8.
 
 ### Camel K
 
-We have continued porting over more from the Camel K runtime to this core Camel project.
+We have continued porting over more from the [Camel K](/camel-k/latest/) runtime to this core Camel project.
 The support for webhooks and kamelet reify component has been ported over.
 
 ### Rest DSL
 
-The Rest DSL have been improved to support the OpenAPI 3.1 specification
-in regards to declaring security model and requirements.
+The [Rest DSL](/manual/latest/rest-dsl.html) have been improved to support the OpenAPI 3.1 specification
+regarding security model and requirements declarations.
 
 ### Cloud component
 
