@@ -63,7 +63,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gulp-htmlmin", "npm:5.0.1"],
             ["html-validate", "npm:4.11.0"],
             ["http-proxy", "npm:1.18.1"],
-            ["hugo-extended", "npm:0.73.0"],
+            ["hugo-extended", "npm:0.83.1"],
             ["netlify-cli", "npm:2.69.11"],
             ["npm-run-all", "npm:4.1.5"],
             ["opal-runtime", "npm:1.0.11"],
@@ -4391,7 +4391,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gulp-htmlmin", "npm:5.0.1"],
             ["html-validate", "npm:4.11.0"],
             ["http-proxy", "npm:1.18.1"],
-            ["hugo-extended", "npm:0.73.0"],
+            ["hugo-extended", "npm:0.83.1"],
             ["netlify-cli", "npm:2.69.11"],
             ["npm-run-all", "npm:4.1.5"],
             ["opal-runtime", "npm:1.0.11"],
@@ -11850,10 +11850,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["hugo-extended", [
-        ["npm:0.73.0", {
-          "packageLocation": "./.yarn/unplugged/hugo-extended-npm-0.73.0-f4a4b1a424/node_modules/hugo-extended/",
+        ["npm:0.83.1", {
+          "packageLocation": "./.yarn/unplugged/hugo-extended-npm-0.83.1-0d67d3a0ea/node_modules/hugo-extended/",
           "packageDependencies": [
-            ["hugo-extended", "npm:0.73.0"],
+            ["hugo-extended", "npm:0.83.1"],
             ["bin-wrapper", "npm:4.1.0"]
           ],
           "linkType": "HARD",

@@ -43,7 +43,7 @@
     "gulp-htmlmin": "~5.0",
     "html-validate": "~4",
     "http-proxy": "~1.18",
-    "hugo-extended": "^0.73.0",
+    "hugo-extended": "^0.83.1",
     "netlify-cli": "^2.69.11",
     "npm-run-all": "~4",
     "opal-runtime": "1.0.11",

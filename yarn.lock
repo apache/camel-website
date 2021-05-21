@@ -3220,7 +3220,7 @@ __metadata:
     gulp-htmlmin: ~5.0
     html-validate: ~4
     http-proxy: ~1.18
-    hugo-extended: ^0.73.0
+    hugo-extended: ^0.83.1
     netlify-cli: ^2.69.11
     npm-run-all: ~4
     opal-runtime: 1.0.11
@@ -9962,14 +9962,14 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"hugo-extended@npm:^0.73.0":
-  version: 0.73.0
-  resolution: "hugo-extended@npm:0.73.0"
+"hugo-extended@npm:^0.83.1":
+  version: 0.83.1
+  resolution: "hugo-extended@npm:0.83.1"
   dependencies:
     bin-wrapper: ^4.1.0
   bin:
     hugo: cli.js
-  checksum: 2bd13f528ffed3eedfa7e8915acb90a125835bc37cc6697793bb556d3909f7f65f59f56448f1e70ff956b72bac9ff8eddda8fcedd23d52cc5963fce8580df20b
+  checksum: ec3625a4dfe572d8fca60ef2e90ab326aedbf144793b02ffcf9a218406d320d1eb465b0a303e20c6730cddc298405115693f10c71ad262c011333720fed89b0f
   languageName: node
   linkType: hard
 
