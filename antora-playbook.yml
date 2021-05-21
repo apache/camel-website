@@ -15,7 +15,7 @@ content:
     - url: git@github.com:apache/camel.git
       branches:
         - main
-        - camel-3.9.x
+        - camel-3.10.x
         - camel-3.7.x
       start_paths:
         # eip
@@ -68,14 +68,14 @@ content:
     - url: git@github.com:apache/camel-spring-boot.git
       branches:
         - main
-        - camel-spring-boot-3.9.x
+        - camel-spring-boot-3.10.x
         - camel-spring-boot-3.7.x
         - camel-spring-boot-3.4.x
       start_path: docs
     - url: git@github.com:apache/camel-karaf.git
       branches:
         - main
-        - camel-karaf-3.9.x
+        - camel-karaf-3.10.x
         - camel-karaf-3.7.x
         - camel-karaf-3.4.x
       start_path: docs
