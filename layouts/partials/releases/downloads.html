@@ -17,22 +17,26 @@
 {{ range $kind := $.Category.kinds }}
     {{ if eq $kind.filter "latest" }}
         {{/* there can be only single latest version, and we sort by version to find it, there could be newer by date versions that are not the latest, e.g. patching a legacy or lts release */}}
-        {{ $released_versions := partial "releases/version_sort.html" ($category_releases.ByParam "version") }}
+        {{ $released_versions := partial "releases/version_sort.html" $category_releases }}
         {{ $version := (index $released_versions 0).Param "version" }}
         {{ $versions = $versions | append (dict $kind.name $version) }}
     {{ else }}
         {{/* non-latest versions we need to sort by date of release */}}
-        {{ $released_versions := partial "releases/version_sort.html" ($category_releases.ByParam "date") }}
+        {{ $released_versions := partial "releases/version_sort.html" $category_releases }}
         {{ if $kind.last }}
-            {{/* we need to feature more than one of this kind: 0..last - 1*/}}
+            {{/* we need to feature more than one of this kind, up to $kind.last */}}
 
             {{/* if we need to feature more than one, we don't want the last N of the same major.minor, we want previous N major.minor versions */}}
             {{ $last_major_minor := "" }}
-            {{ range $idx := (seq 0 (sub $kind.last 1)) }}
-                {{ $version := (index (where $released_versions ".Params.kind" $kind.filter) $idx).Param "version" }}
+            {{/* number of versions of this kind found so far */}}
+            {{ $no_last := 0 }}
+            {{/* take only this kind into consideration */}}
+            {{ range $release := where $released_versions ".Params.kind" $kind.filter }}
+                {{ $version := $release.Param "version" }}
                 {{ $major_minor := replaceRE "\\.\\d+$" "" $version }}
-                {{ if ne $last_major_minor $major_minor }}
+                {{ if (and (ne $last_major_minor $major_minor) (lt $no_last $kind.last)) }}
                     {{ $versions = $versions | append (dict $kind.name $version) }}
+                    {{ $no_last = $no_last | add 1 }}
                 {{ end }}
                 {{ $last_major_minor = $major_minor }}
             {{ end }}
