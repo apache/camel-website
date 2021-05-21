@@ -1,0 +1,20 @@
+{{/* sorts given pages according to the semantic version */}}
+{{/* array containing map with 'version_num' - the numbered version, and 'page' - the page */}}
+{{ $versions := slice }}
+{{ range . }}
+    {{/* version from the page front matter, a string */}}
+    {{ $version := .Params.version }}
+    {{/* version as number, e.g. 1.2.3 -> 100020003 */}}
+    {{ $version_num := 0 }}
+    {{ range $version_part := split $version "." }}
+        {{ $version_num = add (mul $version_num 1000) (int $version_part) }}
+    {{ end }}
+    {{ $versions = $versions | append (dict "version_num" $version_num "page" .) }}
+{{ end }}
+{{/* array of sorted pages */}}
+{{ $sorted := slice }}
+{{/* sort by version_num and collect only pages */}}
+{{ range $val := (sort $versions "version_num" "desc") }}
+    {{ $sorted = $sorted | append (index $val "page") }}
+{{ end }}
+{{ return $sorted }}

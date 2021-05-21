@@ -16,13 +16,13 @@
 
 {{ range $kind := $.Category.kinds }}
     {{ if eq $kind.filter "latest" }}
-        {{/* there can be only single latest version, and we sort by version (as strings!) to find it, there could be newer by date versions that are not the latest, e.g. patching a legacy or lts release */}}
-        {{ $released_versions := ($category_releases.ByParam "version").Reverse }}
+        {{/* there can be only single latest version, and we sort by version to find it, there could be newer by date versions that are not the latest, e.g. patching a legacy or lts release */}}
+        {{ $released_versions := partial "releases/version_sort.html" ($category_releases.ByParam "version") }}
         {{ $version := (index $released_versions 0).Param "version" }}
         {{ $versions = $versions | append (dict $kind.name $version) }}
     {{ else }}
         {{/* non-latest versions we need to sort by date of release */}}
-        {{ $released_versions := ($category_releases.ByParam "date").Reverse }}
+        {{ $released_versions := partial "releases/version_sort.html" ($category_releases.ByParam "date") }}
         {{ if $kind.last }}
             {{/* we need to feature more than one of this kind: 0..last - 1*/}}
 
