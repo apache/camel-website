@@ -335,7 +335,7 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 
 ## Online Training
 
-*.  [Build a Registration System with Camel and Kubernetes](https://www.manning.com/liveproject/build-a-registration-system-with-camel-and-kubernetes) - A self-pased online learning (May 2021) where you’ll master common Apache Camel techniques and components for helping build modern interconnected applications.   
+*  [Build a Registration System with Camel and Kubernetes](https://www.manning.com/liveproject/build-a-registration-system-with-camel-and-kubernetes) - A self-pased online learning (May 2021) where you’ll master common Apache Camel techniques and components for helping build modern interconnected applications.   
 *   [Introduction to Apache Camel](http://www.pluralsight.com/courses/apache-camel-intro-integration) - Pluralsight o<span style="color: rgb(34,34,34);">nline <span style="color: rgb(34,34,34);">training course covering the core Camel framework, pattern implementations <span style="color: rgb(34,34,34);">and [hawt.io](http://hawt.io/) 
 *   [Apache Camel Video Tutorial](http://www.nvisia.com/apache-camel-video-tutorial) - A 3 part video series that introduces you to Apache Camel, covers an use-case, and then highlights why you should use Camel.
 *   [Java In Use](http://www.javainuse.com/camel) - Apache Camel Introduction, Apache Camel Interview Questions, and other beginner related training for Apache Camel.
