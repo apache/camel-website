@@ -4,6 +4,7 @@ title: "Articles"
 
 ## Camel Videos
 
+*   [Integrating systems in the age of Quarkus and Camel](https://www.youtube.com/watch?v=b7FxG2mKop8) 45 min webinar from May 2021 by Claus Ibsen, with quick overview of Camel 3 projects and then focus on Camel Quarkus, Camel K and Kamelets. Mix of slides and live demos (yes with a demo not working perfect)
 *   [OCB: Integration in OpenShift](https://www.youtube.com/watch?v=5dDsVmS9HKk) 1 hour introductory presentation from May 2021 by Zineb Bendhiba, Rachel Jordan-McGeever, and María Arias de Reyna about Camel, Camel Quarkus, Camel K and Kamelets.
 *   [Formula 1 telemetry processing using Kafka Streams - DevConf.CZ 2021](https://www.youtube.com/watch?v=OkXlSb4vfDk) - 25 min presentation from April 2021 by Paolo Patierno and Thomas Cooper talking about how they capture metrics from F1 computer game and stream into Kafka using Camel.
 *   [Whats new with Apache Camel 3 | JCon Peru 2020](https://www.youtube.com/watch?v=phGWE6QqDwc) - 55 min presentation from October 2020 by Claus Ibsen and Andrea Cosentino presenting whats new in Camel 3 and primary focused on latest innovations with Camel K, Camel Quarkus and Camel Kafka Connector.
@@ -335,7 +336,7 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 
 ## Online Training
 
-*  [Build a Registration System with Camel and Kubernetes](https://www.manning.com/liveproject/build-a-registration-system-with-camel-and-kubernetes) - A self-pased online learning (May 2021) where you’ll master common Apache Camel techniques and components for helping build modern interconnected applications.   
+*   [Build a Registration System with Camel and Kubernetes](https://www.manning.com/liveproject/build-a-registration-system-with-camel-and-kubernetes) - A self-pased online learning (May 2021) where you’ll master common Apache Camel techniques and components for helping build modern interconnected applications.   
 *   [Introduction to Apache Camel](http://www.pluralsight.com/courses/apache-camel-intro-integration) - Pluralsight o<span style="color: rgb(34,34,34);">nline <span style="color: rgb(34,34,34);">training course covering the core Camel framework, pattern implementations <span style="color: rgb(34,34,34);">and [hawt.io](http://hawt.io/) 
 *   [Apache Camel Video Tutorial](http://www.nvisia.com/apache-camel-video-tutorial) - A 3 part video series that introduces you to Apache Camel, covers an use-case, and then highlights why you should use Camel.
 *   [Java In Use](http://www.javainuse.com/camel) - Apache Camel Introduction, Apache Camel Interview Questions, and other beginner related training for Apache Camel.
