@@ -335,12 +335,14 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 
 ## Online Training
 
+*.  [Build a Registration System with Camel and Kubernetes](https://www.manning.com/liveproject/build-a-registration-system-with-camel-and-kubernetes) - A self-pased online learning (May 2021) where you’ll master common Apache Camel techniques and components for helping build modern interconnected applications.   
 *   [Introduction to Apache Camel](http://www.pluralsight.com/courses/apache-camel-intro-integration) - Pluralsight o<span style="color: rgb(34,34,34);">nline <span style="color: rgb(34,34,34);">training course covering the core Camel framework, pattern implementations <span style="color: rgb(34,34,34);">and [hawt.io](http://hawt.io/) 
 *   [Apache Camel Video Tutorial](http://www.nvisia.com/apache-camel-video-tutorial) - A 3 part video series that introduces you to Apache Camel, covers an use-case, and then highlights why you should use Camel.
 *   [Java In Use](http://www.javainuse.com/camel) - Apache Camel Introduction, Apache Camel Interview Questions, and other beginner related training for Apache Camel.
 *   [Udemy Training: Apache Camel for Beginners - Learn by Coding in Java](https://www.udemy.com/apache-camel-for-beginners-learn-by-coding-in-java/) - Learn Apache Camel framework by coding it in Java. This is purely a coding course where you will be performing ton of code throughout the course. This course will cover integrations with Kafka, Active MQ, Postgres SQL , Rest WebServices and etc.
 *   [Max Munus](http://www.maxmunus.com/page/Apache-Camel) - Provides online training to many different technologies. They provide online training for Apache Camel.
 
+    
 ## Other
 
 *   [Linkedin Apache Camel group](http://www.linkedin.com/groups?mostPopular=&gid=2447439) - Linkedin group for the Apache Camel project.
