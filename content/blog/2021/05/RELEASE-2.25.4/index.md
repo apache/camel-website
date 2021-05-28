@@ -1,6 +1,6 @@
 ---
 title: "RELEASE 2.25.4"
-date: 2020-05-28
+date: 2021-05-28
 draft: false
 authors: [gzurowski]
 categories: ["Releases"]
