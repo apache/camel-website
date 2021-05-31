@@ -114,11 +114,12 @@
 <table class="tableblock frame-all grid-all stretch">
     <thead>
         <tr>
-            <th>Version</th>
-            <th>Description</th>
-            <th>Download Link</th>
-            <th>PGP Signature file of download</th>
-            <th>SHA512 Checksum file of download</th>
+            {{ if eq $.Section "download" }}
+                <th>Version</th>
+                <th>Note</th>
+            {{ end }}
+            <th>Download</th>
+            <th>Signature and checksum</th>
         </tr>
     </thead>
 
@@ -132,30 +133,41 @@
             {{ end }}
 
             <tr>
-                {{ if gt (len $.Category.downloads) 1 }}
-                <td rowspan="{{ len $.Category.downloads }}">
-                {{ else }}
-                <td>
-                {{ end }}
-                    <strong><a href="{{ $release_note.Permalink | relURL }}">{{ $v }}</a></strong>
-                    {{ with $kind }}
-                        <br/>
-                        <small>{{ . }}</small>
-                        <br/>
-                        <small>{{ ((index (where (where (where $.Pages "Section" "releases") ".Params.category" $.Category.id) ".Params.version" $v) 0).Param "date").Format "Jan, 2006" }}</small>
+                {{ if eq $.Section "download" }}
+                    {{ if gt (len $.Category.downloads) 1 }}
+                    <td rowspan="{{ len $.Category.downloads }}">
+                    {{ else }}
+                    <td>
                     {{ end }}
-                </td>
+                        <strong><a href="{{ $release_note.Permalink | relURL }}">{{ $v }}</a></strong>
+                        {{ with $kind }}
+                            <br/>
+                            <em class="kind">{{ . }}</em>
+                        {{ end }}
+                    </td>
+                    {{ if gt (len $.Category.downloads) 1 }}
+                    <td rowspan="{{ len $.Category.downloads }}">
+                    {{ else }}
+                    <td>
+                    {{ end }}
+                        <a href="{{ $release_note.Permalink | relURL }}">Release notes</a>
+                        <br/>
+                        {{ with (index (where (where (where $.Pages "Section" "releases") ".Params.category" $.Category.id) ".Params.version" $v) 0) }}
+                        <small>
+                            Released in {{ (.Param "date").Format "Jan 2006" }}{{ if .Param "eol" }}, end of life in {{ dateFormat "Jan 2006" (.Param "eol") }}{{ end }}
+                        </small>
+                        {{ end }}
+                    </td>
+                {{ end }}
                 {{ range $idx, $download := $.Category.downloads }}
                     {{ if ne $idx 0 }}
                     </tr><tr>
                     {{ end }}
                     {{ $path := replace $download.path_format "{version}" $v }}
                     {{ $filename := replace $download.filename_format "{version}" $v }}
-                    <td>{{ $download.name}}</td>
                     {{ if $path }}
-                        <td><a href="{{ $artifact_base_url }}{{ $path }}">{{ $filename }}</a></td>
-                        <td><a href="{{ $meta_base_url }}{{ $path }}.asc">{{ $filename }}.asc</a></td>
-                        <td><a href="{{ $meta_base_url }}{{ $path }}{{ $hash_extension }}">{{ $filename }}{{ $hash_extension }}</a></td>
+                        <td><a href="{{ $artifact_base_url }}{{ $path }}">{{ $filename }}</a> ({{ $download.name}})</td>
+                        <td><a href="{{ $meta_base_url }}{{ $path }}.asc">PGP Signature</a>, <a href="{{ $meta_base_url }}{{ $path }}{{ $hash_extension }}">SHA512 Checksum</a></td>
                     {{ else }}
                          <td colspan="3"><a href="{{ .link }}">{{ replace .title "{version}" $v }}</a></td>
                     {{ end }}

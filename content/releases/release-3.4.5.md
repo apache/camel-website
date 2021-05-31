@@ -1,5 +1,6 @@
 ---
 date: 2020-12-23
+eol: 2021-12-01
 draft: false
 type: release-note
 version: 3.4.5
