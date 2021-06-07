@@ -17,7 +17,7 @@ Here are some highlights of Camel Quarkus 1.0.0-CR3.
 The following new extensions were added:
 
 * [AWS 2 Athena](/camel-quarkus/latest/reference/extensions/aws2-athena.html)
-* [Component DSL](/camel-quarkus/latest/reference/extensions/componentdsl.html)
+* [Component DSL](https://github.com/apache/camel-quarkus/blob/1.0.0-CR3/docs/modules/ROOT/pages/extensions/componentdsl.adoc)
 * [JOLT](/camel-quarkus/latest/reference/extensions/jolt.html)
 * [JTA](/camel-quarkus/latest/reference/extensions/jta.html)
 * [OpenApi Java](/camel-quarkus/latest/reference/extensions/openapi-java.html)
