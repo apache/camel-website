@@ -18,7 +18,7 @@ The Camel Kafka Connector catalog has been upgraded from 0.6.0 to 0.7.0.
 
 #### Completion for Basic Configuration
 
-Some properties are not part of the Camel catalog material, neither of the [Kafka Connect](https://kafka.apache.org/documentation/#connectconfigs) framework and applies to all Camel Kafka connectors. They are the [Basic Configuration properties](/camel-kafka-connector/latest/basic-configuration.html).
+Some properties are not part of the Camel catalog material, neither of the [Kafka Connect](https://kafka.apache.org/documentation/#connectconfigs) framework and applies to all Camel Kafka connectors. They are the [Basic Configuration properties](/camel-kafka-connector/latest/user-guide/basic-configuration.html).
 
 Completion is now available for these properties:
 
