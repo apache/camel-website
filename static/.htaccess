@@ -729,6 +729,9 @@ Redirect 301 /camel-quarkus/latest/extensions/xstream.html /camel-quarkus/latest
 Redirect 301 /camel-quarkus/latest/extensions/zip-deflater.html /camel-quarkus/latest/reference/extensions/zip-deflater.html
 Redirect 301 /camel-quarkus/latest/extensions/zipfile.html /camel-quarkus/latest/reference/extensions/zipfile.html
 # camel-quarkus end
+# camel-kafka-connect start
+Redirect 301 camel-kafka-connector/latest/connectors.html /camel-kafka-connector/latest/reference/index.html
+# camel-kafka-connect end
 Redirect 301 /camel-run-maven-goal.html /manual/latest/camel-run-maven-goal.html
 Redirect 301 /camel-test /components/latest/test.html
 Redirect 301 /camel-test.html /components/latest/test.html
