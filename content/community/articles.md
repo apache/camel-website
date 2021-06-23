@@ -94,11 +94,7 @@ Articles are divided into several sections. As the lists grow, further sectionin
 *   [Camel Cheatsheet](http://www.masteringintegration.com/apache-frameworks/camel/camel-cheatsheet) - A cheatsheet for Camel developers
 *   [Proxy Web Services request with Camel](http://www.masteringintegration.com/apache-frameworks/camel/proxy-web-services-request-with-camel) - How to create a Camel proxy facade to a legacy JAX-WS Service
 *   [Create a Custom Camel logging handler for WildFly ](http://www.mastertheboss.com/jboss-server/jboss-log/create-a-custom-camel-logging-handler-for-wildfly) - by Francesco Marchioni. Shows how to use a Camel based logging handler in WildFly
-
-These examples show usage of several different components and other concepts such as error handling.
-
-*   <span>[Jammazwan](https://github.com/jammazwan/jammazwan.x_index) - A set of many small examples to learn parts of Apache Camel more quickly.<span>  
-    
+*   [Jammazwan](https://github.com/jammazwan/jammazwan.x_index) - A set of many small examples to learn parts of Apache Camel more quickly
 *   Matteo wrote a blog entry about [using Camel with iBatis](http://matteoredaelli.wordpress.com/2008/10/08/using-apache-camel-with-ibatis/)
 *   [Using the Camel aggregator correctly](http://tmielke.blogspot.com/2009/01/using-camel-aggregator-correctly.html) _by Torsten Mielke_
 *   [Spring Remoting with JMS Example](http://aminsblog.wordpress.com/2008/05/06/15/) _by Amin Abbaspour_
