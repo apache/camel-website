@@ -189,6 +189,7 @@ These examples show usage of several different components and other concepts suc
 
 These examples show Camel combined with several tools (e.g. IDE), ESBs, Application Services, and other middleware products such as messaging or OSGi container.
 
+*   [Distributed Logs and Tracing with Spring, Apache Camel, OpenTelemetry and Grafana](https://dev.to/antongoncharov/distributed-logs-and-tracing-with-spring-apache-camel-opentelemetry-and-grafana-example-554e) blog post by Anton Goncharov in June 2020 with example how to setup OpenTracing with Camel and have a visual Grafana dashboard.    
 *   [Upgrading to Apache Camel 3 using Windup](https://jpoth.blogspot.com/2020/09/upgrading-to-camel-300-with-windup.html) blog post by John Poth from September 2020 showing how to use Winup to generate migration report of your Camel projects (source code scanning). 
 *   [Using Camel and NiFi in one solution](https://medium.com/@raymondmeester/using-camel-and-nifi-in-one-solution-c7668fafe451) blog post how to use Camel inside Apache Nifi.
 *   [Wanna try our Apache Camel developer tools for Enterprise Integration Patterns?](http://macstrac.blogspot.com/2011/01/wanna-try-our-apache-camel-developer.html) _by James Strachan_
