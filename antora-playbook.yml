@@ -44,7 +44,9 @@ content:
 
 # sub-projects
     - url: git@github.com:apache/camel-k.git
-      branches: main
+      branches: 
+        - main
+        - release-1.4.x
       start_path: docs
     - url: git@github.com:apache/camel-k-runtime.git
       branches: main
