@@ -185,6 +185,7 @@ Articles are divided into several sections. As the lists grow, further sectionin
 
 These examples show Camel combined with several tools (e.g. IDE), ESBs, Application Services, and other middleware products such as messaging or OSGi container.
 
+*   [Saga-Based Design Using Apache Camel and Kafka: Implementing Highly Reliable Distributed Business Transactions](https://modusbox.com/saga-based-design-using-apache-camel-and-kafka-implementing-highly-reliable-distributed-business-transactions/) article from June 2021 about the Sage EIP for transactions with Camel and Kafka.
 *   [Distributed Logs and Tracing with Spring, Apache Camel, OpenTelemetry and Grafana](https://dev.to/antongoncharov/distributed-logs-and-tracing-with-spring-apache-camel-opentelemetry-and-grafana-example-554e) blog post by Anton Goncharov in June 2020 with example how to setup OpenTracing with Camel and have a visual Grafana dashboard.    
 *   [Upgrading to Apache Camel 3 using Windup](https://jpoth.blogspot.com/2020/09/upgrading-to-camel-300-with-windup.html) blog post by John Poth from September 2020 showing how to use Winup to generate migration report of your Camel projects (source code scanning). 
 *   [Using Camel and NiFi in one solution](https://medium.com/@raymondmeester/using-camel-and-nifi-in-one-solution-c7668fafe451) blog post how to use Camel inside Apache Nifi.
