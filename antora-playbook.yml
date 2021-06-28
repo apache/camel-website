@@ -54,6 +54,13 @@ content:
     - url: git@github.com:apache/camel-kamelets.git
       branches: main
       start_path: docs
+    - url: git@github.com:apache/camel-quarkus.git
+      branches:
+        - main
+      start_path: docs
+    - url: git@github.com:apache/camel-quarkus-examples.git
+      branches: HEAD
+      start_path: docs
     - url: git@github.com:apache/camel-kafka-connector.git
       branches:
         - camel-kafka-connector-0.10.x
