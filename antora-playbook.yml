@@ -15,7 +15,7 @@ content:
     - url: git@github.com:apache/camel.git
       branches:
         - main
-        - camel-3.10.x
+        - camel-3.11.x
         - camel-3.7.x
       start_paths:
         # eip
