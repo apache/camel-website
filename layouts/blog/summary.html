@@ -2,7 +2,7 @@
 
     <header>
         <a href="{{ .RelPermalink }}"><h1>{{ .Title }}</h1></a>
-        <time itemprop="published" datetime="{{ dateFormat "2006-01-02" .PublishDate }}" title="{{ dateFormat "Monday, January 2, 2006" .PublishDate }}">{{ dateFormat "January 2, 2006" .PublishDate }}</time>, by {{ range $idx, $author := .Params.authors }}{{ if gt $idx 0 }}, {{ end }}<span rel="author">{{ (getJSON $.Site.Params.GitHubAPI "/users/" $author).name }}</span>{{ end }}
+        <time itemprop="published" datetime="{{ dateFormat "2006-01-02" .PublishDate }}" title="{{ dateFormat "Monday, January 2, 2006" .PublishDate }}">{{ dateFormat "January 2, 2006" .PublishDate }}</time>, by {{ range $idx, $author := .Params.authors }}{{ if gt $idx 0 }}, {{ end }}<span rel="author">{{ (getJSON "https://api.github.com/users/" $author (dict "Authorization" (printf "%s:%s" $.Site.Params.GitHubUsername $.Site.Params.GitHubToken | base64Encode))).name }}</span>{{ end }}
     </header>
     <p>{{ .Summary }}</p>
     <p><a class="continue" href="{{ .RelPermalink }}">Continue reading &#10095;</a></p>
