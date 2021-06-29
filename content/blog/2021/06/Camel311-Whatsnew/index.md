@@ -8,9 +8,15 @@ preview: Details of what we have done in the Camel 3.11 LTS release.
 
 Apache Camel 3.11 has just been [released](/blog/2021/06/RELEASE-3.11.0/).
 
-This is a LTS release which will be supported 1-year with regular patch releases.
+This is a LTS release which will be supported for 1 year with regular patch and security releases.
 
-## So what's in this release
+This blog post first details the noteworthy changes since the last 3.10 release from last month.
+For readers that are upgrading from the last 3.7 LTS release then we have added a summary section that highlights
+all the important new features and changes (3.7 to 3.11).
+
+At first what did we do since thg 3.10 release.
+
+## So what's in this release since 3.10
 
 This release introduces a set of new features and noticeable improvements that we will cover in this blog post.
 
@@ -70,3 +76,27 @@ Make sure to read the [upgrade guide](/manual/latest/camel-3x-upgrade-guide-3_11
 ## Release Notes
 
 You can find more information about this release in the [release notes](/releases/release-3.11.0/), with a list of JIRA tickets resolved in the release.
+
+
+## Summary of changes since the last 3.7 LTS release
+
+It is 6 months since the last 3.7 LTS release, and here is a high level summary of the most significant changes we have done:
+
+- Optimized core (faster startup and quicker routing engine)
+- Modularized core (even smaller core)
+- Reduced Object Allocations (lower memory footprint)  
+- Reflection free (Native compilation friendly)
+- Optimized toD EIP for messaging based components
+- Better startup and shutdown logging
+- Java Flight Recorder
+- Routes loader (Java, XML, YAML, Groovy, JavaScript, and Kotlin)
+- YAML DSL
+- Kamelets
+- 17 new components
+- Support for Spring Boot 2.5 and Quarkus 2.0
+
+There are many other great new features and improvements that you can find detailed in each of the _Whats New_ blog posts:
+
+- [Camel 3.8 What's New](/blog/2021/02/Camel38-Whatsnew/)
+- [Camel 3.9 What's New](/blog/2021/03/Camel39-Whatsnew/)
+- [Camel 3.10 What's New](/blog/2021/05/Camel310-Whatsnew/)
