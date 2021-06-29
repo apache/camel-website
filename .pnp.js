@@ -62,8 +62,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gulp-cheerio", "npm:1.0.0"],
             ["gulp-htmlmin", "npm:5.0.1"],
             ["html-validate", "npm:4.11.0"],
-            ["http-proxy", "npm:1.18.1"],
-            ["hugo-extended", "npm:0.83.1"],
+            ["hugo-extended", "npm:0.84.3"],
             ["netlify-cli", "npm:2.69.11"],
             ["npm-run-all", "npm:4.1.5"],
             ["opal-runtime", "npm:1.0.11"],
@@ -3376,6 +3375,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@sindresorhus/is", "npm:3.1.2"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:4.0.1", {
+          "packageLocation": "./.yarn/cache/@sindresorhus-is-npm-4.0.1-30716423e5-16908ae19a.zip/node_modules/@sindresorhus/is/",
+          "packageDependencies": [
+            ["@sindresorhus/is", "npm:4.0.1"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["@sindresorhus/slugify", [
@@ -4390,8 +4396,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gulp-cheerio", "npm:1.0.0"],
             ["gulp-htmlmin", "npm:5.0.1"],
             ["html-validate", "npm:4.11.0"],
-            ["http-proxy", "npm:1.18.1"],
-            ["hugo-extended", "npm:0.83.1"],
+            ["hugo-extended", "npm:0.84.3"],
             ["netlify-cli", "npm:2.69.11"],
             ["npm-run-all", "npm:4.1.5"],
             ["opal-runtime", "npm:1.0.11"],
@@ -6053,6 +6058,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/chalk-npm-4.1.0-c746e252ba-f860285b41.zip/node_modules/chalk/",
           "packageDependencies": [
             ["chalk", "npm:4.1.0"],
+            ["ansi-styles", "npm:4.3.0"],
+            ["supports-color", "npm:7.2.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:4.1.1", {
+          "packageLocation": "./.yarn/cache/chalk-npm-4.1.1-f1ce6bae57-445c12db7a.zip/node_modules/chalk/",
+          "packageDependencies": [
+            ["chalk", "npm:4.1.1"],
             ["ansi-styles", "npm:4.3.0"],
             ["supports-color", "npm:7.2.0"]
           ],
@@ -9373,6 +9387,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["strip-final-newline", "npm:2.0.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:5.1.1", {
+          "packageLocation": "./.yarn/cache/execa-npm-5.1.1-191347acf5-4286ade8cd.zip/node_modules/execa/",
+          "packageDependencies": [
+            ["execa", "npm:5.1.1"],
+            ["cross-spawn", "npm:7.0.3"],
+            ["get-stream", "npm:6.0.1"],
+            ["human-signals", "npm:2.1.0"],
+            ["is-stream", "npm:2.0.0"],
+            ["merge-stream", "npm:2.0.0"],
+            ["npm-run-path", "npm:4.0.1"],
+            ["onetime", "npm:5.1.2"],
+            ["signal-exit", "npm:3.0.3"],
+            ["strip-final-newline", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["execall", [
@@ -10495,6 +10525,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pump", "npm:3.0.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:6.0.1", {
+          "packageLocation": "./.yarn/cache/get-stream-npm-6.0.1-83e51a4642-83de1fde5b.zip/node_modules/get-stream/",
+          "packageDependencies": [
+            ["get-stream", "npm:6.0.1"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["get-value", [
@@ -10846,6 +10883,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["got", "npm:11.7.0"],
             ["@sindresorhus/is", "npm:3.1.2"],
+            ["@szmarczak/http-timer", "npm:4.0.5"],
+            ["@types/cacheable-request", "npm:6.0.1"],
+            ["@types/responselike", "npm:1.0.0"],
+            ["cacheable-lookup", "npm:5.0.3"],
+            ["cacheable-request", "npm:7.0.1"],
+            ["decompress-response", "npm:6.0.0"],
+            ["http2-wrapper", "npm:1.0.0-beta.5.2"],
+            ["lowercase-keys", "npm:2.0.0"],
+            ["p-cancelable", "npm:2.0.0"],
+            ["responselike", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:11.8.2", {
+          "packageLocation": "./.yarn/cache/got-npm-11.8.2-c1eb105458-6415f98ec2.zip/node_modules/got/",
+          "packageDependencies": [
+            ["got", "npm:11.8.2"],
+            ["@sindresorhus/is", "npm:4.0.1"],
             ["@szmarczak/http-timer", "npm:4.0.5"],
             ["@types/cacheable-request", "npm:6.0.1"],
             ["@types/responselike", "npm:1.0.0"],
@@ -11850,11 +11905,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["hugo-extended", [
-        ["npm:0.83.1", {
-          "packageLocation": "./.yarn/unplugged/hugo-extended-npm-0.83.1-0d67d3a0ea/node_modules/hugo-extended/",
+        ["npm:0.84.3", {
+          "packageLocation": "./.yarn/unplugged/hugo-extended-npm-0.84.3-127c9ef304/node_modules/hugo-extended/",
           "packageDependencies": [
-            ["hugo-extended", "npm:0.83.1"],
-            ["bin-wrapper", "npm:4.1.0"]
+            ["hugo-extended", "npm:0.84.3"],
+            ["chalk", "npm:4.1.1"],
+            ["decompress", "npm:4.2.1"],
+            ["execa", "npm:5.1.1"],
+            ["got", "npm:11.8.2"],
+            ["sumchecker", "npm:3.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -11864,6 +11923,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/human-signals-npm-1.1.1-616b2586c2-cac115f635.zip/node_modules/human-signals/",
           "packageDependencies": [
             ["human-signals", "npm:1.1.1"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:2.1.0", {
+          "packageLocation": "./.yarn/cache/human-signals-npm-2.1.0-f75815481d-70bfd94d27.zip/node_modules/human-signals/",
+          "packageDependencies": [
+            ["human-signals", "npm:2.1.0"]
           ],
           "linkType": "HARD",
         }]
@@ -16230,6 +16296,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mimic-fn", "npm:2.1.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:5.1.2", {
+          "packageLocation": "./.yarn/cache/onetime-npm-5.1.2-3ed148fa42-e425f6caeb.zip/node_modules/onetime/",
+          "packageDependencies": [
+            ["onetime", "npm:5.1.2"],
+            ["mimic-fn", "npm:2.1.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["opal-runtime", [
@@ -19597,6 +19671,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["signal-exit", "npm:3.0.2"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:3.0.3", {
+          "packageLocation": "./.yarn/cache/signal-exit-npm-3.0.3-5a2d797648-f8f3fec95c.zip/node_modules/signal-exit/",
+          "packageDependencies": [
+            ["signal-exit", "npm:3.0.3"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["simple-concat", [
@@ -20553,6 +20634,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["sugarss", "npm:2.0.0"],
             ["postcss", "npm:7.0.35"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["sumchecker", [
+        ["npm:3.0.1", {
+          "packageLocation": "./.yarn/cache/sumchecker-npm-3.0.1-b6973781e3-7f4f9276f7.zip/node_modules/sumchecker/",
+          "packageDependencies": [
+            ["sumchecker", "npm:3.0.1"],
+            ["debug", "virtual:d27045f313cae7cbc212b229738d5843f6d2265eba3ea36069f78075a79d301bc17e702a21a7b811ca9aa59de4cb7943fb27cda91a0e7d8a8ad547668124b185#npm:4.3.2"]
           ],
           "linkType": "HARD",
         }]

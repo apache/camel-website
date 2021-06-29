@@ -114,6 +114,15 @@ project directory on your filesystem.
 
 ## Build the website and Antora theme
 
+Some of the content for the website is derived from the data received from GitHub API and rate limits can cause
+build failures. For that reason it is necessary to set the following environment variables:
+
+ - `HUGO_PARAMS_GitHubUsername=<GitHub username>`
+ - `HUGO_PARAMS_GitHubToken=<GitHub token>`
+
+These values are used by Hugo when building or running in development mode (`yarn preview:hugo`) or building the
+website (`yarn build:hugo` or `yarn build-all`) to access GitHub API with a higher rate limit.
+
 We're using yarn [workspaces](https://yarnpkg.com/features/workspaces) to build both the theme and the website run `build-all` script, for example:
 
     $ yarn build-all
@@ -399,21 +408,6 @@ the subproject's documentation, and most common issue is an introduction of a br
 The configuration of the HTML validation rules is in `.htmlvalidate.json`, with exclusions of checks listed in
 `.htmlvalidateignore` file, custom rules are in `rules.js` for mandating relative links to camel.apache.org domain,
 JSON-LD schema validation, and mandating that the HTML title be set.
-
-Some of the content for the website is derived from the data received from GitHub API, even though we cache the
-data, GitHub API rate limits can cause build failures. Until we can use authenticated requests against the GitHub
-API (see https://github.com/gohugoio/hugo/issues/5617), a API "proxy" can be/is used to add authentication to
-the requests as authenticated users receive a higher GitHub API limit. To use the proxy following environment
-variables need to be set (and are set in the production build, see `Jenkinsfile`):
-
- - `HUGO_PARAMS_GitHubAPI=http://localhost:22635`
- - `GITHUB_USR=<GitHub username>`
- - `GITHUB_PSW=<GitHub token>`
-
-When those environment variables are set, requests are sent to `localhost:22635` instead of `api.github.com`
-where the request is modified to set the correct `Host` header and to add the `Authorization` header for
-authenticated access. The proxy is defined in the `github-proxy.js`, and since it's run in the backround
-any logs from the proxy can be found in `.github-proxy.log` file.
 
 ## Pull request previews are powered by Netlify
 
