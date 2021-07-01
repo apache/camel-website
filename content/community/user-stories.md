@@ -45,6 +45,7 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |[Camel-graph](https://github.com/avvero/camel-graph)|Camel-graph is a route graph viewer for ServiceMix and Camel applications, visualising your route topologies with metrics.|
 |[Camel Extra project](https://camel-extra.github.io/)|contains a number of extension components which due to GPL/LGPL licensing cannot be hosted at Apache.
 |[Platform6](https://www.platform6.io/) | Decentralised application framework for blockchains, called Platform 6 which heavily uses Apache Camel and Web3j.|
+|[Rayvens](http://ibm.biz/rayvens) | Built on Apache Camel, Rayvens enables data scientists to interface with hundreds of data services with little effort to consume, process, and produce events and data in real time. |
 {{< /table >}}
 
 ## Developer Tooling
