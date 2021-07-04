@@ -14,7 +14,7 @@ This blog post first details the noteworthy changes since the last 3.10 release 
 For readers that are upgrading from the last 3.7 LTS release then we have added a summary section that highlights
 all the important new features and changes (3.7 to 3.11).
 
-At first what did we do since thg 3.10 release.
+At first what did we do since the 3.10 release.
 
 ## So what's in this release since 3.10
 
