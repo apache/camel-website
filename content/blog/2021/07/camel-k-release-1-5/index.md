@@ -32,9 +32,11 @@ You can learn more in [a blog dedicated to the topic](/blog/2021/05/new-camel-k-
 
 Prior to this version, we may have found a bit clumsy the work of providing a configuration file to our `Integration`. As a developer, you will now be able to define in details how and where to load a configuration file, filter a `Configmap` or a `Secret` and also distinguish between __build-time__ and __runtime__ properties. An entire blog covering this feature will be soon available, stay tuned!
  
-## More Kamelet commands
+## More Kamelet love
 
-Since their appearence, **Kamelets** have gained quite a lot of traction. With this new release we've introduced new commands in the `kamel` CLI to help you discovering and managing them. You will have a new command available `kamel kamelet` that will help you listing and deleting any `Kamelet`. Also `kamel describe kamelet` has been introduced to help you analyising the available Kamelets.
+Since their appearence, **Kamelets** have gained quite a lot of traction. With this new release we've introduced new commands in the `kamel` CLI to help you discovering and managing them. You will have a new command available `kamel kamelet` that will help you listing and deleting any `Kamelet`. Also `kamel describe kamelet` has been introduced to help you analysing the available Kamelets.
+
+We should also mention that we're having more Kamelets available in the [Apache Camel Kamelets Catalog](/camel-kamelets/latest/index.html). We are counting 117 different source and sink Kamelets and we are actively adding many more.
 
 ## Allow configuration via traits annotations
 
@@ -58,4 +60,4 @@ Another thing that is worth to mention is a first version of our API that is now
 
 # Thanks
 
-Thanks to all contributors who made this possible. We're happy to receive feedback on this version through the [usual channels](/camel-k/latest/contributing/developers.html) or filing an issue on [Camel K Github repository](https://github.com/apache/camel-k).
+Thanks to all contributors who made this possible. We're happy to receive feedback on this version through our [mailing list](/community/mailing-list/), our [official chat](https://camel.zulipchat.com/) or filing an issue on [Camel K Github repository](https://github.com/apache/camel-k).
