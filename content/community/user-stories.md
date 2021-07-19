@@ -105,4 +105,5 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |[camel-kamon](https://github.com/osinka/camel-kamon)|Kamon metrics and traces for Apache Camel routes, processors|
 |[camel-spring-cloud-stream](https://github.com/donovanmuller/)|A component to integrate with Spring Cloud Stream|
 |[camel-rocketmq](https://github.com/TeslaCN/camel-rocketmq)|A component to integrate with Apache RocketMQ|
+|[camel-openhtmltopdf](https://github.com/elevation-solutions/camel-openhtmltopdf)|A Camel component to generate nice looking PDF files from HTML, CSS, images, etc.|
 {{< /table >}}
