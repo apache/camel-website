@@ -1,6 +1,6 @@
 ---
 title: "Camel K 1.5 - New configuration settings"
-date: 2021-07-19
+date: 2021-07-20
 draft: false
 authors: [squakez]
 categories: ["Features", "Camel K"]
@@ -37,14 +37,14 @@ A very interesting use case that will benefit from this new flag is the [configu
 
 If you look at the example, you can see that you can quickly setup a **JDBC Datasource** by configuration, just providing certain build and runtime properties to your `Integration`:
 ```
-kamel run PostgresDBAutoDatasource.java --dev 
-                                        --build-property quarkus.datasource.camel.db-kind=postgresql 
-                                        -p quarkus.datasource.camel.jdbc.url=jdbc:postgresql://postgres:5432/test 
-                                        -p quarkus.datasource.camel.username=postgresadmin 
-                                        -p quarkus.datasource.camel.password=admin123 
+kamel run PostgresDBAutoDatasource.java --dev \
+                                        --build-property quarkus.datasource.camel.db-kind=postgresql \
+                                        -p quarkus.datasource.camel.jdbc.url=jdbc:postgresql://postgres:5432/test \
+                                        -p quarkus.datasource.camel.username=postgresadmin \
+                                        -p quarkus.datasource.camel.password=admin123 \
                                         -d mvn:io.quarkus:quarkus-jdbc-postgresql:1.13.7.Final
 ```
-You can learn more about this feature in the [build time properties documentation page](/camel-k/latest/configuration/build-time-properties.html)
+You can learn more about this feature in the [build time properties documentation page](/camel-k/latest/configuration/build-time-properties.html).
 
 ## Integration configuration
 
@@ -55,11 +55,10 @@ We realized that we need to distinguish between two different types of files tha
 According to the `kamel run --help`, the `--config`:
 ```
       --config stringArray             Add a runtime configuration from a Configmap, a Secret or a file (syntax: [configmap|secret|file]:name[/key], where  name represents the local file path or the configmap/secret name and key optionally represents the configmap/secret key to be filtered)
-
 ```
 You will be able to provide a `Configmap`, a `Secret` or a local file. The new syntax is expecting you to declare the kind of resource ( _configmap_, _secret_ or _file_) and the name or local path where it is located. You may also specify the `Configmap`/`Secret` key, helping therefore to limit the exposure of information that will be needed in your integration.
 
-The whole documentation is available on the [runtime configuration page](https://camel.apache.org/camel-k/latest/configuration/runtime-config.html). You can also refer the different examples provided in [Camel K example repository](https://github.com/apache/camel-k/tree/main/examples/user-config).
+The whole documentation is available on the [runtime configuration page](/camel-k/latest/configuration/runtime-config.html). You can also refer the different examples provided in [Camel K example repository](https://github.com/apache/camel-k/tree/main/examples/user-config).
 
 ## Integration resources
 
@@ -72,7 +71,6 @@ Let's look at what the `kamel run --help` tells us about `--resource`:
 The syntax is similar on what we had for `--config`. There is a slight powerful addition though. Within a resource we can specify the destination path (_@path_) where we expect the file to be materialized. With this new feature, you will be able to include any file to any destination needed directly through the CLI. As an example, you can check now how easy is to [setup an SSL certificate to your HTTP connection](https://github.com/apache/camel-k/blob/main/examples/http/PlatformHttpsServer.java).
 
 Once you have stored your certificate in a `Secret`, for instance running:
-
 ```
 kubectl create secret generic my-self-signed-ssl --from-file=server.key --from-file=server.crt
 ```
@@ -80,14 +78,14 @@ kubectl create secret generic my-self-signed-ssl --from-file=server.key --from-f
 Then, the rest will be to let your integration know where to materialize those files. Using the `PlatformHttp` in Camel K, the result will be executing the following command:
 ```
 kamel run PlatformHttpsServer.java -p quarkus.http.ssl.certificate.file=/etc/ssl/my-self-signed-ssl/server.crt \
-                                   -p quarkus.http.ssl.certificate.key-file=/etc/ssl/my-self-signed-ssl/server.key \ 
+                                   -p quarkus.http.ssl.certificate.key-file=/etc/ssl/my-self-signed-ssl/server.key \
                                    --resource secret:my-self-signed-ssl@/etc/ssl/my-self-signed-ssl \
                                    -t container.port=8443 --dev
 ```
 
 We are leveraging the **Quarkus** properties to declare where the application is expecting to find the certificate and the key (via `--p` flag). We are also telling the `Integration` to create the files expected in the __my-self-signed-ssl__ `Secret` and to mount at __/etc/ssl/my-self-signed-ssl/__ directory.
 
-You will find more details in the [runtime resource page official documentation](https://camel.apache.org/camel-k/latest/configuration/runtime-resources).html
+You will find more details in the [runtime resource page official documentation](/camel-k/latest/configuration/runtime-resources.html).
 
 ## Warnings and limitations
 
