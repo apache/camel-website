@@ -123,6 +123,10 @@ build failures. For that reason it is necessary to set the following environment
 These values are used by Hugo when building or running in development mode (`yarn preview:hugo`) or building the
 website (`yarn build:hugo` or `yarn build-all`) to access GitHub API with a higher rate limit.
 
+**NOTE**: When you clone the `camel-website` repository the binaries present in the Yarn PnP cache or in the
+`.yarn/unplugged` directories are built for x86-64 Linux, so if you're running on a different architecture or OS
+run `yarn workspaces foreach rebuild` to rebuild the binaries.
+
 We're using yarn [workspaces](https://yarnpkg.com/features/workspaces) to build both the theme and the website run `build-all` script, for example:
 
     $ yarn build-all
