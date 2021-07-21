@@ -4,7 +4,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "build:antora": "antora --clean --fetch antora-playbook.yml --stacktrace --require ./patch-sitemap.js",
-    "build:hugo": "hugo --cacheDir ${HUGO_CACHE_DIR:-$(pwd)/.hugo_data}",
+    "build:hugo": "hugo --cacheDir ${HUGO_CACHE_DIR:-$(pwd)/.hugo_data} ${HUGO_OPTIONS:-}",
     "build:minify": "gulp minify",
     "build:sitemap": "gulp sitemap",
     "build": "run-s build:antora build:hugo build:sitemap build:minify",

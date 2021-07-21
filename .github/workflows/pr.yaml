@@ -21,6 +21,7 @@ on: pull_request
 
 env:
   CAMEL_ENV: production
+  HUGO_OPTIONS: '--buildFuture'
 
 jobs:
   checks:
