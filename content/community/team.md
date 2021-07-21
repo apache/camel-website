@@ -45,6 +45,7 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 | Jan Bednar             | janbednar        | CGI IT Czech Republic      |
 | Jean-Baptiste Onofré   | jbonofre         | Talend                     |
 | Jeff Genender          | jgenender        | Savoir Technologies        |
+| Jeremy Ross            | jeremyross       | Elevation Solutions        |
 | Johan Edstrom          | joed             | Savoir Technologies        |
 | John Poth              |                  | Red Hat                    |
 | Jonathan Anstey        | janstey          | Red Hat                    |
@@ -127,7 +128,6 @@ If you have been contributing to the Apache Camel project, and you want your nam
 | Jérôme Delagnes         |                                |
 | Jeff Sparkes            |                                |
 | Jeff Lansing            | SYS Technologies               |
-| Jeremy Ross             | Elevation Solutions            |
 | Jeremy Volkman          |                                |
 | Joe Fernandez           | TTM                            |
 | John Heitmann           |                                |
