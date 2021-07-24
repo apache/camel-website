@@ -11,4 +11,4 @@ We are pleased to announce that [Elevation Solutions](https://elevation.solution
 
 Input HTML can be provided as a `String`, `InputStream`, or URI. For URIs, `file`, `http`, and `https` are supported. And there's no need to worry if your markup is not compliant XHTML. The `leniantParsing` option (enabled by default) can deal with all sorts of tag soup. 
 
-For more information, and to get started, visited the project's GitHub at https://github.com/elevation-solutions/camel-openhtmltopdf.
+For more information, and to get started, visit the project's GitHub at https://github.com/elevation-solutions/camel-openhtmltopdf.
