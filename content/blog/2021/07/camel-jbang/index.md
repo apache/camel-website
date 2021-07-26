@@ -32,7 +32,8 @@ jbang app install CamelJBang@apache/camel
 
 The screencast below shows it in practice:
 
-[![asciicast](https://asciinema.org/a/426328.svg)](https://asciinema.org/a/426328)
+[![asciicast](install.svg)](https://asciinema.org/a/426328)
+
 
 # Search Feature
 
@@ -40,19 +41,19 @@ With Camel JBang installed, there are a few features currently available that we
 
 * Searching for Kamelets:
 
-[![asciicast](https://asciinema.org/a/426334.svg)](https://asciinema.org/a/426334)
+[![asciicast](search-kamelets.svg)](https://asciinema.org/a/426334)
 
 * Searching for Components:
 
-[![asciicast](https://asciinema.org/a/426340.svg)](https://asciinema.org/a/426340)
+[![asciicast](search-components.svg)](https://asciinema.org/a/426340)
 
 * Searching for Languages:
 
-[![asciicast](https://asciinema.org/a/426341.svg)](https://asciinema.org/a/426341)
+[![asciicast](search-languages.svg)](https://asciinema.org/a/426341)
 
 * Searching for miscellaneous components:
 
-[![asciicast](https://asciinema.org/a/426342.svg)](https://asciinema.org/a/426342)
+[![asciicast](search-others.svg)](https://asciinema.org/a/426342)
 
 # Kamelet Support and Running Routes
 
@@ -76,7 +77,7 @@ Searching is not the only cool feature of Camel JBang. We can also leverage one 
 
 The screencast below shows Camel JBang consuming and producing from a JMS broker, using the sink and source Kamelets:
 
-[![asciicast](https://asciinema.org/a/426344.svg)](https://asciinema.org/a/426344)
+[![asciicast](running.svg)](https://asciinema.org/a/426344)
 
 All in all, these features make it fairly easy to find and try new components; try and reuse Kamelets from the catalog; and experiment with Apache Camel in ways that were not possible in the past.
 
