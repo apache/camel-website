@@ -313,21 +313,61 @@ repository in [antora-ui-camel](antora-ui-camel).
 
 You need to rebuild the Antora UI theme in order to see your changes reflected locally.
 
-### Changes for Camel and Camel K docs
+### Changes for Antora generated content
+
+Edits to individual pages can generally be made from the "edit this page" link at the top left of each antora-generated page.
+However, this will not yet work for Camel component documentation pages.
+
+For more extensive changes, use of the Intellij Asciidoctor plugin is extremely convenient as it provides extensive syntax checking and understands a great deal of Antora-specific asciidoc syntax such as xrefs.
+The plugin works with all Intellij editors including the free IDEA CE.
+
+Consult the [Antora documentation](https://docs.antora.org/) and [Asciidoctor documentation](https://docs.asciidoctor.org/home/) for complete information on Antora and AsciidDoc/Asciidoctor.
 
 The Apache Camel website includes documentation sources from other github repositories. Content sources are defined in
 [antora-playbook.yml](antora-playbook.yml).
 
-At the moment these are the documentation sources from [Camel](https://github.com/apache/camel)
-and [Camel K](https://github.com/apache/camel-k). These are basically the component reference docs and the Camel user
-manual. In case you want to change something here, please go to the respective github repository and contribute your
-change there.
+Your changes in these repositories will automatically be included in the website after a site rebuild.
 
-- [Camel components](https://github.com/apache/camel/tree/master/docs/components)
-- [Camel user manual](https://github.com/apache/camel/tree/master/docs/user-manual)
-- [Camel K docs](https://github.com/apache/camel-k/tree/antora/docs)
+#### Links between pages in Antora content
 
-Your changes in these repositories will automatically get visible on the website after a site rebuild.
+Links to other pages in Antora content are defined using the xref: inline macro.
+This takes the form xref:<page id><optional #fragment>[<link text>].
+The default link text for non-fragment links is the target page title.
+
+Antora documentation for page ids is [here](https://docs.antora.org/antora/3.0/page/page-id/).
+A small project showing the effect of all possible forms of page id is [here](https://gitlab.com/djencks/simple-examples/-/tree/master/multiple-components/xrefs).
+
+The first step is to determine the component, version, and module of both the source and target pages.
+
+To determine the component name and version of a page, look in the antora.yml file next to the "modules" folder the page source is in.
+The "module" is the folder name under "modules".
+The "default" module is "ROOT": leaving out the module name will always take you to the ROOT module.
+
+Several repositories and start paths in a repository can contribute to the same component/version.
+For instance, in the main camel repository, the "components" component has sources under docs/components (dataformats, languages, other, and ROOT (components) modules) and core/camel-core-engine/src/main/docs (eips module).
+The easiest way to determine the current set of components and their versions is to consult the website and look in the "drawer" at the bottom left, showing the current component/version.
+When opened it lists the components and for each component the versions.
+The main camel repository contains both the "components" and "user manual" Antora components.
+Other components are in the obvious repository.
+
+- To link to another page in the same component/version/module use the absolute path from "pages": xref:path/to/page.adoc[].
+  For instance, a link from one camel component to another would be xref:activemq-component.adoc[].
+  A link from any camel-quarkus page to a camel-quarkus extension would be xref:reference/extensions/activemq.adoc[]. 
+- To link to a page in another module in the same component/version use the module name and absolute path from "pages": xref:module:path/to/page.adoc[].
+For instance, a link from a dataformat to a language would be xref:languages:jsonpath-language.adoc[].
+  A link from a dataformat to an eip would be xref:eips:aggregate-eip.adoc[].
+
+Xref links that do not specify the component or version stay within the same component/version.
+If only the (Antora) component is specified, the link will be to the "latest" version of the component.
+This is most likely what you want.
+
+- For instance, a link from camel-quarkus to the latest version of a component would be xref:components::activemq-component.adoc[].
+- A link from a component, eip, or other "components" module to the user manual would be xref:manual::architecture.adoc[].
+- A link from a component, eip, etc, or the user manual to a camel-quarkus extension would be xref:camel-quarkus::reference/extensions/activemq.adoc[].
+- Note that specifying the same component as the source page will link to the latest version of the target page: e.g. xref:camel-quarkus::reference/extensions/activemq.adoc[] from a version 2.0.0 camel-quarkus page will link to the latest activemq.adoc version, not the 2.0.0 version.
+
+If you need to link to a specific non-latest version of a page, specify the version in the xref.
+- A link from anywhere to a camel-quarkus 2.0.0 page would be xref:2.0.0@camel-quarkus::reference/extensions/activemq.adoc[].
 
 ## Build with Maven
 
