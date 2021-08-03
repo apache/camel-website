@@ -1,5 +1,5 @@
 ---
-url: "/releases/q-2.0.0/"
+url: "/releases/q-2.1.0/"
 date: 2021-07-30T10:00:00+01:00
 type: release-note
 version: "2.1.0"
