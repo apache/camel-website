@@ -4,6 +4,7 @@ title: "Articles"
 
 ## Camel Videos
 
+*   [The Evolution of Apachel Camel 3 in Cloud Age - Roan Brasil Monteiro and Bruno Kaufmann](https://www.youtube.com/watch?v=7TyyBcMe5Lc) 45 min from July 2021 (english) talking about the main news about Apache Camel 3 and how to design a good architecture with this framework. 
 *   [Integrating systems in the age of Quarkus and Camel](https://www.youtube.com/watch?v=b7FxG2mKop8) 45 min webinar from May 2021 by Claus Ibsen, with quick overview of Camel 3 projects and then focus on Camel Quarkus, Camel K and Kamelets. Mix of slides and live demos (yes with a demo not working perfect)
 *   [OCB: Integration in OpenShift](https://www.youtube.com/watch?v=5dDsVmS9HKk) 1 hour introductory presentation from May 2021 by Zineb Bendhiba, Rachel Jordan-McGeever, and María Arias de Reyna about Camel, Camel Quarkus, Camel K and Kamelets.
 *   [Formula 1 telemetry processing using Kafka Streams - DevConf.CZ 2021](https://www.youtube.com/watch?v=OkXlSb4vfDk) - 25 min presentation from April 2021 by Paolo Patierno and Thomas Cooper talking about how they capture metrics from F1 computer game and stream into Kafka using Camel.
