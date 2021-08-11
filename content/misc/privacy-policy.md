@@ -15,7 +15,7 @@ Although what you disclose here is public, we are all limited by copyright and p
 
 ## Website Usage Privacy Policy
 
-Information about your use of this website is collected using server access logs and a tracking cookie. The collected information consists of the following:
+Information about your use of this website is collected in the server access logs. The collected information consists of the following:
 
 * The IP address from which you access the website
 * The type of browser and operating system you use to access our site
