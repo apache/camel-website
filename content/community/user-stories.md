@@ -46,6 +46,7 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |[Camel Extra project](https://camel-extra.github.io/)|contains a number of extension components which due to GPL/LGPL licensing cannot be hosted at Apache.
 |[Platform6](https://www.platform6.io/) | Decentralised application framework for blockchains, called Platform 6 which heavily uses Apache Camel and Web3j.|
 |[Rayvens](http://ibm.biz/rayvens) | Built on Apache Camel, Rayvens enables data scientists to interface with hundreds of data services with little effort to consume, process, and produce events and data in real time. |
+|[Huawei Cloud ROMA](https://www.huaweicloud.com/en-us/product/roma.html)|Apache camel powers the runtime engine for [Huawei Cloud ROMA](https://www.huaweicloud.com/en-us/product/roma.html) which is a commercial iPaaS offering by Huawei Cloud. ROMA integrates data, services, messages and devices under one unified platform which enables it's customers to hook up systems spanning across multiple Paas, Saas and cloud services.|
 {{< /table >}}
 
 ## Developer Tooling
