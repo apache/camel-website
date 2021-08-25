@@ -1,18 +1,18 @@
 ---
 title: "Deploying a Camel Route in AWS Lambda using Quarkus"
-date: 2021-08-19
+date: 2021-08-25
 authors: [ravishankarhassain]
-categories: ["AWS", "Lambda","Camel Quarkus"]
+categories: ["AWS Lambda","Camel Quarkus"]
 preview: "A new demonstration explaining how to develop a camel route using Quarkus (in both JVM & Native mode) and steps to deploy it in AWS Lamda"
 ---
 
 Do you fancy running camel route as functions in AWS Lambda. Well I did a small Proof Of Concept to test this and the results were interesting.
-Thanks to the Quarkus & Camel-Quarkus project and the team for their efforts to make this technically possible.
+Thanks to the Quarkus and Camel-Quarkus communities for their efforts to make this technically possible.
 
 
 You can find the working sample in the Camel Quarkus Examples [github repo](https://github.com/apache/camel-quarkus-examples/tree/camel-quarkus-main/aws-lambda)
 
-# Deploying a Camel Route in AWS Lambda : A Camel Quarkus example
+#Deploying a Camel Route in AWS Lambda : A Camel Quarkus example
 
 This project uses the following framework 
 
@@ -208,3 +208,13 @@ io.quarkus.amazon.lambda.runtime.QuarkusStreamHandler::handleRequest
 
 ## JVM vs Native : Results based on lambda execution logs & stats
 ![JVM vs Native Results](results.png?raw=true "JVM vs Native Results")
+
+The above table is populated based on the execution stats provided in the AWS Lamda Logs 
+
+Based on the data captured sharing few comments:
+
+* It's interesting to see that native uses less memory than JVM which might reduce the cost in running AWS Lambda
+
+* The execution time seems faster in native mode from 2nd to 5th invocations, it would be interesting to see if this trend continues on subsequent calls as the JIT compiler might kick in.
+
+* It's clear that the init duration is by magnitude faster in native mode. However, I am curious to see that for the first call the total billed duration includes the Init duration in native mode where as in JVM mode, Init duration is ignored in the total billed duration. Not sure, If this is a billing issue in AWS or a feature provided by AWS for executing Java runtime in Lambda ?
