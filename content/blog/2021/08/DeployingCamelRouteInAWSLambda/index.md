@@ -20,12 +20,6 @@ This project uses the following framework
  * **Apache Camel** - *The Swiss Army Knife of Enterprise Application Integration for integrating heterogeneous systems*
  * **AWS Lambda** - *Event-driven, serverless computing platform provided by Amazon as a part of Amazon Web Services*
 
-If you want to learn more about 
-
-* *Quarkus - please visit its website: https://quarkus.io/*
-* *Apache Camel - please visit its website: https://camel.apache.org/*
-* *AWS Lambda - please visit its website: https://aws.amazon.com/lambda/*
-
 ## Provided Code
 
 ### Quarkus Camel Amazon Lambda Integration example
@@ -37,19 +31,16 @@ This example contains a sample Greeter service build using Quarkus & Camel frame
 
 #### Quarkus Extensions / Dependencies Used
 
-1. **[Apache Camel](https://quarkus.io/guides/camel)**
-    * [camel-quarkus-core](https://camel.apache.org/camel-quarkus/latest/reference/extensions/core.html)
-    * [camel-quarkus-direct](https://camel.apache.org/camel-quarkus/latest/reference/extensions/direct.html)
-    * [camel-quarkus-log](https://camel.apache.org/camel-quarkus/latest/reference/extensions/log.html)
-    * [camel-quarkus-bean](https://camel.apache.org/camel-quarkus/latest/reference/extensions/bean.html)
+1. **Apache Camel**
+    * camel-quarkus-core
+    * camel-quarkus-direct
+    * camel-quarkus-log
+    * camel-quarkus-bean
 
-2. **Amazon Lambda**
-    * [quarkus-amazon-lambda](https://quarkus.io/guides/amazon-lambda)
+2. **Quarkus**
+    * quarkus-amazon-lambda
     
-3. **[Context Dependency Injection](https://quarkus.io/guides/cdi)**
-    * [quarkus-arc](https://quarkus.io/guides/cdi-reference)
-    
-4. **[Testing](https://quarkus.io/guides/getting-started-testing)**
+3. **[Testing](https://quarkus.io/guides/getting-started-testing)**
     * quarkus-junit5
     * [quarkus-junit5-mockito](https://quarkus.io/blog/mocking/)
     * quarkus-test-amazon-lambda
