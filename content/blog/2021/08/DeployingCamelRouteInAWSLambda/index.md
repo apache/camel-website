@@ -161,7 +161,7 @@ io.quarkus.amazon.lambda.runtime.QuarkusStreamHandler::handleRequest
     ```
 ## Deploying the Quarkus Native executable to AWS Lambda via AWS Web Console
 
-**_NOTE:_** [Please ensure that you have built your Java code as Quarkus Native executable](#native)
+**_NOTE:_** Please ensure that you have built your Java code as Quarkus Native executable
 
 1. Go to AWS Web console and search for Lambda Service
  
