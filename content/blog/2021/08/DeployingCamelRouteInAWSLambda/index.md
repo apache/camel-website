@@ -74,7 +74,7 @@ The application is now runnable using `java -jar target/quarkus-app/quarkus-run.
 
 It also generates a zip file target/function.zip. This zip file contains your java code along with the dependencies.
 
-##<a name="native"> </a>Building and Packaging the Java code as Quarkus Native executable
+##Building and Packaging the Java code as Quarkus Native executable
 
 If you want a lower memory footprint and faster initialization times for your lambda, you can compile your Java code to a native executable. Just make sure to rebuild your project with the -Pnative switch.
 > :warning: **Building Native Executables will take much longer time and depends on the underlying system**
@@ -108,7 +108,7 @@ If you want to learn more about building native executables, please consult http
 
 * sam.native.yaml - (optional) for use with sam cli and native local testing
 
-> :information_source: [Please click here to know more on how to use these scripts for automated deployment](https://quarkus.io/guides/amazon-lambda#extra-build-generated-files)
+> [Please click here to know more on how to use these scripts for automated deployment](https://quarkus.io/guides/amazon-lambda#extra-build-generated-files)
 
 ## Deploying the Quarkus JVM application to AWS Lambda via AWS Web Console
 
