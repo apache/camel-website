@@ -99,7 +99,7 @@ This project hosts the efforts to port and package the 280+ Camel components as 
 <p>
 <a class="button dark" href="/camel-quarkus/latest/">Documentation</a>
 <a class="button light" href="https://github.com/apache/camel-quarkus/">Source</a>
-<a class="button light" href="https://github.com/apache/camel-quarkus/tree/master/examples">Examples</a>
+<a class="button light" href="https://github.com/apache/camel-quarkus-examples/">Examples</a>
 </p>
 
 {{< /div >}}
