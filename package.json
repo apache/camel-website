@@ -4,11 +4,12 @@
   "license": "Apache-2.0",
   "scripts": {
     "build:antora": "antora --clean --fetch antora-playbook.yml --stacktrace",
+    "build:ui": "yarn workspace antora-ui-camel build",
     "build:hugo": "hugo --cacheDir ${HUGO_CACHE_DIR:-$(pwd)/.hugo_data} ${HUGO_OPTIONS:-}",
     "build:minify": "gulp minify",
     "build:sitemap": "gulp sitemap",
     "build": "run-s build:antora build:hugo build:sitemap build:minify",
-    "build-all": "yarn workspaces foreach --topological-dev run build",
+    "build-all": "run-s build:ui build",
     "clean": "gulp clean",
     "preview": "run-s preview:antora preview:hugo",
     "preview:antora": "antora --clean --fetch antora-playbook.yml",
