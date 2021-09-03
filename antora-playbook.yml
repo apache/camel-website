@@ -1,18 +1,18 @@
 site:
   title: Apache Camel
-  url: /
+  url: https://camel.apache.org
   start_page: latest@manual::index.adoc
 
 content:
   sources:
 
-    - url: git@github.com:apache/camel.git
+    - url: https://github.com/apache/camel.git
       branches: main
       start_paths:
         # manual
         - docs/user-manual
 
-    - url: git@github.com:apache/camel.git
+    - url: https://github.com/apache/camel.git
       branches:
         - main
         - camel-3.11.x
@@ -23,7 +23,7 @@ content:
         # main components doc
         - docs/components
 
-    - url: git@github.com:apache/camel.git
+    - url: https://github.com/apache/camel.git
       branches: camel-3.4.x
       start_paths:
         # eip
@@ -34,7 +34,7 @@ content:
         # main components doc
         - docs/components
 
-    - url: git@github.com:apache/camel.git
+    - url: https://github.com/apache/camel.git
       branches: camel-2.x
       start_paths:
         # main components doc
@@ -43,39 +43,39 @@ content:
         - camel-core/src/main/docs
 
 # sub-projects
-    - url: git@github.com:apache/camel-k.git
-      branches: 
+    - url: https://github.com/apache/camel-k.git
+      branches:
         - main
         - release-1.4.x
       start_path: docs
-    - url: git@github.com:apache/camel-k-runtime.git
+    - url: https://github.com/apache/camel-k-runtime.git
       branches: main
       start_path: docs
-    - url: git@github.com:apache/camel-kamelets.git
+    - url: https://github.com/apache/camel-kamelets.git
       branches: main
       start_path: docs
-    - url: git@github.com:apache/camel-quarkus.git
+    - url: https://github.com/apache/camel-quarkus.git
       branches:
         - main
         - release/2.0.0
       start_path: docs
-    - url: git@github.com:apache/camel-quarkus-examples.git
+    - url: https://github.com/apache/camel-quarkus-examples.git
       branches: HEAD
       start_path: docs
-    - url: git@github.com:apache/camel-kafka-connector.git
+    - url: https://github.com/apache/camel-kafka-connector.git
       branches:
         - camel-kafka-connector-0.10.x
         - camel-kafka-connector-0.7.x
         - camel-kafka-connector-0.4.x
       start_path: docs
-    - url: git@github.com:apache/camel-spring-boot.git
+    - url: https://github.com/apache/camel-spring-boot.git
       branches:
         - main
         - camel-spring-boot-3.11.x
         - camel-spring-boot-3.7.x
         - camel-spring-boot-3.4.x
       start_path: docs
-    - url: git@github.com:apache/camel-karaf.git
+    - url: https://github.com/apache/camel-karaf.git
       branches:
         - main
         - camel-karaf-3.11.x
@@ -98,6 +98,15 @@ asciidoc:
     - ./extensions/table.js
     - ./extensions/inline-styles.js
     - "@djencks/asciidoctor-antora-indexer"
-    - "@djencks/asciidoctor-jsonpath"
   attributes:
     eip-vc: latest@components
+
+runtime:
+  log:
+    level: warn
+    failure_level: warn
+
+pipeline:
+  extensions:
+    - require: '@djencks/asciidoctor-jsonpath'
+#      trace: true
