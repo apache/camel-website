@@ -21,7 +21,7 @@ content:
       branches:
 #        - HEAD
         - jsonpath-options
-        - camel-3.11.x-attributes
+        - camel-3.11.x
         - camel-3.7.x
       start_paths:
         # eip
@@ -75,11 +75,11 @@ content:
 #    - url: ./../camel-kamelets
       branches: main-roles
       start_path: docs
-    - url: https://github.com/djencks/camel-quarkus.git
+    - url: https://github.com/apache/camel-quarkus.git
 #    - url: ./../camel-quarkus
       branches:
-        - main-attributes
-        - release/2.0.0-attributes
+        - main
+        - release/2.0.0
       start_path: docs
     - url: https://github.com/apache/camel-quarkus-examples.git
       branches: HEAD
