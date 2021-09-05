@@ -1,9 +1,0 @@
-.misc p {
-  display: flex;
-  align-items: center;
-}
-
-.misc p img {
-  margin-right: 1rem;
-  width: 7rem;
-}

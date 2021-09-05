@@ -1596,9 +1596,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@djencks/asciidoctor-jsonpath@npm:^0.0.3":
-  version: 0.0.3
-  resolution: "@djencks/asciidoctor-jsonpath@npm:0.0.3"
+"@djencks/asciidoctor-jsonpath@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "@djencks/asciidoctor-jsonpath@npm:0.0.4"
   dependencies:
     "@antora/user-require-helper": ^2.0.0
     "@iarna/toml": ^2.2.5
@@ -1607,7 +1607,7 @@ __metadata:
     json5: ^2.2.0
     jsonpath: ^1.1.1
     static-eval: ^2.1.0
-  checksum: 05c099c0ea60dfea931799d4b4cc5a05b17e7048fd8ddf727df26794468dd6e8ab8911c83f4450572b625d0afca921618699691da38a2d7c7ce7ce7123d263f0
+  checksum: ba33c6567cb4814f778aeafc4a9519a0b9acc27c832c542143294bff69684cdeb2d2c2bbf69fdadb13493a6fd8be7c6de32247e954f85b11ead12bc2af649da0
   languageName: node
   linkType: hard
 
@@ -3153,13 +3153,13 @@ __metadata:
 
 "antora-ui-camel@file:./antora-ui-camel::locator=apache-camel-website%40workspace%3A.":
   version: 0.0.0
-  resolution: "antora-ui-camel@file:./antora-ui-camel#./antora-ui-camel::hash=12324f&locator=apache-camel-website%40workspace%3A."
+  resolution: "antora-ui-camel@file:./antora-ui-camel#./antora-ui-camel::hash=d47360&locator=apache-camel-website%40workspace%3A."
   dependencies:
     algoliasearch: ^4.0.3
   dependenciesMeta:
     highlight.js@9.18.1:
       unplugged: true
-  checksum: 54a7a407a9f1c748c96d21e6040fb686c5b101b4c8d388b0eb0bcca67315319289da20a21f396ca44c92a04b96001fff0cbe0cfb56dcedb3276de17efb1156dd
+  checksum: c6f202ed32fa671f75ba7aaa5047168db29e14442b67cbaf57c7388316e9f31d0ba5110400acf9ae20c3ba7146c068d73f519d61f06b4513dc8548b2909063ac
   languageName: node
   linkType: hard
 
@@ -3250,7 +3250,7 @@ __metadata:
     "@antora/site-generator-default": ^3.0.0-alpha.9
     "@deadlinks/cargo-deadlinks": "github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux"
     "@djencks/asciidoctor-antora-indexer": ^0.0.6
-    "@djencks/asciidoctor-jsonpath": ^0.0.3
+    "@djencks/asciidoctor-jsonpath": ^0.0.4
     "@oclif/errors": ^1.3.4
     antora-ui-camel: ./antora-ui-camel
     del: ^6.0.0

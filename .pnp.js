@@ -46,9 +46,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@antora/site-generator-default", "npm:3.0.0-alpha.9"],
             ["@deadlinks/cargo-deadlinks", "github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux"],
             ["@djencks/asciidoctor-antora-indexer", "npm:0.0.6"],
-            ["@djencks/asciidoctor-jsonpath", "npm:0.0.3"],
+            ["@djencks/asciidoctor-jsonpath", "npm:0.0.4"],
             ["@oclif/errors", "npm:1.3.4"],
-            ["antora-ui-camel", "file:./antora-ui-camel#./antora-ui-camel::hash=12324f&locator=apache-camel-website%40workspace%3A."],
+            ["antora-ui-camel", "file:./antora-ui-camel#./antora-ui-camel::hash=d47360&locator=apache-camel-website%40workspace%3A."],
             ["del", "npm:6.0.0"],
             ["escape-string-regexp", "npm:2.0.0"],
             ["gulp", "npm:4.0.2"],
@@ -2476,10 +2476,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@djencks/asciidoctor-jsonpath", [
-        ["npm:0.0.3", {
-          "packageLocation": "./.yarn/cache/@djencks-asciidoctor-jsonpath-npm-0.0.3-751b184df1-05c099c0ea.zip/node_modules/@djencks/asciidoctor-jsonpath/",
+        ["npm:0.0.4", {
+          "packageLocation": "./.yarn/cache/@djencks-asciidoctor-jsonpath-npm-0.0.4-daa788a548-ba33c6567c.zip/node_modules/@djencks/asciidoctor-jsonpath/",
           "packageDependencies": [
-            ["@djencks/asciidoctor-jsonpath", "npm:0.0.3"],
+            ["@djencks/asciidoctor-jsonpath", "npm:0.0.4"],
             ["@antora/user-require-helper", "npm:2.0.0"],
             ["@iarna/toml", "npm:2.2.5"],
             ["esprima", "npm:4.0.1"],
@@ -4331,10 +4331,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["antora-ui-camel", [
-        ["file:./antora-ui-camel#./antora-ui-camel::hash=12324f&locator=apache-camel-website%40workspace%3A.", {
-          "packageLocation": "./.yarn/unplugged/antora-ui-camel-file-5f401b4d81/node_modules/antora-ui-camel/",
+        ["file:./antora-ui-camel#./antora-ui-camel::hash=d47360&locator=apache-camel-website%40workspace%3A.", {
+          "packageLocation": "./.yarn/unplugged/antora-ui-camel-file-97ecf86322/node_modules/antora-ui-camel/",
           "packageDependencies": [
-            ["antora-ui-camel", "file:./antora-ui-camel#./antora-ui-camel::hash=12324f&locator=apache-camel-website%40workspace%3A."],
+            ["antora-ui-camel", "file:./antora-ui-camel#./antora-ui-camel::hash=d47360&locator=apache-camel-website%40workspace%3A."],
             ["algoliasearch", "npm:4.5.1"]
           ],
           "linkType": "HARD",
@@ -4425,9 +4425,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@antora/site-generator-default", "npm:3.0.0-alpha.9"],
             ["@deadlinks/cargo-deadlinks", "github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux"],
             ["@djencks/asciidoctor-antora-indexer", "npm:0.0.6"],
-            ["@djencks/asciidoctor-jsonpath", "npm:0.0.3"],
+            ["@djencks/asciidoctor-jsonpath", "npm:0.0.4"],
             ["@oclif/errors", "npm:1.3.4"],
-            ["antora-ui-camel", "file:./antora-ui-camel#./antora-ui-camel::hash=12324f&locator=apache-camel-website%40workspace%3A."],
+            ["antora-ui-camel", "file:./antora-ui-camel#./antora-ui-camel::hash=d47360&locator=apache-camel-website%40workspace%3A."],
             ["del", "npm:6.0.0"],
             ["escape-string-regexp", "npm:2.0.0"],
             ["gulp", "npm:4.0.2"],
