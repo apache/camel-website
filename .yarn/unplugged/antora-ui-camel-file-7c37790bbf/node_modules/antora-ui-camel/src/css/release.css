@@ -1,0 +1,36 @@
+.release dl {
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+
+.release dt {
+  grid-column-start: 1;
+}
+
+.release dd {
+  grid-column-start: 2;
+  margin-left: 1rem;
+  word-break: break-word;
+}
+
+.release .tableblock thead tr th {
+  text-align: left;
+}
+
+.release .tableblock tbody tr:nth-child(2n) {
+  background: var(--color-smoke-50);
+}
+
+.release aside {
+  float: right;
+  margin-left: 1rem;
+  width: 25rem;
+}
+
+/* for mobile screens */
+@media screen and (max-width: 626px) {
+  .release aside {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
