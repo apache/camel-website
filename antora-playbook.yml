@@ -98,7 +98,6 @@ asciidoc:
     - ./extensions/table.js
     - ./extensions/inline-styles.js
     - "@djencks/asciidoctor-antora-indexer"
-    - "@djencks/asciidoctor-jsonpath"
   attributes:
     eip-vc: latest@components
 
@@ -106,3 +105,7 @@ runtime:
   log:
     level: info
     failure_level: warn
+
+pipeline:
+  extensions:
+    - require: '@djencks/asciidoctor-jsonpath'
