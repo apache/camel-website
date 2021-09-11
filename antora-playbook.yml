@@ -1,6 +1,6 @@
 site:
   title: Apache Camel
-  url: /
+  url: https://camel.apache.org
   start_page: latest@manual::index.adoc
 
 content:

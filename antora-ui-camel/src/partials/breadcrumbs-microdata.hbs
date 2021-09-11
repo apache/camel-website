@@ -6,38 +6,33 @@
         "@type": "ListItem",
         "position": 1,
         "name": "{{{site.title}}}",
-        "item": "https://camel.apache.org/"
+        "item": "{{{site.url}}}/"
         },
         {
         "@type": "ListItem",
         "position": 2,
         "name": "{{{page.component.title}}}",
-        "item": "https://camel.apache.org{{{page.component.url}}}"
+        "item": "{{{site.url}}}{{{page.component.url}}}"
         },
         {
         "@type": "ListItem",
         "position": 3,
         "name": "{{{page.componentVersion.displayVersion}}}",
-        "item": "https://camel.apache.org{{{page.componentVersion.url}}}"
+        "item": "{{{site.url}}}{{{page.componentVersion.url}}}"
         }
-        {{#if page.breadcrumbs}}
+        {{~#each page.breadcrumbs~}}
         ,
-        {{#each page.breadcrumbs}}
         {
         "@type": "ListItem",
         "position": {{add @index 4}},
         "name": "{{{remove_markup ./content }}}",
-        {{~#if (and ./url (eq ./urlType 'internal'))~}}
-        "item": "https://camel.apache.org{{{./url}}}"
-        {{~else~}}
-        "item": "https://camel.apache.org{{{../page.componentVersion.url}}}"
-        {{~/if~}}
-        }
-        {{#unless @last}}
-        ,
-        {{/unless}}
-        {{/each}}
+        {{#if (and ./url (eq ./urlType 'internal'))}}
+        "item": "{{{../site.url}}}{{{./url}}}"
+        {{else}}
+        "item": "{{{../site.url}}}{{{../page.componentVersion.url}}}"
         {{/if}}
+        }
+        {{~/each~}}
         ]
     }
 </script>

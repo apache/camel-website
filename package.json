@@ -3,7 +3,7 @@
   "version": "1.0.0-SNAPSHOT",
   "license": "Apache-2.0",
   "scripts": {
-    "build:antora": "antora --clean --fetch antora-playbook.yml --stacktrace --require ./patch-sitemap.js",
+    "build:antora": "antora --clean --fetch antora-playbook.yml --stacktrace",
     "build:hugo": "hugo --cacheDir ${HUGO_CACHE_DIR:-$(pwd)/.hugo_data} ${HUGO_OPTIONS:-}",
     "build:minify": "gulp minify",
     "build:sitemap": "gulp sitemap",
@@ -20,9 +20,7 @@
   },
   "devDependencies": {
     "@antora/cli": "^3.0.0-alpha.9",
-    "@antora/playbook-builder": "^3.0.0-alpha.9",
     "@antora/site-generator-default": "^3.0.0-alpha.9",
-    "@antora/site-mapper": "^3.0.0-alpha.9",
     "@deadlinks/cargo-deadlinks": "github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux",
     "@djencks/asciidoctor-antora-indexer": "^0.0.6",
     "@djencks/asciidoctor-jsonpath": "^0.0.4",
