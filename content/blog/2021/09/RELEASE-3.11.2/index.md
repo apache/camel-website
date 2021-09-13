@@ -1,6 +1,6 @@
 ---
 title: "RELEASE 3.11.2"
-date: 2021-08-05
+date: 2021-09-13
 draft: false
 authors: [gzurowski]
 categories: ["Releases"]
