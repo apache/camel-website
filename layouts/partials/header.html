@@ -25,7 +25,7 @@
     <meta property="og:image" content="https://camel.apache.org/_/img/logo-d.svg">
     <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
     <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
-    <link rel="canonical" href="{{ .RelPermalink }}">
+    <link rel="canonical" href="{{ .Permalink }}">
     {{ if .Description}}
     <meta name="description" content="{{ .Description }}">
     {{ end }}
