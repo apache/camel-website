@@ -47,7 +47,7 @@ camel-k:
     - name: 'Linux 64bit binary'
       path_format: 'camel/camel-k/{version}/camel-k-client-{version}-linux-64bit.tar.gz'
       filename_format: 'camel-k-client-{version}-linux-64bit.tar.gz'
-    - name: 'MacOS 64bit binary'
+    - name: 'MacOS (x86) 64bit binary'
       path_format: 'camel/camel-k/{version}/camel-k-client-{version}-mac-64bit.tar.gz'
       filename_format: 'camel-k-client-{version}-mac-64bit.tar.gz'
     - name: 'Windows 64bit binary'
