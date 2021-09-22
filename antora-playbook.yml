@@ -24,17 +24,6 @@ content:
         - docs/components
 
     - url: https://github.com/apache/camel.git
-      branches: camel-3.4.x
-      start_paths:
-        # eip
-        - core/camel-core-engine/src/main/docs
-        # languages
-        - core/camel-core-languages/src/main/docs
-        - core/camel-xml-jaxp/src/main/docs
-        # main components doc
-        - docs/components
-
-    - url: https://github.com/apache/camel.git
       branches: camel-2.x
       start_paths:
         # main components doc
@@ -73,14 +62,12 @@ content:
         - main
         - camel-spring-boot-3.11.x
         - camel-spring-boot-3.7.x
-        - camel-spring-boot-3.4.x
       start_path: docs
     - url: https://github.com/apache/camel-karaf.git
       branches:
         - main
         - camel-karaf-3.11.x
         - camel-karaf-3.7.x
-        - camel-karaf-3.4.x
       start_path: docs
 
 ui:
@@ -98,12 +85,10 @@ asciidoc:
     - ./extensions/table.js
     - ./extensions/inline-styles.js
     - "@djencks/asciidoctor-antora-indexer"
-  attributes:
-    eip-vc: latest@components
 
 runtime:
   log:
-    level: info
+    level: warn
     failure_level: warn
 
 pipeline:
