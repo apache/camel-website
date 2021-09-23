@@ -2,7 +2,7 @@
 title: "Java 8 to be dropped by end of 2021"
 date: 2021-09-22
 authors: [davsclaus]
-categories: ["Releases"]
+categories: ["Roadmap"]
 preview: All Camel projects will drop support for Java 8 by end of 2021
 ---
 
