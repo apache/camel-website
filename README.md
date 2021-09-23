@@ -24,6 +24,10 @@ Tools used to generate the website:
    website.
  - (optional) [Maven](https://maven.apache.org/) a build tool used to run the complete website generating process.
 
+## Issues
+
+Please report issues on the [project's Jira](https://issues.apache.org/jira/projects/CAMEL) specifiying the `website` component.
+
 ## Build with Node and yarn
 
 You can build the website locally using the tools `Node.js` and `yarn`.
