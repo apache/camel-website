@@ -30,3 +30,5 @@ github:
     squash:  true
     merge:   false
     rebase:  true
+  features:
+    issues: true
