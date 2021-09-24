@@ -35,7 +35,7 @@ content:
     - url: https://github.com/apache/camel-k.git
       branches:
         - main
-        - release-1.4.x
+        - release-1.6.x
       start_path: docs
     - url: https://github.com/apache/camel-k-runtime.git
       branches: main
@@ -54,8 +54,6 @@ content:
     - url: https://github.com/apache/camel-kafka-connector.git
       branches:
         - camel-kafka-connector-0.10.x
-        - camel-kafka-connector-0.7.x
-        - camel-kafka-connector-0.4.x
       start_path: docs
     - url: https://github.com/apache/camel-spring-boot.git
       branches:
