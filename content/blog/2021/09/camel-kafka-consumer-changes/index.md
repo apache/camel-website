@@ -52,7 +52,7 @@ The tests were run on an IBM 8335 GTH server with 2 Power 9 CPUs with 16 cores (
 
 We used Kafka's own producer performance test client to generate the load on the Kafka instance. On the consumer end, we implemented a simple mock consumer to compute the metrics and save the results. This mock consumer, with details about how to reproduce the test are also [available](https://github.com/orpiske/kafka-tester).
 
-The tests, which used the default configuration for the component, indicate that the performance of the component for highly concurrent scenarios was greater than 17% (sometimes far exceeding that) in our environment. For scenarios with low to none concurrency, the results were mostly within the 5% margin. Although Camel did perform better by a small percent on most of the time, at such a low difference it's certainly within the margin of error.
+The tests, which used the default configuration for the component, indicate that the performance of the component for highly concurrent scenarios was greater than 17% (sometimes far exceeding that) in our environment. For scenarios with low to none concurrency, the results were mostly within the 5% margin. Although the new component did perform better by a small percent on most of the time, at such a small difference it's certainly within the margin of error.
 
 
 ![Single consumer test](p9-single-consumers-default-settings.png)
