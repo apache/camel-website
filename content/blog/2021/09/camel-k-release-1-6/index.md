@@ -31,14 +31,14 @@ The `kamel bind` subcommand was recently introduced to simplify the creation of 
 ## Support https liveness and readiness probes
 
 Security in transit is a must. Even for probes. We have improved the [container trait](/camel-k/latest/traits/container.html) in order to allow setting liveness and readiness probes with `https` scheme.
- 
+
 ## More Kamelet love
 
 We have reached 150+ official Kamelet! If you need some connector to quickly source or sink your events, then, the [Apache Camel Kamelet Catalog](/camel-kamelets/latest/index.html) is the place.
 
 ## Bug fixes, test coverage and documentation
 
-And of course, last but not least, we have dedicated an imporant effort to close known bugs, keep raising the bar of quality adding tests and documentation. 
+And of course, last but not least, we have dedicated an important effort to close known bugs, keep raising the bar of quality adding tests and documentation.
 
 # Thanks
 
