@@ -4,14 +4,24 @@ title: "Books"
 
 This page lists the known books about Apache Camel. If you happen to know a book which is not listed then please contact us, for example using the [Mailing Lists](/community/mailing-list/).
 
-*   [Camel in Action 2nd edition](http://manning.com/ibsen2/)
-*   [Camel in Action](http://www.manning.com/ibsen)
-*   [Apache Camel Developer's Cookbook](http://www.packtpub.com/apache-camel-developers-cookbook/book)
-*   [Camel Design Patterns](https://leanpub.com/camel-design-patterns)
-*   [Mastering Apache Camel](https://www.packtpub.com/application-development/mastering-apache-camel)
-*   [Instant Apache Camel Message Routing](http://www.packtpub.com/apache-camel-message-routing/book)
-*   [Instant Apache Camel Messaging System](http://www.packtpub.com/apache-camel-messaging-system/book)
-*   [Enterprise Integration Patterns](http://www.enterpriseintegrationpatterns.com/)
+* [Cloud Native Integration with Apache Camel](https://www.apress.com/gp/book/9781484272107)
+* [Camel in Action 2nd edition](http://manning.com/ibsen2/)
+* [Camel in Action](http://www.manning.com/ibsen)
+* [Apache Camel Developer's Cookbook](http://www.packtpub.com/apache-camel-developers-cookbook/book)
+* [Camel Design Patterns](https://leanpub.com/camel-design-patterns)
+* [Mastering Apache Camel](https://www.packtpub.com/application-development/mastering-apache-camel)
+* [Instant Apache Camel Message Routing](http://www.packtpub.com/apache-camel-message-routing/book)
+* [Instant Apache Camel Messaging System](http://www.packtpub.com/apache-camel-messaging-system/book)
+* [Enterprise Integration Patterns](http://www.enterpriseintegrationpatterns.com/)
+
+### Cloud Native Integration with Apache Camel
+
+[Cloud Native Integration with Apache Camel](https://www.apress.com/gp/book/9781484272107) by Guilherme Camposo.
+Published by [Apress](https://www.apress.com/) in August 2021.
+
+![Cloud Native Integration with Apache Camel book cover](/img/books/cloud_native_integration.jpg)
+
+You will learn to connect with databases, create REST APIs, transform data, connect with message oriented software (MOMs), secure your services, and test using Camel. You will also learn software architecture patterns for integration and how to leverage container platforms, such as Kubernetes. This book is suitable for those who are eager to learn an integration tool that fits the Kubernetes world, and who want to explore the integration challenges that can be solved using containers.
 
 ### Camel in Action 2nd edition
 
