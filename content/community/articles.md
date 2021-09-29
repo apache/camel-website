@@ -92,7 +92,7 @@ Articles are divided into several sections. As the lists grow, further sectionin
 *   [Streamline Software Integration: An Apache Camel Tutorial](https://www.toptal.com/apache/apache-camel-tutorial) - A longer article and tutorial on introducing Apache Camel and using Camel with microservices, testing, Kubernetes, and much more. The tutorial is based on the Camel 2.22 release.  
 *   [Getting started with Camel 3](http://www.masterspringboot.com/camel/getting-started-with-camel-3/) - by Francesco Marchioni. A quick introduction to Camel 3 with a basic application example using a Camel Main class
 *   [Routing Camel messages to Artemis embedded in WildFly ](http://www.masterspringboot.com/camel/routing-camel-messages-to-artemis-embedded-in-wildfly/) - by Francesco Marchioni. Shows how to route JMS messages from a Camel route to ArtemisMQ embedded in WildFly
-*   [Camel Cheatsheet](www.masterspringboot.com/camel/camel-cheatsheet/) - A cheatsheet for Camel developers
+*   [Camel Cheatsheet](http://www.masterspringboot.com/camel/camel-cheatsheet/) - A cheatsheet for Camel developers
 *   [Proxy Web Services request with Camel](http://www.masterspringboot.com/camel/proxy-web-services-request-with-camel/) - How to create a Camel proxy facade to a legacy JAX-WS Service
 *   [Create a Custom Camel logging handler for WildFly](http://www.mastertheboss.com/jboss-server/jboss-log/create-a-custom-camel-logging-handler-for-wildfly) - by Francesco Marchioni. Shows how to use a Camel based logging handler in WildFly
 *   [Getting started with Camel-k](http://www.masterspringboot.com/camel/getting-started-with-camel-k-tutorial/) - by Francesco Marchioni. A quick dive into Camel-K
