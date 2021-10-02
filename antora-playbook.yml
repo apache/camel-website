@@ -36,6 +36,8 @@ content:
     - url: https://github.com/apache/camel-k.git
       branches:
         - main
+#        Release-1.6.x does not work because there is no corresponding camel-k-runtime version for languages.
+#        - release-1.6.x
         - release-1.4.x
       start_path: docs
 
@@ -50,11 +52,13 @@ content:
     - url: https://github.com/apache/camel-quarkus.git
       branches:
         - main
-        - release/2.0.0
+        - 2.3.x
+#        - 2.2.x
+#        - release/2.0.0
       start_path: docs
 
     - url: https://github.com/apache/camel-quarkus-examples.git
-      branches: HEAD
+      branches: main
       start_path: docs
 
     - url: https://github.com/apache/camel-kafka-connector.git
@@ -94,11 +98,12 @@ output:
 asciidoc:
   attributes:
     requires@: "'util=util/jsonpath-util.js'"
-  #    sb-statistics: on
+#    uncomment sb-statistics to see more info on camel spring boot list page such as non-spring-boot components.
+#    This also tests the output of unused camel-spring-boot json detection and fails the Antora build with errors.
+#    sb-statistics: on
   extensions:
     - ./extensions/table.js
     - ./extensions/inline-styles.js
-    - "@djencks/asciidoctor-antora-indexer"
 
 runtime:
   log:
@@ -108,3 +113,6 @@ runtime:
 pipeline:
   extensions:
     - require: '@djencks/asciidoctor-jsonpath'
+#      trace: true
+    - require: '@djencks/asciidoctor-antora-indexer'
+#      trace: true

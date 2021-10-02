@@ -1,3 +1,22 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+const RESOURCEID_RX = /[^$]*\$json\/(.*)\.json/
+
 module.exports = {
   alias: (name, aliases) => {
     for (expr of (aliases || '').split(',')) {
@@ -30,22 +49,13 @@ module.exports = {
     }
   },
 
-  description2: (value) => {
-    try {
-      return module.exports.strong(value, 'Autowired')
-        + module.exports.strong(value, 'Required')
-        + module.exports.strong(value, 'Deprecated')
-        + (value.description ? module.exports.escapeAttributes(value.description) + (value.description.endsWith('.') ? '' : '') : '')
-        + (value.deprecatedNote ? `\n\nNOTE: ${value.deprecatedNote}` : '')
-        + (value.enum ? `${['\n\nEnum values:\n'].concat(value.enum).join('\n* ')}` : '')
-    } catch (e) {
-      console.log('error', e)
-      return e.msg()
-    }
-  },
-
   escapeAttributes: (text) => {
     return text ? text.split('{').join('\\{') : text
+  },
+
+  extractSBName: (resourceid) => {
+    const m =resourceid.match(RESOURCEID_RX)
+    return m ? m[1] : 'no match'
   },
 
   formatSignature: (signature) => {
@@ -70,6 +80,10 @@ module.exports = {
     if (consumerOnly) return 'Only consumer is supported'
     if (producerOnly) return 'Only producer is supported'
     return 'Both producer and consumer are supported'
+  },
+
+  starterArtifactId: (data) => {
+    return data['starter-artifactid'] ? data['starter-artifactid'] : `${data.artifactid}-starter`
   },
 
   strong: (data, text) => {
