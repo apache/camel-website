@@ -38,32 +38,41 @@ content:
         - main
         - release-1.4.x
       start_path: docs
+      
     - url: https://github.com/apache/camel-k-runtime.git
       branches: main
       start_path: docs
+
     - url: https://github.com/apache/camel-kamelets.git
       branches: main
       start_path: docs
+
     - url: https://github.com/apache/camel-quarkus.git
       branches:
         - main
         - release/2.0.0
       start_path: docs
+
     - url: https://github.com/apache/camel-quarkus-examples.git
       branches: HEAD
       start_path: docs
+
     - url: https://github.com/apache/camel-kafka-connector.git
       branches:
         - main
         - camel-kafka-connector-0.11.x
       start_path: docs
+
     - url: https://github.com/apache/camel-spring-boot.git
       branches:
         - main
         - camel-spring-boot-3.12.x
         - camel-spring-boot-3.11.x
         - camel-spring-boot-3.7.x
-      start_path: docs
+      start_paths:
+        - docs/components
+        - docs/spring-boot
+
     - url: https://github.com/apache/camel-karaf.git
       branches:
         - main
@@ -86,7 +95,7 @@ asciidoc:
   extensions:
     - ./extensions/table.js
     - ./extensions/inline-styles.js
-    - "@djencks/asciidoctor-antora-indexer"
+    - "@apache/asciidoctor-antora-indexer"
 
 runtime:
   log:
@@ -95,4 +104,4 @@ runtime:
 
 pipeline:
   extensions:
-    - require: '@djencks/asciidoctor-jsonpath'
+    - require: '@apache/asciidoctor-jsonpath'
