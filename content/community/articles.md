@@ -189,6 +189,7 @@ Articles are divided into several sections. As the lists grow, further sectionin
 
 These examples show Camel combined with several tools (e.g. IDE), ESBs, Application Services, and other middleware products such as messaging or OSGi container.
 
+*   [Build your own social media analytics with Apache Kafka, Strimzi and Apache Camel](https://www.youtube.com/watch?v=niQEglT_nYQ) presentation from Data Con LA 2021 by Jakub Scholz presents how to use Camel Kafka Connectors and Kafka Streams to analyze tweets.
 *   [Huawei Cloud Roma Connect : Enterprise Integration Platform With Apache Camel](https://www.youtube.com/watch?v=h-Gc4OKXm5I) presentation from ApacheCon Asia 2021 in August 2021 by Eugene Chan and Reji Mathews present how Apache camel powers the runtime engine for Huawei Cloud ROMA (commercial iPaaS offering by Huawei Cloud)
 *   [Saga-Based Design Using Apache Camel and Kafka: Implementing Highly Reliable Distributed Business Transactions](https://modusbox.com/saga-based-design-using-apache-camel-and-kafka-implementing-highly-reliable-distributed-business-transactions/) article from June 2021 about the Sage EIP for transactions with Camel and Kafka.
 *   [Distributed Logs and Tracing with Spring, Apache Camel, OpenTelemetry and Grafana](https://dev.to/antongoncharov/distributed-logs-and-tracing-with-spring-apache-camel-opentelemetry-and-grafana-example-554e) blog post by Anton Goncharov in June 2020 with example how to setup OpenTracing with Camel and have a visual Grafana dashboard.    
