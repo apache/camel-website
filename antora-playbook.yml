@@ -38,7 +38,7 @@ content:
         - main
         - release-1.4.x
       start_path: docs
-      
+
     - url: https://github.com/apache/camel-k-runtime.git
       branches: main
       start_path: docs
@@ -95,7 +95,7 @@ asciidoc:
   extensions:
     - ./extensions/table.js
     - ./extensions/inline-styles.js
-    - "@apache/asciidoctor-antora-indexer"
+    - "@djencks/asciidoctor-antora-indexer"
 
 runtime:
   log:
@@ -104,4 +104,4 @@ runtime:
 
 pipeline:
   extensions:
-    - require: '@apache/asciidoctor-jsonpath'
+    - require: '@djencks/asciidoctor-jsonpath'
