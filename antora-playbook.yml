@@ -92,6 +92,9 @@ output:
   dir: ./documentation
 
 asciidoc:
+  attributes:
+    requires@: "'util=util/jsonpath-util.js'"
+  #    sb-statistics: on
   extensions:
     - ./extensions/table.js
     - ./extensions/inline-styles.js
