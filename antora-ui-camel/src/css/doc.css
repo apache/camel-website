@@ -78,7 +78,8 @@
 .doc h3 .anchor,
 .doc h4 .anchor,
 .doc h5 .anchor,
-.doc h6 .anchor {
+.doc h6 .anchor,
+.doc td .anchor {
   position: absolute;
   text-decoration: none;
   width: 1.75ex;
@@ -95,7 +96,8 @@
 .doc h3 .anchor::before,
 .doc h4 .anchor::before,
 .doc h5 .anchor::before,
-.doc h6 .anchor::before {
+.doc h6 .anchor::before,
+.doc td .anchor::before {
   content: '\00a7';
 }
 
@@ -104,7 +106,8 @@
 .doc h3:hover .anchor,
 .doc h4:hover .anchor,
 .doc h5:hover .anchor,
-.doc h6:hover .anchor {
+.doc h6:hover .anchor,
+.doc td:hover .anchor {
   visibility: visible;
 }
 
