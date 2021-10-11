@@ -22,7 +22,7 @@
     "@antora/cli": "^3.0.0-alpha.9",
     "@antora/site-generator-default": "^3.0.0-alpha.9",
     "@deadlinks/cargo-deadlinks": "github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux",
-    "@djencks/asciidoctor-antora-indexer": "^0.0.6",
+    "@djencks/asciidoctor-antora-indexer": "^0.0.7",
     "@djencks/asciidoctor-jsonpath": "^0.0.4",
     "@oclif/errors": "^1.3.4",
     "antora-ui-camel": "workspace:antora-ui-camel",
