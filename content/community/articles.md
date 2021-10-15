@@ -4,6 +4,8 @@ title: "Articles"
 
 ## Camel Videos
 
+
+*   [Testing Kamelets - Verify event sources and sinks with YAKS](https://www.youtube.com/watch?v=mIfmMFOgdbI) 40 min from October 2021 at ApacheCon 2021 by Christoph Deppisch how to test Apache Camel Kamelet event sink/source's with YAKS testing framework
 *   [The Evolution of Apachel Camel 3 in Cloud Age - Roan Brasil Monteiro and Bruno Kaufmann](https://www.youtube.com/watch?v=7TyyBcMe5Lc) 45 min from July 2021 (english) talking about the main news about Apache Camel 3 and how to design a good architecture with this framework. 
 *   [Integrating systems in the age of Quarkus and Camel](https://www.youtube.com/watch?v=b7FxG2mKop8) 45 min webinar from May 2021 by Claus Ibsen, with quick overview of Camel 3 projects and then focus on Camel Quarkus, Camel K and Kamelets. Mix of slides and live demos (yes with a demo not working perfect)
 *   [OCB: Integration in OpenShift](https://www.youtube.com/watch?v=5dDsVmS9HKk) 1 hour introductory presentation from May 2021 by Zineb Bendhiba, Rachel Jordan-McGeever, and María Arias de Reyna about Camel, Camel Quarkus, Camel K and Kamelets.
