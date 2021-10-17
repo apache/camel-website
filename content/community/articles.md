@@ -4,6 +4,8 @@ title: "Articles"
 
 ## Camel Videos
 
+
+*   [Evolution from ESB to Cloud-native API Integration](https://www.youtube.com/watch?v=o1O0kQtk7I8) ApacheCon 2021 by Andre Sluczka and Jeff Bruns talking about how they adapted to a lightweight cloud-native integration strategy based on Apache’s new Camel K framework.
 *   [From Camel to Kamelets: new connectors for event-driven applications](https://www.youtube.com/watch?v=xVL1gJ5AJVg) ApacheCon 2021 by Nicola Ferraro introducing Kamelets as connectors for event driven systems. In his talk Nicola presents two demos and show how easy you can build your own Kamelets and contribute them to Apache Camel.
 *   [Getting further with Apache Camel on Quarkus](https://www.youtube.com/watch?v=tn3cdZM8SrI) ApacheCon 2021 by Alenandre Gallice covering how great Camel and Quarkus work together, and how to build cloud native Camel microservices and finally how to run this on Kubernetes and Knative
 *   [Apache Camel 3: the next generation of enterprise integration](https://www.youtube.com/watch?v=OIkJWf7eXUc) ApacheCon 2021 by Claus Ibsen and Andrea Cosentino with introduction to Apache Camel v3 and what we have done to make Camel great for cloud native integrations
@@ -332,14 +334,6 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   [Jesse Gorzinski on Apache Camel and Open-Source System Lifecycles](https://techchannel.com/SMB/04/2021/jesse-gorzinski-apache-camel) from April 2021 _by_ TechChannel interviews IBM's Jesse Gorzinski, that talks about IBMSi usage of Apache Camel, _vitality_ of open source projects in general, and more
 
 
-## Books
-
-*   Camel Design Patterns by Bilgin Ibryam (LeanPub, January 2016)
-*   Apache Camel Developer's Cookbook _by Scott Cranton and Jakub Korab_ (Packt Publishing, December 2013)
-*   Instant Apache Camel Messaging System _by Evgeniy Sharapov_ (Packt Publishing, September 2013)
-*   Instant Apache Camel Message Routing _by Bilgin Ibryam_ (Packt Publishing, August 2013)
-*   Camel in Action _by Claus Ibsen and Jonathan Anstey_ (Manning, December 2010)
-*   Enterprise Integration Patterns _by Gregor Hohpe and Bobby Woolf_ (Addison Wesley, October 2003)
 
 ## Online Training
 
