@@ -30,7 +30,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Check cache
-        run: yarn workspaces foreach install --check-cache
+        run: yarn validate-deps
       - name: Build
         run: yarn build-all
       - name: Run checks
