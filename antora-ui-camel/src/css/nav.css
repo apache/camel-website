@@ -249,6 +249,15 @@ html.is-clipped--nav {
   height: var(--drawer-height);
 }
 
+.nav-panel-explore .context .noversion {
+  background-image: url(../img/chevron.svg);
+  background-repeat: no-repeat;
+  background-position: right 0.5rem top 50%;
+  background-size: auto 0.75em;
+  padding: 0 1.5rem 0 0.5rem;
+  display: block;
+}
+
 .nav-panel-explore .context .version {
   background-image: url(../img/chevron.svg);
   background-repeat: no-repeat;
@@ -300,6 +309,11 @@ html.is-clipped--nav {
 .nav-panel-explore .component .version {
   display: block;
   margin: 0.375rem 0.375rem 0 0;
+}
+
+.nav-panel-explore .component .title a {
+  color: inherit;
+  display: inherit;
 }
 
 .nav-panel-explore .component .version a {
