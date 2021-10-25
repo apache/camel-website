@@ -24,19 +24,19 @@ As ever, we added some new extensions and enhanced existing ones with native sup
 
 1 new JVM only extension was added:
 
-* [AWS 2 Eventbridge](/camel-quarkus/latest/reference/extensions/aws2-eventbridge.html)
+* [AWS 2 Eventbridge](/camel-quarkus/next/reference/extensions/aws2-eventbridge.html)
 
 7 extensions were enhanced with native support.
 
-* [JSLT](/camel-quarkus/latest/reference/extensions/jslt.html)
-* [Lumberjack](/camel-quarkus/latest/reference/extensions/lumberjack.html)
-* [MSV](/camel-quarkus/latest/reference/extensions/msv.html)
-* [Nagios](/camel-quarkus/latest/reference/extensions/nagios.html)
-* [Saga](/camel-quarkus/latest/reference/extensions/saga.html)
-* [Twilio](/camel-quarkus/latest/reference/extensions/twilio.html)
-* [Zendesk](/camel-quarkus/latest/reference/extensions/zendesk.html)
+* [JSLT](/camel-quarkus/next/reference/extensions/jslt.html)
+* [Lumberjack](/camel-quarkus/next/reference/extensions/lumberjack.html)
+* [MSV](/camel-quarkus/next/reference/extensions/msv.html)
+* [Nagios](/camel-quarkus/next/reference/extensions/nagios.html)
+* [Saga](/camel-quarkus/next/reference/extensions/saga.html)
+* [Twilio](/camel-quarkus/next/reference/extensions/twilio.html)
+* [Zendesk](/camel-quarkus/next/reference/extensions/zendesk.html)
 
-You can browse the full list of supported extensions over at the [extensions reference](/camel-quarkus/latest/reference/index.html).
+You can browse the full list of supported extensions over at the [extensions reference](/camel-quarkus/next/reference/index.html).
 
 ## Improved integration with Quarkus Spring extensions
 
@@ -46,6 +46,6 @@ This release fixes a [bug](https://github.com/apache/camel-quarkus/issues/1759) 
 
 We move onwards towards supporting Camel 3.7.0, Quarkus 1.11.0 and continuing to work through the [list](https://github.com/apache/camel-quarkus/issues?q=is%3Aissue+is%3Aopen+label%3Anative) of extensions that need native support. 
 
-As ever, we love contributions. So if you'd like to fix a bug, add a new extension or add native support to an existing one, check out the [list of issues](https://github.com/apache/camel-quarkus/issues) and the [contributor guide](/camel-quarkus/latest/contributor-guide/index.html).
+As ever, we love contributions. So if you'd like to fix a bug, add a new extension or add native support to an existing one, check out the [list of issues](https://github.com/apache/camel-quarkus/issues) and the [contributor guide](/camel-quarkus/next/contributor-guide/index.html).
 
 We hope you enjoy Camel Quarkus 1.4.0 and we look forward to your feedback and participation!

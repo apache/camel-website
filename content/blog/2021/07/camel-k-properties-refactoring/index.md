@@ -25,7 +25,7 @@ Through this blog you will learn about:
 If you're an experienced Camel K developer, you are certainly familiar with the `--property` (abbreviated `--p`) and `--property-file` flags of the `kamel run` command. Through these flags you are instructing the runtime `Integration` to include properties configuration that will be used during the application execution. Within version 1.5 we made a slight change on how to provide a property file. We have deprecated the `--property-file` flag and favoured the new syntax `--property file:my-file.properties` (or shorter, `--p file:my-file.properties`).
 Since this version we're also starting to distinguish between **runtime** properties and **build-time** properties. `--property` will be used to identify runtime properties.
 
-Learn more in the [runtime properties documentation page](/camel-k/latest/configuration/runtime-properties.html).
+Learn more in the [runtime properties documentation page](/camel-k/next/configuration/runtime-properties.html).
 
 ## Build-time properties
 
@@ -44,7 +44,7 @@ kamel run PostgresDBAutoDatasource.java --dev \
                                         -p quarkus.datasource.camel.password=admin123 \
                                         -d mvn:io.quarkus:quarkus-jdbc-postgresql:1.13.7.Final
 ```
-You can learn more about this feature in the [build time properties documentation page](/camel-k/latest/configuration/build-time-properties.html).
+You can learn more about this feature in the [build time properties documentation page](/camel-k/next/configuration/build-time-properties.html).
 
 ## Integration configuration
 
@@ -58,7 +58,7 @@ According to the `kamel run --help`, the `--config`:
 ```
 You will be able to provide a `Configmap`, a `Secret` or a local file. The new syntax is expecting you to declare the kind of resource ( _configmap_, _secret_ or _file_) and the name or local path where it is located. You may also specify the `Configmap`/`Secret` key, helping therefore to limit the exposure of information that will be needed in your integration.
 
-The whole documentation is available on the [runtime configuration page](/camel-k/latest/configuration/runtime-config.html). You can also refer the different examples provided in [Camel K example repository](https://github.com/apache/camel-k/tree/main/examples/user-config).
+The whole documentation is available on the [runtime configuration page](/camel-k/next/configuration/runtime-config.html). You can also refer the different examples provided in [Camel K example repository](https://github.com/apache/camel-k/tree/main/examples/user-config).
 
 ## Integration resources
 
@@ -85,7 +85,7 @@ kamel run PlatformHttpsServer.java -p quarkus.http.ssl.certificate.file=/etc/ssl
 
 We are leveraging the **Quarkus** properties to declare where the application is expecting to find the certificate and the key (via `--p` flag). We are also telling the `Integration` to create the files expected in the __my-self-signed-ssl__ `Secret` and to mount at __/etc/ssl/my-self-signed-ssl/__ directory.
 
-You will find more details in the [runtime resource page official documentation](/camel-k/latest/configuration/runtime-resources.html).
+You will find more details in the [runtime resource page official documentation](/camel-k/next/configuration/runtime-resources.html).
 
 ## Warnings and limitations
 

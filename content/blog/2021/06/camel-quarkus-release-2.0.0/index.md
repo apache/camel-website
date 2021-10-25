@@ -38,22 +38,22 @@ Please check the [What's new in Camel 3.11.0](/blog/2021/06/Camel311-Whatsnew/) 
 
 New extensions:
 
-* [Avro Jackson](/camel-quarkus/latest/reference/extensions/jackson-avro.html)
-* [AWS Secrets Manager](/camel-quarkus/latest/reference/extensions/aws-secrets-manager.html) (JVM only)
-* [Azure CosmosDB](/camel-quarkus/latest/reference/extensions/azure-cosmosdb.html) (JVM only)
-* [Etcd3](/camel-quarkus/latest/reference/extensions/etcd3.html) (JVM only)
-* [Google Cloud Functions](/camel-quarkus/latest/reference/extensions/google-functions.html) (JVM only)
-* [Google Storage](/camel-quarkus/latest/reference/extensions/google-storage.html)
-* [jOOR](/camel-quarkus/latest/reference/extensions/joor.html) (JVM only)
-* [Kamelet Reify](/camel-quarkus/latest/reference/extensions/kamelet-reify.html) (JVM only)
-* [Protobuf Jackson](/camel-quarkus/latest/reference/extensions/jackson-protobuf.html)
+* [Avro Jackson](/camel-quarkus/next/reference/extensions/jackson-avro.html)
+* [AWS Secrets Manager](/camel-quarkus/next/reference/extensions/aws-secrets-manager.html) (JVM only)
+* [Azure CosmosDB](/camel-quarkus/next/reference/extensions/azure-cosmosdb.html) (JVM only)
+* [Etcd3](/camel-quarkus/next/reference/extensions/etcd3.html) (JVM only)
+* [Google Cloud Functions](/camel-quarkus/next/reference/extensions/google-functions.html) (JVM only)
+* [Google Storage](/camel-quarkus/next/reference/extensions/google-storage.html)
+* [jOOR](/camel-quarkus/next/reference/extensions/joor.html) (JVM only)
+* [Kamelet Reify](/camel-quarkus/next/reference/extensions/kamelet-reify.html) (JVM only)
+* [Protobuf Jackson](/camel-quarkus/next/reference/extensions/jackson-protobuf.html)
 
 Extensions newly supported in native mode:
 
-* [DigitalOcean](/camel-quarkus/latest/reference/extensions/digitalocean.html)
-* [OpenStack](/camel-quarkus/latest/reference/extensions/openstack.html)
-* [XChange](/camel-quarkus/latest/reference/extensions/xchange.html)
-* [XQuery](/camel-quarkus/latest/reference/extensions/saxon.html)
+* [DigitalOcean](/camel-quarkus/next/reference/extensions/digitalocean.html)
+* [OpenStack](/camel-quarkus/next/reference/extensions/openstack.html)
+* [XChange](/camel-quarkus/next/reference/extensions/xchange.html)
+* [XQuery](/camel-quarkus/next/reference/extensions/saxon.html)
 
 
 ## Test coverage and closing functionality gaps
@@ -61,25 +61,25 @@ Extensions newly supported in native mode:
 In this release, we invested a lot of effort into reviewing existing tests and adding new test cases.
 We proceeded methodically, following the main Camel documentation.
 We took care to cover every use case mentioned on the Camel component pages.
-For example for the HTTP component, we went through the use cases mentioned on its [component page](/components/latest/http-component.html),
+For example for the HTTP component, we went through the use cases mentioned on its [component page](/components/next/http-component.html),
 and we checked whether they are covered by existing tests.
 All the missing scenarios were listed in a ["Test expansion" issue](https://github.com/apache/camel-quarkus/issues/2794)
 and fixed by adding the [respective tests](https://github.com/apache/camel-quarkus/commit/5c969cac27abd1af122b895fc0a7e7f26b69df25).
 
 In this way, we not only found and fixed bugs, but we also uncovered fully missing features.
 This was the case e.g. with `@org.apache.camel.EndpointInject`, `@org.apache.camel.Produce` and `@org.apache.camel.Consume` annotations from `camel-core`.
-These are supported by Camel Quarkus now - see [here](/camel-quarkus/latest/user-guide/cdi.html#_endpointinject_and_produce) and [here](/camel-quarkus/latest/user-guide/cdi.html#_consume).
+These are supported by Camel Quarkus now - see [here](/camel-quarkus/next/user-guide/cdi.html#_endpointinject_and_produce) and [here](/camel-quarkus/next/user-guide/cdi.html#_consume).
 
 The extent of this effort can be assessed by running [this GitHub issues query](https://github.com/apache/camel-quarkus/issues?q=is%3Aissue+label%3Aintegration-test+closed%3A2021-04-26..2021-06-25). This endeavour is going to continue in coming Camel Quarkus releases.
 
 ## Deprecations
 
-* Avro extension: `@BuildTimeAvroDataFormat` is deprecated - see the [Avro extension](/camel-quarkus/latest/reference/extensions/avro.html#_additional_camel_quarkus_configuration) page.
+* Avro extension: `@BuildTimeAvroDataFormat` is deprecated - see the [Avro extension](/camel-quarkus/next/reference/extensions/avro.html#_additional_camel_quarkus_configuration) page.
 
 
 ## Breaking changes and migration steps
 
-Please refer to our [2.0.0 Migration guide](/camel-quarkus/latest/migration-guide/2.0.0.html).
+Please refer to our [2.0.0 Migration guide](/camel-quarkus/next/migration-guide/2.0.0.html).
 
 ## Release notes
 

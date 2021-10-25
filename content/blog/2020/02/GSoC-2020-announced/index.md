@@ -23,13 +23,13 @@ the mentor and the obligations you would take on.
 project, look into subprojects and find areas that are interesting for you to
 participate in. Camel covers a wide range of interesting technologies and
 challenges, typical areas of contribution are improvements to existing
-[components](/components/latest/), adding [new
-components](http://localhost:1313/manual/latest/writing-components.html) or
+[components](/components/next/), adding [new
+components](http://localhost:1313/manual/writing-components.html) or
 doing improvements to the core of Camel. There are exciting developments if
-you're interested in Kubernetes in the [Camel K](/camel-k/latest/), fast
+you're interested in Kubernetes in the [Camel K](/camel-k/next/), fast
 startup and low memory footprint in [Camel
-Quarkus](/camel-quarkus/latest/), or stream processing in [Camel
-Kafka](/camel-kafka-connector/latest/) subprojects. Also look for issues
+Quarkus](/camel-quarkus/next/), or stream processing in [Camel
+Kafka](/camel-kafka-connector/next/) subprojects. Also look for issues
 labeled with
 [`help-wanted`](https://issues.apache.org/jira/issues/?jql=project%20%3D%20CAMEL%20AND%20status%20%3D%20Open%20AND%20labels%20%3D%20help-wanted%20ORDER%20BY%20priority%20DESC%2C%20updated%20DESC)
 for easy issues to get started with to gain some experience contributing to

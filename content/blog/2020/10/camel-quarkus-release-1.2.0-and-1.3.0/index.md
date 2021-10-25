@@ -27,54 +27,54 @@ even faster and more effective than before.
 
 There are 10 new extensions:
 
-* [AWS XRay](/camel-quarkus/latest/reference/extensions/aws-xray.html) (JVM only)
-* [HBase](/camel-quarkus/latest/reference/extensions/hbase.html) (JVM only)
-* [Headersmap](/camel-quarkus/latest/reference/extensions/headersmap.html)
-* [Jasypt](/camel-quarkus/latest/reference/extensions/jasypt.html) (JVM only)
-* [JCache](/camel-quarkus/latest/reference/extensions/jcache.html) (JVM only)
-* [LevelDB](/camel-quarkus/latest/reference/extensions/leveldb.html)
-* [LRA](/camel-quarkus/latest/reference/extensions/lra.html) (JVM only)
-* [Ribbon](/camel-quarkus/latest/reference/extensions/ribbon.html) (JVM only)
-* [Shiro](/camel-quarkus/latest/reference/extensions/shiro.html) (JVM only)
-* [Spark](/camel-quarkus/latest/reference/extensions/spark.html) (JVM only)
+* [AWS XRay](/camel-quarkus/next/reference/extensions/aws-xray.html) (JVM only)
+* [HBase](/camel-quarkus/next/reference/extensions/hbase.html) (JVM only)
+* [Headersmap](/camel-quarkus/next/reference/extensions/headersmap.html)
+* [Jasypt](/camel-quarkus/next/reference/extensions/jasypt.html) (JVM only)
+* [JCache](/camel-quarkus/next/reference/extensions/jcache.html) (JVM only)
+* [LevelDB](/camel-quarkus/next/reference/extensions/leveldb.html)
+* [LRA](/camel-quarkus/next/reference/extensions/lra.html) (JVM only)
+* [Ribbon](/camel-quarkus/next/reference/extensions/ribbon.html) (JVM only)
+* [Shiro](/camel-quarkus/next/reference/extensions/shiro.html) (JVM only)
+* [Spark](/camel-quarkus/next/reference/extensions/spark.html) (JVM only)
 
 And there are 16 promotions from JVM-only to native:
 
-* [Atom](/camel-quarkus/latest/reference/extensions/atom.html)
-* [Browse](/camel-quarkus/latest/reference/extensions/browse.html)
-* [Caffeine Cache](/camel-quarkus/latest/reference/extensions/caffeine.html)
-* [Crypto (JCE)](/camel-quarkus/latest/reference/extensions/crypto.html)
-* [Disruptor](/camel-quarkus/latest/reference/extensions/disruptor.html)
-* [FOP](/camel-quarkus/latest/reference/extensions/fop.html)
-* [Geocoder](/camel-quarkus/latest/reference/extensions/geocoder.html)
-* [Jing](/camel-quarkus/latest/reference/extensions/jing.html)
-* [NSQ](/camel-quarkus/latest/reference/extensions/nsq.html)
-* [PostgresSQL Event](/camel-quarkus/latest/reference/extensions/pgevent.html)
-* [PostgresSQL Replication Slot](/camel-quarkus/latest/reference/extensions/pg-replication-slot.html)
-* [RSS](/camel-quarkus/latest/reference/extensions/rss.html)
-* [SSH](/camel-quarkus/latest/reference/extensions/ssh.html)
-* [String Template](/camel-quarkus/latest/reference/extensions/stringtemplate.html)
-* [uniVocity CSV](/camel-quarkus/latest/reference/extensions/univocity-parsers.html)
-* [Velocity](/camel-quarkus/latest/reference/extensions/velocity.html)
+* [Atom](/camel-quarkus/next/reference/extensions/atom.html)
+* [Browse](/camel-quarkus/next/reference/extensions/browse.html)
+* [Caffeine Cache](/camel-quarkus/next/reference/extensions/caffeine.html)
+* [Crypto (JCE)](/camel-quarkus/next/reference/extensions/crypto.html)
+* [Disruptor](/camel-quarkus/next/reference/extensions/disruptor.html)
+* [FOP](/camel-quarkus/next/reference/extensions/fop.html)
+* [Geocoder](/camel-quarkus/next/reference/extensions/geocoder.html)
+* [Jing](/camel-quarkus/next/reference/extensions/jing.html)
+* [NSQ](/camel-quarkus/next/reference/extensions/nsq.html)
+* [PostgresSQL Event](/camel-quarkus/next/reference/extensions/pgevent.html)
+* [PostgresSQL Replication Slot](/camel-quarkus/next/reference/extensions/pg-replication-slot.html)
+* [RSS](/camel-quarkus/next/reference/extensions/rss.html)
+* [SSH](/camel-quarkus/next/reference/extensions/ssh.html)
+* [String Template](/camel-quarkus/next/reference/extensions/stringtemplate.html)
+* [uniVocity CSV](/camel-quarkus/next/reference/extensions/univocity-parsers.html)
+* [Velocity](/camel-quarkus/next/reference/extensions/velocity.html)
 
-Check the full list of supported extensions in the [extensions reference](/camel-quarkus/latest/reference/index.html).
+Check the full list of supported extensions in the [extensions reference](/camel-quarkus/next/reference/index.html).
 
 With Camel Quarkus 1.3.0, we got very close to supporting all components required by
-[Camel K](/camel-k/latest/index.html).
+[Camel K](/camel-k/next/index.html).
 
 ### Documentation
 
 * Following [a request from a user](https://github.com/apache/camel-quarkus/issues/1781) Native since and JVM since
   versions are now kept in separate columns on our
-  [Extensions reference pages](/camel-quarkus/latest/reference/index.html)
+  [Extensions reference pages](/camel-quarkus/next/reference/index.html)
 * We have added a section about defining
-  [Camel routes in XML](/camel-quarkus/latest/user-guide/defining-camel-routes.html)
+  [Camel routes in XML](/camel-quarkus/next/user-guide/defining-camel-routes.html)
 * We now have a [Change log](https://github.com/apache/camel-quarkus/blob/master/CHANGELOG.md) updated by the CI.
 
 ## What's next?
 
 We would like to promote
 [more extensions](https://github.com/apache/camel-quarkus/issues?q=is%3Aissue+is%3Aopen+label%3Anative) to native.
-Please upvote your favorites, or even better [contribute](/camel-quarkus/latest/contributor-guide/index.html)!
+Please upvote your favorites, or even better [contribute](/camel-quarkus/next/contributor-guide/index.html)!
 
 We hope Camel Quarkus 1.3.0 brings some tangible value to you and we look forward to your feedback and participation!

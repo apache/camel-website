@@ -37,15 +37,15 @@ The new release of Quarkus brings several new features:
 
 ## New [language DSLs](/blog/2021/03/Camel39-Whatsnew/#multi-language-dsls)
 
-These are mostly motivated by [Camel K](/camel-k/latest/)
+These are mostly motivated by [Camel K](/camel-k/next/)
 and its project-less approach to defining Camel routes.
 With Camel K, all you need to run an integration is a file where the routes are defined using one of the supported DSLs
-([Java jOOR](/camel-quarkus/latest/reference/extensions/java-joor-dsl.html),
-[XML](/camel-quarkus/latest/reference/extensions/xml-io-dsl.html),
-[Groovy](/camel-quarkus/latest/reference/extensions/groovy-dsl.html),
-[YAML](/camel-quarkus/latest/reference/extensions/yaml-dsl.html),
-[Kotlin](/camel-quarkus/latest/reference/extensions/kotlin-dsl.html)
-or [JavaScript](/camel-quarkus/latest/reference/extensions/js-dsl.html)).
+([Java jOOR](/camel-quarkus/next/reference/extensions/java-joor-dsl.html),
+[XML](/camel-quarkus/next/reference/extensions/xml-io-dsl.html),
+[Groovy](/camel-quarkus/next/reference/extensions/groovy-dsl.html),
+[YAML](/camel-quarkus/next/reference/extensions/yaml-dsl.html),
+[Kotlin](/camel-quarkus/next/reference/extensions/kotlin-dsl.html)
+or [JavaScript](/camel-quarkus/next/reference/extensions/js-dsl.html)).
 With Camel Quarkus you still need the `pom.xml` file with the appropriate dependencies in addition to the route definition files.
 Except for XML and YAML, these DSLs are supported only in JVM mode, because they load and compile the routes at runtime.
 
@@ -53,18 +53,18 @@ Except for XML and YAML, these DSLs are supported only in JVM mode, because they
 
 Except for the new DSLs mentioned above, there are six new extensions:
 
-* [Azure Storage Data Lake](/camel-quarkus/latest/reference/extensions/azure-storage-datalake.html) (JVM only)
-* [Freemarker](/camel-quarkus/latest/reference/extensions/freemarker.html) (native)
-* [HL7](/camel-quarkus/latest/reference/extensions/hl7.html) (native)
-* [Huawei Cloud SMN](/camel-quarkus/latest/reference/extensions/huaweicloud-smn.html) (JVM only)
-* [Paho MQTT 5](/camel-quarkus/latest/reference/extensions/paho-mqtt5.html) (native)
-* [Stitch](/camel-quarkus/latest/reference/extensions/stitch.html) (JVM only)
+* [Azure Storage Data Lake](/camel-quarkus/next/reference/extensions/azure-storage-datalake.html) (JVM only)
+* [Freemarker](/camel-quarkus/next/reference/extensions/freemarker.html) (native)
+* [HL7](/camel-quarkus/next/reference/extensions/hl7.html) (native)
+* [Huawei Cloud SMN](/camel-quarkus/next/reference/extensions/huaweicloud-smn.html) (JVM only)
+* [Paho MQTT 5](/camel-quarkus/next/reference/extensions/paho-mqtt5.html) (native)
+* [Stitch](/camel-quarkus/next/reference/extensions/stitch.html) (JVM only)
 
 These three extensions are now supported in native mode:
 
-* [LRA](/camel-quarkus/latest/reference/extensions/lra.html)
-* [Nitrite](/camel-quarkus/latest/reference/extensions/nitrite.html)
-* [Splunk](/camel-quarkus/latest/reference/extensions/splunk.html)
+* [LRA](/camel-quarkus/next/reference/extensions/lra.html)
+* [Nitrite](/camel-quarkus/next/reference/extensions/nitrite.html)
+* [Splunk](/camel-quarkus/next/reference/extensions/splunk.html)
 
 ## Deprecated extensions
 
@@ -78,7 +78,7 @@ These three extensions are now supported in native mode:
 
 The following deprecated extensions were removed in this release:
 
-* WebSocket JSR 356 (replaced by [Vert.x WebSocket](/camel-quarkus/latest/reference/extensions/vertx-websocket.html))
+* WebSocket JSR 356 (replaced by [Vert.x WebSocket](/camel-quarkus/next/reference/extensions/vertx-websocket.html))
 * All AWS SDK v1 extensions (replaced by their AWS SDK v2 counterparts)
 
 A part of the functionality originally present in `camel-quarkus-xml-io` has moved to
@@ -102,4 +102,4 @@ following the respective Quarkus milestones.
 In the mean time, we may still consider releasing 1.9.0 if we have enough material for it.
 
 There is still a lot of [Camel components to port](https://github.com/apache/camel-quarkus/issues?q=is%3Aissue+is%3Aopen+label%3Aextension) to Quarkus.
-Please upvote your favorites, or even better [contribute](/camel-quarkus/latest/contributor-guide/index.html)!
+Please upvote your favorites, or even better [contribute](/camel-quarkus/next/contributor-guide/index.html)!

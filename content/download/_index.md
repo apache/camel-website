@@ -2,7 +2,7 @@
 title: "Downloads"
 ---
 
-We do frequent releases, a release almost every month, and even though we strive to maintain backward compatibility, we may on occasion introduce a breaking change in the interest of the long-term evolution of the project. We document backward compatibility breaking changes in the [Migration and Upgrade](/manual/latest/migration-and-upgrade.html) section of the user manual.
+We do frequent releases, a release almost every month, and even though we strive to maintain backward compatibility, we may on occasion introduce a breaking change in the interest of the long-term evolution of the project. We document backward compatibility breaking changes in the [Migration and Upgrade](/manual/migration-and-upgrade.html) section of the user manual.
 
 Unless you need the latest features, you might consider using a Long Term Support (LTS) version that will receive bug and security fixes for a longer time - up to one year.
 

@@ -43,7 +43,7 @@ The documentation of each connector (source/sink or both) now contains reference
 - Aggregation Strategies list available in the connector as out of the box solutions
 
 On the Archetypes side: the archetype provided to extend the current connectors is now able to use a parameter to specify what connector you want to extend.
-More information available at [Camel-Kafka-connector archetype documentation](/camel-kafka-connector/latest/user-guide/extending-connector/index.html).
+More information available at [Camel-Kafka-connector archetype documentation](/camel-kafka-connector/next/user-guide/extending-connector/index.html).
 
 We added also a troubleshooting section in our documentation, to be able to debug and use the connectors in the best way possible.
 

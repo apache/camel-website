@@ -25,9 +25,9 @@ Camel Quarkus 1.1.0 will be released shortly after Camel 3.5.0. We will possibly
 depending on the availability of Camel 3.5.0 CRs.
 
 To get an idea which new extensions are coming, look for the extensions
-having `since = 1.1.0` in the [list of extensions](/camel-quarkus/latest/reference/index.html).
+having `since = 1.1.0` in the [list of extensions](/camel-quarkus/next/reference/index.html).
 You may also check the [issues assigned to milestone 1.1.0](https://github.com/apache/camel-quarkus/milestone/5?closed=1).
 
 We are looking forward to your participation through
-[contributing](/camel-quarkus/latest/contributor-guide/index.html) and/or
+[contributing](/camel-quarkus/next/contributor-guide/index.html) and/or
 [filing bugs](https://github.com/apache/camel-quarkus/issues/new)!

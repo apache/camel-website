@@ -74,7 +74,7 @@ The more meaningful part is `${UNEXISTING_ENV_VAR:${default-value}}`. If the env
 
 ## A tricky situation
 
-The previous syntax `${VAR:default}` may sound familiar for some Camel users. Indeed, it reminds us of some parts of the [Camel simple language](/components/latest/languages/simple-language.html).
+The previous syntax `${VAR:default}` may sound familiar for some Camel users. Indeed, it reminds us of some parts of the [Camel simple language](/components/next/languages/simple-language.html).
 For instance, some developers could end up defining a property like below:
 ```properties
 date-expression = ${date:now}

@@ -11,7 +11,7 @@ The aim of this post is giving some hints on how and when to use the idempotency
 
 ### What is Idempotency?
 
-The Idempotent Consumer from the EIP patterns is used to filter out duplicate messages: it essentially acts like a Message Filter to filter out duplicates, as reported in the [Camel documentation](/components/latest/eips/idempotentConsumer-eip.html)
+The Idempotent Consumer from the EIP patterns is used to filter out duplicate messages: it essentially acts like a Message Filter to filter out duplicates, as reported in the [Camel documentation](/components/next/eips/idempotentConsumer-eip.html)
 
 From the [Enterprise Integration Patterns documentation](https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessagingEndpointsIntro.html):
 _Sometimes the same message gets delivered more than once, either because the messaging system is not certain the message has been successfully delivered yet, or because the Message Channel’s quality-of-service has been lowered to improve performance. Message receivers, on the other hand, tend to assume that each message will be delivered exactly once, and tend to cause problems when they repeat processing because of repeat messages. A receiver designed as an Idempotent Receiver handles duplicate messages and prevents them from causing problems in the receiver application._
@@ -66,7 +66,7 @@ Some of the options can be used with their default value, in this example we're 
 
 ### A real example
 
-The best way to show how the idempotency feature works, in camel-kafka-connector, it's through an example. We'll use the [AWS2-S3 Source connector](/camel-kafka-connector/latest/reference/connectors/camel-aws2-s3-kafka-source-connector.html)
+The best way to show how the idempotency feature works, in camel-kafka-connector, it's through an example. We'll use the [AWS2-S3 Source connector](/camel-kafka-connector/next/reference/connectors/camel-aws2-s3-kafka-source-connector.html)
 
 As first step you'll need to fully build the [Camel-Kafka-connector project](https://github.com/apache/camel-kafka-connector) and install the connectors/camel-aws2-s3-kafka-connector zip package in your Kafka Broker plugin.path. Once the connector is in the plugin.path location, just unzip it. We describe how to build and unpack in the next steps:
 
