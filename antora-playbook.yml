@@ -1,7 +1,7 @@
 site:
   title: Apache Camel
   url: https://camel.apache.org
-  start_page: latest@manual::index.adoc
+  start_page: _@manual::index.adoc
 
 content:
   sources:
@@ -36,25 +36,25 @@ content:
     - url: https://github.com/apache/camel-k.git
       branches:
         - main
-#        Release-1.6.x does not work because there is no corresponding camel-k-runtime version for languages.
-#        - release-1.6.x
+        - release-1.6.x
         - release-1.4.x
       start_path: docs
 
     - url: https://github.com/apache/camel-k-runtime.git
-      branches: main
+      branches:
+        - main
+        - release-1.9.x
       start_path: docs
 
     - url: https://github.com/apache/camel-kamelets.git
-      branches: main
+      branches:
+        - main
       start_path: docs
 
     - url: https://github.com/apache/camel-quarkus.git
       branches:
         - main
-        - 2.3.x
-#        - 2.2.x
-#        - release/2.0.0
+        - 2.4.x
       start_path: docs
 
     - url: https://github.com/apache/camel-quarkus-examples.git
