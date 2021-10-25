@@ -17,7 +17,7 @@ Camel Quarkus 1.5.0 is based on Camel 3.7.0 LTS bringing new features and improv
 
 ### CSimple language
 
-[CSimple language](/components/latest/languages/csimple-language.html) is a new variant of the well known [Simple language](/components/latest/languages/simple-language.html). The "C" in its name stands for "compiled" and indeed, the expressions are compiled into Java byte code or native code at application build time. This brings significant performance boost at runtime. Camel Quarkus 1.5.0 brings experimental support for the CSimple language in both JVM and native modes.
+[CSimple language](/components/next/languages/csimple-language.html) is a new variant of the well known [Simple language](/components/next/languages/simple-language.html). The "C" in its name stands for "compiled" and indeed, the expressions are compiled into Java byte code or native code at application build time. This brings significant performance boost at runtime. Camel Quarkus 1.5.0 brings experimental support for the CSimple language in both JVM and native modes.
 
 ### Lightweight mode
 
@@ -38,27 +38,27 @@ Check [Camel 3.7 what's new](/blog/2020/12/Camel37-Whatsnew/) blog post by Claus
 As usual, the new Camel Quarkus release brings some new extensions:
 
 * CSimple language mentioned above
-* [Micrometer](/camel-quarkus/latest/reference/extensions/micrometer.html) - in addition to [MicroProfile Metrics](/camel-quarkus/latest/reference/extensions/microprofile-metrics.html), you can now collect your metrics using [Micrometer](https://micrometer.io/). See also [this blog post](https://quarkus.io/blog/micrometer-metrics/) by Ken Finnigan.
-* [Minio](/camel-quarkus/latest/reference/extensions/minio.html) (JVM only)
-* [AtlasMap](/camel-quarkus/latest/reference/extensions/atlasmap.html) (JVM only)
+* [Micrometer](/camel-quarkus/next/reference/extensions/micrometer.html) - in addition to [MicroProfile Metrics](/camel-quarkus/next/reference/extensions/microprofile-metrics.html), you can now collect your metrics using [Micrometer](https://micrometer.io/). See also [this blog post](https://quarkus.io/blog/micrometer-metrics/) by Ken Finnigan.
+* [Minio](/camel-quarkus/next/reference/extensions/minio.html) (JVM only)
+* [AtlasMap](/camel-quarkus/next/reference/extensions/atlasmap.html) (JVM only)
 
 The following extensions are now supported in native mode:
 
-* [Protobuf](/camel-quarkus/latest/reference/extensions/protobuf.html)
-* [Avro RPC](/camel-quarkus/latest/reference/extensions/avro-rpc.html)
-* [SCP](/camel-quarkus/latest/reference/extensions/jsch.html)
-* [Solr](/camel-quarkus/latest/reference/extensions/solr.html)
-* [Google PubSub](/camel-quarkus/latest/reference/extensions/google-pubsub.html)
-* [Google BigQuery](/camel-quarkus/latest/reference/extensions/google-bigquery.html)
-* [OptaPlanner](/camel-quarkus/latest/reference/extensions/optaplanner.html)
+* [Protobuf](/camel-quarkus/next/reference/extensions/protobuf.html)
+* [Avro RPC](/camel-quarkus/next/reference/extensions/avro-rpc.html)
+* [SCP](/camel-quarkus/next/reference/extensions/jsch.html)
+* [Solr](/camel-quarkus/next/reference/extensions/solr.html)
+* [Google PubSub](/camel-quarkus/next/reference/extensions/google-pubsub.html)
+* [Google BigQuery](/camel-quarkus/next/reference/extensions/google-bigquery.html)
+* [OptaPlanner](/camel-quarkus/next/reference/extensions/optaplanner.html)
 
-Check the full list of supported extensions in the [extensions reference](/camel-quarkus/latest/reference/index.html).
+Check the full list of supported extensions in the [extensions reference](/camel-quarkus/next/reference/index.html).
 
 ### Documentation
 
-Following some recent user questions, we have added a new documetation page dedicated to [Testing with Camel Quarkus](/camel-quarkus/latest/user-guide/testing.html). It gives the basic guidance how to test your applications in JVM and native modes.
+Following some recent user questions, we have added a new documetation page dedicated to [Testing with Camel Quarkus](/camel-quarkus/next/user-guide/testing.html). It gives the basic guidance how to test your applications in JVM and native modes.
 
-We aim at further improving our [documentation](/camel-quarkus/latest/index.html). Do not
+We aim at further improving our [documentation](/camel-quarkus/next/index.html). Do not
 hesitate to [ask](https://github.com/apache/camel-quarkus/issues/new) if you feel topics are missing or if details are lacking somewhere.
 
 ## What's next?
@@ -66,4 +66,4 @@ hesitate to [ask](https://github.com/apache/camel-quarkus/issues/new) if you fee
 Camel Quarkus 1.6.0 should appear in the middle of January 2021, shortly after [Quarkus 1.11](https://groups.google.com/g/quarkus-platform-coordination/c/gXuyg4w3FPo).
 
 There is still a lot of [Camel components to port](https://github.com/apache/camel-quarkus/issues?q=is%3Aissue+is%3Aopen+label%3Aextension) to Quarkus.
-Please upvote your favorites, or even better [contribute](/camel-quarkus/latest/contributor-guide/index.html)!
+Please upvote your favorites, or even better [contribute](/camel-quarkus/next/contributor-guide/index.html)!

@@ -44,7 +44,7 @@ For examples, take a look at some of the existing [unit test cases](https://gith
 ## Working on the documentation
 
 Documentation is extremely important to help users make the most of Apache Camel and it's probably the area that needs the most help!
-So if you are interested in helping the documentation effort; whether it's just to fix a page here or there, correct a link or even write a tutorial or improve existing documentation please do dive in and help! Most of the documentation is managed in the same repositories as the related source code so the process is similar to working on the code. For more details please refer to [Improving the documentation in the User Manual](/manual/latest/improving-the-documentation.html).
+So if you are interested in helping the documentation effort; whether it's just to fix a page here or there, correct a link or even write a tutorial or improve existing documentation please do dive in and help! Most of the documentation is managed in the same repositories as the related source code so the process is similar to working on the code. For more details please refer to [Improving the documentation in the User Manual](/manual/improving-the-documentation.html).
 
 ## Working on the code
 
@@ -62,7 +62,7 @@ Build the project with [Maven](http://maven.apache.org/download.html). Maven 3.6
 **NOTE:** You might need to build multiple times (if you get a build error) because sometimes maven fails to download all the required jars.
 Then import the projects into your workspace.
 
-You can find more details about building camel in the User Manual [Building](/manual/latest/building.html) page.
+You can find more details about building camel in the User Manual [Building](/manual/building.html) page.
 
 If you aren't able to build a component after adding some new URI parameters due to `Empty doc for option: [OPTION], parent options: <null>` please make sure that you either added properly javadoc for get/set method or description in `@UriPath` annotation.
 
@@ -89,7 +89,7 @@ If you need to implement tests for your changes (highly recommended!), you will 
 - writing testable code,
 - the test logic itself. 
 Naturally, there is no rule of
-thumb for how the code changes and test logic should be written. The [Testing](/manual/latest/testing.html) page in the User Manual provides detailed information and examples for writing Camel unit tests.
+thumb for how the code changes and test logic should be written. The [Testing](/manual/testing.html) page in the User Manual provides detailed information and examples for writing Camel unit tests.
 With regard to simulating the test infrastructure, there is a
 growing library of reusable components that can be helpful. These components are located in the test-infra module and provide
 support for simulating message brokers, cloud environments, databases and much more.
@@ -162,5 +162,5 @@ or
 
 ## Becoming a committer
 
-Once you've become involved as above, we may well invite you to be a committer. See [How do I become a committer](/manual/latest/faq/how-do-i-become-a-committer.html) for more details.
+Once you've become involved as above, we may well invite you to be a committer. See [How do I become a committer](/manual/faq/how-do-i-become-a-committer.html) for more details.
 

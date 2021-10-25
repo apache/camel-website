@@ -183,6 +183,6 @@ We have of course cleaned up the code base, such as removing all deprecated APIs
 
 Internally we have also adjusted the route model, to make it easier to extend into new DSLs; and there is a YAML DSL on the way which was initiated in Camel K.
 
-In terms of backward compatibility then Camel 3 is mostly compatibility for regular Camel applications. However, if you are using some of the more advanced features and other plugins in Camel then migration is needed. Also, custom components must be migrated and recompiled. There are other adjustments such as Spring Boot users must use `org.apache.camel.springboot` as groupId instead of `org.apache.camel` etc. All details can be seen in the [migration guide](/manual/latest/camel-3-migration-guide.html).
+In terms of backward compatibility then Camel 3 is mostly compatibility for regular Camel applications. However, if you are using some of the more advanced features and other plugins in Camel then migration is needed. Also, custom components must be migrated and recompiled. There are other adjustments such as Spring Boot users must use `org.apache.camel.springboot` as groupId instead of `org.apache.camel` etc. All details can be seen in the [migration guide](/manual/camel-3-migration-guide.html).
 
 Good luck with your migration if you decide to continue your Camel journey. And for new users to Camel then good luck getting onboard.

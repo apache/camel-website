@@ -19,10 +19,10 @@ Please refer to [Quarkus 2.1.0.Final announcement](https://quarkus.io/blog/quark
 
 ## New extension
 
-* [OpenTelemetry](/camel-quarkus/latest/reference/extensions/opentelemetry.html)
+* [OpenTelemetry](/camel-quarkus/next/reference/extensions/opentelemetry.html)
 
 ## Serialization support
-We introduced the support for Serialization. Please refer to the section in our [User guide](/camel-quarkus/latest/user-guide/native-mode.html#serialization)
+We introduced the support for Serialization. Please refer to the section in our [User guide](/camel-quarkus/next/user-guide/native-mode.html#serialization)
 
 
 ## More test coverage
@@ -32,7 +32,7 @@ The extent of this effort can be assessed by running [this GitHub issues query](
 
 ## Breaking changes and migration steps
 
-Please refer to our [2.1.0 Migration guide](/camel-quarkus/latest/migration-guide/2.1.0.html).
+Please refer to our [2.1.0 Migration guide](/camel-quarkus/next/migration-guide/2.1.0.html).
 
 ## FULL CHANGELOG OF CAMEL QUARKUS 2.1.0
 
@@ -44,5 +44,5 @@ Please refer to our [2.1.0 Migration guide](/camel-quarkus/latest/migration-guid
 Camel Quarkus 2.2.0 should appear within a couple of weeks, shortly after Quarkus 2.2.0.Final.
 
 There is still a lot of [Camel components to port](https://github.com/apache/camel-quarkus/issues?q=is%3Aissue+is%3Aopen+label%3Aextension) to Quarkus.
-Please upvote your favorites, or even better [contribute](/camel-quarkus/latest/contributor-guide/index.html)!
+Please upvote your favorites, or even better [contribute](/camel-quarkus/next/contributor-guide/index.html)!
 

@@ -71,7 +71,7 @@ This release has a number of new components, data formats and languages:
 
 ## Upgrading
 
-Make sure to read the [upgrade guide](/manual/latest/camel-3x-upgrade-guide-3_11.html) if you are upgrading from a previous Camel version.
+Make sure to read the [upgrade guide](/manual/camel-3x-upgrade-guide-3_11.html) if you are upgrading from a previous Camel version.
 
 ## Release Notes
 

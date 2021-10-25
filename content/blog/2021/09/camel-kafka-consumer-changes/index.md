@@ -7,7 +7,7 @@ categories: ["Features", "Camel"]
 preview: "Upcoming changes to the consumer on Kafka component"
 ---
 
-We recently started to review, investigate and fix reliability issues with the [Kafka](/components/latest/kafka-component.html) component. As part of that, we refactored the code to avoid problematic concurrency patterns, remove calls to deprecated Kafka client code and simplify the overall maintainability of the code. This led to many changes in the internal implementation of the component, which we will talk about in this blog post.
+We recently started to review, investigate and fix reliability issues with the [Kafka](/components/next/kafka-component.html) component. As part of that, we refactored the code to avoid problematic concurrency patterns, remove calls to deprecated Kafka client code and simplify the overall maintainability of the code. This led to many changes in the internal implementation of the component, which we will talk about in this blog post.
 
 ## Motivation
 

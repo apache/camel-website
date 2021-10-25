@@ -16,7 +16,7 @@ description: Camel is an open source integration framework that empowers you to 
 
 Camel supports most of the Enterprise Integration Patterns from the excellent book by Gregor Hohpe and Bobby Woolf, and newer integration patterns from microservice architectures to help you solve your integration problem by applying best practices out of the box.
 
-<p><a class="button dark" href="/components/latest/eips/enterprise-integration-patterns.html">Read more on EIP</a></p>
+<p><a class="button dark" href="/components/next/eips/enterprise-integration-patterns.html">Read more on EIP</a></p>
 
 {{< /div >}}
 
@@ -56,7 +56,7 @@ Apache Camel is standalone, and can be embedded as a library within Spring Boot,
 ## Packed with Components
 Packed with several hundred components that are used to access databases, message queues, APIs or basically anything under the sun. Helping you integrate with everything.
 
-<p><a class="button dark" href="/components/latest/">Go to Component Reference</a></p>
+<p><a class="button dark" href="/components/next/">Go to Component Reference</a></p>
 
 {{< /div >}}
 
@@ -81,7 +81,7 @@ Packed with several hundred components that are used to access databases, messag
 ## Supports over 50 Data Formats
 
 Camel supports around 50 data formats, allowing to translate messages in multiple formats, and with support from industry standard formats from finance, telco, health-care, and more.
-<p><a class="button dark" href="/components/latest/dataformats/">See Supported Formats</a></p>
+<p><a class="button dark" href="/components/next/dataformats/">See Supported Formats</a></p>
 
 {{< /div >}}
 

@@ -22,7 +22,7 @@ We have a set of new exciting dependencies that we leverage. Among them we can s
 
 ## Scalable KameletBinding
 
-We're more and more getting used to `Kamelet` and `KameletBinding` adoption. One of the new things introduced in version 1.6 is the possibility to scale a KameletBinding via `kubectl` (or `oc`) CLI. Learn more about [how to scale a KameletBinding](/camel-k/latest/scaling/binding.html). One of the coolest thing is that you can even use HPA (Horizontal Pod Autoscaling)!
+We're more and more getting used to `Kamelet` and `KameletBinding` adoption. One of the new things introduced in version 1.6 is the possibility to scale a KameletBinding via `kubectl` (or `oc`) CLI. Learn more about [how to scale a KameletBinding](/camel-k/next/scaling/binding.html). One of the coolest thing is that you can even use HPA (Horizontal Pod Autoscaling)!
 
 ## Kamel bind enhancement
 
@@ -30,11 +30,11 @@ The `kamel bind` subcommand was recently introduced to simplify the creation of 
 
 ## Support https liveness and readiness probes
 
-Security in transit is a must. Even for probes. We have improved the [container trait](/camel-k/latest/traits/container.html) in order to allow setting liveness and readiness probes with `https` scheme.
+Security in transit is a must. Even for probes. We have improved the [container trait](/camel-k/next/traits/container.html) in order to allow setting liveness and readiness probes with `https` scheme.
 
 ## More Kamelet love
 
-We have reached 150+ official Kamelet! If you need some connector to quickly source or sink your events, then, the [Apache Camel Kamelet Catalog](/camel-kamelets/latest/index.html) is the place.
+We have reached 150+ official Kamelet! If you need some connector to quickly source or sink your events, then, the [Apache Camel Kamelet Catalog](/camel-kamelets/next/index.html) is the place.
 
 ## Bug fixes, test coverage and documentation
 

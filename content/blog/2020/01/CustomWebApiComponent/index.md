@@ -7,7 +7,7 @@ categories: ["Usecases"]
 preview: "Build your own custom Web API Component from scratch."
 ---
 
-Have you built a new great Web API for your product? Wouldn't be wonderful to have it available as a part of the great [Apache Camel component family](/components/latest/)? We would love it.
+Have you built a new great Web API for your product? Wouldn't be wonderful to have it available as a part of the great [Apache Camel component family](/components/next/)? We would love it.
 
 The community just released [Camel 3](/blog/2019/12/Camel3-Whatsnew/) which is more modular, lightweight and already includes lots of components (300+) to quickly integrate various systems consuming or producing data. All of these components can be used with the same integration domain specific language (DSL) based on the famous [Enterprise Integration Patterns](https://www.enterpriseintegrationpatterns.com) (EIPs).
 

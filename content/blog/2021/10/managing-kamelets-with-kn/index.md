@@ -17,9 +17,9 @@ Kamelets (Kamel route snippets) introduce a new concept in Apache Camel that all
 
 The user only provides a set of properties that the Kamelet needs for connecting to a foreign service (e.g. authorization token, target destination, connection credentials). The heavy lift of establishing the connection and exchanging data is done with the Camel components that run as part of the Kamelet runtime.
 
-If you want to use Kamelets on your Kubernetes cluster simply install the Camel K operator ([installation guide](/camel-k/latest/installation/installation.html)).
+If you want to use Kamelets on your Kubernetes cluster simply install the Camel K operator ([installation guide](/camel-k/next/installation/installation.html)).
 
-The user can then choose from a constantly growing [Kamelet catalog](/camel-kamelets/latest/index.html) that provides a great ensemble of ready-to-use Kamelets.
+The user can then choose from a constantly growing [Kamelet catalog](/camel-kamelets/next/index.html) that provides a great ensemble of ready-to-use Kamelets.
 
 **Kamelets catalog**
 
@@ -99,7 +99,7 @@ You should see a new plugins section with the Kamelet source plugin listed. This
 
 ## List Kamelets
 
-First thing you can do with the plugin is to list all available Kamelets. This will print a list of Kamelets coming from the [Kamelet catalog](/camel-kamelets/latest/index.html) that is installed on your cluster via the Camel K operator.
+First thing you can do with the plugin is to list all available Kamelets. This will print a list of Kamelets coming from the [Kamelet catalog](/camel-kamelets/next/index.html) that is installed on your cluster via the Camel K operator.
 
 ```shell
 kn source kamelet list

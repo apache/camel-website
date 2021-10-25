@@ -36,7 +36,7 @@ Prior to this version, we may have found a bit clumsy the work of providing a co
 
 Since their appearence, **Kamelets** have gained quite a lot of traction. With this new release we've introduced new commands in the `kamel` CLI to help you discovering and managing them. You will have a new command available `kamel kamelet` that will help you listing and deleting any `Kamelet`. Also `kamel describe kamelet` has been introduced to help you analysing the available Kamelets.
 
-We should also mention that we're having more Kamelets available in the [Apache Camel Kamelets Catalog](/camel-kamelets/latest/index.html). We are counting 117 different source and sink Kamelets and we are actively adding many more.
+We should also mention that we're having more Kamelets available in the [Apache Camel Kamelets Catalog](/camel-kamelets/next/index.html). We are counting 117 different source and sink Kamelets and we are actively adding many more.
 
 ## Allow configuration via traits annotations
 
@@ -56,7 +56,7 @@ One little but great improvements we've introduced lately is the versioning of t
 
 ### Generated API
 
-Another thing that is worth to mention is a first version of our API that is now available through the documentation pages. Have a look at [Camel K API resources documentation page](/camel-k/latest/apis/camel.html) in order to understand how to interact directly with them.
+Another thing that is worth to mention is a first version of our API that is now available through the documentation pages. Have a look at [Camel K API resources documentation page](/camel-k/next/apis/camel.html) in order to understand how to interact directly with them.
 
 # Thanks
 

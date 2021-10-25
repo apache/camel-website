@@ -13,7 +13,7 @@ If you are in doubt, we appreciate asking the [mailing list](/community/mailing-
 Please read the section below (How to get help), and follow the bullets advised there first:
 
 * [Issue tracker](https://issues.apache.org/jira/browse/CAMEL)
-* [FAQ](/manual/latest/faq/index.html)
+* [FAQ](/manual/faq/index.html)
 
 ### Reporting bugs - Please read this first
 
@@ -40,7 +40,7 @@ A list of deprecated components is listed on the github page at: https://github.
 
 ### How to get help
 
-Before you report a problem, you may wish to read the [FAQ](/manual/latest/faq/index.html).
+Before you report a problem, you may wish to read the [FAQ](/manual/faq/index.html).
 When you report an issue, please be sure to include as much information as possible. The more we know, the easier it is to reach an effective solution quickly.
 
 *What version do you use*
@@ -51,7 +51,7 @@ What version of Camel do you use? Remember to include this information.
 *  what platform and JDK?
 *  any particular container being used? and if so, what version?
 *  stack traces generally really help! (Remember to post which version of Camel you use, this is important to know when posting stacktraces.) If in doubt, include the whole thing; often exceptions get wrapped in other exceptions and the exception right near the bottom explains the actual error, not the first few lines at the top. It's very easy for us to skim-read past unnecessary parts of a stack trace.
-*  log output can be useful too; sometimes [enabling DEBUG logging] (/manual/latest/faq/how-do-i-change-the-logging.html) can help
+*  log output can be useful too; sometimes [enabling DEBUG logging] (/manual/faq/how-do-i-change-the-logging.html) can help
 *  your code & configuration files are often useful
 *  did it work before? what have you changed to break it?
 *  try upgrading to the latest release and see if it's fixed there
@@ -72,4 +72,4 @@ We can help you much quicker if you try the following
 ## Commercial Support
 
 This is an open source project, so the amount of time we have available to help resolve your issue is often limited as all help is provided on a volunteer basis.
-If you want to get priority help, need to get up to speed quickly, require some training or mentoring, or need full 24 x 7 production support you could contact one of the following companies with [Commercial Camel Offerings](/manual/latest/commercial-camel-offerings.html).
+If you want to get priority help, need to get up to speed quickly, require some training or mentoring, or need full 24 x 7 production support you could contact one of the following companies with [Commercial Camel Offerings](/manual/commercial-camel-offerings.html).

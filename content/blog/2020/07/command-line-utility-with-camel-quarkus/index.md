@@ -6,7 +6,7 @@ categories: ["Howtos", "Camel Quarkus"]
 preview: How to write a command line utility with Camel Quarkus
 ---
 
-[Camel](/) and [Camel Quarkus](/camel-quarkus/latest/index.html) are
+[Camel](/) and [Camel Quarkus](/camel-quarkus/next/index.html) are
 typically used to create integration applications that run as long living processes, a.k.a. daemons or services.
 In this blog post, we are going to explain a slightly different use case: using Camel Quarkus in programs that exit by
 themselves after performing some desired tasks.
@@ -28,7 +28,7 @@ There are just two things where it would differ from a stock Camel Quarkus appli
 1. Adding `camel-quarkus-main` dependency
 2. Setting an exit condition in `application.properties`
 
-The rest of the application - most notably the [Route](/manual/latest/routes.html) that
+The rest of the application - most notably the [Route](/manual/routes.html) that
 performs the actual data transformation and transfer - will look the same like with a traditional Camel service.
 
 
@@ -53,12 +53,12 @@ public class CamelRoute extends RouteBuilder {
 }
 ```
 
-Note that we use the [timer](/components/latest/timer-component.html) component to trigger the
+Note that we use the [timer](/components/next/timer-component.html) component to trigger the
 route execution. The URI parameter `delay=-1` causes the timer to be triggered with no initial delay and
 `repeatCount=1` ensures that the route is executed just once.
 
 However, doing just the above would not make our application exit by itself.
-[camel-main](/components/latest/others/main.html) and its `camel.main.durationMax*`
+[camel-main](/components/next/others/main.html) and its `camel.main.durationMax*`
 family of configuration options offers a way to solve that. E.g. we can set the following in
 `application.properties`
 
@@ -173,7 +173,7 @@ $ $ java -Dgreeted.subject=Joe -jar target/*-runner.jar
 
 ## Compiling the command line utility to a native executable
 
-[As usual with Camel Quarkus](/camel-quarkus/latest/user-guide/first-steps.html#_native_mode),
+[As usual with Camel Quarkus](/camel-quarkus/next/user-guide/first-steps.html#_native_mode),
 the application can be compiled to native executable by activating the `native` profile.
 GraalVM with `native-image` command installed and `GRAALVM_HOME` environment variable set is required for that,
 see [Building a native executable](https://quarkus.io/guides/building-native-image) section of the Quarkus

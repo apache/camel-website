@@ -20,17 +20,17 @@ following the same requirement by Quarkus, Camel Quarkus now requires Java 11+.
 
 Camel Quarkus brings support for three new Camel components:
 
-* [JSONATA](/camel-quarkus/latest/reference/extensions/jsonata.html)
-* [Vert.x Kafka](/camel-quarkus/latest/reference/extensions/vertx-kafka.html)
-* [Redis](/camel-quarkus/latest/reference/extensions/redis.html) (JVM only)
+* [JSONATA](/camel-quarkus/next/reference/extensions/jsonata.html)
+* [Vert.x Kafka](/camel-quarkus/next/reference/extensions/vertx-kafka.html)
+* [Redis](/camel-quarkus/next/reference/extensions/redis.html) (JVM only)
 
 Components newly supported in native mode:
 
-* [Azure Storage Blob Service](/camel-quarkus/latest/reference/extensions/azure-storage-blob.html)
-* [Debezium MongoDB Connector](/camel-quarkus/latest/reference/extensions/debezium-mongodb.html)
-* [Google BigQuery](/camel-quarkus/latest/reference/extensions/google-bigquery.html)
-* [Hazelcast](/camel-quarkus/latest/reference/extensions/hazelcast.html)
-* [Minio](/camel-quarkus/latest/reference/extensions/minio.html)
+* [Azure Storage Blob Service](/camel-quarkus/next/reference/extensions/azure-storage-blob.html)
+* [Debezium MongoDB Connector](/camel-quarkus/next/reference/extensions/debezium-mongodb.html)
+* [Google BigQuery](/camel-quarkus/next/reference/extensions/google-bigquery.html)
+* [Hazelcast](/camel-quarkus/next/reference/extensions/hazelcast.html)
+* [Minio](/camel-quarkus/next/reference/extensions/minio.html)
 
 ## Quarkus 1.11.0.Final
 
@@ -87,4 +87,4 @@ users are advised to use GraalVM 20.3.1 or Mandrell GraalVM 20.3.0.
 Camel Quarkus 1.7.0 should appear within a couple of weeks, shortly after Quarkus 1.12 or Camel 3.8, whichever comes first.
 
 There is still a lot of [Camel components to port](https://github.com/apache/camel-quarkus/issues?q=is%3Aissue+is%3Aopen+label%3Aextension) to Quarkus.
-Please upvote your favorites, or even better [contribute](/camel-quarkus/latest/contributor-guide/index.html)!
+Please upvote your favorites, or even better [contribute](/camel-quarkus/next/contributor-guide/index.html)!

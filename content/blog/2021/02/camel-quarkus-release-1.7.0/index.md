@@ -39,25 +39,25 @@ You can go back to the original behavior by setting `quarkus.package.type=legacy
 
 Camel Quarkus brings support for six new Camel components:
 
-* [Azure Event Hubs](/camel-quarkus/latest/reference/extensions/azure-eventhubs.html)
-* [Kamelet](/camel-quarkus/latest/reference/extensions/kamelet.html)
-* [OAI-PMH](/camel-quarkus/latest/reference/extensions/oaipmh.html)
-* [Spring RabbitMQ](/camel-quarkus/latest/reference/extensions/spring-rabbitmq.html)
-* [XML Security Sign and Verify](/camel-quarkus/latest/reference/extensions/xmlsecurity.html)
-* [JFR](/camel-quarkus/latest/reference/extensions/jfr.html) (JVM only)
+* [Azure Event Hubs](/camel-quarkus/next/reference/extensions/azure-eventhubs.html)
+* [Kamelet](/camel-quarkus/next/reference/extensions/kamelet.html)
+* [OAI-PMH](/camel-quarkus/next/reference/extensions/oaipmh.html)
+* [Spring RabbitMQ](/camel-quarkus/next/reference/extensions/spring-rabbitmq.html)
+* [XML Security Sign and Verify](/camel-quarkus/next/reference/extensions/xmlsecurity.html)
+* [JFR](/camel-quarkus/next/reference/extensions/jfr.html) (JVM only)
 
 Components newly supported in native mode:
 
-* [AtlasMap](/camel-quarkus/latest/reference/extensions/atlasmap.html)
-* [AWS 2 Eventbridge](/camel-quarkus/latest/reference/extensions/aws2-eventbridge.html)
-* [AWS 2 Kinesis and Firehose](/camel-quarkus/latest/reference/extensions/aws2-kinesis.html)
-* [Azure Storage Queue Service](/camel-quarkus/latest/reference/extensions/azure-storage-queue.html)
-* [Cassandra CQL](/camel-quarkus/latest/reference/extensions/cassandraql.html)
-* [IPFS](/camel-quarkus/latest/reference/extensions/ipfs.html)
-* [PubNub](/camel-quarkus/latest/reference/extensions/pubnub.html)
-* [StAX](/camel-quarkus/latest/reference/extensions/stax.html)
-* [CBOR](/camel-quarkus/latest/reference/extensions/cbor.html)
-* [Syslog](/camel-quarkus/latest/reference/extensions/syslog.html)
+* [AtlasMap](/camel-quarkus/next/reference/extensions/atlasmap.html)
+* [AWS 2 Eventbridge](/camel-quarkus/next/reference/extensions/aws2-eventbridge.html)
+* [AWS 2 Kinesis and Firehose](/camel-quarkus/next/reference/extensions/aws2-kinesis.html)
+* [Azure Storage Queue Service](/camel-quarkus/next/reference/extensions/azure-storage-queue.html)
+* [Cassandra CQL](/camel-quarkus/next/reference/extensions/cassandraql.html)
+* [IPFS](/camel-quarkus/next/reference/extensions/ipfs.html)
+* [PubNub](/camel-quarkus/next/reference/extensions/pubnub.html)
+* [StAX](/camel-quarkus/next/reference/extensions/stax.html)
+* [CBOR](/camel-quarkus/next/reference/extensions/cbor.html)
+* [Syslog](/camel-quarkus/next/reference/extensions/syslog.html)
 
 ## Deprecated extensions
 
@@ -102,4 +102,4 @@ use plain Camel Quarkus BoM instead of Quarkus Universe BoM.
 Camel Quarkus 1.8.0 should appear within a couple of weeks, shortly after Quarkus 1.13.
 
 There is still a lot of [Camel components to port](https://github.com/apache/camel-quarkus/issues?q=is%3Aissue+is%3Aopen+label%3Aextension) to Quarkus.
-Please upvote your favorites, or even better [contribute](/camel-quarkus/latest/contributor-guide/index.html)!
+Please upvote your favorites, or even better [contribute](/camel-quarkus/next/contributor-guide/index.html)!

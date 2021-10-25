@@ -20,7 +20,7 @@ This release introduces a set of new features and noticeable improvements that w
 We continued our avenue of making Camel faster and smaller. This time we focused on the built-in Simple scripting
 language.
 
-First we added the [jOOR language](/components/latest/languages/joor-language.html). jOOR is a small Java tool for
+First we added the [jOOR language](/components/next/languages/joor-language.html). jOOR is a small Java tool for
 performing runtime compilation of Java source code in-memory. It has some limitations but generally works well for small
 scripting code (requires Java 11 onwards).
 
@@ -28,7 +28,7 @@ Then we worked on compiled simple.
 
 ### Compiled Simple
 
-The [csimple language](/components/latest/languages/csimple-language.html)
+The [csimple language](/components/next/languages/csimple-language.html)
 is parsed into regular Java source code and compiled together with all the other source code, or compiled once during
 bootstrap via jOOR.
 
@@ -83,7 +83,7 @@ then [Claus wrote a blog post](http://www.davsclaus.com/2020/11/apache-camel-37-
 ### Optimized components startup
 
 The camel core has been optimized in Camel 3 to be small, slim, and fast on startup. This benefits
-[Camel Quarkus](/camel-quarkus/latest/) which can do built time optimizations that take advantage of the optimized camel
+[Camel Quarkus](/camel-quarkus/next/) which can do built time optimizations that take advantage of the optimized camel
 core.
 
 We have continued this effort in the Camel components where whenever possible initialization is moved ahead to an
@@ -123,7 +123,7 @@ microservice/serverless architectures, with a _closed world_ assumption.
 ### Autowiring components
 
 The Camel components is now capable of autowiring by type. For example
-the [AWS2 SQS](/components/latest/aws2-sqs-component.html) components can automatically lookup in the registry if there is
+the [AWS2 SQS](/components/next/aws2-sqs-component.html) components can automatically lookup in the registry if there is
 a single instance of `SqsClient`, and then pre configure itself.
 
 We have marked up in the Camel documentation which component options supports this by showing *Autowired* in bold in the
@@ -132,19 +132,19 @@ description.
 ### Salesforce fixes
 
 Our recent Camel committer [Jeremy Ross](https://github.com/jeremyross) did great work to improve and fix bugs in
-the [camel-salesforce component](/components/latest/salesforce-component.html). We expect more to come from him.
+the [camel-salesforce component](/components/next/salesforce-component.html). We expect more to come from him.
 
 ### VertX Kafka Component
 
 A new Kafka component has been developed that uses the Vert.X Kafka Java Client which allows us to use all of its
 features, and also its robustness and stability.
 
-The [camel-vertx-kafka](/components/latest/vertx-kafka-component.html) component is intended to be (more) feature
+The [camel-vertx-kafka](/components/next/vertx-kafka-component.html) component is intended to be (more) feature
 complete with the existing camel-kafka component. We will continue this work for the next couple of Camel releases.
 
 ### DataSonnet
 
-The new [camel-datasonnet](/components/latest/languages/datasonnet-language.html) component, is to be used for data
+The new [camel-datasonnet](/components/next/languages/datasonnet-language.html) component, is to be used for data
 transformation using the [DataSonnet](https://datasonnet.com/) standard.
 
 DataSonnet is an open source JSON-centric, template-based data transformation standard built to rival proprietary
@@ -158,7 +158,7 @@ We have upgraded to Spring Boot 2.4.
 
 This release has a number of new components, data formats and languages:
 
-- [AtlasMap](/components/latest/atlasmap-component.html): Transforms the message using
+- [AtlasMap](/components/next/atlasmap-component.html): Transforms the message using
   an [AtlasMap](https://www.atlasmap.io/) transformation
 - Kubernetes Custom Resources: Perform operations on Kubernetes Custom Resources and get notified on Deployment changes
 - Vert.X Kafka: Sent and receive messages to/from an Apache Kafka broker using vert.x Kafka client
@@ -169,7 +169,7 @@ This release has a number of new components, data formats and languages:
 
 ## Upgrading
 
-Make sure to read the [upgrade guide](/manual/latest/camel-3x-upgrade-guide-3_7.html) if you are upgrading to this
+Make sure to read the [upgrade guide](/manual/camel-3x-upgrade-guide-3_7.html) if you are upgrading to this
 release from a previous Camel version.
 
 ## More details

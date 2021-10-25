@@ -86,7 +86,7 @@ There are several API based components which are source code generated from _ext
   
 Also, we include additional metadata for Camel tooling so they can provide code assistance when Camel end-users are using these API based components. Some of those external APIs are huge and you can have hundreds of APIs.
 
-The API based components are: [AS2](/components/latest/as2-component.html), [Box](/components/latest/box-component.html), [Braintree](/components/latest/braintree-component.html), [FHIR](/components/latest/fhir-component.html), Google [Calendar](/components/latest/google-calendar-component.html)/[Drive](/components/latest/google-drive-component.html)/[Mail](/components/latest/google-mail-component.html)/[Sheets](/components/latest/google-sheets-component.html), [Olingo](/components/latest/olingo4-component.html), [Twillio](/components/latest/twilio-component.html), and [Zendesk](/components/latest/zendesk-component.html).
+The API based components are: [AS2](/components/next/as2-component.html), [Box](/components/next/box-component.html), [Braintree](/components/next/braintree-component.html), [FHIR](/components/next/fhir-component.html), Google [Calendar](/components/next/google-calendar-component.html)/[Drive](/components/next/google-drive-component.html)/[Mail](/components/next/google-mail-component.html)/[Sheets](/components/next/google-sheets-component.html), [Olingo](/components/next/olingo4-component.html), [Twillio](/components/next/twilio-component.html), and [Zendesk](/components/next/zendesk-component.html).
 
 
 ### Reduce reflection
@@ -99,7 +99,7 @@ Yet another release where we reduced using reflections in a few spots in Camel c
 As mentioned in the optimization section we moved initialization of languages to an earlier phase.
 Camel now pre compile languages when its applicable, for example JSonPath, and XPath language.
 
-And speaking of pre-compiled languages then Camel 3.7 introduces the [jOOR language](/components/latest/languages/joor-language.html)
+And speaking of pre-compiled languages then Camel 3.7 introduces the [jOOR language](/components/next/languages/joor-language.html)
 to use runtime compile Java in the Camel DSL. A compiled simple language is also on the roadmap.
 
 
@@ -125,7 +125,7 @@ in the [blog announcement](/blog/2020/10/camel-aws2-eventbridge-intro/).
 
 ## Upgrading
 
-Make sure to read the [upgrade guide](/manual/latest/camel-3x-upgrade-guide-3_6.html) if you
+Make sure to read the [upgrade guide](/manual/camel-3x-upgrade-guide-3_6.html) if you
 are upgrading to this release from a previous Camel version.
 
 
