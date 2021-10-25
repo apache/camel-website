@@ -83,7 +83,7 @@ camel-kafka-connector:
       filename_format: 'camel-kafka-connector-{version}-src.zip'
     - name: 'Binaries'
       title: 'Connectors download list'
-      link: '/camel-kafka-connector/latest/reference/index.html'
+      link: '/camel-kafka-connector/next/reference/index.html'
 camel-quarkus:
   id: 'camel-quarkus'
   name: 'Apache Camel Quarkus'
