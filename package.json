@@ -3,6 +3,9 @@
   "version": "1.0.0-SNAPSHOT",
   "license": "Apache-2.0",
   "scripts": {
+    "update-deps": "yarn workspaces foreach install --check-cache",
+    "validate-deps": "yarn workspaces foreach install --check-cache --immutable",
+    "deps-rebuild-all": "yarn workspaces foreach rebuild",
     "build:antora": "antora --clean --fetch antora-playbook.yml --stacktrace",
     "build:hugo": "hugo --cacheDir ${HUGO_CACHE_DIR:-$(pwd)/.hugo_data} ${HUGO_OPTIONS:-}",
     "build:minify": "gulp minify",
