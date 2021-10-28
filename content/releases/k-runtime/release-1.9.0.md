@@ -7,5 +7,4 @@ title: "Camel-K Runtime release 1.9.0"
 preview: ""
 changelog: ""
 category: "camel-k-runtime"
-milestone: 14
 ---
