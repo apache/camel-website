@@ -1,7 +1,7 @@
 ---
 title: "Karavan Designer VS Code extension Preview Release"
 date: 2021-10-28
-authors: [marat]
+authors: [mgubaidullin]
 categories: ["Releases","Tooling"]
 preview: "Karavan Designer VS Code extension Preview Release: Read/Write Integration resources, Kamelets source/sink/action, Enterprise Integration Patterns DSL"
 ---
