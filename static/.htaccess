@@ -1283,25 +1283,31 @@ Redirect 301 /blog/release-3-4-4.html /blog/2020/09/RELEASE-3.4.4/
 Redirect 301 /blog/release-3-5-0.html /blog/2020/09/RELEASE-3.5.0/
 Redirect 301 /blog/release-3-6-0.html /blog/2020/09/RELEASE-3.6.0/
 
-# default to 'next' documentation versions, to make it easier on folk to type in shorter urls
-# However, this may not comply with the Apache policy to not direct people to unreleased software.
-RewriteRule "^components/$" "/components/next/" [R=permanent,L]
-RewriteRule "^camel-spring-boot/$" "/camel-spring-boot/next/" [R=permanent,L]
-RewriteRule "^camel-karaf/$" "/camel-karaf/next/" [R=permanent,L]
-RewriteRule "^camel-k/$" "/camel-k/next/" [R=permanent,L]
-RewriteRule "^camel-kafka-connector/$" "/camel-kafka-connector/next/" [R=permanent,L]
-RewriteRule "^camel-quarkus/$" "/camel-quarkus/next/" [R=permanent,L]
+# if the request can serve the file, serve it don't evaluate rules below
+RewriteCond %{REQUEST_FILENAME} !-f
 
-# latest to next
-RewriteRule "^components/latest/$" "/components/next/" [R=permanent,L]
-RewriteRule "^camel-spring-boot/latest/$" "/camel-spring-boot/next/" [R=permanent,L]
-RewriteRule "^camel-karaf/latest/$" "/camel-karaf/next/" [R=permanent,L]
-RewriteRule "^camel-k/latest/$" "/camel-k/next/" [R=permanent,L]
-RewriteRule "^camel-kafka-connector/latest/$" "/camel-kafka-connector/next/" [R=permanent,L]
-RewriteRule "^camel-quarkus/latest/$" "/camel-quarkus/next/" [R=permanent,L]
+# request for `/<Antora component>` with either `/latest` or not `/next`,
+# eating up the next `/` if it exists and capturing everything after that
+# get redirected to `/<Antora component>/next/<what was captured>`
+# NOTES:
+#  * no / at the beginning in the rule, i.e. starts with `^(components...`
+#    as `RewriteBase` is set to `/`, so no slash prefix here
+#  * first group captures the current component name
+#  * next group eats `/latest` or doesn't match `/next` but consumes both
+#    the negative match against `/next` is to prevent redirect loops for
+#    urls with `/next` in them (e.g. `/<Antora component/next/...`)
+#  * optionaly matching `/` consumes the `/` if it's there so we can
+#    add the `/` so `/components/next` becomes `/components/next/` but
+#    `/components/next/` doesn't become `/components/next//`
+#  * we need to be careful with Antora componets with the same prefixes
+#    e.g. camel-k, camel-karaf and camel-kafka-connector, so we don't match
+#    partialy and capture the rest of the Antora component name in subsequent
+#    groups
+RewriteRule ^(components|camel-spring-boot|camel-k(?:araf|afka-connector)|camel-quarkus)(?|(/latest)|(?!/next))/?(.*)$ /$1/next/$3 [R=permanent,L]
 
 # manual is now unversioned
-RewriteRule "^manual/latest/$" "/manual/" [R=permanent,L]
+Redirect 301 /manual/latest/ /manual/
+Redirect 301 /manual/latest /manual/
 
 # Disable the pattern matching based on filenames.
 #
