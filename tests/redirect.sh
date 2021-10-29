@@ -34,6 +34,15 @@ test $BASE_URL/camel-spring-boot/latest/ 301 $BASE_URL/camel-spring-boot/next/
 test $BASE_URL/camel-spring-boot/latest/list.html 301 $BASE_URL/camel-spring-boot/next/list.html
 test $BASE_URL/camel-spring-boot/next/list.html 200
 
+test $BASE_URL/camel-k 301 $BASE_URL/camel-k/next/
+test $BASE_URL/camel-k/ 301 $BASE_URL/camel-k/next/
+test $BASE_URL/camel-k/next 301 $BASE_URL/camel-k/next/
+test $BASE_URL/camel-k/next/ 200
+test $BASE_URL/camel-k/latest 301 $BASE_URL/camel-k/next/
+test $BASE_URL/camel-k/latest/ 301 $BASE_URL/camel-k/next/
+test $BASE_URL/camel-k/latest/traits/master.html 301 $BASE_URL/camel-k/next/traits/master.html
+test $BASE_URL/camel-k/next/traits/master.html 200
+
 test $BASE_URL/camel-karaf 301 $BASE_URL/camel-karaf/next/
 test $BASE_URL/camel-karaf/ 301 $BASE_URL/camel-karaf/next/
 test $BASE_URL/camel-karaf/next 301 $BASE_URL/camel-karaf/next/

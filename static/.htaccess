@@ -1302,8 +1302,8 @@ RewriteCond %{REQUEST_FILENAME} !-f
 #  * we need to be careful with Antora componets with the same prefixes
 #    e.g. camel-k, camel-karaf and camel-kafka-connector, so we don't match
 #    partialy and capture the rest of the Antora component name in subsequent
-#    groups
-RewriteRule ^(components|camel-spring-boot|camel-k(?:araf|afka-connector)|camel-quarkus)(?|(/latest)|(?!/next))/?(.*)$ /$1/next/$3 [R=permanent,L]
+#    groups, that's why we have the negative lookahead in the camel-k option
+RewriteRule ^(components|camel-spring-boot|(?:camel-k(?!afka-connector|araf)|camel-kafka-connector|camel-karaf)|camel-quarkus)(?|(/latest)|(?!/next))/?(.*)$ /$1/next/$3 [R=permanent,L]
 
 # manual is now unversioned
 Redirect 301 /manual/latest/ /manual/
