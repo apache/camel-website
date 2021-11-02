@@ -32,7 +32,7 @@ module.exports = {
   boldLink: (text, idPrefix, suffix = '') => {
     const idText = `_${idPrefix}_${text.split('.').join('_')}`
     text = suffix ? `*${text}* (${suffix})` : `*${text}*`
-    return  `[#${idText}]\nxref:#${idText}['',role=anchor]${text}`
+    return  `[[${idText}]]\nxref:#${idText}['',role=anchor]${text}`
   },
 
   description: (value) => {
@@ -87,12 +87,16 @@ module.exports = {
   },
 
   strong: (data, text) => {
-    return data[text.toLowerCase()] ? `*${text}* ` : ''
+    return trueEnough(data[text.toLowerCase()]) ? `*${text}* ` : ''
   },
 
   valueAsString: (value) => {
     return value === undefined ? '' : `${value}`
   },
+}
+
+function trueEnough (value) {
+  return (value === true) || (value === 'true')
 }
 
 function splitOnce (querySpec, token = '=') {
