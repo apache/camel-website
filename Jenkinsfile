@@ -57,7 +57,7 @@ pipeline {
             }
 
             steps {
-                sh "cd $WORKSPACE/camel-website && yarn clean && yarn deps-rebuild-all; HUGO_PARAMS_GitHubUsername=$GITHUB_USR HUGO_PARAMS_GitHubToken=$GITHUB_PSW yarn build-all"
+                sh "cd $WORKSPACE/camel-website && yarn clean; HUGO_PARAMS_GitHubUsername=$GITHUB_USR HUGO_PARAMS_GitHubToken=$GITHUB_PSW yarn build-all"
             }
         }
 
