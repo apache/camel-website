@@ -61,6 +61,15 @@ test $BASE_URL/camel-kafka-connector/latest/ 301 $BASE_URL/camel-kafka-connector
 test $BASE_URL/camel-kafka-connector/latest/contributor-guide/release-guide.html 301 $BASE_URL/camel-kafka-connector/next/contributor-guide/release-guide.html
 test $BASE_URL/camel-kafka-connector/next/contributor-guide/release-guide.html 200
 
+test $BASE_URL/camel-kamelets 301 $BASE_URL/camel-kamelets/next/
+test $BASE_URL/camel-kamelets/ 301 $BASE_URL/camel-kamelets/next/
+test $BASE_URL/camel-kamelets/next 301 $BASE_URL/camel-kamelets/next/
+test $BASE_URL/camel-kamelets/next/ 200
+test $BASE_URL/camel-kamelets/latest 301 $BASE_URL/camel-kamelets/next/
+test $BASE_URL/camel-kamelets/latest/ 301 $BASE_URL/camel-kamelets/next/
+test $BASE_URL/camel-kamelets/latest/github-source.html 301 $BASE_URL/camel-kamelets/next/github-source.html
+test $BASE_URL/camel-kamelets/next/github-source.html 200
+
 test $BASE_URL/camel-quarkus 301 $BASE_URL/camel-quarkus/next/
 test $BASE_URL/camel-quarkus/ 301 $BASE_URL/camel-quarkus/next/
 test $BASE_URL/camel-quarkus/next 301 $BASE_URL/camel-quarkus/next/
