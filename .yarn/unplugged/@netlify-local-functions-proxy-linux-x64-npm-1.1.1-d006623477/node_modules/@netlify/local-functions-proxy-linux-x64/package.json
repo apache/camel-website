@@ -1,0 +1,17 @@
+{
+  "name": "@netlify/local-functions-proxy-linux-x64",
+  "version": "1.1.1",
+  "main": "index.js",
+  "description": "The Linux 64-bit binary for the Netlify Functions local proxy server",
+  "repository": "https://github.com/netlify/local-functions-proxy",
+  "license": "MIT",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "directories": {
+    "bin": "bin"
+  }
+}
