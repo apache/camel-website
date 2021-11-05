@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 4
+  version: 5
   cacheKey: 8
 
 "@algolia/cache-browser-local-storage@npm:4.5.1":
@@ -1906,7 +1906,7 @@ __metadata:
   resolution: "@netlify/local-functions-proxy-darwin-arm64@npm:1.1.1"
   bin:
     local-functions-proxy: bin/local-functions-proxy
-  checksum: c16ef0515b6a76ef843c8c636b1830a9e185bd621694e8aa8d81b52800842dc30728be0dab56e8771f03205d8ffcf30a90cda61cd5cd4e501447cccebebb7c2e
+  conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
@@ -1915,7 +1915,7 @@ __metadata:
   resolution: "@netlify/local-functions-proxy-darwin-x64@npm:1.1.1"
   bin:
     local-functions-proxy: bin/local-functions-proxy
-  checksum: bdabd9363809514ce962a3c733c9647b84fd8e1492a585b9c543dffa4a1b5fdcee373d6101eb76f75fe06a97056cf44f32c323127013d0eccd02851dad969113
+  conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
@@ -1924,7 +1924,7 @@ __metadata:
   resolution: "@netlify/local-functions-proxy-freebsd-arm64@npm:1.1.1"
   bin:
     local-functions-proxy: bin/local-functions-proxy
-  checksum: 2d26c384abfe6cb79395e12286f228a6d3b0ebd1011bdf5536226a253aa9143f6a5659dbb87955fbf4136b3705514d23b76a9a7ae2a7b257eb6e077ded8f5e2a
+  conditions: os=freebsd & cpu=arm64
   languageName: node
   linkType: hard
 
@@ -1933,7 +1933,7 @@ __metadata:
   resolution: "@netlify/local-functions-proxy-freebsd-x64@npm:1.1.1"
   bin:
     local-functions-proxy: bin/local-functions-proxy
-  checksum: c385cb5c1cbe76f402fade270afe890fed483d8ea37c3492788d776748659ae3982405e86e1338dc1bd122735b8f9e435be7c43568741c686bbd3ffdde3220a5
+  conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
 
@@ -1942,7 +1942,7 @@ __metadata:
   resolution: "@netlify/local-functions-proxy-linux-arm64@npm:1.1.1"
   bin:
     local-functions-proxy: bin/local-functions-proxy
-  checksum: ea820c0bab67880633c3b118f9b7d339220dab77970f7465dc53495433e9414991457914897c83eb0e6aa8265923559645c37ede8d9cf6ce729bcd9624ab0761
+  conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
@@ -1951,7 +1951,7 @@ __metadata:
   resolution: "@netlify/local-functions-proxy-linux-arm@npm:1.1.1"
   bin:
     local-functions-proxy: bin/local-functions-proxy
-  checksum: d5c79a5843d19f65ce2dc210613c561ed2cb9344beed5077150919b640d5266c421cbdcf707572e9e1450c96e09baca2ead16ef9dad9e2d48d0690a5f632203a
+  conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
@@ -1960,7 +1960,7 @@ __metadata:
   resolution: "@netlify/local-functions-proxy-linux-ia32@npm:1.1.1"
   bin:
     local-functions-proxy: bin/local-functions-proxy
-  checksum: c3566ccd8336f34e94fdc4409a33e9b79951cf6e5c6d0594e7d5f76f4f710c78a5756eafc645213e8bae471f335fe7c2ae0ea6907a38312b73d5466b1a461eae
+  conditions: os=linux & cpu=ia32
   languageName: node
   linkType: hard
 
@@ -1969,7 +1969,7 @@ __metadata:
   resolution: "@netlify/local-functions-proxy-linux-ppc64@npm:1.1.1"
   bin:
     local-functions-proxy: bin/local-functions-proxy
-  checksum: c37e5113a52230ef6492e73770ddb54803dc2e7bc4638bb658a89b50f9dfbd6bb07eac9c97db03d92dc9fd987b1a2660b3ccc775ddce63ced91165ebf4c48924
+  conditions: os=linux & cpu=ppc64
   languageName: node
   linkType: hard
 
@@ -1978,7 +1978,7 @@ __metadata:
   resolution: "@netlify/local-functions-proxy-linux-x64@npm:1.1.1"
   bin:
     local-functions-proxy: bin/local-functions-proxy
-  checksum: 925de3eb054363bd95787bed1a60ffc6cc809dab90701abc43c450baf7a42c45c0a5b7ecc6c5dbe070def049072f48d8ad1449bb2452a183530a1c4f94489dca
+  conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
@@ -1987,7 +1987,7 @@ __metadata:
   resolution: "@netlify/local-functions-proxy-openbsd-x64@npm:1.1.1"
   bin:
     local-functions-proxy: bin/local-functions-proxy
-  checksum: 183250189606740bf580ee1c3a394f2384bf3fea0b8c6c01dd31c324d364d2e131be89a7c7b44b25d82d3a49c27bfd30e02e8da52283c4dceb792053599a7df9
+  conditions: os=openbsd & cpu=x64
   languageName: node
   linkType: hard
 
@@ -1996,7 +1996,7 @@ __metadata:
   resolution: "@netlify/local-functions-proxy-win32-ia32@npm:1.1.1"
   bin:
     local-functions-proxy.exe: bin/local-functions-proxy.exe
-  checksum: 501ecf6396ea537790cdfaf08fbbf2c1e80c780b3702166bdb374d76f1976822fcf94ee8fcccadc044b6d617c14c770cf5a380a0008cb79552026378bda37cfb
+  conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
@@ -2005,7 +2005,7 @@ __metadata:
   resolution: "@netlify/local-functions-proxy-win32-x64@npm:1.1.1"
   bin:
     local-functions-proxy.exe: bin/local-functions-proxy.exe
-  checksum: 2502eb51e9eb4a84953a145eab24d7545d9e074fe97c4284dd1eb7a8ba9394c266f1c48e338a59ab82ca9f6589c7708da957dc9e38e13b03f6e3695d6115683f
+  conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
@@ -2099,28 +2099,28 @@ __metadata:
 "@netlify/routing-local-proxy-darwin-arm64@npm:^0.34.1":
   version: 0.34.1
   resolution: "@netlify/routing-local-proxy-darwin-arm64@npm:0.34.1"
-  checksum: 43c38d75497c09598ed1127d5d52ad107a3ea3a21c5de2b181ac976bf082d6eb051d13e3975fb67d8510f4fea4a7ccdb6b2a48657e17cbb608083a397cb63f01
+  conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
 "@netlify/routing-local-proxy-darwin-x64@npm:^0.34.1":
   version: 0.34.1
   resolution: "@netlify/routing-local-proxy-darwin-x64@npm:0.34.1"
-  checksum: b9adc65595475db3ccaf8b3f61c8f20ac15bfcff87b6021c3d27e5698ba47ee325950702c40b16f78e26b5cbb5e4d2d798a203caca3726c649f27d53a7f27578
+  conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
 "@netlify/routing-local-proxy-linux-x64@npm:^0.34.1":
   version: 0.34.1
   resolution: "@netlify/routing-local-proxy-linux-x64@npm:0.34.1"
-  checksum: dd16ba8f8c12a107e6ea12d140a53f715535190f8df90eeb7581ad4efdf2cc183e6e815247fbcf485063a30afeddc99fa7d944c455177d0e531ae1eb000ed524
+  conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
 "@netlify/routing-local-proxy-win32-x64@npm:^0.34.1":
   version: 0.34.1
   resolution: "@netlify/routing-local-proxy-win32-x64@npm:0.34.1"
-  checksum: 8bc14e65ae133ab9f27b78cb16dd187e963356edeedc0f43c40c44aa946bc8f8768cf3b825937c086779a32723508d857266ba3970fe6bc072d2555ea95223b8
+  conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
@@ -9266,27 +9266,28 @@ fsevents@^1.2.7:
     node-gyp: latest
     node-pre-gyp: "*"
   checksum: 3daedd1272f49c281b25eab372965673ba3cad5038ddf678ba0463e53181a1e9a8d471fcb5894cfee6b7e05406803b723fe708c1e3f6d5a93929115697439350
+  conditions: os=darwin
   languageName: node
   linkType: hard
 
 "fsevents@patch:fsevents@^1.2.7#~builtin<compat/fsevents>":
   version: 1.2.11
-  resolution: "fsevents@patch:fsevents@npm%3A1.2.11#~builtin<compat/fsevents>::version=1.2.11&hash=1cc4b2"
+  resolution: "fsevents@patch:fsevents@npm%3A1.2.11#~builtin<compat/fsevents>::version=1.2.11&hash=18f3a7"
   dependencies:
     bindings: ^1.5.0
     nan: ^2.12.1
     node-gyp: latest
     node-pre-gyp: "*"
-  checksum: 008ff261eff05bee0d4f2271add609d4b06c21a0ad33b91d478c0203f11de881072efa11cc7fd9553018b03e44c8db83bb7865f098a8a774fc64c6a3b13b7a08
+  conditions: os=darwin
   languageName: node
   linkType: hard
 
 "fsevents@patch:fsevents@~2.1.2#~builtin<compat/fsevents>":
   version: 2.1.3
-  resolution: "fsevents@patch:fsevents@npm%3A2.1.3#~builtin<compat/fsevents>::version=2.1.3&hash=1cc4b2"
+  resolution: "fsevents@patch:fsevents@npm%3A2.1.3#~builtin<compat/fsevents>::version=2.1.3&hash=18f3a7"
   dependencies:
     node-gyp: latest
-  checksum: 37502954e1b2cf7d1f555561e45956521afa12e12cbfe05445ffa1f2852a3d8932980cacb808d504b1def84b12b3b7b41c26673180691295001fa7740cc63fba
+  conditions: os=darwin
   languageName: node
   linkType: hard
 
@@ -9296,6 +9297,7 @@ fsevents@~2.1.2:
   dependencies:
     node-gyp: latest
   checksum: b5ec0516b44d75b60af5c01ff80a80cd995d175e4640d2a92fbabd02991dd664d76b241b65feef0775c23d531c3c74742c0fbacd6205af812a9c3cef59f04292
+  conditions: os=darwin
   languageName: node
   linkType: hard
 
@@ -12571,7 +12573,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"listr@npm:0.14.3, listr@npm:^0.14.3":
+"listr@npm:^0.14.3":
   version: 0.14.3
   resolution: "listr@npm:0.14.3"
   dependencies:
@@ -17344,31 +17346,31 @@ resolve@^2.0.0-next.1:
 
 "resolve@patch:resolve@^1.1.4#~builtin<compat/resolve>, resolve@patch:resolve@^1.1.6#~builtin<compat/resolve>, resolve@patch:resolve@^1.1.7#~builtin<compat/resolve>, resolve@patch:resolve@^1.10.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.10.1#~builtin<compat/resolve>, resolve@patch:resolve@^1.12.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.13.1#~builtin<compat/resolve>, resolve@patch:resolve@^1.17.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.4.0#~builtin<compat/resolve>":
   version: 1.18.1
-  resolution: "resolve@patch:resolve@npm%3A1.18.1#~builtin<compat/resolve>::version=1.18.1&hash=00b1ff"
+  resolution: "resolve@patch:resolve@npm%3A1.18.1#~builtin<compat/resolve>::version=1.18.1&hash=07638b"
   dependencies:
     is-core-module: ^2.0.0
     path-parse: ^1.0.6
-  checksum: 3a5051499a570cf94d74353d494cacadbfa489107def201f87e26cabd80d000bd8abccbe247783b86b06d86ce2c646eee5c55900c71cbf1ad2043a67a92b0242
+  checksum: 7439c8f3d8fa00c9dc800ef3c8ed0bd8e8772823e6e4948b1a77487759e0fb905381808caae96398d135619af90654d8e74cac778e5b8c9d7138f2dd52bb2bba
   languageName: node
   linkType: hard
 
 "resolve@patch:resolve@^1.19.0#~builtin<compat/resolve>":
   version: 1.20.0
-  resolution: "resolve@patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=00b1ff"
+  resolution: "resolve@patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b"
   dependencies:
     is-core-module: ^2.2.0
     path-parse: ^1.0.6
-  checksum: bed00be983cd20a8af0e7840664f655c4b269786dbd9595c5f156cd9d8a0050e65cdbbbdafc30ee9b6245b230c78a2c8ab6447a52545b582f476c29adb188cc5
+  checksum: a0dd7d16a8e47af23afa9386df2dff10e3e0debb2c7299a42e581d9d9b04d7ad5d2c53f24f1e043f7b3c250cbdc71150063e53d0b6559683d37f790b7c8c3cd5
   languageName: node
   linkType: hard
 
 "resolve@patch:resolve@^2.0.0-next.1#~builtin<compat/resolve>":
   version: 2.0.0-next.2
-  resolution: "resolve@patch:resolve@npm%3A2.0.0-next.2#~builtin<compat/resolve>::version=2.0.0-next.2&hash=00b1ff"
+  resolution: "resolve@patch:resolve@npm%3A2.0.0-next.2#~builtin<compat/resolve>::version=2.0.0-next.2&hash=07638b"
   dependencies:
     is-core-module: ^2.0.0
     path-parse: ^1.0.6
-  checksum: e335d25548753935be8d0eba775fe3acfb451581167b9ef53d6c8acadac80a4197a08dc5fff5b2ef4bfe41f89da7ba73c2cc41a6f035f27a9d95b7a44088962b
+  checksum: 16ac416139498330823c20250b88b5ca78751662cbcf1d952c57d6056bef57b4c0adb4bb66cfa0ce03a4fea354bbcce4536ce1e1d212b94138ed74eaa13a25ec
   languageName: node
   linkType: hard
 
@@ -19834,21 +19836,21 @@ resolve@^2.0.0-next.1:
 
 "typescript@patch:typescript@^3.2.1#~builtin<compat/typescript>, typescript@patch:typescript@^3.9.7#~builtin<compat/typescript>":
   version: 3.9.7
-  resolution: "typescript@patch:typescript@npm%3A3.9.7#~builtin<compat/typescript>::version=3.9.7&hash=32657b"
+  resolution: "typescript@patch:typescript@npm%3A3.9.7#~builtin<compat/typescript>::version=3.9.7&hash=ddd1e8"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 46b87576ee37cc91c86965922ddef0fbee3ba49fc1627a9b6dce77cb41dc72d93f5643cefd175928a2d76e68189123e20c24db382d8b289ac6c27cfb4b7993a6
+  checksum: be4742230d87145344866f264771c0d78fe548479694279de1d8c9b1ea0942b1016a1957f87952924b370f86107bc71d95eb7feea16ad8875c61c571aca280e6
   languageName: node
   linkType: hard
 
 "typescript@patch:typescript@^4.1.5#~builtin<compat/typescript>, typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>":
   version: 4.4.4
-  resolution: "typescript@patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=32657b"
+  resolution: "typescript@patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: c97c33903f1eb4f9e178649befdfc859d93157db1eccd1e521e84976ec6861db53412d8018e5e4c5d09268771c65498d42caa64bd881878346c3644f6b7cd202
+  checksum: bd629ad0da4a15d79aaad56baf3ee7d96f6a181760d430ae77f8c5325df7bffd9edee57544a3970e3651e8b796fe03a5838a7eb39c6d46cc3866c0b23d36a0dd
   languageName: node
   linkType: hard
 

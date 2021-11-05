@@ -44,5 +44,6 @@
   },
   "workspaces": [
     "antora-ui-camel"
-  ]
+  ],
+  "packageManager": "yarn@3.1.0"
 }
