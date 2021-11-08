@@ -64,7 +64,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gulp-terser", "npm:1.2.0"],
             ["gulp-vinyl-zip", "npm:2.2.1"],
             ["handlebars", "npm:4.7.6"],
-            ["highlight.js", "npm:9.18.1"],
+            ["highlight.js", "npm:11.3.1"],
             ["js-yaml", "npm:3.13.1"],
             ["merge-stream", "npm:2.0.0"],
             ["plugin-error", "npm:1.0.1"],
@@ -1125,7 +1125,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gulp-terser", "npm:1.2.0"],
             ["gulp-vinyl-zip", "npm:2.2.1"],
             ["handlebars", "npm:4.7.6"],
-            ["highlight.js", "npm:9.18.1"],
+            ["highlight.js", "npm:11.3.1"],
             ["js-yaml", "npm:3.13.1"],
             ["merge-stream", "npm:2.0.0"],
             ["plugin-error", "npm:1.0.1"],
@@ -6167,10 +6167,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["highlight.js", [
-        ["npm:9.18.1", {
-          "packageLocation": "./.yarn/unplugged/highlight.js-npm-9.18.1-3aa55e5737/node_modules/highlight.js/",
+        ["npm:11.3.1", {
+          "packageLocation": "./.yarn/cache/highlight.js-npm-11.3.1-3fddf9f392-9adaaa1fe5.zip/node_modules/highlight.js/",
           "packageDependencies": [
-            ["highlight.js", "npm:9.18.1"]
+            ["highlight.js", "npm:11.3.1"]
           ],
           "linkType": "HARD",
         }]

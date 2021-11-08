@@ -34,7 +34,7 @@ module.exports = (src, dest, preview) => () => {
           .reduce((accum, { file: depPath, type }) => (type === 'dependency' ? accum.concat(depPath) : accum), [])
           .map((importedPath) => fs.stat(importedPath).then(({ mtime }) => mtime))
       ).then((mtimes) => {
-        const newestMtime = mtimes.reduce((max, curr) => (!max || curr > max ? curr : max))
+        const newestMtime = mtimes.reduce((max, curr) => (!max || curr > max ? curr : max), file.stat.mtime)
         if (newestMtime > file.stat.mtime) file.stat.mtimeMs = +(file.stat.mtime = newestMtime)
       }),
     postcssUrl([
@@ -82,7 +82,7 @@ module.exports = (src, dest, preview) => () => {
               })
               .bundle((bundleError, bundleBuffer) =>
                 Promise.all(mtimePromises).then((mtimes) => {
-                  const newestMtime = mtimes.reduce((max, curr) => (!max || curr > max ? curr : max))
+                  const newestMtime = mtimes.reduce((max, curr) => (curr > max ? curr : max), file.stat.mtime)
                   if (newestMtime > file.stat.mtime) file.stat.mtimeMs = +(file.stat.mtime = newestMtime)
                   if (bundleBuffer !== undefined) file.contents = bundleBuffer
                   file.path = file.path.slice(0, file.path.length - 10) + '.js'

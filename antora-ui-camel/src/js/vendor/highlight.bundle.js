@@ -1,5 +1,5 @@
 ;(function () {
-  var hljs = require('highlight.js/lib/highlight')
+  var hljs = require('highlight.js')
   hljs.registerLanguage('dockerfile', require('highlight.js/lib/languages/dockerfile'))
   hljs.registerLanguage('groovy', require('highlight.js/lib/languages/groovy'))
   hljs.registerLanguage('java', require('highlight.js/lib/languages/java'))
