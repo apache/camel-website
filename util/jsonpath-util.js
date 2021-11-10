@@ -17,6 +17,14 @@
 
 const RESOURCEID_RX = /[^$]*\$json\/(.*)\.json/
 
+const SPECIAL_CHARS = /[<>&]/g
+
+const REPLACEMENTS = {
+  '<': '&lt;',
+  '>': '&gt;',
+  '&': '&amp;',
+}
+
 module.exports = {
   alias: (name, aliases) => {
     for (expr of (aliases || '').split(',')) {
@@ -81,6 +89,10 @@ module.exports = {
     if (producerOnly) return 'Only producer is supported'
     return 'Both producer and consumer are supported'
   },
+
+  //Presumably temporary until asciidoctor-jsonpath can do this
+  //used from camel-kafka-connector template.
+  scSubs: (string) => string.replace(SPECIAL_CHARS, (m) => REPLACEMENTS[m]),
 
   starterArtifactId: (data) => {
     return data['starter-artifactid'] ? data['starter-artifactid'] : `${data.artifactid}-starter`
