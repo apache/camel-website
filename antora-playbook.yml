@@ -13,6 +13,7 @@ content:
         - docs/user-manual
 
     - url: https://github.com/apache/camel.git
+#    - url: https://github.com/djencks/camel.git
       branches:
         - main
         - camel-3.12.x
@@ -62,18 +63,28 @@ content:
       start_path: docs
 
     - url: https://github.com/apache/camel-kafka-connector.git
+#    - url: https://github.com/djencks/camel-kafka-connector.git
       branches:
         - main
         - camel-kafka-connector-0.11.x
-      start_path: docs
+      start_paths:
+        - docs
+        - connectors
 
     - url: https://github.com/apache/camel-spring-boot.git
+#    - url: https://github.com/djencks/camel-spring-boot.git
       branches:
         - main
         - camel-spring-boot-3.12.x
         - camel-spring-boot-3.11.x
         - camel-spring-boot-3.7.x
+#        - main-collect
+#        - camel-spring-boot-3.12.x-collect
+#        - camel-spring-boot-3.11.x-collect
+#        - camel-spring-boot-3.7.x-collect
       start_paths:
+#        - components-starter
+#        - core
         - docs/components
         - docs/spring-boot
 
@@ -91,6 +102,9 @@ ui:
 
 urls:
   redirect_facility: disabled
+#  latest_version_segment_strategy: redirect:from
+#  latest_version_segment: latest
+
 
 output:
   dir: ./documentation
@@ -109,10 +123,40 @@ runtime:
   log:
     level: warn
     failure_level: warn
-
-pipeline:
+#    format: json
+    
+antora:
   extensions:
+    - require: '@djencks/antora-aggregate-collector'
+#      log_level: trace
+      componentversions:
+        - name: components
+          version: '*'
+          local-mappings: ac-mappings.yml
+        - name: camel-spring-boot
+          version: '*'
+          local-mappings: ac-mappings.yml
+        - name: camel-kafka-connector
+          version: '*'
+          local-mappings: ac-mappings.yml
+
     - require: '@djencks/asciidoctor-jsonpath'
-#      trace: true
+#      log_level: trace
+
     - require: '@djencks/asciidoctor-antora-indexer'
-#      trace: true
+#      log_level: trace
+      indexPages:
+        - query:
+            component: camel-kafka-connector
+            module: ROOT
+            family: example
+            relative: json/*
+          template-id:
+            family: example
+            relative: template/connector-options.adoc
+          extract:
+            - path: 'src.relative'
+              match: 'json/camel-(?<basename>*)-kafka-(?<type>source|sink)-connector.json'
+          target:
+            match: 'json/(?<body>*).json'
+            format: '`reference/connectors/${body}.adoc`'
