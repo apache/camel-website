@@ -66,7 +66,7 @@ Some of the options can be used with their default value, in this example we're 
 
 ### A real example
 
-The best way to show how the idempotency feature works, in camel-kafka-connector, it's through an example. We'll use the [AWS2-S3 Source connector](/camel-kafka-connector/next/reference/connectors/camel-aws2-s3-kafka-source-connector.html)
+The best way to show how the idempotency feature works, in camel-kafka-connector, it's through an example. We'll use the AWS2-S3 Source Connector for this purpose.
 
 As first step you'll need to fully build the [Camel-Kafka-connector project](https://github.com/apache/camel-kafka-connector) and install the connectors/camel-aws2-s3-kafka-connector zip package in your Kafka Broker plugin.path. Once the connector is in the plugin.path location, just unzip it. We describe how to build and unpack in the next steps:
 
