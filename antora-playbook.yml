@@ -13,9 +13,9 @@ content:
         - docs/user-manual
 
     - url: https://github.com/apache/camel.git
-#    - url: https://github.com/djencks/camel.git
       branches:
         - main
+        - camel-3.13.x
         - camel-3.12.x
         - camel-3.11.x
         - camel-3.7.x
@@ -63,7 +63,6 @@ content:
       start_path: docs
 
     - url: https://github.com/apache/camel-kafka-connector.git
-#    - url: https://github.com/djencks/camel-kafka-connector.git
       branches:
         - main
         - camel-kafka-connector-0.11.x
@@ -72,25 +71,22 @@ content:
         - connectors
 
     - url: https://github.com/apache/camel-spring-boot.git
-#    - url: https://github.com/djencks/camel-spring-boot.git
       branches:
         - main
+        - camel-spring-boot-3.13.x
         - camel-spring-boot-3.12.x
         - camel-spring-boot-3.11.x
         - camel-spring-boot-3.7.x
-#        - main-collect
-#        - camel-spring-boot-3.12.x-collect
-#        - camel-spring-boot-3.11.x-collect
-#        - camel-spring-boot-3.7.x-collect
       start_paths:
-#        - components-starter
-#        - core
+        - components-starter
+        - core
         - docs/components
         - docs/spring-boot
 
     - url: https://github.com/apache/camel-karaf.git
       branches:
         - main
+        - camel-karaf-3.13.x
         - camel-karaf-3.12.x
         - camel-karaf-3.11.x
         - camel-karaf-3.7.x
