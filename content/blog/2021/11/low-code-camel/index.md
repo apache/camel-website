@@ -6,8 +6,6 @@ categories: ["Kamelets", "Camel K", "Tooling"]
 preview: "How Kamelets enable a low code integration experience."
 ---
 
-NOTE: this post originally appeared [in the author's blog](https://www.nicolaferraro.me/2021/11/03/low-code-camel/).
-
 Apache Camel is a project in constant transformation. Anyone knows that Camel has been able to adapt to any new kinds of protocols and systems that have emerged in the past 15 years. But it's not only that: Camel is also able to adapt to any new ways of dealing with integration problems in the cloud era.
 While Camel K represented a fundamental shift towards a new approach to cloud-native integration, ["Kamelets"](https://www.nicolaferraro.me/2020/10/12/kamelets/) are driving a deeper transformation towards "low code" development.
 
@@ -54,8 +52,6 @@ If writing YAML is not your favourite sport, you can also opt for a visual UI. I
 on Kamelets. If you either need to create a simple source/sink integration or a more complex one, Karavan can help designing it with ease. There's also a [blog post about Karavan](/blog/2021/10/camel-karavan-preview-release/) if you want to learn more.
 
 ![Karavan](./karavan.png)
-*The Karavan UI*
-{: style="color:gray; font-size: 90%; text-align: center;"}
 
 After you finish to configure the integration, the output you get from the UI is an `Integration` custom resource, that you can direcly apply to any Kubernetes cluster (having Camel K installed) and it will automatically run.
 
@@ -96,3 +92,5 @@ the [Kamelet catalog](/camel-kamelets/next/).
 And finally look at how easy is to [create and use your own Kamelets](/camel-k/next/kamelets/kamelets-dev.html).
 
 We'd love to hear your feedback!
+
+_This post originally appeared [in the author's blog](https://www.nicolaferraro.me/2021/11/03/low-code-camel/)_
