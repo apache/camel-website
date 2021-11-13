@@ -71,20 +71,16 @@ content:
         - docs
         - connectors
 
-    - url: https://github.com/apache/camel-spring-boot.git
-#    - url: https://github.com/djencks/camel-spring-boot.git
+#    - url: https://github.com/apache/camel-spring-boot.git
+    - url: https://github.com/djencks/camel-spring-boot.git
       branches:
-        - main
-        - camel-spring-boot-3.12.x
-        - camel-spring-boot-3.11.x
-        - camel-spring-boot-3.7.x
-#        - main-collect
-#        - camel-spring-boot-3.12.x-collect
-#        - camel-spring-boot-3.11.x-collect
-#        - camel-spring-boot-3.7.x-collect
+        - main-collect
+        - camel-spring-boot-3.12.x-collect
+        - camel-spring-boot-3.11.x-collect
+        - camel-spring-boot-3.7.x-collect
       start_paths:
-#        - components-starter
-#        - core
+        - components-starter
+        - core
         - docs/components
         - docs/spring-boot
 
