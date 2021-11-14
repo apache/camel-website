@@ -53,6 +53,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gulp", "npm:4.0.2"],
             ["gulp-cheerio", "npm:1.0.0"],
             ["gulp-htmlmin", "npm:5.0.1"],
+            ["gulp-inject", "npm:5.0.5"],
             ["html-validate", "npm:4.11.0"],
             ["hugo-extended", "npm:0.84.3"],
             ["netlify-cli", "npm:6.14.10"],
@@ -4579,6 +4580,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ansi-colors", "npm:2.0.5"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:4.1.1", {
+          "packageLocation": "./.yarn/cache/ansi-colors-npm-4.1.1-97ad42f223-138d04a510.zip/node_modules/ansi-colors/",
+          "packageDependencies": [
+            ["ansi-colors", "npm:4.1.1"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["ansi-cyan", [
@@ -4806,6 +4814,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["any-promise", [
+        ["npm:1.3.0", {
+          "packageLocation": "./.yarn/cache/any-promise-npm-1.3.0-f34eeaa7e7-0ee8a9bdbe.zip/node_modules/any-promise/",
+          "packageDependencies": [
+            ["any-promise", "npm:1.3.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["anymatch", [
         ["npm:2.0.0", {
           "packageLocation": "./.yarn/cache/anymatch-npm-2.0.0-f2fcb92f28-f7bb192984.zip/node_modules/anymatch/",
@@ -4844,6 +4861,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gulp", "npm:4.0.2"],
             ["gulp-cheerio", "npm:1.0.0"],
             ["gulp-htmlmin", "npm:5.0.1"],
+            ["gulp-inject", "npm:5.0.5"],
             ["html-validate", "npm:4.11.0"],
             ["hugo-extended", "npm:0.84.3"],
             ["netlify-cli", "npm:6.14.10"],
@@ -11220,6 +11238,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["get-value", "npm:2.0.6"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:3.0.1", {
+          "packageLocation": "./.yarn/cache/get-value-npm-3.0.1-b525a3975a-d2df36858c.zip/node_modules/get-value/",
+          "packageDependencies": [
+            ["get-value", "npm:3.0.1"],
+            ["isobject", "npm:3.0.1"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["getpass", [
@@ -11678,6 +11704,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["group-array", [
+        ["npm:1.0.0", {
+          "packageLocation": "./.yarn/cache/group-array-npm-1.0.0-78145fdbf9-0be7a58edb.zip/node_modules/group-array/",
+          "packageDependencies": [
+            ["group-array", "npm:1.0.0"],
+            ["arr-flatten", "npm:1.1.0"],
+            ["for-own", "npm:1.0.0"],
+            ["get-value", "npm:3.0.1"],
+            ["kind-of", "npm:6.0.3"],
+            ["split-string", "npm:6.1.0"],
+            ["union-value", "npm:2.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["gulp", [
         ["npm:4.0.2", {
           "packageLocation": "./.yarn/cache/gulp-npm-4.0.2-56726bdf31-c18e6c33e6.zip/node_modules/gulp/",
@@ -11825,6 +11866,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [
             "@types/gulp",
             "gulp"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["gulp-inject", [
+        ["npm:5.0.5", {
+          "packageLocation": "./.yarn/cache/gulp-inject-npm-5.0.5-eaf1f4a1bf-4c1c8cba08.zip/node_modules/gulp-inject/",
+          "packageDependencies": [
+            ["gulp-inject", "npm:5.0.5"],
+            ["ansi-colors", "npm:4.1.1"],
+            ["arrify", "npm:2.0.1"],
+            ["escape-string-regexp", "npm:2.0.0"],
+            ["fancy-log", "npm:1.3.3"],
+            ["group-array", "npm:1.0.0"],
+            ["plugin-error", "npm:1.0.1"],
+            ["stream-to-array", "npm:2.3.0"],
+            ["through2", "npm:3.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -20273,6 +20331,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["split-string", "npm:3.1.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:3.0.2", {
+          "packageLocation": "./.yarn/cache/set-value-npm-3.0.2-4e32225201-cb7a36004f.zip/node_modules/set-value/",
+          "packageDependencies": [
+            ["set-value", "npm:3.0.2"],
+            ["is-plain-object", "npm:2.0.4"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["setprototypeof", [
@@ -20704,6 +20770,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["extend-shallow", "npm:3.0.2"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:6.1.0", {
+          "packageLocation": "./.yarn/cache/split-string-npm-6.1.0-df506cc33f-7190a33e46.zip/node_modules/split-string/",
+          "packageDependencies": [
+            ["split-string", "npm:6.1.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["split2", [
@@ -20948,6 +21021,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["stream-splicer", "npm:2.0.1"],
             ["inherits", "npm:2.0.4"],
             ["readable-stream", "npm:2.3.7"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["stream-to-array", [
+        ["npm:2.3.0", {
+          "packageLocation": "./.yarn/cache/stream-to-array-npm-2.3.0-eaa32c31d8-7feaf63b38.zip/node_modules/stream-to-array/",
+          "packageDependencies": [
+            ["stream-to-array", "npm:2.3.0"],
+            ["any-promise", "npm:1.3.0"]
           ],
           "linkType": "HARD",
         }]
@@ -22519,6 +22602,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["get-value", "npm:2.0.6"],
             ["is-extendable", "npm:0.1.1"],
             ["set-value", "npm:2.0.1"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:2.0.1", {
+          "packageLocation": "./.yarn/cache/union-value-npm-2.0.1-2d00b76e15-a121be653a.zip/node_modules/union-value/",
+          "packageDependencies": [
+            ["union-value", "npm:2.0.1"],
+            ["get-value", "npm:3.0.1"],
+            ["set-value", "npm:3.0.2"]
           ],
           "linkType": "HARD",
         }]
