@@ -3348,6 +3348,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ansi-colors@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "ansi-colors@npm:4.1.1"
+  checksum: 138d04a51076cb085da0a7e2d000c5c0bb09f6e772ed5c65c53cb118d37f6c5f1637506d7155fb5f330f0abcf6f12fa2e489ac3f8cdab9da393bf1bb4f9a32b0
+  languageName: node
+  linkType: hard
+
 "ansi-cyan@npm:^0.1.1":
   version: 0.1.1
   resolution: "ansi-cyan@npm:0.1.1"
@@ -3545,6 +3552,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"any-promise@npm:^1.1.0":
+  version: 1.3.0
+  resolution: "any-promise@npm:1.3.0"
+  checksum: 0ee8a9bdbe882c90464d75d1f55cf027f5458650c4bd1f0467e65aec38ccccda07ca5844969ee77ed46d04e7dded3eaceb027e8d32f385688523fe305fa7e1de
+  languageName: node
+  linkType: hard
+
 "anymatch@npm:^2.0.0":
   version: 2.0.0
   resolution: "anymatch@npm:2.0.0"
@@ -3582,6 +3596,7 @@ __metadata:
     gulp: ~4.0
     gulp-cheerio: ~1.0
     gulp-htmlmin: ~5.0
+    gulp-inject: ^5.0.2
     html-validate: ~4
     hugo-extended: ^0.84.3
     netlify-cli: ^6.14.10
@@ -9340,6 +9355,15 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"get-value@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "get-value@npm:3.0.1"
+  dependencies:
+    isobject: ^3.0.1
+  checksum: d2df36858c34f0ef63d928e760740b23d14a7b955eaf740fea0d908b60cf2504de388a2ff72fb531318719645271f506390005f811a53d35ce4d7f7eba98e470
+  languageName: node
+  linkType: hard
+
 "getpass@npm:^0.1.1":
   version: 0.1.7
   resolution: "getpass@npm:0.1.7"
@@ -9774,6 +9798,20 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"group-array@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "group-array@npm:1.0.0"
+  dependencies:
+    arr-flatten: ^1.1.0
+    for-own: ^1.0.0
+    get-value: ^3.0.1
+    kind-of: ^6.0.2
+    split-string: ^6.1.0
+    union-value: ^2.0.1
+  checksum: 0be7a58edba0ec6793c582fa019488eaf7dcb45d97367062ef42d1081ac39d2d70e8f427a15d63c0e995cb5b10ef420c776c30f59035d10c32448f7c0f91029f
+  languageName: node
+  linkType: hard
+
 "gulp-cheerio@npm:~1.0":
   version: 1.0.0
   resolution: "gulp-cheerio@npm:1.0.0"
@@ -9904,6 +9942,22 @@ fsevents@~2.1.2:
     gulp:
       optional: true
   checksum: a6e214072222d5069b62dca38f17705e2e23888e359bbc6c93d983fbf15bcd24649d42050b842343d2448cd394ef648557a1cf4aa2c703b44664613ae4a51890
+  languageName: node
+  linkType: hard
+
+"gulp-inject@npm:^5.0.2":
+  version: 5.0.5
+  resolution: "gulp-inject@npm:5.0.5"
+  dependencies:
+    ansi-colors: ^4.1.1
+    arrify: ^2.0.1
+    escape-string-regexp: ^2.0.0
+    fancy-log: ^1.3.3
+    group-array: ^1.0.0
+    plugin-error: ^1.0.1
+    stream-to-array: ^2.3.0
+    through2: ^3.0.1
+  checksum: 4c1c8cba0896dabacb3a537319ba06c7f2726668a27b1d0ae7971aaa39063e9226de5177777b0fef6584020dbbfbfd4bd1a19789cf5f18e19eef25bcd987ed1f
   languageName: node
   linkType: hard
 
@@ -17558,6 +17612,15 @@ resolve@^2.0.0-next.1:
   languageName: node
   linkType: hard
 
+"set-value@npm:^3.0.0":
+  version: 3.0.2
+  resolution: "set-value@npm:3.0.2"
+  dependencies:
+    is-plain-object: ^2.0.4
+  checksum: cb7a36004f7f0ec3ab654612fecb2ce706f381322e9dad54d2ebae40aa8e00653b46fca476489b6872b34707f496d48373c3420adba5f58bbb58c1fb231c1c0b
+  languageName: node
+  linkType: hard
+
 "setprototypeof@npm:1.1.0":
   version: 1.1.0
   resolution: "setprototypeof@npm:1.1.0"
@@ -17947,6 +18010,13 @@ resolve@^2.0.0-next.1:
   languageName: node
   linkType: hard
 
+"split-string@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "split-string@npm:6.1.0"
+  checksum: 7190a33e46b3afd8f6deffd359f52095332fa5a2b021fff819dfc84ec4364aceb4378100e288eec81b0789fae3666b4332fd038aecbfb62d6867777311d73758
+  languageName: node
+  linkType: hard
+
 "split2@npm:^1.0.0":
   version: 1.1.1
   resolution: "split2@npm:1.1.1"
@@ -18168,6 +18238,15 @@ resolve@^2.0.0-next.1:
     inherits: ^2.0.1
     readable-stream: ^2.0.2
   checksum: 7bb3563961450e69183baa04272e042bdd7df44f6d75bf1cce0d6a628efd2d4b0a0d2a290bed0674ea7719c87e6cf6bf7406ca1d17413abf1484430d36d65580
+  languageName: node
+  linkType: hard
+
+"stream-to-array@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "stream-to-array@npm:2.3.0"
+  dependencies:
+    any-promise: ^1.1.0
+  checksum: 7feaf63b38399b850615e6ffcaa951e96e4c8f46745dbce4b553a94c5dc43966933813747014935a3ff97793e7f30a65270bde19f82b2932871a1879229a77cf
   languageName: node
   linkType: hard
 
@@ -19611,6 +19690,16 @@ resolve@^2.0.0-next.1:
     is-extendable: ^0.1.1
     set-value: ^2.0.1
   checksum: a3464097d3f27f6aa90cf103ed9387541bccfc006517559381a10e0dffa62f465a9d9a09c9b9c3d26d0f4cbe61d4d010e2fbd710fd4bf1267a768ba8a774b0ba
+  languageName: node
+  linkType: hard
+
+"union-value@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "union-value@npm:2.0.1"
+  dependencies:
+    get-value: ^3.0.1
+    set-value: ^3.0.0
+  checksum: a121be653aa4ed483b6d9af6cb48cff44aeb153db927dea3b10110f5da6e6c560719808b5e2a987377ac7f79c11c31654b324a8617d12319674767475422d288
   languageName: node
   linkType: hard
 
