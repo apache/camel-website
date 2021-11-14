@@ -1,7 +1,7 @@
 site:
   title: Apache Camel
   url: https://camel.apache.org
-  start_page: _@manual::index.adoc
+#  start_page: _@manual::index.adoc
 
 content:
   sources:
@@ -97,9 +97,9 @@ ui:
     url: ./antora-ui-camel/build/ui-bundle.zip
 
 urls:
-  redirect_facility: disabled
-#  latest_version_segment_strategy: redirect:from
-#  latest_version_segment: latest
+  redirect_facility: httpd
+  latest_version_segment_strategy: redirect:from
+  latest_version_segment: latest
 
 
 output:

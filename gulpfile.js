@@ -2,6 +2,7 @@ const cheerio = require('gulp-cheerio');
 const env = process.env.CAMEL_ENV || 'development';
 const gulp = require('gulp');
 const htmlmin = require('gulp-htmlmin');
+const inject = require('gulp-inject')
 
 /**
  * We minify all HTML files using htmlmin, this is to make them smaller in size
@@ -52,6 +53,44 @@ gulp.task('sitemap', (done) => {
     ))
     .pipe(gulp.dest('public'));
 });
+
+gulp.task('htaccess', (done) => {
+  return gulp.src(`static/.htaccess`)
+    .pipe(
+      inject(
+        gulp.src('documentation/.htaccess'),
+        {
+          starttag:'<!-- inject:htaccess -->',
+          removeTags: true,
+          transform: (filename, file) => {
+            return versionlessRedirects(file.contents.toString('utf8'))
+          },
+        }
+      )
+    )
+    .pipe(gulp.dest('public'))
+});
+
+const REDIRECT_RX = /^Redirect 302 \/(?<component>c.*)\/latest \/\k<component>\/(?<version>.*)$/
+
+function versionlessRedirects (text) {
+  const lines = text.split('\n')
+  const processed = lines.reduce((accum, line) => {
+    accum.push(line)
+    const m = line.match(REDIRECT_RX)
+    if (m) {
+      accum.push(`RedirectMatch 302 "^/${m.groups.component}(/?)$" "/${m.groups.component}/${m.groups.version}/"`)
+      // The first line redirects **/next to **/next/ so the second line does not match.
+      // Apparently it needs to be a match or it will transform **/next/ to **/next//
+      accum.push(`RedirectMatch 301 "^/${m.groups.component}/next$" "/${m.groups.component}/next/"`)
+      accum.push(`RedirectMatch 302 "^/${m.groups.component}/(?![0-9].*|next/)(.+)$" "/${m.groups.component}/${m.groups.version}/$1"`)
+      // As an alternative, the following line works as long as no file names start with 'next'
+      // accum.push(`RedirectMatch 302 "^/${m.groups.component}/(?![0-9].*|next)(.+)$" "/${m.groups.component}/${m.groups.version}/$1"`)
+    }
+    return accum
+  }, [])
+  return processed.join('\n')
+}
 
 /*
  * Removes the content from the `public` directory.
