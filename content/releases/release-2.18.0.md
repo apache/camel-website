@@ -10,6 +10,7 @@ knownIssues: ""
 jiraVersionId: 12334759
 category: camel
 kind: legacy
+jdk: [8]
 ---
 
 Welcome to the 2.18.0 release which resolved over 500 issues. This is

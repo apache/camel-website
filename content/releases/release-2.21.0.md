@@ -10,6 +10,7 @@ knownIssues: ""
 jiraVersionId: 12341576
 category: camel
 kind: legacy
+jdk: [8]
 ---
 
 Welcome to the 2.21.0 release which resolved 400 issues including new

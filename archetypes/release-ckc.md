@@ -8,4 +8,5 @@ title: "Camel Kafka Connector release {{ replace (replaceRE ".*/release-(.*).md"
 preview: ""
 changelog: ""
 category: "camel-kafka-connector"
+jdk: [8,11]
 ---

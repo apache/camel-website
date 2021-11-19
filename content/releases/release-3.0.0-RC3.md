@@ -10,6 +10,7 @@ apiBreaking: ""
 knownIssues: ""
 jiraVersionId: 12346354
 category: camel
+jdk: [8,11]
 ---
 
 This release the third and final release candidate towards Camel 3.0.0 release.

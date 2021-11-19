@@ -8,4 +8,5 @@ preview: ""
 changelog: ""
 category: "camel-k"
 milestone: 18
+jdk: [11]
 ---

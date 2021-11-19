@@ -13,4 +13,5 @@ jiraVersionId: ""
 category: "camel"
 # kind can be lts or legacy (for 2.x)
 # kind:
+jdk: [8,11]
 ---

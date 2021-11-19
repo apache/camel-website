@@ -10,6 +10,7 @@ knownIssues: ""
 jiraVersionId: 12348081
 category: camel
 kind: legacy
+jdk: [8]
 ---
 
 This release is the new Camel 2.25.2 patch release.

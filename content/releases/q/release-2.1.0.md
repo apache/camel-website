@@ -8,4 +8,5 @@ preview: ""
 changelog: ""
 category: "camel-quarkus"
 milestone: 17
+jdk: [11]
 ---

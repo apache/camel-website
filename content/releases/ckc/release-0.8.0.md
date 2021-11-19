@@ -7,4 +7,5 @@ title: "Camel Kafka Connector release 0.8.0"
 preview: ""
 changelog: ""
 category: "camel-kafka-connector"
+jdk: [8,11]
 ---

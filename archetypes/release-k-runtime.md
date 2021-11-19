@@ -9,4 +9,5 @@ preview: ""
 changelog: ""
 category: "camel-k-runtime"
 milestone:
+jdk: [11]
 ---

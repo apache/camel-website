@@ -11,6 +11,7 @@ knownIssues: ""
 jiraVersionId: 12350137
 category: camel
 kind: lts
+jdk: [8,11]
 ---
 
 This release is the new Camel 3.7.5 LTS release.
