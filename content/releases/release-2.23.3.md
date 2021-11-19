@@ -10,6 +10,7 @@ knownIssues: ""
 jiraVersionId: 12345358
 category: camel
 kind: legacy
+jdk: [8]
 ---
 
 This release is a minor update of the 2.23.x branch.

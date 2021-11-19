@@ -8,6 +8,7 @@ preview: ""
 changelog: ""
 category: "camel-k"
 milestone: 20
+jdk: [11]
 ---
 
 This release is a minor update of the 1.3.x branch.

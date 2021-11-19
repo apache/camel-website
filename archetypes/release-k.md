@@ -9,4 +9,5 @@ preview: ""
 changelog: ""
 category: "camel-k"
 milestone:
+jdk: [11]
 ---

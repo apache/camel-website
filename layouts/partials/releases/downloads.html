@@ -154,7 +154,12 @@
                         <br/>
                         {{ with (index (where (where (where $.Pages "Section" "releases") ".Params.category" $.Category.id) ".Params.version" $v) 0) }}
                         <small>
-                            Released in {{ (.Param "date").Format "Jan 2006" }}{{ if .Param "eol" }}, end of life in {{ dateFormat "Jan 2006" (.Param "eol") }}{{ end }}
+                            {{ with .Params.jdk }}
+                              Supports Java {{ delimit . ", " " and " }}
+                              <br>
+                            {{ end }}
+                            Released in {{ (.Param "date").Format "Jan 2006" }}{{ if .Param "eol" }}, end of life in {{ dateFormat "Jan 2006" (.Param "eol") }}
+                            {{ end }}
                         </small>
                         {{ end }}
                     </td>

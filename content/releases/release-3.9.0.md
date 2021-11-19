@@ -9,6 +9,7 @@ apiBreaking: ""
 knownIssues: ""
 jiraVersionId: 12349612
 category: camel
+jdk: [8,11]
 ---
 
 This release is the new Camel 3.9.0 minor release.

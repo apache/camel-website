@@ -10,6 +10,7 @@ knownIssues: ""
 jiraVersionId: 12343345
 category: camel
 kind: legacy
+jdk: [8]
 ---
 
 Welcome to the Apache Camel 2.23.0 release which is a new minor release and resolved 262 issues
