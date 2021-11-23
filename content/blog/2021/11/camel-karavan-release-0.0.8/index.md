@@ -16,7 +16,7 @@ Karavan Serverless gets and applies Integration Custom Resources directly from/t
 # Try Karavan Serverless mode on Minikube
 
 1. [Install Minikube](https://github.com/kubernetes/minikube#installation) 
-2. [Install Camel-K](https://camel.apache.org/camel-k/next/installation/installation.html)
+2. [Install Camel-K](/camel-k/next/installation/installation.html)
 3. Install Karavan serverless
     ```shell
     git clone --depth 1  https://github.com/apache/camel-karavan
