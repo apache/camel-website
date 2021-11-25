@@ -52,7 +52,7 @@ This one is a series of improvements to **include more descriptive information**
 
 ## Secondary Integration Platform
 
-So far, a single operator was able to manage the `Integration` created on a namespace. This simple model was a bit limiting, as we were not able to distinguish a way to have more than one operator on the same namespace. With the new feature developed, now you will be able to declare a secondary `Integration Platform` and **have more than one operator** collaborating on the same `Namespace`. This is an advanced feature that will let you unlock more advanced deployment topology in order to have a [more scalable and resilient configuration](/camel-k/next/architecture/advanced.html).
+So far, a single operator was able to manage the `Integration` created on a namespace. This simple model was a bit limiting, as we were not able to distinguish a way to have more than one operator on the same namespace. With the new feature developed, now you will be able to declare a secondary `Integration Platform` and **have more than one operator** collaborating on the same `Namespace`. This is an advanced feature that will let you unlock more advanced deployment topology in order to have a [more scalable and resilient configuration](/camel-k/next/installation/installation.html).
 
 ## Traits enhancements
 
