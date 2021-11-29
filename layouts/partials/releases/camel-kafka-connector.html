@@ -26,7 +26,7 @@ git checkout camel-kafka-connector-{{ .Params.version }}</pre>
 
 <h2 id="resolved"><a class="anchor" href="#resolved"></a>Resolved issues</h2>
 <p>Here is a list of all the issues that have been resolved for this release</p>
-{{ $issues := getJSON "https://api.github.com/repos/apache/camel-kafka-connector/issues?state=closed&labels=" (string .Params.version) (dict "Authorization" (printf "%s:%s" $.Site.Params.GitHubUsername $.Site.Params.GitHubToken | base64Encode)) }}
+{{ $issues := getJSON "https://api.github.com/repos/apache/camel-kafka-connector/issues?state=closed&labels=" (string .Params.version) (dict "Authorization" (printf "Basic %s" (printf "%s:%s" $.Site.Params.GitHubUsername $.Site.Params.GitHubToken | base64Encode))) }}
 <dl>
 {{ range $issues }}
   <dt><a href="{{ .html_url }}">#{{ .number }}</a></dt><dd>{{ .title }}</dd>
