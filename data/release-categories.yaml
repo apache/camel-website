@@ -70,10 +70,21 @@ camel-k-runtime:
     - name: 'Sources'
       path_format: 'camel/camel-k-runtime/{version}/apache-camel-k-runtime-{version}-source-release.zip'
       filename_format: 'apache-camel-k-runtime-{version}-source-release.zip'
+camel-kamelets:
+  id: 'camel-kamelets'
+  name: 'Apache Camel Kamelets'
+  order: 4
+  kinds:
+    - name: 'latest'
+      filter: 'latest'
+  downloads:
+    - name: 'Sources'
+      path_format: 'camel/camel-kamelets/{version}/camel-kamelets-sources-{version}.tar.gz'
+      filename_format: 'camel-kamelets-sources-{version}.tar.gz'
 camel-kafka-connector:
   id: 'camel-kafka-connector'
   name: 'Apache Camel Kafka Connector'
-  order: 4
+  order: 5
   kinds:
     - name: 'latest'
       filter: 'latest'
@@ -87,7 +98,7 @@ camel-kafka-connector:
 camel-quarkus:
   id: 'camel-quarkus'
   name: 'Apache Camel Quarkus'
-  order: 5
+  order: 6
   kinds:
     - name: 'latest'
       filter: 'latest'
