@@ -13,7 +13,7 @@
             Posted on <time itemprop="published" datetime="{{ dateFormat "2006-01-02" .PublishDate }}"
                 title="{{ dateFormat "Monday, January 2, 2006" .PublishDate }}">{{ dateFormat "January 2, 2006" .PublishDate }}</time>,
             by {{ range $author := .Params.authors }}
-            {{ with getJSON "https://api.github.com/users/" $author (dict "Authorization" (printf "%s:%s" $.Site.Params.GitHubUsername $.Site.Params.GitHubToken | base64Encode)) }}
+            {{ with getJSON "https://api.github.com/users/" $author (dict "Authorization" (printf "Basic %s" (printf "%s:%s" $.Site.Params.GitHubUsername $.Site.Params.GitHubToken | base64Encode))) }}
             <figure>
                 <img src="{{ .avatar_url }}" alt="{{ .name }}">
                 <figcaption rel="author">{{ .name }}</figcaption>
