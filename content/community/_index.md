@@ -4,11 +4,7 @@ Title: "Community"
 
 {{< div "box" >}}
 
-{{< div "icon" >}}
-
-[![Camel](/_/img/support.svg)](/community/support/)
-
-{{< /div >}}
+<a href="/community/support/" class="icon" title="Community support">{{< icon "support" "Question bubble" >}}</a>
 
 {{< div "content" >}}
 
@@ -25,17 +21,13 @@ If you are experiencing problems using Camel there are several channels availabl
 
 {{< div "box" >}}
 
-{{< div "icon" >}}
-
-[![Camel](/_/img/support.svg)](/community/mailing-list/)
-
-{{< /div >}}
+<a href="/community/mailing-list/" class="icon" title="Mailing list">{{< icon "support" "Question bubble" >}}</a>
 
 {{< div "content" >}}
 
 ## Mailing List
 
-One way to get help is to use the Camel mailing lists. This allows the entire community to help with your problem. 
+One way to get help is to use the Camel mailing lists. This allows the entire community to help with your problem.
 
 <p>
 <a class="button dark" href="/community/mailing-list/">Read More</a>
@@ -48,11 +40,7 @@ One way to get help is to use the Camel mailing lists. This allows the entire co
 
 {{< div "box" >}}
 
-{{< div "icon" >}}
-
-[![Camel](/_/img/contributing.svg)](/community/contributing/)
-
-{{< /div >}}
+<a href="/community/contributing/" class="icon" title="How to contribuite">{{< icon "contributing" "Git fork" >}}</a>
 
 {{< div "content" >}}
 
@@ -70,11 +58,7 @@ There are many ways you can help make Camel better - please dive in and help!Ide
 
 {{< div "box" >}}
 
-{{< div "icon" >}}
-
-[![Camel](/_/img/user-stories.svg)](/community/user-stories/)
-
-{{< /div >}}
+<a href="/community/user-stories/" class="icon" title="User stories">{{< icon "user-stories" "Person talking" >}}</a>
 
 {{< div "content" >}}
 
@@ -92,11 +76,7 @@ This page is intended as a place to collect user stories and feedback on Apache 
 
 {{< div "box" >}}
 
-{{< div "icon" >}}
-
-[![Camel](/_/img/articles.svg)](/community/articles/)
-
-{{< /div >}}
+<a href="/community/articles/" class="icon" title="Articles">{{< icon "articles" "Article" >}}</a>
 
 {{< div "content" >}}
 
@@ -114,11 +94,7 @@ Articles are divided into several sections. As the lists grow, further sectionin
 
 {{< div "box" >}}
 
-{{< div "icon" >}}
-
-[![Camel](/_/img/books.svg)](/community/books/)
-
-{{< /div >}}
+<a href="/community/books/" class="icon" title="Books">{{< icon "books" "Books" >}}</a>
 
 {{< div "content" >}}
 
@@ -136,17 +112,13 @@ This page lists the known books about Apache Camel. If you happen to know a book
 
 {{< div "box" >}}
 
-{{< div "icon" >}}
-
-[![Camel](/_/img/team.svg)](/community/team/)
-
-{{< /div >}}
+<a href="/community/team/" class="icon" title="Team">{{< icon "team" "People" >}}</a>
 
 {{< div "content" >}}
 
 ## Team
 
-This page lists who we are. By all means add yourself to the list - lets sort it in alphabetical order. When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
+This page lists who we are. By all means add yourself to the list - lets sort it in alphabetical order. When posting to the mailing lists, use plain text mails. Do not use HTML mails.
 
 <p>
 <a class="button dark" href="/community/team/">Read More</a>

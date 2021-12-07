@@ -1,0 +1,1 @@
+{{- range $idx := (seq 0 2 (sub (len .Params) 1)) }}<img src="{{ path.Join "_" (index site.Data "rev-manifest" (printf "img/%s.svg" (index $.Params $idx))) | relURL }}" alt="{{ index $.Params (add $idx 1) }}"/>{{- end }}

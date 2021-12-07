@@ -4759,6 +4759,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gulp-postcss", "npm:8.0.0"],
             ["gulp-rename", "npm:1.4.0"],
             ["gulp-rev", "npm:9.0.0"],
+            ["gulp-rev-rewrite", "npm:5.0.0"],
             ["gulp-stylelint", "virtual:40e0eba2b2747b78b17285b5a80d54e9bed0c51acd01aa1fab2b869ee61f21c6d6cda6fee2acf095fea1709035ac613a1bc772c8e59bb0339d7af2ceea528de8#npm:13.0.0"],
             ["gulp-template", "npm:5.0.0"],
             ["gulp-terser", "npm:1.4.1"],
@@ -11927,6 +11928,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["gulp-rev-rewrite", [
+        ["npm:5.0.0", {
+          "packageLocation": "./.yarn/cache/gulp-rev-rewrite-npm-5.0.0-7f674f2659-4b75625849.zip/node_modules/gulp-rev-rewrite/",
+          "packageDependencies": [
+            ["gulp-rev-rewrite", "npm:5.0.0"],
+            ["lodash.escaperegexp", "npm:4.1.2"],
+            ["plugin-error", "npm:1.0.1"],
+            ["through2", "npm:4.0.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["gulp-stylelint", [
         ["npm:13.0.0", {
           "packageLocation": "./.yarn/cache/gulp-stylelint-npm-13.0.0-dd9bc9b127-0992e8342f.zip/node_modules/gulp-stylelint/",
@@ -14836,6 +14849,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/lodash.difference-npm-4.5.0-7a179a50e1-ecee276aa5.zip/node_modules/lodash.difference/",
           "packageDependencies": [
             ["lodash.difference", "npm:4.5.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lodash.escaperegexp", [
+        ["npm:4.1.2", {
+          "packageLocation": "./.yarn/cache/lodash.escaperegexp-npm-4.1.2-c5b90e0e9c-6d99452b1c.zip/node_modules/lodash.escaperegexp/",
+          "packageDependencies": [
+            ["lodash.escaperegexp", "npm:4.1.2"]
           ],
           "linkType": "HARD",
         }]

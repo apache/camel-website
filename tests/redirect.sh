@@ -207,6 +207,9 @@ test "$BASE_URL/manual/latest/component-dsl.html" 302 "$BASE_URL/manual/componen
 test "$BASE_URL/manual/" 200
 test "$BASE_URL/manual/component-dsl.html" 200
 
+test "$BASE_URL/_/img/logo-d.svg" 301 "$BASE_URL/_/$(jq -r '."img/logo-d.svg"' documentation/_/data/rev-manifest.json)"
+test "$BASE_URL/_/$(jq -r '."img/logo-d.svg"' documentation/_/data/rev-manifest.json)" 200
+
 # prints summary
 if [ "$TOTAL" == "$SUCCESS" ]; then
   echo -e "$0 \e[1mSUCCESSFULLY\e[0m ran $TOTAL tests"

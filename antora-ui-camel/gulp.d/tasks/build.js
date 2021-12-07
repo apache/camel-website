@@ -8,7 +8,6 @@ const cssnano = require('cssnano')
 const data = require('gulp-data')
 const fs = require('fs-extra')
 const imagemin = require('gulp-imagemin')
-const { obj: map } = require('through2')
 const merge = require('merge-stream')
 const ospath = require('path')
 const path = ospath.posix
@@ -19,9 +18,11 @@ const postcssUrl = require('postcss-url')
 const postcssVar = require('postcss-custom-properties')
 const rename = require('gulp-rename')
 const rev = require('gulp-rev')
+const rewrite = require('gulp-rev-rewrite')
 const template = require('gulp-template')
 const terser = require('gulp-terser')
 const vfs = require('vinyl-fs')
+const { obj: map } = require('through2')
 
 module.exports = (src, dest, preview) => () => {
   const opts = { base: src, cwd: src }
@@ -99,16 +100,16 @@ module.exports = (src, dest, preview) => () => {
       )
       .pipe(buffer())
       .pipe(terser())
-    // NOTE use this statement to bundle a JavaScript library that cannot be browserified, like jQuery
-    //vfs.src(require.resolve('<package-name-or-require-path>'), opts).pipe(concat('js/vendor/<library-name>.js')),
+      // NOTE use this statement to bundle a JavaScript library that cannot be browserified, like jQuery
+      //vfs.src(require.resolve('<package-name-or-require-path>'), opts).pipe(concat('js/vendor/<library-name>.js')),
       .pipe(rev()),
     vfs
       .src('css/site.css', { ...opts, sourcemaps })
       .pipe(postcss((file) => ({ plugins: postcssPlugins, options: { file } })))
       .pipe(rev()),
     vfs.src('font/*.{ttf,woff*(2)}', opts),
-    vfs.src('img/**/*.{jpg,ico,png,svg}', opts).pipe(
-      imagemin([
+    vfs.src('img/**/*.{jpg,ico,png,svg}', opts)
+      .pipe(imagemin([
         imagemin.gifsicle(),
         imagemin.jpegtran(),
         imagemin.optipng(),
@@ -120,12 +121,13 @@ module.exports = (src, dest, preview) => () => {
             { removeDesc: false },
           ],
         }),
-      ])
-    ),
+      ]))
+      .pipe(rev()),
     vfs.src('helpers/*.js', opts),
     vfs.src('layouts/*.hbs', opts),
     vfs.src('partials/*.hbs', opts)
   )
+    .pipe(rewrite())
     .pipe(vfs.dest(dest, { sourcemaps: sourcemaps && '.' }))
     .pipe(rev.manifest())
     .pipe(vfs.dest(path.join(dest, 'data')))
