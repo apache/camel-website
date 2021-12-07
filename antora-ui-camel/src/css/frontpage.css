@@ -77,11 +77,12 @@ header.frontpage p {
 a.button,
 section.frontpage a.button {
   white-space: nowrap;
-  margin-right: 0.5rem;
+  margin: 0.5rem;
   background-image: none;
   border-radius: 3rem;
   font-weight: bold;
   padding: 0.4rem 1rem;
+  display: inline-block;
 }
 
 header.frontpage a.button {
@@ -320,7 +321,7 @@ section.frontpage.projects .project img {
   section.frontpage.functionalities .icon img,
   section.frontpage.projects .icon img {
     max-width: 25vw;
-    margin: 2vw;
+    margin: auto;
   }
 
   section.frontpage.functionalities .content {
@@ -352,7 +353,7 @@ section.frontpage.projects .project img {
 
   a.button,
   section.frontpage a.button {
-    line-height: 3rem;
+    line-height: 1.5rem;
   }
 }
 

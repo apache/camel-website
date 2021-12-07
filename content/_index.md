@@ -97,7 +97,7 @@ Camel supports around 50 data formats, allowing to translate messages in multipl
 
 {{< div "icon" >}}
 
-<img src="/_/img/logo-d.svg" alt="data icon"/>
+{{< icon "logo-d" "Apache Camel logo" >}}
 
 {{< /div >}}
 
@@ -115,7 +115,7 @@ Apache Camel helps you integrate various systems consuming or producing data.
 
 {{< div "icon" >}}
 
-<img src="/_/img/knative.svg" alt="data icon"/>
+{{< icon "knative" "KNatve logo" >}}
 
 {{< /div >}}
 
@@ -133,7 +133,7 @@ Apache Camel K is a lightweight integration framework that runs natively on Kube
 
 {{< div "icon" >}}
 
-<img src="/_/img/quarkus.svg" alt="data icon"/>
+{{< icon "quarkus" "Quarkus logo" >}}
 
 {{< /div >}}
 
@@ -151,7 +151,7 @@ Apache Camel Quarkus packages 280+ Camel components as Quarkus extensions.
 
 {{< div "icon" >}}
 
-<img src="/_/img/apache-kafka.svg" alt="data icon"/>
+{{< icon "apache-kafka" "Apache Kafka logo" >}}
 
 {{< /div >}}
 
@@ -170,7 +170,7 @@ Apache Camel Kafka Connector embeds Camel within Kafka Connect.
 
 {{< div "icon" >}}
 
-<img src="/_/img/spring-boot.svg" alt="data icon"/>
+{{< icon "spring-boot" "Spring Boot logo" >}}
 
 {{< /div >}}
 
@@ -188,7 +188,7 @@ Apache Camel Spring Boot runs Camel on Spring Boot and provides starters for Cam
 
 {{< div "icon" >}}
 
-<img src="/_/img/apache-karaf.svg" alt="data icon"/>
+{{< icon "apache-karaf" "Apache Karaf logo" >}}
 
 {{< /div >}}
 
@@ -197,8 +197,6 @@ Apache Camel Spring Boot runs Camel on Spring Boot and provides starters for Cam
 ## Camel Karaf
 Apache Camel Karaf makes running Apache Camel components to run in the OSGi environment.
 <p><a class="button dark" href="/docs/">Read More</a></p>
-
-{{< /div >}}
 
 {{< /div >}}
 

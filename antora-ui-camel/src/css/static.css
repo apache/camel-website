@@ -2,12 +2,6 @@
   margin: var(--static-margin);
 }
 
-@media screen and (min-width: 1025px) {
-  .static {
-    max-width: var(--static-max-width--desktop);
-  }
-}
-
 /* Antora markup is wrapped in <div>, we need to emulate the same */
 .static dl,
 .static ol,
@@ -15,4 +9,80 @@
 .static pre,
 .static ul {
   margin: 1rem 0 0;
+}
+
+.static a.icon {
+  margin: 2rem;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  background: none;
+}
+
+.static .box {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.static .box img {
+  margin-top: 1rem;
+  height: 6rem;
+  margin-right: 0.5rem;
+}
+
+.static .icon a,
+.static a.button-light,
+.static a.button-dark {
+  background-image: none;
+}
+
+@media screen and (min-width: 1025px) {
+  .static {
+    max-width: var(--static-max-width--desktop);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .static .box,
+  .static .content,
+  .static .icon {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .static .box .content {
+    width: 100%;
+  }
+
+  .static .box img {
+    height: 6rem;
+    max-width: 25vw;
+    margin-left: auto;
+  }
+
+  .static .box img:only-child {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .static .box img + img {
+    margin-left: 1rem;
+    margin-right: auto;
+  }
+
+  .static .box.right {
+    flex-direction: column-reverse;
+  }
+
+  .static .button-light {
+    line-height: 4rem;
+  }
+
+  .static a.icon {
+    margin: 0;
+    width: 100%;
+  }
 }

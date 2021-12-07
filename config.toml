@@ -39,35 +39,35 @@ defaultMarkdownHandler = "blackfriday"
     weight = 2
     identifier = "blog"
     url = "/blog/"
-    pre = "/_/img/blog.svg"
+    pre = "img/blog.svg"
 
 [[menu.main]]
     name = "Documentation"
     identifier = "docs"
     weight = 3
     url = "/docs/"
-    pre = "/_/img/documentation.svg"
+    pre = "img/documentation.svg"
 
 [[menu.main]]
     name = "Community"
     identifier = "community"
     weight = 4
     url = "/community/"
-    pre = "/_/img/community.svg"
+    pre = "img/community.svg"
 
 [[menu.main]]
     name = "Download"
     weight = 5
     identifier = "download"
     url = "/download/"
-    pre = "/_/img/download.svg"
+    pre = "img/download.svg"
 
 [[menu.main]]
     name = "Security"
     weight = 6
     identifier = "security"
     url = "/security/"
-    pre = "/_/img/security.svg"
+    pre = "img/security.svg"
 
 [module]
 

@@ -861,6 +861,7 @@ __metadata:
     gulp-postcss: ~8.0
     gulp-rename: ~1.4
     gulp-rev: ~9.0
+    gulp-rev-rewrite: ^5.0.0
     gulp-stylelint: ~13.0
     gulp-template: ~5.0
     gulp-terser: ^1.2.0
@@ -3375,11 +3376,11 @@ __metadata:
   linkType: hard
 
 "end-of-stream@npm:^1.0.0, end-of-stream@npm:^1.1.0":
-  version: 1.4.1
-  resolution: "end-of-stream@npm:1.4.1"
+  version: 1.4.4
+  resolution: "end-of-stream@npm:1.4.4"
   dependencies:
     once: ^1.4.0
-  checksum: ac0f75d57cfcd5569af5bd2d7d005efb21e1a939fcfcc367e3d991c7e3275eeb10c400880aab4b3be72d5cda0406401511e98990d85996e72b2210cfdd4c8f8a
+  checksum: 530a5a5a1e517e962854a31693dbb5c0b2fc40b46dad2a56a2deec656ca040631124f4795823acc68238147805f8b021abbe221f4afed5ef3c8e8efc2024908b
   languageName: node
   linkType: hard
 
@@ -5087,6 +5088,17 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"gulp-rev-rewrite@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "gulp-rev-rewrite@npm:5.0.0"
+  dependencies:
+    lodash.escaperegexp: ^4.1.2
+    plugin-error: ^1.0.1
+    through2: ^4.0.2
+  checksum: 4b7562584991ac152ce0be0eedcadc32f63a0fbbe41adc3382d24100c91891a74e5eb3fff87bfe2fddacc96ed0a14397e1d235a4f41c09c090d5362e458959d2
+  languageName: node
+  linkType: hard
+
 "gulp-rev@npm:~9.0":
   version: 9.0.0
   resolution: "gulp-rev@npm:9.0.0"
@@ -6712,6 +6724,13 @@ fsevents@^1.2.7:
   dependencies:
     p-locate: ^4.1.0
   checksum: 83e51725e67517287d73e1ded92b28602e3ae5580b301fe54bfb76c0c723e3f285b19252e375712316774cf52006cb236aed5704692c32db0d5d089b69696e30
+  languageName: node
+  linkType: hard
+
+"lodash.escaperegexp@npm:^4.1.2":
+  version: 4.1.2
+  resolution: "lodash.escaperegexp@npm:4.1.2"
+  checksum: 6d99452b1cfd6073175a9b741a9b09ece159eac463f86f02ea3bee2e2092923fce812c8d2bf446309cc52d1d61bf9af51c8118b0d7421388e6cead7bd3798f0f
   languageName: node
   linkType: hard
 
@@ -9204,7 +9223,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"readable-stream@npm:2 || 3, readable-stream@npm:^3.1.1, readable-stream@npm:^3.5.0, readable-stream@npm:^3.6.0":
+"readable-stream@npm:2 || 3, readable-stream@npm:3, readable-stream@npm:^3.1.1, readable-stream@npm:^3.5.0, readable-stream@npm:^3.6.0":
   version: 3.6.0
   resolution: "readable-stream@npm:3.6.0"
   dependencies:
@@ -10914,6 +10933,15 @@ fsevents@^1.2.7:
   dependencies:
     readable-stream: 2 || 3
   checksum: ffac3931c1906b5d3a375b71e3d692228432299ba63213e65d686f95ea3abe1bb5726fa335fb7eba9c6f5f010da17c071a6c1c531bd091b2ec7650bc38bcaf13
+  languageName: node
+  linkType: hard
+
+"through2@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "through2@npm:4.0.2"
+  dependencies:
+    readable-stream: 3
+  checksum: ac7430bd54ccb7920fd094b1c7ff3e1ad6edd94202e5528331253e5fde0cc56ceaa690e8df9895de2e073148c52dfbe6c4db74cacae812477a35660090960cc0
   languageName: node
   linkType: hard
 

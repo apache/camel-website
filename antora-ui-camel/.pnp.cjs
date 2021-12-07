@@ -59,6 +59,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gulp-postcss", "npm:8.0.0"],
             ["gulp-rename", "npm:1.4.0"],
             ["gulp-rev", "npm:9.0.0"],
+            ["gulp-rev-rewrite", "npm:5.0.0"],
             ["gulp-stylelint", "virtual:53a2c559876ac93d5e6cf4689198c015a86ce923a72ff31018f4155c30b7da56dbd10410abafabb98da7a76016aae31ad749fae1ec28733b94edc21faa0ef05b#npm:13.0.0"],
             ["gulp-template", "npm:5.0.0"],
             ["gulp-terser", "npm:1.2.0"],
@@ -1120,6 +1121,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gulp-postcss", "npm:8.0.0"],
             ["gulp-rename", "npm:1.4.0"],
             ["gulp-rev", "npm:9.0.0"],
+            ["gulp-rev-rewrite", "npm:5.0.0"],
             ["gulp-stylelint", "virtual:53a2c559876ac93d5e6cf4689198c015a86ce923a72ff31018f4155c30b7da56dbd10410abafabb98da7a76016aae31ad749fae1ec28733b94edc21faa0ef05b#npm:13.0.0"],
             ["gulp-template", "npm:5.0.0"],
             ["gulp-terser", "npm:1.2.0"],
@@ -1534,7 +1536,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/async-done-npm-1.3.1-e17882bb72-4cf4d232ca.zip/node_modules/async-done/",
           "packageDependencies": [
             ["async-done", "npm:1.3.1"],
-            ["end-of-stream", "npm:1.4.1"],
+            ["end-of-stream", "npm:1.4.4"],
             ["once", "npm:1.4.0"],
             ["process-nextick-args", "npm:1.0.7"],
             ["stream-exhaust", "npm:1.0.2"]
@@ -3871,7 +3873,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/duplexify-npm-3.7.1-8f4f1e821f-3c2ed2223d.zip/node_modules/duplexify/",
           "packageDependencies": [
             ["duplexify", "npm:3.7.1"],
-            ["end-of-stream", "npm:1.4.1"],
+            ["end-of-stream", "npm:1.4.4"],
             ["inherits", "npm:2.0.4"],
             ["readable-stream", "npm:2.3.6"],
             ["stream-shift", "npm:1.0.0"]
@@ -3961,10 +3963,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["end-of-stream", [
-        ["npm:1.4.1", {
-          "packageLocation": "./.yarn/cache/end-of-stream-npm-1.4.1-ccccf6139c-ac0f75d57c.zip/node_modules/end-of-stream/",
+        ["npm:1.4.4", {
+          "packageLocation": "./.yarn/cache/end-of-stream-npm-1.4.4-497fc6dee1-530a5a5a1e.zip/node_modules/end-of-stream/",
           "packageDependencies": [
-            ["end-of-stream", "npm:1.4.1"],
+            ["end-of-stream", "npm:1.4.4"],
             ["once", "npm:1.4.0"]
           ],
           "linkType": "HARD",
@@ -5899,6 +5901,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["gulp-rev-rewrite", [
+        ["npm:5.0.0", {
+          "packageLocation": "./.yarn/cache/gulp-rev-rewrite-npm-5.0.0-7f674f2659-4b75625849.zip/node_modules/gulp-rev-rewrite/",
+          "packageDependencies": [
+            ["gulp-rev-rewrite", "npm:5.0.0"],
+            ["lodash.escaperegexp", "npm:4.1.2"],
+            ["plugin-error", "npm:1.0.1"],
+            ["through2", "npm:4.0.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["gulp-stylelint", [
         ["npm:13.0.0", {
           "packageLocation": "./.yarn/cache/gulp-stylelint-npm-13.0.0-dd9bc9b127-0992e8342f.zip/node_modules/gulp-stylelint/",
@@ -7714,6 +7728,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/lodash-npm-4.17.15-566d9324f7-bb689bc88c.zip/node_modules/lodash/",
           "packageDependencies": [
             ["lodash", "npm:4.17.15"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lodash.escaperegexp", [
+        ["npm:4.1.2", {
+          "packageLocation": "./.yarn/cache/lodash.escaperegexp-npm-4.1.2-c5b90e0e9c-6d99452b1c.zip/node_modules/lodash.escaperegexp/",
+          "packageDependencies": [
+            ["lodash.escaperegexp", "npm:4.1.2"]
           ],
           "linkType": "HARD",
         }]
@@ -10267,7 +10290,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/pump-npm-2.0.1-05afac7fc4-e9f26a17be.zip/node_modules/pump/",
           "packageDependencies": [
             ["pump", "npm:2.0.1"],
-            ["end-of-stream", "npm:1.4.1"],
+            ["end-of-stream", "npm:1.4.4"],
             ["once", "npm:1.4.0"]
           ],
           "linkType": "HARD",
@@ -10276,7 +10299,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/pump-npm-3.0.0-0080bf6a7a-e42e9229fb.zip/node_modules/pump/",
           "packageDependencies": [
             ["pump", "npm:3.0.0"],
-            ["end-of-stream", "npm:1.4.1"],
+            ["end-of-stream", "npm:1.4.4"],
             ["once", "npm:1.4.0"]
           ],
           "linkType": "HARD",
@@ -12295,7 +12318,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tar-stream", "npm:1.6.2"],
             ["bl", "npm:1.2.2"],
             ["buffer-alloc", "npm:1.2.0"],
-            ["end-of-stream", "npm:1.4.1"],
+            ["end-of-stream", "npm:1.4.4"],
             ["fs-constants", "npm:1.0.0"],
             ["readable-stream", "npm:2.3.6"],
             ["to-buffer", "npm:1.1.1"],
@@ -12368,6 +12391,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/through2-npm-3.0.1-dcc4042403-ffac3931c1.zip/node_modules/through2/",
           "packageDependencies": [
             ["through2", "npm:3.0.1"],
+            ["readable-stream", "npm:3.6.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:4.0.2", {
+          "packageLocation": "./.yarn/cache/through2-npm-4.0.2-da7b2da443-ac7430bd54.zip/node_modules/through2/",
+          "packageDependencies": [
+            ["through2", "npm:4.0.2"],
             ["readable-stream", "npm:3.6.0"]
           ],
           "linkType": "HARD",

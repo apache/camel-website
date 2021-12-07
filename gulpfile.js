@@ -60,10 +60,31 @@ gulp.task('htaccess', (done) => {
       inject(
         gulp.src('documentation/.htaccess'),
         {
-          starttag:'<!-- inject:htaccess -->',
+          starttag:'<!-- inject:htaccess:docs -->',
           removeTags: true,
           transform: (filename, file) => {
             return versionlessRedirects(file.contents.toString('utf8'))
+          },
+        }
+      )
+    )
+    // redirect un-hashed resources (e.g. `/_/img/logo-d.svg`) to hashed resources (e.g. `/_/img/logo-d-f21b25ba38.svg`)
+    // so we don't break backward compatibility
+    .pipe(
+      inject(
+        gulp.src('documentation/_/data/rev-manifest.json'),
+        {
+          starttag:'<!-- inject:htaccess:resources -->',
+          removeTags: true,
+          transform: (filename, file) => {
+            const data = JSON.parse(file.contents)
+            let rules = ''
+            for (const [key, value] of Object.entries(data)) {
+              if (key.endsWith('.svg') || key.endsWith('.png')) {
+                rules += `Redirect 301 /_/${key} /_/${value}\n`
+              }
+            }
+            return rules
           },
         }
       )

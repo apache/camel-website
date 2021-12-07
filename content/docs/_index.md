@@ -1,13 +1,9 @@
 ---
 Title: "Documentation"
 ---
-{{< div "box left camel-core" >}}
+{{< div "box left" >}}
 
-{{< div "icon" >}}
-
-[![Camel](/_/img/logo-d.svg)](/camel-k/latest/)
-
-{{< /div >}}
+<a href="/manual/" class="icon" title="Camel User Manual">{{< icon "logo-d" "Apache Camel logo" >}}</a>
 
 {{< div "content" >}}
 
@@ -47,7 +43,7 @@ Apache Camel K is a lightweight integration framework built on Apache Camel that
 <a class="button light" href="https://github.com/apache/camel-k-examples">Examples</a>
 </p>
 
-Apache Camel K now leverages a catalog of connectors called "Kamelets" (_Kamel_ route snipp_ets_) that allow creating sources or sinks towards external systems via a 
+Apache Camel K now leverages a catalog of connectors called "Kamelets" (_Kamel_ route snipp_ets_) that allow creating sources or sinks towards external systems via a
 simplified interface, hiding all the low level details about how those connections are implemented.
 
 <p>
@@ -56,21 +52,13 @@ simplified interface, hiding all the low level details about how those connectio
 
 {{< /div >}}
 
-{{< div "icon" >}}
-
-[![Camel](/_/img/logo-d.svg)![Knative](/_/img/knative.svg)](/camel-k/latest/)
-
-{{< /div >}}
+<a href="/camel-k/latest/" class="icon" title="Camel-K Manual ">{{< icon "logo-d" "Apache Camel logo" "knative" "KNative logo" >}}</a>
 
 {{< /div >}}
 
 {{< div "box left" >}}
 
-{{< div "icon" >}}
-
-[![Camel](/_/img/logo-d.svg)![Knative](/_/img/apache-kafka.svg)](/camel-k/latest/)
-
-{{< /div >}}
+<a href="/camel-kafka-connector/latest/" class="icon" title="Camel Kafka Connector Manual ">{{< icon "logo-d" "Apache Camel logo" "apache-kafka" "Apache Kafka logo" >}}</a>
 
 {{< div "content">}}
 
@@ -104,21 +92,13 @@ This project hosts the efforts to port and package the 280+ Camel components as 
 
 {{< /div >}}
 
-{{< div "icon" >}}
-
-[![Camel](/_/img/logo-d.svg)![Quarkus](/_/img/quarkus.svg)](/camel-quarkus/latest/)
-
-{{< /div >}}
+<a href="/camel-quarkus/latest/" class="icon" title="Camel Quarkus Manual ">{{< icon "logo-d" "Apache Camel logo" "quarkus" "Quarkus logo" >}}</a>
 
 {{< /div >}}
 
 {{< div "box left" >}}
 
-{{< div "icon" >}}
-
-[![Camel](/_/img/logo-d.svg)![Spring Boot](/_/img/spring-boot.svg)](/camel-spring-boot/latest/)
-
-{{< /div >}}
+<a href="/camel-spring-boot/latest/" class="icon" title="Camel Spring Boot latest documentation">{{< icon "logo-d" "Apache Camel logo" "spring-boot" "Spring Boot logo" >}}</a>
 
 {{< div "content">}}
 
@@ -152,10 +132,6 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 
 {{< /div >}}
 
-{{< div "icon" >}}
-
-[![Camel](/_/img/logo-d.svg)![Karaf](/_/img/apache-karaf.svg)](/camel-karaf/latest/)
-
-{{< /div >}}
+<a href="/camel-karaf/latest/" class="icon" title="Camel Karaf Manual ">{{< icon "logo-d" "Apache Camel logo" "apache-karaf" "Apache Karaf logo" >}}</a>
 
 {{< /div >}}

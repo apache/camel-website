@@ -3514,6 +3514,7 @@ __metadata:
     gulp-postcss: ~8.0
     gulp-rename: ~1.4
     gulp-rev: ~9.0
+    gulp-rev-rewrite: ^5.0.0
     gulp-stylelint: ~13.0
     gulp-template: ~5.0
     gulp-terser: ^1.2.0
@@ -9981,6 +9982,17 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"gulp-rev-rewrite@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "gulp-rev-rewrite@npm:5.0.0"
+  dependencies:
+    lodash.escaperegexp: ^4.1.2
+    plugin-error: ^1.0.1
+    through2: ^4.0.2
+  checksum: 4b7562584991ac152ce0be0eedcadc32f63a0fbbe41adc3382d24100c91891a74e5eb3fff87bfe2fddacc96ed0a14397e1d235a4f41c09c090d5362e458959d2
+  languageName: node
+  linkType: hard
+
 "gulp-rev@npm:~9.0":
   version: 9.0.0
   resolution: "gulp-rev@npm:9.0.0"
@@ -12604,6 +12616,13 @@ fsevents@~2.1.2:
   version: 4.5.0
   resolution: "lodash.difference@npm:4.5.0"
   checksum: ecee276aa578f300e79350805a14a51be8d1f12b3c1389a19996d8ab516f814211a5f65c68331571ecdad96522b863ccc484b55504ce8c9947212a29f8857d5a
+  languageName: node
+  linkType: hard
+
+"lodash.escaperegexp@npm:^4.1.2":
+  version: 4.1.2
+  resolution: "lodash.escaperegexp@npm:4.1.2"
+  checksum: 6d99452b1cfd6073175a9b741a9b09ece159eac463f86f02ea3bee2e2092923fce812c8d2bf446309cc52d1d61bf9af51c8118b0d7421388e6cead7bd3798f0f
   languageName: node
   linkType: hard
 
