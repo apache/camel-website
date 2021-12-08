@@ -62,6 +62,13 @@ defaultMarkdownHandler = "blackfriday"
     url = "/download/"
     pre = "/_/img/download.svg"
 
+[[menu.main]]
+    name = "Security"
+    weight = 6
+    identifier = "security"
+    url = "/security/"
+    pre = "/_/img/security.svg"
+
 [module]
 
   [[module.mounts]]
