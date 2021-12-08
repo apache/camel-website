@@ -61,13 +61,19 @@ pipeline {
             }
         }
 
+        stage('Setup') {
+          steps {
+            sh "$WORKSPACE/camel-website/support/docker-pipe.sh $WORKSPACE/docker-pipe &"
+          }
+        }
+
         stage('Checks') {
             agent {
                 dockerfile {
                     dir 'camel-website'
                     label "$NODE"
                     reuseNode true
-                    args '-u root'
+                    args "-u root -v $WORKSPACE/docker-pipe/docker:/usr/bin/docker"
                 }
             }
 
@@ -97,6 +103,12 @@ pipeline {
                     sh 'git push --force origin asf-site'
                 }
             }
-       }
+        }
+    }
+
+    post {
+        always {
+            sh "$WORKSPACE/docker-pipe/teardown.sh"
+        }
     }
 }
