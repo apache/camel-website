@@ -2,7 +2,7 @@
 
 <div class="body">
     <main>
-        <article class="static doc">
+        <article class="static doc security">
 
             {{ .Content }}
             <div class="table-wrapper">
@@ -18,7 +18,17 @@
                   </tr>
                 </thead>
                 <tbody>
-              {{ range .Pages.GroupByDate "2006" "desc" }}
+              {{ $pages := .Pages.GroupByDate "2006" "desc" }}
+              {{ $latest_year := (index $pages 0).Key }}
+              {{ range seq (now.Format "2006") (add (int $latest_year) 1) }}
+                  <tr>
+                    <th colspan="5" scope="row"><strong>{{ . }}</strong></th>
+                  </tr>
+                  <tr>
+                    <td colspan="5"><em>No issues reported</em></td>
+                  </tr>
+              {{ end }}
+              {{ range $pages }}
                   <tr>
                     <th colspan="5" scope="row"><strong>{{ .Key }}</strong></th>
                   </tr>

@@ -1,0 +1,7 @@
+.security td:only-child {
+  text-align: center;
+}
+
+.security td:first-child {
+  white-space: nowrap;
+}
