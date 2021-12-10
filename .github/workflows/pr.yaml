@@ -39,7 +39,6 @@ jobs:
         run: |
           mkdir pull_request
           echo ${{ github.event.pull_request.number }} > ./pull_request/number
-          echo ${{ github.event.pull_request.html_url }} > ./pull_request/html_url
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
