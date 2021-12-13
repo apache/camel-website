@@ -34,7 +34,7 @@ will no longer be included.
 ### 3rd party components with transitive dependency on log4j-core
 
 There are two Camel components, camel-nsq and camel-corda which have a 
-dependenc on log4j-core by their 3rd party library. Those libraries
+dependency on log4j-core by their 3rd party library. Those libraries
 do not actively use log4j-core, but rely only on log4j-api. Therefore the maintainers
 of those projects should correct this in their projects.
 
