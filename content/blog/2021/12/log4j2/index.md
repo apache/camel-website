@@ -56,3 +56,8 @@ See more details from the [Spring Boot team announcement](https://spring.io/blog
 
 Apache Kafka Connectors runs on Apache Kafka and Kafka uses the older log4 v1 which is not affected.
  
+### What about Apache Camel 2?
+
+Apache Camel 2 is not affected. The camel-core from Camel 2 uses slf4j-api
+as the logging facade, and log4j is only used during testing Camel itself.
+
