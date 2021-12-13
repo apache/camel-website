@@ -36,5 +36,10 @@ will no longer be included.
 Apache Camel Quarkus and Camel K uses Quarkus as the runtime, and Quarkus does not use log4j, and 
 they are therefore not affected.
 
+Camel Spring Boot uses Spring Boot as the runtime, and Spring Boot is only
+affected if you have chosen to use log4j instead of the default logback logger.
+See more details from the [Spring Boot team announcement](https://spring.io/blog/2021/12/10/log4j2-vulnerability-and-spring-boot).
 
+
+ 
 
