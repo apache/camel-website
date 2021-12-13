@@ -55,6 +55,10 @@ affected if you have chosen to use log4j instead of the default logback logger.
 See more details from the [Spring Boot team announcement](https://spring.io/blog/2021/12/10/log4j2-vulnerability-and-spring-boot).
 
 Apache Kafka Connectors runs on Apache Kafka and Kafka uses the older log4 v1 which is not affected.
+
+Camel Karaf uses Apache Karaf as the runtime, and **Apache Karaf is affected**.
+The latest Karaf release 4.3.3 comes with several versions of log4j such as 2.14.1, 2.13.3 and 2.9.1
+The Karaf team is aware of this and are working on a new release with updated log4j.
  
 ### What about Apache Camel 2?
 
