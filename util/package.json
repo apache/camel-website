@@ -1,0 +1,8 @@
+{
+  "name": "camel-website-util",
+  "version": "1.0.0",
+  "main": "jsonpath-util.js",
+  "files": [
+    "jsonpath-util.js"
+  ]
+}

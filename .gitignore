@@ -22,3 +22,5 @@ resources
 !**/.yarn/unplugged
 !**/.yarn/versions
 *.github-proxy.*
+
+local-antora-playbook-*

@@ -111,7 +111,7 @@ output:
 
 asciidoc:
   attributes:
-    requires@: "'util=util/jsonpath-util.js'"
+    requires@: "'util=camel-website-util'"
 #    uncomment sb-statistics to see more info on camel spring boot list page such as non-spring-boot components.
 #    This also tests the output of unused camel-spring-boot json detection and fails the Antora build with errors.
 #    sb-statistics: on

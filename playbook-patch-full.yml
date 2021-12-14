@@ -1,0 +1,18 @@
+    - require: "@djencks/antora-site-manifest"
+      export-site-manifest: true
+      export-site-navigation-data: true
+      exported-attributes:
+        - cq-artifact-id
+        - cq-artifact-id-base
+        - cq-native-supported
+        - cq-status
+        - cq-deprecated
+        - cq-jvm-since
+        - cq-native-since
+        - cq-camel-part-name
+        - cq-camel-part-title
+        - cq-camel-part-description
+        - cq-extension-page-title
+
+    - require: '@djencks/antora-timer'
+      log_level: info
