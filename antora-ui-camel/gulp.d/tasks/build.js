@@ -134,7 +134,7 @@ module.exports = (src, dest, preview) => () => {
     .pipe(
       map((file, enc, next) => {
         manifest = file.contents.toString()
-        next(null, null)
+        next(null, file)
       })
     )
     .pipe(vfs.src('helpers/*.js.template', opts))
