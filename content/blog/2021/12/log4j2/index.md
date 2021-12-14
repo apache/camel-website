@@ -27,7 +27,9 @@ version that was used for building and testing the release:
     <log4j2-version>2.13.3</log4j2-version>
 
 In the upcoming LTS releases 3.14.0, 3.11.5, and 3.7.7 we have upgraded to
-log4j 2.15.0. For future releases then we plan to filter out testing
+log4j 2.15.0. **UPDATE:** We upgrade to log4j 2.16.0 in LTS releases 3.14.1, 3.11.5 and 3.7.7.
+
+For future releases then we plan to filter out testing
 dependencies in the `camel-dependencies` BOM, meaning that `log4j2-version`
 will no longer be included.
 
