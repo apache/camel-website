@@ -4,7 +4,7 @@
   const algoliasearch = require('algoliasearch/lite')
 
   window.addEventListener('load', () => {
-    const client = algoliasearch('BH4D9OD16A', '16e3a9155a136e4962dc4c206f8278bd')
+    const client = algoliasearch('V62SL4FFIW', '1b7e52df4759e32dd49adedb286997f6')
     const index = client.initIndex('apache_camel')
     const search = document.querySelector('#search')
     const container = search.parentNode
