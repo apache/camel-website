@@ -84,6 +84,24 @@ if [ "$SERVE" == 1 ]; then
   fi
 fi
 
+# make sure we can reach the web site
+CURL_CMD=curl
+set +e
+$CURL_CMD -sS -k -o /dev/null --retry-all-errors --retry-delay 3 --retry 5 "$BASE_URL" || {
+  set -e
+  if [ -n "${CONTAINER_ID+x}" ]; then
+    echo Reverting to using curl from within the HTTP container
+    $CONTAINER_CMD exec "$CONTAINER_ID" apt-get update -y
+    $CONTAINER_CMD exec "$CONTAINER_ID" apt-get install -y curl
+    CURL_CMD="$CONTAINER_CMD exec $CONTAINER_ID curl"
+    BASE_URL=https://localhost
+    $CURL_CMD -sS -k -o /dev/null --retry-all-errors --retry-delay 3 --retry 5 "$BASE_URL"
+  else
+    exit 1
+  fi
+}
+set -e
+
 TOTAL=0
 SUCCESS=0
 
@@ -98,7 +116,7 @@ function test {
 
   local output
   set +e
-  output=$(curl -k -w '%{http_code},%{redirect_url}\n' -o /dev/null -s "${url}")
+  output=$($CURL_CMD -k -w '%{http_code},%{redirect_url}' -o /dev/null -s "${url}")
   set -e
   TOTAL=$((TOTAL + 1))
 
