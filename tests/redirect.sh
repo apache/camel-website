@@ -130,12 +130,18 @@ function test {
   fi
 }
 
+HTACCESS_FILE="$GIT_ROOT/documentation/.htaccess"
+if [ ! -f "$HTACCESS_FILE" ]; then
+  echo "No $HTACCESS_FILE found, using last published version. If you have made changes to the Antora playbook make sure to build the site first to test those."
+  $CURL_CMD -s -o "$HTACCESS_FILE" 'https://gitbox.apache.org/repos/asf?p=camel-website.git;a=blob_plain;f=.htaccess;hb=refs/heads/asf-site'
+fi
+
 # determine current _latest_ versions
-COMPONENTS_VERSION="$(grep 'components/latest' "$GIT_ROOT/documentation/.htaccess" | grep -Z -o '[^/]*$')"
-CAMEL_K_VERSION="$(grep 'camel-k/latest' "$GIT_ROOT/documentation/.htaccess" | grep -Z -o '[^/]*$')"
-CAMEL_KAFKA_CONNECTOR_VERSION="$(grep 'camel-kafka-connector/latest' "$GIT_ROOT/documentation/.htaccess" | grep -Z -o '[^/]*$')"
-CAMEL_QUARKUS_VERSION="$(grep 'camel-quarkus/latest' "$GIT_ROOT/documentation/.htaccess" | grep -Z -o '[^/]*$')"
-CAMEL_KAMELETS_VERSION="$(grep 'camel-kamelets/latest' "$GIT_ROOT/documentation/.htaccess" | grep -Z -o '[^/]*$')"
+COMPONENTS_VERSION="$(grep '^Redirect 302 /components/latest' "$HTACCESS_FILE" | grep -Z -o '[^/]*$')"
+CAMEL_K_VERSION="$(grep '^Redirect 302 /camel-k/latest' "$HTACCESS_FILE" | grep -Z -o '[^/]*$')"
+CAMEL_KAFKA_CONNECTOR_VERSION="$(grep '^Redirect 302 /camel-kafka-connector/latest' "$HTACCESS_FILE" | grep -Z -o '[^/]*$')"
+CAMEL_QUARKUS_VERSION="$(grep '^Redirect 302 /camel-quarkus/latest' "$HTACCESS_FILE" | grep -Z -o '[^/]*$')"
+CAMEL_KAMELETS_VERSION="$(grep '^Redirect 302 /camel-kamelets/latest' "$HTACCESS_FILE" | grep -Z -o '[^/]*$')"
 
 #
 # TESTS
