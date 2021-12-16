@@ -13,24 +13,24 @@ extended the support period from 1 to 2 years.
 
 This blog post first details the noteworthy changes since the last 3.11 LTS release from 6 months ago.
 
-## So what's in this release (6 months for work) 
+## So what's in this release (6 months of work) 
 
 This release introduces a set of new features and noticeable improvements that we will cover in this blog post.
 
 ### Documentation
 
-We have polished, cleaned up, and updated most of the documentation in 2nd half this year.
-We will continue this work in 1st half next year to complete this work.
+We have polished, cleaned up, and updated most of the documentation in the 2nd half this year.
+We will continue this work in the 1st half next year to complete this work.
 
 ### Core
 
-Configuring data formats, and thread pools are now reflection free (Native compilation friendly).
+Configuring data formats and thread pools are now reflection free (native compilation friendly).
 
 We identified a few places to improve performance by reducing object allocations
 in the Camel event notification system.
 
-Logging with logMask=true to hide sensitive information now masks all known
-secured keywords gather from all the Camel components.
+Logging with `logMask=true` to hide sensitive information now masks all known
+secured keywords gathered from all the Camel components.
 
 Added a new `LambdaEndpointRouteBuilder` that uses the type-safe Endpoint DSL.
 
@@ -43,7 +43,7 @@ Now you can configure a number of route configurations, and then specify on each
 
 ### Reload Routes
 
-The route reload functionality in Camel is capable of watching a directory folder for file changes, and then automatic trigger reload of the running routes in the Camel application.
+The route reload functionality in Camel is capable of watching a directory folder for file changes, and then automatically trigger a reload of the running routes in the Camel application.
 This functionality is intended for development purposes, and not for production use.
 
 You can see the reloading in action from one of the examples such as: https://github.com/apache/camel-examples/tree/master/examples/main-xml
@@ -61,7 +61,7 @@ for example Kamelets to embed code as the strategy directly in the Kamelet spec 
 
 ### Health Checks
 
-Camel components can now provide custom health checks which can be automatic discovered by Camel.
+Camel components can now provide custom health checks which can be automatically discovered by Camel.
 
 We added new health checks for route consumers so a consumer can more preciesly
 report health status, and in case of errors, then the consumer reports more detailed
@@ -85,7 +85,7 @@ CamelJBang is used to quickly try and run Camel applications.
 With CamelJBang we made it possible for anyone to quickly try Camel.
 
 The Camel Karavan Designer uses CamelJBang in its editor that allows you to visually
-builder Camel integrations and run them with ease while designing directly from the editor or web-browser.
+build Camel integrations and run them with ease while designing directly from the editor or web-browser.
 
 ### Kafka
 
