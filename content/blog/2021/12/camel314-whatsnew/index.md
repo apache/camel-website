@@ -89,7 +89,12 @@ build Camel integrations and run them with ease while designing directly from th
 
 ### Kafka
 
-The `camel-kafka` component has been overhauled and optimized to be more robust and have better performance.
+The `camel-kafka` component has been overhauled and optimized to be more robust, have better
+performance and improve resource utilization. Users of the Kafka idempotent repository will also benefit from
+more robustness fixes implemented during the last releases.
+
+Additionally, we added support for asynchronous commits, increased the test coverage, and included
+forward testing support for Kafka 3.0.
 
 We also worked on making _resume from offset_ a general concept in Camel and provide
 more out-of-the-box strategies for `camel-kafka`.
