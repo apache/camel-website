@@ -89,7 +89,10 @@ builder Camel integrations and run them with ease while designing directly from 
 
 ### Kafka
 
-TODO:
+The `camel-kafka` component has been overhauled and optimized to be more robust and have better performance.
+
+We also worked on making _resume from offset_ a general concept in Camel and provide
+more out-of-the-box strategies for `camel-kafka`.
 
 ### Salesforce
 
