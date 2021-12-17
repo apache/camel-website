@@ -1,6 +1,6 @@
 ---
 date: 2021-12-16
-eol: 2022-12-16
+eol: 2023-12-16
 draft: false
 type: release-note
 version: 3.14.0
@@ -14,4 +14,4 @@ kind: lts
 jdk: [8,11]
 ---
 
-This release is the new Camel 3.14.0 LTS minor release.
+This release is the new Camel 3.14.0 LTS release (last release to support Java 8).
