@@ -35,7 +35,7 @@
     "@djencks/antora-aggregate-collector": "^0.1.0-beta.1",
     "@djencks/antora-site-manifest": "^0.0.3-rc.2",
     "@djencks/antora-source-map": "^0.0.1-rc.2",
-    "@djencks/antora-source-watch": "^0.0.3-rc.2",
+    "@djencks/antora-source-watch": "^0.0.4-rc.2",
     "@djencks/antora-timer": "^0.0.1-beta.1",
     "@djencks/asciidoctor-antora-indexer": "^0.1.0-rc.2",
     "@djencks/asciidoctor-jsonpath": "^0.1.0-rc.2",
