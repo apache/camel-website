@@ -1614,16 +1614,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@djencks/antora-source-watch@npm:^0.0.3-rc.2":
-  version: 0.0.3-rc.2
-  resolution: "@djencks/antora-source-watch@npm:0.0.3-rc.2"
+"@djencks/antora-source-watch@npm:^0.0.4-rc.2":
+  version: 0.0.4-rc.2
+  resolution: "@djencks/antora-source-watch@npm:0.0.4-rc.2"
   dependencies:
     "@antora/expand-path-helper": ^2.0.0
     "@antora/user-require-helper": ~2.0
     browser-sync: ^2.27.7
     chokidar: ^3.5.2
     picomatch: ^2.3.0
-  checksum: cf9c4ce167177e11a57351ff1552861d20fb38eba2d90415b70b7a76d01f468a70231a0da78bf78e1ce1b5bcb4e467ea2b83462fee6d0507ea682478decd4f69
+  checksum: 3f972aaa9a48344451861cc72235975e70480032e83f7ef7f3616b59648d085724ccfb2e8fbbe85b8314f322602d2dda4b17a4e61fbf7b3cbf351301607fd129
   languageName: node
   linkType: hard
 
@@ -3650,7 +3650,7 @@ __metadata:
     "@djencks/antora-aggregate-collector": ^0.1.0-beta.1
     "@djencks/antora-site-manifest": ^0.0.3-rc.2
     "@djencks/antora-source-map": ^0.0.1-rc.2
-    "@djencks/antora-source-watch": ^0.0.3-rc.2
+    "@djencks/antora-source-watch": ^0.0.4-rc.2
     "@djencks/antora-timer": ^0.0.1-beta.1
     "@djencks/asciidoctor-antora-indexer": ^0.1.0-rc.2
     "@djencks/asciidoctor-jsonpath": ^0.1.0-rc.2
