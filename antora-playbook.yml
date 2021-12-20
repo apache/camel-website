@@ -59,6 +59,7 @@ content:
     - url: https://github.com/apache/camel-quarkus.git
       branches:
         - main
+        - 2.6.x
         - 2.5.x
         - 2.4.x
       start_path: docs
@@ -124,7 +125,7 @@ asciidoc:
 
 runtime:
   log:
-    level: warn
+    level: info
     failure_level: warn
 #    format: json
     
@@ -156,3 +157,33 @@ antora:
         - local:
             component: camel-kamelets
             path: indexPages.yml
+
+    - require: '@djencks/antora-source-map'
+      #      log_level: trace
+      source_map:
+        - url: 'https://github.com/apache/camel.git'
+          mapped_url: 'https://github.com/djencks/camel.git'
+          branches:
+            - branch: main
+              mapped_branch: main-remove-cq-bits
+            - branch: camel-3.14.x
+              mapped_branch: camel-3.14.x-remove-cq-bits
+            - branch: camel-3.13.x
+              mapped_branch: camel-3.13.x-remove-cq-bits
+            - branch: camel-3.12.x
+              mapped_branch: camel-3.12.x-remove-cq-bits
+            - branch: camel-3.11.x
+              mapped_branch: camel-3.11.x-remove-cq-bits
+            - branch: camel-3.7.x
+              mapped_branch: camel-3.7.x-remove-cq-bits
+        - url: 'https://github.com/apache/camel-quarkus.git'
+          mapped-url: 'https://github.com/djencks/camel-quarkus.git'
+          branches:
+            - branch: main
+              mapped-branch: main-contentAsTables
+            - branch: 2.6.x
+              mapped-branch: 2.6.x-contentAsTables
+            - branch: 2.5.x
+              mapped-branch: 2.5.x-contentAsTables
+            - branch: 2.4.x
+              mapped-branch: 2.4.x-contentAsTables
