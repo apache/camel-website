@@ -29,7 +29,7 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 | David Jencks           | djencks          | IBM                        |
 | Daniel Kulp            | dkulp            | Talend                     |
 | Denis Istomin          | distomin         |                            |
-| Dmitry Volodin         | dmvolod          | Red Hat                    |
+| Dmitry Volodin         | dmvolod          | T-Systems RUS              |
 | Franz Forsthofer       | forsthofer       | SAP                        |
 | Freeman Fang           | ffang            | Red Hat                    |
 | Gary Tully             | gtully           | Red Hat                    |
