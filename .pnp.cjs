@@ -53,8 +53,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@djencks/antora-source-map", "npm:0.0.1-rc.2"],
             ["@djencks/antora-source-watch", "npm:0.0.5-rc.2"],
             ["@djencks/antora-timer", "npm:0.0.1-beta.1"],
-            ["@djencks/asciidoctor-antora-indexer", "npm:0.1.2-rc.2"],
-            ["@djencks/asciidoctor-jsonpath", "npm:0.1.2-rc.2"],
+            ["@djencks/asciidoctor-antora-indexer", "npm:0.1.3-rc.2"],
+            ["@djencks/asciidoctor-jsonpath", "npm:0.1.3-rc.2"],
             ["@oclif/errors", "npm:1.3.4"],
             ["antora-ui-camel", "workspace:antora-ui-camel"],
             ["camel-website-util", "workspace:util"],
@@ -2536,11 +2536,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@djencks/asciidoctor-antora-indexer", [
-        ["npm:0.1.2-rc.2", {
-          "packageLocation": "./.yarn/cache/@djencks-asciidoctor-antora-indexer-npm-0.1.2-rc.2-7541c27778-c1dc0bf163.zip/node_modules/@djencks/asciidoctor-antora-indexer/",
+        ["npm:0.1.3-rc.2", {
+          "packageLocation": "./.yarn/cache/@djencks-asciidoctor-antora-indexer-npm-0.1.3-rc.2-a82a717eab-f5c6740586.zip/node_modules/@djencks/asciidoctor-antora-indexer/",
           "packageDependencies": [
-            ["@djencks/asciidoctor-antora-indexer", "npm:0.1.2-rc.2"],
-            ["@djencks/asciidoctor-report-support", "npm:0.1.2-rc.2"],
+            ["@djencks/asciidoctor-antora-indexer", "npm:0.1.3-rc.2"],
+            ["@djencks/asciidoctor-report-support", "npm:0.1.3-rc.2"],
             ["camelcase-keys", "npm:6.2.2"],
             ["picomatch", "npm:2.1.1"]
           ],
@@ -2548,12 +2548,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@djencks/asciidoctor-jsonpath", [
-        ["npm:0.1.2-rc.2", {
-          "packageLocation": "./.yarn/cache/@djencks-asciidoctor-jsonpath-npm-0.1.2-rc.2-b8d26597a6-581e7ed839.zip/node_modules/@djencks/asciidoctor-jsonpath/",
+        ["npm:0.1.3-rc.2", {
+          "packageLocation": "./.yarn/cache/@djencks-asciidoctor-jsonpath-npm-0.1.3-rc.2-41dc12f1b3-27d574a08e.zip/node_modules/@djencks/asciidoctor-jsonpath/",
           "packageDependencies": [
-            ["@djencks/asciidoctor-jsonpath", "npm:0.1.2-rc.2"],
+            ["@djencks/asciidoctor-jsonpath", "npm:0.1.3-rc.2"],
             ["@antora/user-require-helper", "npm:2.0.0"],
-            ["@djencks/asciidoctor-report-support", "npm:0.1.2-rc.2"],
+            ["@djencks/asciidoctor-report-support", "npm:0.1.3-rc.2"],
             ["@iarna/toml", "npm:2.2.5"],
             ["json5", "npm:2.2.0"],
             ["jsonpath", "npm:1.1.1"],
@@ -2563,10 +2563,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@djencks/asciidoctor-report-support", [
-        ["npm:0.1.2-rc.2", {
-          "packageLocation": "./.yarn/cache/@djencks-asciidoctor-report-support-npm-0.1.2-rc.2-c41f392460-7e7efd91bb.zip/node_modules/@djencks/asciidoctor-report-support/",
+        ["npm:0.1.3-rc.2", {
+          "packageLocation": "./.yarn/cache/@djencks-asciidoctor-report-support-npm-0.1.3-rc.2-a530125474-b1c402ddf2.zip/node_modules/@djencks/asciidoctor-report-support/",
           "packageDependencies": [
-            ["@djencks/asciidoctor-report-support", "npm:0.1.2-rc.2"],
+            ["@djencks/asciidoctor-report-support", "npm:0.1.3-rc.2"],
             ["@antora/user-require-helper", "npm:2.0.0"],
             ["camelcase-keys", "npm:7.0.1"],
             ["esprima", "npm:4.0.1"],
@@ -4936,8 +4936,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@djencks/antora-source-map", "npm:0.0.1-rc.2"],
             ["@djencks/antora-source-watch", "npm:0.0.5-rc.2"],
             ["@djencks/antora-timer", "npm:0.0.1-beta.1"],
-            ["@djencks/asciidoctor-antora-indexer", "npm:0.1.2-rc.2"],
-            ["@djencks/asciidoctor-jsonpath", "npm:0.1.2-rc.2"],
+            ["@djencks/asciidoctor-antora-indexer", "npm:0.1.3-rc.2"],
+            ["@djencks/asciidoctor-jsonpath", "npm:0.1.3-rc.2"],
             ["@oclif/errors", "npm:1.3.4"],
             ["antora-ui-camel", "workspace:antora-ui-camel"],
             ["camel-website-util", "workspace:util"],
