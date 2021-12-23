@@ -170,3 +170,8 @@ antora:
               mapped-branch: 0.6.x-collect
             - branch: 0.5.x
               mapped-branch: 0.5.x-collect
+              
+# this is an experiment to work with the site manifest served from the site.
+    - require: "@djencks/antora-site-manifest"
+      export-site-manifest: true
+      export-site-navigation-data: true
