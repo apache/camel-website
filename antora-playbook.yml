@@ -53,6 +53,7 @@ content:
     - url: https://github.com/apache/camel-kamelets.git
       branches:
         - main
+        - 0.6.x
         - 0.5.x
       start_path: docs
 
@@ -156,3 +157,16 @@ antora:
         - local:
             component: camel-kamelets
             path: indexPages.yml
+
+    - require: '@djencks/antora-source-map'
+      #      log_level: trace
+      source-map:
+        - url: 'https://github.com/apache/camel-kamelets.git'
+          mapped-url: 'https://github.com/djencks/camel-kamelets.git'
+          branches:
+            - branch: main
+              mapped-branch: main-collect
+            - branch: 0.6.x
+              mapped-branch: 0.6.x-collect
+            - branch: 0.5.x
+              mapped-branch: 0.5.x-collect
