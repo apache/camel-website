@@ -13,15 +13,23 @@ The recent release of the [Apache Camel plugin for IntelliJ version v0.8.0](http
 The first tech preview includes the following features:
 
 - Breakpoints inside Camel routes in XML DSL;
+
 - Conditional breakpoints with Simple language predicates;
+
 - Message body, headers and Exchange properties preview;
   ![Message Body, Headers and Properties](./headersProperties.gif)
+
 - Camel expressions evaluator;
   ![Expression Evaluator](./evaluateExpression.gif)
+
 - Support for Simple and DataSonnet expression languages;
+
 - Message History and execution stack;
-- Step Over, Step Into, Step Out and Run To Position functionalities implemented;
+
+- Step Over, Step Into and Step Out functionalities implemented;
   ![Stepping Over, Into and Out](./stepOverIntoOut.gif)
+
+- Run To Position implemented;
   ![Run to Position](./runToPosition.gif)
 
 - Camel and Camel SpringBoot run configurations.
