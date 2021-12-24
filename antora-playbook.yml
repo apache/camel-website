@@ -102,7 +102,7 @@ content:
 
 ui:
   bundle:
-    url: ./antora-ui-camel/build/ui-bundle.zip
+    url: ./antora-ui-camel/public/_
 
 urls:
   redirect_facility: httpd

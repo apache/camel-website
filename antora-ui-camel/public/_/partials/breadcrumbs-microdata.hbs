@@ -1,0 +1,38 @@
+<script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "{{{site.title}}}",
+        "item": "{{{site.url}}}/"
+        },
+        {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "{{{page.component.title}}}",
+        "item": "{{{site.url}}}{{{page.component.url}}}"
+        },
+        {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "{{{page.componentVersion.displayVersion}}}",
+        "item": "{{{site.url}}}{{{page.componentVersion.url}}}"
+        }
+        {{~#each page.breadcrumbs~}}
+        ,
+        {
+        "@type": "ListItem",
+        "position": {{add @index 4}},
+        "name": "{{{remove_markup ./content }}}",
+        {{#if (and ./url (eq ./urlType 'internal'))}}
+        "item": "{{{../site.url}}}{{{./url}}}"
+        {{else}}
+        "item": "{{{../site.url}}}{{{../page.componentVersion.url}}}"
+        {{/if}}
+        }
+        {{~/each~}}
+        ]
+    }
+</script>
