@@ -5,7 +5,9 @@
   "scripts": {
     "build": "run-s build:antora build:hugo build:sitemap build:htaccess build:minify",
     "build-all": "yarn workspaces foreach --topological-dev run build",
-    "build:antora": "antora --clean --fetch antora-playbook.yml --stacktrace",
+    "build:antora": "run-s build:antora-prep build:antora-perf",
+    "build:antora-prep": "yarn exec antora-playbook-snippets/assemble-playbook.sh antora-playbook-production.yml playbook-export-site-manifest.yml",
+    "build:antora-perf": "antora --clean --fetch antora-playbook-production.yml --stacktrace",
     "build:hugo": "hugo --cacheDir ${HUGO_CACHE_DIR:-$(pwd)/.hugo_data} ${HUGO_OPTIONS:-}",
     "build:minify": "gulp minify",
     "build:sitemap": "gulp sitemap",
@@ -26,7 +28,10 @@
     "preview:hugo": "hugo server -D",
     "preview:netlify": "netlify deploy --dir public",
     "build:antora-local-full": "antora local-antora-playbook-full.yml --stacktrace --clean --fetch",
-    "build:antora-local-partial": "antora local-antora-playbook-partial.yml --stacktrace"
+    "build:antora-local-partial": "antora local-antora-playbook-partial.yml --stacktrace",
+    "build:antora-local-full2": "antora antora-playbook-local-full.yml --stacktrace --clean --fetch",
+    "build:antora-local-partial2": "antora antora-playbook-local-partial.yml --stacktrace",
+    "build:antora-local-quick": "antora antora-playbook-local-quick.yml --stacktrace"
   },
   "devDependencies": {
     "@antora/cli": "^3.0.0-rc.2",

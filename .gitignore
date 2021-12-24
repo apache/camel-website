@@ -23,4 +23,8 @@ resources
 !**/.yarn/versions
 *.github-proxy.*
 
+antora-playbook-*.yml
+
+#temporary
 local-antora-playbook-*
+antora-playbook.yml
