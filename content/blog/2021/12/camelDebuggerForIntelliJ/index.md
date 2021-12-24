@@ -1,6 +1,6 @@
 ---
 title: "Camel Debugger For IntelliJ"
-date: 2021-12-23T07:53:49-07:00
+date: 2021-12-24
 authors: ["javaduke"]
 categories: ["Tooling"]
 preview: "Apache Camel plugin for IntelliJ now features a debugger for XML routes"
@@ -12,22 +12,27 @@ The recent release of the [Apache Camel plugin for IntelliJ version v0.8.0](http
 
 The first tech preview includes the following features:
 
-- breakpoints inside Camel routes in XML DSL;
-- conditional breakpoints with Simple language predicates;
+- Breakpoints inside Camel routes in XML DSL;
+- Conditional breakpoints with Simple language predicates;
+- Message body, headers and Exchange properties preview;
+  ![Message Body, Headers and Properties](./headersProperties.gif)
 - Camel expressions evaluator;
+  ![Expression Evaluator](./evaluateExpression.gif)
 - Support for Simple and DataSonnet expression languages;
 - Message History and execution stack;
 - Step Over, Step Into, Step Out and Run To Position functionalities implemented;
+  ![Stepping Over, Into and Out](./stepOverIntoOut.gif)
+  ![Run to Position](./runToPosition.gif)
+
 - Camel and Camel SpringBoot run configurations.
 
-![](expressionEvaluator.png "Camel Debugger and Expression Evaluator")
 
 To try the debugger:
 
 - Check out a [Camel Spring Boot example which uses XML routes](https://github.com/apache/camel-spring-boot-examples/tree/main/xml);
 - Import the project into the IntelliJ as a Maven project;
 - Create a new **Camel SpringBoot Application** run configuration;
-- If you want to evaluate expressions in the [DataSonnet language](https://camel.apache.org/components/3.13.x/languages/datasonnet-language.html), add the following dependencies to your `pom.xml`:
+- If you want to evaluate expressions in the [DataSonnet language](/components/latest/languages/datasonnet-language.html), add the following dependencies to your `pom.xml`:
  ```
     <dependency>
         <groupId>org.apache.camel.springboot</groupId>
