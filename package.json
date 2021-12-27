@@ -34,8 +34,8 @@
     "build:antora-local-quick": "antora antora-playbook-local-quick.yml --stacktrace"
   },
   "devDependencies": {
-    "@antora/cli": "^3.0.0-rc.2",
-    "@antora/site-generator": "^3.0.0-rc.2",
+    "@antora/cli": "^3.0.0",
+    "@antora/site-generator": "^3.0.0",
     "@deadlinks/cargo-deadlinks": "github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux",
     "@djencks/antora-aggregate-collector": "^0.1.0-beta.1",
     "@djencks/antora-site-manifest": "^0.0.3-rc.2",
