@@ -45,8 +45,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
-            ["@antora/cli", "npm:3.0.0-rc.2"],
-            ["@antora/site-generator", "npm:3.0.0-rc.2"],
+            ["@antora/cli", "npm:3.0.0"],
+            ["@antora/site-generator", "npm:3.0.0"],
             ["@deadlinks/cargo-deadlinks", "github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux"],
             ["@djencks/antora-aggregate-collector", "npm:0.1.0-beta.1"],
             ["@djencks/antora-site-manifest", "npm:0.0.3-rc.2"],
@@ -225,11 +225,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@antora/asciidoc-loader", [
-        ["npm:3.0.0-rc.2", {
-          "packageLocation": "./.yarn/cache/@antora-asciidoc-loader-npm-3.0.0-rc.2-d3cf6a1a09-8910e5f8a4.zip/node_modules/@antora/asciidoc-loader/",
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/@antora-asciidoc-loader-npm-3.0.0-691ac44a81-f2bfa50278.zip/node_modules/@antora/asciidoc-loader/",
           "packageDependencies": [
-            ["@antora/asciidoc-loader", "npm:3.0.0-rc.2"],
-            ["@antora/logger", "npm:3.0.0-rc.2"],
+            ["@antora/asciidoc-loader", "npm:3.0.0"],
+            ["@antora/logger", "npm:3.0.0"],
             ["@antora/user-require-helper", "npm:2.0.0"],
             ["@asciidoctor/core", "npm:2.2.5"]
           ],
@@ -237,12 +237,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@antora/cli", [
-        ["npm:3.0.0-rc.2", {
-          "packageLocation": "./.yarn/cache/@antora-cli-npm-3.0.0-rc.2-f0a441cf95-1874e28817.zip/node_modules/@antora/cli/",
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/@antora-cli-npm-3.0.0-02208b09d4-68b8530c74.zip/node_modules/@antora/cli/",
           "packageDependencies": [
-            ["@antora/cli", "npm:3.0.0-rc.2"],
-            ["@antora/logger", "npm:3.0.0-rc.2"],
-            ["@antora/playbook-builder", "npm:3.0.0-rc.2"],
+            ["@antora/cli", "npm:3.0.0"],
+            ["@antora/logger", "npm:3.0.0"],
+            ["@antora/playbook-builder", "npm:3.0.0"],
             ["@antora/user-require-helper", "npm:2.0.0"],
             ["commander", "npm:8.3.0"]
           ],
@@ -250,10 +250,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@antora/content-aggregator", [
-        ["npm:3.0.0-rc.2", {
-          "packageLocation": "./.yarn/cache/@antora-content-aggregator-npm-3.0.0-rc.2-e61d158f2b-b7ced90a19.zip/node_modules/@antora/content-aggregator/",
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/@antora-content-aggregator-npm-3.0.0-4518a3ac9f-12dfbc3dea.zip/node_modules/@antora/content-aggregator/",
           "packageDependencies": [
-            ["@antora/content-aggregator", "npm:3.0.0-rc.2"],
+            ["@antora/content-aggregator", "npm:3.0.0"],
             ["@antora/expand-path-helper", "npm:2.0.0"],
             ["@antora/user-require-helper", "npm:2.0.0"],
             ["braces", "npm:3.0.2"],
@@ -263,7 +263,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["hpagent", "npm:0.1.2"],
             ["isomorphic-git", "npm:1.10.0"],
             ["js-yaml", "npm:4.1.0"],
-            ["multi-progress", "virtual:e61d158f2b5ba98b3bc3a7a9be20ee10a578df82131843c5b51b68d5cd37dd083ad70264b32e02a53443d63dcfe8eda710f52a3a8e84e40069728550f9bf5fd1#npm:4.0.0"],
+            ["multi-progress", "virtual:4518a3ac9f0083ac66151094561523136c3f83a4f40ce081b432380896b6846d0fa68ca4bf7e9169266ef53e1cff497bb4b1b540fede66c1fbdaf110120b5a50#npm:4.0.0"],
             ["picomatch", "npm:2.3.0"],
             ["progress", "npm:2.0.3"],
             ["should-proxy", "npm:1.0.4"],
@@ -274,11 +274,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@antora/content-classifier", [
-        ["npm:3.0.0-rc.2", {
-          "packageLocation": "./.yarn/cache/@antora-content-classifier-npm-3.0.0-rc.2-1a846468b0-f7f5015051.zip/node_modules/@antora/content-classifier/",
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/@antora-content-classifier-npm-3.0.0-edef487091-6226522eee.zip/node_modules/@antora/content-classifier/",
           "packageDependencies": [
-            ["@antora/content-classifier", "npm:3.0.0-rc.2"],
-            ["@antora/logger", "npm:3.0.0-rc.2"],
+            ["@antora/content-classifier", "npm:3.0.0"],
+            ["@antora/logger", "npm:3.0.0"],
             ["mime-types", "npm:2.1.26"],
             ["vinyl", "npm:2.2.1"]
           ],
@@ -286,11 +286,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@antora/document-converter", [
-        ["npm:3.0.0-rc.2", {
-          "packageLocation": "./.yarn/cache/@antora-document-converter-npm-3.0.0-rc.2-98b6748333-35996878bf.zip/node_modules/@antora/document-converter/",
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/@antora-document-converter-npm-3.0.0-4ee8952431-cc4a26f5b1.zip/node_modules/@antora/document-converter/",
           "packageDependencies": [
-            ["@antora/document-converter", "npm:3.0.0-rc.2"],
-            ["@antora/asciidoc-loader", "npm:3.0.0-rc.2"]
+            ["@antora/document-converter", "npm:3.0.0"],
+            ["@antora/asciidoc-loader", "npm:3.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -305,10 +305,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@antora/file-publisher", [
-        ["npm:3.0.0-rc.2", {
-          "packageLocation": "./.yarn/cache/@antora-file-publisher-npm-3.0.0-rc.2-8729c3e54b-66030e642f.zip/node_modules/@antora/file-publisher/",
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/@antora-file-publisher-npm-3.0.0-b184089ed3-b4fa7a48bb.zip/node_modules/@antora/file-publisher/",
           "packageDependencies": [
-            ["@antora/file-publisher", "npm:3.0.0-rc.2"],
+            ["@antora/file-publisher", "npm:3.0.0"],
             ["@antora/expand-path-helper", "npm:2.0.0"],
             ["@antora/user-require-helper", "npm:2.0.0"],
             ["gulp-vinyl-zip", "npm:2.5.0"],
@@ -319,34 +319,34 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@antora/logger", [
-        ["npm:3.0.0-rc.2", {
-          "packageLocation": "./.yarn/cache/@antora-logger-npm-3.0.0-rc.2-5a957def06-9f70dbfc96.zip/node_modules/@antora/logger/",
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/@antora-logger-npm-3.0.0-1d41811740-aa7908066c.zip/node_modules/@antora/logger/",
           "packageDependencies": [
-            ["@antora/logger", "npm:3.0.0-rc.2"],
+            ["@antora/logger", "npm:3.0.0"],
             ["@antora/expand-path-helper", "npm:2.0.0"],
-            ["pino", "npm:7.5.1"],
-            ["pino-pretty", "npm:7.2.0"],
+            ["pino", "npm:7.6.1"],
+            ["pino-pretty", "npm:7.3.0"],
             ["sonic-boom", "npm:2.4.1"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@antora/navigation-builder", [
-        ["npm:3.0.0-rc.2", {
-          "packageLocation": "./.yarn/cache/@antora-navigation-builder-npm-3.0.0-rc.2-ecc9225dc1-af66f39412.zip/node_modules/@antora/navigation-builder/",
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/@antora-navigation-builder-npm-3.0.0-9a93c15d1e-2294991f2f.zip/node_modules/@antora/navigation-builder/",
           "packageDependencies": [
-            ["@antora/navigation-builder", "npm:3.0.0-rc.2"],
-            ["@antora/asciidoc-loader", "npm:3.0.0-rc.2"]
+            ["@antora/navigation-builder", "npm:3.0.0"],
+            ["@antora/asciidoc-loader", "npm:3.0.0"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@antora/page-composer", [
-        ["npm:3.0.0-rc.2", {
-          "packageLocation": "./.yarn/cache/@antora-page-composer-npm-3.0.0-rc.2-c00b6e0b78-28b09092d7.zip/node_modules/@antora/page-composer/",
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/@antora-page-composer-npm-3.0.0-128704405e-4f82a6bd3b.zip/node_modules/@antora/page-composer/",
           "packageDependencies": [
-            ["@antora/page-composer", "npm:3.0.0-rc.2"],
-            ["@antora/logger", "npm:3.0.0-rc.2"],
+            ["@antora/page-composer", "npm:3.0.0"],
+            ["@antora/logger", "npm:3.0.0"],
             ["handlebars", "npm:4.7.5"],
             ["require-from-string", "npm:2.0.2"]
           ],
@@ -354,10 +354,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@antora/playbook-builder", [
-        ["npm:3.0.0-rc.2", {
-          "packageLocation": "./.yarn/cache/@antora-playbook-builder-npm-3.0.0-rc.2-1ba8a83c71-55da169a71.zip/node_modules/@antora/playbook-builder/",
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/@antora-playbook-builder-npm-3.0.0-6f058ad7da-c5e1c3507f.zip/node_modules/@antora/playbook-builder/",
           "packageDependencies": [
-            ["@antora/playbook-builder", "npm:3.0.0-rc.2"],
+            ["@antora/playbook-builder", "npm:3.0.0"],
             ["@iarna/toml", "npm:2.2.5"],
             ["camelcase-keys", "npm:7.0.1"],
             ["convict", "npm:6.2.1"],
@@ -368,64 +368,64 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@antora/redirect-producer", [
-        ["npm:3.0.0-rc.2", {
-          "packageLocation": "./.yarn/cache/@antora-redirect-producer-npm-3.0.0-rc.2-2727ea46cb-8a75eae89a.zip/node_modules/@antora/redirect-producer/",
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/@antora-redirect-producer-npm-3.0.0-6e1ff99143-0450adf691.zip/node_modules/@antora/redirect-producer/",
           "packageDependencies": [
-            ["@antora/redirect-producer", "npm:3.0.0-rc.2"],
+            ["@antora/redirect-producer", "npm:3.0.0"],
             ["vinyl", "npm:2.2.1"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@antora/site-generator", [
-        ["npm:3.0.0-rc.2", {
-          "packageLocation": "./.yarn/cache/@antora-site-generator-npm-3.0.0-rc.2-06634ec2ff-5cbb84c78f.zip/node_modules/@antora/site-generator/",
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/@antora-site-generator-npm-3.0.0-2dd87effbf-48104504dc.zip/node_modules/@antora/site-generator/",
           "packageDependencies": [
-            ["@antora/site-generator", "npm:3.0.0-rc.2"],
-            ["@antora/asciidoc-loader", "npm:3.0.0-rc.2"],
-            ["@antora/content-aggregator", "npm:3.0.0-rc.2"],
-            ["@antora/content-classifier", "npm:3.0.0-rc.2"],
-            ["@antora/document-converter", "npm:3.0.0-rc.2"],
-            ["@antora/file-publisher", "npm:3.0.0-rc.2"],
-            ["@antora/logger", "npm:3.0.0-rc.2"],
-            ["@antora/navigation-builder", "npm:3.0.0-rc.2"],
-            ["@antora/page-composer", "npm:3.0.0-rc.2"],
-            ["@antora/playbook-builder", "npm:3.0.0-rc.2"],
-            ["@antora/redirect-producer", "npm:3.0.0-rc.2"],
-            ["@antora/site-mapper", "npm:3.0.0-rc.2"],
-            ["@antora/site-publisher", "npm:3.0.0-rc.2"],
-            ["@antora/ui-loader", "npm:3.0.0-rc.2"],
+            ["@antora/site-generator", "npm:3.0.0"],
+            ["@antora/asciidoc-loader", "npm:3.0.0"],
+            ["@antora/content-aggregator", "npm:3.0.0"],
+            ["@antora/content-classifier", "npm:3.0.0"],
+            ["@antora/document-converter", "npm:3.0.0"],
+            ["@antora/file-publisher", "npm:3.0.0"],
+            ["@antora/logger", "npm:3.0.0"],
+            ["@antora/navigation-builder", "npm:3.0.0"],
+            ["@antora/page-composer", "npm:3.0.0"],
+            ["@antora/playbook-builder", "npm:3.0.0"],
+            ["@antora/redirect-producer", "npm:3.0.0"],
+            ["@antora/site-mapper", "npm:3.0.0"],
+            ["@antora/site-publisher", "npm:3.0.0"],
+            ["@antora/ui-loader", "npm:3.0.0"],
             ["@antora/user-require-helper", "npm:2.0.0"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@antora/site-mapper", [
-        ["npm:3.0.0-rc.2", {
-          "packageLocation": "./.yarn/cache/@antora-site-mapper-npm-3.0.0-rc.2-15c85ad7ec-688f1375ce.zip/node_modules/@antora/site-mapper/",
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/@antora-site-mapper-npm-3.0.0-1ad7aad642-0dcfcd1c16.zip/node_modules/@antora/site-mapper/",
           "packageDependencies": [
-            ["@antora/site-mapper", "npm:3.0.0-rc.2"],
-            ["@antora/content-classifier", "npm:3.0.0-rc.2"],
+            ["@antora/site-mapper", "npm:3.0.0"],
+            ["@antora/content-classifier", "npm:3.0.0"],
             ["vinyl", "npm:2.2.1"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@antora/site-publisher", [
-        ["npm:3.0.0-rc.2", {
-          "packageLocation": "./.yarn/cache/@antora-site-publisher-npm-3.0.0-rc.2-70f728bd09-2d5d67ce31.zip/node_modules/@antora/site-publisher/",
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/@antora-site-publisher-npm-3.0.0-dc0ac5ca52-afbf4387a1.zip/node_modules/@antora/site-publisher/",
           "packageDependencies": [
-            ["@antora/site-publisher", "npm:3.0.0-rc.2"],
-            ["@antora/file-publisher", "npm:3.0.0-rc.2"]
+            ["@antora/site-publisher", "npm:3.0.0"],
+            ["@antora/file-publisher", "npm:3.0.0"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["@antora/ui-loader", [
-        ["npm:3.0.0-rc.2", {
-          "packageLocation": "./.yarn/cache/@antora-ui-loader-npm-3.0.0-rc.2-05aeb5dc65-d35bf78933.zip/node_modules/@antora/ui-loader/",
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/@antora-ui-loader-npm-3.0.0-4dbc54924f-52655bc9bf.zip/node_modules/@antora/ui-loader/",
           "packageDependencies": [
-            ["@antora/ui-loader", "npm:3.0.0-rc.2"],
+            ["@antora/ui-loader", "npm:3.0.0"],
             ["@antora/expand-path-helper", "npm:2.0.0"],
             ["braces", "npm:3.0.2"],
             ["cache-directory", "npm:2.0.0"],
@@ -4928,8 +4928,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["apache-camel-website", "workspace:."],
-            ["@antora/cli", "npm:3.0.0-rc.2"],
-            ["@antora/site-generator", "npm:3.0.0-rc.2"],
+            ["@antora/cli", "npm:3.0.0"],
+            ["@antora/site-generator", "npm:3.0.0"],
             ["@deadlinks/cargo-deadlinks", "github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux"],
             ["@djencks/antora-aggregate-collector", "npm:0.1.0-beta.1"],
             ["@djencks/antora-site-manifest", "npm:0.0.3-rc.2"],
@@ -14601,10 +14601,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["joycon", [
-        ["npm:3.0.1", {
-          "packageLocation": "./.yarn/cache/joycon-npm-3.0.1-1489fed95a-1fb67a921e.zip/node_modules/joycon/",
+        ["npm:3.1.1", {
+          "packageLocation": "./.yarn/cache/joycon-npm-3.1.1-3033e0e5f4-8003c9c3fc.zip/node_modules/joycon/",
           "packageDependencies": [
-            ["joycon", "npm:3.0.1"]
+            ["joycon", "npm:3.1.1"]
           ],
           "linkType": "HARD",
         }]
@@ -16553,10 +16553,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:e61d158f2b5ba98b3bc3a7a9be20ee10a578df82131843c5b51b68d5cd37dd083ad70264b32e02a53443d63dcfe8eda710f52a3a8e84e40069728550f9bf5fd1#npm:4.0.0", {
-          "packageLocation": "./.yarn/__virtual__/multi-progress-virtual-ebf92c4765/0/cache/multi-progress-npm-4.0.0-e647cd6e59-1e1290c3db.zip/node_modules/multi-progress/",
+        ["virtual:4518a3ac9f0083ac66151094561523136c3f83a4f40ce081b432380896b6846d0fa68ca4bf7e9169266ef53e1cff497bb4b1b540fede66c1fbdaf110120b5a50#npm:4.0.0", {
+          "packageLocation": "./.yarn/__virtual__/multi-progress-virtual-10f19fb650/0/cache/multi-progress-npm-4.0.0-e647cd6e59-1e1290c3db.zip/node_modules/multi-progress/",
           "packageDependencies": [
-            ["multi-progress", "virtual:e61d158f2b5ba98b3bc3a7a9be20ee10a578df82131843c5b51b68d5cd37dd083ad70264b32e02a53443d63dcfe8eda710f52a3a8e84e40069728550f9bf5fd1#npm:4.0.0"],
+            ["multi-progress", "virtual:4518a3ac9f0083ac66151094561523136c3f83a4f40ce081b432380896b6846d0fa68ca4bf7e9169266ef53e1cff497bb4b1b540fede66c1fbdaf110120b5a50#npm:4.0.0"],
             ["@types/progress", null],
             ["progress", "npm:2.0.3"]
           ],
@@ -18504,13 +18504,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["pino", [
-        ["npm:7.5.1", {
-          "packageLocation": "./.yarn/cache/pino-npm-7.5.1-e97f7aed9d-2f71ebadb0.zip/node_modules/pino/",
+        ["npm:7.6.1", {
+          "packageLocation": "./.yarn/cache/pino-npm-7.6.1-606dcde267-9b56990264.zip/node_modules/pino/",
           "packageDependencies": [
-            ["pino", "npm:7.5.1"],
+            ["pino", "npm:7.6.1"],
             ["fast-redact", "npm:3.0.2"],
             ["fastify-warning", "npm:0.2.0"],
-            ["get-caller-file", "npm:2.0.5"],
             ["on-exit-leak-free", "npm:0.2.0"],
             ["pino-abstract-transport", "npm:0.5.0"],
             ["pino-std-serializers", "npm:4.0.0"],
@@ -18545,7 +18544,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["dateformat", "npm:4.6.3"],
             ["fast-safe-stringify", "npm:2.1.1"],
             ["jmespath", "npm:0.15.0"],
-            ["joycon", "npm:3.0.1"],
+            ["joycon", "npm:3.1.1"],
             ["pump", "npm:3.0.0"],
             ["readable-stream", "npm:3.6.0"],
             ["rfdc", "npm:1.3.0"],
@@ -18554,15 +18553,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:7.2.0", {
-          "packageLocation": "./.yarn/cache/pino-pretty-npm-7.2.0-7c09610ec4-dafe8a3368.zip/node_modules/pino-pretty/",
+        ["npm:7.3.0", {
+          "packageLocation": "./.yarn/cache/pino-pretty-npm-7.3.0-2ee6bd0043-28320e4f7d.zip/node_modules/pino-pretty/",
           "packageDependencies": [
-            ["pino-pretty", "npm:7.2.0"],
+            ["pino-pretty", "npm:7.3.0"],
             ["args", "npm:5.0.1"],
             ["colorette", "npm:2.0.16"],
             ["dateformat", "npm:4.6.3"],
             ["fast-safe-stringify", "npm:2.1.1"],
-            ["joycon", "npm:3.0.1"],
+            ["joycon", "npm:3.1.1"],
             ["pino-abstract-transport", "npm:0.5.0"],
             ["pump", "npm:3.0.0"],
             ["readable-stream", "npm:3.6.0"],
