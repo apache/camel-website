@@ -3,7 +3,7 @@
       import_manifests:
         - primary_site_manifest_url: ./documentation/site-manifest.json
       local_urls: true
-      # Turn on partial_components if you further restict source-watch to build less than the full subproject.
+      # Turn on partial_components if you further restrict source-watch to build less than the full subproject.
 #      partial_components: true
 
     - require: '@djencks/antora-timer'

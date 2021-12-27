@@ -1,9 +1,6 @@
     - require: "@djencks/antora-site-manifest"
       import-manifests:
-# Until PR is merged
-        - primary-site-manifest-url: https://pr-735--camel.netlify.app/site-manifest.json
-# After PR is merged
-#        - primary-site-manifest-url: https://camel.apache.org/site-manifest.json
+        - primary-site-manifest-url: https://camel.apache.org/site-manifest.json
 
     - require: '@djencks/antora-timer'
       log_level: info
