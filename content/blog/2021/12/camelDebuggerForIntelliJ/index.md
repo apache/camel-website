@@ -40,7 +40,7 @@ To try the debugger:
 - Check out a [Camel Spring Boot example which uses XML routes](https://github.com/apache/camel-spring-boot-examples/tree/main/xml);
 - Import the project into the IntelliJ as a Maven project;
 - Create a new **Camel SpringBoot Application** run configuration;
-- If you want to evaluate expressions in the [DataSonnet language](/components/latest/languages/datasonnet-language.html), add the following dependencies to your `pom.xml`:
+- If you want to evaluate expressions in the DataSonnet language, add the following dependencies to your `pom.xml`:
  ```
     <dependency>
         <groupId>org.apache.camel.springboot</groupId>
