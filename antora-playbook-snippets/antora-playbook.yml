@@ -157,3 +157,22 @@ antora:
         - local:
             component: camel-kamelets
             path: indexPages.yml
+
+    - require: '@djencks/antora-source-map'
+      #      log_level: trace
+      source-map:
+        - url: 'https://github.com/apache/camel-karaf.git'
+          mapped-url: 'https://github.com/djencks/camel-karaf.git'
+          branches:
+            - branch: main
+              mapped-branch: main-generate-index
+            - branch: camel-karaf-3.14.x
+              mapped-branch: camel-karaf-3.14.x-generate-index
+            - branch: camel-karaf-3.13.x
+              mapped-branch: camel-karaf-3.13.x-generate-index
+            - branch: camel-karaf-3.12.x
+              mapped-branch: camel-karaf-3.12.x-generate-index
+            - branch: camel-karaf-3.11.x
+              mapped-branch: camel-karaf-3.11.x-generate-index
+            - branch: camel-karaf-3.7.x
+              mapped-branch: camel-karaf-3.7.x-generate-index
