@@ -176,3 +176,8 @@ antora:
               mapped-branch: camel-karaf-3.11.x-generate-index
             - branch: camel-karaf-3.7.x
               mapped-branch: camel-karaf-3.7.x-generate-index
+        - url: https://github.com/apache/camel.git
+          mapped-url: https://github.com/djencks/camel.git
+          branches:
+            - branch: main
+              mapped-branch: main-fix-salesforce-page
