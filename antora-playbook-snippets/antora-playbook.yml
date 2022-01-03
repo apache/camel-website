@@ -162,3 +162,20 @@ antora:
         - local:
             component: camel-kamelets
             path: indexPages.yml
+
+    - require: '@djencks/antora-source-map'
+      #      log_level: trace
+      source-map:
+        - url: https://github.com/apache/camel-k.git
+          mapped-url: 'https://github.com/djencks/camel-k.git'
+          branches:
+            - branch: main
+              mapped-branch: main-gen-adoc-crd
+            - branch: release-1.8.x
+              mapped-branch: release-1.8.x-gen-adoc-crd
+            - branch: release-1.7.x
+              mapped-branch: release-1.7.x-gen-adoc-crd
+            - branch: release-1.6.x
+              mapped-branch: release-1.6.x-gen-adoc-crd
+            - branch: release-1.4.x
+              mapped-branch: release-1.4.x-gen-adoc-crd
