@@ -208,10 +208,10 @@ test "$BASE_URL/camel-kamelets/next" 301 "$BASE_URL/camel-kamelets/next/"
 test "$BASE_URL/camel-kamelets/next/" 200
 test "$BASE_URL/camel-kamelets/latest" 302 "$BASE_URL/camel-kamelets/${CAMEL_KAMELETS_VERSION}"
 test "$BASE_URL/camel-kamelets/latest/" 302 "$BASE_URL/camel-kamelets/${CAMEL_KAMELETS_VERSION}/"
-test "$BASE_URL/camel-kamelets/github-source.html" 302 "$BASE_URL/camel-kamelets/${CAMEL_KAMELETS_VERSION}/github-source.html"
-test "$BASE_URL/camel-kamelets/latest/github-source.html" 302 "$BASE_URL/camel-kamelets/${CAMEL_KAMELETS_VERSION}/github-source.html"
-test "$BASE_URL/camel-kamelets/next/github-source.html" 200
-test "$BASE_URL/camel-kamelets/next/github-source.html" 200
+test "$BASE_URL/camel-kamelets/aws-s3-source.html" 302 "$BASE_URL/camel-kamelets/${CAMEL_KAMELETS_VERSION}/aws-s3-source.html"
+test "$BASE_URL/camel-kamelets/latest/aws-s3-source.html" 302 "$BASE_URL/camel-kamelets/${CAMEL_KAMELETS_VERSION}/aws-s3-source.html"
+test "$BASE_URL/camel-kamelets/next/aws-s3-source.html" 200
+test "$BASE_URL/camel-kamelets/next/aws-s3-source.html" 200
 
 test "$BASE_URL/camel-quarkus" 302 "$BASE_URL/camel-quarkus/${CAMEL_QUARKUS_VERSION}/"
 test "$BASE_URL/camel-quarkus/" 302 "$BASE_URL/camel-quarkus/${CAMEL_QUARKUS_VERSION}/"
