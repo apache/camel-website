@@ -53,6 +53,7 @@ content:
     - url: https://github.com/apache/camel-kamelets.git
       branches:
         - main
+        - 0.6.x
         - 0.5.x
       start_path: docs
 
