@@ -17,7 +17,7 @@ There are many ways you can help make Camel a better piece of software - please 
 
 Identify areas you can contribute first. You don't have to be an expert in an area, the Apache Camel developers are available to offer help and guidance.
 
-Introduce yourself on the [developer's mailing list] (#getting-in-touch), tell us what area of work or problem you wish to address in Camel. Create a draft of your solution, this can be simple 1-2 sentences on the change you wish to make. Try to be as specific as you can: include a short description of your intent, what you tried and what didn't work, or what you need help with. The best way of approaching the developers is by describing what you would like to work on and asking specific questions on how to get started. We'll do our best to guide you and help you make your contribution. 
+Introduce yourself on the [developer's mailing list] (#getting-in-touch), tell us what area of work or problem you wish to address in Camel. Create a draft of your solution, this can be simple 1-2 sentences on the change you wish to make. Try to be as specific as you can: include a short description of your intent, what you tried and what didn't work, or what you need help with. The best way of approaching the developers is by describing what you would like to work on and asking specific questions on how to get started. We'll do our best to guide you and help you make your contribution.
 
 We also participate in Google Summer of Code and Outreachy programs; for information about those look at those program websites. If you wish to participate in either of those follow the guidelines and schedule set by those programs. If you are unsure please reach out via official communication channels of those programs, or ask on the developer's mailing list for help.
 
@@ -52,13 +52,13 @@ We recommend working on the code from the [camel GitHub repository](https://gith
 
     git clone https://github.com/apache/camel.git
     cd camel
-    
+
 **NOTE:** If you are an Apache Camel committer, then you may also clone the [ASF git repo](https://gitbox.apache.org/repos/asf/camel.git).
 
 Build the project with [Maven](http://maven.apache.org/download.html). Maven 3.6.x or newer is required to build Camel 3 or later. The following command will do a fast build.
 
     mvn clean install -Pfastinstall
-    
+
 **NOTE:** You might need to build multiple times (if you get a build error) because sometimes maven fails to download all the required jars.
 Then import the projects into your workspace.
 
@@ -83,11 +83,11 @@ If you modified a component/dataformat or updated a dependency in the main camel
 
 ## Testing the changes
 
-If you need to implement tests for your changes (highly recommended!), you will probably need to handle 3 separate things: 
+If you need to implement tests for your changes (highly recommended!), you will probably need to handle 3 separate things:
 
-- simulate the infrastructure required for the test (ie.: JMS brokers, Kafka, etc), 
+- simulate the infrastructure required for the test (ie.: JMS brokers, Kafka, etc),
 - writing testable code,
-- the test logic itself. 
+- the test logic itself.
 Naturally, there is no rule of
 thumb for how the code changes and test logic should be written. The [Testing](/manual/testing.html) page in the User Manual provides detailed information and examples for writing Camel unit tests.
 With regard to simulating the test infrastructure, there is a
@@ -105,7 +105,7 @@ If you need to implement a new test-infra service, check the [readme on the test
 
 ## Running checkstyle
 
-Apache Camel source code uses a coding style/format that can 
+Apache Camel source code uses a coding style/format that can
 be verified for compliance using the checkstyle plugin.
 To enable source style checking with checkstyle, build Camel with the -Psourcecheck parameter:
 
@@ -128,12 +128,12 @@ Be mindful of the source checks, formatting and the structure of the git commit 
 Ensure that the unit tests include proper assertions, and not only system.out or logging.
 Please also avoid unnecessary changes, like reordering methods and fields, which will make your PR harder to review.
 
-Following these guidelines will help you in getting your contribution accepted. 
+Following these guidelines will help you in getting your contribution accepted.
 
 ### Creating a Pull Request at Github
 The *preferred* way of submitting your contribution is to fork the camel Github repository and push your changes there.
 You can find many resources online explaining how to work on GitHub projects and how to submit work to these projects.
-After updating your private repository, create a Pull Request (PR). One of the committers then needs to accept your PR to bring the code into the ASF codebase. 
+After updating your private repository, create a Pull Request (PR). One of the committers then needs to accept your PR to bring the code into the ASF codebase.
 
 Expect that your Pull Request will receive a review and that you will need to respond and correspond to that via comments at GitHub.
 
@@ -158,6 +158,10 @@ or
 
     git diff --no-prefix > patchfile.txt
 
+### Automated Code Analysis
+
+As part of our [Continuous Integration](https://ci-builds.apache.org/job/Camel/job/Apache%20Camel/job/main/), the code is automatically analyzed for issues using a [SonarQube instance](https://sonarcloud.io/project/overview?id=apache_camel) managed by the ASF Infra.
+Apache Camel Committers and contributors are encouraged to analyze the quality reports and suggest fixes and improvements.
 
 
 ## Becoming a committer
