@@ -158,3 +158,11 @@ antora:
         - local:
             component: camel-kamelets
             path: indexPages.yml
+    - require: '@djencks/antora-source-map'
+      #      log_level: trace (1)
+      source-map:
+      - url: 'https://github.com/apache/camel.git'
+        mapped-url: 'https://github.com/essobedo/camel.git'
+        branches:
+          - branch: main
+            mapped-branch: main-fix-javadoc-paths
