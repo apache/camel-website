@@ -21,7 +21,7 @@ following the same requirement by Quarkus, Camel Quarkus now requires Java 11+.
 Camel Quarkus brings support for three new Camel components:
 
 * [JSONATA](/camel-quarkus/next/reference/extensions/jsonata.html)
-* [Vert.x Kafka](/camel-quarkus/next/reference/extensions/vertx-kafka.html)
+* Vert.x Kafka
 * [Redis](/camel-quarkus/next/reference/extensions/redis.html) (JVM only)
 
 Components newly supported in native mode:
