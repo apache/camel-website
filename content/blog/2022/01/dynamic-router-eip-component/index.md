@@ -69,7 +69,7 @@ template.sendBody("dynamic-router:control", evenSubscribeMsg);
 ```
 
 
-The message contains the message type, the subscription ID, the Dynamic Router channel, message priority (where lower = higher priority), the destination URI for matching exchanges, and the [Predicate](https://camel.apache.org/manual/predicate.html) to evaluate the exchange.
+The message contains the message type, the subscription ID, the Dynamic Router channel, message priority (where lower = higher priority), the destination URI for matching exchanges, and the [Predicate](/manual/predicate.html) to evaluate the exchange.
 
 
 ##### Unsubscribe Example
