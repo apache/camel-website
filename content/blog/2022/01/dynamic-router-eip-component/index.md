@@ -28,7 +28,7 @@ So, let’s have a look at both implementations to see what this new component p
 
 ### A Look at the Dynamic Router EIP
 
-![Dynamic Router EIP](/components/eips/_images/eip/DynamicRouter.gif "Dynamic Router EIP")
+![Dynamic Router EIP](components/eips/_images/eip/DynamicRouter.gif "Dynamic Router EIP")
 
 
 Above, you see a diagram of the Dynamic Router [EIP](https://www.enterpriseintegrationpatterns.com/DynamicRouter.html).  What I like best about this pattern is that the routing participants (A, B, and C) can utilize a control channel to provide their routing rules to the rule base inside the Dynamic Router itself.  When a message comes in through the input channel, the message router consults the dynamic rule base, and sends the message to the recipient with matching rules in the rule base.
