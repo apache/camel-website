@@ -108,7 +108,7 @@ pipeline {
 
     post {
         always {
-            sh "$WORKSPACE/docker-pipe/teardown.sh"
+            sh "[ -x $WORKSPACE/docker-pipe/teardown.sh ] && $WORKSPACE/docker-pipe/teardown.sh"
         }
         fixed {
             mail subject: 'Website build status', body: "🥳 Build succeeded!", to: 'camel-website.874fb06555c2b4407efde9f9a3b13c13.show-sender@streams.zulipchat.com'
