@@ -72,6 +72,7 @@ content:
     - url: https://github.com/apache/camel-kafka-connector.git
       branches:
         - main
+        - camel-kafka-connector-1.0.x
         - camel-kafka-connector-0.11.x
       start_paths:
         - docs
