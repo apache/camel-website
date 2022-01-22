@@ -38,6 +38,7 @@ content:
     - url: https://github.com/apache/camel-k.git
       branches:
         - main
+        - release-1.8.x
         - release-1.7.x
         - release-1.6.x
         - release-1.4.x
@@ -46,6 +47,7 @@ content:
     - url: https://github.com/apache/camel-k-runtime.git
       branches:
         - main
+        - release-1.11.x
         - release-1.10.x
         - release-1.9.x
       start_path: docs
@@ -53,6 +55,7 @@ content:
     - url: https://github.com/apache/camel-kamelets.git
       branches:
         - main
+        - 0.7.x
         - 0.6.x
         - 0.5.x
       start_path: docs
