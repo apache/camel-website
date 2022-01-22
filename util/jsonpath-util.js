@@ -105,6 +105,41 @@ module.exports = {
   valueAsString: (value) => {
     return value === undefined ? '' : `${value}`
   },
+
+//  Compatibility table support
+  camelRef: (version, docVersion) => (docVersion === 'none') ? version : `xref:${docVersion}@components:ROOT:index.adoc[${version}]`,
+
+  ckRef: (version, docVersion) => (docVersion === 'none') ? version : `xref:${docVersion}@camel-k:ROOT:index.adoc[${version}]`,
+
+  ckcRef: (version, docVersion) => (docVersion === 'none') ? version : `xref:${docVersion}@camel-kafka-connector:ROOT:index.adoc[${version}]`,
+
+  kameletsRef: (version, docVersion) => (docVersion === 'none') ? version : `xref:${docVersion}@camel-kamelets:ROOT:index.adoc[${version}]`,
+
+  camelQuarkusRef: (version, docVersion) => (docVersion === 'none') ? version : `xref:${docVersion}@camel-quarkus:ROOT:index.adoc[${version}]`,
+
+// External dependency links for compatibility tables
+  graalvmRef: (version, docVersion) => `https://www.graalvm.org/${docVersion}/docs/[${version}]`,
+
+  kafkaRef: (version, docVersion) => `https://kafka.apache.org/${docVersion}/documentation.html[${version}]`,
+
+  quarkusRef: (version) => `https://quarkus.io/guides[${version}]`,
+
+  //Sorts next, then versions descending
+  sortCompatibilityItems: (items) => items.sort((t1, t2) => {
+    const v1 = t1['page-component-version']
+    const v2 = t2['page-component-version']
+    if (v1 === v2) return 0
+    if ((v1 === 'next') || !v2) return -1
+    if ((v2 === 'next') || !v1) return 1
+    const v1s = v1.split('.').map((t) => Number(t))
+    const v2s = v2.split('.').map((t) => Number(t))
+    let i
+    for (i = 0; i < v1s.length; i++) {
+      if (i === v2s.length) return -1
+      if (v1s[i] !== v2s[i]) return v2s[i] - v1s[i] // could be a problem with NaN?
+    }
+    return 1
+  })
 }
 
 function trueEnough (value) {
