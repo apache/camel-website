@@ -162,3 +162,56 @@ antora:
         - local:
             component: camel-kamelets
             path: indexPages.yml
+
+    - require: '@djencks/antora-source-map'
+      #      log_level: trace
+      source-map:
+        - url: https://github.com/apache/camel-k.git
+          mapped-url: 'https://github.com/djencks/camel-k.git'
+          branches:
+            - branch: main
+              mapped-branch: main-RI-table
+            - branch: release-1.8.x
+              mapped-branch: release-1.8.x-RI-table
+            - branch: release-1.7.x
+              mapped-branch: release-1.7.x-RI-table
+            - branch: release-1.6.x
+              mapped-branch: release-1.6.x-RI-table
+            - branch: release-1.4.x
+              mapped-branch: release-1.4.x-RI-table
+        - url: https://github.com/apache/camel-k-runtime.git
+          mapped-url: https://github.com/djencks/camel-k-runtime.git
+          branches:
+            - branch: release-1.11.x
+              mapped-branch: release-1.11.x-RI-table
+        - url: https://github.com/apache/camel-kamelets.git
+          mapped-url: https://github.com/djencks/camel-kamelets.git
+          branches:
+            - branch: main
+              mapped-branch: main-RI-table
+            - branch: 0.7.x
+              mapped-branch: 0.7.x-RI-table
+            - branch: 0.6.x
+              mapped-branch: 0.6.x-RI-table
+            - branch: 0.5.x
+              mapped-branch: 0.5.x-RI-table
+        - url: https://github.com/apache/camel-kafka-connector.git
+          mapped-url: https://github.com/djencks/camel-kafka-connector.git
+          branches:
+            - branch: main
+              mapped-branch: main-RI-table2
+            - branch: camel-kafka-connector-1.0.x
+              mapped-branch: camel-kafka-connector-1.0.x-RI-table2
+            - branch: camel-kafka-connector-0.11.x
+              mapped-branch: camel-kafka-connector-0.11.x-RI-table2
+        - url: https://github.com/apache/camel-quarkus.git
+          mapped-url: https://github.com/djencks/camel-quarkus.git
+          branches:
+            - branch: main
+              mapped-branch: main-RI-table
+            - branch: 2.6.x
+              mapped-branch: 2.6.x-RI-table
+            - branch: 2.5.x
+              mapped-branch: 2.5.x-RI-table
+            - branch: 2.4.x
+              mapped-branch: 2.4.x-RI-table
