@@ -56,7 +56,7 @@ One little but great improvements we've introduced lately is the versioning of t
 
 ### Generated API
 
-Another thing that is worth to mention is a first version of our API that is now available through the documentation pages. Have a look at [Camel K API resources documentation page](/camel-k/next/apis/camel.html) in order to understand how to interact directly with them.
+Another thing that is worth to mention is a first version of our API that is now available through the documentation pages. Have a look at [Camel K API resources documentation page](/camel-k/next/apis/camel-k.html) in order to understand how to interact directly with them.
 
 # Thanks
 
