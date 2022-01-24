@@ -1,6 +1,6 @@
 ---
 url: "/releases/k-runtime-1.11.0/"
-date: 2021-11-15
+date: 2022-01-18
 type: release-note
 version: "1.11.0"
 title: "Camel-K Runtime release 1.11.0"
