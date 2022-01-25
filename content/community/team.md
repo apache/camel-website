@@ -51,6 +51,7 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 | Jonathan Anstey        | janstey          | Red Hat                    |
 | James Netherton        |                  | Red Hat                    |
 | James Strachan         | jstrachan        |                            |
+| Karen Lease            | klease           |                            |
 | Luca Burgazzoli        | lburgazzoli      | Red Hat                    |
 | Martin Krasser         | krasserm         |                            |
 | Nicky Sandhu           | nsandhu          |                            |
