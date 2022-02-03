@@ -93,7 +93,11 @@ We will continue to work on this functionality in the upcoming releases.
 
 We also plan to integrate with [Quarkus Dev UI](https://quarkus.io/guides/dev-ui),
 so you will have a lot of Camel consoles when using Camel on Quarkus.
+### Camel Kafka
 
+We refactored the commit management code to simplify the maintenance, reduce the incidence of bugs and support the new features planned for future releases. 
+
+The Kafka client was upgraded to version 3.1.0. The Kafka component remains backwards compatible with older Kafka versions. 
 ### Quarkus
 
 The upcoming Camel Quarkus 2.8 release will be upgraded to Camel 3.15. 
