@@ -73,7 +73,7 @@ You can also run directly from GitHub via:
 The `--reload` option has been improved, and in the next release Camel can also do updates to Java classes.
 However, in this release the reloading is only Camel route source files.
 
-See more details at the [Camel JBang documentation](/manual/camel-jbang/)
+See more details at the [Camel JBang documentation](/manual/camel-jbang.html)
 
 ### Developer Console
 
