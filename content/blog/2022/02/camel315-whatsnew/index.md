@@ -128,7 +128,7 @@ We have upgraded to the latest Spring Boot 2.6 release.
 ### Better Java 17 support
 
 Although Java 17 is not officially supported, we did improve a few Camel components to make them work with Java 17.
-The official support is Java 11.
+The official support is for Java 11.
 
 ### New components
 
