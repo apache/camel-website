@@ -1,6 +1,6 @@
 ---
 title: "RELEASE 3.15.0"
-date: 2022-02-08
+date: 2022-02-04
 draft: false
 authors: [gzurowski]
 categories: ["Releases"]
