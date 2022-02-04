@@ -18,6 +18,8 @@
 notifications:
   pullrequests: commits@camel.apache.org
   jira_options: link label comment
+publish:
+  whoami: asf-site
 github:
   labels:
     - camel

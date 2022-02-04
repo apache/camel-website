@@ -94,7 +94,7 @@ pipeline {
             steps {
                 dir('deploy/live') {
                     deleteDir()
-                    sh 'git clone -b asf-site https://gitbox.apache.org/repos/asf/camel-website.git .'
+                    sh 'git clone -b asf-site https://gitbox.apache.org/repos/asf/camel-website-pub.git .'
                     sh "git -c core.editor='sed -i 2,/\$(git log --skip=9 -1 --pretty=format:%h)/s/^pick/squash/' rebase -q --interactive $STOP_SQUASH_AT" // squash all but initial and last 9 commits
                     sh 'git rm -q -r *'
                     sh "cp -R $WORKSPACE/camel-website/public/. ."
