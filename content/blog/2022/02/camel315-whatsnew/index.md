@@ -37,6 +37,8 @@ Camel now comes with support for route debugger for tooling.
 The Camel IDEA plugin already supports this, which makes it possible
 to do step by step debugging in Java, XML, YAML, Groovy, Kotlin routes.
 
+![IDEA Route Debugger](./debug.png)
+
 You can read more about the debugger in this [blog post](/blog/2021/12/camelDebuggerForIntelliJ/).
 
 The Camel Tooling team is currently working on debugging support for other IDEs such as VSCode and Eclipse.
