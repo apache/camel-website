@@ -10,7 +10,7 @@ Apache Camel 3.15 has just been [released](/blog/2022/02/RELEASE-3.15.0/).
 
 This release has **dropped** support for Java 8, and therefore Java 11 is required.
 
-Because this is first release where we upgrade from Java 8 to 11, then some effort was used
+Because this is first release where we upgrade from Java 8 to 11, then some effort has been made
 to migrate various Maven plugins and settings to make this upgrade possible.
 
 This release introduces a set of new features and noticeable improvements that we will cover in this blog post.
