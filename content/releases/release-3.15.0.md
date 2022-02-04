@@ -1,5 +1,5 @@
 ---
-date: 2022-02-08
+date: 2022-02-04
 draft: false
 type: release-note
 version: 3.15.0
@@ -12,4 +12,4 @@ category: camel
 jdk: [11]
 ---
 
-This release is the new Camel 3.15.0 LTS release. Java 8 support has been dropped with this release.
+This release is the new Camel 3.15.0 release. Java 8 support has been dropped with this release.
