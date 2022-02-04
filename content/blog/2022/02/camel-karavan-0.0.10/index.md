@@ -25,6 +25,7 @@ Current release comes with new redesigned interface for [Standalone application]
 # New supported DSLs
 
 We continue to add more DSL elements. New in this release:
+
 1. Do Try - Do Catch - Do Finally
 2. Circuit Breaker
 3. Do Switch (new in Camel 3.15)
