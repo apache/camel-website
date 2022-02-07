@@ -166,3 +166,22 @@ antora:
         - local:
             component: camel-kamelets
             path: indexPages.yml
+
+    - require: '@djencks/antora-source-map'
+      #      log_level: trace
+      source_map:
+        - url: 'https://github.com/apache/camel.git'
+          mapped_url: 'https://github.com/apache/camel.git'
+          branches:
+            - branch: camel-3.15.x
+              mapped_branch: apply-website-changes-3.15
+        - url: 'https://github.com/apache/camel-spring-boot.git'
+          mapped_url: 'https://github.com/djencks/camel-spring-boot.git'
+          branches:
+            - branch: camel-spring-boot-3.15.x
+              mapped_branch: camel-spring-boot-3.15.x-add-to-website
+        - url: 'https://github.com/apache/camel-karaf.git'
+          mapped-url: 'https://github.com/djencks/camel-karaf.git'
+          branches:
+            - branch: camel-karaf-3.15.x
+              mapped-branch: camel-karaf-3.15.x-add-to-website
