@@ -207,7 +207,7 @@ Apache Camel Karaf makes running Apache Camel components to run in the OSGi envi
 # Apache &amp; OpenSource
 
 {{< div "split" >}}
-![20 years of Apache Software foundation](/img/apache-20.png)
+{{< icon "asf-estd-1999-logo" "Apache Software foundation, Est. 1999" >}}
 {{< /div >}}
 
 {{< div "split" >}}
