@@ -45,7 +45,7 @@ New extensions:
 * [Google Cloud Functions](/camel-quarkus/next/reference/extensions/google-functions.html) (JVM only)
 * [Google Storage](/camel-quarkus/next/reference/extensions/google-storage.html)
 * [jOOR](/camel-quarkus/next/reference/extensions/joor.html) (JVM only)
-* [Kamelet Reify](/camel-quarkus/next/reference/extensions/kamelet-reify.html) (JVM only)
+* Kamelet Reify (JVM only, no longer supported, February 2022)
 * [Protobuf Jackson](/camel-quarkus/next/reference/extensions/jackson-protobuf.html)
 
 Extensions newly supported in native mode:

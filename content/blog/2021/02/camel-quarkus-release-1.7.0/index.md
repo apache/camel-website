@@ -53,7 +53,7 @@ Components newly supported in native mode:
 * [AWS 2 Kinesis and Firehose](/camel-quarkus/next/reference/extensions/aws2-kinesis.html)
 * [Azure Storage Queue Service](/camel-quarkus/next/reference/extensions/azure-storage-queue.html)
 * [Cassandra CQL](/camel-quarkus/next/reference/extensions/cassandraql.html)
-* [IPFS](/camel-quarkus/next/reference/extensions/ipfs.html)
+* IPFS (no longer supported, February 2022)
 * [PubNub](/camel-quarkus/next/reference/extensions/pubnub.html)
 * [StAX](/camel-quarkus/next/reference/extensions/stax.html)
 * [CBOR](/camel-quarkus/next/reference/extensions/cbor.html)
