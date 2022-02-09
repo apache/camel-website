@@ -15,6 +15,7 @@ The Camel Textual Route debugger is working locally. The debugger must be runnin
 ## Features
 
 The Camel Textual Route Debugger provides the following features:
+
 - Add and remove breakpoint.
 - Inspect variable values on suspended breakpoints. Notably `body` and `headers` but also several more advanced ones.
   ![Breakpoint suspended with variable values expanded to see body and headers](./breakpointWithVariableValues.png)
