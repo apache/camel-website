@@ -12,6 +12,7 @@ resources
 .settings
 .hugo_data
 .pnp
+**/.DS_Store
 
 **/.yarn/*
 !**/.yarn/build-state.yml
