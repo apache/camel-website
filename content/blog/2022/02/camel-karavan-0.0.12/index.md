@@ -1,5 +1,5 @@
 ---
-title: "Beans and dependenies in Karavan"
+title: "Beans and dependencies in Karavan"
 date: 2022-02-14
 authors: [mgubaidullin]
 categories: ["Releases","Tooling"]
@@ -12,25 +12,25 @@ New Karavan preview release comes with Beans and dependencies configuration. Get
 
 # Bean Configuration
 
-New bean tab to configure Beans:
+New Beans tab to configure Beans:
 
 ![screenshot](./karavan-beans.png)
 
 # Dependencies Configuration
 
-Dependencies could be added to access Beans outside Camel:
+Configure Dependencies to access Beans outside Camel:
 
 ![screenshot](./karavan-dependencies.png)
 
 # DSL Bean mapping
 
-How to map bean to DSL: just select from the list.
+How to map Bean to DSL: just select from the list.
 
 ![screenshot](./karavan-bean-dsl.png)
 
 # Component Bean mapping
 
-How to map bean to Component: just select from the list.
+How to map Bean to Component: just select from the list.
 
 ![screenshot](./karavan-bean-component.png)
 
