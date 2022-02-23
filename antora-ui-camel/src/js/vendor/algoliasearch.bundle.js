@@ -51,23 +51,19 @@
           .then((results) => {
             const hits = results.hits
             const data = hits.reduce((data, hit) => {
-              const d = {}
-              d.url = hit.url
-              var section = hit.hierarchy.lvl0
-              if (hit.hierarchy.lvl6 !== null) section = section + '/' + hit.hierarchy.lvl6
-              var breadcrumbs = Object.values(hit.hierarchy)
-                .slice(1)
-                .filter((lvl) => lvl !== null)
-                .join(' / ')
+              const section = hit.hierarchy.lvl0
+              const sectionKey = `${section}-${hit.version || ''}`
 
-              d.breadcrumbs = ((breadcrumbs !== '') ? breadcrumbs : section)
-              d.snippet = hit._snippetResult.content.value
-              if (d.snippet !== undefined || d.snippet !== null) {
-                d.snippet = d.snippet.split('&quot;').join('') + '...'
-              }
-
-              data[section] = data[section] || []
-              data[section].push(d)
+              data[sectionKey] = data[sectionKey] || []
+              data[sectionKey].name = section
+              data[sectionKey].version = hit.version
+              data[sectionKey].push({
+                url: hit.url,
+                section,
+                categories: hit.categories,
+                breadcrumbs: Object.values(hit.hierarchy).slice(1).filter((lvl) => lvl !== null).join(' / '),
+                snippet: hit._highlightResult.content.value,
+              })
 
               return data
             }, {})
@@ -88,13 +84,13 @@
               <dl>
                 ${Object.keys(data)
     .map(
-      (section) => `
+      (sectionKey) => `
                   <div class="result">
                     <div class="heading">
-                      <dt>${section.split('/')[0]}</dt>
-                      <dt class="version">${section.split('/')[1]}</dt>
+                      <dt>${data[sectionKey].name}</dt>
+                      ${(data[sectionKey].version && `<dt class="version">${data[sectionKey].version}</dt>`) || ''}
                     </div>
-                    ${data[section]
+                    ${data[sectionKey]
     .map(
       (hit) => `
                     <a href="${hit.url}">
@@ -119,11 +115,6 @@
           })
           .then((markup) => {
             results.innerHTML = markup
-            Array.from(results.querySelectorAll('.version')).forEach((version) => {
-              if (version.innerHTML === 'undefined') {
-                version.style.display = 'none'
-              }
-            })
             container.className = 'navbar-search'
           })
       }, 150)
