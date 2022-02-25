@@ -6,12 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
   if (!navSearch) {
     return
   }
-  var navToggle = document.querySelectorAll('.nav-item-toggle')
   var navLinks = document.querySelectorAll('.nav-link')
   navSearch.addEventListener('keyup', function () {
-    navToggle.forEach(function (navToggle) {
-      navToggle.style.display = navSearch.value === '' ? 'block' : 'none'
-    })
     var tokens = navSearch.value.split('')
     var term = new RegExp(tokens.map(tokenize).join(''), 'i')
     for (var i = 0; i < navLinks.length; i++) {
@@ -19,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var matches = term.test(text)
       var replacement = ''
       if (matches) {
-        navLinks[i].style.display = ''
+        navLinks[i].classList.remove('filtered')
         if (tokens.length === 0) {
           replacement = text
         } else {
@@ -36,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         }
       } else {
-        navLinks[i].style.display = 'none'
+        navLinks[i].classList.add('filtered')
         replacement = text
       }
       navLinks[i].innerHTML = replacement

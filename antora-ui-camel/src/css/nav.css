@@ -119,6 +119,30 @@ html.is-clipped--nav {
   border-bottom-color: var(--nav-panel-divider-color);
 }
 
+.nav-panel-menu input.search:valid ~ .nav-menu ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-panel-menu input.search:valid ~ .nav-menu li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-panel-menu input.search:valid ~ .nav-menu .filtered {
+  display: none;
+}
+
+.nav-panel-menu input.search:valid ~ .nav-menu button {
+  display: none;
+}
+
+.nav-panel-menu input.search:valid ~ .nav-menu a.nav-link:not(.filtered) {
+  line-height: 1.5rem;
+}
+
 .nav-menu {
   top: 2.5rem;
   min-height: 0;
