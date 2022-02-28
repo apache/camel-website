@@ -1,13 +1,6 @@
 html,
 body {
   height: 100%;
-  scroll-padding-top: var(--body-top);
-}
-
-@media screen and (max-width: 1024px) {
-  body {
-    scroll-padding-top: var(--body-mobile-top);
-  }
 }
 
 *,
