@@ -100,7 +100,7 @@ Route parsing has a great margin of improvement in order to automatically discov
 ## Observability
 Monitoring running Integrations is another field which will let the user feel the maturity of the product.
 
-* Migrate from MicroProfile metrics to Micrometer
+* Migrate from [MicroProfile](https://microprofile.io/) metrics to [Micrometer](https://micrometer.io/)
 * Secured monitoring (see proposal)
 * Grafana dashboards
 
