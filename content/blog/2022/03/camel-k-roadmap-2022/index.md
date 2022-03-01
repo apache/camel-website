@@ -4,7 +4,7 @@ date: 2022-03-01
 draft: false
 authors: [squakez]
 categories: ["Roadmap", "Camel K"]
-preview: "A brief overview of what we've planned for 2022"
+preview: "A brief overview of what we've planned for Camel K in 2022"
 ---
 
 <sub><sup><a href='https://pngtree.com/so/Signpost'>Signpost png from pngtree.com/</a></sup></sub>
