@@ -42,7 +42,7 @@ Through multi architecture images we will be able to widen our target audience b
 We have several installation process options in place. We may need to harmonize them to simplify the maintenance of the installation procedure.
 
 * Document the usage of Kustomize ([#2758](https://github.com/apache/camel-k/issues/2758))
-* Deprecate kamel install in favor of kubectl apply -k / kustomize
+* Deprecate `kamel install` in favor of `kubectl apply -k` / `kustomize`
 * Move to descoped OLM model
 
 There is some preliminary work introduced in release 1.7 around [Kustomize](https://github.com/apache/camel-k/releases/tag/v1.7.0). We may leverage that in order to identify a replacement for the kamel install. We should analyze how that will happen and the user experience around any new way we’ll propose to the community.
