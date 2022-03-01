@@ -92,7 +92,7 @@ Integration building process needs to be tweaked in order to guarantee scalabili
 Other efforts that will let Camel K be more mature are related to features around the runtime.
 
 * Improve route DSL parsing ([#1266](https://github.com/apache/camel-k/issues/1266))
-* Surface Camel health checks into integration status ([#2886](https://github.com/apache/camel-k/issues/2886)
+* Surface Camel health checks into integration status ([#2886](https://github.com/apache/camel-k/issues/2886))
 * Business vs. technical errors
 
 Route parsing has a great margin of improvement in order to automatically discover components, capabilities, dependencies, etc, and in general to be more reliable. Also, exposing more meaningful ways to query the healthy status of an Integration will let users speed up their troubleshooting (this part is almost completed in the latest releases).
