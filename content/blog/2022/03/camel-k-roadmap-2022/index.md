@@ -55,7 +55,7 @@ We can start thinking of Camel K as an enablement technology. Then, it makes sen
 * Comprehensive CRD structural schemas for tooling
 * Traits configuration schema ([#1614](https://github.com/apache/camel-k/issues/1614))
 
-Implementation of structural schema may be the goal of 2.0 as will probably require many breaking changes. Some draft was realized and it provided discussions we may take in consideration during the feature implementation (see [#2831](https://github.com/apache/camel-k/issues/2831)
+Implementation of structural schema may be the goal of 2.0 as will probably require many breaking changes. Some draft was realized and it provided discussions we may take in consideration during the feature implementation (see [#2831](https://github.com/apache/camel-k/issues/2831)).
 
 ## CLI
 The CLI is still a very useful tool when interacting with connected environments, in particular in the community. 
