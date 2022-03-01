@@ -102,7 +102,7 @@ Monitoring running Integrations is another field which will let the user feel th
 
 * Migrate from [MicroProfile](https://microprofile.io/) metrics to [Micrometer](https://micrometer.io/)
 * Secured monitoring (see proposal)
-* Grafana dashboards
+* [Grafana](https://grafana.com/) dashboards
 
 The Micrometer looks to be the default choice of **Quarkus**, so, it makes sense to migrate what we already have in that direction: there may be some gap between what is provided by Microprofile and Micrometer, so we may have to review more in general the metrics collection offered.
 We already have some monitoring in place with **Prometheus**. We probably need some improvements and some additional development on top of the existing features.
