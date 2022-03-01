@@ -49,7 +49,7 @@ There is some preliminary work introduced in release 1.7 around [Kustomize](http
 Another thread we should follow is related to the proposal about descoped OLM. This part should be put in a wider context around the OLM project.
 
 ## API
-We can start thinking of Camel K as an enablement technology. Then, it makes sense to dedicate some effort in improving the way the technology may be consumed by others. APIs and CRDs are the main scope of this section.
+We can start thinking of Camel K as an enablement technology. Then, it makes sense to dedicate some effort in improving the way the technology may be consumed by others. APIs and Custom Resource Definitions (CRD) are the main scope of this section.
 
 * Provide a full description of the APIs
 * Comprehensive CRD structural schemas for tooling
