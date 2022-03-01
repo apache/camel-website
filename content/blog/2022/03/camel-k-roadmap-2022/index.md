@@ -60,7 +60,7 @@ Implementation of structural schema may be the goal of 2.0 as will probably requ
 ## CLI
 The CLI is still a very useful tool when interacting with connected environments, in particular in the community. 
 
-* Fill the gaps for kamel local commands
+* Fill the gaps for `kamel local` commands
 * Enable JBang
 * Better auto-completion ([#2461](https://github.com/apache/camel-k/issues/2461))
 
