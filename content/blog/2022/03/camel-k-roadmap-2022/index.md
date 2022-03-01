@@ -43,7 +43,7 @@ We have several installation process options in place. We may need to harmonize 
 
 * Document the usage of Kustomize ([#2758](https://github.com/apache/camel-k/issues/2758))
 * Deprecate `kamel install` in favor of `kubectl apply -k` / `kustomize`
-* Move to descoped OLM model
+* Move to descoped Operator Lifecycle Manager [OLM](https://docs.openshift.com/container-platform/4.9/operators/understanding/olm/olm-understanding-olm.html) model
 
 There is some preliminary work introduced in release 1.7 around [Kustomize](https://github.com/apache/camel-k/releases/tag/v1.7.0). We may leverage that in order to identify a replacement for the kamel install. We should analyze how that will happen and the user experience around any new way we’ll propose to the community.
 Another thread we should follow is related to the proposal about descoped OLM. This part should be put in a wider context around the OLM project.
