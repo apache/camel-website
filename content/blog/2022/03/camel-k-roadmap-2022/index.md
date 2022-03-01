@@ -82,7 +82,7 @@ Integration building process needs to be tweaked in order to guarantee scalabili
 
 * Improve concurrency / scalability ([#1784](https://github.com/apache/camel-k/issues/1784))
 * Image garbage collection / compaction ([#2736](https://github.com/apache/camel-k/issues/2736))
-* Support OCI registries for universal artifacts management ([#2732](https://github.com/apache/camel-k/issues/2732))
+* Support Open Container Initiative ([OCI](https://opencontainers.org/)) registries for universal artifacts management ([#2732](https://github.com/apache/camel-k/issues/2732))
 * CI/CD support
 * Build Pod compute resources
 
