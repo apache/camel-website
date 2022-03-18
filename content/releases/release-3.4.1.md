@@ -1,5 +1,5 @@
 ---
-date: 2020-07-16
+date: 2020-07-12
 draft: false
 type: release-note
 version: 3.4.1
