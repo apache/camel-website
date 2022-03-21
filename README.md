@@ -115,10 +115,14 @@ project directory on your filesystem.
 ## Build the website and Antora theme
 
 Some of the content for the website is derived from the data received from GitHub API and rate limits can cause
-build failures. For that reason it is necessary to set the following environment variables:
+build failures. For that reason it is necessary to set either the following environment variables:
 
  - `HUGO_PARAMS_GitHubUsername=<GitHub username>`
  - `HUGO_PARAMS_GitHubToken=<GitHub token>`
+
+Or the following environment variable:
+
+ - `GITHUB_TOKEN=<personal access token>`
 
 These values are used by Hugo when building or running in development mode (`yarn preview:hugo`) or building the
 website (`yarn build:hugo` or `yarn build-all`) to access GitHub API with a higher rate limit.
@@ -352,7 +356,7 @@ Other components are in the obvious repository.
 
 - To link to another page in the same component/version/module use the absolute path from "pages": xref:path/to/page.adoc[].
   For instance, a link from one camel component to another would be xref:activemq-component.adoc[].
-  A link from any camel-quarkus page to a camel-quarkus extension would be xref:reference/extensions/activemq.adoc[]. 
+  A link from any camel-quarkus page to a camel-quarkus extension would be xref:reference/extensions/activemq.adoc[].
 - To link to a page in another module in the same component/version use the module name and absolute path from "pages": xref:module:path/to/page.adoc[].
 For instance, a link from a dataformat to a language would be xref:languages:jsonpath-language.adoc[].
   A link from a dataformat to an eip would be xref:eips:aggregate-eip.adoc[].
