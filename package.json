@@ -54,12 +54,15 @@
     "gulp-htmlmin": "~5.0",
     "gulp-inject": "^5.0.2",
     "html-validate": "~4",
-    "hugo-extended": "^0.84.3",
+    "hugo-extended": "^0.95.0",
     "netlify-cli": "^6.14.10",
     "npm-run-all": "~4",
     "opal-runtime": "1.0.11",
     "pino-pretty": "^5.0.0",
     "toml": "~3.0"
+  },
+  "resolutions": {
+    "chalk": "4.1.2"
   },
   "workspaces": [
     "antora-ui-camel",
