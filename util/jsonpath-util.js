@@ -62,10 +62,13 @@ module.exports = {
   },
 
   escapeAutoLinks: (text) => {
-    return text ? text
-      .replaceAll(/ (http|https|ftp|irc|mailto|file):\/\//g, ' \\$1://')
-      .replaceAll(/ (\b[\w\.\/\-\+]+@[\w\.\/\-]+\b)/g, ' \\$1')
-      : text
+    if (typeof text === 'undefined' || text === null) {
+      return text
+    }
+
+    return `${text}`
+      .replace(/(^|\w)(http|https|ftp|irc|mailto|file):\/\//g, '$1\\$2://')
+      .replace(/(^|\w)(\b[\w\.\/\-\+]+@[\w\.\/\-]+\b)/g, ' $1\\$2//')
   },
 
   extractSBName: (resourceid) => {
