@@ -20,17 +20,17 @@ The Resume API should not be confused with the [Idempotent Consumer](/components
 
 Here's an example of that API in action, taken from the [Resume API File Offset Example](https://github.com/apache/camel-examples/tree/main/examples/resume-api/resume-api-file-offset):
 
-[![asciicast](https://asciinema.org/a/477253.svg)](https://asciinema.org/a/477253)
+[![asciicast](resume-api-file-offset.svg)](https://asciinema.org/a/477253)
 
 This example shows a sample Camel integration reading a large file and publishing the offsets to a Kafka instance that serves as the storaged for the offsets. It displays it consuming batches of 30 lines, then stopping and then resuming from where it stopped.
 
 A similar example to the one above, shows the Resume API v2 processing large directories [Resume API File Set Example](https://github.com/apache/camel-examples/tree/main/examples/resume-api/resume-api-fileset):
 
-[![asciicast](https://asciinema.org/a/477253.svg)](https://asciinema.org/a/477253)
+[![asciicast](resume-api-fileset.svg)](https://asciinema.org/a/477253)
 
 The Resume API v2 also works in clustered mode with the master component. This means that integrations using clustering with this component, can have their secondary nodes pick up the processing from where the primary left off. The [Resume API File Set Clusterized Example](https://github.com/apache/camel-examples/tree/main/examples/resume-api/resume-api-fileset-clusterized) demonstrates how this:
 
-[![asciicast](https://asciinema.org/a/479064.svg)](https://asciinema.org/a/479064)
+[![asciicast](resume-api-fileset-cluster.svg)](https://asciinema.org/a/479064)
 
 In this release we are starting with a limited set of supported components:
 
