@@ -61,6 +61,16 @@ module.exports = {
     return text ? text.split('{').join('\\{') : text
   },
 
+  escapeAutoLinks: (text) => {
+    if (typeof text === 'undefined' || text === null) {
+      return text
+    }
+
+    return `${text}`
+      .replace(/(^|\w)(http|https|ftp|irc|mailto|file):\/\//g, '$1\\$2://')
+      .replace(/(^|\w)(\b[\w\.\/\-\+]+@[\w\.\/\-]+\b)/g, ' $1\\$2//')
+  },
+
   extractSBName: (resourceid) => {
     const m =resourceid.match(RESOURCEID_RX)
     return m ? m[1] : 'no match'

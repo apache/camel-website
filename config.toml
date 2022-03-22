@@ -21,6 +21,9 @@ defaultMarkdownHandler = "blackfriday"
     GitHubUsername = ""
     GitHubToken = ""
 
+[security.funcs]
+  getenv = ['^HUGO_','CAMEL_ENV', 'GITHUB_TOKEN']
+
 [caches]
 
     [caches.getjson]

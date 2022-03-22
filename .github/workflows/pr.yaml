@@ -32,6 +32,8 @@ jobs:
       - name: Check cache
         run: yarn check:dependencies
       - name: Build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: yarn build-all
       - name: Run checks
         run: yarn checks

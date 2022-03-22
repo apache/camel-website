@@ -11,7 +11,13 @@ git checkout v{{ .Params.version }}</pre>
 
 <h2 id="resolved"><a class="anchor" href="#resolved"></a>Resolved issues</h2>
 <p>Here is a list of all the issues that have been resolved for this release</p>
-{{ $issues := getJSON "https://api.github.com/repos/apache/camel-k/issues?state=closed&milestone=" (string .Params.milestone) (dict "Authorization" (printf "Basic %s" (printf "%s:%s" $.Site.Params.GitHubUsername $.Site.Params.GitHubToken | base64Encode))) }}
+{{ $headers := dict }}
+{{ with os.Getenv "GITHUB_TOKEN" }}
+  {{ $headers = dict "Authorization" (printf "Bearer %s" .) }}
+{{ else }}
+  {{ $headers = dict "Authorization" (printf "Basic %s" (printf "%s:%s" $.Site.Params.GitHubUsername $.Site.Params.GitHubToken | base64Encode)) }}
+{{ end }}
+{{ $issues := getJSON "https://api.github.com/repos/apache/camel-k/issues?state=closed&milestone=" (string .Params.milestone) $headers }}
 <dl>
 {{ range $issues }}
   <dt><a href="{{ .html_url }}">#{{ .number }}</a></dt><dd>{{ .title }}</dd>
