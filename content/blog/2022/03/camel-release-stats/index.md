@@ -2,7 +2,7 @@
 title: "Camel 3 Release Stats"
 date: 2022-03-22
 draft: false
-authors: "Raymond Meester"
+authors: ["assimbly"]
 categories: ["Camel"]
 preview: "Camel 3 Release Stats"
 ---
