@@ -18,7 +18,7 @@ But there are other stats that goes beyond lines of code and deeper than just th
 
 # The release stats
 
-The release stats gives in insight in how stabile a project is. Questions to answer:
+The release stats gives in insight in how stable a project is. Questions to answer:
 
 * How many releases are there?
 * What are the biggest releases?
@@ -71,7 +71,7 @@ This blog answers these questions for Camel 3 (so far). The major release was re
 
 Note that releases after LTS releases tend to be the biggest
 
-## Totals and avarages **
+## Totals and averages **
 
 * Total number of issues solved: 2927
 * Total number of issues bugs: 799
@@ -85,7 +85,7 @@ Note that releases after LTS releases tend to be the biggest
 ** The totals and average release stats rules out patch releases to avoid duplicated issues. That doesn't mean of course patch releases aren't important.
 Exactly the opposite, when more projects would put that much attention to LTS Patch releases as Camel, then the world would be a happier place...
 
-Of course this wasn't the last release of Camel 3, 3.16.0 is just around the corner.
+Of course, this wasn't the last release of Camel 3, 3.16 is just around the corner.
 
 **Sources:**
 
