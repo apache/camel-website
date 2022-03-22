@@ -1,6 +1,6 @@
 ---
 title: "Camel 3 Release Stats"
-date: 2022-03-22
+date: 2022-03-23
 draft: false
 authors: ["assimbly"]
 categories: ["Camel"]
@@ -89,7 +89,7 @@ Of course this wasn't the last release of Camel 3, 3.16.0 is just around the cor
 
 **Sources:**
 
-* [Camel releases](https://camel.apache.org/releases/)
+* [Camel releases](camel.apache.org/releases/)
 * [Apache by the Digit](https://blogs.apache.org/foundation/entry/apache-in-2021-by-the)
 * [Gist with release numbers](https://gist.github.com/assimbly/dc7cbd9aa90b67e42e5f66a84aae996f)
 
