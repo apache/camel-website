@@ -22,7 +22,7 @@ Here's an example of that API in action, taken from the [Resume API File Offset 
 
 [![asciicast](resume-api-file-offset.svg)](https://asciinema.org/a/477253)
 
-This example shows a sample Camel integration reading a large file and publishing the offsets to a Kafka instance that serves as the storaged for the offsets. It displays it consuming batches of 30 lines, then stopping and then resuming from where it stopped.
+This example shows a sample Camel integration reading a large file and publishing the offsets to a Kafka instance that serves as the storage for the offsets. It displays it consuming batches of 30 lines, then stopping and then resuming from where it stopped.
 
 A similar example to the one above, shows the Resume API v2 processing large directories [Resume API File Set Example](https://github.com/apache/camel-examples/tree/main/examples/resume-api/resume-api-fileset):
 
