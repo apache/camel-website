@@ -105,10 +105,15 @@ In YAML DSL
         value: "Hello Camel templated route!"
 ```
 
-
 ### Component Headers
 
-TODO: Work started on marking up all headers in every components for automatic documentation, and tooling support.
+Most of the components produce or consume headers so like endpoints' options, it was important to provide some tooling to generate the documentation of the headers in a standardized way. 
+
+For this, we added a new element called `headersClass` to the annotation `@UriEndpoint` in order to provide the class that holds all the name of headers as `String` constants. Generally, it is the class whose name is of type *xxxConstants* where *xxx* is the name of the corresponding component like for example `FtpConstants` for the component camel-ftp.
+
+Then, in the headers class, each constant defining the name of a header, is then annotated with `@Metadata` to provide its documentation like for the options. 
+
+We started marking up all headers in every component for automatic generation of documentation, but also to expose the metadata of the headers to external tools.
 
 ### Camel Kafka
 
