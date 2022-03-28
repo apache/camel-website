@@ -4,7 +4,7 @@ date: 2022-03-28
 draft: false
 authors: [gzurowski]
 categories: ["Releases"]
-preview: "The Camel community announces the immediate availability of the new Camel 3.16.0 LTS release"
+preview: "The Camel community announces the immediate availability of the new Camel 3.16.0 release"
 ---
 
 
