@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 3.16 What's New"
 date: 2022-03-28
-authors: [davsclaus]
+authors: [davsclaus, opiske]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 3.16 release.
 ---
@@ -12,8 +12,7 @@ This release introduces a set of new features and noticeable improvements that w
 
 ### Resume from Offset
 
-TODO:
-https://camel.apache.org/blog/2022/03/resume-api-v2/
+This release brings a new API to simplify consuming data at scale: the resume API V2. Please check the [blog post](https://camel.apache.org/blog/2022/03/resume-api-v2/) we wrote to introduce it to our community.
 
 ### Load properties from valut/secrets cloud services
 
@@ -84,7 +83,7 @@ TODO:
 We added specific health-checks for kafka producer and consumers that checks the kafka-client
 internals if the connectivity with the kafka brokers is healthy or not.
 
-We did other bug fixes, and made camel-kafka more roboust.
+We did other bug fixes, and we continue to make the camel-kafka component more robust. In this release we fixed offset management issues. Please check the release notes for details.
 
 ### Quarkus
 
@@ -95,6 +94,10 @@ The upcoming Camel Quarkus 2.8 release will be upgraded to Camel 3.16.
 We have upgraded to the latest Spring Boot 2.6 release.
 
 Added more unit tests to various starter JARs to increase the QA of this project.
+
+## Deprecated Components: Camel Testcontainers
+
+In this release we are replacing the camel-testcontainers components with the camel-test-infra. These new set of test-related components simplify integration testing with Camel, allow us to test edge case scenarios more easily, reduce our maintenance effort and more. Please check the [blog post](https://camel.apache.org/blog/2022/02/camel-test-infra/) where we explained about the changes.
 
 ## Upgrading
 
