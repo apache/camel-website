@@ -12,7 +12,7 @@ This release introduces a set of new features and noticeable improvements that w
 
 ### Resume from Offset
 
-This release brings a new API to simplify consuming data at scale: the resume API V2. Please check the [blog post](https://camel.apache.org/blog/2022/03/resume-api-v2/) we wrote to introduce it to our community.
+This release brings a new API to simplify consuming data at scale: the resume API V2. Please check the [blog post](/blog/2022/03/resume-api-v2/) we wrote to introduce it to our community.
 
 ### Load properties from valut/secrets cloud services
 
@@ -97,7 +97,7 @@ Added more unit tests to various starter JARs to increase the QA of this project
 
 ## Deprecated Components: Camel Testcontainers
 
-In this release we are replacing the camel-testcontainers components with the camel-test-infra. These new set of test-related components simplify integration testing with Camel, allow us to test edge case scenarios more easily, reduce our maintenance effort and more. Please check the [blog post](https://camel.apache.org/blog/2022/02/camel-test-infra/) where we explained about the changes.
+In this release we are replacing the camel-testcontainers components with the camel-test-infra. These new set of test-related components simplify integration testing with Camel, allow us to test edge case scenarios more easily, reduce our maintenance effort and more. Please check the [blog post](/blog/2022/02/camel-test-infra/) where we explained about the changes.
 
 ## Upgrading
 
