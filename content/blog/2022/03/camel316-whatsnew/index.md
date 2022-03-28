@@ -113,7 +113,9 @@ For this, we added a new element called `headersClass` to the annotation `@UriEn
 
 Then, in the headers class, each constant defining the name of a header, is then annotated with `@Metadata` to provide its documentation like for the options. 
 
-We started marking up all headers in every component for automatic generation of documentation, but also to expose the metadata of the headers to external tools.
+We started [^1] marking up all headers in every component for automatic generation of documentation, but also to expose the metadata of the headers to external tools.
+
+[^1]: For now, only the headers of components whose name starts with A to G have been documented.
 
 ### Camel Kafka
 
