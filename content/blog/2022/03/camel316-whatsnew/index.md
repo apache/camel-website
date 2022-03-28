@@ -16,8 +16,10 @@ This release brings a new API to simplify consuming data at scale: the resume AP
 
 ### Load properties from valut/secrets cloud services
 
-TODO:
-https://camel.apache.org/blog/2022/03/secrets-properties-functions/
+This release brings a new feature: the ability to retrieve properties values from a Vault/Secrets cloud services.
+We are currently supporting AWS Secret manager service and Google Secret Manager, but we are planning to add more.
+
+See more details at the following [blog post](blog/2022/03/secrets-properties-functions/)
 
 ### Camel Main
 
