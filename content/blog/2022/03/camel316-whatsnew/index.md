@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 3.16 What's New"
 date: 2022-03-28
-authors: [davsclaus, opiske]
+authors: [davsclaus, opiske, essobedo]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 3.16 release.
 ---
@@ -68,9 +68,43 @@ The `camel-health` has been overhauled to be made simpler to implement custom he
 
 ### Camel Route Templates
 
-The XML and YAML DSL now also supports creating routes from route templates.
-TODO: Add code example
-https://issues.apache.org/jira/browse/CAMEL-17611
+The XML, Spring XML, Java and YAML DSL now also support creating routes from route templates.
+
+Assuming that you have a simple route template whose id is `someTemplate` with one template parameter `message`, according to the DSL of your choice, you can create a new route from this template as next:
+
+In Java DSL
+```java
+templatedRoute("someTemplate")
+    .parameter("message", "Hello Camel templated route!");
+```
+
+In Spring XML DSL
+```xml
+<camelContext>
+    <templatedRoute routeTemplateRef="someTemplate">
+        <parameter name="message" value="Hello Camel templated route!"/>
+    </templatedRoute>
+</camelContext>
+```
+
+In XML DSL
+```xml
+<templatedRoutes xmlns="http://camel.apache.org/schema/spring">
+    <templatedRoute routeTemplateRef="someTemplate">
+        <parameter name="message" value="Hello Camel templated route!"/>
+    </templatedRoute>
+</templatedRoutes>
+```
+
+In YAML DSL
+```yaml
+- templated-route:
+    route-template-ref: "someTemplate"
+    parameters:
+      - name: "message"
+        value: "Hello Camel templated route!"
+```
+
 
 ### Component Headers
 
