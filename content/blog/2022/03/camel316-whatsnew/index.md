@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 3.16 What's New"
 date: 2022-03-28
-authors: [davsclaus, opiske, essobedo]
+authors: [davsclaus, opiske, essobedo, oscerd]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 3.16 release.
 ---
@@ -120,8 +120,6 @@ We started [^1] marking up all headers in every component for automatic generati
 [^1]: For now, only the headers of components whose name starts with A to G have been documented.
 
 ### Camel Kafka
-
-TODO: 
 
 We added specific health-checks for kafka producer and consumers that checks the kafka-client
 internals if the connectivity with the kafka brokers is healthy or not.
