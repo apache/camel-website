@@ -21,7 +21,6 @@ content:
         - camel-3.13.x
         - camel-3.12.x
         - camel-3.11.x
-        - camel-3.7.x
       start_paths:
         # eip
         - core/camel-core-engine/src/main/docs
@@ -93,7 +92,6 @@ content:
         - camel-spring-boot-3.13.x
         - camel-spring-boot-3.12.x
         - camel-spring-boot-3.11.x
-        - camel-spring-boot-3.7.x
       start_paths:
         - components-starter
         - core
@@ -109,7 +107,6 @@ content:
         - camel-karaf-3.13.x
         - camel-karaf-3.12.x
         - camel-karaf-3.11.x
-        - camel-karaf-3.7.x
       start_path: docs
 
 ui:
