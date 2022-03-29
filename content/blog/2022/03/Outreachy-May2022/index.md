@@ -1,6 +1,6 @@
 ---
 title: "Outreachy Internship Contributions Open"
-date: 2022-03-28
+date: 2022-03-29
 draft: false
 authors: [astefanutti]
 categories: ["Outreachy"]
