@@ -16,7 +16,9 @@ content:
       branches:
         - main
         - camel-3.16.x
+        - camel-3.15.x
         - camel-3.14.x
+        - camel-3.12.x
         - camel-3.11.x
       start_paths:
         # eip
@@ -49,6 +51,7 @@ content:
     - url: https://github.com/apache/camel-kamelets.git
       branches:
         - main
+        - 0.6.x
         - 0.7.x
       start_path: docs
 
@@ -75,7 +78,9 @@ content:
       branches:
         - main
         - camel-spring-boot-3.16.x
+        - camel-spring-boot-3.15.x
         - camel-spring-boot-3.14.x
+        - camel-spring-boot-3.12.x
         - camel-spring-boot-3.11.x
       start_paths:
         - components-starter
@@ -87,7 +92,9 @@ content:
       branches:
         - main
         - camel-karaf-3.16.x
+        - camel-karaf-3.15.x
         - camel-karaf-3.14.x
+        - camel-karaf-3.12.x
         - camel-karaf-3.11.x
       start_path: docs
 
