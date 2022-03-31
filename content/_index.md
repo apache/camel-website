@@ -202,6 +202,24 @@ Apache Camel Karaf makes running Apache Camel components to run in the OSGi envi
 
 {{< /section >}}
 
+{{< div "project" >}}
+
+{{< div "icon" >}}
+
+{{< icon "karavan" "Karavan logo" >}}
+
+{{< /div >}}
+
+{{< div "content" >}}
+
+## Camel Karavan
+Apache Camel Karavan is a mastering tool to facilitate integration and speed up development through the process visualization.
+<p><a class="button dark" href="/docs/">Read More</a></p>
+
+{{< /div >}}
+
+{{< /div >}}
+
 {{< section "frontpage columns apache" >}}
 
 # Apache &amp; OpenSource
