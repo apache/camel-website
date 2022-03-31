@@ -135,3 +135,24 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 <a href="/camel-karaf/latest/" class="icon" title="Camel Karaf Manual ">{{< icon "logo-d" "Apache Camel logo" "apache-karaf" "Apache Karaf logo" >}}</a>
 
 {{< /div >}}
+
+{{< div "box left" >}}
+
+<a class="icon" title="Camel Karavan latest documentation">{{< icon "logo-d" "Apache Camel logo" "karavan" "Karavan logo" >}}</a>
+
+{{< div "content">}}
+
+## Camel Karavan
+
+Karavan provides a graphical user interface to design and configure routes (EIP and REST) using Kamelets and Components.  Karavan reads and writes integrations using [YAML DSL](/components/next/others/yaml-dsl.html).
+Karavan could be used as a [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=camel-karavan.karavan) integrated with [Camel Jbang](/manual/camel-jbang.html) runtime as well as a containerized application alongside Camel-K integrated through API or GitOps operational framework.
+
+<p>
+<!-- <a class="button dark" href="/camel-karavan/latest/">Documentation</a> -->
+<a class="button light" href="https://github.com/apache/camel-karavan">Source</a>
+<a class="button light" href="https://github.com/apache/camel-karavan/tree/main/karavan-demo">Examples</a>
+</p>
+
+{{< /div >}}
+
+{{< /div >}}
