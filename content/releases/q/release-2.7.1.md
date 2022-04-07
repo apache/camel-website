@@ -9,5 +9,6 @@ preview: ""
 changelog: ""
 category: "camel-quarkus"
 kind: lts
+milestone: 27
 jdk: [11]
 ---
