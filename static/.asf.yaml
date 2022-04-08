@@ -15,21 +15,16 @@
 # limitations under the License.
 #
 
-notifications:
-  pullrequests: commits@camel.apache.org
-  jira_options: link label comment
 publish:
   whoami: asf-site
 github:
   labels:
     - camel
-    - integration
-    - java
-    - hacktoberfest
+    - website
   enabled_merge_buttons:
-    squash:  true
+    squash:  false
     merge:   false
-    rebase:  true
-  features:
-    issues: true
+    rebase:  false
+  dependabot_alerts:  false
+  dependabot_updates: false
   protected_branches: ~
