@@ -13,7 +13,7 @@ The latest release of the [VS Code Camel Designer](https://marketplace.visualstu
 
 [*AtlasMap*](https://www.atlasmap.io/) is a great visual data mapping tool that enables users to define data transformations that *Camel* can process at runtime.
 
-The [0.1.0 release of the *VSCode* extension for *AtlasMap*](https://camel.apache.org/blog/2021/11/vscode-atlasmap-release-0.1.0/) introduced a series of improvements that allowed a better user experience when creating and editing *AtlasMap* definitions.
+The [0.1.0 release of the *VSCode* extension for *AtlasMap*](/blog/2021/11/vscode-atlasmap-release-0.1.0/) introduced a series of improvements that allowed a better user experience when creating and editing *AtlasMap* definitions.
 
 Provided that *AtlasMap* is a visual design-time tool that Camel can execute, it makes sense to integrate *AtlasMap* with other visual tooling for *Camel*. And that’s what the latest release of *Camel Designer* does, enable the user to model *Camel* routes, and include *AtlasMap* as a step in the processing flow.
 
