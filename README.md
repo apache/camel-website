@@ -373,6 +373,22 @@ This is most likely what you want.
 If you need to link to a specific non-latest version of a page, specify the version in the xref.
 - A link from anywhere to a camel-quarkus 2.0.0 page would be xref:2.0.0@camel-quarkus::reference/extensions/activemq.adoc[].
 
+## Build with Yarn in Docker
+
+To avoid having to install everything on your local machine or if you are a Mac or Windows user, you still have the possibility to launch the `yarn` commands directly inside a Docker container in which all the required tools have been preinstalled.
+
+Assuming that Docker is properly installed on your local machine and the Docker daemon is started, all you need to do is to call the script `yarn-in-docker.sh` or `yarn-in-docker.bat` with the arguments that you would like to pass to the `yarn` command.
+
+For example to launch `yarn` with `build-all` as argument inside a Docker container, the corresponding command is then:
+
+    $ ./yarn-in-docker.sh build-all
+
+Equivalent for Windows
+
+    > yarn-in-docker.bat build-all
+
+Note - The environment variables `GITHUB_TOKEN` and `CAMEL_ENV` locally set are automatically propagated to the Docker container.
+
 ## Build with Maven
 
 The project provides a simple way to build the website sources locally using the build tool [Maven](https://maven.apache.org/).
