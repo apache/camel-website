@@ -75,7 +75,7 @@ You will observe how Camel Designer generates all your source code in real time 
 
 - Explore [*AtlasMap*'s website](https://www.atlasmap.io/) to discover all its features.
 
-- Read [this blog](https://camel.apache.org/blog/2021/11/vscode-atlasmap-release-0.1.0/) presenting the latest *VS Code AtlasMap* release
+- Read [this blog](/blog/2021/11/vscode-atlasmap-release-0.1.0/) presenting the latest *VS Code AtlasMap* release
 
 - Find [*Camel Designer*](https://marketplace.visualstudio.com/items?itemName=brunoNetId.camel-designer) in *VS Code*'s marketplace
 
