@@ -10,7 +10,7 @@ preview: "What's new in Karavan 0.0.14"
 
 What's going on with Apache Camel Karavan? 
 
-Karavan is progressing! The following cool staff was done since the last [post](/blog/2022/02/camel-karavan-0.0.12):
+Karavan is progressing! The following cool stuff was done since the last [post](/blog/2022/02/camel-karavan-0.0.12):
 
 # REST API
 
