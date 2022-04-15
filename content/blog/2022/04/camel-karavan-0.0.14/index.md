@@ -29,9 +29,9 @@ Karavan comes with the new theme aligned to VSCode build-in theme.
 
 ![theme](./theme-dark.png)
 
-## New VSCode view
+## New VS Code view
 
-Karavan comes with the new VSCode view to manage integrations.
+Karavan comes with the new VS Code view to manage integrations.
 
 ![theme](./vscode-view.png)
 
