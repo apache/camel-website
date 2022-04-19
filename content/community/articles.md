@@ -4,7 +4,7 @@ title: "Articles"
 
 ## Camel Videos
 
-
+*   [How to create and deploy an integration via Camel K using Kaoto](https://www.youtube.com/watch?v=55G-sbgVQtM) Short video to show how to use Kaoto to create and deploy a hello world Kamelet Binding.
 *   [Evolution from ESB to Cloud-native API Integration](https://www.youtube.com/watch?v=o1O0kQtk7I8) ApacheCon 2021 by Andre Sluczka and Jeff Bruns talking about how they adapted to a lightweight cloud-native integration strategy based on Apache’s new Camel K framework.
 *   [From Camel to Kamelets: new connectors for event-driven applications](https://www.youtube.com/watch?v=xVL1gJ5AJVg) ApacheCon 2021 by Nicola Ferraro introducing Kamelets as connectors for event driven systems. In his talk Nicola presents two demos and show how easy you can build your own Kamelets and contribute them to Apache Camel.
 *   [Getting further with Apache Camel on Quarkus](https://www.youtube.com/watch?v=tn3cdZM8SrI) ApacheCon 2021 by Alenandre Gallice covering how great Camel and Quarkus work together, and how to build cloud native Camel microservices and finally how to run this on Kubernetes and Knative
