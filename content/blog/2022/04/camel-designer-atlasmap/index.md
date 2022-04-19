@@ -44,13 +44,13 @@ Camel routes are composed of multiple processing steps. You first define the dat
 
 From the visual editor, a representative flow would be rendered as follows:
 
-<img src="route-atlasmap.png" alt="Camel route rendering in Camel Designer showing the AtlasMap activity" style="width: 80%;" align="center"/>
+<img src="route-atlasmap.png" alt="Camel route rendering in Camel Designer showing the AtlasMap activity" style="width: 80%;" />
 
 In the illustration above, an *AtlasMap* activity follows the starting element (`direct`). The yellow ring indicates the activity under configuration (AtlasMap).
 
 The default ADM file (*AtlasMap* data mapping definition) is dummy, configured as `demo.adm` (does not exist). If you try to edit the file, you would get the following error displayed:
 
-<img src="adm-not-found.png" alt="Error message shown when ADM file not found in workspace." style="width: 40%;" align="left"  />
+<img src="adm-not-found.png" alt="Error message shown when ADM file not found in workspace." style="width: 40%; float: left" />
 
 <br>
 
