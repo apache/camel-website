@@ -3644,6 +3644,7 @@ __metadata:
     gulp-inject: ^5.0.2
     html-validate: ~4
     hugo-extended: ^0.95.0
+    js-yaml: ~4.1.0
     netlify-cli: ^6.14.10
     npm-run-all: ~4
     opal-runtime: 1.0.11
@@ -12418,7 +12419,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"js-yaml@npm:^4.0.0, js-yaml@npm:^4.1.0, js-yaml@npm:~4.1":
+"js-yaml@npm:^4.0.0, js-yaml@npm:^4.1.0, js-yaml@npm:~4.1, js-yaml@npm:~4.1.0":
   version: 4.1.0
   resolution: "js-yaml@npm:4.1.0"
   dependencies:
