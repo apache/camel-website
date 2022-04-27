@@ -38,7 +38,8 @@ module.exports = {
   },
 
   boldLink: (text, idPrefix, suffix = '') => {
-    const idText = `_${idPrefix}_${text.split('.').join('_')}`
+    // Remove all the formatting characters from the id to prevent invalid url generation
+    const idText = `_${idPrefix}_${text.split(/[*_`#~^]*/g).join('').split('.').join('_')}`
     text = suffix ? `*${text}* (${suffix})` : `*${text}*`
     return  `[[${idText}]]\nxref:#${idText}['',role=anchor]${text}`
   },
