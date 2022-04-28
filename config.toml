@@ -110,3 +110,9 @@ defaultMarkdownHandler = "blackfriday"
 
   [privacy.youtube]
     privacyEnhanced = true
+
+[mediaTypes."text/plain"]
+  suffixes = ["txt"]
+[outputFormats.TXT]
+  mediaType = "text/plain"
+  isPlainText = true
