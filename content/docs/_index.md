@@ -64,7 +64,7 @@ simplified interface, hiding all the low level details about how those connectio
 
 ## Camel Kafka Connector
 
-Camel Kafka Connector allows you to use all [Camel components](/components/latest/) as [Kafka Connect](http://kafka.apache.org/documentation/#connect) connectors, which, as a result, expands Kafka Connect compatibility by allowing all Camel components to be used in the Kafka ecosystem.
+Camel Kafka Connector allows you to use all [Camel components](/components/latest/) as [Kafka Connect](http://kafka.apache.org/documentation/#connect) connectors, which, as a result, expands Kafka Connect compatibility by allowing Camel components to be used in the Kafka ecosystem.
 
 <p>
 <a class="button dark" href="/camel-kafka-connector/latest/">Documentation</a>
@@ -122,7 +122,7 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 
 ## Camel Karaf
 
-[Apache Karaf](https://karaf.apache.org/) makes running Apache Camel in [OSGi](https://www.osgi.org/) container easy, which as a result, expands Apache Camel's compatibility by allowing all Camel components to run in the OSGi environment.
+[Apache Karaf](https://karaf.apache.org/) makes running Apache Camel in [OSGi](https://www.osgi.org/) container easy, which as a result, expands Apache Camel's compatibility by allowing Camel components to run in the OSGi environment.
 
 <p>
 <a class="button dark" href="/camel-karaf/latest/">Documentation</a>
