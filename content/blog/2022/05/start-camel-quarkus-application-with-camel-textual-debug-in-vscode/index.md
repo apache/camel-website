@@ -123,8 +123,8 @@ I created a short video to see all of that in action [here](https://youtu.be/owN
 Several potentially interesting next steps:
 
 - Provide completion to create the task launching with `quarkus:dev` [FUSETOOLS2-1623](https://issues.redhat.com/browse/FUSETOOLS2-1623)
-- Quarkify `camel-debug` [apache/camel-quarkus#3775]https://github.com/apache/camel-quarkus/issues/3775)
-- Enhance `quarkus:dev` to preconfigure application with `camel-debug` [apache/camel-quarkus#3775]https://github.com/apache/camel-quarkus/issues/3775)
+- Quarkify `camel-debug` [apache/camel-quarkus#3775](https://github.com/apache/camel-quarkus/issues/3775)
+- Enhance `quarkus:dev` to preconfigure application with `camel-debug` [apache/camel-quarkus#3775](https://github.com/apache/camel-quarkus/issues/3775)
 - Support automatic redeploy [FUSETOOLS2-1624](https://issues.redhat.com/browse/FUSETOOLS2-1624)
 
 You can submit your enhancement requests on the [VS Code client for Debug Adapter for Camel](https://github.com/camel-tooling/camel-dap-client-vscode/issues) or in the [Red Hat Jira](https://issues.redhat.com/browse/FUSETOOLS2).
