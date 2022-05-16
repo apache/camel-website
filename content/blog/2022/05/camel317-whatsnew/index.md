@@ -72,7 +72,9 @@ and can do code assistance in your Camel routes.
 
 ### Resume from Offset
 
-TODO: Otavio anything to mention (pausable/resumable)
+This release adds experimental support for pausable Kafka consumers. Under certain error conditions, it is now possible to pause the Kafka consumer so that consumption can be further resumed once the conditions on the integration are adequate. Please check the Resume API documentation for details.
+
+Experimental support for resume operations was added to the following components in this release: camel-atom, camel-rss, camel-cassandraql and camel-couchbase. 
 
 ### Java DSL in Camel K
 
@@ -92,9 +94,7 @@ See more details at the following [blog post](/blog/2022/03/secrets-properties-f
 
 ### Camel Kafka
 
-TODO: More Kafka ???
-
-We did other bug fixes, and we continue to make the camel-kafka component more robust. 1
+We did other bug fixes, and we continue to make the camel-kafka component more robust. In particular, we fixed issues related to concurrency as well as resume API related issues. To simplify the code maintainance, we also simplified the way the code tracks the last processed offset.
 
 ### Spring Boot
 
