@@ -74,7 +74,7 @@ and can do code assistance in your Camel routes.
 
 This release adds experimental support for pausable Kafka consumers. Under certain error conditions, it is now possible to pause the Kafka consumer so that consumption can be further resumed once the conditions on the integration are adequate. Please check the Resume API documentation for details.
 
-Experimental support for resume operations was added to the following components in this release: camel-atom, camel-rss, camel-cassandraql and camel-couchbase. 
+Experimental support for resume operations was added to the following components in this release: `camel-atom`, `camel-rss`, `camel-cassandraql` and `camel-couchbase`. 
 
 ### Java DSL in Camel K
 
