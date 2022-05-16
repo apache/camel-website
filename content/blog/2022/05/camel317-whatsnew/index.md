@@ -12,8 +12,8 @@ This release introduces a set of new features and noticeable improvements that w
 
 ### Java 17 (runtime) support
 
-This is the first release where we have official Java 17 support. The support is runtime only,
-meaning that we do not add special support for new Java 17 language features such as Java records.
+Camel 3.17 is the first release where we have official support for Java 17, really easy to remember :) That said, the Java 17 support
+is runtime only, meaning that we do not add special support for new Java 17 language features such as Java records.
 
 ### Camel Main
 
