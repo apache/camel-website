@@ -6,7 +6,7 @@ categories: ["Releases"]
 preview: Details of what we have done in the Camel 3.17 release.
 ---
 
-Apache Camel 3.17 has just been TODO: released(/blog/2022/05/RELEASE-3.17.0/).
+Apache Camel 3.17 has just been [released](/blog/2022/05/RELEASE-3.17.0/).
 
 This release introduces a set of new features and noticeable improvements that we will cover in this blog post.
 
@@ -113,5 +113,5 @@ Make sure to read the [upgrade guide](/manual/camel-3x-upgrade-guide-3_17.html) 
 
 You can find more information about this release in the list of JIRA tickets resolved in the release: 
 
-- TODO: release notes 3.17(/releases/release-3.17.0/)
+- [Release notes 3.17](/releases/release-3.17.0/)
 
