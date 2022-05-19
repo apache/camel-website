@@ -99,6 +99,14 @@ See more details at the following [blog post](/blog/2022/03/secrets-properties-f
 
 We did other bug fixes, and we continue to make the camel-kafka component more robust. In particular, we fixed issues related to concurrency as well as resume API related issues. To simplify the code maintainance, we also simplified the way the code tracks the last processed offset. We added support for kafka transaction in producer and it can work with `transacted()`. It would commit the transaction or abort it if there is an Exception throwing or the exchange is marked with `RollbackOnly`. It can not be used in multi threads since kafka transaction does not support it right now. Also kafka transaction does not support JTA/XA spec, so there is still a risk with the data consistency when combining with some XA resources (SQL or JMS).
 
+### New Components
+
+There are three new components:
+
+- camel-azure-key-vault - Manage secrets and keys in Azure Key Vault Service
+- camel-debezium-db2 - Capture changes from a DB2 database
+- camel-debezium-oracle - Capture changes from a Oracle database
+
 ### Spring Boot
 
 We have upgraded to the latest Spring Boot 2.6 release.
