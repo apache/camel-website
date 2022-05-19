@@ -94,7 +94,7 @@ See more details at the following [blog post](/blog/2022/03/secrets-properties-f
 
 ### Camel Kafka
 
-We did other bug fixes, and we continue to make the camel-kafka component more robust. In particular, we fixed issues related to concurrency as well as resume API related issues. To simplify the code maintainance, we also simplified the way the code tracks the last processed offset.
+We did other bug fixes, and we continue to make the camel-kafka component more robust. In particular, we fixed issues related to concurrency as well as resume API related issues. To simplify the code maintainance, we also simplified the way the code tracks the last processed offset. We added support for kafka transaction in producer and it can work with `transacted()`. It would commit the transaction or abort it if there is an Exception throwing or the exchange is marked with `RollbackOnly`. It can not be used in multi threads since kafka transaction does not support it right now. Also kafka transaction does not support JTA/XA spec, so there is still a risk with the data consistency when combining with some XA resources (SQL or JMS).
 
 ### Spring Boot
 
