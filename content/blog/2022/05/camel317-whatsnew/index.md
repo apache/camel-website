@@ -1,6 +1,6 @@
 ---
 title: "Apache Camel 3.17 What's New"
-date: 2022-03-19
+date: 2022-05-19
 authors: [davsclaus,gzurowski,essobedo,orpiske,aldettinger,apupier,zhfeng]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 3.17 release.
