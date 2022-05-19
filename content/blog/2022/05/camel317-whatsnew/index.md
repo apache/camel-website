@@ -33,12 +33,15 @@ Users that are familiar with Camel K and its "ease of use", then we are taking t
 same user experience to everyone; without the need for a Kubernetes platform.
 
 Having JBang installed, then you can easily run a Camel application from a terminal.
+At first install Camel into JBang so you can run using the `camel` command:
 
-To quickly create a new basic Camel integration use the `init` command:
+    jbang app install camel@apache/camel
+
+Then you can quickly create a new basic Camel integration use the `init` command:
 
     camel init hello.java
 
-And then you can run the file:
+And run the file (use `ctrl + c` to stop):
 
     camel run hello.java
 
@@ -51,7 +54,7 @@ see live updates, using the `init` command:
 
     camel init https://github.com/apache/camel-kamelets-examples/tree/main/jbang/hello-java
 
-And then you can run in developer mode that has live reloading on source changes (on save):
+And then you can run in developer mode (`--dev`) with _live reloading_ on source changes (on save):
 
     camel run * --dev
 
@@ -62,7 +65,7 @@ There you can also find information how to get JBang installed, and after that i
 
 ### Component Headers
 
-We completed the work of documenting every headers of all supported components.
+We completed the work of documenting every header's of all supported components.
 
 This means you can see in the website documentation what headers a component consumer or producer
 uses, and their purpose.
