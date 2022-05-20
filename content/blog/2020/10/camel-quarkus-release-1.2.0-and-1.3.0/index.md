@@ -27,35 +27,35 @@ even faster and more effective than before.
 
 There are 10 new extensions:
 
-* [AWS XRay](/camel-quarkus/next/reference/extensions/aws-xray.html) (JVM only)
-* [HBase](/camel-quarkus/next/reference/extensions/hbase.html) (JVM only)
-* [Headersmap](/camel-quarkus/next/reference/extensions/headersmap.html)
-* [Jasypt](/camel-quarkus/next/reference/extensions/jasypt.html) (JVM only)
-* [JCache](/camel-quarkus/next/reference/extensions/jcache.html) (JVM only)
-* [LevelDB](/camel-quarkus/next/reference/extensions/leveldb.html)
-* [LRA](/camel-quarkus/next/reference/extensions/lra.html) (JVM only)
-* [Ribbon](/camel-quarkus/next/reference/extensions/ribbon.html) (JVM only)
-* [Shiro](/camel-quarkus/next/reference/extensions/shiro.html) (JVM only)
-* [Spark](/camel-quarkus/next/reference/extensions/spark.html) (JVM only)
+* AWS XRay
+* HBase
+* Headersmap
+* Jasypt
+* JCache
+* LevelDB
+* LRA
+* Ribbon
+* Shiro
+* Spark
 
 And there are 16 promotions from JVM-only to native:
 
-* [Atom](/camel-quarkus/next/reference/extensions/atom.html)
-* [Browse](/camel-quarkus/next/reference/extensions/browse.html)
-* [Caffeine Cache](/camel-quarkus/next/reference/extensions/caffeine.html)
-* [Crypto (JCE)](/camel-quarkus/next/reference/extensions/crypto.html)
-* [Disruptor](/camel-quarkus/next/reference/extensions/disruptor.html)
-* [FOP](/camel-quarkus/next/reference/extensions/fop.html)
-* [Geocoder](/camel-quarkus/next/reference/extensions/geocoder.html)
-* [Jing](/camel-quarkus/next/reference/extensions/jing.html)
-* [NSQ](/camel-quarkus/next/reference/extensions/nsq.html)
-* [PostgresSQL Event](/camel-quarkus/next/reference/extensions/pgevent.html)
-* [PostgresSQL Replication Slot](/camel-quarkus/next/reference/extensions/pg-replication-slot.html)
-* [RSS](/camel-quarkus/next/reference/extensions/rss.html)
-* [SSH](/camel-quarkus/next/reference/extensions/ssh.html)
-* [String Template](/camel-quarkus/next/reference/extensions/stringtemplate.html)
-* [uniVocity CSV](/camel-quarkus/next/reference/extensions/univocity-parsers.html)
-* [Velocity](/camel-quarkus/next/reference/extensions/velocity.html)
+* Atom
+* Browse
+* Caffeine Cache
+* Crypto (JCE)
+* Disruptor
+* FOP
+* Geocoder
+* Jing
+* NSQ
+* PostgresSQL Event
+* PostgresSQL Replication Slot
+* RSS
+* SSH
+* String Template
+* uniVocity CSV
+* Velocity
 
 Check the full list of supported extensions in the [extensions reference](/camel-quarkus/next/reference/index.html).
 
