@@ -170,7 +170,7 @@ in only a few minutes. Camel JBang is excellent for no-code/low-code use-cases a
 when you need to quickly build a prototype with Camel.
 
 <p>
-<a class="button dark" href="/manual/camel-jbang/">Documentation</a>
+<a class="button dark" href="/manual/camel-jbang.html">Documentation</a>
 <a class="button light" href="https://github.com/apache/camel/tree/main/dsl">Source</a>
 <a class="button light" href="https://github.com/apache/camel-kamelets-examples/tree/main/jbang">Examples</a>
 </p>
