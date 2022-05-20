@@ -156,3 +156,25 @@ Karavan could be used as a [VS Code Extension](https://marketplace.visualstudio.
 {{< /div >}}
 
 {{< /div >}}
+
+{{< div "box right" >}}
+
+<a class="icon" title="Camel JBang latest documentation">{{< icon "logo-d" "Apache Camel logo" "jbang" "JBang logo" >}}</a>
+
+{{< div "content">}}
+
+## Camel JBang
+
+Camel CLI (Command Line Interface) to easily install and get started with Apache Camel,
+in only a few minutes. Camel JBang is excellent for no-code/low-code use-cases and
+when you need to quickly build a prototype with Camel.
+
+<p>
+<a class="button dark" href="/manual/camel-jbang/">Documentation</a>
+<a class="button light" href="https://github.com/apache/camel/tree/main/dsl">Source</a>
+<a class="button light" href="https://github.com/apache/camel-kamelets-examples/tree/main/jbang">Examples</a>
+</p>
+
+{{< /div >}}
+
+{{< /div >}}

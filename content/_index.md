@@ -220,7 +220,25 @@ Apache Camel Karavan is a mastering tool to facilitate integration and speed up 
 
 {{< /div >}}
 
-{{< section "frontpage columns apache" >}}
+{{< div "project" >}}
+
+{{< div "icon" >}}
+
+{{< icon "jbang" "JBang logo" >}}
+
+{{< /div >}}
+
+{{< div "content" >}}
+
+## Camel JBang
+
+The Camel CLI for easily getting started with Apache Camel. 
+
+<p><a class="button dark" href="/docs/">Read More</a></p>
+
+{{< /div >}}
+
+{{< /div >}}
 
 # Apache &amp; OpenSource
 
