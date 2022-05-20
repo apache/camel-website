@@ -195,7 +195,7 @@ Apache Camel Spring Boot runs Camel on Spring Boot and provides starters for Cam
 {{< div "content" >}}
 
 ## Camel Karaf
-Apache Camel Karaf makes running Apache Camel components to run in the OSGi environment.
+Apache Camel Karaf makes running Camel in the OSGi container.
 <p><a class="button dark" href="/docs/">Read More</a></p>
 
 {{< /div >}}

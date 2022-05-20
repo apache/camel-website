@@ -159,8 +159,6 @@ Karavan could be used as a [VS Code Extension](https://marketplace.visualstudio.
 
 {{< div "box right" >}}
 
-<a class="icon" title="Camel JBang latest documentation">{{< icon "logo-d" "Apache Camel logo" "jbang" "JBang logo" >}}</a>
-
 {{< div "content">}}
 
 ## Camel JBang
@@ -176,5 +174,7 @@ when you need to quickly build a prototype with Camel.
 </p>
 
 {{< /div >}}
+
+<a href="/manual/camel-jbang.html" class="icon" title="Camel JBang ">{{< icon "logo-d" "Apache Camel logo" "jbang" "JBang logo" >}}</a>
 
 {{< /div >}}
