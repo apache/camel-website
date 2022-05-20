@@ -24,17 +24,17 @@ As ever, we added some new extensions and enhanced existing ones with native sup
 
 1 new JVM only extension was added:
 
-* [AWS 2 Eventbridge](/camel-quarkus/next/reference/extensions/aws2-eventbridge.html)
+* AWS 2 Eventbridge
 
 7 extensions were enhanced with native support.
 
-* [JSLT](/camel-quarkus/next/reference/extensions/jslt.html)
-* [Lumberjack](/camel-quarkus/next/reference/extensions/lumberjack.html)
-* [MSV](/camel-quarkus/next/reference/extensions/msv.html)
-* [Nagios](/camel-quarkus/next/reference/extensions/nagios.html)
-* [Saga](/camel-quarkus/next/reference/extensions/saga.html)
-* [Twilio](/camel-quarkus/next/reference/extensions/twilio.html)
-* [Zendesk](/camel-quarkus/next/reference/extensions/zendesk.html)
+* JSLT
+* Lumberjack
+* MSV
+* Nagios
+* Saga
+* Twilio
+* Zendesk
 
 You can browse the full list of supported extensions over at the [extensions reference](/camel-quarkus/next/reference/index.html).
 
