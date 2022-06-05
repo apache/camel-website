@@ -168,6 +168,7 @@ If you have been contributing to the Apache Camel project, and you want your nam
 | Przemyslaw Budzik       |                                |
 | Radek Sedmak            |                                |
 | Reuben Garrett          |                                |
+| Rhuan Rocha             | Digibee                        |
 | Robert Liguori          | Solentus                       |
 | Robin Roos              | Dresdner Kleinwort Wasserstein |
 | Ross Mason              |                                |
