@@ -48,7 +48,7 @@ In a `~/.emacs.d/init.el` file:
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
- 
+
 (require 'lsp-mode)
 (add-hook 'nxml-mode-hook #'lsp)
 ```
@@ -133,7 +133,7 @@ In a `~/.emacs.d/lsp-camel.el` file:
 
 * Loading Camel LS by calling: `M-x lsp-install-server` and choosing `camells`
 
-Follow [this link](https://github.com/camel-tooling/camel-lsp-client-emacs) to know more about configuring Emacs and have up-to-date information. 
+Follow [this link](https://github.com/camel-tooling/camel-lsp-client-emacs) to know more about configuring Emacs and have up-to-date information.
 
 Then you can enjoy editing capabilities of Camel URI.
 
