@@ -8,7 +8,7 @@ preview: "Client implementation of the Apache Camel Language Server Protocol for
 
 # Text Editing capabilities of Camel URI with Camel XML DSL
 
-The capabilities are based on the Camel Language Server.
+The capabilities are based on the [Camel Language Server](https://github.com/camel-tooling/camel-language-server).
 
 For instance, code completion of Camel URI with Camel XML Dsl:
 
