@@ -8,17 +8,19 @@ preview: "Client implementation of the Apache Camel Language Server Protocol for
 
 # Text Editing capabilities of Camel URI with Camel XML DSL
 
-For instance, code completion for Camel XML Dsl. The capabilities are based on the Camel Language Server.
+The capabilities are based on the Camel Language Server.
 
-![Demo](images/camell.gif)
+For instance, code completion of Camel URI with Camel XML Dsl:
 
-Error detection for Camel XML Dsl
+![Demo of completion in Camel URI](images/camell.gif)
 
-![errordetection](images/Errordetection.gif)
+Diagnostic of Camel URI attribute value with Camel XML Dsl:
 
-Spell correction for Camel XML Dsl
+![Diagnostic of Camel URI attribute value, the exchangePattern attribute is an enum. An error is reported when a value which is not part of the enumeration is provided](images/Errordetection.gif)
 
-![spellcorrection](images/Spellchecker.gif)
+Diagnostic of Camel URI attribute name with Camel XML Dsl:
+
+![Diagnostic of Camel URI attribute name](images/Spellchecker.gif)
 
 
 # How to configure Emacs?
@@ -51,7 +53,8 @@ In a `~/.emacs.d/init.el` file:
 (add-hook 'nxml-mode-hook #'lsp)
 ```
 
-* Create `~/.emacs.d/lsp-camel.el` 
+* Create `~/.emacs.d/lsp-camel.el`file with the following content:
+
 
 In a `~/.emacs.d/lsp-camel.el` file:
 
@@ -130,9 +133,8 @@ In a `~/.emacs.d/lsp-camel.el` file:
 
 * Loading Camel LS by calling: `M-x lsp-install-server` and choosing `camells`
 
-
-Follow this link to know more about configuring Emacs - (https://github.com/camel-tooling/camel-lsp-client-emacs)
+Follow [this link](https://github.com/camel-tooling/camel-lsp-client-emacs) to know more about configuring Emacs and have up-to-date information. 
 
 Then you can enjoy editing capabilities of Camel URI.
 
-NOTE - The configuration will be simplified with next release of lsp-mode
+NOTE - The configuration will be simplified with next release of [lsp-mode](https://github.com/emacs-lsp/lsp-mode) thanks to [built-in support of Camel Language Server](https://github.com/emacs-lsp/lsp-mode/issues/3528).
