@@ -9,7 +9,7 @@ preview: "Top 10 features of Camel 3.x"
 
 At the end of 2019 Camel 3 arrived. Some main features were modularization of the core and support for Java 11. A bunch of other changes were mentioned in Claus Ibsen's blog:
 
-[Apache Camel 3 What's New (top 10)](https://medium.com/r/?url=https%3A%2F%2Fcamel.apache.org%2Fblog%2F2019%2F12%2FCamel3-Whatsnew%2F)
+[Apache Camel 3 What's New (top 10)](/blog/2019/12/Camel3-Whatsnew/)
 
 In this blog, we focus on the top 10 of features that arrived since the 3.0 release. As an overview, but also to give some attention to features not everyone is aware of. Just in case you missed them :)
 
