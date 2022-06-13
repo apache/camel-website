@@ -184,4 +184,4 @@ Sometimes secrets like passwords are managed in the cloud. The question is, how 
 </camelContext>
 ```
 
-[Camel 3.16.0 new feature: Load properties from Vault/Secrets cloud services](https://medium.com/r/?url=https%3A%2F%2Fcamel.apache.org%2Fblog%2F2022%2F03%2Fsecrets-properties-functions%2F)
+[Camel 3.16.0 new feature: Load properties from Vault/Secrets cloud services](/blog/2022/03/secrets-properties-functions/)
