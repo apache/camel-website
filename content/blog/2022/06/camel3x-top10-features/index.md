@@ -1,6 +1,6 @@
 ---
 title: "Top 10 features of Camel 3.x"
-date: 2022-06-15
+date: 2022-06-16
 authors: ["assimbly"]
 categories: ["Camel"]
 preview: "Top 10 features of Camel 3.x"
@@ -28,15 +28,13 @@ Camel main was introduced in Camel 3 to provide means to run Camel standalone wi
 
 https://kameleon.dev
 
-## 3. Camel CLI (JBang)
+## 3. Camel CLI (JBang)
 
 Another option, to make it easier to run Camel, is support for the command line. JBang provides an environment to compile, resolve dependencies and see direct results on the command line:
 
 https://www.jbang.dev/try/
 
-Camel on JBang is now supported through a JBang extension:
-
-https://camel.apache.org/manual/camel-jbang.html
+[Camel on JBang](/manual/camel-jbang.html) is now supported through a JBang extension:
 
 After installing the Camel extension in JBang you can run routes (whether they are written in Java DSL, XML DSL or YAML DSL). You can even mix them like this:
 
@@ -50,7 +48,7 @@ Camel JBang is particularly there to run routes. Designing routes is possible th
 
 https://github.com/apache/camel-karavan
 
-##  5. Camel DSL
+##  5. Camel DSL
 
 Some benefits of Camel K have being ported into Camel 3. Now it's possible to create routes in various languages like:
 
@@ -147,30 +145,24 @@ from("direct:setMyBody")
 
 The last example, a Kamelet, makes it possible to call a template as a normal Camel endpoint. Note there is a whole catalog with almost 200 predefined templates (aka Kamelets) available:
 
-https://camel.apache.org/camel-kamelets/0.8.x/index.html
-
 These Kamelets are about a certain use case, instead of components which are more about a certain protocol or technology.
 
-##  7. Route Load and Reload
+##  7. Route Load and Reload
 
-The routesloader enable to load or update Camel routes from various resources. These routes can be written in for example the XML DSL or the YAML DSL and load from file, classpath, string or URL. When the routes are loaded from a directory, the routes can also [reload](https://camel.apache.org/manual/route-reload.html) when a file changes.
+The routesloader enable to load or update Camel routes from various resources. These routes can be written in for example the XML DSL or the YAML DSL and load from file, classpath, string or URL. When the routes are loaded from a directory, the routes can also [reload](/manual/route-reload.html) when a file changes.
 
 ## 8. Route Configuration
 
-Camel 3.12 introduced route configuration, which is used for separating configurations from the routes. This can be used in situations such as configuring different error handlers across a set of routes. In previous versions of Camel, this somewhat cumbersome to do, as you would either have to copy the same configuration to a set of routes or rely on a global error handling configuration.
+Camel 3.12 introduced [route configuration](/manual/route-configuration.html), which is used for separating configurations from the routes. This can be used in situations such as configuring different error handlers across a set of routes. In previous versions of Camel, this somewhat cumbersome to do, as you would either have to copy the same configuration to a set of routes or rely on a global error handling configuration.
 Now you can configure a number of route configurations, and then specify on each route which configuration to use (you can use match by IDs, wildcards, and regular expression).
 
-https://camel.apache.org/manual/route-configuration.html
+## 9. Running Java
 
-## 9. Running Java
+In Camel 2 it was possible to run JavaScript code from a Camel route. With Camel supporting Java 11 (and now also 17) this is unfortunately no longer possible as the JavaScript engine (Nashorn) was deprecated since Java 9 (and removed altogether from Java since version 15).
 
-In Camel 2 it was possible to run JavaScript code from a Camel route. With Camel supporting Java 11 (and now also 17) this is unfortunately no longer possible as the JavaScript engine (Nashorn) was deprecated since Java 9 (and removed altogether from Java since version 15). 
+The good news it's now possible to run Java code (with some limitations) through the [jOOR language](/components/3.17.x/languages/joor-language.html)
 
-The good news it's now possible to run Java code (with some limitations) through the jOOR language:
-
-https://camel.apache.org/components/3.17.x/languages/joor-language.html
-
-## 10. Load properties from vault/secrets cloud services
+## 10. Load properties from vault/secrets cloud services
 
 Sometimes secrets like passwords are managed in the cloud. The question is, how can you use them within Camel? Since Camel 3.16 this is possible for various cloud providers like Amazon and Google. Then you can refer to a secret like this:
 
