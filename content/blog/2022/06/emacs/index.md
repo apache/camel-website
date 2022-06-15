@@ -12,15 +12,15 @@ The capabilities are based on the [Camel Language Server](https://github.com/cam
 
 For instance, code completion of Camel URI with Camel XML Dsl:
 
-![Demo of completion in Camel URI](images/camell.gif)
+![Demo of completion in Camel URI](camell.gif)
 
 Diagnostic of Camel URI attribute value with Camel XML Dsl:
 
-![Diagnostic of Camel URI attribute value, the exchangePattern attribute is an enum. An error is reported when a value which is not part of the enumeration is provided](images/Errordetection.gif)
+![Diagnostic of Camel URI attribute value, the exchangePattern attribute is an enum. An error is reported when a value which is not part of the enumeration is provided](Errordetection.gif)
 
 Diagnostic of Camel URI attribute name with Camel XML Dsl:
 
-![Diagnostic of Camel URI attribute name](images/Spellchecker.gif)
+![Diagnostic of Camel URI attribute name](Spellchecker.gif)
 
 
 # How to configure Emacs?

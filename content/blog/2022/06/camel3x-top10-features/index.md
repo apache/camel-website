@@ -1,7 +1,6 @@
 ---
 title: "Top 10 features of Camel 3.x"
 date: 2022-06-15
-draft: false
 authors: ["assimbly"]
 categories: ["Camel"]
 preview: "Top 10 features of Camel 3.x"
