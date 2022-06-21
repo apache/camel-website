@@ -44,7 +44,7 @@ camel run route1.java route2.xml route3.yaml
 
 ##  4. Camel UI Designer (Karavan)
 
-Camel JBang is particularly there to run routes. Designing routes is possible through a new UI Designer named Karavan. Just give it a try in Visual Studio Code or the standalone version:
+Camel JBang is particularly there to run routes. Designing routes is possible through a new UI Designer named Karavan. Just give it a try in [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=camel-karavan.karavan) or the standalone version:
 
 https://github.com/apache/camel-karavan
 
