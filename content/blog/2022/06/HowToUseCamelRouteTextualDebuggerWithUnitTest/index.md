@@ -83,7 +83,7 @@ You might also want to introduce a longer timeout to let you time to debug.
 
 ## VS Code Task configuration
 
-The following VS Code task must be created in the `settings/tasks.json` file:
+The following VS Code task must be created in the `.vscode/tasks.json` file:
 
 ```json
 {
@@ -111,7 +111,7 @@ It allows to start the test with `camel-debug` on the classpath.
 
 ## VSCode Launch configuration
 
-The following launch configuration must be created in the `.settings/launch.json`:
+The following launch configuration must be created in the `.vscode/launch.json`:
 
 ```json
 {
