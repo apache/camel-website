@@ -123,7 +123,7 @@ Apache Camel helps you integrate various systems consuming or producing data.
 
 ## Camel K
 Apache Camel K is a lightweight integration framework that runs natively on Kubernetes.
-<p><a class="button dark" href="/docs/">Read More</a></p>
+<p><a class="button dark" href="/camel-k/latest/">Read More</a></p>
 
 {{< /div >}}
 
@@ -141,7 +141,7 @@ Apache Camel K is a lightweight integration framework that runs natively on Kube
 
 ## Camel Quarkus
 Apache Camel Quarkus packages 280+ Camel components as Quarkus extensions.
-<p><a class="button dark" href="/docs/">Read More</a></p>
+<p><a class="button dark" href="/camel-quarkus/latest/">Read More</a></p>
 
 {{< /div >}}
 
@@ -160,7 +160,7 @@ Apache Camel Quarkus packages 280+ Camel components as Quarkus extensions.
 ## Camel Kafka Connector
 Apache Camel Kafka Connector embeds Camel within Kafka Connect.
 
-<p><a class="button dark" href="/docs/">Read More</a></p>
+<p><a class="button dark" href="/camel-kafka-connector/latest/">Read More</a></p>
 
 {{< /div >}}
 
@@ -196,7 +196,7 @@ Apache Camel Spring Boot runs Camel on Spring Boot and provides starters for Cam
 
 ## Camel Karaf
 Apache Camel Karaf makes running Camel in the OSGi container.
-<p><a class="button dark" href="/docs/">Read More</a></p>
+<p><a class="button dark" href="/camel-karaf/latest/">Read More</a></p>
 
 {{< /div >}}
 
@@ -232,9 +232,9 @@ Apache Camel Karavan is a mastering tool to facilitate integration and speed up 
 
 ## Camel JBang
 
-The Camel CLI for easily getting started with Apache Camel. 
+The Camel CLI for easily getting started with Apache Camel.
 
-<p><a class="button dark" href="/docs/">Read More</a></p>
+<p><a class="button dark" href="/manual/camel-jbang.html">Read More</a></p>
 
 {{< /div >}}
 
