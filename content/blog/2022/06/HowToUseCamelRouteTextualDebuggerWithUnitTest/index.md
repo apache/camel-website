@@ -148,7 +148,7 @@ We have seen one way to debug a Camel route textually which is part of a test. Y
 - One test at a time
 - Requires modification of test code to activate JMX
 - Requires modification of test code to ensure debugger is ready on first route execution in the test
-- Cannot use [Camel test Java Debugger](/manual/debugger.html#_debugging_camel_routes)
+- Cannot use [Camel test Java Debugger](/manual/debugger.html)
 
 Stay tuned as I expect several of these limitations to be overcome in following weeks.
 
