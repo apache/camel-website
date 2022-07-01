@@ -20,7 +20,7 @@ To really understand how this new configuration system works, head to the follow
 
 - [**Gearing up _Camel Designer_**](https://brunonetid.github.io/2022/06/28/camel-designer-configuration.html)
 
-In the blog above, this new functionality is covered in great detail. Furthermore, it showcases how combining *Camel Designer* and [***Camel JBang***](https://camel.apache.org/manual/camel-jbang.html) empowers the developer to code with super fast trial-and-error cycles. The combo shines when used for exploratory work and prototyping.
+In the blog above, this new functionality is covered in great detail. Furthermore, it showcases how combining *Camel Designer* and [***Camel JBang***](/manual/camel-jbang.html) empowers the developer to code with super fast trial-and-error cycles. The combo shines when used for exploratory work and prototyping.
 
 
 ## Quick video demonstration
@@ -36,9 +36,5 @@ If you're not that interested in the nitty-gritty details, here's a video record
 \
 
 - In-detail blog post about [*Camel Designer*'s](https://brunonetid.github.io/2022/06/28/camel-designer-configuration.html) configuration system.
-- Official [*Camel JBang*'s](https://camel.apache.org/manual/camel-jbang.html) documentation.
+- Official [*Camel JBang*'s](/manual/camel-jbang.html) documentation.
 - Find [*Camel Designer*](https://marketplace.visualstudio.com/items?itemName=brunoNetId.camel-designer) in *VS Code*'s marketplace.
-
-
-
-
