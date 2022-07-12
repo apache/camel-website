@@ -6,7 +6,7 @@ categories: ["Tooling"]
 preview: "An extension for coc.nvim to enable Apache Camel Language Server"
 ---
 
-## Two weeks before it became easier to provide language support inside emacs - (https://camel.apache.org/blog/2022/06/emacs/).It is now the case for vim.  
+Two weeks before it became easier to provide language support inside emacs -[See this blog post](/blog/2022/06/emacs/). It is now the case for vim.  
 
 # coc-camel
 An [extension for coc.nvim](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions) to enable
