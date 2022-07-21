@@ -17,7 +17,7 @@ This completion allows you to add Camel K Modeline at the beginning of your Came
 
 ![Insert Camel K Modeline completion](./img/ModelineInsertionBlog.gif)
 
-# Support for the productized version
+# Improved support for the productized version
 
 The support for the productized version has been improved. Now the maven repositories will be automatically added when using any productized version's catalog.
 
