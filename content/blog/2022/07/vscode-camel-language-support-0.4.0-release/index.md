@@ -1,9 +1,9 @@
 ---
-title: "Released version 0.4.0 of VSCode Language Support for Apache Camel"
+title: "Released version 0.4.0 of VS Code Language Support for Apache Camel"
 date: 2022-07-21
 authors: [joshiraez]
 categories: ["Tooling", "Releases"]
-preview: "Released version 0.4.0 of VSCode Language Support for Apache Camel. New completion to add Camel K modeline, updates on the default catalogs and support for the productized version."
+preview: "Released version 0.4.0 of VS Code Language Support for Apache Camel. New completion to add Camel K modeline, updates on the default catalogs and support for the productized version."
 ---
 
 # Release 0.4.0
@@ -17,15 +17,20 @@ This completion allows you to add Camel K Modeline at the beginning of your Came
 
 ![Insert Camel K Modeline completion](./img/ModelineInsertionBlog.gif)
 
+# Support for the productized version
+
+The support for the productized version has been improved. Now the maven repositories will be automatically added when using any productized version's catalog.
+
+![Camel's productized version catalog](./img/ModelineInsertionBlog.gif)
+
+
 # Catalog upgrades
 
 This new release contains the following upgrades:
 
-* Camel Quarkus Catalog from 2.7.0 to 2.8.0
-* Default Camel Catalog version from 3.15.0 to 3.16.0
-* Kamelet Catalog from 0.7.1 to 0.8.0
-* Support for the productized Camel catalog (not Kamelets)
-
+* Camel Catalog version from 3.16.0 to 3.18.0
+* Camel Quarkus Catalog from 2.8.0 to 2.10.0
+* Kamelet Catalog from 0.8.0 to 0.8.1
 
 # What's next
 
