@@ -3,12 +3,12 @@ title: "Released version 0.4.0 of VS Code Language Support for Apache Camel"
 date: 2022-07-21
 authors: [joshiraez]
 categories: ["Tooling", "Releases"]
-preview: "Released version 0.4.0 of VS Code Language Support for Apache Camel. New completion to add Camel K modeline, updates on the default catalogs and support for the productized version."
+preview: "Released version 0.4.0 of VS Code Language Support for Apache Camel. New completion to add Camel K Modeline, updates on the default catalogs and support for the productized version."
 ---
 
 # Release 0.4.0
 
-This new release adds a new completion to add Camel K modeline to new files.
+This new release adds a new completion to add Camel K Modeline to new files.
 It also brings updates on the default Camel catalogs and brings support for the productized classic Camel catalog.
 
 # Insert Camel K Modeline completion
