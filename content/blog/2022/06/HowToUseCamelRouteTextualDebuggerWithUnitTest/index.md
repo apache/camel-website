@@ -6,6 +6,8 @@ categories: ["Tooling"]
 preview: "How to use Camel textual Route Debugger with Unit test in VS Code"
 ---
 
+EDIT: I recommend to read this [new article](/blog/2022/07/HowToUseCamelRouteTextualDebuggerWithUnitTest) if using Camel 3.18+.
+
 Textual debug for Camel routes allows to set breakpoints at Route definition. It is convenient to leverage this feature with a Unit test.
 
 This article will explain how it is possible to configure the project and the VS Code IDE for that. Similar functionality should be possible with other IDEs but not covered in this article.
