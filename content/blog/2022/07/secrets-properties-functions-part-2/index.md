@@ -37,7 +37,7 @@ You already have the information for AWS and GCP in the old blog post.
 
 Let's explore Azure Key Vault and Hashicorp Vault.
 
-#### AWS Secrets Manager
+#### Azure Key Vault
 
 The Azure Key Vault Properties Function configurations through enviroment variables are the following:
 
@@ -51,7 +51,7 @@ export $CAMEL_VAULT_AZURE_VAULT_NAME=vaultName
 While as Main Configuration properties it is possible to define the credentials through the following:
 
 ```
-camel.vault.azure.tenantId = accessKey
+camel.vault.azure.tenantId = tenantId
 camel.vault.azure.clientId = clientId
 camel.vault.azure.clientSecret = clientSecret
 camel.vault.azure.vaultName = vaultName
@@ -75,7 +75,7 @@ The Hashicorp Vault Properties Function configurations through enviroment variab
 
 ```
 export $CAMEL_VAULT_HASHICORP_TOKEN=token
-export $CAMEL_VAULT_HASHICORP_ENGINE=secretKey
+export $CAMEL_VAULT_HASHICORP_ENGINE=engine
 export $CAMEL_VAULT_HASHICORP_HOST=host
 export $CAMEL_VAULT_HASHICORP_PORT=port
 export $CAMEL_VAULT_HASHICORP_SCHEME=http/https
