@@ -188,12 +188,12 @@ Articles are divided into several sections. As the lists grow, further sectionin
 *   [Creating a REST API in Apache Camel](https://tomd.xyz/articles/camel-rest/) from June 2018 by Tom Donohue explains the Rest DSL and how to use it with a basic example that is a great tutorial for learning about the Rest DSL. 
 *   [Enterprise integration for Ethereum](https://medium.com/@bibryam/enterprise-integration-for-ethereum-fa67a1577d43) from July 2018 by Bilgin Ibryam explains the Ethereum eco-system and where you can use Camel with the bit-coin and block-chain technologies.
 *   [Camel Aggregation Strategies](http://blog.joshdreagan.com/2018/08/30/camel_aggregation_strategies/) from August 2018 by Josh Reagan whom blogs about how to aggregate data using Camel's AggregationStrategy when using EIPs such as Content Enricher, Splitter or the Aggregator. 
-*   [CCreating custom processors, Kamelets and components in Apache Camel|https://raymondmeester.medium.com/custom-code-in-apache-camel-56c9249d5b24] from June 2022 blog on how to write custom Camel code with processors, Kamelets and components.
-*   [Authenticating Camel K to Kafka using SASL](https://dev.to/kuthumipepple/authenticating-camel-k-to-kafka-using-sasl-1723) from August 2022 by Kuthumi Pepple explains how to connect and authenticate Camel K to Apache Kafka using the SASL Oauthbearer authentication mechanism
+*   [Creating custom processors, Kamelets and components in Apache Camel](https://raymondmeester.medium.com/custom-code-in-apache-camel-56c9249d5b24) from June 2022 blog on how to write custom Camel code with processors, Kamelets and components.
 
 ### Camel K
 
 * [Why Camel K](https://dzone.com/articles/why-camel-k) by Saravanakumar Selvaraj from June 2020 where he briefly hightlights 5 key elements of Camel K 
+*   [Authenticating Camel K to Kafka using SASL](https://dev.to/kuthumipepple/authenticating-camel-k-to-kafka-using-sasl-1723) from August 2022 by Kuthumi Pepple explains how to connect and authenticate Camel K to Apache Kafka using the SASL Oauthbearer authentication mechanism
 
 ### Tooling / Combination with other Products
 
