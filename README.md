@@ -328,7 +328,7 @@ The plugin works with all Intellij editors including the free IDEA CE.
 Consult the [Antora documentation](https://docs.antora.org/) and [Asciidoctor documentation](https://docs.asciidoctor.org/home/) for complete information on Antora and AsciidDoc/Asciidoctor.
 
 The Apache Camel website includes documentation sources from other github repositories. Content sources are defined in
-[antora-playbook.yml](antora-playbook.yml).
+[antora-playbook.yml](antora-playbook-snippets/antora-playbook.yml).
 
 Your changes in these repositories will automatically be included in the website after a site rebuild.
 
