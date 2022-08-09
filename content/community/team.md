@@ -62,6 +62,7 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 | Quinn Stevenson        | quinn            |                            |
 | Raul Kripalani         | raulk            |                            |
 | Pascal Schumacher      | pascalschumacher |                            |
+| Pasquale Congiusti     | pcongiusti       | Red Hat                    |
 | Peter Palaga           | ppalaga          | Red Hat                    |
 | Rich Newcomb           | rnewcomb         |                            |
 | Richard Kettelerij     | rickette         | Avisi BV                   |
