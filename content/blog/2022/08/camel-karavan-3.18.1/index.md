@@ -73,6 +73,6 @@ or move existing DSL elements into Step DSL
 
 # Feedback is gold
 
-Get Karavan as a [Standalone application](https://github.com/apache/camel-karavan/pkgs/container/camel-karavan) or install [VS Code extension](https://marketplace.visualstudio.com/items?itemName=camel-karavan.karavan) from the Marketplace.
+Deploy Karavan as a [cloud-native integration toolkit](https://github.com/apache/camel-karavan/tree/main/karavan-builder) or install [VS Code extension](https://marketplace.visualstudio.com/items?itemName=camel-karavan.karavan) from the Marketplace.
 
 If you have any idea or find a new issue, please [create a new issue report in GitHub](https://github.com/apache/camel-karavan/issues)!
