@@ -6,7 +6,7 @@ categories: ["Tooling"]
 preview: "LSP-camel extension for camells integration with sublime text to enable Apache Camel Language Server"
 ---
 
-Two weeks before it became easier to provide language support inside coc.nvim -[See this blog post](https://camel.apache.org/blog/page/2/). It is now the case for sublime, thanks to [camells](https://github.com/camel-tooling/camel-lsp-client-sublime).
+Two weeks before it became easier to provide language support inside coc.nvim -[See this blog post](/blog/2022/07/coc-nvim-camel-lsp/). It is now the case for sublime, thanks to [camells](https://github.com/camel-tooling/camel-lsp-client-sublime).
 
 It is an [extension for camells](https://github.com/sublimelsp) to enable [Apache Camel language server](https://github.com/camel-tooling/camel-language-server) support.
 
