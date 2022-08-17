@@ -16,7 +16,7 @@ In this release, we mainly focused on improving the Camel Debugger user experien
 
 In this version, in the case of the Standalone/Main and Spring Boot runtimes, it is now possible to enable the Camel Debugger seamlessly when launching a Camel application or a test by using respectively the _Java Launcher_ or the _JUnit Launcher_ as shown below:
 
-![Debug a Camel Application with the Java Launcher](https://github.com/camel-idea-plugin/camel-idea-plugin/raw/main/img/42-camel-debugger-standalone-java-launcher.gif)
+![Debug a Camel Application with the Java Launcher](https://raw.githubusercontent.com/camel-tooling/camel-idea-plugin/main/img/42-camel-debugger-standalone-java-launcher.gif)
 
 The plugin detects that you are trying to launch a Camel application, and then automatically adds the required dependencies and configuration properties for you to enable the Camel Debugger.
 
