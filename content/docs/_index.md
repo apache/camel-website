@@ -144,8 +144,11 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 
 ## Camel Karavan
 
-Karavan provides a graphical user interface to design and configure routes (EIP and REST) using Kamelets and Components.  Karavan reads and writes integrations using [YAML DSL](/components/next/others/yaml-dsl.html).
-Karavan could be used as a [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=camel-karavan.karavan) integrated with [Camel Jbang](/manual/camel-jbang.html) runtime as well as a containerized application alongside Camel-K integrated through API or GitOps operational framework.
+An Integration Toolkit aimed to increase developer performance through a graphical user interface to design and configure routes (EIP and REST) using Kamelets and Components, integration with runtimes and package, image build and deploy to Kubernetes out-of-the-box.
+
+Being deployed in Kubernetes Karavan in cloud-native mode helps to manage projects, design and monitor integrations, Tekton pipeline to build and deploy integrations.
+
+[Karavan VS Code Extension](https://marketplace.visualstudio.com/items?itemName=camel-karavan.karavan) is integrated with [Camel Jbang](/manual/camel-jbang.html) runtime for fast local development cycles.
 
 <p>
 <!-- <a class="button dark" href="/camel-karavan/latest/">Documentation</a> -->
