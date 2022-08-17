@@ -38,7 +38,7 @@ Karavan uses Tekton Pipelines to build and deploy integrations. Pipeline generat
 ![theme](./karavan-deploy.gif)
 
 ## Kubernetes integration
-KStarting from 3.18 Camel supports placeholders for secrets and configMaps
+Starting from 3.18 Camel supports placeholders for secrets and configMaps
 Karavan supports them as well. In addition Karavan provides selectors for ConfigMaps, Secrets and Services retrieved from Kubernetes.
 
 ![theme](./karavan-kube-resourses.gif)
