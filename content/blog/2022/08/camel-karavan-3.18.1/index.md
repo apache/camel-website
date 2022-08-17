@@ -18,8 +18,7 @@ Versions alignment is required to avoid DSL compatibility matrix between Camel a
 
 # Cloud-native Itegration Toolkit
 
-Starting from this preview release Karavan could be deployed to OpenShift (Kubernetes version is comming)
-as self-managed service to design, build, deploy and monitor integrations.
+Starting from this preview release Karavan could be deployed to OpenShift (Kubernetes version is comming) to design, build, deploy and monitor integrations.
 
 ## Architecture
 Karavan cloud-native integration toolkit is a user application to manage projects, design and monitor integrations, Tekton pipeline to build and deploy integrations.
