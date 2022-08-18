@@ -11,6 +11,7 @@ preview: "New integration designer capabilities, Karavan on OpenShift, Tekton Pi
 Karavan is an Integration Toolkit for Apache Camel aimed to increase developer performance through the visualization of routes, integration with runtimes and pipelines for package, image build and deploy to kubernetes out-of-the-box.
 
 Karavan Visual Designer for Integrations supports:
+
 - Enterprise Integration Patterns DSL
 - REST DSL
 - OpenAPI to REST DSL generator
@@ -20,12 +21,14 @@ Karavan Visual Designer for Integrations supports:
 - Integration CRD (*.yaml with kind:Integration) and plain yaml routes
 
 Karavan integrates with the following Camel Runtimes:
+
 - Camel Jbang (local run)
 - Camel Quarkus (export and CI pipeline)
 - Camel Spring-boot (export only)
 - Camel Main (export only)
 
 Karavan can be used as: 
+
  - a cloud-native application in Kubernetes/OpenShift (FKA cloud/serverless mode)
  - a VS Code extenson
 
