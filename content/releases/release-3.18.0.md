@@ -5,7 +5,7 @@ draft: false
 type: release-note
 version: 3.18.0
 title: "Release 3.18.0"
-preview: "New release 3.18.0"
+preview: "New LTS release 3.18.0"
 apiBreaking: ""
 knownIssues: ""
 jiraVersionId: 12351640
