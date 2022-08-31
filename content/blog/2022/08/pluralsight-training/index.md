@@ -1,9 +1,9 @@
 ---
 title: "Author-led Training on Apache Camel"
-date: 2022-08-30
+date: 2022-08-31
 draft: false
 authors: [michaelhoffmantech]
-categories: ["HOWTOS", "VIDEOS"]
+categories: ["Howtos", "Videos"]
 preview: "Author-led Course on Apache Camel"
 ---
 ## Announcing Author-led Training on Camel
