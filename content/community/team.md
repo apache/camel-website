@@ -17,7 +17,7 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 | Antonin Stefanutti     | astefanutti      | Red Hat                    |
 | Babak Vahdat           | bvahdat          | Cyberlogic Consulting GmbH |
 | Ben O'Day              | boday            | Initek Consulting          |
-| Bilgin Ibryam          | bibryam          | Red Hat                    |
+| Bilgin Ibryam          | bibryam          |                            |
 | Bob Paulin             | bob              |                            |
 | Bruce Snyder           | bsnyder          |                            |
 | Charles Moulliard      | cmoulliard       | Red Hat                    |
