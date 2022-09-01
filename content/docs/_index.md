@@ -82,7 +82,7 @@ Camel Kafka Connector allows you to use all [Camel components](/components/lates
 
 ## Camel Quarkus
 
-This project hosts the efforts to port and package the 280+ Camel components as Quarkus extensions. [Quarkus](https://quarkus.io/) is a Java platform offering fast boot times and low memory footprint. It targets both stock JVMs and GraalVM.
+This project hosts the efforts to port and package most of the Camel components as Quarkus extensions. [Quarkus](https://quarkus.io/) is a Java platform offering fast boot times and low memory footprint. It targets both stock JVMs and GraalVM.
 
 <p>
 <a class="button dark" href="/camel-quarkus/latest/">Documentation</a>
@@ -104,7 +104,7 @@ This project hosts the efforts to port and package the 280+ Camel components as 
 
 ## Camel Spring Boot
 
-Camel support for Spring Boot provides auto-configuration of the Camel context by auto-detecting Camel routes available in the Spring context and registers the key Camel utilities as beans. It also provides starters for many Camel components.
+Camel support for Spring Boot provides auto-configuration of the Camel context by auto-detecting Camel routes available in the Spring context and registers the key Camel utilities as beans. It also provides starters for the Camel components.
 
 <p>
 <a class="button dark" href="/camel-spring-boot/latest/">Documentation</a>
@@ -122,7 +122,7 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 
 ## Camel Karaf
 
-[Apache Karaf](https://karaf.apache.org/) makes running Apache Camel in [OSGi](https://www.osgi.org/) container easy, which as a result, expands Apache Camel's compatibility by allowing Camel components to run in the OSGi environment.
+[Apache Karaf](https://karaf.apache.org/) makes running Apache Camel in the Karaf [OSGi](https://www.osgi.org/) container.
 
 <p>
 <a class="button dark" href="/camel-karaf/latest/">Documentation</a>
