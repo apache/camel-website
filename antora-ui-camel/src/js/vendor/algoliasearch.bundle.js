@@ -61,7 +61,10 @@
                 url: hit.url,
                 section,
                 categories: hit.categories,
-                breadcrumbs: Object.values(hit.hierarchy).slice(1).filter((lvl) => lvl !== null).join(' / '),
+                breadcrumbs: Object.values(hit.hierarchy)
+                  .slice(1)
+                  .filter((lvl) => lvl !== null)
+                  .join(' / '),
                 snippet: hit._highlightResult.content.value,
               })
 
@@ -83,16 +86,16 @@
               return `
               <dl>
                 ${Object.keys(data)
-    .map(
-      (sectionKey) => `
+                  .map(
+                    (sectionKey) => `
                   <div class="result">
                     <div class="heading">
                       <dt>${data[sectionKey].name}</dt>
                       ${(data[sectionKey].version && `<dt class="version">${data[sectionKey].version}</dt>`) || ''}
                     </div>
                     ${data[sectionKey]
-    .map(
-      (hit) => `
+                      .map(
+                        (hit) => `
                     <a href="${hit.url}">
                       <dd>
                         <header class="result_header">${hit.breadcrumbs}</header>
@@ -100,11 +103,11 @@
                       </dd>
                     </a>
                   `
-    )
-    .join('')}
+                      )
+                      .join('')}
                 </div>`
-    )
-    .join('')}
+                  )
+                  .join('')}
               </dl>
               <div class="footer-search">
                 <h4 id="algolia">Search By</h4>

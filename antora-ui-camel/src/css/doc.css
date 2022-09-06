@@ -61,7 +61,7 @@
 }
 
 .doc h2:not(.discrete)::after {
-  content: "";
+  content: '';
   display: block;
   position: relative;
   height: 1px;
@@ -672,12 +672,12 @@
 }
 
 .doc b.button::before {
-  content: "[";
+  content: '[';
   padding-right: 0.25em;
 }
 
 .doc b.button::after {
-  content: "]";
+  content: ']';
   padding-left: 0.25em;
 }
 
@@ -715,7 +715,7 @@
 }
 
 .doc .menuseq i.caret::before {
-  content: "\203a";
+  content: '\203a';
   font-size: 1.1em;
   font-weight: var(--body-font-weight-bold);
   line-height: calc(1 / 1.1);
