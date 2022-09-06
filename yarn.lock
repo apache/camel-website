@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 5
+  version: 6
   cacheKey: 8
 
 "@algolia/cache-browser-local-storage@npm:4.5.1":
@@ -3267,12 +3267,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn@npm:^8.3.0, acorn@npm:^8.4.1":
-  version: 8.5.0
-  resolution: "acorn@npm:8.5.0"
+"acorn@npm:^8.3.0, acorn@npm:^8.4.1, acorn@npm:^8.5.0":
+  version: 8.8.0
+  resolution: "acorn@npm:8.8.0"
   bin:
     acorn: bin/acorn
-  checksum: 2e4c1dbed3da327684863debf31d341bf8882c6893c506653872c00977eee45675feb9129255d6c74c88424d2b20d889ca6de5b39776e5e3cccfc756b3ca1da8
+  checksum: 7270ca82b242eafe5687a11fea6e088c960af712683756abf0791b68855ea9cace3057bd5e998ffcef50c944810c1e0ca1da526d02b32110e13c722aa959afdc
   languageName: node
   linkType: hard
 
@@ -20330,7 +20330,7 @@ resolve@^2.0.0-next.1:
 
 "typescript@patch:typescript@^3.2.1#~builtin<compat/typescript>, typescript@patch:typescript@^3.9.7#~builtin<compat/typescript>":
   version: 3.9.7
-  resolution: "typescript@patch:typescript@npm%3A3.9.7#~builtin<compat/typescript>::version=3.9.7&hash=ddd1e8"
+  resolution: "typescript@patch:typescript@npm%3A3.9.7#~builtin<compat/typescript>::version=3.9.7&hash=a1c5e5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
@@ -20340,11 +20340,11 @@ resolve@^2.0.0-next.1:
 
 "typescript@patch:typescript@^4.1.5#~builtin<compat/typescript>, typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>":
   version: 4.4.4
-  resolution: "typescript@patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=ddd1e8"
+  resolution: "typescript@patch:typescript@npm%3A4.4.4#~builtin<compat/typescript>::version=4.4.4&hash=a1c5e5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: bd629ad0da4a15d79aaad56baf3ee7d96f6a181760d430ae77f8c5325df7bffd9edee57544a3970e3651e8b796fe03a5838a7eb39c6d46cc3866c0b23d36a0dd
+  checksum: 3d1b04449662193544b81d055479d03b4c5dca95f1a82f8922596f089d894c9fefbe16639d1d9dfe26a7054419645530cef44001bc17aed1fe1eb3c237e9b3c7
   languageName: node
   linkType: hard
 

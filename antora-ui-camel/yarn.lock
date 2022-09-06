@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 5
+  version: 6
   cacheKey: 8
 
 "@algolia/cache-browser-local-storage@npm:4.0.3":
@@ -669,6 +669,15 @@ __metadata:
   bin:
     acorn: bin/acorn
   checksum: a2b05485496fdb313338bd8a7a793de5fcb075e71f64cbb3f4ca6009249b692180ebf35c9662bf78ca52aafe590cf2cc3ff93be0038701115084b18e61d2e5ae
+  languageName: node
+  linkType: hard
+
+"acorn@npm:^8.5.0":
+  version: 8.8.0
+  resolution: "acorn@npm:8.8.0"
+  bin:
+    acorn: bin/acorn
+  checksum: 7270ca82b242eafe5687a11fea6e088c960af712683756abf0791b68855ea9cace3057bd5e998ffcef50c944810c1e0ca1da526d02b32110e13c722aa959afdc
   languageName: node
   linkType: hard
 
@@ -11272,7 +11281,7 @@ typescript@^3.2.1:
 
 "typescript@patch:typescript@^3.2.1#~builtin<compat/typescript>":
   version: 3.9.7
-  resolution: "typescript@patch:typescript@npm%3A3.9.7#~builtin<compat/typescript>::version=3.9.7&hash=ddd1e8"
+  resolution: "typescript@patch:typescript@npm%3A3.9.7#~builtin<compat/typescript>::version=3.9.7&hash=a1c5e5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
