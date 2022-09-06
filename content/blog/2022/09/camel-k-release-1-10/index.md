@@ -59,7 +59,7 @@ While doing some stress tests, we've noticed that there were a high number of un
 
 ## Multi operator handling and multi tenancy model
 
-Another big effort that required some heavy refactoring. Before version 1.10, there was no way to have more than one operator running at the same time. We had provided some development to partially allow [multiple operators](camel-k/1.10.x/installation/advanced/multi.html). Within this release, we're freeing the Camel K operator to be bound to a namespace, letting the Integrations (and the rest of CRDs) to declare which is the operator in charge of reconciling.
+Another big effort that required some heavy refactoring. Before version 1.10, there was no way to have more than one operator running at the same time. We had provided some development to partially allow [multiple operators](/camel-k/1.10.x/installation/advanced/multi.html). Within this release, we're freeing the Camel K operator to be bound to a namespace, letting the Integrations (and the rest of CRDs) to declare which is the operator in charge of reconciling.
 
 The new model translates into more liberty from the user which can define a "self service" tenancy model. You can have several Camel K operators running, each of them managing its own set of resources. The nice thing is that we have worked to maintain full compatibility with what we used to have. So, if you don't need this new advanced feature, the application will behave exactly as it was.
 
