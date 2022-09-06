@@ -40,7 +40,7 @@
 
   nav.querySelector('.nav-panel-explore').addEventListener('click', function () {
     var currentPanel = nav.querySelector('.is-active[data-panel]')
-    var activatePanel = (currentPanel === null || currentPanel.dataset.panel === 'menu') ? 'explore' : 'menu'
+    var activatePanel = currentPanel === null || currentPanel.dataset.panel === 'menu' ? 'explore' : 'menu'
     nav.querySelector(`[data-panel=${activatePanel}]`).classList.toggle('is-active')
     if (currentPanel !== null) currentPanel.classList.toggle('is-active')
   })

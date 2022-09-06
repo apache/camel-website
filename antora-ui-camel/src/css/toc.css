@@ -51,7 +51,7 @@
   margin: 0;
 }
 
-.toc .toc-menu li[data-level="2"] a {
+.toc .toc-menu li[data-level='2'] a {
   padding-left: 1.25rem;
 }
 
@@ -61,7 +61,7 @@
   }
 }
 
-.toc .toc-menu li[data-level="3"] a {
+.toc .toc-menu li[data-level='3'] a {
   padding-left: 2rem;
 }
 

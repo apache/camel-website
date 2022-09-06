@@ -303,7 +303,7 @@ html:not([data-scroll='0']) .navbar {
   margin-right: 10px;
   overflow-y: auto;
   max-height: 80vh;
-  scrollbar-width: thin;  /* Firefox */
+  scrollbar-width: thin; /* Firefox */
 }
 
 #search_results::-webkit-scrollbar {
