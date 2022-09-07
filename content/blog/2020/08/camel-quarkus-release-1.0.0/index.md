@@ -95,7 +95,7 @@ On Camel Quarkus, the extensions roughly correspond to camel components - i.e. i
 need `camel-sql` you add the `camel-quarkus-sql` extension as a dependency to your application and it takes
 care for both pulling the `camel-sql` artifact and configuring the native compiler. Extension pages document any
 further configuration that needs to be done by the application developer. E.g. in case of the
-[SQL extension](/camel-quarkus/next/reference/extensions/sql.html#_additional_camel_quarkus_configuration),
+[SQL extension](/camel-quarkus/next/reference/extensions/sql.html#extensions-sql-additional-camel-quarkus-configuration),
 the `quarkus.camel.sql.script-files` property needs to be set.
 
 Check the [Native mode](/camel-quarkus/next/user-guide/native-mode.html) section of the Camel

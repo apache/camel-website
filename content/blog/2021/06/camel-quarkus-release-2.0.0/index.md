@@ -74,7 +74,7 @@ The extent of this effort can be assessed by running [this GitHub issues query](
 
 ## Deprecations
 
-* Avro extension: `@BuildTimeAvroDataFormat` is deprecated - see the [Avro extension](/camel-quarkus/next/reference/extensions/avro.html#_additional_camel_quarkus_configuration) page.
+* Avro extension: `@BuildTimeAvroDataFormat` is deprecated - see the [Avro extension](/camel-quarkus/next/reference/extensions/avro.html#extensions-avro-additional-camel-quarkus-configuration) page.
 
 
 ## Breaking changes and migration steps
