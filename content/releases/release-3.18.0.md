@@ -1,6 +1,6 @@
 ---
 date: 2022-07-06
-eol: 2024-07-06
+eol: 2023-07-06
 draft: false
 type: release-note
 version: 3.18.0
