@@ -290,6 +290,11 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   [A Camel running in the Clouds (Part 2)](https://www.linkedin.com/redir/redirect?url=https%3A%2F%2Flburgazzoli%2Egithub%2Eio%2F2017%2F04%2F12%2FA-camel-running-in-the-clouds-part-2%2Ehtml&urlhash=JHUN&_t=tracking_anet) by Luca Burgazzoli (April 2017)
 *   [A Camel running in the Clouds](https://lburgazzoli.github.io/2016/12/21/A-camel-running-in-the-clouds.html) by Luca Burgazzoli (December 2016)
 
+### Camel and SAP
+
+*   [Camel  with Sapjcoserver](https://github.com/wangyan100/sapjcoserver)  - An example showing how to work with Camel,SAP JCOServer and Spring Boot by WangYan
+*   [Camel  with Sapjcoclient](https://github.com/wangyan100/sapjcoclient)  - An example showing how to work with Camel,SAP JCOClient and Spring Boot by WangYan
+
 ### Comparison to Camel's Competitors
 
 *   [Apache Camel and other ESBs (Camel vs Mule)](https://stackoverflow.com/questions/3792519/apache-camel-and-other-esb-products) - A question on Stackoverflow originally from 2010 but with a great showcase of what is the status 5 years later according to [Raul's answer](https://stackoverflow.com/questions/3792519/apache-camel-and-other-esb-products/34818263#34818263), and [follow up comments from Claus](http://www.davsclaus.com/2016/01/apache-camel-and-other-esb-products.html).
