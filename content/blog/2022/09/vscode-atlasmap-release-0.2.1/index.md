@@ -1,7 +1,7 @@
 ---
 title: "New release of VS Code AtlasMap 0.2.1"
 date: 2022-9-22
-authors: [jraez]
+authors: [joshiraez]
 categories: ["Releases","Tooling"]
 preview: "New release of VS Code AtlasMap 0.2.1"
 ---
@@ -14,7 +14,7 @@ It brings a new feature to allow custom placement of AtlasMap files inside the w
 
 ## Create a new AtlasMap Data Transformation at a custom location inside workspace
 
-New addition to the Create AtlasMap file which allows users to place files in their desired location inside the workspace.
+New addition to the Create AtlasMap file action which allows users to place files in their desired location inside the workspace.
 
 ![Demo of creation of AtlasMap files in custom locations](./atlasMapCustomFileLocation.gif)
 
