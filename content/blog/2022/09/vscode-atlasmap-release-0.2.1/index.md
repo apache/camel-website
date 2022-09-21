@@ -16,7 +16,7 @@ It brings a new feature to allow custom placement of AtlasMap files inside the w
 
 New addition to the Create AtlasMap file which allows users to place files in their desired location inside the workspace.
 
-![Demo of creation of AtlasMap files in custom locations](./resources/atlasMapCustomFileLocation.gif)
+![Demo of creation of AtlasMap files in custom locations](./atlasMapCustomFileLocation.gif)
 
 # What's next?
 
