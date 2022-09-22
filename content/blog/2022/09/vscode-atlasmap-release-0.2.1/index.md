@@ -8,7 +8,7 @@ preview: "New release of VS Code AtlasMap 0.2.1"
 
 A new version of [VS Code AtlasMap](https://marketplace.visualstudio.com/items?itemName=redhat.atlasmap-viewer) 0.2.1 has been released.
 
-It brings a new feature to allow custom placement of AtlasMap files inside the workspace.
+It brings a new feature to allow custom placement of AtlasMap files in any directory inside the workspace.
 
 # New features
 
