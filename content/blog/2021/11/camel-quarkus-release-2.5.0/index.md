@@ -38,7 +38,7 @@ to cover all major use cases mentioned in the main Camel documentation.
 We have improved the user guide with :
 
 * New section for additional configuration in the [AWS 2 Lambda documentation](/camel-quarkus/next/reference/extensions/aws2-lambda.html#extensions-aws2-lambda-additional-camel-quarkus-configuration)
-* New section explaining how to [generate Salesforce DTOs With the Salesforce-Maven-Plugin](/camel-quarkus/next/reference/extensions/salesforce.html#extensions-usage-generating-salesforce-dtos-with-the-salesforce-maven-plugin)
+* New section explaining how to [generate Salesforce DTOs With the Salesforce-Maven-Plugin](/camel-quarkus/next/reference/extensions/salesforce.html#extensions-salesforce-usage-generating-salesforce-dtos-with-the-salesforce-maven-plugin)
 * Update section for [additional configuration in Avro](/camel-quarkus/next/reference/extensions/avro.html#extensions-avro-additional-camel-quarkus-configuration)
 
 
