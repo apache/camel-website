@@ -9,10 +9,13 @@ enableRobotsTXT = true
 timeout = 300000
 
 [markup]
-defaultMarkdownHandler = "blackfriday"
-    [markup.blackfriday]
-        nofollowLinks = true
-        noreferrerLinks = true
+defaultMarkdownHandler = "goldmark"
+    [markup.goldmark]
+        autoHeadingIDType = "blackfriday"
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.highlight]
+      noClasses = false
 
 [params]
     socialProfiles = ["https://twitter.com/ApacheCamel"]
