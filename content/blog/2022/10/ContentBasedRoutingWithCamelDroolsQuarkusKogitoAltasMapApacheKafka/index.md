@@ -37,7 +37,7 @@ In a [separate post](https://blog.kie.org/2022/01/data-enrichment-use-case-with-
 
 ## Technical details
 
-In this section, I want to highlight how the [Camel DSL](https://camel.apache.org/manual/dsl.html) allows to implement the EIP pattern very easily:
+In this section, I want to highlight how the [Camel DSL](/manual/dsl.html) allows to implement the EIP pattern very easily:
 
 ```java
 from("direct:hl7")
