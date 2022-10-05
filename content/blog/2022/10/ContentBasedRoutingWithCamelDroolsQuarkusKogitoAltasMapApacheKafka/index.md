@@ -50,7 +50,7 @@ from("direct:hl7")
 from("direct:label")
     .unmarshal().hl7()
     .to("atlasmap:atlasmap-mapping.adm").unmarshal().json()
-    .process(kogitoDMNEvaluate) // <== Rules as DMN decisions 
+    .process(kogitoDMNEvaluate) // <== Rules as DMN decisions
     .setHeader("topicsHeader", simple("${body[topic names]}"))
     ;
 ```
