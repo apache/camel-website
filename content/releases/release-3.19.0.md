@@ -12,4 +12,4 @@ category: camel
 jdk: [11,17]
 ---
 
-This release is the new Camel 3.19.0 LTS release.
+This release is the new Camel 3.19.0 release.
