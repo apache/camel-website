@@ -94,6 +94,6 @@ If you found this content useful, you might be interested to know this is a seco
 You can reference that for additional technical details about the integration of Camel and Drools thanks to Kogito.
 In this installment instead I wanted to expand on that, to finally share an end-to-end solution which could be easily deployed on the cloud!
 
-Feedback?  
-Questions?  
+Feedback?
+Questions?
 Don't hesitate to let us know!
