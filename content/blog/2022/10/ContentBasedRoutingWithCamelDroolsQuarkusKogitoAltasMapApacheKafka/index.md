@@ -9,7 +9,7 @@ preview: "Content Based Routing using Quarkus as a development platform includin
 
 {{< youtube id="nXyKM-xds2M" class="video" >}}
 <br/>
-In this post I want to share with you how to implement a complete, end-to-end **Content Based Routing** solution using [Apache Camel](https://camel.apache.org/#apache-camel-projects), [AtlasMap](https://www.atlasmap.io/) and [Quarkus](https://quarkus.io/) as a developer platform, including: [Drools DMN Engine](https://www.drools.org/learn/dmn.html), [Kogito](https://kogito.kie.org/). Apache Kafka is used in this solution as a message broker.
+In this post I want to share with you how to implement a complete, end-to-end **Content Based Routing** solution using [Apache Camel](/#apache-camel-projects), [AtlasMap](https://www.atlasmap.io/) and [Quarkus](https://quarkus.io/) as a developer platform, including: [Drools DMN Engine](https://www.drools.org/learn/dmn.html), [Kogito](https://kogito.kie.org/). Apache Kafka is used in this solution as a message broker.
 
 ## Content based routing overview
 
