@@ -85,7 +85,7 @@ We're programming through YAML DSL, but here you can put any Camel DSL you prefe
     steps:
       - unmarshal:
           json: 
-            library: Jackson        
+            library: Jackson
       - to: log:info
       - set-body:
           simple: "insert into customers (name, city) values ('${body[name]}', '${body[city]}')"
