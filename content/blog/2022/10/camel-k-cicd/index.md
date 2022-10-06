@@ -27,7 +27,7 @@ Let's start installing Tekton. You can install Tekton pipelines operator followi
 
 # Camel K operator installation
 
-We need now to prepare the Kubernetes namespaces that we're using to separate **development** and **production** environment. 
+We need now to prepare the Kubernetes namespaces that we're using to separate **development** and **production** environment.
 ```
 kubectl create namespace development
 kubectl create namespace production
