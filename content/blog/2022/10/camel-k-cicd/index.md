@@ -149,7 +149,7 @@ spec:
     description: The git repo branch.
   workspaces:
   - name: shared-data
-    description: | 
+    description: |
       This workspace contains the cloned repo files, so they can be read by the
       next task.
   tasks:
