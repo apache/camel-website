@@ -188,7 +188,7 @@ spec:
       workspace: shared-data
     params:
       - name: script
-        value: test/e2e-test.sh    
+        value: test/e2e-test.sh
       - name: hostname
         value: $(tasks.kamel-run.results.integration-name).development
   # 4. promote to production environment and 
