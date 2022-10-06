@@ -344,7 +344,7 @@ spec:
     - pipelineTaskName: kamel-run
       taskServiceAccountName: camel-k-pipeline-sa
     - pipelineTaskName: kamel-promote
-      taskServiceAccountName: camel-k-pipeline-sa   
+      taskServiceAccountName: camel-k-pipeline-sa
   podTemplate:
     securityContext:
       fsGroup: 65532
