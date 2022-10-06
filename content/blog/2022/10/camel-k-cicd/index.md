@@ -172,7 +172,7 @@ spec:
       name: kamel-run
     workspaces:
     - name: source
-      workspace: shared-data      
+      workspace: shared-data
     params:
       - name: filename
         value: my-rest.yaml
