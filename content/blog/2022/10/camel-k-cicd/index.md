@@ -191,7 +191,7 @@ spec:
         value: test/e2e-test.sh
       - name: hostname
         value: $(tasks.kamel-run.results.integration-name).development
-  # 4. promote to production environment and 
+  # 4. promote to production environment and
   - name: kamel-promote
     runAfter: ["e2e-test"]
     taskRef:
