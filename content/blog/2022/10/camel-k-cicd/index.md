@@ -97,7 +97,7 @@ We're programming through YAML DSL, but here you can put any Camel DSL you prefe
       - set-body:
           simple: "delete from customers where name = '${header.name}'"
       - to: log:info
-      - to: jdbc:camel  
+      - to: jdbc:camel
 ``` 
 
 ## Database preparation
