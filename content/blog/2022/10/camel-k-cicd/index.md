@@ -198,7 +198,7 @@ spec:
       name: kamel-promote
     workspaces:
     - name: source
-      workspace: shared-data      
+      workspace: shared-data
     params:
       - name: integration-name
         value: $(tasks.kamel-run.results.integration-name)
