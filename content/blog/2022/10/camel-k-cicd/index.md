@@ -38,7 +38,7 @@ NOTE: make sure development and production operators share the same container re
 
 # Application development
 
-You can find the source code in this [Camel K REST example github repository](https://github.com/squakez/camel-k-rest-cicd). 
+You can find the source code in this [Camel K REST example github repository](https://github.com/squakez/camel-k-rest-cicd).
 
 ## Camel K Integration
 
