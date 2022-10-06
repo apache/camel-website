@@ -153,7 +153,7 @@ spec:
       This workspace contains the cloned repo files, so they can be read by the
       next task.
   tasks:
-  # 1. checkout the code repository with the latest changes, 
+  # 1. checkout the code repository with the latest changes,
   - name: fetch-source
     taskRef:
       name: git-clone
