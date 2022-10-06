@@ -320,7 +320,7 @@ spec:
     - name: namespace
       description: the namespace source
     - name: to
-      description: the namespace destination           
+      description: the namespace destination
   workspaces:
   - name: source
   steps:
