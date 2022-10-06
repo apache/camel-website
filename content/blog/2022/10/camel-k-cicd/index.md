@@ -138,7 +138,7 @@ kind: Pipeline
 metadata:
   name: pipeline-cicd
 spec:
-  description: | 
+  description: |
     CICD pipeline for a microservice
   params:
   - name: repo-url
