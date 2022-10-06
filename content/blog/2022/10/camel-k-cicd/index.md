@@ -218,7 +218,7 @@ spec:
       - name: script
         value: test/smoke-test.sh
       - name: hostname
-        value: $(tasks.kamel-run.results.integration-name).production  
+        value: $(tasks.kamel-run.results.integration-name).production
 ```
 
 The `Pipeline` expect from us to provide just a `repo-url` and a `repo-branch`. The repo will contain the Integration source code but to also the suite of test, so that everything is self-contained and "consumable" from the same pipeline. Also CI configuration is there (someone would call this **devops**...). We use a `workspace` that is a way provided by Tekton to share resources among the different tasks (which will run as a separate `Pod`).
