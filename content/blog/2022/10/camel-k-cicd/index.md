@@ -378,7 +378,7 @@ kubectl apply -f ci/sa.yaml -n development
 kubectl apply -f ci/rolebinding.yaml -n development
 ```
 
-We also need to install the [`git-clone` task from Tekton hub](https://hub.tekton.dev/tekton/task/git-clone) in `development` namespace: 
+We also need to install the [`git-clone` task from Tekton hub](https://hub.tekton.dev/tekton/task/git-clone) in `development` namespace:
 
 ```
 kubectl apply -f https://raw.githubusercontent.com/tektoncd/catalog/main/task/git-clone/0.8/git-clone.yaml -n development
