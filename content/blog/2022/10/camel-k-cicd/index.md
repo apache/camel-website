@@ -164,7 +164,7 @@ spec:
     - name: url
       value: $(params.repo-url)
     - name: revision
-      value: $(params.repo-branch)      
+      value: $(params.repo-branch)
   # 2. release the Integration in a development environment,
   - name: kamel-run
     runAfter: ["fetch-source"]
