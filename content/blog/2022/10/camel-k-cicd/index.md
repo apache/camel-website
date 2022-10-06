@@ -575,7 +575,7 @@ That means the `Pipeline` was triggered and in a few minutes you should have you
 During the development of your pipeline (or if you want to use a local cluster such as `minikube`), you may be interested in simulating the push event. This should be as easy as running something like:
 
 ```
-http post http://192.168.49.2:32698/my-cd-pipeline X-GitHub-Event:push json=test 
+http post http://192.168.49.2:32698/my-cd-pipeline X-GitHub-Event:push json=test
 ```
 
 # Conclusion
