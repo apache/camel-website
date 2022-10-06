@@ -55,7 +55,7 @@ We're programming through YAML DSL, but here you can put any Camel DSL you prefe
       - to: "direct:get"
         path: "/customers/{name}"
       - to: "direct:getall"
-        path: "/customers/"        
+        path: "/customers/"
     post:
       - to: "direct:post"
         path: "/customers/"
