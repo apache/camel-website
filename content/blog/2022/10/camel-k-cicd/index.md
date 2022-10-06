@@ -11,7 +11,7 @@ In [Camel K version 10](/blog/2022/09/camel-k-release-1-10/), we've released the
 
 The application I'm building is a REST API backed by a PostgreSQL database. It will be realized with Camel K Integration via YAML DSL. The source code is stored in Github and the idea is to build a **Continuous Delivery** pipeline that can be manually triggered when we want to provide a release. The pipeline will:
 
-  1. checkout the code repository with the latest changes, 
+  1. checkout the code repository with the latest changes,
   2. release the Integration in a development environment,
   3. run a complete suite of automated test,
   4. promote to production environment and 
