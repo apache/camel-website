@@ -84,7 +84,7 @@ We're programming through YAML DSL, but here you can put any Camel DSL you prefe
     uri: "direct:post"
     steps:
       - unmarshal:
-          json: 
+          json:
             library: Jackson
       - to: log:info
       - set-body:
@@ -98,7 +98,7 @@ We're programming through YAML DSL, but here you can put any Camel DSL you prefe
           simple: "delete from customers where name = '${header.name}'"
       - to: log:info
       - to: jdbc:camel
-``` 
+```
 
 ## Database preparation
 
