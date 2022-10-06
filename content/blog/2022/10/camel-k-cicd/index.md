@@ -14,7 +14,7 @@ The application I'm building is a REST API backed by a PostgreSQL database. It w
   1. checkout the code repository with the latest changes,
   2. release the Integration in a development environment,
   3. run a complete suite of automated test,
-  4. promote to production environment and 
+  4. promote to production environment and
   5. run some smoke test on the production endpoints as last check stage.
 
 It should sound quite a familiar development process. We may just need to implement the first 3 tasks as a basic **Continuous Integration**, but, given the presence of `kamel promote` we can easily extend it to a CD pipeline. But that's not all. As an additional feature we're finally reusing the CD to enable a **Continuous Deployment** process triggering the pipeline when any change is pushed to the repo. Your journey from code to production has never been that fast!!
