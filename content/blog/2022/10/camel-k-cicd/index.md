@@ -146,7 +146,7 @@ spec:
     description: The git repo URL to clone from.
   - name: repo-branch
     type: string
-    description: The git repo branch.    
+    description: The git repo branch.
   workspaces:
   - name: shared-data
     description: | 
