@@ -243,7 +243,7 @@ spec:
       description: the namespace where to run the integration
   results:
     - name: integration-name
-      description: The name of the integration    
+      description: The name of the integration
   workspaces:
   - name: source
   steps:
