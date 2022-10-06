@@ -61,7 +61,7 @@ We're programming through YAML DSL, but here you can put any Camel DSL you prefe
         path: "/customers/"
     delete:
       - to: "direct:delete"
-        path: "/customers/{name}"        
+        path: "/customers/{name}"
 - from:
     uri: "direct:getall"
     steps:
