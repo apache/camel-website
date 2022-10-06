@@ -216,7 +216,7 @@ spec:
       workspace: shared-data
     params:
       - name: script
-        value: test/smoke-test.sh    
+        value: test/smoke-test.sh
       - name: hostname
         value: $(tasks.kamel-run.results.integration-name).production  
 ```
