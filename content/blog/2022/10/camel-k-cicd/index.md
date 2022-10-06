@@ -270,7 +270,7 @@ metadata:
 spec:
   params:
     - name: script
-      description: the script to execute 
+      description: the script to execute
     - name: hostname
       description: the hostname we want to test
   workspaces:
