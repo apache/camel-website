@@ -23,7 +23,7 @@ For example to list all running Camel processes:
     61818  sample.camel.MyCamelApplica…   1/1   Running  26m38s
     62506  dude                           1/1   Running   4m34s
 
-To see a bit more information, then you can use `camel get`.
+To see a bit more information, you can use `camel get`.
 
 Suppose you have two running processes, then you can manage them, such as stop,
 or stop/start routes etc:
@@ -34,7 +34,7 @@ or stop/start routes etc:
 There is a lot more that Camel JBang can do, so make sure to see the [Camel JBang documentation](/manual/camel-jbang.html).
 It is also a good idea to run `camel --help` to list all available commands.
 
-There you can also find information how to get JBang installed, and after that install the camel app in JBang.
+There you can also find information how to get JBang installed, and after that install the Camel app in JBang.
 
 ### Camel File
 
@@ -50,7 +50,7 @@ and to link the routes using `direct` endpoints.
 
 ### Security
 
-We have upgraded to `TLSv1.3` as default, in components that are using SSL/TLS.
+We have upgraded to `TLSv1.3` as default in all components that are using SSL/TLS.
 
 
 ### Load properties from vault/secrets cloud services
@@ -75,11 +75,11 @@ TODO: Anything done here
 
 There are 5 new components:
 
-- camel-aws-cloudtrail - Consume events from Amazon Cloudtrail
-- camel-elasticsearch - Send requests to ElasticSearch via Java Client API
-- camel-hyperledger-aries - Camel support for Hyperledger Aries
-- camel-mapstruct - Type Conversion using Mapstruct
-- camel-python - To use python scripts
+- `camel-aws-cloudtrail` - Consume events from Amazon Cloudtrail
+- `camel-elasticsearch` - Send requests to ElasticSearch via Java Client API
+- `camel-hyperledger-aries` - Camel support for Hyperledger Aries
+- `camel-mapstruct` - Type Conversion using Mapstruct
+- `camel-python` - To use python scripts
 
 ### Spring Boot
 
