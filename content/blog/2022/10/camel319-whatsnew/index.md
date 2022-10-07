@@ -55,7 +55,17 @@ We have upgraded to `TLSv1.3` as default, in components that are using SSL/TLS.
 
 ### Load properties from vault/secrets cloud services
 
-TODO: Andrea update here
+In 3.19.0 we introduced the feature of automatically reloading context on Secrets update events on Cloud Services.
+
+We currently support this for AWS Secrets Manager, Google Secret Manager and Azure Key Vault.
+
+The features are using some of the services provided on the cloud
+
+- For AWS we're leveraging AWS Cloudtrail
+- For GCP we're leveraging Google Pubsub
+- For Azure Key Vault we're leveraging Azure Eventgrid and Azure Eventhubs
+
+We provide some [Examples](https://github.com/apache/camel-examples/tree/main/examples/vault) in our camel-examples repository.
 
 ### Camel Kafka
 
