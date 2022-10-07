@@ -42,6 +42,11 @@ The `camel-file` component has been optimized on the consumer scanning for files
 to lazy evaluate file size/modification, which often yields better performance,
 as file filtering is usually only based on file names.
 
+### Camel Salesforce
+
+When querying from salesforce, Camel can now sniff the query result and detect the correct DTO class to use
+for deserializing the response, alleviating the need to provide sObjectClass and sObjectName options.
+
 ### Rest DSL
 
 It is now possible to inline routes in Rest DSL which means that a Rest service corresponds to 1 route,
