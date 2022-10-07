@@ -36,13 +36,22 @@ It is also a good idea to run `camel --help` to list all available commands.
 
 There you can also find information how to get JBang installed, and after that install the camel app in JBang.
 
-### Resume from Offset
+### Camel File
 
-TODO: Anything done here
+The `camel-file` component has been optimized on the consumer scanning for files,
+to lazy evaluate file size/modification, which often yields better performance,
+as file filtering is usually only based on file names.
 
-### Camel YAML DSL
+### Rest DSL
 
-TODO: Anything done here
+It is now possible to inline routes in Rest DSL which means that a Rest service corresponds to 1 route,
+and not 2 as before. This requires to enable `inline-routes=true` in Rest configuration,
+and to link the routes using `direct` endpoints.
+
+### Security
+
+We have upgraded to `TLSv1.3` as default, in components that are using SSL/TLS.
+
 
 ### Load properties from vault/secrets cloud services
 
@@ -65,6 +74,9 @@ There are 5 new components:
 ### Spring Boot
 
 We have upgraded to the latest Spring Boot 2.7 release.
+
+Camel Spring Boot now supports `platform-http` to make it easy to
+define Camel routes that starts from the embedded HTTP server inside Spring Boot.
 
 ## Upgrading
 
