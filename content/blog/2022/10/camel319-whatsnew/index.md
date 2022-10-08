@@ -25,8 +25,8 @@ For example to list all running Camel processes:
 
 To see a bit more information, you can use `camel get`.
 
-Suppose you have two running processes, then you can manage them, such as stop,
-or stop/start routes etc:
+Suppose you have two running integrations, then you can manage them, such as stop (with `camel stop <integration-name-or-pid>`),
+or stop/start routes (with respectively `camel cmd stop-route --id=<id-route> <integration-name-or-pid>`/`camel cmd start-route --id=<id-route> <integration-name-or-pid>`) etc:
 
     camel stop dude
     Stopping running Camel integration (pid: 62506)
@@ -59,15 +59,15 @@ We have upgraded to `TLSv1.3` as default in all components that are using SSL/TL
 
 ### Load properties from vault/secrets cloud services
 
-In 3.19.0 we introduced the feature of automatically reloading context on Secrets update events on Cloud Services.
+In 3.19.0, we introduced the feature of automatically reloading context on Secrets update events on Cloud Services.
 
 We currently support this for AWS Secrets Manager, Google Secret Manager and Azure Key Vault.
 
 The features are using some of the services provided on the cloud
 
-- For AWS we're leveraging AWS Cloudtrail
-- For GCP we're leveraging Google Pubsub
-- For Azure Key Vault we're leveraging Azure Eventgrid and Azure Eventhubs
+- For AWS, we're leveraging AWS Cloudtrail
+- For GCP, we're leveraging Google Pubsub
+- For Azure Key Vault, we're leveraging Azure Eventgrid and Azure Eventhubs
 
 We provide some [Examples](https://github.com/apache/camel-examples/tree/main/examples/vault) in our camel-examples repository.
 
@@ -95,7 +95,7 @@ There are 5 new components:
 We have upgraded to the latest Spring Boot 2.7 release.
 
 Camel Spring Boot now supports `platform-http` to make it easy to
-define Camel routes that starts from the embedded HTTP server inside Spring Boot.
+define Camel routes that start from the embedded HTTP server inside Spring Boot.
 
 ## Upgrading
 
