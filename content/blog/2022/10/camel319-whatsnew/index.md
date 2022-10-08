@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 3.19 What's New"
 date: 2022-10-10
-authors: [davsclaus]
+authors: [davsclaus,gzurowski,essobedo,oscerd]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 3.19 release.
 ---
