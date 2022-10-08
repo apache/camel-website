@@ -57,7 +57,6 @@ and to link the routes using `direct` endpoints.
 
 We have upgraded to `TLSv1.3` as default in all components that are using SSL/TLS.
 
-
 ### Load properties from vault/secrets cloud services
 
 In 3.19.0 we introduced the feature of automatically reloading context on Secrets update events on Cloud Services.
@@ -72,9 +71,14 @@ The features are using some of the services provided on the cloud
 
 We provide some [Examples](https://github.com/apache/camel-examples/tree/main/examples/vault) in our camel-examples repository.
 
+**NOTE:**
+The context reloading feature is implemented as general functionality, which means, that its possible
+to use for other use-cases.
+
 ### Camel Kafka
 
-TODO: Anything done here
+We upgraded to Kafka Clients 3.2.x.
+Various other improvements and bug fixes as well, such as better error messages with health checks.
 
 ### New Components
 
