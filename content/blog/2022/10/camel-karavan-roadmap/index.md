@@ -14,7 +14,7 @@ Apache Camel Karavan is celebrating its first anniversary. October 4, 2021 a new
 
 Today we have the Karavan VS Code extension and Cloud-native application for Kubernetes/OpenShift. Karavan supports Enterprise Integration Patterns, REST DSL (including import of OpenAPI and generation of routes), Camel Components and Kamelets. Cloud application comes with Tekton task and pipeline for package, build and deploy.    
 
-After only one year Karavan has become a toolkit used by thousands developers and integrators. 
+After only one year Karavan has become a toolkit used by developers and integrators to design and run Camel integrations with success.
 However we still have a lot to do to make Apache Camel Karavan the best open-source integration solution.
 
 # Roadmap
