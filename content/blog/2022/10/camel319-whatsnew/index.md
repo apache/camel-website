@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 3.19 What's New"
 date: 2022-10-10
-authors: [davsclaus,gzurowski,essobedo,oscerd]
+authors: [davsclaus,gzurowski,essobedo,oscerd,orpiske]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 3.19 release.
 ---
@@ -79,6 +79,10 @@ to use for other use-cases.
 
 We upgraded to Kafka Clients 3.2.x.
 Various other improvements and bug fixes as well, such as better error messages with health checks.
+
+### Camel Telegram
+
+We migrated the external HTTP client used by this component to the HTTP client provided by the JVM.
 
 ### New Components
 
