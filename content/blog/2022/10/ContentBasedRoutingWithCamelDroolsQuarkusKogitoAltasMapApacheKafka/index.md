@@ -1,6 +1,6 @@
 ---
 title: "Content Based Routing with Camel, Drools, Quarkus, Kogito, AtlasMap and Apache Kafka!"
-date: 2022-10-04T11:56:35+02:00
+date: 2022-10-10T11:56:35+02:00
 draft: false
 authors: ["tarilabs"]
 categories: ["EIP", "Quarkus", "Drools", "Kogito", "Usecases", "Videos"]
