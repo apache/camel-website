@@ -50,7 +50,6 @@ content:
       branches:
         - main
         - release-1.15.x
-        - release-1.14.x
         - release-1.13.x
       start_path: docs
 
