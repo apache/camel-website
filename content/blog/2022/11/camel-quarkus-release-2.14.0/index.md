@@ -1,5 +1,5 @@
 ---
-title: "Camel Quarkus 2.13.0 Released"
+title: "Camel Quarkus 2.14.0 Released"
 date: 2022-11-10
 authors: ["zbendhiba"]
 categories: ["Releases", "Camel Quarkus"]
