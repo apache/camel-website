@@ -39,7 +39,7 @@ $ camel init HelloJBang.java
 At this stage, we could edit the file with the logic we need for our integration, or, simply run it:
 
 ```
-$ camel run HelloJBang.java 
+$ camel run HelloJBang.java
 2022-11-23 12:11:05.407  INFO 52841 --- [           main] org.apache.camel.main.MainSupport        : Apache Camel (JBang) 3.18.1 is starting
 2022-11-23 12:11:05.470  INFO 52841 --- [           main] org.apache.camel.main.MainSupport        : Using Java 11.0.17 with PID 52841. Started by squake in /home/squake/workspace/jbang/camel-blog
 2022-11-23 12:11:07.537  INFO 52841 --- [           main] e.camel.impl.engine.AbstractCamelContext : Apache Camel 3.18.1 (CamelJBang) is starting
@@ -54,7 +54,7 @@ $ camel run HelloJBang.java
 A local java process will start with a Camel application running. No need to create a Maven project, all the boilerplate is on Camel JBang! However, you may notice that the Camel version used is different from the one we want to target. This is because my Camel JBang is using a different version of Camel. No worry, we can re-run this application but specifying the Camel version we want to run:
 
 ```
-$ jbang run -Dcamel.jbang.version=3.18.3 camel@apache/camel run HelloJBang.java 
+$ jbang run -Dcamel.jbang.version=3.18.3 camel@apache/camel run HelloJBang.java
 ...
 [1] 2022-11-23 11:13:02,825 INFO  [org.apa.cam.imp.eng.AbstractCamelContext] (main) Apache Camel 3.18.3 (camel-1) started in 70ms (build:0ms init:61ms start:9ms)
 ...
@@ -73,8 +73,8 @@ Integration "hello-j-bang" created
 [1] 2022-11-23 11:13:02,824 INFO  [org.apa.cam.imp.eng.AbstractCamelContext] (main) Routes startup (started:1)
 [1] 2022-11-23 11:13:02,825 INFO  [org.apa.cam.imp.eng.AbstractCamelContext] (main)     Started java (timer://java)
 [1] 2022-11-23 11:13:02,825 INFO  [org.apa.cam.imp.eng.AbstractCamelContext] (main) Apache Camel 3.18.3 (camel-1) started in 70ms (build:0ms init:61ms start:9ms)
-[1] 2022-11-23 11:13:02,828 INFO  [io.quarkus] (main) camel-k-integration 1.10.3 on JVM (powered by Quarkus 2.13.4.Final) started in 2.234s. 
-[1] 2022-11-23 11:13:02,829 INFO  [io.quarkus] (main) Profile prod activated. 
+[1] 2022-11-23 11:13:02,828 INFO  [io.quarkus] (main) camel-k-integration 1.10.3 on JVM (powered by Quarkus 2.13.4.Final) started in 2.234s.
+[1] 2022-11-23 11:13:02,829 INFO  [io.quarkus] (main) Profile prod activated.
 [1] 2022-11-23 11:13:02,829 INFO  [io.quarkus] (main) Installed features: [camel-bean, camel-core, camel-java-joor-dsl, camel-k-core, camel-k-runtime, camel-kubernetes, camel-timer, cdi, kubernetes-client, security]
 [1] 2022-11-23 11:13:03,850 INFO  [java] (Camel (camel-1) thread #1 - timer://java) Hello Camel from java
 ```
@@ -121,7 +121,7 @@ There is a process that is in charge to write files into a directory. I need to 
 Now that I'm ready, I run a last round of testing locally via Camel JBang:
 
 ```
-$ jbang run -Dcamel.jbang.version=3.18.3 camel@apache/camel run MyJBangRoute.java 
+$ jbang run -Dcamel.jbang.version=3.18.3 camel@apache/camel run MyJBangRoute.java
 2022-11-23 12:19:11.516  INFO 55909 --- [           main] org.apache.camel.main.MainSupport        : Apache Camel (JBang) 3.18.3 is starting
 2022-11-23 12:19:11.592  INFO 55909 --- [           main] org.apache.camel.main.MainSupport        : Using Java 11.0.17 with PID 55909. Started by squake in /home/squake/workspace/jbang/camel-blog
 2022-11-23 12:19:14.020  INFO 55909 --- [           main] e.camel.impl.engine.AbstractCamelContext : Apache Camel 3.18.3 (CamelJBang) is starting
@@ -154,7 +154,7 @@ In this case we want to use certain volumes we had made available in our cluster
 $ kamel run MyJBangRoute.java --volume my-pv-claim-input:/tmp/input --volume my-pv-claim-output:/tmp/output --volume my-pv-claim-discarded:/tmp/discarded --dev
 ...
 [1] 2022-11-23 11:39:26,281 INFO  [route1] (Camel (camel-1) thread #1 - file:///tmp/input) Processing file file_1669203565971 with content: some entry
-[1] 
+[1]
 [1] 2022-11-23 11:39:26,303 INFO  [route1] (Camel (camel-1) thread #1 - file:///tmp/input) WARN not checked!
 [1] 2022-11-23 11:39:32,322 INFO  [route1] (Camel (camel-1) thread #1 - file:///tmp/input) Processing file file_1669203571981 with content: some entry checked
 ```
@@ -205,10 +205,10 @@ In order to test it, we can use it a very simple Integration to log its content:
       - log: "${body}"
 ```
 
-If we have the Kamelet in the same directory of the Integration, we can run:
+Now we can run:
 
 ```
-$ camel run beer-integration.yaml 
+$ camel run --local-kamelet-dir=</path/to/local/kamelets/dir> beer-integration.yaml
 2022-11-24 11:27:29.634  INFO 39527 --- [           main] org.apache.camel.main.MainSupport        : Apache Camel (JBang) 3.18.1 is starting
 2022-11-24 11:27:29.706  INFO 39527 --- [           main] org.apache.camel.main.MainSupport        : Using Java 11.0.17 with PID 39527. Started by squake in /home/squake/workspace/jbang/camel-blog
 2022-11-24 11:27:31.391  INFO 39527 --- [           main] e.camel.impl.engine.AbstractCamelContext : Apache Camel 3.18.1 (CamelJBang) is starting
