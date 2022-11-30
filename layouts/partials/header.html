@@ -31,7 +31,7 @@
     <meta property="og:type" content="website">
     {{ $featured := (.Resources.ByType "image").GetMatch "*featured*" }}
     {{ with $featured }}
-        <meta property="og:image" content="https://camel.apache.org{{ $featured.RelPermalink }}">
+        <meta property="og:image" content="{{ $featured.Permalink }}">
     {{ else }}
         <meta property="og:image" content="{{ .Site.Params.organizationLogo }}">
     {{ end }}
