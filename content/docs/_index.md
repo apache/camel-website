@@ -9,10 +9,14 @@ Title: "Documentation"
 
 ## Camel Core
 
+
+The foundation for all other projects. Ideal for experienced Java developers or achitects willing to innovate and build upon a lower level integration framework.
+
 The [User Manual](/manual/) is a comprehensive guide meant to help you with the key concepts of Apache Camel and software integration, from how to [get started](/manual/getting-started.html) with Apache Camel, how to [upgrade to Camel 3.x](/manual/camel-3x-upgrade-guide.html), to [architecture](/manual/architecture.html) or [integration patterns](/components/latest/eips/enterprise-integration-patterns.html).
 
 <p>
-<a class="button dark" href="/manual/">Documentation</a>
+<a class="button dark" href="/camel-core/">Documentation</a>
+<a class="button light" href="/manual/">Old Documentation</a>
 <a class="button light" href="https://github.com/apache/camel/">Source</a>
 <a class="button light" href="https://github.com/apache/camel-examples">Examples</a>
 </p>
