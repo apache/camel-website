@@ -11,6 +11,8 @@ content:
       start_paths:
         # manual
         - docs/user-manual
+        # main website for camel core
+        - docs/main
 
     - url: https://github.com/apache/camel.git
       branches:
@@ -145,7 +147,7 @@ runtime:
     level: warn
     failure_level: warn
 #    format: json
-    
+
 antora:
   extensions:
     - require: '@djencks/antora-aggregate-collector'
