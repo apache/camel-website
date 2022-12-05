@@ -19,28 +19,40 @@
                 </thead>
                 <tbody>
               {{ $pages := .Pages.GroupByDate "2006" "desc" }}
-              {{ $latest_year := (index $pages 0).Key }}
-              {{ range seq (now.Format "2006") (add (int $latest_year) 1) }}
+              {{ $earliest_year := (index (.Pages.GroupByDate "2006" "asc") 0).Key }}
+              {{ range $year := seq (now.Format "2006") $earliest_year }}
+                {{ $has_any := false }}
+                {{ range $pages }}
+                  {{ if eq $year (int .Key) }}
+                    {{ $has_any = true}}
+                    {{ break }}
+                  {{ end }}
+                {{ end }}
+                {{ if $has_any }}
+                  {{ range $pages }}
+                    {{ if eq $year (int .Key) }}
+                      <tr>
+                        <th colspan="5" scope="row"><strong>{{ .Key }}</strong></th>
+                      </tr>
+                      {{ range .Pages }}
+                        <tr>
+                          <td><a href="{{ .RelPermalink }}">{{ .Params.cve }}</a></td>
+                          <td>{{ .Params.affected }}</td>
+                          <td>{{ .Params.fixed }}</td>
+                          <td>{{ .Params.severity }}</td>
+                          <td>{{ .Params.summary }}</td>
+                        </tr>
+                      {{ end }}
+                    {{ end }}
+                  {{ end }}
+                {{ else }}
                   <tr>
-                    <th colspan="5" scope="row"><strong>{{ . }}</strong></th>
+                    <th colspan="5" scope="row"><strong>{{ $year }}</strong></th>
                   </tr>
                   <tr>
                     <td colspan="5"><em>No issues reported</em></td>
                   </tr>
-              {{ end }}
-              {{ range $pages }}
-                  <tr>
-                    <th colspan="5" scope="row"><strong>{{ .Key }}</strong></th>
-                  </tr>
-                  {{ range .Pages }}
-                  <tr>
-                    <td><a href="{{ .RelPermalink }}">{{ .Params.cve }}</a></td>
-                    <td>{{ .Params.affected }}</td>
-                    <td>{{ .Params.fixed }}</td>
-                    <td>{{ .Params.severity }}</td>
-                    <td>{{ .Params.summary }}</td>
-                  </tr>
-                  {{ end }}
+                {{ end }}
               {{ end }}
                 </tbody>
               </table>
