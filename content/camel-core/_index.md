@@ -6,12 +6,6 @@ Apache Camel is an Open Source integration framework that empowers you to quickl
 
 The Apache Camel Core is the foundation for all other projects. Ideal for experienced Java developers or architects willing to innovate and build upon a lower level integration framework.
 
-<!-- {{< div "main-heading" >}} -->
-<!-- <p>
-
-</p> -->
-
-
 {{< div "row-camel-core-main" >}}
 
 {{< div "column-camel-core-13" >}}
