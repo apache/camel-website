@@ -10888,15 +10888,15 @@ fsevents@^1.2.7:
   linkType: hard
 
 "terser@npm:^4.0.0":
-  version: 4.1.4
-  resolution: "terser@npm:4.1.4"
+  version: 4.8.1
+  resolution: "terser@npm:4.8.1"
   dependencies:
     commander: ^2.20.0
     source-map: ~0.6.1
     source-map-support: ~0.5.12
   bin:
-    terser: bin/uglifyjs
-  checksum: bcac12e792c3b0249738aa382aa5f76a8231cb519768c158cb841d4b0d59b90b4a3226dce3561269589d05fc6070fe632971c3a10c3e08a82985cc25f66b878b
+    terser: bin/terser
+  checksum: b342819bf7e82283059aaa3f22bb74deb1862d07573ba5a8947882190ad525fd9b44a15074986be083fd379c58b9a879457a330b66dcdb77b485c44267f9a55a
   languageName: node
   linkType: hard
 

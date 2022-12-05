@@ -5994,7 +5994,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["gulp-terser", "npm:1.2.0"],\
             ["plugin-error", "npm:1.0.1"],\
-            ["terser", "npm:4.1.4"],\
+            ["terser", "npm:4.8.1"],\
             ["through2", "npm:3.0.1"],\
             ["vinyl-sourcemaps-apply", "npm:0.2.1"]\
           ],\
@@ -12382,10 +12382,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["terser", [\
-        ["npm:4.1.4", {\
-          "packageLocation": "./.yarn/cache/terser-npm-4.1.4-e7ae53c133-bcac12e792.zip/node_modules/terser/",\
+        ["npm:4.8.1", {\
+          "packageLocation": "./.yarn/cache/terser-npm-4.8.1-16347908cf-b342819bf7.zip/node_modules/terser/",\
           "packageDependencies": [\
-            ["terser", "npm:4.1.4"],\
+            ["terser", "npm:4.8.1"],\
             ["acorn", "npm:8.8.0"],\
             ["commander", "npm:2.20.0"],\
             ["source-map", "npm:0.6.1"],\
