@@ -8,13 +8,12 @@
   width: 7rem;
 }
 
-
 .column-camel-core-13 {
   float: left;
   width: 33.33%;
 }
 
-.row-camel-core-main:after {
+.row-camel-core-main::after {
   content: "";
   display: table;
   clear: both;
