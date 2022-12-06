@@ -38,10 +38,10 @@ const manifest = {
   "img/support.svg": "img/support-d38244a6cc.svg",
   "img/team.svg": "img/team-eef83d1804.svg",
   "img/user-stories.svg": "img/user-stories-89e2dbda2c.svg",
-  "js/site.js": "js/site-ca1c0b0367.js",
-  "js/vendor/algoliasearch.js": "js/vendor/algoliasearch-77ad57d83c.js",
-  "js/vendor/highlight.js": "js/vendor/highlight-0a351063af.js",
-  "js/vendor/svg4everybody.js": "js/vendor/svg4everybody-195d47ce7d.js"
+  "js/site.js": "js/site-c215fb6972.js",
+  "js/vendor/algoliasearch.js": "js/vendor/algoliasearch-bad45193e2.js",
+  "js/vendor/highlight.js": "js/vendor/highlight-621a10fe1b.js",
+  "js/vendor/svg4everybody.js": "js/vendor/svg4everybody-a0c573f2b9.js"
 }
 
 module.exports = (resource) => {
