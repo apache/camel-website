@@ -48,6 +48,7 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |[Rayvens](http://ibm.biz/rayvens) | Built on Apache Camel, Rayvens enables data scientists to interface with hundreds of data services with little effort to consume, process, and produce events and data in real time. |
 |[Huawei Cloud ROMA](https://www.huaweicloud.com/en-us/product/roma.html)|Apache camel powers the runtime engine for [Huawei Cloud ROMA](https://www.huaweicloud.com/en-us/product/roma.html) which is a commercial iPaaS offering by Huawei Cloud. ROMA integrates data, services, messages and devices under one unified platform which enables it's customers to hook up systems spanning across multiple Paas, Saas and cloud services.|
 |[ModusBox PortX](https://modusbox.com/portx-platform/)|PortX, the Integration Platform as a Service (IPaaS) for financial institutions, is built on the open source Apache Camel framework.|
+|[Guidewire Integration Framework](https://www.guidewire.com/blog/technology/cloud-integration-framework-the-right-tools-for-the-job/)| Integration Gateway is an open framework for developing integration apps that bridge Guidewire APIs with external apps and services. It is based on Apache Camel.| 
 {{< /table >}}
 
 ## Developer Tooling
