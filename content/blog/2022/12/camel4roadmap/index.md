@@ -27,7 +27,7 @@ and to keep up with popular runtimes such as Spring Boot and Quarkus.
 
 ## Major Goals
 9. Support Java 17 features such as records, multiline strings, and what else
-10. EIP model without JAXB dependency (is possible)
+10. EIP model without JAXB dependency (if possible)
 11. Endpoint URI parsing (do not use `java.net.URI`)
 12. Deprecate `message.getIn()` use `getMessage()` instead
 13. Deprecate/Remove camel-cdi
@@ -72,3 +72,7 @@ This means the Camel v3 schedule is as follows:
  
 Each Camel 3 LTS release will contain less new features and improvements as previously, 
 because our focus and work shifted to Camel v4.
+
+The Camel v4 work has already started, and there are some intermediate branches
+with the jakarta migration such as: https://github.com/apache/camel/tree/jakarta/rewritten
+
