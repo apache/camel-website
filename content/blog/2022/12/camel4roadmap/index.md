@@ -2,7 +2,7 @@
 title: "Roadmap to Camel v4"
 date: 2022-12-16
 draft: false
-authors: [davsclaus]
+authors: [davsclaus, oscerd, essobedo, klease]
 categories: ["Roadmap"]
 preview: "Roadmap to Apache Camel v4 and impact on Camel v3"
 ---
