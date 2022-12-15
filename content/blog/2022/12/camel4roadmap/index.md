@@ -60,8 +60,7 @@ The times are _estimates_ and the number of versions may vary according to the n
 - Oct 2023: Camel 4.2
 - Dec 2023: Camel 4.3 LTS
 
-For Camel 3 then we slow down in releases and provide 2 LTS releases per year.
-
+For Camel 3, only LTS versions are released twice a year.
 This means the Camel v3 schedule is as follows:
 
 - Dec 2022: Camel 3.20 LTS
