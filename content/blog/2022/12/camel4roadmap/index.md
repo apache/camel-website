@@ -65,7 +65,7 @@ This means the Camel v3 schedule is as follows:
 
 - Dec 2022: Camel 3.20 LTS
 - Jun 2023: Camel 3.21 LTS
-- Dec 2023: Camel 3.22 LTS (last planned Camel v3 release, supported until Dec 2024)
+- Dec 2023: Camel 3.22 LTS (last planned Camel v3 release so last version supporting Java 11, supported until Dec 2024)
  
 Each Camel 3 LTS release will contain fewer new features and improvements than before, 
 because our focus and work shifted to Camel v4.
