@@ -26,7 +26,7 @@ and to keep up with popular runtimes such as Spring Boot and Quarkus.
 8. Move Camel Karaf to Apache Karaf as karaf-camel sub-project 
 
 ## Major Goals
-9. Support Java 17 features such as records, multiline strings, and what else
+9. Support Java 17 features such as records, multiline strings, etc.
 10. EIP model without JAXB dependency (if possible)
 11. Endpoint URI parsing (do not use `java.net.URI`)
 12. Deprecate `message.getIn()` use `getMessage()` instead
@@ -50,7 +50,7 @@ upgrade to Camel v4 when they are ready to upgrade Java as well.
 
 ## Timeline
 
-The times are _estimates_ and the number of versions may vary according to the needs and the state of progress of the process. In other words, Camel v4 may be released earlier than expected.
+The milestones are _estimates_ and the number of versions may vary according to the needs and the state of progress of the process. In other words, Camel v4 may be released earlier than expected.
 
 - Feb 2023: Camel 4.0 milestone 1
 - Mar 2023: Camel 4.0 milestone 2
@@ -65,7 +65,7 @@ This means the Camel v3 schedule is as follows:
 
 - Dec 2022: Camel 3.20 LTS
 - Jun 2023: Camel 3.21 LTS
-- Dec 2023: Camel 3.22 LTS (last planned Camel v3 release so last version supporting Java 11, supported until Dec 2024)
+- Dec 2023: Camel 3.22 LTS (last planned Camel v3 release so last version supporting Java 11 until Dec 2024)
  
 Each Camel 3 LTS release will contain fewer new features and improvements than before, 
 because our focus and work shifted to Camel v4.
