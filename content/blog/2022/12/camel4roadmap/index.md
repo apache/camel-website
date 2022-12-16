@@ -1,8 +1,8 @@
 ---
 title: "Roadmap to Camel v4"
-date: 2022-12-16
+date: 2022-12-21
 draft: false
-authors: [davsclaus, oscerd, essobedo, klease]
+authors: [davsclaus, oscerd, essobedo]
 categories: ["Roadmap"]
 preview: "Roadmap to Apache Camel v4 and impact on Camel v3"
 ---
@@ -50,22 +50,22 @@ upgrade to Camel v4 when they are ready to upgrade Java as well.
 
 ## Timeline
 
-The milestones are _estimates_ and the number of versions may vary according to the needs and the state of progress of the process. In other words, Camel v4 may be released earlier than expected.
+The milestones are _estimates_ and the number of versions may vary according to the needs and the state of progress of the process. In other words, Camel v4 could be released earlier than expected.
 
 - Feb 2023: Camel 4.0 milestone 1
 - Mar 2023: Camel 4.0 milestone 2
 - Apr 2023: Camel 4.0 RC1
-- May 2023: Camel 4.0 LTS (LTS until 4.1 release)
-- Aug 2023: Camel 4.1 LTS (LTS until Jun 2024)
+- May 2023: Camel 4.0 LTS (until 4.1 release)
+- Aug 2023: Camel 4.1 LTS (until Jun 2024)
 - Oct 2023: Camel 4.2
-- Dec 2023: Camel 4.3 LTS
+- Dec 2023: Camel 4.3 LTS (until Dec 2024)
 
 For Camel 3, only LTS versions are released twice a year.
 This means the Camel v3 schedule is as follows:
 
-- Dec 2022: Camel 3.20 LTS
-- Jun 2023: Camel 3.21 LTS
-- Dec 2023: Camel 3.22 LTS (last planned Camel v3 release so last version supporting Java 11 until Dec 2024)
+- Dec 2022: Camel 3.20 LTS (until Dec 2023)
+- Jun 2023: Camel 3.21 LTS (until Jun 2024)
+- Dec 2023: Camel 3.22 LTS (until Dec 2024. Last v3 release supporting Java 11.)
  
 Each Camel 3 LTS release will contain fewer new features and improvements than before, 
 because our focus and work shifted to Camel v4.
