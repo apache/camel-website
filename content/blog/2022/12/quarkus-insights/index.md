@@ -1,19 +1,17 @@
 ---
-title: "Camel presented at Quarkus Insights"
-date: 2022-12-12
+title: "How to quickly run 16 years old Camel 1.0 route today"
+date: 2022-12-16
 draft: false
-authors: [ppalaga,zbendhiba,davsclaus]
+authors: [davsclaus]
 categories: ["Videos"]
-preview: "Apache Camel presented at Quarkus Insights"
+preview: "Short video of quickly running Camel 1.0 code with the newest Camel"
 ---
 
-Apache Camel was recently showcased at the Quarkus Insights show (#110).
+A few weeks ago I presented Camel JBang at the Quarkus Insights show 
+and one of the demos I did was to quickly run Camel 1.0 route copied with the latest Camel.
 
-The session runs 1 hour and 10 minutes, where Peter first
-give an overview of Apache Camel, then Claus presents the latest update
-on Camel JBang, and with live demos. And the last 40 minutes is focused
-on Camel Quarkus where Zineb shows a live coded demo.
+This is a [4-minute recording](https://www.youtube.com/watch?v=VTak5jC9Oko) of that demo. 
 
-The recording can be watched from [YouTube](https://www.youtube.com/watch?v=stBjGMu73B0).
+If you want to see more, then I recommend to watch the [Quarkus Insight session](https://www.youtube.com/watch?v=stBjGMu73B0).
 
 
