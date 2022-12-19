@@ -7,5 +7,5 @@ title: "Camel Kafka Connector release 3.19.0"
 preview: ""
 changelog: ""
 category: "camel-kafka-connector"
-jdk: [8,11]
+jdk: [11,17]
 ---
