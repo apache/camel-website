@@ -36,10 +36,23 @@ quay.io/quarkus/ubi-quarkus-mandrel:22.2.0.0-Final-java11
 
 ## Updated Maven to 3.8.6
 
+Maven was changed from 3.8.4 to 3.8.6, this is not expected to affect Camel K users, since this is the internal maven version used to build the generated pom.xml for the integration.
+
 ## Deprecate kamel local and kamel init
 
 We have deprecated the `local` and `init` commands of `kamel` CLI due to overlapping of [camel jbang](/manual/camel-jbang.html).
 `camel jbang` may provide more features and a better developer experience to `kamel init` and `kamel local`, so we had to deprecate `kamel local`.
+
+## Removed deprecated code
+
+Some [deprecated code](https://github.com/apache/camel-k/pull/3819) were removed, a short summary:
+
+
+* No possibility to bundle resources in the `Integration` spec, as any resources should use the `mount` trait or persistence volume.
+* Removed `CASecret` from the Maven configuration, use the plural name `CASecrets`. This affects the IntegrationPlatform object.
+* Removal of old `dead-letter-channel` error handler type of KameletBinding
+* Removal of flow in Kamelets, a `template` should be used.
+* Removal of openapi resource type. Use the `ConfigMap` option of the `openapi` trait to store the openapi specification. Previsouly the openapi spec was stored as part of the IntegrationSpec object.
 
 ## Updated the Go Policy API to v1
 
