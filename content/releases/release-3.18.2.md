@@ -1,6 +1,6 @@
 ---
 date: 2022-09-08
-eol: 2023-08-11
+eol: 2023-07-06
 draft: false
 type: release-note
 version: 3.18.2
