@@ -13,7 +13,7 @@ This release introduces a set of new features and noticeable improvements that w
 
 ## Camel Core
 
-The Split EIP has been optimized to perform faster and reduced overhead, when splitting by a single separator char.
+The Split EIP has been optimized to perform faster and reduced overhead when splitting by a String literal or a regular expression.
 
 When working with EIPs you may want to temporarily disable one or more EIPs. Today you have to comment out code, or remove the EIPs.
 We have now introduced the `disabled` option which you quickly can enable on EIPs to turn off.
