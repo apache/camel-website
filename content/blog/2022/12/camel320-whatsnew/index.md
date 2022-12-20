@@ -2,7 +2,7 @@
 ---
 title: "Apache Camel 3.20 What's New"
 date: 2022-12-21
-authors: [davsclaus]
+authors: [davsclaus, essobedo]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 3.20 release.
 ---
@@ -119,4 +119,13 @@ Make sure to read the [upgrade guide](/manual/camel-3x-upgrade-guide-3_20.html) 
 You can find more information about this release in the list of JIRA tickets resolved in the release: 
 
 - [Release notes 3.20](/releases/release-3.20.0/)
+
+## Camel 4 is coming
+
+A new major version of Camel is planned for the first half of 2023 with a bunch of amazing main goals such as the support of Spring 6, Spring Boot 3, and Quarkus 3. 
+It will be proposed as a major version due to the Jakarta migration that brings breaking changes.
+
+Regarding Camel 3, we still plan to release LTS versions twice a year, but be aware that most of our efforts will be focused on Camel 4, so don't expect too many improvements and features inside.
+
+For more information about Camel 4 and the future of Camel 3, stay tuned, a dedicated blog post will be available soon.
 
