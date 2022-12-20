@@ -17,20 +17,20 @@ Starting from Camel 3.19.0 we have four cloud services supported for loading pro
 One of the problems we faced in the development was related to finding a way to automatically refresh the secret value on the secrets update.
 
 The main players in the cloud game are providing solutions based on their services:
-AWS provides multiple ways to be notified about secret updates and secret rotations through AWS Cloudtrail or AWS Cloud events, GCP leverages Google Pubsub to deliver messages with events related to secret, 
+AWS provides multiple ways to be notified about secret updates and secret rotations through AWS Cloudtrail or AWS Cloud events, GCP leverages Google Pubsub to deliver messages with events related to secret,
 while Azure provides multiple ways of getting notified about events related to a vault in the Azure Key Vault service, mostly by using Azure Eventgrid as an intermediate service.
 Hashicorp Vault as of today doesn't provide an API to get secrets notification.
 
-### Enabling Automatic Camel context reloading after Secrets Refresh 
+### Enabling Automatic Camel context reloading after Secrets Refresh
 
 #### AWS Secrets Manager
 
 The automatic context reloading could be achieved through Camel's main properties. In particular, the authentication to AWS service (Cloudtrail) could be set through the default credentials provider or through access key/secret key/region credentials. The camel's main properties are:
 
 ```
-camel.vault.aws.refreshEnabled=true 
-camel.vault.aws.refreshPeriod=60000 
-camel.vault.aws.secrets=Secret 
+camel.vault.aws.refreshEnabled=true
+camel.vault.aws.refreshPeriod=60000
+camel.vault.aws.secrets=Secret
 camel.main.context-reload-enabled = true
 ```
 
@@ -46,11 +46,11 @@ At the following URL, we provide a simple example through camel-jbang: [AWS Secr
 The automatic context reloading could be achieved through Camel's main properties. In particular, the authentication to Google service (Pubsub) could be set through the default google instance or through the service account key file. The camel's main properties are:
 
 ```
-camel.vault.gcp.projectId= projectId 
-camel.vault.gcp.refreshEnabled=true 
-camel.vault.gcp.refreshPeriod=60000 
-camel.vault.gcp.secrets=hello* 
-camel.vault.gcp.subscriptionName=subscriptionName 
+camel.vault.gcp.projectId= projectId
+camel.vault.gcp.refreshEnabled=true
+camel.vault.gcp.refreshPeriod=60000
+camel.vault.gcp.secrets=hello*
+camel.vault.gcp.subscriptionName=subscriptionName
 camel.main.context-reload-enabled = true
 ```
 
@@ -67,13 +67,13 @@ At the following URL, we provide a simple example through camel-jbang: [Google S
 The automatic context reloading could be achieved through Camel's main properties. In particular, the authentication to Azure service (Storage Blob) could be set through client id/client secret/tenant id. The camel's main properties are:
 
 ```
-camel.vault.azure.refreshEnabled=true 
-camel.vault.azure.refreshPeriod=60000 
-camel.vault.azure.secrets=Secret 
-camel.vault.azure.eventhubConnectionString=eventhub_conn_string 
-camel.vault.azure.blobAccountName=blob_account_name 
-camel.vault.azure.blobContainerName=blob_container_name 
-camel.vault.azure.blobAccessKey=blob_access_key 
+camel.vault.azure.refreshEnabled=true
+camel.vault.azure.refreshPeriod=60000
+camel.vault.azure.secrets=Secret
+camel.vault.azure.eventhubConnectionString=eventhub_conn_string
+camel.vault.azure.blobAccountName=blob_account_name
+camel.vault.azure.blobContainerName=blob_container_name
+camel.vault.azure.blobAccessKey=blob_access_key
 camel.main.context-reload-enabled = true
 ```
 
@@ -93,6 +93,6 @@ This is well explained in this example the reader could run through camel-jbang:
 
 In the next Camel development for what concerns the secret updates feature, we would like to provide the ability to select a different kinds of tasks/policies to trigger a context reloading. For example, we would like to support the secret rotations events coming from AWS Services supporting the rotation. This is in our roadmap.
 
-If you find this feature useful and you feel there is something to improve, don't hesitate to contact us via the usual channels: [Camel Support](https://camel.apache.org/community/support/)
+If you find this feature useful and you feel there is something to improve, don't hesitate to contact us via the usual channels: [Camel Support](/community/support/)
 
 Thanks for your attention and see you online.
