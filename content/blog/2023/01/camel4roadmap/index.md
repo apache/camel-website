@@ -1,6 +1,6 @@
 ---
 title: "Roadmap to Camel 4"
-date: 2022-12-21
+date: 2023-01-03
 draft: false
 authors: [davsclaus, oscerd, essobedo]
 categories: ["Roadmap"]
