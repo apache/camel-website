@@ -56,9 +56,9 @@ When using Rest DSL with api-doc enabled, then Camel JBang will automatically do
 Camel JBang now has shell completions which can be installed with the `camel completion` command,
 to generate bash/zsh scripts.
 
-The `camel export` command now supports choose Gradle as build-tool instead of Maven.
+The `camel export` command now supports Gradle as build-tool instead of Maven.
 
-We have also added new comments to easily get details about:
+We have also added new commands to easily get details about:
 - metrics
 - health-checks
 - inflight messages
@@ -71,10 +71,10 @@ Camel JBang will now compile `csimple` languages on startup, if in use.
 
 Added `camel run --code='...'` to quickly run some Java DSL code. 
 
-There is a lot more that Camel JBang can do, so make sure to see the [Camel JBang documentation](/manual/camel-jbang.html).
+There is a lot more that Camel JBang can do, so make sure to read the [Camel JBang documentation](/manual/camel-jbang.html).
 It is also a good idea to run `camel --help` to list all available commands.
 
-There you can also find information how to get JBang installed, and after that install the Camel app in JBang.
+There you can also find information on how to get JBang installed and how to install the Camel app in JBang.
 
 ### Camel Open Telemetry
 
@@ -84,7 +84,7 @@ Camel can now correct associate spans across both synchronous and asynchronous e
 
 The `camel-yaml-dsl` schema now includes error handler and route configuration.
 
-Fixed intercept EIP did not work, when used in YAML DSL.
+Fixed a bug preventing the intercept EIP to work when used in YAML DSL.
 
 ### Camel Kafka
 
@@ -94,7 +94,7 @@ Many bug fixes and smaller improvements.
 
 There are 8 new components:
 
-- `camel-etc3` - Get, set, delete or watch keys in etcd v3 key-value store.
+- `camel-etcd3` - Get, set, delete or watch keys in etcd v3 key-value store.
 - `camel-influxdb2` - Interact with InfluxDB v2, a time series database.
 - `camel-js` - Evaluates a JavaScript expression
 - `camel-kubernetes-events` - Perform operations on Kubernetes Events and get notified on Events changes
