@@ -42,13 +42,12 @@ content:
 
 # sub-projects
     - url: https://github.com/apache/camel-k.git
+      # Let's keep latest active development + LTS active versions only
       branches:
         - main
         - release-1.11.x
         - release-1.10.x
-        - release-1.9.x
         - release-1.8.x
-        - release-1.6.x
       start_path: docs
 
     - url: https://github.com/apache/camel-k-runtime.git
@@ -56,7 +55,6 @@ content:
         - main
         - release-1.16.x
         - release-1.15.x
-        - release-1.13.x
       start_path: docs
 
     - url: https://github.com/apache/camel-kamelets.git
@@ -64,9 +62,7 @@ content:
         - main
         - 0.10.x
         - 0.9.x
-        - 0.8.x
         - 0.7.x
-        - 0.6.x
       start_path: docs
 
     - url: https://github.com/apache/camel-quarkus.git
