@@ -19,9 +19,9 @@ The effect of faster build times may be seen in the benchmark comparisons below.
 
 ### System Configuration
 
-| Device         | Chip              | Total Number of Cores | Memory |
-| -------        | -----             | --------              |--------|
-|MacBook Air (M1)| Apple Sillicon M1 |   8 core CPU (4 performance and 4 efficiency), 7 Core GPU                |                  8GB
+| Device           | Chip              | Total Number of Cores                                   | Memory |
+|------------------|-------------------|---------------------------------------------------------|--------|
+| MacBook Air (M1) | Apple Sillicon M1 | 8 core CPU (4 performance and 4 efficiency), 7 Core GPU | 8GB    |
 
 ### Environment Configuration
 
@@ -89,7 +89,7 @@ It is clear that the build time has decreased significantly; with more powerful 
 
 ### Leveraging the benefit
 
-To utilise this newly available functionality and apply CPU constraints on operator deployment, select from the following example measures or consult the [Resource Management](/camel-k/1.9.x/installation/advanced/resources.html#scheduling-infra-pod-resources) guide to modify it about their own needs.
+To utilise this newly available functionality and apply CPU constraints on operator deployment, select from the following example measures or consult the [Resource Management](/camel-k/next/installation/advanced/resources.html#scheduling-infra-pod-resources) guide to modify it about their own needs.
 
 ```shell
 kamel install --operator-resources requests.cpu=256m --operator-resources limits.cpu=500m --operator-resources limits.memory=512Mi ...

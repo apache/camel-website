@@ -48,7 +48,7 @@ Another little improvement was to redirect all the warning output to the `stderr
 
 ## Removed specialized builder configuration
 
-We decided to deprecate the Kaniko settings which were directly exposed in the generic `IntegrationPlatform.build.spec` (see the [API](/camel-k/1.9.x/apis/camel-k.html#_camel_apache_org_v1_IntegrationPlatformBuildSpec)). We've moved them in some more general purpose `.build.spec.PublishStrategyOptions`. From now on, we'll have a cleaner configuration which does not define any implementation detail. And we'll have a place where to hold any future Builder specialized options too!
+We decided to deprecate the Kaniko settings which were directly exposed in the generic `IntegrationPlatform.build.spec`. We've moved them in some more general purpose `.build.spec.PublishStrategyOptions`. From now on, we'll have a cleaner configuration which does not define any implementation detail. And we'll have a place where to hold any future Builder specialized options too!
 
 ## Kamel bind trait option
 
