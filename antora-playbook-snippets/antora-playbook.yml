@@ -62,9 +62,7 @@ content:
         - main
         - 0.10.x
         - 0.9.x
-        - 0.8.x
         - 0.7.x
-        - 0.6.x
       start_path: docs
 
     - url: https://github.com/apache/camel-quarkus.git
