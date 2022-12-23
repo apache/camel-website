@@ -96,7 +96,7 @@ There are 8 new components:
 
 - `camel-etcd3` - Get, set, delete or watch keys in etcd v3 key-value store.
 - `camel-influxdb2` - Interact with InfluxDB v2, a time series database.
-- `camel-js` - Evaluates a JavaScript expression
+- `camel-javascript` - Evaluates a JavaScript expression
 - `camel-kubernetes-events` - Perform operations on Kubernetes Events and get notified on Events changes
 - `camel-plc4x` - Read and write to PLC devices
 - `camel-rocketmq` Send and receive messages from RocketMQ cluster
