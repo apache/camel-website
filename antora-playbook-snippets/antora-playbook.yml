@@ -91,7 +91,6 @@ content:
         - main
         - camel-kafka-connector-3.18.x
         - camel-kafka-connector-1.0.x
-        - camel-kafka-connector-0.11.x
       start_paths:
         - docs
         - connectors
