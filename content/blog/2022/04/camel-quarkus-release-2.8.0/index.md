@@ -45,6 +45,6 @@ All commits:
 
 ## Upgrading from Camel Quarkus 2.7.x:
 
-Some deprecated extensions and features were removed in the 2.8.0 release. For further details see the [migration guide](/camel-quarkus/2.8.x/migration-guide/2.8.0.html).
+Some deprecated extensions and features were removed in the 2.8.0 release. For further details see the [migration guide](/camel-quarkus/next/migration-guide/2.8.0.html).
 
 Also note that the `spark`, `ahc` and `ahc-ws` extensions are now deprecated and will be removed in a future version (likely 2.9.0).

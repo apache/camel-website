@@ -23,7 +23,7 @@ Please refer to the [Quarkus 2.12.0.Final announcement](https://quarkus.io/blog/
 
 ## New extensions
 
-There is one new extension in the 2.12.0 release. The long awaited and highly requested [CXF SOAP](/camel-quarkus/2.12.x/reference/extensions/cxf-soap.html) extension is now avilable 
+There is one new extension in the 2.12.0 release. The long awaited and highly requested CXF SOAP extension is now available 
 for both JVM and native modes.
 
 ## JVM mode testing improvements
@@ -31,7 +31,7 @@ for both JVM and native modes.
 Another highly requested feature has been the ability to use testing constructs available in other Camel runtimes such as `CamelTestSupport`. The good news is that support for such tests has now 
 arrived in the form of a new `camel-quarkus-junit5` dependency and `CamelQuarkusTestSupport` class.
 
-You can read more about how it works in the [documentation](/camel-quarkus/2.12.x/user-guide/testing.html#_cameltestsupport_style_of_testing).
+You can read more about how it works in the [documentation](/camel-quarkus/next/user-guide/testing.html#_cameltestsupport_style_of_testing).
 
 ## Release notes
 

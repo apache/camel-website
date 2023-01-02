@@ -23,9 +23,9 @@ Please refer to the [Quarkus 2.11.1.Final announcement](https://quarkus.io/blog/
 
 ## New extensions
 
-* [DataSet](/camel-quarkus/2.11.x/reference/extensions/dataset.html)
-* [Hashicorp Vault](/camel-quarkus/2.11.x/reference/extensions/hashicorp-vault.html)
-* [JQ](/camel-quarkus/2.11.x/reference/extensions/jq.html)
+* DataSet
+* Hashicorp Vault
+* JQ
 
 ## Release notes
 
@@ -39,4 +39,4 @@ All commits:
 
 Migration guide:
 
-* [Migration from Camel Quarkus 2.10.0 to Camel Quarkus 2.11.x](/camel-quarkus/2.11.x/migration-guide/2.11.0.html)
+* [Migration from Camel Quarkus 2.10.0 to Camel Quarkus 2.11.x](/camel-quarkus/next/migration-guide/2.11.0.html)

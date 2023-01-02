@@ -33,4 +33,4 @@ All commits:
 
 Upgrading from Camel Quarkus 2.6.0:
 
-Some deprecated extensions and features were removed in the 2.7.0 release. For further details see the [migration guide](/camel-quarkus/2.7.x/migration-guide/2.7.0.html).
+Some deprecated extensions and features were removed in the 2.7.0 release. For further details see the [migration guide](/camel-quarkus/next/migration-guide/2.7.0.html).

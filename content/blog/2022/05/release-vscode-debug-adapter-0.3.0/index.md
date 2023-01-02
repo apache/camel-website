@@ -35,7 +35,7 @@ You can add a condition and/or hit count when creating a source breakpoint (with
 
 ![Conditional breakpoint for Camel route](./conditionalBreakpoint.gif)
 
-For details how to write the condition, see the [Camel Simple language documentation page](/components/3.16.x/languages/simple-language.html).
+For details how to write the condition, see the [Camel Simple language documentation page](/components/next/languages/simple-language.html).
 
 A [video](https://youtu.be/38Q1CDZm5SI) is available to see it in action with comments.
 
