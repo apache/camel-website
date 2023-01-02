@@ -1,3 +1,4 @@
+
 ---
 title: "Camel Quarkus 2.10.0 Released"
 date: 2022-06-23
@@ -23,14 +24,14 @@ Please refer to the [Quarkus 2.10.0.Final announcement](https://quarkus.io/blog/
 
 ## New extensions
 
-* [Azure Key Vault](/camel-quarkus/2.10.x/reference/extensions/azure-key-vault.html)
-* [DataSonnet](/camel-quarkus/2.10.x/reference/extensions/datasonnet.html)
+* Azure Key Vault
+* DataSonnet
 
 ## Removal of deprecated extensions
 
 A number of deprecated components were removed in Camel 3.17.0 and therefore the corresponding deprecated extensions in Camel Quarkus were also removed.
 
-For more information see the [migration guide](/camel-quarkus/2.10.x/migration-guide/2.10.0.html).
+For more information see the [migration guide](/camel-quarkus/next/migration-guide/2.10.0.html).
 
 ## Release notes
 
