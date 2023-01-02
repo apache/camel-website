@@ -45,7 +45,6 @@ content:
         - main
         - release-1.11.x
         - release-1.10.x
-        - release-1.8.x
       start_path: docs
 
     - url: https://github.com/apache/camel-k-runtime.git
@@ -60,7 +59,6 @@ content:
         - main
         - 0.10.x
         - 0.9.x
-        - 0.7.x
       start_path: docs
 
     - url: https://github.com/apache/camel-quarkus.git
@@ -68,7 +66,6 @@ content:
         - main
         - 2.14.x
         - 2.13.x
-        - 2.7.x
       start_path: docs
 
     - url: https://github.com/apache/camel-quarkus-examples.git
@@ -89,9 +86,6 @@ content:
         - camel-spring-boot-3.20.x
         - camel-spring-boot-3.19.x
         - camel-spring-boot-3.18.x
-        - camel-spring-boot-3.17.x
-        - camel-spring-boot-3.16.x
-        - camel-spring-boot-3.15.x
         - camel-spring-boot-3.14.x
       start_paths:
         - components-starter
@@ -105,9 +99,6 @@ content:
         - camel-karaf-3.20.x
         - camel-karaf-3.19.x
         - camel-karaf-3.18.x
-        - camel-karaf-3.17.x
-        - camel-karaf-3.16.x
-        - camel-karaf-3.15.x
         - camel-karaf-3.14.x
       start_path: docs
 
