@@ -23,7 +23,6 @@ github:
     - camel
     - integration
     - java
-    - hacktoberfest
   enabled_merge_buttons:
     squash:  true
     merge:   false
