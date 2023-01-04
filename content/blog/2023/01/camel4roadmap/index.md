@@ -1,6 +1,6 @@
 ---
 title: "Roadmap to Camel 4"
-date: 2023-01-03
+date: 2023-01-04
 draft: false
 authors: [davsclaus, oscerd, essobedo]
 categories: ["Roadmap"]
@@ -23,7 +23,7 @@ and to keep up with popular runtimes such as Spring Boot and Quarkus.
 6. Release only what is ready (JEE10 / Java17)
    This means that Camel components that are not ready (yet) will be dropped in a release until they are ready.
 7. Release Camel Core + Camel Spring Boot together
-8. Move Camel Karaf to Apache Karaf as karaf-camel sub-project 
+8. Move Camel Karaf to Apache Karaf as karaf-camel subproject 
 
 ## Major Goals
 9. Support Java 17 features such as records, multiline strings, etc.
@@ -51,7 +51,7 @@ upgrade to Camel 4 when they are ready to upgrade Java as well.
 ## Timeline
 
 The milestones are _estimates_ and the number of releases may vary according to the needs and the state of progress of the process.
-In other words, Camel 4 could be released earlier than expected.
+In other words, Camel 4 could be released **earlier than expected**.
 
 - Feb 2023: Camel 4.0 milestone 1
 - Mar 2023: Camel 4.0 milestone 2
@@ -66,11 +66,11 @@ This means the Camel 3 schedule is as follows:
 
 - Dec 2022: Camel 3.20 LTS (until Dec 2023)
 - Jun 2023: Camel 3.21 LTS (until Jun 2024)
-- Dec 2023: Camel 3.22 LTS (until Dec 2024. Last 3 release supporting Java 11.)
+- Dec 2023: Camel 3.22 LTS (until Dec 2024; Last release supporting Java 11.)
  
-Each Camel 3 LTS release will contain fewer new features and improvements than before, 
+Each Camel 3 release will contain fewer new features and improvements than before, 
 because our focus and work shifted to Camel 4.
 
 The Camel 4 work has already started, and there are some intermediate branches
-with the jakarta migration such as: https://github.com/apache/camel/tree/jakarta/rewritten
+with the Jakarta migration such as: https://github.com/apache/camel/tree/jakarta/rewritten
 
