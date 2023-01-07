@@ -111,7 +111,5 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |[camel-spring-cloud-stream](https://github.com/donovanmuller/)|A component to integrate with Spring Cloud Stream|
 |[camel-rocketmq](https://github.com/TeslaCN/camel-rocketmq)|A component to integrate with Apache RocketMQ|
 |[camel-openhtmltopdf](https://github.com/elevation-solutions/camel-openhtmltopdf)|A Camel component to generate nice looking PDF files from HTML, CSS, images, etc.|
-|[camel-xtrasonnet](https://jam01.github.io/xtrasonnet/camel/)|xtrasonnet is an extensible, jsonnet-based, data transformation engine
-for Java or any JVM-based language. The Camel xtrasonnet component enables the use of xtrasonnet transformations as
-Expressions or Predicates in the DSL.|
+|[camel-xtrasonnet](https://jam01.github.io/xtrasonnet/camel/)|xtrasonnet is an extensible, jsonnet-based, data transformation engine  for Java or any JVM-based language. The Camel xtrasonnet component enables the use of xtrasonnet transformations as  Expressions or Predicates in the DSL.|
 {{< /table >}}
