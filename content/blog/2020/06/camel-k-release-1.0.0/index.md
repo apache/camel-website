@@ -202,7 +202,7 @@ Now, let's suppose you want to see what your routes are doing and trace the exec
 kamel run Routes.java -t prometheus.enabled=true -t tracing.enabled=true
 ```
 
-That's it again. The Camel K operator will add the [camel-opentracing library](/components/next/others/opentracing.html) and **connect it to the Jaeger collector that is available in the namespace**.
+That's it again. The Camel K operator will add the [camel-opentracing library](/components/3.20.x/others/opentracing.html) and **connect it to the Jaeger collector that is available in the namespace**.
 Here again, [advanced use cases](/camel-k/next/traits/tracing.html) are supported.
 
 ## Master routes
