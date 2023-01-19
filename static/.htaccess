@@ -482,7 +482,7 @@ Redirect 301 /documentation.html /manual/
 # Redirect 301 /yaml-data-format.html
 # Redirect 301 /zeromq.html
 # Redirect 301 /zip-dataformat.html
-Redirect 301 /activemq.html /components/next/activemq-component.html
+# Redirect 301 /activemq.html /components/next/activemq-component.html
 Redirect 301 /advanced-configuration-of-camelcontext-using-spring.html /manual/advanced-configuration-of-camelcontext-using-spring.html
 Redirect 301 /aggregator.html /components/next/eips/aggregate-eip.html
 Redirect 301 /aggregator2 /components/next/eips/aggregate-eip.html
@@ -957,7 +957,7 @@ Redirect 301 /spring-xml-extensions.html /manual/spring-xml-extensions.html
 Redirect 301 /spring.html /components/next/spring.html
 # Possible candidates for previous URL: [/manual/spring.html, /components/next/spring.html]
 Redirect 301 /springbatch.html /components/next/spring-batch-component.html
-Redirect 301 /springintegration.html /components/next/spring-integration-component.html
+# Redirect 301 /springintegration.html /components/next/spring-integration-component.html
 Redirect 301 /sql-component.html /components/next/sql-component.html
 Redirect 301 /sql.html /components/next/sql-component.html
 Redirect 301 /ssh.html /components/next/ssh-component.html
