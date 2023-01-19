@@ -153,10 +153,10 @@ test "$BASE_URL/components/next" 301 "$BASE_URL/components/next/"
 test "$BASE_URL/components/next/" 200
 test "$BASE_URL/components/latest" 302 "$BASE_URL/components/${COMPONENTS_VERSION}"
 test "$BASE_URL/components/latest/" 302 "$BASE_URL/components/${COMPONENTS_VERSION}/"
-test "$BASE_URL/components/activemq-component.html" 302 "$BASE_URL/components/${COMPONENTS_VERSION}/activemq-component.html"
-test "$BASE_URL/components/latest/activemq-component.html" 302 "$BASE_URL/components/${COMPONENTS_VERSION}/activemq-component.html"
-test "$BASE_URL/components/${COMPONENTS_VERSION}/activemq-component.html" 200
-test "$BASE_URL/components/next/activemq-component.html" 200
+test "$BASE_URL/components/jms-component.html" 302 "$BASE_URL/components/${COMPONENTS_VERSION}/jms-component.html"
+test "$BASE_URL/components/latest/jms-component.html" 302 "$BASE_URL/components/${COMPONENTS_VERSION}/jms-component.html"
+test "$BASE_URL/components/${COMPONENTS_VERSION}/jms-component.html" 200
+test "$BASE_URL/components/next/jms-component.html" 200
 
 test "$BASE_URL/camel-spring-boot" 302 "$BASE_URL/camel-spring-boot/${COMPONENTS_VERSION}/"
 test "$BASE_URL/camel-spring-boot/" 302 "$BASE_URL/camel-spring-boot/${COMPONENTS_VERSION}/"
