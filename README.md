@@ -355,8 +355,8 @@ The main camel repository contains both the "components" and "user manual" Antor
 Other components are in the obvious repository.
 
 - To link to another page in the same component/version/module use the absolute path from "pages": xref:path/to/page.adoc[].
-  For instance, a link from one camel component to another would be xref:activemq-component.adoc[].
-  A link from any camel-quarkus page to a camel-quarkus extension would be xref:reference/extensions/activemq.adoc[].
+  For instance, a link from one camel component to another would be xref:jms-component.adoc[].
+  A link from any camel-quarkus page to a camel-quarkus extension would be xref:reference/extensions/jms.adoc[].
 - To link to a page in another module in the same component/version use the module name and absolute path from "pages": xref:module:path/to/page.adoc[].
 For instance, a link from a dataformat to a language would be xref:languages:jsonpath-language.adoc[].
   A link from a dataformat to an eip would be xref:eips:aggregate-eip.adoc[].
@@ -365,13 +365,13 @@ Xref links that do not specify the component or version stay within the same com
 If only the (Antora) component is specified, the link will be to the "latest" version of the component.
 This is most likely what you want.
 
-- For instance, a link from camel-quarkus to the latest version of a component would be xref:components::activemq-component.adoc[].
+- For instance, a link from camel-quarkus to the latest version of a component would be xref:components::jms-component.adoc[].
 - A link from a component, eip, or other "components" module to the user manual would be xref:manual::architecture.adoc[].
-- A link from a component, eip, etc, or the user manual to a camel-quarkus extension would be xref:camel-quarkus::reference/extensions/activemq.adoc[].
-- Note that specifying the same component as the source page will link to the latest version of the target page: e.g. xref:camel-quarkus::reference/extensions/activemq.adoc[] from a version 2.0.0 camel-quarkus page will link to the latest activemq.adoc version, not the 2.0.0 version.
+- A link from a component, eip, etc, or the user manual to a camel-quarkus extension would be xref:camel-quarkus::reference/extensions/jms.adoc[].
+- Note that specifying the same component as the source page will link to the latest version of the target page: e.g. xref:camel-quarkus::reference/extensions/jms.adoc[] from a version 2.0.0 camel-quarkus page will link to the latest jms.adoc version, not the 2.0.0 version.
 
 If you need to link to a specific non-latest version of a page, specify the version in the xref.
-- A link from anywhere to a camel-quarkus 2.0.0 page would be xref:2.0.0@camel-quarkus::reference/extensions/activemq.adoc[].
+- A link from anywhere to a camel-quarkus 2.0.0 page would be xref:2.0.0@camel-quarkus::reference/extensions/jms.adoc[].
 
 ## Build with Yarn in Docker
 
