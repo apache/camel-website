@@ -8,7 +8,7 @@ title: "Camel Kafka Connector release 3.20.0"
 preview: ""
 changelog: ""
 category: "camel-kafka-connector"
-eol: 2023-12-21
+kind: lts
 jdk: [11,17]
 ---
 
