@@ -13,7 +13,7 @@ We're in 2023 since a while (just if nobody has noticed yet...) and we've taken 
 
 We'll keep supporting Camel K version 1 as long as the support for Camel 3 will be provided.
 
-Let's have a sneak peek at the main areas we have discussed:
+Let's have a look at the main areas we have discussed:
 
 * Camel K release process
 * Camel 4 support
@@ -24,7 +24,6 @@ Let's have a sneak peek at the main areas we have discussed:
 * Kustomize
 * Kamelets
 * Strengthen other operator supports relationship
-* Kamelets
 
 In each section, I've tried to detail the rationale and some ideas that can be furtherly refined. There may also be reference to Github issues that are related to the requirement under discussion.
 
@@ -40,7 +39,7 @@ One first piece in place is the Camel K Runtime which we're aiming to move as a 
 
 Given the point discussed above, the support of Camel 4 will be inherited by the runtime we use. I don't expect any real impact on Camel K development that is coming from any change on Camel 4. In any case, we'll be integrating the first stable bits of this new major release to make sure everything will be running smoothly.
 
-## Enhance build and make it more enterprise
+## Enhance build and make it more "enterprise"
 
 This is the area where we likely will introduce some important change. Let's start from one point discussed in the release process. As we need to decouple from the runtime, we'll need also to remove any dependency from the tooling required to build the application (which version change based on the runtime): more details are exposed in [#3831](https://github.com/apache/camel-k/issues/3831). This development may bring us to a new situation where we can enable a building strategy which by default will schedule a Job/Pod to run the build.
 
@@ -60,7 +59,7 @@ All these ideas should be furtherly analyzed and refined as they may clash again
 
 ## Multitenancy
 
-The new multitenancy model development has still some aspect to polish. One of them is the ability to have more than one operator running in the same namespace. We may also think if it makes sense to remove the global operator once we are confident with the new model.
+The new multitenancy model development has still some aspect to polish. One of them is the ability to have more than one operator running in the same namespace.
 
 ## Observability
 
@@ -79,6 +78,8 @@ So far, we're using the `kamel` CLI also as an intallation method. As we're will
 ## Kamelets
 
 We've mentioned briefly the dependency of the release process between Camel K and Kamelets. We've already worked to remove such a dependency and let Kamelets catalog to be released at any time. However we may need to move the Kamelets Custom Resource Definition into the catalog project. Right now, the CRDs are part of the release cycle of Camel K, so it makes sense to move them out and be able to recover them when required by the installation procedure.
+
+We can provide more features on the Kamelets side in order to be able to use headers, automatic data formats, etc.
 
 Another important point we may review is the ability to [bundle the Catalog as an OCI container](https://github.com/apache/camel-k/issues/2732). Right Camel K expects the catalog to be a Git repository, but it would be convenient to think other models of distributable artifacts.
 
