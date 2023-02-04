@@ -4,7 +4,7 @@ date: 2023-02-04
 draft: false
 authors: [gzurowski]
 categories: ["Releases"]
-preview: "The Camel community announces the immediate availability of a new release candidate Camel 4.0.0-M1"
+preview: "The Camel community announces the immediate availability of a new milestone Camel 4.0.0-M1"
 ---
 
 
