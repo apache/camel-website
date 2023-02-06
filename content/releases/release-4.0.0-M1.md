@@ -1,9 +1,8 @@
 ---
 date: 2023-02-04
-draft: false 
+draft: false
 type: release-note
 version: 4.0.0-M1
-rc: true
 title: "Release 4.0.0-M1"
 preview: "First milestone for 4.0.0"
 apiBreaking: ""

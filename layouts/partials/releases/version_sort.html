@@ -6,8 +6,20 @@
     {{ $version := .Params.version }}
     {{/* version as number, e.g. 1.2.3 -> 100020003 */}}
     {{ $version_num := 0 }}
-    {{ range $version_part := split $version "." }}
-        {{ $version_num = add (mul $version_num 1000) (int $version_part) }}
+    {{ range split $version "." }}
+        {{ if strings.ContainsAny . "-RCM" }}
+            {{ range split . "-" }}
+                {{ range split . "M" }}
+                    {{ range split . "RC" }}
+                        {{ if . }}
+                            {{ $version_num = add (mul $version_num 1000) (int .) }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        {{ else }}
+            {{ $version_num = add (mul $version_num 1000000) (mul (int .) 1000) }}
+        {{ end }}
     {{ end }}
     {{ $versions = $versions | append (dict "version_num" $version_num "page" .) }}
 {{ end }}
