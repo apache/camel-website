@@ -26,12 +26,19 @@
   </dependency>
 </dependencies>
 ` .Params.version) }}</code></pre>
-<p>To use this release in a Spring Boot application, use the <code>camel-spring-boot-bom</code> Bill of Materials (BOM):
+<p>To use this release in a Spring Boot application, use Spring Boot <code>spring-boot-dependencies</code> and Camel <code>camel-spring-boot-bom</code> Bill of Materials (BOM):
 <aside>
   <p>Replace the <code>COMPONENT</code> with the artifact outlined in the <a href="/components/next/">component documentation</a></p>
 </aside>
 <pre><code>{{ htmlUnescape (printf `<dependencyManagement>
   <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-dependencies</artifactId>
+      <version> SPRING BOOT VERSION HERE </version>
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
     <dependency>
       <groupId>org.apache.camel.springboot</groupId>
       <artifactId>camel-spring-boot-bom</artifactId>
