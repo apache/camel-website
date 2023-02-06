@@ -9,6 +9,7 @@ apiBreaking: ""
 knownIssues: ""
 jiraVersionId: 12346354
 category: camel
+kind: RC
 jdk: [8,11]
 ---
 
