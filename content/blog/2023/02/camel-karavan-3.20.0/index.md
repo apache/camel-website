@@ -16,7 +16,7 @@ Developers can use Karavan in their local development environment by installing 
 
 Being installed in a kubernetes environment, Karavan can be used as an application in any modern web browser. In that case Karavan stores integrations as YAML files in a git repository and starts a Tekton pipeline to package an application, build and deploy it to kubernetes.
 
-# New fetures
+# New features
 The long-awaited release brings more flexibility to developers. Runtime selection: Quarkus or Spring Boot. Configurable default values for  application.properties. Deployment to kubernetes from a local environment with configurable Maven commands. Simplified code creation for custom Processors and AggregationStrategy.
 
 ![yes.png](yes.png)
