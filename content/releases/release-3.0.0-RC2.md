@@ -1,9 +1,8 @@
 ---
 date: 2019-10-06
-draft: false 
+draft: false
 type: release-note
 version: 3.0.0-RC2
-rc: true
 title: "Release 3.0.0-RC2"
 preview: "Second release candidate for 3.0.0"
 apiBreaking: ""

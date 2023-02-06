@@ -9,7 +9,7 @@
 {{ $versions := slice }}
 
 {{/* all versions from a category (camel, camel-k...) */}}
-{{ $category_releases := where (where (where .Pages "Section" "releases") ".Params.rc" "ne" "true") ".Params.category" $.Category.id }}
+{{ $category_releases := where (where .Pages "Section" "releases") ".Params.category" $.Category.id }}
 
 {{/* are we featuring a current versions or an archived ones */}}
 {{ $is_current_versions := false }}
