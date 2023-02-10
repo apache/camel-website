@@ -38,19 +38,19 @@ Check [Camel 3.7 what's new](/blog/2020/12/Camel37-Whatsnew/) blog post by Claus
 As usual, the new Camel Quarkus release brings some new extensions:
 
 * CSimple language mentioned above
-* [Micrometer](/camel-quarkus/next/reference/extensions/micrometer.html) - in addition to [MicroProfile Metrics](/camel-quarkus/next/reference/extensions/microprofile-metrics.html), you can now collect your metrics using [Micrometer](https://micrometer.io/). See also [this blog post](https://quarkus.io/blog/micrometer-metrics/) by Ken Finnigan.
+* [Micrometer](/camel-quarkus/next/reference/extensions/micrometer.html) - in addition to MicroProfile Metrics, you can now collect your metrics using [Micrometer](https://micrometer.io/). See also [this blog post](https://quarkus.io/blog/micrometer-metrics/) by Ken Finnigan.
 * [Minio](/camel-quarkus/next/reference/extensions/minio.html) (JVM only)
 * [AtlasMap](/camel-quarkus/next/reference/extensions/atlasmap.html) (JVM only)
 
 The following extensions are now supported in native mode:
 
 * [Protobuf](/camel-quarkus/next/reference/extensions/protobuf.html)
-* [Avro RPC](/camel-quarkus/next/reference/extensions/avro-rpc.html)
+* Avro RPC
 * [SCP](/camel-quarkus/next/reference/extensions/jsch.html)
 * [Solr](/camel-quarkus/next/reference/extensions/solr.html)
 * [Google PubSub](/camel-quarkus/next/reference/extensions/google-pubsub.html)
 * [Google BigQuery](/camel-quarkus/next/reference/extensions/google-bigquery.html)
-* [OptaPlanner](/camel-quarkus/next/reference/extensions/optaplanner.html)
+* OptaPlanner
 
 Check the full list of supported extensions in the [extensions reference](/camel-quarkus/next/reference/index.html).
 

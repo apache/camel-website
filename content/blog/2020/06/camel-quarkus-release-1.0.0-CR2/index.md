@@ -29,7 +29,7 @@ All supported bits can be seen in the [List of Camel Quarkus extensions](/camel-
 Each Camel Quarkus extension has a separate page now. Most of the content is generated from the data available in
 [Camel Catalog](/manual/camel-catalog.html). This includes some basic description, Maven
 coordinates and links to the involved Camel bits.
-[ActiveMQ](/camel-quarkus/next/reference/extensions/activemq.html) is an example of such a rudimentary
+ActiveMQ is an example of such a rudimentary
 page.
 
 In some cases, that generated content is combined with manually maintained sections that inform about Camel

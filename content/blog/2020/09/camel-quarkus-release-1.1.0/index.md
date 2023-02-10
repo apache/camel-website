@@ -36,8 +36,8 @@ In addition, native support has been added to the following 16 extensions:
 * [Git](/camel-quarkus/next/reference/extensions/git.html)
 * [Master](/camel-quarkus/next/reference/extensions/master.html)
 * [NATS](/camel-quarkus/next/reference/extensions/nats.html)
-* [RabbitMQ](/camel-quarkus/next/reference/extensions/rabbitmq.html)
-* [SmallRye Reactive Messaging](/camel-quarkus/next/reference/extensions/smallrye-reactive-messaging.html)
+* RabbitMQ
+* SmallRye Reactive Messaging
 * [ThreadPoolFactory Vert.x](/camel-quarkus/next/reference/extensions/threadpoolfactory-vertx.html)
 * [Vert.x HTTP Client](/camel-quarkus/next/reference/extensions/vertx-http.html)
 * [Vert.x WebSocket](/camel-quarkus/next/reference/extensions/vertx-websocket.html)
