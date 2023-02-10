@@ -43,7 +43,7 @@ Camel Quarkus brings support for six new Camel components:
 * [Kamelet](/camel-quarkus/next/reference/extensions/kamelet.html)
 * [OAI-PMH](/camel-quarkus/next/reference/extensions/oaipmh.html)
 * [Spring RabbitMQ](/camel-quarkus/next/reference/extensions/spring-rabbitmq.html)
-* [XML Security Sign and Verify](/camel-quarkus/next/reference/extensions/xmlsecurity.html)
+* XML Security Sign and Verify
 * [JFR](/camel-quarkus/next/reference/extensions/jfr.html) (JVM only)
 
 Components newly supported in native mode:
@@ -55,7 +55,7 @@ Components newly supported in native mode:
 * [Cassandra CQL](/camel-quarkus/next/reference/extensions/cassandraql.html)
 * IPFS (no longer supported, February 2022)
 * [PubNub](/camel-quarkus/next/reference/extensions/pubnub.html)
-* [StAX](/camel-quarkus/next/reference/extensions/stax.html)
+* StAX
 * [CBOR](/camel-quarkus/next/reference/extensions/cbor.html)
 * [Syslog](/camel-quarkus/next/reference/extensions/syslog.html)
 

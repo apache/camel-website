@@ -21,7 +21,7 @@ The following new extensions were added:
 * [JOLT](/camel-quarkus/next/reference/extensions/jolt.html)
 * [JTA](/camel-quarkus/next/reference/extensions/jta.html)
 * [OpenApi Java](/camel-quarkus/next/reference/extensions/openapi-java.html)
-* [Tika](/camel-quarkus/next/reference/extensions/tika.html)
+* Tika
 * [Vert.x](/camel-quarkus/next/reference/extensions/vertx.html)
 
 
