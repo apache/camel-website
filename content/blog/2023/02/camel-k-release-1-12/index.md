@@ -30,7 +30,7 @@ The `kamel promote` command has simplified the promotion of an Integration to a 
 
 ## Generate apply configurations
 
-This is something not immediatly user facing, as it enables API types to be used with server-side apply. Still worth mentioning to let Camel K developers around the world this is now available.
+This is something not immediately user-facing, as it enables API types to be used with server-side apply. Still worth mentioning to let know Camel K developers around the world this is now available.
 
 ## Support Hashicorp Vault
 
