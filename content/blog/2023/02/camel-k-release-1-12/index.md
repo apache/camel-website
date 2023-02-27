@@ -9,7 +9,7 @@ preview: "What's new in Camel K 1.12"
 
 Image (c): <a href="https://www.vecteezy.com/free-vector/camel">Camel Vectors by Vecteezy</a>
 
-Altough we're already in [Camel K 2.0](/blog/2023/02/camel-k-roadmap-2023/) mode, we had not forgotten to bring new fresh features on version 1. **Camel K 1.12.0** has been just released and it brings a lot of new interesting upgrades and features. This may be the last release of Camel K 1 major version as we aim to have a release of Camel K 2 during half of this year.
+Although we're already in [Camel K 2.0](/blog/2023/02/camel-k-roadmap-2023/) mode, we had not forgotten to bring new fresh features on version 1. **Camel K 1.12.0** has just been released and it brings a lot of new interesting upgrades and features. This may be the last release of Camel K 1 major version as we aim to have a release of Camel K 2 during half of this year.
 
 As usual let's start by acknowledging the tech stack on top of Camel K and the new exciting versions our fellows have baked:
 
