@@ -26,7 +26,7 @@ The most interesting feature coming in this release is the extension of **Quarku
 
 ## `kamel promote` dry run
 
-The `kamel promote` command has simplified the promotion of an Integration to higher environment. `kamel promote -o yaml` is doing the very same stuff, but, instead of publishing the Integration in the new namespace, it returns the yaml (or json if you prefer) specification. It's a little step towards GitOps and will allow you perform already some integration with external pipeline tools.
+The `kamel promote` command has simplified the promotion of an Integration to a higher environment. `kamel promote -o yaml` is doing the very same stuff, but, instead of publishing the Integration in the new namespace, it returns the yaml (or JSON if you prefer) specification. It's a little step towards GitOps and will allow you to perform already some integration with external pipeline tools.
 
 ## Generate apply configurations
 
