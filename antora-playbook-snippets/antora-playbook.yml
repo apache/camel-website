@@ -40,6 +40,7 @@ content:
       # Let's keep latest active development + LTS active versions only
       branches:
         - main
+        - release-1.12.x
         - release-1.11.x
         - release-1.10.x
       start_path: docs
