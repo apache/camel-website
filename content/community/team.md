@@ -75,6 +75,7 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 | Tracy Snell            | tjsnell          | Juice Labs                 |
 | Willem Jiang           | ningjiang        | Huawei                     |
 | William Tam            | wtam             | Red Hat                    |
+| Zineb Bendhiba         | zbendhiba        | Red Hat                    |
 | Zheng Feng             | zhfeng           | Red Hat                    |
 | Zoran Regvart          | zregvart         | Red Hat                    |
 {{< /table >}}
