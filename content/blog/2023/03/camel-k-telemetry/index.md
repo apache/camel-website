@@ -1,15 +1,15 @@
 ---
 title: "Camel K Observability: Distributed Tracing"
-date: 2023-03-25
+date: 2023-03-09
 draft: false
 authors: [gansheer]
-categories: ["Camel K", "Features"]
+categories: ["Camel K", "Features", "Devops"]
 preview: "Camel K: how to configure Distributed Tracing for an Integration"
 ---
 
 Tracing is an important approach for controlling and monitoring the experience of users, it allows us to gather more information about an integration's performance. 
 
-Camel K has long been providing support for distributed tracing using OpenTracing. At the beginning of 2022, the [CNCF](https://www.cncf.io) announced that there were [archiving the OpenTracing project](https://www.cncf.io/blog/2022/01/31/cncf-archives-the-opentracing-project/) in favor of the [OpenTelemetry project](https://opentelemetry.io/). OpenTelemetry is the latest solution created by merging OpenTracing and OpenCensus. As a result, we decided in Camel K 1.12 to introduce the [`telemetry` trait](https://camel.apache.org/camel-k/1.12.x/traits/telemetry.html) based on OpenTelemtry. At the same time we decides to deprecate the [`tracing` trait](https://camel.apache.org/camel-k/1.12.x/traits/tracing.html) based on OpenTracing.
+Camel K has been providing support for distributed tracing using OpenTracing since long time. At the beginning of 2022, the [CNCF](https://www.cncf.io) announced that there were [archiving the OpenTracing project](https://www.cncf.io/blog/2022/01/31/cncf-archives-the-opentracing-project/) in favor of the [OpenTelemetry project](https://opentelemetry.io/). OpenTelemetry is the latest solution created by merging OpenTracing and OpenCensus. As a result, we decided in Camel K 1.12 to introduce the [`telemetry` trait](/camel-k/1.12.x/traits/telemetry.html) based on OpenTelemetry. At the same time we decides to deprecate the [`tracing` trait](/camel-k/1.12.x/traits/tracing.html) based on OpenTracing.
 
 I'll walk you through the configurations needed to support Distributed tracing for your camel integrations in this blog post.
 
@@ -21,7 +21,7 @@ The `telemetry` trait has been tested on Jaeger (v1.35+), OpenTelemetry Collecto
 
 We will be using Jaeger for this blog post manipulations.
 
-## Camel K 
+## Camel K
 
 The `telemetry` trait is available starting from Camel K version 1.12, so you should first check your kamel client version
 
@@ -42,7 +42,7 @@ NAME                                READY   STATUS    RESTARTS   AGE
 camel-k-operator-5b897ddcdd-4qwqb   1/1     Running   0          50s
 ```
 
-For more informations see the [documentation](https://camel.apache.org/camel-k/1.12.x/installation/installation.html)
+For more informations see the [documentation](/camel-k/1.12.x/installation/installation.html)
 
 ## Install Jaeger
 
@@ -103,7 +103,7 @@ We will be creating two integration routes as the distributed services:
 * *Inventory* which is also a rest service in charge of product's inventory management
 
 **`InventoryService.java`**
-```java 
+```java
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.rest.RestBindingMode;
 import org.apache.camel.component.jackson.JacksonDataFormat;
@@ -115,7 +115,6 @@ import java.util.Map;
 
 public class InventoryService extends RouteBuilder {
 
-    
     @Override
     public void configure() throws Exception {
         restConfiguration()
@@ -126,7 +125,6 @@ public class InventoryService extends RouteBuilder {
             .post("/notify/order/place")
                 .to("direct:notify");
 
-        
         JacksonDataFormat invDataFormat = new JacksonDataFormat();
         invDataFormat.setUnmarshalType(InventoryNotification.class);
 
@@ -186,12 +184,10 @@ public class InventoryService extends RouteBuilder {
         public Date getDatetime() {
             return datetime;
         }
-    
         public void setDatetime(Date datetime) {
             this.datetime = datetime;
         }
     }
-    
 }
 ```
 
@@ -211,7 +207,7 @@ public class OrderService extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
-        
+
         restConfiguration()
             .enableCORS(true)
             .bindingMode(RestBindingMode.json);
@@ -235,10 +231,9 @@ public class OrderService extends RouteBuilder {
             .unmarshal().json()
         ;
     }
-    
+
     private static class Order implements java.io.Serializable{
         private static final long serialVersionUID = 1L;
-        
         private Integer orderId;
         private Integer itemId;
         private Integer quantity;
@@ -255,14 +250,12 @@ public class OrderService extends RouteBuilder {
         public void setQuantity(Integer quantity){
             this.quantity=quantity;
         }
-
         public void setOrderItemName(String orderItemName){
             this.orderItemName=orderItemName;
         }
         public void setPrice(Integer price){
             this.price=price;
         }
-        
         public Integer getOrderId(){
             return this.orderId;
         }
@@ -272,7 +265,6 @@ public class OrderService extends RouteBuilder {
         public Integer getQuantity(){
             return this.quantity;
         }
-
         public String getOrderItemName(){
             return this.orderItemName;
         }
@@ -407,7 +399,7 @@ $ curl  http://order-tracing.local/place -d '{"orderId":21, "itemId":5, "quantit
 {"inventory":"{\"orderId\":21,\"itemId\":5,\"quantity\":1,\"department\":\"inventory\",\"datetime\":1678296184049}"}
 ```
 
-As you can see, going from the `trancing` to the `telemetry` is quite effortless. On the trace side, from one protocol to another you should expect some differences in your traces:
+As you can see, going from the `trancing` to the `telemetry` is quite effortless. On the trace side, from one protocol to another you should expect some differences in your trancing:
 
 ![Difference between OpenTracing and OpenTelemtry traces](compare_tracing_telemetry.png)
 
@@ -417,4 +409,4 @@ As you can see, going from the `trancing` to the `telemetry` is quite effortless
 This blog post showed how you can use the new `telemetry` trait and how to work with the Jager Distributed Tracing tool. We also took the time to see how you can migrate from the deprecated `tracing` trait to the `telemetry` trait.
 
 
-If you have any feedback, ideas or find a new issue, please [create a new issue report in GitHub](https://github.com/apache/camel-karavan/issues)!
+If you have any feedback, ideas or find a new issue, please [create a new issue report in GitHub](https://github.com/apache/camel-k/issues)!
