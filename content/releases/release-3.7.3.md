@@ -1,5 +1,6 @@
 ---
 date: 2021-03-10
+eol: 2022-01-01
 draft: false
 type: release-note
 version: 3.7.3
