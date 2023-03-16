@@ -2,7 +2,7 @@
 url: "/releases/q-1.7.0/"
 date: 2021-02-19
 type: release-note
-version: "1.7.0"
+version: 1.7.0
 title: "Camel Quarkus release 1.7.0"
 preview: ""
 changelog: ""
