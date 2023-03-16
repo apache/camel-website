@@ -1,7 +1,7 @@
 ---
 url: "/releases/q-2.13.2/"
 date: 2022-12-16
-eol: 2022-03-26
+eol: 2023-03-26
 type: release-note
 version: 2.13.2
 title: "New LTS Camel Quarkus release 2.13.2"
