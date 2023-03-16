@@ -1,6 +1,6 @@
 ---
 url: "/releases/q-2.2.0/"
-date: 2021-09-01T10:00:00+01:00
+date: 2021-09-01
 type: release-note
 version: "2.2.0"
 title: "Camel Quarkus release 2.2.0"
