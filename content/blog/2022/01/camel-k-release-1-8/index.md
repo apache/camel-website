@@ -30,7 +30,7 @@ You already know, Camel K was imprinted with the concept of fast execution. One 
 
 ## Honor HTTP proxy settings
 
-We had this feature in our TODO list since a while. You will be able to use your HTTP(S) proxy in the Camel K Operator for any kind of egress operation (Maven dependencies, image pulling, ...). Moreover, once set, you will be able to have it automatically **configure the HTTP proxy settings** in all your `Integrations`. Just declare the typical HTTP proxy environment variables during Camel K Operator installation. Have a look a the [official documentation](/camel-k/next/configuration/http-proxy.html) for more details. 
+We had this feature in our TODO list since a while. You will be able to use your HTTP(S) proxy in the Camel K Operator for any kind of egress operation (Maven dependencies, image pulling, ...). Moreover, once set, you will be able to have it automatically **configure the HTTP proxy settings** in all your `Integrations`. Just declare the typical HTTP proxy environment variables during Camel K Operator installation. Have a look a the [official documentation](/camel-k/next/    installation/advanced/http-proxy.html) for more details. 
 
 ## Configurable Maven CLI options
 
