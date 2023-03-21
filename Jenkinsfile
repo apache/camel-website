@@ -29,8 +29,6 @@ pipeline {
             logRotator(artifactNumToKeepStr: '5', numToKeepStr: '10')
         )
 
-        ansiColor('xterm')
-
         checkoutToSubdirectory('camel-website')
     }
 
