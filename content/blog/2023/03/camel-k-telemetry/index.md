@@ -309,7 +309,7 @@ We are also using inventory.local and order.local host in ingress for the rest s
 
 As you can see we did not provide the OTLP API endpoint as Camel K automatically discovered the **Jaeger** OTLP API endpoint. For any other Distributed Tracing tool you will have to declare it through `-t telemetry.endpoint=xxxx`. The `telemetry` trait is expecting an [OTLP trace endpoint](https://opentelemetry.io/docs/concepts/sdk-configuration/otlp-exporter-configuration/#otel_exporter_otlp_traces_endpoint).
 
-Now that everything is up let's make some traces !
+Now that everything is up let's make some traces!
 
 ## Generate some integration traces
 
