@@ -9,15 +9,15 @@ preview: "Camel K: how to configure Distributed Tracing for an Integration"
 
 Tracing is an important approach for controlling and monitoring the experience of users, it allows us to gather more information about an integration's performance. 
 
-Camel K has been providing support for distributed tracing using OpenTracing since long time. At the beginning of 2022, the [CNCF](https://www.cncf.io) announced that there were [archiving the OpenTracing project](https://www.cncf.io/blog/2022/01/31/cncf-archives-the-opentracing-project/) in favor of the [OpenTelemetry project](https://opentelemetry.io/). OpenTelemetry is the latest solution created by merging OpenTracing and OpenCensus. As a result, we decided in Camel K 1.12 to introduce the [`telemetry` trait](/camel-k/1.12.x/traits/telemetry.html) based on OpenTelemetry. At the same time we decides to deprecate the [`tracing` trait](/camel-k/1.12.x/traits/tracing.html) based on OpenTracing.
+Camel K has been providing support for distributed tracing using OpenTracing since long time. At the beginning of 2022, the [CNCF](https://www.cncf.io) announced that they were [archiving the OpenTracing project](https://www.cncf.io/blog/2022/01/31/cncf-archives-the-opentracing-project/) in favor of the [OpenTelemetry project](https://opentelemetry.io/). OpenTelemetry is the latest solution created by merging OpenTracing and OpenCensus. As a result, we decided in Camel K 1.12 to introduce the [`telemetry` trait](/camel-k/1.12.x/traits/telemetry.html) based on OpenTelemetry. At the same time we decided to deprecate the [`tracing` trait](/camel-k/1.12.x/traits/tracing.html) based on OpenTracing.
 
-I'll walk you through the configurations needed to support Distributed tracing for your camel integrations in this blog post.
+I'll walk you through the configurations needed to support Distributed tracing for your Camel integrations in this blog post.
 
 ## Distributed Tracing tools
 
-OpenTelemetry defines the [OpenTelemetry Protocol (OTLP)](https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/protocol/otlp.md) that allows any Distributed Tracing tool that provides a OTLP compatible collector API to be used. While OpenTelemetry is still CNCF incubating project, its has become an industry-standard and is now natively supported by many Distributed Tracings tools.
+OpenTelemetry defines the [OpenTelemetry Protocol (OTLP)](https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/protocol/otlp.md) that allows any Distributed Tracing tool that provides an OTLP compatible collector API to be used. While OpenTelemetry is still CNCF incubating project, it has become an industry-standard and is now natively supported by many Distributed Tracings tools.
 
-The `telemetry` trait has been tested on Jaeger (v1.35+), OpenTelemetry Collector and Grafana Tempo to this day.
+The `telemetry` trait has been tested on Jaeger (v1.35+), OpenTelemetry Collector and Grafana Tempo at the time of writing this blog post.
 
 We will be using Jaeger for this blog post manipulations.
 
@@ -42,11 +42,11 @@ NAME                                READY   STATUS    RESTARTS   AGE
 camel-k-operator-5b897ddcdd-4qwqb   1/1     Running   0          50s
 ```
 
-For more informations see the [documentation](/camel-k/1.12.x/installation/installation.html)
+For more information see the [documentation](/camel-k/1.12.x/installation/installation.html)
 
 ## Install Jaeger
 
-For this installation, you should firt ensure that ingress is available on your kubernetes. If you are working on minikube `minikube addons enable ingress` should be enough.
+For this installation, you should first ensure that ingress is available on your kubernetes. If you are working on minikube `minikube addons enable ingress` should be enough.
 
 If Jaeger is not already available on your kubernetes instance, an easy way to install it on a kubernetes is to install the Jaeger operator (see https://www.jaegertracing.io/docs).
 
@@ -54,7 +54,7 @@ In short, to install the Jaeger operator you should:
 
 * Install cert-manager if it is not installed as it is required 
 ```sh
- # The cert manager is a pre-requise to the Jaeger operator (see https://cert-manager.io/docs/installation/)
+ # The cert manager is a prerequisite to the Jaeger operator (see https://cert-manager.io/docs/installation/)
 $ kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.10.1/cert-manager.yaml
 ```
 Wait 1 or 2 minutes, we want to ensure the cert-manager has had enough time to be fully deployed
@@ -84,7 +84,7 @@ metadata:
 EOF
 ```
 
-Check the presence of the Jaeger instance
+Check the presence of the Jaeger instance:
 
 ```sh
 $ kubectl get jaeger
@@ -96,7 +96,7 @@ instance   Running   1.42.0    allinone   memory    8s
 ## Run some Camel K Integrations with Telemetry trait
 
 Now that we have Jaeger available on the Kubernetes cluster, the next step is to run some integrations in a Kubernetes cluster where Camel K is installed.
-You can find the source code in the [Camel K example github repository](https://github.com/apache/camel-k-examples/tree/main/generic-examples/traits/telemetry).
+You can find the source code in the [Camel K example GitHub repository](https://github.com/apache/camel-k-examples/tree/main/generic-examples/traits/telemetry).
 
 We will be creating two integration routes as the distributed services:
 
@@ -191,7 +191,7 @@ public class InventoryService extends RouteBuilder {
 }
 ```
 
-* *Order* which is a rest service called by a user to place an order for an product, and will notify the *Inventory* service
+* *Order* which is a rest service called by a user to place an order for a product, that will then notify the *Inventory* service
 
 **`OrderService.java`**
 ```java
@@ -307,9 +307,9 @@ This configuration will:
 
 We are also using inventory.local and order.local host in ingress for the rest services so make sure that your DNS pointing to your cluster for both hostnames. You can execute `echo "$(minikube ip) order.local inventory.local" | sudo tee -a /etc/hosts` if you are working on minikube.
 
-As you can see we did not provide the OTLP API endpoint as Camel K automaticly discover the **Jaeger** OTLP API endpoint. For any other Distributed Tracing tool you will have to declare it through `-t telemetry.endpoint=xxxx`. The `telemetry` trait is expecting an [OTLP trace endpoint](https://opentelemetry.io/docs/concepts/sdk-configuration/otlp-exporter-configuration/#otel_exporter_otlp_traces_endpoint).
+As you can see we did not provide the OTLP API endpoint as Camel K automatically discovered the **Jaeger** OTLP API endpoint. For any other Distributed Tracing tool you will have to declare it through `-t telemetry.endpoint=xxxx`. The `telemetry` trait is expecting an [OTLP trace endpoint](https://opentelemetry.io/docs/concepts/sdk-configuration/otlp-exporter-configuration/#otel_exporter_otlp_traces_endpoint).
 
-Now that everything is up let's make somes traces !
+Now that everything is up let's make some traces !
 
 ## Generate some integration traces
 
@@ -352,7 +352,7 @@ As you can see, it is quite easy to improve the observability of your integratio
 
 We are encouraging migration from the `tracing` trait to the `telemetry` trait.
 
-To give you some inputs on your migration, I will show you how to collect and compare the traces usings both traits.
+To give you some inputs on your migration, I will show you how to collect and compare the traces using both traits.
 
 Let's deploy two different *Order* integrations to compare the traces generated :
 * stop collecting the traces from *Inventory* integration
@@ -385,7 +385,7 @@ $ kamel run OrderService.java --name order-tracing \
 Integration "order-tracing" created
 ```
 
-Don't forget to ensure the new order-tracing.local hostname is configured for your kubernetes cluster !
+Don't forget to ensure the new order-tracing.local hostname is configured for your kubernetes cluster!
 
 Let's create the same orders with the two order services:
 * one with the order service using the new `telemetry` trait
@@ -399,14 +399,14 @@ $ curl  http://order-tracing.local/place -d '{"orderId":21, "itemId":5, "quantit
 {"inventory":"{\"orderId\":21,\"itemId\":5,\"quantity\":1,\"department\":\"inventory\",\"datetime\":1678296184049}"}
 ```
 
-As you can see, going from the `trancing` to the `telemetry` is quite effortless. On the trace side, from one protocol to another you should expect some differences in your trancing:
+As you can see, going from the `trancing` to the `telemetry` is quite effortless. On the trace side, from one protocol to another you should expect some differences in your tracing:
 
 ![Difference between OpenTracing and OpenTelemtry traces](compare_tracing_telemetry.png)
 
 
 # Conclusion
 
-This blog post showed how you can use the new `telemetry` trait and how to work with the Jager Distributed Tracing tool. We also took the time to see how you can migrate from the deprecated `tracing` trait to the `telemetry` trait.
+This blog post showed how you can use the new `telemetry` trait and how to work with the Jaeger Distributed Tracing tool. We also took the time to see how you can migrate from the deprecated `tracing` trait to the `telemetry` trait.
 
 
 If you have any feedback, ideas or find a new issue, please [create a new issue report in GitHub](https://github.com/apache/camel-k/issues)!
