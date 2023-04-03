@@ -111,7 +111,7 @@ registry.observationConfig().observationHandler(new DefaultTracingObservationHan
 
 ## How does Micrometer Observation work with Camel?
 
-Apache Camel comes with an abstraction of a [`Tracer`](https://camel.apache.org/components/3.20.x/others/tracing.html). It automatically creates spans for Camel Routes.
+Apache Camel comes with an abstraction of a [`Tracer`](/components/3.20.x/others/tracing.html). It automatically creates spans for Camel Routes.
 
 With Micrometer Observation we've modified the concept of a `Tracer` to allow distingushing between high and low cardinality tags. That in turn allowed us to use the `Tracer` API to create `Observations` instead of spans. That allowed us to automatically create both traces and metrics depending on your `ObservationRegistry` setup.
 
