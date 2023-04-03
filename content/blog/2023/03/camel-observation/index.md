@@ -190,7 +190,7 @@ You should get a trace view similar to this one
 
 You will get Camel metrics. Example of one of the metrics from Prometheus
 
-![Prometheus](metrics.jpeg) 
+![Prometheus](metrics.jpeg)
 
 Example of plotting metrics in Grafana
 
