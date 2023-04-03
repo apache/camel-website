@@ -136,8 +136,8 @@ ObservationRegistry observationRegistry = ObservationRegistry.create();
 observationRegistry.observationConfig().observationHandler(new DefaultMeterObservationHandler(meterRegistry));
 observationRegistry.observationConfig().observationHandler(
     new ObservationHandler.FirstMatchingCompositeObservationHandler(
-        new PropagatingSenderTracingObservationHandler<>(tracer, propagator), 
-        new PropagatingReceiverTracingObservationHandler<>(tracer, propagator), 
+        new PropagatingSenderTracingObservationHandler<>(tracer, propagator),
+        new PropagatingReceiverTracingObservationHandler<>(tracer, propagator),
         new DefaultTracingObservationHandler(tracer)
     )
 );
