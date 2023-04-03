@@ -128,7 +128,7 @@ MicrometerObservationTracer micrometerObservationTracer = new MicrometerObservat
 MeterRegistry meterRegistry = new SimpleMeterRegistry();
 
 // Micrometer Tracing
-Tracer tracer = ...; 
+Tracer tracer = ...;
 Propagator propagator = ...;
 
 // Micrometer Observation setup
