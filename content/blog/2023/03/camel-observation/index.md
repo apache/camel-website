@@ -1,6 +1,6 @@
 ---
 title: "Camel Micrometer Observation: Observability with Micrometer"
-date: 2023-03-28
+date: 2023-04-04
 draft: false
 authors: [marcingrzejszczak]
 categories: ["Features", "Observability"]
