@@ -123,7 +123,7 @@ All of them have `org.apache.camel.springboot:camel-observation-starter` depende
 
 You should get a trace view similar to this one
 
-![Zipkin full trace](trace.png)
+![Zipkin full trace](trace.jpeg)
 
 You will get Camel metrics. Example of one of the metrics from Prometheus
 
