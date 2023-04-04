@@ -44,7 +44,7 @@ registry.observationConfig().observationHandler(new DefaultTracingObservationHan
 - <2> - for metrics a `MeterRegistry` is needed. Check the [docs](https://micrometer.io/docs/concepts) on more information on how to wotk with Micrometer
 - <3> - an `ObservationRegistry` is required to create `Observation`. Check the [docs](https://micrometer.io/docs/observation) on more information on how to set it up
 - <4> - to add capabilities to `ObservationRegistry` one needs to add handlers. Here you have an example of a handler for metrics
-- <5> - Here you have an example of a handler for tracing. This is a basic sample, for moew information check this [part of the docs](https://micrometer.io/docs/tracing#_handler_configuration)
+- <5> - Here you have an example of a handler for tracing. This is a basic sample, for more information check this [part of the docs](https://micrometer.io/docs/tracing#_handler_configuration)
 
 ## How does Micrometer Observation work with Camel?
 
