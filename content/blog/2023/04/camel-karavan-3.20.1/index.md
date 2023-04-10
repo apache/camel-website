@@ -15,24 +15,24 @@ This is a short [Karavan introduction](/blog/2023/01/karavan-intro/) aimed to he
 
 ## Hybrid Developer Experience
 
-Starting from this release, developers can work on the same repository from Karavan application as well as with Karavan VS Code extension. 
+Starting from this release, developers can work on the same repository from the Karavan application as well as with Karavan VS Code extension. 
 
-To synchronize repository and Karavan application, polling interval can be configured in Karavan CRD.
+To synchronize the repository and Karavan application, polling interval can be configured in Karavan CRD.
 
-If polling activated, it updates project information in Karavan application as well as starts pipeline for deployment if development environment.
+If polling is activated, it updates project information in the Karavan application as well as starts a pipeline for deployment in the development environment.
  
 ![hybrid-dev.png](hybrid-dev.png)
 
 ## Configurable subset of components
 Developer can limit component palette with a subset of components to be used by configuring path to the component list in Settings. Subset should be defined in JSON file in the same format as an output of `camel catalog component --json`.
 
-In current release subset of components implemented in VS Code extension only. Karavan application support coming soon.
+In the current release subset of components implemented in VS Code extension only. Karavan application support coming soon.
 
 ![config.png](config.png)
 
 ## Nice-to-have small improvements
-1. Developer can add custom Git commit message through Karavan application
-2. Developer can stop running pipeline in Karavan application
+1. Developers can add custom Git commit message through Karavan application
+2. Developers can stop running pipelines in Karavan application
 3. **Choice** DSL element comes with default **when** and **other** elements
 
 ![choice.gif](choice.gif)
