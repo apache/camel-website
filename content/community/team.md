@@ -178,6 +178,7 @@ If you have been contributing to the Apache Camel project, and you want your nam
 | Sachin Handiekar        |                                |
 | Sami Dalouche           |                                |
 | Sanjiv Jivan            |                                |
+| Stanislav Deviatov      | EPAM Systems                   |
 | Steven Marcus           |                                |
 | Taariq Levack           |                                |
 | Taylor Gautier          |                                |
