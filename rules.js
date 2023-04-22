@@ -6,6 +6,7 @@ class HtmlTitle extends Rule {
       description: "Title of the page must be defined"
     };
   }
+
   validateTitle(title) {
     if (!title.textContent || title.textContent.trim().length === 0) {
       this.report(title, "No title specified");
@@ -15,7 +16,6 @@ class HtmlTitle extends Rule {
       this.report(title, "Title starts with the `Untitled` make sure that the Asciidoc file starts with level 1 heading");
     }
   }
-
 
   setup() {
     this.on("dom:ready", event => {
@@ -29,7 +29,6 @@ class HtmlTitle extends Rule {
   }
 }
 
-
 class RelativeLinks extends Rule {
   documentation(context) {
     return {
@@ -40,12 +39,13 @@ class RelativeLinks extends Rule {
   setup() {
     this.on("dom:ready", event => {
       const anchors = event.document.getElementsByTagName('a');
-      if (anchors !== null) {
-        for (let i = 0; i < anchors.length; i++) {
-          const href = anchors[i].getAttribute("href");
-          if (href && href.startsWith("https://camel.apache.org")) {
-            this.report(anchors[i], `For links within camel.apache.org use relative links, found: ${href}`);
-          }
+      if (anchors === null) {
+        return;
+      }
+      for (let i = 0; i < anchors.length; i++) {
+        const href = anchors[i].getAttribute("href");
+        if (href && href.startsWith("https://camel.apache.org")) {
+          this.report(anchors[i], `For links within camel.apache.org use relative links, found: ${href}`);
         }
       }
     });
@@ -59,12 +59,22 @@ class StructuredData extends Rule {
     };
   }
 
-  
-setup() {
-    this.on('tag:close', event => {
+  setup() {
+    let start = -1;
+
+    this.on('tag:open', event => {
       const tag = event.target;
       if (tag.nodeName === 'script' && tag.hasAttribute('type') && tag.getAttribute('type').value === 'application/ld+json') {
-        const content = tag.textContent.trim();
+        start = tag.location.offset;
+      }
+    });
+
+    this.on('tag:close', event => {
+      const tag = event.previous;
+      if (tag.nodeName === 'script' && tag.hasAttribute('type') && tag.getAttribute('type').value === 'application/ld+json') {
+        const startIdx = data.indexOf('>', start) + 1;
+        const endIdx = tag.location.offset - 1; // omit the opening tag angled bracket
+        const content = data.substring(startIdx, endIdx);
         try {
           JSON.parse(content);
         } catch (err) {
@@ -75,7 +85,12 @@ setup() {
   }
 }
 
+let data;
+
 module.exports = {
+  setup(source) {
+    data = source.data;
+  },
   rules: {
     "camel/title": HtmlTitle,
     "camel/relative-links": RelativeLinks,
