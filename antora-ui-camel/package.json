@@ -20,6 +20,7 @@
     "preview": "gulp preview"
   },
   "devDependencies": {
+    "@asciidoctor/tabs": "1.0.0-beta.3",
     "@openfonts/open-sans_latin-ext": "^1.44.0",
     "asciidoctor.js": "1.5.9",
     "autoprefixer": "~9.7",

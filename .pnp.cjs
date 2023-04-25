@@ -45,6 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@antora/cli", "npm:3.0.0"],\
             ["@antora/site-generator", "npm:3.0.0"],\
+            ["@asciidoctor/tabs", "npm:1.0.0-beta.3"],\
             ["@deadlinks/cargo-deadlinks", "github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux"],\
             ["@djencks/antora-aggregate-collector", "npm:0.1.0-beta.1"],\
             ["@djencks/antora-site-manifest", "npm:0.0.3-rc.2"],\
@@ -458,6 +459,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@asciidoctor/core", "npm:2.2.5"],\
             ["asciidoctor-opal-runtime", "npm:0.3.3"],\
             ["unxhr", "npm:1.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@asciidoctor/tabs", [\
+        ["npm:1.0.0-beta.3", {\
+          "packageLocation": "./.yarn/cache/@asciidoctor-tabs-npm-1.0.0-beta.3-47cb3e60a0-e804b17951.zip/node_modules/@asciidoctor/tabs/",\
+          "packageDependencies": [\
+            ["@asciidoctor/tabs", "npm:1.0.0-beta.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4792,6 +4802,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./antora-ui-camel/",\
           "packageDependencies": [\
             ["antora-ui-camel", "workspace:antora-ui-camel"],\
+            ["@asciidoctor/tabs", "npm:1.0.0-beta.3"],\
             ["@openfonts/open-sans_latin-ext", "npm:1.44.2"],\
             ["algoliasearch", "npm:4.5.1"],\
             ["asciidoctor.js", "npm:1.5.9"],\
@@ -4908,6 +4919,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["apache-camel-website", "workspace:."],\
             ["@antora/cli", "npm:3.0.0"],\
             ["@antora/site-generator", "npm:3.0.0"],\
+            ["@asciidoctor/tabs", "npm:1.0.0-beta.3"],\
             ["@deadlinks/cargo-deadlinks", "github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux"],\
             ["@djencks/antora-aggregate-collector", "npm:0.1.0-beta.1"],\
             ["@djencks/antora-site-manifest", "npm:0.0.3-rc.2"],\

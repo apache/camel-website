@@ -137,6 +137,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@asciidoctor/tabs@npm:1.0.0-beta.3":
+  version: 1.0.0-beta.3
+  resolution: "@asciidoctor/tabs@npm:1.0.0-beta.3"
+  checksum: e804b1795121883a0aa5efb3229b7e5c77b5b90d97aa4e55f2a890729a10f6ed7e25ec406259ac0f3a5d494b574d6d3c8dfc3862297753a9f4dec7ecf66cdc69
+  languageName: node
+  linkType: hard
+
 "@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.10.1":
   version: 7.10.1
   resolution: "@babel/code-frame@npm:7.10.1"
@@ -846,6 +853,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "antora-ui-camel@workspace:."
   dependencies:
+    "@asciidoctor/tabs": 1.0.0-beta.3
     "@openfonts/open-sans_latin-ext": ^1.44.0
     algoliasearch: ^4.0.3
     asciidoctor.js: 1.5.9
