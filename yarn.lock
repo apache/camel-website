@@ -359,7 +359,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@asciidoctor/tabs@npm:1.0.0-beta.3":
+"@asciidoctor/tabs@npm:1.0.0-beta.3, @asciidoctor/tabs@npm:^1.0.0-beta.3":
   version: 1.0.0-beta.3
   resolution: "@asciidoctor/tabs@npm:1.0.0-beta.3"
   checksum: e804b1795121883a0aa5efb3229b7e5c77b5b90d97aa4e55f2a890729a10f6ed7e25ec406259ac0f3a5d494b574d6d3c8dfc3862297753a9f4dec7ecf66cdc69
@@ -3633,7 +3633,7 @@ __metadata:
   dependencies:
     "@antora/cli": ^3.0.0
     "@antora/site-generator": ^3.0.0
-    "@asciidoctor/tabs": 1.0.0-beta.3
+    "@asciidoctor/tabs": ^1.0.0-beta.3
     "@deadlinks/cargo-deadlinks": "github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux"
     "@djencks/antora-aggregate-collector": ^0.1.0-beta.1
     "@djencks/antora-site-manifest": ^0.0.3-rc.2
