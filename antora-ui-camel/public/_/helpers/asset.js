@@ -1,7 +1,7 @@
 'use strict'
 
 const manifest = {
-  "css/site.css": "css/site-00b7d111da.css",
+  "css/site.css": "css/site-66db361433.css",
   "img/algolia.svg": "img/algolia-05f7506b2a.svg",
   "img/apache-kafka.svg": "img/apache-kafka-712a1f3ba0.svg",
   "img/apache-karaf.svg": "img/apache-karaf-e55039ae99.svg",
@@ -41,7 +41,8 @@ const manifest = {
   "js/site.js": "js/site-c215fb6972.js",
   "js/vendor/algoliasearch.js": "js/vendor/algoliasearch-bad45193e2.js",
   "js/vendor/highlight.js": "js/vendor/highlight-621a10fe1b.js",
-  "js/vendor/svg4everybody.js": "js/vendor/svg4everybody-a0c573f2b9.js"
+  "js/vendor/svg4everybody.js": "js/vendor/svg4everybody-a0c573f2b9.js",
+  "js/vendor/tabs.js": "js/vendor/tabs-5aea11bcf5.js"
 }
 
 module.exports = (resource) => {

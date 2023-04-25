@@ -126,6 +126,7 @@ asciidoc:
   extensions:
     - ./extensions/table.js
     - ./extensions/inline-styles.js
+    - "@asciidoctor/tabs"
 
 runtime:
   log:

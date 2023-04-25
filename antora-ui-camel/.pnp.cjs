@@ -33,6 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@asciidoctor/tabs", "npm:1.0.0-beta.3"],\
             ["@openfonts/open-sans_latin-ext", "npm:1.44.0"],\
             ["algoliasearch", "npm:4.0.3"],\
             ["asciidoctor.js", "npm:1.5.9"],\
@@ -232,6 +233,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@algolia/cache-common", "npm:4.0.3"],\
             ["@algolia/logger-common", "npm:4.0.3"],\
             ["@algolia/requester-common", "npm:4.0.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@asciidoctor/tabs", [\
+        ["npm:1.0.0-beta.3", {\
+          "packageLocation": "./.yarn/cache/@asciidoctor-tabs-npm-1.0.0-beta.3-47cb3e60a0-e804b17951.zip/node_modules/@asciidoctor/tabs/",\
+          "packageDependencies": [\
+            ["@asciidoctor/tabs", "npm:1.0.0-beta.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1102,6 +1112,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["antora-ui-camel", "workspace:."],\
+            ["@asciidoctor/tabs", "npm:1.0.0-beta.3"],\
             ["@openfonts/open-sans_latin-ext", "npm:1.44.0"],\
             ["algoliasearch", "npm:4.0.3"],\
             ["asciidoctor.js", "npm:1.5.9"],\
