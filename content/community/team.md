@@ -34,7 +34,7 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 | Freeman Fang           | ffang            | Red Hat                    |
 | Gary Tully             | gtully           | Red Hat                    |
 | Gert Vanthienen        | gertv            |                            |
-| Gregor Zurowski        | gzurowski        | Sotheby's                  |
+| Gregor Zurowski        | gzurowski        | Independent consultant     |
 | Guillaume Nodet        | gnodet           | Red Hat                    |
 | Hadrian Zbarcea        | hadrian          |                            |
 | Henryk Konsek          | hekonsek         |                            |
