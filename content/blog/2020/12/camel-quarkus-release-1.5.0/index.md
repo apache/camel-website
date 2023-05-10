@@ -47,7 +47,7 @@ The following extensions are now supported in native mode:
 * [Protobuf](/camel-quarkus/next/reference/extensions/protobuf.html)
 * Avro RPC
 * [SCP](/camel-quarkus/next/reference/extensions/jsch.html)
-* [Solr](/camel-quarkus/next/reference/extensions/solr.html)
+* Solr
 * [Google PubSub](/camel-quarkus/next/reference/extensions/google-pubsub.html)
 * [Google BigQuery](/camel-quarkus/next/reference/extensions/google-bigquery.html)
 * OptaPlanner
