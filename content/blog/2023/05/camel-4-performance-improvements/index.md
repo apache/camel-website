@@ -21,7 +21,7 @@ The JVM issue [JDK-8180450](https://bugs.openjdk.org/browse/JDK-8180450), known 
 
 # Unveiling Performance Insights
 
-Our investigation highlighted a significant concern related to the instructions per second (IPS) when utilizing the disruptor component in earlier versions of Camel (e.g., Camel 3.14, 3.18, and 3.20). Notably, we observed IPS values of approximately 0.71, 0.81, and 0.77, respectively. These numbers indicated a performance bottleneck where the CPU experienced delays due to memory I/O.
+Our investigation highlighted a significant concern related to the instructions per cycle (IPC) when utilizing the disruptor component in earlier versions of Camel (e.g., Camel 3.14, 3.18, and 3.20). Notably, we observed IPC values of approximately 0.71, 0.81, and 0.77, respectively. These numbers indicated a performance bottleneck where the CPU experienced delays due to memory I/O.
 
 To delve deeper, we employed the [type-pollution-agent](https://github.com/RedHatPerf/type-pollution-agent), which successfully generated a comprehensive report detailing the affected conversions. This report [validated](https://issues.apache.org/jira/browse/CAMEL-19058) our suspicions and [emphasized the need](https://issues.apache.org/jira/browse/CAMEL-19060) for immediate attention to overcome the performance [barriers](https://issues.apache.org/jira/browse/CAMEL-19319). Notably, we discovered that the `Exchange`, `CamelContext`, and `Message` were among the critical elements affected by this performance issue.
 
