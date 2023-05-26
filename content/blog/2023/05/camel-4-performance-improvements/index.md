@@ -11,7 +11,7 @@ preview: "Hunting performance monsters on the back of a Camel"
 
 We are thrilled to share the remarkable advancements in the performance of Apache Camel 4, achieved through our diligent efforts in addressing a critical JVM issue (JDK-8180450). In this article, we will delve into the details of our investigation, the tools employed, and the subsequent optimizations that have propelled Apache Camel 4 to new heights of speed and efficiency.
 
-Identifying the Performance Challenge:
+# Identifying the Performance Challenge
 
 The JVM issue [JDK-8180450](https://bugs.openjdk.org/browse/JDK-8180450), known for its potential performance penalties during type checking, became our focal point. To gain a comprehensive understanding of the issue, we extensively utilized diagnostic tools such as perf stat, perf c2c, the async-profiler, and the type-pollution-agent, as recommended in the [JDK-8180450 troubleshooting documentation](https://github.com/RedHatPerf/type-pollution-agent/blob/master/benchmarks/WHATIF.md).
 
