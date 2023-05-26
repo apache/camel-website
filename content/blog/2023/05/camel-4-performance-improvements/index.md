@@ -74,7 +74,7 @@ The results were highly encouraging, with Apache Camel 4 outperforming its prede
 
 ![chart](baseline-camel-3.18.6-2023-05-13-threaded-disruptor-producer-chart.png)
 
-* Notably, the disruptor component in Apache Camel 4 demonstrated its superiority, outperforming disruptor on Camel 3.20.4 in a remarkable 91.9% of the cases.
+* Notably, the disruptor component in Apache Camel 4 demonstrated its superiority, outperforming disruptor on Camel 3.20.4 in a remarkable 93.5% of the cases.
 
 ![chart](baseline-camel-3.20.4-2023-05-17-threaded-disruptor-producer-chart.png)
 
