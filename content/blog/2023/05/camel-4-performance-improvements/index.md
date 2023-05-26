@@ -35,29 +35,29 @@ Through meticulous workarounds addressing the JVM issue and implementing optimiz
 
 * With 3 consumers and 2 producers, the disruptor component witnessed a remarkable 20% performance enhancement.
 
-![graph](baseline-camel-3.20.4-2023-05-17-threaded-disruptor-producer-consumer-threads-3-producer-2.png)
+![graph](baseline-camel-3.20.4-2023-05-17-threaded-disruptor-producer-consumer-threads-3-producer-2.svg)
 
 * Scaling up to 6 consumers and 5 producers, the disruptor component maintained its accelerated pace, delivering a consistent 35% improvement.
 
-![graph](baseline-camel-3.20.4-2023-05-17-threaded-disruptor-producer-consumer-threads-6-producer-5.png)
+![graph](baseline-camel-3.20.4-2023-05-17-threaded-disruptor-producer-consumer-threads-6-producer-5.svg)
 
 * Furthermore, with 9 consumers and 9 producers, the disruptor component exhibited a notable 19% increase in performance.
 
-![graph](baseline-camel-3.20.4-2023-05-17-threaded-disruptor-producer-consumer-threads-9-producer-9.png)
+![graph](baseline-camel-3.20.4-2023-05-17-threaded-disruptor-producer-consumer-threads-9-producer-9.svg)
 
 Similarly, the SEDA component showcased significant advancements:
 
 * Utilizing 2 consumers and 1 producer, the seda component achieved an impressive 19% boost in performance.
 
-![graph](baseline-camel-3.18.6-2023-05-12-threaded-seda-producer-consumer-threads-2-producer-1.png)
+![graph](baseline-camel-3.18.6-2023-05-12-threaded-seda-producer-consumer-threads-2-producer-1.svg)
 
 * Scaling up to 4 consumers and 1 producer, it demonstrated a commendable 18% improvement.
 
-![graph](baseline-camel-3.18.6-2023-05-12-threaded-seda-producer-consumer-threads-4-producer-1.png)
+![graph](baseline-camel-3.18.6-2023-05-12-threaded-seda-producer-consumer-threads-4-producer-1.svg)
 
 * Scaling further to 8 consumers and 1 producer, the seda component soared with a remarkable 51% performance enhancement.
 
-![graph](baseline-camel-3.18.6-2023-05-12-threaded-seda-producer-consumer-threads-8-producer-1.png)
+![graph](baseline-camel-3.18.6-2023-05-12-threaded-seda-producer-consumer-threads-8-producer-1.svg)
 
 # Validation Through Rigorous Testing
 
@@ -68,15 +68,15 @@ The results were highly encouraging, with Apache Camel 4 outperforming its prede
 
 * In 80% of the cases, the SEDA component of Apache Camel 4 surpassed SEDA on Camel 3.20.4 in terms of performance.
 
-![chart](baseline-camel-3.20.4-2023-05-13-threaded-seda-producer-chart.png)
+![chart](baseline-camel-3.20.4-2023-05-13-threaded-seda-producer-chart.svg)
 
 * The disruptor component in Apache Camel 4 outperformed disruptor on Camel 3.18.6 in 80.6% of the tests.
 
-![chart](baseline-camel-3.18.6-2023-05-13-threaded-disruptor-producer-chart.png)
+![chart](baseline-camel-3.18.6-2023-05-13-threaded-disruptor-producer-chart.svg)
 
 * Notably, the disruptor component in Apache Camel 4 demonstrated its superiority, outperforming disruptor on Camel 3.20.4 in a remarkable 93.5% of the cases.
 
-![chart](baseline-camel-3.20.4-2023-05-17-threaded-disruptor-producer-chart.png)
+![chart](baseline-camel-3.20.4-2023-05-17-threaded-disruptor-producer-chart.svg)
 
 # Future Endeavors
 
