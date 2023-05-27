@@ -6,6 +6,9 @@ authors: [mikeintoch]
 categories: ["Features", "Camel"]
 preview: "Capturing database change records using Apache Camel and Debezium"
 ---
+<p align="center">
+<img src="header-image.svg" width="479" height="244">
+</p>
 
 In this article, we will explore how to use Debezium and Apache Camel in conjunction with Quarkus to build a reactive application efficiently and send real-time changes from a database to a destination, such as webservice or message queue or another database.
 
@@ -34,7 +37,9 @@ In addition, using Debezium with Camel allows you to not rely on an external Kaf
 
 This is useful for ETL (Extract, Transform, Load) processes, as it allows moving data from one system to another in real time, as in the following example:
 
-![Example Architecture Diagram](architecture.png)
+<p align="center">
+<img src="architecture.png" width="840" height="170">
+</p>
 
 Camel includes components for Debezium in its implementation which allows to use it inside Apache Camel as a consumer endpoint which allows to run the [Debezium engine in an embedded way](https://debezium.io/documentation/reference/stable/development/engine.html) in the running instance of Camel.
 
@@ -139,7 +144,10 @@ curl http://localhost:8080/customer -XPOST -i -H 'Content-Type: application/json
 ```
 
 `Step 7.` Finally verify that the data is at its final destination.
-![Mongodb Image](mongo-db.png)
+
+<p align="center">
+<img src="mongo-db.png" width="603" height="514">
+</p>
 
 # Conclusion
 
