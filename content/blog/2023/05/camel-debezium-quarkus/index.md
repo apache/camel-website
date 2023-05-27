@@ -4,7 +4,7 @@ date:
 draft: true
 authors: [mikeintoch]
 categories: ["Features", "Camel"]
-preview: "Change Data Capture with Apache Camel and Debezium"
+preview: "Capturing database change records using Apache Camel and Debezium"
 ---
 
 In this article, we will explore how to use Debezium and Apache Camel in conjunction with Quarkus to build a reactive application efficiently and send real-time changes from a database to a destination, such as webservice or message queue or another database.
