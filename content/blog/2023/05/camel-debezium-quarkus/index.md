@@ -1,7 +1,7 @@
 ---
 title: "Change Data Capture with Apache Camel and Debezium"
 date: 
-draft: true
+draft: false
 authors: [mikeintoch]
 categories: ["Features", "Camel"]
 preview: "Capturing database change records using Apache Camel and Debezium"
@@ -16,15 +16,11 @@ In this article, we will explore how to use Debezium and Apache Camel in conjunc
 
 Debezium is a distributed, event-driven data change platform used to capture data changes in database systems and send them to other systems in real time so that applications can respond to all database insertions, updates and deletions made by other applications. Debezium can connect to a variety of database systems, including MySQL, PostgreSQL, MongoDB, SQL Server and Oracle.
 
-# What is Apache Camel?
-
-Apache Camel is an open source integration framework that provides a wide variety of components and integration patterns to help developers integrate applications efficiently. Camel integrates easily with other systems and technologies, making it a valuable tool for developers who need to integrate multiple systems efficiently.
-
 # What is Quarkus?
 
-Quarkus is a Java application development framework designed for the cloud and optimized for OpenJDK HotSpot and GraalVM. Quarkus is based on the Java EE platform and provides a complete set of features for developing cloud-native applications. Quarkus also supports several popular open source frameworks and libraries, making it easy to integrate technologies such as Debezium and Apache Camel.
+Quarkus is a full-stack, Kubernetes-native Java framework made for Java virtual machines (JVMs) and native compilation (GraalVM), optimizing Java specifically for containers and enabling it to become an effective platform for serverless, cloud, and Kubernetes environments. Quarkus also supports several popular open source frameworks and libraries, making it easy to integrate technologies such as Debezium and Apache Camel.
 
-# Apache Camel y Debezium
+# Debezium with Apache Camel
 
 Using Debezium with Apache Camel can provide several advantages, including:
 
@@ -59,7 +55,7 @@ You can find the complete [source code](https://github.com/mikeintoch/quarkus-de
 mvn io.quarkus:quarkus-maven-plugin:2.15.3.Final:create \                                                                                          
     -DprojectGroupId=dev.mikeintoch \
     -DprojectArtifactId=quarkus-debezium-camel \
-    -Dextensions="camel-quarkus-core,camel-quarkus-debezium-postgres,camel-quarkus-direct,camel-quarkus-rest,camel-quarkus-jsonpath,camel-quarkus-jackson,camel-quarkus-mongodb,camel-quarkus-jpa,quarkus-hibernate-orm,quarkus-agroal"
+    -Dextensions="camel-quarkus-core,camel-quarkus-debezium-postgres,camel-quarkus-direct,camel-quarkus-rest,camel-quarkus-jsonpath,camel-quarkus-mongodb,camel-quarkus-jpa,quarkus-hibernate-orm,quarkus-agroal"
 ```
 
 `Step 2.` Configure Debezium to connect to the PostgreSQL database and capture the changes. Create a new file called `application.properties` and add the following properties:
@@ -81,7 +77,7 @@ camel.component.debezium-postgres.offset-flush-interval-ms=10000
 
 `Step 3.` Create a Camel route to process the changes captured by Debezium. Create a new file named `DebeziumRoute.java` and add the following code:
 ```java
-import java.util.Map
+import java.util.Map;
 
 import org.apache.camel.builder.RouteBuilder;
 
@@ -94,20 +90,13 @@ public class DebeziumRoute extends RouteBuilder {
         .log("${body}")
         .choice()
           .when(header("CamelDebeziumOperation").isEqualTo("c"))
-              .process(exchange -> {
-                  // Transform the data to a format suitable for MongoDB
-                  Map<String, Object> data = exchange.getIn().getBody(Map.class);
-                  data.remove("updated_at");
-                  data.remove("created_at");
-                  data.remove("phone");
-                  exchange.getIn().setBody(data);
-                })
+              .convertBodyTo(Map.class)
               .to("mongodb:mydb?database={{mongodb.database}}&collection={{mongodb.collection}}&operation=insert");
     }
 }
 ```
 
-This route will listen for changes in the client table of the `my_db` database and send them to a `mongodb database`. Also processing the data to only process the record creation events, curing the message by removing unneeded information.
+This route will listen for changes in the client table of the `my_db` database and send them to a `mongodb database`. Also processing the data to only process the record creation events.
 
 `Step 5.` Configure services to test locally.
 
@@ -140,7 +129,7 @@ curl http://localhost:8080/customer -XPOST -i -H 'Content-Type: application/json
 
 curl http://localhost:8080/customer -XPOST -i -H 'Content-Type: application/json' -d '{"name": "Carmen Rojas","email": "carmen@example.com","phone":"+355-945-894","country": "Albania"}'
 
-curl http://localhost:8080/customer -XPOST -i -H 'Content-Type: application/json' -d '{"name": "Joe Robinson","email": "joerobinson@example.com","phone":"+1-746-8796","country": "United States"}
+curl http://localhost:8080/customer -XPOST -i -H 'Content-Type: application/json' -d '{"name": "Joe Robinson","email": "joerobinson@example.com","phone":"+1-746-8796","country": "United States"}'
 ```
 
 `Step 7.` Finally verify that the data is at its final destination.
@@ -156,3 +145,6 @@ Apache Camel and Debezium provide an excellent combination for building event-dr
 By using these tools together, you can create microservices and applications that can react in real time to changes in your data sources, without the need for costly and complex data synchronization processes. This can lead to significant improvements in data consistency and reliability, as well as faster and more efficient data processing.
 
 You can find the complete [source code](https://github.com/mikeintoch/quarkus-debezium-camel) of the example on GitHub.
+
+
+> **_NOTE:_** This is a translation/contribution based on the original article available in Spanish at [https://contenerizar.com/capturar-cambios-en-bases-de-datos-con-debezium-y-apache-camel](https://contenerizar.com/capturar-cambios-en-bases-de-datos-con-debezium-y-apache-camel)
