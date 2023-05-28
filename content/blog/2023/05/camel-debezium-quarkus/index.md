@@ -28,12 +28,12 @@ Quarkus is a Java application development framework designed for the cloud and o
 
 Using Debezium with Apache Camel can provide several advantages, including:
 
-- `Full integration`:Camel provides a wide range of connectors and components that can be used to integrate with different data sources and destinations. Debezium can easily integrate with Camel, allowing you to capture and transmit database changes to various destinations/systems.
+- `Full integration`: Camel provides a wide range of connectors/components that can be used to integrate with different data sources and destinations. Debezium can easily integrate with Camel, allowing you to capture and transmit database changes to various destinations/systems.
 - `Simplified data transformations`: Camel provides data transformation capabilities that can be used to convert data formats and structures. When used in conjunction with Debezium, Camel can be used to transform and filter database changes, facilitating data processing.
 - `Flexible Routing`: Camel provides a flexible routing engine that can be used to route data based on various criteria, such as the source or destination of the data. When used in conjunction with Debezium, Camel can be used to route database changes to different destinations based on data content.
 - `Scalability`: Debezium provides a distributed architecture that can be used to scale horizontally. When used with Apache Camel, you can leverage the scalability of Debezium and Camel to handle large volumes of data changes and process them in real time.
 
-In addition, using Debezium with Camel allows you to not rely on an external Kafka cluster or configure *"Kafka Service Connectors"*. Instead, Debezium runs directly in the context of the application,capturing the same change events within the database.
+In addition, using Debezium with Camel allows you to not rely on an external Kafka cluster or configure *"Kafka Service Connectors"*. Instead, Debezium runs directly in the context of the application, capturing the same change events within the database.
 
 This is useful for ETL (Extract, Transform, Load) processes, as it allows moving data from one system to another in real time, as in the following example:
 
@@ -41,9 +41,9 @@ This is useful for ETL (Extract, Transform, Load) processes, as it allows moving
 <img src="architecture.png" width="840" height="170">
 </p>
 
-Camel includes components for Debezium in its implementation which allows to use it inside Apache Camel as a consumer endpoint which allows to run the [Debezium engine in an embedded way](https://debezium.io/documentation/reference/stable/development/engine.html) in the running instance of Camel.
+Camel includes components for Debezium in its implementation which allows to use it inside Apache Camel as a consumer endpoint which allows running the [Debezium engine in an embedded way](https://debezium.io/documentation/reference/stable/development/engine.html) in the running instance of Camel.
 
-Some of the connectors currently available are:
+Some of the components currently available are:
 - [Debezium MySQL Connector Component](https://camel.apache.org/components/latest/debezium-mysql-component.html)
 - [Debezium PostgreSQL Connector Component](https://camel.apache.org/components/latest/debezium-postgres-component.html)
 - [Debezium SQL Server Connector Component](https://camel.apache.org/components/latest/debezium-sqlserver-component.html)
