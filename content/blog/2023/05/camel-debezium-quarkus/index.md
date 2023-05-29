@@ -6,9 +6,8 @@ authors: [mikeintoch]
 categories: ["Features", "Camel"]
 preview: "Capturing database change records using Apache Camel and Debezium"
 ---
-<p align="center">
-<img src="header-image.svg" width="479" height="244">
-</p>
+
+![header](header-image.svg)
 
 In this article, we will explore how to use Debezium and Apache Camel in conjunction with Quarkus to build a reactive application efficiently and send real-time changes from a database to a destination, such as webservice or message queue or another database.
 
@@ -134,9 +133,7 @@ curl http://localhost:8080/customer -XPOST -i -H 'Content-Type: application/json
 
 `Step 7.` Finally verify that the data is at its final destination.
 
-<p align="center">
-<img src="mongo-db.png" width="603" height="514">
-</p>
+![mongo-db](mongo-db.png)
 
 # Conclusion
 
