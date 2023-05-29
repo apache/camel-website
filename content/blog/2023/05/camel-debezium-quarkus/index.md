@@ -39,7 +39,7 @@ Camel includes components for Debezium in its implementation which allows to use
 
 Some of the components currently available are:
 - [Debezium MySQL Connector Component](/components/3.20.x/debezium-mysql-component.html)
-- [Debezium PostgreSQL Connector Component](/components/3.20.xlatest/debezium-postgres-component.html)
+- [Debezium PostgreSQL Connector Component](/components/3.20.x/debezium-postgres-component.html)
 - [Debezium SQL Server Connector Component](/components/3.20.x/debezium-sqlserver-component.html)
 - [Debezium MongoDB Connector Component](/components/3.20.x/debezium-mongodb-component.html)
 - [Debezium Oracle Connector Component](/components/3.20.x/debezium-oracle-component.html) (So far it is still not supported in Quarkus)
