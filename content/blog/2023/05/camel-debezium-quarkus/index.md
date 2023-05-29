@@ -38,11 +38,11 @@ This is useful for ETL (Extract, Transform, Load) processes, as it allows moving
 Camel includes components for Debezium in its implementation which allows to use it inside Apache Camel as a consumer endpoint which allows running the [Debezium engine in an embedded way](https://debezium.io/documentation/reference/stable/development/engine.html) in the running instance of Camel.
 
 Some of the components currently available are:
-- [Debezium MySQL Connector Component](/components/latest/debezium-mysql-component.html)
-- [Debezium PostgreSQL Connector Component](/components/latest/debezium-postgres-component.html)
-- [Debezium SQL Server Connector Component](/components/latest/debezium-sqlserver-component.html)
-- [Debezium MongoDB Connector Component](/components/latest/debezium-mongodb-component.html)
-- [Debezium Oracle Connector Component](/components/latest/debezium-oracle-component.html) (So far it is still not supported in Quarkus)
+- [Debezium MySQL Connector Component](/components/3.20.x/debezium-mysql-component.html)
+- [Debezium PostgreSQL Connector Component](/components/3.20.xlatest/debezium-postgres-component.html)
+- [Debezium SQL Server Connector Component](/components/3.20.x/debezium-sqlserver-component.html)
+- [Debezium MongoDB Connector Component](/components/3.20.x/debezium-mongodb-component.html)
+- [Debezium Oracle Connector Component](/components/3.20.x/debezium-oracle-component.html) (So far it is still not supported in Quarkus)
 
 Now that we have introduced the different technologies we are going to use, let's start building our application.
 
