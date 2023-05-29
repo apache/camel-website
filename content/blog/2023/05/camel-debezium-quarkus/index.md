@@ -32,9 +32,8 @@ In addition, using Debezium with Camel allows you to not rely on an external Kaf
 
 This is useful for ETL (Extract, Transform, Load) processes, as it allows moving data from one system to another in real time, as in the following example:
 
-<p align="center">
-<img src="architecture.png" width="840" height="170">
-</p>
+
+![header](architecture.png)
 
 Camel includes components for Debezium in its implementation which allows to use it inside Apache Camel as a consumer endpoint which allows running the [Debezium engine in an embedded way](https://debezium.io/documentation/reference/stable/development/engine.html) in the running instance of Camel.
 
