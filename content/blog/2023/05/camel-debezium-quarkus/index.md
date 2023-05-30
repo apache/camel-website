@@ -96,7 +96,7 @@ public class DebeziumRoute extends RouteBuilder {
 
 This route will listen for changes in the client table of the `my_db` database and send them to a `mongodb database`. Also processing the data to only process the record creation events.
 
-`Step 5.` Configure services to test locally.
+`Step 4.` Configure services to test locally.
 
 Use [Quarkus Dev Services](https://quarkus.io/guides/dev-services), a powerful feature of the Quarkus framework that simplifies the development and testing of applications that rely on external services such as databases, messaging systems, and other resources. It allows developers to automatically start and manage these external services during development and testing, eliminating the need to manually configure them or use a separate environment for testing. This feature reduces the complexity of the development process, increases efficiency and helps ensure that your application works properly in production environments. With Quarkus DevServices, developers can focus on writing code and building high-quality applications instead of managing complex dependencies by using containers to pull up these services.
 
@@ -115,7 +115,7 @@ quarkus.mongodb.devservices.enabled=true
 quarkus.mongodb.devservices.port=27017
 ```
 
-`Step 6.` Run the application.
+`Step 5.` Run the application.
 ```bash
 mvn quarkus:dev
 ```
@@ -130,7 +130,7 @@ curl http://localhost:8080/customer -XPOST -i -H 'Content-Type: application/json
 curl http://localhost:8080/customer -XPOST -i -H 'Content-Type: application/json' -d '{"name": "Joe Robinson","email": "joerobinson@example.com","phone":"+1-746-8796","country": "United States"}'
 ```
 
-`Step 7.` Finally verify that the data is at its final destination.
+`Step 6.` Finally verify that the data is at its final destination.
 
 ![mongo-db](mongo-db.png)
 
@@ -142,5 +142,4 @@ By using these tools together, you can create microservices and applications tha
 
 You can find the complete [source code](https://github.com/mikeintoch/quarkus-debezium-camel) of the example on GitHub.
 
-
-> **_NOTE:_** This is a translation/contribution based on the original article available in Spanish at [https://contenerizar.com/capturar-cambios-en-bases-de-datos-con-debezium-y-apache-camel](https://contenerizar.com/capturar-cambios-en-bases-de-datos-con-debezium-y-apache-camel)
+**_NOTE: This is a translation/contribution based on the original article available in Spanish at [https://contenerizar.com/capturar-cambios-en-bases-de-datos-con-debezium-y-apache-camel](https://contenerizar.com/capturar-cambios-en-bases-de-datos-con-debezium-y-apache-camel)_**
