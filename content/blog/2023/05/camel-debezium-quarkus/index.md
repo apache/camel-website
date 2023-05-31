@@ -49,11 +49,11 @@ Now that we have introduced the different technologies we are going to use, let'
 You can find the complete [source code](https://github.com/mikeintoch/quarkus-debezium-camel) of the example on GitHub.
 
 `Step 1.` Create a quarkus application using maven, with the dependencies needed to build our application.
-```bash
-mvn io.quarkus:quarkus-maven-plugin:2.15.3.Final:create \                                                                                          
-    -DprojectGroupId=dev.mikeintoch \
-    -DprojectArtifactId=quarkus-debezium-camel \
-    -Dextensions="camel-quarkus-core,camel-quarkus-debezium-postgres,camel-quarkus-direct,camel-quarkus-rest,camel-quarkus-jsonpath,camel-quarkus-mongodb,camel-quarkus-jpa,quarkus-hibernate-orm,quarkus-agroal"
+```shell script
+mvn io.quarkus:quarkus-maven-plugin:2.15.3.Final:create \
+-DprojectGroupId=dev.mikeintoch \
+-DprojectArtifactId=quarkus-debezium-camel \
+-Dextensions="camel-quarkus-core,camel-quarkus-debezium-postgres,camel-quarkus-direct,camel-quarkus-rest,camel-quarkus-jsonpath,camel-quarkus-mongodb,camel-quarkus-jpa,quarkus-hibernate-orm,quarkus-agroal"
 ```
 
 `Step 2.` Configure Debezium to connect to the PostgreSQL database and capture the changes. Create a new file called `application.properties` and add the following properties:
@@ -116,7 +116,7 @@ quarkus.mongodb.devservices.port=27017
 ```
 
 `Step 5.` Run the application.
-```bash
+```shell script
 mvn quarkus:dev
 ```
 This will deploy two containers, a Postgresql container and a MongoDB container to test the application.
