@@ -1,6 +1,6 @@
 ---
 title: "Change Data Capture with Apache Camel and Debezium"
-date: 2023-05-29
+date: 2023-05-31
 draft: false
 authors: [mikeintoch]
 categories: ["Features", "Camel"]
