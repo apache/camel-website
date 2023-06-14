@@ -53,6 +53,7 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 | James Strachan         | jstrachan        |                            |
 | Karen Lease            | klease           |                            |
 | Luca Burgazzoli        | lburgazzoli      | Red Hat                    |
+| Marat Gubaidullin      | mgubaidullin     | Talisman Cloud             |
 | Martin Krasser         | krasserm         |                            |
 | Nicky Sandhu           | nsandhu          |                            |
 | Nicola Ferraro         | nicolaferraro    | Redpanda                   |
