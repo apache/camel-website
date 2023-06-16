@@ -1,6 +1,6 @@
 ---
 title: "RELEASE 3.18.8"
-date: 2023-05-25
+date: 2023-06-16
 draft: false
 authors: [gzurowski]
 categories: ["Releases"]
