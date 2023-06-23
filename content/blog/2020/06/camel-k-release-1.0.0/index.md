@@ -181,7 +181,7 @@ kamel run Handler.java
 
 The other options are taken automatically from the file modeline. The CLI also displays the full command to let you know what's running.
 
-This kind of configuration is extremely useful in CI/CD scenarios because it allows you to have self-contained integration files and you don't need to change the pipeline to setup additional options. If you're curious about the CI/CD configurations, you can follow the [tutorial about Tekton pipelines](/camel-k/next/tutorials/tekton/tekton.html) to have more information.
+This kind of configuration is extremely useful in CI/CD scenarios because it allows you to have self-contained integration files and you don't need to change the pipeline to setup additional options. If you're curious about the CI/CD configurations, you can follow the tutorial about Tekton pipelines to have more information.
 
 ## Monitoring and Tracing
 
