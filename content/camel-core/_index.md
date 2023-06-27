@@ -92,7 +92,7 @@ The Apache Camel Core is the foundation for all other projects. Ideal for experi
 	Everything you need to know to make a <b>contribution</b> to the Camel Core project. Learn how to <b>build, test, document</b> and improve the project.
 </p>
 
-<a class="button dark" href="../community/contributing">Learn More</a>
+<a class="button dark" href="/camel-core/contributing/">Learn More</a>
 
 {{< /div >}}
 

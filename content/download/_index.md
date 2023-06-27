@@ -6,7 +6,7 @@ We do frequent releases, a release almost every month, and even though we strive
 
 Unless you need the latest features, you might consider using a Long Term Support (LTS) version that will receive bug and security fixes for a longer time - up to one year.
 
-A good strategy to prepare for future LTS releases might be to test the latest releases. You can do this on less impactful projects or by running tests of your codebase against newer releases. Please do [report any issues](/community/contributing/#if-you-find-a-bug-or-problem) with functionality or backward compatibility so they can be addressed in time for the LTS version.
+A good strategy to prepare for future LTS releases might be to test the latest releases. You can do this on less impactful projects or by running tests of your codebase against newer releases. Please do [report any issues](/community/contributing/) with functionality or backward compatibility so they can be addressed in time for the LTS version.
 
 For information on the release planning look at the blog posts in the [Roadmap](/categories/Roadmap/) category.
 
