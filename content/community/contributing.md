@@ -55,7 +55,21 @@ We recommend working on the code from the [camel GitHub repository](https://gith
 
 **NOTE:** If you are an Apache Camel committer, then you may also clone the [ASF git repo](https://gitbox.apache.org/repos/asf/camel.git).
 
-Build the project with [Maven](http://maven.apache.org/download.html). Maven 3.6.x or newer is required to build Camel 3 or later. The following command will do a fast build.
+Now it is time to build the project with [Maven](http://maven.apache.org/download.html).
+
+The recommended Maven version may differ by branch.
+Running the Maven Wrapper script with `-v` parameter from the root directory of the project will reveal the recommended Maven version:
+
+    ./mvnw -v
+    Apache Maven 1.2.3
+    Maven home: /home/user/.m2/wrapper/dists/apache-maven-1.2.3-bin/deadbeef/apache-maven-1.2.3
+    Java version: 17.0.5, vendor: Eclipse Adoptium, runtime: /home/user/java/17.0.5-tem
+    Default locale: en_IE, platform encoding: UTF-8
+    OS name: "linux", version: "6.3.7-200.fc38.x86_64", arch: "amd64", family: "unix"
+
+If you do not like installing Maven manually, you can keep using `mvnw` instead of `mvn`.
+
+Once you have the right version of Maven available, you can trigger a fast build using the following command:
 
     mvn clean install -Pfastinstall
 
