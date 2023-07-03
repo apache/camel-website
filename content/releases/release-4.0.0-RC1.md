@@ -1,5 +1,5 @@
 ---
-date: 2023-06-03
+date: 2023-07-03
 draft: false
 type: release-note
 version: 4.0.0-RC1
