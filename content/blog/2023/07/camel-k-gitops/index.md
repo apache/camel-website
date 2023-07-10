@@ -1,6 +1,6 @@
 ---
 title: "Camel K GitOps"
-date: 2023-07-07
+date: 2023-07-10
 draft: false
 authors: [squakez]
 categories: ["Howtos", "Camel K", "Operations"]
@@ -35,15 +35,15 @@ In Camel K we use the container registry as the common place where to store the 
 
 We can think on three different topologies:
 
-<img src="single_cluster.png" alt="Single cluster, shared container registry" width="560" height="774"/>
+<img src="single_cluster.png" alt="Single cluster, shared container registry" style="width:560px;height:774px;"/>
 
 This is the simples topology where you have a single cluster and a logical separation with namespaces. In such configuration you need to have both operators to share the same container registry.
 
-<img src="multi_cluster.png" alt="Separate clusters, shared container registry" width="650" height="754"/>
+<img src="multi_cluster.png" alt="Separate clusters, shared container registry" style="width:650px;height:754px;"/>
 
 Here you will have a physical separation as there are two separate clusters. However, in order to properly use the containers tested in development, both operators needs also to share the same container registry.
 
-<img src="multi_cluster_sync.png" alt="Separate clusters, synchronized container registries" width="600" height="794"/>
+<img src="multi_cluster_sync.png" alt="Separate clusters, synchronized container registries" style="width:600px;height:794px;"/>
 
 This topology is similar to the previous one, but you have dedicated container registries. The only caveat is that you need to put in place a mechanism to promote (or synchronize) the containers images which are created in development.
 
