@@ -9,10 +9,17 @@
     {{ range split $version "." }}
         {{ if strings.ContainsAny . "-RCM" }}
             {{ range split . "-" }}
-                {{ range split . "M" }}
-                    {{ range split . "RC" }}
+                {{ if hasPrefix . "M"}}
+                    {{ range split . "M" }}
                         {{ if . }}
                             {{ $version_num = add (mul $version_num 1000) (int .) }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+                {{ if hasPrefix . "RC"}}
+                    {{ range split . "RC" }}
+                        {{ if . }}
+                            {{ $version_num = add (mul $version_num 1000) (mul 100 (int .)) }}
                         {{ end }}
                     {{ end }}
                 {{ end }}
