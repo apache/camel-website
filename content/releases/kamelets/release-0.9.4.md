@@ -7,5 +7,5 @@ title: "Kamelets 0.9.4"
 preview: ""
 changelog: ""
 category: "camel-kamelets"
-jdk: [11, 17]
+jdk: [11,17]
 ---

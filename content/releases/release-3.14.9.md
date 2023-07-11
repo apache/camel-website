@@ -11,7 +11,7 @@ knownIssues: ""
 jiraVersionId: 12353269
 category: camel
 kind: lts
-jdk: [8, 11]
+jdk: [8,11]
 ---
 
 This release is the new Camel 3.14.9 LTS patch release.
