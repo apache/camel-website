@@ -110,7 +110,7 @@ article.blog p {
 }
 
 .blog .post-content img {
-  width: 100%;
+  width: auto;
   max-width: 800px;
   height: auto;
   max-height: 600px;
