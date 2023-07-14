@@ -17,6 +17,7 @@ content:
     - url: https://github.com/apache/camel.git
       branches:
         - main
+        - camel-3.21.x
         - camel-3.20.x
         - camel-3.19.x
         - camel-3.18.x
@@ -57,6 +58,7 @@ content:
     - url: https://github.com/apache/camel-kamelets.git
       branches:
         - main
+        - 3.21.x
         - 3.20.x
         - 0.10.x
         - 0.9.x
@@ -87,6 +89,7 @@ content:
     - url: https://github.com/apache/camel-spring-boot.git
       branches:
         - main
+        - camel-spring-boot-3.21.x
         - camel-spring-boot-3.20.x
         - camel-spring-boot-3.19.x
         - camel-spring-boot-3.18.x
@@ -100,6 +103,7 @@ content:
     - url: https://github.com/apache/camel-karaf.git
       branches:
         - main
+        - camel-karaf-3.21.x
         - camel-karaf-3.20.x
         - camel-karaf-3.19.x
         - camel-karaf-3.18.x
