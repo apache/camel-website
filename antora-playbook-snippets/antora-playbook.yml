@@ -41,17 +41,12 @@ content:
       branches:
         - main
         - release-1.12.x
-        - release-1.11.x
-        - release-1.10.x
       start_path: docs
 
     - url: https://github.com/apache/camel-k-runtime.git
       branches:
         - main
         - release-1.17.x
-        # Old, but required by Camel K 1.11 and 1.10 (to be removed when cleaning)
-        - release-1.16.x
-        - release-1.15.x
       start_path: docs
 
     - url: https://github.com/apache/camel-kamelets.git
@@ -59,8 +54,6 @@ content:
         - main
         - 3.21.x
         - 3.20.x
-        - 0.10.x
-        - 0.9.x
       start_path: docs
 
     - url: https://github.com/apache/camel-quarkus.git
@@ -68,8 +61,6 @@ content:
         - main
         - 3.0.x
         - 2.16.x
-        - 2.15.x
-        - 2.14.x
         - 2.13.x
       start_path: docs
 
