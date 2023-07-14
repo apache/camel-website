@@ -149,7 +149,7 @@ TODO - include some documentation instead of the link to the PR.
 
 # Default Micrometer for integration monitoring
 
-About observability we made some work to use Micrometer as a default. This change is quite transparent to the final user as it replaced the dependencies used from one technology (Microprofile) to another (Micrometer).
+About observability we made some work to use Micrometer as a default. Some changes are expected in the default metrics as it replaced the dependencies used from one technology (Microprofile) to another (Micrometer).
 
 You can have a look at the [Prometheus trait configuration](/camel-k/next/traits/prometheus.html) to learn more.
 
