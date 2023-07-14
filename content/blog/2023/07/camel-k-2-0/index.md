@@ -145,7 +145,11 @@ In version 2 they won't be any longer available and the operator may fail if tho
 
 This feature is not immediately available as it depends on the presence of the relative feature which will be available in Camel 4. When a Camel 4 compatible runtime will be available (we're all waiting with impatience), then you will be able to use the new [Kamelet Data Type configuration](https://github.com/apache/camel-k/pull/4100).
 
-TODO - include some documentation instead of the link to the PR.
+# Multiple data types and schemas in Kamelets
+
+Kamelets are now able to expose supported input/output data types as part of the [Kamelet data type specification](/camel-k/next/kamelets/kamelets-dev.html#_kamelet_data_types) in order to increase the interoperability with other components. When referencing a Kamelet as a source or sink in a Pipe users may now choose an appropriate input/output data type that fits best for their individual use case. 
+
+This feature leverages the [data types transformer concept](https://camel.apache.org/manual/transformer.html) in Apache Camel 4 and reveals its full power once the new major version of Camel is available (we are all eagerly awaiting it).
 
 # Default Micrometer for integration monitoring
 
