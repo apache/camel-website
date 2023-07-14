@@ -97,12 +97,17 @@ NOTE: we haven't (yet) deprecated **Kaniko** and **Buildah** strategy and these 
 
 ## Build order strategy
 
-Another little interesting feature you have available now is the possibility to define which is the order of the building strategy. When in
-Camel K 1 you submitted a series of parallel builds, there was no guarantee on the order of execution. Now you can specify it using the [Builder trait order strategy parameter](/camel-k/next/traits/builder.html#_configuration).
+Another interesting feature that is now available to you is the possibility to define a build order strategy that controls in which order scheduled integration builds get executed. 
 
-If you run many builds in parallel you may want to use the `dependencies` strategy which will take care to smartly create a queue for those builds which may depend on each other and leverage the incremental build feature.
+In Camel K v1 a series of parallel submitted builds got executed strictly sequential (only one single build at a time) and there was no guarantee on the order of build execution.
 
-Our operator is smarter than any AI out there!!
+Now you can specify the order of builds using the [Builder trait order strategy parameter](/camel-k/next/traits/builder.html#_configuration).
+
+Supported build order strategies are:
+- `sequential`: equivalent to the Camel K 1 behavior running only one single build at a time
+- `fifo`: First in first out strategy runs builds as they have been created and allows builds to run in parallel to each other as long as `maxRunningBuilds` limit has not been reached.
+- `dependencies`: Sophisticated order strategy smartly creating a queue for those builds which may depend on each other in order to effectively run builds leveraging the incremental build feature. Allows independent builds to run in parallel to each other as long as `maxRunningBuilds` limit has not been reached.
+You can now choose from these build order strategies to get the best out of Camel K. Our operator is smarter than any AI out there!!
 
 # More info on Kube native CLI
 
