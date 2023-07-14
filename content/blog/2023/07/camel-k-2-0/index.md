@@ -10,7 +10,7 @@ preview: "What's new in Camel K 2.0!"
 
 © 2023, RoadTrafficSigns.com
 
-With a great level of excitment, on behalf of Apache Camel community, I'm proud to announce the general availability of **Camel K 2.0**. It's been a long ride since the beginning of 2023 when we announced the desire to work on an heavy refactoring in order to introduce new shining features and be able to run the future **Camel 4** runtimes.
+With a great level of excitement, on behalf of Apache Camel community, I'm proud to announce the general availability of **Camel K 2.0**. It's been a long ride since the beginning of 2023 when we announced the desire to work on an heavy refactoring in order to introduce new shining features and be able to run the future **Camel 4** runtimes.
 
 This is the first important milestone reached, and we thought that the work done so far is already mature to see **general availability**. We'll keep working on the [roadmap](/blog/2023/02/camel-k-roadmap-2023/) along this year in order to try to complete as much as we can of what we have planned for 2023.
 
@@ -22,7 +22,7 @@ The first concern you may have is about compatibility to Camel K version 1 and h
 
 We don't expect you to make any change on the old API though. As for `Kamelet`, the Kubernetes cluster will take care to automatically upgrade this (as it's just a change in the versioning).
 
-> **Warning** make sure not to downgrade to Camel K version 1 once you have upgraded to version 2, because there won't be any conversion from `v1` to `v1alpha1` and it may result in a fatal error.
+WARNING: make sure not to downgrade to Camel K version 1 once you have upgraded to version 2, because there won't be any conversion from `v1` to `v1alpha1` and it may result in a fatal error.
 
 The old `v1alpha1.KameletBinding` will still be supported in this release in order to give you the time to make the needed change and move all your KameletBindings to [`v1.Pipe`](/camel-k/next/apis/camel-k.html#_camel_apache_org_v1_Pipe). Try to give priority to this operation because the `v1alpha1` is now deprecated and will be removed within the next versions of Camel K.
 
@@ -36,11 +36,11 @@ The first important feature we have introduced is the **possibility to run any C
 
 By default, Camel K 2.x will use the stable runtime version at the moment of the release (in this case, Camel K runtime `2.16.0`).
 
-> **Note** You can use any Camel K Runtime version >= `1.17.0`.
+NOTE: You can use any Camel K Runtime version >= `1.17.0`.
 
-# Enterpise grade build system
+# Enterprise grade build system
 
-We have redesignid massively the way we conceive our build in order to accomodate the need run any Camel K Runtime. We are in general aware that we need to strenghten the way we build the applications, making sure each customer can introduce their tooling and have enough possibility to choose how to perform such a **build in an "enterprise-grade"**. Altough we're still working in progress (more enhancements to come in next milestone), we already have achieved most of the points we wanted to cover.
+We have redesigned massively the way we conceive our build in order to accommodate the need run any Camel K Runtime. We are in general aware that we need to strengthen the way we build the applications, making sure each customer can introduce their tooling and have enough possibility to choose how to perform such a **build in an "enterprise-grade"**. Although we're still working in progress (more enhancements to come in next milestone), we already have achieved most of the points we wanted to cover.
 
 ## Free Camel K from Runtime
 
@@ -83,9 +83,9 @@ In particular in the `Build `(which is the main reason why an application fails)
 
 ## Quarkus Native build as a Pod
 
-A Quarkus native build is an important feature that helps you save resources and give your Java application all the charateristics of a **first class Cloud Native** citizen. However, AOT compilation is something that requires resources and time. For this reason, from now on, when you run a Quarkus Native build, this will be performed with the `Pod` build strategy, which will basically spin off an external `Pod` to take care of such an heavy operation.
+A Quarkus native build is an important feature that helps you save resources and give your Java application all the characteristics of a **first class Cloud Native** citizen. However, AOT compilation is something that requires resources and time. For this reason, from now on, when you run a Quarkus Native build, this will be performed with the `Pod` build strategy, which will basically spin off an external `Pod` to take care of such an heavy operation.
 
-This is a good news, because it will free the operator from the burden of such an heavy operation. Moreover we introduced some sensible resource configuration which should be enough for the builder Pod to complete its work withouth affecting the stability of the operator.
+This is a good news, because it will free the operator from the burden of such an heavy operation. Moreover we introduced some sensible resource configuration which should be enough for the builder Pod to complete its work without affecting the stability of the operator.
 
 However, if those are not enough or you still want to customize the builder Pod resources, we have made available a set of [builder parameters](/camel-k/next/traits/builder.html) (mainly cpu and memory resources).
 
@@ -93,7 +93,7 @@ However, if those are not enough or you still want to customize the builder Pod 
 
 This is quite an hidden work we've done and it really gave us a lot of trouble in order to let **Spectrum** and **S2I** builds to run in an unprivileged mode. However, we've accomplished it and we feel a little safer against any possible attack from privileged escalation.
 
-> **Note**: we haven't (yet) deprecated **Kaniko** and **Buildah** strategy and these deployment methods require to run with `root` privileges. Make sure to understand the possible risks involved.
+NOTE: we haven't (yet) deprecated **Kaniko** and **Buildah** strategy and these deployment methods require to run with `root` privileges. Make sure to understand the possible risks involved.
 
 ## Build order strategy
 
@@ -106,7 +106,7 @@ Our operator is smarter than any AI out there!!
 
 # More info on Kube native CLI
 
-It's no secret that in the long term we're willing to move most of the logic of `kamel` CLI in Camel JBang or any other UI tool. The possibility to include more informations directly in `kubectl` and any other K8S CLI (ie, `oc`) will help you getting most of the required information in one shot:
+It's no secret that in the long term we're willing to move most of the logic of `kamel` CLI in Camel JBang or any other UI tool. The possibility to include more information directly in `kubectl` and any other K8S CLI (ie, `oc`) will help you getting most of the required information in one shot:
 
 ```
 $ kubectl get camelcatalog
@@ -139,7 +139,7 @@ As we embarked in a major upgrade, we took the opportunity to clean all the **de
 * `kamel init`
 * `kamel run --config|--resource file:`
 
-In version 2 they won't be any longer available and the operator may fail if those configurations are provided. Above all, the last one will require you to provide a resource file as either a Configmap or Secret if you want to use the related configuration (we don't support any longer the autogenerated confimaps from file).
+In version 2 they won't be any longer available and the operator may fail if those configurations are provided. Above all, the last one will require you to provide a resource file as either a Configmap or Secret if you want to use the related configuration (we don't support any longer the auto-generated Confimaps from file).
 
 # Multiple data types and schemas in Kamelets
 
@@ -149,7 +149,7 @@ TODO - include some documentation instead of the link to the PR.
 
 # Default Micrometer for integration monitoring
 
-About observability we made some work to use Micrometer as a default. Some changes are expected in the default metrics as it replaced the dependencies used from one technology (Microprofile) to another (Micrometer).
+About observability we made some work to use **Micrometer as a default**. Some changes are expected in the default metrics as it replaced the dependencies used from one technology (Microprofile) to another (Micrometer).
 
 You can have a look at the [Prometheus trait configuration](/camel-k/next/traits/prometheus.html) to learn more.
 
@@ -188,5 +188,3 @@ Some of the original work planned and not completed may be delivered in the next
 # Thanks
 
 I'd like to spend some words and thanks all the contributors who made this release possible. All the people that have made some development. All the people that have tested all the work done. All the people that have taken the time to write and read documentation. All the people which have provided feedback, ideas and criticisms around the developments we've been doing in the last months. Apache Camel K (and more in general, Camel) is made by all of you: thanks!
-
-
