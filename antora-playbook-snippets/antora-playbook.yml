@@ -48,6 +48,9 @@ content:
     - url: https://github.com/apache/camel-k-runtime.git
       branches:
         - main
+        - release-2.16.x
+        - release-1.17.x
+        # Old, but required by Camel K 1.11 and 1.10 (to be removed when cleaning)
         - release-1.16.x
         - release-1.15.x
       start_path: docs
