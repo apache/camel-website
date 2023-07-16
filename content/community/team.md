@@ -65,6 +65,7 @@ When posting to the mailing lists, use plain text mails. Do not use HTML mails. 
 | Pascal Schumacher      | pascalschumacher |                            |
 | Pasquale Congiusti     | pcongiusti       | Red Hat                    |
 | Peter Palaga           | ppalaga          | Red Hat                    |
+| Rhuan Rocha            | rhuanrocha       | Digibee                    |
 | Rich Newcomb           | rnewcomb         |                            |
 | Richard Kettelerij     | rickette         | Avisi BV                   |
 | Rob Davies             | rajdavies        |                            |
