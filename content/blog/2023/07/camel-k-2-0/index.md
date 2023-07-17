@@ -6,8 +6,6 @@ authors: [squakez]
 categories: ["Releases", "Camel K", "Roadmap"]
 preview: "What's new in Camel K 2.0!"
 ---
-
-
 © 2023, RoadTrafficSigns.com
 
 With a great level of excitement, on behalf of Apache Camel community, I'm proud to announce the general availability of **Camel K 2.0**. It's been a long ride since the beginning of 2023 when we announced the desire to work on an heavy refactoring in order to introduce new shining features and be able to run the future **Camel 4** runtimes.
@@ -48,7 +46,7 @@ The build process is now partially decoupled from the runtime process. We have i
 
 In order to enable this feature, you will notice that the `CamelCatalog` Custom Resource is now a dynamic resource which is reconciled by the operator. It is the one in charge to dynamically create any new runtime catalog required. This work was a big design change and we're confident it will help use reaching the longer term goal which is to **onboard any Camel runtime** (main, springboot, quarkus).
 
-TODO - some more official doc
+Have a look at the official documentation and learn more about the new [Camel K Runtime builder design](/camel-k/next/running/runtime-version.html).
 
 ## Transform the build into a pipeline
 
@@ -97,7 +95,7 @@ NOTE: we haven't (yet) deprecated **Kaniko** and **Buildah** strategy and these 
 
 ## Build order strategy
 
-Another interesting feature that is now available to you is the possibility to define a build order strategy that controls in which order scheduled integration builds get executed. 
+Another interesting feature that is now available to you is the possibility to define a build order strategy that controls in which order scheduled integration builds get executed.
 
 In Camel K v1 a series of parallel submitted builds got executed strictly sequential (only one single build at a time) and there was no guarantee on the order of build execution.
 
@@ -148,7 +146,7 @@ In version 2 they won't be any longer available and the operator may fail if tho
 
 # Multiple data types and schemas in Kamelets
 
-Kamelets are now able to expose supported input/output data types as part of the [Kamelet data type specification](/camel-k/next/kamelets/kamelets-dev.html#_kamelet_data_types) in order to increase the interoperability with other components. When referencing a Kamelet as a source or sink in a Pipe users may now choose an appropriate input/output data type that fits best for their individual use case. 
+Kamelets are now able to expose supported input/output data types as part of the [Kamelet data type specification](/camel-k/next/kamelets/kamelets-dev.html#_kamelet_data_types) in order to increase the interoperability with other components. When referencing a Kamelet as a source or sink in a Pipe users may now choose an appropriate input/output data type that fits best for their individual use case.
 
 This feature leverages the [data types transformer concept](/manual/transformer.html) in Apache Camel 4 and reveals its full power once the new major version of Camel is available (we are all eagerly awaiting it).
 
