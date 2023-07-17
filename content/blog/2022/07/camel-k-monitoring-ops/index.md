@@ -14,7 +14,7 @@ First of all let's start presenting the Apache Camel component that will make th
 
 When the component is available, the Integration will expose a _/q/metrics_ endpoint and you can use it for monitoring purposes.
 
-## Prometheus stack
+## Prometheus stack 
 
 If you look at the endpoint you will quickly notice that the information are not thought to be read by humans. They are infact designed to work with some scraping tool whose goal is to read the information and aggregate the results.
 
