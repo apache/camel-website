@@ -307,7 +307,7 @@ This configuration will:
 
 We are also using inventory.local and order.local host in ingress for the rest services so make sure that your DNS pointing to your cluster for both hostnames. You can execute `echo "$(minikube ip) order.local inventory.local" | sudo tee -a /etc/hosts` if you are working on minikube.
 
-As you can see we did not provide the OTLP API endpoint as Camel K automatically discovered the **Jaeger** OTLP API endpoint. For any other Distributed Tracing tool you will have to declare it through `-t telemetry.endpoint=xxxx`. The `telemetry` trait is expecting an [OTLP trace endpoint](https://opentelemetry.io/docs/concepts/sdk-configuration/otlp-exporter-configuration/#otel_exporter_otlp_traces_endpoint).
+As you can see we did not provide the OTLP API endpoint as Camel K automatically discovered the **Jaeger** OTLP API endpoint available in the namespace. For any other Distributed Tracing tool you will have to declare it through `-t telemetry.endpoint=xxxx`. The `telemetry` trait is expecting an [OTLP trace endpoint](https://opentelemetry.io/docs/concepts/sdk-configuration/otlp-exporter-configuration/#otel_exporter_otlp_traces_endpoint).
 
 Now that everything is up let's make some traces!
 
