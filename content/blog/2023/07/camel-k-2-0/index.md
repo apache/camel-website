@@ -166,6 +166,29 @@ For more information you can have a look at the [Multi architecture official doc
 
 If you're a Camel K contributor you have noticed that we introduced a nice action which is taking care to calculate the code coverage of the new code developed. The actions reports the coverage difference, so we know how we increase (or decrease) indirectly the quality of the code. This is not really (yet) a gateway, we want to create awareness among Camel K developers about the level of quality we introduce with each change. Little by little we expect to **increase the quality of the code** we produce and have less bugs affecting our code.
 
+# Optimize operator performance and resource allocation
+
+The team has made some effort to reduce the amount of resources (memory and CPU) consumed by the Camel K operator. The results of this can be seen when creating many Integrations on a cluster and when the operator runs multiple integration builds.
+
+We have run some test scenarios and compared the results of different Camel K versions.
+
+_Test scenario: Running 600 Camel K integrations_
+
+| Camel K | avg. Memory | avg. CPU | Time |
+| :------- | :------------: | :--------: | :----: |
+| 1.9.0 | 529 MiB  | 262 millicores | 29 mins |
+| 1.12.1 | 344 MiB | 54 millicores | 21 mins |
+| 2.0.0 | 306 MiB | 60 millicores | 20 mins |
+
+_Test scenario: Running 50 integrations builds in parallel_
+
+| Camel K | avg. Memory | avg. CPU | Time |
+| :------- | :------------: | :--------: | :----: |
+| 1.9.0 | 510 MiB | 352 millicores | 59 mins |
+| 1.12.1 | 440 MiB | 185 millicores | 57 mins |
+| 2.0.0 | 326 MiB | 45 millicores | 38 mins |
+
+The Camel K 2.0 results are pleasant especially when running multiple builds at the same time. The team is keen to keep improving the operator performance in future releases.
 # Documentation
 
 The last important point we've introduced is about the additional documentation we've provided. Maintaining the documentation up to date is a very well known hard task. But we know this is important for the final users to get the best from the project.
