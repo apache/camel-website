@@ -185,6 +185,8 @@ We have run some test scenarios and compared the results of different Camel K ve
 
 _Test scenario: Running 600 Camel K integrations_
 
+![Running 600 Camel K integrations](600_integrations.svg)
+
 | Camel K | avg. Memory | avg. CPU | Time |
 | :------- | :------------: | :--------: | :----: |
 | 1.9.0 | 529 MiB  | 262 millicores | 29 mins |
@@ -192,6 +194,8 @@ _Test scenario: Running 600 Camel K integrations_
 | 2.0.0 | 306 MiB | 60 millicores | 20 mins |
 
 _Test scenario: Running 50 integrations builds in parallel_
+
+![Running 50 integrations builds in parallel](50_builds.svg)
 
 | Camel K | avg. Memory | avg. CPU | Time |
 | :------- | :------------: | :--------: | :----: |
