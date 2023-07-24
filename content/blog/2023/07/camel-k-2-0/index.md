@@ -1,6 +1,6 @@
 ---
 title: "Camel K 2.0"
-date: 2023-07-13
+date: 2023-07-24
 draft: false
 authors: [squakez]
 categories: ["Releases", "Camel K", "Roadmap"]
@@ -13,6 +13,17 @@ With a great level of excitement, on behalf of Apache Camel community, I'm proud
 This is the first important milestone reached, and we thought that the work done so far is already mature to see **general availability**. We'll keep working on the [roadmap](/blog/2023/02/camel-k-roadmap-2023/) along this year in order to try to complete as much as we can of what we have planned for 2023.
 
 Let's look at one by one the main new features or updates that Camel K 2.0 is introducing. We plan to work on more blogs and documentation dedicated to each of the new features introduced during next months.
+
+# Release details
+
+You can find all the CLIs and detailed changelog information in the [Camel K 2.0.0 release page](https://github.com/apache/camel-k/releases/tag/v2.0.0). Download the CLI for your operating system and architecture, `kamel install` and be ready to use the latest features available.
+
+As usual, we acknowledge the great work done in Apache Camel community. Camel K default runtime is based on the following projects:
+
+* Apache Camel K Runtime 2.16.0
+* Apache Camel Quarkus 2.16.0
+* Apache Camel 3.20.1
+* Apache Camel Kamelets 3.20.1.1
 
 # Upgrade from V1
 
