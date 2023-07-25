@@ -41,7 +41,9 @@ content:
       # Let's keep latest active development + LTS active versions only
       branches:
         - main
+        - release-2.0.x
         - release-1.12.x
+        # Old, but required by Kamelets
         - release-1.11.x
         - release-1.10.x
       start_path: docs
@@ -49,6 +51,7 @@ content:
     - url: https://github.com/apache/camel-k-runtime.git
       branches:
         - main
+        - release-2.16.x
         - release-1.17.x
         # Old, but required by Camel K 1.11 and 1.10 (to be removed when cleaning)
         - release-1.16.x
@@ -60,6 +63,7 @@ content:
         - main
         - 3.21.x
         - 3.20.x
+        # Old, but required by Camel Kafka Connector
         - 0.10.x
         - 0.9.x
       start_path: docs
