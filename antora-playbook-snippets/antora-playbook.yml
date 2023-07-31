@@ -28,14 +28,6 @@ content:
         # main components doc
         - docs/components
 
-    - url: https://github.com/apache/camel.git
-      branches: camel-2.x
-      start_paths:
-        # main components doc
-        - docs/components
-        # languages
-        - camel-core/src/main/docs
-
 # sub-projects
     - url: https://github.com/apache/camel-k.git
       # Let's keep latest active development + LTS active versions only
