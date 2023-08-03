@@ -38,10 +38,10 @@ Now, you can open your browser to http://localhost:9090, http://localhost:3000, 
 
 ## Run a Camel K Integration with Prometheus trait
 
-We have prepared the field to play. Now we need to run some Camel K application in order to see it in action. We're using a simple REST API application to show how to monitor an Integration in Camel K. Let's use this [Camel K REST API example](https://github.com/apache/camel-k/blob/main/examples/rest/RestDSL.java). In order to perform all the configuration required to expose the metrics we can rely on [Prometheus trait](/camel-k/next/traits/prometheus.html). As we already have a Prometheus operator installed, it will be as easy as enabling the trait:
+We have prepared the field to play. Now we need to run some Camel K application in order to see it in action. We're using a simple REST API application to show how to monitor an Integration in Camel K. Let's use this [Camel K REST API example](https://github.com/apache/camel-k-examples/blob/main/generic-examples/rest/RestDSL.java). In order to perform all the configuration required to expose the metrics we can rely on [Prometheus trait](/camel-k/next/traits/prometheus.html). As we already have a Prometheus operator installed, it will be as easy as enabling the trait:
 
 ```
-kamel run https://raw.githubusercontent.com/apache/camel-k/main/examples/rest/RestDSL.java --dev -t prometheus.enabled=true
+kamel run https://raw.githubusercontent.com/apache/camel-k-examples/main/generic-examples/rest/RestDSL.java --dev -t prometheus.enabled=true
 ```
 
 ## Check Microprofile metrics and Prometheus target
