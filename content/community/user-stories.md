@@ -48,7 +48,7 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |[Rayvens](http://ibm.biz/rayvens) | Built on Apache Camel, Rayvens enables data scientists to interface with hundreds of data services with little effort to consume, process, and produce events and data in real time. |
 |[Huawei Cloud ROMA](https://www.huaweicloud.com/en-us/product/roma.html)|Apache camel powers the runtime engine for [Huawei Cloud ROMA](https://www.huaweicloud.com/en-us/product/roma.html) which is a commercial iPaaS offering by Huawei Cloud. ROMA integrates data, services, messages and devices under one unified platform which enables it's customers to hook up systems spanning across multiple Paas, Saas and cloud services.|
 |[ModusBox PortX](https://modusbox.com/portx-platform/)|PortX, the Integration Platform as a Service (IPaaS) for financial institutions, is built on the open source Apache Camel framework.|
-|[Guidewire Integration Framework](https://www.guidewire.com/blog/technology/cloud-integration-framework-the-right-tools-for-the-job/)| Integration Gateway is an open framework for developing integration apps that bridge Guidewire APIs with external apps and services. It is based on Apache Camel.| 
+|[Guidewire Integration Framework](https://www.guidewire.com/blog/technology/cloud-integration-framework-the-right-tools-for-the-job/)| Integration Gateway is an open framework for developing integration apps that bridge Guidewire APIs with external apps and services. It is based on Apache Camel.|
 |[Multi-Channel Framework (MCF)](https://www.felpfe.com/multi-channel-framework-mcf/)| MCF utilizes Camel to provide developers with an empowering framework, enabling them to create, test, and deploy integration scenarios intuitively, without the need for extensive coding. By leveraging the robust capabilities of Apache Camel, MCF streamlines the development workflow, reducing complexity and the reliance on manual coding. Its configuration-driven approach facilitates seamless integration using Camel, allowing developers to achieve their goals with minimal coding effort.|
 {{< /table >}}
 
@@ -82,8 +82,8 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |--------------|-------------|
 |[Apache Camel User Group Denmark](https://groups.google.com/group/camel-user-group-denmark)|A danish user group for Apache Camel.|
 |[Apache Camel User Group Tunisia](http://groups.google.com/group/apache-camel-user-group-tunisia)|A tunisian user group for Apache Camel.|
-|[Linkedin Apache Camel Group](http://www.linkedin.com/groups?gid=2447439&trk=hb_side_g)|The Apache Camel group in linkedin.|
-|[Google+ Apache Camel Group](https://plus.google.com/communities/106271384875356488225)|The Apache Camel group in google+|
+|[Apache Camel LinkedIn Group](https://www.linkedin.com/groups/2447439/)|The Apache Camel group on LinkedIn.|
+|[Apache Camel User Group São Paulo](https://www.linkedin.com/groups/8893741/)|A brazilian user group on LinkedIn.|
 |[Apache Camel User Group Japan](https://jcug-oss.github.io/)|A Japanese user group for Apache Camel.|
 {{< /table >}}
 
