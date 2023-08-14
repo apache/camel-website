@@ -6,9 +6,13 @@ categories: ["Releases"]
 preview: Top 10 of what's new in Apache Camel version 4
 ---
 
-TODO: Something about Camel v4 just released
+After 10 months of development, with 3 milestone, and 2 RC releases, then Apache Camel v4 is released
+today as LTS release. The Camel `4.0.x` is a LTS release that is supported for 1 year.
 
 This blog post highlights some noteworthy new features and improvements in Camel v4.
+
+The features are based on work since January 2023, which was the time, where we switched `main` branch
+to be Camel v4 based, and our effort was focused primary on Camel v4.
 
 ### 1) Major Goals
 
@@ -144,6 +148,7 @@ And in YAML
 
     - log: "${prettyBody}"
 
+
 TODO: Other bits and pieces
 
 ### 11) Migrating to Camel 4
@@ -158,4 +163,23 @@ All details can be seen in the [migration guide](/manual/camel-4-migration-guide
 
 Good luck with your migration if you decide to continue your Camel journey. And for new users to Camel then good luck getting onboard.
 
+### 12) Roadmap for remainder of 2023
 
+We will continue working on Camel 4.x and do non-LTS releases, leading up to the next LTS release by end of this year.
+The major goals for this is Java 21 support, Spring Boot 3.2, and to catch up with newer Quarkus releases.
+
+The following release scheduled, is subject for change.
+
+| Release | Date | Description |
+|---------|------|-------------|
+| 4.1     | Oct  | Non-LTS     |
+| 4.2     | Dec  | LTS         |
+
+An ongoing effort is also to keep stabilizing our CI builds, to ensure commits do not introduce regressions.
+At this moment then the CI builds are occasionally have a few test errors that are related to flaky tests, that
+we keep fixing, to ensure the CI reports are trustworthy.
+
+We have also identified that we can improve performance in the Camel type converter systems, which we plan to refactor
+for Camel 4.1 onwards.
+
+And of course all the usual new features and improvements coming in from community users and contributors.
