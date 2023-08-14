@@ -50,21 +50,21 @@ Stay tuned for their release announcements.
 
 ### 6) Camel Main
 
-For users that just want to run standalone Camel, then we have `camel-main` that are constantly being improved.
-The foundation in `camel-main` is reused by Camel Spring Boot, Camel Quarkus, and Camel JBang as well.
+For users who just want to run Camel as a standalone application, we have `camel-main` which is constantly being improved.
+The core in `camel-main` is reused by Camel Spring Boot, Camel Quarkus, and Camel JBang as well.
 
 For Camel 4 we have made it possible to easily include an embedded HTTP server with the new `camel-platform-http-main` module.
 See more in the [camel-main](https://github.com/apache/camel-examples/tree/main/examples/main) example.
 
 ### 7) Camel JBang
 
-A lot of improvements was put into `camel-jbang`. The `camel` CLI is now able to easily run with different Camel versions,
+A lot of improvements were put into `camel-jbang`. The `camel` CLI is now able to easily run with different Camel versions,
 for example
 
     camel run foo.yaml --camel-version=3.21.0
     camel run foo.yaml --camel-version=3.20.6
 
-This is very handy when you for example need to trouble-shoot why _something_ started failed. It works on X but not on Y,
+This is very handy when you for example need to trouble-shoot why _something_ started to fail. It works on X but not on Y,
 and now you can quickly try and find out which version in between that started failing.
 
 You can also specify that `camel` CLI should by default use a specific Camel version, for example if you have a newer version
@@ -72,7 +72,7 @@ of Camel JBang installed but must develop and use an older release.
 
     camel version set 3.20.6
 
-The following new commands has been added
+The following new commands have been added:
 
 - `camel config` - to set custom user configuration
 - `camel log` - to show logs of your running Camel integrations (can show logs for 1 or more Camel apps)
@@ -82,17 +82,17 @@ The following new commands has been added
 
 The maven resolver that Camel JBang uses has been migrated to latest, and Camel JBang will now report more accurately
 whether a dependency was downloaded or resolved from a local maven repository. The `camel run` command also has a `--verbose`
-flag to output more details in dependency resolution that can help during troubleshooting.
+flag to output more details about dependency resolution, which can help during troubleshooting.
 
 The `camel-main` runtime now supports exporting with Kubernetes manifest and build support, to make it easier to build
 container images that are ready to run on Kubernetes.
 
-In general there has been many improvements to Camel JBang making this a great way to try Camel, and as well as
+In general there have been many improvements to Camel JBang making this a great way to try Camel, and as well as
 a companion tool you can use during traditional Camel development.
 
 ### 8) XML DSL with beans
 
-We have been working on to unify the YAML, XML and Java DSL to be more aligned in feature parity related
+We have been working on unifying the YAML, XML and Java DSL to be more aligned in feature parity related
 to configuring beans. For example in XML DSL (`camel-xml-io`) you can now declare beans and Camel routes in
 the same XML file with `<camel>` as the root tag:
 
@@ -120,7 +120,7 @@ You can also use Spring dependency injection (which is more advanced), by inlini
 See more in the documentation for `camel-xml-io-dsl` module.
 
 There is more work to be done, and we are planning to see if we can also use this to make migration from legacy
-OSGi Blueprint (and Spring XML files, eg `<beans>`) to modern Camel DSL.
+OSGi Blueprint and Spring XML files (i.e. `<beans>`) to modern Camel DSL easier.
 
 ### 9) New components
 
@@ -136,7 +136,7 @@ OSGi Blueprint (and Spring XML files, eg `<beans>`) to modern Camel DSL.
 
 Camel 4 now requires JUnit 5 for unit tests, with the test components that have -junit5 as suffix.
 
-If you work with XML or JSon payloads then the body can be logged in pretty format with:
+If you work with XML or JSON payloads then the body can be logged in pretty format with:
 
     .log("${prettyBody}")
 
@@ -176,7 +176,7 @@ The following releases are currently scheduled (subject for change) for this yea
 | 4.2     | Dec  | LTS         |
 
 An ongoing effort is also to keep stabilizing our CI builds, to ensure commits do not introduce regressions.
-At this moment then the CI builds are occasionally have a few test errors that are related to flaky tests, that
+At the moment the CI builds are occasionally having a few test errors that are related to flaky tests, that
 we keep fixing, to ensure the CI reports are trustworthy.
 
 During the development of Camel 4, our community received many contributions for improving Camel build and tests on higher 
