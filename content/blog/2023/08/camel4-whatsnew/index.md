@@ -28,7 +28,9 @@ We have upgraded all 3rd party dependencies to their latest releases where possi
 
 ### 3) Performance optimizations
 
-TODO: Stuff that Otavio worked on
+We have improved the performance of the internal Camel routing engine and framework. 
+
+You can find more details in this blog post [camel 4 performance improvements](/blog/2023/05/camel-4-performance-improvements.html).
 
 ### 4) Camel Spring Boot
 
@@ -52,9 +54,39 @@ See more in the [camel-main](https://github.com/apache/camel-examples/tree/main/
 
 ### 7) Camel JBang
 
-TODO: jbang stuff
+A lot of improvements was put into `camel-jbang`. The `camel` CLI is now able to easily run with different Camel versions,
+for example
 
-### 8) XML with beans
+    camel run foo.yaml --camel-version=3.21.0
+    camel run foo.yaml --camel-version=3.20.6
+
+This is very handy when you for example need to trouble-shoot why _something_ started failed. It works on X but not on Y,
+and now you can quickly try and find out which version in between that started failing.
+
+You can also specify that `camel` CLI should by default use a specific Camel version, for example if you have a newer version
+of Camel JBang installed but must develop and use an older release.
+
+    camel version set 3.20.6
+
+The following new commands has been added
+
+- `camel config` - to set custom user configuration
+- `camel log` - to show logs of your running Camel integrations (can show logs for 1 or more Camel apps)
+- `camel trace` - to show message tracing of your running Camel integrations (can show logs for 1 or more Camel apps)
+- `camel cmd send` - to send messages to an existing running Camel integration
+- `camel get route-dump` - to dump routes in XML or YAML format
+
+The maven resolver that Camel JBang uses has been migrated to latest, and Camel JBang will now report more accurately
+whether a dependency was downloaded or resolved from a local maven repository. The `camel run` command also has a `--verbose`
+flag to output more details in dependency resolution that can help during troubleshooting.
+
+The `camel-main` runtime now supports exporting with Kubernetes manifest and build support, to make it easier to build
+container images that are ready to run on Kubernetes.
+
+In general there has been many improvements to Camel JBang making this a great way to try Camel, and as well as
+a companion tool you can use during traditional Camel development.
+
+### 8) XML DSL with beans
 
 We have been working on to unify the YAML, XML and Java DSL to be more aligned in feature parity related
 to configuring beans. For example in XML DSL (`camel-xml-io`) you can now declare beans and Camel routes in
