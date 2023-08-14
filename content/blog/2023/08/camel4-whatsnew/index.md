@@ -33,7 +33,7 @@ We have upgraded all 3rd party dependencies to their latest releases where possi
 
 We have improved the performance of the internal Camel routing engine and framework. 
 
-You can find more details in this blog post [camel 4 performance improvements](/blog/2023/05/camel-4-performance-improvements.html).
+You can find more details in this blog post [camel 4 performance improvements](/blog/2023/05/camel-4-performance-improvements).
 
 ### 4) Camel Spring Boot
 
