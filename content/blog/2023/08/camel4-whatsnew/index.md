@@ -49,13 +49,14 @@ Stay tuned for their release announcements.
 
 ### 6) Camel Main
 
-For users that just want to run standalone Camel, then we have `camel-main` that are constantly being improved.
-The foundation in `camel-main` is reused by Camel Spring Boot, Camel Quarkus, and Camel JBang as well.
+For users who just want to run Camel as a standalone application, we have `camel-main` which is constantly being improved.
+The core in `camel-main` is reused by Camel Spring Boot, Camel Quarkus, and Camel JBang as well.
 
 The inclusion of an embedded HTTP server is now made easy with the new `camel-platform-http-main` module.
 See more in the [camel-main](https://github.com/apache/camel-examples/tree/main/examples/main) example.
 
 ### 7) Camel JBang
+
 
 We made a lot of improvements to Camel JBang. The `camel` CLI can now easily run with different Camel versions, for example:
 
