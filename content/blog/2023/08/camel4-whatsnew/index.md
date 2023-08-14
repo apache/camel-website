@@ -184,7 +184,7 @@ end server platforms such as Power (ppc64le) and s390x (Linux On Mainframe). Use
 Apache Camel on those platforms should have a smoother experience with Camel 4. This continues as an ongoing effort and 
 we expect and even better experience for those platforms in subsequent releases.
 
-We have also identified that we can improve performance in the Camel type converter systems, which we plan to refactor
-for Camel 4.1 onwards.
+We will continue to look for areas where we can improve the performance of Camel. At this point, we have identified that we
+can improve performance in the Camel type converter systems, and we plan to refactor for Camel 4.1 onwards.
 
 And of course all the usual new features and improvements coming in from community users and contributors.
