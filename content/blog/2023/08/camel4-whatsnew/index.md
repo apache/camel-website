@@ -168,7 +168,7 @@ Good luck with your migration if you decide to continue your Camel journey. And 
 We will continue working on Camel 4.x and do non-LTS releases, leading up to the next LTS release by end of this year.
 The major goals for this is Java 21 support, Spring Boot 3.2, and to catch up with newer Quarkus releases.
 
-The following release scheduled, is subject for change.
+The following releases are currently scheduled (subject for change) for this year:
 
 | Release | Date | Description |
 |---------|------|-------------|
