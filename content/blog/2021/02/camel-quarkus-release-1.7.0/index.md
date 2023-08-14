@@ -39,25 +39,25 @@ You can go back to the original behavior by setting `quarkus.package.type=legacy
 
 Camel Quarkus brings support for six new Camel components:
 
-* [Azure Event Hubs](/camel-quarkus/next/reference/extensions/azure-eventhubs.html)
-* [Kamelet](/camel-quarkus/next/reference/extensions/kamelet.html)
-* [OAI-PMH](/camel-quarkus/next/reference/extensions/oaipmh.html)
-* [Spring RabbitMQ](/camel-quarkus/next/reference/extensions/spring-rabbitmq.html)
+* Azure Event Hubs
+* Kamelet
+* OAI-PMH
+* Spring RabbitMQ
 * XML Security Sign and Verify
-* [JFR](/camel-quarkus/next/reference/extensions/jfr.html) (JVM only)
+* JFR (JVM only)
 
 Components newly supported in native mode:
 
-* [AtlasMap](/camel-quarkus/next/reference/extensions/atlasmap.html)
-* [AWS 2 Eventbridge](/camel-quarkus/next/reference/extensions/aws2-eventbridge.html)
-* [AWS 2 Kinesis and Firehose](/camel-quarkus/next/reference/extensions/aws2-kinesis.html)
-* [Azure Storage Queue Service](/camel-quarkus/next/reference/extensions/azure-storage-queue.html)
-* [Cassandra CQL](/camel-quarkus/next/reference/extensions/cassandraql.html)
+* AtlasMap
+* AWS 2 Eventbridge
+* AWS 2 Kinesis and Firehose
+* Azure Storage Queue Service
+* Cassandra CQL
 * IPFS (no longer supported, February 2022)
-* [PubNub](/camel-quarkus/next/reference/extensions/pubnub.html)
+* PubNub
 * StAX
-* [CBOR](/camel-quarkus/next/reference/extensions/cbor.html)
-* [Syslog](/camel-quarkus/next/reference/extensions/syslog.html)
+* CBOR
+* Syslog
 
 ## Deprecated extensions
 
