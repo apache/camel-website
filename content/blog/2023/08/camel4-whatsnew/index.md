@@ -181,7 +181,8 @@ we keep fixing, to ensure the CI reports are trustworthy.
 
 During the development of Camel 4, our community received many contributions for improving Camel build and tests on higher 
 end server platforms such as Power (ppc64le) and s390x (Linux On Mainframe). Users and organizations building and leveraging 
-Apache Camel on those platforms should have a smoother experience with Camel 4.
+Apache Camel on those platforms should have a smoother experience with Camel 4. This continues as an ongoing effort and 
+we expect and even better experience for those platforms in subsequent releases.
 
 We have also identified that we can improve performance in the Camel type converter systems, which we plan to refactor
 for Camel 4.1 onwards.
