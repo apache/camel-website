@@ -53,6 +53,7 @@ content:
 
     - url: https://github.com/apache/camel-kamelets.git
       branches:
+        - main
         - 3.21.x
         - 3.20.x
         # Old, but required by Camel Kafka Connector
