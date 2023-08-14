@@ -178,6 +178,7 @@ The following releases are currently scheduled (subject for change) for this yea
 |---------|------|-------------|
 | 4.1     | Oct  | Non-LTS     |
 | 4.2     | Dec  | LTS         |
+
 An ongoing effort is also to keep stabilizing our CI builds, to ensure commits do not introduce regressions.
 At this moment, the CI builds are occasionally have a few test errors that are related to flaky tests, that we keep fixing to 
 ensure the CI reports are trustworthy.
