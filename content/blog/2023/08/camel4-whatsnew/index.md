@@ -8,7 +8,7 @@ preview: Top 10 of what's new in Apache Camel version 4
 
 TODO: Something about Camel v4 just released
 
-This blog post highlights the noteworthy new features and improvements in Camel v4.
+This blog post highlights some noteworthy new features and improvements in Camel v4.
 
 ### 1) Major Goals
 
@@ -20,7 +20,7 @@ Camel 4 requires Java 17. Support for Java 21 is planned for next LTS released b
 
 ### 3) Dependency updates
 
-We have as much as possible upgraded all 3rd party dependencies to their latest releases.
+We have upgraded all 3rd party dependencies to their latest releases where possible.
 
 ### 4) Performance optimizations
 
@@ -44,13 +44,13 @@ TODO: Gregorz stuff (preview)
 
 ### 9) New components
 
-- camel-aws2-step-functions: Manage and invoke AWS Step functions
-- camel-azure-files: Send and receive files on Azure File Storage
-- camel-dhis2 - Integrate with DHIS2 (health-level)
-- camel-opensearch - Send requests to OpenSearch
-- camel-parquet-avro - Parquet Avro serialization and de-serialization
-- camel-platform-http-main - Platform HTTP for Camel Main runtime
-- camel-yaml-io - YAML DSL route dumper
+- `camel-aws2-step-functions`: Manage and invoke AWS Step functions
+- `camel-azure-files`: Send and receive files on Azure File Storage
+- `camel-dhis2`: Integrate with DHIS2 (health-level)
+- `camel-opensearch`: Send requests to OpenSearch
+- `camel-parquet-avro`: Parquet Avro serialization and de-serialization
+- `camel-platform-http-main`: Platform HTTP for Camel Main runtime
+- `camel-yaml-io`: YAML DSL route dumper
 
 ### 10) Miscellaneous improvements
 
@@ -75,7 +75,7 @@ TODO: Other bits and pieces
 We have of course cleaned up the code base, such as removing all deprecated APIs and components. 
 We have also adjusted some APIs in regard to configuring `CamelContext` with custom settings.
 
-In terms of backward compatibility then Camel 4 is mostly compatibility for regular Camel applications.
+In terms of backward compatibility then Camel 4 is mostly compatible for regular Camel applications.
 However, if you are using some of the more advanced features and other plugins in Camel then migration is needed.
 Also, custom components must be migrated and recompiled.
 All details can be seen in the [migration guide](/manual/camel-4-migration-guide.html).
