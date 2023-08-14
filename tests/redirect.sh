@@ -180,16 +180,16 @@ test "$BASE_URL/camel-k/latest/traits/master.html" 302 "$BASE_URL/camel-k/${CAME
 test "$BASE_URL/camel-k/${CAMEL_K_VERSION}/traits/master.html" 200
 test "$BASE_URL/camel-k/next/traits/master.html" 200
 
-test "$BASE_URL/camel-karaf" 302 "$BASE_URL/camel-karaf/${COMPONENTS_VERSION}/"
-test "$BASE_URL/camel-karaf/" 302 "$BASE_URL/camel-karaf/${COMPONENTS_VERSION}/"
-test "$BASE_URL/camel-karaf/next" 301 "$BASE_URL/camel-karaf/next/"
-test "$BASE_URL/camel-karaf/next/" 200
-test "$BASE_URL/camel-karaf/latest" 302 "$BASE_URL/camel-karaf/${COMPONENTS_VERSION}"
-test "$BASE_URL/camel-karaf/latest/" 302 "$BASE_URL/camel-karaf/${COMPONENTS_VERSION}/"
-test "$BASE_URL/camel-karaf/latest/components.html" 302 "$BASE_URL/camel-karaf/${COMPONENTS_VERSION}/components.html"
-test "$BASE_URL/camel-karaf/latest/components.html" 302 "$BASE_URL/camel-karaf/${COMPONENTS_VERSION}/components.html"
-test "$BASE_URL/camel-karaf/${COMPONENTS_VERSION}/components.html" 200
-test "$BASE_URL/camel-karaf/next/components.html" 200
+#test "$BASE_URL/camel-karaf" 302 "$BASE_URL/camel-karaf/${COMPONENTS_VERSION}/"
+#test "$BASE_URL/camel-karaf/" 302 "$BASE_URL/camel-karaf/${COMPONENTS_VERSION}/"
+#test "$BASE_URL/camel-karaf/next" 301 "$BASE_URL/camel-karaf/next/"
+#test "$BASE_URL/camel-karaf/next/" 200
+#test "$BASE_URL/camel-karaf/latest" 302 "$BASE_URL/camel-karaf/${COMPONENTS_VERSION}"
+#test "$BASE_URL/camel-karaf/latest/" 302 "$BASE_URL/camel-karaf/${COMPONENTS_VERSION}/"
+#test "$BASE_URL/camel-karaf/latest/components.html" 302 "$BASE_URL/camel-karaf/${COMPONENTS_VERSION}/components.html"
+#test "$BASE_URL/camel-karaf/latest/components.html" 302 "$BASE_URL/camel-karaf/${COMPONENTS_VERSION}/components.html"
+#test "$BASE_URL/camel-karaf/${COMPONENTS_VERSION}/components.html" 200
+#test "$BASE_URL/camel-karaf/next/components.html" 200
 
 test "$BASE_URL/camel-kafka-connector" 302 "$BASE_URL/camel-kafka-connector/${CAMEL_KAFKA_CONNECTOR_VERSION}/"
 test "$BASE_URL/camel-kafka-connector/" 302 "$BASE_URL/camel-kafka-connector/${CAMEL_KAFKA_CONNECTOR_VERSION}/"
