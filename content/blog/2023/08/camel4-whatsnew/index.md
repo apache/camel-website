@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 4 What's New (top 10)"
 date: 2023-08-15
-authors: [davsclaus,gzurowski]
+authors: [davsclaus,gzurowski,opiske]
 categories: ["Releases"]
 preview: Top 10 of what's new in Apache Camel version 4
 ---
@@ -178,6 +178,10 @@ The following release scheduled, is subject for change.
 An ongoing effort is also to keep stabilizing our CI builds, to ensure commits do not introduce regressions.
 At this moment then the CI builds are occasionally have a few test errors that are related to flaky tests, that
 we keep fixing, to ensure the CI reports are trustworthy.
+
+During the development of Camel 4, our community received many contributions for improving Camel build and tests on higher 
+end server platforms such as Power (ppc64le) and s390x (Linux On Mainframe). Users and organizations building and leveraging 
+Apache Camel on those platforms should have a smoother experience with Camel 4.
 
 We have also identified that we can improve performance in the Camel type converter systems, which we plan to refactor
 for Camel 4.1 onwards.
