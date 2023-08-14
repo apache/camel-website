@@ -61,21 +61,13 @@ to configuring beans. For example in XML DSL (`camel-xml-io`) you can now declar
 the same XML file with `<camel>` as the root tag:
 
 ```xml
-<camel> 
-    <beans>
-        <bean id="messageString" class="java.lang.String">
-            <constructor-arg index="0" value="Hello"/>
-        </bean>
+<camel>
 
-        <bean id="greeter" class="org.apache.camel.main.app.Greeter">
-            <description>Spring Bean</description>
-            <property name="message">
-                <bean class="org.apache.camel.main.app.GreeterMessage">
-                    <property name="msg" ref="messageString"/>
-                </bean>
-            </property>
-        </bean>
-    </beans>
+    <bean name="greeter" type="com.foo.Greeter">
+        <properties>
+            <property key="message" value="Hello World" />
+        </properties>
+    </bean>
 
     <route id="my-route">
         <from uri="direct:start"/>
@@ -88,7 +80,8 @@ the same XML file with `<camel>` as the root tag:
 
 Then Camel handles the dependency injection, among the `<beans>`. 
 
-You can also plugin Spring dependency injection, if you declare the beans to use spring namespace and include necessary Spring JARs.
+You can also use Spring dependency injection (which is more advanced), by inlining Spring `<beans>` tag with the spring namespace.
+See more in the documentation for `camel-xml-io-dsl` module.
 
 There is more work to be done, and we are planning to see if we can also use this to make migration from legacy
 OSGi Blueprint (and Spring XML files, eg `<beans>`) to modern Camel DSL.
