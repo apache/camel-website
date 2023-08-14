@@ -39,6 +39,9 @@ You can find more details in this blog post [camel 4 performance improvements](/
 
 We tested Camel 4 with Spring Boot 3.1.2, the latest release available.
 
+The `camel-platform-http-starter` is now using the embedded HTTP server directly from Spring Boot, instead of
+using Servlet APIs as previously.
+
 This release also comes with our first basic (and very limited) support for Spring Boot native (AOT compilation).
 See more in the [aot-basic](https://github.com/apache/camel-spring-boot-examples/tree/main/aot-basic) example.
 
@@ -56,7 +59,6 @@ The inclusion of an embedded HTTP server is now made easy with the new `camel-pl
 See more in the [camel-main](https://github.com/apache/camel-examples/tree/main/examples/main) example.
 
 ### 7) Camel JBang
-
 
 We made a lot of improvements to Camel JBang. The `camel` CLI can now easily run with different Camel versions, for example:
 
@@ -125,12 +127,16 @@ There is more work to be done, and we are planning to see if we can also use thi
 - `camel-aws2-step-functions`: Manage and invoke AWS Step functions
 - `camel-azure-files`: Send and receive files on Azure File Storage
 - `camel-dhis2`: Integrate with DHIS2 (health-level)
+- `camel-observation`: Observability using Micrometer Observation
 - `camel-opensearch`: Send requests to OpenSearch
 - `camel-parquet-avro`: Parquet Avro serialization and de-serialization
 - `camel-platform-http-main`: Platform HTTP for Camel Main runtime
 - `camel-yaml-io`: YAML DSL route dumper
+- `camel-zeebe`: Integration with Camunda Zeebe
 
 ### 10) Miscellaneous improvements
+
+The Camel maven plugins has been made compatible with Apache Maven 4.
 
 Camel 4 now requires JUnit 5 for unit tests, with the test components that have -junit5 as suffix.
 
@@ -146,12 +152,20 @@ And in YAML:
 
     - log: "${prettyBody}"
 
+We have added more _dev_console_s that provide insights into your running Camel application, which
+can be used together with Camel JBang and also visible in the developer web console.
 
-TODO: Other bits and pieces
+### Migrating to Camel 4
 
-### 11) Migrating to Camel 4
+Support for OSGi (via Apache Karaf) and `camel-cdi` has been removed. 
+
+Camel 4 is primary supporting Spring Boot, Quarkus, and standalone Camel with `camel-main`.
+Other runtimes is not officially supported.
 
 We have, of course, cleaned up the code base. For instance, we removed all the deprecated APIs and components. 
+
+Some components that are not `jakarta` API compatible has been removed, until they have new releases,
+that works with `jakarta` APIs. The removed components are listed in the migration guide.
 
 We have also adjusted some APIs used to configure the `CamelContext` with custom settings.
 
@@ -166,7 +180,7 @@ You can learn about all details can in the [migration guide](/manual/camel-4-mig
 
 Good luck with your migration if you decide to continue your Camel journey. And for new users to Camel then good luck getting onboard.
 
-### 12) Roadmap for remainder of 2023
+### Roadmap for Camel 4 for remainger of 2023
 
 We will continue working on Camel 4.x and do non-LTS releases, leading up to the next LTS release by end of this year.
 
@@ -191,3 +205,13 @@ We will continue to look for areas where we can improve the performance of Camel
 improve performance in the Camel type converter systems, and we plan to refactor for Camel 4.1 onwards.
 
 And of course all the usual new features and improvements coming in from community users and contributors.
+
+### Roadmap for Camel 3 releases
+
+Our focus has shifted to primary work on Camel 4 onwards. We will continue to fix important bugs, CVEs and whatnot for the
+supported LTS releases of Camel 3. The last Camel 3.x release is Camel 3.22 LTS that is planned for end of this year.
+This means we will only do patch releases for Camel 3.22 LTS in 2024, and by end of 2024, then all of Camel 3 is EOL. 
+
+The Camel 3.22 release will be a _small release_ with only limited new functionality.
+
+Users are encourage to start new development, when possible, on Camel 4.
