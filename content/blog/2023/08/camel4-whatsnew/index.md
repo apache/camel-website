@@ -157,8 +157,6 @@ can be used together with Camel JBang and also visible in the developer web cons
 
 ### Migrating to Camel 4
 
-Support for OSGi (via Apache Karaf) and `camel-cdi` has been removed. 
-
 Camel 4 is primary supporting Spring Boot, Quarkus, and standalone Camel with `camel-main`.
 Other runtimes are not officially supported. For users that must use Camel 4 as a framework on top of other runtimes,
 then you can ask for guidance and help in the Camel community. 
