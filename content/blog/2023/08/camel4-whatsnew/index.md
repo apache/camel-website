@@ -65,7 +65,7 @@ We made a lot of improvements to Camel JBang. The `camel` CLI can now easily run
     camel run foo.yaml --camel-version=3.21.0
     camel run foo.yaml --camel-version=3.20.6
 
-This is very handy when, for example, you need to trouble-shoot why _something_ started failed. For instance, in occasions when
+This is very handy when, for example, you need to trouble-shoot when _something_ started failing. For instance, in occasions when
 it works on version X but not on version Y, now you can quickly try to find out which version in between that started failing.
 
 You can also specify that `camel` CLI should use a specific Camel version by default. For example, if you have a newer version of
@@ -93,7 +93,7 @@ Camel development.
 
 ### 8) XML DSL with beans
 
-We have been working on to unify the YAML, XML and Java DSL, so that they have feature parity related to configuring beans. For example,
+We have been working on unifying the YAML, XML and Java DSL, so that they have feature parity related to configuring beans. For example,
 in XML DSL (`camel-xml-io`) you can now declare beans and Camel routes in the same XML file with `<camel>` as the root tag:
 
 ```xml
@@ -160,7 +160,7 @@ can be used together with Camel JBang and also visible in the developer web cons
 Support for OSGi (via Apache Karaf) and `camel-cdi` has been removed. 
 
 Camel 4 is primary supporting Spring Boot, Quarkus, and standalone Camel with `camel-main`.
-Other runtimes is not officially supported. For users that must use Camel 4 as a framework on top of other runtimes,
+Other runtimes are not officially supported. For users that must use Camel 4 as a framework on top of other runtimes,
 then you can ask for guidance and help in the Camel community. 
 
 We have, of course, cleaned up the code base. For instance, we removed all the deprecated APIs and components. 
@@ -181,7 +181,7 @@ You can learn about all details can in the [migration guide](/manual/camel-4-mig
 
 Good luck with your migration if you decide to continue your Camel journey. And for new users to Camel then good luck getting onboard.
 
-### Roadmap for Camel 4 for remainger of 2023
+### Roadmap for Camel 4 for the remainder of 2023
 
 We will continue working on Camel 4.x and do non-LTS releases, leading up to the next LTS release by end of this year.
 
@@ -215,4 +215,4 @@ This means we will only do patch releases for Camel 3.22 LTS in 2024, and by end
 
 The Camel 3.22 release will be a _small release_ with only limited new functionality.
 
-Users are encourage to start new development, when possible, on Camel 4.
+Users are encouraged to start new development on Camel 4.
