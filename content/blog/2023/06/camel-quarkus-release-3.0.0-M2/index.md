@@ -20,7 +20,7 @@ Please refer to the [Camel 4.0.0-M3 announcement](/blog/2023/05/RELEASE-4.0.0-M3
 Please refer to the [3.1.0.Final announcement](https://quarkus.io/blog/quarkus-3-1-0-final-released/) for more details.
 
 # Migrating to Camel Quarkus 3.0.0
-Please check the [Camel Quarku 3.0 migration guide](/camel-quarkus/next/migration-guide/3.0.0.html) to learn about main breaking changes from both Camel 4.0 and Quarkus 3.0.
+Please check the Camel Quarkus 3.0 migration guide to learn about main breaking changes from both Camel 4.0 and Quarkus 3.0.
 
 # Work in progress
 There is still work in progress and some extensions that are not available yet in the Camel Quarkus 3.0.0-M2. Please check [the pending issues](https://github.com/apache/camel-quarkus/issues?q=is%3Aopen+is%3Aissue+label%3Ajakarta).
