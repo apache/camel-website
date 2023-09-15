@@ -1,5 +1,5 @@
 ---
-url: "/releases/q-2.13.0/"
+url: "/releases/q-3.2.0/"
 date: 2023-09-01
 eol: 2024-03-01
 type: release-note
