@@ -26,9 +26,6 @@ kamel logs test
 [1] 2023-09-19 08:51:59,475 INFO  [org.apa.cam.k.Runtime] (main) Apache Camel K Runtime 3.2.0
 [1] 2023-09-19 08:51:59,496 INFO  [org.apa.cam.qua.cor.CamelBootstrapRecorder] (main) Bootstrap runtime: org.apache.camel.quarkus.main.CamelMainRuntime
 [1] 2023-09-19 08:51:59,498 INFO  [org.apa.cam.mai.MainSupport] (main) Apache Camel (Main) 4.0.0 is starting
-[1] 2023-09-19 08:51:59,475 INFO  [org.apa.cam.k.Runtime] (main) Apache Camel K Runtime 3.2.0
-[1] 2023-09-19 08:51:59,496 INFO  [org.apa.cam.qua.cor.CamelBootstrapRecorder] (main) Bootstrap runtime: org.apache.camel.quarkus.main.CamelMainRuntime
-[1] 2023-09-19 08:51:59,498 INFO  [org.apa.cam.mai.MainSupport] (main) Apache Camel (Main) 4.0.0 is starting
 ...
 ```
 
