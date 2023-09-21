@@ -43,7 +43,7 @@ Same luck for the `addons`. If you need further details on how to use the new st
 
 ## Add settings security to Maven build
 
-Securing your applications should be a top one priority. With the addition of Maven settings security, we're giving some more option to our user to strenghten their security policies. Find more information in the official [Maven setting security](/camel-k/1.10.x/configuration/maven.html#maven-settings-security) documentation page.
+Securing your applications should be a top one priority. With the addition of Maven settings security, we're giving some more option to our user to strenghten their security policies. Find more information in the Camel K Maven setting security documentation page.
 
 ## Environment promotion
 
@@ -59,7 +59,7 @@ While doing some stress tests, we've noticed that there were a high number of un
 
 ## Multi operator handling and multi tenancy model
 
-Another big effort that required some heavy refactoring. Before version 1.10, there was no way to have more than one operator running at the same time. We had provided some development to partially allow [multiple operators](/camel-k/1.10.x/installation/advanced/multi.html). Within this release, we're freeing the Camel K operator to be bound to a namespace, letting the Integrations (and the rest of CRDs) to declare which is the operator in charge of reconciling.
+Another big effort that required some heavy refactoring. Before version 1.10, there was no way to have more than one operator running at the same time. We had provided some development to partially allow multiple operators. Within this release, we're freeing the Camel K operator to be bound to a namespace, letting the Integrations (and the rest of CRDs) to declare which is the operator in charge of reconciling.
 
 The new model translates into more liberty from the user which can define a "self service" tenancy model. You can have several Camel K operators running, each of them managing its own set of resources. The nice thing is that we have worked to maintain full compatibility with what we used to have. So, if you don't need this new advanced feature, the application will behave exactly as it was.
 
@@ -76,7 +76,7 @@ Serverless is one of the features we've always sponsored in Camel K. That means 
 
 ## Resume API support
 
-Lately in Camel there was the great addition of the [Resume API strategy](/components/3.18.x/eips/resume-strategies.html). Within this release, we've introduced this support to let you Integration consume data at scale. Let's add some quote from a nice blog written recently about the [Resume API](/blog/2022/03/resume-api-v2/):
+Lately in Camel there was the great addition of the _Resume API strategy_. Within this release, we've introduced this support to let you Integration consume data at scale. Let's add some quote from a nice blog written recently about the [Resume API](/blog/2022/03/resume-api-v2/):
 
 > With this API the users can instruct Camel to start consuming data from the last offset that was processed. For instance, when reading a very large file Camel can skip reading the file offsets that have been previously consumed. It can start processing at the last processed offset.
 

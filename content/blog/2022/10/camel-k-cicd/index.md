@@ -7,7 +7,7 @@ categories: ["Howtos", "Camel K", "Devops"]
 preview: "Continuous Integration, Continuous Delivery and Continuous Deployment in Camel K"
 ---
 
-In [Camel K version 10](/blog/2022/09/camel-k-release-1-10/), we've released the CLI [`promote` feature](/camel-k/1.10.x/running/promoting.html) that provides Camel K an opinionated way of promoting an Integration through the stages of software development. This feature unlock the possibility to combine Camel K with external tooling and let the user develop according to any automated release process. We always ear about CI/CD (Continuous Integration/Continuous Delivery and/or Deployment), and in this blog we're going to see how to make it for any Camel K integration.
+In [Camel K version 10](/blog/2022/09/camel-k-release-1-10/), we've released the CLI `promote feature that provides Camel K an opinionated way of promoting an Integration through the stages of software development. This feature unlock the possibility to combine Camel K with external tooling and let the user develop according to any automated release process. We always ear about CI/CD (Continuous Integration/Continuous Delivery and/or Deployment), and in this blog we're going to see how to make it for any Camel K integration.
 
 The application I'm building is a REST API backed by a PostgreSQL database. It will be realized with Camel K Integration via YAML DSL. The source code is stored in Github and the idea is to build a **Continuous Delivery** pipeline that can be manually triggered when we want to provide a release. The pipeline will:
 

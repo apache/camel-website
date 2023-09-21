@@ -20,8 +20,6 @@ content:
         - camel-4.0.x
         - camel-3.21.x
         - camel-3.20.x
-        - camel-3.19.x
-        - camel-3.18.x
         - camel-3.14.x
       start_paths:
         # eip
@@ -36,9 +34,6 @@ content:
         - main
         - release-2.0.x
         - release-1.12.x
-        # Old, but required by Kamelets
-        - release-1.11.x
-        - release-1.10.x
       start_path: docs
 
     - url: https://github.com/apache/camel-k-runtime.git
@@ -46,9 +41,6 @@ content:
         - main
         - release-2.16.x
         - release-1.17.x
-        # Old, but required by Camel K 1.11 and 1.10 (to be removed when cleaning)
-        - release-1.16.x
-        - release-1.15.x
       start_path: docs
 
     - url: https://github.com/apache/camel-kamelets.git
@@ -57,9 +49,6 @@ content:
         - 4.0.x
         - 3.21.x
         - 3.20.x
-        # Old, but required by Camel Kafka Connector
-        - 0.10.x
-        - 0.9.x
       start_path: docs
 
     - url: https://github.com/apache/camel-quarkus.git
@@ -67,9 +56,6 @@ content:
         - main
         - 3.2.x
         - 2.16.x
-        - 2.15.x
-        - 2.14.x
-        - 2.13.x
       start_path: docs
 
     - url: https://github.com/apache/camel-quarkus-examples.git
@@ -79,7 +65,7 @@ content:
     - url: https://github.com/apache/camel-kafka-connector.git
       branches:
         - main
-        - camel-kafka-connector-3.18.x
+        - camel-kafka-connector-3.20.x
       start_paths:
         - docs
         - connectors
@@ -90,8 +76,6 @@ content:
         - camel-spring-boot-4.0.x
         - camel-spring-boot-3.21.x
         - camel-spring-boot-3.20.x
-        - camel-spring-boot-3.19.x
-        - camel-spring-boot-3.18.x
         - camel-spring-boot-3.14.x
       start_paths:
         - components-starter
@@ -104,8 +88,6 @@ content:
         - main
         - camel-karaf-3.21.x
         - camel-karaf-3.20.x
-        - camel-karaf-3.19.x
-        - camel-karaf-3.18.x
         - camel-karaf-3.14.x
       start_path: docs
 
