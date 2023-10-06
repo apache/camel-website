@@ -37,7 +37,7 @@ was a release lead by Spring Boot 3, Quarkus 3, and `javax` -> `jakarta` API.
 
 There are Camel components that have been removed in Camel 4 as they were either deprecated in v3, or they do
 not support Jakarta EE, or their underlying project is no longer active. You can find a list of components
-that has been removed (with suggestion for new component to use) in the [camel 4 migration guide](manual/camel-4-migration-guide.html).
+that have been removed (with suggestions for new components to use) in the [camel 4 migration guide](manual/camel-4-migration-guide.html).
 
 In terms of backward compatibility, then Camel 4 is mostly compatible with regular Camel applications.
 However, if you are using some of the more advanced features and other plugins in Camel, then migrating
