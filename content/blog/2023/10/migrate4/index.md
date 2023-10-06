@@ -35,7 +35,10 @@ You can find more details in the [migration and upgrade guides](/manual/migratio
 We anticipate the migration effort for most end users from Camel 3 to 4 is a _minor effort_, as Camel 4
 was a release lead by Spring Boot 3, Quarkus 3, and `javax` -> `jakarta` API. 
 
-However, there are Camel components that has been removed in Camel 4 as they were either deprecated in v3, or they do
+There are Camel components that has been removed in Camel 4 as they were either deprecated in v3, or they do
 not support Jakarta EE, or their project is no longer active. You can find a list of components
 that has been removed (with suggestion for new component to use) in the [camel 4 migration guide](manual/camel-4-migration-guide.html).
 
+In terms of backward compatibility, then Camel 4 is mostly compatible with regular Camel applications.
+However, if you are using some of the more advanced features and other plugins in Camel, then migrating
+the code to the new version might be needed. Additionally, custom components must be migrated and recompiled.
