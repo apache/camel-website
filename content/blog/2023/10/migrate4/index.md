@@ -12,7 +12,7 @@ that are seeking information how to migrate from Camel 2 or 3.
 We plan to post more blog posts in the future with more specific details on migrating, such as migrating from Camel Karaf
 to Camel 4 on Spring Boot or Quarkus. 
 
-Apache Camel 4.0 is based on the Camel 3.20.0 release. In other words, after the 3.20.0 release, we shifted the `main`
+Apache Camel 4.0 is a fork of Camel 3.20. In other words, after the 3.20.0 release, we shifted the `main`
 code branch to be Camel 4. This affects how to migrate to Camel 4, as you essentially need to migrate to Camel 3.20 first.
 And then afterward you can migrate to Camel 4.x.
 
