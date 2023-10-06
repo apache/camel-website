@@ -33,7 +33,7 @@ Migration Plan:
 You can find more details in the [migration and upgrade guides](/manual/migration-and-upgrade.html).
 
 We anticipate the migration effort for most end users from Camel 3 to 4 is a _minor effort_, as Camel 4
-was a release lead by Spring Boot 3, Quarkus 3, and `javax` -> `jakarta` API. 
+was a release led by Spring Boot 3, Quarkus 3, and Jakarta EE migration. 
 
 There are Camel components that have been removed in Camel 4 as they were either deprecated in v3, or they do
 not support Jakarta EE, or their underlying project is no longer active. You can find a list of components
