@@ -40,5 +40,5 @@ not support Jakarta EE, or their underlying project is no longer active. You can
 that have been removed (with suggestions for new components to use) in the [camel 4 migration guide](manual/camel-4-migration-guide.html).
 
 In terms of backward compatibility, then Camel 4 is mostly compatible with regular Camel applications.
-However, if you are using some of the more advanced features and other plugins in Camel, then migrating
+However, if you are using some advanced features and other plugins in Camel, then migrating
 the code to the new version might be needed. Additionally, custom components must be migrated and recompiled.
