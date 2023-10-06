@@ -36,7 +36,7 @@ We anticipate the migration effort for most end users from Camel 3 to 4 is a _mi
 was a release lead by Spring Boot 3, Quarkus 3, and `javax` -> `jakarta` API. 
 
 There are Camel components that have been removed in Camel 4 as they were either deprecated in v3, or they do
-not support Jakarta EE, or their project is no longer active. You can find a list of components
+not support Jakarta EE, or their underlying project is no longer active. You can find a list of components
 that has been removed (with suggestion for new component to use) in the [camel 4 migration guide](manual/camel-4-migration-guide.html).
 
 In terms of backward compatibility, then Camel 4 is mostly compatible with regular Camel applications.
