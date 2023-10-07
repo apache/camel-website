@@ -42,3 +42,7 @@ that have been removed (with suggestions for new components to use) in the [came
 In terms of backward compatibility, then Camel 4 is mostly compatible with regular Camel applications.
 However, if you are using some advanced features and other plugins in Camel, then migrating
 the code to the new version might be needed. Additionally, custom components must be migrated and recompiled.
+
+Users that uses custom or advanced features of Apache Camel, such as adding and removing routes dynamically
+via programmatic APIs, and users that rely on `ExtendedCamelContext`, will need to migrate and adapt code.
+
