@@ -1,7 +1,7 @@
 ---
 title: "Migrating to Apache Camel 4"
 date: 2023-10-10
-authors: [davsclaus]
+authors: [davsclaus, essobedo]
 categories: ["Howtos"]
 preview: Guidelines for migrating to Apache Camel 4
 ---
