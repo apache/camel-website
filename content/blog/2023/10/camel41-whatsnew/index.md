@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 4.1 What's New"
-date: 2023-10-11
-authors: [davsclaus]
+date: 2023-10-12
+authors: [davsclaus, gzurowski]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 4.1 release.
 ---
