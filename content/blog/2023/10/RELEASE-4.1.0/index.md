@@ -4,7 +4,7 @@ date: 2023-10-11
 draft: false
 authors: [gzurowski]
 categories: ["Releases"]
-preview: "The Camel community announces the immediate availability of a the new Camel 4.1.0 release"
+preview: "The Camel community announces the immediate availability of the new Camel 4.1.0 release"
 ---
 
 The Camel community announces the immediate availability of the Camel 4.1.0 release with 175 new features and improvements.
