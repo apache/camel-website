@@ -80,9 +80,9 @@ Set `muteException=false` to have old behaviour.
 
 ## New Components
 
-- camel-aws2-redshift-data - Perform operations on AWS Redshift using Redshift Data API.
-- camel-aws2-timestream - A Camel Amazon Web Services TimeStream component
-- camel-thymeleaf - Transform messages using a Thymeleaf template.
+- `camel-aws2-redshift-data` - Perform operations on AWS Redshift using Redshift Data API.
+- `camel-aws2-timestream` - A Camel Amazon Web Services TimeStream component
+- `camel-thymeleaf` - Transform messages using a Thymeleaf template.
 
 ## Upgrading
 
