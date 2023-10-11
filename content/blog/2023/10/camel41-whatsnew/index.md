@@ -12,7 +12,7 @@ This release introduces a set of new features and noticeable improvements that w
 
 ## DSL
 
-The XML and YAML DSL now has better support for defining `<bean>` which can be configured with properties, and
+The XML and YAML DSL now has better support for defining <bean> which can be configured with properties, and
 references to other beans. We have added support for easier configuration to specify constructor arguments,
 factory beans and methods, and inlined script or java code that gives full power for creating the bean.
 
