@@ -12,14 +12,14 @@ This release introduces a set of new features and noticeable improvements that w
 
 ## DSL
 
-The XML and YAML DSL now has better support for defining <bean> which can be configured with properties, and
+The XML and YAML DSL now have better support for defining <bean> which can be configured with properties, and
 references to other beans. We have added support for easier configuration to specify constructor arguments,
 factory beans and methods, and inlined script or java code that gives full power for creating the bean.
 
 We have also enhanced `camel-core` to make it able to dump route DSLs with <bean> included. This makes it possible
 for Camel being able to migrate your route sources between XML and YAML DSLs (see more in next section).
 
-The XML DSL `camel-xml-io` now have line-precise parsing error that shows you exactly where the problem is.
+The XML DSL `camel-xml-io` now has line-precise parsing error that shows you exactly where the problem is.
 
 ## Camel JBang (Camel CLI)
 
@@ -48,11 +48,11 @@ Added `camel get startup` command to output timed report of startup procedures t
 Added type converter for `byte[]` to `String` to make it easy to get Kafka header content as text value
 (data is stored as byte array by Kafka).
 
-## Camel OpenTelemtry
+## Camel OpenTelemetry
 
-Added `OpenTelematryTracingStrategy` that allows fine-grained tracing of every step a message is routed by Camel.
+Added `OpenTelemetryTracingStrategy` that allows fine-grained tracing of every step a message is routed by Camel.
 
-Decorators now uses [OpenTelemtry Sematic Naming Style](https://opentelemetry.io/docs/specs/otel/trace/semantic_conventions/)
+Decorators now uses [OpenTelemetry Semantic Naming Style](https://opentelemetry.io/docs/specs/otel/trace/semantic_conventions/)
 for tracing headers.
 
 ## Spring Boot
@@ -63,7 +63,7 @@ Upgraded to latest 3.1.4 release.
 
 The `camel-report:route-coverage` Maven plugin can now generate reports in HTML format.
 
-The `file` component now have options to accept hidden files and directories.
+The `file` component now has options to accept hidden files and directories.
 
 The `xslt` component is more dynamic by make it possible to specify the XSLT template as a header,
 meaning that each `Exchange` can use a dynamic computed stylesheet.
