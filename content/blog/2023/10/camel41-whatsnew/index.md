@@ -19,11 +19,11 @@ and can bring improved performance for many scenarios, such as the content-based
 
 ## DSL
 
-The XML and YAML DSL now have better support for defining <bean> which can be configured with properties, and
+The XML and YAML DSL now have better support for defining bean which can be configured with properties, and
 references to other beans. We have added support for easier configuration to specify constructor arguments,
 factory beans and methods, and inlined script or java code that gives full power for creating the bean.
 
-We have also enhanced `camel-core` to make it able to dump route DSLs with <bean> included. This makes it possible
+We have also enhanced `camel-core` to make it able to dump route DSLs with bean included. This makes it possible
 for Camel being able to migrate your route sources between XML and YAML DSLs (see more in next section).
 
 The XML DSL `camel-xml-io` now has line-precise parsing error that shows you exactly where the problem is.
