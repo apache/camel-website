@@ -12,7 +12,7 @@ This release introduces a set of new features and noticeable improvements that w
 
 ## Camel Core
 
-We continue with our [performance optimizations](/camel-4-performance-improvements/) in the core.
+We continue with our [performance optimizations](/blog/2023/05/camel-4-performance-improvements/) in the core.
 
 This release brings an optimized type converter, that works around JDK issue 8180450,
 and can bring improved performance for many scenarios, such as the content-based router and filter.
