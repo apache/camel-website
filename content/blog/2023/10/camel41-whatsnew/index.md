@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 4.1 What's New"
 date: 2023-10-12
-authors: [davsclaus, gzurowski]
+authors: [davsclaus, gzurowski,orpiske]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 4.1 release.
 ---
@@ -9,6 +9,13 @@ preview: Details of what we have done in the Camel 4.1 release.
 Apache Camel 4.1 (non LTS) has just been [released](/blog/2023/10/RELEASE-4.1.0/).
 
 This release introduces a set of new features and noticeable improvements that we will cover in this blog post.
+
+## Camel Core
+
+We continue with our [performance optimizations](/camel-4-performance-improvements/) in the core.
+
+This release brings an optimized type converter, that works around JDK issue 8180450,
+and can bring improved performance for many scenarios, such as the content-based router and filter.
 
 ## DSL
 
