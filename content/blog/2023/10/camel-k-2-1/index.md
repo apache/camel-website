@@ -36,7 +36,7 @@ More on the builder side it is the introduction of **JIB as an additional builde
 
 ## Restricted security context
 
-Security is something we have at hearth. From now on, by default, the operator and the Integration Pods will run with a **restricted security context**.
+Security is something we have at heart. From now on, by default, the operator and the Integration Pods will run with a **restricted security context**.
 
 ## Registry configuration and error condition
 
