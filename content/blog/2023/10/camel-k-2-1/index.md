@@ -7,6 +7,7 @@ categories: ["Releases", "Camel K", "Roadmap"]
 preview: "What's new in Camel K 2.1!"
 ---
 
+
 Apache Camel community is happy to announce the general availability of **Camel K 2.1**. We have worked on the introduction of a lot of new exciting feature that will further **simplify the deployment and management of Camel application on Kubernetes**. Let's see what you should expect from this release.
 
 ## Default Camel 4 runtime
@@ -25,7 +26,7 @@ _Camel K Pipeline tasks_
 This gives you more flexibility by letting you customize the build before the binaries are taken by the package task. Beside this change we have introduced a lot of advanced configuration in the Builder trait. Each custom task you will define, can be configured with limits and requests resources: `builder.tasks-request-cpu`, `builder.tasks-request-memory`, `builder.tasks-limit-cpu`, `builder.tasks-limit-memory`.
 Another interesting option we have introduced, was to let the user disable the Incremental Image Build option via `builder.incremental-image-build`. It is not advisable, but there could be situations were you don't want your Integration inherit from existing IntegrationKits.
 
-Always related to the builder, you will find now the presence of `builder.maven-profile` option. With this one you can provide a customized [Maven profile](https://maven.apache.org/guides/introduction/introduction-to-profiles.html#profiles-in-poms) to your build. This is cool if you want to influence the build phase in any manner.
+Always related to the builder, you will find now the presence of `builder.maven-profiles` option. With this one you can provide one or more customized [Maven profiles](https://maven.apache.org/guides/introduction/introduction-to-profiles.html#profiles-in-poms) to your build. This is cool if you want to influence the build phase in any manner.
 
 Next thing, we have removed the dynamic builder catalog which will give the operator more stability, getting rid off one moving part (which may always fail for any reason). It was part of a more general Quarkus Native refactoring where we have also introduced a series of advanced configurations. From now on, in the Quarkus trait you can specify the `quarkus.native-builder-image` and the `quarkus.native-base-image` to respectively override which is the container image you want to use for the native build and which is the one you want to use in your Native integration.
 We have also simplified the configuration required to run either a JVM or Native Quarkus application by introducing the trait parameter `quarkus.build-mode` which simply accept `jvm` or `native` values. The previous `quarkus.package-type` (now deprecated) was exposing implementation details not really user friendly (who of you can tell what a `fast-jar` is!?).
