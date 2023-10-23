@@ -1,6 +1,6 @@
 ---
 title: "Camel K 2.1"
-date: 2023-10-20
+date: 2023-10-23
 draft: false
 authors: [squakez]
 categories: ["Releases", "Camel K", "Roadmap"]
