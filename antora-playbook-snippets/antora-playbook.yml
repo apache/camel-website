@@ -32,6 +32,7 @@ content:
       # Let's keep latest active development + LTS active versions only
       branches:
         - main
+        - release-2.1.x
         - release-2.0.x
         - release-1.12.x
       start_path: docs
@@ -39,6 +40,7 @@ content:
     - url: https://github.com/apache/camel-k-runtime.git
       branches:
         - main
+        - release-3.2.x
         - release-2.16.x
         - release-1.17.x
       start_path: docs
