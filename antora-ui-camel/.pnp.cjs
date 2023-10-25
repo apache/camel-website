@@ -273,7 +273,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:d27045f313cae7cbc212b229738d5843f6d2265eba3ea36069f78075a79d301bc17e702a21a7b811ca9aa59de4cb7943fb27cda91a0e7d8a8ad547668124b185#npm:4.1.1"],\
             ["gensync", "npm:1.0.0-beta.1"],\
             ["json5", "npm:2.2.3"],\
-            ["lodash", "npm:4.17.15"],\
+            ["lodash", "npm:4.17.21"],\
             ["resolve", "patch:resolve@npm%3A1.18.1#~builtin<compat/resolve>::version=1.18.1&hash=07638b"],\
             ["semver", "npm:5.7.0"],\
             ["source-map", "npm:0.5.7"]\
@@ -288,7 +288,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/generator", "npm:7.10.2"],\
             ["@babel/types", "npm:7.10.2"],\
             ["jsesc", "npm:2.5.2"],\
-            ["lodash", "npm:4.17.15"],\
+            ["lodash", "npm:4.17.21"],\
             ["source-map", "npm:0.5.7"]\
           ],\
           "linkType": "HARD"\
@@ -347,7 +347,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/helper-split-export-declaration", "npm:7.10.1"],\
             ["@babel/template", "npm:7.10.1"],\
             ["@babel/types", "npm:7.10.2"],\
-            ["lodash", "npm:4.17.15"]\
+            ["lodash", "npm:4.17.21"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -464,7 +464,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/types", "npm:7.10.2"],\
             ["debug", "virtual:d27045f313cae7cbc212b229738d5843f6d2265eba3ea36069f78075a79d301bc17e702a21a7b811ca9aa59de4cb7943fb27cda91a0e7d8a8ad547668124b185#npm:4.1.1"],\
             ["globals", "npm:11.12.0"],\
-            ["lodash", "npm:4.17.15"]\
+            ["lodash", "npm:4.17.21"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -475,7 +475,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@babel/types", "npm:7.10.2"],\
             ["@babel/helper-validator-identifier", "npm:7.10.1"],\
-            ["lodash", "npm:4.17.15"],\
+            ["lodash", "npm:4.17.21"],\
             ["to-fast-properties", "npm:2.0.0"]\
           ],\
           "linkType": "HARD"\
@@ -4182,7 +4182,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["js-yaml", "npm:3.13.1"],\
             ["json-stable-stringify-without-jsonify", "npm:1.0.1"],\
             ["levn", "npm:0.3.0"],\
-            ["lodash", "npm:4.17.15"],\
+            ["lodash", "npm:4.17.21"],\
             ["minimatch", "npm:3.1.2"],\
             ["mkdirp", "npm:0.5.1"],\
             ["natural-compare", "npm:1.4.0"],\
@@ -4226,7 +4226,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["js-yaml", "npm:3.13.1"],\
             ["json-stable-stringify-without-jsonify", "npm:1.0.1"],\
             ["levn", "npm:0.3.0"],\
-            ["lodash", "npm:4.17.15"],\
+            ["lodash", "npm:4.17.21"],\
             ["minimatch", "npm:3.1.2"],\
             ["mkdirp", "npm:0.5.1"],\
             ["natural-compare", "npm:1.4.0"],\
@@ -5991,7 +5991,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/gulp-template-npm-5.0.0-dc378aeb0a-6312065295.zip/node_modules/gulp-template/",\
           "packageDependencies": [\
             ["gulp-template", "npm:5.0.0"],\
-            ["lodash", "npm:4.17.15"],\
+            ["lodash", "npm:4.17.21"],\
             ["plugin-error", "npm:0.1.2"],\
             ["safe-buffer", "npm:5.1.2"],\
             ["through2", "npm:2.0.5"]\
@@ -6642,7 +6642,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cli-width", "npm:2.2.0"],\
             ["external-editor", "npm:3.0.3"],\
             ["figures", "npm:2.0.0"],\
-            ["lodash", "npm:4.17.15"],\
+            ["lodash", "npm:4.17.21"],\
             ["mute-stream", "npm:0.0.7"],\
             ["run-async", "npm:2.4.1"],\
             ["rxjs", "npm:6.5.5"],\
@@ -6662,7 +6662,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cli-width", "npm:2.2.0"],\
             ["external-editor", "npm:3.0.3"],\
             ["figures", "npm:3.2.0"],\
-            ["lodash", "npm:4.17.15"],\
+            ["lodash", "npm:4.17.21"],\
             ["mute-stream", "npm:0.0.8"],\
             ["run-async", "npm:2.4.1"],\
             ["rxjs", "npm:6.5.5"],\
@@ -7768,10 +7768,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["lodash", [\
-        ["npm:4.17.15", {\
-          "packageLocation": "./.yarn/cache/lodash-npm-4.17.15-566d9324f7-bb689bc88c.zip/node_modules/lodash/",\
+        ["npm:4.17.21", {\
+          "packageLocation": "./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/",\
           "packageDependencies": [\
-            ["lodash", "npm:4.17.15"]\
+            ["lodash", "npm:4.17.21"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -9979,7 +9979,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["postcss-reporter", "npm:6.0.1"],\
             ["chalk", "npm:2.4.2"],\
-            ["lodash", "npm:4.17.15"],\
+            ["lodash", "npm:4.17.21"],\
             ["log-symbols", "npm:2.2.0"],\
             ["postcss", "npm:7.0.32"]\
           ],\
@@ -12134,7 +12134,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["imurmurhash", "npm:0.1.4"],\
             ["known-css-properties", "npm:0.18.0"],\
             ["leven", "npm:3.1.0"],\
-            ["lodash", "npm:4.17.15"],\
+            ["lodash", "npm:4.17.21"],\
             ["log-symbols", "npm:3.0.0"],\
             ["mathml-tag-names", "npm:2.1.3"],\
             ["meow", "npm:6.1.1"],\
@@ -12333,7 +12333,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["table", "npm:5.4.6"],\
             ["ajv", "npm:6.12.6"],\
-            ["lodash", "npm:4.17.15"],\
+            ["lodash", "npm:4.17.21"],\
             ["slice-ansi", "npm:2.1.0"],\
             ["string-width", "npm:3.1.0"]\
           ],\
@@ -13454,7 +13454,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-visitor-keys", "npm:1.1.0"],\
             ["espree", "npm:3.5.4"],\
             ["esquery", "npm:1.0.1"],\
-            ["lodash", "npm:4.17.15"]\
+            ["lodash", "npm:4.17.21"]\
           ],\
           "packagePeers": [\
             "@types/eslint",\
