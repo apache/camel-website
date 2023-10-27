@@ -1507,6 +1507,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["minimalistic-assert", "npm:1.0.1"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:5.4.1", {\
+          "packageLocation": "./.yarn/cache/asn1.js-npm-5.4.1-37c7edbcb0-3786a101ac.zip/node_modules/asn1.js/",\
+          "packageDependencies": [\
+            ["asn1.js", "npm:5.4.1"],\
+            ["bn.js", "npm:4.11.8"],\
+            ["inherits", "npm:2.0.4"],\
+            ["minimalistic-assert", "npm:1.0.1"],\
+            ["safer-buffer", "npm:2.1.2"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["assert", [\
@@ -1835,6 +1846,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["bn.js", "npm:4.11.8"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:4.12.0", {\
+          "packageLocation": "./.yarn/cache/bn.js-npm-4.12.0-3ec6c884f6-39afb4f15f.zip/node_modules/bn.js/",\
+          "packageDependencies": [\
+            ["bn.js", "npm:4.12.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:5.2.1", {\
+          "packageLocation": "./.yarn/cache/bn.js-npm-5.2.1-dc952b1965-3dd8c8d380.zip/node_modules/bn.js/",\
+          "packageDependencies": [\
+            ["bn.js", "npm:5.2.1"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["body", [\
@@ -2070,20 +2095,31 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["randombytes", "npm:2.1.0"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:4.1.0", {\
+          "packageLocation": "./.yarn/cache/browserify-rsa-npm-4.1.0-2a224a51bc-155f0c1358.zip/node_modules/browserify-rsa/",\
+          "packageDependencies": [\
+            ["browserify-rsa", "npm:4.1.0"],\
+            ["bn.js", "npm:5.2.1"],\
+            ["randombytes", "npm:2.1.0"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["browserify-sign", [\
-        ["npm:4.0.4", {\
-          "packageLocation": "./.yarn/cache/browserify-sign-npm-4.0.4-1a79e14f9b-b1e6f6383f.zip/node_modules/browserify-sign/",\
+        ["npm:4.2.2", {\
+          "packageLocation": "./.yarn/cache/browserify-sign-npm-4.2.2-92f50c6d35-b622730c0f.zip/node_modules/browserify-sign/",\
           "packageDependencies": [\
-            ["browserify-sign", "npm:4.0.4"],\
-            ["bn.js", "npm:4.11.8"],\
-            ["browserify-rsa", "npm:4.0.1"],\
+            ["browserify-sign", "npm:4.2.2"],\
+            ["bn.js", "npm:5.2.1"],\
+            ["browserify-rsa", "npm:4.1.0"],\
             ["create-hash", "npm:1.2.0"],\
             ["create-hmac", "npm:1.1.7"],\
-            ["elliptic", "npm:6.4.1"],\
+            ["elliptic", "npm:6.5.4"],\
             ["inherits", "npm:2.0.4"],\
-            ["parse-asn1", "npm:5.1.4"]\
+            ["parse-asn1", "npm:5.1.6"],\
+            ["readable-stream", "npm:3.6.2"],\
+            ["safe-buffer", "npm:5.2.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3096,7 +3132,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["crypto-browserify", "npm:3.12.0"],\
             ["browserify-cipher", "npm:1.0.1"],\
-            ["browserify-sign", "npm:4.0.4"],\
+            ["browserify-sign", "npm:4.2.2"],\
             ["create-ecdh", "npm:4.0.3"],\
             ["create-hash", "npm:1.2.0"],\
             ["create-hmac", "npm:1.1.7"],\
@@ -3943,6 +3979,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["elliptic", "npm:6.4.1"],\
             ["bn.js", "npm:4.11.8"],\
+            ["brorand", "npm:1.1.0"],\
+            ["hash.js", "npm:1.1.7"],\
+            ["hmac-drbg", "npm:1.0.1"],\
+            ["inherits", "npm:2.0.4"],\
+            ["minimalistic-assert", "npm:1.0.1"],\
+            ["minimalistic-crypto-utils", "npm:1.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:6.5.4", {\
+          "packageLocation": "./.yarn/cache/elliptic-npm-6.5.4-0ca8204a86-d56d21fd04.zip/node_modules/elliptic/",\
+          "packageDependencies": [\
+            ["elliptic", "npm:6.5.4"],\
+            ["bn.js", "npm:4.12.0"],\
             ["brorand", "npm:1.1.0"],\
             ["hash.js", "npm:1.1.7"],\
             ["hmac-drbg", "npm:1.0.1"],\
@@ -9201,6 +9251,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["safe-buffer", "npm:5.1.2"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:5.1.6", {\
+          "packageLocation": "./.yarn/cache/parse-asn1-npm-5.1.6-6cc3a6eeae-9243311d1f.zip/node_modules/parse-asn1/",\
+          "packageDependencies": [\
+            ["parse-asn1", "npm:5.1.6"],\
+            ["asn1.js", "npm:5.4.1"],\
+            ["browserify-aes", "npm:1.2.0"],\
+            ["evp_bytestokey", "npm:1.0.3"],\
+            ["pbkdf2", "npm:3.0.17"],\
+            ["safe-buffer", "npm:5.1.2"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["parse-entities", [\
@@ -10606,6 +10668,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["util-deprecate", "npm:1.0.2"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:3.6.2", {\
+          "packageLocation": "./.yarn/cache/readable-stream-npm-3.6.2-d2a6069158-bdcbe6c22e.zip/node_modules/readable-stream/",\
+          "packageDependencies": [\
+            ["readable-stream", "npm:3.6.2"],\
+            ["inherits", "npm:2.0.4"],\
+            ["string_decoder", "npm:1.2.0"],\
+            ["util-deprecate", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["readdirp", [\
@@ -11094,6 +11166,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/safe-buffer-npm-5.1.2-c27fedf6c4-f2f1f7943c.zip/node_modules/safe-buffer/",\
           "packageDependencies": [\
             ["safe-buffer", "npm:5.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:5.2.1", {\
+          "packageLocation": "./.yarn/cache/safe-buffer-npm-5.2.1-3481c8aa9b-b99c4b41fd.zip/node_modules/safe-buffer/",\
+          "packageDependencies": [\
+            ["safe-buffer", "npm:5.2.1"]\
           ],\
           "linkType": "HARD"\
         }]\
