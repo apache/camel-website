@@ -56,7 +56,7 @@ simplified interface, hiding all the low level details about how those connectio
 
 {{< /div >}}
 
-<a href="/camel-k/latest/" class="icon" title="Camel-K Manual ">{{< icon "logo-d" "Apache Camel logo" "knative" "KNative logo" >}}</a>
+<a href="/camel-k/latest/" class="icon" title="Camel-K Manual ">{{< icon "logo-d" "Apache Camel logo" "kubernetes" "Kubernetes logo" >}}</a>
 
 {{< /div >}}
 
