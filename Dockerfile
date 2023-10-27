@@ -1,4 +1,4 @@
-FROM node:lts-buster
+FROM node:18-buster
 
 RUN set -ex \
   && apt-get update \
