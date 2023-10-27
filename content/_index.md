@@ -115,7 +115,7 @@ Apache Camel helps you integrate various systems consuming or producing data.
 
 {{< div "icon" >}}
 
-{{< icon "knative" "KNatve logo" >}}
+{{< icon "kubernetes" "Kubernetes logo" >}}
 
 {{< /div >}}
 
@@ -232,7 +232,7 @@ Apache Camel Karavan is a mastering tool to facilitate integration and speed up 
 
 ## Camel JBang
 
-The Camel CLI for easily getting started with Apache Camel. 
+The Camel CLI for easily getting started with Apache Camel.
 
 <p><a class="button dark" href="/docs/">Read More</a></p>
 
