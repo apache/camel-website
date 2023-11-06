@@ -27,6 +27,7 @@ const manifest = {
   "img/jbang.svg": "img/jbang-123e48aa14.svg",
   "img/karavan.svg": "img/karavan-feb7559d76.svg",
   "img/knative.svg": "img/knative-81c3109183.svg",
+  "img/kubernetes.svg": "img/kubernetes-99a42ac37b.svg",
   "img/logo-camel-medium.png": "img/logo-camel-medium-372cf8688f.png",
   "img/logo-d.svg": "img/logo-d-f21b25ba38.svg",
   "img/menu.svg": "img/menu-16e95092aa.svg",
