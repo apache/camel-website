@@ -16,6 +16,8 @@ This is the first release that officially supports running on Java 21.
 
 ## Camel Core
 
+TODO: performance and type converter stuff
+
 The Java DSL now supports String text-blocks when defining Camel URIs, as shown:
 
 ```
@@ -28,22 +30,62 @@ from("""debezium-postgres:customerEvents
     .to("kafka:cheese");
 ```
 
+You can now use a bean method call with property placeholders.
+
+For example a bean can be used to return the name for a topic to use in a Kafka route:
+
+```
+from("kafka:{{bean:myBean.computeTopic}}")
+  .to("bean:cheese")
+```
+
+In this example Camel will invoke the method `computeTopic` on the bean with id `myBean` when the route is created.
+
+## Camel Main
+
+You can now configure the following in `application.properties`:
+
+- global SSL options using `camel.ssl.`
+- Camel route debugger options using `camel.debug.`
+- Camel Open Telemetry options using `camel.opentelemetry.`
 
 ## DSL
 
-TODO:
+The kebab-case syntax in YAML DSL has been deprecated and Camel will now report a WARN if detected.
+You should use Camel Case of course ;) For example `set-header` should be `setHeader`.
 
 ## Camel JBang (Camel CLI)
 
-TOOD: debug command
+TODO: debug command
+TODO: other stuff
 
-## Spring Boot
+## Spring and Spring Boot
 
 Upgraded to latest 3.1.5 release.
+
+Added support for Spring beans using `@Primary` for auto-wiring. This allows Camel to use the primary bean when there are multiple
+bean instance for the same Java type (such as database connection's).
+
+## Rest DSL
+
+You can now use wildcards (`*`) in Rest DSL when defining APIs:
+
+```
+rest("myapi")
+  .get("/user/*")
+  .to("direct:getUser")
+```
 
 ## Miscellaneous
 
 The `camel-azure` can now send binary files to Azure Service Bus,
+
+The `camel-micrometer` can be configured in backwards (Camel 3.20 or older) naming mode. This allows to keep using old naming style,
+that monitoring systems have been pre-configured to use.
+
+The `camel-platform-http-vertx` now supports streaming big HTTP payloads directly if `useStreaming=true` has been set.
+
+The `camel-dynamic-router` component has been refactored to use Camel's `MulticastProcessor` as its engine instead of custom processor.
 
 ## New Components
 
