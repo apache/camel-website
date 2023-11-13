@@ -16,7 +16,9 @@ This is the first release that officially supports running on Java 21.
 
 ## Camel Core
 
-TODO: performance and type converter stuff
+We continue to fine-tune the new type converter that was introduced on Camel 4.1.0. This version brings a few cleanups to the code, some fixes to the type converter resolution logic, caching improvements and micro optimizations to the type matching algorithm.
+
+This release also comes with a additional changes to cleanup, simplify and organize internal APIs provided by the CamelContext.
 
 The Java DSL now supports String text-blocks when defining Camel URIs, as shown:
 
