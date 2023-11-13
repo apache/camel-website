@@ -60,7 +60,7 @@ We have continued investing in Camel JBang, and this time we introduce the new D
 route debugger from the CLI. This makes it very easy and quick to run and debug your Camel routes and better
 see and understand what happens.
 
-![Camel Debug](camel_debug.png)
+![Camel Debug](camel-debug.png)
 
 We plan to make a separate blog and video showing the debug command in action.
 
