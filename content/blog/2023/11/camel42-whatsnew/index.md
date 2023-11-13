@@ -32,7 +32,7 @@ from("""debezium-postgres:customerEvents
 
 You can now use a bean method call with property placeholders.
 
-For example a bean can be used to return the name for a topic to use in a Kafka route:
+For example, a bean can be used to return the name of a topic to use in a Kafka route:
 
 ```
 from("kafka:{{bean:myBean.computeTopic}}")
@@ -73,10 +73,10 @@ The `run clipboard.yaml` command (run from clipboard) now supports `--dev` mode 
 
 ## Spring and Spring Boot
 
-Upgraded to latest 3.1.5 release.
+Upgraded to latest [Spring Boot 3.1.5](https://spring.io/blog/2023/10/19/spring-boot-3-1-5-available-now) release.
 
 Added support for Spring beans using `@Primary` for auto-wiring. This allows Camel to use the primary bean when there are multiple
-bean instance for the same Java type (such as database connection's).
+bean instance for the same Java type (such as database connections).
 
 ## Rest DSL
 
@@ -92,16 +92,16 @@ This will then let Camel service all HTTP GET requests that starts with `myapi/u
 
 ## Miscellaneous
 
-The `camel-azure` can now send binary files to Azure Service Bus,
+The `camel-azure` can now send binary files to Azure Service Bus.
 
-The `camel-micrometer` can be configured in backwards (Camel 3.20 or older) naming mode. This allows to keep using old naming style,
+The `camel-micrometer` can be configured in backwards naming mode (Camel 3.20 or older). This allows to keep using old naming style,
 that monitoring systems have been pre-configured to use.
 
 The `camel-platform-http-vertx` now supports streaming big HTTP payloads directly if `useStreaming=true` has been set.
 
 The `camel-dynamic-router` component has been refactored to use Camel's `MulticastProcessor` as its engine instead of custom processor.
 
-The `camel-kafka` consumer will now fail on startup if you have invalid broker port number, that previously would make Kafka
+The `camel-kafka` consumer will now fail on startup if you have an invalid broker port number, that previously would make Kafka
 attempt endless reconnection.
 
 The `camel-http` component now supports OAuth 2.0 client authentication.
