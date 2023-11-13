@@ -68,13 +68,15 @@ bean instance for the same Java type (such as database connection's).
 
 ## Rest DSL
 
-You can now use wildcards (`*`) in Rest DSL when defining APIs:
+You can now use wildcards (`*`) in Rest DSL to handle a wider range of requests from the same API service:
 
 ```
 rest("myapi")
-  .get("/user/*")
-  .to("direct:getUser")
+  .get("user/*")
+  .to("direct:userStuff")
 ```
+
+This will then let Camel service all HTTP GET requests that starts with `myapi/user/` such as `myapi/user/123`, `myapi/user/123/account/zip`, etc.
 
 ## Miscellaneous
 
@@ -89,8 +91,8 @@ The `camel-dynamic-router` component has been refactored to use Camel's `Multica
 
 ## New Components
 
-- `camel-azure-schema-registry` - Azure Schema Registry Component for utilities to deal with authentication
-- `camel-smb` - SMB component which consumes natively from file shares using the Server Message Block (SMB, also known as Common Internet File System - CIFS) protocol
+- `camel-azure-schema-registry` - Azure Schema Registry Component for utilities to deal with authentication.
+- `camel-smb` - Receive files from SMB (Server Message Block) shares.
 
 ## Upgrading
 
