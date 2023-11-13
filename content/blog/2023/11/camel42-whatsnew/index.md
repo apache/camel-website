@@ -45,7 +45,7 @@ In this example Camel will invoke the method `computeTopic` on the bean with id 
 
 You can now configure the following in `application.properties`:
 
-- global SSL options using `camel.ssl.`
+- Global SSL options using `camel.ssl.`
 - Camel route debugger options using `camel.debug.`
 - Camel Open Telemetry options using `camel.opentelemetry.`
 
@@ -56,8 +56,20 @@ You should use Camel Case of course ;) For example `set-header` should be `setHe
 
 ## Camel JBang (Camel CLI)
 
-TODO: debug command
-TODO: other stuff
+We have continued investing in Camel JBang, and this time we introduce the new DSL `debug` command, that is a Camel
+route debugger from the CLI. This makes it very easy and quick to run and debug your Camel routes and better
+see and understand what happens.
+
+![Camel Debug](camel_debug.png)
+
+We plan to make a separate blog and video showing the debug command in action.
+
+The Camel JBang now supports Java Agents when exporting to `camel-main` runtime. This makes it easy for example to
+include Open Telemetry Java Agent JAR in the export, so you can easily build, package and run with the agent readily available.
+
+We also made Camel JBang work better on Windows. However, we are interested in feedback from Windows users.
+
+The `run clipboard.yaml` command (run from clipboard) now supports `--dev` mode for reload on changes (i.e. you can copy to clipboard your updates).
 
 ## Spring and Spring Boot
 
@@ -88,6 +100,11 @@ that monitoring systems have been pre-configured to use.
 The `camel-platform-http-vertx` now supports streaming big HTTP payloads directly if `useStreaming=true` has been set.
 
 The `camel-dynamic-router` component has been refactored to use Camel's `MulticastProcessor` as its engine instead of custom processor.
+
+The `camel-kafka` consumer will now fail on startup if you have invalid broker port number, that previously would make Kafka
+attempt endless reconnection.
+
+The `camel-http` component now supports OAuth 2.0 client authentication.
 
 ## New Components
 
