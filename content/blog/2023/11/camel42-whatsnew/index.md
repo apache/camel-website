@@ -73,7 +73,7 @@ We also made Camel JBang work better on Windows. However, we are interested in f
 
 The `run clipboard.yaml` command (run from clipboard) now supports `--dev` mode for reload on changes (i.e. you can copy to clipboard your updates).
 
-We have also improved support for migrating older Spring XML (spring <beans> XML files) or Camel Karaf projects (OSGi <blueprint> XML files)
+We have also improved support for migrating older Spring XML (classic Spring XML files) or Camel Karaf projects (OSGi blueprint XML files)
 to Camel 4 with the `transform` command. A blog post is currently in the writing about this topic.
 However, this effort, lead us to implement _best effort_ running existing Maven based projects via `camel run pom.xml`.
 The need for this is to assist during migrating those older projects, but can be used for other purposes in the future.
