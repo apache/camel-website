@@ -181,6 +181,8 @@ when you need to quickly build a prototype with Camel.
 
 {{< div "box left" >}}
 
+<a href="/camel-kamelets/latest/" class="icon" title="Kamelets ">{{< icon "logo-d" "Apache Camel logo" >}}</a>
+
 {{< div "content">}}
 
 ## Kamelets
@@ -193,7 +195,5 @@ simplified interface, hiding all the low level details about how those connectio
 </p>
 
 {{< /div >}}
-
-<a href="/camel-kamelets/latest/" class="icon" title="Kamelets ">{{< icon "logo-d" "Apache Camel logo" >}}</a>
 
 {{< /div >}}
