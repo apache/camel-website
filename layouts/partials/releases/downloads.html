@@ -1,6 +1,9 @@
 {{/* after 2018-11-10 we started using SHA512 */}}
 {{ $sha1_cutoff := time "2018-11-10" }}
 
+{{/* from 2023-11-14 all releases have SBOM downloads */}}
+{{ $sbom_cutoff := time "2023-11-14" }}
+
 {{/* default base URLs for current releases */}}
 {{ $artifact_base_url := "https://www.apache.org/dyn/closer.lua/" }}
 {{ $meta_base_url := "https://downloads.apache.org/" }}
@@ -128,14 +131,22 @@
         {{ range $kind, $v := $version }}
             {{ $release_note := (index (where (where (where $.Pages "Section" "releases") ".Params.category" $.Category.id) ".Params.version" $v) 0) }}
             {{ $hash_extension := ".sha512" }}
+            {{ $hash_name := "SHA512" }}
             {{ if le $release_note.Date $sha1_cutoff }}
                 {{ $hash_extension = ".sha1" }}
+                {{ $hash_name = "SHA1" }}
+            {{ end }}
+            {{ $downloads := $.Category.downloads}}
+            {{ if lt $release_note.Date $sbom_cutoff }}
+                {{/* removes SBOM downloads based on the cutoff date */}}
+                {{ $downloads = collections.Where $downloads "name" "not in" "SBOM, CycloneDX XML" }} {{/* must match the name in data/release-categories.yaml */}}
+                {{ $downloads = collections.Where $downloads "name" "not in" "SBOM, CycloneDX JSON" }} {{/* must match the name in data/release-categories.yaml */}}
             {{ end }}
 
             <tr>
                 {{ if eq $.Section "download" }}
-                    {{ if gt (len $.Category.downloads) 1 }}
-                    <td rowspan="{{ len $.Category.downloads }}">
+                    {{ if gt (len $downloads) 1 }}
+                    <td rowspan="{{ len $downloads }}">
                     {{ else }}
                     <td>
                     {{ end }}
@@ -145,8 +156,8 @@
                             <em class="kind">{{ . }}</em>
                         {{ end }}
                     </td>
-                    {{ if gt (len $.Category.downloads) 1 }}
-                    <td rowspan="{{ len $.Category.downloads }}">
+                    {{ if gt (len $downloads) 1 }}
+                    <td rowspan="{{ len $downloads }}">
                     {{ else }}
                     <td>
                     {{ end }}
@@ -164,7 +175,7 @@
                         {{ end }}
                     </td>
                 {{ end }}
-                {{ range $idx, $download := $.Category.downloads }}
+                {{ range $idx, $download := $downloads }}
                     {{ if ne $idx 0 }}
                     </tr><tr>
                     {{ end }}
