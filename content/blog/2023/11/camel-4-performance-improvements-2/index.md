@@ -46,6 +46,8 @@ The average response time exhibited a progressive decline: from 0.367ms in 4.0.3
 
 The numbers for Camel 4.1 show a significant decrease in performance due to a bug that caused a cache miss when trying to resolve a type converter. This bug was fixed in 4.2.0.
 
+*Note*: an earlier version of these images contained an incorrect description on the labels. The images were updated to reflect the correct data.
+
 # Testing: Ensuring Reliability
 
 The reliability of these performance enhancements was validated through rigorous testing methodologies. For core components, the [Camel Load Tester](https://github.com/orpiske/camel-load-tester) project was employed, ensuring a comprehensive evaluation of the framework's capabilities. The testing of Platform HTTP Vert.x components, on the other hand, leveraged [Hyperfoil](https://hyperfoil.io/), a powerful benchmarking tool.
