@@ -60,12 +60,15 @@ If you run the example you will notice it runs without any error.
 What happens is that `camel-jbang` was able to load the OSGi blueprint XML file, parse <bean> and <camelContext> and run this on a modern Camel 4.
 This means the migration effort for this example is minimal.
 
-What is needed to be migrated is the OSGi Blueprint XML file to either XML or YAML DSL. This can be done easily with `camel-jbang` also:
+What is needed to be migrated is the OSGi Blueprint XML file to either XML or YAML DSL. This can be done with the new `transform` command in
+`camel-jbang` as follows:
 
 ```
 cd examples/camel-example-sql-blueprint
 camel transform pom.xml 
 ```
+
+**NOTE:** The `transform` command is renamed to `transform route` in Camel 4.3 onwards.
 
 This will dump the Blueprint XML file _transformed_ into modern Camel 4 YAML DSL. If you want to output in XML you can do:
 
