@@ -15,7 +15,7 @@ We are pleased to announce the 3.6.0 release of Camel Quarkus. It aligns with th
 
 Please refer to the [Camel 4.2.0 announcement](/blog/2023/11/RELEASE-4.2.0/) for more details. There's more information in the "what's new" [blog post](/blog/2023/11/camel42-whatsnew/).
 
-## Quarkus 3.6.0.Final
+## Quarkus 3.6.0
 
 Please refer to the [Quarkus 3.6.0 announcement](https://quarkus.io/blog/quarkus-3-6-0-released/)
 
