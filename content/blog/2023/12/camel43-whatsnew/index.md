@@ -12,11 +12,25 @@ This release introduces a set of new features and noticeable improvements that w
 
 ## Camel Core
 
-TODO:
+Added basic support for Java 21 virtual threads. Note this is experimental and there is more work to complete
+to have full support for virtual threads. More details at [threading model](/manual/threading-model.html). 
+
+The simple language can now work better with JSon and XML with inlined jq/jsonpath/xpath functions. This
+can be used for basic message transformation. You can find an examples at:
+
+- [json transformation](https://github.com/apache/camel-kamelets-examples/tree/main/jbang/json-transform)
+- [xml transformation](/components/next/languages/xpath-language.html#_transforming_a_xml_message)
+
+We plan to record a video on doing basic message transformation with json and xml with live updates using Camel JBang.
 
 ## Camel Main
 
-TODO:
+Added support for Prometheus in the new `camel-micrometer-prometheus` component, that makes it possible to expose
+metrics in Prometheus format.
+
+This can be configured in `application.properties`:
+
+- Micrometer and Prometheus options using `camel.metrics.`
 
 ## DSL
 
