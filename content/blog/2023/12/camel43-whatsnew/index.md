@@ -20,7 +20,41 @@ TODO:
 
 ## DSL
 
-TODO: New EIPs
+We added the following EIPs:
+
+- `setHeaders` EIP to make it easier and less verbose to set multiple headers from the same EIP.
+- `convertHeaderTo` EIP to make it easy to convert header value to a specific type.
+
+We improved configuring beans, that can now support builder beans, that are used to build the actual bean.
+For example in the following YAML notice how the `builderClass` refers to class responsible for building the target bean:
+
+```yaml
+- beans:
+    - name: myCustomer
+      type: com.mycompany.Customer
+      builderClass: com.mycompany.CustomerBuilder
+      properties:
+         name: "Acme"
+         street: "Somestreet 42"
+         zip: 90210
+         gold: true
+- from:
+    uri: "timer:yaml"
+    parameters:
+      period: "5000"
+    steps:
+      - bean:
+          ref: myCustomer
+          method: summary
+      - log: "${body}"
+```
+
+The builder class is required to have a build method that Camel invokes. The name of the method is `build` by default.
+
+To see more see the following examples:
+
+- https://github.com/apache/camel-kamelets-examples/tree/main/jbang/bean-builder
+- https://github.com/apache/camel-kamelets-examples/tree/main/jbang/bean-inlined-code
 
 ## Camel JBang (Camel CLI)
 
@@ -32,9 +66,15 @@ TODO:
 
 Upgraded to latest [Spring Boot 3.2.0](https://spring.io/blog/2023/11/23/spring-boot-3-2-0-available-now) release.
 
+## SBom
+
+TODO:
+
 ## Miscellaneous
 
-TODO
+The `camel-hdfs` component has been deprecated and planned for removal soon. The Apache Hadoop project is unfortunately
+not offering client JARs with a limited set of dependencies, which leads to a giant dependency set that have many
+old versions that has known CVEs. 
 
 ## New Components
 
