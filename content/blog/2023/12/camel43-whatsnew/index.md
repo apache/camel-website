@@ -23,6 +23,10 @@ can be used for basic message transformation. You can find an examples at:
 
 We plan to record a video on doing basic message transformation with json and xml with live updates using Camel JBang.
 
+We added `debugStandby` option to allow route debugging a running Camel application on demand. Being in standby mode
+has no overhead and only when debugging is activated then Camel runs in debugging mode, which can then be deactivated
+to go back to run in normal mode.
+
 ## Camel Main
 
 Added support for Prometheus in the new `camel-micrometer-prometheus` component, that makes it possible to expose
@@ -74,9 +78,44 @@ To see more see the following examples:
 
 ## Camel JBang (Camel CLI)
 
-We have continued investing in Camel JBang, and this time ...
+We have continued investing in Camel JBang, and this time we have some great new stuff in the release.
 
-TODO:
+We have added support for using JBang style for declaring dependencies by using `//DEPS ` code comments, as shown
+in the following Java file:
+
+```java
+//DEPS org.apache.camel:camel-bom:4.3.0@pom
+//DEPS org.apache.camel:camel-endpointdsl
+//DEPS org.apache.camel:camel-kubernetes
+//DEPS org.apache.camel:camel-aws2-s3
+
+import org.apache.camel.builder.endpoint.EndpointRouteBuilder;
+
+public class foo extends EndpointRouteBuilder {
+
+    @Override
+    public void configure() {
+        from(timer("trigger").delay(1000).repeatCount(1))
+            // something that may use Java APIs from Kubernetes
+    }
+}
+```
+
+You can now also easily use JBang way of editing source code in your favorite editor, such as `jbang edit -b foo.java`.
+You can see more in the [jbang-edit example](https://github.com/apache/camel-kamelets-examples/tree/main/jbang/jbang-edit).
+
+TODO: JBang Transform message
+
+We have improved the `camel export` to avoid starting some services that was not needed, which could potentially
+cause the export to tail or take longer time.
+
+Camel JBang now accurately reports resolved vs download for dependency resolution. Previously it may report downloading
+but the dependency was resolved from local disk.  You can also run in `--verbose` mode that shows verbose details
+for dependency resolution that can be useful for troubleshooting.
+
+Camel JBang export to `camel-main` can now configure authentication for container image registries.
+
+Camel JBang is also improved in hot reload mode `--dev` to let Java compiler compile all changed files in same compilation unit. 
 
 ## Spring and Spring Boot
 
