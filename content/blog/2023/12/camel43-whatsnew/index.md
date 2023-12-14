@@ -25,6 +25,8 @@ We added the following EIPs:
 - `setHeaders` EIP to make it easier and less verbose to set multiple headers from the same EIP.
 - `convertHeaderTo` EIP to make it easy to convert header value to a specific type.
 
+The `throttler` EIP has been refactored to throttle based on concurrent requests instead of sliding window.
+
 We improved configuring beans, that can now support builder beans, that are used to build the actual bean.
 For example in the following YAML notice how the `builderClass` refers to class responsible for building the target bean:
 
@@ -66,6 +68,8 @@ TODO:
 
 Upgraded to latest [Spring Boot 3.2.0](https://spring.io/blog/2023/11/23/spring-boot-3-2-0-available-now) release.
 
+The health checks in Camel now incorporate with the Spring Boot way of doing readiness and liveness check.
+
 ## SBom
 
 TODO:
@@ -74,7 +78,19 @@ TODO:
 
 The `camel-hdfs` component has been deprecated and planned for removal soon. The Apache Hadoop project is unfortunately
 not offering client JARs with a limited set of dependencies, which leads to a giant dependency set that have many
-old versions that has known CVEs. 
+old versions that has known CVEs.
+
+The `camel-file` and `camel-ftp` components can now also write SHA checksum file, when uploading files.
+
+The `camel-jetty` component has been upgraded from Jetty 10 to 12.
+
+The `camel-openapi-java` now better support both OpenAPI 3.0 and 3.1 at the same time.
+
+Components such as `camel-ftp` and others that can take a long time on first poll, will now report as ready
+more eager in readiness check. Before they would become ready after first poll completed; this could cause
+problems if downloading a large FTP file takes a long time, causing the readiness check to fail on startup.
+
+Upgraded many 3rd party dependencies to latest release at time of release.
 
 ## New Components
 
