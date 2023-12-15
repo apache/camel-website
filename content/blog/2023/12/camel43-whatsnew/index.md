@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 4.3 What's New"
 date: 2023-12-18
-authors: [davsclaus,gzurowski,orpiske,apupier]
+authors: [davsclaus,gzurowski,orpiske,apupier,oscerd]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 4.3 release.
 ---
@@ -127,9 +127,13 @@ Upgraded to latest [Spring Boot 3.2.0](https://spring.io/blog/2023/11/23/spring-
 
 The health checks in Camel now incorporate with the Spring Boot way of doing readiness and liveness check.
 
-## SBom
+## SBOM
 
-TODO:
+Starting from releases 4.0.3 and 4.2.0, we started to publish JSON and XML SBOM in the Camel website download section. An SBOM is a “software bill of materials” and in recent years has emerged as a key building block in software security and software supply chain risk management. An SBOM is a nested inventory, which means you could have an overview of all the components of your software.
+
+In combination with other tools, the SBOM could be analyzed against the CVEs Database and anyone could be able to have a security analysis always up-to-date. We plan to include SBOMs in all of our releases and the work has already started. 
+
+This is of particular interest for a project like Camel because we are using a large number of dependencies (direct and transitive) in our projects and it’s really hard to track everything. From the community perspective, this could also be a good entry point for new contributors to periodically have a look at new CVEs and try to fix them.
 
 ## Miscellaneous
 
