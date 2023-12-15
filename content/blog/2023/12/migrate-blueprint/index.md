@@ -1,6 +1,6 @@
 ---
 title: "Migrating from Camel Karaf to Apache Camel 4"
-date: 2023-11-01
+date: 2023-12-15
 authors: [davsclaus]
 categories: ["Howtos"]
 preview: Guidelines for migrating from Camel Karaf to Apache Camel 4
