@@ -30,8 +30,6 @@ camel:
       filter: 'lts'
     - name: 'latest'
       filter: 'latest'
-    - name: 'RC'
-      filter: 'RC'
   downloads:
     - name: 'Sources'
       path_format: 'camel/apache-camel/{version}/apache-camel-{version}-src.zip'
