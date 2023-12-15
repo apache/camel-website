@@ -21,8 +21,6 @@ can be used for basic message transformation. You can find an examples at:
 - [json transformation](https://github.com/apache/camel-kamelets-examples/tree/main/jbang/json-transform)
 - [xml transformation](/components/next/languages/xpath-language.html#_transforming_a_xml_message)
 
-We plan to record a video on doing basic message transformation with json and xml with live updates using Camel JBang.
-
 We added `debugStandby` option to allow route debugging a running Camel application on demand. Being in standby mode
 has no overhead and only when debugging is activated then Camel runs in debugging mode, which can then be deactivated
 to go back to run in normal mode.
@@ -110,7 +108,9 @@ shown in the screenshot below:
 
 You can find an example at [jbang-edit example](https://github.com/apache/camel-kamelets-examples/tree/main/jbang/jbang-edit).
 
-TODO: JBang Transform message
+Another new functionality is the _live message transformer_ with the new `camel transform message` command.
+You can find detailed information in the [camel-jbang docs](/manual/camel-jbang.html#_transforming_message_data_mapping),
+and a basic example here [json transformation](https://github.com/apache/camel-kamelets-examples/tree/main/jbang/json-transform). 
 
 We have improved the `camel export` to avoid starting some services that was not needed, which could potentially
 cause the export to tail or take longer time.
