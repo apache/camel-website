@@ -110,10 +110,10 @@ You can find an example at [jbang-edit example](https://github.com/apache/camel-
 
 Another new functionality is the _live message transformer_ with the new `camel transform message` command.
 You can find detailed information in the [camel-jbang docs](/manual/camel-jbang.html#_transforming_message_data_mapping),
-and a basic example here [json transformation](https://github.com/apache/camel-kamelets-examples/tree/main/jbang/json-transform). 
+a basic example is here [json transformation](https://github.com/apache/camel-kamelets-examples/tree/main/jbang/json-transform), and we have a [video recording on YouTube](https://www.youtube.com/watch?v=ntVRSBcBBLU). 
 
 We have improved the `camel export` to avoid starting some services that was not needed, which could potentially
-cause the export to tail or take longer time.
+cause the export to fail or take longer time.
 
 Camel JBang now accurately reports resolved vs download for dependency resolution. Previously it may report downloading
 but the dependency was resolved from local disk.  You can also run in `--verbose` mode that shows verbose details
