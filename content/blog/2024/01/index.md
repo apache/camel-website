@@ -10,15 +10,15 @@ It's the time of the year when we take a look back at 2023, and compile a brief 
 
 ## Camel 2023 in Numbers
 
-TODO: Update with new numbers
+Number of Camel Core releases in 2023: **33**
 
-Number of Camel Core releases in 2023: **19**
+Number of Camel Quarkus releases in 2023: **13**
 
-Number of Camel Quarkus releases in 2023: **15**
+Number of Camel K releases in 2023: **7**
 
-Number of Camel K releases in 2023: **11**
+Number of Camel Kafka Connector releases in 2023: **5**
 
-Number of Camel Kafka Connector releases in 2023: **4**
+TODO: Update numbers below!
 
 Number of commits in 2023: **6162** [1]
 
