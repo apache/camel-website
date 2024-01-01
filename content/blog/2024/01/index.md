@@ -1,12 +1,14 @@
 ---
 title: "Camel 2023 in Numbers"
-date: 2024-01-03
+date: 2024-01-01
 authors: [davsclaus]
 categories: ["Roadmap"]
 preview: Quick summary of the Apache Camel project in 2023 by numbers
 ---
 
 It's the time of the year when we take a look back at 2023, and compile a brief summary (by numbers) of the Apache Camel project(s).
+
+You can find previous year [2022 numbers here](/blog/2023/01/2022-Numbers/).
 
 ## Camel 2023 in Numbers
 
@@ -18,31 +20,29 @@ Number of Camel K releases in 2023: **7**
 
 Number of Camel Kafka Connector releases in 2023: **5**
 
-TODO: Update numbers below!
-
 Number of commits in 2023: **6162** [1]
 
-Total number of JIRA tickets created at end of 2023: **18825**
+Total number of JIRA tickets created at end of 2023: **20286**
 
-Number of JIRA tickets created in 2023: **1400**
+Number of JIRA tickets created in 2023: **1436**
 
-Number of JIRA tickets resolved in 2023: **1700**
+Number of JIRA tickets resolved in 2023: **1451**
 
-Number of stars on GitHub at end of 2023: **4652**
+Number of stars on GitHub at end of 2023: **6126**
 
-Total number of commits at end of 2023: **61875**
+Total number of commits at end of 2023: **68078**
 
-Total number of contributors on GitHub at end of 2023: **923**
+Total number of contributors on GitHub at end of 2023: **1021**
 
-Number of individual committers doing commits in 2023: **212** [2]
+Number of individual committers doing commits in 2023: **195** [2]
 
-Number of closed pull requests at end of 2023: **8933**
+Number of closed pull requests at end of 2023: **12593**
 
-Number of closed pull requests in 2023: **2344**
+Number of closed pull requests in 2023: **3653**
 
-Number of X (Twitter) followers at end of 2023: **2759**
+Number of X (Twitter) followers at end of 2023: **2979**
 
-Number of users in Apache Camel Linkedin group at end of 2023: **4639** 
+Number of users in Apache Camel Linkedin group at end of 2023: **4650** 
 
 ```
 #1 git shortlog -ns --since 2023-01-01 --until 2024-01-01 | cut -c1-7 | awk '{ SUM += $1} END { print SUM }'
