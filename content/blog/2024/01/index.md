@@ -40,9 +40,9 @@ Number of closed pull requests at end of 2023: **12593**
 
 Number of closed pull requests in 2023: **3653**
 
-Number of X (Twitter) followers at end of 2023: **2979**
+Number of [X (Twitter)](https://twitter.com/ApacheCamel) followers at end of 2023: **2979**
 
-Number of users in Apache Camel Linkedin group at end of 2023: **4650** 
+Number of users in [Apache Camel LinkedIn](https://www.linkedin.com/groups/2447439/) group at end of 2023: **4650** 
 
 ```
 #1 git shortlog -ns --since 2023-01-01 --until 2024-01-01 | cut -c1-7 | awk '{ SUM += $1} END { print SUM }'
