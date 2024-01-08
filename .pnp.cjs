@@ -3198,7 +3198,7 @@ const RAW_RUNTIME_STATE =
           ["debug", "virtual:d27045f313cae7cbc212b229738d5843f6d2265eba3ea36069f78075a79d301bc17e702a21a7b811ca9aa59de4cb7943fb27cda91a0e7d8a8ad547668124b185#npm:4.3.4"],\
           ["globby", "npm:11.0.4"],\
           ["is-wsl", "npm:2.2.0"],\
-          ["tslib", "npm:2.3.1"]\
+          ["tslib", "npm:2.6.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3288,7 +3288,7 @@ const RAW_RUNTIME_STATE =
           ["load-json-file", "npm:5.3.0"],\
           ["npm-run-path", "npm:4.0.1"],\
           ["semver", "npm:7.3.5"],\
-          ["tslib", "npm:2.3.1"],\
+          ["tslib", "npm:2.6.2"],\
           ["yarn", "npm:1.22.10"]\
         ],\
         "linkType": "HARD"\
@@ -7093,7 +7093,7 @@ const RAW_RUNTIME_STATE =
           ["strip-ansi", "npm:6.0.1"],\
           ["supports-color", "npm:7.2.0"],\
           ["supports-hyperlinks", "npm:2.1.0"],\
-          ["tslib", "npm:2.3.1"]\
+          ["tslib", "npm:2.6.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -17527,7 +17527,7 @@ const RAW_RUNTIME_STATE =
           ["@oclif/config", "npm:1.17.0"],\
           ["@oclif/errors", "npm:1.3.4"],\
           ["@types/oclif__errors", null],\
-          ["tslib", "npm:2.3.1"]\
+          ["tslib", "npm:2.6.2"]\
         ],\
         "packagePeers": [\
           "@oclif/errors",\
@@ -23145,13 +23145,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/tslib-npm-1.14.1-102499115e-7dbf34e6f5.zip/node_modules/tslib/",\
         "packageDependencies": [\
           ["tslib", "npm:1.14.1"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:2.3.1", {\
-        "packageLocation": "./.yarn/cache/tslib-npm-2.3.1-0e21e18015-5e7de59ed9.zip/node_modules/tslib/",\
-        "packageDependencies": [\
-          ["tslib", "npm:2.3.1"]\
         ],\
         "linkType": "HARD"\
       }],\
