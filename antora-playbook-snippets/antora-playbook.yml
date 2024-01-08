@@ -34,9 +34,11 @@ content:
         - main
         - release-2.2.x
         - release-2.1.x
+        - release-2.0.x
         - release-1.12.x
       start_path: docs
 
+    # We may remove this module as soon as Camel K 2.1 (release-2.1.x) is no longer supported.
     - url: https://github.com/apache/camel-k-runtime.git
       branches:
         - main
