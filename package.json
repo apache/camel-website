@@ -4,7 +4,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "build": "run-s -l build:antora build:hugo build:sitemap build:htaccess build:minify",
-    "build-all": "yarn workspaces foreach --topological-dev run build",
+    "build-all": "yarn workspaces foreach --all --topological-dev run build",
     "build:antora": "run-s -l build:antora-prep build:antora-perf",
     "build:antora-prep": "yarn exec antora-playbook-snippets/assemble-playbook.sh antora-playbook-production.yml playbook-export-site-manifest.yml",
     "build:antora-perf": "antora --clean --fetch antora-playbook-production.yml --stacktrace",
@@ -18,11 +18,11 @@
     "checks": "run-s -l check:links check:html check:redirects",
     "clean": "gulp clean",
     "check:dependencies": "run-p check:cache check:dedupe",
-    "check:cache": "yarn workspaces foreach install --immutable --immutable-cache --check-cache",
-    "check:dedupe": "yarn workspaces foreach dedupe --check",
+    "check:cache": "yarn workspaces foreach --all install --immutable --immutable-cache --check-cache",
+    "check:dedupe": "yarn workspaces foreach --all dedupe --check",
     "update:dependencies": "run-s -l update:dedupe update:cache",
-    "update:cache": "yarn workspaces foreach install --check-cache",
-    "update:dedupe": "yarn workspaces foreach dedupe",
+    "update:cache": "yarn workspaces foreach --all install --check-cache",
+    "update:dedupe": "yarn workspaces foreach --all dedupe",
     "preview": "run-s -l build:antora preview:hugo",
     "preview:hugo": "hugo server --bind=0.0.0.0 -D",
     "preview:netlify": "netlify deploy --dir public",
@@ -69,5 +69,5 @@
     "antora-ui-camel",
     "util"
   ],
-  "packageManager": "yarn@3.2.3"
+  "packageManager": "yarn@4.0.2"
 }
