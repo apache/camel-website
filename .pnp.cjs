@@ -4896,6 +4896,7 @@ const RAW_RUNTIME_STATE =
           ["@asciidoctor/tabs", "npm:1.0.0-beta.3"],\
           ["@openfonts/open-sans_latin-ext", "npm:1.44.2"],\
           ["@ronilaukkarinen/gulp-stylelint", "virtual:40e0eba2b2747b78b17285b5a80d54e9bed0c51acd01aa1fab2b869ee61f21c6d6cda6fee2acf095fea1709035ac613a1bc772c8e59bb0339d7af2ceea528de8#npm:14.1.2"],\
+          ["@vscode/gulp-vinyl-zip", "npm:2.5.0"],\
           ["algoliasearch", "npm:4.5.1"],\
           ["asciidoctor.js", "npm:1.5.9"],\
           ["autoprefixer", "npm:9.7.6"],\
@@ -4922,7 +4923,6 @@ const RAW_RUNTIME_STATE =
           ["gulp-rev-rewrite", "npm:5.0.0"],\
           ["gulp-template", "npm:5.0.0"],\
           ["gulp-terser", "npm:1.4.1"],\
-          ["gulp-vinyl-zip", "npm:2.2.0"],\
           ["handlebars", "npm:4.7.8"],\
           ["highlight.js", "npm:11.3.1"],\
           ["js-yaml", "npm:3.13.1"],\
@@ -12551,22 +12551,6 @@ const RAW_RUNTIME_STATE =
           ["terser", "npm:5.5.1"],\
           ["through2", "npm:4.0.2"],\
           ["vinyl-sourcemaps-apply", "npm:0.2.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["gulp-vinyl-zip", [\
-      ["npm:2.2.0", {\
-        "packageLocation": "./.yarn/cache/gulp-vinyl-zip-npm-2.2.0-f0ff90b288-6018a334db.zip/node_modules/gulp-vinyl-zip/",\
-        "packageDependencies": [\
-          ["gulp-vinyl-zip", "npm:2.2.0"],\
-          ["queue", "npm:4.5.1"],\
-          ["through", "npm:2.3.8"],\
-          ["through2", "npm:2.0.5"],\
-          ["vinyl", "npm:2.2.1"],\
-          ["vinyl-fs", "npm:3.0.3"],\
-          ["yauzl", "npm:2.10.0"],\
-          ["yazl", "npm:2.5.1"]\
         ],\
         "linkType": "HARD"\
       }]\
