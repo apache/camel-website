@@ -5881,10 +5881,17 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:5.1.3", {\
-        "packageLocation": "./.yarn/cache/bn.js-npm-5.1.3-f8c9aed796-4cae8e4115.zip/node_modules/bn.js/",\
+      ["npm:4.12.0", {\
+        "packageLocation": "./.yarn/cache/bn.js-npm-4.12.0-3ec6c884f6-10f8db196d.zip/node_modules/bn.js/",\
         "packageDependencies": [\
-          ["bn.js", "npm:5.1.3"]\
+          ["bn.js", "npm:4.12.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:5.2.1", {\
+        "packageLocation": "./.yarn/cache/bn.js-npm-5.2.1-dc952b1965-7a7e8764d7.zip/node_modules/bn.js/",\
+        "packageDependencies": [\
+          ["bn.js", "npm:5.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6233,21 +6240,30 @@ const RAW_RUNTIME_STATE =
           ["randombytes", "npm:2.1.0"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:4.1.0", {\
+        "packageLocation": "./.yarn/cache/browserify-rsa-npm-4.1.0-2a224a51bc-155f0c1358.zip/node_modules/browserify-rsa/",\
+        "packageDependencies": [\
+          ["browserify-rsa", "npm:4.1.0"],\
+          ["bn.js", "npm:5.2.1"],\
+          ["randombytes", "npm:2.1.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["browserify-sign", [\
-      ["npm:4.2.1", {\
-        "packageLocation": "./.yarn/cache/browserify-sign-npm-4.2.1-9a8530ca87-bf3f917758.zip/node_modules/browserify-sign/",\
+      ["npm:4.2.2", {\
+        "packageLocation": "./.yarn/cache/browserify-sign-npm-4.2.2-92f50c6d35-b622730c0f.zip/node_modules/browserify-sign/",\
         "packageDependencies": [\
-          ["browserify-sign", "npm:4.2.1"],\
-          ["bn.js", "npm:5.1.3"],\
-          ["browserify-rsa", "npm:4.0.1"],\
+          ["browserify-sign", "npm:4.2.2"],\
+          ["bn.js", "npm:5.2.1"],\
+          ["browserify-rsa", "npm:4.1.0"],\
           ["create-hash", "npm:1.2.0"],\
           ["create-hmac", "npm:1.1.7"],\
-          ["elliptic", "npm:6.5.3"],\
+          ["elliptic", "npm:6.5.4"],\
           ["inherits", "npm:2.0.4"],\
           ["parse-asn1", "npm:5.1.6"],\
-          ["readable-stream", "npm:3.6.0"],\
+          ["readable-stream", "npm:3.6.2"],\
           ["safe-buffer", "npm:5.2.1"]\
         ],\
         "linkType": "HARD"\
@@ -8085,7 +8101,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["crypto-browserify", "npm:3.12.0"],\
           ["browserify-cipher", "npm:1.0.1"],\
-          ["browserify-sign", "npm:4.2.1"],\
+          ["browserify-sign", "npm:4.2.2"],\
           ["create-ecdh", "npm:4.0.4"],\
           ["create-hash", "npm:1.2.0"],\
           ["create-hmac", "npm:1.1.7"],\
@@ -9426,6 +9442,20 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["elliptic", "npm:6.5.3"],\
           ["bn.js", "npm:4.11.9"],\
+          ["brorand", "npm:1.1.0"],\
+          ["hash.js", "npm:1.1.7"],\
+          ["hmac-drbg", "npm:1.0.1"],\
+          ["inherits", "npm:2.0.4"],\
+          ["minimalistic-assert", "npm:1.0.1"],\
+          ["minimalistic-crypto-utils", "npm:1.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:6.5.4", {\
+        "packageLocation": "./.yarn/cache/elliptic-npm-6.5.4-0ca8204a86-2cd7ff4b69.zip/node_modules/elliptic/",\
+        "packageDependencies": [\
+          ["elliptic", "npm:6.5.4"],\
+          ["bn.js", "npm:4.12.0"],\
           ["brorand", "npm:1.1.0"],\
           ["hash.js", "npm:1.1.7"],\
           ["hmac-drbg", "npm:1.0.1"],\
@@ -20132,6 +20162,16 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/readable-stream-npm-3.6.0-23a4a5eb56-b80b3e6a7f.zip/node_modules/readable-stream/",\
         "packageDependencies": [\
           ["readable-stream", "npm:3.6.0"],\
+          ["inherits", "npm:2.0.4"],\
+          ["string_decoder", "npm:1.3.0"],\
+          ["util-deprecate", "npm:1.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:3.6.2", {\
+        "packageLocation": "./.yarn/cache/readable-stream-npm-3.6.2-d2a6069158-d9e3e53193.zip/node_modules/readable-stream/",\
+        "packageDependencies": [\
+          ["readable-stream", "npm:3.6.2"],\
           ["inherits", "npm:2.0.4"],\
           ["string_decoder", "npm:1.3.0"],\
           ["util-deprecate", "npm:1.0.2"]\
