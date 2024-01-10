@@ -1576,14 +1576,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@deadlinks/cargo-deadlinks@github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux":
-  version: 0.8.0
-  resolution: "@deadlinks/cargo-deadlinks@github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux"
+"@deadlinks/cargo-deadlinks@github-release:deadlinks/cargo-deadlinks:0.8.1/deadlinks-linux":
+  version: 0.8.1
+  resolution: "@deadlinks/cargo-deadlinks@github-release:deadlinks/cargo-deadlinks:0.8.1/deadlinks-linux"
   dependencies:
     "@yarnpkg/fslib": "npm:3.0.1"
   bin:
     deadlinks-linux: exec.js
-  checksum: 7f29cda8ce5f45a5c069592b5f87498ea71e1f4c8cd3021fa4d28f1224dd10224d696e5f79ab8242f215b3fbf90a26b80721e8a3001b2a86337f61578e39ab4f
+  checksum: 4f6e38b06d529c9822e50a2ac89bb8d2dee3c4b6658bdfdd043abcd4f0dedbc886667349435eefa81ed56ccb2f8485758b0511412e3d557549828ffb80c17a72
   languageName: node
   linkType: hard
 
@@ -3639,7 +3639,7 @@ __metadata:
     "@antora/cli": "npm:^3.1.7"
     "@antora/site-generator": "npm:^3.1.7"
     "@asciidoctor/tabs": "npm:^1.0.0-beta.3"
-    "@deadlinks/cargo-deadlinks": "github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux"
+    "@deadlinks/cargo-deadlinks": "github-release:deadlinks/cargo-deadlinks:0.8.1/deadlinks-linux"
     "@djencks/antora-aggregate-collector": "npm:^0.1.0-beta.1"
     "@djencks/antora-site-manifest": "npm:^0.0.3-rc.2"
     "@djencks/antora-source-map": "npm:^0.0.1-rc.2"

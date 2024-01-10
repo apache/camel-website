@@ -39,7 +39,7 @@ const RAW_RUNTIME_STATE =
           ["@antora/cli", "npm:3.1.7"],\
           ["@antora/site-generator", "npm:3.1.7"],\
           ["@asciidoctor/tabs", "npm:1.0.0-beta.3"],\
-          ["@deadlinks/cargo-deadlinks", "github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux"],\
+          ["@deadlinks/cargo-deadlinks", "github-release:deadlinks/cargo-deadlinks:0.8.1/deadlinks-linux"],\
           ["@djencks/antora-aggregate-collector", "npm:0.1.0-beta.1"],\
           ["@djencks/antora-site-manifest", "npm:0.0.3-rc.2"],\
           ["@djencks/antora-source-map", "npm:0.0.1-rc.2"],\
@@ -2467,10 +2467,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@deadlinks/cargo-deadlinks", [\
-      ["github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux", {\
-        "packageLocation": "./.yarn/cache/@deadlinks-cargo-deadlinks-github-release-a8ddbf1b3b-7f29cda8ce.zip/node_modules/@deadlinks/cargo-deadlinks/",\
+      ["github-release:deadlinks/cargo-deadlinks:0.8.1/deadlinks-linux", {\
+        "packageLocation": "./.yarn/cache/@deadlinks-cargo-deadlinks-github-release-a675f573c0-4f6e38b06d.zip/node_modules/@deadlinks/cargo-deadlinks/",\
         "packageDependencies": [\
-          ["@deadlinks/cargo-deadlinks", "github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux"],\
+          ["@deadlinks/cargo-deadlinks", "github-release:deadlinks/cargo-deadlinks:0.8.1/deadlinks-linux"],\
           ["@yarnpkg/fslib", "npm:3.0.1"]\
         ],\
         "linkType": "HARD"\
@@ -4917,7 +4917,7 @@ const RAW_RUNTIME_STATE =
           ["@antora/cli", "npm:3.1.7"],\
           ["@antora/site-generator", "npm:3.1.7"],\
           ["@asciidoctor/tabs", "npm:1.0.0-beta.3"],\
-          ["@deadlinks/cargo-deadlinks", "github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux"],\
+          ["@deadlinks/cargo-deadlinks", "github-release:deadlinks/cargo-deadlinks:0.8.1/deadlinks-linux"],\
           ["@djencks/antora-aggregate-collector", "npm:0.1.0-beta.1"],\
           ["@djencks/antora-site-manifest", "npm:0.0.3-rc.2"],\
           ["@djencks/antora-source-map", "npm:0.0.1-rc.2"],\
