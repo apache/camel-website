@@ -28,7 +28,7 @@
 }
 
 /* for mobile screens */
-@media screen and (max-width: 626px) {
+@media screen and (width <= 626px) {
   .release aside {
     width: 100%;
     margin: 0 auto;

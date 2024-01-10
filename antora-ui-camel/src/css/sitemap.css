@@ -4,15 +4,13 @@
 
 .sitemap ul.sitemap-list {
   list-style-type: none;
-  -webkit-columns: 2;
-  -moz-columns: 2;
   columns: 2;
   padding: 0;
   column-gap: 25%;
   white-space: nowrap;
 }
 
-@media screen and (max-width: 626px) {
+@media screen and (width <= 626px) {
   .sitemap ul.sitemap-list {
     columns: 1;
   }
