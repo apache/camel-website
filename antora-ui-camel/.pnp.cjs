@@ -1391,13 +1391,14 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["asn1.js", [\
-      ["npm:4.10.1", {\
-        "packageLocation": "./.yarn/cache/asn1.js-npm-4.10.1-e813eef12f-5a02104b9b.zip/node_modules/asn1.js/",\
+      ["npm:5.4.1", {\
+        "packageLocation": "./.yarn/cache/asn1.js-npm-5.4.1-37c7edbcb0-63d57c766f.zip/node_modules/asn1.js/",\
         "packageDependencies": [\
-          ["asn1.js", "npm:4.10.1"],\
-          ["bn.js", "npm:4.11.8"],\
+          ["asn1.js", "npm:5.4.1"],\
+          ["bn.js", "npm:4.12.0"],\
           ["inherits", "npm:2.0.4"],\
-          ["minimalistic-assert", "npm:1.0.1"]\
+          ["minimalistic-assert", "npm:1.0.1"],\
+          ["safer-buffer", "npm:2.1.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1707,16 +1708,23 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["bl", "npm:1.2.2"],\
           ["readable-stream", "npm:2.3.6"],\
-          ["safe-buffer", "npm:5.1.2"]\
+          ["safe-buffer", "npm:5.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["bn.js", [\
-      ["npm:4.11.8", {\
-        "packageLocation": "./.yarn/cache/bn.js-npm-4.11.8-296affce9a-b498be9c09.zip/node_modules/bn.js/",\
+      ["npm:4.12.0", {\
+        "packageLocation": "./.yarn/cache/bn.js-npm-4.12.0-3ec6c884f6-10f8db196d.zip/node_modules/bn.js/",\
         "packageDependencies": [\
-          ["bn.js", "npm:4.11.8"]\
+          ["bn.js", "npm:4.12.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:5.2.1", {\
+        "packageLocation": "./.yarn/cache/bn.js-npm-5.2.1-dc952b1965-7a7e8764d7.zip/node_modules/bn.js/",\
+        "packageDependencies": [\
+          ["bn.js", "npm:5.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1806,7 +1814,7 @@ const RAW_RUNTIME_STATE =
           ["JSONStream", "npm:1.3.5"],\
           ["combine-source-map", "npm:0.8.0"],\
           ["defined", "npm:1.0.0"],\
-          ["safe-buffer", "npm:5.1.2"],\
+          ["safe-buffer", "npm:5.2.1"],\
           ["through2", "npm:2.0.5"],\
           ["umd", "npm:3.0.3"]\
         ],\
@@ -1923,7 +1931,7 @@ const RAW_RUNTIME_STATE =
           ["create-hash", "npm:1.2.0"],\
           ["evp_bytestokey", "npm:1.0.3"],\
           ["inherits", "npm:2.0.4"],\
-          ["safe-buffer", "npm:5.1.2"]\
+          ["safe-buffer", "npm:5.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1948,34 +1956,36 @@ const RAW_RUNTIME_STATE =
           ["cipher-base", "npm:1.0.4"],\
           ["des.js", "npm:1.0.0"],\
           ["inherits", "npm:2.0.4"],\
-          ["safe-buffer", "npm:5.1.2"]\
+          ["safe-buffer", "npm:5.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["browserify-rsa", [\
-      ["npm:4.0.1", {\
-        "packageLocation": "./.yarn/cache/browserify-rsa-npm-4.0.1-faeab97656-36d68a5344.zip/node_modules/browserify-rsa/",\
+      ["npm:4.1.0", {\
+        "packageLocation": "./.yarn/cache/browserify-rsa-npm-4.1.0-2a224a51bc-155f0c1358.zip/node_modules/browserify-rsa/",\
         "packageDependencies": [\
-          ["browserify-rsa", "npm:4.0.1"],\
-          ["bn.js", "npm:4.11.8"],\
+          ["browserify-rsa", "npm:4.1.0"],\
+          ["bn.js", "npm:5.2.1"],\
           ["randombytes", "npm:2.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["browserify-sign", [\
-      ["npm:4.0.4", {\
-        "packageLocation": "./.yarn/cache/browserify-sign-npm-4.0.4-1a79e14f9b-1d47963cb8.zip/node_modules/browserify-sign/",\
+      ["npm:4.2.2", {\
+        "packageLocation": "./.yarn/cache/browserify-sign-npm-4.2.2-92f50c6d35-b622730c0f.zip/node_modules/browserify-sign/",\
         "packageDependencies": [\
-          ["browserify-sign", "npm:4.0.4"],\
-          ["bn.js", "npm:4.11.8"],\
-          ["browserify-rsa", "npm:4.0.1"],\
+          ["browserify-sign", "npm:4.2.2"],\
+          ["bn.js", "npm:5.2.1"],\
+          ["browserify-rsa", "npm:4.1.0"],\
           ["create-hash", "npm:1.2.0"],\
           ["create-hmac", "npm:1.1.7"],\
-          ["elliptic", "npm:6.4.1"],\
+          ["elliptic", "npm:6.5.4"],\
           ["inherits", "npm:2.0.4"],\
-          ["parse-asn1", "npm:5.1.4"]\
+          ["parse-asn1", "npm:5.1.6"],\
+          ["readable-stream", "npm:3.6.2"],\
+          ["safe-buffer", "npm:5.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2343,7 +2353,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["cipher-base", "npm:1.0.4"],\
           ["inherits", "npm:2.0.4"],\
-          ["safe-buffer", "npm:5.1.2"]\
+          ["safe-buffer", "npm:5.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2872,8 +2882,8 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/create-ecdh-npm-4.0.3-c40d23c7aa-0678955daf.zip/node_modules/create-ecdh/",\
         "packageDependencies": [\
           ["create-ecdh", "npm:4.0.3"],\
-          ["bn.js", "npm:4.11.8"],\
-          ["elliptic", "npm:6.4.1"]\
+          ["bn.js", "npm:4.12.0"],\
+          ["elliptic", "npm:6.5.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2901,7 +2911,7 @@ const RAW_RUNTIME_STATE =
           ["create-hash", "npm:1.2.0"],\
           ["inherits", "npm:2.0.4"],\
           ["ripemd160", "npm:2.0.2"],\
-          ["safe-buffer", "npm:5.1.2"],\
+          ["safe-buffer", "npm:5.2.1"],\
           ["sha.js", "npm:2.4.11"]\
         ],\
         "linkType": "HARD"\
@@ -2937,7 +2947,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["crypto-browserify", "npm:3.12.0"],\
           ["browserify-cipher", "npm:1.0.1"],\
-          ["browserify-sign", "npm:4.0.4"],\
+          ["browserify-sign", "npm:4.2.2"],\
           ["create-ecdh", "npm:4.0.3"],\
           ["create-hash", "npm:1.2.0"],\
           ["create-hmac", "npm:1.1.7"],\
@@ -3578,7 +3588,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/diffie-hellman-npm-5.0.3-cbef8f3171-2ff28231f9.zip/node_modules/diffie-hellman/",\
         "packageDependencies": [\
           ["diffie-hellman", "npm:5.0.3"],\
-          ["bn.js", "npm:4.11.8"],\
+          ["bn.js", "npm:4.12.0"],\
           ["miller-rabin", "npm:4.0.1"],\
           ["randombytes", "npm:2.1.0"]\
         ],\
@@ -3794,11 +3804,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["elliptic", [\
-      ["npm:6.4.1", {\
-        "packageLocation": "./.yarn/cache/elliptic-npm-6.4.1-cf04a1e7bb-5758e4d7bd.zip/node_modules/elliptic/",\
+      ["npm:6.5.4", {\
+        "packageLocation": "./.yarn/cache/elliptic-npm-6.5.4-0ca8204a86-2cd7ff4b69.zip/node_modules/elliptic/",\
         "packageDependencies": [\
-          ["elliptic", "npm:6.4.1"],\
-          ["bn.js", "npm:4.11.8"],\
+          ["elliptic", "npm:6.5.4"],\
+          ["bn.js", "npm:4.12.0"],\
           ["brorand", "npm:1.1.0"],\
           ["hash.js", "npm:1.1.7"],\
           ["hmac-drbg", "npm:1.0.1"],\
@@ -4512,7 +4522,7 @@ const RAW_RUNTIME_STATE =
           ["evp_bytestokey", "npm:1.0.3"],\
           ["md5.js", "npm:1.3.5"],\
           ["node-gyp", "npm:7.1.2"],\
-          ["safe-buffer", "npm:5.1.2"]\
+          ["safe-buffer", "npm:5.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5588,7 +5598,7 @@ const RAW_RUNTIME_STATE =
           ["lowercase-keys", "npm:1.0.1"],\
           ["p-cancelable", "npm:0.3.0"],\
           ["p-timeout", "npm:1.2.1"],\
-          ["safe-buffer", "npm:5.1.2"],\
+          ["safe-buffer", "npm:5.2.1"],\
           ["timed-out", "npm:4.0.1"],\
           ["url-parse-lax", "npm:1.0.0"],\
           ["url-to-options", "npm:1.0.1"]\
@@ -5614,7 +5624,7 @@ const RAW_RUNTIME_STATE =
           ["p-cancelable", "npm:0.4.1"],\
           ["p-timeout", "npm:2.0.1"],\
           ["pify", "npm:3.0.0"],\
-          ["safe-buffer", "npm:5.1.2"],\
+          ["safe-buffer", "npm:5.2.1"],\
           ["timed-out", "npm:4.0.1"],\
           ["url-parse-lax", "npm:3.0.0"],\
           ["url-to-options", "npm:1.0.1"]\
@@ -5826,7 +5836,7 @@ const RAW_RUNTIME_STATE =
           ["gulp-template", "npm:5.0.0"],\
           ["lodash", "npm:4.17.15"],\
           ["plugin-error", "npm:0.1.2"],\
-          ["safe-buffer", "npm:5.1.2"],\
+          ["safe-buffer", "npm:5.2.1"],\
           ["through2", "npm:2.0.5"]\
         ],\
         "linkType": "HARD"\
@@ -6017,7 +6027,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["hash-base", "npm:3.0.4"],\
           ["inherits", "npm:2.0.4"],\
-          ["safe-buffer", "npm:5.1.2"]\
+          ["safe-buffer", "npm:5.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7812,7 +7822,7 @@ const RAW_RUNTIME_STATE =
           ["md5.js", "npm:1.3.5"],\
           ["hash-base", "npm:3.0.4"],\
           ["inherits", "npm:2.0.4"],\
-          ["safe-buffer", "npm:5.1.2"]\
+          ["safe-buffer", "npm:5.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7935,7 +7945,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/miller-rabin-npm-4.0.1-3426ac0bf7-2a38ba9d1e.zip/node_modules/miller-rabin/",\
         "packageDependencies": [\
           ["miller-rabin", "npm:4.0.1"],\
-          ["bn.js", "npm:4.11.8"],\
+          ["bn.js", "npm:4.12.0"],\
           ["brorand", "npm:1.1.0"]\
         ],\
         "linkType": "HARD"\
@@ -8931,16 +8941,15 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["parse-asn1", [\
-      ["npm:5.1.4", {\
-        "packageLocation": "./.yarn/cache/parse-asn1-npm-5.1.4-b1b30cede7-6031e8ce39.zip/node_modules/parse-asn1/",\
+      ["npm:5.1.6", {\
+        "packageLocation": "./.yarn/cache/parse-asn1-npm-5.1.6-6cc3a6eeae-4e9ec3bd59.zip/node_modules/parse-asn1/",\
         "packageDependencies": [\
-          ["parse-asn1", "npm:5.1.4"],\
-          ["asn1.js", "npm:4.10.1"],\
+          ["parse-asn1", "npm:5.1.6"],\
+          ["asn1.js", "npm:5.4.1"],\
           ["browserify-aes", "npm:1.2.0"],\
-          ["create-hash", "npm:1.2.0"],\
           ["evp_bytestokey", "npm:1.0.3"],\
           ["pbkdf2", "npm:3.0.17"],\
-          ["safe-buffer", "npm:5.1.2"]\
+          ["safe-buffer", "npm:5.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -9164,7 +9173,7 @@ const RAW_RUNTIME_STATE =
           ["create-hash", "npm:1.2.0"],\
           ["create-hmac", "npm:1.1.7"],\
           ["ripemd160", "npm:2.0.2"],\
-          ["safe-buffer", "npm:5.1.2"],\
+          ["safe-buffer", "npm:5.2.1"],\
           ["sha.js", "npm:2.4.11"]\
         ],\
         "linkType": "HARD"\
@@ -9962,12 +9971,12 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/public-encrypt-npm-4.0.3-b25e19fada-059d64da8b.zip/node_modules/public-encrypt/",\
         "packageDependencies": [\
           ["public-encrypt", "npm:4.0.3"],\
-          ["bn.js", "npm:4.11.8"],\
-          ["browserify-rsa", "npm:4.0.1"],\
+          ["bn.js", "npm:4.12.0"],\
+          ["browserify-rsa", "npm:4.1.0"],\
           ["create-hash", "npm:1.2.0"],\
-          ["parse-asn1", "npm:5.1.4"],\
+          ["parse-asn1", "npm:5.1.6"],\
           ["randombytes", "npm:2.1.0"],\
-          ["safe-buffer", "npm:5.1.2"]\
+          ["safe-buffer", "npm:5.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -10106,7 +10115,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/randombytes-npm-2.1.0-e3da76bccf-4efd1ad3d8.zip/node_modules/randombytes/",\
         "packageDependencies": [\
           ["randombytes", "npm:2.1.0"],\
-          ["safe-buffer", "npm:5.1.2"]\
+          ["safe-buffer", "npm:5.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -10117,7 +10126,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["randomfill", "npm:1.0.4"],\
           ["randombytes", "npm:2.1.0"],\
-          ["safe-buffer", "npm:5.1.2"]\
+          ["safe-buffer", "npm:5.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -10240,10 +10249,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:3.6.0", {\
-        "packageLocation": "./.yarn/cache/readable-stream-npm-3.6.0-23a4a5eb56-b80b3e6a7f.zip/node_modules/readable-stream/",\
+      ["npm:3.6.2", {\
+        "packageLocation": "./.yarn/cache/readable-stream-npm-3.6.2-d2a6069158-d9e3e53193.zip/node_modules/readable-stream/",\
         "packageDependencies": [\
-          ["readable-stream", "npm:3.6.0"],\
+          ["readable-stream", "npm:3.6.2"],\
           ["inherits", "npm:2.0.4"],\
           ["string_decoder", "npm:1.2.0"],\
           ["util-deprecate", "npm:1.0.2"]\
@@ -10337,7 +10346,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["remove-bom-stream", "npm:1.2.0"],\
           ["remove-bom-buffer", "npm:3.0.0"],\
-          ["safe-buffer", "npm:5.1.2"],\
+          ["safe-buffer", "npm:5.2.1"],\
           ["through2", "npm:2.0.5"]\
         ],\
         "linkType": "HARD"\
@@ -10422,7 +10431,7 @@ const RAW_RUNTIME_STATE =
           ["oauth-sign", "npm:0.9.0"],\
           ["performance-now", "npm:2.1.0"],\
           ["qs", "npm:6.5.3"],\
-          ["safe-buffer", "npm:5.1.2"],\
+          ["safe-buffer", "npm:5.2.1"],\
           ["tough-cookie", "npm:2.5.0"],\
           ["tunnel-agent", "npm:0.6.0"],\
           ["uuid", "npm:3.3.2"]\
@@ -10679,6 +10688,13 @@ const RAW_RUNTIME_STATE =
           ["safe-buffer", "npm:5.1.2"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:5.2.1", {\
+        "packageLocation": "./.yarn/cache/safe-buffer-npm-5.2.1-3481c8aa9b-32872cd0ff.zip/node_modules/safe-buffer/",\
+        "packageDependencies": [\
+          ["safe-buffer", "npm:5.2.1"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["safe-json-parse", [\
@@ -10929,7 +10945,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["sha.js", "npm:2.4.11"],\
           ["inherits", "npm:2.0.4"],\
-          ["safe-buffer", "npm:5.1.2"]\
+          ["safe-buffer", "npm:5.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -11326,7 +11342,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["stream-browserify", "npm:3.0.0"],\
           ["inherits", "npm:2.0.4"],\
-          ["readable-stream", "npm:3.6.0"]\
+          ["readable-stream", "npm:3.6.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -11369,7 +11385,7 @@ const RAW_RUNTIME_STATE =
           ["stream-http", "npm:3.1.1"],\
           ["builtin-status-codes", "npm:3.0.0"],\
           ["inherits", "npm:2.0.4"],\
-          ["readable-stream", "npm:3.6.0"],\
+          ["readable-stream", "npm:3.6.2"],\
           ["xtend", "npm:4.0.2"]\
         ],\
         "linkType": "HARD"\
@@ -12012,7 +12028,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/through2-npm-3.0.1-dcc4042403-79fd36d135.zip/node_modules/through2/",\
         "packageDependencies": [\
           ["through2", "npm:3.0.1"],\
-          ["readable-stream", "npm:3.6.0"]\
+          ["readable-stream", "npm:3.6.2"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -12020,7 +12036,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/through2-npm-4.0.2-da7b2da443-72c246233d.zip/node_modules/through2/",\
         "packageDependencies": [\
           ["through2", "npm:4.0.2"],\
-          ["readable-stream", "npm:3.6.0"]\
+          ["readable-stream", "npm:3.6.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -12283,7 +12299,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/tunnel-agent-npm-0.6.0-64345ab7eb-7f0d9ed5c2.zip/node_modules/tunnel-agent/",\
         "packageDependencies": [\
           ["tunnel-agent", "npm:0.6.0"],\
-          ["safe-buffer", "npm:5.1.2"]\
+          ["safe-buffer", "npm:5.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -12630,7 +12646,7 @@ const RAW_RUNTIME_STATE =
           ["is-arguments", "npm:1.0.4"],\
           ["is-generator-function", "npm:1.0.7"],\
           ["is-typed-array", "npm:1.1.3"],\
-          ["safe-buffer", "npm:5.1.2"],\
+          ["safe-buffer", "npm:5.2.1"],\
           ["which-typed-array", "npm:1.1.2"]\
         ],\
         "linkType": "HARD"\
