@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Check cache
         run: yarn check:dependencies
       - name: Build
@@ -42,7 +42,7 @@ jobs:
           mkdir pull_request
           echo ${{ github.event.pull_request.number }} > ./pull_request/number
       - name: Upload artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: website
           path: |
