@@ -137,6 +137,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@asciidoctor/core@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@asciidoctor/core@npm:3.0.2"
+  dependencies:
+    "@asciidoctor/opal-runtime": "npm:3.0.1"
+    unxhr: "npm:1.2.0"
+  checksum: e85d141f48cb16eb1557423fdc7be4fc83ca6e965dee28c88686af7b8dab28f7dee60403fa26283d1f6eadcacc1cc87ca71f80afe9217201385d829b8cdb1391
+  languageName: node
+  linkType: hard
+
+"@asciidoctor/opal-runtime@npm:3.0.1":
+  version: 3.0.1
+  resolution: "@asciidoctor/opal-runtime@npm:3.0.1"
+  dependencies:
+    glob: "npm:8.1.0"
+    unxhr: "npm:1.2.0"
+  checksum: 49939d197e591564908ee7474b1408b3d5081704b1cb541368beb3967af29854b61d4c0290a9293c9f7e034aaf7cb71df3d890339ad39d78220dc352e726c5b4
+  languageName: node
+  linkType: hard
+
 "@asciidoctor/tabs@npm:1.0.0-beta.3":
   version: 1.0.0-beta.3
   resolution: "@asciidoctor/tabs@npm:1.0.0-beta.3"
@@ -725,12 +745,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "antora-ui-camel@workspace:."
   dependencies:
+    "@asciidoctor/core": "npm:^3.0.2"
     "@asciidoctor/tabs": "npm:1.0.0-beta.3"
     "@openfonts/open-sans_latin-ext": "npm:^1.44.0"
     "@ronilaukkarinen/gulp-stylelint": "npm:^14.1.2"
     "@vscode/gulp-vinyl-zip": "npm:^2.5.0"
     algoliasearch: "npm:^4.0.3"
-    asciidoctor.js: "npm:1.5.9"
     autoprefixer: "npm:~9.7"
     browser-pack-flat: "npm:~3.4"
     browserify: "npm:~17"
@@ -1051,15 +1071,6 @@ __metadata:
   version: 1.0.1
   resolution: "arrify@npm:1.0.1"
   checksum: 745075dd4a4624ff0225c331dacb99be501a515d39bcb7c84d24660314a6ec28e68131b137e6f7e16318170842ce97538cd298fc4cd6b2cc798e0b957f2747e7
-  languageName: node
-  linkType: hard
-
-"asciidoctor.js@npm:1.5.9":
-  version: 1.5.9
-  resolution: "asciidoctor.js@npm:1.5.9"
-  dependencies:
-    opal-runtime: "npm:1.0.11"
-  checksum: 1a46b242efff8b8f2655523f57671e13c78383e1fa9e72774b9c28b703316fec21e993db4fc3acbd24d7c953ca87a650ba0e76b0214932586d51e822f1fffec1
   languageName: node
   linkType: hard
 
@@ -1391,6 +1402,15 @@ __metadata:
     balanced-match: "npm:^1.0.0"
     concat-map: "npm:0.0.1"
   checksum: faf34a7bb0c3fcf4b59c7808bc5d2a96a40988addf2e7e09dfbb67a2251800e0d14cd2bfc1aa79174f2f5095c54ff27f46fb1289fe2d77dac755b5eb3434cc07
+  languageName: node
+  linkType: hard
+
+"brace-expansion@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "brace-expansion@npm:2.0.1"
+  dependencies:
+    balanced-match: "npm:^1.0.0"
+  checksum: a61e7cd2e8a8505e9f0036b3b6108ba5e926b4b55089eeb5550cd04a471fe216c96d4fe7e4c7f995c728c554ae20ddfc4244cad10aef255e72b62930afd233d1
   languageName: node
   linkType: hard
 
@@ -4626,16 +4646,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:6.0.4":
-  version: 6.0.4
-  resolution: "glob@npm:6.0.4"
+"glob@npm:8.1.0":
+  version: 8.1.0
+  resolution: "glob@npm:8.1.0"
   dependencies:
+    fs.realpath: "npm:^1.0.0"
     inflight: "npm:^1.0.4"
     inherits: "npm:2"
-    minimatch: "npm:2 || 3"
+    minimatch: "npm:^5.0.1"
     once: "npm:^1.3.0"
-    path-is-absolute: "npm:^1.0.0"
-  checksum: b8fec415f772983ffbf7823c2c87aedd50aacf4f8db1868a11535db1023cf5180c9dd7487ce08f85bd64ed5cfd4268cea1a1c61c2772523d7d6194177d6d53a8
+  checksum: 9aab1c75eb087c35dbc41d1f742e51d0507aa2b14c910d96fb8287107a10a22f4bbdce26fc0a3da4c69a20f7b26d62f1640b346a4f6e6becfff47f335bb1dc5e
   languageName: node
   linkType: hard
 
@@ -6978,12 +6998,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:2 || 3, minimatch@npm:^3.0.4":
+"minimatch@npm:^3.0.4":
   version: 3.1.2
   resolution: "minimatch@npm:3.1.2"
   dependencies:
     brace-expansion: "npm:^1.1.7"
   checksum: e0b25b04cd4ec6732830344e5739b13f8690f8a012d73445a4a19fbc623f5dd481ef7a5827fde25954cd6026fede7574cc54dc4643c99d6c6b653d6203f94634
+  languageName: node
+  linkType: hard
+
+"minimatch@npm:^5.0.1":
+  version: 5.1.6
+  resolution: "minimatch@npm:5.1.6"
+  dependencies:
+    brace-expansion: "npm:^2.0.1"
+  checksum: 126b36485b821daf96d33b5c821dac600cc1ab36c87e7a532594f9b1652b1fa89a1eebcaad4dff17c764dce1a7ac1531327f190fed5f97d8f6e5f889c116c429
   languageName: node
   linkType: hard
 
@@ -7558,16 +7587,6 @@ __metadata:
   dependencies:
     mimic-fn: "npm:^2.1.0"
   checksum: a2beeef8b927797b8d549cff01faf3458c963215bfeb579964acb43b06d3f20ee2d5ef571dda5009df5beecb62f8f9e509ed1724977fed115915ad30df796b13
-  languageName: node
-  linkType: hard
-
-"opal-runtime@npm:1.0.11":
-  version: 1.0.11
-  resolution: "opal-runtime@npm:1.0.11"
-  dependencies:
-    glob: "npm:6.0.4"
-    xmlhttprequest: "npm:1.8.0"
-  checksum: 213efe05690f4be50e2e3df500c474f2531707ac64673b959f145e95d0abc118cf7dcbb4399c615a936c560d619c503b1db83218681950fcbc2154d0c0c89f75
   languageName: node
   linkType: hard
 
@@ -11050,6 +11069,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"unxhr@npm:1.2.0":
+  version: 1.2.0
+  resolution: "unxhr@npm:1.2.0"
+  checksum: 1a5accbb25005e2034954f3fb4402eefce40ad5ebeac52df8ee247dbf18cb4b7e3fc2ad7d61365c9445c2b727e4e693c6202b5f442ca522c3e289322f7bea8cf
+  languageName: node
+  linkType: hard
+
 "upath@npm:^1.1.1":
   version: 1.1.2
   resolution: "upath@npm:1.1.2"
@@ -11471,13 +11497,6 @@ __metadata:
   dependencies:
     mkdirp: "npm:^0.5.1"
   checksum: abb3a249df922dbd4060d4cab5017b6c07268523d6b3d8c933a7f64afe3078c58507543e4b830065ea02beb8ab25e40dc2f8be8eea5cdfc08d91e89e65e952b5
-  languageName: node
-  linkType: hard
-
-"xmlhttprequest@npm:1.8.0":
-  version: 1.8.0
-  resolution: "xmlhttprequest@npm:1.8.0"
-  checksum: 4f2cc2029f863d425ba8d6ef717de7ee44cd44ceae97df45c122343ecbcd4418559fbb8bdc3fa3678ea8cb24fb31a143ed0e8f7bb302c13185bc4486d81d8399
   languageName: node
   linkType: hard
 

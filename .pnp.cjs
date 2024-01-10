@@ -453,6 +453,26 @@ const RAW_RUNTIME_STATE =
           ["unxhr", "npm:1.0.1"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:3.0.2", {\
+        "packageLocation": "./.yarn/cache/@asciidoctor-core-npm-3.0.2-74b3ab57b9-e85d141f48.zip/node_modules/@asciidoctor/core/",\
+        "packageDependencies": [\
+          ["@asciidoctor/core", "npm:3.0.2"],\
+          ["@asciidoctor/opal-runtime", "npm:3.0.1"],\
+          ["unxhr", "npm:1.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@asciidoctor/opal-runtime", [\
+      ["npm:3.0.1", {\
+        "packageLocation": "./.yarn/cache/@asciidoctor-opal-runtime-npm-3.0.1-e2800d4cc2-49939d197e.zip/node_modules/@asciidoctor/opal-runtime/",\
+        "packageDependencies": [\
+          ["@asciidoctor/opal-runtime", "npm:3.0.1"],\
+          ["glob", "npm:8.1.0"],\
+          ["unxhr", "npm:1.2.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@asciidoctor/tabs", [\
@@ -4893,12 +4913,12 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./antora-ui-camel/",\
         "packageDependencies": [\
           ["antora-ui-camel", "workspace:antora-ui-camel"],\
+          ["@asciidoctor/core", "npm:3.0.2"],\
           ["@asciidoctor/tabs", "npm:1.0.0-beta.3"],\
           ["@openfonts/open-sans_latin-ext", "npm:1.44.2"],\
           ["@ronilaukkarinen/gulp-stylelint", "virtual:40e0eba2b2747b78b17285b5a80d54e9bed0c51acd01aa1fab2b869ee61f21c6d6cda6fee2acf095fea1709035ac613a1bc772c8e59bb0339d7af2ceea528de8#npm:14.1.2"],\
           ["@vscode/gulp-vinyl-zip", "npm:2.5.0"],\
           ["algoliasearch", "npm:4.5.1"],\
-          ["asciidoctor.js", "npm:1.5.9"],\
           ["autoprefixer", "npm:9.7.6"],\
           ["browser-pack-flat", "npm:3.4.2"],\
           ["browserify", "npm:17.0.0"],\
@@ -5453,16 +5473,6 @@ const RAW_RUNTIME_STATE =
           ["asciidoctor-opal-runtime", "npm:0.3.3"],\
           ["glob", "npm:7.1.3"],\
           ["unxhr", "npm:1.0.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["asciidoctor.js", [\
-      ["npm:1.5.9", {\
-        "packageLocation": "./.yarn/cache/asciidoctor.js-npm-1.5.9-57059645fb-1a46b242ef.zip/node_modules/asciidoctor.js/",\
-        "packageDependencies": [\
-          ["asciidoctor.js", "npm:1.5.9"],\
-          ["opal-runtime", "npm:1.0.11"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -23397,6 +23407,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/unxhr-npm-1.0.1-a738451b6c-b9b1648d0f.zip/node_modules/unxhr/",\
         "packageDependencies": [\
           ["unxhr", "npm:1.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:1.2.0", {\
+        "packageLocation": "./.yarn/cache/unxhr-npm-1.2.0-2525ed94b7-1a5accbb25.zip/node_modules/unxhr/",\
+        "packageDependencies": [\
+          ["unxhr", "npm:1.2.0"]\
         ],\
         "linkType": "HARD"\
       }]\

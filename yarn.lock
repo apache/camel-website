@@ -348,6 +348,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@asciidoctor/core@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@asciidoctor/core@npm:3.0.2"
+  dependencies:
+    "@asciidoctor/opal-runtime": "npm:3.0.1"
+    unxhr: "npm:1.2.0"
+  checksum: e85d141f48cb16eb1557423fdc7be4fc83ca6e965dee28c88686af7b8dab28f7dee60403fa26283d1f6eadcacc1cc87ca71f80afe9217201385d829b8cdb1391
+  languageName: node
+  linkType: hard
+
 "@asciidoctor/core@npm:~2.2":
   version: 2.2.5
   resolution: "@asciidoctor/core@npm:2.2.5"
@@ -355,6 +365,16 @@ __metadata:
     asciidoctor-opal-runtime: "npm:0.3.3"
     unxhr: "npm:1.0.1"
   checksum: f9d02817dbc672cc59d8ce05fd437cb5164ba919fff618321681b71114344460a1ec39171806f3b8e000c8d342330631238010b55a6f7fec9ce290468e87f01d
+  languageName: node
+  linkType: hard
+
+"@asciidoctor/opal-runtime@npm:3.0.1":
+  version: 3.0.1
+  resolution: "@asciidoctor/opal-runtime@npm:3.0.1"
+  dependencies:
+    glob: "npm:8.1.0"
+    unxhr: "npm:1.2.0"
+  checksum: 49939d197e591564908ee7474b1408b3d5081704b1cb541368beb3967af29854b61d4c0290a9293c9f7e034aaf7cb71df3d890339ad39d78220dc352e726c5b4
   languageName: node
   linkType: hard
 
@@ -3595,12 +3615,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "antora-ui-camel@workspace:antora-ui-camel"
   dependencies:
+    "@asciidoctor/core": "npm:^3.0.2"
     "@asciidoctor/tabs": "npm:1.0.0-beta.3"
     "@openfonts/open-sans_latin-ext": "npm:^1.44.0"
     "@ronilaukkarinen/gulp-stylelint": "npm:^14.1.2"
     "@vscode/gulp-vinyl-zip": "npm:^2.5.0"
     algoliasearch: "npm:^4.0.3"
-    asciidoctor.js: "npm:1.5.9"
     autoprefixer: "npm:~9.7"
     browser-pack-flat: "npm:~3.4"
     browserify: "npm:~17"
@@ -4083,15 +4103,6 @@ __metadata:
     glob: "npm:7.1.3"
     unxhr: "npm:1.0.1"
   checksum: ded115b5f2a49e529b9029d4ee85fa3aeb6051365cb7360732e45d2c2cd1d2e3b80d6ffa5f5d27a9ea2c8d6182ca09ee9b92325044cb07d6a89dae9ef52c7526
-  languageName: node
-  linkType: hard
-
-"asciidoctor.js@npm:1.5.9":
-  version: 1.5.9
-  resolution: "asciidoctor.js@npm:1.5.9"
-  dependencies:
-    opal-runtime: "npm:1.0.11"
-  checksum: 1a46b242efff8b8f2655523f57671e13c78383e1fa9e72774b9c28b703316fec21e993db4fc3acbd24d7c953ca87a650ba0e76b0214932586d51e822f1fffec1
   languageName: node
   linkType: hard
 
@@ -9949,6 +9960,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"glob@npm:8.1.0, glob@npm:^8.0.0":
+  version: 8.1.0
+  resolution: "glob@npm:8.1.0"
+  dependencies:
+    fs.realpath: "npm:^1.0.0"
+    inflight: "npm:^1.0.4"
+    inherits: "npm:2"
+    minimatch: "npm:^5.0.1"
+    once: "npm:^1.3.0"
+  checksum: 9aab1c75eb087c35dbc41d1f742e51d0507aa2b14c910d96fb8287107a10a22f4bbdce26fc0a3da4c69a20f7b26d62f1640b346a4f6e6becfff47f335bb1dc5e
+  languageName: node
+  linkType: hard
+
 "glob@npm:^10.0.0":
   version: 10.3.10
   resolution: "glob@npm:10.3.10"
@@ -9975,19 +9999,6 @@ __metadata:
     once: "npm:^1.3.0"
     path-is-absolute: "npm:^1.0.0"
   checksum: bc78b6ea0735b6e23d20678aba4ae6a4760e8c9527e3c4683ac25b14e70f55f9531245dcf25959b70cbc4aa3dcce1fc37ab65fd026a4cbd70aa3a44880bd396b
-  languageName: node
-  linkType: hard
-
-"glob@npm:^8.0.0":
-  version: 8.1.0
-  resolution: "glob@npm:8.1.0"
-  dependencies:
-    fs.realpath: "npm:^1.0.0"
-    inflight: "npm:^1.0.4"
-    inherits: "npm:2"
-    minimatch: "npm:^5.0.1"
-    once: "npm:^1.3.0"
-  checksum: 9aab1c75eb087c35dbc41d1f742e51d0507aa2b14c910d96fb8287107a10a22f4bbdce26fc0a3da4c69a20f7b26d62f1640b346a4f6e6becfff47f335bb1dc5e
   languageName: node
   linkType: hard
 
@@ -20417,6 +20428,13 @@ __metadata:
   version: 1.0.1
   resolution: "unxhr@npm:1.0.1"
   checksum: b9b1648d0feb86e79f8db03b5216a951b7d95ff9ffc71c4ee49fe677278c18859a81844c8550ee08ad74c8a1cb51bb2fbd31c3e41e7f7b465166c27a1823b551
+  languageName: node
+  linkType: hard
+
+"unxhr@npm:1.2.0":
+  version: 1.2.0
+  resolution: "unxhr@npm:1.2.0"
+  checksum: 1a5accbb25005e2034954f3fb4402eefce40ad5ebeac52df8ee247dbf18cb4b7e3fc2ad7d61365c9445c2b727e4e693c6202b5f442ca522c3e289322f7bea8cf
   languageName: node
   linkType: hard
 
