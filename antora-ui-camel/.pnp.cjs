@@ -4048,7 +4048,7 @@ const RAW_RUNTIME_STATE =
           ["js-yaml", "npm:3.13.1"],\
           ["json-stable-stringify-without-jsonify", "npm:1.0.1"],\
           ["levn", "npm:0.3.0"],\
-          ["lodash", "npm:4.17.15"],\
+          ["lodash", "npm:4.17.21"],\
           ["minimatch", "npm:3.1.2"],\
           ["mkdirp", "npm:0.5.1"],\
           ["natural-compare", "npm:1.4.0"],\
@@ -4092,7 +4092,7 @@ const RAW_RUNTIME_STATE =
           ["js-yaml", "npm:3.13.1"],\
           ["json-stable-stringify-without-jsonify", "npm:1.0.1"],\
           ["levn", "npm:0.3.0"],\
-          ["lodash", "npm:4.17.15"],\
+          ["lodash", "npm:4.17.21"],\
           ["minimatch", "npm:3.1.2"],\
           ["mkdirp", "npm:0.5.1"],\
           ["natural-compare", "npm:1.4.0"],\
@@ -5834,7 +5834,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/gulp-template-npm-5.0.0-dc378aeb0a-af540605b2.zip/node_modules/gulp-template/",\
         "packageDependencies": [\
           ["gulp-template", "npm:5.0.0"],\
-          ["lodash", "npm:4.17.15"],\
+          ["lodash", "npm:4.17.21"],\
           ["plugin-error", "npm:0.1.2"],\
           ["safe-buffer", "npm:5.2.1"],\
           ["through2", "npm:2.0.5"]\
@@ -6479,7 +6479,7 @@ const RAW_RUNTIME_STATE =
           ["cli-width", "npm:2.2.0"],\
           ["external-editor", "npm:3.0.3"],\
           ["figures", "npm:2.0.0"],\
-          ["lodash", "npm:4.17.15"],\
+          ["lodash", "npm:4.17.21"],\
           ["mute-stream", "npm:0.0.7"],\
           ["run-async", "npm:2.4.1"],\
           ["rxjs", "npm:6.5.5"],\
@@ -6499,7 +6499,7 @@ const RAW_RUNTIME_STATE =
           ["cli-width", "npm:2.2.0"],\
           ["external-editor", "npm:3.0.3"],\
           ["figures", "npm:3.2.0"],\
-          ["lodash", "npm:4.17.15"],\
+          ["lodash", "npm:4.17.21"],\
           ["mute-stream", "npm:0.0.8"],\
           ["run-async", "npm:2.4.1"],\
           ["rxjs", "npm:6.5.5"],\
@@ -7543,10 +7543,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["lodash", [\
-      ["npm:4.17.15", {\
-        "packageLocation": "./.yarn/cache/lodash-npm-4.17.15-566d9324f7-e3e43ed2f6.zip/node_modules/lodash/",\
+      ["npm:4.17.21", {\
+        "packageLocation": "./.yarn/cache/lodash-npm-4.17.21-6382451519-c08619c038.zip/node_modules/lodash/",\
         "packageDependencies": [\
-          ["lodash", "npm:4.17.15"]\
+          ["lodash", "npm:4.17.21"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -11913,7 +11913,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["table", "npm:5.4.6"],\
           ["ajv", "npm:6.12.6"],\
-          ["lodash", "npm:4.17.15"],\
+          ["lodash", "npm:4.17.21"],\
           ["slice-ansi", "npm:2.1.0"],\
           ["string-width", "npm:3.1.0"]\
         ],\
@@ -12879,7 +12879,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-visitor-keys", "npm:1.1.0"],\
           ["espree", "npm:3.5.4"],\
           ["esquery", "npm:1.0.1"],\
-          ["lodash", "npm:4.17.15"]\
+          ["lodash", "npm:4.17.21"]\
         ],\
         "packagePeers": [\
           "@types/eslint",\
