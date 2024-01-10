@@ -49,7 +49,7 @@
     "gulp-template": "~5.0",
     "gulp-terser": "^1.2.0",
     "gulp-vinyl-zip": "~2.2",
-    "handlebars": "~4.7",
+    "handlebars": "^4.7.8",
     "highlight.js": "~11",
     "js-yaml": "~3.13",
     "merge-stream": "~2.0",

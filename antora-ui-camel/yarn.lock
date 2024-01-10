@@ -883,7 +883,7 @@ __metadata:
     gulp-template: "npm:~5.0"
     gulp-terser: "npm:^1.2.0"
     gulp-vinyl-zip: "npm:~2.2"
-    handlebars: "npm:~4.7"
+    handlebars: "npm:^4.7.8"
     highlight.js: "npm:~11"
     js-yaml: "npm:~3.13"
     merge-stream: "npm:~2.0"
@@ -5210,12 +5210,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"handlebars@npm:~4.7":
-  version: 4.7.6
-  resolution: "handlebars@npm:4.7.6"
+"handlebars@npm:^4.7.8":
+  version: 4.7.8
+  resolution: "handlebars@npm:4.7.8"
   dependencies:
     minimist: "npm:^1.2.5"
-    neo-async: "npm:^2.6.0"
+    neo-async: "npm:^2.6.2"
     source-map: "npm:^0.6.1"
     uglify-js: "npm:^3.1.4"
     wordwrap: "npm:^1.0.0"
@@ -5224,7 +5224,7 @@ __metadata:
       optional: true
   bin:
     handlebars: bin/handlebars
-  checksum: 2253cd695f53ed1d65b12da90f9887d6a82ea0f0f8848afd0ad659983cee4100c7ef57917a8aefc89eb60ade820b3ae54721e28ca9665270f913e2fd2049a59a
+  checksum: bd528f4dd150adf67f3f857118ef0fa43ff79a153b1d943fa0a770f2599e38b25a7a0dbac1a3611a4ec86970fd2325a81310fb788b5c892308c9f8743bd02e11
   languageName: node
   linkType: hard
 
@@ -7442,10 +7442,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"neo-async@npm:^2.6.0":
-  version: 2.6.1
-  resolution: "neo-async@npm:2.6.1"
-  checksum: e945b92f47377d9393549d86015af25c6f1990f80ed2373a248459bfc57159b47964a46a4fb340fc90ac6d33a84c6d966a1c684c4a6c0e3c788cfb6dbcd0e71d
+"neo-async@npm:^2.6.2":
+  version: 2.6.2
+  resolution: "neo-async@npm:2.6.2"
+  checksum: 1a7948fea86f2b33ec766bc899c88796a51ba76a4afc9026764aedc6e7cde692a09067031e4a1bf6db4f978ccd99e7f5b6c03fe47ad9865c3d4f99050d67e002
   languageName: node
   linkType: hard
 

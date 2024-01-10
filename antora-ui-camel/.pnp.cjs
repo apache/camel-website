@@ -56,7 +56,7 @@ const RAW_RUNTIME_STATE =
           ["gulp-template", "npm:5.0.0"],\
           ["gulp-terser", "npm:1.2.0"],\
           ["gulp-vinyl-zip", "npm:2.2.1"],\
-          ["handlebars", "npm:4.7.6"],\
+          ["handlebars", "npm:4.7.8"],\
           ["highlight.js", "npm:11.3.1"],\
           ["js-yaml", "npm:3.13.1"],\
           ["merge-stream", "npm:2.0.0"],\
@@ -1135,7 +1135,7 @@ const RAW_RUNTIME_STATE =
           ["gulp-template", "npm:5.0.0"],\
           ["gulp-terser", "npm:1.2.0"],\
           ["gulp-vinyl-zip", "npm:2.2.1"],\
-          ["handlebars", "npm:4.7.6"],\
+          ["handlebars", "npm:4.7.8"],\
           ["highlight.js", "npm:11.3.1"],\
           ["js-yaml", "npm:3.13.1"],\
           ["merge-stream", "npm:2.0.0"],\
@@ -6032,12 +6032,12 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["handlebars", [\
-      ["npm:4.7.6", {\
-        "packageLocation": "./.yarn/cache/handlebars-npm-4.7.6-f64e7514e4-2253cd695f.zip/node_modules/handlebars/",\
+      ["npm:4.7.8", {\
+        "packageLocation": "./.yarn/cache/handlebars-npm-4.7.8-25244c2c82-bd528f4dd1.zip/node_modules/handlebars/",\
         "packageDependencies": [\
-          ["handlebars", "npm:4.7.6"],\
+          ["handlebars", "npm:4.7.8"],\
           ["minimist", "npm:1.2.5"],\
-          ["neo-async", "npm:2.6.1"],\
+          ["neo-async", "npm:2.6.2"],\
           ["source-map", "npm:0.6.1"],\
           ["uglify-js", "npm:3.5.15"],\
           ["wordwrap", "npm:1.0.0"]\
@@ -8535,10 +8535,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["neo-async", [\
-      ["npm:2.6.1", {\
-        "packageLocation": "./.yarn/cache/neo-async-npm-2.6.1-96bc443be6-e945b92f47.zip/node_modules/neo-async/",\
+      ["npm:2.6.2", {\
+        "packageLocation": "./.yarn/cache/neo-async-npm-2.6.2-75d6902586-1a7948fea8.zip/node_modules/neo-async/",\
         "packageDependencies": [\
-          ["neo-async", "npm:2.6.1"]\
+          ["neo-async", "npm:2.6.2"]\
         ],\
         "linkType": "HARD"\
       }]\
