@@ -4547,17 +4547,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bn.js@npm:^4.0.0, bn.js@npm:^4.1.0, bn.js@npm:^4.4.0":
-  version: 4.11.9
-  resolution: "bn.js@npm:4.11.9"
-  checksum: c5a2342f0bc3d0bbe53361d57aa51c489589ad2d7c726c1337e9af7f37b6bc2d2d1b63cfb1972a7aacbc053367832037f699f973c81d9c5844af247650968691
+"bn.js@npm:^4.0.0, bn.js@npm:^4.1.0, bn.js@npm:^4.11.9":
+  version: 4.12.0
+  resolution: "bn.js@npm:4.12.0"
+  checksum: 10f8db196d3da5adfc3207d35d0a42aa29033eb33685f20ba2c36cadfe2de63dad05df0a20ab5aae01b418d1c4b3d4d205273085262fa020d17e93ff32b67527
   languageName: node
   linkType: hard
 
-"bn.js@npm:^5.1.1":
-  version: 5.1.3
-  resolution: "bn.js@npm:5.1.3"
-  checksum: 4cae8e41152b690e51136152a7a8551a610e7b119863e73089912aaecf46dcc66be08c34f8b5fdb3187f03fc14d54737cf4ac22f52caad3b47b66c94e63993eb
+"bn.js@npm:^5.0.0, bn.js@npm:^5.2.1":
+  version: 5.2.1
+  resolution: "bn.js@npm:5.2.1"
+  checksum: 7a7e8764d7a6e9708b8b9841b2b3d6019cc154d2fc23716d0efecfe1e16921b7533c6f7361fb05471eab47986c4aa310c270f88e3507172104632ac8df2cfd84
   languageName: node
   linkType: hard
 
@@ -4660,7 +4660,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"brorand@npm:^1.0.1":
+"brorand@npm:^1.0.1, brorand@npm:^1.1.0":
   version: 1.1.0
   resolution: "brorand@npm:1.1.0"
   checksum: 8a05c9f3c4b46572dec6ef71012b1946db6cae8c7bb60ccd4b7dd5a84655db49fe043ecc6272e7ef1f69dc53d6730b9e2a3a03a8310509a3d797a618cbee52be
@@ -4827,30 +4827,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserify-rsa@npm:^4.0.0, browserify-rsa@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "browserify-rsa@npm:4.0.1"
+"browserify-rsa@npm:^4.0.0, browserify-rsa@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "browserify-rsa@npm:4.1.0"
   dependencies:
-    bn.js: "npm:^4.1.0"
+    bn.js: "npm:^5.0.0"
     randombytes: "npm:^2.0.1"
-  checksum: 36d68a5344ed787ad03f6c2611b85df0032798bea083a59be0a02f7a4a88ae803578b0a4f91c0cb2423f147bbeecabb1fe44d9d5f0adfed0928347ac7ebcc250
+  checksum: 155f0c135873efc85620571a33d884aa8810e40176125ad424ec9d85016ff105a07f6231650914a760cca66f29af0494087947b7be34880dd4599a0cd3c38e54
   languageName: node
   linkType: hard
 
 "browserify-sign@npm:^4.0.0":
-  version: 4.2.1
-  resolution: "browserify-sign@npm:4.2.1"
+  version: 4.2.2
+  resolution: "browserify-sign@npm:4.2.2"
   dependencies:
-    bn.js: "npm:^5.1.1"
-    browserify-rsa: "npm:^4.0.1"
+    bn.js: "npm:^5.2.1"
+    browserify-rsa: "npm:^4.1.0"
     create-hash: "npm:^1.2.0"
     create-hmac: "npm:^1.1.7"
-    elliptic: "npm:^6.5.3"
+    elliptic: "npm:^6.5.4"
     inherits: "npm:^2.0.4"
-    parse-asn1: "npm:^5.1.5"
-    readable-stream: "npm:^3.6.0"
-    safe-buffer: "npm:^5.2.0"
-  checksum: bf3f9177587a4155bcd64cb4f56f3a0fd6f5aa590188a5f12c07b5dfb50815a1248e90abc8a1dbd75bd42cb825fec09c57ffc8dc7bfba8704875403b762312b4
+    parse-asn1: "npm:^5.1.6"
+    readable-stream: "npm:^3.6.2"
+    safe-buffer: "npm:^5.2.1"
+  checksum: b622730c0fc183328c3a1c9fdaaaa5118821ed6822b266fa6b0375db7e20061ebec87301d61931d79b9da9a96ada1cab317fce3c68f233e5e93ed02dbb35544c
   languageName: node
   linkType: hard
 
@@ -7683,18 +7683,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"elliptic@npm:^6.5.3":
-  version: 6.5.3
-  resolution: "elliptic@npm:6.5.3"
+"elliptic@npm:^6.5.3, elliptic@npm:^6.5.4":
+  version: 6.5.4
+  resolution: "elliptic@npm:6.5.4"
   dependencies:
-    bn.js: "npm:^4.4.0"
-    brorand: "npm:^1.0.1"
+    bn.js: "npm:^4.11.9"
+    brorand: "npm:^1.1.0"
     hash.js: "npm:^1.0.0"
-    hmac-drbg: "npm:^1.0.0"
-    inherits: "npm:^2.0.1"
-    minimalistic-assert: "npm:^1.0.0"
-    minimalistic-crypto-utils: "npm:^1.0.0"
-  checksum: 3cced500e63ecb5496fe86ce177a00611627ca5eb7ddf46639ea09d943ef06829e907dcfcbf6c12111ebbb9acd44615f128ccf553d9ae6d8f006d1bddd2d89ed
+    hmac-drbg: "npm:^1.0.1"
+    inherits: "npm:^2.0.4"
+    minimalistic-assert: "npm:^1.0.1"
+    minimalistic-crypto-utils: "npm:^1.0.1"
+  checksum: 2cd7ff4b69720dbb2ca1ca650b2cf889d1df60c96d4a99d331931e4fe21e45a7f3b8074e86618ca7e56366c4b6258007f234f9d61d9b0c87bbbc8ea990b99e94
   languageName: node
   linkType: hard
 
@@ -10780,7 +10780,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hmac-drbg@npm:^1.0.0":
+"hmac-drbg@npm:^1.0.1":
   version: 1.0.1
   resolution: "hmac-drbg@npm:1.0.1"
   dependencies:
@@ -13838,7 +13838,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimalistic-crypto-utils@npm:^1.0.0, minimalistic-crypto-utils@npm:^1.0.1":
+"minimalistic-crypto-utils@npm:^1.0.1":
   version: 1.0.1
   resolution: "minimalistic-crypto-utils@npm:1.0.1"
   checksum: 6e8a0422b30039406efd4c440829ea8f988845db02a3299f372fceba56ffa94994a9c0f2fd70c17f9969eedfbd72f34b5070ead9656a34d3f71c0bd72583a0ed
@@ -15486,7 +15486,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"parse-asn1@npm:^5.0.0, parse-asn1@npm:^5.1.5":
+"parse-asn1@npm:^5.0.0, parse-asn1@npm:^5.1.6":
   version: 5.1.6
   resolution: "parse-asn1@npm:5.1.6"
   dependencies:
@@ -17154,14 +17154,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"readable-stream@npm:2 || 3, readable-stream@npm:3, readable-stream@npm:^3.0.0, readable-stream@npm:^3.1.1, readable-stream@npm:^3.4.0, readable-stream@npm:^3.5.0, readable-stream@npm:^3.6.0":
-  version: 3.6.0
-  resolution: "readable-stream@npm:3.6.0"
+"readable-stream@npm:2 || 3, readable-stream@npm:3, readable-stream@npm:^3.0.0, readable-stream@npm:^3.1.1, readable-stream@npm:^3.4.0, readable-stream@npm:^3.5.0, readable-stream@npm:^3.6.0, readable-stream@npm:^3.6.2":
+  version: 3.6.2
+  resolution: "readable-stream@npm:3.6.2"
   dependencies:
     inherits: "npm:^2.0.3"
     string_decoder: "npm:^1.1.1"
     util-deprecate: "npm:^1.0.1"
-  checksum: b80b3e6a7fafb1c79de7db541de357f4a5ee73bd70c21672f5a7c840d27bb27bdb0151e7ba2fd82c4a888df22ce0c501b0d9f3e4dfe51688876701c437d59536
+  checksum: d9e3e53193adcdb79d8f10f2a1f6989bd4389f5936c6f8b870e77570853561c362bee69feca2bbb7b32368ce96a85504aa4cedf7cf80f36e6a9de30d64244048
   languageName: node
   linkType: hard
 
