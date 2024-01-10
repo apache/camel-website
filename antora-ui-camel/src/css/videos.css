@@ -1,7 +1,7 @@
 .video {
   position: relative;
   overflow: hidden;
-  padding-bottom: 52.9986395%; /* height/width ratio 409.017/771.75=0.529986395 */
+  padding-bottom: 52.9986%; /* height/width ratio 409.017/771.75=0.529986395 */
 }
 
 .video iframe {

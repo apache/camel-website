@@ -1,10 +1,10 @@
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
   aside.toc.sidebar {
     display: none;
   }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (width >= 1025px) {
   main {
     flex: auto;
     /* min-width: 0 required for flexbox to constrain overflowing elements */
@@ -48,7 +48,7 @@
   }
 }
 
-@media screen and (min-width: 1216px) {
+@media screen and (width >= 1216px) {
   aside.toc.sidebar {
     flex-basis: var(--toc-width--widescreen);
   }

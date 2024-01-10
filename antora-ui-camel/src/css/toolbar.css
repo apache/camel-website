@@ -18,7 +18,7 @@
   max-width: 100vw;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
   .toolbar {
     top: var(--navbar-mobile-height);
   }
@@ -29,7 +29,7 @@
 }
 
 .nav-toggle {
-  background: url(../img/menu.svg) no-repeat 50% 47.5%;
+  background: url("../img/menu.svg") no-repeat 50% 47.5%;
   background-size: 49%;
   border: none;
   outline: none;
@@ -40,19 +40,19 @@
   margin-right: -0.25rem;
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (width >= 1025px) {
   .nav-toggle {
     display: none;
   }
 }
 
 .nav-toggle.is-active {
-  background-image: url(../img/back.svg);
+  background-image: url("../img/back.svg");
   background-size: 41.5%;
 }
 
 .home-link {
-  background: url(../img/home-o.svg) no-repeat 50% 45%;
+  background: url("../img/home-o.svg") no-repeat 50% 45%;
   background-size: 50%;
   display: block;
   height: 2.5rem;
@@ -62,7 +62,7 @@
 
 .home-link:hover,
 .home-link.is-current {
-  background-image: url(../img/home.svg);
+  background-image: url("../img/home.svg");
 }
 
 .edit-this-page {
@@ -70,7 +70,7 @@
   padding-right: 0.5rem;
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (width >= 1025px) {
   .edit-this-page {
     display: block;
   }
