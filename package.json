@@ -36,7 +36,7 @@
     "@antora/cli": "^3.1.7",
     "@antora/site-generator": "^3.1.7",
     "@asciidoctor/tabs": "^1.0.0-beta.3",
-    "@deadlinks/cargo-deadlinks": "github-release:deadlinks/cargo-deadlinks:0.8.0/deadlinks-linux",
+    "@deadlinks/cargo-deadlinks": "github-release:deadlinks/cargo-deadlinks:0.8.1/deadlinks-linux",
     "@djencks/antora-aggregate-collector": "^0.1.0-beta.1",
     "@djencks/antora-site-manifest": "^0.0.3-rc.2",
     "@djencks/antora-source-map": "^0.0.1-rc.2",
