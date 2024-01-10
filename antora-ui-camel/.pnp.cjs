@@ -26,12 +26,12 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
+          ["@asciidoctor/core", "npm:3.0.2"],\
           ["@asciidoctor/tabs", "npm:1.0.0-beta.3"],\
           ["@openfonts/open-sans_latin-ext", "npm:1.44.0"],\
           ["@ronilaukkarinen/gulp-stylelint", "virtual:53a2c559876ac93d5e6cf4689198c015a86ce923a72ff31018f4155c30b7da56dbd10410abafabb98da7a76016aae31ad749fae1ec28733b94edc21faa0ef05b#npm:14.1.2"],\
           ["@vscode/gulp-vinyl-zip", "npm:2.5.0"],\
           ["algoliasearch", "npm:4.0.3"],\
-          ["asciidoctor.js", "npm:1.5.9"],\
           ["autoprefixer", "npm:9.7.6"],\
           ["browser-pack-flat", "npm:3.4.2"],\
           ["browserify", "npm:17.0.0"],\
@@ -226,6 +226,28 @@ const RAW_RUNTIME_STATE =
           ["@algolia/cache-common", "npm:4.0.3"],\
           ["@algolia/logger-common", "npm:4.0.3"],\
           ["@algolia/requester-common", "npm:4.0.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@asciidoctor/core", [\
+      ["npm:3.0.2", {\
+        "packageLocation": "./.yarn/cache/@asciidoctor-core-npm-3.0.2-74b3ab57b9-e85d141f48.zip/node_modules/@asciidoctor/core/",\
+        "packageDependencies": [\
+          ["@asciidoctor/core", "npm:3.0.2"],\
+          ["@asciidoctor/opal-runtime", "npm:3.0.1"],\
+          ["unxhr", "npm:1.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@asciidoctor/opal-runtime", [\
+      ["npm:3.0.1", {\
+        "packageLocation": "./.yarn/cache/@asciidoctor-opal-runtime-npm-3.0.1-e2800d4cc2-49939d197e.zip/node_modules/@asciidoctor/opal-runtime/",\
+        "packageDependencies": [\
+          ["@asciidoctor/opal-runtime", "npm:3.0.1"],\
+          ["glob", "npm:8.1.0"],\
+          ["unxhr", "npm:1.2.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -986,12 +1008,12 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["antora-ui-camel", "workspace:."],\
+          ["@asciidoctor/core", "npm:3.0.2"],\
           ["@asciidoctor/tabs", "npm:1.0.0-beta.3"],\
           ["@openfonts/open-sans_latin-ext", "npm:1.44.0"],\
           ["@ronilaukkarinen/gulp-stylelint", "virtual:53a2c559876ac93d5e6cf4689198c015a86ce923a72ff31018f4155c30b7da56dbd10410abafabb98da7a76016aae31ad749fae1ec28733b94edc21faa0ef05b#npm:14.1.2"],\
           ["@vscode/gulp-vinyl-zip", "npm:2.5.0"],\
           ["algoliasearch", "npm:4.0.3"],\
-          ["asciidoctor.js", "npm:1.5.9"],\
           ["autoprefixer", "npm:9.7.6"],\
           ["browser-pack-flat", "npm:3.4.2"],\
           ["browserify", "npm:17.0.0"],\
@@ -1354,16 +1376,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/arrify-npm-1.0.1-affafba9fe-745075dd4a.zip/node_modules/arrify/",\
         "packageDependencies": [\
           ["arrify", "npm:1.0.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["asciidoctor.js", [\
-      ["npm:1.5.9", {\
-        "packageLocation": "./.yarn/cache/asciidoctor.js-npm-1.5.9-57059645fb-1a46b242ef.zip/node_modules/asciidoctor.js/",\
-        "packageDependencies": [\
-          ["asciidoctor.js", "npm:1.5.9"],\
-          ["opal-runtime", "npm:1.0.11"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1738,6 +1750,14 @@ const RAW_RUNTIME_STATE =
           ["brace-expansion", "npm:1.1.11"],\
           ["balanced-match", "npm:1.0.0"],\
           ["concat-map", "npm:0.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:2.0.1", {\
+        "packageLocation": "./.yarn/cache/brace-expansion-npm-2.0.1-17aa2616f9-a61e7cd2e8.zip/node_modules/brace-expansion/",\
+        "packageDependencies": [\
+          ["brace-expansion", "npm:2.0.1"],\
+          ["balanced-match", "npm:1.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5362,18 +5382,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["glob", [\
-      ["npm:6.0.4", {\
-        "packageLocation": "./.yarn/cache/glob-npm-6.0.4-dbb227ba4a-b8fec415f7.zip/node_modules/glob/",\
-        "packageDependencies": [\
-          ["glob", "npm:6.0.4"],\
-          ["inflight", "npm:1.0.6"],\
-          ["inherits", "npm:2.0.4"],\
-          ["minimatch", "npm:3.1.2"],\
-          ["once", "npm:1.4.0"],\
-          ["path-is-absolute", "npm:1.0.1"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:7.1.4", {\
         "packageLocation": "./.yarn/cache/glob-npm-7.1.4-8bd8317a74-776bcc3137.zip/node_modules/glob/",\
         "packageDependencies": [\
@@ -5384,6 +5392,18 @@ const RAW_RUNTIME_STATE =
           ["minimatch", "npm:3.1.2"],\
           ["once", "npm:1.4.0"],\
           ["path-is-absolute", "npm:1.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:8.1.0", {\
+        "packageLocation": "./.yarn/cache/glob-npm-8.1.0-65f64af8b1-9aab1c75eb.zip/node_modules/glob/",\
+        "packageDependencies": [\
+          ["glob", "npm:8.1.0"],\
+          ["fs.realpath", "npm:1.0.0"],\
+          ["inflight", "npm:1.0.6"],\
+          ["inherits", "npm:2.0.4"],\
+          ["minimatch", "npm:5.1.6"],\
+          ["once", "npm:1.4.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -8023,6 +8043,14 @@ const RAW_RUNTIME_STATE =
           ["brace-expansion", "npm:1.1.11"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:5.1.6", {\
+        "packageLocation": "./.yarn/cache/minimatch-npm-5.1.6-1e71429f4c-126b36485b.zip/node_modules/minimatch/",\
+        "packageDependencies": [\
+          ["minimatch", "npm:5.1.6"],\
+          ["brace-expansion", "npm:2.0.1"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["minimist", [\
@@ -8651,17 +8679,6 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["onetime", "npm:5.1.0"],\
           ["mimic-fn", "npm:2.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["opal-runtime", [\
-      ["npm:1.0.11", {\
-        "packageLocation": "./.yarn/cache/opal-runtime-npm-1.0.11-8390e0d246-213efe0569.zip/node_modules/opal-runtime/",\
-        "packageDependencies": [\
-          ["opal-runtime", "npm:1.0.11"],\
-          ["glob", "npm:6.0.4"],\
-          ["xmlhttprequest", "npm:1.8.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -12501,6 +12518,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["unxhr", [\
+      ["npm:1.2.0", {\
+        "packageLocation": "./.yarn/cache/unxhr-npm-1.2.0-2525ed94b7-1a5accbb25.zip/node_modules/unxhr/",\
+        "packageDependencies": [\
+          ["unxhr", "npm:1.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["upath", [\
       ["npm:1.1.2", {\
         "packageLocation": "./.yarn/cache/upath-npm-1.1.2-a90b400d2f-0ced8e08ea.zip/node_modules/upath/",\
@@ -12982,15 +13008,6 @@ const RAW_RUNTIME_STATE =
           ["write-file-atomic", "npm:5.0.1"],\
           ["imurmurhash", "npm:0.1.4"],\
           ["signal-exit", "npm:4.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["xmlhttprequest", [\
-      ["npm:1.8.0", {\
-        "packageLocation": "./.yarn/cache/xmlhttprequest-npm-1.8.0-7ac1c8e494-4f2cc2029f.zip/node_modules/xmlhttprequest/",\
-        "packageDependencies": [\
-          ["xmlhttprequest", "npm:1.8.0"]\
         ],\
         "linkType": "HARD"\
       }]\

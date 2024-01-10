@@ -6,7 +6,7 @@ Error.call = (self, ...args) => {
   return Object.assign(self, { message: err.message, stack: err.stack })
 }
 
-const asciidoctor = require('asciidoctor.js')()
+const asciidoctor = require('@asciidoctor/core')()
 const data = require('gulp-data')
 const fs = require('fs-extra')
 const handlebars = require('handlebars')
