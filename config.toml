@@ -4,7 +4,7 @@ title = "Apache Camel"
 relativeURLs = true
 disablePathToLower = true
 staticDir = ["static", "documentation"]
-disableKinds = ["taxonomyTerm"]
+disableKinds = ["taxonomy"]
 enableRobotsTXT = true
 timeout = 300000
 
