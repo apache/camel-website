@@ -71,7 +71,7 @@ Now, if you press the `Connect` button, the Hawtio console should open in a new 
 
 ## What Camel plugin can do
 
-![Camel plugin](https://storage.googleapis.com/zenn-user-upload/f2cc8bd0475d-20240111.png)
+![Camel plugin](camel-plugin.png)
 
 Hawtio's enduring popularity among Camel engineers is due to the list of features you can do at runtime with it:
 
