@@ -353,7 +353,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@antora/playbook-builder", "npm:3.1.7"],\
           ["@iarna/toml", "npm:2.2.5"],\
-          ["convict", "npm:6.2.1"],\
+          ["convict", "npm:6.2.4"],\
           ["js-yaml", "npm:4.1.0"],\
           ["json5", "npm:2.2.0"]\
         ],\
@@ -7861,10 +7861,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["convict", [\
-      ["npm:6.2.1", {\
-        "packageLocation": "./.yarn/cache/convict-npm-6.2.1-29af5bd4ae-33d2ac7f5a.zip/node_modules/convict/",\
+      ["npm:6.2.4", {\
+        "packageLocation": "./.yarn/cache/convict-npm-6.2.4-c10e44771d-d4b9c50dcd.zip/node_modules/convict/",\
         "packageDependencies": [\
-          ["convict", "npm:6.2.1"],\
+          ["convict", "npm:6.2.4"],\
           ["lodash.clonedeep", "npm:4.5.0"],\
           ["yargs-parser", "npm:20.2.9"]\
         ],\

@@ -6285,12 +6285,12 @@ __metadata:
   linkType: hard
 
 "convict@npm:~6.2":
-  version: 6.2.1
-  resolution: "convict@npm:6.2.1"
+  version: 6.2.4
+  resolution: "convict@npm:6.2.4"
   dependencies:
     lodash.clonedeep: "npm:^4.5.0"
     yargs-parser: "npm:^20.2.7"
-  checksum: 33d2ac7f5ad8488a112f27403eafcb465895a1b124793ed69512b28252a304aa885063e95d1bca8c64ce6cbbbcc0f8c8d04243f4c90d3b93544791cc3f92c04f
+  checksum: d4b9c50dcddf4b5da7a80c1d99d1cfae8a47d78d291f0cc11637ab25b6b4515f5f0e9029abd45bcc30cc3e33032aa8814ead22142b4563c4e4959d2e56bdf1ae
   languageName: node
   linkType: hard
 
