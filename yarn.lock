@@ -18323,11 +18323,11 @@ __metadata:
   linkType: hard
 
 "set-value@npm:^3.0.0":
-  version: 3.0.2
-  resolution: "set-value@npm:3.0.2"
+  version: 3.0.3
+  resolution: "set-value@npm:3.0.3"
   dependencies:
     is-plain-object: "npm:^2.0.4"
-  checksum: db4d8319264f5903f31923d4fd6bd7609c9f70010e4981366bf71ab5118b81533befdee3296ac95914ecc7028c6fb22327128216a467099aec2bae7098dba5f3
+  checksum: 88bc0883e0c2dabdaeadf8ac27b74342f4c3a359ab6daa74bc9438162059144abdd0a31899e28df30cc7382e447ee07315eff74255b35cd5810ec434c7b21316
   languageName: node
   linkType: hard
 

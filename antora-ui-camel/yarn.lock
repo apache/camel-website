@@ -9804,14 +9804,14 @@ __metadata:
   linkType: hard
 
 "set-value@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "set-value@npm:2.0.0"
+  version: 2.0.1
+  resolution: "set-value@npm:2.0.1"
   dependencies:
     extend-shallow: "npm:^2.0.1"
     is-extendable: "npm:^0.1.1"
     is-plain-object: "npm:^2.0.3"
     split-string: "npm:^3.0.1"
-  checksum: e5e401cd74717a611f587fa401ee0823e9a0ba2ade80310c0833c0efb7a7eda711810625f09aefe6074339f3f91860f26e27e9aef4fb36737a852f1114c48257
+  checksum: 4f1ccac2e9ad4d1b0851761d41df4bbd3780ed69805f24a80ab237a56d9629760b7b98551cd370931620defe5da329645834e1e9a18574cecad09ce7b2b83296
   languageName: node
   linkType: hard
 
