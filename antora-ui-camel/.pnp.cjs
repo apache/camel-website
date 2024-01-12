@@ -2135,7 +2135,7 @@ const RAW_RUNTIME_STATE =
           ["get-value", "npm:2.0.6"],\
           ["has-value", "npm:1.0.0"],\
           ["isobject", "npm:3.0.1"],\
-          ["set-value", "npm:2.0.0"],\
+          ["set-value", "npm:2.0.1"],\
           ["to-object-path", "npm:0.3.0"],\
           ["union-value", "npm:1.0.0"],\
           ["unset-value", "npm:1.0.0"]\
@@ -11065,10 +11065,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:2.0.0", {\
-        "packageLocation": "./.yarn/cache/set-value-npm-2.0.0-0f9afb4d99-e5e401cd74.zip/node_modules/set-value/",\
+      ["npm:2.0.1", {\
+        "packageLocation": "./.yarn/cache/set-value-npm-2.0.1-35da5f8180-4f1ccac2e9.zip/node_modules/set-value/",\
         "packageDependencies": [\
-          ["set-value", "npm:2.0.0"],\
+          ["set-value", "npm:2.0.1"],\
           ["extend-shallow", "npm:2.0.1"],\
           ["is-extendable", "npm:0.1.1"],\
           ["is-plain-object", "npm:2.0.4"],\
