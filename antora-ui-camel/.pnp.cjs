@@ -1222,13 +1222,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["array-filter", [\
-      ["npm:0.0.1", {\
-        "packageLocation": "./.yarn/cache/array-filter-npm-0.0.1-37dfbb574c-4f5162448f.zip/node_modules/array-filter/",\
-        "packageDependencies": [\
-          ["array-filter", "npm:0.0.1"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:1.0.0", {\
         "packageLocation": "./.yarn/cache/array-filter-npm-1.0.0-2d57caf5c8-93f8bf988b.zip/node_modules/array-filter/",\
         "packageDependencies": [\
@@ -1283,24 +1276,6 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["array-last", "npm:1.3.0"],\
           ["is-number", "npm:4.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["array-map", [\
-      ["npm:0.0.0", {\
-        "packageLocation": "./.yarn/cache/array-map-npm-0.0.0-45992ed41e-dba1e08b1e.zip/node_modules/array-map/",\
-        "packageDependencies": [\
-          ["array-map", "npm:0.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["array-reduce", [\
-      ["npm:0.0.0", {\
-        "packageLocation": "./.yarn/cache/array-reduce-npm-0.0.0-d774206485-8416dc070f.zip/node_modules/array-reduce/",\
-        "packageDependencies": [\
-          ["array-reduce", "npm:0.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1904,7 +1879,7 @@ const RAW_RUNTIME_STATE =
           ["readable-stream", "npm:2.3.6"],\
           ["resolve", "patch:resolve@npm%3A1.18.1#optional!builtin<compat/resolve>::version=1.18.1&hash=c3c19d"],\
           ["shasum-object", "npm:1.0.0"],\
-          ["shell-quote", "npm:1.6.1"],\
+          ["shell-quote", "npm:1.8.1"],\
           ["stream-browserify", "npm:3.0.0"],\
           ["stream-http", "npm:3.1.1"],\
           ["string_decoder", "npm:1.2.0"],\
@@ -7285,15 +7260,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["jsonify", [\
-      ["npm:0.0.0", {\
-        "packageLocation": "./.yarn/cache/jsonify-npm-0.0.0-80da2da40c-dc738debf7.zip/node_modules/jsonify/",\
-        "packageDependencies": [\
-          ["jsonify", "npm:0.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["jsonparse", [\
       ["npm:1.3.1", {\
         "packageLocation": "./.yarn/cache/jsonparse-npm-1.3.1-b6fde74828-24531e956f.zip/node_modules/jsonparse/",\
@@ -10973,14 +10939,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["shell-quote", [\
-      ["npm:1.6.1", {\
-        "packageLocation": "./.yarn/cache/shell-quote-npm-1.6.1-193629270d-4f052ba746.zip/node_modules/shell-quote/",\
+      ["npm:1.8.1", {\
+        "packageLocation": "./.yarn/cache/shell-quote-npm-1.8.1-fcccf06093-af19ab5a1e.zip/node_modules/shell-quote/",\
         "packageDependencies": [\
-          ["shell-quote", "npm:1.6.1"],\
-          ["array-filter", "npm:0.0.1"],\
-          ["array-map", "npm:0.0.0"],\
-          ["array-reduce", "npm:0.0.0"],\
-          ["jsonify", "npm:0.0.0"]\
+          ["shell-quote", "npm:1.8.1"]\
         ],\
         "linkType": "HARD"\
       }]\
