@@ -1,6 +1,6 @@
 <h2 id="maven"><a class="anchor" href="#maven"></a>Getting the Binaries using Maven</h2>
 <p>To use this release in your <a href="https://maven.apache.org">Apache Maven</a> <code>pom.xml</code>, import the Camel Bill of Materials (BOM) and then include the <code>camel-core</code> and any other components needed without specifying the version.</p>
-<aside>
+<aside aria-label="Note 1">
   <p>Replace the <code>COMPONENT</code> with the artifact outlined in the <a href="/components/next/">component documentation</a></p>
 </aside>
 <pre><code>{{ htmlUnescape (printf `<dependencyManagement>
@@ -27,7 +27,7 @@
 </dependencies>
 ` .Params.version) }}</code></pre>
 <p>To use this release in a Spring Boot application, use Spring Boot <code>spring-boot-dependencies</code> and Camel <code>camel-spring-boot-bom</code> Bill of Materials (BOM):
-<aside>
+<aside aria-label="Note 2">
   <p>Replace the <code>COMPONENT</code> with the artifact outlined in the <a href="/components/next/">component documentation</a></p>
 </aside>
 <pre><code>{{ htmlUnescape (printf `<dependencyManagement>

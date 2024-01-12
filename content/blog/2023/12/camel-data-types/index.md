@@ -385,13 +385,11 @@ spec:
      types:
        binary:
          format: "application-octet-stream"
-         description: |-
-           Default binary representation of the source.
+         description: Default binary representation of the source.
          mediaType: application/octet-stream
        cloudevents:
          format: "aws2-s3:application-cloudevents"
-         description: |-
-            Data type sets CloudEvent headers on the message.
+         description: Data type sets CloudEvent headers on the message.
 # ...
 ```
 
