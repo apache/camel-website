@@ -47,7 +47,6 @@ const RAW_RUNTIME_STATE =
           ["@djencks/antora-timer", "npm:0.0.1-beta.1"],\
           ["@djencks/asciidoctor-antora-indexer", "npm:0.1.3-rc.2"],\
           ["@djencks/asciidoctor-jsonpath", "npm:0.1.3-rc.2"],\
-          ["@oclif/errors", "npm:1.3.4"],\
           ["antora-ui-camel", "workspace:antora-ui-camel"],\
           ["camel-website-util", "workspace:util"],\
           ["chalk", "npm:5.3.0"],\
@@ -2016,20 +2015,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@oclif/errors", [\
-      ["npm:1.3.4", {\
-        "packageLocation": "./.yarn/cache/@oclif-errors-npm-1.3.4-455c0531d6-77653f534c.zip/node_modules/@oclif/errors/",\
-        "packageDependencies": [\
-          ["@oclif/errors", "npm:1.3.4"],\
-          ["clean-stack", "npm:3.0.1"],\
-          ["fs-extra", "npm:8.1.0"],\
-          ["indent-string", "npm:4.0.0"],\
-          ["strip-ansi", "npm:6.0.1"],\
-          ["wrap-ansi", "npm:7.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["@octokit/auth-token", [\
       ["npm:3.0.4", {\
         "packageLocation": "./.yarn/cache/@octokit-auth-token-npm-3.0.4-2b669244cb-8e21e567e3.zip/node_modules/@octokit/auth-token/",\
@@ -3721,7 +3706,6 @@ const RAW_RUNTIME_STATE =
           ["@djencks/antora-timer", "npm:0.0.1-beta.1"],\
           ["@djencks/asciidoctor-antora-indexer", "npm:0.1.3-rc.2"],\
           ["@djencks/asciidoctor-jsonpath", "npm:0.1.3-rc.2"],\
-          ["@oclif/errors", "npm:1.3.4"],\
           ["antora-ui-camel", "workspace:antora-ui-camel"],\
           ["camel-website-util", "workspace:util"],\
           ["chalk", "npm:5.3.0"],\
@@ -5724,14 +5708,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/clean-stack-npm-2.2.0-a8ce435a5c-2ac8cd2b2f.zip/node_modules/clean-stack/",\
         "packageDependencies": [\
           ["clean-stack", "npm:2.2.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:3.0.1", {\
-        "packageLocation": "./.yarn/cache/clean-stack-npm-3.0.1-85c3878b76-dc18c842d7.zip/node_modules/clean-stack/",\
-        "packageDependencies": [\
-          ["clean-stack", "npm:3.0.1"],\
-          ["escape-string-regexp", "npm:4.0.0"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -8589,13 +8565,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/escape-string-regexp-npm-2.0.0-aef69d2a25-9f8a2d5743.zip/node_modules/escape-string-regexp/",\
         "packageDependencies": [\
           ["escape-string-regexp", "npm:2.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:4.0.0", {\
-        "packageLocation": "./.yarn/cache/escape-string-regexp-npm-4.0.0-4b531d8d59-98b48897d9.zip/node_modules/escape-string-regexp/",\
-        "packageDependencies": [\
-          ["escape-string-regexp", "npm:4.0.0"]\
         ],\
         "linkType": "HARD"\
       }],\
