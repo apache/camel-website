@@ -1,6 +1,6 @@
 <article class="blog doc">
 
-    <header>
+    <header aria-label="Blog post">
         <a href="{{ .RelPermalink }}"><h1>{{ .Title }}</h1></a>
         {{ $headers := dict }}
         {{ with os.Getenv "GITHUB_TOKEN" }}

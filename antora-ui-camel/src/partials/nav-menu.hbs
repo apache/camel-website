@@ -3,7 +3,7 @@
   {{#if (eq @root.page.component.name 'components')}}
   <input class="search" placeholder="Quick lookup">
   {{/if}}
-  <nav class="nav-menu" data-panel="menu">
+  <nav class="nav-menu" data-panel="menu" aria-label="Topics">
     {{#with @root.page.componentVersion}}
     <h3 class="title"><a href="{{{relativize ./url}}}">{{./title}}</a></h3>
     {{/with}}

@@ -20,6 +20,8 @@
     "long-title": "off",
     "no-inline-style": "off",
     "prefer-tbody": "off",
-    "wcag/h30": "off"
+    "wcag/h30": "off",
+    "valid-id": "off",
+    "wcag/h63": "off"
   }
 }

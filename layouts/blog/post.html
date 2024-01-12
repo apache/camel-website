@@ -1,14 +1,14 @@
 <article class="blog doc">
 
-    <header>
+    <header aria-labelledby="title">
         {{ if .Params.categories }}
         {{ range .Params.categories }}<a class="category"
             href="{{ "/categories/" | relURL }}{{ . | urlize }}/">{{ upper . }}</a>{{ end }}
         {{ end }}
-        <h1>{{ .Title }}</h1>
+        <h1 id="title">{{ .Title }}</h1>
     </header>
     <div class="post">
-        <aside>
+        <aside aria-label="Post details">
             <div class="summary">{{ .Params.preview }}</div>
             Posted on <time itemprop="published" datetime="{{ dateFormat "2006-01-02" .PublishDate }}"
                 title="{{ dateFormat "Monday, January 2, 2006" .PublishDate }}">{{ dateFormat "January 2, 2006" .PublishDate }}</time>,

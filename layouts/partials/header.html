@@ -49,8 +49,8 @@
 </head>
 
 <body class="{{ if .Page.IsHome }}homepage {{ end }}article">
-    <header class="header">
-        <nav class="navbar">
+    <header class="header" aria-label="Header">
+        <nav class="navbar" aria-label="Main menu">
             <div class="navbar-brand">
                 <a class="nav-logo" href="{{ .Site.BaseURL | relURL }}" title="{{ .Site.Title }}"></a>
                 <div id="topbar-nav" class="navbar-menu">
