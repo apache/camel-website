@@ -6319,7 +6319,7 @@ const RAW_RUNTIME_STATE =
           ["readable-stream", "npm:2.3.7"],\
           ["resolve", "patch:resolve@npm%3A1.20.0#optional!builtin<compat/resolve>::version=1.20.0&hash=c3c19d"],\
           ["shasum-object", "npm:1.0.0"],\
-          ["shell-quote", "npm:1.7.2"],\
+          ["shell-quote", "npm:1.8.1"],\
           ["stream-browserify", "npm:3.0.0"],\
           ["stream-http", "npm:3.1.1"],\
           ["string_decoder", "npm:1.3.0"],\
@@ -17219,7 +17219,7 @@ const RAW_RUNTIME_STATE =
           ["minimatch", "npm:3.0.4"],\
           ["pidtree", "npm:0.3.0"],\
           ["read-pkg", "npm:3.0.0"],\
-          ["shell-quote", "npm:1.7.2"],\
+          ["shell-quote", "npm:1.8.1"],\
           ["string.prototype.padend", "npm:3.1.0"]\
         ],\
         "linkType": "HARD"\
@@ -21028,10 +21028,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["shell-quote", [\
-      ["npm:1.7.2", {\
-        "packageLocation": "./.yarn/cache/shell-quote-npm-1.7.2-8e2768dbb0-5d7540d320.zip/node_modules/shell-quote/",\
+      ["npm:1.8.1", {\
+        "packageLocation": "./.yarn/cache/shell-quote-npm-1.8.1-fcccf06093-af19ab5a1e.zip/node_modules/shell-quote/",\
         "packageDependencies": [\
-          ["shell-quote", "npm:1.7.2"]\
+          ["shell-quote", "npm:1.8.1"]\
         ],\
         "linkType": "HARD"\
       }]\
