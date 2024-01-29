@@ -54,9 +54,12 @@ We now support adding Kamelets in a Camel Route, expanding your options, and sim
 ### Lightweight
 This new version of Kaoto is a UI-only application, which makes it more portable for embedding it in different environments.
 
+### Let's Build it Together
+We're looking forward to get your feedback. Please join us in the dedicated [GitHub discussions](https://github.com/orgs/KaotoIO/discussions/747). Do you have ideas, would you love to see a useful feature implemented or simply ask a question? Don't hesitate to contact us through the project [GitHub issues](https://github.com/KaotoIO/kaoto-next/issues/new/choose)
+
 ## What comes next?
 Our plan is to release Kaoto 2.0 Final at the end of Q1 / 2024. We still have some major features to implement - like for instance a REST editor. You can find a more comprehensive Roadmap on [the Kaoto website](https://kaoto.io).
 
 Kaoto continues to be available as a [VS Code extension](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-kaoto), ensuring seamless integration into your development environment. We also host a [showcase environment](https://kaotoio.github.io/kaoto-next/#) accessible in your browser for easy exploring.
 
-We invite you to explore these exciting new features. Give it a try today and tell us about your experiences!
+We invite you to explore these exciting new features. Give it a try today and [tell us about](https://github.com/orgs/KaotoIO/discussions) your experiences!
