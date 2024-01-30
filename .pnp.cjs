@@ -355,7 +355,7 @@ const RAW_RUNTIME_STATE =
           ["@iarna/toml", "npm:2.2.5"],\
           ["convict", "npm:6.2.4"],\
           ["js-yaml", "npm:4.1.0"],\
-          ["json5", "npm:2.2.0"]\
+          ["json5", "npm:2.2.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -772,7 +772,7 @@ const RAW_RUNTIME_STATE =
           ["@djencks/antora-aggregate-collector", "npm:0.1.0-beta.1"],\
           ["@iarna/toml", "npm:2.2.5"],\
           ["js-yaml", "npm:4.1.0"],\
-          ["json5", "npm:2.2.0"],\
+          ["json5", "npm:2.2.3"],\
           ["picomatch", "npm:2.3.1"]\
         ],\
         "linkType": "HARD"\
@@ -845,7 +845,7 @@ const RAW_RUNTIME_STATE =
           ["@antora/user-require-helper", "npm:2.0.0"],\
           ["@djencks/asciidoctor-report-support", "npm:0.1.3-rc.2"],\
           ["@iarna/toml", "npm:2.2.5"],\
-          ["json5", "npm:2.2.0"],\
+          ["json5", "npm:2.2.3"],\
           ["jsonpath", "npm:1.1.1"],\
           ["yaml", "npm:2.3.4"]\
         ],\
@@ -13591,11 +13591,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["json5", [\
-      ["npm:2.2.0", {\
-        "packageLocation": "./.yarn/cache/json5-npm-2.2.0-da49dc7cb5-d72ea87423.zip/node_modules/json5/",\
+      ["npm:2.2.3", {\
+        "packageLocation": "./.yarn/cache/json5-npm-2.2.3-9962c55073-1db67b853f.zip/node_modules/json5/",\
         "packageDependencies": [\
-          ["json5", "npm:2.2.0"],\
-          ["minimist", "npm:1.2.8"]\
+          ["json5", "npm:2.2.3"]\
         ],\
         "linkType": "HARD"\
       }]\
