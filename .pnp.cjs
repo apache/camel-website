@@ -7219,10 +7219,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["decode-uri-component", [\
-      ["npm:0.2.0", {\
-        "packageLocation": "./.yarn/cache/decode-uri-component-npm-0.2.0-5bcc0f3597-0686aa1f56.zip/node_modules/decode-uri-component/",\
+      ["npm:0.2.2", {\
+        "packageLocation": "./.yarn/cache/decode-uri-component-npm-0.2.2-e22e2aa917-17a0e5fa40.zip/node_modules/decode-uri-component/",\
         "packageDependencies": [\
-          ["decode-uri-component", "npm:0.2.0"]\
+          ["decode-uri-component", "npm:0.2.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -18545,7 +18545,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/query-string-npm-5.1.1-86edac70d6-8834591ed0.zip/node_modules/query-string/",\
         "packageDependencies": [\
           ["query-string", "npm:5.1.1"],\
-          ["decode-uri-component", "npm:0.2.0"],\
+          ["decode-uri-component", "npm:0.2.2"],\
           ["object-assign", "npm:4.1.1"],\
           ["strict-uri-encode", "npm:1.1.0"]\
         ],\
@@ -20228,7 +20228,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["source-map-resolve", "npm:0.5.3"],\
           ["atob", "npm:2.1.2"],\
-          ["decode-uri-component", "npm:0.2.0"],\
+          ["decode-uri-component", "npm:0.2.2"],\
           ["resolve-url", "npm:0.2.1"],\
           ["source-map-url", "npm:0.4.0"],\
           ["urix", "npm:0.1.0"]\
