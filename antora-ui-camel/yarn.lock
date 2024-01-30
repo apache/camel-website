@@ -9791,19 +9791,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"set-value@npm:^0.4.3":
-  version: 0.4.3
-  resolution: "set-value@npm:0.4.3"
-  dependencies:
-    extend-shallow: "npm:^2.0.1"
-    is-extendable: "npm:^0.1.1"
-    is-plain-object: "npm:^2.0.1"
-    to-object-path: "npm:^0.3.0"
-  checksum: 0fdc194489d9182322cafbe71d7606e6f96bdbb7b8e459d8b749e57699a87857afa4a00683ab4cede03dbbd857f9282998c2661e8c13a98a6caf2be58f773965
-  languageName: node
-  linkType: hard
-
-"set-value@npm:^2.0.0":
+"set-value@npm:^2.0.0, set-value@npm:^2.0.1":
   version: 2.0.1
   resolution: "set-value@npm:2.0.1"
   dependencies:
@@ -11267,14 +11255,14 @@ __metadata:
   linkType: hard
 
 "union-value@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "union-value@npm:1.0.0"
+  version: 1.0.1
+  resolution: "union-value@npm:1.0.1"
   dependencies:
     arr-union: "npm:^3.1.0"
     get-value: "npm:^2.0.6"
     is-extendable: "npm:^0.1.1"
-    set-value: "npm:^0.4.3"
-  checksum: 42b96cecaa4f87a2d19c9031a43350f4b7eb977e2ff153e4c0703918b94701b004c6020648b314dc451285b2b9e3658aa177a2ec56d2c26b40679629e8b79a0a
+    set-value: "npm:^2.0.1"
+  checksum: a3464097d3f27f6aa90cf103ed9387541bccfc006517559381a10e0dffa62f465a9d9a09c9b9c3d26d0f4cbe61d4d010e2fbd710fd4bf1267a768ba8a774b0ba
   languageName: node
   linkType: hard
 
