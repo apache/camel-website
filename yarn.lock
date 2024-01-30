@@ -10004,8 +10004,8 @@ __metadata:
   linkType: hard
 
 "got@npm:~11.8":
-  version: 11.8.3
-  resolution: "got@npm:11.8.3"
+  version: 11.8.6
+  resolution: "got@npm:11.8.6"
   dependencies:
     "@sindresorhus/is": "npm:^4.0.0"
     "@szmarczak/http-timer": "npm:^4.0.5"
@@ -10018,7 +10018,7 @@ __metadata:
     lowercase-keys: "npm:^2.0.0"
     p-cancelable: "npm:^2.0.0"
     responselike: "npm:^2.0.0"
-  checksum: eae5373c3523fdc8abd2eee438e008cbcd2802abda847bb70ee288510dbe0f268127ae51351f03e914ac9c26514c68fbfd831f377d0790e95bfdb5444dc223cd
+  checksum: a30c74029d81bd5fe50dea1a0c970595d792c568e188ff8be254b5bc11e6158d1b014570772d4a30d0a97723e7dd34e7c8cc1a2f23018f60aece3070a7a5c2a5
   languageName: node
   linkType: hard
 
@@ -10688,14 +10688,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"http-cache-semantics@npm:3.8.1":
-  version: 3.8.1
-  resolution: "http-cache-semantics@npm:3.8.1"
-  checksum: 88821cd3082a0aaced65d2aa8d1670672aaf27b0b4e6dbf6acca9ac11f6b58dd0f9628934baa9ea98191a60d6e9f60605b83c4859774ae066de0116c63be404c
-  languageName: node
-  linkType: hard
-
-"http-cache-semantics@npm:^4.0.0, http-cache-semantics@npm:^4.1.1":
+"http-cache-semantics@npm:4.1.1":
   version: 4.1.1
   resolution: "http-cache-semantics@npm:4.1.1"
   checksum: 362d5ed66b12ceb9c0a328fb31200b590ab1b02f4a254a697dc796850cc4385603e75f53ec59f768b2dad3bfa1464bd229f7de278d2899a0e3beffc634b6683f
