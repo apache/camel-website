@@ -15542,7 +15542,7 @@ const RAW_RUNTIME_STATE =
           ["node-fetch", "npm:3.3.2"],\
           ["omit.js", "npm:2.0.2"],\
           ["p-wait-for", "npm:4.1.0"],\
-          ["qs", "npm:6.11.0"]\
+          ["qs", "npm:6.11.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -18527,6 +18527,14 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/qs-npm-6.11.0-caf1bc9dea-5a3bfea3e2.zip/node_modules/qs/",\
         "packageDependencies": [\
           ["qs", "npm:6.11.0"],\
+          ["side-channel", "npm:1.0.4"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:6.11.2", {\
+        "packageLocation": "./.yarn/cache/qs-npm-6.11.2-b118bc1c6f-f2321d0796.zip/node_modules/qs/",\
+        "packageDependencies": [\
+          ["qs", "npm:6.11.2"],\
           ["side-channel", "npm:1.0.4"]\
         ],\
         "linkType": "HARD"\
@@ -21576,7 +21584,7 @@ const RAW_RUNTIME_STATE =
           ["faye-websocket", "npm:0.10.0"],\
           ["livereload-js", "npm:2.4.0"],\
           ["object-assign", "npm:4.1.1"],\
-          ["qs", "npm:6.11.0"]\
+          ["qs", "npm:6.11.2"]\
         ],\
         "linkType": "HARD"\
       }]\
