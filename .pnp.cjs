@@ -785,7 +785,7 @@ const RAW_RUNTIME_STATE =
           ["@djencks/antora-site-manifest", "npm:0.0.3-rc.2"],\
           ["@antora/expand-path-helper", "npm:2.0.0"],\
           ["cache-directory", "npm:2.0.0"],\
-          ["got", "npm:11.8.3"],\
+          ["got", "npm:11.8.6"],\
           ["node-gzip", "npm:1.1.2"],\
           ["uglify-js", "npm:3.13.10"],\
           ["vinyl", "npm:2.2.1"]\
@@ -5253,7 +5253,7 @@ const RAW_RUNTIME_STATE =
           ["cacheable-request", "npm:2.1.4"],\
           ["clone-response", "npm:1.0.2"],\
           ["get-stream", "npm:3.0.0"],\
-          ["http-cache-semantics", "npm:3.8.1"],\
+          ["http-cache-semantics", "npm:4.1.1"],\
           ["keyv", "npm:3.0.0"],\
           ["lowercase-keys", "npm:1.0.0"],\
           ["normalize-url", "npm:2.0.1"],\
@@ -11025,10 +11025,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["got", [\
-      ["npm:11.8.3", {\
-        "packageLocation": "./.yarn/cache/got-npm-11.8.3-caf98d599b-eae5373c35.zip/node_modules/got/",\
+      ["npm:11.8.6", {\
+        "packageLocation": "./.yarn/cache/got-npm-11.8.6-89e7cd5d67-a30c74029d.zip/node_modules/got/",\
         "packageDependencies": [\
-          ["got", "npm:11.8.3"],\
+          ["got", "npm:11.8.6"],\
           ["@sindresorhus/is", "npm:4.0.1"],\
           ["@szmarczak/http-timer", "npm:4.0.6"],\
           ["@types/cacheable-request", "npm:6.0.1"],\
@@ -11842,13 +11842,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["http-cache-semantics", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "./.yarn/cache/http-cache-semantics-npm-3.8.1-9d037f563e-88821cd308.zip/node_modules/http-cache-semantics/",\
-        "packageDependencies": [\
-          ["http-cache-semantics", "npm:3.8.1"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:4.1.1", {\
         "packageLocation": "./.yarn/cache/http-cache-semantics-npm-4.1.1-1120131375-362d5ed66b.zip/node_modules/http-cache-semantics/",\
         "packageDependencies": [\

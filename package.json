@@ -66,5 +66,8 @@
     "antora-ui-camel",
     "util"
   ],
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.0.2",
+  "resolutions": {
+    "http-cache-semantics": "4.1.1"
+  }
 }
