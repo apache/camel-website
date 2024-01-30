@@ -8631,7 +8631,7 @@ const RAW_RUNTIME_STATE =
           ["json-stable-stringify-without-jsonify", "npm:1.0.1"],\
           ["levn", "npm:0.3.0"],\
           ["lodash", "npm:4.17.21"],\
-          ["minimatch", "npm:3.0.4"],\
+          ["minimatch", "npm:3.1.2"],\
           ["mkdirp", "npm:0.5.5"],\
           ["natural-compare", "npm:1.4.0"],\
           ["optionator", "npm:0.8.3"],\
@@ -8675,7 +8675,7 @@ const RAW_RUNTIME_STATE =
           ["json-stable-stringify-without-jsonify", "npm:1.0.1"],\
           ["levn", "npm:0.3.0"],\
           ["lodash", "npm:4.17.21"],\
-          ["minimatch", "npm:3.0.4"],\
+          ["minimatch", "npm:3.1.2"],\
           ["mkdirp", "npm:0.5.5"],\
           ["natural-compare", "npm:1.4.0"],\
           ["optionator", "npm:0.8.3"],\
@@ -8824,7 +8824,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-import-resolver-node", "npm:0.3.4"],\
           ["eslint-module-utils", "virtual:5dec28ad20bb36f9a45bb6a05ff0fcade80d2b4de2ea201fc5c6c43573a558d8a7f1d6c7cef2e6e5ca4d49d879073ce580a9fc927becc88a8ec2ab0a3635b206#npm:2.6.0"],\
           ["has", "npm:1.0.3"],\
-          ["minimatch", "npm:3.0.4"],\
+          ["minimatch", "npm:3.1.2"],\
           ["object.values", "npm:1.1.1"],\
           ["read-pkg-up", "npm:2.0.0"],\
           ["resolve", "patch:resolve@npm%3A1.20.0#optional!builtin<compat/resolve>::version=1.20.0&hash=c3c19d"]\
@@ -8855,7 +8855,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-es", "virtual:0980b1e3325b4de37286d715b5a7866381731eaa55d16220cb08d60092bc3c858afb1e6bc1140fc26b56ea5d6db228c4a612d600cc8440bfe311d4f1a1da6335#npm:3.0.1"],\
           ["eslint-utils", "npm:2.1.0"],\
           ["ignore", "npm:5.3.0"],\
-          ["minimatch", "npm:3.0.4"],\
+          ["minimatch", "npm:3.1.2"],\
           ["resolve", "patch:resolve@npm%3A1.20.0#optional!builtin<compat/resolve>::version=1.20.0&hash=c3c19d"],\
           ["semver", "npm:6.3.0"]\
         ],\
@@ -10750,7 +10750,7 @@ const RAW_RUNTIME_STATE =
           ["glob", "npm:6.0.4"],\
           ["inflight", "npm:1.0.6"],\
           ["inherits", "npm:2.0.4"],\
-          ["minimatch", "npm:3.0.4"],\
+          ["minimatch", "npm:3.1.2"],\
           ["once", "npm:1.4.0"],\
           ["path-is-absolute", "npm:1.0.1"]\
         ],\
@@ -10763,7 +10763,7 @@ const RAW_RUNTIME_STATE =
           ["fs.realpath", "npm:1.0.0"],\
           ["inflight", "npm:1.0.6"],\
           ["inherits", "npm:2.0.4"],\
-          ["minimatch", "npm:3.0.4"],\
+          ["minimatch", "npm:3.1.2"],\
           ["once", "npm:1.4.0"],\
           ["path-is-absolute", "npm:1.0.1"]\
         ],\
@@ -10776,7 +10776,7 @@ const RAW_RUNTIME_STATE =
           ["fs.realpath", "npm:1.0.0"],\
           ["inflight", "npm:1.0.6"],\
           ["inherits", "npm:2.0.4"],\
-          ["minimatch", "npm:3.0.4"],\
+          ["minimatch", "npm:3.1.2"],\
           ["once", "npm:1.4.0"],\
           ["path-is-absolute", "npm:1.0.1"]\
         ],\
@@ -12085,7 +12085,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/ignore-walk-npm-3.0.3-7d7a6bd656-7e18321e75.zip/node_modules/ignore-walk/",\
         "packageDependencies": [\
           ["ignore-walk", "npm:3.0.3"],\
-          ["minimatch", "npm:3.0.4"]\
+          ["minimatch", "npm:3.1.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15010,10 +15010,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["minimatch", [\
-      ["npm:3.0.4", {\
-        "packageLocation": "./.yarn/cache/minimatch-npm-3.0.4-6e76f51c23-3b3f17f765.zip/node_modules/minimatch/",\
+      ["npm:3.1.2", {\
+        "packageLocation": "./.yarn/cache/minimatch-npm-3.1.2-9405269906-e0b25b04cd.zip/node_modules/minimatch/",\
         "packageDependencies": [\
-          ["minimatch", "npm:3.0.4"],\
+          ["minimatch", "npm:3.1.2"],\
           ["brace-expansion", "npm:1.1.11"]\
         ],\
         "linkType": "HARD"\
@@ -16132,7 +16132,7 @@ const RAW_RUNTIME_STATE =
           ["chalk", "npm:2.4.2"],\
           ["cross-spawn", "npm:6.0.5"],\
           ["memorystream", "npm:0.3.1"],\
-          ["minimatch", "npm:3.0.4"],\
+          ["minimatch", "npm:3.1.2"],\
           ["pidtree", "npm:0.3.0"],\
           ["read-pkg", "npm:3.0.0"],\
           ["shell-quote", "npm:1.8.1"],\
@@ -18066,7 +18066,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["postcss-url", "npm:8.0.0"],\
           ["mime", "npm:2.4.6"],\
-          ["minimatch", "npm:3.0.4"],\
+          ["minimatch", "npm:3.1.2"],\
           ["mkdirp", "npm:0.5.5"],\
           ["postcss", "npm:7.0.35"],\
           ["xxhashjs", "npm:0.2.2"]\
@@ -19263,7 +19263,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["resp-modifier", "npm:6.0.2"],\
           ["debug", "virtual:49da7761f14c39be47aef793d385c5d9772cb83cbafe666acd6dcac0493fcf843442edf106f6c89d68bb082ba8e126076947421b9d182cda0cf92ead7d5f809b#npm:2.6.9"],\
-          ["minimatch", "npm:3.0.4"]\
+          ["minimatch", "npm:3.1.2"]\
         ],\
         "linkType": "HARD"\
       }]\
