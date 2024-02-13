@@ -2150,7 +2150,7 @@ const RAW_RUNTIME_STATE =
           ["cacheable-request", "npm:2.1.4"],\
           ["clone-response", "npm:1.0.2"],\
           ["get-stream", "npm:3.0.0"],\
-          ["http-cache-semantics", "npm:3.8.1"],\
+          ["http-cache-semantics", "npm:4.1.1"],\
           ["keyv", "npm:3.0.0"],\
           ["lowercase-keys", "npm:1.0.0"],\
           ["normalize-url", "npm:2.0.1"],\
@@ -6224,13 +6224,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["http-cache-semantics", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "./.yarn/cache/http-cache-semantics-npm-3.8.1-9d037f563e-88821cd308.zip/node_modules/http-cache-semantics/",\
-        "packageDependencies": [\
-          ["http-cache-semantics", "npm:3.8.1"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:4.1.1", {\
         "packageLocation": "./.yarn/cache/http-cache-semantics-npm-4.1.1-1120131375-362d5ed66b.zip/node_modules/http-cache-semantics/",\
         "packageDependencies": [\
