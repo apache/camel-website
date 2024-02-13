@@ -2794,12 +2794,12 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["copy-props", [\
-      ["npm:2.0.4", {\
-        "packageLocation": "./.yarn/cache/copy-props-npm-2.0.4-128dd26186-8187deba82.zip/node_modules/copy-props/",\
+      ["npm:2.0.5", {\
+        "packageLocation": "./.yarn/cache/copy-props-npm-2.0.5-81da1b51f3-eba7486dc0.zip/node_modules/copy-props/",\
         "packageDependencies": [\
-          ["copy-props", "npm:2.0.4"],\
+          ["copy-props", "npm:2.0.5"],\
           ["each-props", "npm:1.3.2"],\
-          ["is-plain-object", "npm:2.0.4"]\
+          ["is-plain-object", "npm:5.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5821,7 +5821,7 @@ const RAW_RUNTIME_STATE =
           ["array-sort", "npm:1.0.0"],\
           ["color-support", "npm:1.1.3"],\
           ["concat-stream", "npm:1.6.2"],\
-          ["copy-props", "npm:2.0.4"],\
+          ["copy-props", "npm:2.0.5"],\
           ["fancy-log", "npm:1.3.3"],\
           ["gulplog", "npm:1.0.0"],\
           ["interpret", "npm:1.2.0"],\
