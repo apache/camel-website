@@ -2340,7 +2340,7 @@ const RAW_RUNTIME_STATE =
           ["async-each", "npm:1.0.3"],\
           ["braces", "npm:2.3.2"],\
           ["fsevents", "patch:fsevents@npm%3A1.2.13#optional!builtin<compat/fsevents>::version=1.2.13&hash=d11327"],\
-          ["glob-parent", "npm:3.1.0"],\
+          ["glob-parent", "npm:5.1.2"],\
           ["inherits", "npm:2.0.4"],\
           ["is-binary-path", "npm:1.0.1"],\
           ["is-glob", "npm:4.0.1"],\
@@ -5568,15 +5568,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["glob-parent", [\
-      ["npm:3.1.0", {\
-        "packageLocation": "./.yarn/cache/glob-parent-npm-3.1.0-31416ad085-653d559237.zip/node_modules/glob-parent/",\
-        "packageDependencies": [\
-          ["glob-parent", "npm:3.1.0"],\
-          ["is-glob", "npm:3.1.0"],\
-          ["path-dirname", "npm:1.0.2"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:5.1.2", {\
         "packageLocation": "./.yarn/cache/glob-parent-npm-5.1.2-021ab32634-32cd106ce8.zip/node_modules/glob-parent/",\
         "packageDependencies": [\
@@ -5593,7 +5584,7 @@ const RAW_RUNTIME_STATE =
           ["glob-stream", "npm:6.1.0"],\
           ["extend", "npm:3.0.2"],\
           ["glob", "npm:7.1.4"],\
-          ["glob-parent", "npm:3.1.0"],\
+          ["glob-parent", "npm:5.1.2"],\
           ["is-negated-glob", "npm:1.0.0"],\
           ["ordered-read-streams", "npm:1.0.1"],\
           ["pumpify", "npm:1.5.1"],\
@@ -9272,15 +9263,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/path-browserify-npm-1.0.1-f975d99a99-7e7368a520.zip/node_modules/path-browserify/",\
         "packageDependencies": [\
           ["path-browserify", "npm:1.0.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["path-dirname", [\
-      ["npm:1.0.2", {\
-        "packageLocation": "./.yarn/cache/path-dirname-npm-1.0.2-d158cba006-0d2f6604ae.zip/node_modules/path-dirname/",\
-        "packageDependencies": [\
-          ["path-dirname", "npm:1.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
