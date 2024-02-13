@@ -83,6 +83,7 @@
     "http-cache-semantics": "4.1.1",
     "nth-check": "2.1.1",
     "semver-regex": "4.0.5",
-    "glob-parent": "5.1.2"
+    "glob-parent": "5.1.2",
+    "acorn": "8.11.3"
   }
 }
