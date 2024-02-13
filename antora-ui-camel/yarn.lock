@@ -11888,9 +11888,9 @@ __metadata:
   linkType: hard
 
 "y18n@npm:^3.2.1":
-  version: 3.2.1
-  resolution: "y18n@npm:3.2.1"
-  checksum: 10/645ec00f3f09072f268d69d6eda4dbba843ae8160ac4afe0d3605eed721b003f602c6cd5be132d1297f085352f124fb27cf4dc7d51353b15592410bfbc5213bf
+  version: 3.2.2
+  resolution: "y18n@npm:3.2.2"
+  checksum: 10/42ee58e321252ac87f85ccc7cee01c2e3e224737531e9e543963264194255132ce406e02993904b84ea974050d53b8959dcf9da695408553c32f2a8b4b59a667
   languageName: node
   linkType: hard
 
