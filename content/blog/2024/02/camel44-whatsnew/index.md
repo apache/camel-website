@@ -29,9 +29,9 @@ We refactored the [Throttle EIP](/components/next/eips/throttle-eip.html) implem
 
 The biggest new feature in Camel 4.4 is the introduction of [variables](/manual/variables.adoc).
 
-A variable is a key/value that can hold a value that can either be private per `Exchange`, or shared per route, or globally.
+A variable is a key/value that can hold a value that can either be private per `Exchange`, or shared per route, or per Camel context.
 
-With variables, you can now more easily share data between routes and/or globally. Variables is also readily accessible
+With variables, you can now more easily share data between routes and/or globally. Variables are also readily accessible
 from EIPs and languages, just as message _headers_ or _exchange properties_ are. In other words, they have been added
 as first-class into Camel.
 
@@ -40,7 +40,7 @@ You can find a small example here:
 - https://github.com/apache/camel-kamelets-examples/tree/main/jbang/variables
 
 We have also made a selected number of EIPs have _special use_ of variables. The idea is to make it easier to
-collect various set of data from external systems using Camel components and commonly used EIPs, without any
+collect various sets of data from external systems using Camel components and commonly used EIPs, without any
 ceremony to prepare message body and headers, and cleanup afterward (i.e. removing HTTP headers).
 
 And you can find a small example here using variables with EIPs:
@@ -108,8 +108,8 @@ avoids any confusion, and you can regard calling a Kamelet just as calling a com
 
 ## Camel Kafka
 
-The Kafka component was improved to support batching. With the batching support it is now possible to consume and handle a set of 
-Kafka consumer records as one exchange. For greater flexibility, the Kafka component can support both automatic and manual commits. 
+The Kafka component was improved to support batching, which makes it possible to consume and handle a set of 
+Kafka consumer records as one Camel `Exchange`. For greater flexibility, the Kafka component can support both automatic and manual commits. 
 
 ## Spring and Spring Boot
 
