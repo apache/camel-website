@@ -3734,10 +3734,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["dot-prop", [\
-      ["npm:4.2.0", {\
-        "packageLocation": "./.yarn/cache/dot-prop-npm-4.2.0-f61418cdac-e98b892290.zip/node_modules/dot-prop/",\
+      ["npm:4.2.1", {\
+        "packageLocation": "./.yarn/cache/dot-prop-npm-4.2.1-9e47a92a56-25372bc0a4.zip/node_modules/dot-prop/",\
         "packageDependencies": [\
-          ["dot-prop", "npm:4.2.0"],\
+          ["dot-prop", "npm:4.2.1"],\
           ["is-obj", "npm:1.0.1"]\
         ],\
         "linkType": "HARD"\
@@ -9968,7 +9968,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/postcss-selector-parser-npm-3.1.1-a628cfbf19-a27d661204.zip/node_modules/postcss-selector-parser/",\
         "packageDependencies": [\
           ["postcss-selector-parser", "npm:3.1.1"],\
-          ["dot-prop", "npm:4.2.0"],\
+          ["dot-prop", "npm:4.2.1"],\
           ["indexes-of", "npm:1.0.1"],\
           ["uniq", "npm:1.0.1"]\
         ],\
