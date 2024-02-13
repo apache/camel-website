@@ -12,11 +12,14 @@ This release introduces a set of new features and noticeable improvements that w
 
 ## Camel Core
 
-TODO: Core stuff
+The simple language has been improved with `hash` function, and further improved the embedded functions for `jsonpath`, `jq` and `xpath`
+making it easier to grab data from JSon or XML within your simple expression or predicates.
 
-## Camel Main
+We have optimized data formats to avoid converting payload to `byte[]` when unmarshalling, but allowing each data format
+to unmarshal the payload _as-is_. 
 
-TODO: Main stuff
+Added JMX operation to update routes at runtime via XML format (requires to turn on this feature). This can be
+useful for tooling where you can then change routes during troubleshooting an existing running Camel integration.
 
 ## DSL
 
@@ -27,19 +30,59 @@ TODO: Variables
 
 We have continued investing in Camel JBang, and this time we have some great new stuff in the release.
 
-TODO: JBang stuff
+The `camel-jbang` now supports new commands as plugins. And the first set of commands is [camel-k commands](/manual/camel-jbang-k.html),
+that allows to use `camel-jbang` to manage and operate Camel K integrations.
+
+You can now run `camel-jbang` with `--prompt` that lets users type in placeholder values during startup,
+making it easy to build examples and prototypes that can easily be customized to users need, when trying.
+
+You can now more easily run `camel-jbang` with custom `log4j2.properties` file to use your logging configuration,
+instead of the _built-in_ logging.
+
+Added support for using Jolokia 2.x with `camel-jbang`.
+
+## Kamelets
+
+When using Kamelets then the _route snippets_ due not use any error handler. This means that when calling a Kamelet
+then if any error happens these are thrown back, and allows to use your current error handling configuration. This
+avoids any confusing, and you can regard calling a Kamelet just as calling a component; If they fail the exception is thrown back.
+
+## Camel Kafka
+
+TODO: batching consumer and other stuff
 
 ## Spring and Spring Boot
 
+We have changed the recommended ordering of BOM from:
+
+- `spring-boot-dependencies`
+- `camel-spring-boot-bom`
+
+To reverse the order so Camel comes first:
+
+- `camel-spring-boot-bom`
+- `spring-boot-dependencies`
+
+See more in the [upgrade guide](/manual/camel-4x-upgrade-guide-4_4.html). 
+
 Upgraded to latest Spring Boot 3.2.2 release.
 
-TODO: More SB stuff?
 
 ## Kotlin API
 
 TODO: About the new DSL for Kotlin
 
 ## Miscellaneous
+
+The `camel-grpc` can now do full streaming in proxy mode. 
+
+The `camel-netty` has added support for using KQueue native transport.
+
+The `camel-jms` component now adds a header to the `Message` with the actual JMS destination the message was sent to,
+this is useful information, when using dynamic computed queue names.
+
+The `camel-kubernetes` component can now auto-create `KubernetesClient` if needed, making it easier to use when running inside
+a Kubernetes pod.
 
 Upgraded many 3rd party dependencies to latest release at time of release.
 
