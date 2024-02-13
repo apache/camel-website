@@ -81,6 +81,11 @@ The source (input) is from another variable named `beer2`. You can also specify 
 if you remove `source` then the message body is used as input (default).
 The result is converted to a Java `float`,
 
+**NOTE:** 
+If you take a closer look in the screenshot above, then the debugger reveals that the `Exchange` has no message headers,
+and that the message body is empty (`null`). The example is exclusively using variables to gather and compute data; without
+the need to store and restore data on message header/body during routing. This is a cleaner and elegant practice.
+
 
 ## Camel JBang (Camel CLI)
 
