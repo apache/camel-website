@@ -18,7 +18,7 @@ making it easier to grab data from JSon or XML within your simple expression or 
 We have optimized data formats to avoid converting payload to `byte[]` when unmarshalling, but allowing each data format
 to unmarshal the payload _as-is_. 
 
-Added JMX operation to update routes at runtime via XML format (requires to turn on this feature). This can be
+Added JMX operation to update routes at runtime via XML format (requires turning on this feature). This can be
 useful for tooling where you can then change routes during troubleshooting an existing running Camel integration.
 
 ## DSL
@@ -84,12 +84,12 @@ this is useful information, when using dynamic computed queue names.
 The `camel-kubernetes` component can now auto-create `KubernetesClient` if needed, making it easier to use when running inside
 a Kubernetes pod.
 
-Upgraded many 3rd party dependencies to latest release at time of release.
+Upgraded many 3rd-party dependencies to the latest release at the time of release.
 
 ## New Components
 
 - `camel-beanio` - **Added back:** Marshal and unmarshal Java beans to and from flat files (such as CSV, delimited, or fixed length formats).
-- `camel-jte` - Transform messages using a Java based template engine (JTE).
+- `camel-jte` - Transform messages using a Java-based template engine (JTE).
 - `camel-wasm` - Invoke Wasm functions.
 - `kotlin-api` - API for the new Kotlin DSL
 
