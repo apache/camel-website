@@ -78,5 +78,8 @@
     "highlight.js@9.18.1": {
       "unplugged": true
     }
+  },
+  "resolutions": {
+    "http-cache-semantics": "4.1.1"
   }
 }
