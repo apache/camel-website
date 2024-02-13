@@ -762,28 +762,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["acorn-dynamic-import", [\
-      ["npm:4.0.0", {\
-        "packageLocation": "./.yarn/cache/acorn-dynamic-import-npm-4.0.0-c0c0c080f3-8a1efc546f.zip/node_modules/acorn-dynamic-import/",\
-        "packageDependencies": [\
-          ["acorn-dynamic-import", "npm:4.0.0"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:eb8fbb7af0e0013e84611930f4b3d6efe04b928b675cca17a81ed9ef8b52b1ba962a1853540b2a1161d900dbdab928455194126f0050817ad12384ebfd8e3a99#npm:4.0.0", {\
-        "packageLocation": "./.yarn/__virtual__/acorn-dynamic-import-virtual-bece840250/0/cache/acorn-dynamic-import-npm-4.0.0-c0c0c080f3-8a1efc546f.zip/node_modules/acorn-dynamic-import/",\
-        "packageDependencies": [\
-          ["acorn-dynamic-import", "virtual:eb8fbb7af0e0013e84611930f4b3d6efe04b928b675cca17a81ed9ef8b52b1ba962a1853540b2a1161d900dbdab928455194126f0050817ad12384ebfd8e3a99#npm:4.0.0"],\
-          ["@types/acorn", null],\
-          ["acorn", "npm:8.11.3"]\
-        ],\
-        "packagePeers": [\
-          "@types/acorn",\
-          "acorn"\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["acorn-jsx", [\
       ["npm:3.0.1", {\
         "packageLocation": "./.yarn/cache/acorn-jsx-npm-3.0.1-3c3c3ddce8-8cb7f7b44f.zip/node_modules/acorn-jsx/",\
@@ -815,23 +793,22 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["acorn-node", [\
-      ["npm:1.7.0", {\
-        "packageLocation": "./.yarn/cache/acorn-node-npm-1.7.0-eb8fbb7af0-f3ae8d4da1.zip/node_modules/acorn-node/",\
+      ["npm:1.8.2", {\
+        "packageLocation": "./.yarn/cache/acorn-node-npm-1.8.2-b30b72c499-a4d5e44a9a.zip/node_modules/acorn-node/",\
         "packageDependencies": [\
-          ["acorn-node", "npm:1.7.0"],\
+          ["acorn-node", "npm:1.8.2"],\
           ["acorn", "npm:8.11.3"],\
-          ["acorn-dynamic-import", "virtual:eb8fbb7af0e0013e84611930f4b3d6efe04b928b675cca17a81ed9ef8b52b1ba962a1853540b2a1161d900dbdab928455194126f0050817ad12384ebfd8e3a99#npm:4.0.0"],\
-          ["acorn-walk", "npm:6.1.1"],\
+          ["acorn-walk", "npm:7.2.0"],\
           ["xtend", "npm:4.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["acorn-walk", [\
-      ["npm:6.1.1", {\
-        "packageLocation": "./.yarn/cache/acorn-walk-npm-6.1.1-19617886f4-afae57b864.zip/node_modules/acorn-walk/",\
+      ["npm:7.2.0", {\
+        "packageLocation": "./.yarn/cache/acorn-walk-npm-7.2.0-5f8b515308-4d3e186f72.zip/node_modules/acorn-walk/",\
         "packageDependencies": [\
-          ["acorn-walk", "npm:6.1.1"]\
+          ["acorn-walk", "npm:7.2.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3558,7 +3535,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/detective-npm-5.2.0-c623eb79e6-08841e02a5.zip/node_modules/detective/",\
         "packageDependencies": [\
           ["detective", "npm:5.2.0"],\
-          ["acorn-node", "npm:1.7.0"],\
+          ["acorn-node", "npm:1.8.2"],\
           ["defined", "npm:1.0.0"],\
           ["minimist", "npm:1.2.8"]\
         ],\
@@ -6656,7 +6633,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["insert-module-globals", "npm:7.2.1"],\
           ["JSONStream", "npm:1.3.5"],\
-          ["acorn-node", "npm:1.7.0"],\
+          ["acorn-node", "npm:1.8.2"],\
           ["combine-source-map", "npm:0.8.0"],\
           ["concat-stream", "npm:1.6.2"],\
           ["is-buffer", "npm:1.1.6"],\
@@ -12193,7 +12170,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/syntax-error-npm-1.4.0-8721590265-eb3b44ef38.zip/node_modules/syntax-error/",\
         "packageDependencies": [\
           ["syntax-error", "npm:1.4.0"],\
-          ["acorn-node", "npm:1.7.0"]\
+          ["acorn-node", "npm:1.8.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -12520,7 +12497,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/transform-ast-npm-2.4.4-4f8272fcaf-d12b34d6c0.zip/node_modules/transform-ast/",\
         "packageDependencies": [\
           ["transform-ast", "npm:2.4.4"],\
-          ["acorn-node", "npm:1.7.0"],\
+          ["acorn-node", "npm:1.8.2"],\
           ["convert-source-map", "npm:1.7.0"],\
           ["dash-ast", "npm:1.0.0"],\
           ["is-buffer", "npm:2.0.3"],\
@@ -12683,7 +12660,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/undeclared-identifiers-npm-1.1.3-f4b85bcf76-e1f2a18d7b.zip/node_modules/undeclared-identifiers/",\
         "packageDependencies": [\
           ["undeclared-identifiers", "npm:1.1.3"],\
-          ["acorn-node", "npm:1.7.0"],\
+          ["acorn-node", "npm:1.8.2"],\
           ["dash-ast", "npm:1.0.0"],\
           ["get-assigned-identifiers", "npm:1.2.0"],\
           ["simple-concat", "npm:1.0.0"],\
