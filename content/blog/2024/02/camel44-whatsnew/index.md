@@ -26,6 +26,62 @@ useful for tooling where you can then change routes during troubleshooting an ex
 TODO: Throttler EIP
 TODO: Variables
 
+### Variables
+
+The biggest new feature in Camel 4.4 is the introduction of [variables](/manual/variables.adoc).
+
+A variable is a key/value that can hold a value that can either be private per `Exchange`, or shared per route, or globally.
+
+With variables, you can now more easily share data between routes and/or globally. Variables is also readily accessible
+from EIPs and languages, just as message _headers_ or _exchange properties_ are. In other words, they have been added
+as first-class into Camel.
+
+You can find a small example here:
+
+- https://github.com/apache/camel-kamelets-examples/tree/main/jbang/variables
+
+We have also made a selected number of EIPs have _special use_ of variables. The idea is to make it easier to
+collect various set of data from external systems using Camel components and commonly used EIPs, without any
+ceremony to prepare message body and headers, and cleanup afterward (i.e. removing HTTP headers).
+
+And you can find a small example here using variables with EIPs:
+
+- https://github.com/apache/camel-kamelets-examples/tree/main/jbang/variables-eip
+
+The JBang debugger can also show variables if enabled with `--show-exchange-variables`, as shown in the screenshot below:
+
+[source,bash]
+----
+camel debug * --show-exchange-variables
+----
+
+![JBang Debug with Variables](variable-debug.png)
+
+In the screenshot, you can see three variables:
+
+- `alc1` - Is a float with the alcohol percentage of beer 1
+- `beer1` - Is the json structure of beer1
+- `beer2` - Is the json structure of beer2
+
+The debugger is suspended (blue) in the Camel route where we are about to set variable `alc2` computed as follows:
+
+[source,yaml]
+```yaml
+- setVariable:
+    name: alc2
+    expression:
+      jq:
+        expression: .alcohol | rtrimstr("%")
+        source: beer2
+        resultType: float
+```
+
+Here you can see the `alc2` variable is set from a `jq` expression that grabs the alcohol field, and remove the `%` sign.
+The source (input) is from another variable named `beer2`. You can also specify `header:myHeader` to refer to a header, or
+if you remove `source` then the message body is used as input (default).
+The result is converted to a Java `float`,
+
+
 ## Camel JBang (Camel CLI)
 
 We have continued investing in Camel JBang, and this time we have some great new stuff in the release.
