@@ -23,7 +23,7 @@ useful for tooling where you can then change routes during troubleshooting an ex
 
 ## DSL
 
-TODO: Throttler EIP
+We refactored the [Throttle EIP](/components/next/eips/throttle-eip.html) implementation to allow supporting two different modes of throttling.
 
 ### Variables
 
@@ -108,7 +108,8 @@ avoids any confusion, and you can regard calling a Kamelet just as calling a com
 
 ## Camel Kafka
 
-TODO: batching consumer and other stuff
+The Kafka component was improved to support batching. With the batching support it is now possible to consume and handle a set of 
+Kafka consumer records as one exchange. For greater flexibility, the Kafka component can support both automatic and manual commits. 
 
 ## Spring and Spring Boot
 
