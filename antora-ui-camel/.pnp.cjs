@@ -13208,16 +13208,16 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["websocket-driver", "npm:0.7.0"],\
           ["http-parser-js", "npm:0.5.0"],\
-          ["websocket-extensions", "npm:0.1.3"]\
+          ["websocket-extensions", "npm:0.1.4"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["websocket-extensions", [\
-      ["npm:0.1.3", {\
-        "packageLocation": "./.yarn/cache/websocket-extensions-npm-0.1.3-80445f180b-9423ba5227.zip/node_modules/websocket-extensions/",\
+      ["npm:0.1.4", {\
+        "packageLocation": "./.yarn/cache/websocket-extensions-npm-0.1.4-be839a9e56-b5399b487d.zip/node_modules/websocket-extensions/",\
         "packageDependencies": [\
-          ["websocket-extensions", "npm:0.1.3"]\
+          ["websocket-extensions", "npm:0.1.4"]\
         ],\
         "linkType": "HARD"\
       }]\
