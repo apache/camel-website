@@ -4895,7 +4895,7 @@ const RAW_RUNTIME_STATE =
           ["browser-resolve", "npm:2.0.0"],\
           ["browserify-zlib", "npm:0.2.0"],\
           ["buffer", "npm:5.2.1"],\
-          ["cached-path-relative", "npm:1.0.2"],\
+          ["cached-path-relative", "npm:1.1.0"],\
           ["concat-stream", "npm:1.6.2"],\
           ["console-browserify", "npm:1.2.0"],\
           ["constants-browserify", "npm:1.0.0"],\
@@ -5309,10 +5309,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["cached-path-relative", [\
-      ["npm:1.0.2", {\
-        "packageLocation": "./.yarn/cache/cached-path-relative-npm-1.0.2-375da1d4a2-643fa65a65.zip/node_modules/cached-path-relative/",\
+      ["npm:1.1.0", {\
+        "packageLocation": "./.yarn/cache/cached-path-relative-npm-1.1.0-7662af2352-2f1d63c230.zip/node_modules/cached-path-relative/",\
         "packageDependencies": [\
-          ["cached-path-relative", "npm:1.0.2"]\
+          ["cached-path-relative", "npm:1.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15289,7 +15289,7 @@ const RAW_RUNTIME_STATE =
           ["module-deps", "npm:6.2.3"],\
           ["JSONStream", "npm:1.3.5"],\
           ["browser-resolve", "npm:2.0.0"],\
-          ["cached-path-relative", "npm:1.0.2"],\
+          ["cached-path-relative", "npm:1.1.0"],\
           ["concat-stream", "npm:1.6.2"],\
           ["defined", "npm:1.0.0"],\
           ["detective", "npm:5.2.0"],\
