@@ -24,7 +24,6 @@ useful for tooling where you can then change routes during troubleshooting an ex
 ## DSL
 
 TODO: Throttler EIP
-TODO: Variables
 
 ### Variables
 
@@ -86,7 +85,6 @@ If you take a closer look in the screenshot above, then the debugger reveals tha
 and that the message body is empty (`null`). The example is exclusively using variables to gather and compute data; without
 the need to store and restore data on message header/body during routing. This is a cleaner and elegant practice.
 
-
 ## Camel JBang (Camel CLI)
 
 We have continued investing in Camel JBang, and this time we have some great new stuff in the release.
@@ -119,7 +117,7 @@ We have changed the recommended ordering of BOM from:
 - `spring-boot-dependencies`
 - `camel-spring-boot-bom`
 
-To reverse the order so Camel comes first:
+... to reverse the order, so Camel comes first:
 
 - `camel-spring-boot-bom`
 - `spring-boot-dependencies`
@@ -133,6 +131,7 @@ Upgraded to latest Spring Boot 3.2.2 release.
 
 TODO: About the new DSL for Kotlin
 
+
 ## Miscellaneous
 
 The `camel-grpc` can now do full streaming in proxy mode. 
@@ -145,7 +144,7 @@ this is useful information, when using dynamic computed queue names.
 The `camel-kubernetes` component can now auto-create `KubernetesClient` if needed, making it easier to use when running inside
 a Kubernetes pod.
 
-Upgraded many 3rd-party dependencies to the latest release at the time of release.
+Upgraded many third-party dependencies to the latest release at the time of release.
 
 ## New Components
 
