@@ -11732,9 +11732,9 @@ __metadata:
   linkType: hard
 
 "websocket-extensions@npm:>=0.1.1":
-  version: 0.1.3
-  resolution: "websocket-extensions@npm:0.1.3"
-  checksum: 10/9423ba52274a2991c4d10f4a70f7d70f98ecaf7a843596e336cd10d2d681165507bd9b9c90670cd860109db4c081fee0a40c7cc51d1f320466ddaf8ff33894d3
+  version: 0.1.4
+  resolution: "websocket-extensions@npm:0.1.4"
+  checksum: 10/b5399b487d277c78cdd2aef63764b67764aa9899431e3a2fa272c6ad7236a0fb4549b411d89afa76d5afd664c39d62fc19118582dc937e5bb17deb694f42a0d1
   languageName: node
   linkType: hard
 
