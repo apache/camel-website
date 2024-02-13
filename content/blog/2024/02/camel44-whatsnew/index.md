@@ -104,7 +104,7 @@ Added support for using Jolokia 2.x with `camel-jbang`.
 
 When using Kamelets then the _route snippets_ due not use any error handler. This means that when calling a Kamelet
 then if any error happens these are thrown back, and allows to use your current error handling configuration. This
-avoids any confusing, and you can regard calling a Kamelet just as calling a component; If they fail the exception is thrown back.
+avoids any confusion, and you can regard calling a Kamelet just as calling a component; If they fail the exception is thrown back.
 
 ## Camel Kafka
 
