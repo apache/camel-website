@@ -5164,7 +5164,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["find-versions", "npm:3.1.0"],\
           ["array-uniq", "npm:2.1.0"],\
-          ["semver-regex", "npm:2.0.0"]\
+          ["semver-regex", "npm:4.0.5"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -11044,10 +11044,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["semver-regex", [\
-      ["npm:2.0.0", {\
-        "packageLocation": "./.yarn/cache/semver-regex-npm-2.0.0-218c804009-da7d6f5cea.zip/node_modules/semver-regex/",\
+      ["npm:4.0.5", {\
+        "packageLocation": "./.yarn/cache/semver-regex-npm-4.0.5-9917344f87-b9e5c0573c.zip/node_modules/semver-regex/",\
         "packageDependencies": [\
-          ["semver-regex", "npm:2.0.0"]\
+          ["semver-regex", "npm:4.0.5"]\
         ],\
         "linkType": "HARD"\
       }]\
