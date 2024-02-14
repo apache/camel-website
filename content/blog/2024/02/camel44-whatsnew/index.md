@@ -100,6 +100,8 @@ instead of the _built-in_ logging.
 
 Added support for using Jolokia 2.x with `camel-jbang`.
 
+Upgraded to Hawtio 3.x when running `camel hawtio`.
+
 ## Kamelets
 
 When using Kamelets then the _route snippets_ do not use any error handler. This means that when calling a Kamelet
