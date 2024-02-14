@@ -18,8 +18,8 @@ making it easier to grab data from JSon or XML within your simple expression or 
 We have optimized data formats to avoid converting payload to `byte[]` when unmarshalling, but allowing each data format
 to unmarshal the payload _as-is_. 
 
-Added JMX operation to update routes at runtime via XML format (requires turning on this feature). This can be
-useful for tooling where you can then change routes during troubleshooting an existing running Camel integration.
+Added JMX MBean operation to update routes at runtime via XML format (requires turning on this feature with setting JmxUpdateRouteEnabled=true).
+This can be useful for tooling where you can then change routes during troubleshooting an existing running Camel integration.
 
 ## DSL
 
