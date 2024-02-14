@@ -21,6 +21,10 @@ to unmarshal the payload _as-is_.
 Added JMX MBean operation to update routes at runtime via XML format (requires turning on this feature with setting JmxUpdateRouteEnabled=true).
 This can be useful for tooling where you can then change routes during troubleshooting an existing running Camel integration.
 
+The internal code on the core was adjusted to use a monotonic time source, via an internal Clock API, to provide more accurate duration reporting. 
+Additionally, we cleaned up usages of restricted identifiers across the code base, consolidated exchange constructors, and applied fixes to 
+improve handling of interrupts.
+
 ## DSL
 
 We refactored the [Throttle EIP](/components/next/eips/throttle-eip.html) implementation to allow supporting two different modes of throttling.
