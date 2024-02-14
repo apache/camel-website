@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 4.4 What's New"
 date: 2024-02-19
-authors: [davsclaus]
+authors: [davsclaus, opiske]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 4.4 release.
 ---
