@@ -45,7 +45,7 @@ You can find a small example here:
 
 We have also made a selected number of EIPs have _special use_ of variables. The idea is to make it easier to
 collect various sets of data from external systems using Camel components and commonly used EIPs, without any
-ceremony to prepare message body and headers, and cleanup afterward (i.e. removing HTTP headers).
+ceremony to prepare message body and headers, and cleanup afterward (i.e., removing HTTP headers).
 
 And you can find a small example here using variables with EIPs:
 
@@ -143,9 +143,9 @@ TODO: About the new DSL for Kotlin
 
 ## Miscellaneous
 
-The `camel-grpc` can now do full streaming in proxy mode. 
+The `camel-grpc` component can now do full streaming in proxy mode. 
 
-The `camel-netty` has added support for using KQueue native transport.
+The `camel-netty` component has added support for using KQueue native transport.
 
 The `camel-jms` component now adds a header to the `Message` with the actual JMS destination the message was sent to,
 this is useful information, when using dynamic computed queue names.
