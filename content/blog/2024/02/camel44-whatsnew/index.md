@@ -113,6 +113,8 @@ avoids any confusion, and you can regard calling a Kamelet just as calling a com
 The Kafka component was improved to support batching, which makes it possible to consume and handle a set of 
 Kafka consumer records as one Camel `Exchange`. For greater flexibility, the Kafka component can support both automatic and manual commits. 
 
+This version also brings fixes for the Kafka idempotent repositoryand unifies the setup of the commit manager.
+
 ## Spring and Spring Boot
 
 We have changed the recommended ordering of BOM from:
