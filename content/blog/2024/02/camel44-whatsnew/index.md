@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 4.4 What's New"
 date: 2024-02-19
-authors: [davsclaus, orpiske]
+authors: [davsclaus, orpiske, iMashtak]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 4.4 release.
 ---
@@ -138,7 +138,11 @@ Upgraded to latest Spring Boot 3.2.2 release.
 
 ## Kotlin API
 
-TODO: About the new DSL for Kotlin
+We have introduced new experimental API for defining Camel routes in Kotlin with the `camel-kotlin-api` JAR.
+This provides Kotlin type-safe builders as building blocks of Camel entities.
+
+Kotlin API is not the replacement of Kotlin DSL (it is a separate module for now).
+While it is experimental there may be breaking changes in upcoming releases.
 
 
 ## Miscellaneous
