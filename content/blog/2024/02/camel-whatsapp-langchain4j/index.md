@@ -8,7 +8,7 @@ preview: "Build a conversational AI integration with Apache Camel, langchain4j, 
 ---
 
 
-This blog shows how Apache Camel can help integrate multiple systems with an AI model, in particular, the [camel-whatsapp](https://camel.apache.org/components/4.0.x/whatsapp-component.html) component is used to build a chat on WhatsApp; so that a user can easily communicate with the LLM via WhatsApp.
+This blog shows how Apache Camel can help integrate multiple systems with an AI model, in particular, the [camel-whatsapp](/components/4.0.x/whatsapp-component.html) component is used to build a chat on WhatsApp; so that a user can easily communicate with the LLM via WhatsApp.
 
 
 # Overview
@@ -22,7 +22,7 @@ The objective is clear, but what about the implementation? Libraries like langch
 * On the other hand, langchain4j offers abstractions and toolkits that help developers interact with LLMs.
 
 
-In this example, the model [GPT-3.5 Turbo](https://platform.openai.com/docs/models/gpt-3-5-turbo) is used, and the [camel core contribution documentation](https://camel.apache.org/camel-core/contributing/) is used as an embedding, in this way it will be possible to have clear conversations about camel contributions.
+In this example, the model [GPT-3.5 Turbo](https://platform.openai.com/docs/models/gpt-3-5-turbo) is used, and the [camel core contribution documentation](/camel-core/contributing/) is used as an embedding, in this way it will be possible to have clear conversations about camel contributions.
 
 
 # Set up
@@ -31,7 +31,7 @@ In this example, the model [GPT-3.5 Turbo](https://platform.openai.com/docs/mode
 This is the hardest part, if you would like to test it by yourself some requirements need to be fulfilled before executing the code, in particular:
 
 
-* A business WhatsApp account is needed, for development purposes this is free, you can follow the documentation in the [Camel WhatsApp component](https://camel.apache.org/components/4.0.x/whatsapp-component.html)
+* A business WhatsApp account is needed, for development purposes this is free, you can follow the documentation in the [Camel WhatsApp component](/components/4.0.x/whatsapp-component.html)
 * An OpenAI API key, the [langchain4j getting started](https://github.com/langchain4j#getting-started) contains information how to generate the API key
 * [Webhook](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/set-up-webhooks) needs to be configured in the WhatsApp business account, so that way WhatsApp API can communicate with the running Apache Camel application
 * If you are testing locally, the running application's webhook has to be exposed to the internet, for example via [ngrok](https://ngrok.com/)
