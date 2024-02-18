@@ -17,7 +17,9 @@ content:
     - url: https://github.com/apache/camel.git
       branches:
         - main
+        - camel-4.4.x
         - camel-4.0.x
+        - camel-3.22.x
         - camel-3.21.x
         - camel-3.20.x
         - camel-3.14.x
@@ -78,6 +80,7 @@ content:
     - url: https://github.com/apache/camel-spring-boot.git
       branches:
         - main
+        - camel-spring-boot-4.4.x
         - camel-spring-boot-4.0.x
         - camel-spring-boot-3.21.x
         - camel-spring-boot-3.20.x
