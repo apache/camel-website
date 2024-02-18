@@ -82,6 +82,7 @@ content:
         - main
         - camel-spring-boot-4.4.x
         - camel-spring-boot-4.0.x
+        - camel-spring-boot-3.22.x
         - camel-spring-boot-3.21.x
         - camel-spring-boot-3.20.x
         - camel-spring-boot-3.14.x
@@ -94,6 +95,7 @@ content:
     - url: https://github.com/apache/camel-karaf.git
       branches:
         - main
+        - camel-karaf-3.22.x
         - camel-karaf-3.21.x
         - camel-karaf-3.20.x
         - camel-karaf-3.14.x
