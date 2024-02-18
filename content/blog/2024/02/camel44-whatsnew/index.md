@@ -37,13 +37,13 @@ A variable is a key/value that can hold a value that can either be private per `
 
 With variables, you can now more easily share data between routes and/or globally. Variables are also readily accessible
 from EIPs and languages, just as message _headers_ or _exchange properties_ are. In other words, they have been added
-as first-class into Camel.
+as first-class primitives into Camel.
 
 You can find a small example here:
 
 - https://github.com/apache/camel-kamelets-examples/tree/main/jbang/variables
 
-We have also made a selected number of EIPs have _special use_ of variables. The idea is to make it easier to
+We also made a selected number of EIPs to have _special use_ of variables. The idea is to make it easier to
 collect various sets of data from external systems using Camel components and commonly used EIPs, without any
 ceremony to prepare message body and headers, and cleanup afterward (i.e., removing HTTP headers).
 
@@ -87,7 +87,7 @@ The result is converted to a Java `float`,
 **NOTE:** 
 If you take a closer look in the screenshot above, then the debugger reveals that the `Exchange` has no message headers,
 and that the message body is empty (`null`). The example is exclusively using variables to gather and compute data; without
-the need to store and restore data on message header/body during routing. This is a cleaner and elegant practice.
+the need to store and restore data on message header/body during routing. This is a cleaner and more elegant practice.
 
 ## Camel JBang (Camel CLI)
 
