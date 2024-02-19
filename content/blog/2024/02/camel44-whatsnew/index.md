@@ -170,11 +170,20 @@ Upgraded many third-party dependencies to the latest release at the time of rele
 
 Make sure to read the [upgrade guide](/manual/camel-4x-upgrade-guide-4_4.html) if you are upgrading from a previous Camel version.
 
+If you are upgrading from, for example, 4.0 to 4.4, then make sure to follow the upgrade guides for each release in-between, i.e. 
+4.0 -> 4.1, 4.1 -> 4.2, and so forth.
+
 ## Release Notes
 
 You can find more information about this release in the list of JIRA tickets resolved in the release:
 
 - [Release notes 4.4](/releases/release-4.4.0/)
+
+You can also find blog posts What's new in the previous releases since last LTS
+
+- [What's new in Camel 4.1](/blog/2023/10/camel41-whatsnew/)
+- [What's new in Camel 4.2](/blog/2023/11/camel42-whatsnew/)
+- [What's new in Camel 4.3](/blog/2023/12/camel43-whatsnew/)
 
 ## Roadmap
 
