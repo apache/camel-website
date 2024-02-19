@@ -16,13 +16,13 @@ The simple language has been improved with `hash` function, and further improved
 making it easier to grab data from JSon or XML within your simple expression or predicates.
 
 We have optimized data formats to avoid converting payload to `byte[]` when unmarshalling, but allowing each data format
-to unmarshal the payload _as-is_. 
+to unmarshal the payload _as-is_.
 
 Added JMX MBean operation to update routes at runtime via XML format (requires turning on this feature with setting JmxUpdateRouteEnabled=true).
 This can be useful for tooling where you can then change routes during troubleshooting an existing running Camel integration.
 
-The internal code on the core was adjusted to use a monotonic time source, via an internal Clock API, to provide more accurate duration reporting. 
-Additionally, we cleaned up usages of restricted identifiers across the code base, consolidated exchange constructors, and applied fixes to 
+The internal code on the core was adjusted to use a monotonic time source, via an internal Clock API, to provide more accurate duration reporting.
+Additionally, we cleaned up usages of restricted identifiers across the code base, consolidated exchange constructors, and applied fixes to
 improve handling of interrupts.
 
 ## DSL
@@ -53,10 +53,11 @@ And you can find a small example here using variables with EIPs:
 
 The JBang debugger can also show variables if enabled with `--show-exchange-variables`, as shown in the screenshot below:
 
-[source,bash]
-----
+
+```bash
 camel debug * --show-exchange-variables
-----
+```
+
 
 ![JBang Debug with Variables](variable-debug.png)
 
@@ -68,7 +69,7 @@ In the screenshot, you can see three variables:
 
 The debugger is suspended (blue) in the Camel route where we are about to set variable `alc2` computed as follows:
 
-[source,yaml]
+
 ```yaml
 - setVariable:
     name: alc2
@@ -84,7 +85,7 @@ The source (input) is from another variable named `beer2`. You can also specify 
 if you remove `source` then the message body is used as input (default).
 The result is converted to a Java `float`,
 
-**NOTE:** 
+**NOTE:**
 If you take a closer look in the screenshot above, then the debugger reveals that the `Exchange` has no message headers,
 and that the message body is empty (`null`). The example is exclusively using variables to gather and compute data; without
 the need to store and restore data on message header/body during routing. This is a cleaner and more elegant practice.
@@ -114,8 +115,8 @@ avoids any confusion, and you can regard calling a Kamelet just as calling a com
 
 ## Camel Kafka
 
-The Kafka component was improved to support batching, which makes it possible to consume and handle a set of 
-Kafka consumer records as one Camel `Exchange`. For greater flexibility, the Kafka component can support both automatic and manual commits. 
+The Kafka component was improved to support batching, which makes it possible to consume and handle a set of
+Kafka consumer records as one Camel `Exchange`. For greater flexibility, the Kafka component can support both automatic and manual commits.
 
 This version also brings fixes for the Kafka idempotent repository and unifies the setup of the commit manager.
 
@@ -131,7 +132,7 @@ We have changed the recommended ordering of BOM from:
 - `camel-spring-boot-bom`
 - `spring-boot-dependencies`
 
-See more in the [upgrade guide](/manual/camel-4x-upgrade-guide-4_4.html). 
+See more in the [upgrade guide](/manual/camel-4x-upgrade-guide-4_4.html).
 
 Upgraded to latest Spring Boot 3.2.2 release.
 
@@ -148,7 +149,7 @@ While it is experimental there may be breaking changes in upcoming releases.
 
 ## Miscellaneous
 
-The `camel-grpc` component can now do full streaming in proxy mode. 
+The `camel-grpc` component can now do full streaming in proxy mode.
 
 The `camel-netty` component has added support for using KQueue native transport.
 
@@ -171,7 +172,7 @@ Upgraded many third-party dependencies to the latest release at the time of rele
 
 Make sure to read the [upgrade guide](/manual/camel-4x-upgrade-guide-4_4.html) if you are upgrading from a previous Camel version.
 
-If you are upgrading from, for example, 4.0 to 4.4, then make sure to follow the upgrade guides for each release in-between, i.e. 
+If you are upgrading from, for example, 4.0 to 4.4, then make sure to follow the upgrade guides for each release in-between, i.e.
 4.0 -> 4.1, 4.1 -> 4.2, and so forth.
 
 ## Release Notes
