@@ -31,7 +31,7 @@ We refactored the [Throttle EIP](/components/next/eips/throttle-eip.html) implem
 
 ### Variables
 
-The biggest new feature in Camel 4.4 is the introduction of [variables](/manual/variables.adoc).
+The biggest new feature in Camel 4.4 is the introduction of [variables](/manual/variables.html).
 
 A variable is a key/value that can hold a value that can either be private per `Exchange`, or shared per route, or per Camel context.
 
