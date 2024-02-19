@@ -1,7 +1,7 @@
 ---
 title: "Integrate your AI models effortlessly with Apache Camel"
 date: 2024-02-19
-draft: true
+draft: false
 authors: [croway]
 categories: ["Camel Spring Boot", "Usecases", "AI"]
 preview: "Build a conversational AI integration with Apache Camel, LangChain4j, and WhatsApp."
@@ -173,3 +173,4 @@ In this example, we handle only `TextMessageRequest` objects, but camel-whatsapp
 
 
 This blog post shows how Apache Camel can be leveraged to integrate LLMs with bulletproof enterprise integration patterns, we just showed how few lines of code can implement such a complex use case. 
+![Demo](conversation.gif)
