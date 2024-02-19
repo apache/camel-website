@@ -117,7 +117,7 @@ avoids any confusion, and you can regard calling a Kamelet just as calling a com
 The Kafka component was improved to support batching, which makes it possible to consume and handle a set of 
 Kafka consumer records as one Camel `Exchange`. For greater flexibility, the Kafka component can support both automatic and manual commits. 
 
-This version also brings fixes for the Kafka idempotent repositoryand unifies the setup of the commit manager.
+This version also brings fixes for the Kafka idempotent repository and unifies the setup of the commit manager.
 
 ## Spring and Spring Boot
 
@@ -138,7 +138,8 @@ Upgraded to latest Spring Boot 3.2.2 release.
 
 ## Kotlin API
 
-We have introduced new experimental API for defining Camel routes in Kotlin with the `camel-kotlin-api` JAR.
+We have introduced new experimental [Kotlin API](/components/next/others/kotlin-api.html)
+for defining Camel routes in Kotlin with the `camel-kotlin-api` JAR.
 This provides Kotlin type-safe builders as building blocks of Camel entities.
 
 Kotlin API is not the replacement of Kotlin DSL (it is a separate module for now).
