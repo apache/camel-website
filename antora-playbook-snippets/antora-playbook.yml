@@ -21,7 +21,6 @@ content:
         - camel-4.0.x
         - camel-3.22.x
         - camel-3.21.x
-        - camel-3.20.x
       start_paths:
         # eip
         - core/camel-core-engine/src/main/docs
@@ -34,15 +33,12 @@ content:
       branches:
         - main
         - release-2.2.x
-        - release-1.12.x
       start_path: docs
 
-    # We may remove this module as soon as Camel K 2.1 (release-2.1.x) is no longer supported.
     - url: https://github.com/apache/camel-k-runtime.git
       branches:
         - main
         - release-3.2.x
-        - release-1.17.x
       start_path: docs
 
     - url: https://github.com/apache/camel-kamelets.git
@@ -50,7 +46,6 @@ content:
         - main
         - 4.0.x
         - 3.21.x
-        - 3.20.x
       start_path: docs
 
     - url: https://github.com/apache/camel-quarkus.git
@@ -58,7 +53,6 @@ content:
         - main
         - 3.7.x
         - 3.2.x
-        - 2.16.x
       start_path: docs
 
     - url: https://github.com/apache/camel-quarkus-examples.git
@@ -80,7 +74,6 @@ content:
         - camel-spring-boot-4.0.x
         - camel-spring-boot-3.22.x
         - camel-spring-boot-3.21.x
-        - camel-spring-boot-3.20.x
       start_paths:
         - components-starter
         - core
@@ -92,7 +85,6 @@ content:
         - main
         - camel-karaf-3.22.x
         - camel-karaf-3.21.x
-        - camel-karaf-3.20.x
       start_path: docs
 
 ui:
