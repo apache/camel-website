@@ -35,6 +35,7 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           base: main
+          add-paths: antora-ui-camel/**
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "Regen for commit ${{ github.sha }}"
           committer: GitHub <noreply@github.com>
