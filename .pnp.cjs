@@ -9420,7 +9420,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/ext-npm-1.4.0-4190310122-8f42fa51fc.zip/node_modules/ext/",\
         "packageDependencies": [\
           ["ext", "npm:1.4.0"],\
-          ["type", "npm:2.0.0"]\
+          ["type", "npm:2.7.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -21980,13 +21980,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/type-npm-1.2.0-e67311c4b2-b4d4b27d19.zip/node_modules/type/",\
         "packageDependencies": [\
           ["type", "npm:1.2.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:2.0.0", {\
-        "packageLocation": "./.yarn/cache/type-npm-2.0.0-fa23229fa0-3fa8cf7919.zip/node_modules/type/",\
-        "packageDependencies": [\
-          ["type", "npm:2.0.0"]\
         ],\
         "linkType": "HARD"\
       }],\
