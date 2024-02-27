@@ -20014,14 +20014,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "type@npm:2.0.0"
-  checksum: 10/3fa8cf79193b50c4171009e18accff6190eb7bd006a0413262ec4446f0357dfa6ae64bb88a403e1a5f403d7cc3bf21685cdcedbd8c107f71d38a68d424844854
-  languageName: node
-  linkType: hard
-
-"type@npm:^2.7.2":
+"type@npm:^2.0.0, type@npm:^2.7.2":
   version: 2.7.2
   resolution: "type@npm:2.7.2"
   checksum: 10/602f1b369fba60687fa4d0af6fcfb814075bcaf9ed3a87637fb384d9ff849e2ad15bc244a431f341374562e51a76c159527ffdb1f1f24b0f1f988f35a301c41d
