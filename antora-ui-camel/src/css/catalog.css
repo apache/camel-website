@@ -10,13 +10,13 @@
   padding: 1rem 0.8rem 0 0; /* there is a whitespace following every p.catalog that takes up space on the right, having 1rem instead of 0.8rem for right pad would look asymmetrical */
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
   .catalog {
     width: 49%;
   }
 }
 
-@media screen and (max-width: 626px) {
+@media screen and (width <= 626px) {
   .catalog {
     width: 100%;
   }

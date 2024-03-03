@@ -7,7 +7,6 @@ const concat = require('gulp-concat')
 const cssnano = require('cssnano')
 const data = require('gulp-data')
 const fs = require('fs-extra')
-const imagemin = require('gulp-imagemin')
 const merge = require('merge-stream')
 const ospath = require('path')
 const path = ospath.posix
@@ -24,7 +23,7 @@ const terser = require('gulp-terser')
 const vfs = require('vinyl-fs')
 const { obj: map } = require('through2')
 
-module.exports = (src, dest, preview) => () => {
+module.exports = (src, dest, preview) => async () => {
   const opts = { base: src, cwd: src }
   const sourcemaps = preview || process.env.SOURCEMAPS === 'true'
   const postcssPlugins = [
@@ -58,6 +57,8 @@ module.exports = (src, dest, preview) => () => {
       ? () => {}
       : (css, result) => cssnano({ preset: 'default' })(css, result).then(() => postcssPseudoElementFixer(css, result)),
   ]
+
+  const imagemin = await import('gulp-imagemin')
 
   let manifest
 
@@ -111,16 +112,16 @@ module.exports = (src, dest, preview) => () => {
     vfs
       .src('img/**/*.{jpg,ico,png,svg}', opts)
       .pipe(
-        imagemin([
+        imagemin.default([
           imagemin.gifsicle(),
-          imagemin.jpegtran(),
+          imagemin.mozjpeg(),
           imagemin.optipng(),
           imagemin.svgo({
             plugins: [
-              { removeViewBox: false },
-              { cleanupIDs: { remove: false } },
-              { removeTitle: false },
-              { removeDesc: false },
+              { name: 'removeViewBox', active: false },
+              { name: 'cleanupIDs', params: { remove: false } },
+              { name: 'removeTitle', active: false },
+              { name: 'removeDesc', active: false },
             ],
           }),
         ])

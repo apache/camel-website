@@ -20,7 +20,7 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (width >= 1025px) {
   html {
     font-size: var(--body-font-size--desktop);
   }

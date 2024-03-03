@@ -6,7 +6,7 @@
   flex-direction: column;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
   .docs,
   .community {
     padding: 0 1rem 4rem;

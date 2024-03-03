@@ -8,15 +8,31 @@
                 {{ with .Title }}
                 <h1>{{ . }} </h1>
                 {{ end }}
-                <aside class="toc embedded">
+                <aside class="toc embedded" aria-label="Table of contents">
                     <div class="toc-menu">
-                        <h3>Contents</h3>
-                        {{ .TableOfContents }}
+                        <h3 id="toc-heading">Contents</h3>
+                        <nav id="TableOfContents" aria-labelledby="toc-heading">
+                            {{ range .Fragments.Headings }}
+                            <ul>
+                                {{ range .Headings }}
+                                    <li><a href="#{{ anchorize .ID }}">{{ .Title }}</a>
+                                    {{- if .Headings }}
+                                    <ul>
+                                        {{- range .Headings }}
+                                            <li><a href="#{{ anchorize .ID }}">{{ .Title }}</a></li>
+                                        {{- end }}
+                                    </ul>
+                                    {{- end }}
+                                    </li>
+                                {{- end }}
+                            </ul>
+                            {{- end }}
+                        </nav>
                     </div>
                 </aside>
                 {{ .Content }}
             </article>
-            <aside class="toc sidebar" data-title="Contents" data-levels="2">
+            <aside class="toc sidebar" data-title="Contents" data-levels="2" aria-label="Contents">
                 <div class="toc-menu"></div>
             </aside>
         </div>

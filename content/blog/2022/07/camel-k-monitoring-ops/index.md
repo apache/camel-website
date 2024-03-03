@@ -10,7 +10,7 @@ Camel K offers a wide list of operations you can execute once your Integration h
 
 ## MicroProfile metrics component
 
-First of all let's start presenting the Apache Camel component that will make the most of the heavy lift work for you: [Camel Microprofile Metrics](/components/3.20.x/microprofile-metrics-component.html). This components is in charge to automatically expose a series of default basic metrics for every Camel route. Moreover, with this component you can include your own metrics (please, refer to the documentation to see how to do that). The standard set of metrics is quite extensive already and can be used to provide a wide variety of information that will give you good insights about the health status of your application.
+First of all let's start presenting the Apache Camel component that will make the most of the heavy lift work for you: Camel Microprofile Metrics. This components is in charge to automatically expose a series of default basic metrics for every Camel route. Moreover, with this component you can include your own metrics (please, refer to the documentation to see how to do that). The standard set of metrics is quite extensive already and can be used to provide a wide variety of information that will give you good insights about the health status of your application.
 
 When the component is available, the Integration will expose a _/q/metrics_ endpoint and you can use it for monitoring purposes.
 

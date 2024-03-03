@@ -38,7 +38,7 @@
 // different platforms) and the hash of the package will be different from
 // the value persisted in Yarn lockfile, and would cause an error.
 //
-const YARN_FS_VERSION = '2.3.0';
+const YARN_FS_VERSION = '3.0.1';
 
 const reference_pattern = /^github-release:(?<organization>[^\/]+)\/(?<repository>[^:]+)(?::(?<version>[^\/]+))?\/(?<binary>[^:]+)$/g;
 
@@ -66,8 +66,8 @@ module.exports = {
   factory: require => {
     const util = require('util');
     const { httpUtils, structUtils, LinkType } = require('@yarnpkg/core');
-    const { ppath, xfs, ZipFS } = require('@yarnpkg/fslib');
-    const { getLibzipPromise } = require('@yarnpkg/libzip');
+    const { ppath, xfs } = require('@yarnpkg/fslib');
+    const { ZipFS, getLibzipPromise } = require('@yarnpkg/libzip');
 
     class GitHubReleaseFetcher {
 
@@ -190,8 +190,10 @@ const execute = (path, args) => {
         return [structUtils.convertDescriptorToLocator(descriptor)];
       }
 
-      async getSatisfying(descriptor, references, opts) {
-        return null;
+      async getSatisfying(descriptor, dependencies, locators, opts) {
+        return {
+          locators
+        };
       }
 
       async resolve(locator, opts) {
@@ -207,7 +209,7 @@ const execute = (path, args) => {
           version: parts.version,
           languageName: opts.project.configuration.get(`defaultLanguageName`),
           linkType: LinkType.HARD,
-          dependencies: dependencies,
+          dependencies: opts.project.configuration.normalizeDependencyMap(dependencies),
           bin: [
             [ parts.binary, 'exec.js' ]
           ]

@@ -19,7 +19,7 @@ footer .footer {
 
 footer .footer p {
   flex-basis: 100%;
-  margin: 3rem 0 0.5rem 0;
+  margin: 3rem 0 0.5rem;
   padding: 0 1rem;
 }
 
@@ -29,7 +29,7 @@ footer .footer p.remark::after {
   position: relative;
   height: 1px;
   width: 25rem;
-  margin: 2rem auto 1rem auto;
+  margin: 2rem auto 1rem;
   background: var(--footer-after-background);
 }
 
@@ -39,7 +39,7 @@ footer .footer a {
 
 footer .footer .context {
   display: inline-block;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1rem;
 }
 
 footer .footer .context a {
@@ -65,9 +65,8 @@ footer .footer figure.logo {
   display: flex;
   flex-direction: row;
   flex-grow: 1;
-  justify-content: center;
+  place-content: center center;
   margin-inline-start: 0;
-  align-content: center;
   align-items: center;
 }
 
@@ -150,7 +149,7 @@ footer .footer dl dt label:nth-child(2) {
   display: none;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
   footer {
     flex-direction: column;
   }

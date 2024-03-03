@@ -31,12 +31,12 @@ jobs:
     if: github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion == 'success'
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Download pull request artifact
-        uses: actions/github-script@v4
+        uses: actions/github-script@v7
         with:
           script: |
-            const artifacts = await github.actions.listWorkflowRunArtifacts({
+            const artifacts = await github.rest.actions.listWorkflowRunArtifacts({
                owner: context.repo.owner,
                repo: context.repo.repo,
                run_id: ${{ github.event.workflow_run.id }},
@@ -44,7 +44,7 @@ jobs:
             const websiteArtifact = artifacts.data.artifacts.filter((artifact) => {
               return artifact.name == 'website'
             })[0];
-            var download = await github.actions.downloadArtifact({
+            var download = await github.rest.actions.downloadArtifact({
                owner: context.repo.owner,
                repo: context.repo.repo,
                artifact_id: websiteArtifact.id,
@@ -65,11 +65,11 @@ jobs:
           DEPLOY_URL=$(yarn preview:netlify --alias="pr-${PR_NUMBER}" --message="Preview for ${PR_URL}" --json 2> /dev/null |jq -r .deploy_url)
           echo "DEPLOY_URL=${DEPLOY_URL}" >> $GITHUB_ENV
           echo "ISSUE_NUMBER=${PR_NUMBER}" >> $GITHUB_ENV
-      - uses: actions/github-script@v3
+      - uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            github.issues.createComment({
+            github.rest.issues.createComment({
               issue_number: Number(process.env.ISSUE_NUMBER),
               owner: context.repo.owner,
               repo: context.repo.repo,

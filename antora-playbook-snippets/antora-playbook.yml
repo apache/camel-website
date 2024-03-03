@@ -17,10 +17,10 @@ content:
     - url: https://github.com/apache/camel.git
       branches:
         - main
+        - camel-4.4.x
         - camel-4.0.x
+        - camel-3.22.x
         - camel-3.21.x
-        - camel-3.20.x
-        - camel-3.14.x
       start_paths:
         # eip
         - core/camel-core-engine/src/main/docs
@@ -32,33 +32,27 @@ content:
       # Let's keep latest active development + LTS active versions only
       branches:
         - main
-        - release-2.1.x
-        - release-2.0.x
-        - release-1.12.x
+        - release-2.2.x
       start_path: docs
 
     - url: https://github.com/apache/camel-k-runtime.git
       branches:
         - main
         - release-3.2.x
-        - release-2.16.x
-        - release-1.17.x
       start_path: docs
 
     - url: https://github.com/apache/camel-kamelets.git
       branches:
         - main
+        - 4.4.x
         - 4.0.x
-        - 3.21.x
-        - 3.20.x
       start_path: docs
 
     - url: https://github.com/apache/camel-quarkus.git
       branches:
         - main
-        - 3.5.x
+        - 3.8.x
         - 3.2.x
-        - 2.16.x
       start_path: docs
 
     - url: https://github.com/apache/camel-quarkus-examples.git
@@ -68,7 +62,7 @@ content:
     - url: https://github.com/apache/camel-kafka-connector.git
       branches:
         - main
-        - camel-kafka-connector-3.20.x
+        - camel-kafka-connector-4.0.x
       start_paths:
         - docs
         - connectors
@@ -76,10 +70,10 @@ content:
     - url: https://github.com/apache/camel-spring-boot.git
       branches:
         - main
+        - camel-spring-boot-4.4.x
         - camel-spring-boot-4.0.x
+        - camel-spring-boot-3.22.x
         - camel-spring-boot-3.21.x
-        - camel-spring-boot-3.20.x
-        - camel-spring-boot-3.14.x
       start_paths:
         - components-starter
         - core
@@ -89,9 +83,8 @@ content:
     - url: https://github.com/apache/camel-karaf.git
       branches:
         - main
+        - camel-karaf-3.22.x
         - camel-karaf-3.21.x
-        - camel-karaf-3.20.x
-        - camel-karaf-3.14.x
       start_path: docs
 
 ui:

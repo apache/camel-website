@@ -7,7 +7,7 @@
   padding: 0 1rem 4rem;
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (width >= 1025px) {
   .doc {
     font-size: var(--doc-font-size--desktop);
     margin: var(--doc-margin--desktop);
@@ -645,7 +645,7 @@
 }
 
 .doc .conum[data-value] {
-  border: 1px solid currentColor;
+  border: 1px solid currentcolor;
   border-radius: 100%;
   display: inline-block;
   font-family: var(--body-font-family);
@@ -732,14 +732,14 @@
 }
 
 /* for mobile screens */
-@media screen and (max-width: 626px) {
+@media screen and (width <= 626px) {
   #preamble + .sect1,
   .doc .sect1 + .sect1 {
     overflow-wrap: break-word;
   }
 }
 
-@media screen and (max-width: 1024px) and (min-width: 480px) {
+@media screen and (width <= 1024px) and (width >= 480px) {
   .doc p code,
   .doc thead code {
     font-size: var(--body-font-size);
@@ -758,7 +758,7 @@ div.badges p {
 
 div.badges span {
   color: var(--color-white);
-  padding: 0.15rem 0.3rem 0.15rem 0.3rem;
+  padding: 0.15rem 0.3rem;
   font-weight: normal;
   font-style: normal;
   font-size: 0.8rem;

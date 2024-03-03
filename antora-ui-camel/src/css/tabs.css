@@ -1,4 +1,4 @@
-@import '@asciidoctor/tabs/dist/css/tabs.css';
+@import url('@asciidoctor/tabs/dist/css/tabs.css');
 
 .tabs {
   margin-top: 1.25em;
