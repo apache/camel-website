@@ -39,6 +39,13 @@ Karavan offers over 300 Camel Components and more than 100 Kamelets, some of whi
 
 ![configurable-kamelets-components.gif](configurable-kamelets-components.gif)
 
+## Simple installation
+
+We are constantly enhancing and streamlining the installation process. As of version 4.4, Karavan can be deployed on Docker using the docker-compose.yaml file and on Kubernetes through straightforward resource YAML files. There will no longer be a need for a custom installer or bespoke internal installation code.
+
+1. [Install on Docker](https://github.com/apache/camel-karavan/blob/4.4.0/docs/WEB_DOCKER.md)
+2. [Install on Kubernetes](https://github.com/apache/camel-karavan/blob/4.4.0/docs/WEB_KUBERNETES.md)
+
 ## The latest and greatest
 
 Karavan is updated with the latest versions of the frameworks and libraries it utilizes and is built with.
