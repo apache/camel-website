@@ -1,6 +1,6 @@
 ---
 date: 2024-02-17
-eol: 2024-02-17
+eol: 2025-02-17
 draft: false
 type: release-note
 version: 4.4.0
