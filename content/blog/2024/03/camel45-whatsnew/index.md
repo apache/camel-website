@@ -13,27 +13,27 @@ This release introduces a set of new features and noticeable improvements that w
 ## Camel Core
 
 When using Kamelets and/or Rest DSL then Camel will now hide their intermediate routes and only show user routes.
-The number of routes that Camel logs on startup is thus only the number of _user_ routes. This avoid to clutter
-up the list of routes in monitoring and management tools as well.
+The number of routes that Camel logs on startup is thus only the number of _user_ routes. This also avoids cluttering
+up the list of routes in monitoring and management tools.
 
 ## Camel Main
 
 We added the concept of _profile_ to running Camel standalone or via camel-jbang. For example camel-jbang runs in `dev` profile
 by default, and `camel-main` would run in `prod` profile by default. 
 
-Using profiles allows you to have profile specific _application.properties_ files, such as `application-dev.properties` that
-that can provide environment specific configuration, for example hostname, username and passwords for connecting to systems.
+Using profiles allows you to have profile-specific _application.properties_ files, such as `application-dev.properties` that
+that can provide environment-specific configuration, for example hostname, username and passwords for connecting to systems.
 To make it quick and easy to have settings for development, and then avoid having to remove those when building for UAT or production.
 
 ## Camel JBang
 
-We fixed some issues using Camel JBang with Windows. But we would like more feedback from Windows users.
+We fixed some issues using Camel JBang with Windows, but we would still like more feedback from Windows users.
 
 Added `/q/info` as HTTP console to show some basic information about the Camel application. 
 
 ## Camel Catalog
 
-We now generate more metadata for evert Camel release and have added the following information into `camel-catalog`,
+We now generate more metadata for every Camel release and have added the following information into `camel-catalog`,
 that can be useful for Camel tooling such as Karavan and Kaoto:
 
 - `dev-consoles` - Provides a list of all available developer consoles
@@ -44,7 +44,7 @@ that can be useful for Camel tooling such as Karavan and Kaoto:
 
 Added _context_ level metrics as well, so you have combined metrics for the entire Camel application.
 
-Adjusted the tags in the metrics to be shorter. See the upgrade guide for more details.
+Adjusted the tags in the metrics to be shorter. See the [upgrade guide](/manual/camel-4x-upgrade-guide-4_5.html) for more details.
 
 ## OpenAPI v2
 
@@ -52,15 +52,15 @@ Support for OpenAPI v2 (swagger) has been removed. Use OpenAPI v3 spec instead.
 
 ## Miscellaneous
 
-The `camel-spring-rabbitmq` can now automatic bind and create if setting `autoDeclareProducer=true` for the producers as well.
+The `camel-spring-rabbitmq` can now automatically bind and create if setting `autoDeclareProducer=true` for the producers as well.
 
-The `camel-yaml-dsl` can now set error handler on the route level as well. Previously you must do this via route configuration.
+The `camel-yaml-dsl` can now set error handler on the route level as well. Previously you had to do this via route configuration.
 
 The `camel-kafka` has been upgraded to Kafka Client 3.7.
 
 The documentation has many grammar, typo and cosmetic changes.
 
-Upgraded many third-party dependencies to the latest release at the time of release.
+Upgraded many third-party dependencies to the latest releases at the time of release.
 
 ## New Components
 
