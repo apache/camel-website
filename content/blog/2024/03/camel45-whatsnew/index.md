@@ -21,7 +21,7 @@ up the list of routes in monitoring and management tools.
 We added the concept of _profile_ to running Camel standalone or via camel-jbang. For example camel-jbang runs in `dev` profile
 by default, and `camel-main` would run in `prod` profile by default. 
 
-Using profiles allows you to have profile-specific _application.properties_ files, such as `application-dev.properties` that
+Using profiles allows you to have profile-specific _application.properties_ files, such as `application-dev.properties`
 that can provide environment-specific configuration, for example hostname, username and passwords for connecting to systems.
 To make it quick and easy to have settings for development, and then avoid having to remove those when building for UAT or production.
 
