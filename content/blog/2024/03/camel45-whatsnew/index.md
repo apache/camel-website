@@ -1,6 +1,6 @@
 ---
 title: "Apache Camel 4.5 What's New"
-date: 2024-03-29
+date: 2024-03-28
 authors: [davsclaus]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 4.5 release.
@@ -49,6 +49,7 @@ Adjusted the tags in the metrics to be shorter. See the [upgrade guide](/manual/
 ## OpenAPI v2
 
 Support for OpenAPI v2 (swagger) has been removed. Use OpenAPI v3 spec instead.
+You can use online coverter tools such as: https://converter.swagger.io/
 
 ## Miscellaneous
 
