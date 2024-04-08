@@ -49,6 +49,9 @@ In the previous Camel K versions we had deprecated certain supported publishing 
 
 Mind that the [Spectrum](https://github.com/container-tools/spectrum) strategy will be very likely deprecated in future version of Camel K, leaving Jib as the only publishing strategy available out of the box. If you're still using it, you may think to start migrating to Jib as soon as possible.
 
+## Introduce IntegrationProfile custom resource
+The new IntegrationProfile custom resource allows users overwrite settings (e.g. trait configurations) for multiple integrations that all reference the same profile. The IntegrationProfile resource is keen to replace the namespace local IntegrationPlatform as well as the secondary platform. In contrast to the IntegrationPlatform resource the IntegrationProfile only exposes a subset of settings that are eligible to be controlled on a user namespace level. In upcoming releases the IntegrationPlatform is meant to be an operator resource with restricted access (e.g. only adjustable by cluster admins). You can now start using the IntegrationProfile as a declarative approach to adjusting settings for multiple integrations.
+
 ## Deprecated features
 While working on several optimizations, we've decided to deprecate a few features. In this version we've deprecated the `kamel run -d file:xyz` feature (plus the related Registry trait) and we've introduced a flag to control a potential dangerous behavior which was happening by default in Kamelets. The `mount.scan-kamelets-implicit-label-secrets` is deprecated and still enabled by default in this version.
 
