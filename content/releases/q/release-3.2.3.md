@@ -1,7 +1,7 @@
 ---
 url: "/releases/q-3.2.3/"
 date: 2023-12-05
-eol: 2024-03-01
+eol: 2024-07-06
 type: release-note
 version: 3.2.3
 title: "New LTS Camel Quarkus release 3.2.3"
