@@ -35,7 +35,7 @@ WARNING: make sure not to downgrade to Camel K version 1 once you have upgraded 
 
 The old `v1alpha1.KameletBinding` will still be supported in this release in order to give you the time to make the needed change and move all your KameletBindings to [`v1.Pipe`](/camel-k/next/apis/camel-k.html#_camel_apache_org_v1_Pipe). Try to give priority to this operation because the `v1alpha1` is now deprecated and will be removed within the next versions of Camel K.
 
-There is no other important concern about the compatibility with the previous Camel K version. You can follow the [documentation provided for Camel K upgrade](/camel-k/next/contributing/upgrade.html) as usual.
+There is no other important concern about the compatibility with the previous Camel K version. 
 
 We suggest to take the opportunity of this major upgrade to detect any usage of deprecated parameters in the [Camel K API](/camel-k/next/apis/camel-k.html) and do the switch accordingly.
 
