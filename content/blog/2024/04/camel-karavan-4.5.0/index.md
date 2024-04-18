@@ -40,7 +40,7 @@ We've introduced a dynamic feature to enhance your workflow efficiency. To exped
 
 ![used-eip](used-eip.png)
 
-##
+## Upgrading
 
 Upgrade to Apache Camel Karavan 4.5.0 today and experience a more seamless and effective integration process, tailored to help you keep pace with the demands of complex integration scenarios. Embrace the power of small changes; they might just make a big difference!
 
