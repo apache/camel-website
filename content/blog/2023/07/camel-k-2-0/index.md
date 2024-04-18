@@ -215,7 +215,6 @@ Beside that we have also worked on a series of documentation or blog post with t
 * [Camel K operator fine tuning](/camel-k/next/installation/advanced/advanced.html)
 * [Camel K Maven best practices](/camel-k/next/installation/advanced/maven.html)
 * [Camel K GitOps unopinionated approach](/blog/2023/07/camel-k-gitops/)
-* [Camel K upgrade process](/camel-k/next/contributing/upgrade.html)
 * [Camel K tracing](/blog/2023/03/camel-k-telemetry/)
 
 We've more planned for the next months so, stay tuned.
