@@ -1,6 +1,6 @@
 ---
 title: "RELEASE 4.4.2"
-date: 2024-03-14
+date: 2024-04-25
 draft: false
 authors: [gzurowski]
 categories: ["Releases"]
