@@ -19,8 +19,6 @@ Camel K 1.4.0 comes with an embedded [Kamelet catalog](/camel-kamelets/next/) co
 
 When installing the operator into a namespace (but also globally in the cluster), the operator installs all the kamelets from the catalog ([version 0.2.1](https://github.com/apache/camel-kamelets/tree/v0.2.1)), so that any integration can use them directly.
 
-Users can bind them to a specific destination by writing a YAML binding file, as explained in the [specific documentation related to each Kamelet](/camel-kamelets/next/aws-sqs-source.html#_knative_source).
-
 Or, you can use the new `kamel bind` command (see below).
 
 **Note:** it's easy to write your own Kamelet and publish it to the Apache Catalog. Take a look at the [Kamelets developer guide](/camel-k/next/kamelets/kamelets-dev.html).
