@@ -10,22 +10,40 @@ Apache Camel 4.6 has just been [released](/blog/2024/05/RELEASE-4.6.0/).
 
 This release introduces a set of new features and noticeable improvements that we will cover in this blog post.
 
-## Camel Core
-
-TODO:
-
-## Camel Main
-
-TODO:
-
 ## Camel JBang
 
 We fixed some issues using Camel JBang with Windows, but we would still like more feedback from Windows users.
 
-TODO: Run with runtime
-TODO: logging level in application.properties
-TODO: datasource spring-boot style
+Camel JBang is __primary__ intended to be Camel standalone only. However, we added
+support for running with Spring Boot or Quarkus directly.
 
+You use the `--runtime` option to specify which platform to use, as shown below:
+
+    $ camel run foo.camel.yaml --runtime=spring-boot
+
+And for Quarkus:
+
+    $ camel run foo.camel.yaml --runtime=quarkus
+
+There are several limitations, one would be that Spring Boot and Quarkus cannot automatically detect new components and download JARs.
+(you can stop and run again to update dependencies).
+
+You can now also configure logging levels per package name in `application.properties` as shown below:
+
+    logging.level.org.apache.kafka = DEBUG
+    logging.level.com.foo.something = TRACE
+
+You can also do this using Quarkus _style_:
+
+    quarkus.log.category."org.apache.kafka".level = DEBUG
+    quarkus.log.category."com.foo.something".level = TRACE
+
+And we also made it possible to define JDBC `DataSource` using Spring Boot _style_ directly in `application.properties` as follows:
+
+    spring.datasource.url= jdbc:sqlserver://db.example.net:1433;databaseName=test_db
+    spring.datasource.username=user
+    spring.datasource.password=password
+    spring.datasource.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
 
 ## DSL
 
@@ -36,7 +54,28 @@ Added `setVariables` EIP to make it possible to set multiple variables from a si
 
 ## Rest DSL with contract first 
 
-TODO:
+The Rest DSL has been improved with a _contract first_ approach using vanilla OpenAPI specification.
+
+The _contract first_ approach requires you to have an existing OpenAPI v3 specification file.
+This contract is a standard OpenAPI contract, and you can use any existing API design tool to build such contracts.
+
+This makes it super easy to define Rest DSL in Camel from an existing OpenAPI specification file, all you do
+is to declare this small piece of Rest DSL code:
+
+For example in Java DSL:
+
+    public void configure() throws Exception {
+        rest().openApi("petstore-v3.json");
+    }
+
+The `petstore-v3.json` is the OpenAPI specification file, and Camel will automatically parse and map each API endpoint
+to a Camel route with the `direct:operationId` convention.
+
+During development of these API endpoints in Camel you can tell Camel to ignore missing routes, so you can build, run, and test
+this one API at a time. 
+
+Here is an example for Camel Spring Boot: https://github.com/apache/camel-spring-boot-examples/tree/main/openapi-contract-first
+And here is an example for YAML DSL with JBang: https://github.com/apache/camel-kamelets-examples/tree/main/jbang/open-api-contract-first
 
 ## Miscellaneous
 
@@ -55,7 +94,6 @@ The Rest DSL `clientRequestValidation` now supports validating for allowed value
 The `@PropertyInject` can inject as an array/list type where the string value is splitted by a separator (such as a comma)
 
 Camel Spring Boot has been upgraded to Spring Boot 3.2.5.
-
 
 ## New Components
 
