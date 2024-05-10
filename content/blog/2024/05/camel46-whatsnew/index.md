@@ -89,6 +89,8 @@ The `camel-sql` component can now use variables in the SQL queries.
 The `camel-kafka` component is upgraded to Kafka 3.7 client. Added `JMSDeserializer` to `camel-kafka` that users can use to
 let Kafka handle serializing/de-serializing JMS headers correct by their expected types (long, int, string etc.)
 
+The `camel-rest-openapi` - Refactored to use another json validator library that is Jakarta EE compatible.
+
 The Rest DSL `clientRequestValidation` now supports validating for allowed values as well.
 
 The `@PropertyInject` can inject as an array/list type where the string value is splitted by a separator (such as a comma)
@@ -101,7 +103,6 @@ This release only brings two new components:
 
 - `camel-google-pubsub-lite` - Send and receive messages to/from Google Cloud Platform PubSub Lite Service.
 - `camel-pinecone` - Perform operations on the Pinecone Vector Database.
-- `camel-rest-openapi` - Refactored to use another json validator library that is Jakarta EE compatible.
 
 ## Upgrading
 
