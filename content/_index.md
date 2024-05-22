@@ -213,7 +213,7 @@ Apache Camel Karaf makes running Camel in the OSGi container.
 {{< div "content" >}}
 
 ## Camel Karavan
-Apache Camel Karavan is a mastering tool to facilitate integration and speed up development through the process visualization.
+Apache Camel Karavan a Low-code Data Integration Platform.
 <p><a class="button dark" href="/docs/">Read More</a></p>
 
 {{< /div >}}
@@ -232,7 +232,7 @@ Apache Camel Karavan is a mastering tool to facilitate integration and speed up 
 
 ## Camel JBang
 
-The Camel CLI for easily getting started with Apache Camel.
+Camel JBang is CLI tooling to easily get started and for building low-code integrations with Camel.
 
 <p><a class="button dark" href="/docs/">Read More</a></p>
 
