@@ -4,6 +4,8 @@ title: "Articles"
 
 ## Camel Videos
 
+
+* [Apache Camel and ActiveMQ at UPS](https://www.youtube.com/watch?v=TDjwr16uaYU) May 2024 where UPS presented their use of Apache Camel and ActiveMQ on OpenShift processing tens of billions messages a day. 
 * [Quarkus Insights #110: Quarkiverse Extension Spotlight of Apache Camel](https://www.youtube.com/watch?v=stBjGMu73B0) November 2022 where Apache Camel was presented on the Quarkus webcast (1h session).
 * [Cloud Native My Camel: from Low Code to Pro Code, inject Serverless & Cloud Native Goodness](https://www.youtube.com/watch?v=af6xXqvxwjE) by Michael Costello from June 2022, 45-min session on low-code Apache Camel, Camel K and demo with Karavan, the Camel UI designer. 
 * [Connecting the World to Knative with Kamelets](https://www.youtube.com/watch?v=Abxp_HW6lJE) by Roland Huss at KnativeCon 2022, 30 min session on using Camel K and Kamelets as sink and sources for KNative.  
