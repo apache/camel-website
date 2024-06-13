@@ -11,9 +11,15 @@ preview: "Kaoto 2.0 has been released"
   <img src="CamelKaoto.png" alt="Kaoto" height="400"/>
 </div>
 
+<br/><strong>
 After previously releasing 3 technical previews, we are thrilled to finally announce the release of Kaoto 2.0, marking the first big release after the project aligned to be much closer to Apache Camel.
+</strong>
 
 ## What is Kaoto?
+
+<div style="text-align: center">
+  <img src="logo-kaoto.png" alt="Kaoto" height="70"/>
+</div>
 
 Kaoto, short for Kamel Orchestration Tool, is a low-code and no-code integration designer that allows users to create and edit integrations based on Apache Camel. It is extendable, flexible, and adaptable to various use cases, making it a versatile tool for integration projects. You can work both visually and also directly access the source code giving you a full round-trip editing experience.
 
@@ -82,8 +88,9 @@ There are many more changes and improvements for you to discover. Try it out!
 
 ## Let's build it together
 
-Let us know what you think by joining us in the [GitHub discussions](https://github.com/orgs/KaotoIO/discussions). Do you have an idea how to improve Kaoto? Would you love to see a useful feature implemented or simply ask a question? Please [create an issue](https://github.com/KaotoIO/kaoto/issues/new/choose) or use the [discussion forums](https://
-github.com/orgs/KaotoIO/discussions).
+Let us know what you think by joining us in the [GitHub discussions](https://github.com/orgs/KaotoIO/discussions). Do you have an idea how to improve Kaoto? Would you love to see a useful feature implemented or simply ask a question? Please do so [here](https://github.com/KaotoIO/kaoto/issues/new/choose). 
+
+You can also join the [Kaoto channel](https://camel.zulipchat.com/#narrow/stream/441302-kaoto) on the Camel Zulip Chat.
 
 You can also check out our [examples repository](https://github.com/KaotoIO/kaoto-examples) to see some more advanced use cases which were set up using Kaoto.
 
@@ -97,15 +104,13 @@ Our journey just started and we have a full backlog of exciting functionalities 
 
 Kaoto continues to be available as [a VS Code extension](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-kaoto), ensuring seamless integration into your development environment. We also host [a showcase environment](https://kaotoio.github.io/kaoto/) accessible in your browser for easy exploring.
 
+---
+<br/><br/>
 <div style="text-align: center">
 We invite you to explore these exciting new features and
 unleash your inner Integration Wizard.
-</div>
-
-<div style="text-align: center">
+<br/><br/>
   <img src="integrationWizard.png" alt="Integration Wizard" height="400"/>
-</div>
-
-<div style="text-align: center">
+<br/><br/>
 Give it a try today and <a href="https://github.com/orgs/KaotoIO/discussions">tell us</a> about your experience!
 </div>
