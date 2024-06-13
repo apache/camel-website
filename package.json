@@ -56,7 +56,7 @@
     "html-validate": "^8.9.1",
     "hugo-extended": "^0.121.2",
     "js-yaml": "~4.1.0",
-    "netlify-cli": "^17.13.2",
+    "netlify-cli": "17.26.3",
     "npm-run-all": "~4",
     "opal-runtime": "1.0.11",
     "pino-pretty": "^5.0.0",
