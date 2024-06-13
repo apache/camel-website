@@ -12,11 +12,11 @@ preview: Quick review of Camel K development in 2022
 
 ## Camel K 2022 roadmap update
 
-It's been a long ride and here a short resume of what we accomplished during the last year in Camel K project. We had a [roadmap plan](/blog/2022/03/camel-k-roadmap-2022/) defined at the begining of the year, let's have a look and see what we accomplished:
+It's been a long ride and here a short resume of what we accomplished during the last year in Camel K project. We had a [roadmap plan](/blog/2022/03/camel-k-roadmap-2022/) defined at the beginning of the year, let's have a look and see what we accomplished:
 
 ### Multi-architecture images partially achieved
 
-This was a nice contribution that is allowing to leverate the capability of building multi-architecture image containers via Buildah. Definetely a great way to start experimenting with the feature and likely something we'll be willing to invest time in 2023.
+This was a nice contribution that is allowing to leverage the capability of building multi-architecture image containers via Buildah. Definitely a great way to start experimenting with the feature and likely something we'll be willing to invest time in 2023.
 
 ### Nightly releases
 
@@ -24,7 +24,7 @@ We now use the very last bits from Camel K Runtime and Kamelets as well. If you'
 
 ### Adding `kamel install` feature parity to Kustomize
 
-We've worked to strenghten the offering of installation via [Kustomize](/camel-k/next/installation/advanced/kustomize.html), that may see more advance in 2023.
+We've worked to strengthen the offering of installation via [Kustomize](/camel-k/next/installation/installation.html#kustomize), that may see more advance in 2023.
 
 ### Provided a full description of the APIs
 
@@ -62,4 +62,4 @@ No more need to publish your local dependency to a Maven repository. Just use it
 
 We've developed a series of "How to" blog post to show main operations on Camel K: [testing](/blog/2022/11/camel-k-jbang/), [monitoring](/blog/2022/07/camel-k-monitoring-ops/), [promoting](/blog/2022/10/camel-k-cicd/) an Integration. You now knows how to do all that stuff ;)
 
-Beside all that stuff, we've made an enourmous work of stabilization (73 known bugs fixed) and an hidden work of automating the process that will strengthen our ability to focus on deliverying new exciting features. On behalf of Camel community we wish you a Happy New Year. 2023 is going to be a great year for Apache Camel with Camel 4 on the way!
+Beside all that stuff, we've made an enormous work of stabilization (73 known bugs fixed) and an hidden work of automating the process that will strengthen our ability to focus on delivering new exciting features. On behalf of Camel community we wish you a Happy New Year. 2023 is going to be a great year for Apache Camel with Camel 4 on the way!
