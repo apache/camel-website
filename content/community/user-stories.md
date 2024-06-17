@@ -50,6 +50,7 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |[ModusBox PortX](https://modusbox.com/portx-platform/)|PortX, the Integration Platform as a Service (IPaaS) for financial institutions, is built on the open source Apache Camel framework.|
 |[Guidewire Integration Framework](https://www.guidewire.com/blog/technology/cloud-integration-framework-the-right-tools-for-the-job/)| Integration Gateway is an open framework for developing integration apps that bridge Guidewire APIs with external apps and services. It is based on Apache Camel.|
 |[Multi-Channel Framework (MCF)](https://www.felpfe.com/multi-channel-framework-mcf/)| MCF utilizes Camel to provide developers with an empowering framework, enabling them to create, test, and deploy integration scenarios intuitively, without the need for extensive coding. By leveraging the robust capabilities of Apache Camel, MCF streamlines the development workflow, reducing complexity and the reliance on manual coding. Its configuration-driven approach facilitates seamless integration using Camel, allowing developers to achieve their goals with minimal coding effort.|
+|[SAP Integration Suite](https://www.sap.com/products/technology-platform/integration-suite.html)| The Cloud Integration capability of SAP's iPaaS product uses Apache Camel.
 {{< /table >}}
 
 ## Developer Tooling
