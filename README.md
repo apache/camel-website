@@ -8,7 +8,7 @@ resources that are to be published.
 Tools used to generate the website:
  - [Git](https://git-scm.com/) a source code management tool used to fetch document sources from different
    github repositories.
- - [Node.js](https://nodejs.org/) a JavaScript runtime used to build the website. You will need to use Node.js version 10.
+ - [Node.js](https://nodejs.org/) a JavaScript runtime used to build the website. You will need to use Node.js version 18+.
  - [yarn](https://yarnpkg.com/) a blazing fast dependency and package manager tool used to download
    and manage required libraries.
  - (installed via yarn) [Gulp](http://gulpjs.com/) a task automation tool. Used to build the Camel
@@ -56,7 +56,7 @@ Make sure that you have Node.js (herein "`Node`") installed.
 
 If this command fails with an error, you do not have Node installed.
 
-This project requires the Node LTS version 14 (e.g., v14.15.0).
+This project requires the Node LTS version 18+ (e.g., v20.11.1).
 
 Please make sure to have a suitable version of Node installed. You have several options to install
 Node on your machine.
@@ -67,35 +67,35 @@ Node on your machine.
 - Install using [Homebrew](https://brew.sh/) and [Node formulae](https://formulae.brew.sh/formula/node)
 - Install from official [Node packages](https://nodejs.org/en/download/)
 
-An easy step to step guide to install nvm and install node v14 on your local system is as follows:
+An easy step to step guide to install nvm and install node v18 on your local system is as follows:
 
     $ touch ~/.bash_profile
-    $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.36.0/install.sh | bash
+    $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.39.7/install.sh | bash
     $ source ~/.nvm/nvm.sh
-    $ nvm install 14
+    $ nvm install 20
 
 
 Note - If you have different Node version other than Node LTS version 14 you can use following command to make
-Node LTS version 14 as default Node version.
+Node LTS version 20 as default Node version.
 
-    $ nvm use 14
+    $ nvm use 20
 
 ### Installation of nvm on Windows
 
 Note - The following steps need to be ran on cmd as administrator only.
 
-An easy step to step guide to install nvm and install node v14 on your local system is as follows:
+An easy step to step guide to install nvm and install node v20 on your local system is as follows:
 
     > choco install nvm
-    > nvm install 14
+    > nvm install 20
 
 Note - If you have different Node version other than Node LTS version 14 you can use following command to make
-Node LTS version 14 as default Node version.
+Node LTS version 20 as default Node version.
 
-    > nvm use 14
+    > nvm use 20
 
 
-Now that you have Node 14 installed, you can proceed with checking the Yarn installation.
+Now that you have Node 20 installed, you can proceed with checking the Yarn installation.
 
 #### Yarn
 
