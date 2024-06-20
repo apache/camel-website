@@ -62,6 +62,8 @@ jobs:
           PR_NUMBER=$(head -1 pull_request/number)
           PR_NUMBER=${PR_NUMBER//[^0-9]/}
           PR_URL="https://github.com/apache/camel-website/pull/${PR_NUMBER}"
+          echo "using modifications"
+          yarn preview:netlify --alias="pr-${PR_NUMBER}" --message="Preview for ${PR_URL}" --json
           DEPLOY_URL=$(yarn preview:netlify --alias="pr-${PR_NUMBER}" --message="Preview for ${PR_URL}" --json 2> /dev/null |jq -r .deploy_url)
           echo "DEPLOY_URL=${DEPLOY_URL}" >> $GITHUB_ENV
           echo "ISSUE_NUMBER=${PR_NUMBER}" >> $GITHUB_ENV
