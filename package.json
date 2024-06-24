@@ -25,7 +25,7 @@
     "update:dedupe": "yarn workspaces foreach --all dedupe",
     "preview": "run-s -l build:antora preview:hugo",
     "preview:hugo": "hugo server --bind=0.0.0.0 -D",
-    "preview:netlify": "netlify deploy --dir public",
+    "preview:netlify": "netlify deploy --dir public --cwd .",
     "build:antora-local-full": "antora local-antora-playbook-full.yml --stacktrace --clean --fetch",
     "build:antora-local-partial": "antora local-antora-playbook-partial.yml --stacktrace",
     "build:antora-local-full2": "antora antora-playbook-local-full.yml --stacktrace --clean --fetch",
