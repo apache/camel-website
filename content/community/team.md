@@ -120,6 +120,7 @@ If you have been contributing to the Apache Camel project, and you want your nam
 | Dimitrios Liapis        |                                |
 | Erik Onnen              |                                |
 | Fabrizio Spataro        | Bizmate                        |
+| Fan Yang                |                                |
 | Fernando Ribeiro        |                                |
 | Glen Klyuzner           | Tullib                         |
 | Hakan Guleryuz          | ASPone                         |
