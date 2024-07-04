@@ -12,13 +12,47 @@ This release introduces a set of new features and noticeable improvements that w
 
 ## Camel Core
 
+The _route template_ has some fixes and improvements, such as that a full local copy
+of the template is created when creating routes from the template; this prevents _unforeseen side effects_
+when the same template is used later to create new routes.
+
+## Camel Management
+
+Added _remote_ performance counters to `CamelContext` and `Routes` which counts only
+messages that are received from an endpoint that is _remote_. In other words internal endpoints
+such as timers, cron, seda etc. are not being counted. This makes it quicker and easier
+to know how many messages Camel has processed received from external systems.
+
 ## Camel JBang
+
+Many bug fixes and improvements to make the overall use of this great tool much better.
+
+The `camel get bean` command shows your custom _beans_ from YAML and XML DSLs which makes
+it easy to see their configuration vs runtime properties, to ensure they are configured correctly.
+
+Added `camel get rest` command to easily see all your rest endpoint and operations hosted in your Camel integrations.
+
+The `camel generate` command has been moved into its own plugin, which must be installed first to be usable.
 
 ## Camel Tracing
 
+Added more trace decorators for more components. This gives more components specific metadata
+in the trace spans. 
+
 ## Miscellaneous
 
+The `camel-as2` has been made more robust and better support for using compression.
+
+Added `substring`, `replace` and `fromRouteId` functions to the simple language.
+
+When using custom beans in YAML and XML DSL then constructor parameters now support
+to lookup others beans.
+
+We have fixes older reported bugs, and at this time of writing there are 12 known in JIRA.
+
 Upgraded many third-party dependencies to the latest releases at the time of release.
+
+The `camel-spring-boot` is upgraded to latest Spring Boot 3.3.1 release.
 
 ## New Components
 
