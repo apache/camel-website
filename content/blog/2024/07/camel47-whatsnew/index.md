@@ -48,7 +48,7 @@ Added `substring`, `replace` and `fromRouteId` functions to the simple language.
 When using custom beans in YAML and XML DSL then constructor parameters now support
 to lookup others beans.
 
-We have fixes older reported bugs, and at this time of writing there are 12 known in JIRA.
+We have fixes older reported bugs, and at this time of writing there are 8 known in JIRA.
 
 Upgraded many third-party dependencies to the latest releases at the time of release.
 
