@@ -50,6 +50,9 @@ to lookup others beans.
 
 We have fixes older reported bugs, and at this time of writing there are 8 known in JIRA.
 
+We have also fixed and made our CI based test suite more stable and only have a few flaky tests
+from time to time, across 4 different OS platforms.
+
 Upgraded many third-party dependencies to the latest releases at the time of release.
 
 The `camel-spring-boot` is upgraded to latest Spring Boot 3.3.1 release.
