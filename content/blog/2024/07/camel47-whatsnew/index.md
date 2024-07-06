@@ -23,6 +23,20 @@ messages that are received from an endpoint that is _remote_. In other words int
 such as timers, cron, seda etc. are not being counted. This makes it quicker and easier
 to know how many messages Camel has processed received from external systems.
 
+For example suppose you have a small Camel integration with 2 routes: (timer and kafka).
+The timer is triggering every second, and kafka is _remote_ and thus will only trigger when a message is received from Kafka.
+
+If you use `camel-jbang` you can easily see this information as follows:
+
+```bash
+$ camel get
+  PID   NAME    CAMEL  PLATFORM        PROFILE  READY  STATUS   RELOAD  AGE   ROUTE  MSG/S  TOTAL  FAIL  INFLIGHT  LAST  DELTA  SINCE-LAST
+ 42240  cheese  4.7.0  JBang v0.116.0  dev       1/1   Running       0  1m8s    2/2   1.01   1/65   0/0       0/0     0     -1     1s/1s/-
+```
+
+Here the _TOTAL_, _FAIL_, _INFLIGHT_ columns have been updated to show two numbers separated by slash.
+The number `1/65` means that there has been only 1 remote message, and 65 in total, so that means the internal timer has triggered 64 times.
+
 ## Camel JBang
 
 Many bug fixes and improvements to make the overall use of this great tool much better.
