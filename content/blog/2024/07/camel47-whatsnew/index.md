@@ -16,6 +16,9 @@ The _route template_ has some fixes and improvements, such as that a full local 
 of the template is created when creating routes from the template; this prevents _unforeseen side effects_
 when the same template is used later to create new routes.
 
+Cleaned up the collection of type convertion statistics, reducing the need for runtime checks and simplifying 
+the code.
+
 ## Camel Management
 
 Added _remote_ performance counters to `CamelContext` and `Routes` which counts only
