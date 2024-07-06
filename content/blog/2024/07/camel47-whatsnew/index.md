@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 4.7 What's New"
 date: 2024-07-12
-authors: [davsclaus,gzurowski]
+authors: [davsclaus,gzurowski,orpiske]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 4.7 release.
 ---
@@ -82,6 +82,13 @@ The `camel generate` command has been moved into its own plugin, which must be i
 Added more trace decorators for more components. This gives more components specific metadata
 in the trace spans. 
 
+## Camel Tests
+
+We have started a multi-release effort to cleanup the base class used for testing. In this release
+we introduced a new set of classes for configuring test behavior, marked several APIs as deprecated, 
+split some of the responsibilities of the `CamelTestSupport` class. This change aims to make the 
+testing code more aligned with JUnit 5 features and provide a simpler interface for the users.
+
 ## Miscellaneous
 
 The `camel-as2` has been made more robust and better support for using compression.
@@ -97,6 +104,8 @@ We have also fixed and made our CI based test suite more stable and only have a 
 from time to time, across 4 different OS platforms.
 
 Upgraded many third-party dependencies to the latest releases at the time of release.
+
+Upgraded several containers used to test Camel.
 
 The `camel-spring-boot` is upgraded to latest Spring Boot 3.3.1 release.
 
