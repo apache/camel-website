@@ -118,7 +118,7 @@ We have added a few new components:
 
 - `camel-activemq6` - JMS component that are preset for ActiveMQ 6.x
 - `camel-smooks` -  EDI, XML, CSV, etc. based data transformation using Smooks
-- `openapi-validator` - OpenAPI validator for Camel Rest DSL (using Atlassian Validator Client)
+- `camel-openapi-validator` - OpenAPI validator for Camel Rest DSL (using Atlassian Validator Client)
 
 ## Upgrading
 
