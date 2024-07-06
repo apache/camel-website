@@ -30,6 +30,35 @@ Many bug fixes and improvements to make the overall use of this great tool much 
 The `camel get bean` command shows your custom _beans_ from YAML and XML DSLs which makes
 it easy to see their configuration vs runtime properties, to ensure they are configured correctly.
 
+For example given the bean in the YAML DSL:
+
+```yaml
+- beans:
+    - name: DemoDatabase
+      type: "#class:org.apache.commons.dbcp2.BasicDataSource"
+      properties:
+        driverClassName: org.postgresql.Driver
+        username: "{{env:DEMO_DATASOURCE_USERNAME:scott}}"
+        password: "{{env:DEMO_DATASOURCE_PASSWORD:tiger}}"
+        url: "{{env:DEMO_DATASOURCE_URL:postgresql://localhost:5432}}"
+```
+
+Then `camel get bean --dsl` will output the beans with columns showing the configuration vs runtime value as follows:
+
+```bash
+$ camel get bean --dsl
+BEAN: DemoDatabase (#class:org.apache.commons.dbcp2.BasicDataSource):
+---------------------------------------------------------------------
+ PROPERTY         TYPE              CONFIGURATION                                            VALUE
+ password         java.lang.String  {{env:DEMO_DATASOURCE_PASSWORD:tiger}}                   tiger
+ driverClassName  java.lang.String  org.postgresql.Driver                                    org.postgresql.Driver
+ url              java.lang.String  {{env:DEMO_DATASOURCE_URL:postgresql://localhost:5432}}  postgresql://localhost:5432
+ username         java.lang.String  {{env:DEMO_DATASOURCE_USERNAME:scott}}                   mySpecialUser
+```
+
+Here we can learn that the password and url are using their default configured values.
+However, the username is `mySpecialUser` which is not the default value, and hence must be from the environment variable.
+
 Added `camel get rest` command to easily see all your rest endpoint and operations hosted in your Camel integrations.
 
 The `camel generate` command has been moved into its own plugin, which must be installed first to be usable.
