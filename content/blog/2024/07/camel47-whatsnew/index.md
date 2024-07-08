@@ -112,6 +112,29 @@ Upgraded several containers used to test Camel.
 
 The `camel-spring-boot` is upgraded to latest Spring Boot 3.3.1 release.
 
+The `camel-djl` now supports a more comprehensive set of machine learning applications as follows and is ready for a wider variety of machine learning use cases:
+- `cv/image_classification`
+- `cv/object_detection`
+- `cv/semantic_segmentation`
+- `cv/instance_segmentation`
+- `cv/pose_estimation`
+- `cv/action_recognition`
+- `cv/word_recognition`
+- `cv/image_generation`
+- `cv/image_enhancement`
+- `nlp/fill_mask`
+- `nlp/question_answer`
+- `nlp/text_classification`
+- `nlp/sentiment_analysis`
+- `nlp/token_classification`
+- `nlp/word_embedding`
+- `nlp/text_generation`
+- `nlp/machine_translation`
+- `nlp/multiple_choice`
+- `nlp/text_embedding`
+- `audio`
+- `timeseries/forecasting`
+
 ## New Components
 
 We have added a few new components:  
