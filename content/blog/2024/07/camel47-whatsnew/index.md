@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 4.7 What's New"
-date: 2024-07-12
-authors: [davsclaus,gzurowski,orpiske]
+date: 2024-07-15
+authors: [davsclaus,gzurowski,orpiske,tadayosi]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 4.7 release.
 ---
