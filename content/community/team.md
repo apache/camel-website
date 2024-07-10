@@ -115,6 +115,7 @@ If you have been contributing to the Apache Camel project, and you want your nam
 | Charles Anthony         |                                |
 | Christopher Köster      |                                |
 | Claus Straube           |                                |
+| Craig Ziesman           | Red Hat                        |
 | Dan Checkoway           |                                |
 | Dennis Byrne            | Thoughtworks                   |
 | Dimitrios Liapis        |                                |
