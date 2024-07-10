@@ -102,6 +102,7 @@ If you have been contributing to the Apache Camel project, and you want your nam
 | Arno Noordover          | het CAK                        |
 | Bahaa Zaid              |                                |
 | Barry Kaplan            |                                |
+| Bartosz Popiela         | bp                             |
 | Brett Meyer             | Impact Upgrade                 |
 | Brian Diesenhaus        |                                |
 | Brian Guan              |                                |
