@@ -83,7 +83,37 @@ The `camel generate` command has been moved into its own plugin, which must be i
 ## Camel Tracing
 
 Added more trace decorators for more components. This gives more components specific metadata
-in the trace spans. 
+in the trace spans.
+
+Camel now also includes more fine-grained service and protocol details in traces and in general for components that connects to remote systems.
+For example connecting to databases and messaging systems, often requires using database drivers, connection pools, and other means, which
+are configured _outside_ Apache Camel. And as such Camel may not be able to display the actual host:port that is used for the connection.
+
+We have made an effort to let Camel detect this and attempt to gather such details for a set of known connection pools, database drivers, cloud providers, etc.
+
+And our beloved Camel JBang is able to easily show this information. For example running the Camel 1.0 example (17 years old) using ActiveMQ JMS broker will now present it as follows:
+
+```bash
+$ camel get route
+  PID   NAME            ID      FROM                     REMOTE  STATUS   AGE  COVER  MSG/S  TOTAL  FAIL  INFLIGHT  MEAN  MIN  MAX  LAST  DELTA  SINCE-LAST
+ 75937  MyRouteBuilder  route1  activemq://test.MyQueue    x     Started  20s    0/1   0.00      0     0         0          0    0                    -/-/-
+ 75937  MyRouteBuilder  route2  file://test                x     Started  20s    0/1   0.00      0     0         0          0    0                    -/-/-
+```
+
+In the output above, we can see there are 2 routes, and that the first route is using the ActiveMQ component. However, we can not see the location of the broker
+but only that it's using the queue named `test.MyQueue`.
+
+In this new Camel 4.7 release, you can now execute the following command:
+
+```bash
+$ camel get service
+  PID   NAME            COMPONENT  DIR  ROUTE   PROTOCOL  SERVICE                           TOTAL  ENDPOINT
+ 75937  MyRouteBuilder  activemq   in   route1  jms       failover://tcp://localhost:61616      0  activemq://test.MyQueue
+```
+
+And as you can see from the output above, the `camel get service` shows what hostname and port is in use. In this example we run a local broker using Docker
+and hence why its `localhost:61616`. You can also see the direction from Camel point of view, meaning that Camel is receiving messages from the broker.
+If Camel is also sending messages to the broker, then the command will show more lines with direction out.
 
 ## Camel Tests
 
