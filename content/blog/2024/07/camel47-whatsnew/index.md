@@ -115,6 +115,8 @@ And as you can see from the output above, the `camel get service` shows what hos
 and hence why its `localhost:61616`. You can also see the direction from Camel point of view, meaning that Camel is receiving messages from the broker.
 If Camel is also sending messages to the broker, then the command will show more lines with direction out.
 
+And the `camel trace` command has also been enhanced to show this information when available.
+
 ## Camel Tests
 
 We have started a multi-release effort to cleanup the base class used for testing. In this release
