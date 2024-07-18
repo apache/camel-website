@@ -1,5 +1,5 @@
 ---
-title: "Kaoto v2.0 release"
+title: "Kaoto v2.1 release"
 date: 2024-07-16
 draft: false
 authors: [lordrip]
