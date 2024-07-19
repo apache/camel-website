@@ -14,7 +14,7 @@ directions about how to convert a conversation transcript into a Java object.
 
 Reading articles like [this](https://www.perfect-memory.com/unlock-the-potential-of-unstructured-data/) over the net, it seems that folks have a lot of unstructured data at disposal while not being able to take advantage on it. So probably, in the future we might expect to deal more and more with unstructured data extraction in integration flow.
 
-From there, I started to experiment about ways to do it with Apache Camel. In this article, I don't come up with full packaged examples but still can share some directions about how to do it. Precisely, we'll use the [langchain4j](https://github.com/langchain4j/langchain4j) high level api in conjunction with camel [bean binding capabilities](https://camel.apache.org/manual/bean-binding.html).
+From there, I started to experiment about ways to do it with Apache Camel. In this article, I don't come up with full packaged examples but still can share some directions about how to do it. Precisely, we'll use the [langchain4j](https://github.com/langchain4j/langchain4j) high level api in conjunction with camel [bean binding capabilities](manual/bean-binding.html).
 
 Let's share some directions.
 
@@ -121,7 +121,7 @@ The extracted `CustomPojo` could then be pretty printed with any home defined me
 
 # Let's send a conversation transcript to the route
 
-The goodness with Camel is that conversation transcript could originate from a lot of systems given the high number of [components available](https://camel.apache.org/components/4.4.x/index.html).
+The goodness with Camel is that conversation transcript could originate from a lot of systems given the high number of [components available](components/latest/index.html).
 
 So, let's send a conversation transcript into the route:
 
