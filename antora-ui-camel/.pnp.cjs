@@ -4895,10 +4895,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["fast-xml-parser", [\
-      ["npm:4.3.3", {\
-        "packageLocation": "./.yarn/cache/fast-xml-parser-npm-4.3.3-35a04105d1-501de1f38d.zip/node_modules/fast-xml-parser/",\
+      ["npm:4.4.1", {\
+        "packageLocation": "./.yarn/cache/fast-xml-parser-npm-4.4.1-b48f31eba7-0c05ab8703.zip/node_modules/fast-xml-parser/",\
         "packageDependencies": [\
-          ["fast-xml-parser", "npm:4.3.3"],\
+          ["fast-xml-parser", "npm:4.4.1"],\
           ["strnum", "npm:1.0.5"]\
         ],\
         "linkType": "HARD"\
@@ -7184,7 +7184,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/is-svg-npm-4.4.0-778e51f4da-cd5a0ba1af.zip/node_modules/is-svg/",\
         "packageDependencies": [\
           ["is-svg", "npm:4.4.0"],\
-          ["fast-xml-parser", "npm:4.3.3"]\
+          ["fast-xml-parser", "npm:4.4.1"]\
         ],\
         "linkType": "HARD"\
       }]\
