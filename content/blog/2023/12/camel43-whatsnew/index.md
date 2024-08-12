@@ -19,7 +19,7 @@ The simple language can now work better with JSon and XML with inlined jq/jsonpa
 can be used for basic message transformation. You can find an examples at:
 
 - [json transformation](https://github.com/apache/camel-kamelets-examples/tree/main/jbang/json-transform)
-- [xml transformation](/components/next/languages/xpath-language.html#_transforming_a_xml_message)
+- [xml transformation](/components/next/languages/xpath-language.html#_transforming_an_xml_message)
 
 We added `debugStandby` option to allow route debugging a running Camel application on demand. Being in standby mode
 has no overhead and only when debugging is activated then Camel runs in debugging mode, which can then be deactivated
