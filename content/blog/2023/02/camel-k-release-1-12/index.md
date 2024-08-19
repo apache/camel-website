@@ -55,7 +55,7 @@ We're now looking forward to see a ton of new tools based on Camel K!
 
 ## Distributed Tracing support moving to OpenTelemetry
 
-If you are already using Distributed Tracing tools then you might already know that the [CNCF](https://www.cncf.io) announced that they were [archiving the OpenTracing project](https://www.cncf.io/blog/2022/0T1/31/cncf-archives-the-opentracing-project/) in favor of the [OpenTelemetry project](https://opentelemetry.io/). In this new release we decided to introduce the [`telemetry` trait](/camel-k/next/traits/telemetry.html) based on OpenTelemetry and deprecate the [`tracing` trait](/camel-k/next/traits/tracing.html) based on OpenTracing.
+If you are already using Distributed Tracing tools then you might already know that the [CNCF](https://www.cncf.io) announced that they were [archiving the OpenTracing project](https://www.cncf.io/blog/2022/0T1/31/cncf-archives-the-opentracing-project/) in favor of the [OpenTelemetry project](https://opentelemetry.io/). In this new release we decided to introduce the [`telemetry` trait](/camel-k/next/traits/telemetry.html) based on OpenTelemetry and deprecate the `tracing` trait based on OpenTracing.
 
 
 ## Dependencies upgrade

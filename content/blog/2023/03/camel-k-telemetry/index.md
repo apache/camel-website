@@ -7,9 +7,9 @@ categories: ["Camel K", "Features", "Devops"]
 preview: "Camel K: how to configure Distributed Tracing for an Integration"
 ---
 
-Tracing is an important approach for controlling and monitoring the experience of users, it allows us to gather more information about an integration's performance. 
+Tracing is an important approach for controlling and monitoring the experience of users, it allows us to gather more information about an integration's performance.
 
-Camel K has been providing support for distributed tracing using OpenTracing since long time. At the beginning of 2022, the [CNCF](https://www.cncf.io) announced that they were [archiving the OpenTracing project](https://www.cncf.io/blog/2022/01/31/cncf-archives-the-opentracing-project/) in favor of the [OpenTelemetry project](https://opentelemetry.io/). OpenTelemetry is the latest solution created by merging OpenTracing and OpenCensus. As a result, we decided in Camel K 1.12 to introduce the [`telemetry` trait](/camel-k/next/traits/telemetry.html) based on OpenTelemetry. At the same time we decided to deprecate the [`tracing` trait](/camel-k/next/traits/tracing.html) based on OpenTracing.
+Camel K has been providing support for distributed tracing using OpenTracing since long time. At the beginning of 2022, the [CNCF](https://www.cncf.io) announced that they were [archiving the OpenTracing project](https://www.cncf.io/blog/2022/01/31/cncf-archives-the-opentracing-project/) in favor of the [OpenTelemetry project](https://opentelemetry.io/). OpenTelemetry is the latest solution created by merging OpenTracing and OpenCensus. As a result, we decided in Camel K 1.12 to introduce the [`telemetry` trait](/camel-k/next/traits/telemetry.html) based on OpenTelemetry. At the same time we decided to deprecate the `tracing` trait based on OpenTracing.
 
 I'll walk you through the configurations needed to support Distributed tracing for your Camel integrations in this blog post.
 
@@ -52,7 +52,7 @@ If Jaeger is not already available on your kubernetes instance, an easy way to i
 
 In short, to install the Jaeger operator you should:
 
-* Install cert-manager if it is not installed as it is required 
+* Install cert-manager if it is not installed as it is required
 ```sh
  # The cert manager is a prerequisite to the Jaeger operator (see https://cert-manager.io/docs/installation/)
 $ kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.10.1/cert-manager.yaml
