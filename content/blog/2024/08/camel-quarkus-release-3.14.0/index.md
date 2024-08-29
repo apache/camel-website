@@ -19,6 +19,6 @@ For more information, please check the [Release notes](/releases/q-3.14.0/).
 
 Please refer to the [Camel 4.7.0 release announcement](/blog/2024/07/camel47-whatsnew/) for more details.
 
-## Quarkus 3.14.0
+## Quarkus Platform 3.14.1
 
-Please refer to the [Quarkus 3.14.0 release announcement](https://quarkus.io/blog/quarkus-3-14-0-released/) for more details.
+Please refer to the [Quarkus 3.14.1 release announcement](https://quarkus.io/blog/quarkus-3-14-1-released/) for more details.
