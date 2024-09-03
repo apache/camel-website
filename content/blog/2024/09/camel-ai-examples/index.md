@@ -135,6 +135,12 @@ The code can be run with [Camel JBang](/manual/camel-jbang.html):
 camel run --camel-version=4.8.0-SNAPSHOT image_to_text.java
 ```
 
+(Post 4.8.0)
+
+```console
+camel run image_to_text.java
+```
+
 For example, let's copy an image of [Kabosu](https://kabosu112.exblog.jp/iv/detail/?s=9944144&i=201002%2F12%2F90%2Fa0126590_22301391.jpg) a.k.a. Doge into `data/inbox`. We should get the following result:
 
 ```console
@@ -231,6 +237,12 @@ This can also be run directly with Camel JBang:
 
 ```console
 camel run --camel-version=4.8.0-SNAPSHOT speech_to_text.java
+```
+
+(Post 4.8.0)
+
+```console
+camel run speech_to_text.java
 ```
 
 Let's try downloading sample Wave files `speech*.wav` from the [sample repository](https://github.com/megacamelus/camel-ai-examples/tree/main/data/speech) and copying them into `data/inbox`:
