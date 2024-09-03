@@ -12,6 +12,7 @@ resources
 .settings
 .hugo_data
 .pnp
+.vscode
 **/.DS_Store
 
 **/.yarn/*
