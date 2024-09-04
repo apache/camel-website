@@ -15,7 +15,7 @@ Before Camel 4.8.0, applications using Camel would have to implement custom chun
 
 ## Introducing the New Chunking DSL in Camel 4.8.0
 
-Starting with Camel 4.8.0, which should be released soon, we've introduced a new Chunking DSL that allows you to describe the desired chunking as part of the route. This feature makes routes more elegant and reduces the need for custom code. With the new Chunking DSL, you can focus on processing your data without worrying about the intricacies of chunking.
+Starting with Camel 4.8.0, we've introduced a new Chunking DSL that allows you to describe the desired chunking as part of the route. This feature makes routes more elegant and reduces the need for custom code. With the new Chunking DSL, you can focus on processing your data without worrying about the intricacies of chunking.
 
 ### Example Use Case: Chunking Documents by Paragraph
 
