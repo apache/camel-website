@@ -25,7 +25,7 @@ Through this blog you will learn about:
 If you're an experienced Camel K developer, you are certainly familiar with the `--property` (abbreviated `--p`) and `--property-file` flags of the `kamel run` command. Through these flags you are instructing the runtime `Integration` to include properties configuration that will be used during the application execution. Within version 1.5 we made a slight change on how to provide a property file. We have deprecated the `--property-file` flag and favoured the new syntax `--property file:my-file.properties` (or shorter, `--p file:my-file.properties`).
 Since this version we're also starting to distinguish between **runtime** properties and **build-time** properties. `--property` will be used to identify runtime properties.
 
-Learn more in the [runtime properties documentation page](/camel-k/next/configuration/runtime-properties.html).
+Learn more in the runtime properties documentation page.
 
 ## Build-time properties
 
