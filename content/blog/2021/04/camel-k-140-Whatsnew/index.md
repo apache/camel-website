@@ -54,7 +54,7 @@ And the command will create a binding that just prints to the log the JSON data 
 
 ## Kamel dump command
 
-When users have issues understanding why Camel K is not behaving as expected, they often need to provide useful information 
+When users have issues understanding why Camel K is not behaving as expected, they often need to provide useful information
 about the current state of their cluster, to let Camel K developers investigate the issue and provide a solution or a quick workaround (e.g. in a Github issue, or in the Zulip chat).
 
 Usually, to identify the root cause of an issue, developers need to know things like:
@@ -72,7 +72,7 @@ kamel dump status.log
 ```
 
 This simple command will store in a text file all the information needed to investigate a possible issue in the cluster.
-The user can now *edit the file to remove sensitive information* (which the command may not be able to tell apart), then 
+The user can now *edit the file to remove sensitive information* (which the command may not be able to tell apart), then
 share it with developers to have much better insights.
 
 ## Stability and compatibility
@@ -84,7 +84,7 @@ to be present for the same service. We've also changed the way channels and brok
 to bind integrations to multiple channels and even create sequences of integrations attached to channels without any issue (e.g. [#2190](https://github.com/apache/camel-k/pull/2190), [#2115](https://github.com/apache/camel-k/pull/2115)).
 
 We've improved **installation options**, letting you configure things that may be important in a production environment, like [setting toleration](https://github.com/apache/camel-k/pull/2114) or using a [secured maven repository](https://github.com/apache/camel-k/pull/2180).
-At the same time, we've fixed compatibility with recent dev environments, e.g. letting you [smoothly install Camel K in K3S](/camel-k/next/installation/registry/k3s.html).
+At the same time, we've fixed compatibility with recent dev environments, e.g. letting you smoothly install Camel K in K3S.
 
 We also kept doing changes to continuously improve speed. On the runtime side of Camel K, we now use the [Quarkus fast-jar format](https://github.com/apache/camel-k/pull/1931) to reduce boot times. And last but not least on the operator side, it's possible to install Camel K globally in a cluster and have much faster build times by [sharing base images across the cluster](https://github.com/apache/camel-k/pull/2058).
 

@@ -26,13 +26,13 @@ spec:
       image: docker.io/my-org/my-camel-app:1.0.0
 ```
 
-See more detail in the official [Camel K runtimes documentation](/camel-k/next/running/camel-runtimes.html). The nice thing is that with this approach you will be able to run **Camel Quarkus**, **Camel Spring Boot** and **Camel Main** runtimes from Camel K operator.
+See more detail in the official Camel K runtimes documentation. The nice thing is that with this approach you will be able to run **Camel Quarkus**, **Camel Spring Boot** and **Camel Main** runtimes from Camel K operator.
 
 As we mentioned at the beginning, there are certain limitations you need to take in consideration. In the linked documentation you can see there is a matrix of traits and at what lifecycle stage of an Integration they are executed. A sourceless Integration will only be able to use "deployment" traits out of the box, that means, those aspects that are executed when the Integration is deployed to Kubernetes.
 
 ## How to run it
 
-A **sourceless Integration** is built by the user. The operator does not care how this is built. What it needs to know is the final container image. Let's see an example in action in order to show how the Camel K operator will be able to leverage at least "deployment" traits and simplify certain operational aspects on Kubernetes. The list of trait you can use is available in [Camel K runtimes documentation](/camel-k/next/running/camel-runtimes.html).
+A **sourceless Integration** is built by the user. The operator does not care how this is built. What it needs to know is the final container image. Let's see an example in action in order to show how the Camel K operator will be able to leverage at least "deployment" traits and simplify certain operational aspects on Kubernetes. The list of trait you can use is available in Camel K runtimes documentation.
 
 We will build a simple REST Camel application and we want to leverage **Knative** in order to **scale to 0** if no traffic happens on the route. Without the Camel K operator, you'd be needed to manage all the Knative resources on your own. The operator will instead do all the heavy lift for you.
 

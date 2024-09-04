@@ -35,7 +35,7 @@ WARNING: make sure not to downgrade to Camel K version 1 once you have upgraded 
 
 The old `v1alpha1.KameletBinding` will still be supported in this release in order to give you the time to make the needed change and move all your KameletBindings to [`v1.Pipe`](/camel-k/next/apis/camel-k.html#_camel_apache_org_v1_Pipe). Try to give priority to this operation because the `v1alpha1` is now deprecated and will be removed within the next versions of Camel K.
 
-There is no other important concern about the compatibility with the previous Camel K version. 
+There is no other important concern about the compatibility with the previous Camel K version.
 
 We suggest to take the opportunity of this major upgrade to detect any usage of deprecated parameters in the [Camel K API](/camel-k/next/apis/camel-k.html) and do the switch accordingly.
 
@@ -57,7 +57,7 @@ The build process is now partially decoupled from the runtime process. We have i
 
 In order to enable this feature, you will notice that the `CamelCatalog` Custom Resource is now a dynamic resource which is reconciled by the operator. It is the one in charge to dynamically create any new runtime catalog required. This work was a big design change and we're confident it will help use reaching the longer term goal which is to **onboard any Camel runtime** (main, springboot, quarkus).
 
-Have a look at the official documentation and learn more about the new [Camel K Runtime builder design](/camel-k/next/running/runtime-version.html).
+Have a look at the official documentation and learn more about the new Camel K Runtime builder design.
 
 ## Transform the build into a pipeline
 
@@ -67,7 +67,7 @@ The first immediate result of this change is that you have available a [simple C
 
 ## Camel K Tekton tasks
 
-We also know that many companies already adopts some richer **CICD technology**. For this reason we have introduced the [Camel K Tekton task](/camel-k/next/pipeline/tekton.html) which we're willing to support in order to simplify the onboarding of Camel K in Tekton pipeline.
+We also know that many companies already adopts some richer **CICD technology**. For this reason we have introduced the Camel K Tekton task which we're willing to support in order to simplify the onboarding of Camel K in Tekton pipeline.
 
 We have chosen to support Tekton because it's one of the most mature and widespread used CICD technology. However, if you're using any other pipeline technology it should not be difficult to transform the action we are supporting in Tekton task with the one required by your pipeline technology.
 

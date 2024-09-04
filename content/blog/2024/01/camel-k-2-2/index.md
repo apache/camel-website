@@ -26,7 +26,7 @@ spec:
       image: docker.io/my-org/my-camel-app:1.0.0
 ```
 
-See more detail in the official [Camel K runtimes documentation](/camel-k/next/running/camel-runtimes.html). The nice thing is that with this approach you will be able to run **Camel Quarkus**, **Camel Springboot** and **Camel Main** runtimes from Camel K operator.
+See more detail in the official Camel K runtimes documentation. The nice thing is that with this approach you will be able to run **Camel Quarkus**, **Camel Springboot** and **Camel Main** runtimes from Camel K operator.
 
 ## Show root image hierarchy in IntegrationKits
 

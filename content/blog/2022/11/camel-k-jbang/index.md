@@ -146,7 +146,7 @@ The Integration started correctly, but, wait a minute: we are using a file syste
 
 Probably it's not what we wanted. So, now it's turn to configure our application for the cloud. Cloud Native development should take in consideration a series of challenges that are implicit in the way how this new paradigm works (as a reference see the [12 factors](https://12factor.net/)).
 
-Kubernetes could be sometimes a bit difficult to fine tune. Many resources to edit and check. Camel K provide a user friendly way to apply most of the tuning your application will need directly in the `kamel run` command (or in the [modeline](/camel-k/next/cli/modeline.html)). Most of the time you will need to get familiar with [Camel K Traits](/camel-k/next/traits/traits.html).
+Kubernetes could be sometimes a bit difficult to fine tune. Many resources to edit and check. Camel K provide a user friendly way to apply most of the tuning your application will need directly in the `kamel run` command (or in the modeline). Most of the time you will need to get familiar with [Camel K Traits](/camel-k/next/traits/traits.html).
 
 In this case we want to use certain volumes we had made available in our cluster. We can use the `--volume` option (syntactic sugar of [mount trait](/camel-k/next/traits/mount.html)) and enable them easily. We can read and write on those volumes from some other `Pod`: it depends on the architecture of our Integration process.
 
