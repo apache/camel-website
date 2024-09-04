@@ -54,7 +54,7 @@ Let's consider an example of edge AI. In this scenario, image data is recorded i
 
 ### Image to Text: Source code
 
-To realise this scenario, we use two pre-trained neural network models: SSD and ResNet. The code is as follows:
+To realise this scenario, we use two pre-trained neural network models: [SSD](https://arxiv.org/abs/1512.02325) and [ResNet](https://en.wikipedia.org/wiki/Residual_neural_network). The code is as follows:
 
 ```java:image_to_text.java
 // camel-k: dependency=camel:djl
@@ -170,7 +170,7 @@ Let's consider another example, which combines sentiment analysis of sentences w
 
 _**WARNING:** At the moment, this sample code does not work on macOS (Apple Silicon). It is because the speech recognition model used is not compatible with Apple Silicon chips._
 
-To realise this scenario, we combine two pre-trained neural network models: wav2vec 2.0 and DistilBERT. Here is the code:
+To realise this scenario, we combine two pre-trained neural network models: [wav2vec 2.0](https://arxiv.org/abs/2006.11477) and [DistilBERT](https://medium.com/huggingface/distilbert-8cf3380435b5). Here is the code:
 
 ```java
 // camel-k: dependency=camel:djl
