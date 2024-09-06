@@ -11,7 +11,7 @@ Chunking is a crucial aspect of data processing that can significantly impact re
 
 ## The Problem with Traditional Chunking Approaches
 
-Before Camel 4.8.0, applications using Camel would have to implement custom chunking logic or rely on external libraries like LangChain4J. This approach not only added complexity but also made it challenging to handle data cleaning, deduplication, and other tasks. Developers had to write code to tokenize, which involved implementing their own chunking logic or using features like Document Splitters provided by libraries like LangChain4J.
+Before Camel 4.8.0, applications using Camel would have to implement custom chunking logic or rely on external libraries. This approach not only added complexity but also made it challenging to handle data cleaning, deduplication, and other tasks. Developers had to write code to tokenize, which involved implementing their own chunking logic or using features like Document Splitters (from LangChain4J) via Camel Processors.
 
 ## Introducing the New Chunking DSL in Camel 4.8.0
 
