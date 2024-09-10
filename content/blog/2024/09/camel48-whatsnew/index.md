@@ -12,11 +12,78 @@ This release introduces a set of new features and noticeable improvements that w
 
 ## Camel Core
 
+The simple language has new functions such as a `iif` (ternary if). 
+The `@BindToRegistry` now supports init/destroy methods, and can be declared as lazy as well.
+
+The `log` EIP can more easily configure its logger name using dynamic patterns.
+
+Add `poll` EIP as an easier and simpler version of `pollEnrich` EIP which is also more tooling friendly.
+
+The Camel tracer has been greatly performance improved, and reducing overhead.
+When using Camel JBang the tracing is now in _standby_ mode instead of enabled. 
+You can use `camel trace --action=start` to starting tracing.
+
 ## Camel JBang
+
+We continued to improve and innovate with the Camel JBang CLI. For this release we have cleaned up the `camel export` command
+and made it more consistent exporting to the three runtimes (Main, Spring Boot, and Quarkus).
+
+The `camel kubernetes` plugin has had major overhaul and we added more support for traits, export to Spring Boot and Quarkus,
+and as well to deploy and run directly via `run`.
+
+You can now easier see why a Camel route failed to start using `camel get route --error` command such as follows:
+
+[source,bash]
+----
+$ camel get route --error
+ PID   NAME     ID      FROM                                     REMOTE  STATUS  PHASE  MESSAGE
+81814  MyKafka  route1  kafka://cheese?brokers=localhost:119092    x      Error  Start  Invalid port in bootstrap.servers: localhost:119092
+
+------------------------------------------------------------------------------------------------------------------------
+                                                       STACK-TRACE
+------------------------------------------------------------------------------------------------------------------------
+	org.apache.kafka.common.config.ConfigException: Invalid port in bootstrap.servers: localhost:119092
+		at org.apache.kafka.clients.ClientUtils.parseAndValidateAddresses(ClientUtils.java:96)
+		at org.apache.kafka.clients.ClientUtils.parseAndValidateAddresses(ClientUtils.java:62)
+		at org.apache.camel.component.kafka.KafkaConsumer.doStart(KafkaConsumer.java:165)
+		at org.apache.camel.support.service.BaseService.start(BaseService.java:113)
+		at org.apache.camel.support.service.ServiceHelper.startService(ServiceHelper.java:126)
+		at org.apache.camel.impl.engine.AbstractCamelContext.startService(AbstractCamelContext.java:3170)
+		at org.apache.camel.impl.engine.InternalRouteStartupManager.doStartOrResumeRouteConsumers(InternalRouteStartupManager.java:415)
+		at org.apache.camel.impl.engine.InternalRouteStartupManager.doStartRouteConsumers(InternalRouteStartupManager.java:331)
+		at org.apache.camel.impl.engine.InternalRouteStartupManager.safelyStartRouteServices(InternalRouteStartupManager.java:217)
+		at org.apache.camel.impl.engine.InternalRouteStartupManager.safelyStartRouteServices(InternalRouteStartupManager.java:245)
+		at org.apache.camel.impl.engine.AbstractCamelContext.startRouteService(AbstractCamelContext.java:3217)
+		at org.apache.camel.impl.engine.AbstractCamelContext.startRoute(AbstractCamelContext.java:1114)
+		at org.apache.camel.impl.engine.InternalRouteController.startRoute(InternalRouteController.java:126)
+		at org.apache.camel.impl.engine.DefaultRouteController.startRoute(DefaultRouteController.java:133)
+		at org.apache.camel.cli.connector.LocalCliConnector.doActionRouteTask(LocalCliConnector.java:823)
+		at org.apache.camel.cli.connector.LocalCliConnector.actionTask(LocalCliConnector.java:237)
+		at org.apache.camel.cli.connector.LocalCliConnector.task(LocalCliConnector.java:220)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:840)
+----
+
+We also made it easy to include small web apps with Camel JBang. Just include your .html, .js, and .css files together with the Camel source code,
+and run it all together via `camel run *`.
+
+Added new `camel cmd browse` to browse messages on external systems such as JMS brokers, and FTP servers.
+
+Added `camel get kafka` to show Kafka topic information such as _comitted offset_.
+
+There are many other small improvements and bug fixes in Camel JBang.
 
 ## Camel Tests
 
 ## Miscellaneous
+
+The `camel-as2` has added more security algorithms.
+
+The `camel-azure-servicebus` component has been made more robust and fault-tolerant.
 
 Upgraded many third-party dependencies to the latest releases at the time of release.
 
