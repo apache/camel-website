@@ -33,8 +33,7 @@ and as well to deploy and run directly via `run`.
 
 You can now easier see why a Camel route failed to start using `camel get route --error` command such as follows:
 
-[source,bash]
-----
+```console
 $ camel get route --error
  PID   NAME     ID      FROM                                     REMOTE  STATUS  PHASE  MESSAGE
 81814  MyKafka  route1  kafka://cheese?brokers=localhost:119092    x      Error  Start  Invalid port in bootstrap.servers: localhost:119092
@@ -66,7 +65,7 @@ $ camel get route --error
 		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 		at java.base/java.lang.Thread.run(Thread.java:840)
-----
+```
 
 We also made it easy to include small web apps with Camel JBang. Just include your .html, .js, and .css files together with the Camel source code,
 and run it all together via `camel run *`.
