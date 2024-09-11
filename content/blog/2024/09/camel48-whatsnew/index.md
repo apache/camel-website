@@ -12,7 +12,7 @@ This release introduces a set of new features and noticeable improvements that w
 
 ## Camel Core
 
-The simple language has new functions such as a `iif` (ternary if). 
+The simple language has new functions such as a `iif` (ternary if).
 The `@BindToRegistry` now supports init/destroy methods, and can be declared as lazy as well.
 
 The `log` EIP can more easily configure its logger name using dynamic patterns.
@@ -20,8 +20,55 @@ The `log` EIP can more easily configure its logger name using dynamic patterns.
 Add `poll` EIP as an easier and simpler version of `pollEnrich` EIP which is also more tooling friendly.
 
 The Camel tracer has been greatly performance improved, and reducing overhead.
-When using Camel JBang the tracing is now in _standby_ mode instead of enabled. 
+When using Camel JBang the tracing is now in _standby_ mode instead of enabled.
 You can use `camel trace --action=start` to starting tracing.
+
+## Cloud configuration
+
+In this version we've added the capability for the core to automatically read the cloud configuration that the user can mount at deployment time. Just add the configuration `camel.main.cloud-properties-location` to let the runtime to scan such directories (it's a comma separated values) and use those values as regular properties.
+
+For example, given the following application:
+
+```yaml
+- from:
+    uri: "timer:yaml"
+    parameters:
+      period: "1000"
+    steps:
+      - setBody:
+          simple: "Hello Camel from {{my-property}}"
+      - log: "${body}"
+```
+
+and the following Kubernetes Secret:
+
+```yaml
+apiVersion: v1
+data:
+  my-property: Q2FtZWwgNC44
+kind: Secret
+metadata:
+  name: my-secret
+type: Opaque
+```
+
+You can provide the `camel.main.cloud-properties-location = /etc/camel/conf.d/_secrets` application property. Then, just wire your Kubernetes secret (or configmap) to the Deployment specification as you usually do with your cloud configuration:
+
+```yaml
+    spec:
+      containers:
+...
+        volumeMounts:
+          - name: secret-volume
+            readOnly: true
+            mountPath: "/etc/camel/conf.d/_secrets"
+      volumes:
+      - name: secret-volume
+        secret:
+          secretName: my-secret
+```
+
+It's nice to notice that the management of secrets (and configuration) would be entirely delegated to the cluster and transparent for the final user.
 
 ## Camel JBang
 
@@ -90,7 +137,7 @@ The `camel-spring-boot` is upgraded to latest Spring Boot 3.3.3 release.
 
 ## New Components
 
-We have added a few new components:  
+We have added a few new components:
 
 - `camel-langchain4j-tools` - LangChain4j Tools and Function Calling Features
 - `camel-langchain4j-tokenizer` - LangChain4j Tokenizer
