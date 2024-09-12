@@ -10,7 +10,7 @@ Title: "Community"
 
 ## Support
 
-If you are experiencing problems using Camel there are several channels available to seek help from the community.
+If you are experiencing problems using Camel, there are several channels available to seek help from the community.
 <p>
 <a class="button dark" href="/community/support/">Read More</a>
 </p>
@@ -29,6 +29,9 @@ If you are experiencing problems using Camel there are several channels availabl
 
 One way to get help is to use the Camel mailing lists. This allows the entire community to help with your problem.
 
+When posting to the mailing lists, please use plain text mails.
+Do not use HTML mails.
+
 <p>
 <a class="button dark" href="/community/mailing-list/">Read More</a>
 </p>
@@ -46,7 +49,10 @@ One way to get help is to use the Camel mailing lists. This allows the entire co
 
 ## Contributing
 
-There are many ways you can help make Camel better - please dive in and help!Identify areas you can contribute first. You don’t have to be an expert in an area, the Apache Camel developers are available to offer help and guidance.
+There are many ways you can help make Camel better.
+Please dive in and help!
+Identify areas you can contribute first.
+You don’t have to be an expert in an area, the Apache Camel developers are available to offer help and guidance.
 
 <p>
 <a class="button dark" href="/community/contributing/">Read More</a>
@@ -64,7 +70,8 @@ There are many ways you can help make Camel better - please dive in and help!Ide
 
 ## User Stories
 
-This page is intended as a place to collect user stories and feedback on Apache Camel. If you are using or have tried Apache Camel please add an entry or comment; or post to the mailing list.
+This page is intended as a place to collect user stories and feedback on Apache Camel.
+If you are using or have tried Apache Camel, please add an entry or comment; or post to the mailing list.
 
 <p>
 <a class="button dark" href="/community/user-stories/">Read More</a>
@@ -100,7 +107,8 @@ Articles are divided into several sections. As the lists grow, further sectionin
 
 ## Books
 
-This page lists the known books about Apache Camel. If you happen to know a book which is not listed then please contact us.
+This page lists the known books about Apache Camel. 
+If you happen to know a book which is not listed, then please contact us.
 
 <p>
 <a class="button dark" href="/community/books/">Read More</a>
@@ -118,7 +126,9 @@ This page lists the known books about Apache Camel. If you happen to know a book
 
 ## Team
 
-This page lists who we are. By all means add yourself to the list - lets sort it in alphabetical order. When posting to the mailing lists, use plain text mails. Do not use HTML mails.
+This page lists who we are.
+By all means add yourself to the list.
+Let's sort it in alphabetical order.
 
 <p>
 <a class="button dark" href="/community/team/">Read More</a>

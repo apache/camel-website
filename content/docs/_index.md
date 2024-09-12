@@ -10,9 +10,10 @@ Title: "Documentation"
 ## Camel Core
 
 
-The foundation for all other projects. Ideal for experienced Java developers or achitects willing to innovate and build upon a lower level integration framework.
+The foundation for all other projects. Ideal for experienced Java developers or architects willing to innovate and build upon a lower level integration framework.
 
-The [User Manual](/manual/) is a comprehensive guide meant to help you with the key concepts of Apache Camel and software integration, from how to [get started](/manual/getting-started.html) with Apache Camel, how to [upgrade to Camel 3.x](/manual/camel-3x-upgrade-guide.html), to [architecture](/manual/architecture.html) or [integration patterns](/components/latest/eips/enterprise-integration-patterns.html).
+The [User Manual](/manual/) is a comprehensive guide meant to help you with the key concepts of Apache Camel and software integration. 
+For instance, you can find information such as how to [get started](/manual/getting-started.html) with Apache Camel, how to [upgrade to Camel 4.x](/manual/camel-4x-upgrade-guide.html), information about Apache Camel [architecture](/manual/architecture.html), [integration patterns](/components/latest/eips/enterprise-integration-patterns.html) and more.
 
 <p>
 <a class="button dark" href="/camel-core/">Documentation</a>
@@ -22,7 +23,8 @@ The [User Manual](/manual/) is a comprehensive guide meant to help you with the 
 </p>
 
 
-Camel is packed with several hundred components that are used to access databases, message queues and APIs. The [Component reference](/components/latest/) provides you information about the functionality and configuration of each component.
+Camel is comes with several hundred components that can be used to access databases, message queues, and APIs.
+The [Component reference](/components/latest/) provides you information about the functionality and configuration of each component.
 
 <p>
 <a class="button dark" href="/components/latest/">Component Reference</a>
@@ -39,7 +41,10 @@ Camel is packed with several hundred components that are used to access database
 
 ## Camel K
 
-Apache Camel K is a lightweight integration framework built on Apache Camel that runs natively on [Kubernetes](https://kubernetes.io/) and is specifically designed for serverless and micro service architectures. It allows you to run integration code written in Camel DSL on your cloud.
+Apache Camel K is a lightweight integration framework built on Apache Camel
+that runs natively on [Kubernetes](https://kubernetes.io/)
+and is specifically designed for serverless and microservice architectures.
+It allows you to run integration code written in Camel DSL on your cloud.
 
 <p>
 <a class="button dark" href="/camel-k/latest/">Documentation</a>
@@ -79,7 +84,7 @@ Camel Kafka Connector allows you to use all [Camel components](/components/lates
 
 ## Camel Quarkus
 
-This project hosts the efforts to port and package most of the Camel components as Quarkus extensions. [Quarkus](https://quarkus.io/) is a Java platform offering fast boot times and low memory footprint. It targets both stock JVMs and GraalVM.
+This project hosts the efforts to port and package most of the Camel components as Quarkus extensions. [Quarkus](https://quarkus.io/) is a Java platform offering fast boot times and low memory footprint. It targets both stock JVMs and the GraalVM.
 
 <p>
 <a class="button dark" href="/camel-quarkus/latest/">Documentation</a>
@@ -101,7 +106,9 @@ This project hosts the efforts to port and package most of the Camel components 
 
 ## Camel Spring Boot
 
-Camel support for Spring Boot provides auto-configuration of the Camel context by auto-detecting Camel routes available in the Spring context and registers the key Camel utilities as beans. It also provides starters for the Camel components.
+Camel support for Spring Boot provides many features for Spring Boot users. 
+Including autoconfiguration of the Camel context by auto-detecting Camel routes available in the Spring context and registers the key Camel utilities as beans.
+It also provides starters for the Camel components.
 
 <p>
 <a class="button dark" href="/camel-spring-boot/latest/">Documentation</a>
@@ -143,7 +150,7 @@ Camel support for Spring Boot provides auto-configuration of the Camel context b
 
 An Integration Toolkit aimed to increase developer performance through a graphical user interface to design and configure routes (EIP and REST) using Kamelets and Components, integration with runtimes and package, image build and deploy to Kubernetes out-of-the-box.
 
-Being deployed in Kubernetes Karavan helps to manage projects, design and monitor integrations, Tekton pipeline to build and deploy integrations.
+Being deployed in Kubernetes, Karavan helps to manage projects, design and monitor integrations, Tekton pipeline to build and deploy integrations.
 
 [Karavan VS Code Extension](https://marketplace.visualstudio.com/items?itemName=camel-karavan.karavan) is integrated with [Camel Jbang](/manual/camel-jbang.html) runtime for fast local development cycles.
 
@@ -163,7 +170,7 @@ Being deployed in Kubernetes Karavan helps to manage projects, design and monito
 
 ## Camel JBang
 
-Camel CLI (Command Line Interface) to easily install and get started with Apache Camel,
+A Camel CLI (Command Line Interface) to easily install and get started with Apache Camel,
 in only a few minutes. Camel JBang is excellent for no-code/low-code use-cases and
 when you need to quickly build a prototype with Camel.
 

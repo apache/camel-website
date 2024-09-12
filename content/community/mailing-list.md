@@ -4,23 +4,40 @@ title: "Mailing Lists"
 
 ## Read this first before posting
 
+### Mailing lists basics
+
+To email the mailing list, you need to subscribe first by sending an email to the Subscribe email address listed below.
+
+If you do not wish to receive any more emails, send a message to the Unsubscribe email address listed below.
+
+If you do not subscribe to the mailing list, your email will be sent to the moderation queue and most likely it will be rejected.
+
+You will not receive email responses sent directly to the mailing list on the topic you raised unless you are subscribed.
+
 ### Which email list to use?
 
-To send an email to the mailing list you need to subscribe first by sending an email to the Subscribe email address listed below. If you do not wish to receive any more emails send a message to the Unsubscribe email address listed below. If you do not subscribe to the mailing list your email will be sent to the moderation queue and most likely it will be rejected. You will not receive email responses sent directly to the mailing list on the topic you raised unless you are subscribed.
+If you want to **discuss using** Apache Camel, please use the Users' mailing list.
+Appropriate discussions for the Users'
+mailing list are questions or problems you encounter using Apache Camel, for example, “How do I…”.
+If in doubt, use the Users' mailing list.
 
-If you want to discuss using Apache Camel please use the Users mailing list. Appropriate discussions for the Users' mailing list are questions or problems you encounter using Apache Camel, for example, “How do I…”. If in doubt use the Users' mailing list.
-
-If you wish to discuss contributing to Apache Camel please use the Developer mailing list. Do not discuss using Apache Camel on the Developers' mailing list.
+If you wish to **discuss contributing** to Apache Camel, please use the Developer mailing list.
+Do not discuss using Apache Camel on the Developers' mailing list.
 
 The Commits and Issues mailing lists contain automated messages on changes to the source code or issue trackers, do not write to those mailing lists.
 
-Again to re-iterate, use the User List, for your Camel questions. This is the correct mailing list and has the most people there ready for helping you.
+Again, to re-iterate, use the User's list for your Camel questions.
+This is the correct mailing list and has the most people there ready for helping you.
 
-Sometimes it might be more appropriate to chat, and for that use the  [Zulip chat](https://camel.zulipchat.com/). For other means of getting support see [Community support](/community/support/) and [Commercial Camel offerings](/manual/commercial-camel-offerings.html).
+Sometimes it might be more appropriate to chat, and for that use the [Zulip chat](https://camel.zulipchat.com/). For other means of getting support see [Community support](/community/support/) and [Commercial Camel offerings](/manual/commercial-camel-offerings.html).
 
 ### Post plain text mails
 
-When posting to the mailing lists, use plain text mail. Do not use HTML mail. HTML mail is more likely to be targeted as spam mail and will be rejected; as well it’s not easily readable by others. Attachments, such as images, source code files, or project archives cannot be sent to the mailing lists, if you need to send an attachment upload it to a file/image-sharing website first and include the link to it in your message.
+When posting to the mailing lists, use plain text mail. Do not use HTML mail. 
+HTML mail is more likely to be targeted as spam mail and will be rejected. 
+As well, it’s not easily readable by others. 
+Attachments, such as images, source code files, or project archives cannot be sent to the mailing lists. 
+If you need to send an attachment, upload it to a file/image-sharing website first and include the link to it in your message.
 
 ### Mailing list addresses
 
