@@ -37,8 +37,12 @@ The refactoring of the test support classes is one of those. Although, the chang
 To ensure a smooth transition, the very first thing that our users should pay attention to is to avoid relying on deprecated interfaces. 
 In many cases, they are used for pre- and post-test setup. 
 As such, that code can almost always be safely replaced by JUnit's setup and tear-down code (represented by annotations such as `@BeforeEach` and `@AfterEach`). 
-The second is to use the new classes `TestExecutionConfiguration` and `CamelContextConfiguration` (via their accessor methods) for adjusting the test and the Camel Context behavior. 
-The third, is to avoid relying on the per-class lifecycle (i.e.: annotating the tests with `@TestInstance(TestInstance.Lifecycle.PER_CLASS)`) - with Camel 4.9 this will trigger the legacy context management code which will, eventually, be removed.
+
+The second is to use the new classes `TestExecutionConfiguration` and `CamelContextConfiguration` (via their accessor methods) 
+for adjusting the test and the Camel Context behavior. 
+
+The third, is to avoid relying on the per-class lifecycle (i.e.: annotating the tests with `@TestInstance(TestInstance.Lifecycle.PER_CLASS)`). 
+With Camel 4.9, this will trigger the legacy context management code which will, eventually, be removed.
 
 The migration can also be made easier, by applying a few additional good practices for writing tests, such as ensuring a clean environment between tests. 
 For instance, in some cases, it might be necessary to reset the mocks between each test execution.
