@@ -3260,7 +3260,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["debug", "virtual:710fa9e84c411e9a6d38057111fc8f87ba51ce39b63d470861c88972bf2b279427700d359b58a66dff9d7497a6091b73f49b16317fa95e6ed5ec2f1aa737346f#npm:3.2.6"],\
           ["@types/supports-color", null],\
-          ["ms", "npm:2.1.2"],\
+          ["ms", "npm:2.1.3"],\
           ["supports-color", null]\
         ],\
         "packagePeers": [\
