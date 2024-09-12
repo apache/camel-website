@@ -2,34 +2,25 @@
 title: "Sources"
 ---
 
-## Web Browsing of git
+## Using GitHub
 
-To browse via the web:
+The source code is mirrored to GitHub, so you can also check out the source code from GitHub,
+if you are familiar with using GitHub.
 
-```
-https://gitbox.apache.org/repos/asf/camel.git
-```
-
-## Web Browing Using FishEye
-
-A hearty thanks to Atlassian for providing FishEye hosting for Camel. Below is the URL to browse the Subversion repo via FishEye:
+By using GitHub, you can submit pull requests to the project using the standard GitHub way.
 
 ```
-https://fisheye6.atlassian.com/browse/camel-git
+https://github.com/apache/camel/
 ```
 
-## Checking out from git
+## Checking out from git
 
 ```
 git clone https://gitbox.apache.org/repos/asf/camel.git
 ```
 
-Only project developers can commit to the git via this method. SSH must be installed on your client machine. Enter your site password when prompted.
+Only project developers can commit to git via this method.
+SSH must be installed on your client machine.
+Enter your site password when prompted.
 
-## Using github
 
-The source code is mirrored to github, so you can also checkout the source code from github, if you are familiar with using github. By using github you can submit pull requests to the project using the standard github way.
-
-```
-https://github.com/apache/camel/
-```
