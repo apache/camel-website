@@ -128,6 +128,23 @@ Added `camel get kafka` to show Kafka topic information such as _comitted offset
 
 There are many other small improvements and bug fixes in Camel JBang.
 
+## Camel Kubernetes Secrets refresh
+
+The Kubernetes Secrets component has been enriched with a Camel Context reload based on Kubernetes Secrets update.
+
+The needed properties are:
+
+```yaml
+camel.vault.kubernetes.refreshEnabled=true
+camel.vault.kubernetes.secrets=<secret_name>
+```
+
+The component will monitor the secrets listed, as comma separated names or regex, through a Kubernetes Client watcher.
+
+Whenever a modification happens on the secret value, the component will trigger a Camel context reload.
+
+To see this feature in action you can have a look at the [example](https://github.com/apache/camel-kamelets-examples/tree/main/jbang/external-secrets-aws)
+
 ## Camel Tests
 
 ## Miscellaneous
