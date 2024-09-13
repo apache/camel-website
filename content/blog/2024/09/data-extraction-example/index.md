@@ -81,8 +81,9 @@ public interface CustomPojoExtractionService {
 ```
 
 Furthermore, notice how we are using the `@org.apache.camel.Handler` annotation to specify that Camel needs to invoke the `extractFromText` method.
-Logically, we should be able to use the full power of [the bean binding](/manual/bean-binding.html), even with Quarkus LangChain4j AI services.
-Could you imagine injecting Camel headers and variables into the LLM prompt?
+Ideally, we should be able to use the full power of [the bean parameter binding](/manual/bean-binding.html#_parameter_binding), even with Quarkus LangChain4j AI services.
+However, there is an [issue](https://github.com/quarkiverse/quarkus-langchain4j/issues/888) today.
+If a solution is found, then we could imagine injecting Camel headers and variables into the LLM prompt.
 
 Once the AI service is available in the registry, it's easy to invoke it from a Camel route, for instance, as below:
 
