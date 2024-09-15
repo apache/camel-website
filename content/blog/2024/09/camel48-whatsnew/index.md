@@ -19,7 +19,7 @@ The `log` EIP can more easily configure its logger name using dynamic patterns.
 
 Add `poll` EIP as an easier and simpler version of `pollEnrich` EIP which is also more tooling friendly.
 
-The Camel tracer has been greatly performance improved, and reducing overhead.
+The performance of the Camel tracer has been significantly improved, with a reduction of overhead.
 When using Camel JBang, tracing is now in _standby_ mode instead of enabled.
 You can use `camel trace --action=start` to start tracing.
 
