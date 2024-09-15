@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 4.8 What's New"
 date: 2024-09-16
-authors: [davsclaus, orpiske]
+authors: [davsclaus, squakez, orpiske, oscerd]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 4.8 release.
 ---
@@ -28,7 +28,7 @@ about 12% faster - in average. Additionally, we have fine-tuned the buffer sizes
 which should help reduce the CPU cycles required for generating strings, handling input and input data and more.
 
 
-## Cloud configuration
+### Cloud configuration
 
 In this version we've added the capability for the core to automatically read the cloud configuration that the user can mount at deployment time. Just add the configuration `camel.main.cloud-properties-location` to let the runtime to scan such directories (it's a comma separated values) and use those values as regular properties.
 
@@ -74,6 +74,7 @@ You can provide the `camel.main.cloud-properties-location = /etc/camel/conf.d/_s
 ```
 
 It's nice to notice that the management of secrets (and configuration) would be entirely delegated to the cluster and transparent for the final user.
+
 
 ## Camel JBang
 
@@ -128,13 +129,14 @@ Added `camel get kafka` to show Kafka topic information such as _comitted offset
 
 There are many other small improvements and bug fixes in Camel JBang.
 
+
 ## Camel Kubernetes Secrets refresh
 
 The Kubernetes Secrets component has been enriched with a Camel Context reload based on Kubernetes Secrets update.
 
 The needed properties are:
 
-```yaml
+```properties
 camel.vault.kubernetes.refreshEnabled=true
 camel.vault.kubernetes.secrets=<secret_name>
 ```
@@ -147,6 +149,9 @@ To see this feature in action you can have a look at the [example](https://githu
 
 ## Camel Tests
 
+We continued to [modernize the testing framework](/blog/2024/09/modernizing-test-support/) which you can read about in the linked blog post. 
+
+
 ## Miscellaneous
 
 The `camel-as2` has added more security algorithms.
@@ -157,6 +162,7 @@ Upgraded many third-party dependencies to the latest releases at the time of rel
 
 The `camel-spring-boot` is upgraded to latest Spring Boot 3.3.3 release.
 
+
 ## New Components
 
 We have added a few new components:
@@ -166,6 +172,7 @@ We have added a few new components:
 - `camel-langchain4j-web-search` - LangChain4j Web Search Engine
 - `camel-solr` - Perform operations against Apache Lucene Solr
 - `camel-tahu` - Sparkplug B Host/Edge support over MQTT using Eclipse Tahu
+
 
 ## Upgrading
 
