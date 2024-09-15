@@ -20,17 +20,17 @@ The `log` EIP can more easily configure its logger name using dynamic patterns.
 Add `poll` EIP as an easier and simpler version of `pollEnrich` EIP which is also more tooling friendly.
 
 The Camel tracer has been greatly performance improved, and reducing overhead.
-When using Camel JBang the tracing is now in _standby_ mode instead of enabled.
-You can use `camel trace --action=start` to starting tracing.
+When using Camel JBang, tracing is now in _standby_ mode instead of enabled.
+You can use `camel trace --action=start` to start tracing.
 
 We continued with micro-optimizations on the core code. For the `simple` language, matching predicates should be 
-about 12% faster - in average. Additionally, we have fine-tuned the buffer sizes used for multiple operations, 
+about 12% faster - on average. Additionally, we have fine-tuned the buffer sizes used for multiple operations, 
 which should help reduce the CPU cycles required for generating strings, handling input and input data and more.
 
 
 ### Cloud configuration
 
-In this version we've added the capability for the core to automatically read the cloud configuration that the user can mount at deployment time. Just add the configuration `camel.main.cloud-properties-location` to let the runtime to scan such directories (it's a comma separated values) and use those values as regular properties.
+In this version we've added the capability for the core to automatically read the cloud configuration that the user can mount at deployment time. Simply add the configuration option `camel.main.cloud-properties-location` to allow the runtime to scan such directories (using comma separated values) and consume those values as regular properties.
 
 For example, given the following application:
 
@@ -78,13 +78,13 @@ It's nice to notice that the management of secrets (and configuration) would be 
 
 ## Camel JBang
 
-We continued to improve and innovate with the Camel JBang CLI. For this release we have cleaned up the `camel export` command
+We continue to improve and innovate with the Camel JBang CLI. For this release we have cleaned up the `camel export` command
 and made it more consistent exporting to the three runtimes (Main, Spring Boot, and Quarkus).
 
 The `camel kubernetes` plugin has had major overhaul and we added more support for traits, export to Spring Boot and Quarkus,
 and as well to deploy and run directly via `run`.
 
-You can now easier see why a Camel route failed to start using `camel get route --error` command such as follows:
+It is now easier to see why a Camel route failed to start using `camel get route --error` command such as follows:
 
 ```console
 $ camel get route --error
@@ -149,7 +149,7 @@ To see this feature in action you can have a look at the [example](https://githu
 
 ## Camel Tests
 
-We continued to [modernize the testing framework](/blog/2024/09/modernizing-test-support/) which you can read about in the linked blog post. 
+We continued to modernize the testing framework which you can read about in [this blog post](/blog/2024/09/modernizing-test-support/) . 
 
 
 ## Miscellaneous
