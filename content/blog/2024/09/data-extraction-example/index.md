@@ -1,5 +1,5 @@
 ---
-title: "Experimenting extraction from unstructured data with Apache Camel and LangChain4j"
+title: "Unstructured data extraction with Apache Camel Quarkus and LangChain4j"
 date: 2024-09-16
 draft: false
 authors: [aldettinger]
