@@ -17,10 +17,9 @@ content:
     - url: https://github.com/apache/camel.git
       branches:
         - main
+        - camel-4.8.x
         - camel-4.4.x
-        - camel-4.0.x
         - camel-3.22.x
-        - camel-3.21.x
       start_paths:
         # eip
         - core/camel-core-engine/src/main/docs
@@ -33,14 +32,11 @@ content:
       branches:
         - main
         - release-2.4.x
-        - release-2.3.x
-        - release-2.2.x
       start_path: docs
 
     - url: https://github.com/apache/camel-k-runtime.git
       branches:
         - main
-        - release-3.2.x
         - release-3.8.x
       start_path: docs
 
@@ -48,14 +44,12 @@ content:
       branches:
         - main
         - 4.4.x
-        - 4.0.x
       start_path: docs
 
     - url: https://github.com/apache/camel-quarkus.git
       branches:
         - main
         - 3.8.x
-        - 3.2.x
       start_path: docs
 
     - url: https://github.com/apache/camel-quarkus-examples.git
@@ -65,7 +59,6 @@ content:
     - url: https://github.com/apache/camel-kafka-connector.git
       branches:
         - main
-        - camel-kafka-connector-4.0.x
       start_paths:
         - docs
         - connectors
@@ -73,10 +66,9 @@ content:
     - url: https://github.com/apache/camel-spring-boot.git
       branches:
         - main
+        - camel-spring-boot-4.8.x
         - camel-spring-boot-4.4.x
-        - camel-spring-boot-4.0.x
         - camel-spring-boot-3.22.x
-        - camel-spring-boot-3.21.x
       start_paths:
         - components-starter
         - core
@@ -86,7 +78,6 @@ content:
     - url: https://github.com/apache/camel-karaf.git
       branches:
         - camel-karaf-3.22.x
-        - camel-karaf-3.21.x
       start_path: docs
 
 ui:
