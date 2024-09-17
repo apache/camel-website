@@ -31,7 +31,7 @@ In this example, the model [GPT-3.5 Turbo](https://platform.openai.com/docs/mode
 This is the hardest part, if you would like to test it by yourself some requirements need to be fulfilled before executing the code, in particular:
 
 
-* A business WhatsApp account is needed, for development purposes this is free, you can follow the documentation in the [Camel WhatsApp component](/components/4.0.x/whatsapp-component.html)
+* A business WhatsApp account is needed, for development purposes this is free, you can follow the documentation in the [Camel WhatsApp component](/components/next/whatsapp-component.html)
 * An OpenAI API key, the [LangChain4j getting started](https://github.com/langchain4j#getting-started) contains information how to generate the API key
 * [Webhook](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/set-up-webhooks) needs to be configured in the WhatsApp business account, so that way WhatsApp API can communicate with the running Apache Camel application
 * If you are testing locally, the running application's webhook has to be exposed to the internet, for example via [ngrok](https://ngrok.com/)

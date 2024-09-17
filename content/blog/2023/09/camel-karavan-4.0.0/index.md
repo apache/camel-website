@@ -40,7 +40,7 @@ We recognize the importance of a straightforward development process. With Karav
 
 ## Camel-main
 
-[Camel-main](/components/4.0.x/others/main.html) (aka standalone) runtime became the primary runtime implementation in this release. Its appeal lies in its pure Apache Camel nature, which requires no external dependencies/runtimes or additional configurations, thus reducing complexity and streamlining your integration projects. You can focus on building robust and efficient integrations without the burden of managing complex runtime environments. It aligns perfectly with the philosophy of Apache Camel Karavan — making integration development straightforward and efficient.
+[Camel-main](/components/next/others/main.html) (aka standalone) runtime became the primary runtime implementation in this release. Its appeal lies in its pure Apache Camel nature, which requires no external dependencies/runtimes or additional configurations, thus reducing complexity and streamlining your integration projects. You can focus on building robust and efficient integrations without the burden of managing complex runtime environments. It aligns perfectly with the philosophy of Apache Camel Karavan — making integration development straightforward and efficient.
 
 ## Version Updates
 
