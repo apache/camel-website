@@ -17,12 +17,12 @@ This is what KEDA does by itself with scalers (Kafka is [one of the many scalers
 
 ## How does it work?
 
-In Camel K 1.8.0 a new [KEDA trait](/camel-k/next/traits/keda.html) has been introduced. 
+In Camel K 1.8.0 a new [KEDA trait](/camel-k/next/traits/keda.html) has been introduced.
 The trait allows to manually tweak the KEDA configuration to make sure that some *ScaledObjects* (KEDA concept) are generated as part of the *Integration* reconciliation, but this is mostly an internal detail. The interesting part about the KEDA trait is that it can recognize special KEDA markers in Kamelets and automatically create a KEDA valid configuration when those Kamelets are used as sources. So users can just use Kamelets to create bindings as usual and, if they **enable a KEDA flag** via an annotation, they get an event driven autoscaler automatically configured.
 
 The Kamelet catalog embedded in next release ([v0.7.0](https://github.com/apache/camel-kamelets/tree/v0.7.0)) contains two Kamelets enhanced with KEDA metadata: `aws-sqs-source` and `kafka-source`. These are just two examples of the many Kamelets that can be augmented in the future. The metadata configuration system is open and Kamelets can be marked at any time to work with KEDA: this means that you don't need to wait for a new Camel K release to enable KEDA on a different source and, more importantly, that you can mark your own Kamelets with KEDA metadata to enable autoscaling from your internal organization components.
 
-The Kamelet developer guide contains a new section on [how to mark a Kamelet with KEDA metadata](/camel-k/next/kamelets/kamelets-dev.html#_keda_integration), but essentially markers are used to map Kamelet properties into KEDA configuration options, so that when you provide a Kamelet configuration, the corresponding KEDA options can be generated from it (all the work is done under the cover by the Camel K operator).
+The Kamelet developer guide contains a new section on how to mark a Kamelet with KEDA metadata, but essentially markers are used to map Kamelet properties into KEDA configuration options, so that when you provide a Kamelet configuration, the corresponding KEDA options can be generated from it (all the work is done under the cover by the Camel K operator).
 
 ## A binding example
 
@@ -51,7 +51,7 @@ spec:
     # ...
 ```
 
-You can notice that the only difference from a standard binding is the presence of the `trait.camel.apache.org/keda.enabled=true` annotation that enables the 
+You can notice that the only difference from a standard binding is the presence of the `trait.camel.apache.org/keda.enabled=true` annotation that enables the
 KEDA trait in Camel K. The information about how to map Kamelet properties into KEDA options is encoded in the Kamelet definition.
 
 ## Demo

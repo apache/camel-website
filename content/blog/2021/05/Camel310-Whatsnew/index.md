@@ -43,7 +43,7 @@ of problem. Then the XML dump is a _view_ of the routes from Camel point of view
 
 ### Kamelets
 
-We have done significant work to [Kamelets](/camel-k/next/kamelets/kamelets-user.html) in this release.
+We have done significant work to Kamelets in this release.
 
 Kamelets (route templates) are now more flexible and more isolated, which really helps
 to build more sophisticated Kamelets that are plug and play ready in any Camel runtime.

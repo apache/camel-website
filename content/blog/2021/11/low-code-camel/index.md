@@ -61,20 +61,17 @@ We have now a wider [catalog of Kamelets](/camel-kamelets/next/) available upstr
 
 There's no doubt you'll find a use case which is not covered by a Kamelet. For example, what about moving data between parts of your organization?
 
-In traditional Camel the approach you would have taken to address this problem is to create one or more ad hoc integrations to 
+In traditional Camel the approach you would have taken to address this problem is to create one or more ad hoc integrations to
 fullfill any of your needs. You'd develop a custom integration route for each use case you have in mind.
 
 The Kamelet approach is completely different. You develop a reusable Kamelet that is responsible of taking specific data out of your system (a **source**), or putting some data back into your system (a **sink**).
 Once you've done that, you can **treat it as a high level connector in the Karavan UI** and use it, whenever you need, in multiple scenarios where you need to move data around, without having to code everything from scratch each time.
 
-Writing a Kamelet is easy, *much easier than writing a Camel component*, if you've ever tried doing so. We've written 
-an extended [Kamelet developer guide](/camel-k/next/kamelets/kamelets-dev.html) that covers
-both easy and complex scenarios.
+Writing a Kamelet is easy, *much easier than writing a Camel component*, if you've ever tried doing so. Check it out on the official documentation online.
 
-We know that creating a source or a sink and also **doing it right** may be difficult (integration is hard, that's why we have Apache Camel) and involve multiple enterprise integration patterns. The
-Kamelet developer guide contains a [section about an "Earthquake" source](/camel-k/next/kamelets/kamelets-dev.html#_step_5_wrap_it_into_a_kamelet) that is complicated on purpose, to mimic a Kamelet that may be developed for handling data inside an organization.
+We know that creating a source or a sink and also **doing it right** may be difficult (integration is hard, that's why we have Apache Camel) and involve multiple enterprise integration patterns.
 
-When writing a new Kamelet, you can use plain YAML to describe a route template, add Java (or Groovy, or ...) code snippets 
+When writing a new Kamelet, you can use plain YAML to describe a route template, add Java (or Groovy, or ...) code snippets
 if you need them, or also link an external Maven project in case you want to add a more complex behavior to it (we did it in the [camel-kamelets](https://github.com/apache/camel-kamelets/blob/1480bd372d42df0a185b4980b465ec245f2de0c5/avro-serialize-action.kamelet.yaml#L34) repository, where we build the default catalog of Kamelets).
 
 What does not change is that, once a Kamelet is written, the logic inside it is **well encapsulated** and you can treat it
@@ -88,8 +85,6 @@ Check out the [Karavan repository](https://github.com/apache/camel-karavan), whe
 
 Then start playing with Karavan in combination with [Camel K](/camel-k/next/) and
 the [Kamelet catalog](/camel-kamelets/next/).
-
-And finally look at how easy is to [create and use your own Kamelets](/camel-k/next/kamelets/kamelets-dev.html).
 
 We'd love to hear your feedback!
 

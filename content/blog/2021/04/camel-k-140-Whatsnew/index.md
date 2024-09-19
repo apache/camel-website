@@ -21,7 +21,7 @@ When installing the operator into a namespace (but also globally in the cluster)
 
 Or, you can use the new `kamel bind` command (see below).
 
-**Note:** it's easy to write your own Kamelet and publish it to the Apache Catalog. Take a look at the [Kamelets developer guide](/camel-k/next/kamelets/kamelets-dev.html).
+**Note:** it's easy to write your own Kamelet and publish it to the Apache Catalog. Take a look at the documentation online.
 
 ## Kamel bind command
 
