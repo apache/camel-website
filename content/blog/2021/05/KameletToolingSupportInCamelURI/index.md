@@ -6,7 +6,7 @@ categories: ["Tooling","Camel K"]
 preview: "Kamelet tooling support for Camel URI"
 ---
 
-[Kamelets](/camel-k/next/kamelets/kamelets-user.html) (Kamel route snippets) are a new concept introduced in Camel K that allow users to connect to external systems via a simplified interface, hiding all the low level details about how those connections are implemented. There are several ways to consume them. One of them is as [standard Camel Components](/camel-k/next/kamelets/kamelets-user.html#kamelets-usage-integration). In this case, completion is provided to fill the template id and the parameter names. It is currently based on a fixed set of Kamelets provided by a snapshot of the [kamelet catalog](https://github.com/apache/camel-kamelets).
+Kamelets (Kamel route snippets) are a new concept introduced in Camel K that allow users to connect to external systems via a simplified interface, hiding all the low level details about how those connections are implemented. There are several ways to consume them. One of them is as standard Camel Components. In this case, completion is provided to fill the template id and the parameter names. It is currently based on a fixed set of Kamelets provided by a snapshot of the [kamelet catalog](https://github.com/apache/camel-kamelets).
 
 
 
