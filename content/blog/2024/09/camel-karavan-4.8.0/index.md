@@ -83,7 +83,7 @@ Stay up to date with the latest versions included in this release:
 
 **Kamelets 4.8.0**
 
-**Jkube 1.17.0**
+**jKube 1.17.0**
 
 **JBang 0.118.0**
 
