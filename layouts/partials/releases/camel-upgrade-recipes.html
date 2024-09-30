@@ -1,0 +1,11 @@
+{{ partial "releases/downloads.html" (dict "Category" (index (index $.Site.Data "release-categories") "camel-upgrade-recipes") "Pages" $.Site.Pages "Version" .Params.version) }}
+
+<h2 id="git"><a class="anchor" href="#git"></a>Git tag checkout</h2>
+<p>
+  Release is tagged with <code>{{ .Params.version }}</code> in the Git, to fetch it use:
+</p>
+<pre>
+git clone https://git-wip-us.apache.org/repos/asf/camel-upgrade-recipes.git
+cd camel-upgrade-recipes
+git checkout {{ .Params.version }}</pre>
+

@@ -119,3 +119,15 @@ camel-quarkus:
     - name: 'SBOM, CycloneDX JSON'
       path_format: 'camel/camel-quarkus/{version}/apache-camel-quarkus-{version}-sbom.json'
       filename_format: 'apache-camel-quarkus-{version}-sbom.json'
+camel-upgrade-recipes:
+  id: 'camel-upgrade-recipes'
+  name: 'Apache Camel Upgrade Recipes'
+  order: 7
+  kinds:
+    - name: 'latest'
+      filter: 'latest'
+  downloads:
+    - name: 'Sources'
+      path_format: 'camel/camel-upgrade-recipes/{version}/camel-upgrade-recipes-sources-{version}.tar.gz'
+      filename_format: 'camel-upgrade-recipes-sources-{version}.tar.gz'
+      
