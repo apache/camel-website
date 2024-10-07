@@ -59,9 +59,10 @@ content:
       start_path: docs
 
     - url: https://github.com/apache/camel-kafka-connector.git
+      # Let's keep latest active development + LTS active versions only
       branches:
         - main
-        - camel-kafka-connector-4.4.x
+        - camel-kafka-connector-4.8.x
       start_paths:
         - docs
         - connectors
