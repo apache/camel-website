@@ -10340,7 +10340,7 @@ const RAW_RUNTIME_STATE =
           ["avvio", "npm:8.3.2"],\
           ["fast-content-type-parse", "npm:1.1.0"],\
           ["fast-json-stringify", "npm:5.16.0"],\
-          ["find-my-way", "npm:8.2.0"],\
+          ["find-my-way", "npm:8.2.2"],\
           ["light-my-request", "npm:5.13.0"],\
           ["pino", "npm:9.2.0"],\
           ["process-warning", "npm:3.0.0"],\
@@ -10695,10 +10695,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["find-my-way", [\
-      ["npm:8.2.0", {\
-        "packageLocation": "./.yarn/cache/find-my-way-npm-8.2.0-a4386c52d4-07e46c94c5.zip/node_modules/find-my-way/",\
+      ["npm:8.2.2", {\
+        "packageLocation": "./.yarn/cache/find-my-way-npm-8.2.2-13991ee085-8a3e7531a7.zip/node_modules/find-my-way/",\
         "packageDependencies": [\
-          ["find-my-way", "npm:8.2.0"],\
+          ["find-my-way", "npm:8.2.2"],\
           ["fast-deep-equal", "npm:3.1.3"],\
           ["fast-querystring", "npm:1.1.2"],\
           ["safe-regex2", "npm:3.1.0"]\
