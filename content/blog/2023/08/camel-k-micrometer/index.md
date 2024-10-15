@@ -29,7 +29,7 @@ Since Micrometer provides a facade, the changes in the default metrics from the 
 Before Camel K 2.0, the default camel metrics where provided by the camel Microprofile Metrics component. Now they default camel metrics are provided by the Micrometer Component. As you can see in the documentations, there are some changes in the naming and the metrics.
 
 
-> **_NOTE:_**  There has been some recent change in the Micrometer Camel component on naming conventions so depending on your camel version you can expect **'CamelExchangesTotal'** to change to **'camel.exchanges.total'** starting from Camel 4. Please refer to the [compatibility matrix](/camel-k/next/index.html#_camel_dependencies_matrix) to know which version of Camel is used.
+> **_NOTE:_**  There has been some recent change in the Micrometer Camel component on naming conventions so depending on your camel version you can expect **'CamelExchangesTotal'** to change to **'camel.exchanges.total'** starting from Camel 4.
 
 One of the most important change concerns the notions of *route* and *context* in the metrics:
 ```
