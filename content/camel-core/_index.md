@@ -65,7 +65,7 @@ The Apache Camel Core is the foundation for all other projects. Ideal for experi
 ## Migration and Upgrade
 
 <p>
-	The <b>migration</b> and <b>upgrade</b> guides you need to follow to keep your Camel Core integrations <b>up-to-date</b>.
+	The <b>migration</b> and <b>upgrade</b> guides you need to follow to keep your Camel Core integrations <b>up to date</b>.
 </p>
 
 <a class="button dark" href="../manual/camel-4x-upgrade-guide.html">Learn More</a>
@@ -77,7 +77,7 @@ The Apache Camel Core is the foundation for all other projects. Ideal for experi
 ## Support
 
 <p>
-	Find out how to <b>obtain help</b> using the Camel Core project, how to <b>report problems</b> and where to find our our community on the web.
+	Find out how to <b>obtain help</b> using the Camel Core project, how to <b>report problems</b> and where to find our community on the web.
 </p>
 
 <a class="button dark" href="../community/support">Learn More</a>
