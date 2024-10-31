@@ -65,6 +65,8 @@ We've used the generic approach suggested in this [GitOps promotion model articl
 
 ## Prepare development Integration
 
+NOTE: this example was originally developed for Camel K operator version 1.12.x and won't work out of the box with Camel K operator version 2.3.x and 2.4.x. We suggest to try this example with other available versions or adjust it to include the IntegrationKit resource which was needed by those operator versions. From version 2.5 onward, however, the example shown here should work out of the box.
+
 You can do the development according your company strategy, using [Camel JBang](/blog/2022/11/camel-k-jbang/), a [pipeline](https://github.com/apache/camel-k/tree/main/cicd/tekton/kamel-run/0.1) or directly the `kamel` CLI. As we want to just focus on the GitOps part, we're using `kamel` CLI which results more self-explainatory for the blog purpose.
 
 Everything starts with some kind of prototype. We can create a `my-route.yaml` route which we'll populate with some YAML DSL. The YAML route we're creating is using some configmap in order to show how we can apply configuration dynamically based on the environment we run. You can image the same when applied to databases, services, etcetera.
