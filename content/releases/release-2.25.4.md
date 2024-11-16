@@ -1,6 +1,6 @@
 ---
 date: 2021-05-28
-eol: 2022-01-01
+eol: 2021-12-31
 draft: false
 type: release-note
 version: 2.25.4

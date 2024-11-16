@@ -1,5 +1,6 @@
 ---
 date: 2019-01-12
+eol: 2019-09-30
 draft: false 
 type: release-note
 version: 2.23.1
