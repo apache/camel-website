@@ -19,6 +19,52 @@ This release also brings the first technical preview of a long awaited feature: 
 
 ### Here are the key highlights of this release:
 
+### Kaoto DataMapper technical preview
+We are introducing a new graphical way of authoring data mappings inside your Apache Camel route with using Kaoto.
+We named it **Kaoto DataMapper** step.
+Just like when you add a regular Camel step from the catalog in the Kaoto canvas, now you can see the Kaoto DataMapper
+step entry to choose in the catalog.
+
+| Tile view                          | List view                          |
+|------------------------------------|------------------------------------|
+| ![Tile](catalogDatamapperTile.png) | ![List](catalogDatamapperList.png) |
+
+Once the Kaoto DataMapper step is added in the route, you can launch Kaoto DataMapper UI by clicking 
+the `Configure` button in the Kaoto DataMapper step config form.
+
+![Kaoto DataMapper step](kaotoDatamapperStep.png)
+
+![DataMapper Configure button](datamapperConfigureButton.png)
+
+Now you can attach the XML schema file to render the Document structure as a tree, and start creating data mappings by
+drag and drop between those.
+
+![DataMapper configured](datamapperConfigured.png)
+
+When you don't yet have an active DataMapper canvas opened, if you click the `DataMapper` tab, it shows the built-in
+step-by-step instructions of how to use Kaoto DataMapper UI.
+
+![DataMapper HowTo](datamapperHowTo.png)
+
+As an initial technical preview version, Kaoto DataMapper only supports XML schema for rendering the data structure.
+And it internally generates a single XSLT step to perform configured data mappings at runtime.
+While you can consume multiple XML documents with using Camel Variables and/or Message Headers that are mapped to XSLT
+Parameters, the output is only a Camel Message Body for this release.
+
+We have a plan to iteratively add more features to the Kaoto DataMapper, for example:
+ - JSON support
+ - Improve XPath expression editor
+   - syntax assist & highlight
+   - better Drag and Drop capability for fields and functions
+ - Data Preview - feed an example input, and instantly see the mapping outcome directly in the UI
+ - Support Setting Camel Variables/Message Headers directly in the UI
+ - Support assuming data structure (schema) by attaching a data example, such as XML instance and JSON instance
+ - `xs:include` and `xs:import` support for XML schema
+ - Enum mapping
+ - and more...
+
+so, please stay tuned!
+
 ### [Breaking] deprecated URI field serialization in favor of the YAML parameters field approach
 The URI field has been deprecated in favor of the YAML parameters field approach. This change allows for a more flexible and user-friendly experience when configuring components.
 
