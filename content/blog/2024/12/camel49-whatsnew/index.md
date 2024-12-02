@@ -56,6 +56,7 @@ We have added a few new components:
 - `camel-clickup` - Receives events from ClickUp
 - `camel-flowable` - Send and receive messages from the Flowable BPMN and CMMN engines.
 - `camel-fury` - Serialize and deserialize messages using Apache Fury
+- `camel-observability-services` - Opinionated observability for Camel on cloud
 - `camel-smooks` - Added smooks also as a data format
 
 ## Upgrading
