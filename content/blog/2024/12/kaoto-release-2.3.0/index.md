@@ -1,14 +1,13 @@
 ---
 title: "Kaoto v2.3 release"
-date: 2024-11-25
+date: 2024-12-05
 draft: false
 authors: [igarashitm, lordrip]
 categories: ["Releases", "Tooling", "Kaoto"]
 preview: "Kaoto 2.3 has been released"
 ---
 
-![Kaoto](cover.png)
-<!-- Some image with a Camel performing some alchemy -->
+![Kaoto](cover.webp)
 
 Following the Apache Camel 4.8.1 release, we're happy to annonce the release of Kaoto 2.3.
 
@@ -29,7 +28,7 @@ step entry to choose in the catalog.
 |------------------------------------|------------------------------------|
 | ![Tile](catalogDatamapperTile.png) | ![List](catalogDatamapperList.png) |
 
-Once the Kaoto DataMapper step is added in the route, you can launch Kaoto DataMapper UI by clicking 
+Once the Kaoto DataMapper step is added in the route, you can launch Kaoto DataMapper UI by clicking
 the `Configure` button in the Kaoto DataMapper step config form.
 
 ![Kaoto DataMapper step](kaotoDatamapperStep.png)
@@ -67,18 +66,25 @@ so, please stay tuned!
 
 ### [Breaking] deprecated URI field serialization in favor of the YAML parameters field approach
 The URI field has been deprecated in favor of the YAML parameters field approach. This change allows for a more flexible and user-friendly experience when configuring components.
+| URI serialized | Parameters serialized |
+| --- | --- |
+| ![URI serialized](uriSerialized.png) | ![Parameters serialized](parametersSerialized.png) |
 
 ### Improved look and feel
 The canvas look and feel has been redesigned to provide a more modern and clean look. The new design is cleaner, with less borders and wider, making it more intuitive and user-friendly.
+![Timer component](timerComponent.png)
 
 ### Contextual toolbar on hovering Nodes
 A contextual toolbar is now displayed when hovering over nodes, providing quick access to the most common actions for the selected node. It can be configured to also be shown on selecting the node.
+![Step toolbar](stepToolbar.png)
 
 ### Less movement for the Canvas
 The autofit functionality when selecting nodes has been removed, instead, the Canvas will move only when necessary to make the node visible, providing a more stable and predictable experience.
+![Auto focus](autoFocus.gif)
 
 ### Parameters Field
 The Parameters Field styling has been improved to provide more room for editing and better visibility of the parameters, being open by default for a more intuitive experience.
+![Parameters field](parametersField.png)
 
 ### Sorting Languages and DataFormats properties
 The properties for languages and data formats are now sorted following the official Camel catalog for easier navigation and discovery.
@@ -109,9 +115,12 @@ Once again, many kudos to [@ibek](https://github.com/ibek/) for the contribution
 ### Enable all functionality
 There's now an "Enable All" functionality to reenable multiple disabled EIPs at once.
 Three in a row for [@ibek](https://github.com/ibek/) 💪.
+![Enable all steps](enableAllSteps.png)
 
 ### Nodes titles are collapsed by default
 The nodes titles are now collapsed by default, providing a cleaner and more focused view of the Canvas, while still allowing you to see them when hovering over the nodes.
+![Node label](nodeLabel.png)
 
 ### Show endpoint URI for the `direct` component
 The endpoint URI for the `direct` component is now displayed in the Config panel, making it easier to understand the configuration of the component.
+![Direct label](directLabel.png)
