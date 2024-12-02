@@ -12,11 +12,31 @@ This release introduces a set of new features and noticeable improvements that w
 
 ## Camel Core
 
+Added _startup condition_ feature to let Camel perform some checks on startup,
+before continuing. For example to check if a specific ENV exists, or wait
+for a specific file to be created etc.
+
+For low-code users that favour using Groovy then we made it possible to use the Log EIP with groovy instead of simple.
+You can configure this with `camel.main.logLanguage = groovy`.
+
+The Log EIP now formats the `${exchange}` output using the standard exchange formatter, which makes
+it easier to see the content of the current `Exchange`.
+
+The supervised route controller now emits `RouteRestartingEvent` when routes are attempted to be
+started again after a previous failure. This allows to have _fined grained_ events for what happens.
+
 TODO: stuff here
+
+## DSL
+
+You can now globally configure data formats in XML and YAML DSL also, which makes it easier to
+set up your data formats once, and reuse these within all your routes by referring to their ids.
 
 ## Camel JBang
 
-TODO: stuff here
+The `camel get properties` can now show property placeholder values with default vs actual value, such
+as when values are applied from ENV variables. This makes it possible to better track how a value was configured.
+
 
 ## ???? 
 
