@@ -16,38 +16,97 @@ Added _startup condition_ feature to let Camel perform some checks on startup,
 before continuing. For example to check if a specific ENV exists, or wait
 for a specific file to be created etc.
 
-For low-code users that favour using Groovy then we made it possible to use the Log EIP with groovy instead of simple.
-You can configure this with `camel.main.logLanguage = groovy`.
-
-The Log EIP now formats the `${exchange}` output using the standard exchange formatter, which makes
-it easier to see the content of the current `Exchange`.
-
 The supervised route controller now emits `RouteRestartingEvent` when routes are attempted to be
 started again after a previous failure. This allows to have _fined grained_ events for what happens.
 
-TODO: stuff here
+Added a _trust all certificate_ option for Camel SSL. To make it quick
+to use HTTPS but without having a valid certificate. Only use this for development purposes.
+
+The route dumper to XML and YAML no longer includes nodes with default values in the output.
 
 ## DSL
 
 You can now globally configure data formats in XML and YAML DSL also, which makes it easier to
 set up your data formats once, and reuse these within all your routes by referring to their ids.
 
+## Camel Test
+
+We have made it easier to use fluent builders with mock endpoints to set expectations using Camel languages such as
+JSonPath, JQ, XPath, Simple, etc.  See `camel-mock` documentation for more details.
+
 ## Camel JBang
+
+When showing _help_ (such as `camel get route --help`) then all the default values is now shown in the help text.
 
 The `camel get properties` can now show property placeholder values with default vs actual value, such
 as when values are applied from ENV variables. This makes it possible to better track how a value was configured.
+
+TODO: repl command
+TODO: receive command
+
+### Camel JBang Kubernetes
+
+TODO: 
 
 
 ## ???? 
 
 TODO: stuff here
 
+## Camel Groovy
+
+We have aligned the syntax to use same naming pattern as the simple language, which makes it easier
+to use both languages with Camel. This means you can refer to exchange, headers, variables in the same way.
+
+Added `log` function to make it easy to write to log from within a groovy script.
+
+For low-code users that favour using Groovy then we made it possible to use the Log EIP with groovy instead of simple.
+You can configure this with `camel.main.logLanguage = groovy`.
+
+The Log EIP now formats the `${exchange}` output using the standard exchange formatter, which makes
+it easier to see the content of the current `Exchange`.
+
+## Camel JMS
+
+The JMS component will now default filter out `CamelXXX` headers as done by other Camel components.
+
+## Camel HTTP
+
+The `camel-http` component now supports caching and refreshing OAuth2 tokens.
+
+## Security Vaults
+
+In the `camel-kubernetes` you can now let Camel be auto-reloaded on configmap updates, just as it was possible with secret updates.
+
+In Camel Spring Boot you can use security vaults to store configuration values, which now can also be used in Spring configurations
+such as `spring.datasource.password = {{aws:myDatabasePassword}}`
+
+## Camel Kamelets
+
+We have moved `kamelets-utils` from Camel Kamelets to Camel Core project (inside `camel-kamelets`) to make it easier to maintain,
+and also because Kamelets are first-class everywhere with Camel.
+
+You can now configure kamelets with ENV variables using a more human ready for lang parameters.
+
+The option `bucketNameOrArn` can now be configured using both of the following styles:
+
+```properties
+CAMEL_KAMELET_AWS_S3_SOURCE_BUCKETNAMEORARN = myBucket
+CAMEL_KAMELET_AWS_S3_SOURCE_BUCKET_NAME_OR_ARN = myBucket
+```
+
+This actually applies to all the Camel configuration you can (not only for kamelets).
+
+## Camel JAXB
+
+We have optimized `camel-jaxb` to include a cache on `ObjectFactory` that makes this faster when using JAXB
+for type converters.
+
 ## Miscellaneous
 
 Upgraded many third-party dependencies to the latest releases at the time of release.
 
 The `camel-spring-boot` is upgraded to latest Spring Boot 3.4.0 release.
-
 
 ## New Components
 
@@ -58,6 +117,7 @@ We have added a few new components:
 - `camel-fury` - Serialize and deserialize messages using Apache Fury
 - `camel-observability-services` - Opinionated observability for Camel on cloud
 - `camel-smooks` - Added smooks also as a data format
+- `camel-jolokia-starter` - To make using Jolokia easy with Camel Spring Boot
 
 ## Upgrading
 
