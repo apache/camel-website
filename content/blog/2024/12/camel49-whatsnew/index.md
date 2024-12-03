@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 4.9 What's New"
 date: 2024-12-06
-authors: [davsclaus]
+authors: [davsclaus,squakez]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 4.9 release.
 ---
@@ -46,10 +46,24 @@ TODO: receive command
 
 ### Camel JBang Kubernetes
 
-TODO: 
+TODO:
 
+## Camel Observability Services
 
-## ???? 
+One of the main challenges of running a Microservices Oriented Architecture on cloud is to monitor how the different services deployed are interacting together. During the last years we have worked to introduce several components that cover the **Observability** stack. However all the different components contributing to the observability services had to be configured each of them separately. Even worse, each of the different runtimes we support in Camel (Main, Quarkus, Spring Boot) had its own configuration and its own endpoints.
+
+The new component we're introducing in this release, `camel-observability-services` has the goal to uniform and harmonize the configuration and to provide a set of default configuration that are the same regardless the runtime of choice. This is going to be particularly handy when you need to manage Camel on the cloud, providing a set of opinionated tools with default settings. So far, when you are using this component, you're going to use these components out of the box:
+
+* `camel-health`
+* `camel-management`
+* `camel-micrometer-prometheus`
+* `camel-opentelemetry`
+
+Read the manual to get more information about [how to do observability with Camel](xref:components::observability-services.adoc).
+
+NOTE: the component will require an extension and will be available on Quarkus runtime with the first release of Camel Quarkus supporting 4.9.0 which should be done some week after this core release.
+
+## ????
 
 TODO: stuff here
 
