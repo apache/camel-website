@@ -177,7 +177,7 @@ when you need to quickly build a prototype with Camel.
 <p>
 <a class="button dark" href="/manual/camel-jbang.html">Documentation</a>
 <a class="button light" href="https://github.com/apache/camel/tree/main/dsl/camel-jbang">Source</a>
-<a class="button light" href="https://github.com/apache/camel-kamelets-examples/tree/main/jbang">Examples</a>
+<a class="button light" href="https://github.com/apache/camel-jbang-examples">Examples</a>
 </p>
 
 {{< /div >}}
