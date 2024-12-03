@@ -109,7 +109,7 @@ CAMEL_KAMELET_AWS_S3_SOURCE_BUCKETNAMEORARN = myBucket
 CAMEL_KAMELET_AWS_S3_SOURCE_BUCKET_NAME_OR_ARN = myBucket
 ```
 
-This actually applies to all the Camel configuration you can (not only for kamelets).
+This actually applies to all the Camel configuration you can (not only for Kamelets).
 
 ## Camel JAXB
 
