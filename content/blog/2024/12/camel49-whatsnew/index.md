@@ -63,6 +63,15 @@ Read the manual to get more information about [how to do observability with Came
 
 NOTE: the component will require an extension and will be available on Quarkus runtime with the first release of Camel Quarkus supporting 4.9.0 which should be done some week after this core release.
 
+### Camel Spring Boot Platform HTTP
+
+Camel Platform HTTP Starter component now implements all the Camel REST Configurations features, moreover, REST service's best practices are implemented in the component itself. This may cause some issues, if you are facing HTTP errors when upgrading to 4.9 they may be caused by the following features:
+
+* Produces/Consumes enforce, if you are using something like `rest().consumes("application/json")`, the client has to provide the `Content-Type` header with value `application/json`, in the past, this check was not enforced.
+* Attachments (application/octet-stream) are now handled, and they can be found in the Exchange Message Attachments.
+* Streaming Requests and Responses are implemented as expected, Camel Platform HTTP Starter now handles hughe files streaming, this way, OutOfMemory Errors are not faced anymore.
+* HTML Forms can now be POSTED as expected.
+
 ## ????
 
 TODO: stuff here
