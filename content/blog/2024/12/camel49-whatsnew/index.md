@@ -140,6 +140,7 @@ We have added a few new components:
 - `camel-fury` - Serialize and deserialize messages using Apache Fury
 - `camel-observability-services` - Opinionated observability for Camel on cloud
 - `camel-smooks` - Added smooks also as a data format
+- `camel-torchserve` - Provide access to PyTorch TorchServe servers to run inference with PyTorch models remotely
 - `camel-jolokia-starter` - To make using Jolokia easy with Camel Spring Boot
 
 ## Upgrading
