@@ -7,16 +7,16 @@ categories: ["Releases", "Tooling", "Kaoto"]
 preview: "Kaoto 2.3 has been released"
 ---
 
-![Kaoto](cover.webp)
+![Kaoto](cover.png)
 
-Following the Apache Camel 4.8.1 release, we're happy to annonce the release of Kaoto 2.3.
+Following the Apache Camel 4.8.1 release, we're happy to announce the release of Kaoto 2.3.
 
 ## What’s New in Kaoto 2.3?
 
 We're thrilled to announce the release of Kaoto 2.3, bringing new features, improvements, and bug fixes to enhance your integration experience.
 This release also brings the first technical preview of a long awaited feature: the Kaoto DataMapper with the ability to perform data transformations using Camel.
 
-### Here are the key highlights of this release:
+## Here are the key highlights of this release:
 
 ### Kaoto DataMapper technical preview
 We are introducing a new graphical way of authoring data mappings inside your Apache Camel route with using Kaoto.
@@ -66,24 +66,49 @@ so, please stay tuned!
 
 ### [Breaking] deprecated URI field serialization in favor of the YAML parameters field approach
 The URI field has been deprecated in favor of the YAML parameters field approach. This change allows for a more flexible and user-friendly experience when configuring components.
+
 | URI serialized | Parameters serialized |
 | --- | --- |
 | ![URI serialized](uriSerialized.png) | ![Parameters serialized](parametersSerialized.png) |
 
 ### Improved look and feel
 The canvas look and feel has been redesigned to provide a more modern and clean look. The new design is cleaner, with less borders and wider, making it more intuitive and user-friendly.
+
 ![Timer component](timerComponent.png)
+
+### Show a placeholder to add a new step
+A placeholder is now displayed when there are no steps in the canvas, providing a more intuitive experience when adding new steps.
+
+![Placeholder](usePlaceholder.gif)
+
+### A quicker way to append a step
+A new way to append a step has been added, allowing you to append a step directly from the catalog by clicking on the ![Append step to the right](appendStepToTheRight.png) button in the canvas, or ![Append step bottom](appendStepBottom.png) depending on the layout.
+
+![Append step](appendStep.gif)
+
+### Add step between two steps
+Clicking on the ![Plus icon in an edge](plusIconEdge.png) between two steps will now add a new step between them, providing a more convenient way to insert a step in the canvas.
+
+![Add step between](addStepBetween.png)
+
+### Toggle visibility of all flows
+The visibility of all flows can now be toggled at once, providing a more convenient way to show or hide all flows in the canvas.
+
+![Toggle flows](showAllFlows.gif)
 
 ### Contextual toolbar on hovering Nodes
 A contextual toolbar is now displayed when hovering over nodes, providing quick access to the most common actions for the selected node. It can be configured to also be shown on selecting the node.
+
 ![Step toolbar](stepToolbar.png)
 
 ### Less movement for the Canvas
 The autofit functionality when selecting nodes has been removed, instead, the Canvas will move only when necessary to make the node visible, providing a more stable and predictable experience.
+
 ![Auto focus](autoFocus.gif)
 
 ### Parameters Field
 The Parameters Field styling has been improved to provide more room for editing and better visibility of the parameters, being open by default for a more intuitive experience.
+
 ![Parameters field](parametersField.png)
 
 ### Sorting Languages and DataFormats properties
@@ -112,15 +137,20 @@ kudos to [@ibek](https://github.com/ibek/) for the contribution.
 The configuration panel can now be closed by clicking outside of it, providing a more intuitive experience when configuring components.
 Once again, many kudos to [@ibek](https://github.com/ibek/) for the contribution.
 
+![Close config panel](closeOutside.gif)
+
 ### Enable all functionality
 There's now an "Enable All" functionality to reenable multiple disabled EIPs at once.
 Three in a row for [@ibek](https://github.com/ibek/) 💪.
+
 ![Enable all steps](enableAllSteps.png)
 
 ### Nodes titles are collapsed by default
 The nodes titles are now collapsed by default, providing a cleaner and more focused view of the Canvas, while still allowing you to see them when hovering over the nodes.
+
 ![Node label](nodeLabel.png)
 
 ### Show endpoint URI for the `direct` component
 The endpoint URI for the `direct` component is now displayed in the Config panel, making it easier to understand the configuration of the component.
+
 ![Direct label](directLabel.png)
