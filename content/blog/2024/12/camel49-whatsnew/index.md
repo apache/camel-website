@@ -1,6 +1,6 @@
 ---
 title: "Apache Camel 4.9 What's New"
-date: 2024-12-06
+date: 2024-12-05
 authors: [davsclaus,squakez,tadayosi]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 4.9 release.
@@ -24,12 +24,12 @@ to use HTTPS but without having a valid certificate. Only use this for developme
 
 The route dumper to XML and YAML no longer includes nodes with default values in the output.
 
-## DSL
+### DSL
 
 You can now globally configure data formats in XML and YAML DSL also, which makes it easier to
 set up your data formats once, and reuse these within all your routes by referring to their ids.
 
-## Camel Test
+### Camel Test
 
 We have made it easier to use fluent builders with mock endpoints to set expectations using Camel languages such as
 JSonPath, JQ, XPath, Simple, etc.  See `camel-mock` documentation for more details.
@@ -62,19 +62,6 @@ The new component we're introducing in this release, `camel-observability-servic
 Read the manual to get more information about [how to do observability with Camel](xref:components::observability-services.adoc).
 
 NOTE: the component will require an extension and will be available on Quarkus runtime with the first release of Camel Quarkus supporting 4.9.0 which should be done some week after this core release.
-
-### Camel Spring Boot Platform HTTP
-
-Camel Platform HTTP Starter component now implements all the Camel REST Configurations features, moreover, REST service's best practices are implemented in the component itself. This may cause some issues, if you are facing HTTP errors when upgrading to 4.9 they may be caused by the following features:
-
-* Produces/Consumes enforce, if you are using something like `rest().consumes("application/json")`, the client has to provide the `Content-Type` header with value `application/json`, in the past, this check was not enforced.
-* Attachments (application/octet-stream) are now handled, and they can be found in the Exchange Message Attachments.
-* Streaming Requests and Responses are implemented as expected, Camel Platform HTTP Starter now handles hughe files streaming, this way, OutOfMemory Errors are not faced anymore.
-* HTML Forms can now be POSTED as expected.
-
-## ????
-
-TODO: stuff here
 
 ## Camel Groovy
 
@@ -125,11 +112,22 @@ This actually applies to all the Camel configuration you can (not only for Kamel
 We have optimized `camel-jaxb` to include a cache on `ObjectFactory` that makes this faster when using JAXB
 for type converters.
 
+## Camel Spring Boot
+
+The `camel-spring-boot` is upgraded to latest Spring Boot 3.4.0 release.
+
+### Camel Spring Boot Platform HTTP
+
+Camel Platform HTTP Starter component now implements all the Camel REST Configurations features, moreover, REST service's best practices are implemented in the component itself. This may cause some issues, if you are facing HTTP errors when upgrading to 4.9 they may be caused by the following features:
+
+* Produces/Consumes enforce, if you are using something like `rest().consumes("application/json")`, the client has to provide the `Content-Type` header with value `application/json`, in the past, this check was not enforced.
+* Attachments (application/octet-stream) are now handled, and they can be found in the Exchange Message Attachments.
+* Streaming Requests and Responses are implemented as expected, Camel Platform HTTP Starter now handles hughe files streaming, this way, OutOfMemory Errors are not faced anymore.
+* HTML Forms can now be POSTED as expected.
+
 ## Miscellaneous
 
 Upgraded many third-party dependencies to the latest releases at the time of release.
-
-The `camel-spring-boot` is upgraded to latest Spring Boot 3.4.0 release.
 
 ## New Components
 
