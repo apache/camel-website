@@ -41,8 +41,15 @@ When showing _help_ (such as `camel get route --help`) then all the default valu
 The `camel get properties` can now show property placeholder values with default vs actual value, such
 as when values are applied from ENV variables. This makes it possible to better track how a value was configured.
 
-TODO: repl command
-TODO: receive command
+The new `camel cmd receive` command can be used to consume messages from external systems. For example
+if you work on a Camel prototype to send messages to Kafka, you can from another shell, run the `camel receive` command
+to let it consume messages from Kafka, which allows you to see those messages that was sent to Kafka.
+
+There is also the `camel cmd browse` command that makes it possible to only peak queues on systems, whichout
+consuming the messages. However, this only works for a limited set of components such as JMS and file/ftp.
+
+And we also added a new `camel shell` command that allows to run Camel JBang in an interactive shell,
+(in REPL mode), so you can quickly execute Camel JBang commands.
 
 ### Camel JBang Kubernetes
 
