@@ -572,6 +572,15 @@ Act as a message source as input to a route
       </xs:documentation>
     </xs:annotation>
   </xs:element>
+  <xs:element name="fury" type="tns:furyDataFormat">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+<![CDATA[
+Serialize and deserialize messages using Apache Fury
+]]>
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
   <xs:element name="get" type="tns:getDefinition">
     <xs:annotation>
       <xs:documentation xml:lang="en">
@@ -1849,6 +1858,15 @@ Allows setting multiple variables at the same time.
       <xs:documentation xml:lang="en">
 <![CDATA[
 Evaluates a Camel simple expression.
+]]>
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="smooks" type="tns:smooksDataFormat">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+<![CDATA[
+Transform and bind XML as well as non-XML data, including EDI, CSV, JSON, and YAML using Smooks.
 ]]>
       </xs:documentation>
     </xs:annotation>
@@ -5561,9 +5579,9 @@ reduce memory usage to avoid storing too many non frequent used producers.
           <xs:annotation>
             <xs:documentation xml:lang="en">
 <![CDATA[
-To use a variable to store the received message body (only body, not headers). This is handy for easy access to the
-received message body via variables. Important: When using receive variable then the received body is stored only in
-this variable and not on the current org.apache.camel.Message .
+To use a variable to store the received message body (only body, not headers). This makes it handy to use variables for
+user data and to easily control what data to use for sending and receiving. Important: When using receive variable then
+the received body is stored only in this variable and not on the current message.
 ]]>
             </xs:documentation>
           </xs:annotation>
@@ -5572,9 +5590,10 @@ this variable and not on the current org.apache.camel.Message .
           <xs:annotation>
             <xs:documentation xml:lang="en">
 <![CDATA[
-To use a variable to store the received message body (only body, not headers). This is handy for easy access to the
-received message body via variables. Important: When using receive variable then the received body is stored only in
-this variable and not on the current org.apache.camel.Message .
+To use a variable as the source for the message body to send. This makes it handy to use variables for user data and to
+easily control what data to use for sending and receiving. Important: When using send variable then the message body is
+taken from this variable instead of the current message, however the headers from the message will still be used as
+well. In other words, the variable is used instead of the message body, but everything else is as usual.
 ]]>
             </xs:documentation>
           </xs:annotation>
@@ -7396,6 +7415,7 @@ down. Default value: false
             <xs:element ref="tns:fhirJson"/>
             <xs:element ref="tns:fhirXml"/>
             <xs:element ref="tns:flatpack"/>
+            <xs:element ref="tns:fury"/>
             <xs:element ref="tns:grok"/>
             <xs:element ref="tns:gzipDeflater"/>
             <xs:element ref="tns:hl7"/>
@@ -7409,6 +7429,7 @@ down. Default value: false
             <xs:element ref="tns:parquetAvro"/>
             <xs:element ref="tns:protobuf"/>
             <xs:element ref="tns:rss"/>
+            <xs:element ref="tns:smooks"/>
             <xs:element ref="tns:soap"/>
             <xs:element ref="tns:swiftMt"/>
             <xs:element ref="tns:swiftMx"/>
@@ -7430,9 +7451,10 @@ down. Default value: false
           <xs:annotation>
             <xs:documentation xml:lang="en">
 <![CDATA[
-To use a variable to store the received message body (only body, not headers). This is handy for easy access to the
-received message body via variables. Important: When using receive variable then the received body is stored only in
-this variable and not on the current org.apache.camel.Message .
+To use a variable as the source for the message body to send. This makes it handy to use variables for user data and to
+easily control what data to use for sending and receiving. Important: When using send variable then the message body is
+taken from this variable instead of the current message, however the headers from the message will still be used as
+well. In other words, the variable is used instead of the message body, but everything else is as usual.
 ]]>
             </xs:documentation>
           </xs:annotation>
@@ -7441,9 +7463,9 @@ this variable and not on the current org.apache.camel.Message .
           <xs:annotation>
             <xs:documentation xml:lang="en">
 <![CDATA[
-To use a variable to store the received message body (only body, not headers). This is handy for easy access to the
-received message body via variables. Important: When using receive variable then the received body is stored only in
-this variable and not on the current org.apache.camel.Message .
+To use a variable to store the received message body (only body, not headers). This makes it handy to use variables for
+user data and to easily control what data to use for sending and receiving. Important: When using receive variable then
+the received body is stored only in this variable and not on the current message.
 ]]>
             </xs:documentation>
           </xs:annotation>
@@ -8679,6 +8701,49 @@ References to a custom parser factory to lookup in the registry.
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:complexType name="furyDataFormat">
+    <xs:complexContent>
+      <xs:extension base="tns:dataFormat">
+        <xs:sequence/>
+        <xs:attribute name="unmarshalType" type="xs:string">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">
+<![CDATA[
+Class of the java type to use when unmarshalling.
+]]>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="requireClassRegistration" type="xs:string">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">
+<![CDATA[
+Whether to require register classes. Default value: true
+]]>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="threadSafe" type="xs:string">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">
+<![CDATA[
+Whether to use the threadsafe fury. Default value: true
+]]>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="allowAutoWiredFury" type="xs:string">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">
+<![CDATA[
+Whether to auto-discover Fury from the registry. Default value: true
+]]>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="grokDataFormat">
     <xs:complexContent>
       <xs:extension base="tns:dataFormat">
@@ -8978,7 +9043,7 @@ value: 0
           <xs:annotation>
             <xs:documentation xml:lang="en">
 <![CDATA[
-To enable pretty printing output nicely formatted. Is by default false. Default value: false
+To enable pretty printing output nicely formatted. Is by default false. Default value: true
 ]]>
             </xs:documentation>
           </xs:annotation>
@@ -8988,7 +9053,7 @@ To enable pretty printing output nicely formatted. Is by default false. Default 
             <xs:documentation xml:lang="en">
 <![CDATA[
 Whether to allow using ObjectFactory classes to create the POJO classes during marshalling. This only applies to POJO
-classes that has not been annotated with JAXB and providing jaxb.index descriptor files. Default value: false
+classes that has not been annotated with JAXB and providing jaxb.index descriptor files. Default value: true
 ]]>
             </xs:documentation>
           </xs:annotation>
@@ -8997,7 +9062,7 @@ classes that has not been annotated with JAXB and providing jaxb.index descripto
           <xs:annotation>
             <xs:documentation xml:lang="en">
 <![CDATA[
-Whether to ignore JAXBElement elements - only needed to be set to false in very special use-cases. Default value: false
+Whether to ignore JAXBElement elements - only needed to be set to false in very special use-cases. Default value: true
 ]]>
             </xs:documentation>
           </xs:annotation>
@@ -9178,6 +9243,16 @@ To enable pretty printing output nicely formatted. Is by default false. Default 
             <xs:documentation xml:lang="en">
 <![CDATA[
 Which json library to use. Default value: Jackson
+]]>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="combineUnicodeSurrogates" type="xs:string">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">
+<![CDATA[
+Force generator that outputs JSON content to combine surrogate pairs (if any) into 4-byte characters. This should be
+preferred when using 4-byte characters such as Japanese. Default value: false
 ]]>
             </xs:documentation>
           </xs:annotation>
@@ -9702,6 +9777,22 @@ value: true
     <xs:complexContent>
       <xs:extension base="tns:dataFormat">
         <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="smooksDataFormat">
+    <xs:complexContent>
+      <xs:extension base="tns:dataFormat">
+        <xs:sequence/>
+        <xs:attribute name="smooksConfig" type="xs:string">
+          <xs:annotation>
+            <xs:documentation xml:lang="en">
+<![CDATA[
+Path to the Smooks configuration file.
+]]>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -11546,9 +11637,9 @@ Sets a reference to use for lookup the policy in the registry.
           <xs:annotation>
             <xs:documentation xml:lang="en">
 <![CDATA[
-To use a variable to store the received message body (only body, not headers). This is handy for easy access to the
-received message body via variables. Important: When using receive variable then the received body is stored only in
-this variable and not on the current Message .
+To use a variable to store the received message body (only body, not headers). This makes it handy to use variables for
+user data and to easily control what data to use for sending and receiving. Important: When using receive variable then
+the received body is stored only in this variable and not on the current message.
 ]]>
             </xs:documentation>
           </xs:annotation>
@@ -11615,9 +11706,9 @@ Returns null if timed out The default value is 20000 (20 seconds). Default value
           <xs:annotation>
             <xs:documentation xml:lang="en">
 <![CDATA[
-To use a variable to store the received message body (only body, not headers). This is handy for easy access to the
-received message body via variables. Important: When using receive variable then the received body is stored only in
-this variable and not on the current org.apache.camel.Message .
+To use a variable to store the received message body (only body, not headers). This makes it handy to use variables for
+user data and to easily control what data to use for sending and receiving. Important: When using receive variable then
+the received body is stored only in this variable and not on the current message.
 ]]>
             </xs:documentation>
           </xs:annotation>
@@ -14103,7 +14194,7 @@ Reference to the exception instance to lookup from the registry to throw.
 <![CDATA[
 To use a variable as the source for the message body to send. This makes it handy to use variables for user data and to
 easily control what data to use for sending and receiving. Important: When using send variable then the message body is
-taken from this variable instead of the current Message , however the headers from the Message will still be used as
+taken from this variable instead of the current message, however the headers from the message will still be used as
 well. In other words, the variable is used instead of the message body, but everything else is as usual.
 ]]>
             </xs:documentation>
@@ -14113,9 +14204,9 @@ well. In other words, the variable is used instead of the message body, but ever
           <xs:annotation>
             <xs:documentation xml:lang="en">
 <![CDATA[
-To use a variable to store the received message body (only body, not headers). This is handy for easy access to the
-received message body via variables. Important: When using receive variable then the received body is stored only in
-this variable and not on the current org.apache.camel.Message .
+To use a variable to store the received message body (only body, not headers). This makes it handy to use variables for
+user data and to easily control what data to use for sending and receiving. Important: When using receive variable then
+the received body is stored only in this variable and not on the current message.
 ]]>
             </xs:documentation>
           </xs:annotation>
@@ -14150,9 +14241,10 @@ org.apache.camel.language.simple.SimpleLanguage expression.
           <xs:annotation>
             <xs:documentation xml:lang="en">
 <![CDATA[
-To use a variable to store the received message body (only body, not headers). This is handy for easy access to the
-received message body via variables. Important: When using receive variable then the received body is stored only in
-this variable and not on the current org.apache.camel.Message .
+To use a variable as the source for the message body to send. This makes it handy to use variables for user data and to
+easily control what data to use for sending and receiving. Important: When using send variable then the message body is
+taken from this variable instead of the current message, however the headers from the message will still be used as
+well. In other words, the variable is used instead of the message body, but everything else is as usual.
 ]]>
             </xs:documentation>
           </xs:annotation>
@@ -14555,6 +14647,7 @@ To type used as a target data type in the transformation.
             <xs:element ref="tns:fhirJson"/>
             <xs:element ref="tns:fhirXml"/>
             <xs:element ref="tns:flatpack"/>
+            <xs:element ref="tns:fury"/>
             <xs:element ref="tns:grok"/>
             <xs:element ref="tns:gzipDeflater"/>
             <xs:element ref="tns:hl7"/>
@@ -14568,6 +14661,7 @@ To type used as a target data type in the transformation.
             <xs:element ref="tns:parquetAvro"/>
             <xs:element ref="tns:protobuf"/>
             <xs:element ref="tns:rss"/>
+            <xs:element ref="tns:smooks"/>
             <xs:element ref="tns:soap"/>
             <xs:element ref="tns:swiftMt"/>
             <xs:element ref="tns:swiftMx"/>
@@ -14589,9 +14683,10 @@ To type used as a target data type in the transformation.
           <xs:annotation>
             <xs:documentation xml:lang="en">
 <![CDATA[
-To use a variable to store the received message body (only body, not headers). This is handy for easy access to the
-received message body via variables. Important: When using receive variable then the received body is stored only in
-this variable and not on the current org.apache.camel.Message .
+To use a variable as the source for the message body to send. This makes it handy to use variables for user data and to
+easily control what data to use for sending and receiving. Important: When using send variable then the message body is
+taken from this variable instead of the current message, however the headers from the message will still be used as
+well. In other words, the variable is used instead of the message body, but everything else is as usual.
 ]]>
             </xs:documentation>
           </xs:annotation>
@@ -14600,9 +14695,9 @@ this variable and not on the current org.apache.camel.Message .
           <xs:annotation>
             <xs:documentation xml:lang="en">
 <![CDATA[
-To use a variable to store the received message body (only body, not headers). This is handy for easy access to the
-received message body via variables. Important: When using receive variable then the received body is stored only in
-this variable and not on the current org.apache.camel.Message .
+To use a variable to store the received message body (only body, not headers). This makes it handy to use variables for
+user data and to easily control what data to use for sending and receiving. Important: When using receive variable then
+the received body is stored only in this variable and not on the current message.
 ]]>
             </xs:documentation>
           </xs:annotation>
@@ -14743,6 +14838,21 @@ List of bean.
       </xs:element>
       <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="skip"/>
       <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="skip"/>
+      <xs:element minOccurs="0" name="dataFormats">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="dataFormat" type="tns:dataFormat">
+              <xs:annotation>
+                <xs:documentation xml:lang="en">
+<![CDATA[
+Camel data formats.
+]]>
+                </xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
       <xs:element maxOccurs="unbounded" minOccurs="0" ref="tns:restConfiguration"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" ref="tns:rest"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" ref="tns:routeConfiguration"/>
@@ -16742,6 +16852,7 @@ Set a reference to a custom Expression to use.
         <xs:element ref="tns:fhirJson"/>
         <xs:element ref="tns:fhirXml"/>
         <xs:element ref="tns:flatpack"/>
+        <xs:element ref="tns:fury"/>
         <xs:element ref="tns:grok"/>
         <xs:element ref="tns:gzipDeflater"/>
         <xs:element ref="tns:hl7"/>
@@ -16756,6 +16867,7 @@ Set a reference to a custom Expression to use.
         <xs:element ref="tns:pgp"/>
         <xs:element ref="tns:protobuf"/>
         <xs:element ref="tns:rss"/>
+        <xs:element ref="tns:smooks"/>
         <xs:element ref="tns:soap"/>
         <xs:element ref="tns:swiftMt"/>
         <xs:element ref="tns:swiftMx"/>
@@ -17530,6 +17642,7 @@ Sets the component name that this definition will apply to.
             <xs:element ref="tns:fhirJson"/>
             <xs:element ref="tns:fhirXml"/>
             <xs:element ref="tns:flatpack"/>
+            <xs:element ref="tns:fury"/>
             <xs:element ref="tns:grok"/>
             <xs:element ref="tns:gzipDeflater"/>
             <xs:element ref="tns:hl7"/>
@@ -17543,6 +17656,7 @@ Sets the component name that this definition will apply to.
             <xs:element ref="tns:parquetAvro"/>
             <xs:element ref="tns:protobuf"/>
             <xs:element ref="tns:rss"/>
+            <xs:element ref="tns:smooks"/>
             <xs:element ref="tns:soap"/>
             <xs:element ref="tns:swiftMt"/>
             <xs:element ref="tns:swiftMx"/>
@@ -17839,9 +17953,9 @@ Sets whether message history is enabled or not. Default value: false
             <xs:documentation xml:lang="en">
 <![CDATA[
 Whether to capture precise source location:line-number for all EIPs in Camel routes. Enabling this will impact parsing
-Java based routes (also Groovy, Kotlin, etc.) on startup as this uses JDK StackTraceElement to calculate the location
-from the Camel route, which comes with a performance cost. This only impact startup, not the performance of the routes
-at runtime. Default value: false
+Java based routes (also Groovy, etc.) on startup as this uses JDK StackTraceElement to calculate the location from the
+Camel route, which comes with a performance cost. This only impact startup, not the performance of the routes at
+runtime. Default value: false
 ]]>
             </xs:documentation>
           </xs:annotation>
