@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 4.9 What's New"
 date: 2024-12-06
-authors: [davsclaus,squakez]
+authors: [davsclaus,squakez,tadayosi]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 4.9 release.
 ---
