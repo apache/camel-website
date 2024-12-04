@@ -1,6 +1,6 @@
 ---
 title: "Kaoto v2.3 release"
-date: 2024-12-05
+date: 2024-12-10
 draft: false
 authors: [igarashitm, lordrip]
 categories: ["Releases", "Tooling", "Kaoto"]
@@ -19,36 +19,34 @@ This release also brings the first technical preview of a long awaited feature: 
 ## Here are the key highlights of this release:
 
 ### Kaoto DataMapper technical preview
-We are introducing a new graphical way of authoring data mappings inside your Apache Camel route with using Kaoto.
-We named it **Kaoto DataMapper** step.
-Just like when you add a regular Camel step from the catalog in the Kaoto canvas, now you can see the Kaoto DataMapper
-step entry to choose in the catalog.
+In this release, we are introducing the new **Kaoto DataMapper**, a graphical way of authoring data mappings inside your routes using Kaoto.
+
+#### How to use it?
+When creating a Camel route, like any other step, just search for **Kaoto DataMapper** in the catalog and add it from there.
 
 | Tile view                          | List view                          |
 |------------------------------------|------------------------------------|
 | ![Tile](catalogDatamapperTile.png) | ![List](catalogDatamapperList.png) |
 
-Once the Kaoto DataMapper step is added in the route, you can launch Kaoto DataMapper UI by clicking
-the `Configure` button in the Kaoto DataMapper step config form.
+Once the **Kaoto DataMapper** step is added in the route, you can launch it using by clicking the `Configure` button in config form.
 
 ![Kaoto DataMapper step](kaotoDatamapperStep.png)
 
 ![DataMapper Configure button](datamapperConfigureButton.png)
 
-Now you can attach the XML schema file to render the Document structure as a tree, and start creating data mappings by
-drag and drop between those.
+Now you can attach the XML schema file to render the Document structure as a tree, and start creating data mappings by drag and drop between those.
 
 ![DataMapper configured](datamapperConfigured.png)
 
-When you don't yet have an active DataMapper canvas opened, if you click the `DataMapper` tab, it shows the built-in
-step-by-step instructions of how to use Kaoto DataMapper UI.
+When you don't yet have an active DataMapper canvas opened, if you click the `DataMapper` tab, it shows the built-in step-by-step instructions of how to use Kaoto DataMapper UI.
 
 ![DataMapper HowTo](datamapperHowTo.png)
 
 As an initial technical preview version, Kaoto DataMapper only supports XML schema for rendering the data structure.
 And it internally generates a single XSLT step to perform configured data mappings at runtime.
-While you can consume multiple XML documents with using Camel Variables and/or Message Headers that are mapped to XSLT
-Parameters, the output is only a Camel Message Body for this release.
+While you can consume multiple XML documents with using Camel Variables and/or Message Headers that are mapped to XSLT Parameters, the output is only a Camel Message Body for this release.
+
+#### What's next for the Kaoto DataMapper?
 
 We have a plan to iteratively add more features to the Kaoto DataMapper, for example:
  - JSON support
@@ -60,9 +58,8 @@ We have a plan to iteratively add more features to the Kaoto DataMapper, for exa
  - Support assuming data structure (schema) by attaching a data example, such as XML instance and JSON instance
  - `xs:include` and `xs:import` support for XML schema
  - Enum mapping
- - and more...
 
-so, please stay tuned!
+and much more, so stay tuned!
 
 ### [Breaking] deprecated URI field serialization in favor of the YAML parameters field approach
 The URI field has been deprecated in favor of the YAML parameters field approach. This change allows for a more flexible and user-friendly experience when configuring components.
