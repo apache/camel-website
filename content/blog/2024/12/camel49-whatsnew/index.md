@@ -38,6 +38,19 @@ JSonPath, JQ, XPath, Simple, etc.  See `camel-mock` documentation for more detai
 
 When showing _help_ (such as `camel get route --help`) then all the default values is now shown in the help text.
 
+We have continued improving and bug fixing Camel JBang. For example the `camel export` functionality
+can now handle more situations out of the box, and in case you have compilation errors and still want
+to export, you can use the `--ignore-loading-error`.
+
+When exporting to Spring Boot or Camel Main, then docker files are included, which makes it ready
+to build runnable container images easily. This was already supported for Quarkus.
+
+When running in dev mode (`camel run --dev *`) then any re-load errors is now also visible when using `camel get` command.
+This allows to see the error, such as if you use `camel get --watch` to show updating list of running Camel integrations.
+The error is of course always in the running integration log as well (which `camel log` can also show).
+
+The `camel version list` now also includes all the old releases going all the way back to Camel 1.0 from 2007.
+
 The `camel get properties` can now show property placeholder values with default vs actual value, such
 as when values are applied from ENV variables. This makes it possible to better track how a value was configured.
 
@@ -55,6 +68,15 @@ And we also added a new `camel shell` command that allows to run Camel JBang in 
 
 We have done many improvements and bug fixes to make `camel kubernetes` work good on Kubernetes.
 You can now run (also in `--dev` mode) and deploy as well for all 3 runtimes: main, spring-boot, and quarkus.
+
+You can now also run `camel kubernetes` using k3s by setting `--cluster-type=k3s`.
+
+The `camel-kubernets` is no longer dependent on Camel K.
+
+## Camel Open Telemetry
+
+We have fixed issues in relation to leaking spans when routing.
+There is still some challenges related to MDC, and we continue to work on this for upcoming releases.
 
 ## Camel Observability Services
 
@@ -119,6 +141,10 @@ This actually applies to all the Camel configuration you can (not only for Kamel
 
 We have optimized `camel-jaxb` to include a cache on `ObjectFactory` that makes this faster when using JAXB
 for type converters.
+
+## Camel AMQP
+
+You can now more easily configure SSL/TLS configurations on the `camel-amqp` component.
 
 ## Camel Spring Boot
 
