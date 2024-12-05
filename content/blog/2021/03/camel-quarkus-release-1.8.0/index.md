@@ -39,13 +39,15 @@ The new release of Quarkus brings several new features:
 
 These are mostly motivated by [Camel K](/camel-k/next/)
 and its project-less approach to defining Camel routes.
-With Camel K, all you need to run an integration is a file where the routes are defined using one of the supported DSLs
-([Java jOOR](/camel-quarkus/next/reference/extensions/java-joor-dsl.html),
-[XML](/camel-quarkus/next/reference/extensions/xml-io-dsl.html),
-[Groovy](/camel-quarkus/next/reference/extensions/groovy-dsl.html),
-[YAML](/camel-quarkus/next/reference/extensions/yaml-dsl.html),
-[Kotlin](/camel-quarkus/next/reference/extensions/kotlin-dsl.html)
-or [JavaScript](/camel-quarkus/next/reference/extensions/js-dsl.html)).
+With Camel K, all you need to run an integration is a file where the routes are defined using one of the supported DSLs:
+
+* Java jOOR
+* XML
+* Groovy
+* YAML
+* Kotlin
+* JavaScript.
+ 
 With Camel Quarkus you still need the `pom.xml` file with the appropriate dependencies in addition to the route definition files.
 Except for XML and YAML, these DSLs are supported only in JVM mode, because they load and compile the routes at runtime.
 
