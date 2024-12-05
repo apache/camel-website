@@ -53,7 +53,8 @@ And we also added a new `camel shell` command that allows to run Camel JBang in 
 
 ### Camel JBang Kubernetes
 
-TODO:
+We have done many improvements and bug fixes to make `camel kubernetes` work good on Kubernetes.
+You can now run (also in `--dev` mode) and deploy as well for all 3 runtimes: main, spring-boot, and quarkus.
 
 ## Camel Observability Services
 
@@ -155,8 +156,8 @@ Make sure to read the [upgrade guide](/manual/camel-4x-upgrade-guide-4_9.html) i
 If you are upgrading from, for example, 4.4 to 4.8, then make sure to follow the upgrade guides for each release in-between, i.e.
 4.4 -> 4.5, 4.5 -> 4.6, and so forth.
 
-TODO: Upgrade recipes
-https://github.com/apache/camel-upgrade-recipes
+The Camel Upgrade Recipes tool can also be used to automate upgrading.
+See more at: https://github.com/apache/camel-upgrade-recipes
 
 ## Release Notes
 
