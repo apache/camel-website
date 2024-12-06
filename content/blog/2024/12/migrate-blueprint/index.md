@@ -1,8 +1,8 @@
 ---
 title: "Migrating from Camel Karaf to Camel Spring Boot or Quarkus"
-date: 2024-12-6
+date: 2024-12-06
 authors: [ davsclaus ]
-categories: [ "Howtos" ]
+categories: [ "Migration" ]
 preview: Guidelines for migrating from legacy Camel Karaf to modern Camel Spring Boot or Camel Quarkus
 ---
 
