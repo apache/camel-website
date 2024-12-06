@@ -55,7 +55,7 @@ This is not expected to be a replacement for Maven or how you should use to run 
 
 If you run the example you will notice it runs without any error. 
 
-What happens is that `camel-jbang` was able to load the OSGi blueprint XML file, parse <bean> and <camelContext> and run this on a modern Camel 4.
+What happens is that `camel-jbang` was able to load the OSGi blueprint XML file, parse `<bean>` and `<camelContext>` and run this on a modern Camel 4.
 This means the migration effort for this example is minimal.
 
 #### Migrating Blueprint XML files 
@@ -438,6 +438,10 @@ to manually migrate this.
 
 On Camel 4 then future upgrades is much easier, as you would be on a modern stack with Spring Boot or Quarkus,
 which has a much larger community, and user base than legacy Apache Karaf.
+
+Beware that transforming Rest DSL into YAML DSL is not yet supported. For example the last example
+we migrated using Rest would not be possible to automatic generate the `rest` elements for YAML DSL.
+This is planned to be implemented in the future.
 
 You can find more details in the Camel 3.x/4.x [migration and upgrade guides](/manual/migration-and-upgrade.html).
 Most of the migration _pain_ would be related to changes documented in the guide (above).
