@@ -3,7 +3,7 @@ title: "Migrating from Camel Karaf to Camel Spring Boot or Quarkus"
 date: 2024-12-6
 authors: [ davsclaus ]
 categories: [ "Howtos" ]
-preview: Guidelines for migrating from legacy Camel Karaf to modern Camel Spring Boot or Camel Quarkus 
+preview: Guidelines for migrating from legacy Camel Karaf to modern Camel Spring Boot or Camel Quarkus
 ---
 
 This is the 2nd blog post in a series of _migration blogs_ to provide details and help for
@@ -70,7 +70,7 @@ What is needed to be migrated is the OSGi Blueprint XML file to either XML or YA
 `camel-jbang` as follows:
 
 ```
-camel transform route pom.xml 
+camel transform route pom.xml
 ```
 
 #### UI Designer
@@ -113,13 +113,13 @@ copy the transformed OSGi Blueprint file into appropriate folder afterward.
 You can export as shown below to Spring Boot:
 
 ```
-camel export pom.xml --gav=com.mycompany:myproject:1.0 --runtime=spring-boot --dir=code 
+camel export pom.xml --gav=com.mycompany:myproject:1.0 --runtime=spring-boot --dir=code
 ```
 
 Or if you want to use Camel Quarkus
 
 ```
-camel export pom.xml --gav=com.mycompany:myproject:1.0 --runtime=quarkus --dir=code 
+camel export pom.xml --gav=com.mycompany:myproject:1.0 --runtime=quarkus --dir=code
 ```
 
 #### Finishing the migration
@@ -346,7 +346,7 @@ $ camel run pom.xml
 For this example we will migrate to Camel Quarkus instead of Spring Boot.
 
 ```
-camel export pom.xml --gav=com.mycompany:myproject:1.0 --runtime=quarkus --dir=code 
+camel export pom.xml --gav=com.mycompany:myproject:1.0 --runtime=quarkus --dir=code
 ```
 
 You will then see another error:
