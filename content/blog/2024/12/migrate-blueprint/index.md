@@ -1,6 +1,6 @@
 ---
 title: "Migrating from Camel Karaf to Camel Spring Boot or Quarkus"
-date: 2024-12-06
+date: 2024-12-09
 authors: [ davsclaus ]
 categories: [ "Migration" ]
 preview: Guidelines for migrating from legacy Camel Karaf to modern Camel Spring Boot or Camel Quarkus
@@ -9,7 +9,7 @@ preview: Guidelines for migrating from legacy Camel Karaf to modern Camel Spring
 This is the 2nd blog post in a series of _migration blogs_ to provide details and help for
 users to Camel 4.
 
-The first blog post that focus on [general migration principles can be found here](/blog/2023/10/migrate4].
+The first blog post that focus on [general migration principles can be found here](/blog/2023/10/migrate4).
 
 This blog post focuses on migrating from legacy Apache Karaf OSGi Blueprint to Camel 4.
 
@@ -152,7 +152,6 @@ When running on Spring Boot its best practice to use its web server so we need t
 in the `pom.xml` as follows:
 
 ```xml
-
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-web</artifactId>
@@ -168,7 +167,6 @@ mvn package spring-boot:run
 The application runs on Spring Boot and has been successfully migrated.
 
 ```log
-
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -255,7 +253,7 @@ in file:src/main/resources/OSGI-INF/blueprint/camel.xml, line 60, column 99:
 For all the REST verbs such as GET,PUT,POST then the `uri` attribute should be renamed to `path` as shown below:
 
 ```
--       <get path="/{id}" outType="org.apache.camel.example.rest.User" description="Find user by id">
+-       <get uri="/{id}" outType="org.apache.camel.example.rest.User" description="Find user by id">
 +       <get path="/{id}" outType="org.apache.camel.example.rest.User" description="Find user by id">
 ```
 
@@ -273,7 +271,6 @@ into separate routes and call then via `direct` endpoints.
 Before:
 
 ```xml
-
 <get path="/{id}" outType="org.apache.camel.example.rest.User" description="Find user by id">
     <param name="id" type="path" description="The id of the user to get" dataType="integer"/>
     <responseMessage message="The user that was found"/>
@@ -293,7 +290,6 @@ Before:
 After:
 
 ```xml
-
 <get path="/{id}" outType="org.apache.camel.example.rest.User" description="Find user by id">
     <param name="id" type="path" description="The id of the user to get" dataType="integer"/>
     <responseMessage message="The user that was found"/>
@@ -301,7 +297,6 @@ After:
     <to uri="direct:getUser"/>
 </get>
 
-<routes>
 <route>
     <from uri="direct:getUser"/>
     <to uri="bean:userService?method=getUser(${header.id})"/>
@@ -312,7 +307,6 @@ After:
         </setHeader>
     </filter>
 </route>
-</routes>
 ```
 
 And yes finally the application can run on Camel 4
@@ -364,7 +358,6 @@ Boot).
 So change the XML file accordingly:
 
 ```xml
-
 <restConfiguration bindingMode="json"
                    contextPath="rest" port="8080"
                    apiContextPath="api-docs"
@@ -384,7 +377,7 @@ below:
 camel transform route pom.xml --format=xml --output=code/src/main/resources/camel
 ```
 
-Next we need to cleanup the example to be fully migrated to Camel 4 on Quarkus.
+Next we need to clean up the example to be fully migrated to Camel 4 on Quarkus.
 
 In the `pom.xml` remove the `camel-jetty` and `camel-spring` dependency.
 
@@ -394,7 +387,6 @@ are not automatically included in the `camel transform route` command.
 So add this in the top of the file under the `<camel>` root tag:
 
 ```xml
-
 <restConfiguration bindingMode="json"
                    contextPath="rest" port="8080"
                    apiContextPath="api-docs"
