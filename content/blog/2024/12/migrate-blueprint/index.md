@@ -1,15 +1,15 @@
 ---
 title: "Migrating from Camel Karaf to Camel Spring Boot or Quarkus"
 date: 2024-12-6
-authors: [davsclaus]
-categories: ["Howtos"]
+authors: [ davsclaus ]
+categories: [ "Howtos" ]
 preview: Guidelines for migrating from legacy Camel Karaf to modern Camel Spring Boot or Camel Quarkus 
 ---
 
 This is the 2nd blog post in a series of _migration blogs_ to provide details and help for
 users to Camel 4.
 
-The first blog post that focus on [general migration principles can be found here](/blog/2023/10/migrate4]. 
+The first blog post that focus on [general migration principles can be found here](/blog/2023/10/migrate4].
 
 This blog post focuses on migrating from legacy Apache Karaf OSGi Blueprint to Camel 4.
 
@@ -24,7 +24,7 @@ The migration consists of the following major _tasks_:
 3. Replacing Karaf (OSGi) with Spring Boot, Quarkus, Standalone Camel, etc.
 4. Migrating your Camel integrations
 
-All these tasks may seem overwhelming at first, but don't panic. 
+All these tasks may seem overwhelming at first, but don't panic.
 
 ## Migrating Camel Karaf to Camel 4
 
@@ -40,7 +40,9 @@ Let's use one of the examples from camel-karaf and go over the effort needed.
 
 ### Migration your first example
 
-We will first go over the [camel-example-sql-blueprint](https://github.com/apache/camel-karaf-examples/tree/main/examples/camel-example-sql-blueprint) example.
+We will first go over
+the [camel-example-sql-blueprint](https://github.com/apache/camel-karaf-examples/tree/main/examples/camel-example-sql-blueprint)
+example.
 This example has some custom Java source and Camel routes in OSGi blueprint XML file.
 
 To quickly check _how bad_ the situation is, we will use `camel-jbang` and let it run the example and see what happens:
@@ -50,26 +52,31 @@ cd examples/camel-example-sql-blueprint
 camel run pom.xml
 ```
 
-In `camel-jbang` we have made it possible to let Camel run as _best effort_ any existing Maven based project, but running the `pom.xml` file.
-This is not expected to be a replacement for Maven or how you should use to run Camel, but its part of the migration experience that greatly helps you.
+In `camel-jbang` we have made it possible to let Camel run as _best effort_ any existing Maven based project, but
+running the `pom.xml` file.
+This is not expected to be a replacement for Maven or how you should use to run Camel, but its part of the migration
+experience that greatly helps you.
 
-If you run the example you will notice it runs without any error. 
+If you run the example you will notice it runs without any error.
 
-What happens is that `camel-jbang` was able to load the OSGi blueprint XML file, parse `<bean>` and `<camelContext>` and run this on a modern Camel 4.
+What happens is that `camel-jbang` was able to load the OSGi blueprint XML file, parse `<bean>` and `<camelContext>` and
+run this on a modern Camel 4.
 This means the migration effort for this example is minimal.
 
-#### Migrating Blueprint XML files 
+#### Migrating Blueprint XML files
 
-What is needed to be migrated is the OSGi Blueprint XML file to either XML or YAML DSL. This can be done with the new `transform` command in
+What is needed to be migrated is the OSGi Blueprint XML file to either XML or YAML DSL. This can be done with the new
+`transform` command in
 `camel-jbang` as follows:
 
 ```
 camel transform route pom.xml 
 ```
 
-#### UI Designer 
+#### UI Designer
 
-The YAML DSL can be edited in Camel designers such as Apache Camel Karavan og Kaoto as shown in the following screen shoots.
+The YAML DSL can be edited in Camel designers such as Apache Camel Karavan og Kaoto as shown in the following screen
+shoots.
 
 ![Camel Karavan](./karavan-sql.png)
 
@@ -91,13 +98,14 @@ You can also use `camel transform route` to write the output to file/dirs, inste
 camel transform route pom.xml --format=xml --output=code
 ```
 
-This will write the migrated files into code sub folder. 
+This will write the migrated files into code sub folder.
 
 Use `camel transform route --help` to see more details of this command.
 
 The migration effort, is then afterward to export this to a chosen runtime such as Spring Boot, Quarkus or Camel Main.
 
-**IMPORTANT**: Notice that the export functionality does not support migrate and transform in one go. So you would need to manually
+**IMPORTANT**: Notice that the export functionality does not support migrate and transform in one go. So you would need
+to manually
 copy the transformed OSGi Blueprint file into appropriate folder afterward.
 
 #### Exporting to Spring Boot
@@ -116,13 +124,15 @@ camel export pom.xml --gav=com.mycompany:myproject:1.0 --runtime=quarkus --dir=c
 
 #### Finishing the migration
 
-After the export you would need to clean up the project a bit as the export is not fully supporting Camel Karaf based projects.
+After the export you would need to clean up the project a bit as the export is not fully supporting Camel Karaf based
+projects.
 
 ```
 cd code
 ```
 
-You would need to copy the transformed route (previous tasks) into `src/main/resources/camel` folder, and delete the old OSGI blueprint file.
+You would need to copy the transformed route (previous tasks) into `src/main/resources/camel` folder, and delete the old
+OSGI blueprint file.
 
 PS: If you forget this, you can redo the transformation and output directly into the expected folder such as:
 
@@ -134,13 +144,15 @@ cd code
 
 Also, the karaf `features.xml` file should be deleted.
 
-You also need to copy over values from `sql.properties` as the export tool only support when they are defined in `application.properties`.
+You also need to copy over values from `sql.properties` as the export tool only support when they are defined in
+`application.properties`.
 So we copy the values from `sql.properties` to `code/src/main/resources/application.properties`.
 
 When running on Spring Boot its best practice to use its web server so we need to add the following dependency
 in the `pom.xml` as follows:
 
 ```xml
+
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-web</artifactId>
@@ -188,12 +200,13 @@ The application runs on Spring Boot and has been successfully migrated.
 2024-12-04T08:24:22.187+01:00  INFO 45359 --- [sed%20=%20false] processOrder-route                       : Processed order id 0 item 222 of 10 copies of ActiveMQ in Action
 ```
 
-Now let's migrate another example that is a bit more complex and requires more effort 
+Now let's migrate another example that is a bit more complex and requires more effort
 
+### Migrating with more difficulty
 
-### Migrating with more difficulty 
-
-This time we migrate [camel-example-openapi-osgi](https://github.com/apache/camel-karaf-examples/tree/main/examples/camel-example-openapi-osgi) example,
+This time we
+migrate [camel-example-openapi-osgi](https://github.com/apache/camel-karaf-examples/tree/main/examples/camel-example-openapi-osgi)
+example,
 that requires changes in the DSL as well.
 
 So first lets try to run it out of the box:
@@ -204,6 +217,7 @@ camel run pom.xml
 ```
 
 When you run this you will see an error as follows:
+
 ```log
 org.apache.camel.xml.io.XmlPullParserLocationException: Unexpected attribute '{}apiContextListing'
 in file:src/main/resources/OSGI-INF/blueprint/camel.xml, line 42, column 42:
@@ -246,6 +260,7 @@ For all the REST verbs such as GET,PUT,POST then the `uri` attribute should be r
 ```
 
 Okay we are almost there, there is one last error which is:
+
 ```log
 org.apache.camel.xml.io.XmlPullParserLocationException: Unexpected element '{http://www.osgi.org/xmlns/blueprint/v1.0.0}route'
 in file:src/main/resources/OSGI-INF/blueprint/camel.xml, line 64, column 16:
@@ -256,45 +271,48 @@ In the Rest DSL then inlined `<route>` is no longer supported and you must move 
 into separate routes and call then via `direct` endpoints.
 
 Before:
+
 ```xml
-      <get path="/{id}" outType="org.apache.camel.example.rest.User" description="Find user by id">
-        <param name="id" type="path" description="The id of the user to get" dataType="integer"/>
-        <responseMessage message="The user that was found"/>
-        <responseMessage code="404" message="User not found"/>
-        <route>
-          <to uri="bean:userService?method=getUser(${header.id})"/>
-          <filter>
+
+<get path="/{id}" outType="org.apache.camel.example.rest.User" description="Find user by id">
+    <param name="id" type="path" description="The id of the user to get" dataType="integer"/>
+    <responseMessage message="The user that was found"/>
+    <responseMessage code="404" message="User not found"/>
+    <route>
+        <to uri="bean:userService?method=getUser(${header.id})"/>
+        <filter>
             <simple>${body} == null</simple>
             <setHeader name="Exchange.HTTP_RESPONSE_CODE">
-              <constant>404</constant>
+                <constant>404</constant>
             </setHeader>
-          </filter>
-        </route>
-      </get>
+        </filter>
+    </route>
+</get>
 ```
 
 After:
 
 ```xml
-      <get path="/{id}" outType="org.apache.camel.example.rest.User" description="Find user by id">
-        <param name="id" type="path" description="The id of the user to get" dataType="integer"/>
-        <responseMessage message="The user that was found"/>
-        <responseMessage code="404" message="User not found"/>
-        <to uri="direct:getUser"/>
-      </get>
 
-    <routes>
-      <route>
-      <from uri="direct:getUser"/>
-      <to uri="bean:userService?method=getUser(${header.id})"/>
-      <filter>
+<get path="/{id}" outType="org.apache.camel.example.rest.User" description="Find user by id">
+    <param name="id" type="path" description="The id of the user to get" dataType="integer"/>
+    <responseMessage message="The user that was found"/>
+    <responseMessage code="404" message="User not found"/>
+    <to uri="direct:getUser"/>
+</get>
+
+<routes>
+<route>
+    <from uri="direct:getUser"/>
+    <to uri="bean:userService?method=getUser(${header.id})"/>
+    <filter>
         <simple>${body} == null</simple>
         <setHeader name="Exchange.HTTP_RESPONSE_CODE">
-          <constant>404</constant>
+            <constant>404</constant>
         </setHeader>
-      </filter>
-    </route>
-  </routes>      
+    </filter>
+</route>
+</routes>      
 ```
 
 And yes finally the application can run on Camel 4
@@ -340,16 +358,18 @@ org.apache.camel.FailedToStartRouteException: Failed to start route route3 becau
 ```
 
 This is because the old Karaf example was using Jetty as the HTTP server for hosting the Rest DSL services.
-You need to remove this and let Camel use the default `platform-http` that comes out of the box with Quarkus (or Spring Boot).
+You need to remove this and let Camel use the default `platform-http` that comes out of the box with Quarkus (or Spring
+Boot).
 
 So change the XML file accordingly:
 
 ```xml
-    <restConfiguration bindingMode="json"
-                       contextPath="rest" port="8080"
-                       apiContextPath="api-docs"
-                       enableCORS="true"
-                       inlineRoutes="false">
+
+<restConfiguration bindingMode="json"
+                   contextPath="rest" port="8080"
+                   apiContextPath="api-docs"
+                   enableCORS="true"
+                   inlineRoutes="false">
 ```
 
 **IMPORTANT**: You also need to set `inlineRoutes="false"` because when using Rest DSL the routes should be separated,
@@ -357,7 +377,8 @@ to make Camel JBang able to transform the routes. This may get fixed for Camel 4
 
 And then run the export again.
 
-And then we want to migrate the Blueprint XML file and output directly to the `src/main/resources/camel` folder as shown below:
+And then we want to migrate the Blueprint XML file and output directly to the `src/main/resources/camel` folder as shown
+below:
 
 ```
 camel transform route pom.xml --format=xml --output=code/src/main/resources/camel
@@ -373,23 +394,24 @@ are not automatically included in the `camel transform route` command.
 So add this in the top of the file under the `<camel>` root tag:
 
 ```xml
-    <restConfiguration bindingMode="json"
-                       contextPath="rest" port="8080"
-                       apiContextPath="api-docs"
-                       enableCORS="true"
-                       inlineRoutes="false">
 
-        <!-- we want json output in pretty mode -->
-        <dataFormatProperty key="prettyPrint" value="true"/>
+<restConfiguration bindingMode="json"
+                   contextPath="rest" port="8080"
+                   apiContextPath="api-docs"
+                   enableCORS="true"
+                   inlineRoutes="false">
 
-        <!-- setup openapi api descriptions -->
-        <apiProperty key="base.path" value="rest"/>
-        <apiProperty key="api.version" value="1.2.3"/>
-        <apiProperty key="api.title" value="User Services"/>
-        <apiProperty key="api.description" value="Camel Rest Example with OpenApi that provides an User REST service"/>
-        <apiProperty key="api.contact.name" value="The Apache Camel team"/>
+    <!-- we want json output in pretty mode -->
+    <dataFormatProperty key="prettyPrint" value="true"/>
 
-    </restConfiguration>
+    <!-- setup openapi api descriptions -->
+    <apiProperty key="base.path" value="rest"/>
+    <apiProperty key="api.version" value="1.2.3"/>
+    <apiProperty key="api.title" value="User Services"/>
+    <apiProperty key="api.description" value="Camel Rest Example with OpenApi that provides an User REST service"/>
+    <apiProperty key="api.contact.name" value="The Apache Camel team"/>
+
+</restConfiguration>
 ```
 
 After this you should be able to compile and run the migrated example on Camel Quarkus as follows:
@@ -428,13 +450,13 @@ curl http://0.0.0.0:8080/rest/user/123
 }
 ```
 
-Phew, this was a bit tricky. 
+Phew, this was a bit tricky.
 
 ## Summary
 
 The Camel JBang tool is a tool that can assist to migrate OSGi Blueprint XML files to modern Camel.
 If you have built more complex OSGi applications that uses special OSGi features then you would need
-to manually migrate this. 
+to manually migrate this.
 
 On Camel 4 then future upgrades is much easier, as you would be on a modern stack with Spring Boot or Quarkus,
 which has a much larger community, and user base than legacy Apache Karaf.
