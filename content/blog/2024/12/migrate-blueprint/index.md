@@ -312,7 +312,7 @@ After:
         </setHeader>
     </filter>
 </route>
-</routes>      
+</routes>
 ```
 
 And yes finally the application can run on Camel 4
