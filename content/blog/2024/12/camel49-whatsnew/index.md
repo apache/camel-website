@@ -103,7 +103,7 @@ Added `log` function to make it easy to write to log from within a groovy script
 For low-code users that favour using Groovy then we made it possible to use the Log EIP with groovy instead of simple.
 You can configure this with `camel.main.logLanguage = groovy`.
 
-The Log EIP now formats the `${exchange}` output using the standard exchange formatter, which makes
+The Log EIP has the the new `${logExchange}` function that formats the Exchange using the standard exchange formatter, which makes
 it easier to see the content of the current `Exchange`.
 
 ## Camel JMS
