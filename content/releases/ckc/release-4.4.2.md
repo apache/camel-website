@@ -8,7 +8,7 @@ preview: ""
 changelog: ""
 category: "camel-kafka-connector"
 kind: lts
-jdk: [17, 21]
+jdk: [17,21]
 ---
 
 This release is the new Camel Kafka Connector 4.4.2 release.

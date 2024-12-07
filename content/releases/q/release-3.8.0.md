@@ -10,5 +10,5 @@ changelog: ""
 category: "camel-quarkus"
 milestone: 54
 kind: lts
-jdk: [17, 21]
+jdk: [17,21]
 ---
