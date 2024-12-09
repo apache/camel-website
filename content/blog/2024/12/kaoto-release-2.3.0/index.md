@@ -9,7 +9,7 @@ preview: "Kaoto 2.3 has been released"
 
 ![Kaoto](cover.png)
 
-Following the Apache Camel 4.8.1 release, we're happy to announce the release of Kaoto 2.3.
+Following the Apache Camel 4.9.0 release, we're happy to announce the release of Kaoto 2.3.
 
 ## What’s New in Kaoto 2.3?
 
@@ -72,6 +72,17 @@ The URI field has been deprecated in favor of the YAML parameters field approach
 The canvas look and feel has been redesigned to provide a more modern and clean look. The new design is cleaner, with less borders and wider, making it more intuitive and user-friendly.
 
 ![Timer component](timerComponent.png)
+
+### More Camel versions included in the catalog
+Kaoto includes more Camel versions in the catalog, providing a more comprehensive and up-to-date experience when working with different versions of Camel. By default it will bring the latest version of Camel, plus the last 2 LTS versions.
+Kaoto 2.3 includes the following Camel versions:
+| Runtime     | Versions                                                        |
+| ---         | ---                                                             |
+| Core        | 4.9.0, 4.8.2, 4.4.4                                             |
+| Quarkus     | 3.17.0 (Camel 4.9.0), 3.15.1 (Camel 4.8.1), 3.8.4 (Camel 4.4.4) |
+| Spring Boot | 4.9.0, 4.8.2, 4.4.4                                             |
+
+![Catalog versions](catalogVersions.png)
 
 ### Show a placeholder to add a new step
 A placeholder is now displayed when there are no steps in the canvas, providing a more intuitive experience when adding new steps.
