@@ -16,10 +16,10 @@ Following the Apache Camel 4.9.0 release, we're happy to announce the release of
 We're thrilled to announce the release of Kaoto 2.3, bringing new features, improvements, and bug fixes to enhance your integration experience.
 This release also brings the first technical preview of a long awaited feature: the Kaoto DataMapper with the ability to perform data transformations using Camel.
 
-## Here are the key highlights of this release:
+## Here are the key highlights of this release
 
 ### Kaoto DataMapper technical preview
-In this release, we are introducing the new **Kaoto DataMapper**, a graphical way of authoring data mappings inside your routes using Kaoto.
+In this release, we are introducing the new **Kaoto DataMapper**, a graphical way of authoring data mappings inside your routes using Kaoto. It's available as a technical preview in VS Code.
 
 #### How to use it?
 When creating a Camel route, like any other step, just search for **Kaoto DataMapper** in the catalog and add it from there.
@@ -28,7 +28,7 @@ When creating a Camel route, like any other step, just search for **Kaoto DataMa
 |------------------------------------|------------------------------------|
 | ![Tile](catalogDatamapperTile.png) | ![List](catalogDatamapperList.png) |
 
-Once the **Kaoto DataMapper** step is added in the route, you can launch it using by clicking the `Configure` button in config form.
+Once the **Kaoto DataMapper** step is added in the route, you can configure it by clicking the `Configure` button in config form.
 
 ![Kaoto DataMapper step](kaotoDatamapperStep.png)
 
@@ -54,15 +54,15 @@ We have a plan to iteratively add more features to the Kaoto DataMapper, for exa
    - syntax assist & highlight
    - better Drag and Drop capability for fields and functions
  - Data Preview - feed an example input, and instantly see the mapping outcome directly in the UI
- - Support Setting Camel Variables/Message Headers directly in the UI
- - Support assuming data structure (schema) by attaching a data example, such as XML instance and JSON instance
+ - Support setting Camel Variables/Message Headers directly in the UI
+ - Support inferring data structure (schema) by attaching a data example, such as XML instance and JSON instance
  - `xs:include` and `xs:import` support for XML schema
  - Enum mapping
 
 and much more, so stay tuned!
 
 ### [Breaking] deprecated URI field serialization in favor of the YAML parameters field approach
-The URI field has been deprecated in favor of the YAML parameters field approach. This change allows for a more flexible and user-friendly experience when configuring components.
+Serializing component's parameters to the URI field has been deprecated in Kaoto favoring the parameters field approach from the YAML DSL. This change allows for a more flexible and user-friendly experience when configuring components.
 
 | URI serialized | Parameters serialized |
 | --- | --- |
