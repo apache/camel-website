@@ -123,7 +123,7 @@ The Parameters Field styling has been improved to provide more room for editing 
 The properties for languages and data formats are now sorted following the official Camel catalog for easier navigation and discovery.
 
 ### Navigate to related locations
-The web version of Kaoto now have convenient links to [the Kaoto examples repository](https://github.com/KaotoIO/kaoto-examples), [the Apache Camel website](https://camel.apache.org/camel-core/getting-started/index.html) and [the Hawtio project](https://hawt.io/docs/get-started.html).
+The web version of Kaoto now have convenient links to [the Kaoto examples repository](https://github.com/KaotoIO/kaoto-examples), [the Apache Camel website](/camel-core/getting-started/index.html) and [the Hawtio project](https://hawt.io/docs/get-started.html).
 
 ### Group EIPs parameters consistently also from older Apache Camel versions
 The parameters for EIPs are now grouped consistently across multiple Apache Camel versions, providing a more uniform experience when working with different versions of Camel.
@@ -135,7 +135,7 @@ The Consumer and Producer properties are now displayed appropriately in the Conf
 Kamelets are now sorted alphabetically for easier discovery and navigation.
 
 ### Support for the new tokenizer EIP
-[The new Tokenizer EIP](https://camel.apache.org/components/4.8.x/others/langchain4j-tokenizer.html) is now supported in the Canvas, allowing you to tokenize (chunk) larger blocks of texts into text segments that can be used when interacting with LLMs.
+[The new Tokenizer EIP](/components/4.8.x/others/langchain4j-tokenizer.html) is now supported in the Canvas, allowing you to tokenize (chunk) larger blocks of texts into text segments that can be used when interacting with LLMs.
 
 ### Catalog ranked search
 The catalog now supports ranked search, providing more relevant results when searching for components.
