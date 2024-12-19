@@ -41,7 +41,7 @@ This page lists who we are. By all means add yourself to the list. Let's sort it
 | Jacek Laskowski        | jlaskowski       |                            |
 | James Carman           | jcarman          | Savoir Technologies        |
 | Jan Bednar             | janbednar        | CGI IT Czech Republic      |
-| Jean-Baptiste Onofré   | jbonofre         | Huawei                     |
+| Jean-Baptiste Onofré   | jbonofre         |                            |
 | Jeff Genender          | jgenender        | Savoir Technologies        |
 | Jeremy Ross            | jeremyross       | Elevation Solutions        |
 | Johan Edstrom          | joed             | Savoir Technologies        |
@@ -71,13 +71,14 @@ This page lists who we are. By all means add yourself to the list. Let's sort it
 | Scott England-Sullivan | sully6768        | Red Hat                    |
 | Stan Lewis             | slewis           | Red Hat                    |
 | Tadayoshi Sato         | tsato            | Red Hat                    |
+| Thomas Diesler         | tdiesler         | Red Hat                    |
 | Tomohisa Igarashi      | igarashitm       | Red Hat                    |
 | Tracy Snell            | tjsnell          | Juice Labs                 |
 | Willem Jiang           | ningjiang        | Huawei                     |
 | William Tam            | wtam             | Red Hat                    |
 | Zineb Bendhiba         | zbendhiba        | Red Hat                    |
 | Zheng Feng             | zhfeng           | Red Hat                    |
-| Zoran Regvart          | zregvart         | Red Hat                    |
+| Zoran Regvart          | zregvart         |                            |
 {{< /table >}}
 
 ### Contributors
