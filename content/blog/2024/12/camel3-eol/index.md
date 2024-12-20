@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 3 - End of Life"
 date: 2024-12-23
-authors: [davsclaus]
+authors: [davsclaus,gzurowski]
 categories: ["Roadmap"]
 preview: Apache Camel 3 is end of life
 ---
