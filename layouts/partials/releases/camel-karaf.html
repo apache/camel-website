@@ -1,0 +1,25 @@
+{{ partial "releases/downloads.html" (dict "Category" (index (index $.Site.Data "release-categories") "camel-karaf") "Pages" $.Site.Pages "Version" .Params.version) }}
+
+<h2 id="git"><a class="anchor" href="#git"></a>Git tag checkout</h2>
+<p>
+  Release is tagged with <code>camel-karaf-{{ .Params.version }}</code> in the Git, to fetch it use:
+</p>
+<pre>
+git clone https://github.com/apache/camel-karaf.git
+cd camel-karaf
+git checkout camel-karaf-{{ .Params.version }}</pre>
+
+<h2 id="resolved"><a class="anchor" href="#resolved"></a>Resolved issues</h2>
+<p>Here is a list of all the issues that have been resolved for this release</p>
+{{ $headers := dict }}
+{{ with os.Getenv "GITHUB_TOKEN" }}
+  {{ $headers = dict "Authorization" (printf "Bearer %s" .) }}
+{{ else }}
+  {{ $headers = dict "Authorization" (printf "Basic %s" (printf "%s:%s" $.Site.Params.GitHubUsername $.Site.Params.GitHubToken | base64Encode)) }}
+{{ end }}
+{{ $issues := getJSON "https://api.github.com/repos/apache/camel-karaf/issues?state=closed&milestone=" (string .Params.milestone ) $headers }}
+<dl>
+{{ range $issues }}
+  <dt><a href="{{ .html_url }}">#{{ .number }}</a></dt><dd>{{ .title }}</dd>
+{{ end }}
+</dl>

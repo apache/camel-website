@@ -102,10 +102,21 @@ camel-kafka-connector:
     - name: 'Binaries'
       title: 'Connectors download list'
       link: '/camel-kafka-connector/next/reference/index.html'
+camel-karaf:
+  id: 'camel-karaf'
+  name: 'Apache Karaf'
+  order: 6
+  kinds:
+    - name: 'latest'
+      filter: 'latest'
+  downloads:
+    - name: 'Sources'
+      path_format: 'camel/camel-karaf/{version}/camel-karaf-{version}-source-release.zip'
+      filename_format: 'camel-karaf-{version}-source-release.zip'
 camel-quarkus:
   id: 'camel-quarkus'
   name: 'Apache Camel Quarkus'
-  order: 6
+  order: 7
   kinds:
     - name: 'latest'
       filter: 'latest'
@@ -122,7 +133,7 @@ camel-quarkus:
 camel-upgrade-recipes:
   id: 'camel-upgrade-recipes'
   name: 'Apache Camel Upgrade Recipes'
-  order: 7
+  order: 8
   kinds:
     - name: 'latest'
       filter: 'latest'
