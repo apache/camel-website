@@ -28,7 +28,7 @@ Number of JIRA tickets created in 2023: **1436**
 
 Number of JIRA tickets resolved in 2023: **1451**
 
-Number of stars on GitHub at end of 2023: **6126**
+Number of stars on GitHub at end of 2023: **5126**
 
 Total number of commits at end of 2023: **68078**
 
