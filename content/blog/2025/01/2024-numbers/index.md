@@ -8,7 +8,7 @@ preview: Quick summary of the Apache Camel project in 2024 by numbers
 
 It's the time of the year when we take a look back at 2024, and compile a brief summary (by numbers) of the Apache Camel project(s).
 
-You can find previous year [2023 numbers here](/blog/2024/01/2023-Numbers/).
+You can find previous year [2023 numbers here](/blog/2024/01/2023-numbers/).
 
 ## Camel 2024 in Numbers
 
