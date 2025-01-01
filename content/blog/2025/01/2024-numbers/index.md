@@ -20,31 +20,31 @@ Number of Camel K releases in 2024: **7**
 
 Number of Camel Kafka Connector releases in 2024: **4**
 
-Number of commits in 2023: **6162** [1]
+Number of commits in 2024: **5484** [1]
 
-Total number of JIRA tickets created at end of 2023: **20286**
+Total number of JIRA tickets created at end of 2024: **21575**
 
-Number of JIRA tickets created in 2023: **1436**
+Number of JIRA tickets created in 2024: **1288**
 
-Number of JIRA tickets resolved in 2023: **1451**
+Number of JIRA tickets resolved in 2024: **1405**
 
-Number of stars on GitHub at end of 2023: **6126**
+Number of stars on GitHub at end of 2024: **5660**
 
-Total number of commits at end of 2023: **68078**
+Total number of commits at end of 2024: **73562**
 
-Total number of contributors on GitHub at end of 2023: **1021**
+Total number of contributors on GitHub at end of 2024: **1086**
 
-Number of individual committers doing commits in 2023: **195** [2]
+Number of individual committers doing commits in 2024: **152** [2]
 
-Number of closed pull requests at end of 2023: **12593**
+Number of closed pull requests at end of 2024: **16647**
 
-Number of closed pull requests in 2023: **3653**
+Number of closed pull requests in 2024: **4041**
 
-Number of [X (Twitter)](https://twitter.com/ApacheCamel) followers at end of 2023: **2979**
+Number of [X (Twitter)](https://twitter.com/ApacheCamel) followers at end of 2024: **3012**
 
-Number of users in [Apache Camel LinkedIn](https://www.linkedin.com/groups/2447439/) group at end of 2023: **4650** 
+Number of users in [Apache Camel LinkedIn](https://www.linkedin.com/groups/2447439/) group at end of 2024: **5260** 
 
 ```
-#1 git shortlog -ns --since 2023-01-01 --until 2024-01-01 | cut -c1-7 | awk '{ SUM += $1} END { print SUM }'
-#2 git shortlog --since 2023-01-01 --until 2024-01-01 -ns | wc -l
+#1 git shortlog -ns --since 2024-01-01 --until 2025-01-01 | cut -c1-7 | awk '{ SUM += $1} END { print SUM }'
+#2 git shortlog --since 2024-01-01 --until 2025-01-01 -ns | wc -l
 ```
