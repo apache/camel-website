@@ -12,9 +12,11 @@ You can find previous year [2023 numbers here](/blog/2024/01/2023-numbers/).
 
 ## Camel 2024 in Numbers
 
-Number of Camel Core releases in 2024: **20**
+Number of Camel Core / Camel Spring Boot releases in 2024: **20**
 
 Number of Camel Quarkus releases in 2024: **16**
+
+Number of Camel Karavan releases in 2024: **5**
 
 Number of Camel K releases in 2024: **7**
 
