@@ -157,7 +157,6 @@ Being deployed in Kubernetes, Karavan helps to manage projects, design and monit
 <p>
 <!-- <a class="button dark" href="/camel-karavan/latest/">Documentation</a> -->
 <a class="button light" href="https://github.com/apache/camel-karavan">Source</a>
-<a class="button light" href="https://github.com/apache/camel-karavan/tree/main/karavan-demo">Examples</a>
 </p>
 
 {{< /div >}}
