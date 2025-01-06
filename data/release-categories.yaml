@@ -104,7 +104,7 @@ camel-kafka-connector:
       link: '/camel-kafka-connector/next/reference/index.html'
 camel-karaf:
   id: 'camel-karaf'
-  name: 'Apache Karaf'
+  name: 'Apache Camel Karaf'
   order: 6
   kinds:
     - name: 'latest'
