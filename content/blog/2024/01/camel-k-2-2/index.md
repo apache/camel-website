@@ -74,7 +74,7 @@ We have decided to use as the default runtime for Camel K, the latest available 
 
 ## ARM64 installation procedure
 
-We've gone a step further in the support of ARM64 architectures. We have reviewed the procedure that will let you install and [run your first ARM64 based Camel K Integration](/camel-k/next/installation/advanced/multi-architecture.html).
+We've gone a step further in the support of ARM64 architectures. We have reviewed the procedure that will let you install and run your first ARM64 based Camel K Integration (see official documentation).
 
 ## Pipeline build NodeSelectors
 

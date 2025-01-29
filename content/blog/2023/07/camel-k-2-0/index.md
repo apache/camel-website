@@ -171,7 +171,7 @@ You can have a look at the [Prometheus trait configuration](/camel-k/next/traits
 
 This feature should not be considered as generally available but more a kind of "tech preview". In Camel K 2.0 we provide an **ARM64 architecture based container image** for the operator but it is not tested due to the difficulty to find the required infrastructure and have the suite of test running. It's a best effort feature that we hope we can make generally available in the future versions.
 
-For more information you can have a look at the [Multi architecture official documentation](/camel-k/next/installation/advanced/multi-architecture.html) page.
+For more information you can have a look at the Multi architecture official documentation page.
 
 # Code coverage report
 
