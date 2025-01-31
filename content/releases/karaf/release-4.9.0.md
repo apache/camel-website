@@ -8,5 +8,5 @@ preview: ""
 changelog: ""
 category: "camel-karaf"
 milestone: 4
-jdk: [17]
+jdk: [17,21]
 ---
