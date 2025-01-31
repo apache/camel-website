@@ -294,7 +294,7 @@ Make sure that you set the `draft: false` property to have the page published.
 
 Use the `release-{category}` archetype to create a new markdown content file in `content/releases/{category}-{version with underscores}/index.md`.
 
-For `{category}` you can use: `k` `k-runtime`, `ckc`, or `q`.
+For `{category}` you can use: `k` `k-runtime`, `karaf`, `ckc`, or `q`.
 
 For example, to create Camel Kafka Connector release note:
 
