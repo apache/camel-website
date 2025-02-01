@@ -83,7 +83,6 @@ content:
     - url: https://github.com/apache/camel-karaf.git
       branches:
         - main
-        - camel-karaf-4.9.x
         - camel-karaf-4.8.x
         - camel-karaf-3.22.x
       start_path: docs
