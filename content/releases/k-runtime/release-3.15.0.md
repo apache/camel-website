@@ -1,5 +1,5 @@
 ---
-url: "/releases/k-runtime-3.8.1/"
+url: "/releases/k-runtime-3.15.0/"
 date: 2024-10-10
 type: release-note
 version: "3.15.0"
