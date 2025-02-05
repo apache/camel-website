@@ -94,7 +94,7 @@ the need to store and restore data on message header/body during routing. This i
 
 We have continued investing in Camel JBang, and this time we have some great new stuff in the release.
 
-The `camel-jbang` now supports new commands as plugins. And the first set of commands is [camel-k commands](/manual/camel-jbang-k.html),
+The `camel-jbang` now supports new commands as plugins. And the first set of commands is camel-k commands,
 that allows to use `camel-jbang` to manage and operate Camel K integrations.
 
 You can now run `camel-jbang` with `--prompt` that lets users type in placeholder values during startup,
