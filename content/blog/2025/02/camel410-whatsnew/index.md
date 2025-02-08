@@ -14,13 +14,76 @@ This release introduces a set of new features and noticeable improvements that w
 
 TODO:
 
+Added `customize` to `RouteBuilder` to make it easier to configure a specific Camel component / dataformat, service
+from a Java lambda style, such as follows:
+
+```java
+@Override
+public void configure() throws Exception {
+    customize(KServeComponent.class, k -> {
+        k.getConfiguration().setTarget("localhost:8888");
+    });
+
+    from("timer:kserve?repeatCount=1")
+        .to("kserve:model/metadata?modelName=myModel")
+        .log("${body}");
+}
+```
+
+This makes it possible for low-code users that want to have a single Java file with the Camel route
+and all its configuration done entirely from the same `configure` method.
+
 ## Camel JBang
 
-TODO:
+Using _modeline_ has been deprecated. It is recommended to configure externally in `application.properties`
+files.
+
+The `debug` command now supports step in and step over. For example debugging a splitter allows
+now to step over and continue after the entire split is complete, while step in, will step
+inside the splitter (default mode). You can now also debug inside Kamelets as well.
+
+The `camel-smb` component has been refactored to include alot more shared features from the `camel-file` component.
+
+The `camel-http` component has a new `logHttpActivity` option you can enable, to make it easy to log
+all HTTP request/response when using this component to call external HTTP services.
 
 ### Camel JBang Kubernetes
 
 TODO:
+
+## Camel Kamelet
+
+The error handling of the kamelets has been aligned to be Camel _standard_ and act
+similar to Camel routes. See the migration guide for more details.
+
+You can now also configure the `bridgeErrorHandler` option on a Kamelet.
+
+And it's now also possible to call another Kamelet from within a Kamelet.
+
+## Camel AI
+
+TODO:
+
+## Camel Groovy
+
+Camel now reports a bit better when groovy scripts have compilation errors, to indicate at what
+position the error is located.
+
+## Camel Attachments / Camel Platform HTTP
+
+We have improved the `platform-http` component to better handle file uploads using `multipart/data-form`
+across all runtimes. The files are stored in `camel-attachments`, and this API has been made
+easier to use from Java, and simple and groovy languages. And if there is a single file
+uploaded, then the file content is automatically stored in the message body, and the file name
+in `CamelFileName` header, length in `CamelFileLength` header, and content-type in `CamelFileContentType`.
+
+We have also included a mime-detector algorithm that has a huge list of well known types,
+(similar to what Spring Boot uses). This means if xml,json,cxf, and various image files is uploaded,
+then the content-type refers to these types instead of the default `application/octet-stream`.
+
+## Camel Vault
+
+The hashicorp vault can now be configured to use cloud-based vault as well.
 
 ## Camel Spring Boot
 
@@ -33,6 +96,9 @@ TODO:
 ## Miscellaneous
 
 Upgraded many third-party dependencies to the latest releases at the time of release.
+
+The `camel-file` component has been optimized when filtering based on file-names to
+be faster.
 
 ## New Components
 
