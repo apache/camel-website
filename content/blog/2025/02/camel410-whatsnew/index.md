@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 4.10 What's New"
 date: 2025-02-12
-authors: [davsclaus]
+authors: [davsclaus, opiske]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 4.10 release.
 ---
@@ -80,6 +80,15 @@ in `CamelFileName` header, length in `CamelFileLength` header, and content-type 
 We have also included a mime-detector algorithm that has a huge list of well known types,
 (similar to what Spring Boot uses). This means if xml,json,cxf, and various image files is uploaded,
 then the content-type refers to these types instead of the default `application/octet-stream`.
+
+
+## Camel Kafka
+
+This release brings a couple of fixes for minor performance issues when evaluating Kafka record metadata.
+
+## Camel SJMS / SJMS2
+
+This release brings a couple of fixes for minor performance issues when working with standard JMS headers. 
 
 ## Camel Vault
 
