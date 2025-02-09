@@ -12,8 +12,6 @@ This release introduces a set of new features and noticeable improvements that w
 
 ## Camel Core
 
-TODO:
-
 Added `customize` to `RouteBuilder` to make it easier to configure a specific Camel component / dataformat, service
 from a Java lambda style, such as follows:
 
@@ -31,21 +29,24 @@ public void configure() throws Exception {
 ```
 
 This makes it possible for low-code users that want to have a single Java file with the Camel route
-and all its configuration done entirely from the same `configure` method.
+and all the Java based configuration done entirely from the same `configure` method.
 
 ## Camel JBang
 
 Using _modeline_ has been deprecated. It is recommended to configure externally in `application.properties`
 files.
 
+We have continued to improve the `run` and `export` to work better and also when using different runtimes.
+
 The `debug` command now supports step in and step over. For example debugging a splitter allows
 now to step over and continue after the entire split is complete, while step in, will step
-inside the splitter (default mode). You can now also debug inside Kamelets as well.
+inside the splitter (default mode).
 
-The `camel-smb` component has been refactored to include alot more shared features from the `camel-file` component.
+The `shell` command has been improved, and can now be used for sub commands such as `log` and `trace` or `--watch` mode,
+and be able to exit logging and still be within the shell. Previously you would quit the shell when pressing `ctrl + c`.
 
-The `camel-http` component has a new `logHttpActivity` option you can enable, to make it easy to log
-all HTTP request/response when using this component to call external HTTP services.
+TODO: test-infra
+TODO: upgrade command
 
 ### Camel JBang Kubernetes
 
@@ -64,6 +65,15 @@ And it's now also possible to call another Kamelet from within a Kamelet.
 
 TODO:
 
+## Camel Micrometer
+
+We have fixed a flawed behavior when using dynamic endpoints which made the generation of endpoint events
+to grow in an uncontrolled way. From now on the component will generate events for the endpoint base URI as a default behavior.
+If you still want to collect events for the extended URI (including the parameters), then,
+you can use the `camel.metrics.baseEndpointURIExchangeEventNotifier=false` configuration.
+Mind that this is strongly discouraged as it can make your number of events growing out of control.
+
+
 ## Camel Groovy
 
 Camel now reports a bit better when groovy scripts have compilation errors, to indicate at what
@@ -81,18 +91,39 @@ We have also included a mime-detector algorithm that has a huge list of well kno
 (similar to what Spring Boot uses). This means if xml,json,cxf, and various image files is uploaded,
 then the content-type refers to these types instead of the default `application/octet-stream`.
 
-
 ## Camel Kafka
 
 This release brings a couple of fixes for minor performance issues when evaluating Kafka record metadata.
+
+Added `pollIntervalMs` to allow kafka batching mode to complete an incomplete group after a given time. 
 
 ## Camel SJMS / SJMS2
 
 This release brings a couple of fixes for minor performance issues when working with standard JMS headers. 
 
+## Camel MLLP
+
+Added support for TLS/SSL for secured network communications.
+
 ## Camel Vault
 
 The hashicorp vault can now be configured to use cloud-based vault as well.
+
+Camel can now configure beans using property placeholders which are sourced from secure vaults.
+
+## Camel Test
+
+The `camel-test` can now easily dump route (or route coverage) to files in the target folder.
+You would then be able to run a suite of tests and be able to inspect the routes (dumped as XML or YAML)
+that was loaded into Camel during the tests.
+
+For example, you run:
+
+```bash
+$ mvn clean test -DCamelTestRouteDump=yaml -DCamelTestRouteCoverage=true
+```
+This requires adding camel-yaml-io and camel-management JAR as dependency (can be set as test scoped)
+You can also configure this programmatically with annotations in the test class.
 
 ## Camel Spring Boot
 
@@ -108,6 +139,11 @@ Upgraded many third-party dependencies to the latest releases at the time of rel
 
 The `camel-file` component has been optimized when filtering based on file-names to
 be faster.
+
+The `camel-smb` component has been refactored to include many more shared features from the `camel-file` component.
+
+The `camel-http` component has a new `logHttpActivity` option you can enable, to make it easy to log
+all HTTP request/response when using this component to call external HTTP services.
 
 ## New Components
 
