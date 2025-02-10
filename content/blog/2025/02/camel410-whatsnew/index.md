@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 4.10 What's New"
 date: 2025-02-12
-authors: [davsclaus, opiske, tadayosi]
+authors: [davsclaus, orpiske, tadayosi]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 4.10 release.
 ---
