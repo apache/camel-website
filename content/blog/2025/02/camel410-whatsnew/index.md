@@ -187,7 +187,20 @@ The `camel-spring-boot` is upgraded to latest Spring Boot 3.4.2 release.
 
 ### Camel Spring Boot Platform HTTP
 
-TODO:
+The platform-http component has been enhanced to fully align with REST services best practices, introducing several significant improvements to request and response handling.
+A major change affects Content-Type validation in requests and responses. The component now strictly enforces Content-Type headers, 
+returning a 415 Unsupported Media Type error when requests contain unexpected Content-Types. This change may require updates to existing implementations to ensure compatibility.
+This is an high level list of the new features:
+
+* Attachment
+* Produes/Consumes Headers
+* Optimize Response Write (always use Streams where possible)
+* Camel Headers
+* Streaming large files
+* Camel Cookie handler
+* HTTP Form
+* CORS
+* URI Matcher
 
 ## Miscellaneous
 
