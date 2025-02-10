@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 4.10 What's New"
 date: 2025-02-12
-authors: [davsclaus, opiske]
+authors: [davsclaus, opiske, tadayosi]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 4.10 release.
 ---
@@ -63,7 +63,11 @@ And it's now also possible to call another Kamelet from within a Kamelet.
 
 ## Camel AI
 
-TODO:
+Camel AI has added three new components (see [New Components](#new-components)).
+
+Two of them (TensorFlow Serving and KServe) are components that support integration with AI model servers, allowing Camel routes to send inference requests with trained models to these model servers. Together with the TorchServe component already introduced in Camel 4.9, Camel now supports the two major AI frameworks PyTorch and TensorFlow, as well as other popular model servers (OpenVINO, Triton, etc.) that support the KServe API. The KServe component will also prepare Camel for integration into MLOps platforms such as Kubeflow.
+
+TODO: Neo4j?
 
 ## Camel Micrometer
 
