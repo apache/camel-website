@@ -55,8 +55,51 @@ inside the splitter (default mode).
 The `shell` command has been improved, and can now be used for sub commands such as `log` and `trace` or `--watch` mode,
 and be able to exit logging and still be within the shell. Previously you would quit the shell when pressing `ctrl + c`.
 
-TODO: test-infra
-TODO: upgrade command
+### Camel JBang Infra
+
+The new Camel JBang `infra` command provides access to external services used for testing Apache Camel. 
+This feature enables developers to quickly set up testing environments and create prototypes using real services.
+
+The `infra` command offers two sub-commands:
+
+* `camel infra list`: Available external services
+* `camel infra run $SERVICE_ALIAS`: Run a service from the list
+
+For example, to start an FTP service, use:
+
+```bash
+$ camel infra run ftp
+
+Starting service ftp
+{
+  "getPort" : 52472,
+  "getFtpRootDir" : "file://path/to/current/directory/target/ftp/camel-test-infra-test-directory/camel-test-infra-configuration-test-directory"
+}
+```
+
+The command returns a JSON response containing service configuration details that can be directly integrated into your Camel routes. 
+In this example, the response includes:
+
+* The dynamically assigned port number
+* The FTP root directory path
+
+This structured output makes it easy to programmatically access service details in your development workflow.
+
+### Camel JBang Update
+
+The new Camel JBang `update` command streamlines the process of upgrading Apache Camel applications to newer versions.
+The `update` command provides two sub-command:
+
+* `list`: Displays all available Apache Camel versions that you can upgrade to.
+* `run`: Performs the actual update process, automatically migrating your application to the specified Camel version.
+
+The update process leverages the https://github.com/apache/camel-upgrade-recipes[Apache Camel Open Rewrite recipes] and supports three runtimes:
+
+* Plain Camel (camel-main)
+* Camel Quarkus (quarkus)
+* Camel Spring Boot (spring-boot)
+
+More information can be found in https://camel.apache.org/manual/camel-jbang.html#_update[Apache Camel JBang documentation].
 
 ### Camel JBang Kubernetes
 
