@@ -33,8 +33,18 @@ and all the Java based configuration done entirely from the same `configure` met
 
 ## Camel JBang
 
-Using _modeline_ has been deprecated. It is recommended to configure externally in `application.properties`
-files.
+Using _modeline_ has been deprecated. It is recommended to configure externally in the `application.properties`
+file, and then include this file when running with Camel JBang:
+
+```bash
+$ camel run foo.camel.yaml application.properties
+```
+
+Or use `*` to include all files from the current folder:
+
+```bash
+$ camel run *
+```
 
 We have continued to improve the `run` and `export` to work better and also when using different runtimes.
 
@@ -76,7 +86,6 @@ to grow in an uncontrolled way. From now on the component will generate events f
 If you still want to collect events for the extended URI (including the parameters), then,
 you can use the `camel.metrics.baseEndpointURIExchangeEventNotifier=false` configuration.
 Mind that this is strongly discouraged as it can make your number of events growing out of control.
-
 
 ## Camel Groovy
 
