@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 4.10 What's New"
 date: 2025-02-12
-authors: [davsclaus, orpiske, tadayosi]
+authors: [davsclaus, orpiske, tadayosi, croway]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 4.10 release.
 ---
@@ -13,7 +13,7 @@ This release introduces a set of new features and noticeable improvements that w
 ## Camel Core
 
 Added `customize` to `RouteBuilder` to make it easier to configure a specific Camel component / dataformat, service
-from a Java lambda style, such as follows:
+in a Java lambda style, such as follows:
 
 ```java
 @Override
@@ -88,7 +88,7 @@ This structured output makes it easy to programmatically access service details 
 ### Camel JBang Update
 
 The new Camel JBang `update` command streamlines the process of upgrading Apache Camel applications to newer versions.
-The `update` command provides two sub-command:
+The `update` command provides two sub-commands:
 
 * `list`: Displays all available Apache Camel versions that you can upgrade to.
 * `run`: Performs the actual update process, automatically migrating your application to the specified Camel version.
@@ -136,14 +136,14 @@ Mind that this is strongly discouraged as it can make your number of events grow
 
 ## Camel Groovy
 
-Camel now reports a bit better when groovy scripts have compilation errors, to indicate at what
+Camel now reports a bit better when Groovy scripts have compilation errors, to indicate at what
 position the error is located.
 
 ## Camel Attachments / Camel Platform HTTP
 
 We have improved the `platform-http` component to better handle file uploads using `multipart/data-form`
 across all runtimes. The files are stored in `camel-attachments`, and this API has been made
-easier to use from Java, and simple and groovy languages. And if there is a single file
+easier to use from Java, and simple and Groovy languages. And if there is a single file
 uploaded, then the file content is automatically stored in the message body, and the file name
 in `CamelFileName` header, length in `CamelFileLength` header, and content-type in `CamelFileContentType`.
 
@@ -155,7 +155,7 @@ then the content-type refers to these types instead of the default `application/
 
 This release brings a couple of fixes for minor performance issues when evaluating Kafka record metadata.
 
-Added `pollIntervalMs` to allow kafka batching mode to complete an incomplete group after a given time. 
+Added `pollIntervalMs` to allow Kafka batching mode to complete an incomplete group after a given time. 
 
 ## Camel SJMS / SJMS2
 
@@ -194,10 +194,10 @@ The `camel-spring-boot` is upgraded to latest Spring Boot 3.4.2 release.
 The platform-http component has been enhanced to fully align with REST services best practices, introducing several significant improvements to request and response handling.
 A major change affects Content-Type validation in requests and responses. The component now strictly enforces Content-Type headers, 
 returning a 415 Unsupported Media Type error when requests contain unexpected Content-Types. This change may require updates to existing implementations to ensure compatibility.
-This is an high level list of the new features:
+This is a high level list of the new features:
 
 * Attachment
-* Produes/Consumes Headers
+* Produces/Consumes Headers
 * Optimize Response Write (always use Streams where possible)
 * Camel Headers
 * Streaming large files
