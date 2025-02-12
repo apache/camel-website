@@ -103,7 +103,11 @@ More information can be found in https://camel.apache.org/manual/camel-jbang.htm
 
 ### Camel JBang Kubernetes
 
-TODO:
+We have done many improvements and bug fixes to make camel kubernetes work well on Openshift and [Minikube](https://camel.apache.org/manual/camel-jbang-kubernetes.html#_minikube_deployment_tips_and_troubleshooting).
+
+The option `--name` has been added to allow the user to explicitly define the integration name. It is available on all `camel kubernetes` commands.
+
+The `--quiet` mode for camel kubernetes run command has been modified to only show errors for build/deploy. Alternatively to display Maven build output and JIB logs you can use `--verbose` mode.
 
 ## Camel Kamelet
 
