@@ -120,7 +120,7 @@ Camel AI has added three new components (see [New Components](#new-components)).
 
 Two of them (TensorFlow Serving and KServe) are components that support integration with AI model servers, allowing Camel routes to send inference requests with trained models to these model servers. Together with the TorchServe component already introduced in Camel 4.9, Camel now supports the two major AI frameworks PyTorch and TensorFlow, as well as other popular model servers (OpenVINO, Triton, etc.) that support the KServe API. The KServe component will also prepare Camel for integration into MLOps platforms such as Kubeflow.
 
-TODO: Neo4j?
+Neo4j has been introduced as a new component in Apache Camel. Neo4j is a popular graph database. In addition to its traditional graph database functionalities, it also supports vector embeddings for RAG (Retrieval AugmentedGeneration). The Neo4j component provides support for graph database queries. Furthermore, it also supports LangChain4j embeddings, which enables AI-enhanced RAG capabilities.
 
 ## Camel Micrometer
 
