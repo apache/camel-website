@@ -93,17 +93,17 @@ The `update` command provides two sub-commands:
 * `list`: Displays all available Apache Camel versions that you can upgrade to.
 * `run`: Performs the actual update process, automatically migrating your application to the specified Camel version.
 
-The update process leverages the https://github.com/apache/camel-upgrade-recipes[Apache Camel Open Rewrite recipes] and supports three runtimes:
+The update process leverages the [Apache Camel Open Rewrite recipes](https://github.com/apache/camel-upgrade-recipes) and supports three runtimes:
 
 * Plain Camel (camel-main)
 * Camel Quarkus (quarkus)
 * Camel Spring Boot (spring-boot)
 
-More information can be found in https://camel.apache.org/manual/camel-jbang.html#_update[Apache Camel JBang documentation].
+More information can be found in [Apache Camel JBang documentation](/manual/camel-jbang.html#_update).
 
 ### Camel JBang Kubernetes
 
-We have done many improvements and bug fixes to make camel kubernetes work well on Openshift and [Minikube](https://camel.apache.org/manual/camel-jbang-kubernetes.html#_minikube_deployment_tips_and_troubleshooting).
+We have done many improvements and bug fixes to make camel kubernetes work well on Openshift and [Minikube](/manual/camel-jbang-kubernetes.html#_minikube_deployment_tips_and_troubleshooting).
 
 The option `--name` has been added to allow the user to explicitly define the integration name. It is available on all `camel kubernetes` commands.
 
