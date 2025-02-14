@@ -7,7 +7,7 @@ categories: ["Usecases", "Howtos", "Camel", "JBang", "Transformation"]
 preview: "Demonstrating EDI X12 integration with Camel and Smooks"
 ---
 
-[Electronic Data Interchange (EDI)](https://en.wikipedia.org/wiki/Electronic_data_interchange) underpins the flow of information in numerous industries. From healthcare, retail, and aviation, to finance, manufacturing, and logistics, EDI is the workhorse carrying billions of transactions across applications in these industries. 
+[Electronic Data Interchange (EDI)](https://en.wikipedia.org/wiki/Electronic_data_interchange) underpins the flow of information in numerous industries. From healthcare, retail, and aviation, to finance, manufacturing, and logistics, EDI is the workhorse carrying billions of transactions across applications in these industries.
 
 Historically viewed as a long, complex and costly journey, connecting EDI to the enterprise is traditionally thought to belong in the realm of expensive proprietary software or organisations with sizeable in-house IT teams. The goal of this blog post is to dispel this perception. I will illustrate how sustainable, mature open-source software can stand up the advanced infrastructure required to integrate EDI with an organisation’s downstream systems. Despite the complexities and nuances of EDI, the end result is a low-code flexible solution that can be run with a single keystroke thanks to [Camel JBang](/manual/camel-jbang.html).
 
@@ -37,7 +37,7 @@ I will break down the above integration into stages in order to comprehend the o
    PO1*1*25*EA*36*PE*MG*XYZ-1234~
    MEA*WT*WT*10*OZ~
    IT8*******B0~
-   SCH*25*EA***106*20170615~  
+   SCH*25*EA***106*20170615~
    CTT*1~
    AMT*TT*900~
    SE*15*0001~
@@ -112,7 +112,7 @@ The following route receives the purchase order from the customer:
             - script:
                 groovy: |
                   httpContext = exchangeProperties['CamelAs2.interchange']
-                  httpContext.setAttribute(org.apache.camel.component.as2.api.AS2Header.DISPOSITION_TYPE, 
+                  httpContext.setAttribute(org.apache.camel.component.as2.api.AS2Header.DISPOSITION_TYPE,
                                            org.apache.camel.component.as2.api.entity.AS2DispositionType.FAILED)
 
 - route:
@@ -156,24 +156,24 @@ This route sends the order to the Smooks endpoint for translating the EDI into X
         xmlns:ftl="https://www.smooks.org/xsd/smooks/freemarker-2.1.xsd"
         xmlns:core="https://www.smooks.org/xsd/smooks/smooks-core-1.6.xsd">
 
-    <!-- Configures Smooks to tolerate run-time exceptions which allows the EDI to be tracked even when 
+    <!-- Configures Smooks to tolerate run-time exceptions which allows the EDI to be tracked even when
          errors occur -->
     <core:filterSettings terminateOnException="false"/>
 
-    <!-- Emits an event stream from the EDI input. The 'segmentTerminator' and 'dataElementSeparator' attributes 
-         configure the expected EDI delimiters ('%WSP*;' means zero or more whitespaces while '%NL;' means a newline). The default 
-         schema driving the parsing behaviour is a generic EDI schema written in DFDL but can be overridden with the 'schemaUri' 
+    <!-- Emits an event stream from the EDI input. The 'segmentTerminator' and 'dataElementSeparator' attributes
+         configure the expected EDI delimiters ('%WSP*;' means zero or more whitespaces while '%NL;' means a newline). The default
+         schema driving the parsing behaviour is a generic EDI schema written in DFDL but can be overridden with the 'schemaUri'
          config attribute -->
     <edi:parser segmentTerminator="~%WSP*; %NL;%WSP*;" dataElementSeparator="*"/>
    
-   <!-- Runs a pipeline (essentially a nested Smooks execution) on each 'segment' event in order to rewrite the 
-        segments events, making it easier to target the segments we are interested in. The child 'dataElement' events 
-        for the segment being processed are kept in-memory since the 'maxNodeDepth' attribute is set to 0 (i.e., max 
+   <!-- Runs a pipeline (essentially a nested Smooks execution) on each 'segment' event in order to rewrite the
+        segments events, making it easier to target the segments we are interested in. The child 'dataElement' events
+        for the segment being processed are kept in-memory since the 'maxNodeDepth' attribute is set to 0 (i.e., max
         possible depth) -->
     <core:smooks filterSourceOn="segment" maxNodeDepth="0">
         <core:config>
             <smooks-resource-list>
-                <!-- Rewrites the pipeline root event (i.e., the first event which is 'segment') with a custom FreeMarker template such 
+                <!-- Rewrites the pipeline root event (i.e., the first event which is 'segment') with a custom FreeMarker template such
                      that it has an attribute called 'segmentId' holding the segment ID. For example:
                      
                      <segment>...</segment>
@@ -182,11 +182,11 @@ This route sends the order to the Smooks endpoint for translating the EDI into X
                      
                      <segment segmentId="ISA">...</segment>
                      
-                     Side note: the EDI parser's underlying DFDL processor doesn't support attributes but the 
-                     'core:rewrite' construct allows us to add attributes which permits us to target segments based on 
+                     Side note: the EDI parser's underlying DFDL processor doesn't support attributes but the
+                     'core:rewrite' construct allows us to add attributes which permits us to target segments based on
                      the segment ID rather than on the segment position in the stream -->
                 <core:rewrite>
-                   <!-- Materialises the FreeMarker template when it encounters the pipeline root event. The template can be 
+                   <!-- Materialises the FreeMarker template when it encounters the pipeline root event. The template can be
                         viewed at: https://github.com/apache/camel-jbang-examples/blob/main/edi-x12-as2/ftl/segment-id-attr.xml.ftl -->
                    <ftl:freemarker applyOnElement="#document">
                         <ftl:template baseDir="../ftl">segment-id-attr.xml.ftl</ftl:template>
@@ -214,7 +214,7 @@ This route sends the order to the Smooks endpoint for translating the EDI into X
                     <camel:to endpoint="direct:tpm"/>
                 </camel:route>
 
-                <!-- Binds the segment event having the segmentId attribute 'PO1' to a HashMap named 
+                <!-- Binds the segment event having the segmentId attribute 'PO1' to a HashMap named
                     'purchaseOrder' -->
                 <jb:bean beanId="purchaseOrder" class="java.util.HashMap" createOnElement="segment[@segmentId = 'PO1']" retain="true">
                     <jb:value property="quantityOrdered" data="#/dataElement[2]" />
@@ -223,7 +223,7 @@ This route sends the order to the Smooks endpoint for translating the EDI into X
                     <jb:expression property="priority" initVal="'standard'"/>
                 </jb:bean>
 
-                <!-- Sends the bean 'purchaseOrder' to the 'direct:erp' Camel endpoint when the segment attribute is 
+                <!-- Sends the bean 'purchaseOrder' to the 'direct:erp' Camel endpoint when the segment attribute is
                      equal to 'AMT' -->
                 <camel:route beanId="purchaseOrder" routeOnElement="segment[@segmentId = 'AMT']">
                     <camel:to endpoint="direct:erp"/>
@@ -243,7 +243,7 @@ This route sends the order to the Smooks endpoint for translating the EDI into X
 
 The comments in the above Smooks config unpack the EDI processing step by step. Nevertheless, it is worth highlighting that:
 
-* Apart from translating the EDI, Smooks takes advantage of Camel's routing from within the Smooks config to transport individual EDI segments to the supplier's downstream systems. 
+* Apart from translating the EDI, Smooks takes advantage of Camel's routing from within the Smooks config to transport individual EDI segments to the supplier's downstream systems.
 * The beans Smooks create are retained (but not accumulated) in the [bean context](https://www.smooks.org/documentation/#bean_context). A number of these beans are referenced from a separate Smooks config when generating the acknowledgement.
 * Besides producing an XML representation of the inbound EDI in the message body, the Smooks endpoint adds the Smooks execution context to the Camel message headers. As we will see later on, the execution context is used in the `generateFunctionalAck` route to retrieve the bean context and, from it, generate the acknowledgement.
 
@@ -356,8 +356,8 @@ The final stage to our integration is generating as well as transmitting the bus
                    inBody: ediMessage
 ```
 
-1. The first step in the preceding route sets the message body to a Smooks `JavaSource`. The source is holding the bean context created from the previous Smooks execution. Bear in mind that Smooks stashes away the beans, such as the `isa` and `st` beans, inside the bean context. 
-2. After the `setBody` step, the route adds to the `JavaSource` body a status (i.e., `ackStatus`) denoting whether an error occurred during the Smooks execution. FreeMarker inserts the status into the acknowledgement it generates from the template referenced in the next Smooks config. This status informs the customer whether the business transaction succeeded. 
+1. The first step in the preceding route sets the message body to a Smooks `JavaSource`. The source is holding the bean context created from the previous Smooks execution. Bear in mind that Smooks stashes away the beans, such as the `isa` and `st` beans, inside the bean context.
+2. After the `setBody` step, the route adds to the `JavaSource` body a status (i.e., `ackStatus`) denoting whether an error occurred during the Smooks execution. FreeMarker inserts the status into the acknowledgement it generates from the template referenced in the next Smooks config. This status informs the customer whether the business transaction succeeded.
 3. The `JavaSource` is fed to Smooks through the `smooks` endpoint. The `../smooks/gen-x12-ack-config.xml` endpoint parameter points to the subsequent Smooks config:
 
    ```xml
@@ -376,18 +376,18 @@ The final stage to our integration is generating as well as transmitting the bus
           </features>
       </reader>
       
-     <!-- Exports the EDI result as a string instead of the default output stream since the outbound AS2 Camel 
+     <!-- Exports the EDI result as a string instead of the default output stream since the outbound AS2 Camel
           endpoint does not handle output streams -->
       <core:exports>
           <core:result type="org.smooks.io.sink.StringSink"/>
       </core:exports>
    
-      <!-- Runs a pipeline to replace the result event stream with the EDI stream emitted from within the pipeline. 
-           Prior to being replaced, the result stream in this execution consists of a single "stub" event because 
+      <!-- Runs a pipeline to replace the result event stream with the EDI stream emitted from within the pipeline.
+           Prior to being replaced, the result stream in this execution consists of a single "stub" event because
            event streaming is disabled
       -->
       <core:smooks filterSourceOn="#document">
-          <!-- Configures the pipeline to replace current event stream with the event stream emitted from the nested 
+          <!-- Configures the pipeline to replace current event stream with the event stream emitted from the nested
                <smooks-resource-list>...</smooks-resource-list>
            -->
           <core:action>
@@ -397,8 +397,8 @@ The final stage to our integration is generating as well as transmitting the bus
           </core:action>
           <core:config>
               <smooks-resource-list>
-                 <!-- Emits an intermediate event stream from a FreeMarker XML template. This template references the 
-                      'isa', 'gs', 'st', and 'ackStatus' beans from the input `JavaSource` to materialise the 
+                 <!-- Emits an intermediate event stream from a FreeMarker XML template. This template references the
+                      'isa', 'gs', 'st', and 'ackStatus' beans from the input `JavaSource` to materialise the
                       acknowledgement. The template can be viewed at https://github.com/apache/camel-jbang-examples/blob/main/edi-x12-as2/ftl/x12-ack.xml.ftl -->
                   <core:rewrite>
                      <!-- Materialises the FreeMarker template when visiting the root event (i.e., stub event) -->
@@ -407,7 +407,7 @@ The final stage to our integration is generating as well as transmitting the bus
                       </ftl:freemarker>
                   </core:rewrite>
    
-                  <!-- Runs a pipeline on the acknowledgement event stream in order to serialise the stream to 
+                  <!-- Runs a pipeline on the acknowledgement event stream in order to serialise the stream to
                        XML and bind this XML to the bean 'x12AckAsXml' -->
                   <core:smooks filterSourceOn="#document">
                       <core:action>
@@ -420,8 +420,8 @@ The final stage to our integration is generating as well as transmitting the bus
                       <camel:to endpoint="direct:track"/>
                   </camel:route>
    
-                  <!-- Uses the default DFDL schema to serialise the event stream to EDI. The 'unparseOnNode' 
-                       attribute is set to a wildcard to serialise all emitted events while 'segmentTerminator' and 
+                  <!-- Uses the default DFDL schema to serialise the event stream to EDI. The 'unparseOnNode'
+                       attribute is set to a wildcard to serialise all emitted events while 'segmentTerminator' and
                        'dataElementSeparator' are set to the delimiters to write out ('%NL;' means a newline) -->
                   <edi:unparser segmentTerminator="~%NL;" dataElementSeparator="*" unparseOnNode="*"/>
               </smooks-resource-list>
@@ -433,7 +433,7 @@ The final stage to our integration is generating as well as transmitting the bus
    
    As explained in the config comments above, Smooks is configured to produce an X12 acknowledgement for Camel. Additionally, it creates a side-channel to Camel in order to track the XML acknowledgement.
 
-4. The final step in `generateFunctionalAck` and in this integration is the delivery of the EDI acknowledgement to the customer's AS2 server. Note: error handling logic for the AS2 message delivery has been left out for the sake of brevity. 
+4. The final step in `generateFunctionalAck` and in this integration is the delivery of the EDI acknowledgement to the customer's AS2 server. Note: error handling logic for the AS2 message delivery has been left out for the sake of brevity.
 
    The AS2 server receives an acknowledgement from the supplier such as the one shown below:
 
