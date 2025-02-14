@@ -357,7 +357,7 @@ The final stage to our integration is generating as well as transmitting the bus
 ```
 
 1. The first step in the preceding route sets the message body to a Smooks `JavaSource`. The source is holding the bean context created from the previous Smooks execution. Bear in mind that Smooks stashes away the beans, such as the `isa` and `st` beans, inside the bean context. 
-2. After the `setBody` step, the route adds to the `JavaSource` body a status (i.e., `ackStatus`) denoting whether an error occurred during the Smooks execution. FreeMarker inserts the status in the acknowledgement it generates from template referenced in the next Smooks config. This status informs to the customer whether the business transaction succeeded. 
+2. After the `setBody` step, the route adds to the `JavaSource` body a status (i.e., `ackStatus`) denoting whether an error occurred during the Smooks execution. FreeMarker inserts the status into the acknowledgement it generates from the template referenced in the next Smooks config. This status informs the customer whether the business transaction succeeded. 
 3. The `JavaSource` is fed to Smooks through the `smooks` endpoint. The `../smooks/gen-x12-ack-config.xml` endpoint parameter points to the subsequent Smooks config:
 
    ```xml
