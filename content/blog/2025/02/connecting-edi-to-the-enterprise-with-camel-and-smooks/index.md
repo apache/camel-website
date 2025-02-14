@@ -81,7 +81,7 @@ I will break down the above integration into stages in order to comprehend the o
        </segment>
    </interchange>
    ```
-   
+
    Each emitted **event** corresponds to a segment or data element within the EDI document. Within `ingest-x12-config.xml`, Smooks is configured to **bind** these events to POJOs using **visitors** which target the events with **selectors**. Different visitors then **route** the POJOs via Camel to (a) verify the document identifiers with a Trading Partner Management system, AND (b) send them to an ERP for purchase order fulfillment.
 
 4. The Smooks endpoint produces an XML representation of the EDI purchase order, even if a non-fatal error happens while binding the events or routing the beans. The _Ingest Purchase Order_ route goes on to post this XML to a tracking system for transaction visibility and monitoring purposes.
@@ -165,7 +165,7 @@ This route sends the order to the Smooks endpoint for translating the EDI into X
          schema driving the parsing behaviour is a generic EDI schema written in DFDL but can be overridden with the 'schemaUri'
          config attribute -->
     <edi:parser segmentTerminator="~%WSP*; %NL;%WSP*;" dataElementSeparator="*"/>
-   
+
    <!-- Runs a pipeline (essentially a nested Smooks execution) on each 'segment' event in order to rewrite the
         segments events, making it easier to target the segments we are interested in. The child 'dataElement' events
         for the segment being processed are kept in-memory since the 'maxNodeDepth' attribute is set to 0 (i.e., max
@@ -175,13 +175,13 @@ This route sends the order to the Smooks endpoint for translating the EDI into X
             <smooks-resource-list>
                 <!-- Rewrites the pipeline root event (i.e., the first event which is 'segment') with a custom FreeMarker template such
                      that it has an attribute called 'segmentId' holding the segment ID. For example:
-                     
+
                      <segment>...</segment>
-                     
+
                      becomes
-                     
+
                      <segment segmentId="ISA">...</segment>
-                     
+
                      Side note: the EDI parser's underlying DFDL processor doesn't support attributes but the
                      'core:rewrite' construct allows us to add attributes which permits us to target segments based on
                      the segment ID rather than on the segment position in the stream -->
@@ -368,20 +368,20 @@ The final stage to our integration is generating as well as transmitting the bus
            xmlns:camel="https://www.smooks.org/xsd/smooks/camel-1.5.xsd"
            xmlns:ftl="https://www.smooks.org/xsd/smooks/freemarker-2.1.xsd"
            xmlns:core="https://www.smooks.org/xsd/smooks/smooks-core-1.6.xsd">
-   
+
       <!-- Prevents Smooks from emitting an event stream from the 'JavaSource' -->
       <reader>
           <features>
               <setOff feature="http://www.smooks.org/sax/features/generate-java-event-stream" />
           </features>
       </reader>
-      
+
      <!-- Exports the EDI result as a string instead of the default output stream since the outbound AS2 Camel
           endpoint does not handle output streams -->
       <core:exports>
           <core:result type="org.smooks.io.sink.StringSink"/>
       </core:exports>
-   
+
       <!-- Runs a pipeline to replace the result event stream with the EDI stream emitted from within the pipeline.
            Prior to being replaced, the result stream in this execution consists of a single "stub" event because
            event streaming is disabled
@@ -406,7 +406,7 @@ The final stage to our integration is generating as well as transmitting the bus
                           <ftl:template baseDir="../ftl">x12-ack.xml.ftl</ftl:template>
                       </ftl:freemarker>
                   </core:rewrite>
-   
+
                   <!-- Runs a pipeline on the acknowledgement event stream in order to serialise the stream to
                        XML and bind this XML to the bean 'x12AckAsXml' -->
                   <core:smooks filterSourceOn="#document">
@@ -414,12 +414,12 @@ The final stage to our integration is generating as well as transmitting the bus
                           <core:bindTo id="x12AckAsXml"/>
                       </core:action>
                   </core:smooks>
-                 
+
                   <!-- Sends the 'x12AckAsXml' bean to the Camel endpoint 'direct:track' -->
                   <camel:route beanId="x12AckAsXml" routeOnElement="#document">
                       <camel:to endpoint="direct:track"/>
                   </camel:route>
-   
+
                   <!-- Uses the default DFDL schema to serialise the event stream to EDI. The 'unparseOnNode'
                        attribute is set to a wildcard to serialise all emitted events while 'segmentTerminator' and
                        'dataElementSeparator' are set to the delimiters to write out ('%NL;' means a newline) -->
@@ -427,10 +427,10 @@ The final stage to our integration is generating as well as transmitting the bus
               </smooks-resource-list>
           </core:config>
       </core:smooks>
-   
+
    </smooks-resource-list>
    ```
-   
+
    As explained in the config comments above, Smooks is configured to produce an X12 acknowledgement for Camel. Additionally, it creates a side-channel to Camel in order to track the XML acknowledgement.
 
 4. The final step in `generateFunctionalAck` and in this integration is the delivery of the EDI acknowledgement to the customer's AS2 server. Note: error handling logic for the AS2 message delivery has been left out for the sake of brevity.
