@@ -55,12 +55,12 @@ content:
       branches: main
       start_path: docs
 
-    - url: https://github.com/apache/camel-kafka-connector.git
-      branches:
-        - main
-      start_paths:
-        - docs
-        - connectors
+#    - url: https://github.com/apache/camel-kafka-connector.git
+#      branches:
+#        - main
+#      start_paths:
+#        - docs
+#        - connectors
 
     - url: https://github.com/apache/camel-spring-boot.git
       branches:
