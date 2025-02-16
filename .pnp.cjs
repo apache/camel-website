@@ -2084,7 +2084,7 @@ const RAW_RUNTIME_STATE =
           ["@octokit/auth-token", "npm:4.0.0"],\
           ["@octokit/graphql", "npm:7.1.0"],\
           ["@octokit/request", "npm:8.4.0"],\
-          ["@octokit/request-error", "npm:5.1.0"],\
+          ["@octokit/request-error", "npm:5.1.1"],\
           ["@octokit/types", "npm:13.5.0"],\
           ["before-after-hook", "npm:2.2.2"],\
           ["universal-user-agent", "npm:6.0.0"]\
@@ -2198,7 +2198,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@octokit/request", "npm:8.4.0"],\
           ["@octokit/endpoint", "npm:9.0.5"],\
-          ["@octokit/request-error", "npm:5.1.0"],\
+          ["@octokit/request-error", "npm:5.1.1"],\
           ["@octokit/types", "npm:13.5.0"],\
           ["universal-user-agent", "npm:6.0.0"]\
         ],\
@@ -2206,10 +2206,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@octokit/request-error", [\
-      ["npm:5.1.0", {\
-        "packageLocation": "./.yarn/cache/@octokit-request-error-npm-5.1.0-f7282c5282-d03f9f7a40.zip/node_modules/@octokit/request-error/",\
+      ["npm:5.1.1", {\
+        "packageLocation": "./.yarn/cache/@octokit-request-error-npm-5.1.1-f22d0f5771-6ad9862640.zip/node_modules/@octokit/request-error/",\
         "packageDependencies": [\
-          ["@octokit/request-error", "npm:5.1.0"],\
+          ["@octokit/request-error", "npm:5.1.1"],\
           ["@octokit/types", "npm:13.5.0"],\
           ["deprecation", "npm:2.3.1"],\
           ["once", "npm:1.4.0"]\
