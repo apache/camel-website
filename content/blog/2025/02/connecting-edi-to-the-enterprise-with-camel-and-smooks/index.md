@@ -73,7 +73,6 @@ I will break down the above integration into stages in order to comprehend the o
            <dataElement>&gt;</dataElement>
        </segment>
        ...
-       ...
        <segment>
            <segmentId>IEA</segmentId>
            <dataElement>1</dataElement>
