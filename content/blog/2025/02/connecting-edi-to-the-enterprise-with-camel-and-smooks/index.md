@@ -1,6 +1,6 @@
 ---
 title: "Connecting EDI to the Enterprise with Camel & Smooks"
-date: 2025-02-13
+date: 2025-02-19
 draft: false
 authors: [cjmamo]
 categories: ["Usecases", "Howtos", "Camel", "JBang", "Transformation"]
@@ -72,6 +72,7 @@ I will break down the above integration into stages in order to comprehend the o
            <dataElement>T</dataElement>
            <dataElement>&gt;</dataElement>
        </segment>
+       ...
        ...
        <segment>
            <segmentId>IEA</segmentId>
