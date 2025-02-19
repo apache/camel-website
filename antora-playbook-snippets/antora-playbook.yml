@@ -35,7 +35,6 @@ content:
         - release-2.6.x
         - release-2.5.x
         - release-2.4.x
-        - release-2.3.x
       start_path: docs
 
     - url: https://github.com/apache/camel-k-runtime.git
@@ -49,7 +48,6 @@ content:
         - main
         - 4.10.x
         - 4.8.x
-        - 4.4.x
       start_path: docs
 
     - url: https://github.com/apache/camel-quarkus.git
