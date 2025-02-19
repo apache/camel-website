@@ -34,13 +34,6 @@ content:
         - main
         - release-2.6.x
         - release-2.5.x
-        - release-2.4.x
-      start_path: docs
-
-    - url: https://github.com/apache/camel-k-runtime.git
-      branches:
-        - main
-        - release-3.8.x
       start_path: docs
 
     - url: https://github.com/apache/camel-kamelets.git
