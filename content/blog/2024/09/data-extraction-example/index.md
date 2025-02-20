@@ -7,7 +7,7 @@ categories: ["Camel", "AI"]
 preview: "Detail a concrete example of how to turn unstructured data into structured data with Camel Quarkus and Quarkus LangChain4j."
 ---
 
-This blog post shows a concrete example of transforming raw unstructured text into structured Java objects with [Camel Quarkus](/camel-quarkus/3.8.x/index.html) and [Quarkus LangChain4j](https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html).
+This blog post shows a concrete example of transforming raw unstructured text into structured Java objects with Camel Quarkus and [Quarkus LangChain4j](https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html).
 
 # Introduction
 
@@ -142,6 +142,6 @@ Told that way, it seems Apache Camel routes doing data extraction could become a
 
 That said, this example only demonstrates a working prototype.
 It would be very interesting to see a concrete larger scale experiment with actual data from a true organization.
-It should possible to learn what accuracy is achievable from 100 raw texts with their corresponding expected JSON output.
+It should be possible to learn what accuracy is achievable from 100 raw texts with their corresponding expected JSON output.
 Having access to some GPUs could speed up the inference computation that takes quite some time to be honest.
-If any reader would be interested in such a larger scale experiment, feel welcome to ping us.
+If any reader were interested in such a larger scale experiment, feel welcome to ping us.

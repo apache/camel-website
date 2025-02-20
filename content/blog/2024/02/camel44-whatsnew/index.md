@@ -139,7 +139,7 @@ Upgraded to latest Spring Boot 3.2.2 release.
 
 ## Kotlin API
 
-We have introduced new experimental [Kotlin API](/components/4.4.x/others/kotlin-api.html)
+We have introduced new experimental Kotlin API
 for defining Camel routes in Kotlin with the `camel-kotlin-api` JAR.
 This provides Kotlin type-safe builders as building blocks of Camel entities.
 
