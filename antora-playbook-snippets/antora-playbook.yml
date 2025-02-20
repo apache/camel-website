@@ -19,7 +19,6 @@ content:
         - main
         - camel-4.10.x
         - camel-4.8.x
-        - camel-4.4.x
         - camel-3.22.x
       start_paths:
         # eip
@@ -47,7 +46,6 @@ content:
       branches:
         - main
         - 3.15.x
-        - 3.8.x
       start_path: docs
 
     - url: https://github.com/apache/camel-quarkus-examples.git
@@ -67,7 +65,6 @@ content:
         - main
         - camel-spring-boot-4.10.x
         - camel-spring-boot-4.8.x
-        - camel-spring-boot-4.4.x
         - camel-spring-boot-3.22.x
       start_paths:
         - components-starter
