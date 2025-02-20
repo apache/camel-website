@@ -1,8 +1,5 @@
-'use strict'
-
-const manifest = <%= manifest %>
+const manifest = JSON.parse('<%= JSON.stringify(manifest) %>');
 
 module.exports = (resource) => {
-  return '/' +  manifest[resource]
-}
-
+  return '/' + manifest[resource];
+};

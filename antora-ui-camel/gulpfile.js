@@ -68,16 +68,35 @@ const formatTask = createTask({
   call: parallel(formatCssTask, formatJsTask),
 })
 
+
+// *** KEY CHANGE: Modified build task to handle gulp-rev import ***
 const buildTask = createTask({
   name: 'build',
   desc: 'Build and stage the UI assets for bundling',
-  call: task.build(srcDir, destDir, process.argv.slice(2).some((name) => name.startsWith('preview'))),
-})
+  call: (srcDir, destDir, isPreview) => {  // Make call a function
+    return new Promise(async (resolve, reject) => { // Use async/await and Promise
+      try {
+        const buildFn = await import('./gulp.d/tasks/build.js'); // Dynamic import
+        resolve(buildFn.default(srcDir, destDir, isPreview)); // Call the build function
+      } catch (err) {
+        reject(err);
+        console.error("Error in build task:", err); // Log the error
+      }
+    });
+  }
+});
 
 const bundleBuildTask = createTask({
   name: 'bundle:build',
-  call: series(cleanTask, lintTask, buildTask),
-})
+  call: series(cleanTask, lintTask, (done) => {  // Wrap buildTask in a function
+    buildTask.call(srcDir, destDir, process.argv.slice(2).some((name) => name.startsWith('preview')))
+      .then(done) // Resolve the series when the buildTask promise resolves
+      .catch((err) => {
+        console.error("Error during bundle build:", err);
+      });
+  }),
+});
+
 
 const bundlePackTask = createTask({
   name: 'bundle:pack',
@@ -110,7 +129,13 @@ const buildPreviewPagesTask = createTask({
 const previewBuildTask = createTask({
   name: 'preview:build',
   desc: 'Process and stage the UI assets and generate pages for the preview',
-  call: parallel(buildTask, buildPreviewPagesTask),
+  call: parallel((done) => {
+    buildTask.call(srcDir, destDir, true) // Pass true for isPreview
+      .then(done)
+      .catch((err) => {
+        console.error("Error during preview build:", err);
+      });
+  }, buildPreviewPagesTask),
 })
 
 const previewServeTask = createTask({
