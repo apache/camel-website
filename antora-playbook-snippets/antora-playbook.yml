@@ -19,7 +19,6 @@ content:
         - main
         - camel-4.10.x
         - camel-4.8.x
-        - camel-4.4.x
         - camel-3.22.x
       start_paths:
         # eip
@@ -67,7 +66,6 @@ content:
         - main
         - camel-spring-boot-4.10.x
         - camel-spring-boot-4.8.x
-        - camel-spring-boot-4.4.x
         - camel-spring-boot-3.22.x
       start_paths:
         - components-starter
