@@ -22,14 +22,11 @@
 
 .blog.list aside ul {
   list-style: none;
- 
   padding: 0;
-  overflow-y: auto;
-  max-height: 990px;
   margin-top: 1rem;
   display: inline-block;
-  max-height: 980px;
   overflow-y: auto;
+  max-height: 960px;
 }
 
 article.blog:first-child {
