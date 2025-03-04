@@ -33,14 +33,6 @@ Please refer to [Quarkus 2.5.0.Final announcement](https://quarkus.io/blog/quark
 In this release, we continued our efforts started in 2.0.0 release to review existing tests and add new ones
 to cover all major use cases mentioned in the main Camel documentation.
 
-## Documentation
-
-We have improved the user guide with :
-
-* New section for additional configuration in the [AWS 2 Lambda documentation](/camel-quarkus/next/reference/extensions/aws2-lambda.html#extensions-aws2-lambda-additional-camel-quarkus-configuration)
-* New section explaining how to [generate Salesforce DTOs With the Salesforce-Maven-Plugin](/camel-quarkus/next/reference/extensions/salesforce.html#extensions-salesforce-usage-generating-salesforce-dtos-with-the-salesforce-maven-plugin)
-* Update section for [additional configuration in Avro](/camel-quarkus/next/reference/extensions/avro.html#extensions-avro-additional-camel-quarkus-configuration)
-
 
 ## Release notes
 
