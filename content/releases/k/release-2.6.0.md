@@ -1,6 +1,6 @@
 ---
 url: "/releases/k-2.6.0/"
-date: 2024-02-15
+date: 2025-02-15
 type: release-note
 version: "2.6.0"
 title: "Camel-K 2.6.0"
