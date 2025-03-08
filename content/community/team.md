@@ -28,6 +28,7 @@ This page lists who we are. By all means add yourself to the list. Let's sort it
 | Daniel Kulp            | dkulp            | Talend                     |
 | Denis Istomin          | distomin         |                            |
 | Dmitry Volodin         | dmvolod          | T-Systems RUS              |
+| Federico Mariani       | croway           | Red Hat                    |
 | Franz Forsthofer       | forsthofer       | SAP                        |
 | Freeman Fang           | ffang            | Red Hat                    |
 | Gary Tully             | gtully           | Red Hat                    |
@@ -72,6 +73,7 @@ This page lists who we are. By all means add yourself to the list. Let's sort it
 | Stan Lewis             | slewis           | Red Hat                    |
 | Tadayoshi Sato         | tsato            | Red Hat                    |
 | Thomas Diesler         | tdiesler         | Red Hat                    |
+| Tom Cunningham         | cunningt         | Red Hat                    |
 | Tomohisa Igarashi      | igarashitm       | Red Hat                    |
 | Tracy Snell            | tjsnell          | Juice Labs                 |
 | Willem Jiang           | ningjiang        | Huawei                     |
