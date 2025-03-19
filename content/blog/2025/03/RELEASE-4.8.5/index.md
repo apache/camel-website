@@ -7,7 +7,7 @@ categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new Camel 4.8.5 LTS release"
 ---
 
-The Camel community announces the immediate availability of the Camel 4.8.5 LTS patch release with 6 bug fixes and improvements.
+The Camel community announces the immediate availability of the Camel 4.8.5 LTS patch release with 6 bug fixes and improvements. 
 
 The artifacts are published and ready for you to download from the Central Maven repository. For more details please take a look at the [release notes](/releases/release-4.8.5/).
 
