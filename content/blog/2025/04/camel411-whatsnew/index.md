@@ -12,11 +12,36 @@ This release introduces a set of new features and noticeable improvements that w
 
 ## Camel Core
 
+The component _verifier extension_ has been deprecated. This functionality has not been in use for many years,
+and we will start to deprecate more of these un-used features in camel-core going forward.
+
 ## Camel JBang
 
-## Camel AI
+Camel JBang now supports running on Eclipse OpenJ9 Java platforms.
 
-## Camel Micrometer
+Added `camel edit` command to be able to edit source file using a terminal editor (nano).
+
+Fixed Camel JBang to be able to run on Windows with Quarkus and Spring Boot runtimes.
+
+The export command has been further hardened to better export using beans that may trigger initialization code
+that would not work during export phase.
+
+## Camel SQL
+
+The `camel-sql` component now supports for non-named SQL queries to use Map message body, where the values
+of the Map is used as SQL parameters (in the order they are in the Map, so use LinkedHashMap).
+
+We have also significantly improved the performance when using SQL batch insert or updates.
+
+## Camel Test
+
+Added `@StubEndpoints` annotation to make it easy to stub a given component, such as kafka, so you
+can easily write unit tests without having to use Kafka but let it be _stubbed_ by Camel and act
+as an internal message queue (ala camel-seda).
+
+We have also made it easier to turn off auto-starting specific routes, using the new `AutoStartupExcludePattern` option (or `@@AutoStartupExclude` annotation).
+This allows to exclude routes (by pattern) so you can write unit tests  and fully control which routes are included and started in the tests.
+
 
 ## Camel Spring Boot
 
@@ -25,6 +50,22 @@ The `camel-spring-boot` is upgraded to latest Spring Boot 3.4.4 release.
 ## Miscellaneous
 
 Upgraded many third-party dependencies to the latest releases at the time of release.
+
+The `camel-bean` component has been improved to better support invoking methods with varargs parameter.
+
+The file based components (`camel-file`, `camel-ftp`, `camel-azure-files`, and `camel-smb`) now better support dynamic polling using `poll` or `pollEnrich` EIPs with dynamic
+computed endpoint, such as `fileName` by using `PollDynamicAware` that is specially optimized for these use-cases.
+
+The `camel-smb` component now also has the `autoCreate` option to let Camel automatic create non-existing starting directory.
+
+The `camel-http` component has more improvements in regards to OAuth2 support.
+
+In `camel-kafka` we added the option `topicMustExists` to tell Camel to check whether a given topic exist or not on startup.
+This can be used to ensure Camel will only consume from existing topics, and otherwise fail if an expected topic does not exists in the broker.
+
+Added `list` and `map` functions to simple language so you can more easily create list/map objects.
+
+The `camel-bom` Maven BOM no longer include a hugh google-bom that could cause builds to be much slower.
 
 ## New Components
 
