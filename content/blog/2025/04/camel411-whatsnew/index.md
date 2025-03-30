@@ -15,6 +15,15 @@ This release introduces a set of new features and noticeable improvements that w
 The component _verifier extension_ has been deprecated. This functionality has not been in use for many years,
 and we will start to deprecate more of these un-used features in camel-core going forward.
 
+### Recipient List, Split and Multicast EIP
+
+In parallel processing mode, you can also enable `synchronous=true` to force these EIPs to process
+the sub-tasks using the upper bounds of the thread-pool. If using `synchronous=false` then Camel
+will allow its reactive routing engine to use as many threads as possible, which may be available
+due to sub-tasks using other thread-pools such as `CompletableFuture.runAsync` or others.
+
+Setting `synchronous=true` is the same behaviour is in Camel 2 which did not have the reactive routing engine.
+
 ## Camel JBang
 
 Camel JBang now supports running on Eclipse OpenJ9 Java platforms.
@@ -41,7 +50,6 @@ as an internal message queue (ala camel-seda).
 
 We have also made it easier to turn off auto-starting specific routes, using the new `AutoStartupExcludePattern` option (or `@@AutoStartupExclude` annotation).
 This allows to exclude routes (by pattern) so you can write unit tests  and fully control which routes are included and started in the tests.
-
 
 ## Camel Spring Boot
 
