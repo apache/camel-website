@@ -65,6 +65,11 @@ This allows to exclude routes (by pattern) so you can write unit tests  and full
 
 The `camel-spring-boot` is upgraded to latest Spring Boot 3.4.4 release.
 
+### Platform HTTP Spring Security integration
+
+The Async Camel Spring Boot Platform HTTP now supports `DelegatingSecurityContextAsyncTaskExecutor` and follows Spring Boot best practices for security context propagation. This enhancement allows security-related information, such as the Principal, to be properly maintained across asynchronous operations.
+Similar to Spring Boot @Async methods, to propagate security related information, users can just configure a `DelegatingSecurityContextAsyncTaskExecutor` Bean.
+
 ## Miscellaneous
 
 Upgraded many third-party dependencies to the latest releases at the time of release.
