@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 4.11 What's New"
 date: 2025-04-12
-authors: [davsclaus, squakez]
+authors: [davsclaus, squakez, croway]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 4.11 release.
 ---
