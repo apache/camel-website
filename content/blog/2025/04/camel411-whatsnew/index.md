@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 4.11 What's New"
 date: 2025-04-12
-authors: [davsclaus]
+authors: [davsclaus, squakez]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 4.11 release.
 ---
@@ -42,6 +42,16 @@ of the Map is used as SQL parameters (in the order they are in the Map, so use L
 
 We have also significantly improved the performance when using SQL batch insert or updates.
 
+## Camel Telemetry
+
+In this version we're introducing a new abstract component for distributed telemetry. The `camel-telemetry` component and its concrete implementations (`camel-telemetrydev`, `camel-opentelemetry2`) will eventually replace `camel-tracing` components. The rationale is a new design to move all generic features of the telemetry components into its abstract definition and make it easier to maintain the implementation in the long term.
+
+As the new component provide a slight different telemetry traces and spans, we've decided to develop it while keeping the older implementation as well. However, you're invited already to try this out.
+
+### Camel Observability Services
+
+The observability services component is now using the `camel-opentelemetry2` instead of `camel-opentelemetry`. This is just a FYI, nothing is expected to be done on the user side.
+
 ## Camel Test
 
 Added `@StubEndpoints` annotation to make it easy to stub a given component, such as kafka, so you
@@ -67,6 +77,13 @@ computed endpoint, such as `fileName` by using `PollDynamicAware` that is specia
 The `camel-smb` component now also has the `autoCreate` option to let Camel automatic create non-existing starting directory.
 
 The `camel-http` component has more improvements in regards to OAuth2 support.
+
+The `camel-micrometer` component has a new `Gauge` which exposes information about the runtime running the Camel application:
+
+```
+# TYPE app_info gauge
+app_info{camel_context="camel-1",camel_runtime_provider="Spring-Boot",camel_runtime_version="3.4.3",camel_version="4.10.2"} 1
+```
 
 In `camel-kafka` we added the option `topicMustExists` to tell Camel to check whether a given topic exist or not on startup.
 This can be used to ensure Camel will only consume from existing topics, and otherwise fail if an expected topic does not exists in the broker.
