@@ -38,23 +38,22 @@ Please check the [What's new in Camel 3.11.0](/blog/2021/06/Camel311-Whatsnew/) 
 
 New extensions:
 
-* [Avro Jackson](/camel-quarkus/next/reference/extensions/jackson-avro.html)
-* [AWS Secrets Manager](/camel-quarkus/next/reference/extensions/aws-secrets-manager.html) (JVM only)
-* [Azure CosmosDB](/camel-quarkus/next/reference/extensions/azure-cosmosdb.html) (JVM only)
-* [Etcd3](/camel-quarkus/next/reference/extensions/etcd3.html) (JVM only)
-* [Google Cloud Functions](/camel-quarkus/next/reference/extensions/google-functions.html) (JVM only)
-* [Google Storage](/camel-quarkus/next/reference/extensions/google-storage.html)
-* [jOOR](/camel-quarkus/next/reference/extensions/joor.html) (JVM only)
-* Kamelet Reify (JVM only, no longer supported, February 2022)
-* [Protobuf Jackson](/camel-quarkus/next/reference/extensions/jackson-protobuf.html)
+- [Avro Jackson](/camel-quarkus/next/reference/extensions/jackson-avro.html)
+- [AWS Secrets Manager](/camel-quarkus/next/reference/extensions/aws-secrets-manager.html) (JVM only)
+- [Azure CosmosDB](/camel-quarkus/next/reference/extensions/azure-cosmosdb.html) (JVM only)
+- [Etcd3] (JVM only)
+- [Google Cloud Functions](/camel-quarkus/next/reference/extensions/google-functions.html) (JVM only)
+- [Google Storage](/camel-quarkus/next/reference/extensions/google-storage.html)
+- [jOOR](/camel-quarkus/next/reference/extensions/joor.html) (JVM only)
+- Kamelet Reify (JVM only, no longer supported, February 2022)
+- [Protobuf Jackson](/camel-quarkus/next/reference/extensions/jackson-protobuf.html)
 
 Extensions newly supported in native mode:
 
-* [DigitalOcean](/camel-quarkus/next/reference/extensions/digitalocean.html)
-* [OpenStack](/camel-quarkus/next/reference/extensions/openstack.html)
-* [XChange](/camel-quarkus/next/reference/extensions/xchange.html)
-* [XQuery](/camel-quarkus/next/reference/extensions/saxon.html)
-
+- [DigitalOcean](/camel-quarkus/next/reference/extensions/digitalocean.html)
+- [OpenStack](/camel-quarkus/next/reference/extensions/openstack.html)
+- [XChange](/camel-quarkus/next/reference/extensions/xchange.html)
+- [XQuery](/camel-quarkus/next/reference/extensions/saxon.html)
 
 ## Test coverage and closing functionality gaps
 
@@ -74,8 +73,7 @@ The extent of this effort can be assessed by running [this GitHub issues query](
 
 ## Deprecations
 
-* Avro extension: `@BuildTimeAvroDataFormat` is deprecated - see the [Avro extension](/camel-quarkus/next/reference/extensions/avro.html#extensions-avro-additional-camel-quarkus-configuration) page.
-
+- Avro extension: `@BuildTimeAvroDataFormat` is deprecated - see the [Avro extension](/camel-quarkus/next/reference/extensions/avro.html#extensions-avro-additional-camel-quarkus-configuration) page.
 
 ## Breaking changes and migration steps
 
@@ -85,10 +83,10 @@ Please refer to our [2.0.0 Migration guide](/camel-quarkus/next/migration-guide/
 
 Fixed issues:
 
-* [Milestone 2.0.0-M1](https://github.com/apache/camel-quarkus/milestone/13?closed=1)
-* [Milestone 2.0.0-M2](https://github.com/apache/camel-quarkus/milestone/16?closed=1)
-* [Milestone 2.0.0](https://github.com/apache/camel-quarkus/milestone/15?closed=1)
+- [Milestone 2.0.0-M1](https://github.com/apache/camel-quarkus/milestone/13?closed=1)
+- [Milestone 2.0.0-M2](https://github.com/apache/camel-quarkus/milestone/16?closed=1)
+- [Milestone 2.0.0](https://github.com/apache/camel-quarkus/milestone/15?closed=1)
 
 All commits:
 
-* [1.8.1..2.0.0](https://github.com/apache/camel-quarkus/compare/1.8.1...2.0.0)
+- [1.8.1..2.0.0](https://github.com/apache/camel-quarkus/compare/1.8.1...2.0.0)
