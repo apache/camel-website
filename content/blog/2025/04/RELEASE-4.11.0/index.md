@@ -1,6 +1,6 @@
 ---
 title: "RELEASE 4.11.0"
-date: 2024-04-03
+date: 2025-04-03
 draft: false
 authors: [gzurowski]
 categories: ["Releases"]
