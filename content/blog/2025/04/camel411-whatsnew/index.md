@@ -13,7 +13,7 @@ This release introduces a set of new features and noticeable improvements that w
 ## Camel Core
 
 The component _verifier extension_ has been deprecated. This functionality has not been in use for many years,
-and we will start to deprecate more of these un-used features in camel-core going forward.
+and we will start to deprecate more of these unused features in camel-core going forward.
 
 ### Recipient List, Split and Multicast EIP
 
@@ -22,13 +22,13 @@ the sub-tasks using the upper bounds of the thread-pool. If using `synchronous=f
 will allow its reactive routing engine to use as many threads as possible, which may be available
 due to sub-tasks using other thread-pools such as `CompletableFuture.runAsync` or others.
 
-Setting `synchronous=true` is the same behaviour is in Camel 2 which did not have the reactive routing engine.
+Setting `synchronous=true` is the same behavior as in Camel 2 which did not have the reactive routing engine.
 
 ## Camel JBang
 
 Camel JBang now supports running on Eclipse OpenJ9 Java platforms.
 
-Added `camel edit` command to be able to edit source file using a terminal editor (nano).
+Added `camel edit` command to be able to edit source files using a terminal editor (nano).
 
 Fixed Camel JBang to be able to run on Windows with Quarkus and Spring Boot runtimes.
 
@@ -74,12 +74,12 @@ Similar to Spring Boot @Async methods, to propagate security related information
 
 Upgraded many third-party dependencies to the latest releases at the time of release.
 
-The `camel-bean` component has been improved to better support invoking methods with varargs parameter.
+The `camel-bean` component has been improved to better support invoking methods with varargs parameters.
 
 The file based components (`camel-file`, `camel-ftp`, `camel-azure-files`, and `camel-smb`) now better support dynamic polling using `poll` or `pollEnrich` EIPs with dynamic
 computed endpoint, such as `fileName` by using `PollDynamicAware` that is specially optimized for these use-cases.
 
-The `camel-smb` component now also has the `autoCreate` option to let Camel automatic create non-existing starting directory.
+The `camel-smb` component now also has the `autoCreate` option to let Camel automatically create a non-existing starting directory.
 
 The `camel-http` component has more improvements in regards to OAuth2 support.
 
@@ -90,12 +90,12 @@ The `camel-micrometer` component has a new `Gauge` which exposes information abo
 app_info{camel_context="camel-1",camel_runtime_provider="Spring-Boot",camel_runtime_version="3.4.3",camel_version="4.10.2"} 1
 ```
 
-In `camel-kafka` we added the option `topicMustExists` to tell Camel to check whether a given topic exist or not on startup.
+In `camel-kafka` we added the option `topicMustExists` to tell Camel to check whether a given topic exists on startup.
 This can be used to ensure Camel will only consume from existing topics, and otherwise fail if an expected topic does not exists in the broker.
 
 Added `list` and `map` functions to simple language so you can more easily create list/map objects.
 
-The `camel-bom` Maven BOM no longer include a hugh google-bom that could cause builds to be much slower.
+The `camel-bom` Maven BOM no longer includes a huge google-bom that could cause builds to be much slower.
 
 ## New Components
 
@@ -104,7 +104,7 @@ We have added a few new components:
 - `camel-dfdl` - Transforms fixed format data such as EDI message from/to XML using a Data Format Description Language (DFDL).
 - `ibm-secrets-manager` - Manage secrets in IBM Secrets Manager Service
 - `camel-oauth` - Camel OAuth
-- `camel-opentelemetry2`  - Implementation of Camel Opentelemetry based on the Camel Telemetry spec
+- `camel-opentelemetry2`  - Implementation of Camel OpenTelemetry based on the Camel Telemetry spec
 - `camel-telemetry` - Distributed telemetry common interfaces
 - `camel-telemetry-dev` - Basic implementation of Camel Telemetry useful for development purposes
 
@@ -120,7 +120,7 @@ See more at: https://github.com/apache/camel-upgrade-recipes
 
 ## Release Notes
 
-You can find more information about this release in the list of JIRA tickets resolved in the release:
+You can find additional information about this release in the list of resolved JIRA tickets:
 
 - [Release notes 4.11](/releases/release-4.11.0/)
 
