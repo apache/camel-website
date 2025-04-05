@@ -1,6 +1,7 @@
 ---
 title: "Apache Camel 4.11 What's New"
-date: 2025-04-04
+date: 2025-04-05
+draft: false
 authors: [davsclaus, squakez, croway, gzurowski]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel 4.11 release.
@@ -103,7 +104,7 @@ We have added a few new components:
 
 - `camel-dfdl` - Transforms fixed format data such as EDI message from/to XML using a Data Format Description Language (DFDL).
 - `ibm-secrets-manager` - Manage secrets in IBM Secrets Manager Service
-- `camel-oauth` - Camel OAuth
+- `camel-oauth` - Camel OAuth (work in progress)
 - `camel-opentelemetry2`  - Implementation of Camel OpenTelemetry based on the Camel Telemetry spec
 - `camel-telemetry` - Distributed telemetry common interfaces
 - `camel-telemetry-dev` - Basic implementation of Camel Telemetry useful for development purposes
