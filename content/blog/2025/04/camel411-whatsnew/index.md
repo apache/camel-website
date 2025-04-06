@@ -4,7 +4,7 @@ date: 2025-04-05
 draft: false
 authors: [davsclaus, squakez, croway, gzurowski]
 categories: ["Releases"]
-preview: Details of what we have done in the Camel 4.11 release.
+preview: "Details of what we have done in the Camel 4.11 release."
 ---
 
 Apache Camel 4.11 has just been [released](/blog/2025/04/RELEASE-4.11.0/).
