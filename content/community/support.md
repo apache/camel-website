@@ -25,6 +25,8 @@ Unfortunately, some people create a JIRA ticket as first thing. **Please don't d
 for the Camel team to react on issues that are not bugs but are already covered in FAQs, in the mailing lists etc., or in the existing documentation.
 Also on the mailing lists, there are more people active to help you better.
 
+Before you can create a JIRA ticket you need to request an account. When requesting the account please be specific about the reason you need it. Please give a brief synopsis of the bug you’re encountering or feature you need. If you’re not quite sure you’re hitting an actual bug or you’re not sure if the feature you need is valid, etc. please contact us on the users mailing list or Zulip chat to get some clarity. Account requests with vague reasons will be rejected.
+
 Also, please avoid sending direct emails to members of the Camel team (we are busy already).
 And conversations about Camel should happen in the public mailing lists, instead of via private emails.
 
