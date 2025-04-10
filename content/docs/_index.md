@@ -193,7 +193,7 @@ when you need to quickly build a prototype with Camel.
 
 ## Kamelets
 
-Apache Camel now leverages a catalog of connectors called "Kamelets" (_Kamel_ route snipp_ets_) that allow creating sources or sinks towards external systems via a
+Apache Camel now leverages a catalog of connectors called "Kamelets" (_Kamel_ route snipp-_ets_) that allow creating sources or sinks towards external systems via a
 simplified interface, hiding all the low level details about how those connections are implemented.
 
 <p>
