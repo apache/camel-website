@@ -5,6 +5,7 @@ title: "Articles"
 ## Camel Videos
 
 
+* [Enterprise Integration Is Dead! Long Live AI-Driven Integration with Apache Camel](https://www.youtube.com/watch?v=WrBmfaY7IB8) from Devoxx UK in May 2025 where Markus and Bruno shows firrst hand how Camel, powered by AI, is quietly reinventing how we connect the enterprise.
 * [Apache Camel and ActiveMQ at UPS](https://www.youtube.com/watch?v=TDjwr16uaYU) May 2024 where UPS presented their use of Apache Camel and ActiveMQ on OpenShift processing tens of billions messages a day. 
 * [Quarkus Insights #110: Quarkiverse Extension Spotlight of Apache Camel](https://www.youtube.com/watch?v=stBjGMu73B0) November 2022 where Apache Camel was presented on the Quarkus webcast (1h session).
 * [Cloud Native My Camel: from Low Code to Pro Code, inject Serverless & Cloud Native Goodness](https://www.youtube.com/watch?v=af6xXqvxwjE) by Michael Costello from June 2022, 45-min session on low-code Apache Camel, Camel K and demo with Karavan, the Camel UI designer. 
