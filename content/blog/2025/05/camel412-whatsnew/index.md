@@ -2,7 +2,7 @@
 title: "Apache Camel 4.12 What's New"
 date: 2025-05-28
 draft: false
-authors: [davsclaus]
+authors: [davsclaus,squakez]
 categories: ["Releases"]
 preview: "Details of what we have done in the Camel 4.12 release."
 ---
@@ -32,6 +32,16 @@ We have added a few new components:
 - `camel-weaviate` - Perform operations on the Weaviate Vector Database.
 - `camel-jandex` - Custom class and resource loader using jandex.idx
 - `camel-oauth` - Camel OAuth (Work in progress)
+
+## Camel Main management port
+
+Camel Quarkus and Spring Boot runtimes allow distinguish a managemet port from the regular HTTP services. We have introduced the same feature for `camel-main` runtime.
+
+You can use a management server where to expose management endpoints (such as health, metrics, etcetera). The new server will be available by default on port `9876`. This and other several configuration can be changed using `camel.management` application properties group. In order to avoid breaking compatibility, the previous services running on business port (default `8080`) will be still running on the old port AND on the new port for a few future releases. However, you're invited to move your configuration and adopt the new `camel.management` embedded server for management services as soon as possible.
+
+## Camel Observability Services using management port
+
+As we have made this feature available across all the runtimes, we're using a management port (`9876`) to expose the observability services. This is an enhancement for security purposes and to allow any tool to be able to use a management port where available without affecting the availability of the regular services exposed by the application.
 
 ## Upgrading
 
