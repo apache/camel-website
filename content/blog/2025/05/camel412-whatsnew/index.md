@@ -28,7 +28,7 @@ Upgraded many third-party dependencies to the latest releases at the time of rel
 We have added a few new components:
 
 - `camel-dapr` - Dapr component which interfaces with Dapr Building Blocks.
-- `camel-pqc` - Post Quantum Computing Signature and Verification component.
+- `camel-pqc` - Post Quantum Cryptography Signature and Verification component.
 - `camel-weaviate` - Perform operations on the Weaviate Vector Database.
 - `camel-jandex` - Custom class and resource loader using jandex.idx
 - `camel-oauth` - Camel OAuth (Work in progress)
