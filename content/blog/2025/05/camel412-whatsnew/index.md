@@ -35,7 +35,7 @@ We have added a few new components:
 
 ## Camel Main management port
 
-Camel Quarkus and Spring Boot runtimes allow distinguish a managemet port from the regular HTTP services. We have introduced the same feature for `camel-main` runtime.
+Camel Quarkus and Spring Boot runtimes allow distinguish a management port from the regular HTTP services. We have introduced the same feature for `camel-main` runtime.
 
 You can use a management server where to expose management endpoints (such as health, metrics, etcetera). The new server will be available by default on port `9876`. This and other several configuration can be changed using `camel.management` application properties group. In order to avoid breaking compatibility, the previous services running on business port (default `8080`) will be still running on the old port AND on the new port for a few future releases. However, you're invited to move your configuration and adopt the new `camel.management` embedded server for management services as soon as possible.
 
