@@ -2,7 +2,7 @@
 title: "Apache Camel 4.12 What's New"
 date: 2025-05-28
 draft: false
-authors: [ davsclaus,squakez ]
+authors: [ davsclaus,squakez,gzurowski ]
 categories: [ "Releases" ]
 preview: "Details of what we have done in the Camel 4.12 release."
 ---
