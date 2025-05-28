@@ -13,7 +13,7 @@ This release introduces a set of new features and noticeable improvements that w
 
 ## Camel Core
 
-The `camel-xml-io` XML DSL now has a generated XSD Schema that are independent, from the classic Camel Spring XSD.
+The `camel-xml-io` XML DSL now has a generated XSD Schema that is independent from the classic Camel Spring XSD.
 This allows tooling and end users to use this schema instead and ensure the schema matches exactly the capabilities
 of the `camel-ml-io` XML DSL.
 
@@ -21,11 +21,11 @@ The schema is published online at: https://camel.apache.org/schema/xml-io
 
 ## Camel Main - Management Port
 
-Camel Quarkus and Spring Boot runtimes allows a dedicated management port (to not reuse the regular HTTP service port).
+Camel Quarkus and Spring Boot runtimes allow a dedicated management port (instead of reusing the regular HTTP service port).
 We have introduced the same feature for `camel-main` runtime.
 
 You can use a management server where to expose management endpoints (such as health, metrics, etc.).
-The new server will be available by default on port `9876`. This and other several configuration can be changed using
+The new server will be available by default on port `9876`. This and several other configurations can be changed using
 `camel.management` application properties group. In order to avoid breaking compatibility, the previous services running
 on business port (default `8080`) will be still running on the old port AND on the new port for a few future releases.
 However, you're invited to move your configuration and adopt the new `camel.management` embedded server for management
@@ -61,7 +61,7 @@ so you can run multiple instances without having port clashes.
 
 ## Camel HTTP
 
-The `camel-http` can now easily do file upload as Multipart using `multipartUpload=true` option.
+The `camel-http` can now easily handle file uploads as Multipart using `multipartUpload=true` option.
 
 Added support for OAuth Bearer Token authentication.
 
@@ -74,7 +74,7 @@ directly from Spring Cloud Config.
 
 ## Camel Spring Boot
 
-The `camel-spring-boot` is upgraded to latest Spring Boot 3.5.0 release.
+`camel-spring-boot` is upgraded to the latest Spring Boot 3.5.0 release.
 
 ## Miscellaneous
 
