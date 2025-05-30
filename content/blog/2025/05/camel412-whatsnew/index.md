@@ -13,11 +13,15 @@ This release introduces a set of new features and noticeable improvements that w
 
 ## Camel Core
 
-The `camel-xml-io` XML DSL now has a generated XSD Schema that is independent from the classic Camel Spring XSD.
+The `camel-xml-io` XML DSL now has a generated XSD Schema that is independent of the classic Camel Spring XSD.
 This allows tooling and end users to use this schema instead and ensure the schema matches exactly the capabilities
 of the `camel-ml-io` XML DSL.
 
-The schema is published online at: https://camel.apache.org/schema/xml-io
+The schema is published online at: 
+
+```text
+https://camel.apache.org/schema/xml-io
+```
 
 ## Camel Main - Management Port
 
