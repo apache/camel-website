@@ -7482,11 +7482,11 @@ __metadata:
   linkType: hard
 
 "eazy-logger@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "eazy-logger@npm:4.0.1"
+  version: 4.1.0
+  resolution: "eazy-logger@npm:4.1.0"
   dependencies:
     chalk: "npm:4.1.2"
-  checksum: 10/6116f29f39c092f5cf999236a5fa8e6c063105814863fe884bea02de038edb604d1a5b63b9b50f8456eeabe56b8fcaca1f679cc845ce2cf6987986ec8aaa22a5
+  checksum: 10/d382716213350b8adfd187396cbc82a5b95206b0ea47b7fea19d91fd3182d1c1052f0738a53207b642e75aa0133e781030e299b4ac81bb8f0dc35a4c2156652d
   languageName: node
   linkType: hard
 

@@ -5448,7 +5448,7 @@ const RAW_RUNTIME_STATE =
           ["connect-history-api-fallback", "npm:1.6.0"],\
           ["dev-ip", "npm:1.0.1"],\
           ["easy-extender", "npm:2.3.4"],\
-          ["eazy-logger", "npm:4.0.1"],\
+          ["eazy-logger", "npm:4.1.0"],\
           ["etag", "npm:1.8.1"],\
           ["fresh", "npm:0.5.2"],\
           ["fs-extra", "npm:3.0.1"],\
@@ -8698,10 +8698,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["eazy-logger", [\
-      ["npm:4.0.1", {\
-        "packageLocation": "./.yarn/cache/eazy-logger-npm-4.0.1-1f98b860f4-6116f29f39.zip/node_modules/eazy-logger/",\
+      ["npm:4.1.0", {\
+        "packageLocation": "./.yarn/cache/eazy-logger-npm-4.1.0-51e109467a-d382716213.zip/node_modules/eazy-logger/",\
         "packageDependencies": [\
-          ["eazy-logger", "npm:4.0.1"],\
+          ["eazy-logger", "npm:4.1.0"],\
           ["chalk", "npm:4.1.2"]\
         ],\
         "linkType": "HARD"\
