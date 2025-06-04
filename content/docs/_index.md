@@ -131,7 +131,6 @@ It also provides starters for the Camel components.
 <p>
 <a class="button dark" href="/camel-karaf/latest/">Documentation</a>
 <a class="button light" href="https://github.com/apache/camel-karaf">Source</a>
-<a class="button light" href="https://github.com/apache/camel-karaf-examples">Examples</a>
 </p>
 
 {{< /div >}}
