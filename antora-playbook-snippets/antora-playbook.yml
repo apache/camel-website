@@ -31,7 +31,7 @@ content:
       # Let's keep latest active development + LTS active versions only
       branches:
         - main
-        - release-2.6.x
+        - release-2.7.x
         - release-2.5.x
       start_path: docs
 
