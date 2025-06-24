@@ -1,6 +1,6 @@
 {{#with page.navigation}}
 <div class="nav-panel-menu is-active">
-  {{#if (eq @root.page.component.name 'components')}}
+  {{#if (or (eq @root.page.component.name 'components') (eq @root.page.component.name 'camel-kamelets'))}}
   <input class="search" placeholder="Quick lookup">
   {{/if}}
   <nav class="nav-menu" data-panel="menu" aria-label="Topics">
