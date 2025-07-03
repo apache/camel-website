@@ -11,34 +11,34 @@ This page lists who we are. By all means add yourself to the list. Let's sort it
 |------------------------|------------------|----------------------------|
 | Aaron Mulder           | ammulder         | Chariot Solutions          |
 | Akitoshi Yoshida       | ay               | SAP                        |
-| Andrea Cosentino       | acosentino       | Red Hat                    |
+| Andrea Cosentino       | acosentino       | IBM                        |
 | Antonin Stefanutti     | astefanutti      | Red Hat                    |
 | Babak Vahdat           | bvahdat          | Cyberlogic Consulting GmbH |
 | Ben O'Day              | boday            | Initek Consulting          |
 | Bilgin Ibryam          | bibryam          |                            |
 | Bob Paulin             | bob              |                            |
 | Bruce Snyder           | bsnyder          |                            |
-| Charles Moulliard      | cmoulliard       | Red Hat                    |
+| Charles Moulliard      | cmoulliard       | IBM                        |
 | Christian Mueller      | cmueller         | Amazon Web Services        |
 | Christian Posta        | ceposta          | Solo                       |
 | Christian Schneider    | cschneider       |                            |
-| Claus Ibsen            | davsclaus        | Red Hat                    |
+| Claus Ibsen            | davsclaus        | IBM                        |
 | Colm O hEigeartaigh    | coheigea         | Talend                     |
 | David Jencks           | djencks          | IBM                        |
 | Daniel Kulp            | dkulp            | Talend                     |
 | Denis Istomin          | distomin         |                            |
 | Dmitry Volodin         | dmvolod          | T-Systems RUS              |
-| Federico Mariani       | croway           | Red Hat                    |
+| Federico Mariani       | croway           | IBM                        |
 | Franz Forsthofer       | forsthofer       | SAP                        |
-| Freeman Fang           | ffang            | Red Hat                    |
-| Gary Tully             | gtully           | Red Hat                    |
+| Freeman Fang           | ffang            | IBM                        |
+| Gary Tully             | gtully           | IBM                        |
 | Gert Vanthienen        | gertv            |                            |
 | Gregor Zurowski        | gzurowski        | Independent consultant     |
-| Guillaume Nodet        | gnodet           | Red Hat                    |
+| Guillaume Nodet        | gnodet           | IBM                        |
 | Hadrian Zbarcea        | hadrian          |                            |
 | Henryk Konsek          | hekonsek         |                            |
 | Hiram Chirino          | chirino          | Red Hat                    |
-| Ioannis Canellos       | iocanel          | Red Hat                    |
+| Ioannis Canellos       | iocanel          | IBM                        |
 | Jacek Laskowski        | jlaskowski       |                            |
 | James Carman           | jcarman          | Savoir Technologies        |
 | Jan Bednar             | janbednar        | CGI IT Czech Republic      |
@@ -46,9 +46,9 @@ This page lists who we are. By all means add yourself to the list. Let's sort it
 | Jeff Genender          | jgenender        | Savoir Technologies        |
 | Jeremy Ross            | jeremyross       | Elevation Solutions        |
 | Johan Edstrom          | joed             | Savoir Technologies        |
-| John Poth              |                  | Red Hat                    |
-| Jonathan Anstey        | janstey          | Red Hat                    |
-| James Netherton        |                  | Red Hat                    |
+| John Poth              |                  | IBM                        |
+| Jonathan Anstey        | janstey          | IBM                        |
+| James Netherton        |                  | IBM                        |
 | James Strachan         | jstrachan        |                            |
 | Karen Lease            | klease           |                            |
 | Luca Burgazzoli        | lburgazzoli      | Red Hat                    |
@@ -58,12 +58,12 @@ This page lists who we are. By all means add yourself to the list. Let's sort it
 | Nicola Ferraro         | nicolaferraro    | Redpanda                   |
 | Onder Sezgin           | onders           |                            |
 | Omar Al-Safi           | oalsafi          |                            |
-| Otavio Rodolfo Piske   | orpiske          | Red Hat                    |
+| Otavio Rodolfo Piske   | orpiske          | IBM                        |
 | Quinn Stevenson        | quinn            |                            |
 | Raul Kripalani         | raulk            |                            |
 | Pascal Schumacher      | pascalschumacher |                            |
-| Pasquale Congiusti     | pcongiusti       | Red Hat                    |
-| Peter Palaga           | ppalaga          | Red Hat                    |
+| Pasquale Congiusti     | pcongiusti       | IBM                        |
+| Peter Palaga           | ppalaga          | IBM                        |
 | Rhuan Rocha            | rhuanrocha       | Digibee                    |
 | Rich Newcomb           | rnewcomb         |                            |
 | Richard Kettelerij     | rickette         | Avisi BV                   |
@@ -71,15 +71,15 @@ This page lists who we are. By all means add yourself to the list. Let's sort it
 | Roman Kalukiewicz      | romkal           |                            |
 | Scott England-Sullivan | sully6768        | Red Hat                    |
 | Stan Lewis             | slewis           | Red Hat                    |
-| Tadayoshi Sato         | tsato            | Red Hat                    |
-| Thomas Diesler         | tdiesler         | Red Hat                    |
-| Tom Cunningham         | cunningt         | Red Hat                    |
-| Tomohisa Igarashi      | igarashitm       | Red Hat                    |
+| Tadayoshi Sato         | tsato            | IBM                        |
+| Thomas Diesler         | tdiesler         | IBM                        |
+| Tom Cunningham         | cunningt         | IBM                        |
+| Tomohisa Igarashi      | igarashitm       | IBM                        |
 | Tracy Snell            | tjsnell          | Juice Labs                 |
 | Willem Jiang           | ningjiang        | Huawei                     |
 | William Tam            | wtam             | Red Hat                    |
-| Zineb Bendhiba         | zbendhiba        | Red Hat                    |
-| Zheng Feng             | zhfeng           | Red Hat                    |
+| Zineb Bendhiba         | zbendhiba        | IBM                        |
+| Zheng Feng             | zhfeng           | IBM                        |
 | Zoran Regvart          | zregvart         |                            |
 {{< /table >}}
 
@@ -144,7 +144,7 @@ Then you can get in touch with the Camel team from the [Mailing Lists](../mailin
 | Kranti Parisa           |                                |
 | Leo Pechersky           |                                |
 | Li Ma                   |                                |
-| Lars Heinemann          | Red Hat                        |
+| Lars Heinemann          | IBM                            |
 | Lauri Lehmijoki         |                                |
 | Lauri Kimmel            |                                |
 | Marco Buss              | Product + Concept              |
