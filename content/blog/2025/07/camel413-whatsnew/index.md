@@ -2,7 +2,7 @@
 title: "Apache Camel 4.13 What's New"
 date: 2025-07-08
 draft: false
-authors: [ davsclaus ]
+authors: [ davsclaus,squakez ]
 categories: [ "Releases" ]
 preview: "Details of what we have done in the Camel 4.13 release."
 ---
@@ -32,7 +32,7 @@ Added `camel get internal-task` command to show state of internal tasks (see abo
 
 This module provides a self-contained executable JAR that includes all dependencies required to run Camel JBang without the need for the JBang two-step process.
 
-This is distributed as: 
+This is distributed as:
 
 1. A self-executing JAR: `camel-launcher-4.13.0.jar`
 2. Distribution archives: `camel-launcher-4.13.0-bin.zip` or `camel-launcher-4.13.0-bin.tar.gz`
@@ -54,7 +54,7 @@ You can then launch Camel either via `java -jar` or extract the distribution and
 Overall improved the request validator, for both the built-in and as well when using `camel-openapi-validator` component.
 The latter will now also validate the request payload is valid according to the OpenAPI schema.
 
-Added support for find-grained validation levels with `camel-openapi-validator`. 
+Added support for find-grained validation levels with `camel-openapi-validator`.
 For example, you can ignore query parameters:
 
 ```properties
@@ -91,6 +91,16 @@ TODO: Made TX easier
 `camel-spring-boot` is upgraded to the latest Spring Boot 3.5.3 release.
 
 Removed deprecated `camel.springboot.xxx` auto configuration naming. Use `camel.main.xxx` instead.
+
+## Camel Micrometer
+
+`camel-micrometer` component added a little but (hopefully) useful default metric: `camel_exchanges_last_timestamp`. The goal of this new metric is to be able to discern how long a Camel application has been idle expecting any exchange to consume. In environments where there is the expectation of a continuous execution of exchanges, this can be of great help to immediately flag an application for some potential problem. The outcome of the metric in `Prometheus` is a `Gauge` which expose the Unix epoch milliseconds:
+
+```
+# HELP camel_exchanges_last_timestamp Last exchange processed time in milliseconds since the Unix epoch
+# TYPE camel_exchanges_last_timestamp gauge
+camel_exchanges_last_timestamp 1.749824808777E12
+```
 
 ## Miscellaneous
 
