@@ -24,11 +24,30 @@ if a route threw an exception on startup.
 
 ## Camel JBang
 
+Reduced the number of dependencies used with `camel run`.
+
 Added `camel get internal-task` command to show state of internal tasks (see above).
 
 ### Camel Launcher
 
-TODO:
+This module provides a self-contained executable JAR that includes all dependencies required to run Camel JBang without the need for the JBang two-step process.
+
+This is distributed as: 
+
+1. A self-executing JAR: `camel-launcher-4.13.0.jar`
+2. Distribution archives: `camel-launcher-4.13.0-bin.zip` or `camel-launcher-4.13.0-bin.tar.gz`
+
+You can then launch Camel either via `java -jar` or extract the distribution and execute the `camel` scripts.
+
+#### Benefits
+
+- No need for JBang installation
+- Single executable JAR with all dependencies included
+- Faster startup time (no dependency resolution step, on-demand class loading)
+- Better memory usage (only loads classes that are actually used)
+- Avoids classpath conflicts (dependencies kept as separate JARs)
+- Each self-executing JAR is its own release, avoiding version complexity
+- Can still be used with JBang if preferred
 
 ## Rest DSL
 
@@ -52,6 +71,17 @@ makes Camel check what is being returned as response is valid according to the O
 Removed support for using kebab-case in the DSL. So for example `set-body` should be migrated to `setBody` which
 is the canonical syntax used in all the DSLs.
 
+## Camel AI
+
+The Camel components for langchain4j has been updated for the latest 1.0.x releases.
+
+## Camel HTTP
+
+Added `skipcontrolheaders` option which can be enabled, that makes it easier when you have
+several HTTP endpoints being called in the routes, and don't want any `CamelHttpXXX` control headers
+to interfere when calling new HTTP endpoints. This avoids having to use `removeHeaders` in the routes
+to manually removing those headers.
+
 ## Camel Kafka
 
 TODO: Made TX easier
@@ -67,6 +97,12 @@ Removed deprecated `camel.springboot.xxx` auto configuration naming. Use `camel.
 Upgraded many third-party dependencies to the latest releases at the time of release.
 
 The `camel-nats` component now has support for using the Nats JetStreams feature.
+
+The `camel-ftp` and `camel-smb` components is now more resilient on startup when using `autoCreate`
+and creating the starting directory in the consumer fails, then Camel will not try to recover and
+attempt to create the directory on next poll.
+
+We made `camel-smb` more resilient and better recover when there are connectivity problems.
 
 ## New Components
 
