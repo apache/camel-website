@@ -84,7 +84,19 @@ to manually removing those headers.
 
 ## Camel Kafka
 
-TODO: Made TX easier
+We added two parameters `transacted` and `transactionalId` to the `camel-kafka` component, so you don't have to set the `transactional.id` in the `additionalProperties` parameter.
+This way sets the kafka producer with transaction boundaries, in this case the `transactional.id` is the endpoint id + route id.
+
+Example:
+```
+from("platform-http:/sendtx/{word}")
+ .setBody(simple("{\"foo\": \"${header.word}\"}"))
+ .to("kafka:my-topic?transacted=true")
+ .to("sql:insert into foo(name) values (:#word)");
+```
+
+In case you want to have finer control you can set a `transactionalId` parameter per route. Note that the old styles using the `additionalProperties` is still valid.
+
 
 ## Camel Spring Boot
 
