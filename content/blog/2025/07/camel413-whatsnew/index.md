@@ -2,7 +2,7 @@
 title: "Apache Camel 4.13 What's New"
 date: 2025-07-08
 draft: false
-authors: [ davsclaus,squakez ]
+authors: [ davsclaus,squakez,claudio4j ]
 categories: [ "Releases" ]
 preview: "Details of what we have done in the Camel 4.13 release."
 ---
@@ -88,11 +88,11 @@ We added two parameters `transacted` and `transactionalId` to the `camel-kafka` 
 This way sets the kafka producer with transaction boundaries, in this case the `transactional.id` is the endpoint id + route id.
 
 Example:
-```
+```java
 from("platform-http:/sendtx/{word}")
- .setBody(simple("{\"foo\": \"${header.word}\"}"))
- .to("kafka:my-topic?transacted=true")
- .to("sql:insert into foo(name) values (:#word)");
+   .setBody(simple("{\"foo\": \"${header.word}\"}"))
+   .to("kafka:my-topic?transacted=true")
+   .to("sql:insert into foo(name) values (:#word)");
 ```
 
 In case you want to have finer control you can set a `transactionalId` parameter per route. Note that the old styles using the `additionalProperties` is still valid.
