@@ -1,6 +1,6 @@
 ---
 title: "Prototyping E2E scenarios with Apache Camel"
-date: 2025-07-18
+date: 2025-07-21
 draft: false
 authors: [croway]
 categories: ["Camel", "E2E", "Infrastructure"]
@@ -9,11 +9,11 @@ preview: "Learn how to leverage Apache Camel JBang to prototype E2E scenarios"
 
 ## Introduction
 
-In this blog post, we'll explore how [Apache Camel JBang's Infrastructure Command](https://camel.apache.org/manual/camel-jbang.html#_infrastructure) can help you rapidly prototype end-to-end integration scenarios and adapt to changing requirements. We'll walk through a realistic development scenario where requirements evolve over time, demonstrating how Camel's flexibility makes it an ideal choice for proof-of-concept development.
+In this blog post, we'll explore how [Apache Camel JBang's Infrastructure Command](/manual/camel-jbang.html#_infrastructure) can help you rapidly prototype end-to-end integration scenarios and adapt to changing requirements. We'll walk through a realistic development scenario where requirements evolve over time, demonstrating how Camel's flexibility makes it an ideal choice for proof-of-concept development.
 
 ## Camel JBang Infrastructure: Your Prototyping Toolkit
 
-We already know and love [Camel JBang](https://camel.apache.org/manual/camel-jbang.html) (if you don't, check out [Claus Ibsen's YouTube channel](https://www.youtube.com/@ClausIbsen/videos) for excellent tutorials). One of recent additions is the infra command, which can list and run external services like brokers, databases, FTP servers, and more.
+We already know and love [Camel JBang](/manual/camel-jbang.html) (if you don't, check out [Claus Ibsen's YouTube channel](https://www.youtube.com/@ClausIbsen/videos) for excellent tutorials). One of recent additions is the infra command, which can list and run external services like brokers, databases, FTP servers, and more.
 To see available services, simply run:
 
 ```console
@@ -81,7 +81,7 @@ $ camel infra run aws s3
 
 Notice how the JSON output provides all the configuration details we need for the AWS S3 component. There's almost a 1:1 mapping between the infra output and component configuration.
 
-let's write some code and create a simple Camel route that uploads files to S3. For this purpose, we'll use the [Apache Camel AWS S3 component](https://camel.apache.org/components/4.10.x/aws2-s3-component.html), the JSON provided by the `camel infra run aws s3` command contains all the informations to get started with the component:
+let's write some code and create a simple Camel route that uploads files to S3. For this purpose, we'll use the [Apache Camel AWS S3 component](/components/4.10.x/aws2-s3-component.html), the JSON provided by the `camel infra run aws s3` command contains all the informations to get started with the component:
 
 ```java
 import org.apache.camel.builder.RouteBuilder;
@@ -148,7 +148,7 @@ $ camel infra run kafka
 }
 ```
 
-In this case we have a perfect 1:1 match between the properties from the `infra run` command and the [Apache Camel Kafka component](https://camel.apache.org/components/4.10.x/kafka-component.html), the only required property for the Kafka component is `brokers`, let's update the previous route with the new requirements:
+In this case we have a perfect 1:1 match between the properties from the `infra run` command and the [Apache Camel Kafka component](/components/4.10.x/kafka-component.html), the only required property for the Kafka component is `brokers`, let's update the previous route with the new requirements:
 
 ```java
 import org.apache.camel.builder.RouteBuilder;
@@ -211,7 +211,7 @@ camel infra run ftp
 
 > Note: For most infra services, Docker images via Testcontainers are executed behind the scenes. The infra command exposes most of the components from the [Apache Camel test infra](https://github.com/apache/camel/tree/main/test-infra). There's no magic behind it—we're reusing the same infrastructure that we use to test Camel itself. Some services, like the FTP one, don't need Docker; instead, an embedded FTP service is spun up.
 
-Let's update the previous route. Instead of the file component, the [Apache Camel FTP component](https://camel.apache.org/components/4.10.x/ftp-component.html) has to be used, using Java DSL there is not an easy 1:1 mapping between the component and the `infra run ftp` JSON, but we would have 1:1 mapping using YAML DSL. 
+Let's update the previous route. Instead of the file component, the [Apache Camel FTP component](/components/4.10.x/ftp-component.html) has to be used, using Java DSL there is not an easy 1:1 mapping between the component and the `infra run ftp` JSON, but we would have 1:1 mapping using YAML DSL. 
 
 ```java
 import org.apache.camel.builder.RouteBuilder;
@@ -241,7 +241,7 @@ public class CamelRoute extends RouteBuilder {
 }
 ```
 
-We can use any software to interact with the FTP, such as FileZilla, but is it really needed? we can easily automate the upload part to the FTP server with Camel, we can do it with [Camel JBang](https://camel.apache.org/manual/camel-jbang.html#_sending_messages_via_camel):
+We can use any software to interact with the FTP, such as FileZilla, but is it really needed? we can easily automate the upload part to the FTP server with Camel, we can do it with [Camel JBang](/manual/camel-jbang.html#_sending_messages_via_camel):
 
 ```console
 $ echo "Test content" > test.txt
@@ -258,7 +258,7 @@ Finally, we can observe the following in the log of the Camel Route:
 
 ## The AI Feature request
 
-`Finally, each file contains informations that we would like to be available to our LLM, let's decouple the process though, when a file is picked up, send the file to an Artemis queue, then, parse the content of the file, apply the following logic, and insert the content in Infinispan Vectore store`
+`Finally, each file contains informations that we would like to be available to our LLM, let's decouple the process though, when a file is picked up, send the file to an Artemis queue, then, parse the content of the file, apply the following logic, and insert the content in Qdrant`
 
 Let's open a couple of console and run the services
 
@@ -285,7 +285,7 @@ $ camel infra run qdrant
 }
 ```
 
-For a plain Camel scenario, the [Apache Camel JMS component](https://camel.apache.org/components/4.10.x/jms-component.html) configuration is a little bit cumbersome, [luckily there are examples](https://github.com/apache/camel-kamelets-examples/tree/main/jbang/artemis) that shows how this can be done.
+For a plain Camel scenario, the [Apache Camel JMS component](/components/4.10.x/jms-component.html) configuration is a little bit cumbersome, [luckily there are examples](https://github.com/apache/camel-kamelets-examples/tree/main/jbang/artemis) that shows how this can be done.
 
 Let's create an `application.properties` file and add the following configuration, in this case, we'll use `camel infra run artemis` informations to fill the `application.properties`
 
@@ -348,7 +348,7 @@ The `camel run` command has to be updated, to include the `application.propertie
 $ camel run CamelRoute.java application.properties
 ```
 
-Finally, let's create the Camel route that consumes from the queue and inserts data into Infinispan. Of course, before doing that, we need to create embeddings from the content of the body. This can be easily done with the [Apache Camel Langchain4j Embeddings component](https://camel.apache.org/components/4.10.x/langchain4j-embeddings-component.html).
+Finally, let's create the Camel route that consumes from the queue and inserts data into Qdrant. Of course, before doing that, we need to create embeddings from the content of the body. This can be easily done with the [Apache Camel Langchain4j Embeddings component](/components/4.10.x/langchain4j-embeddings-component.html).
 
 Before that, the collection has to be created in Qdrant, let's use Camel to achieve this:
 
