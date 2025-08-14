@@ -128,16 +128,46 @@ html.is-clipped--nav {
   padding: 0;
 }
 
-.nav-panel-menu input.search:valid ~ .nav-menu .filtered {
-  display: none;
-}
-
 .nav-panel-menu input.search:valid ~ .nav-menu button {
   display: none;
 }
 
-.nav-panel-menu input.search:valid ~ .nav-menu a.nav-link:not(.filtered) {
-  line-height: 1.5rem;
+/* 1st navigation level */
+.nav-item[data-depth="1"] > a.nav-link,
+.nav-item[data-depth="1"] > .nav-text {
+  line-height: 1.8rem;
+  font-weight: var(--body-font-weight-bold);
+  color: var(--nav-heading-font-color);
+}
+
+/* 2nd navigation level */
+.nav-item[data-depth="1"] > .nav-list a {
+  padding-left: 10px;
+}
+
+.nav-item[data-depth="2"] > a.nav-link {
+  line-height: 1.3rem;
+}
+
+.nav-item[data-depth="2"] > .nav-item-toggle {
+  margin-left: calc(var(--nav-line-height) * -0.5em);
+}
+
+.nav-item[data-depth="2"] > .filtered {
+  display: none;
+}
+
+/* 3rd navigation level */
+.nav-item[data-depth="2"] > .nav-list a {
+  padding-left: 20px
+}
+
+.nav-item[data-depth="3"] > a.nav-link {
+  line-height: 1.2rem;
+}
+
+.nav-item[data-depth="3"] > .filtered {
+  display: none;
 }
 
 .nav-menu {
@@ -227,7 +257,7 @@ html.is-clipped--nav {
   position: absolute;
   height: calc(var(--nav-line-height) * 1em);
   width: calc(var(--nav-line-height) * 1em);
-  margin-top: -0.05em;
+  margin-top: 0.3em;
   margin-left: calc(var(--nav-line-height) * -1em);
 }
 
