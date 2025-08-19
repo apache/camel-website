@@ -26,7 +26,7 @@ pipeline {
 
     options {
         buildDiscarder(
-            logRotator(artifactNumToKeepStr: '5', numToKeepStr: '10')
+            logRotator(artifactNumToKeepStr: '1', numToKeepStr: '1')
         )
 
         checkoutToSubdirectory('camel-website')
