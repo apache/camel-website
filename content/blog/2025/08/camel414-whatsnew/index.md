@@ -60,10 +60,6 @@ All you have to do is putting the groovy files in `src/main/resources/camel-groo
 This also works to hot update in Camel JBang dev mode, so you can edit the source, and automatic update Camel, making it
 very fast for coding in low-code style.
 
-## Camel AI
-
-TODO:
-
 ## Camel Spring Boot
 
 `camel-spring-boot` is upgraded to the latest Spring Boot 3.5.4 release.
