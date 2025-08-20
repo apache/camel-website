@@ -13,8 +13,8 @@ This release introduces a set of new features and noticeable improvements that w
 
 ## Camel Core
 
-Camel consumers will now eager setup MDC logging which makes it possible to include details such as `routeId` in logs while the consumer
-is being created and startup.
+Camel consumers will now eagerly setup MDC logging which makes it possible to include details such as `routeId` in logs while the consumer
+is being created and started up.
 
 The Intercept EIP now includes more details where the message was intercepted (node id and other information).
 
@@ -28,7 +28,7 @@ There are now _dump_ methods to dump statistics in JSon format as well.
 
 ## Camel JBang
 
-The Camel JBang now uses JDK21 as default instead of 17.
+Camel JBang now uses JDK21 as default instead of 17.
 
 We added support for controlling Camel routes by groups, so you can start and stop entire set of routes, using `camel cmd start-group` and `camel cmd stop-group`.
 
@@ -36,28 +36,28 @@ We added support for controlling Camel routes by groups, so you can start and st
 
 You can now enable and disable EIPs dynamically using the `camel cmd enable-processor` and `camel cmd disable-processor`.
 
-The `camel debug` has many improvements and now runs a bit faster.
+`camel debug` has undergone many improvements and now runs slightly faster.
 
-The `camel debug` now supports debugging Camel Spring Boot applications, by executing `camel debug pom.xml` which will
+`camel debug` now supports debugging Camel Spring Boot applications, by executing `camel debug pom.xml` which will
 detect that it's a Camel Spring Boot Maven project, and then startup Spring Boot via `mvn spring-boot:run` and attach
-the Camel route debugger automatic.
+the Camel route debugger automatically.
 
-The `camel debug` can now step forward to a given _index_ which makes it fast to jump to a position such as if you restart
+`camel debug` can now step forward to a given _index_ which makes it fast to jump to a position such as if you restart
 the application and want to debug from a problematic spot during troubleshooting.
 
-The `camel kubernetes` plugin now better support running and exporting a project by a directory name, and to refer to a relative directory
+The `camel kubernetes` plugin now better supports running and exporting a project by a directory name, and referring to a relative directory
 from where the command is being executed; making it more similar to `camel run` command.
 
 The `camel infra` command has been overhauled to better control and manage multiple processors.
 
 ## Camel Groovy
 
-You can now preload shared groovy sources such as DTOs and common functions, and make those available on the classpath,
+You can now preload shared Groovy sources such as DTOs and common functions, and make those available on the classpath,
 for entire Camel to use, such as from other components, dataformats, and Java.
 
 All you have to do is putting the groovy files in `src/main/resources/camel-groovy`, and add `camel-groovy` as dependency.
 
-This also works to hot update in Camel JBang dev mode, so you can edit the source, and automatic update Camel, making it
+This also works to hot update in Camel JBang dev mode, so you can edit the source, and automatically update Camel, making it
 very fast for coding in low-code style.
 
 ## Camel Spring Boot
@@ -76,7 +76,7 @@ Upgraded many third-party dependencies to the latest releases at the time of rel
 
 We made `camel-smb` more resilient and better recover when there are connectivity problems.
 
-The `camel-rabbitmq` has improved performance in the producer.
+`camel-rabbitmq` has improved performance in the producer.
 
 ## New Components
 
