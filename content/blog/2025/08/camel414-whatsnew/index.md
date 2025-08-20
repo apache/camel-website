@@ -2,7 +2,7 @@
 title: "Apache Camel 4.14 What's New"
 date: 2025-08-20
 draft: false
-authors: [ davsclaus ]
+authors: [ davsclaus,gzurowski,christophd]
 categories: [ "Releases" ]
 preview: "Details of what we have done in the Camel 4.14 LTS release."
 ---
