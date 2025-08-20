@@ -50,6 +50,10 @@ from where the command is being executed; making it more similar to `camel run` 
 
 The `camel infra` command has been overhauled to better control and manage multiple processors.
 
+`camel test` is a new Camel JBang plugin that enables you to initialize and prototype some automated tests for the Camel routes. 
+You need to add the plugin to your local Camel JBang tooling with `camel plugin add test`.
+Then you can use the plugin commands such as `camel test init` and `camel test run`.
+
 ## Camel Groovy
 
 You can now preload shared Groovy sources such as DTOs and common functions, and make those available on the classpath,
