@@ -19,7 +19,6 @@ content:
         - main
         - camel-4.14.x
         - camel-4.10.x
-        - camel-4.8.x
         - camel-3.22.x
       start_paths:
         # eip
@@ -40,13 +39,11 @@ content:
       branches:
         - main
         - 4.10.x
-        - 4.8.x
       start_path: docs
 
     - url: https://github.com/apache/camel-quarkus.git
       branches:
         - main
-        - 3.15.x
         - 3.20.x
       start_path: docs
 
@@ -57,7 +54,6 @@ content:
     - url: https://github.com/apache/camel-kafka-connector.git
       branches:
         - main
-        - camel-kafka-connector-4.10.x
       start_paths:
         - docs
         - connectors
@@ -67,7 +63,6 @@ content:
         - main
         - camel-spring-boot-4.14.x
         - camel-spring-boot-4.10.x
-        - camel-spring-boot-4.8.x
         - camel-spring-boot-3.22.x
       start_paths:
         - components-starter
@@ -78,7 +73,6 @@ content:
     - url: https://github.com/apache/camel-karaf.git
       branches:
         - main
-        - camel-karaf-4.8.x
         - camel-karaf-3.22.x
       start_path: docs
 
