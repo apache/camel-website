@@ -135,7 +135,7 @@ The Consumer and Producer properties are now displayed appropriately in the Conf
 Kamelets are now sorted alphabetically for easier discovery and navigation.
 
 ### Support for the new tokenizer EIP
-[The new Tokenizer EIP](/components/4.8.x/others/langchain4j-tokenizer.html) is now supported in the Canvas, allowing you to tokenize (chunk) larger blocks of texts into text segments that can be used when interacting with LLMs.
+The new Tokenizer EIP is now supported in the Canvas, allowing you to tokenize (chunk) larger blocks of texts into text segments that can be used when interacting with LLMs.
 
 ### Catalog ranked search
 The catalog now supports ranked search, providing more relevant results when searching for components.
