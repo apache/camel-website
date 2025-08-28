@@ -10,4 +10,4 @@ category: "camel-upgrade-recipes"
 jdk: [17,21]
 ---
 
-/manual/camel-upgrade-recipes-tool.html[Instructions for Apache Camel Upgrade Recipes]
+[Instructions for Apache Camel Upgrade Recipes](/manual/camel-upgrade-recipes-tool.html)
