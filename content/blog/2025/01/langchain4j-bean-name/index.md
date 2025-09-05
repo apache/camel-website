@@ -70,7 +70,7 @@ From a Camel Quarkus point of view, it should become present in the coming relea
 
 # Conclusion
 
-In this article, we have seen yet another goodness of the [Camel Quarkus LangChain4j extension](/camel-quarkus/next/reference/extensions/langchain4j.html).
+In this article, we have seen yet another goodness of the Camel Quarkus LangChain4j extension.
 Camel users are used to invoke bean by name since years, so it really makes sense to also resolve AI services the same way.
-So, if you are on the path of exploring what AI  could bring to integration scenarios and not afraid to write a few lines of code, I would encourage you to test out the [Camel Quarkus Langchain4j extension](/camel-quarkus/next/reference/extensions/langchain4j.html).
+So, if you are on the path of exploring what AI  could bring to integration scenarios and not afraid to write a few lines of code, I would encourage you to test out the Camel Quarkus Langchain4j extension.
 Of course, feedbacks and contributions are welcome, so feel free to report any bugs and improvements [here](https://github.com/apache/camel-quarkus/issues/new/choose).
