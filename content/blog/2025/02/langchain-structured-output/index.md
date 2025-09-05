@@ -133,5 +133,5 @@ So there is basically nothing the developer should worry about, structured outpu
 In this sense, this improvement comes almost for free.
 By making the LLM to adhere to a specific JSON schema, the data extraction accuracy is expected to raise up.
 Still, it would be good to find concrete benchmarks about impact on performance and accuracy.
-Anyway, it seems to be a good milestone on our journey toward using AI with the [Camel Quarkus Langchain4j extension](/camel-quarkus/next/reference/extensions/langchain4j.html).
+Anyway, it seems to be a good milestone on our journey toward using AI with the Camel Quarkus Langchain4j extension.
 By the way, feel welcome to play with it and report any bugs and improvements [here](https://github.com/apache/camel-quarkus/issues/new/choose).
