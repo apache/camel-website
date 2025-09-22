@@ -1,5 +1,6 @@
 ---
 date: 2025-08-19
+eol: 2026-08-18
 draft: false
 type: release-note
 version: 4.14.0
