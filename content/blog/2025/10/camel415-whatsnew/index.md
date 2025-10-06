@@ -19,6 +19,8 @@ This release introduces a set of new features and noticeable improvements that w
 
 `camel-spring-boot` is upgraded to the latest Spring Boot 3.5.6 release.
 
+When Spring Boot Actuators and the camel-undertow-starter are used in a project, the undertow metrics are now exposed out of the box under the actuator endpoint.
+
 ## Java 25
 
 We have prepared the code-base for the upcoming Java 25 release. However, this release does
@@ -35,6 +37,7 @@ Upgraded many third-party dependencies to the latest releases at the time of rel
 - `camel-aws2-transcribe` - Automatically convert speech to text using AWS Transcribe service
 - `camel-docling` - Process documents using Docling library for parsing and conversion
 - `camel-groovy-xml` - Transform between XML and Groovy Node (Map structure) objects.
+- `camel-langchain4j-embeddingstore` - Provides support for 25+ vector databases using the LangChain4j EmbeddingStore API.
 - `camel-keycloak` - Manage Keycloak instances via Admin API
 - `camel-mdc` - Logging MDC (Mapped Diagnostic Context) Service
 - `camel-micrometer-observability` - Micrometer Observability implementation of Camel Telemetry
