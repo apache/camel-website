@@ -2,7 +2,7 @@
 title: "Apache Camel 4.15 What's New"
 date: 2025-10-08
 draft: false
-authors: [ davsclaus]
+authors: [ davsclaus,cunningt]
 categories: [ "Releases" ]
 preview: "Details of what we have done in the Camel 4.15 release."
 ---
@@ -13,13 +13,56 @@ This release introduces a set of new features and noticeable improvements that w
 
 ## Camel Core
 
+You can now easier extend Camel via 3d-party dependencies via Java ServiceLoader using the `ContextServicePlugin` SPI.
+
+You can add custom sensitive keys to `camel.main.additionalSensitiveKeywords` which Camel will mask in logging.
+
 ## Camel JBang
+
+`camel debug` now also supports debugging Camel Quarkus applications, by executing `camel debug pom.xml` which will
+detect that it's a Camel Quarkus Maven project, and then startup Quarkus via `mvn quarkus:dev` and attach
+the Camel route debugger automatically.
+
+The `camel get route-dump` now dumps in YAML format by default.
+
+Added IBM MQ to `camel infra` which makes it easy to start up a local MQ broker for development purposes.
+
+## Camel Groovy
+
+Added the new `camel-groovy-xml` data format is a basic data format to transform XML to Groovy Node objects,
+and back to XML. This is convenient when working with XML and using Groovy for data manipulation.
+
+This data format is limited in functionality but intended to be easier to use. There are none or only a few options to configure.
 
 ## Camel Spring Boot
 
 `camel-spring-boot` is upgraded to the latest Spring Boot 3.5.6 release.
 
 When Spring Boot Actuators and the camel-undertow-starter are used in a project, the undertow metrics are now exposed out of the box under the actuator endpoint.
+
+## YAML DSL
+
+It is now possible to inline Maps in the `parameters` section. However Camel components rarely have options
+that are Map based, but when they do this makes it easier to use. For example the plc4j component allow to
+configure _tags_ as a Map:
+
+````yaml
+- from:
+    uri: "timer://tick"
+    parameters:
+      period: "1s"
+    steps:
+      - to:
+          uri: "plc4j"
+          parameters:
+            driver: "some driver url here"
+            tags:
+              "tags_2": "XXX"
+              "tags_6": "YYY"
+````
+
+In this example the _tags_ options is of Map type and can be configured using YAML map syntax.
+Because the keys use underscore, then they are quoted.
 
 ## Java 25
 
@@ -30,6 +73,8 @@ We will work on official Java 25 support in the following releases.
 ## Miscellaneous
 
 Upgraded many third-party dependencies to the latest releases at the time of release.
+
+The `camel-file` used as clustered file-lock (`FileLockClusterView`) is now more resilient to split-brain scenarios.
 
 ## New Components
 
