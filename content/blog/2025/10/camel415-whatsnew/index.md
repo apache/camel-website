@@ -59,6 +59,7 @@ configure _tags_ as a Map:
             tags:
               "tags_2": "XXX"
               "tags_6": "YYY"
+```
 
 In this example the _tags_ options is of Map type and can be configured using YAML map syntax.
 Because the keys use underscore, then they are quoted.
@@ -82,17 +83,17 @@ We have introduced a new component which will make it easier the setting and usa
 Adding the `camel-mdc` component (or related starter in Spring Boot and extension in Quarkus runtimes), you will be able to include traces information you want in the log by just declaring which are the Exchange headers or properties containing such info. This new component will let you include the trace in any DSL (you were kind of forced to do it only in Java before), for example:
 
 ```yaml
-      - set-header:
+      - setHeader:
           name: "customHead"
           constant: "I am an header"
-      - set-property:
+      - setProperty:
           name: "customProp"
           constant: "I am a property"
 ```
 
 When activated (`camel.mdc.enabled=true`) you will get automatically a series of default MDC parameters and additionally you can add your own (see more configuration detail in the component page). From there onward you can declare the MDC you want to trace in your log according to your logging framework notation. For example, in Log4j it will be:
 
-```yaml
+```text
 ... [%X{camel.contextId}, %X{camel.routeId}, %X{camel.exchangeId}, %X{camel.messageId}, %X{customHead}, %X{customProp}]
 ```
 
