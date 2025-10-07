@@ -46,7 +46,7 @@ It is now possible to inline Maps in the `parameters` section. However Camel com
 that are Map based, but when they do this makes it easier to use. For example the plc4j component allow to
 configure _tags_ as a Map:
 
-````yaml
+```yaml
 - from:
     uri: "timer://tick"
     parameters:
@@ -59,7 +59,6 @@ configure _tags_ as a Map:
             tags:
               "tags_2": "XXX"
               "tags_6": "YYY"
-````
 
 In this example the _tags_ options is of Map type and can be configured using YAML map syntax.
 Because the keys use underscore, then they are quoted.
