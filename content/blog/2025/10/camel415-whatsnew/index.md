@@ -70,6 +70,12 @@ We have prepared the code-base for the upcoming Java 25 release. However, this r
 not officially support Java 25, but we are not aware of any issues (feedback is welcome).
 We will work on official Java 25 support in the following releases.
 
+## Micrometer Observability implementation of Camel Telemetry
+
+Here a new implementation of the `camel-telemetry` component: `camel-micrometer-observability`. This component uses the technology offered by Micrometer and is available both trough Main and Spring Boot runtime. This component may result a bit more complicated to configure than other telemetry components: the framework is an abstraction layer, therefore it is expected that the integration developers configure the Registry and the Context Propagation mechanisms adding the concrete technology (Opentelemetry, Brave/Zipkin) of choice.
+
+If you're using Spring Boot runtime, it will be much more easy as there are dependencies in charge to autoconfigure it. You can read all detailed information in the component page documentation.
+
 ## Logging MDC (Mapped Diagnostic Context) Service
 
 We have introduced a new component which will make it easier the setting and usage of MDC traces in your applications. We haven't yet deprecated the older feature, but we'll likely do in the future. You're invited to start adopting the new component as soon as possible.
