@@ -2,7 +2,7 @@
 title: "Apache Camel 4.15 What's New"
 date: 2025-10-08
 draft: false
-authors: [ davsclaus,cunningt]
+authors: [ davsclaus,cunningt,squakez]
 categories: [ "Releases" ]
 preview: "Details of what we have done in the Camel 4.15 release."
 ---
@@ -69,6 +69,29 @@ Because the keys use underscore, then they are quoted.
 We have prepared the code-base for the upcoming Java 25 release. However, this release does
 not officially support Java 25, but we are not aware of any issues (feedback is welcome).
 We will work on official Java 25 support in the following releases.
+
+## Logging MDC (Mapped Diagnostic Context) Service
+
+We have introduced a new component which will make it easier the setting and usage of MDC traces in your applications. We haven't yet deprecated the older feature, but we'll likely do in the future. You're invited to start adopting the new component as soon as possible.
+
+Adding the `camel-mdc` component (or related starter in Spring Boot and extension in Quarkus runtimes), you will be able to include traces information you want in the log by just declaring which are the Exchange headers or properties containing such info. This new component will let you include the trace in any DSL (you were kind of forced to do it only in Java before), for example:
+
+```yaml
+      - set-header:
+          name: "customHead"
+          constant: "I am an header"
+      - set-property:
+          name: "customProp"
+          constant: "I am a property"
+```
+
+When activated (`camel.mdc.enabled=true`) you will get automatically a series of default MDC parameters and additionally you can add your own (see more configuration detail in the component page). From there onward you can declare the MDC you want to trace in your log according to your logging framework notation. For example, in Log4j it will be:
+
+```yaml
+... [%X{camel.contextId}, %X{camel.routeId}, %X{camel.exchangeId}, %X{camel.messageId}, %X{customHead}, %X{customProp}]
+```
+
+You won't need any longer to worry about context propagation. Neither the MDC will be interleaved in Camel threads which don't belong to route processing: consistent and clean.
 
 ## Miscellaneous
 
