@@ -22,7 +22,7 @@ We have a set of new exciting dependencies that we leverage. Among them we can s
 
 ## Scalable KameletBinding
 
-We're more and more getting used to `Kamelet` and `KameletBinding` adoption. One of the new things introduced in version 1.6 is the possibility to scale a KameletBinding via `kubectl` (or `oc`) CLI. Learn more about [how to scale a KameletBinding](/camel-k/next/scaling/binding.html). One of the coolest thing is that you can even use HPA (Horizontal Pod Autoscaling)!
+We're more and more getting used to `Kamelet` and `KameletBinding` adoption. One of the new things introduced in version 1.6 is the possibility to scale a KameletBinding via `kubectl` (or `oc`) CLI. One of the coolest thing is that you can even use HPA (Horizontal Pod Autoscaling)!
 
 ## Kamel bind enhancement
 
