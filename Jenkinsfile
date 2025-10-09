@@ -17,7 +17,7 @@
  * under the License.
  */
 def NODE = 'git-websites'
-def STOP_SQUASH_AT = 'edd7b1147123f44b62fdb27be5d993bbdeacbc73'
+def STOP_SQUASH_AT = '3381ad5637eb525502df319e84b7208e8f2a977b'
 
 pipeline {
     agent {
