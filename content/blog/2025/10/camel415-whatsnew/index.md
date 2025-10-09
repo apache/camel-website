@@ -1,6 +1,6 @@
 ---
 title: "Apache Camel 4.15 What's New"
-date: 2025-10-08
+date: 2025-10-09
 draft: false
 authors: [ davsclaus,cunningt,squakez]
 categories: [ "Releases" ]
