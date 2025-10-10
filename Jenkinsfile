@@ -97,7 +97,7 @@ pipeline {
                     sh 'git rm -q -r *'
                     sh "cp -R $WORKSPACE/camel-website/public/. ."
                     sh 'git add .'
-                    sh 'git checkout "$STOP_SQUASH_AT" -- ./.asf.yaml' // force revert to commit containing the valid .asf.yml
+                    sh "git checkout $STOP_SQUASH_AT -- ./.asf.yaml" // force revert to commit containing the valid .asf.yml
                     sh 'git commit -m "Website updated to $GIT_COMMIT"'
                     sh 'git push --force origin asf-site'
                 }
