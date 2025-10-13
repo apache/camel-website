@@ -100,7 +100,6 @@ We have worked a lot trying to make our documentation more structured and simple
 * [Configuring Maven](/camel-k/next/installation/advanced/maven.html)
 * [Configuring Registry](/camel-k/next/installation/registry/registry.html)
 * [Camel K build tuning](/camel-k/next/installation/advanced/build-config.html)
-* [Kamelets Distribution model](/camel-k/next/kamelets/kamelets-distribution.html)
 * [Camel K Integration troubleshooting](/camel-k/next/troubleshooting/troubleshooting.html)
 
 # Thanks
