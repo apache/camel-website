@@ -39,7 +39,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-    <node.version>v16.13.2</node.version>
+    <node.version>v18.12.0</node.version>
     <yarn.version>v1.22.17</yarn.version>
 
     <theme.basedir>antora-ui-camel</theme.basedir>
