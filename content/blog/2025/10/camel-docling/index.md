@@ -229,4 +229,3 @@ We'd love to hear about what you build with these components. Share your experie
 Stay tuned for more examples combining Camel's growing AI component ecosystem. The future of integration is intelligent, and we're just getting started.
 
 Happy integrating!
-
