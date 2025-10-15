@@ -102,19 +102,19 @@ We use a Groovy script bean to configure our LangChain4j chat model:
 
 ```yaml
 - beans:
-  - name: chatModel
-    type: "#class:dev.langchain4j.model.ollama.OllamaChatModel"
-    scriptLanguage: groovy
-    script: |
-      import dev.langchain4j.model.ollama.OllamaChatModel
-      import static java.time.Duration.ofSeconds
+- name: chatModel
+type: "#class:dev.langchain4j.model.ollama.OllamaChatModel"
+scriptLanguage: groovy
+script: |
+import dev.langchain4j.model.ollama.OllamaChatModel
+import static java.time.Duration.ofSeconds
 
-      return OllamaChatModel.builder()
-        .baseUrl("{{ollama.base.url}}")
-        .modelName("{{ollama.model.name}}")
-        .temperature(0.3)
-        .timeout(ofSeconds(120))
-        .build()
+return OllamaChatModel.builder()
+.baseUrl("{{ollama.base.url}}")
+.modelName("{{ollama.model.name}}")
+.temperature(0.3)
+.timeout(ofSeconds(120))
+.build()
 ```
 
 Notice how we use property placeholders (`{{ollama.base.url}}`) which Camel automatically resolves. This makes the configuration flexible and environment-agnostic.
@@ -125,41 +125,41 @@ Here's where the magic happens. The route watches for documents, processes them 
 
 ```yaml
 - route:
-    id: document-analysis-workflow
-    from:
-      uri: file:{{documents.directory}}
-      parameters:
-        include: ".*\\.(pdf|docx|pptx|html|md)"
-        noop: true
-        idempotent: true
-      steps:
-        - log: "Processing document: ${header.CamelFileName}"
+id: document-analysis-workflow
+from:
+uri: file:{{documents.directory}}
+parameters:
+include: ".*\\.(pdf|docx|pptx|html|md)"
+noop: true
+idempotent: true
+steps:
+- log: "Processing document: ${header.CamelFileName}"
 
-        - setBody:
-            simple: "${body.file.absolutePath}"
+- setBody:
+simple: "${body.file.absolutePath}"
 
-        - to:
-            uri: docling:CONVERT_TO_MARKDOWN
-            parameters:
-              useDoclingServe: true
-              doclingServeUrl: "{{docling.serve.url}}"
-              contentInBody: true
+- to:
+uri: docling:CONVERT_TO_MARKDOWN
+parameters:
+useDoclingServe: true
+doclingServeUrl: "{{docling.serve.url}}"
+contentInBody: true
 
-        - setBody:
-            simple: |
-              You are a helpful document analysis assistant. Please analyze
-              the following document and provide:
-              1. A brief summary (2-3 sentences)
-              2. Key topics and main points
-              3. Any important findings or conclusions
+- setBody:
+simple: |
+You are a helpful document analysis assistant. Please analyze
+the following document and provide:
+1. A brief summary (2-3 sentences)
+2. Key topics and main points
+3. Any important findings or conclusions
 
-              Document content:
-              ${exchangeProperty.convertedMarkdown}
+Document content:
+${exchangeProperty.convertedMarkdown}
 
-        - to:
-            uri: langchain4j-chat:analysis
-            parameters:
-              chatModel: "#chatModel"
+- to:
+uri: langchain4j-chat:analysis
+parameters:
+chatModel: "#chatModel"
 ```
 
 ### Interactive Q&A API
@@ -168,21 +168,21 @@ We also provide an HTTP endpoint for asking questions about documents:
 
 ```yaml
 - route:
-    id: document-qa-api
-    from:
-      uri: platform-http:/api/ask
-      steps:
-        # Find latest document
-        # Convert with Docling
-        # Prepare RAG prompt with user question
-        # Get answer from LLM
+id: document-qa-api
+from:
+uri: platform-http:/api/ask
+steps:
+# Find latest document
+# Convert with Docling
+# Prepare RAG prompt with user question
+# Get answer from LLM
 ```
 
 This enables interactive workflows:
 
 ```bash
 $ curl -X POST http://localhost:8080/api/ask \
-  -d "What are the main topics in this document?"
+-d "What are the main topics in this document?"
 ```
 
 ## Future Enhancements
@@ -200,14 +200,14 @@ The complete example is available in the Apache Camel repository under `camel-jb
 
 ```bash
 $ jbang -Dcamel.jbang.version=4.16.0-SNAPSHOT camel@apache/camel run \
-  --fresh \
-  --dep=camel:docling \
-  --dep=camel:langchain4j-chat \
-  --dep=camel:platform-http \
-  --dep=dev.langchain4j:langchain4j:1.6.0 \
-  --dep=dev.langchain4j:langchain4j-ollama:1.6.0 \
-  --properties=application.properties \
-  docling-langchain4j-rag.yaml
+--fresh \
+--dep=camel:docling \
+--dep=camel:langchain4j-chat \
+--dep=camel:platform-http \
+--dep=dev.langchain4j:langchain4j:1.6.0 \
+--dep=dev.langchain4j:langchain4j-ollama:1.6.0 \
+--properties=application.properties \
+docling-langchain4j-rag.yaml
 ```
 
 Don't forget to copy the sample.md into the documents directory!
