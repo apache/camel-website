@@ -135,11 +135,9 @@ Here's where the magic happens. The route watches for documents, processes them 
       steps:
         - log: "Processing document: ${header.CamelFileName}"
 
-        # Convert GenericFile to file path
         - setBody:
             simple: "${body.file.absolutePath}"
 
-        # Convert to Markdown
         - to:
             uri: docling:CONVERT_TO_MARKDOWN
             parameters:
@@ -147,7 +145,6 @@ Here's where the magic happens. The route watches for documents, processes them 
               doclingServeUrl: "{{docling.serve.url}}"
               contentInBody: true
 
-        # Prepare AI prompt
         - setBody:
             simple: |
               You are a helpful document analysis assistant. Please analyze
@@ -159,7 +156,6 @@ Here's where the magic happens. The route watches for documents, processes them 
               Document content:
               ${exchangeProperty.convertedMarkdown}
 
-        # Get AI analysis
         - to:
             uri: langchain4j-chat:analysis
             parameters:
