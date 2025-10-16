@@ -35,7 +35,7 @@ This one is a cool feature that will simplify the distribution and the **version
     steps:
       - to: "log:info"
 ```
-Have a look at the [official Kamelet versioning documentation](/camel-k/next/kamelets/kamelets-user.html#_kamelet_versioning).
+Have a look at the [official Kamelet versioning documentation](/camel-k/next/kamelets/configuration.html#_kamelet_versioning).
 
 ## Traits improvement
 
