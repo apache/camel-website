@@ -32,9 +32,6 @@ The `kamel promote` command has simplified the promotion of an Integration to a 
 
 This is something not immediately user-facing, as it enables API types to be used with server-side apply. Still worth mentioning to let know Camel K developers around the world this is now available.
 
-## Support Hashicorp Vault
-
-If you're developing a super secret Integration mission then you can now use [Hashicorp Vault trait](/camel-k/next/traits/hashicorp-vault.html) to use your credentials safely.
 
 ## Support secret refresh
 
