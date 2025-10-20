@@ -43,7 +43,7 @@
     <meta name="description" content="{{ .Description }}">
     {{ end }}
     {{ if .Keywords}}
-    <meta name="keywords" content="{{ .Keywords }}">
+    <meta name="keywords" content="{{ delimit .Keywords "," }}">
     {{ end }}
     <link rel="stylesheet" href="{{ path.Join "_" (index .Site.Data "rev-manifest" "css/site.css") | relURL }}">
 </head>
