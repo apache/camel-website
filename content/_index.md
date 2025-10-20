@@ -1,6 +1,13 @@
 ---
 title: Home
 description: Camel is an open source integration framework that empowers you to quickly and easily integrate various systems consuming or producing data.
+keywords: 
+- apache
+- camel
+- integration
+- open source
+- java
+- eip
 ---
 
 
