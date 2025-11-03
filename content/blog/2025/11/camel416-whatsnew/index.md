@@ -13,7 +13,22 @@ This release introduces a set of new features and noticeable improvements that w
 
 ## Camel Core
 
+You can now add note(s) to EIPs in the DSL. The notes have no impact on running Camel, but makes it
+consistent to include code comments or other notes that are valuable for developers for maintaining.
+You can of course still use code comments, but `note` make them available for Camel tooling.
+
+The Rest DSL now supports using `camel-jacksonxml` for XML binding (JAXB is default).
+
 ## Camel JBang
+
+Camel JBang is improved to detect kamelets in use by dynamic EIPs such as `toD` to include these kamelets
+during exporting.
+
+The `camel get route-dump` is now printing precise source code line numbers. And the route dumper is now
+dumping in YAML format by default.
+
+Camel JBang now detects Spring Boot/Quarkus Java imports when running Java routes, and include
+the JAR dependencies containing those classes.
 
 ## Camel Spring Boot
 
@@ -33,6 +48,8 @@ to release compatible versions.
 ## Miscellaneous
 
 Upgraded many third-party dependencies to the latest releases at the time of release.
+
+The `camel-aws-s3` component now includes more bucket operations in the producer.
 
 ## New Components
 
