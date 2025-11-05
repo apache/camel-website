@@ -92,7 +92,7 @@ The `camel-aws-s3` component now includes more bucket operations in the producer
 
 ## Upgrading
 
-Make sure to read the [upgrade guide](/manual/camel-4x-upgrade-guide-4_15.html) if you are upgrading from a previous
+Make sure to read the [upgrade guide](/manual/camel-4x-upgrade-guide-4_16.html) if you are upgrading from a previous
 Camel version.
 
 If you are upgrading from, for example, 4.4 to 4.8, then make sure to follow the upgrade guides for each release
