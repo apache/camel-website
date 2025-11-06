@@ -1,6 +1,6 @@
 ---
 title: "Apache Camel 4.16 What's New"
-date: 2025-11-05
+date: 2025-11-06
 draft: false
 authors: [ davsclaus,squakez ]
 categories: [ "Releases" ]
@@ -110,5 +110,5 @@ You can find additional information about this release in the list of resolved J
 
 ## Roadmap
 
-The following 4.17 release is planned for January 2026.
+The following 4.17 release is planned for December 2025 or January 2026.
 
