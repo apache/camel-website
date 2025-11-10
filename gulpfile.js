@@ -2,7 +2,8 @@ const cheerio = require('gulp-cheerio');
 const env = process.env.CAMEL_ENV || 'development';
 const gulp = require('gulp');
 const htmlmin = require('gulp-htmlmin');
-const inject = require('gulp-inject')
+const inject = require('gulp-inject');
+const generateMarkdown = require('./gulp/tasks/generate-markdown');
 
 /**
  * We minify all HTML files using htmlmin, this is to make them smaller in size
@@ -112,6 +113,9 @@ function versionlessRedirects (text) {
   }, [])
   return processed.join('\n')
 }
+
+// Register the generate-markdown task
+gulp.task('generate-markdown', generateMarkdown);
 
 /*
  * Removes the content from the `public` directory.
