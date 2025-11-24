@@ -79,7 +79,7 @@ This page lists who we are. By all means add yourself to the list. Let's sort it
 | Willem Jiang           | ningjiang        | Huawei                     |
 | William Tam            | wtam             | Red Hat                    |
 | Zineb Bendhiba         | zbendhiba        | IBM                        |
-| Zheng Feng             | zhfeng           | IBM                        |
+| Zheng Feng             | zhfeng           | Red Hat                    |
 | Zoran Regvart          | zregvart         |                            |
 {{< /table >}}
 
