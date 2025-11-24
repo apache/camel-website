@@ -100,6 +100,7 @@ Then you can get in touch with the Camel team from the [Mailing Lists](../mailin
 | Axel Hohaus             |                                |
 | Arjan Moraal            |                                |
 | Arno Noordover          | het CAK                        |
+| Ashish Nayyar           |                                |
 | Bahaa Zaid              |                                |
 | Barry Kaplan            |                                |
 | Bartosz Popiela         | bp                             |
