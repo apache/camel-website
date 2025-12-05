@@ -57,7 +57,7 @@
     "gulp-inject": "^5.0.2",
     "html-validate": "^8.9.1",
     "hugo-extended": "^0.121.2",
-    "js-yaml": "~4.1.0",
+    "js-yaml": "~4.1.1",
     "jsdom": "^27.1.0",
     "netlify-cli": "17.26.3",
     "node-html-parser": "^7.0.1",
