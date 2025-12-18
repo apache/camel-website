@@ -51,7 +51,7 @@
     "gulp-terser": "^1.2.0",
     "handlebars": "^4.7.8",
     "highlight.js": "~11",
-    "js-yaml": "~3.13",
+    "js-yaml": "~3.14.2",
     "merge-stream": "~2.0",
     "plugin-error": "~1.0",
     "postcss-calc": "~7.0",
