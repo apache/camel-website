@@ -3,6 +3,24 @@
 
   const algoliasearch = require('algoliasearch/lite')
 
+  // Sub-projects to exclude from main search - users can browse these directly
+  const EXCLUDED_SUBPROJECTS = [
+    '/camel-k/',
+    '/camel-quarkus/',
+    '/camel-spring-boot/',
+    '/camel-kafka-connector/',
+    '/camel-kamelets/',
+    '/camel-karaf/',
+  ]
+
+  // Check if a URL belongs to a sub-project that should be filtered out
+  function isSubProjectUrl (url) {
+    if (!url) return false
+    return EXCLUDED_SUBPROJECTS.some(function (subproject) {
+      return url.indexOf(subproject) !== -1
+    })
+  }
+
   window.addEventListener('load', () => {
     const client = algoliasearch('V62SL4FFIW', '1b7e52df4759e32dd49adedb286997f6')
     const index = client.initIndex('apache_camel')
@@ -46,11 +64,14 @@
         cancel.style.display = 'block'
         index
           .search(search.value, {
-            hitsPerPage: 5,
+            hitsPerPage: 10,
           })
           .then((results) => {
-            const hits = results.hits
-            const data = hits.reduce((data, hit) => {
+            // Filter out sub-project results to focus on camel-core documentation
+            const filteredHits = results.hits.filter(function (hit) {
+              return !isSubProjectUrl(hit.url)
+            }).slice(0, 5)
+            const data = filteredHits.reduce((data, hit) => {
               const section = hit.hierarchy.lvl0
               const sectionKey = `${section}-${hit.version || ''}`
 
