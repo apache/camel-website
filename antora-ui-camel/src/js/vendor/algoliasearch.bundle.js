@@ -10,7 +10,7 @@
     '/camel-spring-boot/',
     '/camel-kafka-connector/',
     '/camel-kamelets/',
-    '/camel-karaf/'
+    '/camel-karaf/',
   ]
 
   // Check if a URL belongs to a sub-project that should be filtered out
