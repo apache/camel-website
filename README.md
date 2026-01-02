@@ -5,6 +5,14 @@
 This is a site generator project for Apache Camel. It generates static HTML and
 resources that are to be published.
 
+## Search Behavior
+
+The site search box focuses on camel-core documentation to help users find general Camel
+information more easily. Sub-project documentation (Camel K, Camel Quarkus, Camel Spring Boot,
+Camel Kafka Connector, Camel Kamelets, and Camel Karaf) is filtered out from search results
+since these projects have their own dedicated documentation sections that users can browse
+directly. This improves the search experience by prioritizing core Camel content.
+
 Tools used to generate the website:
  - [Git](https://git-scm.com/) a source code management tool used to fetch document sources from different
    github repositories.
