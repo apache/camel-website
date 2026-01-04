@@ -13,7 +13,7 @@ This page lists who we are. By all means add yourself to the list. Let's sort it
 | Akitoshi Yoshida       | ay               | SAP                        |
 | Andrea Cosentino       | acosentino       | IBM                        |
 | Antonin Stefanutti     | astefanutti      | Red Hat                    |
-| Babak Vahdat           | bvahdat          | Cyberlogic Consulting GmbH |
+| Babak Vahdat           | bvahdat          | Cyberlogic Consulting      |
 | Ben O'Day              | boday            | Initek Consulting          |
 | Bilgin Ibryam          | bibryam          |                            |
 | Bob Paulin             | bob              |                            |
