@@ -5,6 +5,7 @@
 
   const MAX_SNIPPET_LENGTH = 200
   const RESULTS_LIMIT = 10
+  const MAX_INPUT_LENGTH = 200
 
   // Sub-projects to exclude from main search - users can browse these directly
   const EXCLUDED_SUBPROJECTS = [
@@ -16,11 +17,54 @@
     '/camel-karaf/',
   ]
 
+  // Core docs patterns - these should rank higher than component pages
+  const CORE_DOCS_PATTERNS = [
+    '/manual/',
+    '/user-guide/',
+    '/architecture/',
+    '/getting-started/',
+    '/faq/',
+  ]
+
   // Check if a URL belongs to a sub-project that should be filtered out
   function isSubProjectUrl (url) {
     if (!url) return false
     return EXCLUDED_SUBPROJECTS.some(function (subproject) {
       return url.indexOf(subproject) !== -1
+    })
+  }
+
+  // Check if a URL points to core documentation (should rank higher)
+  function isCoreDocsUrl (url) {
+    if (!url) return false
+    return CORE_DOCS_PATTERNS.some(function (pattern) {
+      return url.indexOf(pattern) !== -1
+    })
+  }
+
+  // Check if a URL points to component documentation
+  function isComponentUrl (url) {
+    if (!url) return false
+    return url.indexOf('/components/') !== -1
+  }
+
+  // Sort hits to prioritize core docs over components
+  function sortByCoreDocs (hits) {
+    return hits.sort(function (a, b) {
+      var aIsCore = isCoreDocsUrl(a.url)
+      var bIsCore = isCoreDocsUrl(b.url)
+      var aIsComponent = isComponentUrl(a.url)
+      var bIsComponent = isComponentUrl(b.url)
+
+      // Core docs first
+      if (aIsCore && !bIsCore) return -1
+      if (!aIsCore && bIsCore) return 1
+
+      // Components last
+      if (aIsComponent && !bIsComponent) return 1
+      if (!aIsComponent && bIsComponent) return -1
+
+      return 0
     })
   }
 
@@ -104,6 +148,13 @@
       e.stopPropagation()
     })
 
+    // Enforce max input length as backup to HTML maxlength attribute
+    search.addEventListener('input', function () {
+      if (search.value.length > MAX_INPUT_LENGTH) {
+        search.value = search.value.substring(0, MAX_INPUT_LENGTH)
+      }
+    })
+
     search.addEventListener(
       'keyup',
       debounce((key) => {
@@ -121,14 +172,16 @@
         cancel.style.display = 'block'
         index
           .search(search.value, {
-            hitsPerPage: 10,
+            hitsPerPage: 20,
           })
           .then((results) => {
             // Filter out sub-project results to focus on camel-core documentation
             const filteredHits = results.hits.filter(function (hit) {
               return !isSubProjectUrl(hit.url)
-            }).slice(0, RESULTS_LIMIT)
-            const data = filteredHits.reduce((data, hit) => {
+            })
+            // Sort to prioritize core docs over components
+            const sortedHits = sortByCoreDocs(filteredHits).slice(0, RESULTS_LIMIT)
+            const data = sortedHits.reduce((data, hit) => {
               const section = hit.hierarchy.lvl0
               const sectionKey = `${section}-${hit.version || ''}`
 
