@@ -5,6 +5,7 @@ title: "Articles"
 ## Camel Videos
 
 
+* [Enterprise Integration Patterns (EIP) | What is Apache Camel?](https://www.youtube.com/watch?v=5xQKG1TSrZc) from January 2026 by Jasvinder Saggu; a great 50-minute video that greatly covers the importance of integration, EIP patterns and what Apache Camel can do. Highly recommended for new users to Camel.
 * [Enterprise Integration Is Dead! Long Live AI-Driven Integration with Apache Camel](https://www.youtube.com/watch?v=WrBmfaY7IB8) from Devoxx UK in May 2025 where Markus and Bruno shows firrst hand how Camel, powered by AI, is quietly reinventing how we connect the enterprise.
 * [Apache Camel and ActiveMQ at UPS](https://www.youtube.com/watch?v=TDjwr16uaYU) May 2024 where UPS presented their use of Apache Camel and ActiveMQ on OpenShift processing tens of billions messages a day. 
 * [Quarkus Insights #110: Quarkiverse Extension Spotlight of Apache Camel](https://www.youtube.com/watch?v=stBjGMu73B0) November 2022 where Apache Camel was presented on the Quarkus webcast (1h session).
