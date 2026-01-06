@@ -68,6 +68,91 @@
     })
   }
 
+  // Extract the parent page path from a URL (removes anchor and trailing segments)
+  function getParentPagePath (url) {
+    if (!url) return ''
+    // Remove anchor fragment
+    var path = url.split('#')[0]
+    // Normalize trailing slash
+    if (path.endsWith('/')) {
+      path = path.slice(0, -1)
+    }
+    return path
+  }
+
+  // Check if hit represents a sub-section of a page (has anchor or deeper hierarchy)
+  function isSubSection (hit) {
+    if (!hit || !hit.url) return false
+    return hit.url.indexOf('#') !== -1
+  }
+
+  // Get the breadcrumb depth (number of hierarchy levels)
+  function getBreadcrumbDepth (hit) {
+    if (!hit || !hit.hierarchy) return 0
+    return Object.values(hit.hierarchy).filter(function (lvl) {
+      return lvl !== null
+    }).length
+  }
+
+  // Remove duplicate results for the same parent page
+  // When parent page is a direct match, exclude its sub-sections
+  function deduplicateHits (hits, query) {
+    var seenPages = {}
+    var parentMatches = {}
+    var queryLower = (query || '').toLowerCase().trim()
+
+    // First pass: identify parent pages that match the query directly
+    hits.forEach(function (hit) {
+      var parentPath = getParentPagePath(hit.url)
+      var hierarchy = hit.hierarchy || {}
+
+      // Check if any top-level hierarchy matches the search query
+      var lvl1 = (hierarchy.lvl1 || '').toLowerCase()
+      var lvl0 = (hierarchy.lvl0 || '').toLowerCase()
+
+      if (lvl1 && lvl1.indexOf(queryLower) !== -1) {
+        parentMatches[parentPath] = true
+      }
+      if (lvl0 && lvl0.indexOf(queryLower) !== -1) {
+        parentMatches[parentPath] = true
+      }
+    })
+
+    // Second pass: filter out sub-sections when parent is already matched
+    return hits.filter(function (hit) {
+      var parentPath = getParentPagePath(hit.url)
+      var isSubSec = isSubSection(hit)
+      var depth = getBreadcrumbDepth(hit)
+
+      // If this is a sub-section and parent page already matched, skip it
+      if (isSubSec && parentMatches[parentPath]) {
+        // Only keep the main page hit, not sub-sections
+        if (seenPages[parentPath]) {
+          return false
+        }
+      }
+
+      // For component pages, only show the main entry (depth <= 2)
+      if (isComponentUrl(hit.url) && depth > 2 && seenPages[parentPath]) {
+        return false
+      }
+
+      // Track that we've seen this parent page
+      if (!seenPages[parentPath]) {
+        seenPages[parentPath] = { depth: depth, hit: hit }
+        return true
+      }
+
+      // If we already have this page, only keep if it's a better match (shallower)
+      if (depth < seenPages[parentPath].depth) {
+        seenPages[parentPath] = { depth: depth, hit: hit }
+        return true
+      }
+
+      return false
+    })
+  }
+
   function truncateHighlightedHtml (html, maxChars) {
     if (!html || maxChars <= 0) return ''
 
@@ -170,17 +255,20 @@
           return
         }
         cancel.style.display = 'block'
+        var searchQuery = search.value
         index
-          .search(search.value, {
-            hitsPerPage: 20,
+          .search(searchQuery, {
+            hitsPerPage: 50,
           })
           .then((results) => {
             // Filter out sub-project results to focus on camel-core documentation
             const filteredHits = results.hits.filter(function (hit) {
               return !isSubProjectUrl(hit.url)
             })
-            // Sort to prioritize core docs over components
-            const sortedHits = sortByCoreDocs(filteredHits).slice(0, RESULTS_LIMIT)
+            // Remove duplicate results for the same parent page
+            const dedupedHits = deduplicateHits(filteredHits, searchQuery)
+            // Sort to prioritize core docs over components and limit results
+            const sortedHits = sortByCoreDocs(dedupedHits).slice(0, RESULTS_LIMIT)
             const data = sortedHits.reduce((data, hit) => {
               const section = hit.hierarchy.lvl0
               const sectionKey = `${section}-${hit.version || ''}`
