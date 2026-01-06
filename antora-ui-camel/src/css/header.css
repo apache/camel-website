@@ -303,6 +303,8 @@ html:not([data-scroll='0']) .navbar {
   margin-right: 10px;
   overflow-y: auto;
   max-height: 80vh;
+  max-width: min(600px, 90vw);
+  min-width: 300px;
   scrollbar-width: thin; /* Firefox */
 }
 
