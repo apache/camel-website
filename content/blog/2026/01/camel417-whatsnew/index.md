@@ -56,21 +56,21 @@ Upgraded many third-party dependencies to the latest releases at the time of rel
 
 ## New Components
 
-- `camel-aws2-rekognition` - Manage and invoke AWS Rekognition.
-- `camel-aws2-s3-vectors` - Store and query vector embeddings using AWS S3 Vectors with similarity search.
-- `camel-chroma` - Perform operations on the Chroma Vector Database.
+- `camel-aws2-rekognition` - Manage and invoke AWS Rekognition
+- `camel-aws2-s3-vectors` - Store and query vector embeddings using AWS S3 Vectors with similarity search
+- `camel-chroma` - Perform operations on the Chroma Vector Database
 - `camel-cli-debug` - Remote CLI debugger
-- `camel-cyberark-vault` - Retrieve secrets from CyberArk Conjur Vault.
-- `camel-google-vertexai` - Interact with Google Cloud Vertex AI generative models.
+- `camel-cyberark-vault` - Retrieve secrets from CyberArk Conjur Vault
+- `camel-google-vertexai` - Interact with Google Cloud Vertex AI generative models
 - `camel-ibm-watson-speech-to-text` - Convert speech audio to text using IBM Watson Speech to Text
 - `camel-ibm-watson-text-to-speech` - Convert text to natural-sounding speech using IBM Watson Text to Speech
-- `camel-once` - Camel Once component
+- `camel-once` - Trigger a single message only once at startup (useful for development and testing purposes)
 - `camel-opentelemetry-metrics` - Camel metrics based on the Camel Telemetry spec
-- `camel-spring-ai-chat` - Perform chat operations using Spring AI.
+- `camel-spring-ai-chat` - Perform chat operations using Spring AI
 - `camel-spring-ai-embeddings` - Spring AI Embeddings
 - `camel-spring-ai-tools` - Spring AI Tools and Function Calling Features
 - `camel-spring-ai-vector-store` - Spring AI Vector Store
-- `camel-stripe` - Camel Stripe component
+- `camel-stripe` - Interact with the Stripe payment platform
 - `camel-test-junit6` - Camel unit testing with JUnit 6
 - `camel-test-main-junit6` - Camel unit testing with Main and JUnit 6
 - `camel-test-spring-junit6` - Camel unit testing with Spring and JUnit 6
