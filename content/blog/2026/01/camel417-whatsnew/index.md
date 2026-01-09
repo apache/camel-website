@@ -2,7 +2,7 @@
 title: "Apache Camel 4.17 What's New"
 date: 2026-01-14
 draft: false
-authors: [ davsclaus ]
+authors: [ davsclaus, Croway ]
 categories: [ "Releases" ]
 preview: "Details of what we have done in the Camel 4.17 release."
 ---
