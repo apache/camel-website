@@ -27,7 +27,19 @@ TODO:
 
 `camel-spring-boot` is upgraded to the latest Spring Boot 3.5.9 release.
 
-TODO: Spring AI
+### Spring AI Integration
+
+Camel 4.17 introduces comprehensive integration with [Spring AI](https://docs.spring.io/spring-ai/reference/), providing four new components that bring AI/LLM capabilities to Camel routes:
+
+- **camel-spring-ai-chat**: Perform chat operations with any LLM supported by Spring AI. Features include prompt templates, conversation memory (message-based and vector-based semantic memory), Retrieval Augmented Generation (RAG) with VectorStore, multimodal support (images, audio, documents), SafeGuard content filtering, structured output conversion, and token usage tracking.
+
+- **camel-spring-ai-tools**: Enable function calling / tool use that allows AI models to invoke Camel routes as tools during conversations. This enables building agentic AI applications where LLMs can execute business logic, query databases, call external APIs, and more.
+
+- **camel-spring-ai-embeddings**: Compute embeddings using Spring AI embedding models for semantic similarity search, text clustering, and RAG pipelines.
+
+- **camel-spring-ai-vector-store**: Store and retrieve documents in vector databases with similarity search and metadata filtering.
+
+Together, these components provide a foundation for integrating AI capabilities into Camel integration flows, leveraging the AI models and vector stores supported by Spring AI.
 
 ## Java 25
 
