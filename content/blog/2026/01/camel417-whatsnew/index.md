@@ -13,7 +13,14 @@ This release introduces a set of new features and noticeable improvements that w
 
 ## Camel Core
 
-TODO:
+We have marked up important headers in various EIPs and components for tooling and troubleshooting assistance.
+
+If you have the need to trigger only once and are using a timer such as `timer:tick?repeatCount=1`,
+then we have added the `once` component to trigger only once on startup, and made it much easier to pre configure
+the message body and headers as needed.
+
+When using Rest DSL _contract first_ then Camel now also capture JMX performance metrics, as would happen with _code first_.
+
 
 ## Camel Test
 
@@ -22,6 +29,10 @@ We have added `camel-test` modules for JUnit 6 support.
 ## Camel JBang
 
 TODO:
+
+## Observability
+
+TODO: metrics supported added to camel-opentelemetry
 
 ## Camel Spring Boot
 
@@ -54,7 +65,16 @@ to release compatible versions.
 
 Upgraded many third-party dependencies to the latest releases at the time of release.
 
+The `camel-ftp` component now has the ability to use producer based health checks (need to enable this).
+
+The `camel-sql` can now dynamic select the `DataSource` (ie database) in the producer (ie `to` / `toD`).
+We also made the SQL stored procedure component support named parameters like the non-stored SQL component.
+
+The `camel-smb` component now uses atomic move IO operations instead of copy & delete (faster).
+
 ## New Components
+
+We have added many new components to this release.
 
 - `camel-aws2-rekognition` - Manage and invoke AWS Rekognition
 - `camel-aws2-s3-vectors` - Store and query vector embeddings using AWS S3 Vectors with similarity search
@@ -64,6 +84,7 @@ Upgraded many third-party dependencies to the latest releases at the time of rel
 - `camel-google-vertexai` - Interact with Google Cloud Vertex AI generative models
 - `camel-ibm-watson-speech-to-text` - Convert speech audio to text using IBM Watson Speech to Text
 - `camel-ibm-watson-text-to-speech` - Convert text to natural-sounding speech using IBM Watson Text to Speech
+- `camel-iggy` - Send and receive message to Apache Iggy streaming platform
 - `camel-once` - Trigger a single message only once at startup (useful for development and testing purposes)
 - `camel-opentelemetry-metrics` - Camel metrics based on the Camel Telemetry spec
 - `camel-spring-ai-chat` - Perform chat operations using Spring AI
