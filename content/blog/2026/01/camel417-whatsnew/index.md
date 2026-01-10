@@ -19,7 +19,7 @@ If you have the need to trigger only once and are using a timer such as `timer:t
 then we have added the `once` component to trigger only once on startup, and made it much easier to pre configure
 the message body and headers as needed.
 
-When using Rest DSL _contract first_ then Camel now also capture JMX performance metrics, as would happen with _code first_.
+When using Rest DSL with _contract first_, Camel now also captures JMX performance metrics, just as it does with _code first_.
 
 
 ## Camel Test
@@ -36,7 +36,7 @@ TODO: metrics supported added to camel-opentelemetry
 
 ## Camel Spring Boot
 
-`camel-spring-boot` is upgraded to the latest Spring Boot 3.5.9 release.
+`camel-spring-boot` has been upgraded to the latest Spring Boot 3.5.9 release.
 
 ### Spring AI Integration
 
@@ -53,8 +53,7 @@ Camel 4.17 introduces comprehensive integration with [Spring AI](https://docs.sp
 Together, these components provide a foundation for integrating AI capabilities into Camel integration flows, leveraging the AI models and vector stores supported by Spring AI.
 
 ## Java 25
-
-We continue to prepare the code-base for the upcoming Java 25 release. However, this release does
+We continue to prepare the codebase for the upcoming Java 25 release. However, this release does
 not officially support Java 25, but we are not aware of any issues (feedback is welcome).
 We will work on official Java 25 support later in 2026.
 
@@ -65,10 +64,10 @@ to release compatible versions.
 
 Upgraded many third-party dependencies to the latest releases at the time of release.
 
-The `camel-ftp` component now has the ability to use producer based health checks (need to enable this).
+The `camel-ftp` component now supports producer-based health checks (this feature must be explicitly enabled).
 
-The `camel-sql` can now dynamic select the `DataSource` (ie database) in the producer (ie `to` / `toD`).
-We also made the SQL stored procedure component support named parameters like the non-stored SQL component.
+`camel-sql` can now dynamically select the `DataSource` (ie database) in the producer (ie `to` / `toD`).
+We also made the SQL stored procedure component support named parameters, just like the regular SQL component.
 
 The `camel-smb` component now uses atomic move IO operations instead of copy & delete (faster).
 
@@ -116,7 +115,7 @@ You can find additional information about this release in the list of resolved J
 
 ## Roadmap
 
-The following 4.18 LTS release is planned for February/March 2026.
+The next 4.18 LTS release is planned for February/March 2026.
 
 This will be the last release that supports Spring Boot 3.5.x.
 
