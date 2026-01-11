@@ -22,13 +22,38 @@ the message body and headers as needed.
 When using Rest DSL with _contract first_, Camel now also captures JMX performance metrics, just as it does with _code first_.
 
 
+## Camel JBang
+
+We continue to improve the Camel JBang experience. 
+
+For example, we made it easier to do remote debugging for Spring Boot or Quarkus (or any other runtime).
+Add the `camel-cli-debug` JAR as dependency to your project, and then run `mvn spring-boot:run` and the debugger
+will be activated, and prints the CLI command to execute to attach the Camel JBang debugger, as shown below:
+
+![Camel CLI Debug](./cli-remote-debug.gif)
+
+Camel JBang now also comes automatic with history for the last message. This makes it very easy to see what happened.
+Suppose you build a Camel application and then try by sending a message into Camel or active something, and then want
+to know exactly what happened at each step in the routes. The `camel get history` command can show you all of that.
+
+In this release we improved this command, and also added the `--it` mode as shown below:
+
+![Camel Get History](./cli-get-history.gif)
+
+You can now also load new routes into existing running Camel JBang applications with the `camel cmd load` command:
+
+[source,bash]
+----
+$ camel cmd load --source=cheese.java
+----
+
+And if you load the same route then its updated, and you can use `--restart` to force restarting all routes.
+
+
 ## Camel Test
 
 We have added `camel-test` modules for JUnit 6 support.
 
-## Camel JBang
-
-TODO:
 
 ## Observability
 
@@ -53,6 +78,7 @@ Camel 4.17 introduces comprehensive integration with [Spring AI](https://docs.sp
 Together, these components provide a foundation for integrating AI capabilities into Camel integration flows, leveraging the AI models and vector stores supported by Spring AI.
 
 ## Java 25
+
 We continue to prepare the codebase for the upcoming Java 25 release. However, this release does
 not officially support Java 25, but we are not aware of any issues (feedback is welcome).
 We will work on official Java 25 support later in 2026.
@@ -66,7 +92,7 @@ Upgraded many third-party dependencies to the latest releases at the time of rel
 
 The `camel-ftp` component now supports producer-based health checks (this feature must be explicitly enabled).
 
-`camel-sql` can now dynamically select the `DataSource` (ie database) in the producer (ie `to` / `toD`).
+And the `camel-sql` can now dynamically select the `DataSource` (ie database) in the producer (ie `to` / `toD`).
 We also made the SQL stored procedure component support named parameters, just like the regular SQL component.
 
 The `camel-smb` component now uses atomic move IO operations instead of copy & delete (faster).
