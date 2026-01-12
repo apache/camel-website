@@ -1,8 +1,8 @@
 ---
 title: "Apache Camel 4.17 What's New"
-date: 2026-01-14
+date: 2026-01-13
 draft: false
-authors: [ davsclaus, Croway ]
+authors: [ davsclaus, Croway, gzurowski ]
 categories: [ "Releases" ]
 preview: "Details of what we have done in the Camel 4.17 release."
 ---
@@ -56,11 +56,23 @@ We have added `camel-test` modules for JUnit 6 support.
 
 ## Camel OpenAI
 
-TODO:
+The OpenAI component provides integration with OpenAI and OpenAI-compatible APIs for chat completion using the official openai-java SDK.
+For example, you can then use LLM models to ask questions very easily from Camel routes:
+
+[source,java]
+----
+from("direct:chat")
+    .setBody(constant("What is Apache Camel?"))
+     .to("openai:chat-completion")
+     .log("Response: ${body}");
+----
+
+Stay tuned for more examples and blog posts in the future about this component.
 
 ## Observability
 
-TODO: metrics supported added to camel-opentelemetry
+You can now collect various metrics directly from Camel routes using OtEL in the new `camel-opentelemtry-metrics` component.
+For example to increment metric counters from your Camel routes, by calling `opentelemetry-metrics:counter:my.counter?increment=1`
 
 ## Camel Spring Boot
 
