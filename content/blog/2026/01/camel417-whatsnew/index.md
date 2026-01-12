@@ -42,10 +42,9 @@ In this release we improved this command, and also added the `--it` mode as show
 
 You can now also load new routes into existing running Camel JBang applications with the `camel cmd load` command:
 
-[source,bash]
-----
+```shell
 $ camel cmd load --source=cheese.java
-----
+```
 
 And if you load the same route then its updated, and you can use `--restart` to force restarting all routes.
 
@@ -59,13 +58,12 @@ We have added `camel-test` modules for JUnit 6 support.
 The OpenAI component provides integration with OpenAI and OpenAI-compatible APIs for chat completion using the official openai-java SDK.
 For example, you can then use LLM models to ask questions very easily from Camel routes:
 
-[source,java]
-----
+```java
 from("direct:chat")
     .setBody(constant("What is Apache Camel?"))
-     .to("openai:chat-completion")
-     .log("Response: ${body}");
-----
+    .to("openai:chat-completion")
+    .log("Response: ${body}");
+```
 
 Stay tuned for more examples and blog posts in the future about this component.
 
