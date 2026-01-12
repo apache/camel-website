@@ -54,6 +54,9 @@ And if you load the same route then its updated, and you can use `--restart` to 
 
 We have added `camel-test` modules for JUnit 6 support.
 
+## Camel OpenAI
+
+TODO:
 
 ## Observability
 
@@ -111,6 +114,7 @@ We have added many new components to this release.
 - `camel-ibm-watson-text-to-speech` - Convert text to natural-sounding speech using IBM Watson Text to Speech
 - `camel-iggy` - Send and receive message to Apache Iggy streaming platform
 - `camel-once` - Trigger a single message only once at startup (useful for development and testing purposes)
+- `camel-openai` - OpenAI endpoint for chat completion
 - `camel-opentelemetry-metrics` - Camel metrics based on the Camel Telemetry spec
 - `camel-spring-ai-chat` - Perform chat operations using Spring AI
 - `camel-spring-ai-embeddings` - Spring AI Embeddings
