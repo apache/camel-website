@@ -245,4 +245,3 @@ We'd love to hear about what you build with the OpenAI component. Share your exp
 list or join us on Zulip chat!
 
 Happy integrating!
-
