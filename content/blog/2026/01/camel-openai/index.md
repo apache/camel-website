@@ -92,10 +92,9 @@ format.
               temperature: 0.15
               jsonSchema: "resource:classpath:pii.schema.json"
               systemMessage: >
-                You are a strict data privacy compliance assistant. 
-                Your goal is to analyze the user input, redact all PII, 
+                You are a strict data privacy compliance assistant.
+                Your goal is to analyze the user input, redact all PII,
                 and return the results in the specified JSON format.
-
 - route:
     from:
       uri: stream
