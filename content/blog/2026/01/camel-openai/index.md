@@ -1,6 +1,6 @@
 ---
 title: "Simple LLM Integration with Camel OpenAI Component"
-date: 2026-01-13
+date: 2026-01-14
 draft: false
 authors: [ ibek ]
 categories: [ "Camel", "AI" ]
