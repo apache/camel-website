@@ -234,9 +234,7 @@ from LLMs - a critical capability for enterprise applications where consistent d
 For more information, check out:
 
 - [Apache Camel OpenAI Component Documentation](/components/next/openai-component.html)
-- [Camel OpenAI examples](https://github.com/apache/camel-jbang-examples/openai)
-- [Apache Camel 4.17 Release Notes](/releases/release-4.17.0/)
-- [Apache Camel 4.17 What's New](/blog/2026/01/camel417-whatsnew/)
+- [Camel OpenAI examples](https://github.com/apache/camel-jbang-examples/tree/main/openai/pii-redaction)
 
 We'd love to hear about what you build with the OpenAI component. Share your experiences on the Apache Camel mailing
 list or join us on Zulip chat!
