@@ -91,7 +91,7 @@ format.
             parameters:
               temperature: 0.15
               jsonSchema: "resource:classpath:pii.schema.json"
-              systemMessage: You are a strict data privacy compliance assistant. Your goal is to analyze the user input, redact all PII, and return the results in the specified JSON format.
+              systemMessage: "You are a strict data privacy compliance assistant. Your goal is to analyze the user input, redact all PII, and return the results in the specified JSON format. RULES: 1. ONLY redact specific identifiers, 2. DO NOT redact generic titles, roles, or common nouns unless they are part of a proper noun. 3. Preserve the grammatical structure of the sentence."
 - route:
     from:
       uri: stream
@@ -218,7 +218,7 @@ echo 'Customer John Doe (email: john.doe@example.com) requested a refund for ord
       "action": "REDACTED"
     }
   ],
-  "sanitizedText": "Customer [REDACTED] ([REDACTED]) requested a refund for order #998877."
+  "sanitizedText": "Customer [REDACTED] (email: [REDACTED]) requested a refund for order #998877."
 }
 ```
 
