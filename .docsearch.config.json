@@ -74,7 +74,7 @@
       "page_rank": 5
     },
     {
-      "url": "https://camel.apache.org/components/\\d+\\.\\d+\\.x/",
+      "url": "https://camel.apache.org/components/(\\d+)\\.(\\d+)\\.x/",
       "page_rank": 4
     },
     {
