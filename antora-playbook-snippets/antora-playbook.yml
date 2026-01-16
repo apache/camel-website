@@ -106,11 +106,12 @@ asciidoc:
 runtime:
   log:
     level: warn
-    failure_level: warn
+    failure_level: error
 #    format: json
 
 antora:
   extensions:
+    - ./extensions/promote-deprecated-attribute.js
     - require: '@djencks/antora-aggregate-collector'
 #      log_level: trace
       componentversions:
