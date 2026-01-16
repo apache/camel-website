@@ -453,6 +453,35 @@ all generated sources in the project first.
 
 Of course this then takes some more time than an optimized rebuild (time to grab another coffee!).
 
+## Search Indexing Configuration
+
+The website uses [Algolia DocSearch](https://docsearch.algolia.com/) to provide site-wide search functionality. The search configuration is defined in [`.docsearch.config.json`](.docsearch.config.json).
+
+### What is indexed
+
+The configuration ensures that Algolia's crawler indexes:
+- All documentation versions (development `next`, latest, and release branches like `4.4.x`)
+- Component specifications and tables (fixing issue #1209)
+- All heading levels and content blocks
+- Code blocks and inline code snippets
+
+### Maintaining the search configuration
+
+If you need to modify what gets indexed or how content is crawled:
+
+1. Edit [`.docsearch.config.json`](.docsearch.config.json) to change selectors or crawling rules
+2. Review the detailed documentation in [`.docsearch.README.md`](.docsearch.README.md)
+3. Test your changes by building the site locally: `yarn build`
+4. Verify content is indexable by visiting the search functionality in the preview
+
+Key elements to be aware of:
+- **Selectors** define what HTML elements are indexed (headings, paragraphs, tables, code)
+- **start_urls** control which parts of the site are crawled and their search priority
+- **selectors_exclude** specify elements to skip (navigation, sidebars, footers)
+- **custom_settings** control search behavior and index settings
+
+For more details, see [`.docsearch.README.md`](.docsearch.README.md).
+
 # Checks, publishing the website
 
 The content of the website, as built by the [Camel.website](https://ci-builds.apache.org/job/Camel/job/Camel.website/job/main/)
