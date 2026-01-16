@@ -1,6 +1,12 @@
 # Redirect security advisories to new location
 RewriteEngine on
 RewriteBase "/"
+
+# Content negotiation for LLM-friendly Markdown
+# When Accept header requests text/markdown, redirect .html to .md
+RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+RewriteRule ^(.+)\.html$ /$1.md [R=303,L]
+
 RewriteRule "^security-advisories.data/(.+)$" "security/$1" [R=permanent,L]
 
 # Customize what Apache returns to the client in case of an error.
