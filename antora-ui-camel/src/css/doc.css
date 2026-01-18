@@ -733,15 +733,20 @@
   margin: 0.25rem 0 -0.25rem;
 }
 
+.doc .colist > table {
+  border-spacing: 0;
+}
+
 .doc .colist > table > tr > :first-child,
 .doc .colist > table > tbody > tr > :first-child {
-  padding: 0.25em 0.5rem 0;
+  padding: 0.25rem 0.5rem 0 0;
   vertical-align: top;
+  width: 1.75rem;
 }
 
 .doc .colist > table > tr > :last-child,
 .doc .colist > table > tbody > tr > :last-child {
-  padding: 0.25rem 0;
+  padding: 0.25rem 0 0.25rem 0.25rem;
 }
 
 .doc .conum[data-value] {
