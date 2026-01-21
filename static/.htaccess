@@ -3,9 +3,9 @@ RewriteEngine on
 RewriteBase "/"
 
 # Content negotiation for LLM-friendly Markdown
-# When Accept header requests text/markdown, redirect .html to .md
+# When Accept header requests text/markdown, serve .md instead of .html
 RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
-RewriteRule ^(.+)\.html$ /$1.md [R=303,L]
+RewriteRule ^(.+)\.html$ $1.md [L]
 
 RewriteRule "^security-advisories.data/(.+)$" "security/$1" [R=permanent,L]
 
