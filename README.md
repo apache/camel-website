@@ -75,8 +75,8 @@ An easy step to step guide to install nvm and install node v18 on your local sys
     $ nvm install 20
 
 
-Note - If you have different Node version other than Node LTS version 14 you can use following command to make
-Node LTS version 20 as default Node version.
+Note - If you have a different Node version installed, you can use the following command to switch to
+Node LTS version 20 (recommended, but any version 18+ will work).
 
     $ nvm use 20
 
@@ -89,8 +89,8 @@ An easy step to step guide to install nvm and install node v20 on your local sys
     > choco install nvm
     > nvm install 20
 
-Note - If you have different Node version other than Node LTS version 14 you can use following command to make
-Node LTS version 20 as default Node version.
+Note - If you have a different Node version installed, you can use the following command to switch to
+Node LTS version 20 (recommended, but any version 18+ will work).
 
     > nvm use 20
 
