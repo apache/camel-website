@@ -303,6 +303,8 @@ html:not([data-scroll='0']) .navbar {
   margin-right: 10px;
   overflow-y: auto;
   max-height: 80vh;
+  max-width: min(600px, 90vw);
+  min-width: 300px;
   scrollbar-width: thin; /* Firefox */
 }
 
@@ -380,6 +382,10 @@ html:not([data-scroll='0']) .navbar {
 .result_summary {
   color: var(--color-jet-50);
   padding-top: 0.3rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
 #search_results div.footer-search {

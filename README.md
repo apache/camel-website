@@ -401,11 +401,11 @@ build errors due to incompatible versions of `Node.js` tooling installed on your
 
 ### Preparing Maven
 
-Make sure that you have Maven installed.
+This project includes Maven Wrapper, so you don't need to install Maven manually. Just use `./mvnw` (or `mvnw.cmd` on Windows) instead of `mvn`. The wrapper automatically downloads the correct Maven version (3.9.6) on first run.
+
+If you prefer using your own Maven installation:
 
     $ mvn --version
-
-If this command fails with an error, you do not have Maven installed.
 
 Please install Maven using your favorite package manager (like [Homebrew](https://brew.sh/)) or from
 official [Maven binaries](https://maven.apache.org/install.html)
@@ -423,7 +423,11 @@ When building everything from scratch the build executes following steps:
 
 You can do all of this with one single command:
 
-    $ mvn package
+    $ ./mvnw package
+
+Or on Windows:
+
+    > mvnw.cmd package
 
 The whole process takes up to five minutes (time to grab some coffee!)
 
@@ -434,7 +438,7 @@ When the build is finished you should see the generated website in the `public` 
 When rebuilding the website you can optimize the build process as some of the steps are only required for a fresh
 build from scratch. You can skip the ui theme rendering (unless you have changes in the theme itself).
 
-    $ mvn package -Dskip.theme
+    $ ./mvnw package -Dskip.theme
 
 This should save you some minutes in the build process. You can find the updated website content in the `public` directory.
 
@@ -445,9 +449,38 @@ When rebuilding the website the process uses some cached content (e.g. the fetch
 If you want to start from scratch for some reason you can simply add the `clean` operation to the build which removes
 all generated sources in the project first.
 
-    $ mvn clean package
+    $ ./mvnw clean package
 
 Of course this then takes some more time than an optimized rebuild (time to grab another coffee!).
+
+## Search Indexing Configuration
+
+The website uses [Algolia DocSearch](https://docsearch.algolia.com/) to provide site-wide search functionality. The search configuration is defined in [`.docsearch.config.json`](.docsearch.config.json).
+
+### What is indexed
+
+The configuration ensures that Algolia's crawler indexes:
+- All documentation versions (development `next`, latest, and release branches like `4.4.x`)
+- Component specifications and tables (fixing issue #1209)
+- All heading levels and content blocks
+- Code blocks and inline code snippets
+
+### Maintaining the search configuration
+
+If you need to modify what gets indexed or how content is crawled:
+
+1. Edit [`.docsearch.config.json`](.docsearch.config.json) to change selectors or crawling rules
+2. Review the detailed documentation in [`.docsearch.README.md`](.docsearch.README.md)
+3. Test your changes by building the site locally: `yarn build`
+4. Verify content is indexable by visiting the search functionality in the preview
+
+Key elements to be aware of:
+- **Selectors** define what HTML elements are indexed (headings, paragraphs, tables, code)
+- **start_urls** control which parts of the site are crawled and their search priority
+- **selectors_exclude** specify elements to skip (navigation, sidebars, footers)
+- **custom_settings** control search behavior and index settings
+
+For more details, see [`.docsearch.README.md`](.docsearch.README.md).
 
 # Checks, publishing the website
 

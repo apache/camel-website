@@ -89,8 +89,6 @@ The new component we're introducing in this release, `camel-observability-servic
 * `camel-micrometer-prometheus`
 * `camel-opentelemetry`
 
-Read the manual to get more information about [how to do observability with Camel](xref:components::observability-services.adoc).
-
 NOTE: the component will require an extension and will be available on Quarkus runtime with the first release of Camel Quarkus supporting 4.9.0 which should be done some week after this core release.
 
 ## Camel Groovy

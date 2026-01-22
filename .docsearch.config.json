@@ -1,0 +1,125 @@
+{
+  "index": {
+    "name": "apache_camel",
+    "startUrls": [
+      "https://camel.apache.org/"
+    ],
+    "ignoreCanonicalTo": false,
+    "pathsToMatch": [
+      "https://camel.apache.org/**"
+    ],
+    "pathsToIgnore": [
+      "https://camel.apache.org/search",
+      "https://camel.apache.org/404.html"
+    ],
+    "includeHeadingLevels": [1, 2, 3, 4, 5, 6],
+    "stripQueryParameters": true
+  },
+  "crawler": {
+    "userAgent": "Algolia Crawler",
+    "maxDepth": 20,
+    "maxUrls": 50000,
+    "waitUntilFired": true,
+    "timeoutMs": 30000,
+    "sitemapUrls": [
+      "https://camel.apache.org/sitemap.xml"
+    ],
+    "ignoreRobotsTxt": false,
+    "allowedDomains": [
+      "camel.apache.org"
+    ]
+  },
+  "selectors": {
+    "lvl0": {
+      "selector": "h1",
+      "global": true,
+      "default_value": "Documentation"
+    },
+    "lvl1": "h2",
+    "lvl2": "h3",
+    "lvl3": "h4",
+    "lvl4": "h5",
+    "lvl5": "h6",
+    "text": "p, li, td, th, dt, dd, span:not(.tooltip), div:not([class*='hidden']), table tbody, code, pre"
+  },
+  "selectors_exclude": [
+    ".no_index",
+    "[data-no-index]",
+    ".sidebar",
+    ".breadcrumb",
+    "nav",
+    ".navbar",
+    ".menu",
+    ".toc",
+    "footer",
+    ".footer",
+    ".copyright",
+    ".hide",
+    ".hidden",
+    "[aria-hidden='true']",
+    "script",
+    "style",
+    ".language-toggle",
+    ".sidebar-toggle"
+  ],
+  "min_indexed_level": 1,
+  "only_content_level": false,
+  "start_urls": [
+    {
+      "url": "https://camel.apache.org/components/next/",
+      "page_rank": 5
+    },
+    {
+      "url": "https://camel.apache.org/components/latest/",
+      "page_rank": 5
+    },
+    {
+      "url": "https://camel.apache.org/components/(\\d+)\\.(\\d+)\\.x/",
+      "page_rank": 4
+    },
+    {
+      "url": "https://camel.apache.org/manual/",
+      "page_rank": 7
+    },
+    {
+      "url": "https://camel.apache.org/docs/",
+      "page_rank": 6
+    },
+    {
+      "url": "https://camel.apache.org/blog/",
+      "page_rank": 3
+    },
+    {
+      "url": "https://camel.apache.org/",
+      "page_rank": 8
+    }
+  ],
+  "stop_urls": [
+    "\\?",
+    "#"
+  ],
+  "custom_settings": {
+    "separatorsToIndex": "_.-",
+    "attributesForFaceting": [
+      "version"
+    ],
+    "attributesToIndex": [
+      "hierarchy",
+      "content",
+      "url"
+    ],
+    "minWordSizefor1Typo": 4,
+    "minWordSizefor2Typos": 8,
+    "exactOnSingleWordQuery": "none",
+    "attributeForDistinctResults": "url",
+    "searchableAttributes": [
+      "hierarchy.lvl0",
+      "hierarchy.lvl1",
+      "hierarchy.lvl2",
+      "hierarchy.lvl3",
+      "hierarchy.lvl4",
+      "hierarchy.lvl5",
+      "content"
+    ]
+  }
+}

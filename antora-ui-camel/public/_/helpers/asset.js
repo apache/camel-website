@@ -1,7 +1,7 @@
 'use strict'
 
 const manifest = {
-  "css/site.css": "css/site-97b8b37dd5.css",
+  "css/site.css": "css/site-0aa325a917.css",
   "img/algolia.svg": "img/algolia-f4ab98e0de.svg",
   "img/apache-kafka.svg": "img/apache-kafka-88809b7472.svg",
   "img/apache-karaf.svg": "img/apache-karaf-7bdb5ce2e3.svg",
@@ -42,7 +42,7 @@ const manifest = {
   "img/team.svg": "img/team-899f1050c2.svg",
   "img/user-stories.svg": "img/user-stories-cccc5f7c8f.svg",
   "js/site.js": "js/site-9b761b31dd.js",
-  "js/vendor/algoliasearch.js": "js/vendor/algoliasearch-bad45193e2.js",
+  "js/vendor/algoliasearch.js": "js/vendor/algoliasearch-c7d08807d6.js",
   "js/vendor/highlight.js": "js/vendor/highlight-621a10fe1b.js",
   "js/vendor/svg4everybody.js": "js/vendor/svg4everybody-a0c573f2b9.js",
   "js/vendor/tabs.js": "js/vendor/tabs-5aea11bcf5.js"
