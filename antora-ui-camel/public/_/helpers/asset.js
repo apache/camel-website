@@ -1,7 +1,7 @@
 'use strict'
 
 const manifest = {
-  "css/site.css": "css/site-6a147d81b8.css",
+  "css/site.css": "css/site-97b8b37dd5.css",
   "img/algolia.svg": "img/algolia-f4ab98e0de.svg",
   "img/apache-kafka.svg": "img/apache-kafka-88809b7472.svg",
   "img/apache-karaf.svg": "img/apache-karaf-7bdb5ce2e3.svg",
@@ -30,7 +30,7 @@ const manifest = {
   "img/karavan.svg": "img/karavan-8621354711.svg",
   "img/knative.svg": "img/knative-5010ee4773.svg",
   "img/kubernetes.svg": "img/kubernetes-07ba46aaa2.svg",
-  "img/logo-camel-medium.png": "img/logo-camel-medium-372cf8688f.png",
+  "img/logo-camel-medium.png": "img/logo-camel-medium-ec76e19c58.png",
   "img/logo-d.svg": "img/logo-d-a567cee6fa.svg",
   "img/menu.svg": "img/menu-8775cec4be.svg",
   "img/quarkus.svg": "img/quarkus-446ffca541.svg",

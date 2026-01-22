@@ -66,16 +66,40 @@
 }
 
 .edit-this-page {
-  display: none;
+  display: flex;
+  align-items: center;
   padding-right: 0.5rem;
-}
-
-@media screen and (width >= 1025px) {
-  .edit-this-page {
-    display: block;
-  }
+  margin-left: auto;
 }
 
 .toolbar .edit-this-page a {
   color: var(--toolbar-muted-color);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.toolbar .edit-this-page a:hover {
+  background-color: var(--toolbar-border-color);
+  color: var(--toolbar-font-color);
+}
+
+.toolbar .edit-this-page .edit-icon {
+  width: 1rem;
+  height: 1rem;
+  fill: currentcolor;
+}
+
+.toolbar .edit-this-page .edit-label {
+  display: none;
+}
+
+@media screen and (width >= 768px) {
+  .toolbar .edit-this-page .edit-label {
+    display: inline;
+  }
 }
