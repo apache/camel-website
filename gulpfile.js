@@ -3,7 +3,6 @@ const env = process.env.CAMEL_ENV || 'development';
 const gulp = require('gulp');
 const htmlmin = require('gulp-htmlmin');
 const inject = require('gulp-inject');
-const generateMarkdown = require('./gulp/tasks/generate-markdown');
 
 /**
  * We minify all HTML files using htmlmin, this is to make them smaller in size
@@ -114,8 +113,12 @@ function versionlessRedirects (text) {
   return processed.join('\n')
 }
 
-// Register the generate-markdown task
-gulp.task('generate-markdown', generateMarkdown);
+// Register the generate-markdown task with lazy loading to avoid requiring
+// node-html-parser when running other tasks (like clean or sitemap)
+gulp.task('generate-markdown', (done) => {
+  const generateMarkdown = require('./gulp/tasks/generate-markdown');
+  return generateMarkdown(done);
+});
 
 /*
  * Removes the content from the `public` directory.
