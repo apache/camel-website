@@ -106,7 +106,7 @@ asciidoc:
 runtime:
   log:
     level: warn
-    failure_level: error
+    failure_level: warn
 #    format: json
 
 antora:
