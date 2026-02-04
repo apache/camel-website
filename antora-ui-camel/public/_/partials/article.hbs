@@ -12,6 +12,22 @@ If you typed the URL of this page manually, please double check that you entered
 {{#with page.title}}
 <h1 class="page">{{{this}}}</h1>
 {{/with}}
+{{#if page.attributes.deprecated}}
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>Deprecated:</strong> This {{or page.attributes.shortname 'component'}} is deprecated and may be removed in a future release.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+{{/if}}
 {{{page.contents}}}
 {{/if}}
 {{> pagination}}
