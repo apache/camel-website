@@ -3,7 +3,7 @@ title: "Apache Camel 2025 Download Statistics"
 date: 2026-02-09
 authors: [ davsclaus ]
 categories: [ "Roadmap" ]
-preview: The rising popularity of Apache Camel with YoY increasing downloads
+preview: The rising popularity of Apache Camel with almost 500 million downloads in 2025
 ---
 
 In 2025, Apache Camel's adoption continued to surge, as shown by monthly download statistics from Maven Central.
@@ -13,7 +13,7 @@ It starts at approximately 29 million downloads in December 2024 and shows stead
 with some fluctuations along the way. Monthly figures rose progressively, reaching peaks around 47 million in July and
 over 50 million in October, before settling at about 44.8 million by December 2025. Year-over-year growth
 from December 2024 to December 2025 was roughly 54%, while peak months demonstrated even stronger increases—highlighting
-robust demand.
+robust demand. The total comes roughly to half a billion (500 million) downloads across 2025.
 
 ![Camel 2025 Downloads](./2025-downloads.png)
 
