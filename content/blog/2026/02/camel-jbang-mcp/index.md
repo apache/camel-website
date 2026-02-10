@@ -17,14 +17,16 @@ In this post we will walk through what the MCP server offers, how to set it up w
 
 The server is built on [Quarkus](https://quarkus.io/) with the [quarkus-mcp-server](https://docs.quarkiverse.io/quarkus-mcp-server/dev/index.html) extension and supports two transports: STDIO for direct integration with CLI-based AI tools, and HTTP/SSE for web-based clients and remote scenarios. It ships as a single uber-JAR that can be launched via JBang.
 
-The server exposes 13 tools organized into six functional areas:
+The server exposes 15 tools organized into six functional areas:
 
 ### Catalog Exploration
 
 - **`camel_catalog_components`** -- List available Camel components with filtering by name, label (e.g., `messaging`, `cloud`, `database`), and runtime type (`main`, `spring-boot`, `quarkus`). Supports querying specific Camel versions.
 - **`camel_catalog_component_doc`** -- Get full documentation for a specific component including all endpoint options, component-level options, Maven coordinates, and URI syntax.
 - **`camel_catalog_dataformats`** -- List available data formats (JSON, XML, CSV, Avro, Protobuf, and others).
+- **`camel_catalog_dataformat_doc`** -- Get detailed documentation for a specific data format including all configuration options, Maven coordinates, and model information.
 - **`camel_catalog_languages`** -- List expression languages (Simple, JsonPath, XPath, JQ, Groovy, and others).
+- **`camel_catalog_language_doc`** -- Get detailed documentation for a specific expression language including all configuration options and Maven coordinates.
 - **`camel_catalog_eips`** -- List Enterprise Integration Patterns with filtering by category.
 - **`camel_catalog_eip_doc`** -- Get detailed documentation for a specific EIP including all its options.
 
