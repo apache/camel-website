@@ -17,7 +17,7 @@ In this post we will walk through what the MCP server offers, how to set it up w
 
 The server is built on [Quarkus](https://quarkus.io/) with the [quarkus-mcp-server](https://docs.quarkiverse.io/quarkus-mcp-server/dev/index.html) extension and supports two transports: STDIO for direct integration with CLI-based AI tools, and HTTP/SSE for web-based clients and remote scenarios. It ships as a single uber-JAR that can be launched via JBang.
 
-The server exposes 11 tools organized into five functional areas:
+The server exposes 13 tools organized into six functional areas:
 
 ### Catalog Exploration
 
@@ -27,6 +27,11 @@ The server exposes 11 tools organized into five functional areas:
 - **`camel_catalog_languages`** -- List expression languages (Simple, JsonPath, XPath, JQ, Groovy, and others).
 - **`camel_catalog_eips`** -- List Enterprise Integration Patterns with filtering by category.
 - **`camel_catalog_eip_doc`** -- Get detailed documentation for a specific EIP including all its options.
+
+### Kamelet Catalog
+
+- **`camel_catalog_kamelets`** -- List available Kamelets from the Kamelet Catalog with filtering by name, description, and type (`source`, `sink`, `action`). Supports querying specific Kamelets catalog versions.
+- **`camel_catalog_kamelet_doc`** -- Get detailed documentation for a specific Kamelet including all properties/options, their types, defaults, examples, and the Kamelet's Maven dependencies.
 
 ### Route Understanding
 
@@ -201,6 +206,91 @@ When you need the exact syntax and available options for a component, ask:
 > "Show me the documentation for the Kafka component, including all endpoint options"
 
 The assistant calls `camel_catalog_component_doc` with `component=kafka` and receives the full component model, including the URI syntax (`kafka:topic`), Maven coordinates, and every single endpoint option with types, defaults, and descriptions. This is the same information you'd find on the Camel website, but delivered directly into your coding session.
+
+### Browsing Kamelets
+
+Kamelets are pre-built integration connectors that abstract away the complexity of configuring individual components. The MCP server gives the AI direct access to the Kamelet Catalog, which is especially useful when you want to wire together sources and sinks without dealing with low-level component options.
+
+> "Show me all available source kamelets related to AWS"
+
+The assistant calls `camel_catalog_kamelets` with `type=source` and `filter=aws`:
+
+```json
+{
+  "count": 5,
+  "kameletsVersion": "4.18.0",
+  "kamelets": [
+    {
+      "name": "aws-cloudwatch-sink",
+      "type": "sink",
+      "supportLevel": "Stable",
+      "description": "Send metrics to AWS CloudWatch."
+    },
+    {
+      "name": "aws-s3-source",
+      "type": "source",
+      "supportLevel": "Stable",
+      "description": "Receive data from an Amazon S3 Bucket."
+    },
+    {
+      "name": "aws-sqs-source",
+      "type": "source",
+      "supportLevel": "Stable",
+      "description": "Receive data from AWS SQS."
+    }
+  ]
+}
+```
+
+You can then drill into a specific Kamelet to get the full documentation:
+
+> "What options does the aws-s3-source kamelet accept?"
+
+The assistant calls `camel_catalog_kamelet_doc` with `kamelet=aws-s3-source` and returns the complete property list:
+
+```json
+{
+  "name": "aws-s3-source",
+  "type": "source",
+  "supportLevel": "Stable",
+  "description": "Receive data from an Amazon S3 Bucket.",
+  "options": [
+    {
+      "name": "bucketNameOrArn",
+      "description": "The S3 Bucket name or Amazon Resource Name (ARN).",
+      "type": "string",
+      "required": true,
+      "defaultValue": null,
+      "example": null,
+      "enumValues": null
+    },
+    {
+      "name": "region",
+      "description": "The AWS region to access.",
+      "type": "string",
+      "required": true,
+      "defaultValue": null,
+      "example": null,
+      "enumValues": null
+    },
+    {
+      "name": "deleteAfterRead",
+      "description": "Specifies to delete objects after consuming them.",
+      "type": "boolean",
+      "required": false,
+      "defaultValue": "true",
+      "example": null,
+      "enumValues": null
+    }
+  ],
+  "dependencies": [
+    "camel:aws2-s3",
+    "camel:kamelet"
+  ]
+}
+```
+
+This gives the AI the exact parameter names, types, and which ones are required, so it can generate correct Kamelet bindings and Pipe definitions without guessing.
 
 ### Validating an Endpoint URI
 
