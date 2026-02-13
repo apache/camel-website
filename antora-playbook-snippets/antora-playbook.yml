@@ -31,7 +31,6 @@ content:
       branches:
         - main
         - release-2.9.x
-        - release-2.7.x
       start_path: docs
 
     - url: https://github.com/apache/camel-kamelets.git
@@ -44,7 +43,6 @@ content:
       branches:
         - main
         - 3.27.x
-        - 3.20.x
       start_path: docs
 
     - url: https://github.com/apache/camel-quarkus-examples.git
