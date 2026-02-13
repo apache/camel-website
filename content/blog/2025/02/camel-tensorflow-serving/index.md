@@ -13,15 +13,15 @@ As noted in the [previous article](/blog/2025/02/camel-torchserve/), the recent 
 
 [^1]: Camel TorchServe component has been provided since 4.9.
 
-* [TorchServe component](/components/4.10.x/torchserve-component.html)
-* [TensorFlow Serving component](/components/4.10.x/tensorflow-serving-component.html)
-* [KServe component](/components/4.10.x/kserve-component.html)
+* [TorchServe component](/components/next/torchserve-component.html)
+* [TensorFlow Serving component](/components/next/tensorflow-serving-component.html)
+* [KServe component](/components/next/kserve-component.html)
 
 Previously we [wrote about the TorchServe component](/blog/2025/02/camel-torchserve/), this time we introduce the TensorFlow Serving component.
 
 ## TensorFlow Serving component
 
-[TensorFlow Serving](https://www.tensorflow.org/tfx/guide/serving) is the serving feature provided by the popular machine learning framework TensorFlow. By using the [Camel TensorFlow Serving](/components/4.10.x/tensorflow-serving-component.html) component, you can invoke AI models deployed on the TensorFlow Serving model servers through their [gRPC Client APIs](https://github.com/tensorflow/serving/blob/2.18.0/tensorflow_serving/apis/prediction_service.proto).
+[TensorFlow Serving](https://www.tensorflow.org/tfx/guide/serving) is the serving feature provided by the popular machine learning framework TensorFlow. By using the [Camel TensorFlow Serving](/components/next/tensorflow-serving-component.html) component, you can invoke AI models deployed on the TensorFlow Serving model servers through their [gRPC Client APIs](https://github.com/tensorflow/serving/blob/2.18.0/tensorflow_serving/apis/prediction_service.proto).
 
 ## Preparation
 

@@ -13,15 +13,15 @@ In the previous blog posts ([camel-tensorflow-serving](/blog/2025/02/camel-tenso
 
 [^1]: The Camel TorchServe component has been available since version 4.9.
 
-* [TorchServe component](/components/4.10.x/torchserve-component.html)
-* [TensorFlow Serving component](/components/4.10.x/tensorflow-serving-component.html)
-* [KServe component](/components/4.10.x/kserve-component.html)
+* [TorchServe component](/components/next/torchserve-component.html)
+* [TensorFlow Serving component](/components/next/tensorflow-serving-component.html)
+* [KServe component](/components/next/kserve-component.html)
 
 We previously wrote about the [TorchServe](/blog/2025/02/camel-torchserve/) and [TensorFlow Serving](/blog/2025/02/camel-tensorflow-serving/) components. This post introduces the KServe component, concluding the series.
 
 ## KServe Component
 
-[KServe](https://kserve.github.io/website/) is a platform for serving AI models on Kubernetes. KServe defines an API protocol enabling clients to perform health checks, retrieve metadata, and run inference on model servers. This KServe API [^2] allows you to interact uniformly with KServe-compliant model servers. The [Camel KServe](/components/4.10.x/kserve-component.html) component enables you to request inference from a Camel route to model servers via the KServe API.
+[KServe](https://kserve.github.io/website/) is a platform for serving AI models on Kubernetes. KServe defines an API protocol enabling clients to perform health checks, retrieve metadata, and run inference on model servers. This KServe API [^2] allows you to interact uniformly with KServe-compliant model servers. The [Camel KServe](/components/next/kserve-component.html) component enables you to request inference from a Camel route to model servers via the KServe API.
 
 [^2]: [KServe Open Inference Protocol V2](https://kserve.github.io/website/latest/modelserving/data_plane/v2_protocol/)
 
