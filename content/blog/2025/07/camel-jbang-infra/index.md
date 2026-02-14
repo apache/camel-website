@@ -81,7 +81,7 @@ $ camel infra run aws s3
 
 Notice how the JSON output provides all the configuration details we need for the AWS S3 component. There's almost a 1:1 mapping between the infra output and component configuration.
 
-let's write some code and create a simple Camel route that uploads files to S3. For this purpose, we'll use the [Apache Camel AWS S3 component](/components/4.10.x/aws2-s3-component.html), the JSON provided by the `camel infra run aws s3` command contains all the informations to get started with the component:
+let's write some code and create a simple Camel route that uploads files to S3. For this purpose, we'll use the [Apache Camel AWS S3 component](/components/next/aws2-s3-component.html), the JSON provided by the `camel infra run aws s3` command contains all the informations to get started with the component:
 
 ```java
 import org.apache.camel.builder.RouteBuilder;
@@ -148,7 +148,7 @@ $ camel infra run kafka
 }
 ```
 
-In this case we have a perfect 1:1 match between the properties from the `infra run` command and the [Apache Camel Kafka component](/components/4.10.x/kafka-component.html), the only required property for the Kafka component is `brokers`, let's update the previous route with the new requirements:
+In this case we have a perfect 1:1 match between the properties from the `infra run` command and the [Apache Camel Kafka component](/components/next/kafka-component.html), the only required property for the Kafka component is `brokers`, let's update the previous route with the new requirements:
 
 ```java
 import org.apache.camel.builder.RouteBuilder;
@@ -211,7 +211,7 @@ camel infra run ftp
 
 > Note: For most infra services, Docker images via Testcontainers are executed behind the scenes. The infra command exposes most of the components from the [Apache Camel test infra](https://github.com/apache/camel/tree/main/test-infra). There's no magic behind it—we're reusing the same infrastructure that we use to test Camel itself. Some services, like the FTP one, don't need Docker; instead, an embedded FTP service is spun up.
 
-Let's update the previous route. Instead of the file component, the [Apache Camel FTP component](/components/4.10.x/ftp-component.html) has to be used, using Java DSL there is not an easy 1:1 mapping between the component and the `infra run ftp` JSON, but we would have 1:1 mapping using YAML DSL. 
+Let's update the previous route. Instead of the file component, the [Apache Camel FTP component](/components/next/ftp-component.html) has to be used, using Java DSL there is not an easy 1:1 mapping between the component and the `infra run ftp` JSON, but we would have 1:1 mapping using YAML DSL. 
 
 ```java
 import org.apache.camel.builder.RouteBuilder;
@@ -285,7 +285,7 @@ $ camel infra run qdrant
 }
 ```
 
-For a plain Camel scenario, the [Apache Camel JMS component](/components/4.10.x/jms-component.html) configuration is a little bit cumbersome, [luckily there are examples](https://github.com/apache/camel-kamelets-examples/tree/main/jbang/artemis) that shows how this can be done.
+For a plain Camel scenario, the [Apache Camel JMS component](/components/next/jms-component.html) configuration is a little bit cumbersome, [luckily there are examples](https://github.com/apache/camel-kamelets-examples/tree/main/jbang/artemis) that shows how this can be done.
 
 Let's create an `application.properties` file and add the following configuration, in this case, we'll use `camel infra run artemis` informations to fill the `application.properties`
 
@@ -348,7 +348,7 @@ The `camel run` command has to be updated, to include the `application.propertie
 $ camel run CamelRoute.java application.properties
 ```
 
-Finally, let's create the Camel route that consumes from the queue and inserts data into Qdrant. Of course, before doing that, we need to create embeddings from the content of the body. This can be easily done with the [Apache Camel Langchain4j Embeddings component](/components/4.10.x/langchain4j-embeddings-component.html).
+Finally, let's create the Camel route that consumes from the queue and inserts data into Qdrant. Of course, before doing that, we need to create embeddings from the content of the body. This can be easily done with the [Apache Camel Langchain4j Embeddings component](/components/next/langchain4j-embeddings-component.html).
 
 Before that, the collection has to be created in Qdrant, let's use Camel to achieve this:
 
