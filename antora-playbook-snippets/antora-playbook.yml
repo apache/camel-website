@@ -17,6 +17,7 @@ content:
     - url: https://github.com/apache/camel.git
       branches:
         - main
+        - camel-4.18.x
         - camel-4.14.x
         - camel-3.22.x
       start_paths:
@@ -60,6 +61,7 @@ content:
     - url: https://github.com/apache/camel-spring-boot.git
       branches:
         - main
+        - camel-spring-boot-4.18.x
         - camel-spring-boot-4.14.x
         - camel-spring-boot-3.22.x
       start_paths:
