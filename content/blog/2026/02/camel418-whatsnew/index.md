@@ -438,9 +438,9 @@ management.server.accesslog.pattern=combined
 
 Several compatibility issues with JDK 25 have been fixed and documented:
 
-`camel-fop` — Add `net.sf.saxon:Saxon-HE` to your classpath to work around a re-entrant XML parsing bug (FOP-3275).
-`camel-parquet-avro` — Disabled on JDK 22+ due to a Hadoop incompatibility (HADOOP-19486).
-`camel-atmosphere-websocket` — Upgraded to Atmosphere 3.1.0 to restore streaming support on JDK 25.
+- `camel-fop` — Add `net.sf.saxon:Saxon-HE` to your classpath to work around a re-entrant XML parsing bug (FOP-3275).
+- `camel-parquet-avro` — Disabled on JDK 22+ due to a Hadoop incompatibility (HADOOP-19486).
+- `camel-atmosphere-websocket` — Upgraded to Atmosphere 3.1.0 to restore streaming support on JDK 25.
 
 ## Miscellaneous
 
