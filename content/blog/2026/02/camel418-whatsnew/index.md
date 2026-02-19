@@ -2,7 +2,7 @@
 title: "Apache Camel 4.18 What's New"
 date: 2026-02-19
 draft: false
-authors: [ davsclaus, oscerd ]
+authors: [ davsclaus, oscerd, ibek ]
 categories: [ "Releases" ]
 preview: "Details of what we have done in the Camel 4.18 LTS release."
 ---
@@ -221,7 +221,28 @@ continues to work as before -- the new simplified options are fully backward com
 
 ### Camel OpenAI
 
-TODO: Ivo
+Camel OpenAI adds new embeddings operation to generate vector embeddings from text for semantic search and RAG
+applications. Combining it with camel-sql and PostgreSQL + pgvector makes it a powerful setup which you have under
+control:
+
+```yaml
+- route:
+    from:
+      uri: direct:index
+      steps:
+        - setVariable:
+            name: text
+            simple: "${body}"
+        - to:
+            uri: openai:embeddings
+            parameters:
+              embeddingModel: nomic-embed-text
+        - setVariable:
+            name: embedding
+            simple: "${body.toString()}"
+        - to:
+            uri: sql:INSERT INTO documents (content, embedding) VALUES (:#text, :#embedding::vector)
+```
 
 ### MCP Server
 
