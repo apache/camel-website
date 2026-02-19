@@ -195,8 +195,41 @@ TODO: Ivo
 
 ### MCP Server
 
-TODO: Andrea
-TODO: link to blog post
+We introduced the **Camel MCP Server**, a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server
+that exposes the Apache Camel Catalog and a set of specialized tools to AI coding assistants
+such as Claude Code, OpenAI Codex, GitHub Copilot, and JetBrains AI.
+
+The server is built on Quarkus using the [quarkus-mcp-server](https://docs.quarkiverse.io/quarkus-mcp-server/dev/index.html)
+extension and ships as a single uber-JAR that can be launched via [JBang](https://www.jbang.dev/).
+It supports both **STDIO** (default, for CLI-based AI tools) and **HTTP/SSE** transports.
+
+The server exposes 16 tools organized into six functional areas:
+
+- **Catalog Exploration** -- Query components, data formats, expression languages, and EIPs with filtering and multi-version support.
+- **Kamelet Catalog** -- Browse and get documentation for Kamelets.
+- **Route Understanding** -- Extract components and EIPs from a route (YAML, XML, or Java DSL) and return enriched context from the catalog.
+- **Security Analysis** -- Analyze routes for security concerns such as hardcoded credentials or plain-text protocols, with risk levels and remediation recommendations.
+- **Validation and Transformation** -- Validate endpoint URIs and YAML DSL structure against the catalog schema, and transform routes between YAML and XML formats.
+- **Version Management** -- List available Camel versions with release dates, JDK requirements, and LTS status.
+
+Setting it up is straightforward. For example, with Claude Code add the following to your `.mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "camel": {
+      "command": "jbang",
+      "args": [
+        "-Dquarkus.log.level=WARN",
+        "org.apache.camel:camel-jbang-mcp:4.18.0:runner"
+      ]
+    }
+  }
+}
+```
+
+This module is in **Preview** status as of Camel 4.18. For a deeper dive, see the dedicated
+[blog post](/blog/2026/02/camel-jbang-mcp/).
 
 ## Camel Quarkus
 
