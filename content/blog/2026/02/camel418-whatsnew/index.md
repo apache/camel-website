@@ -355,6 +355,33 @@ management.server.port=9090
 management.server.accesslog.enabled=false
 ```
 
+### Undertow Access Log Provider
+
+Use whatever camel logging mechanism to manage undertow HTTP access log instead of undertow's own log provider, as it doesn't use 
+a logging manager. It can be set for both management and non-management endpoints:
+
+
+Enable camel logging mechanism to manage undertow access log:
+```
+# disable the Undertow's own access log handler.
+server.undertow.accesslog.enabled=false
+
+# enable camel logging provider
+camel.component.platform-http.server.undertow.accesslog.use-camel-logging=true
+
+# sets a log pattern (optional)
+server.undertow.accesslog.pattern="%r" %s (%D ms)
+```
+
+Enable camel logging mechanism to manage undertow management access log:
+```
+management.server.undertow.accesslog.use-camel-logging=true
+
+# sets a log pattern (optional)
+management.server.accesslog.pattern=combined
+```
+
+
 ## JDK25 compatibility
 
 Several compatibility issues with JDK 25 have been fixed and documented:
