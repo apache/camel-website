@@ -185,7 +185,37 @@ Validation error detected in 1 files
 
 Configuring security with `camel-kafka` has been streamlined to be much easier and _similar_ for all kinds of Kafka security configurations.
 
-TODO: Andrea
+Previously, setting up authentication required manually constructing JAAS configuration strings, knowing the
+correct login module class names, matching `securityProtocol` with `saslMechanism`, and handling special character
+escaping in credentials. This complexity also led to 24 separate Kafka Kamelets in `camel-kamelets` to cover
+different authentication combinations.
+
+A new `saslAuthType` option has been added that supports: `PLAIN`, `SCRAM_SHA_256`, `SCRAM_SHA_512`, `SSL`,
+`OAUTH`, `AWS_MSK_IAM`, and `KERBEROS`. When set, the appropriate `securityProtocol`, `saslMechanism`,
+and `saslJaasConfig` are automatically derived.
+
+For example, configuring SCRAM-SHA-512 authentication is now as simple as:
+
+```java
+from("kafka:my-topic?brokers=localhost:9092&saslAuthType=SCRAM_SHA_512&saslUsername=user&saslPassword=pass")
+```
+
+Instead of the previous verbose approach:
+
+```java
+from("kafka:my-topic?brokers=localhost:9092&securityProtocol=SASL_SSL&saslMechanism=SCRAM-SHA-512"
+    + "&saslJaasConfig=org.apache.kafka.common.security.scram.ScramLoginModule required username=\"user\" password=\"pass\";")
+```
+
+OAuth 2.0 authentication is also supported with dedicated options: `oauthClientId`, `oauthClientSecret`,
+`oauthTokenEndpointUri`, and `oauthScope`.
+
+For programmatic use, a new `KafkaSecurityConfigurer` builder class provides a fluent API with
+convenient factory methods such as `plain(username, password)`, `scramSha512(username, password)`,
+`oauth(clientId, clientSecret, tokenEndpointUri)`, and more.
+
+The existing explicit configuration approach with `securityProtocol`, `saslMechanism`, and `saslJaasConfig`
+continues to work as before -- the new simplified options are fully backward compatible.
 
 ## Camel AI
 
