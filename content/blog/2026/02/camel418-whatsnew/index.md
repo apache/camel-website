@@ -2,7 +2,7 @@
 title: "Apache Camel 4.18 What's New"
 date: 2026-02-19
 draft: false
-authors: [ davsclaus, oscerd, ibek ]
+authors: [ davsclaus, oscerd, ibek, croway ]
 categories: [ "Releases" ]
 preview: "Details of what we have done in the Camel 4.18 LTS release."
 ---
@@ -96,7 +96,10 @@ The example above, will first substring the message body, then trim the result, 
 For users that use simple language for data mapping, or when having a larger simple expression,
 then we have introduced init block.
 
-You can now in the top of your Simple expressions declare an initialization block that are used to define a set of local variables that are pre-computed, and can be used in the following Simple expression. This allows to reuse variables, and also avoid making the simple expression complicated when having inlined functions, and in general make the simple expression easier to maintain and understand.
+You can now in the top of your Simple expressions declare an initialization block that are used to define a set of local
+variables that are pre-computed, and can be used in the following Simple expression. This allows to reuse variables, and
+also avoid making the simple expression complicated when having inlined functions, and in general make the simple
+expression easier to maintain and understand.
 
 ```text
 $init{
@@ -183,7 +186,8 @@ Validation error detected in 1 files
 
 ### Camel JBang Infra
 
-The `camel jbang infra run` command now supports a `--port` option, letting you specify a custom port for your infrastructure services, a long-requested feature that lands in Camel 4.18.0.
+The `camel jbang infra run` command now supports a `--port` option, letting you specify a custom port for your
+infrastructure services, a long-requested feature that lands in Camel 4.18.0.
 
 ```
 $ camel infra run artemis --port 12345
@@ -303,7 +307,9 @@ This module is in **Preview** status as of Camel 4.18. For a deeper dive, see th
 
 ### Camel IBM WatsonX AI
 
-A new component that exposes IBM Watsonx AI APIs — including text extraction, content detection, and chat via the official `watsonx-ai-java-sdk`. Unlike LangChain4j and Spring AI integrations, this component surfaces the full Watsonx API, enabling capabilities that higher-level abstractions don't expose.
+A new component that exposes IBM WatsonX AI APIs — including text extraction, content detection, and chat via the
+official `watsonx-ai-java-sdk`. Unlike LangChain4j and Spring AI integrations, this component surfaces the full WatsonX
+API, enabling capabilities that higher-level abstractions don't expose.
 
 Native IBM COS text extraction pipe documents directly from any Camel source into Watsonx, with results written back to COS automatically:
 
@@ -339,7 +345,9 @@ This now works the same way as Rest DSL in _code first_ style behaves.
 
 ### Separate Management Access Logs
 
-Health check probes hitting actuator endpoints can clutter your access logs when the management and application contexts share a port. You can now suppress access logging for the management context alone by setting `management.server.accesslog.enabled=false`, this requires a dedicated `management.server.port`.
+Health check probes hitting actuator endpoints can clutter your access logs when the management and application contexts
+share a port. You can now suppress access logging for the management context alone by setting
+`management.server.accesslog.enabled=false`, this requires a dedicated `management.server.port`.
 
 ```
 server.tomcat.accesslog.enabled=true
@@ -347,7 +355,7 @@ management.server.port=9090
 management.server.accesslog.enabled=false
 ```
 
-### JDK25 compatibility
+## JDK25 compatibility
 
 Several compatibility issues with JDK 25 have been fixed and documented:
 
@@ -389,11 +397,6 @@ We have some new components to this release.
 - `camel-ocsf` - Marshal and unmarshal OCSF (Open Cybersecurity Schema Framework) security events to/from JSON.
 - `camel-ibm-watsonx-ai` - Interact with IBM watsonx.ai foundation models for text generation, chat, camel-embeddings, and more.
 - `camel-mina-sftp` - Upload and download files to/from SFTP servers using Apache MINA SSHD.
-
-## Java 25
-
-A few more 3rd party components has been made Java 25 compatible.
-However, we expected still some time before all of Camel is Java 25 compatible.
 
 ## Upgrading
 
