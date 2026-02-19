@@ -240,6 +240,58 @@ convenient factory methods such as `plain(username, password)`, `scramSha512(use
 The existing explicit configuration approach with `securityProtocol`, `saslMechanism`, and `saslJaasConfig`
 continues to work as before -- the new simplified options are fully backward compatible.
 
+
+## Camel MINA SFTP
+
+Camel 4.18 introduces **camel-mina-sftp**, a modern SFTP component designed as a **near drop-in replacement** for the existing JSch-based `camel-sftp`
+component. 
+
+Built on top of Apache MINA SSHD, it requires only a URI scheme change from `sftp://` to `mina-sftp://`, 
+all standard configuration options remain the same for supported features, making migration seamless for most use cases.
+
+A standout feature is **OpenSSH certificate-based authentication**, enabling enterprise-grade key management through Certificate Authority (CA)
+infrastructure. This MINA-specific capability, not available in the JSch component, provides centralized key revocation, time-limited access without key
+rotation, and principal-based authorization using standard `@cert-authority` entries in `known_hosts` files.
+
+Beyond ease of migration and certificate support, the component delivers enhanced security with modern algorithms (`Ed25519`, `ChaCha20-Poly1305`, `AES-GCM`),
+built-in compression requiring no additional dependencies, early configuration validation with clear error messages, and strict OpenSSH-compliant `known_hosts`
+verification. Currently at Preview support level, camel-mina-sftp provides a robust, future-proof foundation for SFTP integrations.
+
+### Migration Example
+
+```java
+  // Before (JSch-based sftp component)
+from("sftp://user@host/path?password=secret")
+      .to("file:local");
+
+// After (MINA SSHD-based mina-sftp component)
+from("mina-sftp://user@host/path?password=secret")
+      .to("file:local");
+```
+OpenSSH Certificate Authentication Example
+
+```java
+// Using certificate-based authentication with CA
+from("direct:start")
+      .to("mina-sftp://user@host/path"
+                  + "?privateKeyFile=/path/to/id_rsa"
+                  + "&certFile=/path/to/id_rsa-cert.pub");
+```
+
+With `@cert-authority` entry in `known_hosts`:
+```
+@cert-authority *.example.com ssh-rsa AAAAB3NzaC1yc2E... Enterprise CA
+```
+
+Key Features
+
+  - Drop-in replacement: Change URI scheme, keep existing configs
+  - OpenSSH certificates: Enterprise CA-based authentication and host verification
+  - Modern cryptography: Ed25519, ChaCha20-Poly1305, AES-GCM support
+  - Built-in compression: No additional JARs needed (unlike JSch)
+  - Better error messages: Early validation with clear, actionable errors
+  - OpenSSH compliance: Strict known_hosts semantics
+
 ## Camel AI
 
 ### Camel OpenAI
