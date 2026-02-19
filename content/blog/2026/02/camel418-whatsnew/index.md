@@ -2,7 +2,7 @@
 title: "Apache Camel 4.18 What's New"
 date: 2026-02-19
 draft: false
-authors: [ davsclaus, oscerd, ibek, croway, claudio4j ]
+authors: [ davsclaus, oscerd, ibek, croway, claudio4j, luigidemasi ]
 categories: [ "Releases" ]
 preview: "Details of what we have done in the Camel 4.18 LTS release."
 ---
@@ -447,9 +447,6 @@ Several compatibility issues with JDK 25 have been fixed and documented:
 Upgraded many third-party dependencies to the latest releases at the time of release.
 
 The `camel-mock` component can now assert JSon where the ordering of the elements does not matter.
-
-The new `camel-mina-sftp` has support for OpenSSH certifications for security. A feature the existing `camel-ftp`
-does not offer via the JSch FTP library.
 
 The `camel-zipfile` now avoids loading the entire zip content into memory when used with Split EIP. 
 
