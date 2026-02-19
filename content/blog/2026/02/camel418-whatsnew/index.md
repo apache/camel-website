@@ -21,14 +21,126 @@ to build tutorials with half complete code, and have note(s) that describe what 
 
 The simple language has been improved tremendously.
 
-TODO: Claus
+### More Functions
 
-### Adding custom functions 
+We have added 50 more functions to simple language so it now comes with a total of 114.
+
+There are now a lot more functions to work with the data such as String related functions,
+and also math functions so you can sum totals, find the maximum or minimum value and more.
+
+For example, if you work with JSon data, then there is a new `safeQuote` function,
+which will based on the data type quote the value if necessary.
+
+We also made it possible for Camel components and custom components to provide simple functions.
+For example `camel-attachments` and `camel-base64` has a set of functions out of the box.
+
+#### Adding your own custom Functions 
 
 You can now add custom functions that can be used as _first class_ functions in your simple expressions or predicates.
 
-TODO: More stuff here
+We added a small example with a custom function [stock function](https://github.com/apache/camel-kamelets-examples/tree/main/jbang/simple-custom-function),
+which returns a stock value which can be with Camels simple language with `${stock()}` as shown below:
 
+```yaml
+- from:
+    uri: "timer:stock"
+    parameters:
+      period: 5000
+    steps:
+      - log: |
+
+
+          Stock prices today
+
+          ${stock()}
+          ${stock('AAPL')}
+          ${stock('IBM')}
+
+          Have a nice day
+```
+
+### More Operators
+
+We also added 3 new operators.
+
+#### Elvis Operator
+
+The Elvis operator `?:` is used for returning the current value or a default value.
+The following will return the username header unless its null or empty, which then the default value of Guest is returned.
+
+```java
+simple("${header.username} ?: 'Guest'");
+```
+
+#### Ternary Operator
+
+We have added the beloved `? :` ternary operator so you can do:
+
+```java
+simple("${header.foo > 0 ? 'positive' : 'negative'}");
+```
+
+#### Chain Operator
+
+The new `~>` chain operator is fantastic, when you have a new for calling functions from functions.
+As this makes it much more readable and avoids cluttering when nesting functions inside functions.
+
+```java
+simple("${substringAfter('Hello')} ~> ${trim()} ~> ${uppercase()}");
+```
+
+The example above, will first substring the message body, then trim the result, and lastly then uppercase.
+
+### Init Blocks
+
+For users that use simple language for data mapping, or when having a larger simple expression,
+then we have introduced init block.
+
+You can now in the top of your Simple expressions declare an initialization block that are used to define a set of local variables that are pre-computed, and can be used in the following Simple expression. This allows to reuse variables, and also avoid making the simple expression complicated when having inlined functions, and in general make the simple expression easier to maintain and understand.
+
+```text
+$init{
+  $greeting := ${upper('Hello $body}'}
+  $level := ${header.code > 999 ? 'Gold' : 'Silver'}
+}init$
+{
+  "message": "$greeting",
+  "status": "$level"
+}
+```
+
+Here we have an init block which has 2 local variables assigned, that can then easily be reused in the simple
+expression.
+
+You can also build local custom functions in the init block:
+
+```text
+$init{
+  $cleanUp ~:= ${trim()} ~> ${normalizeWhitespace()} ~> ${uppercase()}
+}init$
+```
+
+Notice how the function is defined using `~:=` which then allows the function to take in a parameter (message body by default).
+You can then use that in the simple expression:
+
+```text
+{
+  "message": "$greeting ~> $cleanUp()",
+  "status": "$level"
+}
+```
+
+### Better Documentation
+
+The simple documentation has been updated and all the functions and operators has been grouped
+in different set of tables such as grouped by: numeric functions, string functions, list functions, date functions, etc.
+
+We also added some examples of many of the functions so you have a better understanding what each function can do.
+
+### Other Simple Improvements
+
+When using the simple language the returned result can now be trimmed via `trimResult: true`.
+You can also pretty print the result (JSon or XML) via `pretty: true`. 
 
 ## Camel JBang
 
