@@ -181,6 +181,25 @@ Validation error detected in 1 files
 		/0/route/from: required property 'steps' not found
 ```
 
+### Camel JBang Infra
+
+The `camel jbang infra run` command now supports a `--port` option, letting you specify a custom port for your infrastructure services, a long-requested feature that lands in Camel 4.18.0.
+
+```
+$ camel infra run artemis --port 12345
+{
+  "brokerPort" : 12345,
+  "brokerUrl" : "amqp://localhost:12345",
+  "host" : "localhost",
+  "password" : "artemis",
+  "port" : 12345,
+  "remoteURI" : "tcp://localhost:12345",
+  "serviceAddress" : "tcp://localhost:12345",
+  "userName" : "artemis",
+  "username" : "artemis"
+}
+```
+
 ## Camel Kafka
 
 Configuring security with `camel-kafka` has been streamlined to be much easier and _similar_ for all kinds of Kafka security configurations.
@@ -282,12 +301,59 @@ Setting it up is straightforward. For example, with Claude Code add the followin
 This module is in **Preview** status as of Camel 4.18. For a deeper dive, see the dedicated
 [blog post](/blog/2026/02/camel-jbang-mcp/).
 
+### Camel IBM WatsonX AI
+
+A new component that exposes IBM Watsonx AI APIs — including text extraction, content detection, and chat via the official `watsonx-ai-java-sdk`. Unlike LangChain4j and Spring AI integrations, this component surfaces the full Watsonx API, enabling capabilities that higher-level abstractions don't expose.
+
+Native IBM COS text extraction pipe documents directly from any Camel source into Watsonx, with results written back to COS automatically:
+
+```java
+from("file:/path/to/documents?noop=true")
+  .to("ibm-watsonx-ai:extract?operation=textExtractionUploadAndFetch" +
+      "&cosUrl=https://s3.us-south.cloud-object-storage.appdomain.cloud" +
+      "&documentBucket=input-bucket&resultBucket=output-bucket&...")
+  .log("Extracted text: ${body}");
+```
+
+Native PII/HAP content detection — inspect messages for sensitive content and branch your route accordingly:
+
+```java
+from("direct:detect")
+  .setBody(constant("Contact John Smith at john.smith@example.com"))
+  .to("ibm-watsonx-ai:detect?operation=detect&detectPii=true")
+  .choice()
+    .when(header("CamelIBMWatsonxAiDetected").isEqualTo(true))
+      .log("PII detected! Count: ${header.CamelIBMWatsonxAiDetectionCount}")
+    .otherwise()
+      .log("No PII detected");
+```
+  
 ## Camel Quarkus
 
 When using `camel-main` or `camel-quarkus` then Rest DSL in _contract first_ style is now
 registering each API endpoints individually with the underlying HTTP server which allows Quarkus
 to register access control and metrics per endpoint instead of a single combined overall endpoints as previously.
 This now works the same way as Rest DSL in _code first_ style behaves.
+
+## Camel Spring Boot
+
+### Separate Management Access Logs
+
+Health check probes hitting actuator endpoints can clutter your access logs when the management and application contexts share a port. You can now suppress access logging for the management context alone by setting `management.server.accesslog.enabled=false`, this requires a dedicated `management.server.port`.
+
+```
+server.tomcat.accesslog.enabled=true
+management.server.port=9090
+management.server.accesslog.enabled=false
+```
+
+### JDK25 compatibility
+
+Several compatibility issues with JDK 25 have been fixed and documented:
+
+`camel-fop` — Add `net.sf.saxon:Saxon-HE` to your classpath to work around a re-entrant XML parsing bug (FOP-3275).
+`camel-parquet-avro` — Disabled on JDK 22+ due to a Hadoop incompatibility (HADOOP-19486).
+`camel-atmosphere-websocket` — Upgraded to Atmosphere 3.1.0 to restore streaming support on JDK 25.
 
 ## Miscellaneous
 
