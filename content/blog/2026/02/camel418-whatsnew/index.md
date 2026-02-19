@@ -2,7 +2,7 @@
 title: "Apache Camel 4.18 What's New"
 date: 2026-02-19
 draft: false
-authors: [ davsclaus, oscerd, ibek, croway ]
+authors: [ davsclaus, oscerd, ibek, croway, claudio4j ]
 categories: [ "Releases" ]
 preview: "Details of what we have done in the Camel 4.18 LTS release."
 ---
