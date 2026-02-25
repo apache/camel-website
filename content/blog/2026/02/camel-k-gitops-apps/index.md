@@ -134,7 +134,7 @@ Let's go now to the repository pull request user interface. Verify the PR is cre
 
 Let's merge merge the PR, although this is not yet going to produce any effect. We're missing the CICD pipeline watching the GitOps repo!
 
-## Prepare the development cluster
+## Prepare the production cluster
 
 Let's install a Camel K operator on a `prod` namespace (alternatively, a production cluster): remind to use the same registry used for the development operator.
 
