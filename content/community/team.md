@@ -183,6 +183,7 @@ Then you can get in touch with the Camel team from the [Mailing Lists](../mailin
 | Ross Mason              |                                |
 | Sachin Handiekar        |                                |
 | Sami Dalouche           |                                |
+| Sandeep N               |                                |
 | Sanjiv Jivan            |                                |
 | Stanislav Deviatov      | EPAM Systems                   |
 | Steven Marcus           |                                |
