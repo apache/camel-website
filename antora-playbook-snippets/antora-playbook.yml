@@ -43,7 +43,6 @@ content:
     - url: https://github.com/apache/camel-quarkus.git
       branches:
         - main
-        - 3.32.x
         - 3.27.x
       start_path: docs
 
