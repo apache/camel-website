@@ -130,7 +130,7 @@ Articles are divided into several sections. As the lists grow, further sectionin
 *   [Camel exception handling overview](http://benoday.blogspot.com/2010/08/camel-exception-handling-overview.html) _by Ben O'Day_
 *   [Remote Observer Pattern with Publish-Subscribe via XMPP](http://spring-java-ee.blogspot.com/2010/12/remote-observer-pattern-with-publish.html) _by Hendy_
 *   [Implementing Asynchronous Observer Pattern with Bean Proxy](http://spring-java-ee.blogspot.com/2010/12/implementing-asynchronous-observer.html) _by Hendy_
-*   [Apache Camel Example Application - Earthquake Mashups](https://docplayer.net/49237992-Apache-camel-example-application-earthquake-mashup.html) showing how Camel using[|\](articles.html) EIPs can gather online earthquake and weather data and expose REST service.
+*   [Apache Camel Example Application - Earthquake Mashups](https://docplayer.net/49237992-Apache-camel-example-application-earthquake-mashup.html) showing how Camel using EIPs can gather online earthquake and weather data and expose REST service.
 *   [RouteBuilding with inherited configurations](http://waterback.github.com/blog/2011/12/09/camel-inherit-errorhandling/) _by Martin Huber_
 *   [Mathew's Thoughts on Apache Camel](http://blogs.justenougharchitecture.com/?p=310) shows how Apache Camel easily can route messages from a JMS topic to files using the Content Based Router EIP. More blog posts to come.
 *   [Transparent Asynchronous Remoting via JMS](http://hwellmann.blogspot.com/2011/03/transparent-asynchronous-remoting-via.html) _by Harald Wellman_
@@ -195,6 +195,8 @@ Articles are divided into several sections. As the lists grow, further sectionin
 *   [Camel Aggregation Strategies](http://blog.joshdreagan.com/2018/08/30/camel_aggregation_strategies/) from August 2018 by Josh Reagan whom blogs about how to aggregate data using Camel's AggregationStrategy when using EIPs such as Content Enricher, Splitter or the Aggregator. 
 *   [Creating custom processors, Kamelets and components in Apache Camel](https://raymondmeester.medium.com/custom-code-in-apache-camel-56c9249d5b24) from June 2022 blog on how to write custom Camel code with processors, Kamelets and components.
 *   [Using gRPC with Apache Camel](https://medium.com/@vimukthimayadunne/using-grpc-with-apache-camel-e44efc16bccb) by Vimukthi Mayadunne from October 2024 a step-by-step guide on how to integrate remote gRPC service with Apache Camel.
+*   [Salesforce Bulk API 2.0 Integration with Apache Camel](https://sedatgoc.com/blog/salesforce-bulkapi2-integration-with-apache-camel/) by Sedac Got (March 2026) how to build a production-ready Salesforce Bulk API 2.0 integration using Apache Camel.
+
 
 ### Camel K
 
