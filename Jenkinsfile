@@ -60,9 +60,9 @@ pipeline {
         }
 
         stage('Setup') {
-          steps {
-            sh "$WORKSPACE/camel-website/support/docker-pipe.sh $WORKSPACE/docker-pipe &"
-          }
+            steps {
+                sh "$WORKSPACE/camel-website/support/docker-pipe.sh $WORKSPACE/docker-pipe &"
+            }
         }
 
         stage('Checks') {
