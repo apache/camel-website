@@ -100,6 +100,10 @@ pipeline {
                     sh "git checkout $STOP_SQUASH_AT -- ./.asf.yaml" // force revert to commit containing the valid .asf.yml
                     sh 'git commit -m "Website updated to $GIT_COMMIT"'
                     sh 'git push --force origin asf-site'
+                    sh 'echo $GIT_COMMIT > rev.txt'
+                    sh 'git add rev.txt'
+                    sh 'git commit -m "Invalidate CDN cache for $GIT_COMMIT"'
+                    sh 'git push origin asf-site'
                 }
             }
         }
