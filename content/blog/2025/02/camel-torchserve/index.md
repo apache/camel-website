@@ -13,9 +13,9 @@ In the just released [Apache Camel 4.10 LTS](/blog/2025/02/RELEASE-4.10.0/), AI-
 
 [^1]: Camel TorchServe component has been provided since 4.9.
 
-* [TorchServe component](/components/next/torchserve-component.html)
-* [TensorFlow Serving component](/components/next/tensorflow-serving-component.html)
-* [KServe component](/components/next/kserve-component.html)
+* TorchServe component
+* TensorFlow Serving component
+* KServe component
 
 My previous article [Apache Camel AI: Leverage power of AI with DJL component](/blog/2024/09/camel-ai-examples/) demonstrated how the DJL component can be used to perform AI model inference within the Camel routes. Starting from 4.10, in addition to the in-route inference by DJL, these new components will allow the Camel routes to invoke external model servers to perform inference.
 
@@ -25,7 +25,7 @@ In this article, let's see how you can use the TorchServe component.
 
 ## TorchServe component
 
-[TorchServe](https://pytorch.org/serve/index.html) is the serving feature provided by the popular machine learning framework PyTorch. The [Camel TorchServe](/components/next/torchserve-component.html) component allows you to call the [REST API](https://pytorch.org/serve/rest_api.html) served by the TorchServe server from within the Camel routes.
+[TorchServe](https://pytorch.org/serve/index.html) is the serving feature provided by the popular machine learning framework PyTorch. The Camel TorchServe component allows you to call the [REST API](https://pytorch.org/serve/rest_api.html) served by the TorchServe server from within the Camel routes.
 
 ### Basic usage
 

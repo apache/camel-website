@@ -13,9 +13,9 @@ As noted in the [previous article](/blog/2025/02/camel-torchserve/), the recent 
 
 [^1]: Camel TorchServe component has been provided since 4.9.
 
-* [TorchServe component](/components/next/torchserve-component.html)
-* [TensorFlow Serving component](/components/next/tensorflow-serving-component.html)
-* [KServe component](/components/next/kserve-component.html)
+* TorchServe component
+* TensorFlow Serving component
+* KServe component
 
 Previously we [wrote about the TorchServe component](/blog/2025/02/camel-torchserve/), this time we introduce the TensorFlow Serving component.
 
