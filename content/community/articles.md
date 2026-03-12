@@ -259,6 +259,7 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 *   [Using Jaeger to trace an Apache Camel application](https://medium.com/jaegertracing/using-jaeger-to-trace-an-apache-camel-application-2b8118efbb4d) (August 2018) blog post from Gary Brown showing how to use camel-opentracing and Jaeger to do distributed traces and visualize them in Jaeger UI.
 *   [Quick Integration with Apache Camel and IBM MQ](https://dzone.com/articles/quickly-integrate-apache-camel-and-ibm-mq) article from May 2020 by Chandra Shekhar Pandey showing how to use Apache Camel running on Spring Boot to integrate with IBM MQ and testing it with Docker containers.
 *   [Monitoring Camel applications with nJAMS](https://www.youtube.com/watch?v=n8PGES67e40) 10 min video from October 2020 by Abdelghani Faiz covering how nJAMS monitoring tooling now has Camel plugin to do deep monitoring of Camel applications with route visualziation and message capturing.
+*   [Using Apache Camel with CouchDB and ingesting docs to Elasticsearch](https://acmattos.com.br/2026/02/my-devops-adventure-building-with-apache-camel-couchdb-and-elasticsearch-part-4/) February 2026 a deeper technical blog about the lesson learned how to do ETL and improve performance with parallel processing and tune thread pools and other Camel seetings to have optimal performance and stable GC pressure in the JVM.
 
 ### Camel and Groovy
 
