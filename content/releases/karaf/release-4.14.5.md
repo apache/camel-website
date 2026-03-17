@@ -1,6 +1,6 @@
 ---
 url: "/releases/karaf-4.14.5/"
-date: 2026-03-17
+date: 2026-03-16
 type: release-note
 version: "4.14.5"
 title: "Camel Karaf release 4.14.5"
