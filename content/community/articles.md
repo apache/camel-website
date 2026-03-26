@@ -306,7 +306,6 @@ These examples show Camel combined with several tools (e.g. IDE), ESBs, Applicat
 
 ### Comparison to Camel's Competitors
 
-*   [MuleSoft vs Apache Camel: An Honest Comparison](https://unmule.com/blog/mulesoft-vs-apache-camel.html) - February 2026. Consultancy company that specializes in migrating from MuleSoft to Apache Camel provides lessons learned and valuable information for users that may want to migrate to Apche Camel.
 *   [Cadec 2026 Large Project Migration from Mule to Apache Camel](https://www.youtube.com/watch?v=gZvZOXiL5fo) - Cadec (February 2026) use-case how they migrated 340 integrations from Mule to Camel (Swedish)
 *   [Apache Camel and other ESBs (Camel vs Mule)](https://stackoverflow.com/questions/3792519/apache-camel-and-other-esb-products) - A question on Stackoverflow originally from 2010 but with a great showcase of what is the status 5 years later according to [Raul's answer](https://stackoverflow.com/questions/3792519/apache-camel-and-other-esb-products/34818263#34818263), and [follow up comments from Claus](http://www.davsclaus.com/2016/01/apache-camel-and-other-esb-products.html).
 *   [Mule vs Spring Integration vs Apache Camel compared by Black Duck Open Hub](http://www.davsclaus.com/2015/12/mule-vs-spring-integration-vs-apache.html) - by Clays Ibsen (December 2015) - How to use Open Hub to compare these projects side by side.
