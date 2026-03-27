@@ -175,6 +175,12 @@
   word-break: normal;
 }
 
+/* breaks long property names */
+.doc table.tableblock tbody tr td:first-child {
+  width: 25%;
+  overflow-wrap: anywhere;
+}
+
 .doc a:hover {
   color: var(--link_hover-font-color);
 }
