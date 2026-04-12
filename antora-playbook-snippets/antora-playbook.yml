@@ -32,6 +32,7 @@ content:
       branches:
         - main
         - release-2.9.x
+        - release-2.10.x
       start_path: docs
 
     - url: https://github.com/apache/camel-kamelets.git
