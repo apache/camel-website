@@ -17,7 +17,7 @@
  * under the License.
  */
 def NODE = 'git-websites'
-def STOP_SQUASH_AT = '3381ad5637eb525502df319e84b7208e8f2a977b'
+def VALID_ASF_YAML = '3381ad5637eb525502df319e84b7208e8f2a977b'
 
 pipeline {
     agent {
@@ -93,16 +93,11 @@ pipeline {
                 dir('deploy/live') {
                     deleteDir()
                     sh 'git clone -b asf-site https://gitbox.apache.org/repos/asf/camel-website-pub.git .'
-                    sh "git -c core.editor='sed -i 2,/\$(git log --skip=9 -1 --pretty=format:%h)/s/^pick/squash/' rebase -q --interactive $STOP_SQUASH_AT" // squash all but initial and last 9 commits
                     sh 'git rm -q -r *'
                     sh "cp -R $WORKSPACE/camel-website/public/. ."
                     sh 'git add .'
-                    sh "git checkout $STOP_SQUASH_AT -- ./.asf.yaml" // force revert to commit containing the valid .asf.yml
+                    sh "git checkout $VALID_ASF_YAML -- ./.asf.yaml" // force revert to commit containing the valid .asf.yml
                     sh 'git commit -m "Website updated to $GIT_COMMIT"'
-                    sh 'git push --force origin asf-site'
-                    sh 'echo $GIT_COMMIT > rev.txt'
-                    sh 'git add rev.txt'
-                    sh 'git commit -m "Invalidate CDN cache for $GIT_COMMIT"'
                     sh 'git push origin asf-site'
                 }
             }
