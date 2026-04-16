@@ -2,7 +2,7 @@
 title: "Apache Camel 4.19 What's New"
 date: 2026-04-20
 draft: false
-authors: [ davsclaus, croway, squakez ]
+authors: [ davsclaus, croway, squakez, cunningt ]
 categories: [ "Releases" ]
 preview: "Details of what we have done in the Camel 4.19 release."
 ---
@@ -221,7 +221,7 @@ Upgraded many third-party dependencies to the latest releases at the time of rel
 
 We have some new components to this release.
 
-- `camel-azure-functions` -  Invoke and manage Azure Functions.
+- `camel-azure-functions` - Invoke and manage Azure Functions.
 - `camel-camunda` - Interact with Camunda 8 Orchestration Clusters using the Camunda Java Client.
 - `camel-event` - Subscribe to Camel internal events such as route started/stopped and exchange.
 - `camel-google-firestore` - Store and retrieve data from Google Cloud Firestore NoSQL database.
