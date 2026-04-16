@@ -65,7 +65,7 @@ Except for the new DSLs mentioned above, there are six new extensions:
 These three extensions are now supported in native mode:
 
 * [LRA](/camel-quarkus/next/reference/extensions/lra.html)
-* [Nitrite](/camel-quarkus/next/reference/extensions/nitrite.html)
+* Nitrite
 * [Splunk](/camel-quarkus/next/reference/extensions/splunk.html)
 
 ## Deprecated extensions
