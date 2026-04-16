@@ -2,7 +2,7 @@
 title: "Apache Camel 4.19 What's New"
 date: 2026-04-20
 draft: false
-authors: [ davsclaus, croway ]
+authors: [ davsclaus, croway, squakez ]
 categories: [ "Releases" ]
 preview: "Details of what we have done in the Camel 4.19 release."
 ---
@@ -86,7 +86,7 @@ In YAML DSL then we have added support for configuring transformer and validator
 
 ## Camel JBang
 
-The output from the Camel JBang commands is now better fit within the current terminal width.  
+The output from the Camel JBang commands is now better fit within the current terminal width.
 
 Added `--json` option to many of the Camel JBang status commands to dump output in JSon instead of tables.
 
@@ -103,7 +103,7 @@ Removed exporting with Gradle as the build tool. Only Maven works reliable and i
 
 Added `camel wrapper` command that installs Camel Launcher with wrapper scripts (`camelw`) which allows to run Camel JBang (without JBang)
 using the Camel Launcher instead with the binary installed locally, just like Maven Wrapper. This ensures consistency and locked to use
-the installed version. 
+the installed version.
 
 
 ## Camel Groovy
@@ -176,6 +176,22 @@ from("direct:chat")
 
 The OAuth SPI is also available on `camel-langchain4j-agent`, `camel-docling` and `camel-ibm-watsonx-ai`. It has been successfully tested with [Wanaku](https://www.wanaku.ai/), an open-source MCP router that federates multiple MCP servers behind a single secured endpoint.
 
+## Meter logging on shutdown
+
+In this release we're introducing the possibility to trace Micrometer metrics when the application is shutting down. When you have a controlled shutdown (for example, a cronjob executing) or a shutdown produced by any fatal error you are in a situation where your last metrics you may have not been able to scrape are lost. From now on you can enable the feature `camel.metrics.logMetricsOnShutdown=true` (and `camel.metrics.logMetricsOnShutdownFilters=camel.exchanges.*`, default `*`) and be able to store those values for any post mortem evaluation (for example when your Kubernetes Pod is stopping gracefully or crashed):
+
+```bash
+2026-03-02 10:50:13.021  INFO 269172 --- [           main] icrometer.json.AbstractMicrometerService : Micrometer component is stopping, here a list of metrics collected so far.
+...
+2026-03-02 10:50:13.050  INFO 269172 --- [           main] icrometer.json.AbstractMicrometerService : {"name":"camel.exchanges.succeeded","type":"counter","value":0.0,"tags":{"routeId":"","kind":"CamelRoute","camelContext":"camel-1","eventType":"context"}}
+2026-03-02 10:50:13.050  INFO 269172 --- [           main] icrometer.json.AbstractMicrometerService : {"name":"camel.exchanges.failed","type":"counter","value":0.0,"tags":{"routeId":"","kind":"CamelRoute","camelContext":"camel-1","eventType":"context"}}
+2026-03-02 10:50:13.050  INFO 269172 --- [           main] icrometer.json.AbstractMicrometerService : {"name":"camel.exchanges.total","type":"counter","value":0.0,"tags":{"routeId":"","kind":"CamelRoute","camelContext":"camel-1","eventType":"context"}}
+```
+
+## MDC Service wildcard filter
+
+You can use the wildcard `*` into your headers (`camel.mdc.customHeaders`) or properties (`camel.mdc.customProperties`) filter configuration, for example `CAMEL_HTTP_*` or `my_*_property` to select the values to include in your MDC logging trace. From now on you can spare some time and avoid to include all configuration one by one.
+
 ## Camel Spring Boot
 
 This is our first release that supports Spring Boot v4.
@@ -204,6 +220,15 @@ We have some new components to this release.
 - `camel-ibm-watsonx-data` - Interact with IBM watsonx.data lakehouse for catalog, schema, table
 - `camel-pgvector` - Perform operations on the PostgreSQL pgvector Vector Database.
 - `camel-spring-ai-image` - Spring AI Image Generation
+
+## Deprecations
+
+Starting from this version we're deprecating the following components:
+
+- `camel-tracing` based components (`camel-opentelemetry`, `camel-observation`): replaced by `camel-telemetry` components (`camel-opentelemetry2`, `camel-micrometer-observability`).
+- Old MDC technology (`camel.main.useMdcLogging = true`): replaced by `camel-mdc` service.
+
+You're invited to move to the new components already in this version.
 
 ## Upgrading
 
