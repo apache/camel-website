@@ -205,6 +205,10 @@ You can use the wildcard `*` into your headers (`camel.mdc.customHeaders`) or pr
 This is our first release that supports Spring Boot v4.
 Spring Boot v3 is no longer supported.
 
+### Camel Jackson 3 Components
+
+Four new components have been added which provide Jackson 3 support - they are named similarly to the previously existing camel-jackson components. Jackson 3 operates under a different package name (tools.jackson.* vs. com.fasterxml.jackson) and there are a number of API changes between Jackson 2 and Jackson 3.    The [upgrade guide](/manual/camel-4x-upgrade-guide-4_19.html) has a lot of details on how to migrate your Camel application to Jackson 3.
+
 ## JDK25 compatibility
 
 We expect the next Camel 4.20 release to support Java 25.
