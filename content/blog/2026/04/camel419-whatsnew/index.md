@@ -15,18 +15,26 @@ This release introduces a set of new features and noticeable improvements that w
 
 ## Simple Language
 
-Added more functions to the simple language to work with list/map and more functions for JSon:
+Added more functions to the simple language to work with list/map:
 
-- listAdd
-- listRemove
-- mapAdd
-- mapRemove
-- sort
-- toPrettyJson
-- toPrettyJsonBody
-- toJson
-- toJsonBody
-- simpleJsonpath (to extract data from JSon using Camel simple OGNL syntax)
+- `listAdd(fun)` - Adds the result of the function to the message body as a list object.
+- `listAdd(source,fun)` - Adds the result of the function to the source expression as a list object.
+- `listRemove(fun)` - Removes the result of the function (use int to remove by position index) from the message body as a list object.
+- `listRemove(source,fun)` - Removes the result of the function (use int to remove by position index) from the source expression as a list object.
+- `mapAdd(key,fun)` - Adds the result of the function to the message body as a map object.
+- `mapAdd(source,key,fun)` - Adds the result of the function to the source expression as a map object.
+- `mapRemove(key)` - Removes the key from the message body as a map object.
+- `mapRemove(source,key)` - Removes the key from the source expression as a map object.
+- `sort(exp,reverse)` - Sorts the message body or expression in natural order
+
+And also new functions for JSon:
+
+- `toPrettyJson(exp)` - Converts the expression to a JSon `String` representation. String values are returned as-is, null values return null, all other types are serialized to JSon in pretty mode.
+- `toPrettyJsonBody` - Converts the message body to a JSon `String` representation. String values are returned as-is, null values return null, all other types are serialized to JSon in pretty mode.
+- `toJson(exp)` - Converts the expression to a JSon `String` representation. String values are returned as-is, null values return null, all other types are serialized to JSon.
+- `toJsonBody` - Converts the message body to a JSon `String` representation. String values are returned as-is, null values return null, all other types are serialized to JSon.
+- `simpleJsonpath(exp)` - When working with JSon data, then this allows using built-in Simple JsonPath, for example, to extract data from the message body (in JSon format).
+- `simpleJsonpath(input,exp)` - Same as `simpleJsonpath(exp)` but to use the _input_ expression as the source of the JSon document.
 
 ## XML and YAML DSL
 
@@ -198,6 +206,8 @@ This is our first release that supports Spring Boot v4.
 Spring Boot v3 is no longer supported.
 
 ## JDK25 compatibility
+
+We expect the next Camel 4.20 release to support Java 25.
 
 ## Miscellaneous
 
