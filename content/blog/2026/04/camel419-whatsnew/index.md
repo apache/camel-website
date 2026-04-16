@@ -13,26 +13,106 @@ This release introduces a set of new features and noticeable improvements that w
 
 ## Camel Core
 
-## Camel Simple
+## Simple Language
 
-The simple language has been improved tremendously.
+Added more functions to the simple language to work with list/map and more functions for JSon:
 
-### More Functions
+- listAdd
+- listRemove
+- mapAdd
+- mapRemove
+- sort
+- toPrettyJson
+- toPrettyJsonBody
+- toJson
+- toJsonBody
+- simpleJsonpath (to extract data from JSon using Camel simple OGNL syntax)
 
-We have added 50 more functions to simple language so it now comes with a total of 114.
+## XML and YAML DSL
 
-There are now a lot more functions to work with the data such as String related functions,
-and also math functions so you can sum totals, find the maximum or minimum value and more.
+You can now configure SSL/TLS directly in the XML and YAML DSL.
 
-For example, if you work with JSon data, then there is a new `safeQuote` function,
-which will based on the data type quote the value if necessary.
+Here is a basic example in XML and YAML:
 
-We also made it possible for Camel components and custom components to provide simple functions.
-For example `camel-attachments` and `camel-base64` has a set of functions out of the box.
+```xml
+<camel xmlns="http://camel.apache.org/schema/xml-io">
+    <sslContextParameters id="mySSL" keyStore="server.p12" keystorePassword="changeit"
+                           trustStore="truststore.p12" trustStorePassword="changeit"/>
+
+    <route id="sslRoute">
+        <from uri="direct:ssl"/>
+        <to uri="mock:ssl"/>
+    </route>
+</camel>
+```
+
+```yaml
+- sslContextParameters:
+    id: mySSL
+    keyStore: server.p12
+    keystorePassword: changeit
+    trustStore: truststore.p12
+    trustStorePassword: changeit
+- from:
+    uri: "direct:ssl"
+    steps:
+      - to: "mock:ssl"
+```
+
+In YAML DSL then we have added support for configuring transformer and validator, something like:
+
+```yaml
+- transformers:
+    loadTransformer:
+      defaults: true
+    endpointTransformer:
+      ref: myXmlEndpoint
+      fromType: xml:XmlXOrder
+      toType: "java:org.example.XOrder"
+    customTransformer:
+      className: org.example.MyTransformer
+      fromType: other:OtherXOrder
+      toType: "java:org.example.XOrder"
+
+- validators:
+    endpointValidator:
+      type: xml:XmlXOrderResponse
+      uri: "myxml:endpoint"
+    customValidator:
+      type: other:OtherXOrder
+      className: org.example.OtherXOrderValidator
+```
+
 
 ## Camel JBang
 
+The output from the Camel JBang commands is now better fit within the current terminal width.  
+
+Added `--json` option to many of the Camel JBang status commands to dump output in JSon instead of tables.
+
+Added `camel transform dataweave` command to convert MuleSoft dataweave scripts into DataSonnet files which
+can run in Camel using the `camel-datasonnet` component.
+
+The `camel-tooling-maven` (Maven downloader) is now using the Apache Maven Mima library, which JBang also recently started using as well.
+
+Added more smaller examples in the documentation and `--help` for the JBang commands.
+
+Camel JBang can now easier run and export with JPA by automatic using Hibernates as the JPA provider (if none has been selected).
+
+Removed exporting with Gradle as the build tool. Only Maven works reliable and is generally supported and recommended to be used.
+
+Added `camel wrapper` command that installs Camel Launcher with wrapper scripts (`camelw`) which allows to run Camel JBang (without JBang)
+using the Camel Launcher instead with the binary installed locally, just like Maven Wrapper. This ensures consistency and locked to use
+the installed version. 
+
+
+## Camel Groovy
+
+The `camel-groovy` JAR now included `camel-groovy-json` and `camel-groovy-xml` all combined in a single dependency.
+
 ## Camel Kafka
+
+Upgraded to Kafka 4.2 client.
 
 ## Camel AI
 
@@ -41,6 +121,9 @@ For example `camel-attachments` and `camel-base64` has a set of functions out of
 ### MCP Server
 
 ## Camel Spring Boot
+
+This is our first release that supports Spring Boot v4.
+Spring Boot v3 is no longer supported.
 
 ## JDK25 compatibility
 
