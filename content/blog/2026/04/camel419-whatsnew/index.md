@@ -2,7 +2,7 @@
 title: "Apache Camel 4.19 What's New"
 date: 2026-04-20
 draft: false
-authors: [ davsclaus ]
+authors: [ davsclaus, croway ]
 categories: [ "Releases" ]
 preview: "Details of what we have done in the Camel 4.19 release."
 ---
@@ -118,7 +118,63 @@ Upgraded to Kafka 4.2 client.
 
 ### Camel OpenAI
 
-### MCP Server
+### MCP Client Support
+
+`camel-openai`, `camel-langchain4j-agent`, and `camel-spring-ai-chat` can now act as MCP clients, connecting to external MCP servers to discover and invoke tools during a conversation.
+
+When MCP servers are configured, the component runs an agentic loop automatically. MCP Tools are exposed to the model, the component executes them via MCP, feeds results back, and repeats until the model produces a final text answer.
+
+MCP servers are configured inline on the endpoint URI. For example, connecting to a filesystem MCP server:
+
+```java
+from("direct:chat")
+    .to("openai:chat-completion?model=gpt-4"
+        + "&mcpServer.fs.transportType=stdio"
+        + "&mcpServer.fs.command=npx"
+        + "&mcpServer.fs.args=-y,@modelcontextprotocol/server-filesystem,/tmp")
+    .log("${body}");
+```
+
+Multiple servers can be configured on the same endpoint, tools from all servers are merged and made available to the model. Stdio, SSE, and Streamable HTTP transports are supported:
+
+```java
+from("direct:chat")
+    .to("openai:chat-completion?model=gpt-4"
+        + "&mcpServer.fs.transportType=stdio"
+        + "&mcpServer.fs.command=npx"
+        + "&mcpServer.fs.args=-y,@modelcontextprotocol/server-filesystem,/tmp"
+        + "&mcpServer.weather.transportType=streamableHttp"
+        + "&mcpServer.weather.url=http://localhost:9090/mcp");
+```
+
+####  OAuth for AI Components
+
+A new OAuth SPI makes it easy to authenticate AI components against identity providers (e.g., Azure AD, Keycloak) using the OAuth 2.0 Client Credentials grant. Define a named profile in your Camel properties and reference it on the endpoint. The token is acquired and refreshed automatically, with caching built in. This requires `camel-oauth` on the classpath.
+
+```properties
+camel.oauth.azure.client-id=my-client
+camel.oauth.azure.client-secret=my-secret
+camel.oauth.azure.token-endpoint=https://login.microsoftonline.com/tenant/oauth2/v2.0/token
+camel.oauth.azure.scope=https://cognitiveservices.azure.com/.default
+```
+
+```java
+from("direct:chat")
+    .to("openai:chat-completion?model=gpt-4&oauthProfile=azure");
+```
+
+MCP servers can also use their own OAuth profile independently, so a single route can authenticate against both the LLM provider and a secured MCP server:
+
+```java
+from("direct:chat")
+    .to("openai:chat-completion?model=gpt-4"
+        + "&oauthProfile=azure"
+        + "&mcpServer.tools.transportType=streamableHttp"
+        + "&mcpServer.tools.url=https://mcp.internal/mcp"
+        + "&mcpServer.tools.oauthProfile=keycloak");
+```
+
+The OAuth SPI is also available on `camel-langchain4j-agent`, `camel-docling` and `camel-ibm-watsonx-ai`. It has been successfully tested with [Wanaku](https://www.wanaku.ai/), an open-source MCP router that federates multiple MCP servers behind a single secured endpoint.
 
 ## Camel Spring Boot
 
