@@ -127,6 +127,53 @@ the installed version.
 Added `camel-launcher-container` that allows to build a Docker image to make it easy to run Camel Launcher
 using Docker or Podman.
 
+### MCP Server
+
+The Camel MCP Server, [introduced as a Preview in 4.18](/blog/2026/02/camel-jbang-mcp/), received significant improvements in this release.
+
+#### New Tools
+
+Three new tools have been added, bringing the total to 19:
+
+- **`camel_error_diagnose`** -- Accepts Camel stack traces or error messages and returns structured diagnosis including the identified component/EIP, common causes, documentation links, and suggested fixes. Covers 17 known Camel exceptions such as `NoSuchEndpointException`, `ResolveEndpointFailedException`, and `FailedToCreateRouteException`.
+- **`camel_dependency_check`** -- Analyzes a project's `pom.xml` and optional route definitions to detect outdated Camel versions, missing Maven dependencies for components used in routes, and version conflicts between the Camel BOM and explicit dependency overrides. Returns actionable recommendations with corrected Maven dependency snippets.
+- **`camel_route_test_scaffold`** -- Generates JUnit 5 test skeletons from YAML or XML Camel route definitions, including `CamelTestSupport` / `@CamelSpringBootTest` setup, mock endpoints, `@RegisterExtension` stubs for 20+ test-infra services, `NotifyBuilder` for timer-based routes, and required Maven dependency listings.
+
+#### MCP Prompts and Resources
+
+We added support for **MCP Prompts**, enabling structured multi-step workflows within AI assistants, and **MCP Resources** which expose the exception catalog as a standalone queryable resource with version-aware documentation links.
+
+#### Architecture Improvements
+
+- **Shared CatalogService with caching** -- A shared `CatalogService` with caching and version parameters has been added to all catalog tools, improving performance and consistency.
+- **Tool annotations** -- All 27 tool methods across 12 tool classes now carry `@Tool.Annotations(readOnlyHint=true, destructiveHint=false, openWorldHint=false)`, explicitly declaring to MCP clients that all tools are read-only. This enables auto-approval and better tool selection decisions in AI assistants.
+- **Typed record return types** -- Refactored all tool classes to return typed Java records instead of manually built JSON strings, reducing ~130 lines of boilerplate code.
+- **Configurable Maven repositories** -- Additional Maven repositories can now be configured for catalog resolution.
+
+#### Bug Fixes
+
+- Fixed `ClassNotFoundException` for `AbstractCamelCatalog` by adding an explicit `camel-catalog` dependency.
+- Fixed `DefaultCamelCatalog.getCatalogVersion()` that was ignoring the `VersionManager` and returning the compiled-in version.
+- Fixed `CatalogLoader.loadCatalog()` failure with `NoClassDefFoundError` for versioned catalogs.
+- Added graceful handling with a clear error message when the Spring Boot catalog provider requires JDK 21+ (since camel-spring-boot 4.19.0 moved to Spring Boot 4).
+- Fixed HTTP server port binding when `--port` is specified.
+
+To use the latest version, update your `.mcp.json` configuration:
+
+```json
+{
+  "mcpServers": {
+    "camel": {
+      "command": "jbang",
+      "args": [
+        "-Dquarkus.log.level=WARN",
+        "org.apache.camel:camel-jbang-mcp:4.19.0:runner"
+      ]
+    }
+  }
+}
+```
+
 ## Observability
 
 ### Meter logging on shutdown
