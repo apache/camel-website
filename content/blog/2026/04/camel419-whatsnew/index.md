@@ -105,6 +105,62 @@ In YAML DSL then we have added support for configuring transformer and validator
 ```
 
 
+## Post-Quantum Cryptography (PQC)
+
+Camel 4.19 brings the most significant set of PQC enhancements since the `camel-pqc` component was introduced in 4.12, spanning hybrid cryptography, key lifecycle management, and platform-wide quantum-safe TLS readiness.
+
+### Hybrid Cryptography
+
+The headline feature is **hybrid cryptography** -- combining a classical algorithm with a post-quantum algorithm for defense-in-depth during the quantum transition period.
+
+New hybrid operations:
+
+- `hybridSign` / `hybridVerify` -- combines a classical signature (ECDSA, Ed25519, RSA) with a PQC signature (ML-DSA, SLH-DSA, etc.).
+- `hybridGenerateSecretKeyEncapsulation` / `hybridExtractSecretKeyEncapsulation` / `hybridExtractSecretKeyFromEncapsulation` -- combines a classical key agreement (ECDH, X25519, X448) with a PQC KEM (ML-KEM, etc.).
+
+Default material classes make getting started straightforward, for example `PQCDefaultECDSAMLDSAMaterial` (ECDSA + ML-DSA) or `PQCDefaultX25519MLKEMMaterial` (X25519 + ML-KEM). The KDF used to combine secrets is configurable (HKDF-SHA256/384/512), and algorithm metadata is embedded in the wire format so the receiver can determine which combination was used.
+
+### Key Lifecycle Management
+
+Key lifecycle operations now work end-to-end through the PQC producer: `generateKeyPair`, `rotateKey`, `exportKey`, `importKey`, `getKeyMetadata`, `listKeys`, `expireKey`, `revokeKey`, and more. Three backends are available:
+
+- `FileBasedKeyLifecycleManager` (local file system, now using PKCS#8/X.509 serialization instead of Java object serialization)
+- `HashicorpVaultKeyLifecycleManager`
+- `AwsSecretsManagerKeyLifecycleManager`
+
+A new `strictKeyLifecycle` option (default: `true`) enforces key status -- REVOKED keys are rejected for all operations, EXPIRED keys are rejected for signing/encapsulation but allowed for verification, and DEPRECATED keys produce a warning.
+
+### Stateful Key Usage Tracking
+
+For hash-based signature schemes (XMSS, XMSSMT, LMS/HSS) where key reuse is dangerous, a new tracking system warns when remaining signatures drop below a configurable threshold (`statefulKeyWarningThreshold`, default 10%) and throws an exception when signatures are exhausted. A `PQCStatefulKeyHealthCheck` Camel Health Check reports DOWN when capacity is low.
+
+### PQC TLS Auto-Configuration
+
+On **JDK 25+**, Camel now automatically configures TLS named groups with PQC preference:
+
+```
+X25519MLKEM768, x25519, secp256r1, secp384r1, [remaining JVM defaults]
+```
+
+This activates only when the user has not explicitly set `namedGroups` or `namedGroupsFilter`, and is fully backward-compatible with peers that do not support PQC.
+
+New `namedGroups`, `namedGroupsFilter`, `signatureSchemes`, and `signatureSchemesFilter` options have been added to `SSLContextParameters`, and are also configurable via properties:
+
+```properties
+camel.ssl.namedGroups = X25519MLKEM768,x25519,secp256r1,secp384r1
+camel.ssl.signatureSchemes = ML-DSA,ECDSA,RSA
+```
+
+PQC TLS readiness has been applied across the platform, including camel-netty, camel-netty-http (changed from "TLS" to "TLSv1.3" with PQC named groups on JDK 25+), and camel-mongodb (fixed hardcoded TLSv1.2 to allow TLS 1.3 with PQC and added `SSLContextParameters` support).
+
+### Input Validation and Documentation
+
+Startup validation now checks symmetric key lengths for KEM operations across 15 symmetric algorithms, warns about non-recommended hybrid combinations (e.g., RSA in hybrid signatures), and logs NIST parameter set guidance for ML-KEM, ML-DSA, and SLH-DSA.
+
+The PQC dataformat has been registered in the DSL model, enabling `marshal().pqc()` in Java DSL and full YAML DSL schema support.
+
+Comprehensive documentation has been added covering PQC usage with the Crypto (Digital Signature) EIP, PQC TLS configuration, auto-configuration, and migration guidance.
+
 ## Camel JBang
 
 The output from the Camel JBang commands is now better fit within the current terminal width.
