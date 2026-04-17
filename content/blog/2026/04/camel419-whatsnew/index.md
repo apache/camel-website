@@ -11,9 +11,18 @@ Apache Camel 4.19 has just been [released](/blog/2026/04/RELEASE-4.19.0/).
 
 This release introduces a set of new features and noticeable improvements that we will cover in this blog post.
 
+## Camel Spring Boot
+
+This is our first release that supports Spring Boot v4.
+Spring Boot v3 is no longer supported.
+
+### Camel Jackson 3 Components
+
+Four new components have been added which provide Jackson 3 support - they are named similarly to the previously existing camel-jackson components. Jackson 3 operates under a different package name (tools.jackson.* vs. com.fasterxml.jackson) and there are a number of API changes between Jackson 2 and Jackson 3.    The [upgrade guide](/manual/camel-4x-upgrade-guide-4_19.html) has a lot of details on how to migrate your Camel application to Jackson 3.
+
 ## Camel Core
 
-## Simple Language
+### Simple Language
 
 Added more functions to the simple language to work with list/map:
 
@@ -36,7 +45,7 @@ And also new functions for JSon:
 - `simpleJsonpath(exp)` - When working with JSon data, then this allows using built-in Simple JsonPath, for example, to extract data from the message body (in JSon format).
 - `simpleJsonpath(input,exp)` - Same as `simpleJsonpath(exp)` but to use the _input_ expression as the source of the JSon document.
 
-## XML and YAML DSL
+### XML and YAML DSL
 
 You can now configure SSL/TLS directly in the XML and YAML DSL.
 
@@ -113,6 +122,24 @@ Added `camel wrapper` command that installs Camel Launcher with wrapper scripts 
 using the Camel Launcher instead with the binary installed locally, just like Maven Wrapper. This ensures consistency and locked to use
 the installed version.
 
+## Observability
+
+### Meter logging on shutdown
+
+In this release we're introducing the possibility to trace Micrometer metrics when the application is shutting down. When you have a controlled shutdown (for example, a cronjob executing) or a shutdown produced by any fatal error you are in a situation where your last metrics you may have not been able to scrape are lost. From now on you can enable the feature `camel.metrics.logMetricsOnShutdown=true` (and `camel.metrics.logMetricsOnShutdownFilters=camel.exchanges.*`, default `*`) and be able to store those values for any post mortem evaluation (for example when your Kubernetes Pod is stopping gracefully or crashed):
+
+```bash
+2026-03-02 10:50:13.021  INFO 269172 --- [           main] icrometer.json.AbstractMicrometerService : Micrometer component is stopping, here a list of metrics collected so far.
+...
+2026-03-02 10:50:13.050  INFO 269172 --- [           main] icrometer.json.AbstractMicrometerService : {"name":"camel.exchanges.succeeded","type":"counter","value":0.0,"tags":{"routeId":"","kind":"CamelRoute","camelContext":"camel-1","eventType":"context"}}
+2026-03-02 10:50:13.050  INFO 269172 --- [           main] icrometer.json.AbstractMicrometerService : {"name":"camel.exchanges.failed","type":"counter","value":0.0,"tags":{"routeId":"","kind":"CamelRoute","camelContext":"camel-1","eventType":"context"}}
+2026-03-02 10:50:13.050  INFO 269172 --- [           main] icrometer.json.AbstractMicrometerService : {"name":"camel.exchanges.total","type":"counter","value":0.0,"tags":{"routeId":"","kind":"CamelRoute","camelContext":"camel-1","eventType":"context"}}
+```
+
+### MDC Service wildcard filter
+
+You can use the wildcard `*` into your headers (`camel.mdc.customHeaders`) or properties (`camel.mdc.customProperties`) filter configuration, for example `CAMEL_HTTP_*` or `my_*_property` to select the values to include in your MDC logging trace. From now on you can spare some time and avoid to include all configuration one by one.
+
 
 ## Camel Groovy
 
@@ -123,8 +150,6 @@ The `camel-groovy` JAR now included `camel-groovy-json` and `camel-groovy-xml` a
 Upgraded to Kafka 4.2 client.
 
 ## Camel AI
-
-### Camel OpenAI
 
 ### MCP Client Support
 
@@ -184,30 +209,44 @@ from("direct:chat")
 
 The OAuth SPI is also available on `camel-langchain4j-agent`, `camel-docling` and `camel-ibm-watsonx-ai`. It has been successfully tested with [Wanaku](https://www.wanaku.ai/), an open-source MCP router that federates multiple MCP servers behind a single secured endpoint.
 
-## Meter logging on shutdown
+## Gmail DataType Transformers
 
-In this release we're introducing the possibility to trace Micrometer metrics when the application is shutting down. When you have a controlled shutdown (for example, a cronjob executing) or a shutdown produced by any fatal error you are in a situation where your last metrics you may have not been able to scrape are lost. From now on you can enable the feature `camel.metrics.logMetricsOnShutdown=true` (and `camel.metrics.logMetricsOnShutdownFilters=camel.exchanges.*`, default `*`) and be able to store those values for any post mortem evaluation (for example when your Kubernetes Pod is stopping gracefully or crashed):
+Two new DataType Transformers have been added for the Gmail component, removing the need to manually construct Gmail API request objects.
 
-```bash
-2026-03-02 10:50:13.021  INFO 269172 --- [           main] icrometer.json.AbstractMicrometerService : Micrometer component is stopping, here a list of metrics collected so far.
-...
-2026-03-02 10:50:13.050  INFO 269172 --- [           main] icrometer.json.AbstractMicrometerService : {"name":"camel.exchanges.succeeded","type":"counter","value":0.0,"tags":{"routeId":"","kind":"CamelRoute","camelContext":"camel-1","eventType":"context"}}
-2026-03-02 10:50:13.050  INFO 269172 --- [           main] icrometer.json.AbstractMicrometerService : {"name":"camel.exchanges.failed","type":"counter","value":0.0,"tags":{"routeId":"","kind":"CamelRoute","camelContext":"camel-1","eventType":"context"}}
-2026-03-02 10:50:13.050  INFO 269172 --- [           main] icrometer.json.AbstractMicrometerService : {"name":"camel.exchanges.total","type":"counter","value":0.0,"tags":{"routeId":"","kind":"CamelRoute","camelContext":"camel-1","eventType":"context"}}
+The `google-mail:update-message-labels` transformer reads `addLabels` and `removeLabels` from exchange variables and builds the `ModifyMessageRequest` automatically:
+
+```yaml
+        - setVariable:
+            name: addLabels
+            simple: ${variable.triageCategory}
+        - setVariable:
+            name: removeLabels
+            constant: INBOX
+        - transformDataType:
+            toType: google-mail:update-message-labels
+        - to:
+            uri: google-mail:messages/modify
+            parameters:
+              inBody: modifyMessageRequest
+              applicationName: camel-email-triage
+              userId: me
 ```
 
-## MDC Service wildcard filter
+The `google-mail:draft` transformer constructs a proper `Draft` object with email headers (`In-Reply-To`, `References`, `To`, `Subject`) from the exchange:
 
-You can use the wildcard `*` into your headers (`camel.mdc.customHeaders`) or properties (`camel.mdc.customProperties`) filter configuration, for example `CAMEL_HTTP_*` or `my_*_property` to select the values to include in your MDC logging trace. From now on you can spare some time and avoid to include all configuration one by one.
+```yaml
+        - transformDataType:
+            toType: google-mail:draft
+        - to:
+            uri: google-mail:drafts/create
+            parameters:
+              inBody: content
+              applicationName: camel-email-triage
+              userId: me
+```
 
-## Camel Spring Boot
+A full example using these transformers to build an AI email triage agent is available in [this blog post](/blog/2026/04/email-triage-agent/).
 
-This is our first release that supports Spring Boot v4.
-Spring Boot v3 is no longer supported.
-
-### Camel Jackson 3 Components
-
-Four new components have been added which provide Jackson 3 support - they are named similarly to the previously existing camel-jackson components. Jackson 3 operates under a different package name (tools.jackson.* vs. com.fasterxml.jackson) and there are a number of API changes between Jackson 2 and Jackson 3.    The [upgrade guide](/manual/camel-4x-upgrade-guide-4_19.html) has a lot of details on how to migrate your Camel application to Jackson 3.
 
 ## JDK25 compatibility
 
