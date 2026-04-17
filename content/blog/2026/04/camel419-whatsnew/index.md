@@ -2,7 +2,7 @@
 title: "Apache Camel 4.19 What's New"
 date: 2026-04-20
 draft: false
-authors: [ davsclaus, croway, squakez, cunningt, zbendhiba ]
+authors: [ davsclaus, croway, squakez, cunningt, zbendhiba, oscerd ]
 categories: [ "Releases" ]
 preview: "Details of what we have done in the Camel 4.19 release."
 ---
@@ -18,7 +18,11 @@ Spring Boot v3 is no longer supported.
 
 ### Camel Jackson 3 Components
 
-Four new components have been added which provide Jackson 3 support - they are named similarly to the previously existing camel-jackson components. Jackson 3 operates under a different package name (tools.jackson.* vs. com.fasterxml.jackson) and there are a number of API changes between Jackson 2 and Jackson 3.    The [upgrade guide](/manual/camel-4x-upgrade-guide-4_19.html) has a lot of details on how to migrate your Camel application to Jackson 3.
+Four new components have been added which provide Jackson 3 support - they are named similarly to the previously existing camel-jackson components. 
+Jackson 3 operates under a different package name (`tools.jackson.*` vs `com.fasterxml.jackson`) and there are a number of
+API changes between Jackson 2 and Jackson 3. 
+
+The [upgrade guide](/manual/camel-4x-upgrade-guide-4_19.html) has a lot of details on how to migrate your Camel application to Jackson 3.
 
 ## Camel Core
 
@@ -192,14 +196,14 @@ In this release we're introducing the possibility to trace Micrometer metrics wh
 
 You can use the wildcard `*` into your headers (`camel.mdc.customHeaders`) or properties (`camel.mdc.customProperties`) filter configuration, for example `CAMEL_HTTP_*` or `my_*_property` to select the values to include in your MDC logging trace. From now on you can spare some time and avoid to include all configuration one by one.
 
+### Deprecated Observability components 
 
-## Camel Groovy
+Starting from this version we're deprecating the following components:
 
-The `camel-groovy` JAR now included `camel-groovy-json` and `camel-groovy-xml` all combined in a single dependency.
+- `camel-tracing` based components (`camel-opentelemetry`, `camel-observation`): replaced by `camel-telemetry` components (`camel-opentelemetry2`, `camel-micrometer-observability`).
+- Old MDC technology (`camel.main.useMdcLogging = true`): replaced by `camel-mdc` service.
 
-## Camel Kafka
-
-Upgraded to Kafka 4.2 client.
+You're invited to move to the new components already in this version.
 
 ## Camel AI
 
@@ -301,10 +305,13 @@ The `google-mail:draft` transformer constructs a proper `Draft` object with emai
 
 A full example using these transformers to build an AI email triage agent is available in [this blog post](/blog/2026/04/email-triage-agent/).
 
+## Camel Groovy
 
-## JDK25 compatibility
+The `camel-groovy` JAR now included `camel-groovy-json` and `camel-groovy-xml` all combined in a single dependency.
 
-We expect the next Camel 4.20 release to support Java 25.
+## Camel Kafka
+
+Upgraded to Kafka 4.2 client.
 
 ## Miscellaneous
 
@@ -334,16 +341,9 @@ We have some new components to this release.
 - `camel-pgvector` - Perform operations on the PostgreSQL pgvector Vector Database.
 - `camel-spring-ai-image` - Spring AI Image Generation
 
-## Deprecations
+## JDK25 compatibility
 
-Starting from this version we're deprecating the following components:
-
-- `camel-tracing` based components (`camel-opentelemetry`, `camel-observation`): replaced by `camel-telemetry` components (`camel-opentelemetry2`, `camel-micrometer-observability`).
-- Old MDC technology (`camel.main.useMdcLogging = true`): replaced by `camel-mdc` service.
-- `camel-csimple` is deprecated, use `camel-simple`.
-- `camel-json-patch` is deprecated. The project is not maintained.
-
-You're invited to move to the new components already in this version.
+We expect the next Camel 4.20 release to support Java 25.
 
 ## Upgrading
 
