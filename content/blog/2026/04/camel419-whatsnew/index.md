@@ -2,7 +2,7 @@
 title: "Apache Camel 4.19 What's New"
 date: 2026-04-20
 draft: false
-authors: [ davsclaus, croway, squakez, cunningt ]
+authors: [ davsclaus, croway, squakez, cunningt, zbendhiba ]
 categories: [ "Releases" ]
 preview: "Details of what we have done in the Camel 4.19 release."
 ---
@@ -36,7 +36,7 @@ Added more functions to the simple language to work with list/map:
 - `mapRemove(source,key)` - Removes the key from the source expression as a map object.
 - `sort(exp,reverse)` - Sorts the message body or expression in natural order
 
-And also new functions for JSon:
+And also new functions for JSON:
 
 - `toPrettyJson(exp)` - Converts the expression to a JSon `String` representation. String values are returned as-is, null values return null, all other types are serialized to JSon in pretty mode.
 - `toPrettyJsonBody` - Converts the message body to a JSon `String` representation. String values are returned as-is, null values return null, all other types are serialized to JSon in pretty mode.
@@ -118,9 +118,14 @@ Camel JBang can now easier run and export with JPA by automatic using Hibernates
 
 Removed exporting with Gradle as the build tool. Only Maven works reliable and is generally supported and recommended to be used.
 
+The `camel transform route` command to YAML has been improved to support all EIPs, error handlers, interceptors, etc.
+
 Added `camel wrapper` command that installs Camel Launcher with wrapper scripts (`camelw`) which allows to run Camel JBang (without JBang)
 using the Camel Launcher instead with the binary installed locally, just like Maven Wrapper. This ensures consistency and locked to use
 the installed version.
+
+Added `camel-launcher-container` that allows to build a Docker image to make it easy to run Camel Launcher
+using Docker or Podman.
 
 ## Observability
 
@@ -150,6 +155,8 @@ The `camel-groovy` JAR now included `camel-groovy-json` and `camel-groovy-xml` a
 Upgraded to Kafka 4.2 client.
 
 ## Camel AI
+
+The `camel-openai` component can now configure TLS/SSL using Camels Security Configuration.
 
 ### MCP Client Support
 
@@ -256,6 +263,12 @@ We expect the next Camel 4.20 release to support Java 25.
 
 Upgraded many third-party dependencies to the latest releases at the time of release.
 
+The `camel-ftp` component for sftp now supports Open SSH.
+
+The `camel-as2` component has many bug fixes and improvements to make it work better work other vendor systems.
+
+The `camel-graphql` component is not based on `camel-http` to allow more flexibility and configuration options. 
+
 ## New Components
 
 We have some new components to this release.
@@ -280,6 +293,8 @@ Starting from this version we're deprecating the following components:
 
 - `camel-tracing` based components (`camel-opentelemetry`, `camel-observation`): replaced by `camel-telemetry` components (`camel-opentelemetry2`, `camel-micrometer-observability`).
 - Old MDC technology (`camel.main.useMdcLogging = true`): replaced by `camel-mdc` service.
+- `camel-csimple` is deprecated, use `camel-simple`.
+- `camel-json-patch` is deprecated. The project is not maintained.
 
 You're invited to move to the new components already in this version.
 
