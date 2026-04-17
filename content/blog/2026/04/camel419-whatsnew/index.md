@@ -1,6 +1,6 @@
 ---
 title: "Apache Camel 4.19 What's New"
-date: 2026-04-20
+date: 2026-04-17
 draft: false
 authors: [ davsclaus, croway, squakez, cunningt, zbendhiba, oscerd ]
 categories: [ "Releases" ]
