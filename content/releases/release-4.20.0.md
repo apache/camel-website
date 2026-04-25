@@ -9,7 +9,7 @@ apiBreaking: ""
 knownIssues: ""
 jiraVersionId: 12356796
 category: camel
-jdk: [21,25]
+jdk: [17,21,25]
 ---
 
 This release is the new Camel 4.20.0 release.
