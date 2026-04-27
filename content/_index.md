@@ -1,7 +1,7 @@
 ---
 title: Home
 description: Camel is an open source integration framework that empowers you to quickly and easily integrate various systems consuming or producing data.
-keywords: 
+keywords:
 - apache
 - camel
 - integration
@@ -250,7 +250,7 @@ Camel JBang is CLI tooling to easily get started and for building low-code integ
 # Apache &amp; OpenSource
 
 {{< div "split" >}}
-{{< icon "asf-estd-1999-logo" "Apache Software foundation, Est. 1999" >}}
+{{< icon "asf_logo_wide" "The ASF, Est. 1999" >}}
 {{< /div >}}
 
 {{< div "split" >}}
