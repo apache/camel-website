@@ -36,7 +36,7 @@ If you're using the `pod` build strategy, from now on your builds will have a de
 
 ## Integration Platform production ready conditions
 
-In the previous release (2.5.0) we made it more explicit the need for a user to configure an IntegrationPlatform. In this release we're adding a few more warning condition to let you know if the configuration is following the best practices for a production ready environments. For example, we'll be warning when you're using a non secure HTTP endpoint registry or you're not configuring any settings for Maven (ie, a [Maven proxy](/camel-k/next/installation/advanced/maven.html#maven-proxy)).
+In the previous release (2.5.0) we made it more explicit the need for a user to configure an IntegrationPlatform. In this release we're adding a few more warning condition to let you know if the configuration is following the best practices for a production ready environments. For example, we'll be warning when you're using a non secure HTTP endpoint registry or you're not configuring any settings for Maven (ie, a Maven proxy).
 
 ## Support Camel core Error Handler
 

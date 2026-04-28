@@ -213,7 +213,7 @@ In general we have worked to update the documentation with the various changes w
 Beside that we have also worked on a series of documentation or blog post with the goal to help you setting up an **"enterprise ready" configuration**:
 
 * [Camel K operator fine tuning](/camel-k/next/installation/advanced/advanced.html)
-* [Camel K Maven best practices](/camel-k/next/installation/advanced/maven.html)
+* Camel K Maven best practices
 * [Camel K GitOps unopinionated approach](/blog/2023/07/camel-k-gitops/)
 * [Camel K tracing](/blog/2023/03/camel-k-telemetry/)
 

@@ -97,9 +97,9 @@ We have already provided some note about changes in traits. Beside that, it is i
 We have worked a lot trying to make our documentation more structured and simpler to read. We have also provided many entries. Among them we'd like to mention the most important ones which may be required to have a proper **production fine tuning**:
 
 * [Network Architecture](/camel-k/next/installation/advanced/network.html)
-* [Configuring Maven](/camel-k/next/installation/advanced/maven.html)
-* [Configuring Registry](/camel-k/next/installation/registry/registry.html)
-* [Camel K build tuning](/camel-k/next/installation/advanced/build-config.html)
+* Configuring Maven
+* Configuring Registry
+* Camel K build tuning
 * [Camel K Integration troubleshooting](/camel-k/next/troubleshooting/troubleshooting.html)
 
 # Thanks
