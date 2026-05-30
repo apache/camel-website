@@ -7,28 +7,28 @@ This page is intended as a place to collect user stories and feedback on Apache 
 {{< table >}}
 | Company, Product, or Project  | Description |
 |-------------------------------|------------|
+|[SAP Integration Suite](https://www.sap.com/products/technology-platform/integration-suite.html)|The Cloud Integration capability of SAP's iPaaS product uses Apache Camel.|
+|[Huawei Cloud ROMA](https://www.huaweicloud.com/intl/en-us/solution/roma/)|Apache Camel powers the runtime engine for [Huawei Cloud ROMA](https://www.huaweicloud.com/en-us/product/roma.html) which is a commercial iPaaS offering by Huawei Cloud. ROMA integrates data, services, messages and devices under one unified platform.|
+|[Netflix](https://www.youtube.com/watch?v=k_ckJ7QgLW0#t=480)|Netflix uses Apache Camel as part of the cloud payment system.|
 |[Onsemi](https://www.onsemi.com/)|Fortune 500 semiconductor company uses Apache Camel as their middleware integration platform handling thousands of daily integrations. Business users independently create integrations using Karavan and custom Kamelets on Spring Boot.|
-|[CAPI Gateway](https://github.com/surisoft-io/capi)|Light API Gateway and load balancer powered by Apache Camel dynamic routes. Used at the European Commission. Features MCP support, OpenTelemetry tracing, Keycloak security, and Open Policy Agent authorization.|
 |[314e Corporation](https://www.314e.com/)|At 314e Corporation, Apache Camel is the powerhouse behind our SaaS-based healthcare integration engine 'ZSegment'. It quietly runs 10K–20K messages per second, connecting EHRs, labs, payers and more in real-time.|
+|[CAPI Gateway](https://github.com/surisoft-io/capi)|Light API Gateway and load balancer powered by Apache Camel dynamic routes. Used at the European Commission. Features MCP support, OpenTelemetry tracing, Keycloak security, and Open Policy Agent authorization.|
+|[Red Hat Build of Apache Camel](https://www.redhat.com/en/technologies/jboss-middleware/fuse)|Red Hat provides a commercial distribution of Apache Camel with enterprise support.|
+|[Guidewire Integration Framework](https://www.guidewire.com/blog/technology/cloud-integration-framework-the-right-tools-for-the-job/)|Integration Gateway is an open framework for developing integration apps that bridge Guidewire APIs with external apps and services. It is based on Apache Camel.|
+|[PortX](https://portx.io/)|PortX, the Integration Platform as a Service (iPaaS) for financial institutions, is built on the open source Apache Camel framework.|
+|[IPF Open eHealth Integration Platform](https://oehf.github.io/ipf-docs/)|The Open eHealth Integration Platform (IPF) is an extension of the Apache Camel routing and mediation engine with comprehensive support for message processing and connecting systems in the eHealth domain.|
+|[Mifos](https://mifos.org/)|An [open core-banking platform](https://github.com/openMF), uses Camel.|
+|[Arla Foods](https://www.arla.com)|Uses Camel to integrate business backend with web application for farmers to access information about quality of their delivered milk. Application used in numerous european countries.|
 |[Apache ActiveMQ](http://activemq.apache.org)|Uses Camel to add [Enterprise Integration Patterns](../../components/next/eips/enterprise-integration-patterns.html) support into the [ActiveMQ broker](http://activemq.apache.org/enterprise-integration-patterns.html). Can be used to bridge ActiveMQ with any of the camel [Components](../../manual/component.html).|
 |[Apache Ignite](https://ignite.apache.org/)|Apache Ignite In-Memory Data Fabric is a high-performance, integrated and distributed in-memory platform for computing and transacting on large-scale data sets in real-time. It uses Camel for its universal streamer.|
+|[SAP HANA](https://www.linkedin.com/pulse/hana-smart-data-integration-simplifies-connecting-facebook-shankar/)|The platform from SAP uses Apache Camel.|
+|[OpenNMS](https://www.opennms.com/)|Enterprise-Grade Open-Source Network Management Platform [uses](https://github.com/OpenNMS/opennms) Apache Camel.|
 |[APIPass](https://apipass.com.br/)|Provides an Integration Platform as a Service (iPaaS) built on Apache Camel.|
-|[Arla Foods](https://www.arla.com)|Uses Camel to integrate business backend with web application for farmers to access information about quality of their delivered milk. Application used in numerous european countries.|
+|[Multi-Channel Framework (MCF)](https://www.felpfe.com/multi-channel-framework-mcf/)|MCF utilizes Camel to provide developers with an empowering framework, enabling them to create, test, and deploy integration scenarios intuitively. Its configuration-driven approach facilitates seamless integration using Camel.|
+|[Kogito](https://kogito.kie.org)|Kogito serverless workflow can integrate with Camel.|
+|[OpenHub](https://github.com/OpenWiseSolutions/openhub-framework)|OpenHub is an integration platform that is built on top of Apache Camel.|
 |[Assimbly Gateway](https://github.com/assimbly/gateway)|A message gateway based on Apache Camel.|
 |[Camel Extra project](https://camel-extra.github.io/)|Contains a number of extension components which due to GPL/LGPL licensing cannot be hosted at Apache.|
-|[Guidewire Integration Framework](https://www.guidewire.com/blog/technology/cloud-integration-framework-the-right-tools-for-the-job/)|Integration Gateway is an open framework for developing integration apps that bridge Guidewire APIs with external apps and services. It is based on Apache Camel.|
-|[Huawei Cloud ROMA](https://www.huaweicloud.com/intl/en-us/solution/roma/)|Apache Camel powers the runtime engine for [Huawei Cloud ROMA](https://www.huaweicloud.com/en-us/product/roma.html) which is a commercial iPaaS offering by Huawei Cloud. ROMA integrates data, services, messages and devices under one unified platform.|
-|[IPF Open eHealth Integration Platform](https://oehf.github.io/ipf-docs/)|The Open eHealth Integration Platform (IPF) is an extension of the Apache Camel routing and mediation engine with comprehensive support for message processing and connecting systems in the eHealth domain.|
-|[Kogito](https://kogito.kie.org)|Kogito serverless workflow can integrate with Camel.|
-|[Mifos](https://mifos.org/)|An [open core-banking platform](https://github.com/openMF), uses Camel.|
-|[Multi-Channel Framework (MCF)](https://www.felpfe.com/multi-channel-framework-mcf/)|MCF utilizes Camel to provide developers with an empowering framework, enabling them to create, test, and deploy integration scenarios intuitively. Its configuration-driven approach facilitates seamless integration using Camel.|
-|[Netflix](https://www.youtube.com/watch?v=k_ckJ7QgLW0#t=480)|Netflix uses Apache Camel as part of the cloud payment system.|
-|[OpenHub](https://github.com/OpenWiseSolutions/openhub-framework)|OpenHub is an integration platform that is built on top of Apache Camel.|
-|[OpenNMS](https://www.opennms.com/)|Enterprise-Grade Open-Source Network Management Platform [uses](https://github.com/OpenNMS/opennms) Apache Camel.|
-|[PortX](https://portx.io/)|PortX, the Integration Platform as a Service (iPaaS) for financial institutions, is built on the open source Apache Camel framework.|
-|[Red Hat Build of Apache Camel](https://www.redhat.com/en/technologies/jboss-middleware/fuse)|Red Hat provides a commercial distribution of Apache Camel with enterprise support.|
-|[SAP HANA](https://www.linkedin.com/pulse/hana-smart-data-integration-simplifies-connecting-facebook-shankar/)|The platform from SAP uses Apache Camel.|
-|[SAP Integration Suite](https://www.sap.com/products/technology-platform/integration-suite.html)|The Cloud Integration capability of SAP's iPaaS product uses Apache Camel.|
 {{< /table >}}
 
 ## Developer Tooling
