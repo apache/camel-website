@@ -22,6 +22,7 @@ title: "Articles"
 
 ### Recent Articles (2020+)
 
+*   [Spring Boot vs Quarkus: Which Java Runtime Wins the AI MCP Tools Performance Battle?](https://medium.com/@egekaraosmanoglu/spring-boot-vs-quarkus-which-java-runtime-wins-the-ai-mcp-tools-performance-battle-4da9d6a248d5) by Ege Karaosmanoglu (May 2026) rigorous benchmark of 12 MCP microservice configurations — Quarkus JVM + Camel still beats every Spring Boot baseline.
 *   [Salesforce Bulk API 2.0 Integration with Apache Camel](https://sedatgoc.com/blog/salesforce-bulkapi2-integration-with-apache-camel/) by Sedac Got (March 2026) how to build a production-ready Salesforce Bulk API 2.0 integration using Apache Camel.
 *   [Using Apache Camel with CouchDB and ingesting docs to Elasticsearch](https://acmattos.com.br/2026/02/my-devops-adventure-building-with-apache-camel-couchdb-and-elasticsearch-part-4/) February 2026 a deeper technical blog about the lesson learned how to do ETL and improve performance with parallel processing and tune thread pools.
 *   [Using gRPC with Apache Camel](https://medium.com/@vimukthimayadunne/using-grpc-with-apache-camel-e44efc16bccb) by Vimukthi Mayadunne from October 2024 a step-by-step guide on how to integrate remote gRPC service with Apache Camel.
