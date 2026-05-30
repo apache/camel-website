@@ -7,6 +7,8 @@ This page is intended as a place to collect user stories and feedback on Apache 
 {{< table >}}
 | Company, Product, or Project  | Description |
 |-------------------------------|------------|
+|[Onsemi](https://www.onsemi.com/)|Fortune 500 semiconductor company uses Apache Camel as their middleware integration platform handling thousands of daily integrations. Business users independently create integrations using Karavan and custom Kamelets on Spring Boot.|
+|[CAPI Gateway](https://github.com/surisoft-io/capi)|Light API Gateway and load balancer powered by Apache Camel dynamic routes. Used at the European Commission. Features MCP support, OpenTelemetry tracing, Keycloak security, and Open Policy Agent authorization.|
 |[314e Corporation](https://www.314e.com/)|At 314e Corporation, Apache Camel is the powerhouse behind our SaaS-based healthcare integration engine 'ZSegment'. It quietly runs 10K–20K messages per second, connecting EHRs, labs, payers and more in real-time.|
 |[Apache ActiveMQ](http://activemq.apache.org)|Uses Camel to add [Enterprise Integration Patterns](../../components/next/eips/enterprise-integration-patterns.html) support into the [ActiveMQ broker](http://activemq.apache.org/enterprise-integration-patterns.html). Can be used to bridge ActiveMQ with any of the camel [Components](../../manual/component.html).|
 |[Apache Ignite](https://ignite.apache.org/)|Apache Ignite In-Memory Data Fabric is a high-performance, integrated and distributed in-memory platform for computing and transacting on large-scale data sets in real-time. It uses Camel for its universal streamer.|
