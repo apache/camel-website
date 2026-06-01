@@ -2,7 +2,7 @@
 title: "How to Camel Debug a Camel Spring Boot route deployed on OpenShift from VS Code"
 date: 2024-08-12
 authors: [ "apupier" ]
-categories: [ "Tooling", "Camel Spring Boot" ]
+categories: ["Tooling"]
 preview: "How to Camel Debug a Camel Spring Boot route deployed on OpenShift from VS Code"
 ---
 

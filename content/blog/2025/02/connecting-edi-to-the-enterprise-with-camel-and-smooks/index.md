@@ -3,7 +3,7 @@ title: "Connecting EDI to the Enterprise with Camel & Smooks"
 date: 2025-02-19
 draft: false
 authors: [cjmamo]
-categories: ["Usecases", "Howtos", "Camel", "JBang", "Transformation"]
+categories: ["Usecases", "Howtos", "Tooling"]
 preview: "Demonstrating EDI X12 integration with Camel and Smooks"
 ---
 

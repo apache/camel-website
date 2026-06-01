@@ -3,7 +3,7 @@ title: "Kaoto v2.7 release"
 date: 2025-09-05
 draft: false
 authors: [lordrip]
-categories: ["Releases", "Tooling", "Kaoto"]
+categories: ["Releases", "Tooling"]
 preview: "Kaoto 2.7 has been released"
 ---
 

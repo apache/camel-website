@@ -2,7 +2,7 @@
 title: "Karavan Introduction in 4 minutes"
 date: 2023-01-09
 authors: [mgubaidullin]
-categories: ["Karavan", "Videos"]
+categories: ["Tooling", "Events"]
 preview: Apache Camel Karavan Introduction video
 ---
 

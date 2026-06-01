@@ -3,7 +3,7 @@ title: "Camel GitOps on Cloud"
 date: 2026-02-24
 draft: false
 authors: [squakez]
-categories: ["Devops", "Camel K", "Howtos"]
+categories: ["Howtos", "Camel K"]
 preview: "How to enable a GitOps strategy with Camel K"
 ---
 

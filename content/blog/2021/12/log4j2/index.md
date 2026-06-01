@@ -3,7 +3,7 @@ title: "Apache Camel and CVE-2021-44228 (log4j)"
 date: 2021-12-13
 draft: false
 authors: [davsclaus]
-categories: ["security"]
+categories: ["Howtos"]
 preview: "Apache Camel and CVE-2021-44228 (log4j)"
 ---
 

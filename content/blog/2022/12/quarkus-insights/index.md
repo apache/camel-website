@@ -3,7 +3,7 @@ title: "How to quickly run 16 years old Camel 1.0 route today"
 date: 2022-12-16
 draft: false
 authors: [davsclaus]
-categories: ["Videos"]
+categories: ["Events"]
 preview: "Short video of quickly running Camel 1.0 code with the newest Camel"
 ---
 

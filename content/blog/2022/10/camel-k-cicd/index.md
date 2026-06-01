@@ -3,7 +3,7 @@ title: "Camel K CICD"
 date: 2022-10-06
 draft: false
 authors: [squakez]
-categories: ["Howtos", "Camel K", "Devops"]
+categories: ["Howtos", "Camel K"]
 preview: "Continuous Integration, Continuous Delivery and Continuous Deployment in Camel K"
 ---
 

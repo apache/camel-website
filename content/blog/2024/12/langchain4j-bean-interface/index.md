@@ -3,7 +3,7 @@ title: "Resolving LangChain4j AI services by interface"
 date: 2024-12-20
 draft: false
 authors: [aldettinger]
-categories: ["Camel", "AI"]
+categories: ["AI"]
 preview: "Explain the new feature to resolve AI services by interface directly from Camel Quarkus"
 ---
 

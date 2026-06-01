@@ -2,7 +2,7 @@
 title: "Introducing Idempotency Support in Camel Kafka Connector"
 date: 2020-12-21
 authors: [oscerd]
-categories: ["Releases", "Camel-Kafka-Connector"]
+categories: ["Releases"]
 preview: Details of the work done to support idempontency in ckc and example.
 ---
 

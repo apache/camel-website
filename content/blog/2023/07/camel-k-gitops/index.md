@@ -3,7 +3,7 @@ title: "Camel K GitOps"
 date: 2023-07-10
 draft: false
 authors: [squakez]
-categories: ["Howtos", "Camel K", "Operations"]
+categories: ["Howtos", "Camel K"]
 preview: "How to apply GitOps with Camel K, Kustomize and ArgoCD."
 ---
 

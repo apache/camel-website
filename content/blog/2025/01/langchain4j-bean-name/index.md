@@ -3,7 +3,7 @@ title: "Resolving LangChain4j AI services by name"
 date: 2025-01-17
 draft: false
 authors: [aldettinger]
-categories: ["Camel", "AI"]
+categories: ["AI"]
 preview: "Explain the new feature to resolve AI services by name directly from Camel Quarkus"
 ---
 

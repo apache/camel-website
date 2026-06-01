@@ -2,7 +2,7 @@
 title: "Karavan 4.0.0: One size fits all"
 date: 2023-09-25
 authors: [mgubaidullin]
-categories: ["Tooling", "Karavan"]
+categories: ["Tooling"]
 preview: "Karavan 4.0.0: Release notes"
 ---
 

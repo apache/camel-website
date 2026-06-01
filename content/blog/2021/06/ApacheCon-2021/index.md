@@ -2,7 +2,7 @@
 title: "ApacheCon Asia and @Home schedules"
 date: 2021-06-15
 authors: ["zregvart"]
-categories: ["Events", "Apache"]
+categories: ["Events"]
 preview: "The schedules for ApacheCon Asia and ApacheCon @Home have been published. Register now to attend!"
 ---
 

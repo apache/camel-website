@@ -2,7 +2,7 @@
 title: "Karavan 4.7.0: Unleashing Flexibility"
 date: 2024-07-29
 authors: [mgubaidullin]
-categories: ["Tooling", "Karavan"]
+categories: ["Tooling"]
 preview: "Karavan 4.7.0: Unleashing Flexibility"
 ---
 

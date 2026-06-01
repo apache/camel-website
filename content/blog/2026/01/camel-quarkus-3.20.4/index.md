@@ -2,7 +2,7 @@
 title: "Camel Quarkus 3.20.4 Released"
 date: 2026-01-19
 authors: ["jiriondrusek"]
-categories: ["Releases", "Camel Quarkus"]
+categories: ["Releases"]
 preview: "Camel Quarkus 3.20.4 Released"
 summary: "Camel Quarkus 3.20.4 release"
 ---

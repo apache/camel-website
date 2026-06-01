@@ -2,7 +2,7 @@
 title: "Camel K 1.0 is here"
 date: 2020-06-08T17:00:00+02:00
 authors: ["nicolaferraro"]
-categories: ["Releases", "Camel K"]
+categories: ["Releases"]
 preview: "What's new in the Camel K 1.0 GA release."
 ---
 

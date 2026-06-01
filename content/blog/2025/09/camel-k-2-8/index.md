@@ -3,7 +3,7 @@ title: "Camel K 2.8.0"
 date: 2025-09-22
 draft: false
 authors: [squakez]
-categories: ["Releases", "Camel K", "Roadmap"]
+categories: ["Releases", "Roadmap"]
 preview: "What's new in Camel K 2.8.0!"
 ---
 

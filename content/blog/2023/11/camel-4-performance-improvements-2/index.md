@@ -3,7 +3,7 @@ title: "The Rise and Fall of the Performance Monsters"
 date: 2023-11-26
 draft: false
 authors: [orpiske]
-categories: ["Features", "Camel"]
+categories: ["Camel"]
 preview: "The Rise and Fall of the Performance Monsters"
 ---
 

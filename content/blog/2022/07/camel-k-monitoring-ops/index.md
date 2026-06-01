@@ -2,7 +2,7 @@
 title: "Camel K Operations: monitoring"
 date: 2022-07-05
 authors: [squakez]
-categories: ["Camel K", "Features"]
+categories: ["Camel K"]
 preview: "Camel K: how to monitor an Integration and get alerts"
 ---
 
@@ -34,7 +34,7 @@ kubectl --namespace monitoring port-forward svc/grafana 3000
 kubectl --namespace monitoring port-forward svc/alertmanager-main 9093
 ```
 
-Now, you can open your browser to http://localhost:9090, http://localhost:3000, http://localhost:9093. Grafana dashboard may require you to login (admin, admin) and to change the default admin password. Some further validation you want to perform is to check that Grafana is correctly setup with Prometheus datasource. Please go to _Configuration >> Data Sources_. By default a Prometheus datasource is set. Click on it and go to the bottom where a "Test" button is shown. Click on it and if all is good you should have a green flag confirming.
+Now, you can open your browser to http://localhost:9090, http://localhost:3000, http://localhost:9093. Grafana dashboard may require you to login (admin, admin) and to change the default admin password. Some further validation you want to perform is to check that Grafana is correctly setup with Prometheus datasource. Please go to _Configuration >> Data Sources_. By default a Prometheus datasource is set. Click on it and go to the bottom where a "Howtos" button is shown. Click on it and if all is good you should have a green flag confirming.
 
 ## Run a Camel K Integration with Prometheus trait
 

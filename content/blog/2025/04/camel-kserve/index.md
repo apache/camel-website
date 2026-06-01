@@ -3,7 +3,7 @@ title: "Apache Camel AI: Inference via Model Serving #3: KServe"
 date: 2025-04-02
 draft: false
 authors: [tadayosi]
-categories: ["Camel", "AI"]
+categories: ["AI"]
 preview: "Learn how to leverage the Camel KServe component in your Camel application for seamless AI model inference with KServe-compliant model servers"
 ---
 

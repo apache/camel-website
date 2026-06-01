@@ -3,7 +3,7 @@ title: "Building a Smart Log Analyzer with Apache Camel"
 date: 2026-01-28
 draft: false
 authors: [ croway, mcarlett ]
-categories: [ "Camel", "AI", "Kafka", "Infinispan", "OpenTelemetry" ]
+categories: ["AI", "Usecases"]
 preview: "A modern approach to developing distributed integration solutions with Apache Camel's YAML DSL, Camel JBang, visual tooling, and LLM-powered log analysis"
 ---
 

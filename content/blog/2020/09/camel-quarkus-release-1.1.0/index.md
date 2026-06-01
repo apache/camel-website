@@ -2,7 +2,7 @@
 title: "Camel Quarkus 1.1.0 Released"
 date: 2020-09-14
 authors: ["jamesnetherton"]
-categories: ["Releases", "Camel Quarkus"]
+categories: ["Releases"]
 preview: "Camel Quarkus 1.1.0 Released"
 ---
 

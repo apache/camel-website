@@ -2,7 +2,7 @@
 title: "Karavan 4.8.0"
 date: 2024-09-30
 authors: [mgubaidullin]
-categories: ["Tooling", "Karavan"]
+categories: ["Tooling"]
 preview: "Karavan 4.8.0"
 ---
 

@@ -3,12 +3,12 @@ title: "Kaoto v2.0 release"
 date: 2024-06-10
 draft: false
 authors: [lordrip]
-categories: ["Releases", "Tooling", "Kaoto"]
+categories: ["Releases", "Tooling"]
 preview: "Kaoto 2.0 has been released"
 ---
 
 <div style="text-align: center">
-  <img src="CamelKaoto.png" alt="Kaoto" height="400"/>
+  <img src="CamelKaoto.png" alt="Tooling" height="400"/>
 </div>
 
 <br/><strong>
@@ -18,7 +18,7 @@ After previously releasing 3 technical previews, we are thrilled to finally anno
 ## What is Kaoto?
 
 <div style="text-align: center">
-  <img src="logo-kaoto.png" alt="Kaoto" height="70"/>
+  <img src="logo-kaoto.png" alt="Tooling" height="70"/>
 </div>
 
 Kaoto, short for Kamel Orchestration Tool, is a low-code and no-code integration designer that allows users to create and edit integrations based on Apache Camel. It is extendable, flexible, and adaptable to various use cases, making it a versatile tool for integration projects. You can work both visually and also directly access the source code giving you a full round-trip editing experience.

@@ -2,7 +2,7 @@
 title: "Camel Quarkus 3.23.0 Released"
 date: 2025-05-26
 authors: ["ppalaga"]
-categories: ["Releases", "Camel Quarkus"]
+categories: ["Releases"]
 preview: "Camel Quarkus 3.23.0 Released"
 summary: "Camel Quarkus 3.23.0 release"
 ---

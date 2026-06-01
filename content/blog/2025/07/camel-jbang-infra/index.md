@@ -3,7 +3,7 @@ title: "Prototyping E2E scenarios with Apache Camel"
 date: 2025-07-21
 draft: false
 authors: [croway]
-categories: ["Camel", "E2E", "Infrastructure"]
+categories: ["Howtos"]
 preview: "Learn how to leverage Apache Camel JBang to prototype E2E scenarios"
 ---
 

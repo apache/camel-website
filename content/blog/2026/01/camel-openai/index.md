@@ -3,7 +3,7 @@ title: "Simple LLM Integration with Camel OpenAI Component"
 date: 2026-01-14
 draft: false
 authors: [ ibek ]
-categories: [ "Camel", "AI" ]
+categories: ["AI"]
 preview: "A deep dive into the new camel-openai component for chat completion with OpenAI and OpenAI-compatible APIs"
 ---
 

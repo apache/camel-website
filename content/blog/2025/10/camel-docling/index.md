@@ -3,7 +3,7 @@ title: "Building Intelligent Document Processing with Apache Camel: Docling meet
 date: 2025-10-15
 draft: false
 authors: [ oscerd ]
-categories: ["Camel", "AI"]
+categories: ["AI"]
 preview: "The new camel-docling component meets camel-langchain4j"
 ---
 

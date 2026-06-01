@@ -2,7 +2,7 @@
 title: "Camel-AWS-S3 - New Streaming upload feature"
 date: 2021-04-20
 authors: ["oscerd"]
-categories: ["Features", "Camel"]
+categories: ["Camel"]
 preview: "AWS S3 Streaming upload"
 summary: "The S3 Streaming upload feature will arrive on Camel 3.10.0"
 ---

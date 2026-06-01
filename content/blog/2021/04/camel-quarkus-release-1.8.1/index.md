@@ -2,7 +2,7 @@
 title: "Camel Quarkus 1.8.1 Released"
 date: 2021-04-12
 authors: ["ppalaga"]
-categories: ["Releases", "Camel Quarkus"]
+categories: ["Releases"]
 preview: "Camel Quarkus 1.8.1 Released"
 summary: "The patch release 1.8.1 of Camel Quarkus brings 14 improvements and fixes."
 ---

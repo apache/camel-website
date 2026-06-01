@@ -2,7 +2,7 @@
 title: "Debugging Camel Quarkus native application in VS Code"
 date: 2023-12-07
 authors: [ "djelinek" ]
-categories: [ "Tooling", "Camel Quarkus", "Videos" ]
+categories: [ "Tooling", "Camel Quarkus", "Events" ]
 preview: "How to debug Camel Quarkus native application using VS Code in a few minutes"
 ---
 

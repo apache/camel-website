@@ -3,7 +3,7 @@ title: "Camel Observability Services"
 date: 2025-03-05
 draft: false
 authors: [squakez]
-categories: ["Howtos", "Observability", "Devops"]
+categories: ["Howtos"]
 preview: "How to leverage Camel Observability Services component"
 ---
 

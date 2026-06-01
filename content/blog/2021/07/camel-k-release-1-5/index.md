@@ -3,7 +3,7 @@ title: "Camel K 1.5 release"
 date: 2021-07-13
 draft: false
 authors: [squakez]
-categories: ["Releases", "Camel K"]
+categories: ["Releases"]
 preview: "What's new in Camel K 1.5"
 ---
 

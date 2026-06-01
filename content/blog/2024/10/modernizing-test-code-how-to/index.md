@@ -3,7 +3,7 @@ title: "Modernizing Camel's Test Support Code: How To"
 date: 2024-10-24
 draft: false
 authors: [orpiske]
-categories: ["Camel", "Test"]
+categories: ["Howtos"]
 preview: "Modernizing Camel's Test Support Code: How To"
 ---
 

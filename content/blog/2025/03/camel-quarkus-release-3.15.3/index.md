@@ -2,7 +2,7 @@
 title: "Camel Quarkus 3.15.3 Released"
 date: 2025-03-18
 authors: ["jamesnetherton"]
-categories: ["Releases", "Camel Quarkus"]
+categories: ["Releases"]
 preview: "Camel Quarkus 3.15.3 Released"
 summary: "Camel Quarkus 3.15.3 release"
 ---

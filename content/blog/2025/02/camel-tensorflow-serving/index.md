@@ -3,7 +3,7 @@ title: "Apache Camel AI: Inference via Model Serving #2: TensorFlow Serving"
 date: 2025-02-24
 draft: false
 authors: [tadayosi]
-categories: ["Camel", "AI"]
+categories: ["AI"]
 preview: "Learn how to leverage Camel TensorFlow Serving component in your Camel application for seamless AI model inference with TensorFlow Serving"
 ---
 

@@ -2,7 +2,7 @@
 title: "Camel Karaf 4.14.5 Released"
 date: 2026-03-17
 authors: ["jbonofre"]
-categories: ["Releases", "Camel Karaf"]
+categories: ["Releases"]
 preview: "Camel Karaf 4.14.5 Released"
 summary: "Camel Karaf 4.14.5 release"
 ---

@@ -3,7 +3,7 @@ title: "How to configure a Maven proxy in Camel K"
 date: 2023-06-12
 draft: false
 authors: [squakez]
-categories: ["Howtos", "Camel K", "Operations"]
+categories: ["Howtos", "Camel K"]
 preview: "Configure Camel K and leverage a Maven proxy"
 ---
 

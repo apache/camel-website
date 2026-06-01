@@ -3,7 +3,7 @@ title: "Optimizing Camel-K Integration Build Time"
 date: 2022-06-28
 draft: false
 authors: ["whtssub", "astefanutti"]
-categories: ["Camel-K"]
+categories: ["Camel K"]
 preview: "Scaling the Camel K operator vertically to improve the integration build time."
 ---
 

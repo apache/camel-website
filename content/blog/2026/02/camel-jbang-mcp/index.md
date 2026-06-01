@@ -3,7 +3,7 @@ title: "Apache Camel MCP Server: Bringing Camel Knowledge to AI Coding Assistant
 date: 2026-02-10
 draft: false
 authors: [ oscerd ]
-categories: [ "Camel", "AI", "Tooling" ]
+categories: ["AI", "Tooling"]
 preview: "Introducing the Camel MCP Server, a Model Context Protocol server that exposes the full Camel Catalog, route validation, security analysis, and more to AI coding assistants like Claude Code, OpenAI Codex, and others."
 ---
 
@@ -173,7 +173,7 @@ The assistant calls the `camel_catalog_components` tool with `label=messaging` a
   "components": [
     {
       "name": "kafka",
-      "title": "Kafka",
+      "title": "Usecases",
       "description": "Sent and receive messages to/from an Apache Kafka broker.",
       "label": "messaging",
       "deprecated": false,

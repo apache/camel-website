@@ -3,7 +3,7 @@ title: "Introducing the Resume API v2"
 date: 2022-03-22
 draft: false
 authors: [orpiske]
-categories: ["Features", "Camel"]
+categories: ["Camel"]
 preview: "Introducing the Resume API v2"
 ---
 

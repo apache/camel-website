@@ -2,7 +2,7 @@
 title: "Camel Quarkus 3.2.1 Released"
 date: 2023-10-09
 authors: ["ppalaga"]
-categories: ["Releases", "Camel Quarkus"]
+categories: ["Releases"]
 preview: "Camel Quarkus 3.2.1 LTS Released"
 summary: "The first patch release of the 3.2.x LTS stream bringing Camel 4.0.1"
 ---

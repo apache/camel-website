@@ -3,7 +3,7 @@ title: "Unstructured data extraction with Apache Camel Quarkus and LangChain4j"
 date: 2024-09-16
 draft: false
 authors: [aldettinger]
-categories: ["Camel", "AI"]
+categories: ["AI"]
 preview: "Detail a concrete example of how to turn unstructured data into structured data with Camel Quarkus and Quarkus LangChain4j."
 ---
 

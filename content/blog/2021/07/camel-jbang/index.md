@@ -2,7 +2,7 @@
 title: "Camel + JBang: bringing the world of Java scripting to Camel"
 date: 2021-07-26
 authors: ["orpiske"]
-categories: ["Features", "Camel"]
+categories: ["Camel"]
 preview: "Camel + JBang"
 summary: "Bringing the world of Java scripting to Camel"
 ---

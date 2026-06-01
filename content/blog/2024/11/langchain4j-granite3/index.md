@@ -3,7 +3,7 @@ title: "Avoiding model lock in while building an AI Camel route"
 date: 2024-11-15
 draft: false
 authors: [aldettinger]
-categories: ["Camel", "AI"]
+categories: ["AI"]
 preview: "Touch the subject of Large Language Models lock in and how to prevent that"
 ---
 

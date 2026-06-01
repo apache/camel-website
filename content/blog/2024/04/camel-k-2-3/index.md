@@ -3,7 +3,7 @@ title: "Camel K 2.3.0"
 date: 2024-04-08
 draft: false
 authors: [squakez]
-categories: ["Releases", "Camel K", "Roadmap"]
+categories: ["Releases", "Roadmap"]
 preview: "What's new in Camel K 2.3.0!"
 ---
 © Sir John Soane’s Museum London

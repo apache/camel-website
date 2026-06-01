@@ -3,7 +3,7 @@ title: "Camel presented at Quarkus Insights"
 date: 2022-12-12
 draft: false
 authors: [ppalaga,zbendhiba,davsclaus]
-categories: ["Videos"]
+categories: ["Events"]
 preview: "Apache Camel presented at Quarkus Insights"
 ---
 

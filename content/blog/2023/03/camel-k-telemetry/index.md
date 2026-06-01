@@ -3,7 +3,7 @@ title: "Camel K Observability: Distributed Tracing"
 date: 2023-03-09
 draft: false
 authors: [gansheer]
-categories: ["Camel K", "Features", "Devops"]
+categories: ["Camel K", "Howtos"]
 preview: "Camel K: how to configure Distributed Tracing for an Integration"
 ---
 

@@ -3,7 +3,7 @@ title: "Upcoming changes to the consumer on Kafka component"
 date: 2021-09-24
 draft: false
 authors: [orpiske]
-categories: ["Features", "Camel"]
+categories: ["Camel"]
 preview: "Upcoming changes to the consumer on Kafka component"
 ---
 

@@ -3,7 +3,7 @@ title: "Easier migration with Apache Camel"
 date: 2024-10-04
 draft: false
 authors: [JiriOndrusek]
-categories: ["Camel", "Migration"]
+categories: ["Howtos"]
 preview: "Introducing Camel Upgrade Recipes - A tool to make Apache Camel version upgrades easier."
 ---
 

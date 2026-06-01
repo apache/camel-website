@@ -3,7 +3,7 @@ title: "Kaoto v2.10 release"
 date: 2026-03-25
 draft: false
 authors: [djelinek, PVinaches, igarashitm, lordrip]
-categories: ["Releases", "Tooling", "Kaoto"]
+categories: ["Releases", "Tooling"]
 preview: "Kaoto 2.10 has been released"
 ---
 

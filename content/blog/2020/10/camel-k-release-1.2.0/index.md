@@ -2,7 +2,7 @@
 title: "Camel K 1.2.0 Released"
 date: 2020-10-12
 authors: ["nicolaferraro"]
-categories: ["Releases", "Camel K"]
+categories: ["Releases"]
 preview: "Camel K 1.2.0 Released"
 ---
 

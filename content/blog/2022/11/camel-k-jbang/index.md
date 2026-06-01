@@ -3,7 +3,7 @@ title: "How to test an Integration for Camel K"
 date: 2022-11-24
 draft: false
 authors: [squakez]
-categories: ["Howtos", "Camel K", "Test", "JBang"]
+categories: ["Howtos", "Camel K", "Tooling"]
 preview: "How to use Camel JBang to locally test a Camel K integration"
 ---
 

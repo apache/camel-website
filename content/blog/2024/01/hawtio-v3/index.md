@@ -3,7 +3,7 @@ title: "Hawtio v3 release and Camel CLI"
 date: 2024-01-12
 draft: false
 authors: [tadayosi]
-categories: ["Releases", "Tooling", "Hawtio"]
+categories: ["Releases", "Tooling"]
 preview: "Hawtio 3.0.0 GA is released. What's new?"
 ---
 

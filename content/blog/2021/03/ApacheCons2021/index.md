@@ -2,7 +2,7 @@
 title: "The call for papers is open for two ApacheCons / 两场Apache大会的演讲征集已经开始"
 date: 2021-03-30T11:22:18+02:00
 authors: ["delawen", "WillemJiang", "zregvart"]
-categories: ["Events", "Apache"]
+categories: ["Events"]
 preview: "This year we have two Apache conferences featuring Camel, ApacheCon Asia from 6th through 8th of August, and ApacheCon @Home from 21st through 23rd of September, 2021. / 今年我们有两个Apache会议将包含Camel相关的话题，分别是8月6日至8日的ApacheCon Asia和2021年9月21日至23日的ApacheCon @Home。"
 ---
 

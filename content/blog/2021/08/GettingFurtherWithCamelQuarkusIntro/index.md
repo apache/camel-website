@@ -2,7 +2,7 @@
 title: "Getting Further With Camel on Quarkus at Apache CON @HOME 2021"
 date: 2021-08-06
 authors: [aldettinger]
-categories: ["Events", "Apache","Camel Quarkus"]
+categories: ["Events", "Camel Quarkus"]
 preview: "A new demonstration explaining further development tips for Camel Quarkus will be held at Apache CON @HOME 2021"
 ---
 

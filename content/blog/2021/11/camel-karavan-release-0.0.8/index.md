@@ -2,7 +2,7 @@
 title: "Karavan Serverless mode"
 date: 2021-11-24
 authors: [mgubaidullin]
-categories: ["Tooling","Videos", "Camel-K", "Howtos"]
+categories: ["Tooling","Events", "Camel K", "Howtos"]
 preview: "Karavan Serverless mode with Camel-K on Kubernetes"
 ---
 

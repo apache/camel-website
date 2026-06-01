@@ -2,12 +2,12 @@
 title: "Low Code Camel"
 date: 2021-11-08
 authors: [nicolaferraro]
-categories: ["Kamelets", "Camel K", "Tooling"]
+categories: ["Camel K", "Tooling"]
 preview: "How Kamelets enable a low code integration experience."
 ---
 
 Apache Camel is a project in constant transformation. Anyone knows that Camel has been able to adapt to any new kinds of protocols and systems that have emerged in the past 15 years. But it's not only that: Camel is also able to adapt to any new ways of dealing with integration problems in the cloud era.
-While Camel K represented a fundamental shift towards a new approach to cloud-native integration, ["Kamelets"](https://www.nicolaferraro.me/2020/10/12/kamelets/) are driving a deeper transformation towards "low code" development.
+While Camel K represented a fundamental shift towards a new approach to cloud-native integration, ["Camel K"](https://www.nicolaferraro.me/2020/10/12/kamelets/) are driving a deeper transformation towards "low code" development.
 
 When I talk about **"low code"**, I refer to a platform for *developers* where you can achieve most of your goals without writing any code. But at the same time, a low code platform should be customizable enough to let you show your development skills when it's time to solve critical issues. It needs to be abstract in order to easily deal with the most common problems, even using a UI. But it should not prevent a developer to play with the low level details in order to extend the capabilities of the platform itself.
 

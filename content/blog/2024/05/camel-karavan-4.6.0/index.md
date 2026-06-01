@@ -2,7 +2,7 @@
 title: "Karavan 4.6.0: Hidden gems"
 date: 2024-05-28
 authors: [mgubaidullin]
-categories: ["Tooling", "Karavan"]
+categories: ["Tooling"]
 preview: "Karavan 4.6.0: Hidden gems"
 ---
 

@@ -2,7 +2,7 @@
 title: "Camel Quarkus 1.2.0 and 1.3.0 Released"
 date: 2020-10-20
 authors: ["ppalaga"]
-categories: ["Releases", "Camel Quarkus"]
+categories: ["Releases"]
 preview: "Camel Quarkus 1.2.0 and 1.3.0 Released"
 summary: "The highlights of Camel Quarkus 1.2.0 and 1.3.0"
 ---

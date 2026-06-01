@@ -2,7 +2,7 @@
 title: "Camel Quarkus 2.13.0 Released"
 date: 2022-09-29
 authors: ["zbendhiba"]
-categories: ["Releases", "Camel Quarkus"]
+categories: ["Releases"]
 preview: "Camel Quarkus 2.13.0 Released"
 summary: "Camel Quarkus 2.13.0 is released and aligns with Camel 3.18.2 and Quarkus 2.13.0.Final"
 ---

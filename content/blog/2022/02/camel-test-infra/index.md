@@ -3,7 +3,7 @@ title: "Good bye camel-testcontainers! Hello Camel's test-infra"
 date: 2022-02-16
 draft: false
 authors: [orpiske]
-categories: ["Features", "Camel"]
+categories: ["Camel"]
 preview: "Good bye camel-testcontainers! Hello Camel's test-infra"
 ---
 

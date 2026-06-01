@@ -3,7 +3,7 @@ title: "Camel Micrometer Observation: Observability with Micrometer"
 date: 2023-04-04
 draft: false
 authors: [marcingrzejszczak]
-categories: ["Features", "Observability"]
+categories: ["Howtos"]
 preview: "Micrometer Observation: how to configure Distributed Tracing and Metrics"
 ---
 

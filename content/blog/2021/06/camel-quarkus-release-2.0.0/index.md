@@ -2,7 +2,7 @@
 title: "Camel Quarkus 2.0.0 Released"
 date: 2021-06-30
 authors: ["ppalaga"]
-categories: ["Releases", "Camel Quarkus"]
+categories: ["Releases"]
 preview: "Camel Quarkus 2.0.0 Released"
 summary: "Camel Quarkus 2.0.0 brings Quarkus 2.0.0.Final and Camel 3.11.0"
 ---

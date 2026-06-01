@@ -3,12 +3,12 @@ title: "Kaoto v2.1 release"
 date: 2024-07-16
 draft: false
 authors: [lordrip]
-categories: ["Releases", "Tooling", "Kaoto"]
+categories: ["Releases", "Tooling"]
 preview: "Kaoto 2.1 has been released"
 ---
 
 <div style="text-align: center">
-  <img src="cover.png" alt="Kaoto" height="400"/>
+  <img src="cover.png" alt="Tooling" height="400"/>
 </div>
 
 <br/><strong>

@@ -3,7 +3,7 @@ title: "Unlocking Efficient Data Processing with the Chunking DSL"
 date: 2024-09-06
 draft: false
 authors: [orpiske]
-categories: ["Camel", "AI"]
+categories: ["AI"]
 preview: "Unlocking Efficient Data Processing with the Chunking DSL"
 ---
 

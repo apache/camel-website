@@ -3,7 +3,7 @@ title: "Camel K 1.12 release"
 date: 2023-02-27
 draft: false
 authors: [squakez]
-categories: ["Releases", "Camel K"]
+categories: ["Releases"]
 preview: "What's new in Camel K 1.12"
 ---
 

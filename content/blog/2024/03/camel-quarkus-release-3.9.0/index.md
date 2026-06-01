@@ -2,7 +2,7 @@
 title: "Camel Quarkus 3.9.0 Released"
 date: 2024-03-27
 authors: ["aldettinger"]
-categories: ["Releases", "Camel Quarkus"]
+categories: ["Releases"]
 preview: "Camel Quarkus 3.9.0 Released"
 summary: "Camel Quarkus 3.9.0 release"
 ---

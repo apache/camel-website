@@ -2,7 +2,7 @@
 title: "Karavan Roadmap 2023"
 date: 2022-10-10
 authors: [mgubaidullin]
-categories: ["Tooling", "Karavan"]
+categories: ["Tooling"]
 preview: "Karavan Roadmap 2023"
 ---
 

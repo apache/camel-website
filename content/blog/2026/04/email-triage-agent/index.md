@@ -3,7 +3,7 @@ title: "Apache Camel AI: Building an Email Triage Agent with OpenAI, Gmail Trans
 date: 2026-04-16
 draft: false
 authors: ["zbendhiba"]
-categories: ["Camel", "AI", "Usecases", "JBang"]
+categories: ["AI", "Usecases", "Tooling"]
 preview: "Combining the camel-openai component with structured output, Gmail DataType Transformers, SimpleFunction, and Camel JBang to build an AI agent that classifies emails, organizes your inbox, and drafts replies."
 ---
 

@@ -3,7 +3,7 @@ title: "Experimenting extraction from unstructured data with Apache Camel and La
 date: 2024-07-19
 draft: false
 authors: [aldettinger]
-categories: ["Camel", "AI"]
+categories: ["AI"]
 preview: "Give directions about how to turn unstructured data into structured data with Camel and LangChain4j."
 ---
 

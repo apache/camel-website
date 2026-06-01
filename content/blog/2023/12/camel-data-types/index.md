@@ -3,7 +3,7 @@ title: "Camel 4 Data Types"
 date: 2023-12-04
 draft: false
 authors: [christophd]
-categories: ["Howtos", "Transformation"]
+categories: ["Howtos"]
 preview: "Boosting the interoperability of Camel routes and Kamelets with data type transformations"
 ---
 

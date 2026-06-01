@@ -2,7 +2,7 @@
 title: "Camel Quarkus 3.2.3 Released"
 date: 2023-12-05
 authors: ["zhfeng"]
-categories: ["Releases", "Camel Quarkus"]
+categories: ["Releases"]
 preview: "Camel Quarkus 3.2.3 Released"
 summary: "Camel Quarkus 3.2.3 release"
 ---

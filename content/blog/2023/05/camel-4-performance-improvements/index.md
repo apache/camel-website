@@ -3,7 +3,7 @@ title: "Hunting performance monsters on the back of a Camel"
 date: 2023-05-25
 draft: false
 authors: [orpiske]
-categories: ["Features", "Camel"]
+categories: ["Camel"]
 preview: "Hunting performance monsters on the back of a Camel"
 ---
 

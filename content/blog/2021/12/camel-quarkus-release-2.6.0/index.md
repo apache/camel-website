@@ -2,7 +2,7 @@
 title: "Camel Quarkus 2.6.0 Released"
 date: 2021-12-23
 authors: ["zbendhiba"]
-categories: ["Releases", "Camel Quarkus"]
+categories: ["Releases"]
 preview: "Camel Quarkus 2.6.0 Released"
 summary: "Camel Quarkus 2.6.0 brings Quarkus 2.6, Camel 3.14 and JFR native support"
 ---

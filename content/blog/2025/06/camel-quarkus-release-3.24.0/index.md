@@ -2,7 +2,7 @@
 title: "Camel Quarkus 3.24.0 Released"
 date: 2025-06-25
 authors: ["jamesnetherton"]
-categories: ["Releases", "Camel Quarkus"]
+categories: ["Releases"]
 preview: "Camel Quarkus 3.24.0 Released"
 summary: "Camel Quarkus 3.24.0 release"
 ---

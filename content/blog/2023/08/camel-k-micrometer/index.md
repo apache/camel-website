@@ -3,7 +3,7 @@ title: "Camel K Observability: Micrometer Metrics"
 date: 2023-08-03
 draft: false
 authors: [gansheer]
-categories: ["Camel K", "Features", "Devops"]
+categories: ["Camel K", "Howtos"]
 preview: "Camel K 2.0: What changes to expect about Integration Metrics"
 ---
 

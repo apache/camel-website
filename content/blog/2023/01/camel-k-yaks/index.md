@@ -3,7 +3,7 @@ title: "Testing Camel K with YAKS"
 date: 2023-01-31
 draft: false
 authors: [christophd]
-categories: ["Howtos", "Camel K", "Test", "YAKS"]
+categories: ["Howtos", "Camel K"]
 preview: "How to verify a Camel K integration with YAKS - locally and on cloud infrastructure"
 ---
 

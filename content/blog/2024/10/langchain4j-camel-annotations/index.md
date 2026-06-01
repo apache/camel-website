@@ -3,7 +3,7 @@ title: "Using Camel annotations with LangChain4j high level api available in nex
 date: 2024-10-10
 draft: false
 authors: [aldettinger]
-categories: ["Camel", "AI"]
+categories: ["AI"]
 preview: "Explain how to use the Camel parameter binding annotations on LangChain4j AI service method parameters."
 ---
 

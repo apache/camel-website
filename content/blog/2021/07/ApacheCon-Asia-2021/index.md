@@ -2,7 +2,7 @@
 title: "ApacheCon Asia Integration Track schedules"
 date: 2021-07-15
 authors: ["WillemJiang"]
-categories: ["Events", "Apache"]
+categories: ["Events"]
 preview: "The integration track introduction for ApacheCon Asia2021"
 ---
 [ApacheCon Asia 2021](https://apachecon.com/acasia2021/) will be held online from 6 August to 8 August. As a track chair of [the integration track](https://apachecon.com/acasia2021/tracks/integration.html), I will be presenting the topics related to integration and [the conference registration](https://hopin.com/events/apachecon-asia-2021) is now open.

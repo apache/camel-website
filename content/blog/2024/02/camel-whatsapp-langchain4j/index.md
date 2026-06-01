@@ -3,7 +3,7 @@ title: "Integrate your AI models effortlessly with Apache Camel"
 date: 2024-02-19
 draft: false
 authors: [croway]
-categories: ["Camel Spring Boot", "Usecases", "AI"]
+categories: ["Usecases", "AI"]
 preview: "Build a conversational AI integration with Apache Camel, LangChain4j, and WhatsApp."
 ---
 

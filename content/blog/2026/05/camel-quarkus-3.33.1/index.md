@@ -2,7 +2,7 @@
 title: "Camel Quarkus 3.33.1 Released"
 date: 2026-05-07
 authors: ["jamesnetherton"]
-categories: ["Releases", "Camel Quarkus"]
+categories: ["Releases"]
 preview: "Camel Quarkus 3.33.1 Released"
 summary: "Camel Quarkus 3.33.1 release"
 ---

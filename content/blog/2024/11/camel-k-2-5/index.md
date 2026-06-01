@@ -3,7 +3,7 @@ title: "Camel K 2.5.0"
 date: 2024-11-04
 draft: false
 authors: [squakez]
-categories: ["Releases", "Camel K", "Roadmap"]
+categories: ["Releases", "Roadmap"]
 preview: "What's new in Camel K 2.5.0!"
 ---
 © Charles Theodore Frere

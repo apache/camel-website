@@ -3,7 +3,7 @@ title: "Toward better data extraction with structured output"
 date: 2025-02-14
 draft: false
 authors: [aldettinger]
-categories: ["Camel", "AI"]
+categories: ["AI"]
 preview: "Demonstrate new improvements in data extraction thanks to the structured output feature"
 ---
 

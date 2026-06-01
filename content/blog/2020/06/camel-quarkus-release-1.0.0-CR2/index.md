@@ -2,7 +2,7 @@
 title: "Camel Quarkus 1.0.0-CR2 Released"
 date: 2020-06-02
 authors: ["ppalaga"]
-categories: ["Releases", "Camel Quarkus"]
+categories: ["Releases"]
 preview: What's new in Camel Quarkus 1.0.0-CR2
 ---
 

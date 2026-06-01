@@ -3,7 +3,7 @@ title: "Apache Camel Meets MCP: Securely Exposing Your Enterprise Routes as MCP 
 date: 2025-10-22
 draft: false
 authors: [ orpiske ]
-categories: ["Camel", "AI"]
+categories: ["AI"]
 preview: "Apache Camel Meets MCP: Securely Exposing Your Enterprise Routes as MCP Tools with Wanaku"
 ---
 

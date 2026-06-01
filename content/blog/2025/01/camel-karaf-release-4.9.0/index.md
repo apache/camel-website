@@ -2,7 +2,7 @@
 title: "Camel Karaf 4.9.0 Released"
 date: 2025-01-30
 authors: ["jbonofre"]
-categories: ["Releases", "Camel Karaf"]
+categories: ["Releases"]
 preview: "Camel Karaf 4.9.0 Released"
 summary: "Camel Karaf 4.9.0 release"
 ---

@@ -2,7 +2,7 @@
 title: "Camel Quarkus 2.9.0 Released"
 date: 2022-05-11
 authors: ["jamesnetherton"]
-categories: ["Releases", "Camel Quarkus"]
+categories: ["Releases"]
 preview: "Camel Quarkus 2.9.0 Released"
 summary: "Camel Quarkus 2.9.0 brings Quarkus 2.9.0.Final, Camel 3.16.0"
 ---

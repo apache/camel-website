@@ -3,7 +3,7 @@ title: "Kamelet Catalog"
 date: 2021-02-24
 draft: false
 authors: [nicolaferraro]
-categories: ["Camel-K"]
+categories: ["Camel K"]
 preview: "We're starting a new initiative at Apache Camel to create a community-driven catalog of reusable Kamelets"
 ---
 

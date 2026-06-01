@@ -3,7 +3,7 @@ title: "Apache Camel AI: Leverage power of AI with DJL component"
 date: 2024-09-04
 draft: false
 authors: [tadayosi]
-categories: ["Camel", "AI"]
+categories: ["AI"]
 preview: "Explore the possibilities of intelligent routing based on neural network model inference with Camel and DJL."
 ---
 
