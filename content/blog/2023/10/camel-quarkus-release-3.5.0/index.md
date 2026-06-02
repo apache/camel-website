@@ -1,7 +1,7 @@
 ---
 title: "Camel Quarkus 3.5.0 Released"
 date: 2023-10-25
-authors: ["jamesnetherton"]
+draft: trueauthors: ["jamesnetherton"]
 categories: ["Releases"]
 preview: "Camel Quarkus 3.5.0 Released"
 summary: "Camel Quarkus 3.5.0 release"

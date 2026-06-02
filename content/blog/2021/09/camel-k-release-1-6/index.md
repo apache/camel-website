@@ -1,7 +1,7 @@
 ---
 title: "Camel K 1.6 release"
 date: 2021-09-09
-draft: false
+draft: true
 authors: [squakez]
 categories: ["Releases"]
 preview: "What's new in Camel K 1.6"

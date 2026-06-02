@@ -1,7 +1,7 @@
 ---
 title: "Camel Quarkus 2.12.0 Released"
 date: 2022-09-01
-authors: ["jamesnetherton"]
+draft: trueauthors: ["jamesnetherton"]
 categories: ["Releases"]
 preview: "Camel Quarkus 2.12.0 Released"
 summary: "Camel Quarkus 2.12.0 is released and aligns with Camel 3.18.1 and Quarkus 2.12.0.Final"

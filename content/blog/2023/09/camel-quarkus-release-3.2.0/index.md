@@ -1,7 +1,7 @@
 ---
 title: "Camel Quarkus 3.2.0 Released"
 date: 2023-09-15
-authors: ["zbendhiba"]
+draft: trueauthors: ["zbendhiba"]
 categories: ["Releases"]
 preview: "Camel Quarkus 3.2.0 LTS Released"
 summary: "Camel Quarkus 3.2.0 is the first final 3.x major release"

@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel K 1.4.0 What's New"
 date: 2021-04-20
-authors: [nicolaferraro]
+draft: trueauthors: [nicolaferraro]
 categories: ["Releases"]
 preview: Details of what we have done in the Camel K 1.4.0 release.
 ---

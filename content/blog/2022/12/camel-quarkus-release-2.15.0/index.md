@@ -1,7 +1,7 @@
 ---
 title: "Camel Quarkus 2.15.0 Released"
 date: 2022-12-16
-authors: ["zbendhiba"]
+draft: trueauthors: ["zbendhiba"]
 categories: ["Releases"]
 preview: "Camel Quarkus 2.15.0 Released"
 summary: "Camel Quarkus 2.15.0 is released and aligns with Quarkus 2.15.0.Final"

@@ -1,7 +1,7 @@
 ---
 title: "Camel Quarkus 1.7.0 Released"
 date: 2021-02-24
-authors: ["ppalaga"]
+draft: trueauthors: ["ppalaga"]
 categories: ["Releases"]
 preview: "Camel Quarkus 1.7.0 Released"
 summary: "The highlights of Camel Quarkus 1.7.0"

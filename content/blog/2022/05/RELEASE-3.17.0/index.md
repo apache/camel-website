@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 3.17.0"
 date: 2022-05-19
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new Camel 3.17.0 release"

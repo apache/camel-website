@@ -1,7 +1,7 @@
 ---
 title: "Camel Quarkus 3.20.2 Released"
 date: 2025-07-07
-authors: ["jiriondrusek"]
+draft: trueauthors: ["jiriondrusek"]
 categories: ["Releases"]
 preview: "Camel Quarkus 3.20.2 Released"
 summary: "Camel Quarkus 3.20.2 release"

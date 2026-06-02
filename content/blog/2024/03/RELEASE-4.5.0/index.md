@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 4.5.0"
 date: 2024-03-28
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new Camel 4.5.0 release"

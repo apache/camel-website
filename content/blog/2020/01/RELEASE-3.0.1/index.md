@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 3.0.1"
 date: 2020-01-16
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of a new release Camel 3.0.1"

@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 4.0.0-M3"
 date: 2023-05-05
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of a new milestone Camel 4.0.0-M3"

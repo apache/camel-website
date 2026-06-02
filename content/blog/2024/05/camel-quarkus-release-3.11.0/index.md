@@ -1,7 +1,7 @@
 ---
 title: "Camel Quarkus 3.11.0 Released"
 date: 2024-05-30
-authors: ["jamesnetherton"]
+draft: trueauthors: ["jamesnetherton"]
 categories: ["Releases"]
 preview: "Camel Quarkus 3.11.0 Released"
 summary: "Camel Quarkus 3.11.0 release"

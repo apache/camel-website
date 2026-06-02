@@ -1,7 +1,7 @@
 ---
 title: "Camel K 2.4.0"
 date: 2024-08-07
-draft: false
+draft: true
 authors: [squakez]
 categories: ["Releases", "Roadmap"]
 preview: "What's new in Camel K 2.4.0!"

@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 3.14.8"
 date: 2023-05-29
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new Camel 3.14.8 LTS release"

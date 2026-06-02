@@ -1,7 +1,7 @@
 ---
 title: "Camel K 1.11 release"
 date: 2022-12-15
-draft: false
+draft: true
 authors: [claudio4j]
 categories: ["Releases"]
 preview: "What's new in Camel K 1.11"

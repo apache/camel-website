@@ -1,7 +1,7 @@
 ---
 title: "Camel Quarkus 3.0.0-M2 Released"
 date: 2023-05-29
-authors: ["ppalaga"]
+draft: trueauthors: ["ppalaga"]
 categories: ["Releases"]
 preview: "Camel Quarkus 3.0.0-M2 Released"
 summary: "Camel Quarkus 3.0.0-M2 is the second iteration towards a new 3.0.0 major release"

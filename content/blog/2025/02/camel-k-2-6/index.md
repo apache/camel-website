@@ -1,7 +1,7 @@
 ---
 title: "Camel K 2.6.0"
 date: 2025-02-19
-draft: false
+draft: true
 authors: [squakez]
 categories: ["Releases", "Roadmap"]
 preview: "What's new in Camel K 2.6.0!"

@@ -1,7 +1,7 @@
 ---
 title: "Camel Quarkus 1.4.0 Released"
 date: 2020-11-23
-authors: ["jamesnetherton"]
+draft: trueauthors: ["jamesnetherton"]
 categories: ["Releases"]
 preview: "Camel Quarkus 1.4.0 Released"
 ---

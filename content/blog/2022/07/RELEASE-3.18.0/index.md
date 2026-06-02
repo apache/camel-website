@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 3.18.0"
 date: 2022-07-06
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new Camel 3.18.0 LTS release"

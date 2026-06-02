@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 3.14.6"
 date: 2022-11-05
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new Camel 3.14.6 LTS release"

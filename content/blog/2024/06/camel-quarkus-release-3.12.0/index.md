@@ -1,7 +1,7 @@
 ---
 title: "Camel Quarkus 3.12.0 Released"
 date: 2024-06-27
-authors: ["aldettinger"]
+draft: trueauthors: ["aldettinger"]
 categories: ["Releases"]
 preview: "Camel Quarkus 3.12.0 Released"
 summary: "Camel Quarkus 3.12.0 release"

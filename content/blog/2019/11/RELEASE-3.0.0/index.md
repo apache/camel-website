@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 3.0.0"
 date: 2019-11-28
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of a new release Camel 3.0.0"

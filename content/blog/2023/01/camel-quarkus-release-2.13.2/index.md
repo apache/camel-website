@@ -1,7 +1,7 @@
 ---
 title: "Camel Quarkus 2.13.2 Released"
 date: 2023-01-24
-authors: ["ppalaga"]
+draft: trueauthors: ["ppalaga"]
 categories: ["Releases"]
 preview: "Camel Quarkus 2.13.2 Released"
 summary: "Camel Quarkus 2.13.2 brings Quarkus 2.13.5.Final"

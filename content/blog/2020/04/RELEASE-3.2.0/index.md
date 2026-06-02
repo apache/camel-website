@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 3.2.0"
 date: 2020-04-06
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new Camel 3.2.0 release"

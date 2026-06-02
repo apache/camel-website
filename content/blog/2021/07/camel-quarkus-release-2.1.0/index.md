@@ -1,7 +1,7 @@
 ---
 title: "Camel Quarkus 2.1.0 Released"
 date: 2021-07-30
-authors: ["zbendhiba"]
+draft: trueauthors: ["zbendhiba"]
 categories: ["Releases"]
 preview: "Camel Quarkus 2.1.0 Released"
 summary: "Camel Quarkus 2.1.0 brings Quarkus 2.1.0.Final"

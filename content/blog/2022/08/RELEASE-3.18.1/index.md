@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 3.18.1"
 date: 2022-08-11
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new Camel 3.18.1 LTS release"

@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 2.25.4"
 date: 2021-05-28
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of Camel 2.25.4"

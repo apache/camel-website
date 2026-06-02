@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 2.24.2"
 date: 2019-09-13
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new patch release Camel 2.24.2"

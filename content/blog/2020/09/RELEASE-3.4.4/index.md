@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 3.4.4"
 date: 2020-09-28
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new Camel 3.4.4 patch release"

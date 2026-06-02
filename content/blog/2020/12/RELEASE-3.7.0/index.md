@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 3.7.0"
 date: 2020-12-16
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new Camel 3.7.0 LTS release"

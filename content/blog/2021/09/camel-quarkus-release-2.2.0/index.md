@@ -1,7 +1,7 @@
 ---
 title: "Camel Quarkus 2.2.0 Released"
 date: 2021-09-01
-authors: ["ppalaga"]
+draft: trueauthors: ["ppalaga"]
 categories: ["Releases"]
 preview: "Camel Quarkus 2.2.0 Released"
 summary: "Camel Quarkus 2.2.0 brings Quarkus 2.2, better test coverage and documentation"

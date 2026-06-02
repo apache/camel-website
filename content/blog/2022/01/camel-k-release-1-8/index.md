@@ -1,7 +1,7 @@
 ---
 title: "Camel K 1.8 release"
 date: 2022-01-26
-draft: false
+draft: true
 authors: [squakez]
 categories: ["Releases"]
 preview: "What's new in Camel K 1.8"

@@ -1,7 +1,7 @@
 ---
 title: "Camel Karaf 4.10.5 Released"
 date: 2025-06-26
-authors: ["jbonofre"]
+draft: trueauthors: ["jbonofre"]
 categories: ["Releases"]
 preview: "Camel Karaf 4.10.5 Released"
 summary: "Camel Karaf 4.10.5 release"

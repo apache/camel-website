@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 4.8.8"
 date: 2025-06-26
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new Camel 4.8.8 LTS release"

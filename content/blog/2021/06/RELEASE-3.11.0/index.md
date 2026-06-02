@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 3.11.0"
 date: 2021-06-28
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new Camel 3.11.0 LTS release"

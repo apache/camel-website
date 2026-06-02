@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 3.21.5"
 date: 2024-06-21
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new Camel 3.21.5 LTS patch release"

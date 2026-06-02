@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 4.0.0-M1"
 date: 2023-02-04
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of a new milestone Camel 4.0.0-M1"

@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 4.2.0"
 date: 2023-11-14
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new Camel 4.2.0 release"

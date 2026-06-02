@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 4.10.3"
 date: 2025-03-31
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new Camel 4.10.3 LTS release"

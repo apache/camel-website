@@ -1,7 +1,7 @@
 ---
 title: "Camel Quarkus 2.7.2 Released"
 date: 2022-07-04
-authors: ["ppalaga"]
+draft: trueauthors: ["ppalaga"]
 categories: ["Releases"]
 preview: "Camel Quarkus 2.7.2 Released"
 summary: "Camel Quarkus 2.7.2 brings Quarkus 2.7.6.Final, Camel 3.14.4"

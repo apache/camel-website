@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 3.7.6"
 date: 2021-10-05
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new Camel 3.7.6 LTS release"

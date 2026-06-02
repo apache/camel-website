@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 3.22.3"
 date: 2024-12-20
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new Camel 3.22.3 LTS release"

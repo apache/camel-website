@@ -1,7 +1,7 @@
 ---
 title: "Camel Quarkus 2.13.3 Released"
 date: 2023-04-24
-authors: ["aldettinger","jamesnetherton"]
+draft: trueauthors: ["aldettinger","jamesnetherton"]
 categories: ["Releases"]
 preview: "Camel Quarkus 2.13.3 Released"
 summary: "Camel Quarkus 2.13.3 brings Quarkus 2.13.7.Final"

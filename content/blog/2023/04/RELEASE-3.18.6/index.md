@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 3.18.6"
 date: 2023-04-03
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of the new Camel 3.18.6 LTS release"

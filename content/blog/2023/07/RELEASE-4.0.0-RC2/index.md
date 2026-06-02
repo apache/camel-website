@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 4.0.0-RC2"
 date: 2023-07-29
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of a new release candidate Camel 4.0.0-RC2"

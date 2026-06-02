@@ -1,7 +1,7 @@
 ---
 title: "RELEASE 4.0.4"
 date: 2024-02-01
-draft: false
+draft: true
 authors: [gzurowski]
 categories: ["Releases"]
 preview: "The Camel community announces the immediate availability of a the new Camel 4.0.4 patch release"
