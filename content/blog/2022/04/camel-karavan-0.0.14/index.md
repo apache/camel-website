@@ -1,7 +1,7 @@
 ---
 title: "Karavan Designer Preview Release 0.0.14"
 date: 2022-04-18
-authors: [mgubaidullin]
+draft: trueauthors: [mgubaidullin]
 categories: ["Releases","Tooling"]
 preview: "What's new in Karavan 0.0.14"
 ---

@@ -1,8 +1,9 @@
 ---
 title: "New committers to Apache Camel"
 date: 2020-12-15T10:40:19+01:00
+draft: true
 authors: ["zregvart"]
-categories: ["Events"]
+categories: ["Community"]
 preview: "Camel community welcomes two new committers to the project!"
 ---
 We're happy to announce that our little caravan has been enriched by two new committers. The Camel project warmly welcomes [Jiri Ondrusek](https://github.com/JiriOndrusek) and [Jeremy Ross](https://github.com/jeremyross).

@@ -1,7 +1,7 @@
 ---
 title: "Kaoto v2.0 TP1 release"
 date: 2024-01-26
-draft: false
+draft: true
 authors: [lordrip]
 categories: ["Releases", "Tooling"]
 preview: "Kaoto 2.0 TP1 is released. What's new?"

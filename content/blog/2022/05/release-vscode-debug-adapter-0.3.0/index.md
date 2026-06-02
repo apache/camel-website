@@ -1,7 +1,7 @@
 ---
 title: "New release of VS Code Debug Adapter for Apache Camel 0.3.0"
 date: 2022-05-17
-authors: [apupier]
+draft: trueauthors: [apupier]
 categories: ["Tooling", "Releases"]
 preview: "New release of VS Code Debug Adapter for Apache Camel 0.3.0. Improve guidance, conditional breakpoint support and breakpoint available on start."
 ---

@@ -1,7 +1,7 @@
 ---
 title: "New Camel K Logging Features"
 date: 2021-05-10
-authors: ["orpiske"]
+draft: trueauthors: ["orpiske"]
 categories: ["Camel K"]
 preview: "New Camel K Logging Features"
 summary: "New Camel K Logging Features for Camel K 1.5"

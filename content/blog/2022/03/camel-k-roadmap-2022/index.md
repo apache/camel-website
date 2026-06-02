@@ -1,7 +1,7 @@
 ---
 title: "Camel K 2022 Roadmap"
 date: 2022-03-01
-draft: false
+draft: true
 authors: [squakez]
 categories: ["Roadmap", "Camel K"]
 preview: "A brief overview of what we've planned for Camel K in 2022"

@@ -1,6 +1,7 @@
 ---
 title: "An extension for coc.nvim to enable Apache Camel Language Server"
 date: 2022-07-15
+draft: true
 authors: [Navyashree0923]
 categories: ["Tooling"]
 preview: "An extension for coc.nvim to enable Apache Camel Language Server"

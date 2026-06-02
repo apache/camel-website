@@ -2,7 +2,7 @@
 title: "Three Apache Camel JBang Videos" 
 date: 2023-10-18
 authors: [davsclaus]
-categories: ["Events", "Tooling"]
+categories: ["Tooling"]
 preview: Three videos with Camel JBang demos and first impressions 
 ---
 

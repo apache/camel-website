@@ -1,10 +1,10 @@
 ---
 title: "Camel at ApacheCon @Home 2020"
 date: 2020-07-01
+draft: true
 authors: [delawen, zregvart]
 categories: ["Events"]
 preview: ApacheConf @Home 2020, free online conference featuring Apache Camel and Software Integration track
-draft: false
 ---
 
 

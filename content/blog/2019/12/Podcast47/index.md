@@ -1,8 +1,9 @@
 ---
 title: "JBoss Asylum Podcast about Apache Camel 3"
 date: 2019-12-17
+draft: true
 authors: [davsclaus]
-categories: ["Events"]
+categories: ["Community"]
 preview: JBoss Community Asylum Podcast epiosode 47 about Apache Camel 3
 ---
 

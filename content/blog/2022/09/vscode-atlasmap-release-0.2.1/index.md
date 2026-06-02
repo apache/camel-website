@@ -1,7 +1,7 @@
 ---
 title: "New release of VS Code AtlasMap 0.2.1"
 date: 2022-09-22
-authors: [joshiraez]
+draft: trueauthors: [joshiraez]
 categories: ["Releases","Tooling"]
 preview: "New release of VS Code AtlasMap 0.2.1"
 ---

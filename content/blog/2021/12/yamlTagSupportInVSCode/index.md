@@ -1,7 +1,7 @@
 ---
 title: "How to have textual Yaml editing support in VS Code for Camel Yaml files"
 date: 2021-12-08
-authors: [apupier]
+draft: trueauthors: [apupier]
 categories: ["Tooling"]
 preview: "How to have textual Yaml editing support in VS Code for Camel Yaml files"
 ---

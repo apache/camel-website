@@ -1,7 +1,7 @@
 ---
 title: "Karavan Preview Release 3.18.3"
 date: 2022-09-19
-authors: [mgubaidullin]
+draft: trueauthors: [mgubaidullin]
 categories: ["Releases", "Tooling"]
 preview: "Karavan supports OSS/Keycloak"
 ---

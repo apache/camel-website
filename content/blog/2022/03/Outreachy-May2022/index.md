@@ -1,9 +1,9 @@
 ---
 title: "Outreachy Internship Contributions Open"
 date: 2022-03-29
-draft: false
+draft: true
 authors: [astefanutti]
-categories: ["Events"]
+categories: ["Community"]
 preview: "The Camel community is participating in the Outreachy program, we welcome internship candidates for the May 2022 internship round."
 ---
 

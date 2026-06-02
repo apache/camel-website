@@ -1,7 +1,7 @@
 ---
 title: "Roadmap to Camel 4"
 date: 2023-01-04
-draft: false
+draft: true
 authors: [davsclaus, oscerd, essobedo]
 categories: ["Roadmap"]
 preview: "Roadmap to Apache Camel 4 and impact on Camel 3"

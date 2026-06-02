@@ -2,7 +2,7 @@
 title: "Apache Camel 2020 Release Schedule"
 date: 2020-03-06
 authors: [davsclaus]
-draft: false
+draft: true
 categories: ["Roadmap"]
 preview: The Apache Camel project is moving to release schedule with Long Term Support (LTS) and non-LTS releases.
 ---

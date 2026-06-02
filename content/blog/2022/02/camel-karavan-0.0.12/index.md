@@ -1,7 +1,7 @@
 ---
 title: "Beans and dependencies in Karavan"
 date: 2022-02-14
-authors: [mgubaidullin]
+draft: trueauthors: [mgubaidullin]
 categories: ["Releases","Tooling"]
 preview: "Camel Karavan preview release 0.0.12"
 ---

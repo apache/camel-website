@@ -1,7 +1,7 @@
 ---
 title: "New release of VS Code Language Support for Camel 0.8.0"
 date: 2023-06-07
-authors: [djelinek]
+draft: trueauthors: [djelinek]
 categories: ["Releases","Tooling"]
 preview: "New release of VS Code Language Support for Camel 0.8.0"
 ---

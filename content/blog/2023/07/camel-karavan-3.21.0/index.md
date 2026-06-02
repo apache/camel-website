@@ -1,7 +1,7 @@
 ---
 title: "Karavan 3.21.0: Developer Performance Accelerator"
 date: 2023-07-11
-authors: [mgubaidullin]
+draft: trueauthors: [mgubaidullin]
 categories: ["Tooling"]
 preview: "What's new in Karavan 3.21.0"
 ---

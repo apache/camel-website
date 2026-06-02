@@ -1,6 +1,7 @@
 ---
 title: "Rayvens: a new project powered by Camel K"
 date: 2021-07-01
+draft: true
 authors: [nicolaferraro]
 categories: ["Usecases"]
 preview: Rayvens is a new open source project that leverages Apache Camel K to connect AI applications.

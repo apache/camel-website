@@ -1,6 +1,7 @@
 ---
 title: "Camel Textual Route debugging in Emacs"
 date: 2022-10-07
+draft: true
 authors: [Navyashree0923]
 categories: ["Tooling"]
 preview: "Camel Textual Route debugging in Emacs"

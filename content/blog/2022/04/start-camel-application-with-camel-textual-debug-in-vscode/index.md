@@ -1,7 +1,7 @@
 ---
 title: "Start a Camel Main application with Textual debug for Camel routes in VS Code with a single launch configuration"
 date: 2022-04-14
-authors: [apupier]
+draft: trueauthors: [apupier]
 categories: ["Tooling"]
 preview: "Start a Camel Main application with Textual debug for Camel routes in VS Code with a single launch configuration"
 ---

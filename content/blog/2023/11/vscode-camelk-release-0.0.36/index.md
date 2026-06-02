@@ -1,7 +1,7 @@
 ---
 title: "New release of VS Code Tooling for Camel K 0.0.36"
 date: 2023-11-07
-authors: [apupier]
+draft: trueauthors: [apupier]
 categories: ["Releases","Tooling"]
 preview: "New release of VS Code Tooling for Camel K 0.0.36"
 ---

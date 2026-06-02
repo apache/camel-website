@@ -1,6 +1,7 @@
 ---
 title: "Client implementation of the Apache Camel Language Server Protocol for Emacs"
 date: 2022-06-09
+draft: true
 authors: [Navyashree0923]
 categories: ["Tooling"]
 preview: "Client implementation of the Apache Camel Language Server Protocol for Emacs"

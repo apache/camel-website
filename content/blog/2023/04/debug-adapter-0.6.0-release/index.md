@@ -1,7 +1,7 @@
 ---
 title: "New release of VS Code Debug Adapter for Apache Camel 0.6.0"
 date: 2023-04-24
-authors: [djelinek]
+draft: trueauthors: [djelinek]
 categories: ["Releases","Tooling"]
 preview: "New release of VS Code Debug Adapter for Apache Camel 0.6.0"
 ---

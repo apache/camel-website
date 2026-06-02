@@ -1,7 +1,7 @@
 ---
 title: "How to Java debug a Camel K integration in VS Code - second iteration"
 date: 2021-05-17
-authors: [apupier]
+draft: trueauthors: [apupier]
 categories: ["Tooling","Camel K"]
 preview: "How to Java debug a Camel K integration in VS Code - second iteration"
 ---

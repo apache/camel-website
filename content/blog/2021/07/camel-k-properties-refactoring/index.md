@@ -1,7 +1,7 @@
 ---
 title: "Camel K 1.5 - New configuration settings"
 date: 2021-07-20
-draft: false
+draft: true
 authors: [squakez]
 categories: ["Camel K"]
 preview: "Learn how to include properties and resources in your Camel K integration"

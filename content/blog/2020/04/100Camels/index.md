@@ -2,7 +2,7 @@
 title: "How to quickly run 100 Camels with Apache Camel, Quarkus and GraalVM"
 date: 2020-04-15
 authors: [davsclaus]
-categories: ["Events"]
+categories: ["Camel Quarkus"]
 preview: 10 minute video of how to run Camel with Quarkus in both JVM and native compiled mode.
 ---
 

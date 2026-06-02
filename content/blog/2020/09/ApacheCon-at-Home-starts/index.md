@@ -1,10 +1,10 @@
 ---
 title: "Camel at ApacheCon @Home starts tomorrow!"
 date: 2020-09-28
+draft: true
 authors: [delawen, zregvart]
 categories: ["Events"]
 preview: ApacheConf @Home 2020, free online conference featuring Apache Camel and Software Integration track starts tomorrow, here's how to make the most of it
-draft: false
 ---
 
 [ApacheCon @Home](https://www.apachecon.com/acna2020/index.html) starts

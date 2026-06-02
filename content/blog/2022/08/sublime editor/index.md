@@ -1,6 +1,7 @@
 ---
 title: "LSP-camel extension for camells integration with sublime text to enable Apache Camel Language Server"
 date: 2022-08-16
+draft: true
 authors: [Navyashree0923]
 categories: ["Tooling"]
 preview: "LSP-camel extension for camells integration with sublime text to enable Apache Camel Language Server"

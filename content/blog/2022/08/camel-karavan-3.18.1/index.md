@@ -1,7 +1,7 @@
 ---
 title: "Karavan Preview Release 3.18"
 date: 2022-08-19
-authors: [mgubaidullin]
+draft: trueauthors: [mgubaidullin]
 categories: ["Releases","Tooling"]
 preview: "New integration designer capabilities, Karavan on OpenShift, Tekton Pipelines and much more"
 ---

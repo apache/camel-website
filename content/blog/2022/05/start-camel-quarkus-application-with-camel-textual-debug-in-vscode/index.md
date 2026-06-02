@@ -1,7 +1,7 @@
 ---
 title: "How to start a Camel Quarkus application with Textual debug for Camel routes in VS Code with a single launch configuration"
 date: 2022-05-06
-authors: [apupier]
+draft: trueauthors: [apupier]
 categories: ["Tooling"]
 preview: "How to start a Camel Quarkus application with Textual debug for Camel routes in VS Code with a single launch configuration"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "New releases of VS Code Extensions: Language Support 0.9.0, Debug Adapter 0.8.0, Tooling for Camel K 0.0.34"
 date: 2023-07-05
-authors: [apupier]
+draft: trueauthors: [apupier]
 categories: ["Releases","Tooling"]
 preview: "New releases of VS Code Extensions: Language Support 0.9.0, Debug Adapter 0.8.0, Tooling for Camel K 0.0.34"
 ---

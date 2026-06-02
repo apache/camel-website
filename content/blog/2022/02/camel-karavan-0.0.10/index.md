@@ -1,7 +1,7 @@
 ---
 title: "Karavan Designer Preview Release 0.0.10"
 date: 2022-02-07
-authors: [mgubaidullin]
+draft: trueauthors: [mgubaidullin]
 categories: ["Releases","Tooling"]
 preview: "Karavan Designer both cloud and VS Code extension Preview Release 0.0.10"
 ---

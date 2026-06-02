@@ -1,9 +1,9 @@
 ---
 title: "Outreachy update"
 date: 2020-03-30
-draft: false
+draft: true
 authors: ["delawen", "zregvart"]
-categories: ["Events"]
+categories: ["Community"]
 preview: "Some updates on Outreachy internship program"
 ---
 

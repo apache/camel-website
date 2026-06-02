@@ -1,7 +1,7 @@
 ---
 title: "Language Support for Apache Camel - VS Code extension 0.0.20"
 date: 2019-12-16
-authors: [apupier]
+draft: trueauthors: [apupier]
 categories: ["Tooling"]
 preview: Language Support for Apache Camel - VS Code extension 0.0.20
 ---

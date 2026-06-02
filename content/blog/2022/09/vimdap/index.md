@@ -1,6 +1,7 @@
 ---
 title: "Camel Textual Route debugging in Vim"
 date: 2022-09-14
+draft: true
 authors: [Navyashree0923]
 categories: ["Tooling"]
 preview: "Camel Textual Route debugging in Vim"

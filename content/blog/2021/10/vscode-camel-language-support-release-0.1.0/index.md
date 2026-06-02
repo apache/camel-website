@@ -1,7 +1,7 @@
 ---
 title: "New release of VS Code Language Support for Apache Camel 0.1.0"
 date: 2021-10-19
-authors: [apupier]
+draft: trueauthors: [apupier]
 categories: ["Releases","Tooling"]
 preview: "New release of VS Code Language Support for Apache Camel 0.1.0: Java 8 drop, catalog upgrades and connected mode completion for Kubernetes and Knative Camel URI."
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Kamelet tooling support for Camel URI"
 date: 2021-05-19
-authors: [apupier]
+draft: trueauthors: [apupier]
 categories: ["Tooling","Camel K"]
 preview: "Kamelet tooling support for Camel URI"
 ---

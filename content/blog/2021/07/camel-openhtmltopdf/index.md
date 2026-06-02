@@ -1,7 +1,7 @@
 ---
 title: "camel-openhtmltopdf: A new component to generate PDF documents"
 date: 2021-07-21
-draft: false
+draft: true
 authors: [jeremyross]
 categories: ["Usecases"]
 preview: "Create beautiful PDFs from HTML and CSS with the new Camel component, camel-openhtmltopdf"

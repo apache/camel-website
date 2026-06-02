@@ -1,7 +1,7 @@
 ---
 title: "Karavan 3.20.0 Preview Release"
 date: 2023-02-05
-authors: [mgubaidullin]
+draft: trueauthors: [mgubaidullin]
 categories: ["Tooling"]
 preview: "What's new in Karavan 3.20.0"
 ---

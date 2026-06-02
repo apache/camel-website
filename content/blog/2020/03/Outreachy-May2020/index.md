@@ -1,9 +1,9 @@
 ---
 title: "Outreachy internship contributions open"
 date: 2020-03-06
-draft: false
+draft: true
 authors: [zregvart]
-categories: ["Events"]
+categories: ["Community"]
 preview: "The Camel community is participating in the Outreachy program, we welcome internship candidates for the May 2020 internship round."
 ---
 

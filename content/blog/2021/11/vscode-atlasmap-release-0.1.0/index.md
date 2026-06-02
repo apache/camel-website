@@ -1,7 +1,7 @@
 ---
 title: "New release of VS Code AtlasMap 0.1.0"
 date: 2021-11-26
-authors: [apupier]
+draft: trueauthors: [apupier]
 categories: ["Releases","Tooling"]
 preview: "New release of VS Code AtlasMap 0.1.0: new development flow."
 ---

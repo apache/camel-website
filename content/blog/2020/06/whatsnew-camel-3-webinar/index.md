@@ -1,6 +1,7 @@
 ---
 title: "What's new with Apache Camel 3 webinar"
 date: 2020-06-11
+draft: true
 authors: [davsclaus]
 categories: ["Events"]
 preview: What's new with Apache Camel 3 webinar.

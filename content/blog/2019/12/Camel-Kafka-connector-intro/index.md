@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel Kafka Connector: Introducing the latest project in the ecosystem"
 date: 2019-12-14
-authors: [oscerd]
+draft: trueauthors: [oscerd]
 categories: ["Roadmap"]
 preview: Introducing Camel-Kafka-connector
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Camel Textual Route debugging in Sublime"
 date: 2022-10-17
+draft: true
 authors: [Navyashree0923]
 categories: ["Tooling"]
 preview: "Camel Textual Route debugging in Sublime"

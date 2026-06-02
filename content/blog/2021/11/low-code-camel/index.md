@@ -1,7 +1,7 @@
 ---
 title: "Low Code Camel"
 date: 2021-11-08
-authors: [nicolaferraro]
+draft: trueauthors: [nicolaferraro]
 categories: ["Camel K", "Tooling"]
 preview: "How Kamelets enable a low code integration experience."
 ---

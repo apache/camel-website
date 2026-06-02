@@ -1,7 +1,7 @@
 ---
 title: "Webinar Integrate Systems in the Age of Camel and Quarkus"
 date: 2021-05-28
-draft: false
+draft: true
 authors: [davsclaus]
 categories: ["Events"]
 preview: "45 min webinar covering latest with Apache Camel, Camel Quarkus, Camel K and Kamelets"

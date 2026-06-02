@@ -1,7 +1,7 @@
 ---
 title: "Managing Kamelet event sources with kn"
 date: 2021-10-04
-draft: false
+draft: true
 authors: [christophd]
 categories: ["Camel K"]
 preview: "How to use the Knative Kamelet event source plugin"
