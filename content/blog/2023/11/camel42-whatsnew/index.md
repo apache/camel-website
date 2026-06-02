@@ -7,7 +7,7 @@ keywords: ["apache camel", "whats new", "camel 4", "release", "camel 4.2", "inte
 preview: Details of what we have done in the Camel 4.2 release.
 ---
 
-Apache Camel 4.2 (non LTS) has just been [released](/blog/2023/11/RELEASE-4.2.0/).
+Apache Camel 4.2 (non LTS) has just been released.
 
 This release introduces a set of new features and noticeable improvements that we will cover in this blog post.
 

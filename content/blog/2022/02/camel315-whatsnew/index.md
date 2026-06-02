@@ -7,7 +7,7 @@ keywords: ["apache camel", "whats new", "camel 3", "release", "camel 3.15", "int
 preview: Details of what we have done in the Camel 3.15 release.
 ---
 
-Apache Camel 3.15 has just been [released](/blog/2022/02/RELEASE-3.15.0/).
+Apache Camel 3.15 has just been released.
 
 This release has **dropped** support for Java 8, and therefore Java 11 is required.
 

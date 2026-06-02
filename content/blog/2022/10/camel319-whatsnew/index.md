@@ -7,7 +7,7 @@ keywords: ["apache camel", "whats new", "camel 3", "release", "camel 3.19", "int
 preview: Details of what we have done in the Camel 3.19 release.
 ---
 
-Apache Camel 3.19 has just been [released](/blog/2022/10/RELEASE-3.19.0/).
+Apache Camel 3.19 has just been released.
 
 This release introduces a set of new features and noticeable improvements that we will cover in this blog post.
 

@@ -8,7 +8,7 @@ keywords: ["apache camel", "whats new", "camel 3", "release", "camel 3.20", "int
 preview: Details of what we have done in the Camel 3.20 release.
 ---
 
-Apache Camel 3.20 has just been [released](/blog/2022/12/RELEASE-3.20.0/).
+Apache Camel 3.20 has just been released.
 
 This release introduces a set of new features and noticeable improvements that we will cover in this blog post.
 

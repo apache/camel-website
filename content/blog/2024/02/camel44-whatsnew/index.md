@@ -7,7 +7,7 @@ keywords: ["apache camel", "whats new", "camel 4", "release", "camel 4.4", "inte
 preview: Details of what we have done in the Camel 4.4 release.
 ---
 
-Apache Camel 4.4 (LTS) has just been [released](/blog/2024/02/RELEASE-4.4.0/).
+Apache Camel 4.4 (LTS) has just been released.
 
 This release introduces a set of new features and noticeable improvements that we will cover in this blog post.
 

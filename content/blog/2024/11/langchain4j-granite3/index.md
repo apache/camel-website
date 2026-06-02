@@ -10,7 +10,7 @@ preview: "Touch the subject of Large Language Models lock in and how to prevent 
 
 # Introduction
 
-In a [previous blog post](/blog/2024/10/langchain4j-camel-annotations/), we have seen how Camel parameter binding annotations could be used in conjunction with LangChain4J AI services to easily create Camel routes using Large Language Models. All this work is best reflected in a [Camel Quarkus example](https://github.com/apache/camel-quarkus-examples/tree/camel-quarkus-main/data-extract-langchain4j). While building this example, poor care was taken about the choice of the LLM as this was not the initial priority. Thinking a bit more, this situation is a great opportunity to experience the switch of an LLM inside of a Camel application. Let's discover this story together.
+In a previous blog post, we have seen how Camel parameter binding annotations could be used in conjunction with LangChain4J AI services to easily create Camel routes using Large Language Models. All this work is best reflected in a [Camel Quarkus example](https://github.com/apache/camel-quarkus-examples/tree/camel-quarkus-main/data-extract-langchain4j). While building this example, poor care was taken about the choice of the LLM as this was not the initial priority. Thinking a bit more, this situation is a great opportunity to experience the switch of an LLM inside of a Camel application. Let's discover this story together.
 
 # Why would one need to switch to another model ?
 

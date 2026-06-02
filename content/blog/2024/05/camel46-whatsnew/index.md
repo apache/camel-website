@@ -7,7 +7,7 @@ keywords: ["apache camel", "whats new", "camel 4", "release", "camel 4.6", "inte
 preview: Summary of what's new and improved in the Camel 4.6 release.
 ---
 
-Apache Camel 4.6 has just been [released](/blog/2024/05/RELEASE-4.6.0/).
+Apache Camel 4.6 has just been released.
 
 This release introduces a set of new features and noticeable improvements that we will cover in this blog post.
 

@@ -7,7 +7,7 @@ keywords: ["apache camel", "whats new", "camel 3", "release", "camel 3.14", "int
 preview: Details of what we have done in the Camel 3.14 LTS release.
 ---
 
-Apache Camel 3.14 has just been [released](/blog/2021/12/RELEASE-3.14.0/).
+Apache Camel 3.14 has just been released.
 
 This is the **last** LTS release supporting Java 8, and therefore we have
 extended the support period from 1 to 2 years.

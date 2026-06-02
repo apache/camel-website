@@ -10,7 +10,7 @@ preview: "Discover how to use Camel TorchServe component to effortlessly run AI 
 
 ## Introduction
 
-In the just released [Apache Camel 4.10 LTS](/blog/2025/02/RELEASE-4.10.0/), AI-related components have been further enhanced. Among others, three new components related to AI model serving have been added. [^1]
+In the just released Apache Camel 4.10 LTS, AI-related components have been further enhanced. Among others, three new components related to AI model serving have been added. [^1]
 
 [^1]: Camel TorchServe component has been provided since 4.9.
 

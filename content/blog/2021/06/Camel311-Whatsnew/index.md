@@ -7,7 +7,7 @@ keywords: ["apache camel", "whats new", "camel 3", "release", "camel 3.11", "int
 preview: Details of what we have done in the Camel 3.11 LTS release.
 ---
 
-Apache Camel 3.11 has just been [released](/blog/2021/06/RELEASE-3.11.0/).
+Apache Camel 3.11 has just been released.
 
 This is a LTS release which will be supported for 1 year with regular patch and security releases.
 

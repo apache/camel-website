@@ -7,7 +7,7 @@ keywords: ["apache camel", "whats new", "camel 3", "release", "camel 3.10", "int
 preview: Details of what we have done in the Camel 3.10 release.
 ---
 
-Apache Camel 3.10 has just been [released](/blog/2021/05/RELEASE-3.10.0/).
+Apache Camel 3.10 has just been released.
 
 This is a non-LTS release which means we will not provide patch releases.
 The next planned LTS release is 3.11 scheduled for June/July 2021.

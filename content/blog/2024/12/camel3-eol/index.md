@@ -9,7 +9,7 @@ preview: Apache Camel 3 is end of life
 
 Apache Camel is officially end of life by end of 2024.
 
-We have just [released](/blog/2024/12/RELEASE-3.22.3/) the last Apache Camel 3.22.3 release of Camel 3.x.
+We have just released the last Apache Camel 3.22.3 release of Camel 3.x.
 There will be NO further releases, and support for Camel 3 has officially reached its end of life.
 
 There will not be any new releases of Camel 3.x, and users are encouraged to start new development

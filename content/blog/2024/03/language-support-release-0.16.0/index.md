@@ -11,7 +11,7 @@ There is a new release of VS Code extension [Language Support for Apache Camel](
 
 Available at [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-apache-camel) and [Open VSX Registry](https://open-vsx.org/extension/redhat/vscode-apache-camel).
 
-This blog post is covering changes made during multiple releases. Latest [blog posted](../../../2023/07/multi-release-vscode-extensions) changes were for Language Support for Apache Camel v0.9.0. But all listed below is available in latest published v0.16.0 extension release.
+This blog post is covering changes made during multiple releases. Latest blog posted changes were for Language Support for Apache Camel v0.9.0. But all listed below is available in latest published v0.16.0 extension release.
 
 ## What's changed
 

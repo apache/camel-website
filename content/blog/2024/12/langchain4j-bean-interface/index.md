@@ -76,7 +76,7 @@ As always, there are manual [workarounds](https://quarkus.io/guides/cdi-referenc
 
 However, this kind of issues is best fixed in the Camel Quarkus LangChain4j extension itself.
 Indeed, this extension aims at solving as much as possible the intricacies of developing camel routes using high-level [AI services](https://docs.langchain4j.dev/tutorials/ai-services/).
-The good news is that the AI service resolution by interface has just been delivered with the recent [Camel Quarkus 3.17.0 release](/blog/2024/12/camel-quarkus-release-3.17.0/).
+The good news is that the AI service resolution by interface has just been delivered with the recent Camel Quarkus 3.17.0 release.
 
 # Conclusion
 

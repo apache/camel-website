@@ -8,7 +8,7 @@ keywords: ["apache camel", "whats new", "camel 4", "release", "camel 4.12", "int
 preview: "Details of what we have done in the Camel 4.12 release."
 ---
 
-Apache Camel 4.12 has just been [released](/blog/2025/05/RELEASE-4.12.0/).
+Apache Camel 4.12 has just been released.
 
 This release introduces a set of new features and noticeable improvements that we will cover in this blog post.
 
