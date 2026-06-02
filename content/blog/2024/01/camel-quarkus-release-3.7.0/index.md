@@ -1,7 +1,8 @@
 ---
 title: "Camel Quarkus 3.7.0 Released"
 date: 2024-01-31
-draft: trueauthors: ["jamesnetherton"]
+draft: true
+authors: ["jamesnetherton"]
 categories: ["Releases"]
 preview: "Camel Quarkus 3.7.0 Released"
 summary: "Camel Quarkus 3.7.0 release"

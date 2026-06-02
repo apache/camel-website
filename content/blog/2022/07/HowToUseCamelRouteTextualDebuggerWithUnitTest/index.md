@@ -1,7 +1,8 @@
 ---
 title: "How to use Camel textual Route Debugger with Unit test in VS Code - Updated with Camel 3.18"
 date: 2022-07-26
-draft: trueauthors: [apupier]
+draft: true
+authors: [apupier]
 categories: ["Tooling"]
 preview: "How to use Camel textual Route Debugger with Unit test in VS Code - Updated with Camel 3.18"
 ---

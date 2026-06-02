@@ -1,7 +1,8 @@
 ---
 title: "Camel Quarkus 3.8.0 LTS Released"
 date: 2024-02-28
-draft: trueauthors: ["aldettinger"]
+draft: true
+authors: ["aldettinger"]
 categories: ["Releases"]
 preview: "Camel Quarkus 3.8.0 LTS Released"
 summary: "Camel Quarkus 3.8.0 LTS release"

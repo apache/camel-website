@@ -1,7 +1,8 @@
 ---
 title: "New release of VS Code Tooling support for Apache Camel K 0.0.26"
 date: 2021-07-27
-draft: trueauthors: [apupier]
+draft: true
+authors: [apupier]
 categories: ["Releases", "Tooling"]
 preview: "New release of VS Code Tooling support for Apache Camel K 0.0.26: Camel K 1.5.0 compatibility and Code Lenses"
 ---

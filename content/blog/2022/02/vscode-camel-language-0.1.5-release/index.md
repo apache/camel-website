@@ -1,7 +1,8 @@
 ---
 title: "VS Code Language support for Camel release 0.1.5"
 date: 2022-02-14
-draft: trueauthors: [apupier]
+draft: true
+authors: [apupier]
 categories: ["Releases", "Tooling"]
 preview: "VS Code Language support for Camel release 0.1.5"
 ---

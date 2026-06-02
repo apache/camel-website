@@ -1,7 +1,8 @@
 ---
 title: "Camel Quarkus 2.14.0 Released"
 date: 2022-11-10
-draft: trueauthors: ["zbendhiba"]
+draft: true
+authors: ["zbendhiba"]
 categories: ["Releases"]
 preview: "Camel Quarkus 2.14.0 Released"
 summary: "Camel Quarkus 2.14.0 is released and aligns with Camel 3.19.0 and Quarkus 2.14.0.Final"

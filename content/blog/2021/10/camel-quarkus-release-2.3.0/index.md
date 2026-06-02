@@ -1,7 +1,8 @@
 ---
 title: "Camel Quarkus 2.3.0 Released"
 date: 2021-10-08
-draft: trueauthors: ["zbendhiba"]
+draft: true
+authors: ["zbendhiba"]
 categories: ["Releases"]
 preview: "Camel Quarkus 2.3.0 Released"
 summary: "Camel Quarkus 2.3.0 brings Quarkus 2.3 and better test coverage"

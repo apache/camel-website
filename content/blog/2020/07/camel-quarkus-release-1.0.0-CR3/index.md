@@ -1,7 +1,8 @@
 ---
 title: "Camel Quarkus 1.0.0-CR3 Released"
 date: 2020-07-07
-draft: trueauthors: ["jamesnetherton"]
+draft: true
+authors: ["jamesnetherton"]
 categories: ["Releases"]
 preview: What's new in Camel Quarkus 1.0.0-CR3
 ---

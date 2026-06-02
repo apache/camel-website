@@ -1,7 +1,8 @@
 ---
 title: "Upgrading to Camel 3.0.0 with Windup"
 date: 2020-09-07
-draft: trueauthors: ["jpoth"]
+draft: true
+authors: ["jpoth"]
 categories: ["Tooling"]
 preview: Plan your upgrade to Camel 3.0.0
 summary: "We'll show you how Windup can help you plan and estimate your upgrade to Camel 3"

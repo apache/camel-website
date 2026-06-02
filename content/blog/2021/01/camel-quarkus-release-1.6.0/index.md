@@ -1,7 +1,8 @@
 ---
 title: "Camel Quarkus 1.6.0 Released"
 date: 2021-01-21
-draft: trueauthors: ["ppalaga"]
+draft: true
+authors: ["ppalaga"]
 categories: ["Releases"]
 preview: "Camel Quarkus 1.6.0 Released"
 summary: "The highlights of Camel Quarkus 1.6.0"

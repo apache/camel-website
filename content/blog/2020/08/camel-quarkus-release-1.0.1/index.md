@@ -1,7 +1,8 @@
 ---
 title: "Camel Quarkus 1.0.1 Released"
 date: 2020-08-31
-draft: trueauthors: ["ppalaga"]
+draft: true
+authors: ["ppalaga"]
 categories: ["Releases"]
 preview: The first maintenance release of Camel Quarkus in the 1.0.x branch
 ---

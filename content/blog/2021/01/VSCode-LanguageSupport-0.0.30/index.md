@@ -1,7 +1,8 @@
 ---
 title: "New release of VS Code Language Support for Apache Camel 0.0.30"
 date: 2021-01-05
-draft: trueauthors: [apupier]
+draft: true
+authors: [apupier]
 categories: ["Releases","Tooling"]
 preview: "New release of VS Code Language Support for Apache Camel 0.0.30: catalog updates and Camel Kafka Connector improvements"
 ---

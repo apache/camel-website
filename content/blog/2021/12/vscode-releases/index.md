@@ -1,7 +1,8 @@
 ---
 title: "New releases of VS Code Language Support for Apache Camel 0.1.2 and Tooling for Apache Camel K 0.0.28"
 date: 2021-12-06
-draft: trueauthors: [apupier]
+draft: true
+authors: [apupier]
 categories: ["Releases","Tooling"]
 preview: "New releases of VS Code Language Support for Apache Camel 0.1.2 and Tooling for Apache Camel K 0.0.28: version upgrades"
 ---

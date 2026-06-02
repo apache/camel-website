@@ -1,7 +1,8 @@
 ---
 title: "Camel Quarkus 3.4.0 Released"
 date: 2023-09-21
-draft: trueauthors: ["zbendhiba"]
+draft: true
+authors: ["zbendhiba"]
 categories: ["Releases"]
 preview: "Camel Quarkus 3.4.0 Released"
 summary: "Camel Quarkus 3.4.0 release"

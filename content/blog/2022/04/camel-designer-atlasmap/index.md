@@ -1,7 +1,8 @@
 ---
 title: "VS Code AtlasMap integrated in Camel-Designer"
 date: 2022-04-19
-draft: trueauthors: [brunoNetId]
+draft: true
+authors: [brunoNetId]
 categories: ["Tooling"]
 preview: "VS Code AtlasMap integrated in Camel-Designer"
 ---

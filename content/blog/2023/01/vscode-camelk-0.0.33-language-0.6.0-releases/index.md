@@ -1,7 +1,8 @@
 ---
 title: "New release of VS Code Language Support for Camel 0.6.0 and Tooling for Camel K 0.0.33"
 date: 2023-01-03
-draft: trueauthors: [apupier]
+draft: true
+authors: [apupier]
 categories: ["Releases","Tooling"]
 preview: "New release of VS Code Language Support for Camel 0.6.0 and Tooling for Camel K 0.0.33"
 ---

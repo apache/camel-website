@@ -1,7 +1,8 @@
 ---
 title: "Camel Quarkus 3.0.0-M1 Released"
 date: 2023-03-24
-draft: trueauthors: ["jamesnetherton","zbendhiba"]
+draft: true
+authors: ["jamesnetherton","zbendhiba"]
 categories: ["Releases"]
 preview: "Camel Quarkus 3.0.0-M1 Released"
 summary: "Camel Quarkus 3.0.0-M1 is the first iteration towards a new 3.0.0 major release"

@@ -1,7 +1,8 @@
 ---
 title: "Camel Quarkus 1.0.0 Released"
 date: 2020-08-10
-draft: trueauthors: ["ppalaga"]
+draft: true
+authors: ["ppalaga"]
 categories: ["Releases"]
 preview: The first stable release of Camel Quarkus
 summary: "Walk through the highlights of the first stable release: Developer joy, Camel component coverage, Bootstrap, CDI, native mode and more!"

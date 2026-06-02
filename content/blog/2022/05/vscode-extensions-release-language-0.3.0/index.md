@@ -1,7 +1,8 @@
 ---
 title: "New release of VS Code Language support for Apache Camel 0.3.0"
 date: 2022-05-03
-draft: trueauthors: [apupier]
+draft: true
+authors: [apupier]
 categories: ["Tooling", "Releases"]
 preview: "New release of VS Code Language support for Apache Camel 0.3.0. It contains updates of default catalogs."
 ---

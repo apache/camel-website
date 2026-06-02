@@ -1,7 +1,8 @@
 ---
 title: "Textual debug for Camel routes in VS Code release 0.1.1"
 date: 2022-04-08
-draft: trueauthors: [apupier]
+draft: true
+authors: [apupier]
 categories: ["Tooling"]
 preview: "Textual debug for Camel routes in VS Code release 0.1.1"
 ---

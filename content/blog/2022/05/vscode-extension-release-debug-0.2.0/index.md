@@ -1,7 +1,8 @@
 ---
 title: "New release of VS Code Debug Adapter for Apache Camel 0.2.0"
 date: 2022-05-04
-draft: trueauthors: [apupier]
+draft: true
+authors: [apupier]
 categories: ["Tooling", "Releases"]
 preview: "New release of VS Code Debug Adapter for Apache Camel 0.2.0. Improve guidance and provide a JBang-based command."
 ---

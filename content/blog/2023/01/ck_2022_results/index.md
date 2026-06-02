@@ -1,7 +1,8 @@
 ---
 title: "Camel K 2022 roadmap - retrospective"
 date: 2023-01-09
-draft: trueauthors: [squakez]
+draft: true
+authors: [squakez]
 categories: ["Roadmap", "Camel K"]
 preview: Quick review of Camel K development in 2022
 ---

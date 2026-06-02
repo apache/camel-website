@@ -1,7 +1,8 @@
 ---
 title: "New release of VS Code Language Support for Apache Camel 0.0.32 and VS Code Tooling for Camel K 0.0.24"
 date: 2021-05-03
-draft: trueauthors: [apupier]
+draft: true
+authors: [apupier]
 categories: ["Releases","Tooling"]
 preview: "New release of VS Code Language Support for Apache Camel 0.0.32 and VS Code Tooling for Camel K 0.0.24: catalog updates, connected mode for Kafka topic completion and dependencies support for Camel K Java integration file"
 ---

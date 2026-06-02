@@ -1,7 +1,8 @@
 ---
 title: "Camel Quarkus 1.0.0-M7 Released"
 date: 2020-04-30
-draft: trueauthors: ["ppalaga"]
+draft: true
+authors: ["ppalaga"]
 categories: ["Releases"]
 preview: What's new in Camel Quarkus 1.0.0-M7
 ---

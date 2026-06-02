@@ -1,7 +1,8 @@
 ---
 title: "Camel K 1.2.0 Released"
 date: 2020-10-12
-draft: trueauthors: ["nicolaferraro"]
+draft: true
+authors: ["nicolaferraro"]
 categories: ["Releases"]
 preview: "Camel K 1.2.0 Released"
 ---

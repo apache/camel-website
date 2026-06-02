@@ -1,7 +1,8 @@
 ---
 title: "Camel Quarkus 2.16.0 Released"
 date: 2023-01-25
-draft: trueauthors: ["aldettinger"]
+draft: true
+authors: ["aldettinger"]
 categories: ["Releases"]
 preview: "Camel Quarkus 2.16.0 Released"
 summary: "Camel Quarkus 2.16.0 brings Quarkus 2.16.0.Final"

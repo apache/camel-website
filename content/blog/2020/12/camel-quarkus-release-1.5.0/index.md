@@ -1,7 +1,8 @@
 ---
 title: "Camel Quarkus 1.5.0 Released"
 date: 2020-12-18
-draft: trueauthors: ["ppalaga"]
+draft: true
+authors: ["ppalaga"]
 categories: ["Releases"]
 preview: "Camel Quarkus 1.5.0 Released"
 summary: "The highlights of Camel Quarkus 1.5.0"

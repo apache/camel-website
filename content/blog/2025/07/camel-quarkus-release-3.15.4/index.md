@@ -1,7 +1,8 @@
 ---
 title: "Camel Quarkus 3.15.4 Released"
 date: 2025-07-01
-draft: trueauthors: ["jiriondrusek"]
+draft: true
+authors: ["jiriondrusek"]
 categories: ["Releases"]
 preview: "Camel Quarkus 3.15.4 Released"
 summary: "Camel Quarkus 3.15.4 release"

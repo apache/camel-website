@@ -1,7 +1,8 @@
 ---
 title: "Start a Camel Main application with Textual debug for Camel routes in Eclipse from a single launch configuration"
 date: 2022-04-19
-draft: trueauthors: [apupier]
+draft: true
+authors: [apupier]
 categories: ["Tooling"]
 preview: "Start a Camel Main application with Textual debug for Camel routes in Eclipse from a single launch configuration"
 ---
