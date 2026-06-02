@@ -3,6 +3,7 @@ title: "Apache Camel 3.11 What's New"
 date: 2021-06-29
 authors: [davsclaus]
 categories: ["Releases"]
+keywords: ["apache camel", "whats new", "camel 3", "release", "camel 3.11", "integration framework"]
 preview: Details of what we have done in the Camel 3.11 LTS release.
 ---
 

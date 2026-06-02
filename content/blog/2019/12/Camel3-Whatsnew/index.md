@@ -3,6 +3,7 @@ title: "Apache Camel 3 What's New (top 10)"
 date: 2019-12-02
 authors: [davsclaus]
 categories: ["Releases"]
+keywords: ["apache camel", "whats new", "release", "camel ", "integration framework"]
 preview: Top 10 of what's new in Apache Camel version 3
 ---
 

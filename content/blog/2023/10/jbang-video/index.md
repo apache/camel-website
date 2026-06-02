@@ -3,6 +3,7 @@ title: "Three Apache Camel JBang Videos"
 date: 2023-10-18
 authors: [davsclaus]
 categories: ["Tooling"]
+keywords: ["apache camel", "camel jbang", "camel cli", "demo", "video", "developer tools", "cli"]
 preview: Three videos with Camel JBang demos and first impressions 
 ---
 

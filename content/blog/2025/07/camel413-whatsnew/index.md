@@ -4,6 +4,7 @@ date: 2025-07-08
 draft: false
 authors: [ davsclaus,squakez,claudio4j ]
 categories: [ "Releases" ]
+keywords: ["apache camel", "whats new", "camel 4", "release", "camel 4.13", "integration framework"]
 preview: "Details of what we have done in the Camel 4.13 release."
 ---
 

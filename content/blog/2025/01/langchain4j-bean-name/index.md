@@ -4,6 +4,7 @@ date: 2025-01-17
 draft: false
 authors: [aldettinger]
 categories: ["AI"]
+keywords: ["apache camel", "langchain4j", "ai services", "bean registry", "llm"]
 preview: "Explain the new feature to resolve AI services by name directly from Camel Quarkus"
 ---
 

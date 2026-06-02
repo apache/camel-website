@@ -4,6 +4,7 @@ date: 2026-02-10
 draft: false
 authors: [ oscerd ]
 categories: ["AI", "Tooling"]
+keywords: ["apache camel", "mcp", "ai coding assistant", "camel jbang", "camel cli", "developer tools"]
 preview: "Introducing the Camel MCP Server, a Model Context Protocol server that exposes the full Camel Catalog, route validation, security analysis, and more to AI coding assistants like Claude Code, OpenAI Codex, and others."
 ---
 

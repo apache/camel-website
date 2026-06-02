@@ -4,6 +4,7 @@ date: 2026-01-14
 draft: false
 authors: [ ibek ]
 categories: ["AI"]
+keywords: ["apache camel", "openai", "llm", "chat completion", "ai integration", "camel component"]
 preview: "A deep dive into the new camel-openai component for chat completion with OpenAI and OpenAI-compatible APIs"
 ---
 

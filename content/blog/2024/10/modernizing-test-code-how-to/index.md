@@ -4,6 +4,7 @@ date: 2024-10-24
 draft: false
 authors: [orpiske]
 categories: ["Howtos"]
+keywords: ["apache camel", "testing", "junit", "test migration", "howto", "modernization"]
 preview: "Modernizing Camel's Test Support Code: How To"
 ---
 

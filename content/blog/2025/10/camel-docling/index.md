@@ -4,6 +4,7 @@ date: 2025-10-15
 draft: false
 authors: [ oscerd ]
 categories: ["AI"]
+keywords: ["apache camel", "docling", "document processing", "langchain4j", "ai", "pdf extraction"]
 preview: "The new camel-docling component meets camel-langchain4j"
 ---
 

@@ -4,6 +4,7 @@ date: 2025-09-17
 draft: false
 authors: [gzurowski]
 categories: ["Releases"]
+keywords: ["apache camel", "release", "4.8.9", "integration framework"]
 preview: "The Camel community announces the immediate availability of the new Camel 4.8.9 LTS release"
 ---
 

@@ -4,6 +4,7 @@ date: 2025-12-23
 draft: false
 authors: [squakez]
 categories: ["Releases", "Roadmap"]
+keywords: ["apache camel", "camel k", "kubernetes", "gitops", "dry build", "keda"]
 preview: "What's new in Camel K 2.9.0!"
 ---
 

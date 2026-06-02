@@ -4,6 +4,7 @@ date: 2023-01-31
 draft: false
 authors: [christophd]
 categories: ["Howtos", "Camel K"]
+keywords: ["apache camel", "camel k", "yaks", "testing", "bdd", "kubernetes"]
 preview: "How to verify a Camel K integration with YAKS - locally and on cloud infrastructure"
 ---
 

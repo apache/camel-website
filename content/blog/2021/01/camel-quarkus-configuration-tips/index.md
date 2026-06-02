@@ -3,6 +3,7 @@ title: "Camel Quarkus Configuration Tips"
 date: 2021-01-29
 authors: ["aldettinger"]
 categories: ["Camel Quarkus"]
+keywords: ["apache camel", "camel quarkus", "configuration", "properties", "tips"]
 preview: "Camel Quarkus Configuration Tips"
 summary: "Some tips related to configuration in Camel Quarkus"
 ---

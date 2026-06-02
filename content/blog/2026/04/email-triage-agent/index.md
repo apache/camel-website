@@ -4,6 +4,7 @@ date: 2026-04-16
 draft: false
 authors: ["zbendhiba"]
 categories: ["AI", "Usecases", "Tooling"]
+keywords: ["apache camel", "openai", "email triage", "gmail", "camel jbang", "camel cli", "ai agent"]
 preview: "Combining the camel-openai component with structured output, Gmail DataType Transformers, SimpleFunction, and Camel JBang to build an AI agent that classifies emails, organizes your inbox, and drafts replies."
 ---
 

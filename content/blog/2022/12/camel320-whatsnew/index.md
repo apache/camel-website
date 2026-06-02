@@ -4,6 +4,7 @@ title: "Apache Camel 3.20 What's New"
 date: 2022-12-21
 authors: [davsclaus, essobedo]
 categories: ["Releases"]
+keywords: ["apache camel", "whats new", "camel 3", "release", "camel 3.20", "integration framework"]
 preview: Details of what we have done in the Camel 3.20 release.
 ---
 

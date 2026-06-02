@@ -3,6 +3,7 @@ title: "Apache Camel Kafka Connector 0.7.0: What's New"
 date: 2020-12-24
 authors: [oscerd, valdar]
 categories: ["Releases"]
+keywords: ["apache camel", "kafka connector", "kafka connect", "release", "streaming"]
 preview: Details of what we have done in the Camel Kafka Connector 0.7.0 release.
 ---
 

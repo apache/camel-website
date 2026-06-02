@@ -3,6 +3,7 @@ title: "Camel Dynamic Router EIP Component"
 date: 2022-01-14
 authors: ["Steve973"]
 categories: ["Camel"]
+keywords: ["apache camel", "dynamic router", "eip", "enterprise integration patterns", "routing"]
 preview: "Apache Camel 3.15.0 introduces a new Dynamic Router EIP Component"
 ---
 

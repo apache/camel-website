@@ -4,6 +4,7 @@ date: 2022-12-12
 draft: false
 authors: [ppalaga,zbendhiba,davsclaus]
 categories: ["Events"]
+keywords: ["apache camel", "quarkus", "camel jbang", "camel cli", "camel quarkus", "presentation", "video"]
 preview: "Apache Camel presented at Quarkus Insights"
 ---
 

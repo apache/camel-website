@@ -4,6 +4,7 @@ date: 2026-02-17
 draft: false
 authors: [gzurowski]
 categories: ["Releases"]
+keywords: ["apache camel", "release", "4.18.0", "integration framework"]
 preview: "The Camel community announces the immediate availability of the new Camel 4.18.0 LTS release"
 ---
 

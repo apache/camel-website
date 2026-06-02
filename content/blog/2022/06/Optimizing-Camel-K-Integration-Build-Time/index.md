@@ -4,6 +4,7 @@ date: 2022-06-28
 draft: false
 authors: ["whtssub", "astefanutti"]
 categories: ["Camel K"]
+keywords: ["apache camel", "camel k", "build optimization", "kubernetes", "performance"]
 preview: "Scaling the Camel K operator vertically to improve the integration build time."
 ---
 

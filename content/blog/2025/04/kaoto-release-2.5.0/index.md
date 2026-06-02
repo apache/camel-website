@@ -4,6 +4,7 @@ date: 2025-04-30
 draft: true
 authors: [lordrip]
 categories: ["Releases", "Tooling"]
+keywords: ["apache camel", "kaoto", "visual editor", "integration design"]
 preview: "Kaoto 2.5 has been released"
 ---
 

@@ -4,6 +4,7 @@ date: 2022-11-24
 draft: false
 authors: [squakez]
 categories: ["Howtos", "Camel K", "Tooling"]
+keywords: ["apache camel", "camel k", "testing", "camel jbang", "camel cli", "integration testing"]
 preview: "How to use Camel JBang to locally test a Camel K integration"
 ---
 

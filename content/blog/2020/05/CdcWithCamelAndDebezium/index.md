@@ -4,6 +4,7 @@ date: 2020-05-04
 draft: false
 authors: [fvaleri]
 categories: ["Usecases"]
+keywords: ["apache camel", "cdc", "debezium", "change data capture", "kafka connect"]
 preview: "CDC approaches based on Camel and Debezium."
 ---
 

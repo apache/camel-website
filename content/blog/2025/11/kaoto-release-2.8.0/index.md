@@ -4,6 +4,7 @@ date: 2025-11-11
 draft: false
 authors: [djelinek, igarashitm, lordrip]
 categories: ["Releases", "Tooling"]
+keywords: ["apache camel", "kaoto", "visual editor", "integration design"]
 preview: "Kaoto 2.8 has been released"
 ---
 

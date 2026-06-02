@@ -3,6 +3,7 @@ title: "Karavan Introduction in 4 minutes"
 date: 2023-01-09
 authors: [mgubaidullin]
 categories: ["Tooling"]
+keywords: ["apache camel", "karavan", "visual designer", "low code", "integration"]
 preview: Apache Camel Karavan Introduction video
 ---
 

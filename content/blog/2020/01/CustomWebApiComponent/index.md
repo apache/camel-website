@@ -4,6 +4,7 @@ date: 2020-01-07
 draft: false
 authors: [fvaleri]
 categories: ["Usecases"]
+keywords: ["apache camel", "custom component", "web api", "camel component", "rest api"]
 preview: "Build your own custom Web API Component from scratch."
 ---
 

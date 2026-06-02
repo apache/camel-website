@@ -3,6 +3,7 @@ title: "Apache Camel 3 - End of Life"
 date: 2024-12-23
 authors: [davsclaus,gzurowski]
 categories: ["Roadmap"]
+keywords: ["apache camel", "end of life", "migration", "camel 3", "camel 4"]
 preview: Apache Camel 3 is end of life
 ---
 

@@ -4,6 +4,7 @@ date: 2026-01-28
 draft: false
 authors: [ croway, mcarlett ]
 categories: ["AI", "Usecases"]
+keywords: ["apache camel", "log analysis", "llm", "kafka", "camel jbang", "camel cli", "ai"]
 preview: "A modern approach to developing distributed integration solutions with Apache Camel's YAML DSL, Camel JBang, visual tooling, and LLM-powered log analysis"
 ---
 

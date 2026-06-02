@@ -4,6 +4,7 @@ date: 2022-03-24
 draft: false
 authors: ["oscerd"]
 categories: ["Camel"]
+keywords: ["apache camel", "secrets management", "vault", "aws secrets manager", "gcp secret manager", "azure key vault"]
 preview: "How to retrieve properties from a Cloud vault service"
 ---
 

@@ -4,6 +4,7 @@ date: 2023-03-09
 draft: false
 authors: [gansheer]
 categories: ["Camel K", "Howtos"]
+keywords: ["apache camel", "camel k", "distributed tracing", "opentelemetry", "observability"]
 preview: "Camel K: how to configure Distributed Tracing for an Integration"
 ---
 

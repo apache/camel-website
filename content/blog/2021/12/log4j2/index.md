@@ -4,6 +4,7 @@ date: 2021-12-13
 draft: false
 authors: [davsclaus]
 categories: ["Howtos"]
+keywords: ["apache camel", "log4j", "cve", "security", "vulnerability", "logging"]
 preview: "Apache Camel and CVE-2021-44228 (log4j)"
 ---
 

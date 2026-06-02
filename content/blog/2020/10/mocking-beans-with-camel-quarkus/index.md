@@ -3,6 +3,7 @@ title: "The Camel: mocking more than ever helped by Quarkus friend"
 date: 2020-10-31T17:02:10+02:00
 authors: ["aldettinger"]
 categories: ["Howtos", "Camel Quarkus"]
+keywords: ["apache camel", "camel quarkus", "mocking", "testing", "cdi", "unit testing"]
 preview: ""
 ---
 

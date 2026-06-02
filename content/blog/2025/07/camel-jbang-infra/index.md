@@ -4,6 +4,7 @@ date: 2025-07-21
 draft: false
 authors: [croway]
 categories: ["Howtos"]
+keywords: ["apache camel", "camel jbang", "camel cli", "prototyping", "end to end", "testing", "infrastructure"]
 preview: "Learn how to leverage Apache Camel JBang to prototype E2E scenarios"
 ---
 

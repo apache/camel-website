@@ -4,6 +4,7 @@ date: 2025-11-12
 draft: false
 authors: [ croway ]
 categories: [ "Tooling" ]
+keywords: ["apache camel", "llms.txt", "ai", "documentation", "llm", "developer experience"]
 preview: "How we implemented llms.txt to make Apache Camel documentation easily accessible to AI coding agents and LLM training"
 ---
 

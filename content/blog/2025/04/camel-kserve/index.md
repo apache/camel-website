@@ -4,6 +4,7 @@ date: 2025-04-02
 draft: false
 authors: [tadayosi]
 categories: ["AI"]
+keywords: ["apache camel", "kserve", "model serving", "ai inference", "kubernetes", "machine learning"]
 preview: "Learn how to leverage the Camel KServe component in your Camel application for seamless AI model inference with KServe-compliant model servers"
 ---
 

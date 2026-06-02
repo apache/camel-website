@@ -3,6 +3,7 @@ title: "Karavan Serverless mode"
 date: 2021-11-24
 authors: [mgubaidullin]
 categories: ["Tooling", "Howtos"]
+keywords: ["apache camel", "karavan", "serverless", "visual designer", "low code"]
 preview: "Karavan Serverless mode with Camel-K on Kubernetes"
 ---
 

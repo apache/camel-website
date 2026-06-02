@@ -4,6 +4,7 @@ date: 2025-10-22
 draft: false
 authors: [ orpiske ]
 categories: ["AI"]
+keywords: ["apache camel", "mcp", "wanaku", "ai agents", "enterprise integration", "tool calling"]
 preview: "Apache Camel Meets MCP: Securely Exposing Your Enterprise Routes as MCP Tools with Wanaku"
 ---
 

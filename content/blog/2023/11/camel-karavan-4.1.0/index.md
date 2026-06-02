@@ -3,6 +3,7 @@ title: "Karavan 4.1.0: We need more Kamelets"
 date: 2023-11-07
 authors: [mgubaidullin]
 categories: ["Tooling"]
+keywords: ["apache camel", "karavan", "kamelets", "visual designer", "integration"]
 preview: "Karavan 4.1.0: Release notes"
 ---
 Apache Camel Karavan 4.1.0 has been launched!

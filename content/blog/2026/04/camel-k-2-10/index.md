@@ -4,6 +4,7 @@ date: 2026-04-13
 draft: false
 authors: [squakez]
 categories: ["Releases", "Roadmap"]
+keywords: ["apache camel", "camel k", "kubernetes", "gitops", "gateway api", "dry build"]
 preview: "What's new in Camel K 2.10.0!"
 ---
 

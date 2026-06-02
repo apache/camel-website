@@ -3,6 +3,7 @@ title: "CAPI Gateway: Using Apache Camel at the European Commission"
 date: 2020-01-02
 authors: [rodrigoserracoelho]
 categories: ["Usecases"]
+keywords: ["apache camel", "api gateway", "spring boot", "keycloak", "microservices", "european commission"]
 preview: How an API Gateway is implemented using Camel at the European Comission
 ---
 

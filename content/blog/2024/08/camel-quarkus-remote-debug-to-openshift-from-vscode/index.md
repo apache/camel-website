@@ -3,6 +3,7 @@ title: "How to Camel Debug a Camel Quarkus route deployed on OpenShift from VS C
 date: 2024-08-06
 authors: [ "apupier" ]
 categories: [ "Tooling", "Camel Quarkus" ]
+keywords: ["apache camel", "camel quarkus", "debugging", "openshift", "vs code", "remote debug"]
 preview: "How to Camel Debug a Camel Quarkus route deployed on OpenShift from VS Code"
 ---
 

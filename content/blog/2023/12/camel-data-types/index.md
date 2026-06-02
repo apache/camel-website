@@ -4,6 +4,7 @@ date: 2023-12-04
 draft: false
 authors: [christophd]
 categories: ["Howtos"]
+keywords: ["apache camel", "data types", "camel 4", "type conversion", "data format"]
 preview: "Boosting the interoperability of Camel routes and Kamelets with data type transformations"
 ---
 

@@ -3,6 +3,7 @@ title: "Apache Camel on top-5 in the ASF annual 2019 report"
 date: 2019-11-01
 authors: [davsclaus]
 categories: ["Camel"]
+keywords: ["apache camel", "apache software foundation", "annual report", "open source", "community"]
 preview: ASF Annual Report 2019 with highlights of Camel in the top-5 category
 ---
 

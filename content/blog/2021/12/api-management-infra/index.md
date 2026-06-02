@@ -3,6 +3,7 @@ title: "A high-security API management infrastructure using Apache Camel"
 date: 2021-12-14
 authors: [Yang-Xie-OSS]
 categories: ["Usecases"]
+keywords: ["apache camel", "api gateway", "keycloak", "oauth2", "api security", "api management"]
 preview: "How a high-security API management infrastructure is implemented using Camel and Keycloak"
 ---
 

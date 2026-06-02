@@ -4,6 +4,7 @@ date: 2022-10-10T11:56:35+02:00
 draft: false
 authors: ["tarilabs"]
 categories: ["Camel Quarkus", "Usecases"]
+keywords: ["apache camel", "content based routing", "drools", "quarkus", "atlasmap", "apache kafka"]
 preview: "Content Based Routing using Quarkus as a development platform including Apache Camel, Drools DMN Engine, Kogito, AtlasMap and Apache Kafka!"
 ---
 

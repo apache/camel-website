@@ -4,6 +4,7 @@ date: 2025-03-05
 draft: false
 authors: [squakez]
 categories: ["Howtos"]
+keywords: ["apache camel", "observability", "opentelemetry", "tracing", "metrics", "logging"]
 preview: "How to leverage Camel Observability Services component"
 ---
 

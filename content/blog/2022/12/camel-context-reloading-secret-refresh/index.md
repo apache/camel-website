@@ -4,6 +4,7 @@ date: 2022-12-20
 draft: false
 authors: [oscerd]
 categories: ["Camel"]
+keywords: ["apache camel", "secrets management", "vault", "auto refresh", "cloud native", "dynamic configuration"]
 preview: "Starting from Camel 3.19.0 we are able to reload automatically the camel context on secret updates events"
 ---
 

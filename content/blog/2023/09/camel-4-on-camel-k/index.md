@@ -4,6 +4,7 @@ date: 2023-09-19
 draft: false
 authors: [squakez]
 categories: ["Releases", "Camel K", "Roadmap"]
+keywords: ["apache camel", "camel k", "camel 4", "kubernetes", "camel quarkus"]
 preview: "Camel K Runtime 3.2.0 release, aka, how to run Camel 4 with Camel K."
 ---
 

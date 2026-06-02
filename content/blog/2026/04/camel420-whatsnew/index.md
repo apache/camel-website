@@ -4,6 +4,7 @@ date: 2026-04-27
 draft: false
 authors: [ davsclaus ]
 categories: [ "Releases" ]
+keywords: ["apache camel", "whats new", "camel 4", "release", "camel 4.20", "integration framework"]
 preview: "Details of what we have done in the Camel 4.20 release."
 ---
 

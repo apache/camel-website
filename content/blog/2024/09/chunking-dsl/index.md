@@ -4,6 +4,7 @@ date: 2024-09-06
 draft: false
 authors: [orpiske]
 categories: ["AI"]
+keywords: ["apache camel", "chunking", "dsl", "data processing", "ai", "rag"]
 preview: "Unlocking Efficient Data Processing with the Chunking DSL"
 ---
 

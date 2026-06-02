@@ -3,6 +3,7 @@ title: "Camel Debugger For IntelliJ"
 date: 2021-12-29
 authors: ["javaduke"]
 categories: ["Tooling"]
+keywords: ["apache camel", "intellij", "debugger", "ide", "camel routes", "debugging"]
 preview: "Apache Camel plugin for IntelliJ now features a debugger for XML routes"
 ---
 

@@ -4,6 +4,7 @@ date: 2021-05-14
 draft: false
 authors: [ncasaux]
 categories: ["Tooling"]
+keywords: ["apache camel", "plantuml", "diagram", "route visualization", "documentation"]
 preview: "Diagramming Camel routes and endpoints interactions with PlantUML"
 ---
 

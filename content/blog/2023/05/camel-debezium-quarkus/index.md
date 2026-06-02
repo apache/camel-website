@@ -4,6 +4,7 @@ date: 2023-05-31
 draft: false
 authors: [mikeintoch]
 categories: ["Camel"]
+keywords: ["apache camel", "debezium", "change data capture", "cdc", "database", "event driven"]
 preview: "Capturing database change records using Apache Camel and Debezium"
 ---
 

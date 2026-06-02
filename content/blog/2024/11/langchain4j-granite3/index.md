@@ -4,6 +4,7 @@ date: 2024-11-15
 draft: false
 authors: [aldettinger]
 categories: ["AI"]
+keywords: ["apache camel", "langchain4j", "granite", "vendor lock-in", "ai", "model portability"]
 preview: "Touch the subject of Large Language Models lock in and how to prevent that"
 ---
 

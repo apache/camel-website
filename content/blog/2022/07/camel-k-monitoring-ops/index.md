@@ -3,6 +3,7 @@ title: "Camel K Operations: monitoring"
 date: 2022-07-05
 authors: [squakez]
 categories: ["Camel K"]
+keywords: ["apache camel", "camel k", "monitoring", "prometheus", "kubernetes", "observability"]
 preview: "Camel K: how to monitor an Integration and get alerts"
 ---
 

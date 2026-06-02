@@ -3,6 +3,7 @@ title: "Apache Camel 4.6 What's New"
 date: 2024-05-10
 authors: [davsclaus]
 categories: ["Releases"]
+keywords: ["apache camel", "whats new", "camel 4", "release", "camel 4.6", "integration framework"]
 preview: Summary of what's new and improved in the Camel 4.6 release.
 ---
 

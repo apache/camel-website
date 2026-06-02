@@ -3,6 +3,7 @@ title: "Apache Camel 4.10 What's New"
 date: 2025-02-12
 authors: [davsclaus, orpiske, tadayosi, croway]
 categories: ["Releases"]
+keywords: ["apache camel", "whats new", "camel 4", "release", "camel 4.10", "integration framework"]
 preview: Details of what we have done in the Camel 4.10 release.
 ---
 

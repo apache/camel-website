@@ -3,6 +3,7 @@ title: "Camel Quarkus 3.20.4 Released"
 date: 2026-01-19
 authors: ["jiriondrusek"]
 categories: ["Releases"]
+keywords: ["apache camel", "camel quarkus", "release", "quarkus", "3.20.4"]
 preview: "Camel Quarkus 3.20.4 Released"
 summary: "Camel Quarkus 3.20.4 release"
 ---

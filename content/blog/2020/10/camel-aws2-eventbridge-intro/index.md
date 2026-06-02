@@ -3,6 +3,7 @@ title: "Introducing Camel-AWS2-Eventbridge component"
 date: 2020-10-17
 authors: ["oscerd"]
 categories: ["Camel"]
+keywords: ["apache camel", "aws", "eventbridge", "cloud events", "serverless"]
 preview: "Camel-AWS2 Eventbridge introduction"
 ---
 

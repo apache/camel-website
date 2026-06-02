@@ -4,6 +4,7 @@ date: 2023-04-04
 draft: false
 authors: [marcingrzejszczak]
 categories: ["Howtos"]
+keywords: ["apache camel", "micrometer", "observability", "tracing", "metrics", "monitoring"]
 preview: "Micrometer Observation: how to configure Distributed Tracing and Metrics"
 ---
 

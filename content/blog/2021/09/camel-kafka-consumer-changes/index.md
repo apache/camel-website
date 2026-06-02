@@ -4,6 +4,7 @@ date: 2021-09-24
 draft: false
 authors: [orpiske]
 categories: ["Camel"]
+keywords: ["apache camel", "kafka", "consumer", "kafka component", "breaking changes"]
 preview: "Upcoming changes to the consumer on Kafka component"
 ---
 

@@ -3,6 +3,7 @@ title: "Camel Quarkus 3.26.0 Released"
 date: 2025-08-25
 authors: ["ppalaga"]
 categories: ["Releases"]
+keywords: ["apache camel", "camel quarkus", "release", "quarkus", "3.26.0"]
 preview: "Camel Quarkus 3.26.0 Released"
 summary: "Camel Quarkus 3.26.0 release"
 ---

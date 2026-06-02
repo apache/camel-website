@@ -3,6 +3,7 @@ title: "Camel 2019 in Numbers"
 date: 2019-12-31
 authors: [davsclaus]
 categories: ["Roadmap"]
+keywords: ["apache camel", "camel 3", "open source", "community", "project statistics", "annual review"]
 preview: Summary of the Apache Camel project in 2019
 ---
 

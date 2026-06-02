@@ -3,6 +3,7 @@ title: "Camel Karaf 4.14.5 Released"
 date: 2026-03-17
 authors: ["jbonofre"]
 categories: ["Releases"]
+keywords: ["apache camel", "camel karaf", "release", "osgi", "4.14.5"]
 preview: "Camel Karaf 4.14.5 Released"
 summary: "Camel Karaf 4.14.5 release"
 ---

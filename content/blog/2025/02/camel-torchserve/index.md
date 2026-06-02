@@ -4,6 +4,7 @@ date: 2025-02-13
 draft: false
 authors: [tadayosi]
 categories: ["AI"]
+keywords: ["apache camel", "torchserve", "model serving", "ai inference", "pytorch", "machine learning"]
 preview: "Discover how to use Camel TorchServe component to effortlessly run AI model inference on TorchServe within your Camel application"
 ---
 

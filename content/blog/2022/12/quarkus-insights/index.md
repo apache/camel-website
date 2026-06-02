@@ -4,6 +4,7 @@ date: 2022-12-16
 draft: false
 authors: [davsclaus]
 categories: ["Howtos"]
+keywords: ["apache camel", "camel jbang", "camel cli", "backwards compatibility", "camel 1.0", "demo"]
 preview: "Short video of quickly running Camel 1.0 code with the newest Camel"
 ---
 

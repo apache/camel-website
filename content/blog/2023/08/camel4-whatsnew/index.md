@@ -3,6 +3,7 @@ title: "Apache Camel 4 What's New (top 10)"
 date: 2023-08-15
 authors: [davsclaus,gzurowski,orpiske]
 categories: ["Releases"]
+keywords: ["apache camel", "whats new", "release", "camel ", "integration framework"]
 preview: Top 10 of what's new in Apache Camel version 4
 ---
 After 10 months of development, with 3 milestones, and 2 RC releases, we are releasing Apache Camel v4 

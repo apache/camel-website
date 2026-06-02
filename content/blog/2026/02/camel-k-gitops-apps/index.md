@@ -4,6 +4,7 @@ date: 2026-02-24
 draft: false
 authors: [squakez]
 categories: ["Howtos", "Camel K"]
+keywords: ["apache camel", "camel k", "gitops", "cloud", "kubernetes", "deployment"]
 preview: "How to enable a GitOps strategy with Camel K"
 ---
 

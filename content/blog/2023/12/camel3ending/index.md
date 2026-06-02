@@ -3,6 +3,7 @@ title: "Apache Camel 3 - Last year of support"
 date: 2023-12-27
 authors: [davsclaus,gzurowski]
 categories: ["Roadmap"]
+keywords: ["apache camel", "end of life", "migration", "camel 3", "camel 4", "long term support"]
 preview: Apache Camel 3 reaching end of life by end of 2024
 ---
 

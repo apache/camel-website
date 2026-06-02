@@ -3,6 +3,7 @@ title: "Apache Camel 2025 Download Statistics"
 date: 2026-02-09
 authors: [ davsclaus ]
 categories: [ "Roadmap" ]
+keywords: ["apache camel", "download statistics", "maven central", "adoption", "open source"]
 preview: The rising popularity of Apache Camel with almost 500 million downloads in 2025
 ---
 

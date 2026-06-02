@@ -3,6 +3,7 @@ title: "Camel Designer's new mapping system"
 date: 2022-07-01
 authors: [brunoNetId]
 categories: ["Tooling"]
+keywords: ["apache camel", "camel designer", "data mapping", "visual editor", "camel jbang", "camel cli"]
 preview: "Camel Designer's new mapping system"
 ---
 

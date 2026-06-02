@@ -4,6 +4,7 @@ date: 2024-10-04
 draft: false
 authors: [JiriOndrusek]
 categories: ["Howtos"]
+keywords: ["apache camel", "migration", "openrewrite", "upgrade recipes", "camel 4.8", "automation"]
 preview: "Introducing Camel Upgrade Recipes - A tool to make Apache Camel version upgrades easier."
 ---
 

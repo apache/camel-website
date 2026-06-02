@@ -3,6 +3,7 @@ title: "Camel + JBang: bringing the world of Java scripting to Camel"
 date: 2021-07-26
 authors: ["orpiske"]
 categories: ["Camel"]
+keywords: ["apache camel", "jbang", "camel jbang", "camel cli", "java scripting", "developer tools", "rapid prototyping"]
 preview: "Camel + JBang"
 summary: "Bringing the world of Java scripting to Camel"
 ---

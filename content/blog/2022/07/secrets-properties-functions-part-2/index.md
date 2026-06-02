@@ -4,6 +4,7 @@ date: 2022-07-26
 draft: false
 authors: ["oscerd"]
 categories: ["Camel"]
+keywords: ["apache camel", "secrets management", "vault", "cloud native", "dynamic configuration"]
 preview: "An update about loading properties from a Cloud vault service"
 ---
 

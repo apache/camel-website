@@ -3,6 +3,7 @@ title: "Karavan 4.4.0: Beauty is variable"
 date: 2024-03-04
 authors: [mgubaidullin]
 categories: ["Tooling"]
+keywords: ["apache camel", "karavan", "visual designer", "rest dsl", "integration"]
 preview: "Karavan 4.4.0: Release notes"
 ---
 *There should have been an AI-generated image of animated camels in a setting vaguely related to the plot of this post. But I think we have already had enough of them ;-)*

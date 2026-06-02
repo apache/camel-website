@@ -4,6 +4,7 @@ date: 2022-03-23
 draft: false
 authors: ["assimbly"]
 categories: ["Camel"]
+keywords: ["apache camel", "release statistics", "camel 3", "open source", "community"]
 preview: "Camel 3 Release Stats"
 ---
 

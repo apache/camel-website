@@ -3,6 +3,7 @@ title: "Karavan 4.7.0: Unleashing Flexibility"
 date: 2024-07-29
 authors: [mgubaidullin]
 categories: ["Tooling"]
+keywords: ["apache camel", "karavan", "visual designer", "integration"]
 preview: "Karavan 4.7.0: Unleashing Flexibility"
 ---
 

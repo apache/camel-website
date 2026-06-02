@@ -4,6 +4,7 @@ date: 2023-07-10
 draft: false
 authors: [squakez]
 categories: ["Howtos", "Camel K"]
+keywords: ["apache camel", "camel k", "gitops", "kubernetes", "argocd"]
 preview: "How to apply GitOps with Camel K, Kustomize and ArgoCD."
 ---
 

@@ -4,6 +4,7 @@ date: 2026-04-25
 draft: false
 authors: [gzurowski]
 categories: ["Releases"]
+keywords: ["apache camel", "release", "4.20.0", "integration framework"]
 preview: "The Camel community announces the immediate availability of the new Camel 4.20.0 release"
 ---
 

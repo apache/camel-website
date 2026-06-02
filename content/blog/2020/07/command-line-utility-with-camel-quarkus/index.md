@@ -3,6 +3,7 @@ title: "Command line utility with Camel Quarkus"
 date: 2020-07-15
 authors: ["ppalaga"]
 categories: ["Howtos", "Camel Quarkus"]
+keywords: ["apache camel", "camel quarkus", "command line", "cli", "picocli", "native"]
 preview: How to write a command line utility with Camel Quarkus
 ---
 

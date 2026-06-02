@@ -4,6 +4,7 @@ date: 2022-08-31
 draft: false
 authors: [michaelhoffmantech]
 categories: ["Howtos"]
+keywords: ["apache camel", "training", "pluralsight", "learning", "tutorial"]
 preview: "Author-led Course on Apache Camel"
 ---
 ## Announcing Author-led Training on Camel

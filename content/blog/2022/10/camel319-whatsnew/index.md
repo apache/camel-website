@@ -3,6 +3,7 @@ title: "Apache Camel 3.19 What's New"
 date: 2022-10-10
 authors: [davsclaus,gzurowski,essobedo,oscerd,orpiske]
 categories: ["Releases"]
+keywords: ["apache camel", "whats new", "camel 3", "release", "camel 3.19", "integration framework"]
 preview: Details of what we have done in the Camel 3.19 release.
 ---
 

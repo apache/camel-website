@@ -3,6 +3,7 @@ title: "Apache Camel 3.15 What's New"
 date: 2022-02-04
 authors: [davsclaus, orpiske]
 categories: ["Releases"]
+keywords: ["apache camel", "whats new", "camel 3", "release", "camel 3.15", "integration framework"]
 preview: Details of what we have done in the Camel 3.15 release.
 ---
 

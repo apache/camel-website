@@ -4,6 +4,7 @@ date: 2026-03-25
 draft: false
 authors: [djelinek, PVinaches, igarashitm, lordrip]
 categories: ["Releases", "Tooling"]
+keywords: ["apache camel", "kaoto", "visual editor", "integration design"]
 preview: "Kaoto 2.10 has been released"
 ---
 

@@ -3,6 +3,7 @@ title: "Camel Quarkus 3.27.1 Released"
 date: 2025-11-03
 authors: ["jiriondrusek"]
 categories: ["Releases"]
+keywords: ["apache camel", "camel quarkus", "release", "quarkus", "3.27.1"]
 preview: "Camel Quarkus 3.27.1 Released"
 summary: "Camel Quarkus 3.27.1 release"
 ---

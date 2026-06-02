@@ -3,6 +3,7 @@ title: "Apache Camel IDEA Plugin 0.8.13 What's New"
 date: 2022-08-17
 authors: [essobedo]
 categories: ["Tooling", "Releases"]
+keywords: ["apache camel", "intellij", "ide plugin", "code completion", "developer tools"]
 preview: "Details of what has been added in the Camel IDEA Plugin 0.8.13 release."
 ---
 

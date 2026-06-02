@@ -3,6 +3,7 @@ title: "Camel Kafka Connector 0.4.0 Released"
 date: 2020-08-06
 authors: [oscerd, valdar]
 categories: ["Releases"]
+keywords: ["apache camel", "kafka connector", "kafka connect", "release", "streaming"]
 preview: "Camel Kafka Connector 0.4.0 Released"
 draft: false
 ---

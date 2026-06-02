@@ -4,6 +4,7 @@ date: 2022-08-22
 draft: false
 authors: [zregvart]
 categories: ["Events"]
+keywords: ["apache camel", "apachecon", "conference", "knative", "serverless", "videos"]
 preview: "ApacheCon Asia 2022 Videos"
 ---
 Video recordings from ApacheCon Asia 2022 are now available for viewing [on YouTube](https://youtube.com/playlist?list=PLU2OcwpQkYCxJscx7dlunTcb7pRXqZLFa).

@@ -4,6 +4,7 @@ date: 2025-02-19
 draft: false
 authors: [cjmamo]
 categories: ["Usecases", "Howtos", "Tooling"]
+keywords: ["apache camel", "edi", "x12", "smooks", "camel jbang", "camel cli", "as2"]
 preview: "Demonstrating EDI X12 integration with Camel and Smooks"
 ---
 

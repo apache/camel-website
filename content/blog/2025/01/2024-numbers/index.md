@@ -3,6 +3,7 @@ title: "Camel 2024 in Numbers"
 date: 2025-01-01
 authors: [davsclaus]
 categories: ["Roadmap"]
+keywords: ["apache camel", "open source", "community", "project statistics", "annual review"]
 preview: Quick summary of the Apache Camel project in 2024 by numbers
 ---
 

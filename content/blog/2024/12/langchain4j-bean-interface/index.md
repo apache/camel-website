@@ -4,6 +4,7 @@ date: 2024-12-20
 draft: false
 authors: [aldettinger]
 categories: ["AI"]
+keywords: ["apache camel", "langchain4j", "ai services", "dependency injection", "llm"]
 preview: "Explain the new feature to resolve AI services by interface directly from Camel Quarkus"
 ---
 

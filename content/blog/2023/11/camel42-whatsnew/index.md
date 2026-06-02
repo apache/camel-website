@@ -3,6 +3,7 @@ title: "Apache Camel 4.2 What's New"
 date: 2023-11-15
 authors: [davsclaus,gzurowski,orpiske,apupier]
 categories: ["Releases"]
+keywords: ["apache camel", "whats new", "camel 4", "release", "camel 4.2", "integration framework"]
 preview: Details of what we have done in the Camel 4.2 release.
 ---
 

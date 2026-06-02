@@ -4,6 +4,7 @@ date: 2026-03-27
 draft: false
 authors: [gzurowski]
 categories: ["Releases"]
+keywords: ["apache camel", "release", "4.18.1", "integration framework"]
 preview: "The Camel community announces the immediate availability of the new Camel 4.18.1 LTS release"
 ---
 

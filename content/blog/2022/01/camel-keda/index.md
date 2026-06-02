@@ -3,6 +3,7 @@ title: "Camel meets KEDA"
 date: 2022-01-21
 authors: [nicolaferraro]
 categories: ["Camel K"]
+keywords: ["apache camel", "keda", "autoscaling", "kubernetes", "event driven", "camel k"]
 preview: "Camel K integrations can leverage KEDA to scale based on the number of incoming events"
 ---
 

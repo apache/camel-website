@@ -3,6 +3,7 @@ title: "Camel 2022 in Numbers"
 date: 2023-01-03
 authors: [davsclaus]
 categories: ["Roadmap"]
+keywords: ["apache camel", "open source", "community", "project statistics", "annual review"]
 preview: Quick summary of the Apache Camel project in 2022 by numbers
 ---
 

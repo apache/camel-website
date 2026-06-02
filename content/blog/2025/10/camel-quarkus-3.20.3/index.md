@@ -3,6 +3,7 @@ title: "Camel Quarkus 3.20.3 Released"
 date: 2025-10-28
 authors: ["jamesnetherton"]
 categories: ["Releases"]
+keywords: ["apache camel", "camel quarkus", "release", "quarkus", "3.20.3"]
 preview: "Camel Quarkus 3.20.3 Released"
 summary: "Camel Quarkus 3.20.3 release"
 ---

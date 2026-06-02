@@ -3,6 +3,7 @@ title: "Apache Camel 4.8 What's New"
 date: 2024-09-16
 authors: [davsclaus, squakez, orpiske, oscerd]
 categories: ["Releases"]
+keywords: ["apache camel", "whats new", "camel 4", "release", "camel 4.8", "integration framework"]
 preview: Details of what we have done in the Camel 4.8 release.
 ---
 

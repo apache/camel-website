@@ -4,6 +4,7 @@ date: 2022-03-22
 draft: false
 authors: [orpiske]
 categories: ["Camel"]
+keywords: ["apache camel", "resume api", "offset management", "fault tolerance", "data processing"]
 preview: "Introducing the Resume API v2"
 ---
 

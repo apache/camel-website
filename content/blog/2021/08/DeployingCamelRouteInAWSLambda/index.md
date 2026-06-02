@@ -3,6 +3,7 @@ title: "Deploying a Camel Route in AWS Lambda using Quarkus"
 date: 2021-08-26
 authors: [ravishankarhassain]
 categories: ["Usecases","Camel Quarkus"]
+keywords: ["apache camel", "aws lambda", "quarkus", "serverless", "camel quarkus", "native compilation"]
 preview: "A new demonstration explaining how to develop a camel route using Quarkus (in both JVM & Native mode) and steps to deploy it in AWS Lamda"
 ---
 

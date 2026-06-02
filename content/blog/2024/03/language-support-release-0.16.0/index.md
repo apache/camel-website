@@ -3,6 +3,7 @@ title: "New release of VS Code Language Support for Apache Camel 0.16.0"
 date: 2024-03-04
 authors: [ "djelinek" ]
 categories: [ "Releases", "Tooling" ]
+keywords: ["apache camel", "vs code", "language support", "ide", "code completion"]
 preview: "New release of VS Code Language Support for Apache Camel 0.16.0"
 ---
 

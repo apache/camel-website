@@ -4,6 +4,7 @@ date: 2025-02-14
 draft: false
 authors: [aldettinger]
 categories: ["AI"]
+keywords: ["apache camel", "structured output", "langchain4j", "data extraction", "ai", "json schema"]
 preview: "Demonstrate new improvements in data extraction thanks to the structured output feature"
 ---
 

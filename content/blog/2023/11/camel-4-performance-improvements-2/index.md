@@ -4,6 +4,7 @@ date: 2023-11-26
 draft: false
 authors: [orpiske]
 categories: ["Camel"]
+keywords: ["apache camel", "performance", "optimization", "camel 4", "throughput", "benchmarks"]
 preview: "The Rise and Fall of the Performance Monsters"
 ---
 

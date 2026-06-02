@@ -4,6 +4,7 @@ date: 2024-09-04
 draft: false
 authors: [tadayosi]
 categories: ["AI"]
+keywords: ["apache camel", "djl", "deep learning", "ai inference", "machine learning"]
 preview: "Explore the possibilities of intelligent routing based on neural network model inference with Camel and DJL."
 ---
 

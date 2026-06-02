@@ -4,6 +4,7 @@ date: 2026-01-13
 draft: false
 authors: [ davsclaus, Croway, gzurowski ]
 categories: [ "Releases" ]
+keywords: ["apache camel", "whats new", "camel 4", "release", "camel 4.17", "integration framework"]
 preview: "Details of what we have done in the Camel 4.17 release."
 ---
 

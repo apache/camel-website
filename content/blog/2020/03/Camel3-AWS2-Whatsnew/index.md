@@ -3,6 +3,7 @@ title: "Camel AWS2 Components are here: what are the changes for end users?"
 date: 2020-03-06
 authors: [oscerd]
 categories: ["Camel"]
+keywords: ["apache camel", "aws", "cloud", "aws components", "migration", "camel 3"]
 preview: Camel AWS2 Components are here
 ---
 

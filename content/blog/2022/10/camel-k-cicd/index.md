@@ -4,6 +4,7 @@ date: 2022-10-06
 draft: false
 authors: [squakez]
 categories: ["Howtos", "Camel K"]
+keywords: ["apache camel", "camel k", "cicd", "kubernetes", "devops", "pipelines"]
 preview: "Continuous Integration, Continuous Delivery and Continuous Deployment in Camel K"
 ---
 

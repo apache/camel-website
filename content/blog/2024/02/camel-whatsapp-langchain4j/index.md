@@ -4,6 +4,7 @@ date: 2024-02-19
 draft: false
 authors: [croway]
 categories: ["Usecases", "AI"]
+keywords: ["apache camel", "langchain4j", "whatsapp", "ai", "llm", "chatbot"]
 preview: "Build a conversational AI integration with Apache Camel, LangChain4j, and WhatsApp."
 ---
 

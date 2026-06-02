@@ -4,6 +4,7 @@ date: 2024-04-02
 draft: false
 authors: [squakez]
 categories: ["Camel K", "Howtos"]
+keywords: ["apache camel", "camel k", "knative", "spring boot", "quarkus", "serverless"]
 preview: "Build an external Camel application and run Camel Spring Boot runtime via Camel K as a Knative Service."
 ---
 

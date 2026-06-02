@@ -4,6 +4,7 @@ date: 2022-02-16
 draft: false
 authors: [orpiske]
 categories: ["Camel"]
+keywords: ["apache camel", "testing", "testcontainers", "test infrastructure", "integration testing"]
 preview: "Good bye camel-testcontainers! Hello Camel's test-infra"
 ---
 

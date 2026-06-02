@@ -3,6 +3,7 @@ title: "Camel Quarkus 3.27.4 Released"
 date: 2026-05-07
 authors: ["jamesnetherton"]
 categories: ["Releases"]
+keywords: ["apache camel", "camel quarkus", "release", "quarkus", "3.27.4"]
 preview: "Camel Quarkus 3.27.4 Released"
 summary: "Camel Quarkus 3.27.4 release"
 ---

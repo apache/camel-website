@@ -4,6 +4,7 @@ date: 2024-01-12
 draft: false
 authors: [tadayosi]
 categories: ["Releases", "Tooling"]
+keywords: ["apache camel", "hawtio", "management console", "monitoring", "camel cli"]
 preview: "Hawtio 3.0.0 GA is released. What's new?"
 ---
 

@@ -4,6 +4,7 @@ date: 2025-09-22
 draft: false
 authors: [squakez]
 categories: ["Releases", "Roadmap"]
+keywords: ["apache camel", "camel k", "kubernetes", "gitops", "jvm agents", "sidecar containers"]
 preview: "What's new in Camel K 2.8.0!"
 ---
 

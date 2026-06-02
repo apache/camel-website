@@ -4,6 +4,7 @@ date: 2024-06-10
 draft: false
 authors: [lordrip]
 categories: ["Releases", "Tooling"]
+keywords: ["apache camel", "kaoto", "visual editor", "low code", "integration design"]
 preview: "Kaoto 2.0 has been released"
 ---
 

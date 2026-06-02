@@ -3,6 +3,7 @@ title: "Apache Camel 3.10 What's New"
 date: 2021-05-21
 authors: [davsclaus]
 categories: ["Releases"]
+keywords: ["apache camel", "whats new", "camel 3", "release", "camel 3.10", "integration framework"]
 preview: Details of what we have done in the Camel 3.10 release.
 ---
 

@@ -3,6 +3,7 @@ title: "Your REST APIs already speak MCP. They just don't know it yet."
 date: 2026-03-03
 authors: [rodrigoserracoelho]
 categories: ["Usecases"]
+keywords: ["apache camel", "api gateway", "mcp", "consul", "rest api", "llm agents"]
 preview: "How I built a Consul-native API Gateway on Apache Camel — and why it now bridges REST APIs and LLM agents via MCP."
 ---
 

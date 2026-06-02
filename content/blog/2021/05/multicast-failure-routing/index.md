@@ -4,6 +4,7 @@ date: 2021-05-10
 draft: false
 authors: [hokutor, mathewsreji]
 categories: ["Usecases"]
+keywords: ["apache camel", "multicast", "eip", "aggregation strategy", "error handling"]
 preview: "Routing multicast output after encountering partial failures"
 ---
 

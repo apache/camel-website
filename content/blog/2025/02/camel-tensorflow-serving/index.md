@@ -4,6 +4,7 @@ date: 2025-02-24
 draft: false
 authors: [tadayosi]
 categories: ["AI"]
+keywords: ["apache camel", "tensorflow", "model serving", "ai inference", "machine learning"]
 preview: "Learn how to leverage Camel TensorFlow Serving component in your Camel application for seamless AI model inference with TensorFlow Serving"
 ---
 

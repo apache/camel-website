@@ -3,6 +3,7 @@ title: "Apache Camel 3.4 What's New"
 date: 2020-06-18
 authors: [davsclaus]
 categories: ["Releases"]
+keywords: ["apache camel", "whats new", "camel 3", "release", "camel 3.4", "integration framework"]
 preview: The long term release version 3.4 of Camel is here, find out what's new.
 draft: false
 ---

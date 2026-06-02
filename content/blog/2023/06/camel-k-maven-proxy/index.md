@@ -4,6 +4,7 @@ date: 2023-06-12
 draft: false
 authors: [squakez]
 categories: ["Howtos", "Camel K"]
+keywords: ["apache camel", "camel k", "maven proxy", "kubernetes", "configuration"]
 preview: "Configure Camel K and leverage a Maven proxy"
 ---
 

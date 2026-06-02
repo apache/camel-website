@@ -4,6 +4,7 @@ date: 2024-07-19
 draft: false
 authors: [aldettinger]
 categories: ["AI"]
+keywords: ["apache camel", "langchain4j", "data extraction", "unstructured data", "ai", "llm"]
 preview: "Give directions about how to turn unstructured data into structured data with Camel and LangChain4j."
 ---
 

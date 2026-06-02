@@ -3,6 +3,7 @@ title: "Karavan 4.6.0: Hidden gems"
 date: 2024-05-28
 authors: [mgubaidullin]
 categories: ["Tooling"]
+keywords: ["apache camel", "karavan", "visual designer", "integration"]
 preview: "Karavan 4.6.0: Hidden gems"
 ---
 

@@ -3,6 +3,7 @@ title: "Top 10 features of Camel 3.x"
 date: 2022-06-16
 authors: ["assimbly"]
 categories: ["Camel"]
+keywords: ["apache camel", "camel 3", "top features", "lightweight", "developer experience"]
 preview: "Top 10 features of Camel 3.x"
 ---
 
