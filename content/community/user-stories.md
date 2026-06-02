@@ -54,7 +54,6 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |[Kogito](https://kogito.kie.org)|Kogito serverless workflow can integrate with Camel.|
 |[OpenHub](https://github.com/OpenWiseSolutions/openhub-framework)|OpenHub is an integration platform that is built on top of Apache Camel.|
 |[Assimbly Gateway](https://github.com/assimbly/gateway)|A message gateway based on Apache Camel.|
-|[Camel Extra project](https://camel-extra.github.io/)|Contains a number of extension components which due to GPL/LGPL licensing cannot be hosted at Apache.|
 {{< /table >}}
 
 ## Developer Tooling
