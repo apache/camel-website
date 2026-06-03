@@ -6,6 +6,7 @@ title: "Articles"
 
 * [Cadec 2026 Large Project Migration from Mule to Apache Camel](https://www.youtube.com/watch?v=gZvZOXiL5fo) - Cadec (January 2026) use-case how they migrated 340 integrations from Mule to Camel (Swedish)
 * [Enterprise Integration Patterns (EIP) | What is Apache Camel?](https://www.youtube.com/watch?v=5xQKG1TSrZc) from January 2026 by Jasvinder Saggu; a great 50-minute video that greatly covers the importance of integration, EIP patterns and what Apache Camel can do. Highly recommended for new users to Camel.
+* [Large-Scale Messaging with ActiveMQ for Particle Accelerators at CERN](https://www.slideshare.net/jamescasey/1005-cernactive-mqv2) CamelOne 2012 keynote by Felix Ehm (CERN) - how the Large Hadron Collider uses ActiveMQ and Camel for 85,000 machines, 2+ million endpoints, and 190 million messages per day.
 * [Enterprise Integration Is Dead! Long Live AI-Driven Integration with Apache Camel](https://www.youtube.com/watch?v=WrBmfaY7IB8) from Devoxx UK in May 2025 where Markus and Bruno shows first hand how Camel, powered by AI, is quietly reinventing how we connect the enterprise.
 * [Apache Camel and ActiveMQ at UPS](https://www.youtube.com/watch?v=TDjwr16uaYU) May 2024 where UPS presented their use of Apache Camel and ActiveMQ on OpenShift processing tens of billions messages a day.
 * [Quarkus Insights #110: Quarkiverse Extension Spotlight of Apache Camel](https://www.youtube.com/watch?v=stBjGMu73B0) November 2022 where Apache Camel was presented on the Quarkus webcast (1h session).
