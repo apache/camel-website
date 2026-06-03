@@ -65,7 +65,11 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |[Fluxygen](https://fluxygen.com/)|Low-code integration platform built on Apache Camel. Used by logistics, retail, and e-commerce companies in the Netherlands and Belgium.|
 |[APIPass](https://apipass.com.br/)|Provides an Integration Platform as a Service (iPaaS) built on Apache Camel.|
 |[Multi-Channel Framework (MCF)](https://www.felpfe.com/multi-channel-framework-mcf/)|MCF utilizes Camel to provide developers with an empowering framework, enabling them to create, test, and deploy integration scenarios intuitively. Its configuration-driven approach facilitates seamless integration using Camel.|
-|[Kogito](https://kogito.kie.org)|Kogito serverless workflow can integrate with Camel.|
+|[Apache KIE](https://kie.apache.org/)|Apache KIE (incubating, formerly Kogito) SonataFlow serverless workflow engine integrates with Apache Camel via the `kogito-addons-quarkus-camel` add-on, enabling workflows to call any Camel route using `camel:direct:` function operations.|
+|[Apache Syncope](https://syncope.apache.org/)|Apache Syncope identity management platform delegates its provisioning process to Apache Camel routes. User/group lifecycle events (create, update, delete) trigger Camel routes that can be modified at runtime via REST or admin console.|
+|[Apache Unomi](https://unomi.apache.org/)|Apache Unomi customer data platform uses Apache Camel routes for import and export of user profiles via file, FTP/SFTP, and Kafka endpoints.|
+|[Apache CXF](https://cxf.apache.org/)|Apache CXF implements a Camel transport factory, allowing CXF web services to use Camel as a transport layer. Bidirectional integration — Camel also has dedicated CXF components.|
+|[Apache Karaf Decanter](https://karaf.apache.org/)|Karaf's observability framework has a Camel Appender (sends monitoring data to Camel endpoints) and a Camel Collector (gathers JMX metrics from Camel route MBeans).|
 |[OpenHub](https://github.com/OpenWiseSolutions/openhub-framework)|OpenHub is an integration platform that is built on top of Apache Camel.|
 |[Assimbly Gateway](https://github.com/assimbly/gateway)|A message gateway based on Apache Camel.|
 {{< /table >}}
