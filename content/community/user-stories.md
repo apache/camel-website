@@ -102,7 +102,6 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |[Echovox](https://www.linkedin.com/feed/update/urn:li:activity:7435425357115064320)|SMS gateway built on Apache Camel in 2012, processing millions of messages daily at 200+ SMS/second per node. Still running in production over a decade later.|
 |[UC Berkeley](https://www.camelone.org/camelone-2012/)|University-wide integration solution — "A Hundred Departments, Same Integration Solution" — built on Apache Camel. Presented at CamelOne 2012.|
 |[US Department of Transportation](https://www.camelone.org/camelone-2012/)|Real-time weather tracking with Big Data and Apache Camel at the Volpe Center. Presented at CamelOne 2012.|
-
 |[Hennepin County, MN](https://www.camelone.org/camelone-2013/)|"Apache Camel in Criminal Justice" — US county government using Camel for justice system integration. Presented at CamelOne 2013.|
 |[Gilt Groupe](https://www.camelone.org/camelone-2012/)|Migrated from Ruby on Rails to Apache Camel for multi-datacenter warehouse and distribution center integration. Normalized messaging across FTP, SFTP, HTTPS with CSV, XML, and pipe-delimited formats for 24/7 international flash-sale operations.|
 |[Sioux Lookout First Nations Health Authority](https://developers.redhat.com/blog/2024/04/17/camel-integration-quarterly-digest-q1-2024)|Canadian healthcare organization innovating with Apache Camel on ROSA (Red Hat OpenShift on AWS). Presented at Red Hat Summit 2024.|
