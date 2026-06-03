@@ -11,17 +11,26 @@
                 <h3>Categories</h3>
                 <ul>
                     {{ range .Site.Taxonomies.categories.Alphabetical }}
+                    {{ if ne .Name "releases" }}
                     <li><a class="category"
                             href="{{ "/categories/" | relURL }}{{ .Name | urlize }}/">{{ .Name | upper }}<span>{{ .Count }}</span></a>
                     </li>
                     {{ end }}
+                    {{ end }}
+                </ul>
+            </div>
+            <div class="nav-category">
+                <h3>Releases</h3>
+                <ul>
+                    <li><a class="category" href="{{ "/categories/releases/" | relURL }}">Recent Releases<span>{{ len .Site.Taxonomies.categories.releases }}</span></a></li>
                 </ul>
             </div>
         </aside>
     </nav>
     <main class="doc blog list">
         <div>
-            {{ $pages := ($.Paginator 3).Pages }}
+            {{ $filtered := where .Pages ".Params.categories" "not intersect" (slice "Releases") }}
+            {{ $pages := (.Paginate $filtered 3).Pages }}
             {{ range $pages }}
             {{ .Render "summary" }}
             {{ end }}
