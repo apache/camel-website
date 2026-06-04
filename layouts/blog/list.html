@@ -11,18 +11,10 @@
                 <h3>Categories</h3>
                 <ul>
                     {{ range .Site.Taxonomies.categories.Alphabetical }}
-                    {{ if ne .Name "releases" }}
                     <li><a class="category"
                             href="{{ "/categories/" | relURL }}{{ .Name | urlize }}/">{{ .Name | upper }}<span>{{ .Count }}</span></a>
                     </li>
                     {{ end }}
-                    {{ end }}
-                </ul>
-            </div>
-            <div class="nav-category">
-                <h3>Releases</h3>
-                <ul>
-                    <li><a class="category" href="{{ "/categories/releases/" | relURL }}">Recent Releases<span>{{ with index .Site.Taxonomies.categories "releases" }}{{ len . }}{{ end }}</span></a></li>
                 </ul>
             </div>
         </aside>
