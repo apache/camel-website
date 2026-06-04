@@ -30,11 +30,11 @@ The sustained contribution rate is partly explained by Camel's architecture. Wit
 
 Numbers on a screen mean nothing without context. Here's where Camel actually runs:
 
-The **Central Bank of Brazil** built [Pix](https://www.redhat.com/en/resources/central-bank-of-brazil-case-study) — the country's instant payment system serving **200+ million people** — on a stack that includes Apache Camel alongside Kafka and OpenShift. Camel is part of the integration layer that makes instant payments work for an entire country.
+**UPS** processes [tens of billions of messages per day](https://www.youtube.com/watch?v=TDjwr16uaYU) on Apache Camel and ActiveMQ on OpenShift — the largest known Camel deployment by message volume.
 
 **CERN** uses Camel and ActiveMQ for the Large Hadron Collider's control systems — [190 million messages per day](https://www.computerworld.com/article/2726702/open-source-messaging-at--nearly--the-speed-of-light.html) across 85,000 machines with 99.98% uptime. As their principal JMS engineer put it: *"If there is no JMS there is no particle physics."*
 
-**UPS** processes [tens of billions of messages per day](https://www.youtube.com/watch?v=TDjwr16uaYU) on Apache Camel and ActiveMQ on OpenShift — the largest known Camel deployment by message volume.
+**IndiGo**, [India's largest airline](https://www.redhat.com/en/success-stories/indigo), uses Apache Camel (Red Hat Fuse) to integrate **400+ applications** — from ticket booking to crew scheduling to load calculation — with zero downtime. The result: **₹500 million per year** saved in fuel costs through more accurate predictions, and post-flight crew reporting cut from 30 minutes to 5.
 
 **Systematic**, one of Denmark's largest software companies, uses Camel as the integration layer for the Columna CIS electronic patient record system serving **3 of 5 Danish regions** — 60,000 healthcare professionals caring for 3.2 million citizens.
 
@@ -42,7 +42,7 @@ The [User Stories](/community/user-stories/) page now documents 100+ organizatio
 
 ## 39% Tests
 
-Of the 56,000+ Java files in the repository, **22,000 are test files** — 39% of the entire codebase. That ratio reflects a project culture where reliability is non-negotiable. When your users include air traffic control systems (FAA), nuclear research facilities (CERN), and national payment infrastructure (Central Bank of Brazil), every commit gets tested.
+Of the 56,000+ Java files in the repository, **22,000 are test files** — 39% of the entire codebase. That ratio reflects a project culture where reliability is non-negotiable. When your users include air traffic control systems (FAA), nuclear research facilities (CERN), and airlines integrating 400+ applications (IndiGo), every commit gets tested.
 
 The project maintains multiple Long-Term Support (LTS) release lines simultaneously. Each LTS line receives security fixes and critical bug fixes for approximately one year. Migration guides are published for every major version. Backwards compatibility is taken seriously — because breaking changes at CERN or UPS aren't an option.
 
@@ -54,7 +54,7 @@ If you're evaluating Apache Camel for a project, the numbers tell you three thin
 
 **2. It won't disappear.** Projects with one maintainer or one corporate sponsor carry risk. Camel has survived the transitions from SOA to microservices to cloud-native to AI agents — not by pivoting, but by adding components for each new paradigm while keeping the core stable. The Apache Software Foundation governance ensures no single company can acquire, pivot, or shut down the project.
 
-**3. It scales from prototype to national infrastructure.** The same framework that runs with `camel jbang run hello.yaml` on your laptop runs Pix for 200 million Brazilians. That's a deployment range few frameworks can match.
+**3. It scales from prototype to national infrastructure.** The same framework that runs with `camel jbang run hello.yaml` on your laptop processes tens of billions of messages per day at UPS. That's a deployment range few frameworks can match.
 
 ## The Full Data
 
