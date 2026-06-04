@@ -21,7 +21,13 @@
     </nav>
     <main class="doc blog list">
         <div>
-            {{ $pages := ($.Paginator 3).Pages }}
+            {{ $filtered := slice }}
+            {{ range .Pages }}
+              {{ if not (in (default slice .Params.categories) "Releases") }}
+                {{ $filtered = $filtered | append . }}
+              {{ end }}
+            {{ end }}
+            {{ $pages := (.Paginate $filtered 3).Pages }}
             {{ range $pages }}
             {{ .Render "summary" }}
             {{ end }}
