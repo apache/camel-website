@@ -117,7 +117,7 @@ The [apache/camel](https://github.com/apache/camel) repository has **6,200+ star
 
 ## Add Your Organization
 
-If your company or organization uses Apache Camel and would like to be featured on the [User Stories](/community/user-stories/) page, we'd love to hear from you. Reach out on the [mailing list](https://camel.apache.org/community/mailing-list/), open a pull request on [camel-website](https://github.com/apache/camel-website), or contact us on [Zulip chat](https://camel.zulipchat.com/). A one-line description and a link to a public reference (blog post, case study, conference talk, or even a LinkedIn post) is all we need.
+If your company or organization uses Apache Camel and would like to be featured on the [User Stories](/community/user-stories/) page, we'd love to hear from you. Reach out on the [mailing list](/community/mailing-list/), open a pull request on [camel-website](https://github.com/apache/camel-website), or contact us on [Zulip chat](https://camel.zulipchat.com/). A one-line description and a link to a public reference (blog post, case study, conference talk, or even a LinkedIn post) is all we need.
 
 ---
 
