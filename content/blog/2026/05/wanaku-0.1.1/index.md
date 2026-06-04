@@ -16,7 +16,7 @@ Wanaku is an open-source MCP router and capability management platform that acts
 
 While Wanaku is runtime-agnostic in design, **Apache Camel is the native and first-class integration runtime**, providing the robust, battle-tested foundation for connecting AI agents to hundreds of enterprise systems, protocols, and data formats.
 
-Getting started is a single command. After [downloading the CLI](https://github.com/wanaku-ai/wanaku/releases/tag/wanaku-0.1.1), just run:
+Getting started is a single command. After [downloading the CLI](https://github.com/wanaku-ai/wanaku/releases/tag/wanaku-0.1.3), just run:
 
 ```shell
 wanaku start local
@@ -325,12 +325,12 @@ This unlocks the full power of Apache Camel for AI agents:
 
 Try Wanaku 0.1.1 today:
 
-- **Download the CLI:** [https://github.com/wanaku-ai/wanaku/releases/tag/wanaku-0.1.1](https://github.com/wanaku-ai/wanaku/releases/tag/wanaku-0.1.1)
-- **Learn Wanaku from the ground up:** [https://github.com/wanaku-ai/wanaku-demos](https://github.com/wanaku-ai/wanaku-demos) — step-by-step guides that take you from local experimentation all the way to production deployment on the cloud
-  - [Demo 2.02 — Service Catalogs](https://github.com/wanaku-ai/wanaku-demos/tree/main/2.02-service-catalogs): Build and deploy a book search catalog step by step
-  - [Demo 2.03 — Service Templates](https://github.com/wanaku-ai/wanaku-demos/tree/main/2.03-service-templates): Create and instantiate reusable integration blueprints
-- **Read the Service Catalogs Guide:** [Service Catalogs Documentation](https://github.com/wanaku-ai/wanaku/blob/main/docs/service-catalogs.md)
-- **Read the Service Templates Guide:** [Service Templates Documentation](https://github.com/wanaku-ai/wanaku/blob/main/docs/service-templates.md)
+- **Download the CLI:** [https://github.com/wanaku-ai/wanaku/releases/](https://github.com/wanaku-ai/wanaku/releases/)
+- **Learn Wanaku from the ground up:** [https://wanaku.ai/docs/demos/](https://wanaku.ai/docs/demos/) — step-by-step guides that take you from local experimentation all the way to production deployment on the cloud
+  - [Demo 2.02 — Service Catalogs](https://wanaku.ai/docs/demos/wanaku-demos-current/2.02-service-catalogs/README.html): Build and deploy a book search catalog step by step
+  - [Demo 2.03 — Service Templates](https://wanaku.ai/docs/demos/wanaku-demos-current/2.03-service-templates/README.html): Create and instantiate reusable integration blueprints
+- **Read the Service Catalogs Guide:** [Service Catalogs Documentation](https://wanaku.ai/docs/version/wanaku-current/docs/service-catalogs.html)
+- **Read the Service Templates Guide:** [Service Templates Documentation](https://wanaku.ai/docs/version/wanaku-current/docs/service-templates.html)
 
 ## What's Next?
 
