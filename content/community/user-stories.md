@@ -2,13 +2,13 @@
 title: "User Stories"
 ---
 
-This page is intended as a place to collect user stories and feedback on Apache Camel. If you are using or have tried Apache Camel please add an entry or comment; or post to the mailing list.
+This page is intended as a place to collect user stories and feedback on Apache Camel. If your company or organization uses Apache Camel and would like to be featured here, reach out on the [mailing list](/community/mailing-list/), open a pull request on [camel-website](https://github.com/apache/camel-website), or contact us on [Zulip chat](https://camel.zulipchat.com/). A one-line description and a link to a public reference (blog post, case study, conference talk, or LinkedIn post) is all we need.
 
 {{< table >}}
 | Company, Product, or Project  | Description |
 |-------------------------------|------------|
 |[UPS](https://www.youtube.com/watch?v=TDjwr16uaYU)|Processes tens of billions of messages per day on Apache Camel and ActiveMQ on OpenShift. The largest known Apache Camel deployment by message volume.|
-|[Sabre Holdings](https://www.camelone.org/camelone-2012/)|National US travel gateway processing 32,000 transactions per second (1.4 billion per day). Migrated from proprietary TPF mainframe to Apache Camel (JBoss Fuse) with significant cost savings and zero system failures. Powers the travel and aviation industry.|
+|[Sabre Holdings](https://www.camelone.org/camelone-2012/)|National US travel gateway — migrated from proprietary TPF mainframe to Apache Camel (JBoss Fuse) with significant cost savings and zero system failures. Processes tens of thousands of transactions per second for airlines and hotels worldwide. Presented at CamelOne 2011 and 2012.|
 |[Central Bank of Brazil (Pix)](https://www.redhat.com/en/resources/central-bank-of-brazil-case-study)|Brazil's national instant payment system serving 200+ million people. Built on Apache Camel (Red Hat Integration), AMQ Streams (Kafka), and OpenShift. Processes 2,000 transactions/second, 99% within 4 seconds. 72 million+ registrations at launch. Replaced paper-based payments for an entire country. 24x7 availability.|
 |[Vocalink, a Mastercard company](https://www.youtube.com/watch?v=5xQKG1TSrZc)|Camel is the backbone of Vocalink's core real-time payment platform, processing millions of transactions.|
 |[Systematic](https://systematic.com/int/industries/healthcare/solutions/hospital-care/columna-cis/)|Denmark's largest privately owned software company and Scandinavia's leading healthcare IT provider. Their Columna CIS electronic patient record is the most widespread EMR in Denmark, serving [3 of 5 Danish regions](https://systematic.com/int/industries/healthcare/news/news/cis-new-electronic-health-record-system-gives-concrete-benefits-for-the-regions/) (Central, North, Southern Denmark) — approximately 60,000 doctors, nurses, and secretaries caring for 3.2 million citizens. Apache Camel powers the integration layer connecting Columna with hospital systems, labs, and national registries.|
