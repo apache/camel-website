@@ -30,11 +30,11 @@ The sustained contribution rate is partly explained by Camel's architecture. Wit
 
 Numbers on a screen mean nothing without context. Here's where Camel actually runs:
 
-**UPS** processes [tens of billions of messages per day](https://www.youtube.com/watch?v=TDjwr16uaYU) on Apache Camel and ActiveMQ on OpenShift — the largest known Camel deployment by message volume.
+**UPS** processes [tens of billions of messages per day](https://www.youtube.com/watch?v=TDjwr16uaYU) on Apache Camel — the largest known Camel deployment by message volume.
 
-**CERN** uses Camel and ActiveMQ for the Large Hadron Collider's control systems — [190 million messages per day](https://www.computerworld.com/article/2726702/open-source-messaging-at--nearly--the-speed-of-light.html) across 85,000 machines with 99.98% uptime. As their principal JMS engineer put it: *"If there is no JMS there is no particle physics."*
+**CERN** uses Apache Camel for the Large Hadron Collider's control systems — [190 million messages per day](https://www.computerworld.com/article/2726702/open-source-messaging-at--nearly--the-speed-of-light.html) across 85,000 machines with 99.98% uptime. As their principal JMS engineer put it: *"If there is no JMS there is no particle physics."*
 
-**IndiGo**, [India's largest airline](https://www.redhat.com/en/success-stories/indigo), uses Apache Camel (Red Hat Fuse) to integrate **400+ applications** — from ticket booking to crew scheduling to load calculation — with zero downtime. The result: **₹500 million per year** saved in fuel costs through more accurate predictions, and post-flight crew reporting cut from 30 minutes to 5.
+**IndiGo**, [India's largest airline](https://www.redhat.com/en/success-stories/indigo), uses Apache Camel to integrate **400+ applications** — from ticket booking to crew scheduling to load calculation — with zero downtime. The result: **₹500 million per year** saved in fuel costs through more accurate predictions, and post-flight crew reporting cut from 30 minutes to 5.
 
 **Systematic**, one of Denmark's largest software companies, uses Camel as the integration layer for the Columna CIS electronic patient record system serving **3 of 5 Danish regions** — 60,000 healthcare professionals caring for 3.2 million citizens.
 
