@@ -22,7 +22,7 @@
             <div class="nav-category">
                 <h3>Releases</h3>
                 <ul>
-                    <li><a class="category" href="{{ "/categories/releases/" | relURL }}">Recent Releases<span>{{ len .Site.Taxonomies.categories.releases }}</span></a></li>
+                    <li><a class="category" href="{{ "/categories/releases/" | relURL }}">Recent Releases<span>{{ with index .Site.Taxonomies.categories "releases" }}{{ len . }}{{ end }}</span></a></li>
                 </ul>
             </div>
         </aside>
