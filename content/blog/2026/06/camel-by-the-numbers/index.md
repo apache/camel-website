@@ -111,6 +111,20 @@ For transparency, here are the complete statistics from the git repository and p
 
 France, Brazil, United Kingdom, Germany, Italy, Netherlands, Finland, Russia, Poland, New Zealand, Denmark, Switzerland, Austria, Sweden, Spain, Belgium, Australia, Romania, Czech Republic, and more.
 
+### Third-Party Technology Tracking
+
+Several independent technology tracking services detect Apache Camel usage across their datasets. Each uses different detection methods (web signals, job postings, technology fingerprinting), which accounts for the variation in numbers:
+
+| Source | Companies using Camel |
+|---|---|
+| [Enlyft](https://enlyft.com/tech/products/apache-camel) | 8,611 |
+| [ReadyContacts](https://www.readycontacts.com/target-account-profiling/apache-camel/) | 6,386 |
+| [TheirStack](https://theirstack.com/en/technology/apache-camel) | 4,721 |
+| [Reo.Dev](https://www.reo.dev/technology/apache-camel) | 4,106 |
+| [6sense](https://6sense.com/tech/data-integration/apache-camel-market-share) | 3,060 |
+
+6sense provides additional detail: of the 3,060 companies they track, **714 have 10,000+ employees** and **572 have 1,000-4,999 employees**. The top countries are the United States (49%), United Kingdom (9%), and Brazil (9%).
+
 ### GitHub Stars
 
 The [apache/camel](https://github.com/apache/camel) repository has **6,200+ stars** on GitHub. If you use Camel and haven't starred the project yet, we'd appreciate it — it helps others discover the project and signals to the open source community that Camel is actively used and valued.
