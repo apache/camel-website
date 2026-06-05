@@ -62,15 +62,22 @@ defaultMarkdownHandler = "goldmark"
     pre = "img/community.svg"
 
 [[menu.main]]
-    name = "Download"
+    name = "Tooling"
     weight = 5
+    identifier = "tooling"
+    url = "/tooling/"
+    pre = "img/tooling.svg"
+
+[[menu.main]]
+    name = "Download"
+    weight = 6
     identifier = "download"
     url = "/download/"
     pre = "img/download.svg"
 
 [[menu.main]]
     name = "Security"
-    weight = 6
+    weight = 7
     identifier = "security"
     url = "/security/"
     pre = "img/security.svg"
