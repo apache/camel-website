@@ -1,6 +1,6 @@
 ---
 title: "Apache Camel by the Numbers: 19 Years of Open Source Integration"
-date: 2026-06-04
+date: 2026-06-08
 draft: false
 authors: [davsclaus]
 categories: ["Community"]
