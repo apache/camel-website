@@ -146,14 +146,3 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |[Red Hat Build of Apache Camel](https://www.redhat.com/en/technologies/jboss-middleware/fuse)|Red Hat provides a commercial distribution of Apache Camel with enterprise support.|
 {{< /table >}}
 
-## Developer Tooling
-{{< table >}}
-| Project | Description |
-|---------|-------------|
-|[Apache Camel IDEA Plugin](https://github.com/camel-idea-plugin/camel-idea-plugin)|Plugin for Intellij IDEA to provide a set of Apache Camel related editing capabilities to the code editor. It also provides Camel textual route debugging capabilities.|
-|[Camel Debug Adapter](https://github.com/camel-tooling/camel-debug-adapter)|A server implementation of the [Debug Adapter Protocol](https://microsoft.github.io/debug-adapter-protocol/) that provides Camel textual route debugging capabilities. It is packaged for [VS Code](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-debug-adapter-apache-camel) and [Eclipse Desktop IDE](https://marketplace.eclipse.org/content/textual-debugging-apache-camel).|
-|[Camel Language Server](https://github.com/camel-tooling/camel-language-server)|A server implementation of the [Language Server protocol](https://github.com/Microsoft/language-server-protocol) that provides Camel DSL smartness (completion, validation, hover, outline). It is packaged for [VS Code](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-apache-camel) and [Eclipse Desktop IDE](https://marketplace.eclipse.org/content/language-support-apache-camel).|
-|[Kaoto](https://kaoto.io/)|Kaoto is an integration editor to create and deploy workflows in a visual, low-code way; with developer-friendly features like a code editor and deployments to the cloud.|
-|[VS Code extension pack for Camel](https://marketplace.visualstudio.com/items?itemName=redhat.apache-camel-extension-pack)|It provides a set of tools to develop Camel applications.|
-|[hawt.io](http://hawt.io)|hawt.io is an open source HTML5 web application for visualizing, managing and tracing Camel routes & endpoints, ActiveMQ brokers, JMX, and much more.|
-{{< /table >}}
