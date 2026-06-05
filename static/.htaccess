@@ -14,6 +14,9 @@ RewriteRule "^security-advisories.data/(.+)$" "security/$1" [R=permanent,L]
 # https://httpd.apache.org/docs/current/mod/core.html#errordocument
 ErrorDocument 404 /404.html
 
+# Redirect /manual/camel-cli.html to /manual/camel-jbang.html
+RewriteRule "^manual/camel-cli\.html$" "/manual/camel-jbang.html" [R=302,L]
+
 # Redirect /news/... to /blog/...
 RewriteRule "^news(/.*)$" "/blog$1" [R=permanent,L]
 

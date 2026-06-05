@@ -231,15 +231,15 @@ Apache Camel Karavan a Low-code Data Integration Platform.
 
 {{< div "icon" >}}
 
-{{< icon "jbang" "JBang logo" >}}
+{{< icon "cli" "CLI icon" >}}
 
 {{< /div >}}
 
 {{< div "content" >}}
 
-## Camel JBang
+## Camel CLI
 
-Camel JBang is CLI tooling to easily get started and for building low-code integrations with Camel.
+Camel CLI lets you easily get started with Apache Camel and build low-code integrations — all from the command line.
 
 <p><a class="button dark" href="/docs/">Read More</a></p>
 
