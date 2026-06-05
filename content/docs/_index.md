@@ -186,6 +186,24 @@ when you need to quickly build a prototype with Camel.
 
 {{< div "box left" >}}
 
+<a href="/tooling/" class="icon" title="Tooling">{{< icon "logo-d" "Apache Camel logo" >}}</a>
+
+{{< div "content">}}
+
+## Tooling
+
+Apache Camel has a rich ecosystem of developer tooling — IDE plugins, visual editors, AI-assisted development tools, Maven plugins, and monitoring solutions.
+
+<p>
+<a class="button dark" href="/tooling/">Tooling</a>
+</p>
+
+{{< /div >}}
+
+{{< /div >}}
+
+{{< div "box right" >}}
+
 <a href="/camel-kamelets/latest/" class="icon" title="Kamelets ">{{< icon "logo-d" "Apache Camel logo" >}}</a>
 
 {{< div "content">}}
