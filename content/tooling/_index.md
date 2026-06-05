@@ -53,8 +53,6 @@ For production projects, Camel provides a set of Maven plugins that integrate wi
 |[Camel REST DSL OpenAPI Plugin](/manual/rest-dsl-openapi.html)|Generates REST DSL routes and DTOs from OpenAPI v3 specification files for a contract-first approach.|
 {{< /table >}}
 
-A [Camel Gradle Plugin](https://github.com/apache/camel/tree/main/tooling/camel-gradle-plugin) is also available for Gradle users.
-
 ## Maven Archetypes
 
 Camel provides [Maven Archetypes](/manual/camel-maven-archetypes.html) to quickly scaffold new projects:
@@ -68,14 +66,6 @@ Camel provides [Maven Archetypes](/manual/camel-maven-archetypes.html) to quickl
 |camel-archetype-component|Creates a new Camel component|
 |camel-archetype-dataformat|Creates a new Camel data format|
 |camel-archetype-api-component|Creates a new Camel component that wraps one or more API proxies|
-{{< /table >}}
-
-## Libraries
-
-{{< table >}}
-| Tool | Description |
-|------|-------------|
-|[Forage](https://kaotoio.github.io/forage/)|Opinionated bean factories for Apache Camel — configure data sources, connection factories, AI models, transaction managers, and more via properties instead of Java code. Works with Camel JBang, Spring Boot, and Quarkus.|
 {{< /table >}}
 
 ## IDE Plugins and Extensions
@@ -105,6 +95,14 @@ Camel provides [Maven Archetypes](/manual/camel-maven-archetypes.html) to quickl
 |------|-------------|
 |[Camel Monitor Operator](https://camel-tooling.github.io/camel-dashboard/docs/installation-guide/advanced/operator/)|A Kubernetes operator that discovers and monitors Camel applications running in the cloud. Provides a lightweight monitoring layer with a GUI dashboard and integrates with advanced monitoring systems like Prometheus.|
 |[hawt.io](http://hawt.io)|hawt.io is an open source HTML5 web application for visualizing, managing and tracing Camel routes & endpoints, ActiveMQ brokers, JMX, and much more.|
+{{< /table >}}
+
+## Libraries
+
+{{< table >}}
+| Tool | Description |
+|------|-------------|
+|[Forage](https://kaotoio.github.io/forage/)|Opinionated bean factories for Apache Camel — configure data sources, connection factories, AI models, transaction managers, and more via properties instead of Java code. Works with Camel JBang, Spring Boot, and Quarkus.|
 {{< /table >}}
 
 ---
