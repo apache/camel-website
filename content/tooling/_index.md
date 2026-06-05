@@ -37,6 +37,7 @@ Supported AI tools include Claude Code, GitHub Copilot, Gemini CLI, Cursor, Wind
 | Tool | Description |
 |------|-------------|
 |[Camel Kit](https://github.com/luigidemasi/camel-kit)|A set of structured slash commands for AI coding assistants that guide you through the complete integration lifecycle — from design and planning to implementation and verification. Supports Claude Code, Gemini CLI, and more.|
+|[Wanaku](https://wanaku.ai)|The Wanaku MCP Router is a router for AI-enabled applications powered by the Model Context Protocol (MCP) and Apache Camel.|
 {{< /table >}}
 
 ## Maven Plugins
