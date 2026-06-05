@@ -27,7 +27,7 @@ The `camel tui` command launches a full terminal-based UI that provides fast, re
 
 ## Camel MCP Server
 
-The [Camel MCP Server](https://github.com/apache/camel-mcp-server) connects Apache Camel to AI coding assistants through the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/). It gives AI tools access to Camel's component catalog, DSL documentation, and integration patterns — so they can help you write, debug, and optimize Camel routes with full context.
+The [Camel MCP Server](/manual/camel-jbang-mcp.html) connects Apache Camel to AI coding assistants through the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/). It gives AI tools access to Camel's component catalog, DSL documentation, and integration patterns — so they can help you write, debug, and optimize Camel routes with full context.
 
 Supported AI tools include Claude Code, GitHub Copilot, Gemini CLI, Cursor, Windsurf, and any MCP-compatible assistant.
 
