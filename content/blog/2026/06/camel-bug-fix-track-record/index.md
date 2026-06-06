@@ -102,11 +102,13 @@ integration open-source communities:
 | 2015 | 3,649 | 141 | 2025 | 4,440 | 150 |
 | 2016 | 4,333 | 196 | 2026* | 3,226 | 92 |
 
-Over **91,000 commits** from more than **1,600 unique contributors** across the project's lifetime.
+Over **91,000 commits** from more than **1,100 contributors** across the project's lifetime.
 The peak year was 2020 with 8,305 commits from 260 contributors.
 
-The contributor count has settled in recent years, but output per contributor is rising —
-Q1 2026 saw the highest single-quarter commit count since early 2023, achieved with fewer people.
+The contributor count in the table above is based on unique git committer emails per year.
+The project started in Subversion where community patches were committed by a committer
+with a "thanks to X for the patch" credit in the commit message — so the early years
+undercount the actual community involvement.
 
 ## The recent trend: getting faster
 
@@ -145,7 +147,7 @@ If you're evaluating Apache Camel for your integration needs, the data tells a c
 - **The project doesn't accumulate debt.** 7,081 reported, 7,070 resolved, 11 open. That's a 99.8% resolution rate.
 - **Releases ship constantly.** 264 releases across 17 years, averaging 2+ per month in recent years.
 - **Growth doesn't break things.** 50+ new components added in 6 months without increasing the bug rate.
-- **The community is large and sustained.** 91,000+ commits from 1,600+ contributors over 19 years.
+- **The community is large and sustained.** 91,000+ commits from 1,100+ contributors over 19 years.
 
 This track record is the result of a global community of contributors, committers, and users
 who care about quality. Whether you're running Camel in production today or considering it
