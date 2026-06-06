@@ -1,8 +1,8 @@
 ---
 title: "Apache Camel's Bug Fix Track Record: 7,070 Bugs Fixed in 19 Years"
-date: 2026-06-06
+date: 2026-06-08
 draft: true
-authors: [ClausIbsen]
+authors: [davsclaus]
 categories: ["Features"]
 preview: "A data-driven look at how the Apache Camel community responds to and fixes bugs — 7,070 resolved since 2007, with a median resolution time of 1 day and only 11 open today."
 ---
