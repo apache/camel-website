@@ -49,46 +49,59 @@
           fill="url(#shieldInner)"/>
 
     <!-- Checkmark in shield -->
-    <g transform="translate(120, 120)" filter="glow">
+    <g transform="translate(120, 115)" filter="glow">
       <polyline points="-35,10 -10,35 40,-25" fill="none" stroke="#4ade80" stroke-width="10"
                 stroke-linecap="round" stroke-linejoin="round"/>
     </g>
 
     <!-- Bug fix count on shield -->
-    <text x="120" y="210" text-anchor="middle" fill="#e8792f" font-size="36" font-weight="bold">1,178</text>
-    <text x="120" y="235" text-anchor="middle" fill="#8899bb" font-size="14" font-weight="500" letter-spacing="1">BUGS FIXED</text>
+    <text x="120" y="205" text-anchor="middle" fill="#e8792f" font-size="36" font-weight="bold">7,070</text>
+    <text x="120" y="230" text-anchor="middle" fill="#8899bb" font-size="14" font-weight="500" letter-spacing="1">BUGS FIXED</text>
+    <text x="120" y="252" text-anchor="middle" fill="#667799" font-size="12" letter-spacing="0.5">19 YEARS</text>
   </g>
 
   <!-- Left stat -->
-  <g transform="translate(70, 160)">
+  <g transform="translate(55, 150)">
     <text x="0" y="0" fill="#4ade80" font-size="42" font-weight="bold">1</text>
     <text x="0" y="22" fill="#8899bb" font-size="13" letter-spacing="0.5">DAY MEDIAN</text>
     <text x="0" y="38" fill="#667799" font-size="13" letter-spacing="0.5">RESOLUTION</text>
   </g>
 
+  <!-- Left stat 2 -->
+  <g transform="translate(55, 240)">
+    <text x="0" y="0" fill="#60a5fa" font-size="28" font-weight="bold">99.8%</text>
+    <text x="0" y="20" fill="#8899bb" font-size="13" letter-spacing="0.5">RESOLVED</text>
+  </g>
+
   <!-- Right stat -->
-  <g transform="translate(600, 160)">
+  <g transform="translate(600, 150)">
     <text x="0" y="0" fill="#60a5fa" font-size="42" font-weight="bold">11</text>
     <text x="0" y="22" fill="#8899bb" font-size="13" letter-spacing="0.5">OPEN BUGS</text>
     <text x="0" y="38" fill="#667799" font-size="13" letter-spacing="0.5">300+ COMPONENTS</text>
+  </g>
+
+  <!-- Right stat 2 -->
+  <g transform="translate(600, 240)">
+    <text x="0" y="0" fill="#e8792f" font-size="28" font-weight="bold">264</text>
+    <text x="0" y="20" fill="#8899bb" font-size="13" letter-spacing="0.5">RELEASES</text>
   </g>
 
   <!-- Bottom stats row -->
   <g transform="translate(0, 385)">
     <line x1="50" y1="0" x2="750" y2="0" stroke="#2a3a5e" stroke-width="1"/>
 
-    <text x="135" y="35" text-anchor="middle" fill="#e8792f" font-size="20" font-weight="bold">54%</text>
-    <text x="135" y="52" text-anchor="middle" fill="#667799" font-size="11">FIXED SAME DAY</text>
+    <text x="135" y="35" text-anchor="middle" fill="#e8792f" font-size="20" font-weight="bold">91,000+</text>
+    <text x="135" y="52" text-anchor="middle" fill="#667799" font-size="11">COMMITS</text>
 
     <line x1="265" y1="15" x2="265" y2="55" stroke="#2a3a5e" stroke-width="1"/>
 
-    <text x="400" y="35" text-anchor="middle" fill="#e8792f" font-size="20" font-weight="bold">77%</text>
-    <text x="400" y="52" text-anchor="middle" fill="#667799" font-size="11">FIXED WITHIN 7 DAYS</text>
+    <text x="400" y="35" text-anchor="middle" fill="#e8792f" font-size="20" font-weight="bold">1,600+</text>
+    <text x="400" y="52" text-anchor="middle" fill="#667799" font-size="11">CONTRIBUTORS</text>
 
     <line x1="535" y1="15" x2="535" y2="55" stroke="#2a3a5e" stroke-width="1"/>
 
-    <text x="665" y="35" text-anchor="middle" fill="#e8792f" font-size="20" font-weight="bold">1.0x</text>
-    <text x="665" y="52" text-anchor="middle" fill="#667799" font-size="11">FIX RATIO EVERY YEAR</text>
+    <text x="665" y="35" text-anchor="middle" fill="#e8792f" font-size="20" font-weight="bold">2007–2026</text>
+    <text x="665" y="52" text-anchor="middle" fill="#667799" font-size="11">ACTIVE DEVELOPMENT</text>
   </g>
 
   <!-- Title -->
