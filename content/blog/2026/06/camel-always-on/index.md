@@ -1,21 +1,22 @@
 ---
-title: "The Always-On Project: 19 Years of Uninterrupted Apache Camel Development"
+title: "Apache Camel: 19 Years of Continuous Development — 272 Releases, 81,000 Commits, Zero Gaps"
 date: 2026-06-08
 draft: true
 authors: [davsclaus]
 categories: ["Features"]
-preview: "232 consecutive months of commits, 272 releases on Maven Central, a new release every 15 days, and never more than 3 days of silence since 2015. The data behind Apache Camel's unbroken track record."
+preview: "Apache Camel has been in continuous active development since 2007 — 232 consecutive months of commits with no gaps, 272 releases on Maven Central, and a new release every 15 days. The project has never gone more than 3 days without a commit since 2015. This is not a recent AI-era phenomenon — Camel's track record spans 19 years, 4 major versions, and over 1,100 contributors."
 ---
 
-In our [previous post](/blog/2026/06/camel-bug-fix-track-record/), we looked at how the Apache
-Camel community handles bugs — 7,070 fixed with a median resolution time of 1 day. But bug fixes
-are only part of the story. The deeper question for any organization evaluating an open-source
-dependency is: **will this project still be here, actively maintained, when we need it?**
+Apache Camel has shipped 272 production releases over 19 years without a single month of
+inactivity. The project averages a new release every 15 days, maintains up to 10 release lines
+in parallel, and has accumulated 81,234 commits from over 1,100 contributors since 2007.
+This track record is not a recent development — it has been sustained continuously since well
+before the current wave of AI-driven open-source activity. This post presents the evidence.
 
-We went through 19 years of [git history](https://github.com/apache/camel) and
-[Maven Central](https://repo1.maven.org/maven2/org/apache/camel/camel-core/) data to find out.
-
-The short version: **81,234 commits. 272 releases. 232 consecutive months of activity. Zero gaps.**
+In our [previous post](/blog/2026/06/camel-bug-fix-track-record/), we looked at how the
+community handles bugs — 7,070 fixed with a median resolution time of 1 day. This companion
+post answers a different question: **will this project still be here, actively maintained,
+when you need it?**
 
 ## 232 months without a break
 
@@ -217,6 +218,52 @@ Even after the peak, the project has sustained **4,000–6,000 commits per year*
 (3,213 in ~5 months) projects to roughly 7,400 for the full year — a resurgence driven by AI
 integration, the new TUI developer tools, and continued platform expansion.
 
+## A stable core team — no bus factor
+
+A common risk with open-source projects is key-person dependency. Apache Camel has avoided this
+through **generational overlap** — each era's core team was already active before the previous
+generation stepped back. There was never a clean break or a scramble to find replacements.
+
+The top 20 contributors by commit count, with merged git identities:
+
+| Contributor | Commits | Years Active | Span |
+|------------|---------|-------------|------|
+| Claus Ibsen | ~26,900 | 19 | 2008–now |
+| Andrea Cosentino | ~18,500 | 13 | 2011–now |
+| Otavio Piske | ~4,600 | 8 | 2019–now |
+| Willem Jiang | ~4,100 | 15 | 2008–2022 |
+| Guillaume Nodet | 1,435 | 20 | 2007–now |
+| James Strachan | 1,385 | 7 | 2007–2013 |
+| Babak Vahdat | 906 | 14 | 2012–2025 |
+| Hadrian Zbarcea | 757 | 8 | 2007–2014 |
+| Luca Burgazzoli | 677 | 12 | 2013–2024 |
+| Jonathan Anstey | 573 | 12 | 2008–2019 |
+| Christian Mueller | 532 | 10 | 2010–2020 |
+| James Netherton | 487 | 12 | 2015–now |
+| Aurélien Pupier | 471 | 11 | 2016–now |
+| Zoran Regvart | 468 | 10 | 2016–2025 |
+| Pascal Schumacher | 437 | 7 | 2015–2021 |
+| Gregor Zurowski | 413 | 14 | 2013–now |
+| Pasquale Congiusti | 399 | 8 | 2019–now |
+| Alex Dettinger | 328 | 9 | 2016–now |
+| Nicolas Filotto | 309 | 5 | 2022–now |
+| Federico Mariani | 283 | 6 | 2021–now |
+
+What stands out:
+
+- **8 contributors with 10+ year tenures.** Guillaume Nodet has been active for 20 years,
+  Claus Ibsen for 19, Willem Jiang for 15, Babak Vahdat and Gregor Zurowski for 14 each.
+- **Generational overlap, not handoff.** James Strachan founded the project (2007–2013),
+  but Claus Ibsen was already contributing from 2008. Andrea Cosentino started in 2011 while
+  the founding team was still active. Otavio Piske joined in 2019, years before any
+  predecessor left. Each generation ramps up while the previous one is still fully engaged.
+- **Deepening bench.** The concentration of commits among the top 3 contributors has dropped
+  from 94% in 2007 to **53% in 2026** — the most distributed the project has ever been.
+  The long tail of contributors is growing, not shrinking.
+- **20 people with 280+ commits spanning 5+ years.** This is not a project that depends on one
+  or two individuals. It is a deep bench of experienced engineers who know the codebase
+  intimately.
+
 ## Weekends and holidays? Still shipping.
 
 Open-source sustainability isn't just about volume — it's about consistency. Does the project
@@ -248,8 +295,9 @@ No "upgrade now or get nothing."
 patches to existing lines. The project ships nearly three maintenance releases for every
 feature release.
 
-**The community is broad enough to sustain itself.** 1,100+ contributors over 19 years.
-No single point of failure.
+**The community is broad enough to sustain itself.** 1,100+ contributors over 19 years,
+with 8 core committers spanning 10+ years each. The project has never depended on a single
+person — generational overlap ensures continuity.
 
 **The governance works.** The Apache Software Foundation's release process — requiring community
 votes, license compliance, and reproducible builds — adds overhead. But 272 successful releases
