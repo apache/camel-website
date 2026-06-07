@@ -224,11 +224,15 @@ A common risk with open-source projects is key-person dependency. Apache Camel h
 through **generational overlap** — each era's core team was already active before the previous
 generation stepped back. There was never a clean break or a scramble to find replacements.
 
+The commit counts below are based on git author data. The project started in Subversion, where
+community patches were committed by a committer with a credit in the commit message — so the
+early years undercount the actual community involvement.
+
 The top 20 contributors by commit count, with merged git identities:
 
 | Contributor | Commits | Years Active | Span |
 |------------|---------|-------------|------|
-| Claus Ibsen | ~26,900 | 19 | 2008–now |
+| Claus Ibsen | ~26,900 | 19 | 2007–now |
 | Andrea Cosentino | ~18,500 | 13 | 2011–now |
 | Otavio Piske | ~4,600 | 8 | 2019–now |
 | Willem Jiang | ~4,100 | 15 | 2008–2022 |
@@ -254,7 +258,8 @@ What stands out:
 - **8 contributors with 10+ year tenures.** Guillaume Nodet has been active for 20 years,
   Claus Ibsen for 19, Willem Jiang for 15, Babak Vahdat and Gregor Zurowski for 14 each.
 - **Generational overlap, not handoff.** James Strachan founded the project (2007–2013),
-  but Claus Ibsen was already contributing from 2008. Andrea Cosentino started in 2011 while
+  but Claus Ibsen was already contributing patches and code reviews from 2007. Andrea
+  Cosentino started in 2011 while
   the founding team was still active. Otavio Piske joined in 2019, years before any
   predecessor left. Each generation ramps up while the previous one is still fully engaged.
 - **Deepening bench.** The concentration of commits among the top 3 contributors has dropped
