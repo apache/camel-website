@@ -133,6 +133,29 @@ Each major version has followed the same pattern:
 | Camel 3.x | 22 | 57 | 79 | 2019 – 2025 |
 | Camel 4.x | 20 | 38 | 58 | 2023 – present |
 
+### The Camel 4.x LTS model
+
+Starting with Camel 4.x, the project introduced a formal **LTS (Long Term Support)** model.
+Non-LTS minor releases ship roughly monthly with new features and improvements. Every few
+months, one of these is designated as an LTS release and receives ongoing patch releases for
+approximately one year.
+
+| LTS Line | Patch Releases | Active Period |
+|----------|---------------|---------------|
+| 4.0.x | 7 | Aug 2023 – Aug 2024 |
+| 4.4.x | 6 | Feb 2024 – Jan 2025 |
+| 4.8.x | 10 | Sep 2024 – Sep 2025 |
+| 4.10.x | 10 | Feb 2025 – Feb 2026 |
+| 4.14.x | 8 | Aug 2025 – present |
+| 4.18.x | 3 | Feb 2026 – present |
+
+The 15 non-LTS lines (4.1, 4.2, 4.3, 4.5, ...) each shipped a single feature release. The 6
+LTS lines produced **44 releases** — 75% of all Camel 4.x releases.
+
+This model gives organizations a clear choice: **track the latest features** by following non-LTS
+releases, or **pin to an LTS line** and receive bug and security fixes for a full year without
+any feature churn. Either way, the release cadence never stops.
+
 ## Multiple release lines, maintained in parallel
 
 What makes Camel's release record especially strong is how many lines are maintained simultaneously.
