@@ -50,22 +50,37 @@ Apache Camel has published **272 GA releases** to Maven Central since the first 
 July 2, 2007. No milestones, no release candidates — 272 production-ready releases
 that users can depend on.
 
-Here is the full release history by year:
+Here is the full release history by year, broken down by release type:
 
-| Year | Releases | Year | Releases |
-|------|----------|------|----------|
-| 2007 | 3 | 2017 | 14 |
-| 2008 | 3 | 2018 | 12 |
-| 2009 | 5 | 2019 | 14 |
-| 2010 | 6 | 2020 | 17 |
-| 2011 | 11 | 2021 | 21 |
-| 2012 | 13 | 2022 | 19 |
-| 2013 | 13 | 2023 | **28** |
-| 2014 | 11 | 2024 | 20 |
-| 2015 | 12 | 2025 | **27** |
-| 2016 | 12 | 2026* | 11 |
+| Year | Major | Minor | Patch | Total |
+|------|-------|-------|-------|-------|
+| 2007 | 1 | 2 | — | 3 |
+| 2008 | — | 3 | — | 3 |
+| 2009 | 1 | 2 | 2 | 5 |
+| 2010 | — | 4 | 2 | 6 |
+| 2011 | — | 4 | 7 | 11 |
+| 2012 | — | 1 | 12 | 13 |
+| 2013 | — | 2 | 11 | 13 |
+| 2014 | — | 2 | 9 | 11 |
+| 2015 | — | 2 | 10 | 12 |
+| 2016 | — | 2 | 10 | 12 |
+| 2017 | — | 2 | 12 | 14 |
+| 2018 | — | 3 | 9 | 12 |
+| 2019 | 1 | 1 | 12 | 14 |
+| 2020 | — | 8 | 9 | 17 |
+| 2021 | — | 7 | 14 | 21 |
+| 2022 | — | 6 | 13 | 19 |
+| 2023 | 1 | 5 | 22 | **28** |
+| 2024 | — | 6 | 14 | 20 |
+| 2025 | — | 7 | 20 | **27** |
+| 2026* | — | 4 | 7 | 11 |
+| **Total** | **4** | **73** | **195** | **272** |
 
 *2026 is partial (through June)*
+
+**71.7% of all releases are patch releases** — bug fixes and security patches shipped to existing
+release lines. That's not a project chasing features at the expense of stability. For every
+new-feature release, there are nearly three maintenance releases keeping production users safe.
 
 The project has shipped **10 or more releases every year for 16 consecutive years** (2011–2026).
 That streak has never been broken — through major version transitions, global events, and
@@ -95,21 +110,64 @@ contributors and was maintaining a single release line.
 **Since 2015**, the largest gap between any two releases is **80 days** — during the Camel 3.0
 preparation in summer 2019. Since 2021, the maximum gap has been **50 days**.
 
+## 4 major versions in 19 years
+
+The project has gone through exactly **4 major releases** — and the timing tells its own story:
+
+| Transition | Gap | What changed |
+|-----------|-----|-------------|
+| 1.0 → 2.0 | 2.1 years | Component model redesign |
+| 2.0 → 3.0 | 10.3 years | Jakarta EE, Java 11+, modular architecture |
+| 3.0 → 4.0 | 3.7 years | Java 17+, virtual threads, Camel DSL |
+
+Camel 2.x ran for **over a decade** — from August 2009 to May 2021, when the last 2.25.4 patch
+shipped. That's the kind of stability enterprises need. The 2.x line alone produced **25 minor
+releases and 96 patch releases** — 121 releases on a single major version.
+
+Each major version has followed the same pattern:
+
+| Version | Minor Releases | Patch Releases | Total | Active Period |
+|---------|---------------|----------------|-------|---------------|
+| Camel 1.x | 6 | 4 | 10 | 2007 – 2010 |
+| Camel 2.x | 25 | 96 | 121 | 2009 – 2021 |
+| Camel 3.x | 22 | 57 | 79 | 2019 – 2025 |
+| Camel 4.x | 20 | 38 | 58 | 2023 – present |
+
+## Multiple release lines, maintained in parallel
+
+What makes Camel's release record especially strong is how many lines are maintained simultaneously.
+The community doesn't abandon older versions the moment a new one ships — it keeps them alive
+with patch releases while users plan their migration.
+
+Here is the number of distinct release lines (e.g. 4.14.x, 4.18.x) that received at least one
+release each year:
+
+| Year | Lines | Year | Lines |
+|------|-------|------|-------|
+| 2011 | 4 | 2019 | 5 |
+| 2012 | 4 | 2020 | **9** |
+| 2013 | 4 | 2021 | **10** |
+| 2014 | 4 | 2022 | 8 |
+| 2015 | 4 | 2023 | **9** |
+| 2016 | 4 | 2024 | **9** |
+| 2017 | 4 | 2025 | **10** |
+| 2018 | 5 | 2026* | 6 |
+
+In 2021 and 2025, the community maintained **10 distinct release lines** in a single year.
+That includes LTS lines receiving security patches, the current development line shipping new
+features, and transitional lines bridging major version upgrades.
+
+This is the "upgrade on your schedule" promise, backed by data.
+
 ## 16-year release streak
 
 To put the cadence in perspective, here is the unbroken streak of years with 10+ releases:
 
 2011 → 2012 → 2013 → 2014 → 2015 → 2016 → 2017 → 2018 → 2019 → 2020 → 2021 → 2022 → 2023 → 2024 → 2025 → 2026
 
-**16 consecutive years.** During this streak, the project went through:
-
-- The Camel **2.x** era (2011–2019): 25 minor releases, each with multiple patch releases
-- The Camel **3.x** era (2019–2023): major migration to Jakarta EE, Java 11+, modular architecture
-- The Camel **4.x** era (2023–present): Java 17+, virtual threads, 50+ new AI components
-
-Through every major transition, older release lines continued receiving patch releases.
-Users were never forced into a rushed upgrade — the prior version kept getting fixes while
-they planned their migration.
+**16 consecutive years.** Through every major transition, older release lines continued
+receiving patch releases. Users were never forced into a rushed upgrade — the prior version
+kept getting fixes while they planned their migration.
 
 ## The community behind the commits
 
@@ -160,7 +218,12 @@ technology shift — SOA, microservices, cloud-native, serverless, AI — by ada
 a queue waiting for a quarterly release cycle.
 
 **Major transitions don't break you.** Through three major version bumps, the prior version
-line kept receiving patch releases. No "upgrade now or get nothing."
+line kept receiving patch releases — up to 10 release lines maintained in parallel.
+No "upgrade now or get nothing."
+
+**Maintenance comes first.** 72% of all releases are patch releases — bug fixes and security
+patches to existing lines. The project ships nearly three maintenance releases for every
+feature release.
 
 **The community is broad enough to sustain itself.** 1,100+ contributors over 19 years.
 No single point of failure.
