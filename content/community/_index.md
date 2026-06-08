@@ -71,7 +71,7 @@ You don’t have to be an expert in an area, the Apache Camel developers are ava
 ## Who Uses Apache Camel
 
 Over 100 companies use Apache Camel in production — from UPS and CERN to SAP and Korean Air.
-Commercial products from Red Hat, SAP, and Huawei are built on Apache Camel.
+Commercial products from Red Hat, SAP, Huawei, and Talend are built on Apache Camel.
 
 <p>
 <a class="button dark" href="/community/user-stories/">Read More</a>
