@@ -10,8 +10,8 @@ Apache Camel is used in production by over 100 known organizations across financ
 If you are using Apache Camel and would like to be listed here, please add an entry or post to the mailing list.
 
 {{< table >}}
-| Company, Product, or Project  | Description |
-|-------------------------------|------------|
+| Company | Description |
+|---------|-------------|
 |[UPS](https://www.youtube.com/watch?v=TDjwr16uaYU)|Processes tens of billions of messages per day on Apache Camel and ActiveMQ on OpenShift. The largest known Apache Camel deployment by message volume.|
 |[Sabre Holdings](https://www.camelone.org/camelone-2012/)|National US travel gateway — migrated from proprietary TPF mainframe to Apache Camel with significant cost savings and zero system failures. Processes tens of thousands of transactions per second for airlines and hotels worldwide. Presented at CamelOne 2011 and 2012.|
 |[Vocalink, a Mastercard company](https://www.youtube.com/watch?v=5xQKG1TSrZc)|Camel is the backbone of Vocalink's core real-time payment platform, processing millions of transactions.|
