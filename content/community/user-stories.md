@@ -1,8 +1,13 @@
 ---
-title: "User Stories"
+title: "Who Uses Apache Camel"
+aliases:
+  - "/community/user-stories/"
+description: "Over 100 companies use Apache Camel in production — from UPS processing billions of messages per day, to CERN running the Large Hadron Collider, to SAP powering their Integration Suite. Apache Camel is trusted by Fortune 500 companies, governments, airlines, banks, and healthcare providers worldwide."
 ---
 
-This page is intended as a place to collect user stories and feedback on Apache Camel. If you are using or have tried Apache Camel please add an entry or comment; or post to the mailing list.
+Apache Camel is used in production by over 100 known organizations across finance, healthcare, government, logistics, telecommunications, retail, and energy. The deployments below range from startups to Fortune 10 companies, processing billions of messages per day.
+
+If you are using Apache Camel and would like to be listed here, please add an entry or post to the mailing list.
 
 {{< table >}}
 | Company, Product, or Project  | Description |
@@ -22,8 +27,8 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |[APIS IT (Croatian Government)](https://www.redhat.com/en/success-stories/apis-it)|Provides critical IT infrastructure for Croatian government ministries and public administration. Uses Apache Camel, AMQ, and OpenShift. 80+ production projects running with 200+ more planned. Modernized 20 years of legacy systems.|
 |[Government of Jalisco, Mexico](https://www.redhat.com/en/success-stories/government-of-state-of-jalisco)|Mexican state government serving 7 million citizens. Uses Apache Camel for digitized public services — online tax payments, traffic fines, vehicle licensing. 60% of services digitized, 60% infrastructure cost reduction.|
 |[Colombia SIC](https://www.redhat.com/en/resources/colombia-sic-case-study)|Colombia's Superintendence of Industry and Commerce (2,000 employees). Uses Apache Camel as part of a service-oriented architecture for consumer protection and market regulation. Digital case management processing 51,000 cases and 24,000+ rulings per year. Citizen-facing mobile app and online dispute resolution.|
-|[SAP Integration Suite](https://www.sap.com/products/technology-platform/integration-suite.html)|The Cloud Integration capability of SAP's iPaaS product uses Apache Camel.|
-|[Huawei Cloud ROMA](https://www.huaweicloud.com/intl/en-us/solution/roma/)|Apache Camel powers the runtime engine for [Huawei Cloud ROMA](https://www.huaweicloud.com/en-us/product/roma.html) which is a commercial iPaaS offering by Huawei Cloud. ROMA integrates data, services, messages and devices under one unified platform.|
+|[SAP](https://www.sap.com/products/technology-platform/integration-suite.html)|SAP's Integration Suite uses Apache Camel as its core integration runtime. See [Commercial Products](#commercial-products-built-on-apache-camel) below.|
+|[Huawei](https://www.huaweicloud.com/intl/en-us/solution/roma/)|Huawei Cloud ROMA uses Apache Camel as its integration engine. See [Commercial Products](#commercial-products-built-on-apache-camel) below.|
 |[Telefónica Colombia (Movistar)](https://www.redhat.com/en/resources/telefonica-colombia-case-study)|Serving 21 million customers across Colombia. Uses Apache Camel, 3scale, and OpenShift for its Mi Movistar customer app. Feature release time cut 51%. Security patches in 19 minutes (99% faster). Migrated from Oracle proprietary stack.|
 |[Vodafone](https://www.redhat.com/en/resources/vodafone-prepares-cloud-red-hat-jboss-fuse)|Global Integration Gateway migrated from IBM DataPower to Apache Camel. Over 100 integrated systems processing 10,000+ transactions per second.|
 |[Maersk](https://www.linkedin.com/posts/maratgubaidullin_communityovercode-apachecamel-karavan-activity-7372608306898681856-CsI4)|The world's largest container shipping company uses Apache Camel with Kafka and Artemis for warehouse automation, integrating Industrial IoT/AOT systems with Warehouse Management. From idea to production in 3 months. Presented at Community Over Code 2025.|
@@ -32,7 +37,6 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |[Transpower New Zealand](https://www.redhat.com/en/success-stories/transpower-new-zealand)|Operates New Zealand's national electricity grid (174 substations, 25,000 towers, 6,800+ miles of lines). Uses Apache Camel as core ESB, AMQ Streams, and OpenShift. Saved NZ$50 million in avoided costs. Launched real-time electricity pricing in 2022 — "the largest single change in the electricity market since 1996."|
 |[Edenor](https://www.redhat.com/en/about/press-releases/edenor-improves-service-delivery-and-continuity-container-based-agile-integration-red-hat)|Argentina's largest electricity distributor (3 million customers in greater Buenos Aires). Uses Apache Camel on OpenShift for billing, outage management, field service, and vehicle monitoring (800,000 events/day). Incident response times reduced by 70%. Replaced legacy integration platform that failed during peak demand.|
 |[CERN](https://www.camelone.org/camelone-2012/)|The European Organization for Nuclear Research uses Apache ActiveMQ and Camel for the Large Hadron Collider's mission-critical 24x7x365 controls, monitoring, and alarm systems. Processes 190 million messages per day across 85,000 machines with 99.98% uptime. As CERN's principal JMS engineer stated: ["If there is no JMS there is no particle physics."](https://www.computerworld.com/article/2726702/open-source-messaging-at--nearly--the-speed-of-light.html) Progress FUSE underpinned CERN's search for the Higgs boson ("God Particle").|
-|[Murex MXopenconnect](https://www.elenjicalsolutions.com/elenjical-solutions-pioneers-murexs-mxopenconnect-development-framework/)|Capital markets trading platform integration framework built on Apache Camel. Connects trading platforms, clearing systems, and core banking for 300+ financial institutions worldwide.|
 |[IndiGo](https://www.redhat.com/en/success-stories/indigo)|India's largest airline (25,000+ employees). Uses Apache Camel to integrate 400+ applications with zero downtime. Saves ₹500 million/year in fuel costs through more accurate predictions. Post-flight crew reporting reduced from 30 minutes to 5 minutes.|
 |[Korean Air](https://www.redhat.com/en/resources/korean-air-case-study)|South Korea's largest airline (17,000 employees, 125 destinations). Uses Apache Camel for Cargo and Passenger Integration Platforms — 100+ passenger systems and 50+ freight systems integrated. Transaction speed doubled. Replaced 20+ year old legacy platforms after evaluating IBM, TIBCO, and others.|
 |[FAA](https://www.camelone.org/camelone-2011/)|The US Federal Aviation Administration uses Apache Camel and ActiveMQ for the SWIM program — real-time aviation weather, flight, and surveillance data sharing across the National Airspace System.|
@@ -82,7 +86,6 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |[Ally Financial](https://www.redhat.com/en/success-stories/ally-financial)|US digital financial services leader (8,000 employees). Uses Apache Camel and OpenShift for online banking, auto finance, insurance, and investing platforms.|
 |[Banco Credicoop](https://www.redhat.com/en/resources/bccl-case-study)|Argentine cooperative bank serving 2.3 million customers. Replaced legacy ESB with Apache Camel on OpenShift for faster service delivery across all channels.|
 |[Asiakastieto (Enento Group)](https://www.redhat.com/en/about/press-releases/asiakastieto-unlocks-open-banking-innovation-red-hat)|Finnish fintech serving the Nordic banking sector. Built Account Insight open banking platform using Apache Camel, Quarkus, and 3scale on OpenShift. Analyzes bank account data for credit assessment under EU PSD2. Reduced production deployment cycle by 95%. Quarkus delivered 90% less memory and 70% less CPU.|
-|[Guidewire Integration Framework](https://www.guidewire.com/blog/technology/cloud-integration-framework-the-right-tools-for-the-job/)|Integration Gateway is an open framework for developing integration apps that bridge Guidewire APIs with external apps and services. It is based on Apache Camel.|
 |[WW (Weight Watchers)](https://medium.com/ww-tech-blog/migrating-apps-from-mulesoft-to-red-hat-fuse-apache-camel-a6d121c99515)|Migrated 200+ MuleSoft applications to Apache Camel in 8 months. Observed lower memory footprint, faster performance, and high production stability. Subsequently used Camel for X12 EDI transaction processing.|
 |[Uber](/blog/2019/09/ApacheConNA-2019/)|Built "Medley," a Camel-based data integration platform for internal data integrations at scale. Presented at ApacheCon North America 2019.|
 |[Globo](https://www.redhat.com/en/resources/globo-case-study)|Brazil's largest media company uses Apache Camel for high-performance integration infrastructure processing 85,000 messages per hour.|
@@ -111,18 +114,29 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |[Logica](https://slideshare.net/ehildebrandt/implementing-enterprise-integration-patterns-with-apache-camel-presentation)|IT services company (39,000 employees, 36 countries) implementing Enterprise Integration Patterns with Apache Camel. Presented at WJAX 2012.|
 |[Arla Foods](https://www.arla.com)|Uses Camel to integrate business backend with web application for farmers to access information about quality of their delivered milk. Application used in numerous european countries.|
 |[Mifos](https://mifos.org/)|An [open core-banking platform](https://github.com/openMF), uses Camel.|
-|[PortX](https://portx.io/)|PortX, the Integration Platform as a Service (iPaaS) for financial institutions, is built on the open source Apache Camel framework.|
-|[Fluxygen](https://fluxygen.com/)|Low-code integration platform built on Apache Camel. Used by logistics, retail, and e-commerce companies in the Netherlands and Belgium.|
-|[APIPass](https://apipass.com.br/)|Provides an Integration Platform as a Service (iPaaS) built on Apache Camel.|
-|[Talisman Platform](https://talismancloud.io/)|Enterprise integration lifecycle platform built on Apache Camel Karavan. Visual design, AI-assisted development, deployment control plane. Customers include Maersk and NTT DATA.|
-|[CAPI Gateway](https://github.com/surisoft-io/capi)|Light API Gateway and load balancer powered by Apache Camel dynamic routes. Used at the European Commission. Features MCP support, OpenTelemetry tracing, Keycloak security, and Open Policy Agent authorization.|
-|[IPF Open eHealth Integration Platform](https://oehf.github.io/ipf-docs/)|The Open eHealth Integration Platform (IPF) is an extension of the Apache Camel routing and mediation engine with comprehensive support for message processing and connecting systems in the eHealth domain.|
-|[Multi-Channel Framework (MCF)](https://www.felpfe.com/multi-channel-framework-mcf/)|MCF utilizes Camel to provide developers with an empowering framework, enabling them to create, test, and deploy integration scenarios intuitively. Its configuration-driven approach facilitates seamless integration using Camel.|
-|[OpenHub](https://github.com/OpenWiseSolutions/openhub-framework)|OpenHub is an integration platform that is built on top of Apache Camel.|
-|[Assimbly Gateway](https://github.com/assimbly/gateway)|A message gateway based on Apache Camel.|
 {{< /table >}}
 
-## Other Projects Using Apache Camel
+## Commercial Products Built on Apache Camel
+
+Several commercial software products and platforms use Apache Camel as their core integration runtime.
+
+{{< table >}}
+| Product | Description |
+|---------|-------------|
+|[Red Hat Build of Apache Camel](https://www.redhat.com/en/products/application-foundations)|Red Hat provides a commercial, enterprise-supported distribution of Apache Camel with long-term support, security patching, and certification on Red Hat OpenShift. Many of the enterprise deployments listed above run on Red Hat's distribution.|
+|[SAP Integration Suite](https://www.sap.com/products/technology-platform/integration-suite.html)|The Cloud Integration capability of SAP's iPaaS product uses Apache Camel as its integration runtime. SAP Integration Suite is positioned as a Leader in the Gartner Magic Quadrant for Integration Platform as a Service.|
+|[Huawei Cloud ROMA](https://www.huaweicloud.com/intl/en-us/solution/roma/)|Apache Camel powers the runtime engine for Huawei Cloud ROMA, a commercial iPaaS offering. ROMA integrates data, services, messages and devices under one unified platform.|
+|[Guidewire Integration Framework](https://www.guidewire.com/blog/technology/cloud-integration-framework-the-right-tools-for-the-job/)|Integration Gateway is an open framework for developing integration apps that bridge Guidewire APIs with external apps and services. It is based on Apache Camel.|
+|[IBM Instana](https://www.ibm.com/products/instana/supported-technologies/camel-monitoring)|IBM's observability platform provides dedicated Apache Camel monitoring with automatic discovery, service mapping, tracing, and troubleshooting. Camel is a first-class supported technology.|
+|[PortX](https://portx.io/)|PortX, the Integration Platform as a Service (iPaaS) for financial institutions, is built on the open source Apache Camel framework.|
+|[Talisman Platform](https://talismancloud.io/)|Enterprise integration lifecycle platform built on Apache Camel Karavan. Visual design, AI-assisted development, deployment control plane. Customers include Maersk and NTT DATA.|
+|[Fluxygen](https://fluxygen.com/)|Low-code integration platform built on Apache Camel. Used by logistics, retail, and e-commerce companies in the Netherlands and Belgium.|
+|[APIPass](https://apipass.com.br/)|Provides an Integration Platform as a Service (iPaaS) built on Apache Camel.|
+|[Murex MXopenconnect](https://www.elenjicalsolutions.com/elenjical-solutions-pioneers-murexs-mxopenconnect-development-framework/)|Capital markets trading platform integration framework built on Apache Camel. Connects trading platforms, clearing systems, and core banking for 300+ financial institutions worldwide.|
+{{< /table >}}
+
+## Open Source Projects Using Apache Camel
+
 {{< table >}}
 | Project | Description |
 |---------|-------------|
@@ -140,9 +154,7 @@ This page is intended as a place to collect user stories and feedback on Apache 
 |[Assimbly Gateway](https://github.com/assimbly/gateway)|A message gateway based on Apache Camel.|
 |[CAPI Gateway](https://github.com/surisoft-io/capi)|Light API Gateway and load balancer powered by Apache Camel dynamic routes. Used at the European Commission. Features MCP support, OpenTelemetry tracing, Keycloak security, and Open Policy Agent authorization.|
 |[Multi-Channel Framework (MCF)](https://www.felpfe.com/multi-channel-framework-mcf/)|MCF utilizes Camel to provide developers with an empowering framework, enabling them to create, test, and deploy integration scenarios intuitively. Its configuration-driven approach facilitates seamless integration using Camel.|
-|[IBM Instana](https://www.ibm.com/products/instana/supported-technologies/camel-monitoring)|IBM's observability platform provides dedicated Apache Camel monitoring with automatic discovery, service mapping, tracing, and troubleshooting. Camel is a first-class supported technology.|
 |[IBM i Integration](https://github.com/IBM/ibmi-oss-examples/tree/master/camel)|IBM maintains examples of Apache Camel routes for IBM i integration, connecting data queues to Kafka, message queues to email, and disk monitoring via Db2 queries.|
 |[SAP HANA](https://www.linkedin.com/pulse/hana-smart-data-integration-simplifies-connecting-facebook-shankar/)|The platform from SAP uses Apache Camel.|
-|[Red Hat Build of Apache Camel](https://www.redhat.com/en/technologies/jboss-middleware/fuse)|Red Hat provides a commercial distribution of Apache Camel with enterprise support.|
 {{< /table >}}
 
