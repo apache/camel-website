@@ -159,4 +159,3 @@ Several commercial software products and platforms use Apache Camel as their cor
 |[IBM i Integration](https://github.com/IBM/ibmi-oss-examples/tree/master/camel)|IBM maintains examples of Apache Camel routes for IBM i integration, connecting data queues to Kafka, message queues to email, and disk monitoring via Db2 queries.|
 |[SAP HANA](https://www.linkedin.com/pulse/hana-smart-data-integration-simplifies-connecting-facebook-shankar/)|The platform from SAP uses Apache Camel.|
 {{< /table >}}
-
