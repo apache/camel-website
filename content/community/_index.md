@@ -64,14 +64,14 @@ You don’t have to be an expert in an area, the Apache Camel developers are ava
 
 {{< div "box" >}}
 
-<a href="/community/user-stories/" class="icon" title="User stories">{{< icon "user-stories" "Person talking" >}}</a>
+<a href="/community/user-stories/" class="icon" title="Who Uses Apache Camel">{{< icon "user-stories" "Person talking" >}}</a>
 
 {{< div "content" >}}
 
-## User Stories
+## Who Uses Apache Camel
 
-This page is intended as a place to collect user stories and feedback on Apache Camel.
-If you are using or have tried Apache Camel, please add an entry or comment; or post to the mailing list.
+Over 100 companies use Apache Camel in production — from UPS and CERN to SAP and Korean Air.
+Commercial products from Red Hat, SAP, Huawei, Talend, and others are built on Apache Camel.
 
 <p>
 <a class="button dark" href="/community/user-stories/">Read More</a>

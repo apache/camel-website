@@ -151,7 +151,7 @@ An Integration Toolkit aimed to increase developer performance through a graphic
 
 Being deployed in Kubernetes, Karavan helps to manage projects, design and monitor integrations, Tekton pipeline to build and deploy integrations.
 
-[Karavan VS Code Extension](https://marketplace.visualstudio.com/items?itemName=camel-karavan.karavan) is integrated with [Camel Jbang](/manual/camel-jbang.html) runtime for fast local development cycles.
+[Karavan VS Code Extension](https://marketplace.visualstudio.com/items?itemName=camel-karavan.karavan) is integrated with [Camel CLI](/manual/camel-jbang.html) runtime for fast local development cycles.
 
 <p>
 <!-- <a class="button dark" href="/camel-karavan/latest/">Documentation</a> -->
@@ -166,10 +166,10 @@ Being deployed in Kubernetes, Karavan helps to manage projects, design and monit
 
 {{< div "content">}}
 
-## Camel JBang
+## Camel CLI
 
-A Camel CLI (Command Line Interface) to easily install and get started with Apache Camel,
-in only a few minutes. Camel JBang is excellent for no-code/low-code use-cases and
+The Camel CLI, powered by [JBang](https://www.jbang.dev/), lets you easily install and get started with Apache Camel
+in only a few minutes. Camel CLI is excellent for no-code/low-code use-cases and
 when you need to quickly build a prototype with Camel.
 
 <p>
@@ -180,11 +180,29 @@ when you need to quickly build a prototype with Camel.
 
 {{< /div >}}
 
-<a href="/manual/camel-jbang.html" class="icon" title="Camel JBang ">{{< icon "logo-d" "Apache Camel logo" "jbang" "JBang logo" >}}</a>
+<a href="/manual/camel-jbang.html" class="icon" title="Camel CLI">{{< icon "logo-d" "Apache Camel logo" "cli" "CLI icon" >}}</a>
 
 {{< /div >}}
 
 {{< div "box left" >}}
+
+<a href="/tooling/" class="icon" title="Tooling">{{< icon "logo-d" "Apache Camel logo" >}}</a>
+
+{{< div "content">}}
+
+## Tooling
+
+Apache Camel has a rich ecosystem of developer tooling — IDE plugins, visual editors, AI-assisted development tools, Maven plugins, and monitoring solutions.
+
+<p>
+<a class="button dark" href="/tooling/">Tooling</a>
+</p>
+
+{{< /div >}}
+
+{{< /div >}}
+
+{{< div "box right" >}}
 
 <a href="/camel-kamelets/latest/" class="icon" title="Kamelets ">{{< icon "logo-d" "Apache Camel logo" >}}</a>
 
