@@ -1,6 +1,6 @@
 ---
 title: "Apache Camel by the Numbers: 19 Years of Open Source Integration"
-date: 2026-06-08
+date: 2026-06-09
 draft: false
 authors: [davsclaus]
 categories: ["Community"]
@@ -105,7 +105,7 @@ For transparency, here are the complete statistics from the git repository and p
 | 2022 | 7,142 | 224 | 121 |
 | 2023 | 8,208 | 221 | 120 |
 | 2024 | 6,563 | 165 | 81 |
-| 2025 | 5,279 | 153 | 73 |
+| 2025 | 5,282 | 153 | 72 |
 
 ### Country Representation (from email domain TLDs)
 
