@@ -153,10 +153,11 @@ camel run hello.yaml
 camel tui
 ```
 
-Or start with Spring Boot:
+Or export to Spring Boot:
 
 ```bash
-camel init --runtime=spring-boot myproject
+camel init hello.yaml
+camel export --runtime=spring-boot --gav=com.example:myproject:1.0-SNAPSHOT
 cd myproject
 mvn spring-boot:run
 ```
