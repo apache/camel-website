@@ -111,7 +111,7 @@ These aren't theoretical — they're production-tested patterns used by thousand
 
 ## Trusted in production
 
-Apache Camel has been running in production for 19 years. Thousands of companies worldwide rely on it — from startups to governments, across financial services, healthcare, aviation, energy, logistics, telecom, and every industry in between. Processing billions of messages daily.
+Apache Camel has been running in production for nearly two decades. Thousands of companies worldwide rely on it — from startups to governments, across financial services, healthcare, aviation, energy, logistics, telecom, and every industry in between. Processing billions of messages daily.
 
 [See who uses Apache Camel →](/community/user-stories/)
 
@@ -119,7 +119,7 @@ Apache Camel has been running in production for 19 years. Thousands of companies
 
 ## Works with AI coding assistants
 
-Apache Camel's entire source code, documentation, tests, examples, and 19 years of commit history are open source on apache.org — making it well-represented in AI training data. AI coding assistants can generate routes, explain components, troubleshoot errors, and suggest patterns.
+Apache Camel's entire source code, documentation, tests, examples, and two decades of commit history are open source on apache.org — making it well-represented in AI training data. AI coding assistants can generate routes, explain components, troubleshoot errors, and suggest patterns.
 
 Camel also provides an **MCP server** (Model Context Protocol) that connects AI assistants directly to Camel's component catalog — giving tools like Claude Code, GitHub Copilot, and Cursor full context awareness when helping you build integrations.
 
@@ -127,14 +127,14 @@ Camel also provides an **MCP server** (Model Context Protocol) that connects AI 
 
 ## The numbers
 
-| | |
+| Metric | Value |
 |---|---|
 | **Connectors** | 350+ |
 | **Integration patterns** | 65+ |
 | **Contributors** | 1,100+ |
-| **Commits** | 91,000+ |
-| **Years in production** | 19 |
-| **Median bug fix time** | 1 day |
+| **Commits** | 82,000+ |
+| **Years in production** | Nearly two decades |
+| **Median bug fix time** | 1–2 days |
 | **Open bugs** | Typically 10 or fewer (across 350+ connectors) |
 | **License** | Apache License 2.0 — free, no cost, forever |
 
