@@ -1,6 +1,20 @@
 ---
 title: "What is Apache Camel?"
 description: "Apache Camel is an open-source integration framework with 350+ connectors, 65+ enterprise integration patterns, and multiple DSLs including Java, YAML, and XML. It connects applications, services, APIs, and data — whether they live in the cloud, on-premise, or both."
+keywords:
+- apache camel
+- integration framework
+- enterprise integration patterns
+- EIP
+- connectors
+- kafka
+- spring boot
+- quarkus
+- yaml dsl
+- open source integration
+- api integration
+- message routing
+- MCP server
 ---
 
 ## Apache Camel is an integration framework.
