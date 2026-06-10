@@ -131,8 +131,8 @@ Camel also provides an **MCP server** (Model Context Protocol) that connects AI 
 |---|---|
 | **Connectors** | 350+ |
 | **Integration patterns** | 65+ |
-| **Contributors** | 1,100+ |
-| **Commits** | 82,000+ |
+| **Contributors** | 1,600+ |
+| **Commits** | 100,000+ |
 | **Years in production** | Nearly two decades |
 | **Median bug fix time** | 1–2 days |
 | **Open bugs** | Typically 10 or fewer (across 350+ connectors) |
