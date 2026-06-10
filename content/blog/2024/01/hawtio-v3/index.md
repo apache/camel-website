@@ -41,7 +41,7 @@ With the proliferation of microservices, application runtimes are becoming light
 
 The Camel JBang CLI already has a nice `camel hawtio` command. [^2] We can expect that a future update will make Hawtio v3 default for the command, but meanwhile if it is still using the old v2 console, you can make it start the new Hawtio v3 from the CLI easily as follows: [^3]
 
-[^2]: [Camel JBang - Using Jolokia and Hawtio](/manual/camel-jbang.html#_using_jolokia_and_hawtio)
+[^2]: [Camel JBang - Using Jolokia and Hawtio](/manual/camel-jbang-managing.html#_using_jolokia_and_hawtio)
 [^3]: 3.0.0 has a problem with `camel hawtio`, so please use 3.0.1.
 
 ```console

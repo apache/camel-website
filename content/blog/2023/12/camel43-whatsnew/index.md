@@ -110,7 +110,7 @@ shown in the screenshot below:
 You can find an example at [jbang-edit example](https://github.com/apache/camel-kamelets-examples/tree/main/jbang/jbang-edit).
 
 Another new functionality is the _live message transformer_ with the new `camel transform message` command.
-You can find detailed information in the [camel-jbang docs](/manual/camel-jbang.html#_transforming_message_data_mapping),
+You can find detailed information in the [camel-jbang docs](/manual/camel-jbang-transforming.html#_transforming_messages_data_mapping),
 a basic example is here [json transformation](https://github.com/apache/camel-kamelets-examples/tree/main/jbang/json-transform), and we have a [video recording on YouTube](https://www.youtube.com/watch?v=ntVRSBcBBLU). 
 
 We have improved the `camel export` to avoid starting some services that was not needed, which could potentially

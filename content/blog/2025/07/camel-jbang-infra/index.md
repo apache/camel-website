@@ -10,7 +10,7 @@ preview: "Learn how to leverage Apache Camel JBang to prototype E2E scenarios"
 
 ## Introduction
 
-In this blog post, we'll explore how [Apache Camel JBang's Infrastructure Command](/manual/camel-jbang.html#_infrastructure) can help you rapidly prototype end-to-end integration scenarios and adapt to changing requirements. We'll walk through a realistic development scenario where requirements evolve over time, demonstrating how Camel's flexibility makes it an ideal choice for proof-of-concept development.
+In this blog post, we'll explore how [Apache Camel JBang's Infrastructure Command](/manual/camel-jbang-dev-services.html) can help you rapidly prototype end-to-end integration scenarios and adapt to changing requirements. We'll walk through a realistic development scenario where requirements evolve over time, demonstrating how Camel's flexibility makes it an ideal choice for proof-of-concept development.
 
 ## Camel JBang Infrastructure: Your Prototyping Toolkit
 
@@ -242,7 +242,7 @@ public class CamelRoute extends RouteBuilder {
 }
 ```
 
-We can use any software to interact with the FTP, such as FileZilla, but is it really needed? we can easily automate the upload part to the FTP server with Camel, we can do it with [Camel JBang](/manual/camel-jbang.html#_sending_messages_via_camel):
+We can use any software to interact with the FTP, such as FileZilla, but is it really needed? we can easily automate the upload part to the FTP server with Camel, we can do it with [Camel JBang](/manual/camel-jbang-devtools.html#_sending_messages_via_camel):
 
 ```console
 $ echo "Test content" > test.txt
