@@ -135,6 +135,8 @@ Several commercial software products and platforms use Apache Camel as their cor
 |[Fluxygen](https://fluxygen.com/)|Low-code integration platform built on Apache Camel. Used by logistics, retail, and e-commerce companies in the Netherlands and Belgium.|
 |[APIPass](https://apipass.com.br/)|Provides an Integration Platform as a Service (iPaaS) built on Apache Camel.|
 |[Murex MXopenconnect](https://www.elenjicalsolutions.com/elenjical-solutions-pioneers-murexs-mxopenconnect-development-framework/)|Capital markets trading platform integration framework built on Apache Camel. Connects trading platforms, clearing systems, and core banking for 300+ financial institutions worldwide.|
+|[Digibee](https://www.digibee.com/)|Cloud-native iPaaS built on Apache Camel. IBM partnership for hybrid integration. Highest-rated iPaaS on G2. Customers include Payless (200+ stores, 15 countries) and Bauducco. Headquartered in Weston, Florida and São Paulo, Brazil.|
+|[Jetic](https://jetic.io/)|Cloud-native iPaaS built on Apache Camel K and Kubernetes. 300+ pre-built connectors. Zero vendor lock-in — native open-source framework code pushed to your Git. Customer: Convey911 (public safety/emergency services).|
 {{< /table >}}
 
 ## Open Source Projects Using Apache Camel
@@ -158,4 +160,6 @@ Several commercial software products and platforms use Apache Camel as their cor
 |[Multi-Channel Framework (MCF)](https://www.felpfe.com/multi-channel-framework-mcf/)|MCF utilizes Camel to provide developers with an empowering framework, enabling them to create, test, and deploy integration scenarios intuitively. Its configuration-driven approach facilitates seamless integration using Camel.|
 |[IBM i Integration](https://github.com/IBM/ibmi-oss-examples/tree/master/camel)|IBM maintains examples of Apache Camel routes for IBM i integration, connecting data queues to Kafka, message queues to email, and disk monitoring via Db2 queries.|
 |[SAP HANA](https://www.linkedin.com/pulse/hana-smart-data-integration-simplifies-connecting-facebook-shankar/)|The platform from SAP uses Apache Camel.|
+|[Eclipse Kura](https://eclipse.dev/kura/)|Eclipse IoT M2M gateway for edge devices. Apache Camel provides the built-in message routing engine for protocol translation (MQTT, AMQP, CoAP, OPC UA, HTTP) and enterprise integration patterns at the IoT edge. Deployed on Raspberry Pi and industrial gateways.|
+|[Eclipse Kapua](https://www.eclipse.org/kapua/)|Eclipse IoT cloud management platform for device registry, management, messaging, and telemetry. Uses Apache Camel and ActiveMQ for message routing and integration. Co-sponsored by Red Hat and Eurotech.|
 {{< /table >}}
