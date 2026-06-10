@@ -486,7 +486,7 @@ For more details, see [`.docsearch.README.md`](.docsearch.README.md).
 
 The content of the website, as built by the [Camel.website](https://ci-builds.apache.org/job/Camel/job/Camel.website/job/main/)
 job, is served from the [asf-site](https://github.com/apache/camel-website/tree/asf-site) branch and served by [ASF
-Infrastrucuture team](https://infra.apache.org/project-site.html).
+Infrastructure team](https://infra.apache.org/project-site.html).
 
 For the site to be published a number of checks need to pass, these include two levels of link checking:
 [Antora xref](https://gitlab.com/antora/xref-validator) and [HTML link checker](https://github.com/deadlinks/cargo-deadlinks);
