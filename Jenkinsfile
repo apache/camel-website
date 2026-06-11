@@ -93,11 +93,13 @@ pipeline {
                 dir('deploy/live') {
                     deleteDir()
                     sh 'git clone -b asf-site https://gitbox.apache.org/repos/asf/camel-website-pub.git .'
-                    sh 'git rm -q -r *'
-                    sh "cp -R $WORKSPACE/camel-website/public/. ."
-                    sh 'git add .'
+                    sh "rsync -a --delete --exclude='.git' --exclude='.asf.yaml' $WORKSPACE/camel-website/public/ ."
+                    sh 'git add -A'
                     sh "git checkout $VALID_ASF_YAML -- ./.asf.yaml" // force revert to commit containing the valid .asf.yml
-                    sh 'git commit -m "Website updated to $GIT_COMMIT"'
+                    sh 'git diff-index --quiet HEAD || git commit -m "Website updated to $GIT_COMMIT"'
+                    sh 'git push origin asf-site'
+                    sh 'sleep 5'
+                    sh 'git commit --allow-empty -m "CDN cache invalidation"'
                     sh 'git push origin asf-site'
                 }
             }
