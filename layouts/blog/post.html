@@ -67,7 +67,7 @@
         <div class="post-content">
             {{ $featured := (.Resources.ByType "image").GetMatch "*featured*" }}
             {{ if not $featured }}
-                {{ $featured = resources.Get "img/default-featured.png" }}
+                {{ $featured = resources.Get "img/default-featured.jpg" }}
             {{ end }}
             {{ with $featured }}
                 {{ if ne $featured.MediaType.SubType "svg" }}
