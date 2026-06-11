@@ -133,7 +133,7 @@ curl http://localhost:8080/customer -XPOST -i -H 'Content-Type: application/json
 
 `Step 6.` Finally verify that the data is at its final destination.
 
-![mongo-db](mongo-db.png)
+![mongo-db](mongo-db.jpg)
 
 # Conclusion
 

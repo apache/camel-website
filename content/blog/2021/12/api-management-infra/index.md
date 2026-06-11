@@ -21,7 +21,7 @@ Keycloak is an identity and access management OSS. As an OAuth 2.0 authorization
 
 As shown in the picture below, the API management infrastructure can perform reverse proxy, protocol conversion, data conversion, mash-up, flow control, API documentation publishing and metrics. Besides, it also can perform simple API authorization by token issuance & management that is provided by Keycloak.
 
-{{< image "API-management-infrastructure.png" "API management infrastructure" >}}
+{{< image "API-management-infrastructure.jpg" "API management infrastructure" >}}
 
 ## Drawbacks of security
 
@@ -174,7 +174,7 @@ As a result of implementing scope check, the API request without granted authori
 
 ### OAuth MTLS
 
-{{< image "OAuth-MTLS.png" "OAuth MTLS" >}}
+{{< image "OAuth-MTLS.jpg" "OAuth MTLS" >}}
 
 OAuth MTLS is a mechanism for preventing token stealing attacks by using the client certificate of the client application. It is defined in [RFC8705](https://datatracker.ietf.org/doc/html/rfc8705), a related standard of OAuth 2.0.
 

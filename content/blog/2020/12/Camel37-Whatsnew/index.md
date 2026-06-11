@@ -50,7 +50,7 @@ with the equivalent csimple expression:
 
 yields a dramatic 100 times performance improvement in reduced cpu usage as shown in the screenshot:
 
-{{< image "simple-csimple-performance.png" "Simple vs Compiled Simple" >}}
+{{< image "simple-csimple-performance.jpg" "Simple vs Compiled Simple" >}}
 
 For more information about the compiled simple language and further break down of performance improvements then
 read [Claus blog post](http://www.davsclaus.com/2020/12/apache-camel-37-compiled-simple.html).

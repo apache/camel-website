@@ -31,7 +31,7 @@ to go back to run in normal mode.
 Added support for Prometheus in the new `camel-micrometer-prometheus` component, that makes it possible to expose
 metrics in Prometheus format, as shown below:
 
-![Prometheus JBang](prometheus-jbang.png)
+![Prometheus JBang](prometheus-jbang.jpg)
 
 This can be configured in `application.properties`:
 
@@ -105,7 +105,7 @@ public class foo extends EndpointRouteBuilder {
 You can now also easily use JBang way of editing source code in your favorite editor, such as `jbang edit -b foo.java`,
 shown in the screenshot below:
 
-![JBang Edit](jbang-edit.png)
+![JBang Edit](jbang-edit.jpg)
 
 You can find an example at [jbang-edit example](https://github.com/apache/camel-kamelets-examples/tree/main/jbang/jbang-edit).
 

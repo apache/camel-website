@@ -16,7 +16,7 @@ The open-source frameworks forming the backbone of this EDI integration are Came
 
 Depicted below is a common supply chain transaction flow where (1) a customer transmits an EDI purchase order to a supplier requesting goods or services followed by (2) the supplier acknowledging the transaction. Between receiving the purchase order and acknowledging it, the supplier exchanges bits and pieces of the order with its internal systems.
 
-![EDI X12 over AS2 with Camel & Smooks](edi-x12-as2-camel-smooks.png)
+![EDI X12 over AS2 with Camel & Smooks](edi-x12-as2-camel-smooks.jpg)
 
 The Camel application I will showcase exchanges [X12](https://x12.org/) documents, a flavour of EDI, to implement the supplier-side flow. While Smooks ships with out-of-the-box support for [EDIFACT](https://www.smooks.org/documentation/#edifact), an EDI dialect popular within Europe, X12 is broadly adopted in North America. It is considered one of the more challenging standards to follow, in small part due to its licensed approach in acquiring the guides governing the data exchange. Later on, we will see how one can parse the X12 purchase orders and generate acknowledgements without these implementation guides in hand.
 

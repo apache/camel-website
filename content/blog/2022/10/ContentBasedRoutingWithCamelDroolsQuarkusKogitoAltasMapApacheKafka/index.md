@@ -16,7 +16,7 @@ In this post I want to share with you how to implement a complete, end-to-end **
 
 Here is the Enterprise Integration Pattern (EIP) diagram of the flow, annotated with some details of the components used:
 
-![EIP Diagram of the Content Based Routing application](./image-1536x646.png)
+![EIP Diagram of the Content Based Routing application](./image-1536x646.jpg)
 
 The focus of this solution is **routing healthcare-related messages**; for this demo example, messages are routed accordingly to the following decision table rules:
 
@@ -32,7 +32,7 @@ For the purpose of this demo, the examples are provided using HL7v2 as the **tec
 
 In order to properly translate from the specific technical format HL7v2 into the domain model, we can make use of the AtlasMap capabilities of data-mapping. This allows the stakeholder involved in the content based routing application to more easily inspect and describe the rules, for instance. Here is a visual summary of the AltasMap intent combined with the DMN decision table:
 
-![Using AltasMap in combination with a DMN decision table](./image-2-1536x746.png)
+![Using AltasMap in combination with a DMN decision table](./image-2-1536x746.jpg)
 
 In a [separate post](https://blog.kie.org/2022/01/data-enrichment-use-case-with-dmn-and-bpmn.html) about Data Enrichment, I previously hinted at the potentials in combining the capabilities of AltasMap with Drools DMN; I hope this tutorial now provides a very pragmatic example!
 
@@ -82,7 +82,7 @@ For instance, I used the very same links myself in order to make sure the demo w
 
 Finally, the deployment and setup is complete, and we can start to make use of our content based routing solution, by sending REST calls to the ingress endpoint; this can be used as a classic webhook or analogous to a [CDS hook](https://cds-hooks.org/).
 
-![Invoking the REST API with an EDI message payload in HL7v2 format, and it is routed to the correct queue](./image-5.png)
+![Invoking the REST API with an EDI message payload in HL7v2 format, and it is routed to the correct queue](./image-5.jpg)
 
 ## Conclusions
 

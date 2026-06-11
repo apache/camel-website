@@ -8,7 +8,7 @@ keywords: ["apache camel", "kaoto", "visual editor", "integration design"]
 preview: "Kaoto 2.8 has been released"
 ---
 
-![Kaoto](cover.png)
+![Kaoto](cover.jpg)
 ## What's New in Kaoto 2.8?
 
 This release represents a major step forward in DataMapper maturity, with extensive XML Schema support improvements, better visual feedback, and numerous stability fixes. We've also enhanced the canvas experience with contextual menus and improved the forms system for better configuration management.

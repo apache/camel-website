@@ -27,7 +27,7 @@ Our latest release brings a slew of improvements aimed at making your integratio
 - **File Change Status**: The status of file changes is now determined based on content rather than change date, ensuring more accurate tracking of modifications.
 - **File Diff Display**: Karavan displays diffs for changed files, enhancing visibility and traceability, making it easier to review and understand changes.
 
-   ![diff](diff.png)
+   ![diff](diff.jpg)
 
 ### Enhanced Visualization and Insights
 - **Topology Visualization**: The topology feature can now visualize consumer and producer groups, providing better insights into data flow and interactions within your integration.
@@ -36,7 +36,7 @@ Our latest release brings a slew of improvements aimed at making your integratio
 
 - **Route Visualization Enhancements**: Routes configured to be auto-started are now marked with an "A" badge, and routes with `errorHandler` configured are indicated with a lightning sign, enhancing the clarity and manageability of your integration routes.
 
-   ![badges](badges.png)
+   ![badges](badges.jpg)
 
 ### Optimized Performance and Resource Usage
 - **ConcurrentMaps for Caching**: Karavan now uses simple `ConcurrentMaps` instead of Hazelcast to cache project data. This change reduces startup time and memory consumption, resulting in a faster and more efficient development environment.

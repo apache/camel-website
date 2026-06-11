@@ -24,7 +24,7 @@ trait option.
 
 This is what it looks like:
 
-![Colorized Camel K Logs](colorized-camel-k-logs.png)
+![Colorized Camel K Logs](colorized-camel-k-logs.jpg)
 
 
 ## Easier support for additional debug levels

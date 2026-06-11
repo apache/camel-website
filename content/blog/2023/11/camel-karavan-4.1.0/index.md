@@ -28,7 +28,7 @@ With this release, Karavan now offers full-fledged Kamelet development support r
 
 A picture is worth a thousand words, and in the world of integration, clarity is key. In this release, we introduce the new Project Topology view, which provides a top-level overview of integrations within your project. This visualization helps you understand the structure and connections of your integrations at a glance, improving project management and collaboration.
 
-![topology](topology.png)
+![topology](topology.jpg)
 
 When joining existing projects, integrators may find themselves sifting through numerous integration routes scattered across multiple files. Understanding the project's objectives and what has been implemented can be quite challenging. 
 

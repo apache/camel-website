@@ -40,9 +40,9 @@ We identified on spring runtimes that Camel would query the spring bean registry
 
 Another related problem is that in Camel 3 due to the modularization then some of the languages (bean, simple, and others) have been changed from being a singleton to prototype scoped. This is one of the biggest problems and we had a Camel user report a problem with thread contention in a high concurrent use-case would race for resolving languages (they are prototype scoped). So you would have this problem, and because the language resolver would query the registry first then Spring would throw `NoSuchBeanDefinitionException`, and then Camel would resolve the language via its own classpath resolver. So all together this cost performance. We can see this in the screenshots from the profiler in the following.
 
-{{< image "350-blocked.png" "Camel 3.5 Blocked Threads" >}}
+{{< image "350-blocked.jpg" "Camel 3.5 Blocked Threads" >}}
 
-{{< image "360-blocked.png" "Camel 3.6 Blocked Threads" >}}
+{{< image "360-blocked.jpg" "Camel 3.6 Blocked Threads" >}}
 
 The top screenshot is using Camel 3.5 and the bottom 3.6. At the top, we can see the threads are blocked in Camel's `resolveLanguage` method. And in 3.6 then it's the log4j logger that is blocking for writing to the log file. Both applications are using the same Camel application and have been running for about 8 minutes.
 
@@ -52,7 +52,7 @@ The next screenshots are showing a sample of the object allocations.
 
 {{< image "350-allocations.png" "Camel 3.5 Average Object Allocations Per Seconds" >}}
 
-{{< image "360-allocations.png" "Camel 3.6 Average Object Allocations Per Seconds" >}}
+{{< image "360-allocations.jpg" "Camel 3.6 Average Object Allocations Per Seconds" >}}
 
 
 With Camel 3.5 we are average about 1000 obj/sec and with 3.6 we are down to about a 1/3th.
@@ -69,7 +69,7 @@ We also improved the simple language to be a bit smarter in its binary operators
 
 The screenshots below show a chart with the CPU, object allocations, and thrown exceptions.
 
-{{< image "350-performance.png" "Camel 3.5 Performance Charts" >}}
+{{< image "350-performance.jpg" "Camel 3.5 Performance Charts" >}}
 
 {{< image "360-performance.png" "Camel 3.6 Performance Charts" >}}
 

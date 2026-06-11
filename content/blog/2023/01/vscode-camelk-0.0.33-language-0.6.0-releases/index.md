@@ -25,8 +25,8 @@ The label of the outline has been simplified from `Language Support for Apache C
 
 In previous versions:
 
-![Outline have a very long name for Camel in previous version](./before-outlineName.png)
+![Outline have a very long name for Camel in previous version](./before-outlineName.jpg)
 
 In new release:
 
-![Outline have a short name for Camel in new version](./after-outlineName.png)
+![Outline have a short name for Camel in new version](./after-outlineName.jpg)

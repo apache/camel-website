@@ -7,7 +7,7 @@ categories: ["Releases","Tooling"]
 preview: "New integration designer capabilities, Karavan on OpenShift, Tekton Pipelines and much more"
 ---
 
-![logo](toolkit.png)
+![logo](toolkit.jpg)
 
 Karavan is an Integration Toolkit for Apache Camel aimed to increase developer performance through the visualization of routes, integration with runtimes and pipelines for package, image build and deploy to kubernetes out-of-the-box.
 

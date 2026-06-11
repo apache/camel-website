@@ -24,13 +24,13 @@ These steps provide a structured approach to generating, setting up, building, a
 
 Within your clean VS Code workspace, initiate the creation of an exemplary Camel route using the command `Camel: Create a Camel Route using Java DSL`. This sets the foundation for your project's routing structure.
 
-![Create a Camel Route using Java DSL](javadsl-route.png)
+![Create a Camel Route using Java DSL](javadsl-route.jpg)
 
 #### Transform the generated Camel Route into a Camel Quarkus Project
 
 Utilize the command `Camel: Create a Camel Quarkus project` to generate a project based on the previously created Camel route. This action transforms your route into a robust Camel Quarkus project, ready for development.
 
-![Create a Camel Quarkus project](export-project.png)
+![Create a Camel Quarkus project](export-project.jpg)
 
 #### Cleanup
 
@@ -40,19 +40,19 @@ This step ensures a clean structure. Remove the original Camel route file from t
 
 Execute a predefined task from `.vscode/tasks.json` to initiate the build process for your Camel Quarkus Native application. This predefined task streamline the building procedure, ensuring a smooth and debug-ready build. You can run your tasks using VS Code Quick Open (`Ctrl/CMD + P`) by typing `task <command name>`.
 
-![Build a Camel Quarkus native application](build-native.png)
+![Build a Camel Quarkus native application](build-native.jpg)
 
 #### Launch Application using Predefined Configuration
 
 Navigate to the `Run and Debug` view within VS Code, where debugging configurations and controls are accessible. Execute the predefined launch configuration to initiate the start of Camel Quarkus Native application. This step seamlessly initiates the execution of your application, readying it for debugging.
 
-![Launch a debug-ready Camel Quarkus native application](launch-app.png)
+![Launch a debug-ready Camel Quarkus native application](launch-app.jpg)
 
 #### Set Breakpoint in Camel Route
 
 Place a breakpoint within the Camel route to interrupt the execution at a specific point. This move allows for detailed inspection and debugging of the application's behavior precisely where needed.
 
-![Set a breakpoint in a Camel Route](set-breakpoint.png)
+![Set a breakpoint in a Camel Route](set-breakpoint.jpg)
 
 ## What's next
 

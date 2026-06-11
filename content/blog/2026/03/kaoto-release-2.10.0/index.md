@@ -8,7 +8,7 @@ keywords: ["apache camel", "kaoto", "visual editor", "integration design"]
 preview: "Kaoto 2.10 has been released"
 ---
 
-![Kaoto](cover.png)
+![Kaoto](cover.jpg)
 ## What's New in Kaoto 2.10?
 
 **Kaoto 2.10** represents a major leap forward in visual integration design, now powered by Apache Camel 4.18.0. This release bridges the gap between API-first design and integration development with full REST DSL and OpenAPI support, while significantly expanding DataMapper capabilities to handle complex multi-file schemas. Combined with production-ready drag-and-drop functionality, building sophisticated integrations has never been more intuitive.

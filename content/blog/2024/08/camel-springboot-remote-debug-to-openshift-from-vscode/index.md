@@ -109,7 +109,7 @@ In a nutshell, the Jolokia jvm agent jar is copied in target folder. Then when `
 * In the `Components` view of the primary sidebar, click on `Create component`
 ![Create component button in Components view](create-component-1.png)
 * Click on `Create` button in panel `From Existing Local Codebase`
-![Create component from existing local codebase](create-component-2.png)
+![Create component from existing local codebase](create-component-2.jpg)
 * Provide a Component name, for instance `my-camel-route`
 * From the drop-down folder, pick the root folder of the workspace which is proposed
 * Click `Next`

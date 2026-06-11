@@ -26,7 +26,7 @@ that has _saw tooth's_ where objects are allocated and later reclaimed by the JV
 
 The diagrams below illustrate the same example of using Camel 3.8 vs 3.9
 
-{{< image "memory-camel38.png" "Camel 3.8" >}}
+{{< image "memory-camel38.jpg" "Camel 3.8" >}}
 
 In Camel 3.8 597mb of objects is allocated by Camel in total (running 10 minute).
 

@@ -8,7 +8,7 @@ keywords: ["apache camel", "kaoto", "visual editor", "integration design"]
 preview: "Kaoto 2.5 has been released"
 ---
 
-![Kaoto](cover.png)
+![Kaoto](cover.jpg)
 Following the Apache Camel 4.11.0 release, we're happy to announce the release of Kaoto 2.5.
 
 ## What’s New in Kaoto 2.5?
@@ -25,11 +25,11 @@ The new perspective includes the following sections:
 * **Integrations**: A dedicated view for your project integrations, making it easier to navigate and running your integration flows.
 * **Deployments**: Provides a view for monitor local running integrations and their status.
 * **Help & Feedback**: A collection of resources to help you get started with Kaoto, Apache Camel and Enterprise Integration Patterns, alongside with a feedback form to help us improve the project.
-![Kaoto perspective](kaoto-perspective.png)
+![Kaoto perspective](kaoto-perspective.jpg)
 
 ### XML Import/Export Support (Experimental)
 Kaoto can now parse and serialize Camel routes from/to XML DSL via Camel XML IO. While still experimental, this is a major step toward better interoperability with traditional Camel development workflows.
-![XML Route](xml-route.png)
+![XML Route](xml-route.jpg)
 
 ### Export Your Routes to Markdown
 Do you want to document your routes effortlessly? You can now export your integration flows with Kaoto as Markdown documents, including a visual representation of the flow in addition to the route parameters, making it easier to share and review routes.

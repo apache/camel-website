@@ -41,12 +41,12 @@ You can now filter the configuration properties in the side panel, showing by de
 ### Updated the components icons
 The icons for the components have been updated to provide a more consistent and modern look, especially around the AI related components.
 
-![Component icons](componentIcons.png)
+![Component icons](componentIcons.jpg)
 
 ### Pagination for the catalog
 The catalog now supports pagination, making it easier and faster to navigate through the components and find the one you need.
 
-![Catalog pagination](catalogPagination.png)
+![Catalog pagination](catalogPagination.jpg)
 
 ### Warning when replacing steps
 When replacing a step in the canvas, you will now get a warning if the step you are replacing has child steps, preventing you from losing your work.

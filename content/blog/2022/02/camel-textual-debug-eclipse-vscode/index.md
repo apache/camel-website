@@ -61,7 +61,7 @@ A [specific extension](https://marketplace.visualstudio.com/items?itemName=redha
 
 Then `In Run and Debug panel`, launch the launch configuration that you just configured.
 
-![Launch configuration for Camel Textual Debugger in Run and Debug panel of VS Code](./DebuggerInRunAndDebugView-VSCode.png)
+![Launch configuration for Camel Textual Debugger in Run and Debug panel of VS Code](./DebuggerInRunAndDebugView-VSCode.jpg)
 
 Next step is to set breakpoints and enjoy!
 
