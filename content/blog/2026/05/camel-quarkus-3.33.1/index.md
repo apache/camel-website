@@ -29,3 +29,4 @@ You can find the Quarkus 3.33.1.1 release announcement on the [Quarkus Blog](htt
 Quarkus 3.33.2 is currently scheduled for release on May 26th. The `quarkus-camel-bom` in this release will be aligned with Camel Quarkus 3.33.1.
 
 Keep a watch on the Quarkus release announcements for more details.
+ 

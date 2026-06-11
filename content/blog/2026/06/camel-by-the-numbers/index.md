@@ -136,3 +136,4 @@ If your company or organization uses Apache Camel and would like to be featured 
 ---
 
 *All statistics in this post are derived from the [Apache Camel git repository](https://github.com/apache/camel), [OpenHub](https://openhub.net/p/camel), [Stack Overflow](https://stackoverflow.com/questions/tagged/apache-camel), and the [GitHub API](https://docs.github.com/en/rest). The data was collected in June 2026.*
+ 
