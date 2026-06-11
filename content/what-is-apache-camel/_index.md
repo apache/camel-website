@@ -113,6 +113,8 @@ These aren't theoretical — they're production-tested patterns used by thousand
 
 The very first Camel route ever written was `from("jms:queue:test.queue").to("file://test")` — one line, June 2007. Nearly two decades later, that same idea powers every Camel route: take data from here, send it there. The framework grew from 19 components to 350+, from a handful of contributors to 1,600+ — but the DNA never changed.
 
+**[Read the full origin story — Camel DNA →](/camel-dna/)**
+
 ## Trusted in production
 
 Apache Camel has been running in production for nearly two decades. Thousands of companies worldwide rely on it — from startups to governments, across financial services, healthcare, aviation, energy, logistics, telecom, and every industry in between. Processing billions of messages daily.
