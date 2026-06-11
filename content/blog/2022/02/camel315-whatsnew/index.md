@@ -24,7 +24,7 @@ for every EIPs in the routes. (Java DSL requires to turn this on).
 The illustration below shows message tracing outputting in the log which file:line the
 message is being routed at:
 
-![Log Line](./log-line.png)
+![Log Line](./log-line.jpg)
 
 Using this also allows Camel to give the exact route location,
 such as where an exception was thrown during routing.
@@ -38,7 +38,7 @@ Camel now comes with support for route debugger for tooling.
 The Camel IDEA plugin already supports this, which makes it possible
 to do step by step debugging in Java, XML, YAML, Groovy, Kotlin routes.
 
-![IDEA Route Debugger](./debug.png)
+![IDEA Route Debugger](./debug.jpg)
 
 You can read more about the debugger in this [blog post](/blog/2021/12/camelDebuggerForIntelliJ/).
 

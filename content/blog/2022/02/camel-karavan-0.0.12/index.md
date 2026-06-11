@@ -27,7 +27,7 @@ Configure Dependencies to access Beans outside Camel:
 
 How to map Bean to DSL: just select from the list.
 
-![screenshot](./karavan-bean-dsl.png)
+![screenshot](./karavan-bean-dsl.jpg)
 
 # Component Bean mapping
 

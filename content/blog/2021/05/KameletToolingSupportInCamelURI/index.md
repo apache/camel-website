@@ -15,7 +15,7 @@ Kamelets (Kamel route snippets) are a new concept introduced in Camel K that all
 
 Inside a Camel URI, after `kamelet:`, completion for the template id is provided with its description.
 
-![Template Id completion with description](./TemplateIdCompletionWithDescription.png)
+![Template Id completion with description](./TemplateIdCompletionWithDescription.jpg)
 
 They are filtered for source/sink consumer/producer endpoint type.
 
@@ -23,7 +23,7 @@ They are filtered for source/sink consumer/producer endpoint type.
 
 Description is available on hover.
 
-![Description on hover of kamelet template id](./descriptionOnHover.png)
+![Description on hover of kamelet template id](./descriptionOnHover.jpg)
 
 # Kamelet parameters support
 

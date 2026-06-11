@@ -30,6 +30,9 @@
     {{ end }}
     <meta property="og:type" content="website">
     {{ $featured := (.Resources.ByType "image").GetMatch "*featured*" }}
+    {{ if not $featured }}
+        {{ $featured = resources.Get "img/default-featured.jpg" }}
+    {{ end }}
     {{ with $featured }}
         <meta property="og:image" content="{{ $featured.Permalink }}">
     {{ else }}

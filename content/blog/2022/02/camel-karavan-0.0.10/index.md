@@ -13,10 +13,10 @@ An important milestone in Apache [Apache Camel Karavan Designer](https://github.
 
 Current release comes with new redesigned interface for [Standalone application](https://github.com/apache/camel-karavan/pkgs/container/camel-karavan) and [VS Code extension](https://marketplace.visualstudio.com/items?itemName=camel-karavan.karavan)  (light and dark mode).
 
-![screenshot](./karavan.png)
+![screenshot](./karavan.jpg)
 
 
-![screenshot](./karavan-vscode.png)
+![screenshot](./karavan-vscode.jpg)
 
 # Connectivity
 
@@ -38,7 +38,7 @@ We continue to add more DSL elements. New in this release:
 
 
 ### Circuit Breaker
-![screenshot](./karavan-circuitbreaker.png)
+![screenshot](./karavan-circuitbreaker.jpg)
 
 
 ### Do Switch (new in Camel 3.15)

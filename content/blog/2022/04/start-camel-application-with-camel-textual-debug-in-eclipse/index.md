@@ -47,7 +47,7 @@ Next step consist in providing a launch configuration to start the Camel applica
 
 For that, you need to create a `Maven Build` launch configuration with goal `camel:run` and profile `camel.debug`.
 
-![Maven Build launch configuration with goal camel:run and profile camel.debug](./Maven%20build%20launch%20Configuration.png)
+![Maven Build launch configuration with goal camel:run and profile camel.debug](./Maven%20build%20launch%20Configuration.jpg)
 
 ## Launch configuration to Attach debugger
 

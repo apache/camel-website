@@ -94,7 +94,7 @@ Kaoto continues to be available as [a VS Code extension](https://marketplace.vis
 <div style="text-align: center">
 We invite you to explore these new features on your summer integrations.
 <br/><br/>
-  <img src="kaoto-summer.png" alt="Kaoto summer" height="400"/>
+  <img src="kaoto-summer.jpg" alt="Kaoto summer" height="400"/>
 <br/><br/>
 Give it a try today and <a href="https://github.com/orgs/KaotoIO/discussions">tell us</a> about your experience!
 </div>

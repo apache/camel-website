@@ -22,7 +22,7 @@ Apache Camel 4.8.0 introduces the new `poll` EIP, a simpler alternative to the e
 ### Magic beans
 **Aggregator and Idempotent** now provide a list of available beans directly in the Properties panel, making it easier to configure and manage these integration processors.
 
-   ![magic-beans](magic-beans.png)
+   ![magic-beans](magic-beans.jpg)
 
 ### Connect the Dots
 The Topology view has been upgraded to offer two types of visualization for route interactions and connections:
@@ -54,7 +54,7 @@ Previously, changing the initial Component or Kamelet of a route (`from`) requir
 ### Bring It Back
 **Revert to Last Committed Version:** Users can now easily revert all changes in any file that has not yet been committed, returning it to the latest committed version. This feature allows for quick rollbacks and helps maintain a clean and consistent development environment.
 
-![undo-uncommited-changes](undo-uncommited-changes.png)
+![undo-uncommited-changes](undo-uncommited-changes.jpg)
 
 
 ### Properties Juggling
@@ -74,7 +74,7 @@ These updates make it simpler to manage and navigate through property configurat
 - **Enhanced Element Selector:** The element selector now displays all available EIP Processors, Components, and Kamelets, allowing users to select the next step with fewer clicks.
 - **Improved Search and Filtering:** Users can now search elements by name or description and filter them by type (Component, Kamelet, or EIP Processor), streamlining the process of finding and using the right elements in their integrations.
 
-![full-course-meal](full-course-meal.png)
+![full-course-meal](full-course-meal.jpg)
 
 ## Latest Versions
 

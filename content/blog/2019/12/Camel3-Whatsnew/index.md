@@ -29,7 +29,7 @@ The Camel code-base is very large, and we have setup sub-projects for new innova
 
 ### 2) New Website
 
-{{< image "camel3-website.png" "Camel 3 website" >}}
+{{< image "camel3-website.jpg" "Camel 3 website" >}}
 
 A major goal for Camel 3 was to finally revamp the old aging website to use modern technologies and be able to auto-generate content from the source code. This has taken years to get to this point as we have built tools over the last many Camel 2.x releases that could take us closer.
 At the end of 2019 then the Camel community and others stepped up and provided the new art-work, logo, and look and feel for the new website - thank you very much!.
@@ -124,7 +124,7 @@ We have also moved initialization logic to earlier phases when it was possible. 
 
 All this optimization improves the startup performance of Camel and reduces the memory overhead. With Camel Quarkus you can natively compile your Camel application and make it startup in 30 milli seconds and consume only 10mb of memory (RSS) with a full blown HTTP REST server and health-checks and metrics.
 
-{{< image "camel3-quarkus.png" "Camel 3 Quarkus native compiled" >}}
+{{< image "camel3-quarkus.jpg" "Camel 3 Quarkus native compiled" >}}
 
 There are still a few items on the agenda that we want to work on in Camel 3.x to further optimize Camel core.
 

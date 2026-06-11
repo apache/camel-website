@@ -60,7 +60,7 @@ camel debug * --show-exchange-variables
 ```
 
 
-![JBang Debug with Variables](variable-debug.png)
+![JBang Debug with Variables](variable-debug.jpg)
 
 In the screenshot, you can see three variables:
 

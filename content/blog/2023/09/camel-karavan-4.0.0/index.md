@@ -9,7 +9,7 @@ preview: "Karavan 4.0.0: Release notes"
 
 We are delighted to unveil Apache Camel Karavan 4.0.0. This release introduces a range of new features, enhancements and updates, making integration development more versatile and user-friendly.
 
-![karavan4](karavan4.png)
+![karavan4](karavan4.jpg)
 
 Here are the key highlights of this release:
 

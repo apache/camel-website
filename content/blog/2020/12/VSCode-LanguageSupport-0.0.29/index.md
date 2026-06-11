@@ -15,7 +15,7 @@ Camel has several API based components which are source code generated from exte
 
 It is proposing completion for api name:
 
-![Completion for API Name](apiNameCompletion.png "Completion for API Name")
+![Completion for API Name](apiNameCompletion.jpg "Completion for API Name")
 
 It is proposing completion for method name available depending on the method name:
 
@@ -23,7 +23,7 @@ It is proposing completion for method name available depending on the method nam
 
 It is proposing completion for properties depending on the api/method name combination of the component with a different icon:
 
-![Completion for API properties](parameterCompletion.png "Completion for API properties")
+![Completion for API properties](parameterCompletion.jpg "Completion for API properties")
 
 # Camel K Modeline improvements
 
@@ -39,7 +39,7 @@ Initially, Camel K modelines were available on the first line only. it is now po
 
 It is especially useful when there are a lot of parameters provided. It allows to split and organize the different kind of parameters a bit.
 
-![multi-lines](multiline.png "Muti-lines for Camel K modeline")
+![multi-lines](multiline.jpg "Muti-lines for Camel K modeline")
 
 # Bugfixes
 

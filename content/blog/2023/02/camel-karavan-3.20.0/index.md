@@ -42,7 +42,7 @@ The latest YAML DSL changes to Camel 3.20.x. The most significant one is routeCo
 ## Deploy to Kubernetes and Openshift from VS Code
 New deployment menu in VS Code extension uses configurable Maven commands for deployment to Kubernetes or OpenShift for both runtimes: Quarkus and Spring Boot with JKube.
 
-![deploy.png](deploy.png)
+![deploy.jpg](deploy.jpg)
 
 ## Framework and runtimes upgrades:
 1. Camel 3.20.1

@@ -8,7 +8,7 @@ keywords: ["apache camel", "kaoto", "visual editor", "integration design"]
 preview: "Kaoto 2.7 has been released"
 ---
 
-![Kaoto](cover.png)
+![Kaoto](cover.jpg)
 ## What’s New in Kaoto 2.7?
 
 We're excited to announce the release of Kaoto 2.7, bringing significant enhancements to the visual integration design experience for Apache Camel. This release focuses on expanding DataMapper capabilities, improving developer productivity, and delivering a more intuitive canvas experience.

@@ -52,7 +52,7 @@ If writing YAML is not your favourite sport, you can also opt for a visual UI. I
 [**Karavan**](https://github.com/apache/camel-karavan) is a new project started at Apache by [Marat Gubaidullin](https://github.com/mgubaidullin). It is a generic visual UI that can design integrations based
 on Kamelets. If you either need to create a simple source/sink integration or a more complex one, Karavan can help designing it with ease. There's also a [blog post about Karavan](/blog/2021/10/camel-karavan-preview-release/) if you want to learn more.
 
-![Karavan](./karavan.png)
+![Karavan](./karavan.jpg)
 
 After you finish to configure the integration, the output you get from the UI is an `Integration` custom resource, that you can direcly apply to any Kubernetes cluster (having Camel K installed) and it will automatically run.
 

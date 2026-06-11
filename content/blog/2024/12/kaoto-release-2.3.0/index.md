@@ -8,7 +8,7 @@ keywords: ["apache camel", "kaoto", "visual editor", "integration design"]
 preview: "Kaoto 2.3 has been released"
 ---
 
-![Kaoto](cover.png)
+![Kaoto](cover.jpg)
 
 Following the Apache Camel 4.9.0 release, we're happy to announce the release of Kaoto 2.3.
 

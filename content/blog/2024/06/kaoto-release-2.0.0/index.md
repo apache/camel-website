@@ -9,7 +9,7 @@ preview: "Kaoto 2.0 has been released"
 ---
 
 <div style="text-align: center">
-  <img src="CamelKaoto.png" alt="Tooling" height="400"/>
+  <img src="CamelKaoto.jpg" alt="Tooling" height="400"/>
 </div>
 
 <br/><strong>
@@ -111,7 +111,7 @@ Kaoto continues to be available as [a VS Code extension](https://marketplace.vis
 We invite you to explore these exciting new features and
 unleash your inner Integration Wizard.
 <br/><br/>
-  <img src="integrationWizard.png" alt="Integration Wizard" height="400"/>
+  <img src="integrationWizard.jpg" alt="Integration Wizard" height="400"/>
 <br/><br/>
 Give it a try today and <a href="https://github.com/orgs/KaotoIO/discussions">tell us</a> about your experience!
 </div>

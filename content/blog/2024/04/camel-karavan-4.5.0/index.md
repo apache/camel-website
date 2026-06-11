@@ -37,7 +37,7 @@ Similar to the Component Headers discussed earlier, Apache Camel Karavan enhance
 
 We've introduced a dynamic feature to enhance your workflow efficiency. To expedite access, the Karavan interface now automatically prioritizes the seven most frequently used Enterprise Integration Patterns (EIPs), Components, and Kamelets at the top of the Palette. This prioritization is based on the number of times elements are added to the routes, ensuring that your most utilized tools are readily accessible. If preferred, users have the flexibility to remove any element from this list.
 
-![used-components](used-components.png)
+![used-components](used-components.jpg)
 
 ![used-eip](used-eip.png)
 

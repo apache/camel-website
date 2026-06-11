@@ -7,7 +7,7 @@ categories: ["Releases", "Tooling"]
 preview: "Kaoto 2.0 TP1 is released. What's new?"
 ---
 
-![Kaoto](CamelKaoto.png)
+![Kaoto](CamelKaoto.jpg)
 
 Introducing Kaoto 2.0 (Tech Preview) - A New Chapter for the Kaoto Project
 We are thrilled to announce the first tech preview release of Kaoto 2.0, marking a significant milestone in the evolution of the Kaoto project.

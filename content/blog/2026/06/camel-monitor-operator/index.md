@@ -16,7 +16,7 @@ The Camel Monitor Operator was born from an experimental feature developed in Ca
 
 Last important point to highlight is that the Camel Monitor Operator does not require Camel K to work, neither Camel K needs the Camel Monitor Operator as they offer orthogonal features.
 
-![Image 1 - Operators workflow](<camel_monitor_operator_workflow.png>)
+![Image 1 - Operators workflow](<camel_monitor_operator_workflow.jpg>)
 
 > NOTE: the Camel Monitor Operator is not part of the Apache Foundation at this moment.
 

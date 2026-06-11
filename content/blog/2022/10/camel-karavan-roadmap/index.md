@@ -9,7 +9,7 @@ preview: "Karavan Roadmap 2023"
 
 Karavan is an Integration Toolkit for Apache Camel aimed to increase developer performance through the visualization of routes, integration with runtimes and pipelines for package, image build and deploy to kubernetes out-of-the-box.
 
-![karavan-clouds](karavan-clouds.png)
+![karavan-clouds](karavan-clouds.jpg)
 
 Apache Camel Karavan is celebrating its first anniversary. October 4, 2021 a new repository was created and the first prototype of Karavan Designer was pushed there.
 
