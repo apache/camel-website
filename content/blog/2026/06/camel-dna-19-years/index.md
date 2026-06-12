@@ -179,7 +179,8 @@ from(kafka("orders").brokers("localhost:9092"))
     from:
       uri: kafka:orders
       steps:
-        - to: aws2-s3:my-bucket
+        - to:
+            uri: aws2-s3:my-bucket
 ```
 
 Both compile down to the same `Route` -> `Processor` chain -> `Exchange` flow. The YAML DSL is syntactic sugar over `ProcessorDefinition` and `RouteDefinition` — the same model classes that backed the Java DSL since 2007.
@@ -216,7 +217,8 @@ Today, an AI agent writes:
     from:
       uri: langchain4j-chat:myModel
       steps:
-        - to: kafka:ai-responses
+        - to:
+            uri: kafka:ai-responses
 ```
 
 Different era. Same DNA.
@@ -249,15 +251,20 @@ from("direct:orders").choice()
       steps:
         - choice:
             when:
-              - simple: "${header.type} == 'priority'"
+              - expression:
+                  simple: "${header.type} == 'priority'"
                 steps:
-                  - to: kafka:priority-orders
-              - simple: "${header.type} == 'bulk'"
+                  - to:
+                      uri: kafka:priority-orders
+              - expression:
+                  simple: "${header.type} == 'bulk'"
                 steps:
-                  - to: kafka:bulk-orders
+                  - to:
+                      uri: kafka:bulk-orders
             otherwise:
               steps:
-                - to: kafka:standard-orders
+                - to:
+                    uri: kafka:standard-orders
 ```
 
 **2026 — Endpoint DSL (type-safe)**
