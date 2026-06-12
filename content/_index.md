@@ -1,13 +1,23 @@
 ---
 title: Home
-description: Camel is an open source integration framework that empowers you to quickly and easily integrate various systems consuming or producing data.
+description: Apache Camel is an open source integration framework with 300+ connectors for databases, APIs, message brokers, and cloud services. Write routes in Java, YAML, or XML. Run on Spring Boot, Quarkus, or standalone with the Camel CLI. In production since 2007. Apache License 2.0.
 keywords:
-- apache
-- camel
-- integration
-- open source
+- apache camel
+- integration framework
+- enterprise integration patterns
+- spring boot
+- quarkus
 - java
-- eip
+- yaml
+- kafka
+- rest api
+- open source
+- cloud native
+- kubernetes
+- microservices
+- data transformation
+- mcp
+- cli
 ---
 
 
