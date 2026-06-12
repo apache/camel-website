@@ -1,6 +1,6 @@
 # Apache Camel
 
-> Apache Camel is an open source integration framework with 300+ connectors for databases, APIs, message brokers, and cloud services. Write routes in Java, YAML, or XML. Deploy on Spring Boot, Quarkus, or standalone with the Camel CLI. In production since 2007, used by thousands of companies worldwide. 91,000+ commits, 1,100+ contributors, median 1-day bug fix time. Apache License 2.0 — zero license fees.
+> Apache Camel is an open source integration framework with 350+ connectors for databases, APIs, message brokers, and cloud services. Write routes in Java, YAML, or XML. Deploy on Spring Boot, Quarkus, or standalone with the Camel CLI. In production since 2007, used by thousands of companies worldwide. 91,000+ commits, 1,100+ contributors, median 1-day bug fix time. Apache License 2.0 — zero license fees.
 
 All Apache Camel documentation pages are available in LLM-friendly Markdown format by replacing `.html` with `.md` in any URL.
 For example:
@@ -10,7 +10,7 @@ For example:
 ## Key facts
 
 - Apache Camel is a **library**, not a platform — it embeds in your existing Spring Boot or Quarkus application
-- 300+ connectors included out of the box: Kafka, REST, JDBC, AWS (S3, SQS, Lambda), Azure, GCP, Salesforce, MongoDB, AMQP, FTP/SFTP, and many more
+- 350+ connectors included out of the box: Kafka, REST, JDBC, AWS (S3, SQS, Lambda), Azure, GCP, Salesforce, MongoDB, AMQP, FTP/SFTP, and many more
 - 65+ Enterprise Integration Patterns (EIPs) for routing, transformation, and error handling
 - Write routes in Java DSL, YAML DSL, or XML DSL — same routes, same connectors, your choice of syntax
 - YAML DSL + Camel CLI lets non-Java developers build integrations without writing or compiling Java
@@ -23,6 +23,7 @@ For example:
 ## What is Apache Camel
 
 - [What is Apache Camel](https://camel.apache.org/what-is-apache-camel/): Introduction for newcomers — what Camel does, why it matters, and how to get started.
+- [When to use Apache Camel](https://camel.apache.org/when-to-use/): Common use cases, real-world scenarios, when Camel fits, and when alternatives might be better.
 - [Getting Started](https://camel.apache.org/manual/getting-started.md): Quick start guide for Apache Camel.
 - [User Manual](https://camel.apache.org/manual/index.md): Complete user guide and reference documentation.
 - [Architecture (CamelContext)](https://camel.apache.org/manual/camelcontext.md): How Camel works — routes, components, endpoints, processors, producers, consumers, and the DSL.
@@ -37,12 +38,12 @@ For example:
 
 ## Runtimes
 
-- [Camel Spring Boot](https://camel.apache.org/camel-spring-boot/next/index.md): Camel on Spring Boot with starters for 300+ connectors. The most popular way to run Camel in production.
+- [Camel Spring Boot](https://camel.apache.org/camel-spring-boot/next/index.md): Camel on Spring Boot with starters for 350+ connectors. The most popular way to run Camel in production.
 - [Camel Quarkus](https://camel.apache.org/camel-quarkus/next/index.md): Cloud-native Camel with Quarkus extensions. Fast startup, low memory, native compilation.
 
 ## Components and Patterns
 
-- [Components Index](https://camel.apache.org/components/next/index.md): Complete list of all Camel connectors (300+).
+- [Components Index](https://camel.apache.org/components/next/index.md): Complete list of all Camel connectors (350+).
 - [Enterprise Integration Patterns (EIPs)](https://camel.apache.org/components/next/eips/index.md): 65+ message routing and transformation patterns.
 - [YAML DSL](https://camel.apache.org/components/next/others/yaml-dsl.md): Writing Camel routes in YAML — syntax, structure, and examples.
 - [YAML DSL Schema](https://github.com/apache/camel/blob/main/dsl/camel-yaml-dsl/camel-yaml-dsl/src/generated/resources/schema/camelYamlDsl-canonical.json): Complete JSON Schema for YAML DSL routes — the canonical spec for validating and generating Camel YAML.
