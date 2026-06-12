@@ -3,8 +3,8 @@
   "version": "1.0.0-SNAPSHOT",
   "license": "Apache-2.0",
   "scripts": {
-    "build": "run-s -l build:antora build:hugo build:post",
-    "build:post": "run-p -l build:sitemap build:htaccess build:markdown build:minify",
+    "build": "run-s -l build:antora build:hugo build:post build:minify",
+    "build:post": "run-p -l build:sitemap build:htaccess build:markdown",
     "build-all": "yarn workspaces foreach --all --topological-dev run build",
     "build:antora": "run-s -l build:antora-prep build:antora-perf",
     "build:antora-prep": "yarn exec antora-playbook-snippets/assemble-playbook.sh antora-playbook-production.yml playbook-export-site-manifest.yml",
