@@ -36,10 +36,10 @@
   <text x="170" y="475" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="700" fill="#e94560">42</text>
   <text x="170" y="505" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#8892b0">files in commit #1</text>
 
-  <text x="400" y="475" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="700" fill="#f5a623">81K</text>
+  <text x="400" y="475" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="700" fill="#f5a623">100K+</text>
   <text x="400" y="505" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#8892b0">commits today</text>
 
-  <text x="600" y="475" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="700" fill="#e94560">311</text>
+  <text x="600" y="475" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="700" fill="#e94560">350+</text>
   <text x="600" y="505" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#8892b0">components</text>
 
   <text x="800" y="475" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="700" fill="#f5a623">19</text>
