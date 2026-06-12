@@ -152,7 +152,7 @@ Camel kept the same `from().to()` DNA but extended the component catalog massive
 from("jms:orders").to("file:processed");
 
 // 2015 pattern — same DNA
-from("kafka:orders").to("aws-s3:processed-bucket");
+from("kafka:orders").to("aws2-s3:processed-bucket");
 ```
 
 Spring Boot auto-configuration meant Camel could start in seconds instead of minutes inside an app server. But `RouteBuilder.configure()` was unchanged.
@@ -215,10 +215,10 @@ Today, an AI agent writes:
 ```yaml
 - route:
     from:
-      uri: langchain4j-chat:myModel
+      uri: kafka:ai-requests
       steps:
         - to:
-            uri: kafka:ai-responses
+            uri: langchain4j-chat:myModel
 ```
 
 Different era. Same DNA.
