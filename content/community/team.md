@@ -69,7 +69,6 @@ This page lists who we are. By all means add yourself to the list. Let's sort it
 | Richard Kettelerij     | rickette         | Avisi BV                   |
 | Rob Davies             | rajdavies        |                            |
 | Roman Kalukiewicz      | romkal           |                            |
-| Saravanakumar Selvaraj | saravanakumar1987| SK Integration Solutions   |
 | Scott England-Sullivan | sully6768        | Red Hat                    |
 | Stan Lewis             | slewis           | Red Hat                    |
 | Tadayoshi Sato         | tsato            | IBM                        |
@@ -186,6 +185,7 @@ Then you can get in touch with the Camel team from the [Mailing Lists](../mailin
 | Sami Dalouche           |                                |
 | Sandeep N               |                                |
 | Sanjiv Jivan            |                                |
+| Saravanakumar Selvaraj  | SK Integration Solutions       |
 | Stanislav Deviatov      | EPAM Systems                   |
 | Steven Marcus           |                                |
 | Taariq Levack           |                                |
