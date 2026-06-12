@@ -185,6 +185,7 @@ Then you can get in touch with the Camel team from the [Mailing Lists](../mailin
 | Sami Dalouche           |                                |
 | Sandeep N               |                                |
 | Sanjiv Jivan            |                                |
+| Saravanakumar Selvaraj  | SK Integration Solutions       |
 | Stanislav Deviatov      | EPAM Systems                   |
 | Steven Marcus           |                                |
 | Taariq Levack           |                                |
