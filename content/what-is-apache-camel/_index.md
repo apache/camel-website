@@ -115,8 +115,6 @@ The very first Camel route ever written was `from("jms:queue:test.queue").to("fi
 
 **[Read the full origin story — Camel DNA →](/camel-dna/)**
 
-**[Run the Camel 1.0 Tribute example →](https://github.com/apache/camel-jbang-examples/tree/main/camel-1-tribute)**
-
 ## Trusted in production
 
 Apache Camel has been running in production for nearly two decades. Thousands of companies worldwide rely on it — from startups to governments, across financial services, healthcare, aviation, energy, logistics, telecom, and every industry in between. Processing billions of messages daily.
