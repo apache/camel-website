@@ -299,6 +299,37 @@ Four syntaxes. One DNA. The route is always a graph of processors connected by e
 | Commits | 1 | 100,000+ |
 | Major versions | 0 | 4 (1.x through 4.x) |
 
+## Try the Original Route Today
+
+The very first Camel example ever shipped — `camel-example-jms-file` from Camel 1.0 — consumed messages from a JMS queue and saved them to the file system. Back then it was 40+ lines of Java, an embedded ActiveMQ broker, manual `ConnectionFactory` wiring, and a Maven project.
+
+Today, the same example is a single YAML file and one command:
+
+```bash
+camel run *
+```
+
+```yaml
+- route:
+    id: jms-to-file
+    description: "Camel 1.0 tribute: consume from JMS queue and save to file"
+    from:
+      uri: jms
+      parameters:
+        destinationName: test.queue
+      steps:
+        - log:
+            message: "Received: ${body}"
+        - to:
+            uri: file
+            parameters:
+              directoryName: test
+```
+
+No Maven project. No manual component wiring. No embedded broker — just `camel infra run artemis` to start one in a container. The route reads from `jms:queue:test.queue` and writes to `file://test`, exactly like the original.
+
+[Run the Camel 1.0 Tribute example →](https://github.com/apache/camel-jbang-examples/tree/main/camel-1-tribute)
+
 ## Why It Lasted
 
 Most frameworks from 2007 are gone. The ones that survived bet on the right abstraction level. Camel bet that **integration is a graph of processors connected by endpoints, with an exchange carrying the message through** — and that bet paid off across J2EE application servers, ESBs, Spring Boot microservices, Kubernetes operators, serverless functions, and now AI agents.
