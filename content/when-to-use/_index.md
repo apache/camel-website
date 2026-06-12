@@ -176,11 +176,11 @@ Custom code gives you full control but no reuse. Every new integration — Kafka
 
 ### vs Spring Integration
 
-Spring Integration is a good choice when integration is a small part of a larger Spring application — polling an SFTP folder, processing a JMS queue. Camel is the better choice when integration is your core problem: many systems, complex routing, diverse protocols. Camel has 350+ connectors vs Spring Integration's significantly fewer adapters, richer EIP support (saga, circuit breaker, dynamic routing), and the YAML DSL for non-Java use. Both run on Spring Boot — they're not mutually exclusive.
+Spring Integration is a good choice when integration is a small part of a larger Spring application — polling an SFTP folder, processing a JMS queue. Camel is the better choice when integration is your core problem: many systems, complex routing, diverse protocols. Camel has 350+ connectors vs Spring Integration's ~40 adapters, richer EIP support (saga, circuit breaker, dynamic routing), and the YAML DSL for non-Java use. Both run on Spring Boot — they're not mutually exclusive.
 
 ### vs managed iPaaS platforms
 
-Managed platforms (MuleSoft, Dell Boomi, Informatica) provide a cloud-hosted environment with visual tools, monitoring, and governance. Camel is open source with zero license fees — you manage the infrastructure. Choose a managed platform if you need a turnkey solution for non-developer teams. Choose Camel if you want full control, no vendor lock-in, and your team is comfortable with code. Some enterprises use both — Camel for developer-built integrations, a managed platform for citizen integrators. Notably, Camel is the runtime engine inside SAP Integration Suite, a Gartner iPaaS Leader.
+Managed platforms (MuleSoft, Dell Boomi, Informatica) provide a cloud-hosted environment with visual tools, monitoring, and governance. Camel is open source with zero license fees — you manage the infrastructure. Choose a managed platform if you need a turnkey solution for non-developer teams. Choose Camel if you want full control, no vendor lock-in, and your team is comfortable with code. Some enterprises use both — Camel for developer-built integrations, a managed platform for citizen integrators. Notably, Camel is the runtime engine inside a Gartner iPaaS Leader (SAP Integration Suite).
 
 ## Go deeper
 
