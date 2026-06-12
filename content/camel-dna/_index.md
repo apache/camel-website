@@ -50,8 +50,6 @@ from("test-jms:queue:test.queue").to("file://test");
 
 One line. Take data from here, send it there. That's the DNA.
 
----
-
 ## Where Camel came from
 
 Camel was born inside the Apache ActiveMQ project. The 1.0 README was signed *"The Apache ActiveMQ team"*. The website lived at `activemq.apache.org/camel`. The Spring XML namespace was `http://activemq.apache.org/camel/schema/spring`. The bug tracker was `issues.apache.org/activemq/browse/CAMEL`.
@@ -67,8 +65,6 @@ Endpoint → Processor → Processor → Processor → Endpoint
 This simple pipeline model turned out to be powerful enough to express any integration pattern. A content-based router is a processor that picks the next endpoint. A splitter is a processor that turns one message into many. An aggregator collects messages until a condition is met. Every pattern in the [Enterprise Integration Patterns](https://www.enterpriseintegrationpatterns.com/) book by Gregor Hohpe and Bobby Woolf maps cleanly onto this model — and Camel turned all of them into code.
 
 The `from().to()` syntax is the user-facing expression of this architecture. But underneath, it's always been endpoints and processors — a design so composable that it scaled from 19 components to 350+ without ever needing to change the core model.
-
----
 
 ## That same route today
 
@@ -97,8 +93,6 @@ camel run jms-to-file.camel.yaml
 
 No Maven project. No build step. No manual wiring. Just one YAML file and one command.
 
----
-
 ## What changed, what didn't
 
 | | **Camel 1.0** (2007) | **Camel CLI** (today) |
@@ -120,8 +114,6 @@ The core routing idea — take data from here, transform it if needed, send it t
 
 Some ideas are so right that they never need to change. SQL gave us `SELECT * FROM` over 50 years ago — and it's still the way the world queries data. Camel's `from().to()` is the same kind of idea. A syntax so natural that it reads like intent, not code. The ecosystem around it grew enormously — databases, cloud services, AI, containers — but the core abstraction endured because it matched how people actually think about moving data.
 
----
-
 ## Try the tribute example
 
 We recreated the original Camel 1.0 example as a modern Camel CLI example. Run it yourself:
@@ -137,8 +129,6 @@ camel run https://github.com/apache/camel-jbang-examples/tree/main/camel-1-tribu
 It sends 10 test messages to a JMS queue and saves them to files — exactly like the original, nearly two decades later.
 
 [See the tribute example on GitHub →](https://github.com/apache/camel-jbang-examples/tree/main/camel-1-tribute)
-
----
 
 ## The DNA
 
