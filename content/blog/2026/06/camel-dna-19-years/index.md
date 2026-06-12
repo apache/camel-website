@@ -1,16 +1,16 @@
 ---
 title: "The DNA of Apache Camel: How a 42-File Commit Became the World's Integration Framework"
-date: 2026-06-11
+date: 2026-06-12
 draft: false
 authors: [davsclaus]
 categories: ["Community"]
 keywords: ["apache camel", "history", "architecture", "integration", "enterprise integration patterns", "evolution", "from to", "exchange", "processor", "dsl"]
-preview: "On March 19, 2007, James Strachan committed 42 files with the message 'Initial checkin of Camel routing library.' Nineteen years and 81,000 commits later, the from().to() pattern from that first test still compiles and runs unchanged. This is the story of the DNA that survived five technology eras."
+preview: "On March 19, 2007, James Strachan committed 42 files with the message 'Initial checkin of Camel routing library.' Nineteen years and 100,000+ commits later, the from().to() pattern from that first test still compiles and runs unchanged. This is the story of the DNA that survived five technology eras."
 ---
 
 On March 19, 2007, at 10:54 UTC, James Strachan pushed commit `77b260b6` with the message *"Initial checkin of Camel routing library."* It contained 42 files across two modules: `camel-core` and `camel-jms`.
 
-Nineteen years later, the repository has crossed **81,000 commits** from **1,500+ contributors**, ships **311 integration components**, and runs in production from CERN's Large Hadron Collider to UPS processing tens of billions of messages per day.
+Nineteen years later, the repository has crossed **100,000+ commits** from **1,600+ contributors**, ships **350+ integration components**, and runs in production from CERN's Large Hadron Collider to UPS processing tens of billions of messages per day.
 
 Through all of that — through the rise and fall of ESBs, the SOA-to-microservices migration, the cloud-native revolution, Kubernetes, serverless, and now AI coding agents — the core DNA has remained remarkably stable. Let's trace it through the source code.
 
@@ -121,7 +121,7 @@ If you understand this sentence, you understand Camel:
 
 > A **Route** consumes messages from an **Endpoint** via a **Consumer**, wraps each message in an **Exchange**, passes it through a chain of **Processors**, and delivers it to one or more **Endpoints** via **Producers**.
 
-Every component — whether it's JMS (2007), Kafka (2014), or LangChain4j (2024) — plugs into this model by implementing an `Endpoint` that creates a `Producer` and/or `Consumer`. The 311 components are 311 implementations of the same three interfaces.
+Every component — whether it's JMS (2007), Kafka (2014), or LangChain4j (2024) — plugs into this model by implementing an `Endpoint` that creates a `Producer` and/or `Consumer`. The 350+ components are 350+ implementations of the same three interfaces.
 
 ## The Five Eras
 
@@ -201,7 +201,7 @@ exchange.getVariable("myVar");          // since 4.4
 
 **The world:** LLMs, AI coding agents, MCP servers, agentic workflows. LangChain4j components arrived in March 2024.
 
-Why the DNA matters now more than ever: AI agents read and write code. The `from().to()` pattern is one of the most learnable DSLs in existence — an AI agent can generate a Camel route with minimal context. The YAML DSL is structured data that machines parse trivially. The 311 components are a catalog of pre-built integrations that an agent can compose without writing HTTP clients or SDK boilerplate.
+Why the DNA matters now more than ever: AI agents read and write code. The `from().to()` pattern is one of the most learnable DSLs in existence — an AI agent can generate a Camel route with minimal context. The YAML DSL is structured data that machines parse trivially. The 350+ components are a catalog of pre-built integrations that an agent can compose without writing HTTP clients or SDK boilerplate.
 
 The same pattern from commit `77b260b6`:
 
@@ -284,12 +284,12 @@ Four syntaxes. One DNA. The route is always a graph of processors connected by e
 | Metric | Day 1 (2007) | Today (2026) |
 |--------|--------------|--------------|
 | Files | 42 | 56,000+ |
-| Components | 2 (SEDA, JMS) | 311 |
+| Components | 2 (SEDA, JMS) | 350+ |
 | DSLs | Java only | Java, YAML, XML, Endpoint DSL |
 | Core interfaces | 3 (Processor, Exchange, Endpoint) | Same 3, plus Producer, Consumer, Component |
 | Processor methods | 1 | 1 |
-| Contributors | 1 | 1,500+ |
-| Commits | 1 | 81,000+ |
+| Contributors | 1 | 1,600+ |
+| Commits | 1 | 100,000+ |
 | Major versions | 0 | 4 (1.x through 4.x) |
 
 ## Why It Lasted
