@@ -4,12 +4,12 @@ date: 2026-06-14
 draft: true
 authors: [davsclaus]
 categories: ["Features"]
-preview: "Apache Camel has been in continuous active development since 2007 — 232 consecutive months of commits with no gaps, 272 releases on Maven Central, and a new release every 15 days. The project has never gone more than 3 days without a commit since 2015. This is not a recent AI-era phenomenon — Camel's track record spans 19 years, 4 major versions, and over 1,600 contributors."
+preview: "Apache Camel has been in continuous active development since 2007 — 232 consecutive months of commits with no gaps, 272 releases on Maven Central, and a new release every 15 days. The project has never gone more than 3 days without a commit since 2015. This is not a recent AI-era phenomenon — Camel's track record spans 19 years, 4 major versions, and over 1,500 contributors."
 ---
 
 Apache Camel has shipped 272 production releases over 19 years without a single month of
 inactivity. The project averages a new release every 15 days, maintains up to 10 release lines
-in parallel, and has accumulated 100,000+ commits from over 1,600 contributors since 2007.
+in parallel, and has accumulated 100,000+ commits from over 1,500 contributors since 2007.
 This track record is not a recent development — it has been sustained continuously since well
 before the current wave of AI-driven open-source activity. This post presents the evidence.
 
@@ -300,7 +300,7 @@ No "upgrade now or get nothing."
 patches to existing lines. The project ships nearly three maintenance releases for every
 feature release.
 
-**The community is broad enough to sustain itself.** 1,600+ contributors over 19 years,
+**The community is broad enough to sustain itself.** 1,500+ contributors over 19 years,
 with 8 core committers spanning 10+ years each. The project has never depended on a single
 person — generational overlap ensures continuity.
 
