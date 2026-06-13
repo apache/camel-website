@@ -5,10 +5,10 @@ draft: false
 authors: [davsclaus]
 categories: ["Community"]
 keywords: ["apache camel", "open source", "statistics", "community", "enterprise integration", "contributors", "adoption"]
-preview: "100,000 commits, 1,600+ contributors, 450+ companies, 311 components, 300+ releases — the numbers behind one of the world's most widely deployed open source integration frameworks"
+preview: "100,000 commits, 1,500+ contributors, 450+ companies, 311 components, 300+ releases — the numbers behind one of the world's most widely deployed open source integration frameworks"
 ---
 
-When the first commit landed on March 19, 2007, Apache Camel was a routing library with a handful of components and a single contributor. Nineteen years later, the git repository has crossed **100,000 commits** from **1,600+ contributors** representing **450+ companies** across more than **20 countries**. The project ships **311 integration components**, has published **300+ releases**, and runs in production at organizations where downtime means grounded flights, blocked payments, or missed diagnoses.
+When the first commit landed on March 19, 2007, Apache Camel was a routing library with a handful of components and a single contributor. Nineteen years later, the git repository has crossed **100,000 commits** from **1,500+ contributors** representing **450+ companies** across more than **20 countries**. The project ships **311 integration components**, has published **300+ releases**, and runs in production at organizations where downtime means grounded flights, blocked payments, or missed diagnoses.
 
 These aren't marketing estimates. Every number in this post is verifiable from the [git repository](https://github.com/apache/camel), [OpenHub](https://openhub.net/p/camel), [Stack Overflow](https://stackoverflow.com/questions/tagged/apache-camel), and [GitHub](https://github.com/apache/camel). We ran the queries. Here's what the data says.
 
@@ -50,7 +50,7 @@ The project maintains multiple Long-Term Support (LTS) release lines simultaneou
 
 If you're evaluating Apache Camel for a project, the numbers tell you three things:
 
-**1. You're not alone.** 1,600+ contributors, 450+ companies, and 11,700+ Stack Overflow questions mean that whatever problem you hit, someone has likely hit it before. The community is large enough that questions get answered, bugs get fixed, and components stay maintained.
+**1. You're not alone.** 1,500+ contributors, 450+ companies, and 11,700+ Stack Overflow questions mean that whatever problem you hit, someone has likely hit it before. The community is large enough that questions get answered, bugs get fixed, and components stay maintained.
 
 **2. It won't disappear.** Projects with one maintainer or one corporate sponsor carry risk. Camel has survived the transitions from SOA to microservices to cloud-native to AI agents — not by pivoting, but by adding components for each new paradigm while keeping the core stable. The Apache Software Foundation governance ensures no single company can acquire, pivot, or shut down the project.
 
@@ -65,7 +65,7 @@ For transparency, here are the complete statistics from the git repository and p
 | Metric | Core Repo | All Repos (Core + Spring Boot + Quarkus + K) |
 |---|---|---|
 | Total commits | ~100,000 | ~166,000 |
-| Contributors (unique emails) | 1,610 | — |
+| Contributors (unique emails) | 1,500+ | — |
 | Corporate email domains | 450+ (author + co-author, provable floor) | — |
 | Integration components | 311 | — |
 | Java source files | 56,169 | — |
