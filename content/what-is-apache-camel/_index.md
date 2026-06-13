@@ -181,6 +181,7 @@ Or design visually: [Kaoto](https://kaoto.io) | [Karavan](https://github.com/apa
 
 ## Go deeper
 
+- [When to use Apache Camel](/when-to-use/) — common use cases and when Camel is the right fit
 - [Getting Started Guide](/manual/getting-started.html) — build your first integration
 - [Component Catalog](/components/next/) — browse 350+ connectors
 - [Enterprise Integration Patterns](/components/next/eips/enterprise-integration-patterns.html) — the pattern library
