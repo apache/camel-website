@@ -77,7 +77,7 @@
   <g transform="translate(600, 150)">
     <text x="0" y="0" fill="#60a5fa" font-size="42" font-weight="bold">11</text>
     <text x="0" y="22" fill="#8899bb" font-size="13" letter-spacing="0.5">OPEN BUGS</text>
-    <text x="0" y="38" fill="#667799" font-size="13" letter-spacing="0.5">350+ COMPONENTS</text>
+    <text x="0" y="38" fill="#667799" font-size="13" letter-spacing="0.5">350+ CONNECTORS</text>
   </g>
 
   <!-- Right stat 2 -->

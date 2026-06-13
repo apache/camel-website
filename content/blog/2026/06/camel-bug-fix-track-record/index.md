@@ -4,11 +4,11 @@ date: 2026-06-14
 draft: true
 authors: [davsclaus]
 categories: ["Features"]
-preview: "Apache Camel is one of the most actively maintained open-source integration frameworks. The data: 7,070 bugs fixed out of 7,081 reported (99.8%), with a median resolution time of 1 day sustained over 19 years. Only 11 bugs are open today across 350+ components."
+preview: "Apache Camel is one of the most actively maintained open-source integration frameworks. The data: 7,070 bugs fixed out of 7,081 reported (99.8%), with a median resolution time of 1 day sustained over 19 years. Only 11 bugs are open today across 350+ connectors."
 ---
 
 Apache Camel has fixed 7,070 out of 7,081 reported bugs — a **99.8% resolution rate** — with a
-median fix time of **1 day**. That track record spans 19 years, 350+ components, and 272
+median fix time of **1 day**. That track record spans 19 years, 350+ connectors, and 272
 production releases. This is not a recent improvement — the project has maintained a 1-day
 median resolution for 17 of the last 19 years. Here is the data.
 
@@ -97,13 +97,13 @@ The history breaks into three phases:
 
 **2012–2020: Growth pressure.** As Camel grew through the 2.x era and into the 3.x migration,
 the backlog climbed. The all-time peak was **77 open bugs in May 2019** — coinciding with the
-Camel 3.x transition. Even at its worst, 77 open bugs across hundreds of components is a
+Camel 3.x transition. Even at its worst, 77 open bugs across hundreds of connectors is a
 number most projects would envy.
 
 **2021–2026: Clean sweep.** December 2020 was the turning point — the community resolved 59 bugs
 in a single month, cutting the backlog in half. Since then, the open count has stayed below 25
 and is now at **10 — the lowest in the project's entire history.** Lower than the early days
-when Camel had a fraction of today's 350+ components.
+when Camel had a fraction of today's 350+ connectors.
 
 ## 264 releases on Maven Central
 
@@ -165,9 +165,9 @@ Zooming in on the last three years, the trend is clear — resolution times are 
 The average resolution time fell **3x** between 2023 and 2025. The same-day fix rate rose
 from 49% to 57%. The community is faster than ever.
 
-## More components, same bug rate
+## More connectors, same bug rate
 
-Between Q3 2025 and Q1 2026, the community added over 50 new components — AI connectors, MCP support,
+Between Q3 2025 and Q1 2026, the community added over 50 new connectors — AI connectors, MCP support,
 document processing, and more. The project's surface area grew by approximately 15%.
 
 The incoming bug rate? Unchanged at ~25-30 per month.
@@ -188,7 +188,7 @@ If you're evaluating Apache Camel for your integration needs, the data tells a c
 - **Bugs get fixed fast.** Median 1-day resolution — not just recently, but for 17 of the last 19 years.
 - **The project doesn't accumulate debt.** 7,081 reported, 7,070 resolved, 11 open. That's a 99.8% resolution rate.
 - **Releases ship constantly.** 264 releases across 17 years, averaging 2+ per month in recent years.
-- **Growth doesn't break things.** 50+ new components added in 6 months without increasing the bug rate.
+- **Growth doesn't break things.** 50+ new connectors added in 6 months without increasing the bug rate.
 - **The community is large and sustained.** 91,000+ commits from 1,100+ contributors over 19 years.
 
 This track record is the result of a global community of contributors, committers, and users
