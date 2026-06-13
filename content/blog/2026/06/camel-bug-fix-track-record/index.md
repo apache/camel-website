@@ -105,22 +105,23 @@ in a single month, cutting the backlog in half. Since then, the open count has s
 and is now at **10 — the lowest in the project's entire history.** Lower than the early days
 when Camel had a fraction of today's 350+ connectors.
 
-## 264 releases on Maven Central
+## 272 releases on Maven Central
 
 Bug fixes only matter if they reach users quickly. The Camel community has published
-**264 releases** to Maven Central since 2009:
+**272 GA releases** to Maven Central since 2007:
 
 | Year | Releases | Year | Releases |
 |------|----------|------|----------|
-| 2009 | 4 | 2018 | 12 |
-| 2010 | 6 | 2019 | 14 |
-| 2011 | 11 | 2020 | 17 |
-| 2012 | 13 | 2021 | 21 |
-| 2013 | 13 | 2022 | 19 |
-| 2014 | 11 | 2023 | 28 |
-| 2015 | 12 | 2024 | 19 |
-| 2016 | 12 | 2025 | 27 |
-| 2017 | 14 | 2026* | 11 |
+| 2007 | 3 | 2017 | 14 |
+| 2008 | 3 | 2018 | 12 |
+| 2009 | 5 | 2019 | 14 |
+| 2010 | 6 | 2020 | 17 |
+| 2011 | 11 | 2021 | 21 |
+| 2012 | 13 | 2022 | 19 |
+| 2013 | 13 | 2023 | 28 |
+| 2014 | 11 | 2024 | 20 |
+| 2015 | 12 | 2025 | 26 |
+| 2016 | 12 | 2026* | 12 |
 
 The release cadence has increased over time — from roughly one release per month in the early years
 to **two or more per month** since 2020. When a bug is fixed, you don't wait long for a release
@@ -133,19 +134,19 @@ integration open-source communities:
 
 | Year | Commits | Contributors | Year | Commits | Contributors |
 |------|---------|-------------|------|---------|-------------|
-| 2007 | 1,173 | 7 | 2017 | 4,439 | 209 |
-| 2008 | 1,957 | 12 | 2018 | 3,600 | 188 |
-| 2009 | 2,725 | 14 | 2019 | 6,734 | 215 |
-| 2010 | 2,484 | 18 | 2020 | 8,305 | 260 |
-| 2011 | 2,448 | 26 | 2021 | 6,316 | 231 |
-| 2012 | 2,381 | 23 | 2022 | 6,162 | 215 |
-| 2013 | 2,487 | 49 | 2023 | 6,130 | 204 |
-| 2014 | 2,755 | 98 | 2024 | 5,484 | 158 |
-| 2015 | 3,649 | 141 | 2025 | 4,440 | 150 |
-| 2016 | 4,333 | 196 | 2026* | 3,226 | 92 |
+| 2007 | 1,177 | 7 | 2017 | 5,337 | 213 |
+| 2008 | 2,122 | 12 | 2018 | 4,607 | 191 |
+| 2009 | 3,313 | 14 | 2019 | 7,887 | 226 |
+| 2010 | 2,554 | 18 | 2020 | 8,882 | 269 |
+| 2011 | 3,230 | 26 | 2021 | 6,973 | 236 |
+| 2012 | 3,983 | 24 | 2022 | 7,142 | 224 |
+| 2013 | 4,235 | 50 | 2023 | 8,208 | 221 |
+| 2014 | 4,099 | 99 | 2024 | 6,563 | 165 |
+| 2015 | 4,995 | 144 | 2025 | 5,282 | 153 |
+| 2016 | 5,596 | 199 | 2026* | 3,226 | 92 |
 
-Over **91,000 commits** from more than **1,100 contributors** across the project's lifetime.
-The peak year was 2020 with 8,305 commits from 260 contributors.
+Over **100,000 commits** from more than **1,600 contributors** across the project's lifetime.
+The peak year was 2020 with 8,882 commits from 269 contributors.
 
 The contributor count in the table above is based on unique git committer emails per year.
 The project started in Subversion where community patches were committed by a committer
@@ -187,9 +188,9 @@ If you're evaluating Apache Camel for your integration needs, the data tells a c
 
 - **Bugs get fixed fast.** Median 1-day resolution — not just recently, but for 17 of the last 19 years.
 - **The project doesn't accumulate debt.** 7,081 reported, 7,070 resolved, 11 open. That's a 99.8% resolution rate.
-- **Releases ship constantly.** 264 releases across 17 years, averaging 2+ per month in recent years.
+- **Releases ship constantly.** 272 releases across 19 years, averaging 2+ per month in recent years.
 - **Growth doesn't break things.** 50+ new connectors added in 6 months without increasing the bug rate.
-- **The community is large and sustained.** 91,000+ commits from 1,100+ contributors over 19 years.
+- **The community is large and sustained.** 100,000+ commits from 1,600+ contributors over 19 years.
 
 This track record is the result of a global community of contributors, committers, and users
 who care about quality. Whether you're running Camel in production today or considering it

@@ -82,7 +82,7 @@
 
   <!-- Right stat 2 -->
   <g transform="translate(600, 240)">
-    <text x="0" y="0" fill="#e8792f" font-size="28" font-weight="bold">264</text>
+    <text x="0" y="0" fill="#e8792f" font-size="28" font-weight="bold">272</text>
     <text x="0" y="20" fill="#8899bb" font-size="13" letter-spacing="0.5">RELEASES</text>
   </g>
 
@@ -90,12 +90,12 @@
   <g transform="translate(0, 385)">
     <line x1="50" y1="0" x2="750" y2="0" stroke="#2a3a5e" stroke-width="1"/>
 
-    <text x="135" y="35" text-anchor="middle" fill="#e8792f" font-size="20" font-weight="bold">91,000+</text>
+    <text x="135" y="35" text-anchor="middle" fill="#e8792f" font-size="20" font-weight="bold">100,000+</text>
     <text x="135" y="52" text-anchor="middle" fill="#667799" font-size="11">COMMITS</text>
 
     <line x1="265" y1="15" x2="265" y2="55" stroke="#2a3a5e" stroke-width="1"/>
 
-    <text x="400" y="35" text-anchor="middle" fill="#e8792f" font-size="20" font-weight="bold">1,100+</text>
+    <text x="400" y="35" text-anchor="middle" fill="#e8792f" font-size="20" font-weight="bold">1,600+</text>
     <text x="400" y="52" text-anchor="middle" fill="#667799" font-size="11">CONTRIBUTORS</text>
 
     <line x1="535" y1="15" x2="535" y2="55" stroke="#2a3a5e" stroke-width="1"/>
