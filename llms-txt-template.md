@@ -1,6 +1,6 @@
 # Apache Camel
 
-> Apache Camel is an open source integration framework with 350+ connectors for databases, APIs, message brokers, and cloud services. Write routes in Java, YAML, or XML. Deploy on Spring Boot, Quarkus, or standalone with the Camel CLI. In production since 2007, used by thousands of companies worldwide. 100,000+ commits, 1,500+ contributors, median 1-day bug fix time. Apache License 2.0 — zero license fees.
+> Apache Camel is an open source integration framework with 350+ connectors for databases, APIs, message brokers, and cloud services. Write routes in Java, YAML, or XML. Deploy on Spring Boot, Quarkus, or standalone with the Camel CLI. In production since 2007, used by thousands of companies worldwide. 100,000+ commits, 1,500+ contributors, median 1–2 day bug fix time. Apache License 2.0 — zero license fees.
 
 All Apache Camel documentation pages are available in LLM-friendly Markdown format by replacing `.html` with `.md` in any URL.
 For example:
