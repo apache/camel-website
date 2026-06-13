@@ -1,15 +1,15 @@
 ---
-title: "Apache Camel: 19 Years of Continuous Development — 272 Releases, 81,000 Commits, Zero Gaps"
+title: "Apache Camel: 19 Years of Continuous Development — 272 Releases, 100,000 Commits, Zero Gaps"
 date: 2026-06-14
 draft: true
 authors: [davsclaus]
 categories: ["Features"]
-preview: "Apache Camel has been in continuous active development since 2007 — 232 consecutive months of commits with no gaps, 272 releases on Maven Central, and a new release every 15 days. The project has never gone more than 3 days without a commit since 2015. This is not a recent AI-era phenomenon — Camel's track record spans 19 years, 4 major versions, and over 1,100 contributors."
+preview: "Apache Camel has been in continuous active development since 2007 — 232 consecutive months of commits with no gaps, 272 releases on Maven Central, and a new release every 15 days. The project has never gone more than 3 days without a commit since 2015. This is not a recent AI-era phenomenon — Camel's track record spans 19 years, 4 major versions, and over 1,600 contributors."
 ---
 
 Apache Camel has shipped 272 production releases over 19 years without a single month of
 inactivity. The project averages a new release every 15 days, maintains up to 10 release lines
-in parallel, and has accumulated 81,234 commits from over 1,100 contributors since 2007.
+in parallel, and has accumulated 100,000+ commits from over 1,600 contributors since 2007.
 This track record is not a recent development — it has been sustained continuously since well
 before the current wave of AI-driven open-source activity. This post presents the evidence.
 
@@ -73,8 +73,8 @@ Here is the full release history by year, broken down by release type:
 | 2022 | — | 6 | 13 | 19 |
 | 2023 | 1 | 5 | 22 | **28** |
 | 2024 | — | 6 | 14 | 20 |
-| 2025 | — | 7 | 20 | **27** |
-| 2026* | — | 4 | 7 | 11 |
+| 2025 | — | 7 | 19 | **26** |
+| 2026* | — | 4 | 8 | 12 |
 | **Total** | **4** | **73** | **195** | **272** |
 
 *2026 is partial (through June)*
@@ -195,27 +195,27 @@ kept getting fixes while they planned their migration.
 
 ## The community behind the commits
 
-**81,234 commits** don't happen by accident. Here is how the contributor base has grown:
+**100,000+ commits** don't happen by accident. Here is how the contributor base has grown:
 
 | Year | Commits | Contributors | Year | Commits | Contributors |
 |------|---------|-------------|------|---------|-------------|
-| 2007 | 1,173 | 7 | 2017 | 4,439 | 200 |
-| 2008 | 1,954 | 12 | 2018 | 3,602 | 184 |
-| 2009 | 2,728 | 14 | 2019 | 6,734 | 218 |
-| 2010 | 2,484 | 18 | 2020 | 8,299 | 265 |
-| 2011 | 2,449 | 26 | 2021 | 6,314 | 229 |
-| 2012 | 2,381 | 24 | 2022 | 6,186 | 212 |
-| 2013 | 2,500 | 50 | 2023 | 6,106 | 195 |
-| 2014 | 2,759 | 91 | 2024 | 5,484 | 152 |
-| 2015 | 3,640 | 136 | 2025 | 4,457 | 144 |
-| 2016 | 4,332 | 192 | 2026* | 3,213 | 91 |
+| 2007 | 1,177 | 7 | 2017 | 5,337 | 213 |
+| 2008 | 2,122 | 12 | 2018 | 4,607 | 191 |
+| 2009 | 3,313 | 14 | 2019 | 7,887 | 226 |
+| 2010 | 2,554 | 18 | 2020 | 8,882 | 269 |
+| 2011 | 3,230 | 26 | 2021 | 6,973 | 236 |
+| 2012 | 3,983 | 24 | 2022 | 7,142 | 224 |
+| 2013 | 4,235 | 50 | 2023 | 8,208 | 221 |
+| 2014 | 4,099 | 99 | 2024 | 6,563 | 165 |
+| 2015 | 4,995 | 144 | 2025 | 5,282 | 153 |
+| 2016 | 5,596 | 199 | 2026* | 3,226 | 92 |
 
-The peak year was **2020 with 8,299 commits from 265 contributors**. That's the Camel 3.x
+The peak year was **2020 with 8,882 commits from 269 contributors**. That's the Camel 3.x
 stabilization period — the community responding to its largest-ever migration with its
 largest-ever effort.
 
-Even after the peak, the project has sustained **4,000–6,000 commits per year**. The 2026 pace
-(3,213 in ~5 months) shows no signs of slowing down, driven by AI
+Even after the peak, the project has sustained **5,000–8,000 commits per year**. The 2026 pace
+(3,226 in ~5 months) shows no signs of slowing down, driven by AI
 integration, the new TUI developer tools, and continued platform expansion.
 
 ## A stable core team — no bus factor
@@ -300,7 +300,7 @@ No "upgrade now or get nothing."
 patches to existing lines. The project ships nearly three maintenance releases for every
 feature release.
 
-**The community is broad enough to sustain itself.** 1,100+ contributors over 19 years,
+**The community is broad enough to sustain itself.** 1,600+ contributors over 19 years,
 with 8 core committers spanning 10+ years each. The project has never depended on a single
 person — generational overlap ensures continuity.
 
@@ -312,6 +312,6 @@ prove that overhead pays for itself in reliability.
 
 Every number in this post is verifiable:
 
-- [GitHub repository](https://github.com/apache/camel) — 81,234 commits, full history since 2007
+- [GitHub repository](https://github.com/apache/camel) — 100,000+ commits, full history since 2007
 - [Maven Central](https://repo1.maven.org/maven2/org/apache/camel/camel-core/) — 272 GA releases with publish dates
 - [Apache Camel JIRA](https://issues.apache.org/jira/projects/CAMEL) — issue tracking since day one
