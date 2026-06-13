@@ -1,14 +1,14 @@
 ---
 title: "Apache Camel's Bug Fix Track Record: 7,070 Bugs Fixed, Median 1-Day Resolution, 99.8% Fix Rate"
-date: 2026-06-08
+date: 2026-06-14
 draft: true
 authors: [davsclaus]
 categories: ["Features"]
-preview: "Apache Camel is one of the most actively maintained open-source integration frameworks. The data: 7,070 bugs fixed out of 7,081 reported (99.8%), with a median resolution time of 1 day sustained over 19 years. Only 11 bugs are open today across 300+ components."
+preview: "Apache Camel is one of the most actively maintained open-source integration frameworks. The data: 7,070 bugs fixed out of 7,081 reported (99.8%), with a median resolution time of 1 day sustained over 19 years. Only 11 bugs are open today across 350+ components."
 ---
 
 Apache Camel has fixed 7,070 out of 7,081 reported bugs — a **99.8% resolution rate** — with a
-median fix time of **1 day**. That track record spans 19 years, 300+ components, and 272
+median fix time of **1 day**. That track record spans 19 years, 350+ components, and 272
 production releases. This is not a recent improvement — the project has maintained a 1-day
 median resolution for 17 of the last 19 years. Here is the data.
 
@@ -46,7 +46,7 @@ Here is the full history — every single year:
 | 2026* | 162 | 161 | — | 1 day | — | — |
 | **Total** | **7,081** | **7,070** | | **1 day** | **~54%** | **~77%** |
 
-*2026 is partial (through June 6)*
+*2026 is partial (through June 13)*
 
 What this table shows is remarkable consistency. The **median resolution time has been 1 day for
 17 out of 19 years**. The only exceptions were 2013 and 2019 where it was 2 days.
@@ -103,7 +103,7 @@ number most projects would envy.
 **2021–2026: Clean sweep.** December 2020 was the turning point — the community resolved 59 bugs
 in a single month, cutting the backlog in half. Since then, the open count has stayed below 25
 and is now at **10 — the lowest in the project's entire history.** Lower than the early days
-when Camel had a fraction of today's 300+ components.
+when Camel had a fraction of today's 350+ components.
 
 ## 264 releases on Maven Central
 
