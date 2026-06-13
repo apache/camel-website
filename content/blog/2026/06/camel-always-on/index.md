@@ -1,6 +1,6 @@
 ---
 title: "Apache Camel: 19 Years of Continuous Development — 272 Releases, 81,000 Commits, Zero Gaps"
-date: 2026-06-08
+date: 2026-06-14
 draft: true
 authors: [davsclaus]
 categories: ["Features"]
@@ -31,9 +31,9 @@ But "at least one commit per month" is a low bar. What does the daily picture lo
 | 2010 | 335 | 365 | 92% |
 | 2012 | 346 | 366 | 95% |
 | 2014 | 336 | 365 | 92% |
-| 2016 | 367 | 366 | 100% |
+| 2016 | 366 | 366 | 100% |
 | 2018 | 341 | 365 | 93% |
-| 2020 | 367 | 366 | 100% |
+| 2020 | 366 | 366 | 100% |
 | 2022 | 351 | 365 | 96% |
 | 2024 | 358 | 366 | 98% |
 | 2025 | 356 | 365 | 98% |
@@ -48,8 +48,8 @@ gone quiet.
 ## 272 releases — a new one every 15 days
 
 Apache Camel has published **272 GA releases** to Maven Central since the first release on
-July 2, 2007. No milestones, no release candidates — 272 production-ready releases
-that users can depend on.
+July 2, 2007. 272 GA releases — not counting the milestones and release candidates used
+for community voting — that users can depend on.
 
 Here is the full release history by year, broken down by release type:
 
@@ -215,7 +215,7 @@ stabilization period — the community responding to its largest-ever migration 
 largest-ever effort.
 
 Even after the peak, the project has sustained **4,000–6,000 commits per year**. The 2026 pace
-(3,213 in ~5 months) projects to roughly 7,400 for the full year — a resurgence driven by AI
+(3,213 in ~5 months) shows no signs of slowing down, driven by AI
 integration, the new TUI developer tools, and continued platform expansion.
 
 ## A stable core team — no bus factor
