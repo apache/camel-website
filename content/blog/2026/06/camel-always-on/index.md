@@ -48,8 +48,8 @@ gone quiet.
 ## 272 releases — a new one every 15 days
 
 Apache Camel has published **272 GA releases** to Maven Central since the first release on
-July 2, 2007. 272 GA releases — not counting the milestones and release candidates used
-for community voting — that users can depend on.
+July 2, 2007. 272 production-ready releases that users can depend on.
+Milestones and release candidates are only used during major version transitions (2→3, 3→4).
 
 Here is the full release history by year, broken down by release type:
 
