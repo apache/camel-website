@@ -6,6 +6,7 @@ const order = [
   'components',
   'camel-spring-boot',
   'camel-quarkus',
+  'camel-kamelets',
 ]
 
 module.exports = (components) =>
