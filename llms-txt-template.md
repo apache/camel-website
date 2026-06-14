@@ -64,6 +64,7 @@ For example:
 - [Tooling Overview](https://camel.apache.org/tooling/): Camel CLI, visual designers, IDE plugins, AI integration, and monitoring tools.
 - [Kaoto](https://kaoto.io): Open source visual designer for Camel routes — drag-and-drop, no code required.
 - [Karavan](https://github.com/apache/camel-karavan): Visual designer for Camel integrations in VS Code and as a standalone application.
+- [Camel Monitor Operator](https://camel-tooling.github.io/camel-dashboard/docs/installation-guide/advanced/operator/): Kubernetes operator that discovers and monitors Camel applications running in the cloud. Lightweight dashboard with Prometheus integration.
 
 ## Examples
 
