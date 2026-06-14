@@ -1,6 +1,6 @@
 ---
 title: "Apache Camel: 19 Years of Continuous Development — 272 Releases, 100,000 Commits, Zero Gaps"
-date: 2026-06-14
+date: 2026-06-15
 draft: true
 authors: [davsclaus]
 categories: ["Features"]
