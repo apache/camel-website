@@ -3,6 +3,7 @@
 const order = [
   'manual',
   'components',
+  'camel-core',
   'camel-spring-boot',
   'camel-quarkus',
   'camel-kamelets',
