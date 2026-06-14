@@ -28,7 +28,49 @@ env:
   HUGO_OPTIONS: '--buildFuture'
 
 jobs:
+  detect-drafts:
+    runs-on: ubuntu-latest
+    outputs:
+      drafts-only: ${{ steps.check.outputs.drafts-only }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+      - name: Check if PR only changes draft blog posts
+        id: check
+        run: |
+          CHANGED=$(gh pr diff ${{ github.event.pull_request.number }} --name-only)
+          DRAFTS_ONLY=true
+          for file in $CHANGED; do
+            case "$file" in
+              content/blog/*/index.md)
+                if ! grep -q '^draft: true' "$file" 2>/dev/null; then
+                  DRAFTS_ONLY=false
+                  break
+                fi
+                ;;
+              content/blog/*)
+                # assets (images, SVGs) alongside a draft post are fine
+                dir=$(dirname "$file")
+                index="$dir/index.md"
+                if [ ! -f "$index" ] || ! grep -q '^draft: true' "$index" 2>/dev/null; then
+                  DRAFTS_ONLY=false
+                  break
+                fi
+                ;;
+              *)
+                DRAFTS_ONLY=false
+                break
+                ;;
+            esac
+          done
+          echo "drafts-only=$DRAFTS_ONLY" >> "$GITHUB_OUTPUT"
+          echo "Drafts only: $DRAFTS_ONLY"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   checks:
+    needs: detect-drafts
+    if: needs.detect-drafts.outputs.drafts-only != 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
