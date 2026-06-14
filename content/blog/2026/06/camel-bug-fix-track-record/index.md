@@ -1,9 +1,9 @@
 ---
 title: "Apache Camel's Bug Fix Track Record: 7,070 Bugs Fixed, Median 1-Day Resolution, 99.8% Fix Rate"
 date: 2026-06-14
-draft: true
+draft: false
 authors: [davsclaus]
-categories: ["Features"]
+categories: ["Community"]
 preview: "Apache Camel is one of the most actively maintained open-source integration frameworks. The data: 7,070 bugs fixed out of 7,081 reported (99.8%), with a median resolution time of 1 day sustained over 19 years. Only 11 bugs are open today across 350+ connectors."
 ---
 
