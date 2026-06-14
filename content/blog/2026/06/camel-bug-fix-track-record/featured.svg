@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8792f"/>
+      <stop offset="100%" style="stop-color:#c4611a"/>
+    </linearGradient>
+    <linearGradient id="shieldInner" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e2a4a"/>
+      <stop offset="100%" style="stop-color:#162040"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.04" stroke="#fff" stroke-width="0.5">
+    <line x1="0" y1="50" x2="800" y2="50"/>
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="250" x2="800" y2="250"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="350" x2="800" y2="350"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+  </g>
+
+  <!-- Shield shape - centered -->
+  <g filter="shadow" transform="translate(280, 45)">
+    <!-- Shield outer -->
+    <path d="M120,0 L240,30 L240,180 C240,260 120,320 120,320 C120,320 0,260 0,180 L0,30 Z"
+          fill="url(#shield)" opacity="0.95"/>
+    <!-- Shield inner -->
+    <path d="M120,15 L228,42 L228,178 C228,250 120,305 120,305 C120,305 12,250 12,178 L12,42 Z"
+          fill="url(#shieldInner)"/>
+
+    <!-- Checkmark in shield -->
+    <g transform="translate(120, 115)" filter="glow">
+      <polyline points="-35,10 -10,35 40,-25" fill="none" stroke="#4ade80" stroke-width="10"
+                stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Bug fix count on shield -->
+    <text x="120" y="205" text-anchor="middle" fill="#e8792f" font-size="36" font-weight="bold">7,070</text>
+    <text x="120" y="230" text-anchor="middle" fill="#8899bb" font-size="14" font-weight="500" letter-spacing="1">BUGS FIXED</text>
+    <text x="120" y="252" text-anchor="middle" fill="#667799" font-size="12" letter-spacing="0.5">19 YEARS</text>
+  </g>
+
+  <!-- Left stat -->
+  <g transform="translate(55, 150)">
+    <text x="0" y="0" fill="#4ade80" font-size="42" font-weight="bold">1</text>
+    <text x="0" y="22" fill="#8899bb" font-size="13" letter-spacing="0.5">DAY MEDIAN</text>
+    <text x="0" y="38" fill="#667799" font-size="13" letter-spacing="0.5">RESOLUTION</text>
+  </g>
+
+  <!-- Left stat 2 -->
+  <g transform="translate(55, 240)">
+    <text x="0" y="0" fill="#60a5fa" font-size="28" font-weight="bold">99.8%</text>
+    <text x="0" y="20" fill="#8899bb" font-size="13" letter-spacing="0.5">RESOLVED</text>
+  </g>
+
+  <!-- Right stat -->
+  <g transform="translate(600, 150)">
+    <text x="0" y="0" fill="#60a5fa" font-size="42" font-weight="bold">11</text>
+    <text x="0" y="22" fill="#8899bb" font-size="13" letter-spacing="0.5">OPEN BUGS</text>
+    <text x="0" y="38" fill="#667799" font-size="13" letter-spacing="0.5">350+ CONNECTORS</text>
+  </g>
+
+  <!-- Right stat 2 -->
+  <g transform="translate(600, 240)">
+    <text x="0" y="0" fill="#e8792f" font-size="28" font-weight="bold">272</text>
+    <text x="0" y="20" fill="#8899bb" font-size="13" letter-spacing="0.5">RELEASES</text>
+  </g>
+
+  <!-- Bottom stats row -->
+  <g transform="translate(0, 385)">
+    <line x1="50" y1="0" x2="750" y2="0" stroke="#2a3a5e" stroke-width="1"/>
+
+    <text x="135" y="35" text-anchor="middle" fill="#e8792f" font-size="20" font-weight="bold">100,000+</text>
+    <text x="135" y="52" text-anchor="middle" fill="#667799" font-size="11">COMMITS</text>
+
+    <line x1="265" y1="15" x2="265" y2="55" stroke="#2a3a5e" stroke-width="1"/>
+
+    <text x="400" y="35" text-anchor="middle" fill="#e8792f" font-size="20" font-weight="bold">1,500+</text>
+    <text x="400" y="52" text-anchor="middle" fill="#667799" font-size="11">CONTRIBUTORS</text>
+
+    <line x1="535" y1="15" x2="535" y2="55" stroke="#2a3a5e" stroke-width="1"/>
+
+    <text x="665" y="35" text-anchor="middle" fill="#e8792f" font-size="20" font-weight="bold">2007–2026</text>
+    <text x="665" y="52" text-anchor="middle" fill="#667799" font-size="11">ACTIVE DEVELOPMENT</text>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="600" letter-spacing="1" opacity="0.9">APACHE CAMEL — BUG FIX TRACK RECORD</text>
+
+  <!-- Small camel silhouette watermark -->
+  <g transform="translate(720, 8)" opacity="0.15">
+    <path d="M0,22 Q5,8 12,10 Q15,2 22,5 Q28,0 32,6 L38,10 Q42,8 45,12 L48,22 L44,22 L42,16 L38,22 L28,22 L26,16 L22,22 L12,22 L10,16 L6,22 Z"
+          fill="#e8792f"/>
+  </g>
+</svg>
