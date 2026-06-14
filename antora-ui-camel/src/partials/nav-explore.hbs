@@ -8,7 +8,7 @@
   </div>
   {{/if}}
   <ul class="components">
-    {{#each (exclude (order_components site.components) 'camel-quarkus-examples' 'camel-k' 'camel-kamelets' 'camel-kafka-connector' 'camel-karaf')}}
+    {{#each (exclude (order_components site.components) 'camel-quarkus-examples')}}
     <li class="component{{#if (eq this @root.page.component)}} is-current{{/if}}">
     {{~#if (eq "" ./latest.version)}}
       <span class="title">
