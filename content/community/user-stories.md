@@ -137,6 +137,7 @@ Several commercial software products and platforms use Apache Camel as their cor
 |[Murex MXopenconnect](https://www.elenjicalsolutions.com/elenjical-solutions-pioneers-murexs-mxopenconnect-development-framework/)|Capital markets trading platform integration framework built on Apache Camel. Connects trading platforms, clearing systems, and core banking for 300+ financial institutions worldwide.|
 |[Digibee](https://www.digibee.com/)|Cloud-native iPaaS built on Apache Camel. IBM partnership for hybrid integration. Highest-rated iPaaS on G2. Customers include Payless (200+ stores, 15 countries) and Bauducco. Headquartered in Weston, Florida and São Paulo, Brazil.|
 |[Jetic](https://jetic.io/)|Cloud-native iPaaS built on Apache Camel K and Kubernetes. 300+ pre-built connectors. Zero vendor lock-in — native open-source framework code pushed to your Git. Customer: Convey911 (public safety/emergency services).|
+|[Syvizo Open Runtime](https://www.syvizo.com/platform/runtime)|No-code/low-code API and integration platform with an Open Runtime for managing deployments of Apache Camel, Spring Boot, Python FastAPI, and Node.js projects across servers, cloud, and Kubernetes. Generates open-source code with no vendor lock-in.|
 {{< /table >}}
 
 ## Open Source Projects Using Apache Camel
