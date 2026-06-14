@@ -96,6 +96,7 @@ pipeline {
                     sh "rsync -a --delete --exclude='.git' --exclude='.asf.yaml' $WORKSPACE/camel-website/public/ ."
                     sh 'git add -A'
                     sh "git checkout $VALID_ASF_YAML -- ./.asf.yaml" // force revert to commit containing the valid .asf.yml
+                    sh 'echo "Website publish: $(git diff --cached --numstat | wc -l | tr -d " ") files changed"'
                     sh 'git diff-index --quiet HEAD || git commit -m "Website updated to $GIT_COMMIT"'
                     sh 'git push origin asf-site'
                     sh 'sleep 5'
