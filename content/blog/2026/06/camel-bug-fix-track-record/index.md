@@ -4,7 +4,7 @@ date: 2026-06-14
 draft: false
 authors: [davsclaus]
 categories: ["Community"]
-preview: "Apache Camel is one of the most actively maintained open-source integration frameworks. The data: 7,070 bugs fixed out of 7,081 reported (99.8%), with a median resolution time of 1 day sustained over 19 years. Only 11 bugs are open today across 350+ connectors."
+preview: "Apache Camel is one of the most actively maintained open-source integration frameworks. The data: 7,070 bugs fixed out of 7,081 reported (99.8%), with a median resolution time of 1 day sustained over 19 years. Only 6 bugs are open today across 350+ connectors."
 ---
 
 Apache Camel has fixed 7,070 out of 7,081 reported bugs — a **99.8% resolution rate** — with a
@@ -59,7 +59,7 @@ approximately as many bugs as were reported — often more. The net balance acro
 
 - **7,081 reported**
 - **7,070 resolved**
-- **11 open today**
+- **6 open today**
 
 That's a 99.8% resolution rate sustained over nearly two decades.
 
@@ -176,7 +176,7 @@ The incoming bug rate? Unchanged at ~25-30 per month.
 New features shipped without destabilizing existing ones. The project's modular architecture
 and testing discipline hold up even during periods of rapid growth.
 
-## What the 11 remaining open bugs look like
+## What the 6 remaining open bugs look like
 
 The current open bugs are all relatively recent — the oldest is from April 2025. There are no
 ancient, multi-year-old issues gathering dust. The community actively triages, resolves, or
@@ -187,7 +187,7 @@ closes bugs rather than letting them accumulate.
 If you're evaluating Apache Camel for your integration needs, the data tells a clear story:
 
 - **Bugs get fixed fast.** Median 1-day resolution — not just recently, but for 17 of the last 19 years.
-- **The project doesn't accumulate debt.** 7,081 reported, 7,070 resolved, 11 open. That's a 99.8% resolution rate.
+- **The project doesn't accumulate debt.** 7,081 reported, 7,070 resolved, 6 open. That's a 99.8% resolution rate.
 - **Releases ship constantly.** 272 releases across 19 years, averaging 2+ per month in recent years.
 - **Growth doesn't break things.** 50+ new connectors added in 6 months without increasing the bug rate.
 - **The community is large and sustained.** 100,000+ commits from 1,500+ contributors over 19 years.
@@ -206,5 +206,5 @@ All numbers in this post are fully verifiable:
 
 If your organization uses Apache Camel and would like to be listed on our
 [user stories](/community/user-stories/) page, we'd love to hear from you — reach out
-on the [mailing list](/community/mailing-list/) or open a
-[GitHub discussion](https://github.com/apache/camel/discussions).
+on the [mailing list](/community/mailing-list/) or on
+[Zulip chat](https://camel.zulipchat.com/).
