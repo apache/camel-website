@@ -17,7 +17,7 @@ keywords:
 - MCP server
 ---
 
-## Apache Camel is an integration framework.
+## Apache Camel is an integration framework
 
 It connects your applications, services, APIs, and data — whether they live in the cloud, on-premise, or both.
 You describe what should happen — read from Kafka, transform the data, write to a database — and Camel
