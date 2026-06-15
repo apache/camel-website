@@ -1017,7 +1017,6 @@ __metadata:
     gulp-terser: "npm:^1.2.0"
     handlebars: "npm:^4.7.9"
     highlight.js: "npm:~11"
-    js-yaml: "npm:^4.2.0"
     merge-stream: "npm:~2.0"
     plugin-error: "npm:~1.0"
     postcss-calc: "npm:~7.0"
@@ -7479,7 +7478,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"js-yaml@npm:^4.1.0, js-yaml@npm:^4.1.1, js-yaml@npm:^4.2.0":
+"js-yaml@npm:^4.1.0, js-yaml@npm:^4.1.1":
   version: 4.2.0
   resolution: "js-yaml@npm:4.2.0"
   dependencies:
