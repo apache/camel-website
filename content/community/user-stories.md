@@ -115,6 +115,7 @@ If you are using Apache Camel and would like to be listed here, please add an en
 |[1&1 Internet AG](http://dlinsin.blogspot.com/2008/11/apache-camel-talk-jug-ka.html)|Germany's major internet hosting company uses Apache Camel for enterprise integration. Presented at JUG Karlsruhe 2008.|
 |[mgm technology partners](http://blog.mgm-tp.com/2013/04/camel-router-part1/)|German IT company built the "Cosmo Router" on Apache Camel to integrate insurance software with CRM systems, exchanging XML documents between Java and .NET systems.|
 |[Logica](https://slideshare.net/ehildebrandt/implementing-enterprise-integration-patterns-with-apache-camel-presentation)|IT services company (39,000 employees, 36 countries) implementing Enterprise Integration Patterns with Apache Camel. Presented at WJAX 2012.|
+|[bwin (Entain)](https://www.jfokus.se/jfokus10/speakers.html)|Online gaming company used Apache Camel and Spring Integration for real-time poker information processing and distribution to 30 receivers. Presented "Enterprise Integration Patterns i praktiken" at Jfokus 2010.|
 |[Arla Foods](https://www.arla.com)|Uses Camel to integrate business backend with web application for farmers to access information about quality of their delivered milk. Application used in numerous european countries.|
 |[Mifos](https://mifos.org/)|An [open core-banking platform](https://github.com/openMF), uses Camel.|
 {{< /table >}}
