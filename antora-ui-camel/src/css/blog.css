@@ -32,6 +32,21 @@
   display: inline-block;
 }
 
+.blog-rss {
+  margin-top: 1rem;
+}
+
+.blog-rss a {
+  text-decoration: none;
+}
+
+.blog-rss .brand-icon {
+  height: 1em;
+  width: 1em;
+  vertical-align: middle;
+  fill: currentcolor;
+}
+
 article.blog:first-child {
   margin-top: 3rem;
 }
@@ -263,6 +278,10 @@ article.blog p {
 
   .blog.list {
     flex-direction: row;
+  }
+
+  main.blog.list {
+    margin-left: 0;
   }
 }
 
