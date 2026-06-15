@@ -77,6 +77,8 @@ jobs:
         uses: actions/checkout@v5
       - name: Install dependencies
         run: yarn workspaces foreach --all install
+      - name: Run JS unit tests
+        run: yarn workspace antora-ui-camel run test
       - name: Check cache
         run: yarn check:dependencies
       - name: Build
