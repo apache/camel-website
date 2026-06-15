@@ -21,7 +21,7 @@
     </nav>
     <main class="doc blog list">
         <div class="blog-rss">
-            <a href="{{ "blog/index.xml" | absURL }}" title="Subscribe to RSS Feed"><svg focusable="false" class="brand-icon"><use href="{{ path.Join "_" (index .Site.Data "rev-manifest" "img/brand-logos.svg") | relURL }}#rss" /></svg> RSS Feed</a>
+            <a href="{{ "blog/index.xml" | relURL }}" title="Subscribe to RSS Feed"><svg focusable="false" class="brand-icon"><use href="{{ path.Join "_" (index .Site.Data "rev-manifest" "img/brand-logos.svg") | relURL }}#rss" /></svg> RSS Feed</a>
         </div>
         <div>
             {{ $filtered := slice }}
