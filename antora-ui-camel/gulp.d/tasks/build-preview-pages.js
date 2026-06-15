@@ -75,7 +75,7 @@ module.exports = (src, previewSrc, previewDest, sink = () => map()) => (done) =>
     )
 
 function loadSampleUiModel (src) {
-  return fs.readFile(ospath.join(src, 'ui-model.yml'), 'utf8').then((contents) => yaml.safeLoad(contents))
+  return fs.readFile(ospath.join(src, 'ui-model.yml'), 'utf8').then((contents) => yaml.load(contents))
 }
 
 function registerPartials (src) {
