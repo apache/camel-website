@@ -118,8 +118,8 @@ The project has gone through exactly **4 major releases** — and the timing tel
 | Transition | Gap | What changed |
 |-----------|-----|-------------|
 | 1.0 → 2.0 | 2.1 years | Component model redesign |
-| 2.0 → 3.0 | 10.3 years | Jakarta EE, Java 11+, modular architecture |
-| 3.0 → 4.0 | 3.7 years | Java 17+, virtual threads, Camel DSL |
+| 2.0 → 3.0 | 10.3 years | Java 11+, modular architecture |
+| 3.0 → 4.0 | 3.7 years | Jakarta EE, Java 17+, virtual threads, YAML DSL |
 
 Camel 2.x ran for **over a decade** — from August 2009 to May 2021, when the last 2.25.4 patch
 shipped. That's the kind of stability enterprises need. The 2.x line alone produced **25 minor
