@@ -279,6 +279,10 @@ article.blog p {
   .blog.list {
     flex-direction: row;
   }
+
+  main.blog.list {
+    margin-left: 0;
+  }
 }
 
 .blog ul,
