@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel: 19 Years of Continuous Development — 272 Releases, 100,000 Commits, Zero Gaps"
 date: 2026-06-15
-draft: true
+draft: false
 authors: [davsclaus]
 categories: ["Features"]
 preview: "Apache Camel has been in continuous active development since 2007 — 232 consecutive months of commits with no gaps, 272 releases on Maven Central, and a new release every 15 days. The project has never gone more than 3 days without a commit since 2015. This is not a recent AI-era phenomenon — Camel's track record spans 19 years, 4 major versions, and over 1,500 contributors."
