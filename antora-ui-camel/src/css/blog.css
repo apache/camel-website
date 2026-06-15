@@ -36,6 +36,10 @@
   margin-top: 1rem;
 }
 
+.blog-rss a {
+  text-decoration: none;
+}
+
 .blog-rss .brand-icon {
   height: 1em;
   width: 1em;
