@@ -60,7 +60,7 @@
     "hugo-extended": "^0.121.2",
     "js-yaml": "^4.2.0",
     "jsdom": "^27.1.0",
-    "netlify-cli": "17.26.3",
+    "netlify-cli": "^26.1.0",
     "node-html-parser": "^7.0.1",
     "npm-run-all": "~4",
     "opal-runtime": "1.0.11",
