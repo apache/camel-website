@@ -12,6 +12,8 @@ For information on the release planning look at the blog posts in the [Roadmap](
 
 Here you will only find the supported releases, older unsupported releases can be found in the [Releases archive](/releases/).
 
+**Note:** Apache Camel Spring Boot is released together with Apache Camel (core) and uses the same version number.
+
 {{< downloads >}}
 
 ## Keys

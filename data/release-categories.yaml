@@ -43,7 +43,7 @@ camel:
 camel-k:
   id: 'camel-k'
   name: 'Apache Camel-K'
-  order: 2
+  order: 3
   kinds:
     - name: 'latest'
       filter: 'latest'
@@ -72,7 +72,7 @@ camel-k:
 camel-k-runtime:
   id: 'camel-k-runtime'
   name: 'Apache Camel-K Runtime'
-  order: 3
+  order: 7
   kinds:
     - name: 'latest'
       filter: 'latest'
@@ -84,6 +84,7 @@ camel-kamelets:
   id: 'camel-kamelets'
   name: 'Apache Camel Kamelets'
   order: 4
+
   kinds:
     - name: 'latest'
       filter: 'latest'
@@ -121,6 +122,7 @@ camel-karaf:
   id: 'camel-karaf'
   name: 'Apache Camel Karaf'
   order: 6
+
   kinds:
     - name: 'latest'
       filter: 'latest'
@@ -131,7 +133,7 @@ camel-karaf:
 camel-quarkus:
   id: 'camel-quarkus'
   name: 'Apache Camel Quarkus'
-  order: 7
+  order: 2
   kinds:
     - name: 'latest'
       filter: 'latest'
