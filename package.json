@@ -76,6 +76,11 @@
   ],
   "packageManager": "yarn@4.1.0",
   "resolutions": {
-    "http-cache-semantics": "4.1.1"
+    "http-cache-semantics": "4.1.1",
+    "shell-quote": "^1.8.4",
+    "hono": "^4.12.25",
+    "qs": "^6.15.2",
+    "tmp": "^0.2.7",
+    "axios": "^1.9.0"
   }
 }
