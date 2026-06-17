@@ -82,8 +82,27 @@
   "resolutions": {
     "http-cache-semantics": "4.1.1",
     "nth-check": "2.1.1",
-    "semver-regex": "4.0.5",
+    "semver-regex": "^4.0.5",
     "glob-parent": "5.1.2",
-    "acorn": "8.11.3"
+    "acorn": "8.11.3",
+    "tar": "^6.2.1",
+    "fast-xml-parser": "^4.5.5",
+    "flatted": "^3.4.2",
+    "minimatch": "^9.0.7",
+    "braces": "^3.0.3",
+    "cross-spawn": "^7.0.6",
+    "ws": "^8.17.1",
+    "picomatch": "^2.3.2",
+    "browserslist": "^4.16.5",
+    "cookie": "^0.7.0",
+    "send": "^0.19.0",
+    "serve-static": "^1.16.0",
+    "semver": "^7.8.4",
+    "js-yaml": "^4.2.0",
+    "copy-props": "^2.0.5",
+    "bl": "^4.1.0",
+    "is-svg": "^4.4.0",
+    "bn.js": "^5.2.3",
+    "tmp": "^0.2.7"
   }
 }
