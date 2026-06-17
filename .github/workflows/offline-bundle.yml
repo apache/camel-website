@@ -54,7 +54,7 @@ jobs:
           TITLE="Apache Camel ${{ inputs.camel_version }} — Offline Documentation"
           NOTES="Offline documentation bundle for Apache Camel ${{ inputs.camel_version }}.
 
-          Contains all Markdown files for components, Kamelets, and the user manual.
+          Contains all Markdown files for components and the user manual.
 
           Download and unzip locally for AI coding agents or environments with restricted internet access."
 

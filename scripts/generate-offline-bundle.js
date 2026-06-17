@@ -5,8 +5,7 @@ const { execFileSync } = require('child_process');
 const PUBLIC_DIR = 'public';
 
 const VERSION_DIRS = [
-  'components',
-  'camel-kamelets'
+  'components'
 ];
 
 const SHARED_DIRS = [
