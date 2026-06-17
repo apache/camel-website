@@ -13,7 +13,11 @@ For agents or environments with no or restricted internet access, versioned offl
 - [Camel 4.18](https://github.com/apache/camel-website/releases/download/docs-4.18/camel-docs-4.18.zip)
 - [Camel 4.14](https://github.com/apache/camel-website/releases/download/docs-4.14/camel-docs-4.14.zip)
 
-Download the zip matching your Camel version, unzip it locally, and read the `.md` files from there. Each bundle preserves the site directory structure and includes all connectors/components (350+) and the user manual.
+Download the zip matching your Camel version, unzip it locally, and read the files from there. Each bundle includes:
+- All connectors/components documentation (350+ as Markdown)
+- The user manual (Markdown)
+- The Camel Catalog — machine-readable JSON metadata for every component, data format, language, and EIP (parameters, types, defaults, descriptions)
+- The YAML DSL canonical JSON Schema — the definitive spec for validating and generating Camel YAML routes (`catalog/schema/camelYamlDsl-canonical.json`)
 
 ## Key facts
 
