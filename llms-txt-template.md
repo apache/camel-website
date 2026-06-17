@@ -81,7 +81,7 @@ The `catalog/` JSON files contain machine-readable metadata for every connector/
 - [Camel MCP Server](https://camel.apache.org/manual/camel-jbang-mcp.md): Model Context Protocol server for AI coding assistants (Claude Code, GitHub Copilot, Cursor, Gemini CLI).
 - [Camel LangChain4j](https://camel.apache.org/components/next/langchain4j-chat-component.md): LLM integration via LangChain4j.
 - [Camel OpenAI](https://camel.apache.org/components/next/openai-component.md): Native OpenAI component.
-- A2A (Agent-to-Agent): Camel supports the A2A protocol for connecting AI agents to enterprise systems.
+- [Camel A2A](https://camel.apache.org/components/next/a2a-component.md): Agent-to-Agent (A2A) protocol component — expose Camel routes as A2A agents or call remote A2A agents. Supports HTTP+JSON and JSONRPC bindings, OAuth/OIDC/API-key auth, and SSE streaming.
 
 ## Tooling
 
