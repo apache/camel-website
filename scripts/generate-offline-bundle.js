@@ -6,7 +6,6 @@ const PUBLIC_DIR = 'public';
 
 const VERSION_DIRS = [
   'components',
-  'camel-spring-boot',
   'camel-kamelets'
 ];
 

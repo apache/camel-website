@@ -13,7 +13,7 @@ For agents or environments with no or restricted internet access, versioned offl
 - [Camel 4.18](https://github.com/apache/camel-website/releases/download/docs-4.18/camel-docs-4.18.zip)
 - [Camel 4.14](https://github.com/apache/camel-website/releases/download/docs-4.14/camel-docs-4.14.zip)
 
-Download the zip matching your Camel version, unzip it locally, and read the `.md` files from there. Each bundle preserves the site directory structure and includes components, Spring Boot starters, Kamelets, and the user manual.
+Download the zip matching your Camel version, unzip it locally, and read the `.md` files from there. Each bundle preserves the site directory structure and includes components, Kamelets, and the user manual.
 
 ## Key facts
 
