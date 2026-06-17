@@ -13,11 +13,23 @@ For agents or environments with no or restricted internet access, versioned offl
 - [Camel 4.18](https://github.com/apache/camel-website/releases/download/docs-4.18/camel-docs-4.18.zip)
 - [Camel 4.14](https://github.com/apache/camel-website/releases/download/docs-4.14/camel-docs-4.14.zip)
 
-Download the zip matching your Camel version, unzip it locally, and read the files from there. Each bundle includes:
-- All connectors/components documentation (350+ as Markdown)
-- The user manual (Markdown)
-- The Camel Catalog — machine-readable JSON metadata for every component, data format, language, and EIP (parameters, types, defaults, descriptions)
-- The YAML DSL canonical JSON Schema — the definitive spec for validating and generating Camel YAML routes (`catalog/schema/camelYamlDsl-canonical.json`)
+Download the zip matching your Camel version, unzip it locally, and read the files from there. Each bundle contains:
+
+```
+components/<version>/      — 350+ connector/component docs (Markdown)
+manual/                    — user manual (Markdown)
+catalog/
+  components/              — 350+ connector/component metadata (JSON)
+  dataformats/             — data format metadata (JSON)
+  languages/               — expression language metadata (JSON)
+  models/                  — EIP model metadata (JSON)
+  others/                  — other component metadata (JSON)
+  schema/
+    camelYamlDsl-canonical.json — YAML DSL JSON Schema
+llms.txt                   — this file
+```
+
+The `catalog/` JSON files contain machine-readable metadata for every connector/component, data format, language, and EIP — parameters, types, defaults, and descriptions. The YAML DSL schema is the definitive spec for validating and generating Camel YAML routes.
 
 ## Key facts
 

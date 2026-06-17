@@ -54,7 +54,7 @@ jobs:
           TITLE="Apache Camel ${{ inputs.camel_version }} — Offline Documentation"
           NOTES="Offline documentation bundle for Apache Camel ${{ inputs.camel_version }}.
 
-          Contains all Markdown documentation for connectors/components (350+) and the user manual, plus the Camel Catalog (JSON metadata for all components, data formats, languages) and the YAML DSL canonical JSON Schema.
+          Contains 350+ connector/component docs (Markdown), the user manual, the Camel Catalog (JSON metadata for all connectors/components, data formats, languages, and EIPs), and the YAML DSL canonical JSON Schema.
 
           Download and unzip locally for AI coding agents or environments with restricted internet access."
 
