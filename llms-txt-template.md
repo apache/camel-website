@@ -7,6 +7,8 @@ For example:
 - HTML: `https://camel.apache.org/components/next/languages/simple-language.html`
 - Markdown: `https://camel.apache.org/components/next/languages/simple-language.md`
 
+For agents or environments with no or restricted internet access, the complete documentation is also available as a single offline archive of all Markdown files, preserving the site structure: `https://camel.apache.org/camel-docs-offline.zip`. Download it once, unzip it locally (for example into `/tmp`) and read the `.md` files from there.
+
 ## Key facts
 
 - Apache Camel is a **library**, not a platform — it embeds in your existing Spring Boot or Quarkus application

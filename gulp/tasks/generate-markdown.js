@@ -3,6 +3,7 @@ const { parse } = require('node-html-parser');
 const { createTurndownService } = require('../helpers/turndown-config');
 const { generateToonSitemaps } = require('../helpers/toon-format');
 const { generateLlmsTxt } = require('../helpers/llms-txt');
+const { generateOfflineBundle } = require('../helpers/offline-bundle');
 const { generateReleasesIndex, generateBlogIndex } = require('../helpers/rss-feed');
 const { generateAllIndexes } = require('../helpers/html-index');
 
@@ -105,6 +106,9 @@ async function generateMarkdown(done) {
 
   // Generate llms.txt file
   generateLlmsTxt(processedPages);
+
+  // Generate the offline documentation bundle (all .md files + llms.txt) as a single .zip
+  generateOfflineBundle();
 
   // Generate toon format sitemaps
   await generateToonSitemaps();
