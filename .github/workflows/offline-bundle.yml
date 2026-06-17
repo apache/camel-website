@@ -1,0 +1,69 @@
+#
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+name: Generate Offline Documentation Bundle
+
+on:
+  workflow_dispatch:
+    inputs:
+      camel_version:
+        description: 'Camel version to bundle (e.g. 4.18)'
+        required: true
+        type: string
+
+jobs:
+  generate-bundle:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Install dependencies
+        run: yarn workspaces foreach --all install
+
+      - name: Build site
+        run: yarn build
+        env:
+          CAMEL_ENV: production
+          HUGO_OPTIONS: --buildFuture
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate versioned bundle
+        run: node scripts/generate-offline-bundle.js ${{ inputs.camel_version }}
+
+      - name: Create or update GitHub Release
+        run: |
+          TAG="docs-${{ inputs.camel_version }}"
+          FILE="public/camel-docs-${{ inputs.camel_version }}.zip"
+          TITLE="Apache Camel ${{ inputs.camel_version }} — Offline Documentation"
+          NOTES="Offline documentation bundle for Apache Camel ${{ inputs.camel_version }}.
+
+          Contains all Markdown files for components, Spring Boot starters, Kamelets, and the user manual.
+
+          Download and unzip locally for AI coding agents or environments with restricted internet access."
+
+          # delete existing release if present so we can recreate it
+          gh release delete "$TAG" --yes 2>/dev/null || true
+
+          gh release create "$TAG" "$FILE" \
+            --title "$TITLE" \
+            --notes "$NOTES" \
+            --latest=false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

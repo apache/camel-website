@@ -7,6 +7,14 @@ For example:
 - HTML: `https://camel.apache.org/components/next/languages/simple-language.html`
 - Markdown: `https://camel.apache.org/components/next/languages/simple-language.md`
 
+## Offline documentation bundles
+
+For agents or environments with no or restricted internet access, versioned offline documentation bundles are available as zip archives of all Markdown files:
+- [Camel 4.18](https://github.com/apache/camel-website/releases/download/docs-4.18/camel-docs-4.18.zip)
+- [Camel 4.14](https://github.com/apache/camel-website/releases/download/docs-4.14/camel-docs-4.14.zip)
+
+Download the zip matching your Camel version, unzip it locally, and read the `.md` files from there. Each bundle preserves the site directory structure and includes components, Spring Boot starters, Kamelets, and the user manual.
+
 ## Key facts
 
 - Apache Camel is a **library**, not a platform — it embeds in your existing Spring Boot or Quarkus application
