@@ -46,6 +46,8 @@ jobs:
 
       - name: Generate versioned bundle
         run: node scripts/generate-offline-bundle.js ${{ inputs.camel_version }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create or update GitHub Release
         run: |

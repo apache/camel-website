@@ -11,7 +11,6 @@ For example:
 
 For agents or environments with no or restricted internet access, versioned offline documentation bundles are available as zip archives of all Markdown files:
 - [Camel 4.18](https://github.com/apache/camel-website/releases/download/docs-4.18/camel-docs-4.18.zip)
-- [Camel 4.14](https://github.com/apache/camel-website/releases/download/docs-4.14/camel-docs-4.14.zip)
 
 Download the zip matching your Camel version, unzip it locally, and read the files from there. Each bundle contains:
 
