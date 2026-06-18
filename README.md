@@ -453,6 +453,50 @@ all generated sources in the project first.
 
 Of course this then takes some more time than an optimized rebuild (time to grab another coffee!).
 
+## Generating Offline Documentation Bundles
+
+After a Camel release, maintainers can generate a versioned offline documentation bundle
+and publish it as a GitHub Release asset. This is useful for AI coding agents or
+environments with restricted internet access.
+
+The workflow is defined in [`.github/workflows/offline-bundle.yml`](.github/workflows/offline-bundle.yml).
+
+### Triggering the workflow
+
+1. Go to **Actions** in this repository
+2. Select **"Generate Offline Documentation Bundle"** in the left sidebar
+3. Click **"Run workflow"**
+4. Enter the Camel version to bundle (e.g. `4.18`) — use the major.minor version only, no patch, no `v` prefix
+5. Click **"Run workflow"**
+
+Or trigger it from the command line using the [GitHub CLI](https://cli.github.com/):
+
+    $ gh workflow run offline-bundle.yml -f camel_version=4.18
+
+### What the workflow does
+
+1. Checks out the repository and builds the full website (`yarn build`)
+2. Runs `scripts/generate-offline-bundle.js` which:
+   - Collects version-specific `.md` files from `public/components/<version>.x/` and `public/manual/`
+   - Fetches the Camel Catalog (JSON metadata for all connectors, data formats, languages, and EIPs) from the `camel-<version>.x` branch in [`apache/camel`](https://github.com/apache/camel) via the GitHub API
+   - Fetches the YAML DSL canonical JSON Schema
+   - Includes `llms.txt` if present
+   - Zips everything into `camel-docs-<version>.zip`
+3. Creates (or replaces) a GitHub Release tagged `docs-<version>` with the zip as an asset
+
+### Output
+
+The bundle is published at:
+
+    https://github.com/apache/camel-website/releases/tag/docs-<version>
+
+For example, the 4.18 bundle would be at `https://github.com/apache/camel-website/releases/tag/docs-4.18`.
+
+### When to run
+
+Trigger this after each Camel release. For example, when Camel `4.18.1` ships, run the workflow
+with version `4.18` to update the `docs-4.18` bundle with the latest documentation.
+
 ## Search Indexing Configuration
 
 The website uses [Algolia DocSearch](https://docsearch.algolia.com/) to provide site-wide search functionality. The search configuration is defined in [`.docsearch.config.json`](.docsearch.config.json).
