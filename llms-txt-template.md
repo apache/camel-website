@@ -7,6 +7,30 @@ For example:
 - HTML: `https://camel.apache.org/components/next/languages/simple-language.html`
 - Markdown: `https://camel.apache.org/components/next/languages/simple-language.md`
 
+## Offline documentation bundles
+
+For agents or environments with no or restricted internet access, versioned offline documentation bundles are available as zip archives of all Markdown files:
+- [Camel 4.18](https://github.com/apache/camel-website/releases/download/docs-4.18/camel-docs-4.18.zip)
+- [Camel 4.14](https://github.com/apache/camel-website/releases/download/docs-4.14/camel-docs-4.14.zip)
+
+Download the zip matching your Camel version, unzip it locally, and read the files from there. Each bundle contains:
+
+```
+components/<version>/      — 350+ connector/component docs (Markdown)
+manual/                    — user manual (Markdown)
+catalog/
+  components/              — 350+ connector/component metadata (JSON)
+  dataformats/             — data format metadata (JSON)
+  languages/               — expression language metadata (JSON)
+  models/                  — EIP model metadata (JSON)
+  others/                  — other component metadata (JSON)
+  schema/
+    camelYamlDsl-canonical.json — YAML DSL JSON Schema
+llms.txt                   — this file
+```
+
+The `catalog/` JSON files contain machine-readable metadata for every connector/component, data format, language, and EIP — parameters, types, defaults, and descriptions. The YAML DSL schema is the definitive spec for validating and generating Camel YAML routes.
+
 ## Key facts
 
 - Apache Camel is a **library**, not a platform — it embeds in your existing Spring Boot or Quarkus application
@@ -57,7 +81,7 @@ For example:
 - [Camel MCP Server](https://camel.apache.org/manual/camel-jbang-mcp.md): Model Context Protocol server for AI coding assistants (Claude Code, GitHub Copilot, Cursor, Gemini CLI).
 - [Camel LangChain4j](https://camel.apache.org/components/next/langchain4j-chat-component.md): LLM integration via LangChain4j.
 - [Camel OpenAI](https://camel.apache.org/components/next/openai-component.md): Native OpenAI component.
-- A2A (Agent-to-Agent): Camel supports the A2A protocol for connecting AI agents to enterprise systems.
+- [Camel A2A](https://camel.apache.org/components/next/a2a-component.md): Agent-to-Agent (A2A) protocol component — expose Camel routes as A2A agents or call remote A2A agents. Supports HTTP+JSON and JSONRPC bindings, OAuth/OIDC/API-key auth, and SSE streaming.
 
 ## Tooling
 
