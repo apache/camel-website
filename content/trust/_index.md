@@ -39,7 +39,8 @@ than years. Designated **Long Term Support (LTS)** releases receive bug and secu
 to a year, giving you a stable target you can plan around. We treat backward compatibility as a
 feature: the rare breaking change is always documented in the
 [Migration and Upgrade](/manual/migration-and-upgrade.html) guide, so an upgrade never holds a
-surprise.
+surprise. The data backs this up: [272 releases over 19 years with zero gaps](/blog/2026/06/camel-always-on/)
+and a core API so stable that [code from the first commit in 2007 still compiles unchanged](/blog/2026/06/camel-dna-19-years/).
 
 <p>
 <a class="button dark" href="/download/">See the releases</a>
@@ -84,7 +85,7 @@ Camel is an Apache Software Foundation project, governed by a meritocratic commu
 ASF's open and vendor-neutral model. No single company controls its roadmap, and no one can take
 it away from you. Development happens entirely in the open on public mailing lists and chat, and
 anyone is free to read the code, propose a change, review a release, or verify a fix for
-themselves.
+themselves. The numbers tell the story: [1,500+ contributors from 450+ companies across 20+ countries](/blog/2026/06/camel-by-the-numbers/).
 
 <p>
 <a class="button dark" href="/community/">Meet the community</a>
@@ -105,10 +106,77 @@ themselves.
 More than 100 known organizations run Apache Camel in production: UPS processing tens of billions
 of messages a day, CERN, SAP's Integration Suite, alongside banks, airlines, healthcare providers,
 and national governments across six continents. Commercial platforms from Red Hat, SAP, and others
-are built directly on Camel.
+are built directly on Camel. Companies don't contribute patches to software they evaluate —
+[450+ corporate email domains in the git history](/blog/2026/06/camel-by-the-numbers/) prove production usage
+no case study can match.
 
 <p>
 <a class="button dark" href="/community/user-stories/">Who uses Camel</a>
+</p>
+
+{{< /div >}}
+
+{{< /div >}}
+
+{{< div "box" >}}
+
+<a href="/blog/2026/06/camel-dna-19-years/" class="icon" title="Built to last">{{< icon "docs" "Document" >}}</a>
+
+{{< div "content" >}}
+
+## Built to last, not to rewrite
+
+Some frameworks reinvent themselves every few years — new APIs, new concepts, painful migrations.
+Camel does not. The `from().to()` pattern from the very first commit in 2007 still compiles and
+runs unchanged today. Four major versions, five technology eras (ESBs, SOA, microservices,
+cloud-native, AI), and the core DNA has stayed stable. You learn Camel once. Your routes,
+your patterns, and your team's expertise carry forward — they do not expire with the next major
+release.
+
+<p>
+<a class="button dark" href="/blog/2026/06/camel-dna-19-years/">Read the story</a>
+</p>
+
+{{< /div >}}
+
+{{< /div >}}
+
+{{< div "box" >}}
+
+<a href="/blog/2026/06/camel-bug-fix-track-record/" class="icon" title="Bug fix track record">{{< icon "support" "Wrench" >}}</a>
+
+{{< div "content" >}}
+
+## A proven bug fix track record
+
+The community has fixed 7,070 out of 7,081 reported bugs — a **99.8% resolution rate** — with a
+median fix time of **1 day**. That track record has been sustained for 17 of the last 19 years
+across 350+ connectors and 272 production releases. Only 6 bugs are open today. When something
+breaks, it gets fixed fast, and the data is there to prove it.
+
+<p>
+<a class="button dark" href="/blog/2026/06/camel-bug-fix-track-record/">See the data</a>
+</p>
+
+{{< /div >}}
+
+{{< /div >}}
+
+{{< div "box" >}}
+
+<a href="/blog/2026/06/camel-dependency-updates/" class="icon" title="Dependency maintenance">{{< icon "tooling" "Gear" >}}</a>
+
+{{< div "content" >}}
+
+## 500+ dependencies kept current
+
+Camel manages over 500 third-party dependencies. Across 20 minor releases, the community made
+**2,449 dependency version updates** — an average of 122 per release. This quiet, invisible work
+keeps the framework secure and compatible, so you are not stuck waiting for a critical library
+upgrade.
+
+<p>
+<a class="button dark" href="/blog/2026/06/camel-dependency-updates/">See the numbers</a>
 </p>
 
 {{< /div >}}
