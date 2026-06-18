@@ -82,6 +82,13 @@ defaultMarkdownHandler = "goldmark"
     url = "/security/"
     pre = "img/security.svg"
 
+[[menu.main]]
+    name = "Trust"
+    weight = 8
+    identifier = "trust"
+    url = "/trust/"
+    pre = "img/security.svg"
+
 [module]
 
   [[module.mounts]]
