@@ -17,13 +17,13 @@ keywords:
 ---
 
 Apache Camel has been running in production since 2007. Some of the largest organizations in
-the world — banks, airlines, hospitals, government agencies, and Fortune 10 companies — route
+the world (banks, airlines, hospitals, government agencies, and Fortune 10 companies) route
 business-critical traffic through Camel every second of every day.
 
 That kind of reliance has to be earned, and it cannot be claimed with a logo or a badge. We earn
 it the same way on every release: in the open, on a predictable schedule, with security handled
 transparently, and as a community that answers to no single vendor. Everything below is a matter
-of public record — you do not have to take our word for any of it. That is what *trust by
+of public record: you do not have to take our word for any of it. That is what *trust by
 default* means for Apache Camel.
 
 {{< div "box" >}}
@@ -58,7 +58,7 @@ surprise.
 ## Security handled in the open
 
 Every reported vulnerability is handled through the Apache Software Foundation's coordinated
-disclosure process and published as a full, PGP-signed advisory — an unbroken public track record
+disclosure process and published as a full, PGP-signed advisory, an unbroken public track record
 that goes back to 2013. A canonical [Security Model](/manual/security-model.html) documents
 exactly where the trust boundaries sit and what is in or out of scope, fixes are delivered across
 every supported LTS line, and we proactively review and harden the framework rather than wait for
@@ -102,7 +102,7 @@ themselves.
 
 ## Proven in production
 
-More than 100 known organizations run Apache Camel in production — UPS processing tens of billions
+More than 100 known organizations run Apache Camel in production: UPS processing tens of billions
 of messages a day, CERN, SAP's Integration Suite, alongside banks, airlines, healthcare providers,
 and national governments across six continents. Commercial platforms from Red Hat, SAP, and others
 are built directly on Camel.
@@ -115,5 +115,5 @@ are built directly on Camel.
 
 {{< /div >}}
 
-Trust is not a feeling — it is a record. Camel's is public and unbroken: every release, every
+Trust is not a feeling. It is a record. Camel's is public and unbroken: every release, every
 advisory, and every line of code is out in the open for you to check.
