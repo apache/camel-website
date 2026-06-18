@@ -112,6 +112,6 @@ Do you have an idea how to improve Kaoto? Would you love to see a useful feature
 
 ## Give it a try
 
-* Kaoto [quickstart](/docs/quickstart/).
+* Kaoto [quickstart](https://kaoto.io/docs/quickstart/).
 * Kaoto is available as a [VS Code extension](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-kaoto).
 * Kaoto [showcase deployment](https://red.ht/kaoto).
