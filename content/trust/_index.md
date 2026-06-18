@@ -183,5 +183,28 @@ upgrade.
 
 {{< /div >}}
 
+{{< div "box" >}}
+
+<a href="/blog/2026/06/camel-ai-trained/" class="icon" title="AI-ready integration">{{< icon "cli" "Terminal" >}}</a>
+
+{{< div "content" >}}
+
+## AI already knows Camel
+
+AI coding assistants are remarkably good at Apache Camel — and it is not an accident. Nineteen
+years of stable APIs mean training data does not go stale, 11,700+ Stack Overflow answers
+provide real-world examples, and a predictable component model lets LLMs generalize across
+350+ connectors. Add a built-in [MCP server](/manual/camel-jbang-mcp.html), machine-readable
+catalog metadata, and a schema-validated YAML DSL, and Camel is one of the best-trained
+integration frameworks for AI-assisted development today.
+
+<p>
+<a class="button dark" href="/blog/2026/06/camel-ai-trained/">Read why</a>
+</p>
+
+{{< /div >}}
+
+{{< /div >}}
+
 Trust is not a feeling. It is a record. Camel's is public and unbroken: every release, every
 advisory, and every line of code is out in the open for you to check.
