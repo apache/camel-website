@@ -3,7 +3,7 @@ title: "Kaoto v2.11 release"
 date: 2026-06-18
 draft: false
 authors: [lordrip, igarashitm, PVinaches, djelinek, mmelko]
-categories: ["Releases", "Tooling"]
+categories: ["Community", "Tooling"]
 keywords: ["apache camel", "kaoto", "visual editor", "integration design"]
 preview: "Kaoto 2.11 has been released"
 ---
