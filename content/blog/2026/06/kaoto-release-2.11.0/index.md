@@ -10,8 +10,9 @@ authors:
   - mmelko
 tags:
   - Kaoto
-  - Release
+  - Community
   - Kaoto 2.11
+keywords: ["apache camel", "kaoto", "visual editor", "integration design"]
 ---
 
 ## What's New?
