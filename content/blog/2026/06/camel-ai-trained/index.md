@@ -91,7 +91,7 @@ Beyond the prose documentation, Camel ships structured data that AI tools can co
   served by the [Camel MCP server](/manual/camel-jbang-mcp.html).
 - **YAML DSL JSON Schema** — the canonical schema for validating and generating Camel YAML
   routes. An AI agent can use this to produce syntactically valid YAML without guessing.
-- **[llms.txt](https://camel.apache.org/llms.txt)** — a structured index of all Camel
+- **[llms.txt](/llms.txt)** — a structured index of all Camel
   documentation, designed for LLM discovery.
 - **Offline documentation bundles** — versioned zip archives of all Markdown docs and catalog
   JSON, available as
