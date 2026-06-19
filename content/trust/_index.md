@@ -28,7 +28,7 @@ default* means for Apache Camel.
 
 {{< div "box" >}}
 
-<a href="/download/" class="icon" title="Releases and Long Term Support">{{< icon "download" "Down arrow" >}}</a>
+<a href="/download/" class="icon" title="Releases and Long Term Support">{{< icon "calendar" "Calendar" >}}</a>
 
 {{< div "content" >}}
 
@@ -120,18 +120,18 @@ no case study can match.
 
 {{< div "box" >}}
 
-<a href="/blog/2026/06/camel-dna-19-years/" class="icon" title="Built to last">{{< icon "docs" "Document" >}}</a>
+<a href="/blog/2026/06/camel-dna-19-years/" class="icon" title="Built to last">{{< icon "books" "Books" >}}</a>
 
 {{< div "content" >}}
 
 ## Built to last, not to rewrite
 
 Some frameworks reinvent themselves every few years — new APIs, new concepts, painful migrations.
-Camel does not. The `from().to()` pattern from the very first commit in 2007 still compiles and
-runs unchanged today. Four major versions, five technology eras (ESBs, SOA, microservices,
-cloud-native, AI), and the core DNA has stayed stable. You learn Camel once. Your routes,
-your patterns, and your team's expertise carry forward — they do not expire with the next major
-release.
+Camel does not. The `from().to()` pattern from the [very first commit in 2007](/blog/2026/06/camel-dna-19-years/)
+still compiles and runs unchanged today. Four major versions, five technology eras (ESBs, SOA,
+microservices, cloud-native, AI), and the core DNA has stayed stable. You learn Camel once. Your
+routes, your patterns, and your team's expertise carry forward — they do not expire with the next
+major release.
 
 <p>
 <a class="button dark" href="/blog/2026/06/camel-dna-19-years/">Read the story</a>
@@ -143,16 +143,16 @@ release.
 
 {{< div "box" >}}
 
-<a href="/blog/2026/06/camel-bug-fix-track-record/" class="icon" title="Bug fix track record">{{< icon "support" "Wrench" >}}</a>
+<a href="/blog/2026/06/camel-bug-fix-track-record/" class="icon" title="Bug fix track record">{{< icon "bugfix" "Checkmark" >}}</a>
 
 {{< div "content" >}}
 
 ## A proven bug fix track record
 
-The community has fixed 7,070 out of 7,081 reported bugs — a **99.8% resolution rate** — with a
-median fix time of **1 day**. That track record has been sustained for 17 of the last 19 years
-across 350+ connectors and 272 production releases. Only 6 bugs are open today. When something
-breaks, it gets fixed fast, and the data is there to prove it.
+The community has fixed [7,070 out of 7,081 reported bugs](/blog/2026/06/camel-bug-fix-track-record/)
+— a **99.8% resolution rate** — with a median fix time of **1 day**. That track record has been
+sustained for 17 of the last 19 years across 350+ connectors and 272 production releases. Only 6
+bugs are open today. When something breaks, it gets fixed fast, and the data is there to prove it.
 
 <p>
 <a class="button dark" href="/blog/2026/06/camel-bug-fix-track-record/">See the data</a>
@@ -171,9 +171,9 @@ breaks, it gets fixed fast, and the data is there to prove it.
 ## 500+ dependencies kept current
 
 Camel manages over 500 third-party dependencies. Across 20 minor releases, the community made
-**2,449 dependency version updates** — an average of 122 per release. This quiet, invisible work
-keeps the framework secure and compatible, so you are not stuck waiting for a critical library
-upgrade.
+[**2,449 dependency version updates**](/blog/2026/06/camel-dependency-updates/) — an average of 122
+per release. This quiet, invisible work keeps the framework secure and compatible, so you are not
+stuck waiting for a critical library upgrade.
 
 <p>
 <a class="button dark" href="/blog/2026/06/camel-dependency-updates/">See the numbers</a>
@@ -185,18 +185,18 @@ upgrade.
 
 {{< div "box" >}}
 
-<a href="/blog/2026/06/camel-ai-trained/" class="icon" title="AI-ready integration">{{< icon "cli" "Terminal" >}}</a>
+<a href="/blog/2026/06/camel-ai-trained/" class="icon" title="AI-ready integration">{{< icon "sparkle" "Sparkle" >}}</a>
 
 {{< div "content" >}}
 
 ## AI already knows Camel
 
-AI coding assistants are remarkably good at Apache Camel — and it is not an accident. Nineteen
-years of stable APIs mean training data does not go stale, 11,700+ Stack Overflow answers
-provide real-world examples, and a predictable component model lets LLMs generalize across
-350+ connectors. Add a built-in [MCP server](/manual/camel-jbang-mcp.html), machine-readable
-catalog metadata, and a schema-validated YAML DSL, and Camel is one of the best-trained
-integration frameworks for AI-assisted development today.
+AI coding assistants are remarkably good at Apache Camel — and it is not an accident. [Nineteen
+years of stable APIs](/blog/2026/06/camel-ai-trained/) mean training data does not go stale,
+11,700+ Stack Overflow answers provide real-world examples, and a predictable component model
+lets LLMs generalize across 350+ connectors. Add a built-in [MCP server](/manual/camel-jbang-mcp.html),
+machine-readable catalog metadata, and a schema-validated YAML DSL, and Camel is one of the
+best-trained integration frameworks for AI-assisted development today.
 
 <p>
 <a class="button dark" href="/blog/2026/06/camel-ai-trained/">Read why</a>
