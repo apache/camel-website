@@ -122,6 +122,7 @@ The `catalog/` JSON files contain machine-readable metadata for every connector/
 - [Blog](https://camel.apache.org/blog/index.md): Latest blog posts about Apache Camel.
 - [Camel by the Numbers](https://camel.apache.org/blog/2026/06/camel-by-the-numbers/): Data-driven overview — commits, contributors, release cadence, bug fix times, and community health metrics.
 - [The DNA of Apache Camel](https://camel.apache.org/blog/2026/06/camel-dna-19-years/): 19 years of backwards compatibility — why Camel users don't have to rewrite their integrations every few years.
+- [Trust by Default](https://camel.apache.org/trust/): Why teams trust Apache Camel in production — release cadence, LTS, security track record, vendor-neutral governance, bug fix data, dependency maintenance, and AI readiness.
 - [Security](https://camel.apache.org/security/): Security advisories and vulnerability reports.
 - [Security Model](https://camel.apache.org/manual/security-model.md): Apache Camel's built-in security model — route policy, payload validation, and how Camel protects against injection and untrusted input.
 - [Migration and Upgrade Guides](https://camel.apache.org/manual/migration-and-upgrade.md): Apache Camel migration and upgrade guides.
