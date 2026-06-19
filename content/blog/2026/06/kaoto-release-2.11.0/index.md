@@ -103,7 +103,7 @@ Kaoto 2.11 includes support for:
 - **Camel Spring Boot** - 4.20.0, 4.18.2, 4.14.7, 4.10.9
 - **Citrus** - 4.10.0, 4.10.1
 
-For a full list of changes including bug fixes and new contributors, please refer to the [full release notes on kaoto.io](https://kaoto.io/blog/kaoto-2.11-release/).
+For a full list of changes including bug fixes and new contributors, please refer to the [full release notes on kaoto.io](https://kaoto.io/blog/2026/kaoto-2.11-release/).
 
 ## Let's Build it Together
 
