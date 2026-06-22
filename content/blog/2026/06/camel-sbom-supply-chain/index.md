@@ -61,7 +61,7 @@ camel sbom --runtime=spring-boot
 camel sbom --runtime=quarkus
 ```
 
-See the [camel sbom command reference](/manual/camel-jbang-sbom.html) for the full set of options.
+See the [camel sbom command reference](/manual/jbang-commands/camel-jbang-sbom.html) for the full set of options.
 
 ### Camel Spring Boot
 
