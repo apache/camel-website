@@ -16,6 +16,13 @@ Here you will only find the supported releases, older unsupported releases can b
 
 {{< downloads >}}
 
+## SBOMs
+
+Every release since 4.0.3 includes PGP-signed CycloneDX SBOMs (JSON and XML) listed alongside the source
+download above. These machine-readable inventories list every dependency in the release and can be fed into
+tools like [OWASP Dependency-Track](https://dependencytrack.org/) for automated vulnerability scanning.
+To generate an SBOM for your own Camel application, see the [Generating SBOMs](/manual/sbom.html) guide.
+
 ## Keys
 
 You can verify your download by following these [procedures](http://www.apache.org/info/verification.html) and using these [KEYS](https://www.apache.org/dist/camel/KEYS).

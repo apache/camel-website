@@ -20,6 +20,12 @@ The Camel subprojects — Camel Quarkus, Camel Spring Boot, Camel Karaf, Camel K
 Kafka Connector and Camel K — inherit the same trust model; report scope for them is governed
 by the same document unless a subproject publishes its own security model.
 
+## Software Bill of Materials (SBOM)
+
+Every Camel release since 4.0.3 ships with PGP-signed CycloneDX SBOMs that list all dependencies,
+enabling supply chain risk analysis alongside the CVE advisories below.
+See [Generating SBOMs](/manual/sbom.html) for details.
+
 ## Reporting new security problems with Apache Camel
 
 The Apache Software Foundation takes a very active stance in eliminating security problems.
