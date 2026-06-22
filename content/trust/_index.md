@@ -185,6 +185,28 @@ stuck waiting for a critical library upgrade.
 
 {{< div "box" >}}
 
+<a href="/manual/sbom.html" class="icon" title="Software Bill of Materials">{{< icon "security" "Padlock" >}}</a>
+
+{{< div "content" >}}
+
+## SBOMs ship with every release
+
+Every Camel release since 4.0.3 ships with PGP-signed CycloneDX SBOMs (JSON and XML), giving you a
+machine-readable inventory of every dependency in the framework. Need an SBOM for your own application?
+The Camel CLI can generate one with a single command (`camel sbom`), and Maven-based projects (Spring Boot
+or Quarkus) can add the standard CycloneDX plugin. Whether it is the EU Cyber Resilience Act or US
+Executive Order 14028, the SBOM box is already checked.
+
+<p>
+<a class="button dark" href="/manual/sbom.html">How to generate SBOMs</a>
+</p>
+
+{{< /div >}}
+
+{{< /div >}}
+
+{{< div "box" >}}
+
 <a href="/blog/2026/06/camel-ai-trained/" class="icon" title="AI-ready integration">{{< icon "sparkle" "Sparkle" >}}</a>
 
 {{< div "content" >}}
