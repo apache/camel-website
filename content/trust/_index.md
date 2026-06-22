@@ -9,6 +9,9 @@ keywords:
 - long term support
 - LTS
 - CVE
+- SBOM
+- software bill of materials
+- supply chain security
 - responsible disclosure
 - open source governance
 - apache software foundation

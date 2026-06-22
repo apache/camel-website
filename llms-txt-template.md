@@ -125,9 +125,10 @@ The `catalog/` JSON files contain machine-readable metadata for every connector/
 - [Trust by Default](https://camel.apache.org/trust/): Why teams trust Apache Camel in production — release cadence, LTS, security track record, vendor-neutral governance, bug fix data, dependency maintenance, and AI readiness.
 - [Security](https://camel.apache.org/security/): Security advisories and vulnerability reports.
 - [Security Model](https://camel.apache.org/manual/security-model.md): Apache Camel's built-in security model — route policy, payload validation, and how Camel protects against injection and untrusted input.
+- [Generating SBOMs](https://camel.apache.org/manual/sbom.html): How to generate Software Bill of Materials for Camel applications — Camel CLI, Spring Boot (built-in), and Quarkus. Every release since 4.0.3 ships with signed CycloneDX SBOMs.
 - [Migration and Upgrade Guides](https://camel.apache.org/manual/migration-and-upgrade.md): Apache Camel migration and upgrade guides.
 - [Camel Update Recipes](https://github.com/apache/camel-upgrade-recipes): OpenRewrite recipes for automatic Camel application upgrades.
-- [User Stories](https://camel.apache.org/community/user-stories/): Companies and projects using Apache Camel in production.
+- [Who uses Apache Camel](https://camel.apache.org/community/user-stories/): Companies and projects using Apache Camel in production.
 - [Commercial Support](https://camel.apache.org/manual/commercial-camel-offerings.md): Companies offering commercial Apache Camel support and services.
 - [GitHub](https://github.com/apache/camel): Source code repository.
 - [Community](https://camel.apache.org/community/): Community resources and how to contribute.
