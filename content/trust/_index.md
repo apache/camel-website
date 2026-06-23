@@ -198,7 +198,7 @@ Every Camel release since 4.0.3 ships with PGP-signed CycloneDX SBOMs (JSON and 
 machine-readable inventory of every dependency in the framework. Need an SBOM for your own application?
 The Camel CLI can generate one with a single command (`camel sbom`), and Maven-based projects (Spring Boot
 or Quarkus) can add the standard CycloneDX plugin. Whether it is the EU Cyber Resilience Act or US
-Executive Order 14028, the SBOM box is already checked.
+Executive Order 14028, the [SBOM box is already checked](/blog/2026/06/camel-sbom-supply-chain/).
 
 <p>
 <a class="button dark" href="/manual/sbom.html">How to generate SBOMs</a>
