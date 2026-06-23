@@ -3,7 +3,7 @@ title: "Wanaku 0.1.1: Bringing Apache Camel Integration Capabilities to AI Agent
 date: 2026-05-31
 draft: false
 authors: [ orpiske ]
-categories: ["Community", "Usecases", "AI"]
+categories: ["Releases", "Usecases", "AI"]
 keywords: ["apache camel", "wanaku", "mcp", "ai agents", "gateway", "enterprise integration"]
 preview: "Wanaku 0.1.1: Service Catalogs and Service Templates bring Apache Camel's integration power to AI agents through the Model Context Protocol"
 ---
