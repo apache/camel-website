@@ -68,6 +68,7 @@ The `catalog/` JSON files contain machine-readable metadata for every connector/
 
 - [Components Index](https://camel.apache.org/components/next/index.md): Complete list of all Camel connectors (350+).
 - [Enterprise Integration Patterns (EIPs)](https://camel.apache.org/components/next/eips/index.md): 65+ message routing and transformation patterns.
+- [AI Patterns](https://camel.apache.org/components/next/eips/ai-patterns.md): Common AI and modern design pattern terms mapped to Camel EIPs — fan-out, scatter-gather, circuit breaker, retry, tokenize, and more.
 - [YAML DSL](https://camel.apache.org/components/next/others/yaml-dsl.md): Writing Camel routes in YAML — syntax, structure, and examples.
 - [YAML DSL Schema](https://github.com/apache/camel/blob/main/dsl/camel-yaml-dsl/camel-yaml-dsl/src/generated/resources/schema/camelYamlDsl-canonical.json): Complete JSON Schema for YAML DSL routes — the canonical spec for validating and generating Camel YAML.
 - [Languages](https://camel.apache.org/components/next/languages/index.md): Expression and predicate languages (Simple, XPath, JSONPath, etc.).
@@ -77,6 +78,7 @@ The `catalog/` JSON files contain machine-readable metadata for every connector/
 
 ## AI Integration
 
+- [AI Patterns](https://camel.apache.org/components/next/eips/ai-patterns.md): Common AI and modern design pattern terms mapped to Camel EIPs — fan-out, scatter-gather, circuit breaker, retry, tokenize, and more.
 - [Camel MCP Server](https://camel.apache.org/manual/camel-jbang-mcp.md): Model Context Protocol server for AI coding assistants (Claude Code, GitHub Copilot, Cursor, Gemini CLI).
 - [Camel LangChain4j](https://camel.apache.org/components/next/langchain4j-chat-component.md): LLM integration via LangChain4j.
 - [Camel OpenAI](https://camel.apache.org/components/next/openai-component.md): Native OpenAI component.

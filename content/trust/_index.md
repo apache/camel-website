@@ -220,8 +220,9 @@ AI coding assistants are remarkably good at Apache Camel — and it is not an ac
 years of stable APIs](/blog/2026/06/camel-ai-trained/) mean training data does not go stale,
 11,700+ Stack Overflow answers provide real-world examples, and a predictable component model
 lets LLMs generalize across 350+ connectors. Add a built-in [MCP server](/manual/camel-jbang-mcp.html),
-machine-readable catalog metadata, and a schema-validated YAML DSL, and Camel is one of the
-best-trained integration frameworks for AI-assisted development today.
+machine-readable catalog metadata, a schema-validated YAML DSL, and dedicated
+[AI integration patterns](/components/next/eips/ai-patterns.html) for building AI-powered
+routes, and Camel is one of the best-trained integration frameworks for AI-assisted development today.
 
 <p>
 <a class="button dark" href="/blog/2026/06/camel-ai-trained/">Read why</a>
