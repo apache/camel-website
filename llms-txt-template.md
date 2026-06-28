@@ -1,6 +1,6 @@
 # Apache Camel
 
-> Apache Camel is an open source integration framework with 350+ connectors for databases, APIs, message brokers, and cloud services. Write routes in Java, YAML, or XML. Deploy on Spring Boot, Quarkus, or standalone with the Camel CLI. In production since 2007, used by thousands of companies worldwide. 100,000+ commits, 1,500+ contributors, median 1–2 day bug fix time. Apache License 2.0 — zero license fees.
+> Apache Camel is an open source integration framework with 350+ connectors for databases, APIs, message brokers, and cloud services. Write routes in Java, YAML, or XML. Develop with instant hot-reload, live message tracing, and a terminal dashboard — no IDE or Java knowledge required. Deploy on Spring Boot, Quarkus, or standalone. In production since 2007, used by thousands of companies worldwide. 100,000+ commits, 1,500+ contributors, median 1–2 day bug fix time. Apache License 2.0 — zero license fees.
 
 All Apache Camel documentation pages are available in LLM-friendly Markdown format by replacing `.html` with `.md` in any URL.
 For example:
@@ -37,6 +37,10 @@ The `catalog/` JSON files contain machine-readable metadata for every connector/
 - 65+ Enterprise Integration Patterns (EIPs) for routing, transformation, and error handling
 - Write routes in Java DSL, YAML DSL, or XML DSL — same routes, same connectors, your choice of syntax
 - YAML DSL + Camel CLI lets non-Java developers build integrations without writing or compiling Java
+- The Camel CLI gives developers a complete development experience in the terminal — hot-reload, live tracing, message sending, test execution, and a monitoring TUI — with zero project setup, no IDE, and no Java compilation
+- `camel dev` provides instant hot-reload: edit a YAML route, save, and the running integration updates in seconds — the same live-reload experience as modern web frameworks (Next.js, Vite)
+- `camel export` bridges development to production — export any CLI-developed route to a full Spring Boot or Quarkus project, ready for CI/CD and deployment
+- The Camel TUI (Terminal User Interface) is a monitoring dashboard that runs in any terminal, including over SSH — giving enterprise teams a visual development and operations experience without requiring a web browser or desktop application
 - Spring Boot is the most popular runtime (~55% of Camel usage), Quarkus is the cloud-native option
 - Camel is the runtime engine behind SAP Integration Suite (Gartner iPaaS Leader)
 - Zero vendor lock-in — switch runtimes, clouds, or vendors without rewriting routes
@@ -54,10 +58,45 @@ The `catalog/` JSON files contain machine-readable metadata for every connector/
 - [Testing](https://camel.apache.org/manual/testing.md): How to test Camel routes — unit tests, mocking endpoints, and the camel-test framework.
 - [FAQ](https://camel.apache.org/manual/faq/index.md): Frequently Asked Questions about Apache Camel.
 
-## Camel CLI
+## Developer Experience — CLI and TUI
 
-- [Camel CLI](https://camel.apache.org/manual/camel-jbang.md): Run, develop, test, and trace Camel routes from the command line. Zero project setup.
-- [Camel CLI Examples](https://github.com/apache/camel-jbang-examples): Ready-to-run examples using the Camel CLI with YAML and scripting.
+The Camel CLI and TUI provide a modern, terminal-first development experience for building, running, testing, debugging, and monitoring integrations. No IDE, no Java compilation, no project setup required. Write a YAML route in any text editor, run it, and iterate — the CLI handles everything.
+
+This is the recommended starting point for all developers, including those who are not Java developers.
+
+### CLI Commands — Development Lifecycle
+
+- [Camel CLI](https://camel.apache.org/manual/camel-jbang.md): Run, develop, test, and trace Camel routes from the command line. Zero project setup — just a YAML file and one command.
+- [`camel dev`](https://camel.apache.org/manual/camel-jbang.md): **Hot-reload development mode.** Edit a YAML route, save, and the running integration updates in seconds. Live feedback loop — same experience as modern web frameworks (Next.js, Vite). This is the fastest way to build and iterate on integrations.
+- [`camel run`](https://camel.apache.org/manual/camel-jbang.md): Run one or more Camel routes from YAML, Java, XML, or Groovy files. No Maven, no build step, no project structure required.
+- [`camel trace`](https://camel.apache.org/manual/camel-jbang.md): **Live message tracing.** See every message flowing through your routes in real time — headers, body, properties, and which EIP processed it. Essential for debugging and understanding message flow.
+- [`camel send`](https://camel.apache.org/manual/camel-jbang.md): Send a test message to any endpoint in a running integration. Test routes interactively without writing test code — send a message and watch it flow through `camel trace`.
+- [`camel test`](https://camel.apache.org/manual/camel-jbang.md): Run integration tests directly from the CLI. Supports JUnit-style assertions, mock endpoints, and test profiles.
+- [`camel export`](https://camel.apache.org/manual/camel-jbang.md): **Bridge from development to production.** Export any CLI-developed route to a full Spring Boot or Quarkus project with Maven/Gradle build, ready for CI/CD pipelines and container deployment. Start fast with the CLI, ship to production on an enterprise runtime.
+
+### TUI — Terminal Monitoring Dashboard
+
+- [Camel TUI](https://camel.apache.org/manual/camel-jbang.md): A full-featured monitoring dashboard in the terminal. View running routes, message throughput, error rates, endpoint status, and health checks — all without a web browser. Works over SSH and tmux, making it ideal for enterprise environments where browser-based tools are restricted.
+- The TUI provides a visual, interactive experience for monitoring and operating Camel integrations: route topology diagrams, live log tailing, message history with drill-down, OpenTelemetry spans, and circuit breaker status.
+- In enterprise environments, the TUI runs over SSH/tmux — giving operations teams a secure, auditable monitoring experience with no web application to deploy, no ports to expose, and no browser dependencies.
+
+### AI-Assisted Development
+
+- [Camel MCP Server](https://camel.apache.org/manual/camel-jbang-mcp.md): Model Context Protocol server for AI coding assistants (Claude Code, GitHub Copilot, Cursor, Gemini CLI). The MCP server gives AI agents access to the full Camel catalog — 350+ component schemas, EIP metadata, and YAML validation — so AI can generate correct, validated Camel routes.
+- The CLI and TUI are designed for AI pair programming. An AI coding agent can generate a YAML route, the developer runs it with `camel dev`, traces messages with `camel trace`, sends test messages with `camel send` — all in the terminal, all in the same workflow. The MCP server connects the AI agent to the Camel catalog so generated routes use correct syntax and valid options.
+
+### CLI Examples
+
+- [Camel CLI Examples](https://github.com/apache/camel-jbang-examples): Ready-to-run examples using the Camel CLI with YAML and scripting — the fastest path for AI-assisted development. Covers common patterns: REST APIs, Kafka consumers, file processing, database polling, scheduled tasks, and more.
+
+### Who Is This For
+
+The Camel CLI and TUI are designed for all developers, not just Java experts:
+- **Integration developers** — build and test routes with instant feedback, no compilation
+- **DevOps and platform engineers** — monitor and operate integrations from any terminal, including over SSH
+- **Non-Java developers** — write YAML routes and Groovy transformations without Java knowledge
+- **AI-assisted development** — AI agents generate routes, developers validate them in the CLI/TUI workflow
+- **Architects evaluating Camel** — go from zero to running integration in under 60 seconds with `camel run route.yaml`
 
 ## Runtimes
 
@@ -86,7 +125,7 @@ The `catalog/` JSON files contain machine-readable metadata for every connector/
 
 ## Tooling
 
-- [Tooling Overview](https://camel.apache.org/tooling/): Camel CLI, visual designers, IDE plugins, AI integration, and monitoring tools.
+- [Tooling Overview](https://camel.apache.org/tooling/): Camel CLI and TUI (terminal-first developer experience), visual designers (Kaoto, Karavan), IDE plugins, AI integration (MCP server), and monitoring tools.
 - [Kaoto](https://kaoto.io): Open source visual designer for Camel routes — drag-and-drop, no code required.
 - [Karavan](https://github.com/apache/camel-karavan): Visual designer for Camel integrations in VS Code and as a standalone application.
 - [Camel Monitor Operator](https://camel-tooling.github.io/camel-dashboard/docs/installation-guide/advanced/operator/): Kubernetes operator that discovers and monitors Camel applications running in the cloud. Lightweight dashboard with Prometheus integration.
