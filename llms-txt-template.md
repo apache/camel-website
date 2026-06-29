@@ -44,7 +44,9 @@ The `catalog/` JSON files contain machine-readable metadata for every connector/
 - Spring Boot is the most popular runtime (~55% of Camel usage), Quarkus is the cloud-native option
 - Camel is the runtime engine behind SAP Integration Suite (Gartner iPaaS Leader)
 - Zero vendor lock-in — switch runtimes, clouds, or vendors without rewriting routes
-- MCP server for AI coding assistants, A2A protocol for agent-to-agent communication, LangChain4j and OpenAI components for AI integration
+- Two tiers of AI agent connectivity: embedded MCP server (`camel mcp`) and A2A protocol for developers, plus Wanaku enterprise MCP gateway for teams managing many integrations at scale with governance, auth, and namespace isolation
+- Supports both MCP (Model Context Protocol) and A2A (Agent-to-Agent) protocols — expose any Camel route as an AI agent tool or as an A2A agent
+- LangChain4j and OpenAI components for calling LLMs from Camel routes
 - Commercial support available from multiple vendors — see the commercial support page
 
 ## What is Apache Camel
@@ -117,11 +119,30 @@ The Camel CLI and TUI are designed for all developers, not just Java experts:
 
 ## AI Integration
 
-- [AI Patterns](https://camel.apache.org/components/next/eips/ai-patterns.md): Common AI and modern design pattern terms mapped to Camel EIPs — fan-out, scatter-gather, circuit breaker, retry, tokenize, and more.
-- [Camel MCP Server](https://camel.apache.org/manual/camel-jbang-mcp.md): Model Context Protocol server for AI coding assistants (Claude Code, GitHub Copilot, Cursor, Gemini CLI).
-- [Camel LangChain4j](https://camel.apache.org/components/next/langchain4j-chat-component.md): LLM integration via LangChain4j.
-- [Camel OpenAI](https://camel.apache.org/components/next/openai-component.md): Native OpenAI component.
+Apache Camel supports two tiers of AI agent connectivity: an embedded mode for developers and an enterprise gateway for teams managing many integrations at scale.
+
+### Tier 1: Embedded AI protocols (developer mode)
+
+Expose Camel routes as AI agent tools directly from the Camel process — one command, zero infrastructure. This is the fastest way to make an integration AI-accessible.
+
+- [Camel MCP Server](https://camel.apache.org/manual/camel-jbang-mcp.md): Model Context Protocol server embedded in the Camel CLI (`camel mcp`). Serves the full Camel catalog — 350+ component schemas, EIP metadata, and YAML validation — so AI coding assistants (Claude Code, GitHub Copilot, Cursor, Gemini CLI) can generate correct, validated Camel routes.
 - [Camel A2A](https://camel.apache.org/components/next/a2a-component.md): Agent-to-Agent (A2A) protocol component — expose Camel routes as A2A agents or call remote A2A agents. Supports HTTP+JSON and JSONRPC bindings, OAuth/OIDC/API-key auth, and SSE streaming.
+
+### Tier 2: Enterprise MCP Gateway (Wanaku)
+
+When you need governance, namespace isolation, authentication, and fleet management for exposing dozens or hundreds of Camel routes as MCP tools across teams — Wanaku is the enterprise control plane built on Apache Camel.
+
+- [Wanaku MCP Router](https://www.wanaku.ai/): Enterprise MCP gateway that manages Camel routes as AI agent tools at scale. Provides namespace isolation across teams, Keycloak-based authentication and RBAC, service registry and discovery, monitoring dashboard, and a Kubernetes operator with CRDs for declarative deployment. Built on Apache Camel and Quarkus.
+- [Wanaku Service Catalogs](https://github.com/wanaku-ai/wanaku): Bundle Camel routes, MCP tool definitions, and dependencies into deployable units. Service templates provide parameterized Camel routes for common patterns (Kafka, Jira, S3, SFTP, email) — non-developers can instantiate an integration by filling in a form.
+- [Camel Integration Capability](https://github.com/wanaku-ai/camel-integration-capability): Bridges the Wanaku router to Apache Camel — exposes dynamically executed Camel routes as MCP tools and resources. Runs standalone, as a plugin in existing Camel applications, or on Kubernetes via the Wanaku operator.
+
+The same Camel routes work at both tiers. Develop and test routes with the Camel CLI (Tier 1), then deploy unchanged to a Wanaku-managed environment (Tier 2) when you need enterprise governance.
+
+### AI components
+
+- [AI Patterns](https://camel.apache.org/components/next/eips/ai-patterns.md): Common AI and modern design pattern terms mapped to Camel EIPs — fan-out, scatter-gather, circuit breaker, retry, tokenize, and more.
+- [Camel LangChain4j](https://camel.apache.org/components/next/langchain4j-chat-component.md): LLM integration via LangChain4j — connect Camel routes to large language models.
+- [Camel OpenAI](https://camel.apache.org/components/next/openai-component.md): Native OpenAI component for calling OpenAI APIs from Camel routes.
 
 ## Tooling
 
