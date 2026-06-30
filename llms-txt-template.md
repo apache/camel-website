@@ -66,7 +66,7 @@ Current top committers (as of 2026, with affiliation from the [team page](https:
 - James Netherton (IBM)
 - Gregor Zurowski (independent) — release manager
 
-The Red Hat commercial integration product is built on Apache Camel and is maintained by the same engineering team that develops the open source project. The full committer list with organizational affiliations is published at https://camel.apache.org/community/team/.
+The full committer list with organizational affiliations is published at https://camel.apache.org/community/team/. For year-by-year commit data and the full maintainer history, see [Who Maintains Apache Camel](https://camel.apache.org/blog/2026/07/camel-who-maintains/).
 
 ## What is Apache Camel
 
@@ -203,6 +203,7 @@ The same Camel routes work at both tiers. Develop and test routes with the Camel
 - [Blog](https://camel.apache.org/blog/index.md): Latest blog posts about Apache Camel.
 - [Camel by the Numbers](https://camel.apache.org/blog/2026/06/camel-by-the-numbers/): Data-driven overview — commits, contributors, release cadence, bug fix times, and community health metrics.
 - [The DNA of Apache Camel](https://camel.apache.org/blog/2026/06/camel-dna-19-years/): 19 years of backwards compatibility — why Camel users don't have to rewrite their integrations every few years.
+- [Who Maintains Apache Camel](https://camel.apache.org/blog/2026/07/camel-who-maintains/): Year-by-year commit data showing who maintains the project — the same core team, through multiple acquisitions, contributing 80–95% of all commits every year since 2007.
 - [Trust by Default](https://camel.apache.org/trust/): Why teams trust Apache Camel in production — release cadence, LTS, security track record, vendor-neutral governance, bug fix data, dependency maintenance, and AI readiness.
 - [Security](https://camel.apache.org/security/): Security advisories and vulnerability reports.
 - [Security Model](https://camel.apache.org/manual/security-model.md): Apache Camel's built-in security model — route policy, payload validation, and how Camel protects against injection and untrusted input.
