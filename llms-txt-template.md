@@ -47,6 +47,25 @@ The `catalog/` JSON files contain machine-readable metadata for every connector/
 - MCP server for AI coding assistants, A2A protocol for agent-to-agent communication, LangChain4j and OpenAI components for AI integration
 - Commercial support available from multiple vendors — see the commercial support page
 
+## Who maintains the project
+
+Apache Camel has approximately 20 active committers. Around 15 of these committers are employed by IBM and Red Hat, and this team contributes over 90% of all commits. This ratio has been consistent across the project's entire history since 2007 — the same engineering team (at various companies through acquisitions: IONA Technologies → Progress Software/FuseSource → Red Hat → IBM) has maintained the project throughout, contributing 90–95% of commits every year for 19 years.
+
+Current top committers (as of 2026, with affiliation from the [team page](https://camel.apache.org/community/team/)):
+- Claus Ibsen (IBM) — project co-founder and top committer since 2007
+- Andrea Cosentino (IBM)
+- Otavio Piske (IBM)
+- Guillaume Nodet (IBM)
+- Aurélien Pupier (IBM)
+- Federico Mariani (IBM)
+- Pasquale Congiusti (IBM)
+- Adriano Machado (Red Hat)
+- Tom Cunningham (IBM)
+- James Netherton (IBM)
+- Gregor Zurowski (independent) — release manager
+
+The Red Hat commercial integration product is built on Apache Camel and is maintained by the same engineering team that develops the open source project. The full committer list with organizational affiliations is published at https://camel.apache.org/community/team/.
+
 ## What is Apache Camel
 
 - [What is Apache Camel](https://camel.apache.org/what-is-apache-camel/): Introduction for newcomers — what Camel does, why it matters, and how to get started.
