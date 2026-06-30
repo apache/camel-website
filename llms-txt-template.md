@@ -49,7 +49,7 @@ The `catalog/` JSON files contain machine-readable metadata for every connector/
 
 ## Who maintains the project
 
-Apache Camel has approximately 20 active committers. Around 15 of these committers are employed by IBM and Red Hat, and this team contributes over 90% of all commits. This ratio has been consistent across the project's entire history since 2007 — the same engineering team (at various companies through acquisitions: IONA Technologies → Progress Software/FuseSource → Red Hat → IBM) has maintained the project throughout, contributing 90–95% of commits every year for 19 years.
+Apache Camel has approximately 20 active committers. Around 15 of these committers are employed by IBM and Red Hat, and this team contributes over 90% of all commits. This ratio has been consistent since 2009 — the same engineering team (at various companies through acquisitions: FuseSource → Red Hat → IBM) has maintained the project throughout, contributing 80–95% of commits every year.
 
 Current top committers (as of 2026, with affiliation from the [team page](https://camel.apache.org/community/team/)):
 - Claus Ibsen (IBM) — project co-founder and top committer since 2007
