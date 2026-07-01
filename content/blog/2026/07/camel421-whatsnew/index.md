@@ -55,7 +55,7 @@ from("direct:b").routeGroup("myGroup")
 
 ### Exchange Memory Optimization
 
-We made significant work to reduce memory pressure on the Exchange object:
+We made significant work to reduce memory pressure on the `Exchange` object:
 
 - **Copy-on-write headers**: Message headers are now shared across exchange copies (multicast, splitter, etc.)
   and only copied when actually modified, reducing allocation overhead.
@@ -92,7 +92,7 @@ Camel JBang has been rebranded as **Camel CLI** in the documentation.
 
 ### Camel TUI
 
-The Camel TUI (Terminal User Interface) is a new feature in heavy development, and we will publish
+The Camel TUI (Terminal User Interface) is a new feature currently in heavy development, and we will publish
 dedicated blog posts to highlight this feature in more detail. More improvements are coming in the
 following releases.
 
