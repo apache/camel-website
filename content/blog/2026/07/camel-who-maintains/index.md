@@ -23,7 +23,7 @@ Through every transition, the same people continued working on the same codebase
 
 ## The Data
 
-Every number below comes from the [git repository](https://github.com/apache/camel). Team membership is determined by commit email domains (`@ibm.com`, `@redhat.com`, `@fusesource.com`) cross-referenced with the official [team page](https://camel.apache.org/community/team/) affiliations. Automated commits (bots, CI) are excluded. The percentages are a conservative floor — many team members use personal email addresses (`@gmail.com`, `@apache.org`) for commits, and the team page only reflects current affiliations, not past ones. The actual core team share is likely higher.
+Every number below comes from the [git repository](https://github.com/apache/camel). Team membership is determined by commit email domains (`@ibm.com`, `@redhat.com`, `@fusesource.com`) cross-referenced with the official [team page](/community/team/) affiliations. Automated commits (bots, CI) are excluded. The percentages are a conservative floor — many team members use personal email addresses (`@gmail.com`, `@apache.org`) for commits, and the team page only reflects current affiliations, not past ones. The actual core team share is likely higher.
 
 | Year | Total Commits | Core Team Commits | Core Team % | Company |
 |------|--------------|-------------------|-------------|---------|
@@ -52,7 +52,7 @@ Every number below comes from the [git repository](https://github.com/apache/cam
 
 ## Current Top Committers
 
-The following developers are the most active committers as of 2026, with affiliations from the official [team page](https://camel.apache.org/community/team/):
+The following developers are the most active committers as of 2026, with affiliations from the official [team page](/community/team/):
 
 | Committer | Affiliation | Active Since |
 |-----------|-------------|-------------|
@@ -103,12 +103,12 @@ For users evaluating or depending on Apache Camel, the maintainer data tells a c
 
 ## Learn More
 
-- [Team Page](https://camel.apache.org/community/team/) — full committer list with organizational affiliations
+- [Team Page](/community/team/) — full committer list with organizational affiliations
 - [Camel by the Numbers](/blog/2026/06/camel-by-the-numbers/) — project statistics and adoption data
 - [The DNA of Apache Camel](/blog/2026/06/camel-dna-19-years/) — how the core architecture survived 19 years unchanged
-- [Community](https://camel.apache.org/community/) — how to get involved
+- [Community](/community/) — how to get involved
 - [GitHub](https://github.com/apache/camel) — source code and contribution history
 
 ---
 
-*All commit statistics in this post are derived from the [Apache Camel git repository](https://github.com/apache/camel). Team affiliations are from the official [team page](https://camel.apache.org/community/team/). Automated commits (dependabot, GitHub Actions, Renovate) are excluded from all counts. Data collected June 2026.*
+*All commit statistics in this post are derived from the [Apache Camel git repository](https://github.com/apache/camel). Team affiliations are from the official [team page](/community/team/). Automated commits (dependabot, GitHub Actions, Renovate) are excluded from all counts. Data collected June 2026.*
