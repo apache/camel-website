@@ -2,7 +2,7 @@
 title: "Apache Camel 4.21 What's New"
 date: 2026-07-03
 draft: false
-authors: [ davsclaus ]
+authors: [ davsclaus, squakez ]
 categories: [ "Releases" ]
 keywords: ["apache camel", "whats new", "camel 4", "release", "camel 4.21", "integration framework"]
 preview: "Details of what we have done in the Camel 4.21 release."
@@ -153,6 +153,22 @@ finding the newest platform compatible with the current Camel version. No more s
 Exported projects now include an `AGENTS.md` file and a _For AI coding assistants_ section in the generated
 `readme.md`, linking to the Apache Camel LLM index for better AI coding assistant context.
 
+### Multi architecture, Multi JDK container
+
+In this release we've also worked to start delivering [Camel JBang official Docker container image](https://hub.docker.com/r/apache/camel-jbang) in multiple architectures and JVM. This is nice if you want to use the container image with different architecture or JVM. So far we're supporting **AMD64** (as usual) and **ARM64** (new), **JDK 17** or **JDK 21**.
+
+### Jib profile
+
+We've enabled the **Jib** Maven profile in order to allow you turning your Camel application into a container via Jib very easily. After running the `camel export`, just run:
+
+```
+mvn clean package jib:build -Pjib \
+    -Djib.to.image=my-registry.io/my-registry-org/my-container:latest \
+    -Djib.from.image=eclipse-temurin:21-jdk \
+```
+
+You're application will be pushed to the registry and you will be able to run it right away directly from Docker (or Kubernetes, sure).
+
 ## Route Diagrams
 
 The new `camel-diagram` component provides route diagram rendering in multiple formats:
@@ -226,6 +242,12 @@ external collector needed.
 ```bash
 camel dev myRoute.yaml --open-telemetry-agent
 ```
+
+### Opentelemetry2 consistency
+
+We've worked to a few adjustment to the Opentelemetry2 component in order to make it more consistent. From this version onward, we've dropped the usage of `ThreadLocal` in favour of the Camel `Exchange` passing mechanism. This is transparent to the users, although it _may_ produce a slighter higher amount of `Spans`.
+
+We've also included a new parameter `includePatterns` which you can use to choose the processors you want to include explicitly in your traces.
 
 ### Reduced Span Verbosity
 
