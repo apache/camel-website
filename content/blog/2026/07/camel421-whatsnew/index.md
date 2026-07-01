@@ -353,7 +353,8 @@ and session logout operations.
 The `camel-nats` component now works properly in JetStream pull mode (previously pull requests were
 never issued) and supports manual acknowledgement.
 
-The `camel-mongodb` consumer now exposes the resume token for change streams.
+The `camel-mongodb` consumer now exposes the resume token for change streams,
+and supports resume strategies for resuming change stream processing from the last known position.
 
 The `camel-milo` (OPC UA) component now supports explicit username and password parameters for
 handling special characters, and exposes the underlying Eclipse Milo `OpcUaClient` for custom
