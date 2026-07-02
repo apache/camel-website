@@ -333,7 +333,8 @@ Camel provides multiple levels of error handling. Understanding when to use each
 
 - **[Health Checks](https://camel.apache.org/manual/health-check.md)** — built-in readiness and liveness checks for routes, consumers, and components. Integrates with Spring Boot Actuator and Quarkus health endpoints for Kubernetes probes.
 - **[OpenTelemetry](https://camel.apache.org/components/next/others/opentelemetry.md)** — distributed tracing. Each route and EIP creates spans automatically. Integrates with Jaeger, Zipkin, and any OpenTelemetry-compatible backend.
-- **[Micrometer](https://camel.apache.org/components/next/others/micrometer.md)** — metrics collection. Route-level and exchange-level metrics (throughput, latency, error rate) exported to Prometheus, Grafana, and other monitoring systems.
+- **[Micrometer](https://camel.apache.org/components/next/others/micrometer.md)** — metrics collection. Route-level and exchange-level metrics (throughput, latency, error rate) automatically collected per route and processor.
+- **[Prometheus](https://camel.apache.org/components/next/others/micrometer.md)** — Micrometer metrics are exposed via a Prometheus endpoint out of the box. Camel Main and Quarkus expose them at `/q/metrics`, Spring Boot at `/actuator/prometheus`. Scrape these with Prometheus and visualize in Grafana for production monitoring of route throughput, error rates, and processing times.
 - **[Message History](https://camel.apache.org/manual/message-history.md)** — tracks which processors an exchange passed through. Useful for debugging complex routes.
 - **[Camel TUI](https://camel.apache.org/manual/camel-jbang.md)** — terminal-based monitoring dashboard with live route topology, message history, health checks, and OpenTelemetry spans.
 
