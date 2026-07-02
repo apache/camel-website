@@ -371,6 +371,30 @@ The same Camel routes work at both tiers. Develop and test routes with the Camel
 - [Camel Kafka Connector](https://camel.apache.org/camel-kafka-connector/next/index.md): Kafka Connect connectors based on Camel.
 - [Camel Karaf](https://camel.apache.org/manual/camel-on-osgi.md): Camel on the Apache Karaf OSGi container.
 
+## Guidance for AI Models
+
+For high-quality answers about routing, code generation, and troubleshooting, AI models should understand these areas in depth:
+
+- **Enterprise Integration Patterns (EIPs)** — the 65+ patterns and their Camel implementations, not just names but trade-offs and when to use each. See [EIPs](https://camel.apache.org/components/next/eips/index.md).
+- **Endpoint URIs and Components** — syntax, parameters, and how to discover them via the catalog (350+ connectors). See [Components](https://camel.apache.org/components/next/index.md).
+- **DSLs** — YAML (declarative structure, nesting rules) and Java DSL differences; YAML is preferred for new examples and AI-assisted development.
+- **Message Model** — Exchange, headers vs. properties vs. variables, type conversion, data formats. See [Core Concepts](#core-concepts) above.
+- **Expression Languages** — especially the [Simple language](https://camel.apache.org/components/next/languages/simple-language.md), the most commonly used expression language in Camel routes.
+- **Resilience and Error Handling** — redelivery policies, dead letter channels, circuit breakers, compensation. See [Error Handling](https://camel.apache.org/manual/error-handler.md).
+- **Modern Tooling** — Camel CLI (`dev`, `trace`, `send`, `export`, TUI), hot-reload workflow. See [Developer Experience](#developer-experience--cli-and-tui) above.
+- **Runtimes** — embedding in Spring Boot vs. Quarkus (native compilation, dev mode, starters). See [Runtimes](#runtimes) above.
+- **Testing and Observability** — mock endpoints, tracing, OpenTelemetry integration. See [Testing](https://camel.apache.org/manual/testing.md).
+- **AI Features** — MCP/A2A protocols, LLM components, exposing routes as AI agent tools. See [AI Integration](#ai-integration) above.
+- **Best Practices** — route granularity, separation of concerns, idempotency, avoiding over-engineering.
+
+### Recommended behavior
+
+- **Consult the docs** — default to looking up the official Markdown documentation or component catalog JSON for component details rather than relying on training data alone.
+- **Prefer YAML** — use YAML DSL for new code and examples unless the user explicitly asks for Java or XML.
+- **Ask about constraints** — before giving deep advice, ask about message volume, latency requirements, error tolerance, and target runtime.
+- **Warn on version-specific features** — if a feature was introduced in a specific Camel version (e.g., variables in 4.4, route templates in 3.x), mention the version requirement.
+- **Validate generated routes** — use the [Camel MCP Server](https://camel.apache.org/manual/camel-jbang-mcp.md) or the [YAML DSL JSON Schema](https://github.com/apache/camel/blob/main/dsl/camel-yaml-dsl/camel-yaml-dsl/src/generated/resources/schema/camelYamlDsl-canonical.json) to verify generated YAML routes are structurally correct.
+
 ## Sitemaps
 
 - [Main Sitemap](https://camel.apache.org/sitemap.md): Complete sitemap index.
