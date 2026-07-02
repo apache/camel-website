@@ -100,6 +100,8 @@ Understanding these concepts is essential for generating correct Camel routes an
 
 Minimal, correct examples that can be run instantly with `camel run route.yaml` (no project setup, no compilation). YAML DSL is the recommended syntax for AI-assisted development. More examples at [Camel CLI Examples](https://github.com/apache/camel-jbang-examples).
 
+**TIP:** The [Camel MCP Server](https://camel.apache.org/manual/camel-jbang-mcp.md) can validate YAML routes against the official JSON Schema, look up component options, and check endpoint URIs — so AI agents can verify their generated routes are correct before the user runs them. The examples below were all validated this way.
+
 ### Timer → Log (simplest possible route)
 
 ```yaml
@@ -211,6 +213,58 @@ from("timer:tick?period=1000")
     .setBody(constant("Hello from Camel!"))
     .log("${body}");
 ```
+
+## YAML DSL Guidance
+
+The [YAML DSL](https://camel.apache.org/components/next/others/yaml-dsl.md) is the recommended syntax for AI-assisted development. It maps directly to the same model as Java and XML DSL — same components, same EIPs, same options.
+
+### Structure rules
+
+- A YAML route file is a **list** at the top level — every item starts with `- route:`, `- rest:`, `- onException:`, `- routeTemplate:`, etc.
+- Processing steps go inside `steps:` under `from:` — this is the processor chain
+- Endpoints use `uri:` with the standard Camel URI syntax: `scheme:path?option=value`
+- Expressions (`simple`, `jq`, `xpath`, `jsonpath`, `constant`) are used inside EIPs for predicates and transformations
+- Options that look like numbers but are typed as strings in the schema (e.g., `redeliveryDelay`) must be quoted: `"2000"` not `2000`
+
+### Route templates (parameterized routes)
+
+Route templates let you define a reusable route pattern with parameters. Use `{{paramName}}` placeholders inside the template — these are replaced when a route is created from the template.
+
+```yaml
+- routeTemplate:
+    id: myTemplate
+    parameters:
+      - name: name
+      - name: greeting
+      - name: myPeriod
+        defaultValue: "3s"
+    from:
+      uri: "timer:{{name}}?period={{myPeriod}}"
+      steps:
+        - setBody:
+            simple: "{{greeting}} ${body}"
+        - log:
+            message: "${body}"
+```
+
+See [Route Templates](https://camel.apache.org/manual/route-template.md) for the full reference.
+
+### Kamelets (pre-built route snippets)
+
+[Kamelets](https://camel.apache.org/camel-kamelets/next/index.md) are pre-built, reusable route snippets for common integration patterns — sources, sinks, and transformations. Use them as endpoints with `kamelet:name?option=value`:
+
+```yaml
+- route:
+    from:
+      uri: kamelet:timer-source?period=5000&message=Hello
+      steps:
+        - to:
+            uri: kamelet:log-action
+```
+
+### Schema validation
+
+Always validate generated YAML routes against the [canonical YAML DSL JSON Schema](https://github.com/apache/camel/blob/main/dsl/camel-yaml-dsl/camel-yaml-dsl/src/generated/resources/schema/camelYamlDsl-canonical.json). The [Camel MCP Server](https://camel.apache.org/manual/camel-jbang-mcp.md) provides validation, component option lookup, and endpoint URI checking — use it to catch errors before running.
 
 ## Developer Experience — CLI and TUI
 
