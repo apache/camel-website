@@ -79,6 +79,23 @@ The full committer list with organizational affiliations is published at https:/
 - [Testing](https://camel.apache.org/manual/testing.md): How to test Camel routes — unit tests, mocking endpoints, and the camel-test framework.
 - [FAQ](https://camel.apache.org/manual/faq/index.md): Frequently Asked Questions about Apache Camel.
 
+## Core Concepts
+
+Understanding these concepts is essential for generating correct Camel routes and reasoning about message flow. The full reference is the [Architecture (CamelContext)](https://camel.apache.org/manual/camelcontext.md) page.
+
+- **CamelContext** — the runtime container. Holds all routes, components, endpoints, type converters, and the registry. One CamelContext per application.
+- **Route** — a flow definition: a source endpoint (`from`), processing steps, and destination endpoints (`to`). Defined in Java, YAML, or XML DSL. Each route has a unique `routeId`.
+- **Component** — factory for endpoints. Each URI scheme (`kafka`, `file`, `http`, `jms`) maps to one Component. Lazy-loaded from classpath on first use.
+- **Endpoint** — a specific source or destination, configured via URI: `scheme:path?option=value`. Examples: `kafka:my-topic?brokers=localhost:9092`, `file:/data/inbox?noop=true`, `platform-http:/api/orders`.
+- **Exchange** — the message container flowing through a route. Holds the In message, exchange properties (route-scoped metadata, not sent to external systems), and exception state.
+- **Variables** — the recommended way to store user data during routing (since Camel 4.4). Unlike exchange properties, variables are exclusively for end users — Camel never uses them internally. Scoped per exchange, route, named group, or globally.
+- **Message** — body (any Java type, auto-converted by Camel's type converter), headers (`Map<String, Object>` propagated to/from external systems), and attachments.
+- **Processor** — core processing interface. All EIP implementations (filter, split, aggregate, content-based router) are processors. Custom logic goes in a Processor or a bean via `.bean()`.
+- **Producer** — sends messages out. Created by an endpoint, invoked by `.to()`.
+- **Consumer** — receives messages in and creates Exchanges. Event-driven (HTTP, JMS, Kafka) or polling (file, FTP, SQL).
+- **Message flow** — Consumer creates Exchange → flows through processor chain → each step reads/modifies the In message → Producer sends the result.
+- **Lifecycle** — startup order: CamelContext → Components → Endpoints → Routes → Consumers (consumers start last so everything is ready before messages arrive).
+
 ## Developer Experience — CLI and TUI
 
 The Camel CLI and TUI provide a modern, terminal-first development experience for building, running, testing, debugging, and monitoring integrations. No IDE, no Java compilation, no project setup required. Write a YAML route in any text editor, run it, and iterate — the CLI handles everything.
