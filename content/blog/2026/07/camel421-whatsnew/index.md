@@ -139,6 +139,10 @@ Plugins are now loaded lazily. Built-in commands that do not consume plugins
 (such as `camel get`, `camel version`, `camel ps`) skip plugin discovery entirely,
 making these commands faster. Plugin classpath resolution is also cached.
 
+### Test plugin execution
+
+The test plugin used to call a separate JBang process for executing the test commands. This has changed in the sense of directly calling the Citrus test engine in the same Camel CLI JVM. This saves the additional indirection of calling a separate JBang process and makes sure to always call the matching Citrus version when using the test plugin in Camel. Also, users of Camel launcher CLI will not require the JBang installation anymore just for running the test plugin.
+
 ### Wrapper Renamed
 
 The `camel wrapper` command now installs scripts as `camel` instead of `camelw`.
