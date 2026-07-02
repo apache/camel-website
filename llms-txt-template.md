@@ -96,6 +96,122 @@ Understanding these concepts is essential for generating correct Camel routes an
 - **Message flow** — Consumer creates Exchange → flows through processor chain → each step reads/modifies the In message → Producer sends the result.
 - **Lifecycle** — startup order: CamelContext → Components → Endpoints → Routes → Consumers (consumers start last so everything is ready before messages arrive).
 
+## Canonical Examples
+
+Minimal, correct examples that can be run instantly with `camel run route.yaml` (no project setup, no compilation). YAML DSL is the recommended syntax for AI-assisted development. More examples at [Camel CLI Examples](https://github.com/apache/camel-jbang-examples).
+
+### Timer → Log (simplest possible route)
+
+```yaml
+- route:
+    from:
+      uri: timer:tick?period=1000
+      steps:
+        - setBody:
+            constant: "Hello from Camel!"
+        - log:
+            message: "${body}"
+```
+
+### File polling with transformation
+
+```yaml
+- route:
+    from:
+      uri: file:data/inbox?noop=true
+      steps:
+        - log:
+            message: "Processing ${header.CamelFileName}"
+        - transform:
+            simple: "Processed: ${body}"
+        - to:
+            uri: file:data/outbox
+```
+
+### Content-Based Router (choice)
+
+```yaml
+- route:
+    from:
+      uri: direct:orders
+      steps:
+        - choice:
+            when:
+              - simple: "${header.priority} == 'high'"
+                steps:
+                  - to:
+                      uri: kafka:orders.priority
+              - simple: "${header.priority} == 'low'"
+                steps:
+                  - to:
+                      uri: kafka:orders.standard
+            otherwise:
+              steps:
+                - to:
+                    uri: kafka:orders.other
+```
+
+### Error handling (onException)
+
+```yaml
+- onException:
+    handled:
+      constant: "true"
+    exception:
+      - java.net.ConnectException
+    redeliveryPolicy:
+      maximumRedeliveries: 3
+      redeliveryDelay: "2000"
+    steps:
+      - log:
+          message: "Connection failed after retries: ${exception.message}"
+      - to:
+          uri: kafka:errors.dead-letter
+
+- route:
+    from:
+      uri: kafka:orders.in
+      steps:
+        - to:
+            uri: http:order-service/api/process
+```
+
+### REST API endpoint
+
+```yaml
+- rest:
+    path: /api
+    get:
+      - path: /hello
+        to:
+          uri: direct:hello
+      - path: /hello/{name}
+        to:
+          uri: direct:hello-name
+
+- route:
+    from:
+      uri: direct:hello
+      steps:
+        - setBody:
+            constant: "Hello from Camel!"
+
+- route:
+    from:
+      uri: direct:hello-name
+      steps:
+        - setBody:
+            simple: "Hello ${header.name}!"
+```
+
+### Java DSL equivalent (Timer → Log)
+
+```java
+from("timer:tick?period=1000")
+    .setBody(constant("Hello from Camel!"))
+    .log("${body}");
+```
+
 ## Developer Experience — CLI and TUI
 
 The Camel CLI and TUI provide a modern, terminal-first development experience for building, running, testing, debugging, and monitoring integrations. No IDE, no Java compilation, no project setup required. Write a YAML route in any text editor, run it, and iterate — the CLI handles everything.
