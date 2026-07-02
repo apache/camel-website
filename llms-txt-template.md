@@ -311,6 +311,54 @@ The Camel CLI and TUI are designed for all developers, not just Java experts:
 - [Camel Spring Boot](https://camel.apache.org/camel-spring-boot/next/index.md): Camel on Spring Boot with starters for 350+ connectors. The most popular way to run Camel in production.
 - [Camel Quarkus](https://camel.apache.org/camel-quarkus/next/index.md): Cloud-native Camel with Quarkus extensions. Fast startup, low memory, native compilation.
 
+## Error Handling
+
+Camel provides multiple levels of error handling. Understanding when to use each is critical for building resilient integrations.
+
+- **[Error Handler](https://camel.apache.org/manual/error-handler.md)** — the default mechanism. Configured per route or globally on the CamelContext. The `DefaultErrorHandler` retries locally; the `DeadLetterChannel` sends failed messages to a designated endpoint after retries are exhausted.
+- **[Dead Letter Channel](https://camel.apache.org/components/next/eips/dead-letter-channel.md)** — an error handler that moves failed exchanges to a dead letter endpoint (e.g., a Kafka topic, a database, a file) for later inspection or reprocessing. Configure with `deadLetterChannel("kafka:errors.dlq")`.
+- **[onException](https://camel.apache.org/manual/exception-clause.md)** — exception-specific handling. Match on exception type and define per-exception behavior: retry count, delay, whether the exchange is handled or continued. Redelivery options go inside `redeliveryPolicy`.
+- **[Circuit Breaker](https://camel.apache.org/components/next/eips/circuitBreaker-eip.md)** — wraps a call to an external service. Opens after repeated failures, preventing cascading outages. Backed by Resilience4j or MicroProfile Fault Tolerance.
+- **[Retry](https://camel.apache.org/manual/error-handler.md)** — configured via redelivery policies on the error handler or `onException`. Supports max attempts, delay, back-off multiplier, and retry-while predicates.
+
+## Testing
+
+- **[Testing Overview](https://camel.apache.org/manual/testing.md)** — how to test Camel routes: unit tests, integration tests, and the camel-test framework.
+- **[CamelTestSupport](https://camel.apache.org/manual/testing.md)** — base class for JUnit 5 tests. Provides a `CamelContext`, `ProducerTemplate`, and `MockEndpoint` setup out of the box.
+- **[Mock Component](https://camel.apache.org/components/next/mock-component.md)** — assert that endpoints receive the expected number of messages with the expected content. Use `getMockEndpoint("mock:result").expectedMessageCount(1)`.
+- **[AdviceWith](https://camel.apache.org/manual/advice-with.md)** — modify routes for testing without changing production code. Replace endpoints, add interceptors, or simulate errors. Essential for testing routes that talk to external systems.
+- **[Test Infra](https://camel.apache.org/manual/test-infra.md)** — Testcontainers-based test infrastructure for databases, message brokers, and cloud services. Use `@RegisterExtension` with service factories (e.g., `KafkaServiceFactory`, `JDBCServiceFactory`).
+
+## Observability
+
+- **[Health Checks](https://camel.apache.org/manual/health-check.md)** — built-in readiness and liveness checks for routes, consumers, and components. Integrates with Spring Boot Actuator and Quarkus health endpoints for Kubernetes probes.
+- **[OpenTelemetry](https://camel.apache.org/components/next/others/opentelemetry.md)** — distributed tracing. Each route and EIP creates spans automatically. Integrates with Jaeger, Zipkin, and any OpenTelemetry-compatible backend.
+- **[Micrometer](https://camel.apache.org/components/next/others/micrometer.md)** — metrics collection. Route-level and exchange-level metrics (throughput, latency, error rate) exported to Prometheus, Grafana, and other monitoring systems.
+- **[Message History](https://camel.apache.org/manual/message-history.md)** — tracks which processors an exchange passed through. Useful for debugging complex routes.
+- **[Camel TUI](https://camel.apache.org/manual/camel-jbang.md)** — terminal-based monitoring dashboard with live route topology, message history, health checks, and OpenTelemetry spans.
+
+## Deployment
+
+### Spring Boot vs. Quarkus
+
+| | **Spring Boot** | **Quarkus** |
+|---|---|---|
+| Popularity | ~55% of Camel usage | Growing, cloud-native focus |
+| Startup | Seconds | Milliseconds (native) |
+| Memory | Typical JVM footprint | Low (native compilation) |
+| Dependencies | Spring Boot starters (`camel-kafka-starter`) | Quarkus extensions (`camel-quarkus-kafka`) |
+| Config | `application.properties` / `application.yaml` | `application.properties` |
+| Dev mode | Spring DevTools | `quarkus dev` with live reload |
+| Native | Not supported | GraalVM native image |
+
+Both runtimes use the same Camel routes, components, and EIPs — only the dependency management and configuration style differ. Routes can be migrated between runtimes without rewriting.
+
+### Kubernetes deployment
+
+- Use `camel export` to generate a Spring Boot or Quarkus project from CLI-developed routes, ready for containerization
+- Spring Boot: standard `Dockerfile` or Jib/Buildpacks, deploy as a Deployment/StatefulSet
+- Quarkus: native image builds for minimal container size and fast startup, ideal for scale-to-zero
+- Health checks (`/health/ready`, `/health/live`) integrate with Kubernetes probes out of the box
 ## Components and Patterns
 
 - [Components Index](https://camel.apache.org/components/next/index.md): Complete list of all Camel connectors (350+).
