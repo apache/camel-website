@@ -18,7 +18,7 @@ When thinking about how to leverage AI in the Apache Camel ecosystem, there are 
 
 Direction 1 includes the [Apache Camel AI components](/components/4.18.x/ai-summary.html). Combining the [Wanaku MCP router](https://www.wanaku.ai/), which has been featured on this blog several times, with Camel also falls into this category.
 
-Direction 2, on the other hand, applies AI at a completely different phase from direction 1. Not as much has been attempted here yet, but an ambitious AI coding assistant tool called [Camel-Kit](https://github.com/luigidemasi/camel-kit) is currently under development. [Kaoto](https://kaoto.io/) would also be a candidate in this category.
+Direction 2, on the other hand, applies AI at a completely different phase from direction 1. [Camel CLI](/manual/camel-jbang.html) and [Camel TUI](/manual/camel-jbang-tui.html) are already integrated with MCP (Model Context Protocol), enabling vibe coding for Camel applications using these tools. In addition, an ambitious AI coding assistant tool called [Camel-Kit](https://github.com/luigidemasi/camel-kit) is currently under development. [Kaoto](https://kaoto.io/) would also be a candidate in this category.
 
 [Hawtio](https://hawt.io/) is the de-facto tool and console for managing and diagnosing Camel applications. Within the Camel ecosystem, it sits in a unique position to apply AI at this operational phase.
 
