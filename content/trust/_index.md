@@ -78,6 +78,39 @@ someone else to find the problem.
 
 {{< div "box" >}}
 
+<a href="/security/" class="icon" title="The work behind every advisory">{{< icon "security" "Padlock" >}}</a>
+
+{{< div "content" >}}
+
+## A busy advisory page is a good sign
+
+The 4.14.8, 4.18.3 and 4.21.0 releases fixed and disclosed
+[**32 vulnerabilities**](/security/) between them, and every one of them got a full public advisory.
+That is what an active security effort looks like from the outside — not a framework springing
+leaks. Researchers across the industry report their findings to the ASF's private security list, and
+we go looking ourselves: when one component turns out to mishandle inbound message headers, we sweep
+the connector portfolio for the same pattern instead of patching only the one that was reported. That
+is why advisories arrive in families, and why every reporter is credited by name in the advisory that
+follows.
+
+Each one costs work you never see: triage against the [Security Model](/manual/security-model.html),
+a fix with regression tests, a CVE assignment, and a written, signed advisory carrying the affected
+version ranges and a workaround you can apply today — and then the backport. **26 of those 32 fixes
+were carried all the way back to the 4.14.x LTS line**, so teams on the older LTS get them without a
+major upgrade. None of it becomes public until the fixes have shipped, and we publish even when a
+hardening change has no known exploit path — because the alternative is asking you to trust a silence
+you cannot check.
+
+<p>
+<a class="button dark" href="/security/">See every advisory</a>
+</p>
+
+{{< /div >}}
+
+{{< /div >}}
+
+{{< div "box" >}}
+
 <a href="/community/" class="icon" title="The Apache Camel community">{{< icon "community" "People" >}}</a>
 
 {{< div "content" >}}
