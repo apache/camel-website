@@ -23,6 +23,12 @@ download above. These machine-readable inventories list every dependency in the 
 tools like [OWASP Dependency-Track](https://dependencytrack.org/) for automated vulnerability scanning.
 To generate an SBOM for your own Camel application, see the [Generating SBOMs](/manual/sbom.html) guide.
 
+## Camel CLI Launcher
+
+You can install the [Camel CLI Launcher](/download/camel-cli-launcher/) on a
+single machine with a one-line command, without a package manager. See the
+[installation guide](/download/camel-cli-launcher/) for details.
+
 ## Keys
 
 You can verify your download by following these [procedures](http://www.apache.org/info/verification.html) and using these [KEYS](https://www.apache.org/dist/camel/KEYS).
