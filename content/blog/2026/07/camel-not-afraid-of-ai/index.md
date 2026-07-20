@@ -5,7 +5,7 @@ draft: false
 authors: [davsclaus]
 categories: ["AI"]
 keywords: ["apache camel", "AI", "LLM", "Claude", "bug fixing", "code review", "software quality", "frontier models"]
-preview: "The Apache Camel project pointed a frontier AI model at 19 years of code and asked it to find bugs. It found 165 for the upcoming 4.22 LTS release — concurrency races, silent data loss, security gaps, and edge cases that are hard for humans to spot. We fixed them. This is what happens when a project is not afraid of AI."
+preview: "The Apache Camel project pointed a frontier AI model at 19 years of code and asked it to find bugs. It found 165 for the upcoming 4.22 LTS release — concurrency races, silent data loss, security gaps, and edge cases that are hard for humans to spot. We fixed all of them. This is what happens when a project is not afraid of AI."
 ---
 
 The Apache Camel project pointed a frontier AI model at 19 years of integration code
@@ -13,8 +13,8 @@ and said: *find what we missed*.
 
 It found **165 bugs** for the upcoming 4.22 LTS release. Not cosmetic issues —
 concurrency races, silent data loss scenarios, security gaps, and edge cases buried deep in
-350+ connectors. We are fixing them. As of today, **148 are already resolved**,
-with a median fix time of 1 day — the same pace this project has maintained for
+350+ connectors. We fixed all of them — every single one — with a median fix time of 1 day,
+the same pace this project has maintained for
 [17 of the last 19 years](/blog/2026/06/camel-bug-fix-track-record/).
 
 This is not a story about software being broken. All software has bugs. The question is
@@ -196,7 +196,7 @@ work alone — a human is always in the loop, guiding the process:
   knowledge and the AI brings the ability to hold the entire component's code in context
   at once.
 
-The result: of the 165 bugs identified for 4.22, **148 have been resolved** — most
+The result: all 165 bugs identified for 4.22 have been resolved — most
 within a day of being filed. That is the same discipline this project has applied for
 19 years: [7,070 bugs fixed out of 7,081 reported](/blog/2026/06/camel-bug-fix-track-record/),
 99.8% resolution rate, 1-day median fix time.

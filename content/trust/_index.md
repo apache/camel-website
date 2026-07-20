@@ -256,6 +256,10 @@ lets LLMs generalize across 350+ connectors. Add a built-in [MCP server](/manual
 machine-readable catalog metadata, a schema-validated YAML DSL, and dedicated
 [AI integration patterns](/components/next/eips/ai-patterns.html) for building AI-powered
 routes, and Camel is one of the best-trained integration frameworks for AI-assisted development today.
+And it works both ways: for the upcoming 4.22 LTS release, we
+[pointed a frontier AI model at the codebase](/blog/2026/07/camel-not-afraid-of-ai/) and fixed
+165 bugs it found — concurrency races, silent data loss, and security gaps that are hard for
+humans to spot.
 
 <p>
 <a class="button dark" href="/blog/2026/06/camel-ai-trained/">Read why</a>
