@@ -1449,6 +1449,12 @@ AddDefaultCharset utf-8
     <FilesMatch "(^#.*#|\.(bak|conf|dist|fla|in[ci]|log|orig|psd|sh|sql|sw[op])|~)$">
         Require all denied
     </FilesMatch>
+    # install.sh and install.ps1 are intentionally public installer scripts, not
+    # leaked build/config files. Scoped to the site root only, so a same-named
+    # file in a subdirectory stays blocked by the FilesMatch rule above.
+    <If "%{REQUEST_URI} =~ m#^/(install\.sh|install\.ps1)$#">
+        Require all granted
+    </If>
 </IfModule>
 
 # ----------------------------------------------------------------------
