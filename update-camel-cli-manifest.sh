@@ -11,9 +11,11 @@
 #    apache/camel tool) to compute SHA-256 and write the release manifests.
 # 3. With --latest, updates latest.properties, but only if <version> is newer.
 #
-# The manifest format (format=1, version, tar_sha256, zip_sha256, with an ASF
-# license header) and all immutability / forward-only rules live in the single
-# Java implementation; this script no longer reimplements them.
+# The manifest format (format=1, version, tar_sha256, zip_sha256) and all
+# immutability / forward-only rules live in the single Java implementation;
+# this script no longer reimplements them. The generator also writes
+# static/install.sha256 (checksums of install.sh/install.ps1), which
+# `camel self-update` uses to verify the installer before running it.
 set -eu
 
 MAIN_RAW="https://raw.githubusercontent.com/apache/camel/main/dsl/camel-jbang/camel-launcher/src/install"
@@ -75,6 +77,8 @@ java "$generator" \
     --zip "$tmp/archive.zip" \
     --output "$static_dir/camel-cli" \
     --latest "$latest" \
+    --install-sh "$static_dir/install.sh" \
+    --install-ps1 "$static_dir/install.ps1" \
     || die "WebsiteManifestGenerator failed"
 
 echo "Done."

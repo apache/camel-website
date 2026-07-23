@@ -38,21 +38,12 @@ is_valid_version() {
         '' | .* | *. | *..* | *[!0-9.]*) return 1 ;;
     esac
     # The case above guarantees digits and single dots only, with no leading, trailing, or doubled
-    # dot, so a valid X.Y.Z is exactly the value containing two dots (three non-empty components).
-    rest="$v"
-    dots=0
-    while :; do
-        case "$rest" in
-            *.*)
-                dots=$((dots + 1))
-                rest="${rest#*.}"
-                ;;
-            *)
-                break
-                ;;
-        esac
-    done
-    [ "$dots" -eq 2 ]
+    # dot, so a valid X.Y.Z is exactly the value with three non-empty components (two dots).
+    case "$v" in
+        *.*.*.*) return 1 ;;
+        *.*.*) return 0 ;;
+        *) return 1 ;;
+    esac
 }
 
 validate_sha256() {
@@ -227,6 +218,20 @@ activate() {
     mv -f "$tmp_link" "$bin_dir/camel"
 }
 
+# Records whether this install is pinned to an explicit version, so `camel self-update` can refuse to move
+# a deliberately pinned install. Skipped when CAMEL_INSTALL_SELF_UPDATE=true: self-update always passes its
+# own resolved --version for TOCTOU-safety (see SelfUpdateCommand), which is not a human pinning a version
+# and must not create or clear a pin either way.
+update_pin_state() {
+    [ "${CAMEL_INSTALL_SELF_UPDATE:-}" = "true" ] && return 0
+    pinned_version_file="$camel_cli_root/pinned-version"
+    if [ -n "$requested_version" ]; then
+        printf '%s\n' "$version" > "$pinned_version_file"
+    else
+        rm -f "$pinned_version_file"
+    fi
+}
+
 requested_version=""
 while [ $# -gt 0 ]; do
     case "$1" in
@@ -288,6 +293,7 @@ staged_root_dir="$extract_dir/camel-launcher-$version"
 verify_staged "$staged_root_dir/bin/camel.sh"
 
 activate "$version" "$staged_root_dir"
+update_pin_state
 
 case ":$PATH:" in
     *":$bin_dir:"*) ;;
