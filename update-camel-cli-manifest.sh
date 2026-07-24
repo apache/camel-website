@@ -5,7 +5,9 @@
 # Usage: ./update-camel-cli-manifest.sh <version> [--latest]
 #
 # 1. Fetches install.sh and install.ps1 from apache/camel main and writes them
-#    byte-identical to static/install.sh and static/install.ps1.
+#    byte-identical to static/install.sh and static/install.ps1. Also refreshes the
+#    vendored scripts/WebsiteManifestGenerator.java from the same apache/camel source,
+#    reapplying the "VENDORED COPY" banner on top of the byte-identical upstream body.
 # 2. Downloads camel-launcher-<version>-bin.{tar.gz,zip} from Maven Central and
 #    delegates to scripts/WebsiteManifestGenerator.java (a vendored copy of the
 #    apache/camel tool) to compute SHA-256 and write the release manifests.
@@ -19,6 +21,7 @@
 set -eu
 
 MAIN_RAW="https://raw.githubusercontent.com/apache/camel/main/dsl/camel-jbang/camel-launcher/src/install"
+GENERATOR_RAW_URL="https://raw.githubusercontent.com/apache/camel/main/dsl/camel-jbang/camel-launcher/src/jreleaser/java/WebsiteManifestGenerator.java"
 MAVEN_BASE="https://repo1.maven.org/maven2/org/apache/camel/camel-launcher"
 
 repo_root=$(CDPATH='' cd -- "$(dirname -- "$0")" && pwd)
@@ -48,7 +51,7 @@ command -v java >/dev/null 2>&1 || die "java (JDK 17+) is required to run $gener
 tmp=$(mktemp -d)
 trap 'rm -rf "$tmp"' EXIT INT TERM
 
-# --- 1. Vendor the installer scripts from apache/camel main ------------------
+# --- 1. Vendor the installer scripts and manifest generator from apache/camel main ------
 mkdir -p "$static_dir"
 for script in install.sh install.ps1; do
     echo "Fetching $script from apache/camel main"
@@ -57,6 +60,21 @@ for script in install.sh install.ps1; do
     mv "$tmp/$script" "$static_dir/$script"
     echo "  wrote static/$script"
 done
+
+echo "Fetching WebsiteManifestGenerator.java from apache/camel main"
+curl -fsSL "$GENERATOR_RAW_URL" -o "$tmp/WebsiteManifestGenerator.java" \
+    || die "could not download WebsiteManifestGenerator.java from $GENERATOR_RAW_URL"
+{
+    printf '// VENDORED COPY - do not edit here.\n'
+    printf '// Source of truth: apache/camel\n'
+    printf '//   dsl/camel-jbang/camel-launcher/src/jreleaser/java/WebsiteManifestGenerator.java\n'
+    printf '// To update: re-copy that file over this one, then re-apply this banner. The body below is\n'
+    printf '// kept byte-identical to the upstream source so the sync stays a mechanical copy.\n'
+    printf '\n'
+    cat "$tmp/WebsiteManifestGenerator.java"
+} > "$tmp/WebsiteManifestGenerator.java.bannered"
+mv "$tmp/WebsiteManifestGenerator.java.bannered" "$generator"
+echo "  wrote scripts/WebsiteManifestGenerator.java"
 
 # --- 2. Download the Maven Central -bin archives ----------------------------
 tar_url="$MAVEN_BASE/$version/camel-launcher-$version-bin.tar.gz"
