@@ -17,6 +17,11 @@ keywords:
 - apache software foundation
 - enterprise integration
 - production
+- secure by default
+- security policy enforcement
+- startup validation
+- production mode
+- insecure configuration
 ---
 
 Apache Camel has been running in production since 2007. Some of the largest organizations in
@@ -235,6 +240,34 @@ Executive Order 14028, the [SBOM box is already checked](/blog/2026/06/camel-sbo
 
 <p>
 <a class="button dark" href="/manual/sbom.html">How to generate SBOMs</a>
+</p>
+
+{{< /div >}}
+
+{{< /div >}}
+
+{{< div "box" >}}
+
+<a href="/manual/security-policy.html" class="icon" title="Secure out of the box — runtime security enforcement">{{< icon "security" "Padlock" >}}</a>
+
+{{< div "content" >}}
+
+## Secure out of the box
+
+Apache Camel doesn't just fix vulnerabilities after they are found — it actively prevents insecure
+configuration from reaching production. Every option in the Camel component catalog carries machine-readable security metadata that identifies whether it is security-sensitive and whether enabling it introduces a known risk. At startup, Camel uses this metadata to validate configuration before a single message is processed.
+
+Camel validates security-sensitive configuration at startup, covering secrets, transport security,
+serialization, and production-only settings. Components are designed with secure defaults so that
+the safest configuration is also the easiest one to use.
+
+In **production mode** (`camel.main.profile = prod`), the global default is `fail`: the application
+refuses to start with any insecure configuration unless explicitly overridden. This is a hard
+guardrail, not a warning that can be scrolled past. In the default (no-profile) mode, violations
+are logged as warnings so existing applications are not broken.
+
+<p>
+<a class="button dark" href="/manual/security-policy.html">Security Policy Enforcement</a>
 </p>
 
 {{< /div >}}
