@@ -28,6 +28,9 @@ On Windows, in PowerShell:
 irm https://camel.apache.org/install.ps1 | iex
 ```
 
+**Update (2026-07-25):** A server configuration issue was briefly returning a
+403 for the `install.sh`/`install.ps1` downloads above. This has been fixed.
+
 Both installers resolve and install the latest published release by default, or
 a specific version if you request one with `--version` (`install.sh`) or `-Version`
 (`install.ps1`). Installation is always per-user and never requires `sudo` or

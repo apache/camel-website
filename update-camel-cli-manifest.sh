@@ -5,21 +5,28 @@
 # Usage: ./update-camel-cli-manifest.sh <version> [--latest]
 #
 # 1. Fetches install.sh and install.ps1 from apache/camel main and writes them
-#    byte-identical to static/install.sh and static/install.ps1.
-# 2. Downloads camel-launcher-<version>-bin.{tar.gz,zip} from Maven Central,
-#    computes SHA-256, and writes static/camel-cli/releases/<version>.properties.
+#    byte-identical to static/install.sh and static/install.ps1. Also refreshes the
+#    vendored scripts/WebsiteManifestGenerator.java from the same apache/camel source,
+#    reapplying the "VENDORED COPY" banner on top of the byte-identical upstream body.
+# 2. Downloads camel-launcher-<version>-bin.{tar.gz,zip} from Maven Central and
+#    delegates to scripts/WebsiteManifestGenerator.java (a vendored copy of the
+#    apache/camel tool) to compute SHA-256 and write the release manifests.
 # 3. With --latest, updates latest.properties, but only if <version> is newer.
 #
-# The manifest format (format=1, version, tar_sha256, zip_sha256) mirrors
-# WebsiteManifestGenerator.java in apache/camel and is parsed by the installers.
+# The manifest format (format=1, version, tar_sha256, zip_sha256) and all
+# immutability / forward-only rules live in the single Java implementation;
+# this script no longer reimplements them. The generator also writes
+# static/install.sha256 (checksums of install.sh/install.ps1), which
+# `camel self-update` uses to verify the installer before running it.
 set -eu
 
 MAIN_RAW="https://raw.githubusercontent.com/apache/camel/main/dsl/camel-jbang/camel-launcher/src/install"
+GENERATOR_RAW_URL="https://raw.githubusercontent.com/apache/camel/main/dsl/camel-jbang/camel-launcher/src/jreleaser/java/WebsiteManifestGenerator.java"
 MAVEN_BASE="https://repo1.maven.org/maven2/org/apache/camel/camel-launcher"
 
-repo_root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+repo_root=$(CDPATH='' cd -- "$(dirname -- "$0")" && pwd)
 static_dir="$repo_root/static"
-releases_dir="$static_dir/camel-cli/releases"
+generator="$repo_root/scripts/WebsiteManifestGenerator.java"
 
 die() { echo "error: $*" >&2; exit 1; }
 usage() { echo "Usage: $0 <version> [--latest]" >&2; exit 2; }
@@ -38,33 +45,13 @@ done
 
 echo "$version" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$' || die "version must be X.Y.Z: $version"
 
-sha256() {
-    if command -v sha256sum >/dev/null 2>&1; then
-        sha256sum "$1" | awk '{print $1}'
-    elif command -v shasum >/dev/null 2>&1; then
-        shasum -a 256 "$1" | awk '{print $1}'
-    else
-        die "need sha256sum or shasum"
-    fi
-}
-
-# 0 (true) if $1 is strictly newer than $2 (both X.Y.Z numeric).
-version_gt() {
-    i=1
-    while [ "$i" -le 3 ]; do
-        fa=$(echo "$1" | cut -d. -f"$i")
-        fb=$(echo "$2" | cut -d. -f"$i")
-        [ "$fa" -gt "$fb" ] && return 0
-        [ "$fa" -lt "$fb" ] && return 1
-        i=$((i + 1))
-    done
-    return 1
-}
+command -v java >/dev/null 2>&1 || die "java (JDK 17+) is required to run $generator"
+[ -f "$generator" ] || die "generator not found: $generator"
 
 tmp=$(mktemp -d)
 trap 'rm -rf "$tmp"' EXIT INT TERM
 
-# --- 1. Vendor the installer scripts from apache/camel main ------------------
+# --- 1. Vendor the installer scripts and manifest generator from apache/camel main ------
 mkdir -p "$static_dir"
 for script in install.sh install.ps1; do
     echo "Fetching $script from apache/camel main"
@@ -74,58 +61,42 @@ for script in install.sh install.ps1; do
     echo "  wrote static/$script"
 done
 
-# --- 2. Compute checksums from the Maven Central -bin archives ---------------
+echo "Fetching WebsiteManifestGenerator.java from apache/camel main"
+curl -fsSL "$GENERATOR_RAW_URL" -o "$tmp/WebsiteManifestGenerator.java" \
+    || die "could not download WebsiteManifestGenerator.java from $GENERATOR_RAW_URL"
+{
+    printf '// VENDORED COPY - do not edit here.\n'
+    printf '// Source of truth: apache/camel\n'
+    printf '//   dsl/camel-jbang/camel-launcher/src/jreleaser/java/WebsiteManifestGenerator.java\n'
+    printf '// To update: re-copy that file over this one, then re-apply this banner. The body below is\n'
+    printf '// kept byte-identical to the upstream source so the sync stays a mechanical copy.\n'
+    printf '\n'
+    cat "$tmp/WebsiteManifestGenerator.java"
+} > "$tmp/WebsiteManifestGenerator.java.bannered"
+mv "$tmp/WebsiteManifestGenerator.java.bannered" "$generator"
+echo "  wrote scripts/WebsiteManifestGenerator.java"
+
+# --- 2. Download the Maven Central -bin archives ----------------------------
 tar_url="$MAVEN_BASE/$version/camel-launcher-$version-bin.tar.gz"
 zip_url="$MAVEN_BASE/$version/camel-launcher-$version-bin.zip"
 echo "Downloading $tar_url"
 curl -fsSL "$tar_url" -o "$tmp/archive.tar.gz" || die "could not download $tar_url"
 echo "Downloading $zip_url"
 curl -fsSL "$zip_url" -o "$tmp/archive.zip" || die "could not download $zip_url"
-tar_sha256=$(sha256 "$tmp/archive.tar.gz")
-zip_sha256=$(sha256 "$tmp/archive.zip")
 
-manifest_body() {
-    printf 'format=1\nversion=%s\ntar_sha256=%s\nzip_sha256=%s\n' \
-        "$version" "$tar_sha256" "$zip_sha256"
-}
-
-write_manifest() {
-    dest=$1
-    tmpf=$(mktemp "$tmp/manifest.XXXXXX")
-    manifest_body >"$tmpf"
-    mv "$tmpf" "$dest"
-    echo "  wrote ${dest#"$repo_root"/}"
-}
-
-mkdir -p "$releases_dir"
-version_file="$releases_dir/$version.properties"
-
-# --- 3. Per-version manifest (immutable) ------------------------------------
-if [ -f "$version_file" ]; then
-    if manifest_body | cmp -s - "$version_file"; then
-        echo "$version.properties already up to date"
-    else
-        die "$version.properties exists with different checksums; per-version manifests are immutable"
-    fi
-else
-    write_manifest "$version_file"
-fi
-
-# --- 4. latest.properties (forward-only) ------------------------------------
-if [ "$update_latest" -eq 1 ]; then
-    latest_file="$releases_dir/latest.properties"
-    if [ -f "$latest_file" ]; then
-        current=$(sed -n 's/^version=//p' "$latest_file")
-        if [ "$current" = "$version" ]; then
-            echo "latest.properties already at $version"
-        elif version_gt "$version" "$current"; then
-            write_manifest "$latest_file"
-        else
-            die "latest.properties already at $current (newer than $version); refusing to move backward"
-        fi
-    else
-        write_manifest "$latest_file"
-    fi
-fi
+# --- 3. Write the manifests via the vendored Java generator ------------------
+# The generator computes checksums, writes static/camel-cli/releases/<version>.properties
+# (immutable) and, when --latest is given, advances latest.properties forward-only.
+if [ "$update_latest" -eq 1 ]; then latest=true; else latest=false; fi
+echo "Generating manifests via scripts/WebsiteManifestGenerator.java"
+java "$generator" \
+    --version "$version" \
+    --tar "$tmp/archive.tar.gz" \
+    --zip "$tmp/archive.zip" \
+    --output "$static_dir/camel-cli" \
+    --latest "$latest" \
+    --install-sh "$static_dir/install.sh" \
+    --install-ps1 "$static_dir/install.ps1" \
+    || die "WebsiteManifestGenerator failed"
 
 echo "Done."
