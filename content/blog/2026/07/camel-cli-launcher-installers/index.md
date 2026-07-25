@@ -28,7 +28,7 @@ On Windows, in PowerShell:
 irm https://camel.apache.org/install.ps1 | iex
 ```
 
-**Update (2026-07-22):** A server configuration issue was briefly returning a
+**Update (2026-07-25):** A server configuration issue was briefly returning a
 403 for the `install.sh`/`install.ps1` downloads above. This has been fixed.
 
 Both installers resolve and install the latest published release by default, or
