@@ -38,7 +38,7 @@ We also had [Serge Haller](https://www.linkedin.com/in/sergehaller/), Echovox's 
 
 The first real decision was the backbone. We were building a system that had to take messages in from a hundred-plus external connections, each with its own format and quirks, run business rules over them, and push messages back out to other networks. High volume, many moving parts, and a clock ticking.
 
-We chose [Apache Camel](https://camel.apache.org/). At the time it was not the obvious pick. The two safe options were both bad. Hand-roll our own message router, and spend a year writing plumbing we did not have a year for. Or bolt everything onto a heavyweight enterprise service bus, the kind that was fashionable then, and inherit weight we did not want. Camel sat in between. It is an integration framework built on well-worn patterns for moving messages between systems, and it gave us two things we needed. Development speed, because most of the plumbing we would otherwise have written by hand already existed and was tested. And modularity, because Camel let us treat each route as a self-contained piece we could reason about on its own.
+We chose Apache Camel. At the time it was not the obvious pick. The two safe options were both bad. Hand-roll our own message router, and spend a year writing plumbing we did not have a year for. Or bolt everything onto a heavyweight enterprise service bus, the kind that was fashionable then, and inherit weight we did not want. Camel sat in between. It is an integration framework built on well-worn patterns for moving messages between systems, and it gave us two things we needed. Development speed, because most of the plumbing we would otherwise have written by hand already existed and was tested. And modularity, because Camel let us treat each route as a self-contained piece we could reason about on its own.
 
 The second point turned out to matter more than the first. When you are connecting to a new mobile operator every few weeks, the ability to add a piece without disturbing the rest of the machine is close to the whole game.
 
@@ -160,7 +160,7 @@ The tools will keep changing. Boring, in the sense of durable and well understoo
 
 ## Chapter 4. Under the hood: three things we got right building an SMS gateway on Apache Camel
 
-The first three chapters were story and argument. This one is engineering: three technical decisions, all resting on [Apache Camel](https://camel.apache.org/), that I am still proud of fifteen years later, plus the change that did the most for our throughput.
+The first three chapters were story and argument. This one is engineering: three technical decisions, all resting on Apache Camel, that I am still proud of fifteen years later, plus the change that did the most for our throughput.
 
 First, the shape of the system. Three kinds of traffic move through Echonect: messages from phones coming in, which we call MOs, messages going out, MTs, and delivery reports coming back for what we sent, DVRs. This chapter mostly follows the outbound path. The whole thing is a set of Camel routes, defined in a `camel-config.xml` per module with a few Java route builders for the dynamic per-provider dispatch. Normalize the input, route it, throttle it, split it, marshal it onto a queue, hand it off. If you have read the Enterprise Integration Patterns book, our flow looks a lot like its table of contents. That is not a coincidence. Camel gives you those patterns as building blocks, so we built with them.
 
@@ -233,7 +233,7 @@ They share one root: pick a clean boundary, then respect it for years. The conne
 
 ## Chapter 5. The whole system on one page, and what Apache Camel gives you
 
-Chapter 4 went deep on three decisions. This last chapter pulls back: the whole of Echonect on one page, and an honest account of what [Apache Camel](https://camel.apache.org/) gives you when you build something like it.
+Chapter 4 went deep on three decisions. This last chapter pulls back: the whole of Echonect on one page, and an honest account of what Apache Camel gives you when you build something like it.
 
 ### Four modules and a queue
 
