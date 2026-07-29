@@ -147,6 +147,40 @@ bearer value was accepted. Next to it,
 [CVE-2026-46455](/security/CVE-2026-46455.html), where a missing `IS_ACTIVE` check meant expired tokens
 were accepted.
 
+## Every finding has a runnable reproducer
+
+Something worth saying about that last section: the reason we can tell you `camel-aws2-sns` had no
+reachable path is that we went and tried to build one.
+
+For each of these findings we wrote a proof of concept before writing the fix. Not a description of
+an attack, an actual project you can run. It is how we confirm a report is real, how we work out how far
+it reaches (the `camel-vertx-websocket` SSRF turning into secret disclosure through placeholder
+resolution only became obvious once someone had it running), and how we check afterwards that the fix
+actually closes it rather than just looking like it should.
+
+Those reproducers are public, one repository per CVE, and they are now up for **31 of the 32**:
+
+- [github.com/oscerd/CVE-2026-46726](https://github.com/oscerd/CVE-2026-46726), the WebSocket SSRF and
+  secret disclosure
+- [github.com/oscerd/CVE-2026-53913](https://github.com/oscerd/CVE-2026-53913), the Keycloak fail-open
+  bypass
+- [github.com/oscerd/CVE-2026-49042](https://github.com/oscerd/CVE-2026-49042), a prompt-injected LLM
+  turning tool call arguments into headers that hijack the route
+
+There is a link for each of the others in the table below. The one that has no reproducer is
+CVE-2026-56140, the `camel-aws2-sns` hardening change, because there is nothing to reproduce.
+
+Each repository is self contained. A Maven project pinned to an affected version, a `Dockerfile` and
+`docker-compose.yml`, and a README with the affected class, the CWE mapping, the affected and fixed
+version ranges, the JIRA issue and the reporter's name. Fifteen of them ship the same defect twice, once
+on Camel Spring Boot and once on Camel Quarkus, because a few of these behave differently depending on
+which runtime is hosting the consumer. Usually it is three commands: `mvn clean package`,
+`docker compose up -d --build`, then curl the exploit endpoint and watch it work.
+
+We publish them because the fixes shipped first, and because "upgrade, there was a vulnerability" is a
+weak argument to take to a change board. Running the thing against your own configuration is a much
+better one, and it is also the fastest way to find out whether a route you own was ever exposed.
+
 ## What to upgrade to
 
 | You are on | Upgrade to | You get |
@@ -194,40 +228,40 @@ Everyone here is named in the advisory they reported. If you find something, mai
 
 All 32 fixed in 4.21.0, for reference:
 
-| CVE | Component | Severity | What it allowed |
-|---|---|---|---|
-| [CVE-2026-42527](/security/CVE-2026-42527.html) | camel-jms + 11 others | MEDIUM | Out-of-band DNS disclosure through a too-permissive default deserialization filter |
-| [CVE-2026-43865](/security/CVE-2026-43865.html) | camel-hazelcast | MEDIUM | Remote code execution via unsafe deserialization |
-| [CVE-2026-43866](/security/CVE-2026-43866.html) | camel-jms | HIGH | Forged `ExchangeHolder` passed the class check and injected body, headers and properties |
-| [CVE-2026-43867](/security/CVE-2026-43867.html) | camel-pqc | MEDIUM | Unfiltered `ObjectInputStream` on persisted key metadata |
-| [CVE-2026-46453](/security/CVE-2026-46453.html) | camel-elasticsearch-rest-client | MEDIUM | Client override of the Elasticsearch query and operation |
-| [CVE-2026-46454](/security/CVE-2026-46454.html) | camel-cometd | MEDIUM | Control header injection by unauthenticated Bayeux clients |
-| [CVE-2026-46455](/security/CVE-2026-46455.html) | camel-keycloak | MEDIUM | Expired access tokens accepted |
-| [CVE-2026-46456](/security/CVE-2026-46456.html) | camel-aws2-sqs | MEDIUM | Control header injection by a message sender |
-| [CVE-2026-46457](/security/CVE-2026-46457.html) | camel-nats | MEDIUM | Control header injection by any publisher to the subject |
-| [CVE-2026-46584](/security/CVE-2026-46584.html) | camel-mail | MEDIUM | Weakened SMTP transport security, and SMTP credential theft before 4.19.0 |
-| [CVE-2026-46585](/security/CVE-2026-46585.html) | camel-lucene | MEDIUM | HTTP client injection of the full-text search query |
-| [CVE-2026-46587](/security/CVE-2026-46587.html) | camel-couchbase | MEDIUM | Operation override from untrusted input |
-| [CVE-2026-46588](/security/CVE-2026-46588.html) | camel-couchdb | MEDIUM | Operation override from untrusted input |
-| [CVE-2026-46590](/security/CVE-2026-46590.html) | camel-pqc | MEDIUM | Unfiltered `ObjectInputStream`, incomplete fix of CVE-2026-40048 |
-| [CVE-2026-46591](/security/CVE-2026-46591.html) | camel-neo4j | MEDIUM | Cypher injection, incomplete fix of CVE-2025-66169 |
-| [CVE-2026-46592](/security/CVE-2026-46592.html) | camel-cxf | MEDIUM | HTTP client redirect of the invoked SOAP operation |
-| [CVE-2026-46726](/security/CVE-2026-46726.html) | camel-vertx-websocket | HIGH | SSRF and secret disclosure via injected `CamelHttpUri` |
-| [CVE-2026-48203](/security/CVE-2026-48203.html) | camel-solr | MEDIUM | Solr query parameter injection (SSRF) and document field injection |
-| [CVE-2026-48204](/security/CVE-2026-48204.html) | camel-mongodb-gridfs | MEDIUM | GridFS operation switch, including file deletion |
-| [CVE-2026-48205](/security/CVE-2026-48205.html) | camel-dns | MEDIUM | DNS queries redirected to an attacker's server, and internal hostname enumeration |
-| [CVE-2026-48206](/security/CVE-2026-48206.html) | camel-jira | MEDIUM | Arbitrary JIRA operations using the endpoint's credentials |
-| [CVE-2026-49042](/security/CVE-2026-49042.html) | camel-langchain4j-tools | MEDIUM | Arbitrary header injection via LLM tool call arguments |
-| [CVE-2026-49086](/security/CVE-2026-49086.html) | camel-dapr | MEDIUM | Re-published message redirected to an arbitrary component and topic |
-| [CVE-2026-49097](/security/CVE-2026-49097.html) | camel-irc | MEDIUM | Outgoing IRC messages redirected to arbitrary channels or users |
-| [CVE-2026-49098](/security/CVE-2026-49098.html) | camel-kafka | MEDIUM | Kafka messages redirected to an arbitrary topic |
-| [CVE-2026-49099](/security/CVE-2026-49099.html) | camel-salesforce | MEDIUM | SOQL and SOSL injection, SObject override, Apex REST redirect |
-| [CVE-2026-49365](/security/CVE-2026-49365.html) | camel-netty-http | MEDIUM | Full Java stack traces returned to unauthenticated clients |
-| [CVE-2026-53913](/security/CVE-2026-53913.html) | camel-keycloak | HIGH | Fail-open authentication bypass in the default configuration |
-| [CVE-2026-55993](/security/CVE-2026-55993.html) | camel-atmosphere-websocket | HIGH | SSRF and secret disclosure via injected control headers |
-| [CVE-2026-55994](/security/CVE-2026-55994.html) | camel-iggy | HIGH | SSRF and secret disclosure via injected control headers |
-| [CVE-2026-56139](/security/CVE-2026-56139.html) | camel-undertow | MEDIUM | Full Java stack traces returned, and the option ignored for Rest DSL |
-| [CVE-2026-56140](/security/CVE-2026-56140.html) | camel-aws2-sns | LOW | Defence-in-depth alignment, no reachable inbound path |
+| CVE | Component | Severity | What it allowed | PoC |
+|---|---|---|---|---|
+| [CVE-2026-42527](/security/CVE-2026-42527.html) | camel-jms + 11 others | MEDIUM | Out-of-band DNS disclosure through a too-permissive default deserialization filter | [PoC](https://github.com/oscerd/CVE-2026-42527) |
+| [CVE-2026-43865](/security/CVE-2026-43865.html) | camel-hazelcast | MEDIUM | Remote code execution via unsafe deserialization | [PoC](https://github.com/oscerd/CVE-2026-43865) |
+| [CVE-2026-43866](/security/CVE-2026-43866.html) | camel-jms | HIGH | Forged `ExchangeHolder` passed the class check and injected body, headers and properties | [PoC](https://github.com/oscerd/CVE-2026-43866) |
+| [CVE-2026-43867](/security/CVE-2026-43867.html) | camel-pqc | MEDIUM | Unfiltered `ObjectInputStream` on persisted key metadata | [PoC](https://github.com/oscerd/CVE-2026-43867) |
+| [CVE-2026-46453](/security/CVE-2026-46453.html) | camel-elasticsearch-rest-client | MEDIUM | Client override of the Elasticsearch query and operation | [PoC](https://github.com/oscerd/CVE-2026-46453) |
+| [CVE-2026-46454](/security/CVE-2026-46454.html) | camel-cometd | MEDIUM | Control header injection by unauthenticated Bayeux clients | [PoC](https://github.com/oscerd/CVE-2026-46454) |
+| [CVE-2026-46455](/security/CVE-2026-46455.html) | camel-keycloak | MEDIUM | Expired access tokens accepted | [PoC](https://github.com/oscerd/CVE-2026-46455) |
+| [CVE-2026-46456](/security/CVE-2026-46456.html) | camel-aws2-sqs | MEDIUM | Control header injection by a message sender | [PoC](https://github.com/oscerd/CVE-2026-46456) |
+| [CVE-2026-46457](/security/CVE-2026-46457.html) | camel-nats | MEDIUM | Control header injection by any publisher to the subject | [PoC](https://github.com/oscerd/CVE-2026-46457) |
+| [CVE-2026-46584](/security/CVE-2026-46584.html) | camel-mail | MEDIUM | Weakened SMTP transport security, and SMTP credential theft before 4.19.0 | [PoC](https://github.com/oscerd/CVE-2026-46584) |
+| [CVE-2026-46585](/security/CVE-2026-46585.html) | camel-lucene | MEDIUM | HTTP client injection of the full-text search query | [PoC](https://github.com/oscerd/CVE-2026-46585) |
+| [CVE-2026-46587](/security/CVE-2026-46587.html) | camel-couchbase | MEDIUM | Operation override from untrusted input | [PoC](https://github.com/oscerd/CVE-2026-46587) |
+| [CVE-2026-46588](/security/CVE-2026-46588.html) | camel-couchdb | MEDIUM | Operation override from untrusted input | [PoC](https://github.com/oscerd/CVE-2026-46588) |
+| [CVE-2026-46590](/security/CVE-2026-46590.html) | camel-pqc | MEDIUM | Unfiltered `ObjectInputStream`, incomplete fix of CVE-2026-40048 | [PoC](https://github.com/oscerd/CVE-2026-46590) |
+| [CVE-2026-46591](/security/CVE-2026-46591.html) | camel-neo4j | MEDIUM | Cypher injection, incomplete fix of CVE-2025-66169 | [PoC](https://github.com/oscerd/CVE-2026-46591) |
+| [CVE-2026-46592](/security/CVE-2026-46592.html) | camel-cxf | MEDIUM | HTTP client redirect of the invoked SOAP operation | [PoC](https://github.com/oscerd/CVE-2026-46592) |
+| [CVE-2026-46726](/security/CVE-2026-46726.html) | camel-vertx-websocket | HIGH | SSRF and secret disclosure via injected `CamelHttpUri` | [PoC](https://github.com/oscerd/CVE-2026-46726) |
+| [CVE-2026-48203](/security/CVE-2026-48203.html) | camel-solr | MEDIUM | Solr query parameter injection (SSRF) and document field injection | [PoC](https://github.com/oscerd/CVE-2026-48203) |
+| [CVE-2026-48204](/security/CVE-2026-48204.html) | camel-mongodb-gridfs | MEDIUM | GridFS operation switch, including file deletion | [PoC](https://github.com/oscerd/CVE-2026-48204) |
+| [CVE-2026-48205](/security/CVE-2026-48205.html) | camel-dns | MEDIUM | DNS queries redirected to an attacker's server, and internal hostname enumeration | [PoC](https://github.com/oscerd/CVE-2026-48205) |
+| [CVE-2026-48206](/security/CVE-2026-48206.html) | camel-jira | MEDIUM | Arbitrary JIRA operations using the endpoint's credentials | [PoC](https://github.com/oscerd/CVE-2026-48206) |
+| [CVE-2026-49042](/security/CVE-2026-49042.html) | camel-langchain4j-tools | MEDIUM | Arbitrary header injection via LLM tool call arguments | [PoC](https://github.com/oscerd/CVE-2026-49042) |
+| [CVE-2026-49086](/security/CVE-2026-49086.html) | camel-dapr | MEDIUM | Re-published message redirected to an arbitrary component and topic | [PoC](https://github.com/oscerd/CVE-2026-49086) |
+| [CVE-2026-49097](/security/CVE-2026-49097.html) | camel-irc | MEDIUM | Outgoing IRC messages redirected to arbitrary channels or users | [PoC](https://github.com/oscerd/CVE-2026-49097) |
+| [CVE-2026-49098](/security/CVE-2026-49098.html) | camel-kafka | MEDIUM | Kafka messages redirected to an arbitrary topic | [PoC](https://github.com/oscerd/CVE-2026-49098) |
+| [CVE-2026-49099](/security/CVE-2026-49099.html) | camel-salesforce | MEDIUM | SOQL and SOSL injection, SObject override, Apex REST redirect | [PoC](https://github.com/oscerd/CVE-2026-49099) |
+| [CVE-2026-49365](/security/CVE-2026-49365.html) | camel-netty-http | MEDIUM | Full Java stack traces returned to unauthenticated clients | [PoC](https://github.com/oscerd/CVE-2026-49365) |
+| [CVE-2026-53913](/security/CVE-2026-53913.html) | camel-keycloak | HIGH | Fail-open authentication bypass in the default configuration | [PoC](https://github.com/oscerd/CVE-2026-53913) |
+| [CVE-2026-55993](/security/CVE-2026-55993.html) | camel-atmosphere-websocket | HIGH | SSRF and secret disclosure via injected control headers | [PoC](https://github.com/oscerd/CVE-2026-55993) |
+| [CVE-2026-55994](/security/CVE-2026-55994.html) | camel-iggy | HIGH | SSRF and secret disclosure via injected control headers | [PoC](https://github.com/oscerd/CVE-2026-55994) |
+| [CVE-2026-56139](/security/CVE-2026-56139.html) | camel-undertow | MEDIUM | Full Java stack traces returned, and the option ignored for Rest DSL | [PoC](https://github.com/oscerd/CVE-2026-56139) |
+| [CVE-2026-56140](/security/CVE-2026-56140.html) | camel-aws2-sns | LOW | Defence-in-depth alignment, no reachable inbound path | none |
 
 Five HIGH, twenty-six MEDIUM, one LOW.
 
@@ -247,6 +281,8 @@ the one with no exploit path at all. We would rather have those on the record th
 ## Learn more
 
 - [Security advisories](/security/), every Camel advisory since 2013, PGP-signed
+- [Reproducers](https://github.com/oscerd?tab=repositories&q=CVE-&type=public), a runnable proof of
+  concept per CVE, 31 of the 32 in this batch
 - [Security model](/manual/security-model.html), where the trust boundaries sit and what is in scope
 - [Camel 4.21 What's New](/blog/2026/07/camel421-whatsnew/), the rest of the release
 - [4.21 upgrade guide](/manual/camel-4x-upgrade-guide-4_21.html), the header renames and changed defaults
