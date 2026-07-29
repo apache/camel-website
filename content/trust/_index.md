@@ -84,9 +84,9 @@ someone else to find the problem.
 
 ## A busy advisory page is a good sign
 
-The 4.14.8, 4.18.3 and 4.21.0 releases fixed and disclosed
-[**32 vulnerabilities**](/security/) between them, and every one of them got a full public advisory.
-That is what an active security effort looks like from the outside — not a framework springing
+Camel 4.21.0 fixed and disclosed [**32 vulnerabilities**](/security/), and every one of them got a
+full public advisory. The 4.18.3 and 4.14.8 LTS releases shipped the backports within four days.
+That is what an active security effort looks like from the outside, not a framework springing
 leaks. Researchers across the industry report their findings to the ASF's private security list, and
 we go looking ourselves: when one component turns out to mishandle inbound message headers, we sweep
 the connector portfolio for the same pattern instead of patching only the one that was reported. That
