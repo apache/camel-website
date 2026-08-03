@@ -22,10 +22,10 @@
     <meta property="og:site_name" content="{{ .Site.Title }}">
     <meta property="og:url" content="{{ .Permalink }}">
     {{ if .Description}}
-        <meta name="og:description" content="{{ .Description }}">
+        <meta property="og:description" content="{{ .Description }}">
     {{ else }}
         {{ if .Params.preview}}
-        <meta name="og:description" content="{{ .Params.preview }}">
+        <meta property="og:description" content="{{ .Params.preview }}">
         {{ end }}
     {{ end }}
     <meta property="og:type" content="website">
