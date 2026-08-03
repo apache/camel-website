@@ -99,7 +99,9 @@ version ranges and a workaround you can apply today — and then the backport. *
 were carried all the way back to the 4.14.x LTS line**, so teams on the older LTS get them without a
 major upgrade. None of it becomes public until the fixes have shipped, and we publish even when a
 hardening change has no known exploit path — because the alternative is asking you to trust a silence
-you cannot check.
+you cannot check. For the full timeline and the process behind the July 2026 batch — including two
+fixes that turned out to be incomplete and a vulnerability we introduced ourselves — read
+[Built to Patch Fast](/blog/2026/07/camel-security-advisories-4.21.0/).
 
 <p>
 <a class="button dark" href="/security/">See every advisory</a>
@@ -122,6 +124,10 @@ ASF's open and vendor-neutral model. No single company controls its roadmap, and
 it away from you. Development happens entirely in the open on public mailing lists and chat, and
 anyone is free to read the code, propose a change, review a release, or verify a fix for
 themselves. The numbers tell the story: [1,500+ contributors from 450+ companies across 20+ countries](/blog/2026/06/camel-by-the-numbers/).
+And behind those contributors, the [same core engineering team](/blog/2026/07/camel-who-maintains/)
+has maintained Camel since 2009 — through multiple acquisitions — contributing 80–95% of all
+commits every single year. When you hit a bug in a component written ten years ago, the person
+who wrote it is likely still an active committer.
 
 <p>
 <a class="button dark" href="/community/">Meet the community</a>
@@ -144,7 +150,10 @@ of messages a day, CERN, SAP's Integration Suite, alongside banks, airlines, hea
 and national governments across six continents. Commercial platforms from Red Hat, SAP, and others
 are built directly on Camel. Companies don't contribute patches to software they evaluate —
 [450+ corporate email domains in the git history](/blog/2026/06/camel-by-the-numbers/) prove production usage
-no case study can match.
+no case study can match. One of those stories in detail:
+[Echonect](/blog/2026/07/echonect-fifteen-years-apache-camel/), one of Europe's larger SMS gateways,
+has run on Camel for fifteen years — 500+ messages per second per node, 99.97% uptime, same team,
+same architecture.
 
 <p>
 <a class="button dark" href="/community/user-stories/">Who uses Camel</a>
