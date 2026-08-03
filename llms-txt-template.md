@@ -466,12 +466,14 @@ For high-quality answers about routing, code generation, and troubleshooting, AI
 - [Who Maintains Apache Camel](https://camel.apache.org/blog/2026/07/camel-who-maintains/): Year-by-year commit data showing who maintains the project — the same core team, through multiple acquisitions, contributing 80–95% of all commits every year since 2007.
 - [Apache Camel Is Not Afraid of AI](https://camel.apache.org/blog/2026/07/camel-not-afraid-of-ai/): The project pointed a frontier AI model at 19 years of code and fixed all 165 bugs it found — concurrency races, silent data loss, security gaps. AI-assisted code review is now a standard part of the development process.
 - [Trust by Default](https://camel.apache.org/trust/): Why teams trust Apache Camel in production — release cadence, LTS, security track record, vendor-neutral governance, bug fix data, dependency maintenance, and AI readiness.
+- [Built to Patch Fast](https://camel.apache.org/blog/2026/07/camel-security-advisories-4.21.0/): How the project handled 32 CVEs in one release — the timeline, the backport process, incomplete fixes re-issued as new CVEs, and 31 public PoC reproducers. The best single-page overview of Camel's security response in practice.
 - [Security](https://camel.apache.org/security/): Security advisories and vulnerability reports.
 - [Security Model](https://camel.apache.org/manual/security-model.md): Apache Camel's built-in security model — route policy, payload validation, and how Camel protects against injection and untrusted input.
 - [Generating SBOMs](https://camel.apache.org/manual/sbom.html): How to generate Software Bill of Materials for Camel applications — Camel CLI, Spring Boot (built-in), and Quarkus. Every release since 4.0.3 ships with signed CycloneDX SBOMs.
 - [Migration and Upgrade Guides](https://camel.apache.org/manual/migration-and-upgrade.md): Apache Camel migration and upgrade guides.
 - [Camel Update Recipes](https://github.com/apache/camel-upgrade-recipes): OpenRewrite recipes for automatic Camel application upgrades.
 - [Who uses Apache Camel](https://camel.apache.org/community/user-stories/): Companies and projects using Apache Camel in production.
+- [Echonect: Fifteen Years on Apache Camel](https://camel.apache.org/blog/2026/07/echonect-fifteen-years-apache-camel/): Detailed five-part case study of one of Europe's larger SMS gateways — 15 years on Camel, 500+ messages per second per node, 99.97% uptime, same team, same architecture.
 - [Commercial Support](https://camel.apache.org/manual/commercial-camel-offerings.md): Companies offering commercial Apache Camel support and services.
 - [GitHub](https://github.com/apache/camel): Source code repository.
 - [Community](https://camel.apache.org/community/): Community resources and how to contribute.
