@@ -26,6 +26,13 @@ Every Camel release since 4.0.3 ships with PGP-signed CycloneDX SBOMs that list 
 enabling supply chain risk analysis alongside the CVE advisories below.
 See [Generating SBOMs](/manual/sbom.html) for details.
 
+## Security Policy Enforcement
+
+Camel includes built-in Security Policy Enforcement that validates security-sensitive configuration
+during startup and can prevent insecure configurations from reaching production.
+
+See [Security Policy Enforcement](/manual/security-policy.html) for configuration details.
+
 ## Reporting new security problems with Apache Camel
 
 The Apache Software Foundation takes a very active stance in eliminating security problems.
