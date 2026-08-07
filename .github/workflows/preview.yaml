@@ -63,7 +63,7 @@ jobs:
           PR_NUMBER=${PR_NUMBER//[^0-9]/}
           PR_URL="https://github.com/apache/camel-website/pull/${PR_NUMBER}"
           yarn install
-          DEPLOY_OUTPUT=$(yarn preview:netlify --alias="pr-${PR_NUMBER}" --message="Preview for ${PR_URL}" --json)
+          DEPLOY_OUTPUT=$(yarn preview:netlify --site "$NETLIFY_SITE_ID" --alias="pr-${PR_NUMBER}" --message="Preview for ${PR_URL}" --json)
           echo "Deploy output: $DEPLOY_OUTPUT"
           DEPLOY_URL=$(echo "$DEPLOY_OUTPUT" | jq -r '.deploy_ssl_url // .deploy_url // .url // empty')
           echo "DEPLOY_URL=${DEPLOY_URL}" >> $GITHUB_ENV
