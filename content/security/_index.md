@@ -28,7 +28,8 @@ See [Generating SBOMs](/manual/sbom.html) for details.
 
 ## Security Policy Enforcement
 
-Camel includes built-in Security Policy Enforcement that validates security-sensitive configuration during startup and can prevent insecure configurations from reaching production.
+Camel includes built-in Security Policy Enforcement that validates security-sensitive configuration
+during startup and can prevent insecure configurations from reaching production.
 
 See [Security Policy Enforcement](/manual/security-policy.html) for configuration details.
 

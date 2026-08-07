@@ -255,7 +255,10 @@ Executive Order 14028, the [SBOM box is already checked](/blog/2026/06/camel-sbo
 ## Secure out of the box
 
 Apache Camel doesn't just fix vulnerabilities after they are found — it actively prevents insecure
-configuration from reaching production. Every option in the Camel component catalog carries machine-readable security metadata that identifies whether it is security-sensitive and whether enabling it introduces a known risk. At startup, Camel uses this metadata to validate configuration before a single message is processed.
+configuration from reaching production. Every option in the Camel component catalog carries
+machine-readable security metadata that identifies whether it is security-sensitive and whether
+enabling it introduces a known risk. At startup, Camel uses this metadata to validate
+configuration before a single message is processed.
 
 Camel validates security-sensitive configuration at startup, covering secrets, transport security,
 serialization, and production-only settings. Components are designed with secure defaults so that
