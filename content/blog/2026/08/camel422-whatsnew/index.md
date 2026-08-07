@@ -178,11 +178,6 @@ The `camel-openai` component gained several new capabilities:
 - **Token budget enforcement** -- A `maxToolCallingRoundTrips` limit (default 10) prevents runaway
   tool-calling loops.
 
-### Spring AI 2.0
-
-The `camel-spring-ai-*` components have been upgraded to Spring AI 2.0, which targets
-Spring Boot 4.1 and Spring Framework 7, aligning with Camel's current baseline.
-
 ## Camel MCP Server
 
 The Camel MCP Server has been promoted from _Preview_ to **Stable** support level.
@@ -259,6 +254,37 @@ records in the batch share the same value.
 The consumer's reconnection logic is now a single background task visible in TUI, CLI, and
 management tooling.
 
+## Camel Spring Boot
+
+### MCP Server Starter
+
+A new `camel-mcp-server-starter` integrates the Camel MCP server bridge with Spring AI's MCP server.
+Camel route tools defined with `ai-tool:` are automatically exposed alongside Spring AI's native
+`@McpTool` beans on the same MCP server, with no extra wiring needed.
+
+### Platform HTTP Starter Hardening
+
+The `camel-platform-http-starter` received a batch of fixes aligning it with Spring Boot 4 idioms:
+Spring MVC mappings are now unregistered when a route stops, executor ownership and exchange lifecycle
+are corrected, `httpMethodRestrict` no longer silently widens to all methods on unparsable verbs,
+and the `CookieHandler` contract is properly honored.
+
+### Profile Support
+
+Configuring `camel.main.profile` via Spring Boot properties now works correctly, so you can
+set `camel.main.profile=prod` in `application.properties` to activate the production security
+profile.
+
+### Spring AI 2.0
+
+The `camel-spring-ai-*` components have been upgraded to Spring AI 2.0, which targets
+Spring Boot 4.1 and Spring Framework 7, aligning with Camel's current baseline.
+
+### Observability Defaults
+
+Observability services defaults are now shipped via an `EnvironmentPostProcessor`, enabling
+zero-config metrics and tracing when the observability infrastructure stack is running.
+
 ## Circuit Breaker EIP
 
 The Circuit Breaker EIP received a modernization effort:
@@ -316,7 +342,6 @@ the running stack.
 - `camel-minio` upgraded to 9.x with several API breaking changes.
 - `camel-opensearch` gained `OpenSearchClient` as a component option.
 - `camel-pqc` now uses authenticated encryption (AEAD) instead of unauthenticated ECB mode.
-- `camel-spring-ai` upgraded to Spring AI 2.0.
 - `camel-wasm` migrated from Chicory to Endive for WebAssembly execution.
 - `camel-weaviate` upgraded to client v6 with new operations (BATCH_CREATE, HYBRID_QUERY, BM25_QUERY, AGGREGATE).
 - `camel-xmpp` upgraded Smack from 4.3.5 to 4.4.8.
