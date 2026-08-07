@@ -60,6 +60,8 @@ The Camel TUI (Terminal User Interface) is a brand-new feature in Camel 4.22. It
 terminal application for monitoring, managing, and developing Camel integrations.
 See the dedicated [Camel TUI](/blog/2026/07/camel-tui/) blog post for an introduction and visual tour.
 
+![Camel TUI Overview](camel-tui-overview.png)
+
 The TUI provides a rich set of tabs for observing your running Camel application: routes, endpoints,
 consumers, activity, errors, history, diagrams, health, OpenTelemetry spans, JFR profiling, heap
 analysis, CVE audit, catalog browsing, SQL queries, and much more -- all from your terminal.
