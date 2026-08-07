@@ -64,7 +64,7 @@ jobs:
           PR_URL="https://github.com/apache/camel-website/pull/${PR_NUMBER}"
           yarn install
           node -e "const fs=require('fs'),p=JSON.parse(fs.readFileSync('package.json','utf8'));delete p.workspaces;fs.writeFileSync('package.json',JSON.stringify(p,null,2)+'\n')"
-          DEPLOY_OUTPUT=$(./node_modules/.bin/netlify deploy --dir public --site "$NETLIFY_SITE_ID" --alias="pr-${PR_NUMBER}" --message="Preview for ${PR_URL}" --json)
+          DEPLOY_OUTPUT=$(./node_modules/.bin/netlify deploy --no-build --dir public --site "$NETLIFY_SITE_ID" --alias="pr-${PR_NUMBER}" --message="Preview for ${PR_URL}" --json)
           echo "Deploy output: $DEPLOY_OUTPUT"
           DEPLOY_URL=$(echo "$DEPLOY_OUTPUT" | jq -r '.deploy_ssl_url // .deploy_url // .url // empty')
           echo "DEPLOY_URL=${DEPLOY_URL}" >> $GITHUB_ENV
