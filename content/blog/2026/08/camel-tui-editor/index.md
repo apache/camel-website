@@ -77,6 +77,8 @@ The editor also includes:
 ![Inline quick docs overlay](camel-tui-quick-docs.png)
 - **Cross-route navigation** -- jump indicators show where routes connect to each other
   (via `direct`, `seda`, etc.), and you can jump between them.
+- **Go to route** -- press `g` to open a type-ahead popup listing all routes in the file,
+  letting you quickly jump to any route by name.
 - **Confirm before discard** -- pressing Esc with unsaved changes prompts for confirmation.
 - **Row:col indicator** in the status bar so you know where you are.
 - **Plain mode** (toggle with a key) strips syntax coloring for easy copy/paste.
