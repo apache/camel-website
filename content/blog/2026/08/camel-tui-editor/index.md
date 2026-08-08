@@ -8,13 +8,6 @@ keywords: ["apache camel", "tui", "terminal", "yaml", "editor", "low-code", "tab
 preview: "The Camel TUI now includes a built-in YAML DSL editor with intelligent Tab completion, validation on save, and support for four AI providers in the AI prompt panel."
 ---
 
-<!-- TODO: Add screenshots before publishing:
-  1. Tab completion popup showing EIP or component names
-  2. Validation error popup on save
-  3. Inline quick docs overlay
-  4. AI prompt panel (F8) in action
--->
-
 Two weeks ago we [introduced the Camel TUI](/blog/2026/07/camel-tui/) -- a terminal dashboard for
 monitoring and managing Apache Camel integrations. Since then, development has continued at a rapid
 pace. This post covers the latest additions landing in Camel 4.22.
@@ -42,6 +35,10 @@ routes and `application.properties` files.
 
 Press **Tab** anywhere in a YAML route file, and the editor offers context-aware completions:
 
+![Tab completion showing EIP names](camel-tui-tab-completion-eip.png)
+
+![Tab completion showing Kafka endpoint options](camel-tui-tab-completion-kafka.png)
+
 - **EIP names** -- `choice`, `split`, `aggregate`, `filter`, and all other EIPs. The autocomplete
   popup shows the EIP category label (routing, transformation, error handling, etc.) to help you
   pick the right one.
@@ -65,6 +62,8 @@ When you save a file (Ctrl+S), the editor validates the content:
 
 - **YAML route files** are validated against the Camel YAML DSL schema. Errors are shown in a
   popup with the line number and description.
+
+![Validation error popup on save](camel-tui-validation-error.png)
 - **`application.properties`** files have their `camel.*` keys validated against the catalog,
   catching typos in property names.
 
@@ -74,6 +73,8 @@ The editor also includes:
 
 - **Inline quick docs** -- press `i` to toggle inline documentation for the component or EIP
   under the cursor.
+
+![Inline quick docs overlay](camel-tui-quick-docs.png)
 - **Cross-route navigation** -- jump indicators show where routes connect to each other
   (via `direct`, `seda`, etc.), and you can jump between them.
 - **Confirm before discard** -- pressing Esc with unsaved changes prompts for confirmation.
@@ -94,6 +95,8 @@ The F8 AI prompt panel now supports a wide range of LLM providers:
   that implements the OpenAI API (Groq, Together, etc.) by setting a custom URL.
 - **IBM watsonx.ai** -- auto-detected when `WATSONX_API_KEY` and `WATSONX_PROJECT_ID` are set.
 - **Ollama** -- for local models, auto-detected when Ollama is running on localhost.
+
+![AI prompt panel](camel-tui-ai-panel.png)
 
 The panel auto-detects which provider to use based on your environment variables, so you just
 set the key and start chatting. You can also switch providers on the fly from within the panel.
