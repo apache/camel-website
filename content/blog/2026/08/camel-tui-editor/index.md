@@ -137,3 +137,15 @@ camel tui
 ```
 
 Navigate to the Source tab, open a YAML file, and press Tab to see the completion in action.
+
+## About the Screenshots
+
+The screenshots in this blog post were captured entirely by an AI agent (Claude Code) connected
+to the running TUI via its built-in MCP server. The agent navigated the TUI, opened files,
+entered the editor, triggered Tab completion, saved with intentional errors, toggled quick docs,
+and opened the AI panel -- all through MCP tool calls, without any human interaction with the
+terminal.
+
+Note: the screenshots have minor alignment artifacts on the right-hand side border lines,
+caused by an emoji width calculation bug in the TamboUI terminal rendering library.
+This is expected to be fixed in the next TamboUI release.
