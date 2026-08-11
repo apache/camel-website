@@ -108,7 +108,7 @@ The F8 AI prompt panel now supports a wide range of LLM providers:
 
 The panel auto-detects which provider to use based on your environment variables, so you just
 set the key and start chatting. You can also switch providers on the fly from within the panel.
-Token usage is tracked per conversation with cumulative cost estimates.
+Token usage is tracked per conversation.
 
 The TUI also comes with a built-in MCP server, so any external AI coding assistant
 (Claude Code, Cursor, Windsurf, etc.) can connect to the TUI and observe, interact with,
