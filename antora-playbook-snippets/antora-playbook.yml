@@ -17,8 +17,8 @@ content:
     - url: https://github.com/apache/camel.git
       branches:
         - main
+        - camel-4.22.x
         - camel-4.18.x
-        - camel-4.14.x
       start_paths:
         # eip
         - core/camel-core-engine/src/main/docs
@@ -30,21 +30,17 @@ content:
       # Let's keep latest active development + LTS active versions only
       branches:
         - main
-        - release-2.9.x
-        - release-2.10.x
       start_path: docs
 
     - url: https://github.com/apache/camel-kamelets.git
       branches:
         - main
         - 4.18.x
-        - 4.14.x
       start_path: docs
 
     - url: https://github.com/apache/camel-quarkus.git
       branches:
         - main
-        - 3.33.x
         - 3.27.x
       start_path: docs
 
@@ -62,8 +58,8 @@ content:
     - url: https://github.com/apache/camel-spring-boot.git
       branches:
         - main
+        - camel-spring-boot-4.22.x
         - camel-spring-boot-4.18.x
-        - camel-spring-boot-4.14.x
       start_paths:
         - components-starter
         - core
