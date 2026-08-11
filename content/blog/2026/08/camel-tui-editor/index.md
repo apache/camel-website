@@ -21,7 +21,7 @@ or Camel Main -- by pointing it at the project directory:
 camel tui .
 ```
 
-The TUI detects the project type from `pom.xml`, runs it, and gives you the full dashboard
+The TUI detects the project type from `pom.xml`, opens it, runs it (via F10), and gives you the full dashboard
 experience for troubleshooting or light development. No extra setup, no plugins to install --
 just point the TUI at your project and go.
 
@@ -87,7 +87,7 @@ The editor also includes:
   letting you quickly jump to any route by name.
 - **Confirm before discard** -- pressing Esc with unsaved changes prompts for confirmation.
 - **Row:col indicator** in the status bar so you know where you are.
-- **Plain mode** (toggle with a key) strips syntax coloring for easy copy/paste.
+- **Plain mode** (toggle with a key) strips syntax coloring and expands the panel to full width without border lines, for easy multi-line copy/paste.
 
 The combination of Tab completion, validation, and inline docs means you can write and iterate
 on Camel routes without leaving the terminal -- a low-code experience for the command line.
@@ -145,6 +145,11 @@ camel tui
 ```
 
 Navigate to the Source tab, open a YAML file, and press Tab to see the completion in action.
+
+## Roadmap
+
+The TUI is actively developed and will continue to receive improvements and new features
+in upcoming Camel releases. Stay tuned!
 
 ## About the Screenshots
 
