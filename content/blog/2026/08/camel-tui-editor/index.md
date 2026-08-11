@@ -1,6 +1,6 @@
 ---
 title: "Camel TUI: A Low-Code YAML Editor in Your Terminal"
-date: 2026-08-13
+date: 2026-08-11
 draft: false
 authors: [davsclaus]
 categories: ["Tooling"]
@@ -30,6 +30,12 @@ just point the TUI at your project and go.
 The biggest addition is a built-in source editor in the Source tab. What started as a read-only
 source viewer with inline documentation has evolved into a mini low-code editor for Camel YAML DSL
 routes and `application.properties` files.
+
+The editor is designed for prototyping and quick edits -- sketching out a new route, tweaking
+an endpoint option, or experimenting with an EIP pattern while your application is running.
+It is not intended to replace a full IDE for project-based development. If you are looking for
+a graphical UI development experience, check out [Kaoto](https://kaoto.io) or
+[Karavan](https://github.com/apache/camel-karavan).
 
 ### Tab Completion
 
@@ -148,6 +154,3 @@ entered the editor, triggered Tab completion, saved with intentional errors, tog
 and opened the AI panel -- all through MCP tool calls, without any human interaction with the
 terminal.
 
-Note: the screenshots have minor alignment artifacts on the right-hand side border lines,
-caused by an emoji width calculation bug in the TamboUI terminal rendering library.
-This is expected to be fixed in the next TamboUI release.
