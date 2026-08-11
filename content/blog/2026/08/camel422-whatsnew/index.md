@@ -1,6 +1,6 @@
 ---
 title: "Apache Camel 4.22 What's New"
-date: 2026-08-13
+date: 2026-08-12
 draft: false
 authors: [ davsclaus ]
 categories: [ "Releases" ]
@@ -58,7 +58,8 @@ safe to run in production without needing to remember a checklist of security op
 
 The Camel TUI (Terminal User Interface) is a brand-new feature in Camel 4.22. It is a full-featured
 terminal application for monitoring, managing, and developing Camel integrations.
-See the dedicated [Camel TUI](/blog/2026/07/camel-tui/) blog post for an introduction and visual tour.
+See the dedicated [Camel TUI](/blog/2026/07/camel-tui/) blog post for an introduction and visual tour,
+and the [Camel TUI Editor](/blog/2026/08/camel-tui-editor/) blog post for a closer look at the built-in YAML editor.
 
 ![Camel TUI Overview](camel-tui-overview.png)
 
