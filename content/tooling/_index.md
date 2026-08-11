@@ -21,9 +21,15 @@ The Camel CLI, powered by [JBang](https://www.jbang.dev/), lets you get started 
 
 See the [Camel CLI documentation](/manual/camel-jbang.html) for installation instructions and detailed usage.
 
-### Camel TUI
+## Camel TUI
 
 The `camel tui` command launches a full terminal-based UI that provides fast, real-time feedback during development — a natural fit for CLI-first and AI-assisted workflows. It gives you route status, message flow, and tracing all in a single terminal view, so you can stay in the flow without switching tools. Ideal for low-code and AI-assisted development where quick iteration matters.
+
+The TUI also includes a built-in mini source editor for Camel YAML DSL routes with context-aware Tab completion for EIPs, components, endpoint options, and expressions — plus validation on save and inline quick docs. A low-code editing experience without leaving the terminal.
+
+![Camel TUI Overview — four running integrations with live throughput chart and log](./camel-tui-overview.png)
+
+See the [Camel TUI documentation](/manual/camel-jbang-tui.html) for more details.
 
 ## Camel MCP Server
 
