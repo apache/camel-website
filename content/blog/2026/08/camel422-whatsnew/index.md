@@ -1,6 +1,6 @@
 ---
 title: "Apache Camel 4.22 What's New"
-date: 2026-08-12
+date: 2026-08-11
 draft: false
 authors: [ davsclaus ]
 categories: [ "Releases" ]
