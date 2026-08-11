@@ -1,6 +1,6 @@
 ---
 title: "Real-Time Analytics with Apache Camel and ClickHouse"
-date: 2026-08-11
+date: 2026-08-12
 draft: false
 authors: [atiaomar1978-hub]
 categories: ["Howtos"]
