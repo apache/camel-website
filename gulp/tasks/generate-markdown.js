@@ -16,7 +16,7 @@ const { generateAllIndexes } = require('../helpers/html-index');
  * - Clean Markdown formatting using Turndown
  * - GitHub-flavored Markdown for tables and code blocks
  */
-async function generateMarkdown(done) {
+async function generateMarkdown() {
   const turndownService = createTurndownService();
 
   // Keep track of processed files for llms.txt
@@ -117,8 +117,6 @@ async function generateMarkdown(done) {
 
   // Generate all other index files
   await generateAllIndexes();
-
-  done();
 }
 
 module.exports = generateMarkdown;

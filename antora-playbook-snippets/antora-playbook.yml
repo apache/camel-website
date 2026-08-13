@@ -116,10 +116,13 @@ antora:
           version: '*'
           local-mappings: ac-mappings.yml
 
-    - require: '@djencks/asciidoctor-jsonpath'
+    # NOTE these two are required via local wrappers rather than directly; see
+    # extensions/asciidoctor-jsonpath.js for why (Antora 3.1.9+ register-signature warning
+    # combined with runtime.log.failure_level: warn).
+    - require: ./extensions/asciidoctor-jsonpath.js
 #      log_level: trace
 
-    - require: '@djencks/asciidoctor-antora-indexer'
+    - require: ./extensions/asciidoctor-antora-indexer.js
 #      log_level: debug
       requires: 'util=camel-website-util'
       index_pages:

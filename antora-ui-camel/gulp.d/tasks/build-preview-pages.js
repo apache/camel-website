@@ -10,8 +10,8 @@ const asciidoctor = require('@asciidoctor/core')()
 const data = require('gulp-data')
 const fs = require('fs-extra')
 const handlebars = require('handlebars')
-const { obj: map } = require('through2')
-const merge = require('merge-stream')
+const { objectTransform: map } = require('through2')
+const ordered = require('ordered-read-streams')
 const ospath = require('path')
 const path = ospath.posix
 const requireFromString = require('require-from-string')
@@ -25,13 +25,13 @@ module.exports = (src, previewSrc, previewDest, sink = () => map()) => (done) =>
   Promise.all([
     loadSampleUiModel(previewSrc),
     toPromise(
-      merge(
+      ordered([
         compileLayouts(src),
         registerPartials(src),
         registerHelpers(src),
         registerTemplatedHelpers(src),
-        copyImages(previewSrc, previewDest)
-      )
+        copyImages(previewSrc, previewDest),
+      ])
     ),
   ])
     .then(([baseUiModel, { layouts }]) => [{ ...baseUiModel, env: process.env }, layouts])
@@ -151,11 +151,13 @@ function transformHandlebarsError ({ message, stack }, layout) {
   return err
 }
 
+// NOTE resolves on 'end' rather than 'finish': ordered-read-streams returns a streamx
+// readable, which has no writable side to emit 'finish'.
 function toPromise (stream) {
   return new Promise((resolve, reject, data = {}) =>
     stream
       .on('error', reject)
       .on('data', (chunk) => chunk.constructor === Object && Object.assign(data, chunk))
-      .on('finish', () => resolve(data))
+      .on('end', () => resolve(data))
   )
 }

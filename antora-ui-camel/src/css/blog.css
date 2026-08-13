@@ -1,5 +1,4 @@
 .blog {
-  max-width: var(--static-max-width);
   margin: var(--static-margin);
 }
 
