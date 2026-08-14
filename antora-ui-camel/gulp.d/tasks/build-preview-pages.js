@@ -15,14 +15,16 @@ const ordered = require('ordered-read-streams')
 const ospath = require('path')
 const path = ospath.posix
 const requireFromString = require('require-from-string')
+const { Writable } = require('stream')
+const { pipeline } = require('stream/promises')
 const template = require('gulp-template')
 const vfs = require('vinyl-fs')
 const yaml = require('js-yaml')
 
 const ASCIIDOC_ATTRIBUTES = { experimental: '', icons: 'font', sectanchors: '', 'source-highlighter': 'highlight.js' }
 
-module.exports = (src, previewSrc, previewDest, sink = () => map()) => (done) =>
-  Promise.all([
+module.exports = (src, previewSrc, previewDest, sink = () => map()) => async () => {
+  const [baseUiModel, { layouts }] = await Promise.all([
     loadSampleUiModel(previewSrc),
     toPromise(
       ordered([
@@ -34,45 +36,47 @@ module.exports = (src, previewSrc, previewDest, sink = () => map()) => (done) =>
       ])
     ),
   ])
-    .then(([baseUiModel, { layouts }]) => [{ ...baseUiModel, env: process.env }, layouts])
-    .then(([baseUiModel, layouts]) =>
-      vfs
-        .src('**/*.adoc', { base: previewSrc, cwd: previewSrc })
-        .pipe(
-          map((file, enc, next) => {
-            const siteRootPath = path.relative(ospath.dirname(file.path), ospath.resolve(previewSrc))
-            const uiModel = { ...baseUiModel }
-            uiModel.page = { ...uiModel.page }
-            uiModel.siteRootPath = siteRootPath
-            uiModel.siteRootUrl = path.join(siteRootPath, 'index.html')
-            uiModel.uiRootPath = path.join(siteRootPath, '_')
-            if (file.stem === '404') {
-              uiModel.page = { layout: '404', title: 'Page Not Found' }
-            } else {
-              const doc = asciidoctor.load(file.contents, { safe: 'safe', attributes: ASCIIDOC_ATTRIBUTES })
-              uiModel.page.attributes = Object.entries(doc.getAttributes())
-                .filter(([name, val]) => name.startsWith('page-'))
-                .reduce((accum, [name, val]) => {
-                  accum[name.substr(5)] = val
-                  return accum
-                }, {})
-              uiModel.page.layout = doc.getAttribute('page-layout', 'default')
-              uiModel.page.title = doc.getDocumentTitle()
-              uiModel.page.contents = Buffer.from(doc.convert())
-            }
-            file.extname = '.html'
-            try {
-              file.contents = Buffer.from(layouts.get(uiModel.page.layout)(uiModel))
-              next(null, file)
-            } catch (e) {
-              next(transformHandlebarsError(e, uiModel.page.layout))
-            }
-          })
-        )
-        .pipe(vfs.dest(previewDest))
-        .on('error', (e) => done)
-        .pipe(sink())
-    )
+
+  const renderPages = map((file, enc, next) => {
+    const siteRootPath = path.relative(ospath.dirname(file.path), ospath.resolve(previewSrc))
+    const uiModel = { ...baseUiModel, env: process.env }
+    uiModel.page = { ...uiModel.page }
+    uiModel.siteRootPath = siteRootPath
+    uiModel.siteRootUrl = path.join(siteRootPath, 'index.html')
+    uiModel.uiRootPath = path.join(siteRootPath, '_')
+    if (file.stem === '404') {
+      uiModel.page = { layout: '404', title: 'Page Not Found' }
+    } else {
+      const doc = asciidoctor.load(file.contents, { safe: 'safe', attributes: ASCIIDOC_ATTRIBUTES })
+      uiModel.page.attributes = Object.entries(doc.getAttributes())
+        .filter(([name, val]) => name.startsWith('page-'))
+        .reduce((accum, [name, val]) => {
+          accum[name.substr(5)] = val
+          return accum
+        }, {})
+      uiModel.page.layout = doc.getAttribute('page-layout', 'default')
+      uiModel.page.title = doc.getDocumentTitle()
+      uiModel.page.contents = Buffer.from(doc.convert())
+    }
+    file.extname = '.html'
+    try {
+      file.contents = Buffer.from(layouts.get(uiModel.page.layout)(uiModel))
+      next(null, file)
+    } catch (e) {
+      next(transformHandlebarsError(e, uiModel.page.layout))
+    }
+  })
+
+  // NOTE gulp 5 settles async tasks on their returned promise, so wait for the final
+  // preview output stream (and optional live-reload sink) to drain before completing.
+  await pipeline(
+    vfs.src('**/*.adoc', { base: previewSrc, cwd: previewSrc }),
+    renderPages,
+    vfs.dest(previewDest),
+    sink(),
+    new Writable({ objectMode: true, write: (file, enc, next) => next() })
+  )
+}
 
 function loadSampleUiModel (src) {
   return fs.readFile(ospath.join(src, 'ui-model.yml'), 'utf8').then((contents) => yaml.load(contents))
