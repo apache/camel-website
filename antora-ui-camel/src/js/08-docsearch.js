@@ -3,11 +3,15 @@
 
   // The index has no attributeForDistinct and no attributesForFaceting, so both the sub-project
   // exclusion and the per-page dedupe below have to run client side. Fetch deeper than the
-  // DocSearch default of 20 so filtering does not starve the result list: for queries like
-  // "timer" the default leaves hits from a single page.
-  var HITS_PER_PAGE = 50
+  // DocSearch default of 20 so filtering does not starve the result list: at 20 a query like
+  // "timer" is left with hits from a single page. Measured against the live index, 75 lifts
+  // "timer" from 5 to 8 distinct pages and "aggregate" from 9 to 13; 100 adds almost nothing
+  // beyond that but doubles the response to ~36 KB gzipped.
+  var HITS_PER_PAGE = 75
 
   // Cap anchors from the same page so one heavily matched document cannot fill a whole group.
+  // Keep this at 2: DocSearch caps each lvl0 group at 5, so a larger value spends those slots on
+  // repeats and yields FEWER distinct pages ("timer" drops from 5 to 4 at a cap of 3).
   var MAX_HITS_PER_PAGE = 2
 
   // Sub-projects to exclude from main search - users can browse these directly
@@ -84,6 +88,26 @@
     })
   }
 
+  // Deepest to shallowest, so the first match is the most specific heading for a hit.
+  var HIERARCHY_LEVELS = ['lvl6', 'lvl5', 'lvl4', 'lvl3', 'lvl2', 'lvl1', 'lvl0']
+
+  // Give each hit the `type` that DocSearch's standard record extractor would have emitted. This
+  // index is not built by that extractor, so records carry no `type`, and DocSearch derives the
+  // title from it as `hierarchy.${item.type}` - which becomes the literal 'hierarchy.undefined'
+  // and resolves to nothing. Every hit therefore renders with an empty title and collapses into
+  // its breadcrumb. Setting type to the deepest populated level restores the heading as the
+  // title ("checkCrcs", "maxRequestSize") with the breadcrumb as subtext.
+  // This is a workaround; the records should carry `type` (and `anchor`) - see CAMEL-24396.
+  function withTitleType (items) {
+    return items.map(function (item) {
+      var hierarchy = item.hierarchy || {}
+      var level = HIERARCHY_LEVELS.find(function (name) {
+        return hierarchy[name]
+      })
+      return Object.assign({}, item, { type: level || 'content' })
+    })
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     // NOTE the vendor bundle is a separate script tag, so bail out instead of throwing if it
     // failed to load; the rest of site.js runs from the same listener chain.
@@ -97,7 +121,7 @@
         var filtered = items.filter(function (item) {
           return !isSubProjectUrl(item.url)
         })
-        return sortByCoreDocs(limitHitsPerPage(filtered))
+        return withTitleType(sortByCoreDocs(limitHitsPerPage(filtered)))
       },
     })
   })

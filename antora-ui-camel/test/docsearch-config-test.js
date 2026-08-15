@@ -109,6 +109,30 @@ for (const name of FIXTURES) {
   })
 }
 
+test('gives every hit the type DocSearch needs to render a title', () => {
+  // DocSearch derives the title attribute as `hierarchy.${item.type}`. These records carry no
+  // type, so without this every hit renders an empty title and collapses into its breadcrumb.
+  const items = loadConfig().transformItems(fixture('routing').hits)
+
+  assert.ok(items.length > 0, 'fixture should produce hits')
+  for (const item of items) {
+    const titleAttribute = item.type === 'content' ? 'content' : `hierarchy.${item.type}`
+    const title = titleAttribute.split('.').reduce((o, k) => (o == null ? o : o[k]), item)
+    assert.ok(title, `expected ${item.url} to resolve a title via ${titleAttribute}`)
+  }
+})
+
+test('titles a sub-heading hit with its own heading, not the page heading', () => {
+  // The deepest populated level is the specific heading ("checkCrcs"), which is what belongs in
+  // the title; the shallower levels are the breadcrumb DocSearch renders beneath it.
+  const items = loadConfig().transformItems(fixture('timer').hits)
+  const anchorHit = items.find((item) => item.url.includes('#') && item.hierarchy.lvl3)
+
+  assert.ok(anchorHit, 'fixture should contain an anchor hit with a level-3 heading')
+  assert.equal(anchorHit.type, 'lvl3')
+  assert.notEqual(anchorHit.hierarchy.lvl3, anchorHit.hierarchy.lvl0)
+})
+
 test('ranks core documentation ahead of component reference pages', () => {
   const items = loadConfig().transformItems(fixture('routing').hits)
 
