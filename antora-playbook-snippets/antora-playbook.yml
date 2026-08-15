@@ -140,7 +140,8 @@ antora:
             component: camel-kamelets
             path: indexPages.yml
 
-    # Reports unreferenced images to build/unused-media.txt. Logs at info, not warn: this playbook
-    # sets runtime.log.failure_level to warn, and @bonitasoft/antora-detect-unused-media-extension
-    # warns once per unused file, which fails the site build over a housekeeping issue.
+    # Reports unreferenced images to build/unused-media.txt. Logs at info rather than warn on
+    # purpose: this playbook sets runtime.log.failure_level to warn, so warning once per unused
+    # file would fail the site build over a housekeeping issue. That is why the off-the-shelf
+    # @bonitasoft/antora-detect-unused-media-extension was dropped in favour of this one.
     - ./extensions/detect-unused-media.js

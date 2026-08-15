@@ -32,7 +32,7 @@ A short cast can be written straight into the page, which keeps the example self
 == Cast from a file
 
 A recording of any length belongs in `assets/images` alongside the page, referenced with an include.
-The `@bonitasoft/antora-detect-unused-media-extension` ignores `.cast` by default, so a recording is not reported as an unused asset.
+`extensions/detect-unused-media.js` ignores `.cast` by default, so a recording is not reported as an unused asset.
 
 [source,asciidoc]
 ----

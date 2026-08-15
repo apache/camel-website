@@ -299,7 +299,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@antora/content-classifier@npm:3.1.15, @antora/content-classifier@npm:^3.0.0":
+"@antora/content-classifier@npm:3.1.15":
   version: 3.1.15
   resolution: "@antora/content-classifier@npm:3.1.15"
   dependencies:
@@ -642,15 +642,6 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 10/4255c133bf1aa1a251474161e33fd0c8f4bb424c5b9f951cd982acd4af412a3bd1c5d87c55e54dfa568134774dd384f34023361053780d4622c62618ffbd0434
-  languageName: node
-  linkType: hard
-
-"@bonitasoft/antora-detect-unused-media-extension@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@bonitasoft/antora-detect-unused-media-extension@npm:1.0.0"
-  dependencies:
-    "@antora/content-classifier": "npm:^3.0.0"
-  checksum: 10/c7f543ee35aae7562b3ffdb737ea014ccea014691e7f019b077515dab2e1f48740cd2494ca339c648fb2415c2c7e35c4cadab6fc59d8614aeca7f9c8dd76235e
   languageName: node
   linkType: hard
 
@@ -4335,7 +4326,6 @@ __metadata:
     "@antora/cli": "npm:^3.1.15"
     "@antora/site-generator": "npm:^3.1.15"
     "@asciidoctor/tabs": "npm:^1.0.0-beta.3"
-    "@bonitasoft/antora-detect-unused-media-extension": "npm:^1.0.0"
     "@deadlinks/cargo-deadlinks": "github-release:deadlinks/cargo-deadlinks:0.8.1/deadlinks-linux"
     "@djencks/antora-aggregate-collector": "npm:^0.1.0-beta.1"
     "@djencks/antora-site-manifest": "npm:^0.0.3-rc.2"
