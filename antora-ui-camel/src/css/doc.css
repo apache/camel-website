@@ -312,9 +312,13 @@
   font-size: calc(15 / var(--rem-base) * 1rem);
 }
 
+/* NOTE no table-layout: fixed here, unlike the default Antora UI. That UI positions td.icon
+   absolutely, so collapsing the icon column costs it nothing; this one keeps the icon in flow as a
+   vertical label bar, and fixed layout gives it zero width because td.content is width: 100%.
+   The rule matches nothing in production anyway, since extensions/table.js wraps every table in a
+   div.table-wrapper and breaks the child combinator. */
 .doc .admonitionblock > table {
   border-collapse: collapse;
-  table-layout: fixed;
   position: relative;
   width: 100%;
 }
