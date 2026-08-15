@@ -6,6 +6,7 @@ const buffer = require('vinyl-buffer')
 const concat = require('gulp-concat')
 const cssnano = require('cssnano')
 const data = require('gulp-data')
+const dropResolvedCustomProperties = require('../lib/drop-resolved-custom-properties')
 const fs = require('fs-extra')
 const ordered = require('ordered-read-streams')
 const ospath = require('path')
@@ -28,10 +29,17 @@ const { objectTransform: map } = require('through2')
 module.exports = (src, dest, preview) => async () => {
   const opts = { base: src, cwd: src }
   const sourcemaps = preview || process.env.SOURCEMAPS === 'true'
+  // NOTE @docsearch/js only exports its ESM entry points, so the UMD bundle the browser loads
+  // has to be located relative to one of them; check it up front because vinyl-fs would
+  // otherwise fail deep in the pipeline with an opaque singular glob error.
   const docsearchUmdPath = ospath.resolve(
     ospath.dirname(require.resolve('@docsearch/js/docsearch')),
     '../umd/docsearch.js'
   )
+  if (!fs.pathExistsSync(docsearchUmdPath)) {
+    throw new Error(`@docsearch/js UMD bundle not found at ${docsearchUmdPath}; check the installed package layout`)
+  }
+  const docsearchCssPath = require.resolve('@docsearch/css/dist/style.css')
   // NOTE these are PostCSS 8 visitor plugins; the bare `(css, result) => ...` form these
   // used to take is the PostCSS 7 API and is no longer invoked.
   const trackImportMtimes = {
@@ -54,18 +62,9 @@ module.exports = (src, dest, preview) => async () => {
     OnceExit: (css) => postcssPseudoElementFixer(css),
   }
 
-  // NOTE postcss-custom-properties substitutes var() in real declarations but, unlike the
-  // postcss 7 release, keeps the :root block that defines them. Once preserve is false
-  // nothing reads those definitions any more, and the oldest browserslist targets (ie 11,
-  // op_mini) ignore custom properties outright, so drop them rather than ship dead bytes.
-  const dropResolvedCustomProperties = {
-    postcssPlugin: 'camel-drop-resolved-custom-properties',
-    OnceExit (css) {
-      css.walkDecls(/^--/, (decl) => decl.remove())
-      css.walkRules((rule) => rule.nodes.length || rule.remove())
-    },
-  }
-
+  // NOTE postcss-custom-properties substitutes :root var() references but, unlike the
+  // postcss 7 release, keeps the :root definitions. Once preserve is false nothing reads
+  // those definitions any more, so drop them without touching unresolved scoped properties.
   const postcssPlugins = [
     postcssImport,
     trackImportMtimes,
@@ -87,6 +86,12 @@ module.exports = (src, dest, preview) => async () => {
     autoprefixer,
     ...(preview ? [] : [cssnano({ preset: 'default' }), pseudoElementFixer]),
   ]
+
+  // NOTE @docsearch/css resolves its custom properties in the browser, so its responsive and
+  // theme overrides only work if they survive the build. Keep it out of the postcssVar pass
+  // above and ship it as a vendor stylesheet, the way the DocSearch UMD bundle is shipped as
+  // vendor JavaScript.
+  const vendorCssPlugins = [autoprefixer, ...(preview ? [] : [cssnano({ preset: 'default' })])]
 
   const imagemin = await import('gulp-imagemin')
 
@@ -140,6 +145,11 @@ module.exports = (src, dest, preview) => async () => {
       .src(docsearchUmdPath)
       .pipe(rename({ dirname: 'js/vendor', basename: 'docsearch', extname: '.js' }))
       .pipe(terser())
+      .pipe(rev()),
+    vfs
+      .src(docsearchCssPath)
+      .pipe(postcss(vendorCssPlugins))
+      .pipe(rename({ dirname: 'css/vendor', basename: 'docsearch', extname: '.css' }))
       .pipe(rev()),
     vfs
       .src('css/site.css', { ...opts, sourcemaps })

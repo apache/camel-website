@@ -15,9 +15,10 @@
     "last 2 versions"
   ],
   "scripts": {
-    "build": "gulp bundle",
+    "build": "node --test && gulp bundle",
     "format": "gulp format",
-    "preview": "gulp preview"
+    "preview": "gulp preview",
+    "test": "node --test"
   },
   "devDependencies": {
     "@asciidoctor/core": "^3.0.2",

@@ -1,0 +1,442 @@
+{
+  "query": "timer",
+  "hits": [
+    {
+      "url": "https://camel.apache.org/components/4.22.x/timer-component.html",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Timer"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/timer-component.html#_endpoint_query_option_time",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Timer",
+        "lvl3": "time"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/timer-component.html#_component_option_includeMetadata",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Timer",
+        "lvl3": "includeMetadata"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/timer-component.html#_endpoint_query_option_daemon",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Timer",
+        "lvl3": "daemon"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/timer-component.html#_endpoint_query_option_repeatCount",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Timer",
+        "lvl3": "repeatCount"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/timer-component.html#_endpoint_query_option_includeMetadata",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Timer",
+        "lvl3": "includeMetadata"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/timer-component.html#_endpoint_query_option_period",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Timer",
+        "lvl3": "period"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/timer-component.html#_component_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Timer",
+        "lvl3": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/timer-component.html#_endpoint_query_option_pattern",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Timer",
+        "lvl3": "pattern"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/timer-component.html#_component_option_autowiredEnabled",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Timer",
+        "lvl3": "autowiredEnabled"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/timer-component.html#_endpoint_path_option_timerName",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Timer",
+        "lvl3": "timerName"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/timer-component.html#_endpoint_query_option_delay",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Timer",
+        "lvl3": "delay"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/timer-component.html#_endpoint_query_option_runLoggingLevel",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Timer",
+        "lvl3": "runLoggingLevel"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/timer-component.html#_endpoint_query_option_exchangePattern",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Timer",
+        "lvl3": "exchangePattern"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/timer-component.html#_endpoint_query_option_timer",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Timer",
+        "lvl3": "timer"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/timer-component.html#_endpoint_query_option_synchronous",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Timer",
+        "lvl3": "synchronous"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/timer-component.html#_endpoint_query_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Timer",
+        "lvl3": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/timer-component.html#_endpoint_query_option_exceptionHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Timer",
+        "lvl3": "exceptionHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/timer-component.html#_endpoint_query_option_fixedRate",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Timer",
+        "lvl3": "fixedRate"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-spring-boot/4.22.x/starters/timer.html#_spring_boot_auto_configuration",
+      "hierarchy": {
+        "lvl0": "Camel Spring Boot",
+        "lvl1": "Starters",
+        "lvl2": "Timer",
+        "lvl3": "Spring Boot Auto-Configuration"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-spring-boot/4.22.x/starters/timer.html#_maven_coordinates",
+      "hierarchy": {
+        "lvl0": "Camel Spring Boot",
+        "lvl1": "Starters",
+        "lvl2": "Timer",
+        "lvl3": "Maven coordinates"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-spring-boot/4.22.x/starters/timer.html#_whats_inside",
+      "hierarchy": {
+        "lvl0": "Camel Spring Boot",
+        "lvl1": "Starters",
+        "lvl2": "Timer",
+        "lvl3": "What\u2019s inside"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-spring-boot/4.22.x/starters/timer.html",
+      "hierarchy": {
+        "lvl0": "Camel Spring Boot",
+        "lvl1": "Starters",
+        "lvl2": "Timer"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-quarkus/next/reference/extensions/timer.html#extensions-timer-whats-inside",
+      "hierarchy": {
+        "lvl0": "Camel Quarkus",
+        "lvl1": "Reference",
+        "lvl2": "Extensions",
+        "lvl3": "Timer",
+        "lvl4": "What\u2019s inside"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-quarkus/next/reference/extensions/timer.html#extensions-timer-maven-coordinates",
+      "hierarchy": {
+        "lvl0": "Camel Quarkus",
+        "lvl1": "Reference",
+        "lvl2": "Extensions",
+        "lvl3": "Timer",
+        "lvl4": "Maven coordinates"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-quarkus/next/reference/extensions/timer.html",
+      "hierarchy": {
+        "lvl0": "Camel Quarkus",
+        "lvl1": "Reference",
+        "lvl2": "Extensions",
+        "lvl3": "Timer"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kafka-connector/next/user-guide/getting-started/try-it-out-locally.html#Tryitoutlocally-Timer",
+      "hierarchy": {
+        "lvl0": "Camel Kafka Connector",
+        "lvl1": "User guide",
+        "lvl2": "Getting started",
+        "lvl3": "Try it locally",
+        "lvl4": "Timer (source)"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/timer-source.html#_timer_source_kamelet_description",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": " Timer Source",
+        "lvl2": "Timer Source Kamelet Description"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/manual/camel-4x-upgrade-guide-4_1.html#_camel_timer",
+      "hierarchy": {
+        "lvl0": "User manual",
+        "lvl1": "Apache Camel 4.x Upgrade Guide",
+        "lvl2": "camel-timer"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/smpp-component.html#_endpoint_query_option_transactionTimer",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "SMPP",
+        "lvl3": "transactionTimer"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/smpp-component.html#_component_option_transactionTimer",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "SMPP",
+        "lvl3": "transactionTimer"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kafka-connector/next/reference/connectors/camel-timer-source-kafka-source-connector.html",
+      "hierarchy": {
+        "lvl0": "Camel Kafka Connector",
+        "lvl1": "Reference",
+        "lvl2": "Connectors",
+        "lvl3": "camel-timer-source-kafka-connector",
+        "lvl4": "Source Docs"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/smpp-component.html#_component_option_enquireLinkTimer",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "SMPP",
+        "lvl3": "enquireLinkTimer"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/smpp-component.html#_endpoint_query_option_enquireLinkTimer",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "SMPP",
+        "lvl3": "enquireLinkTimer"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/timer-source.html#_special_headers",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": " Timer Source",
+        "lvl2": "Special headers"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/timer-source.html#_configuration_requirements",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": " Timer Source",
+        "lvl2": "Configuration requirements"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/timer-source.html#_output_format",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": " Timer Source",
+        "lvl2": "Output format"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/timer-source.html#_usage_examples",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": " Timer Source",
+        "lvl2": "Usage examples"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/timer-source.html#_prerequisites",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": " Timer Source",
+        "lvl2": "Prerequisites"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/timer-source.html#_configuration_options_2",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": " Timer Source",
+        "lvl2": "Configuration options"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/timer-source.html#_configuration_options",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": " Timer Source",
+        "lvl2": "Configuration Options"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/timer-source.html#_dependencies",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": " Timer Source",
+        "lvl2": "Dependencies"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/timer-source.html#_kamelet_source_file",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": " Timer Source",
+        "lvl2": "Kamelet source file"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/timer-source.html#_camel_jbang_usage",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": " Timer Source",
+        "lvl2": "Camel JBang usage"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/timer-source.html",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": " Timer Source"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/metrics-component.html#_endpoint_query_option_action",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Metrics",
+        "lvl3": "action"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/http-source.html#_scheduling_behavior",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": " HTTP Source",
+        "lvl2": "Scheduling Behavior"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/manual/endpoint-annotations.html#_supported_annotations",
+      "hierarchy": {
+        "lvl0": "User manual",
+        "lvl1": "Architecture",
+        "lvl2": "Endpoint Annotations",
+        "lvl3": "Supported Annotations"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/opentelemetry-metrics-component.html#_endpoint_query_option_action",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "OpenTelemetry Metrics",
+        "lvl3": "action"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/micrometer-component.html#_endpoint_query_option_action",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Micrometer",
+        "lvl3": "action"
+      }
+    }
+  ]
+}

@@ -49,6 +49,7 @@
     {{ if .Keywords}}
     <meta name="keywords" content="{{ delimit .Keywords "," }}">
     {{ end }}
+    <link rel="stylesheet" href="{{ path.Join "_" (index .Site.Data "rev-manifest" "css/vendor/docsearch.css") | relURL }}">
     <link rel="stylesheet" href="{{ path.Join "_" (index .Site.Data "rev-manifest" "css/site.css") | relURL }}">
 </head>
 

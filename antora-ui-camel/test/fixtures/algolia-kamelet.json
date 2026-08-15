@@ -1,0 +1,445 @@
+{
+  "query": "kamelet",
+  "hits": [
+    {
+      "url": "https://camel.apache.org/camel-quarkus/next/reference/extensions/kamelet.html#extensions-kamelet-usage-custom-kamelets",
+      "hierarchy": {
+        "lvl0": "Camel Quarkus",
+        "lvl1": "Reference",
+        "lvl2": "Extensions",
+        "lvl3": "Kamelet",
+        "lvl4": "Custom Kamelets"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-quarkus/next/reference/extensions/kamelet.html#extensions-kamelet-usage-using-the-kamelet-catalog",
+      "hierarchy": {
+        "lvl0": "Camel Quarkus",
+        "lvl1": "Reference",
+        "lvl2": "Extensions",
+        "lvl3": "Kamelet",
+        "lvl4": "Using the Kamelet Catalog"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/eips/kamelet-eip.html",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "AI Patterns",
+        "lvl2": "Kamelet"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kamelet-component.html",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kamelet"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/apis/spec.html#_camel_apache_org_v1_Kamelet",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": "Camel Kamelets API",
+        "lvl2": "Kamelet"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kamelet-component.html#_endpoint_query_option_noErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kamelet",
+        "lvl3": "noErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kamelet-component.html#_endpoint_query_option_timeout",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kamelet",
+        "lvl3": "timeout"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kamelet-component.html#_component_option_routeProperties",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kamelet",
+        "lvl3": "routeProperties"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kamelet-component.html#_endpoint_query_option_exceptionHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kamelet",
+        "lvl3": "exceptionHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kamelet-component.html#_component_option_timeout",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kamelet",
+        "lvl3": "timeout"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kamelet-component.html#_endpoint_query_option_location",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kamelet",
+        "lvl3": "location"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kamelet-component.html#_endpoint_query_option_block",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kamelet",
+        "lvl3": "block"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kamelet-component.html#_component_option_routeTemplateLoaderListener",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kamelet",
+        "lvl3": "routeTemplateLoaderListener"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kamelet-component.html#_component_option_location",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kamelet",
+        "lvl3": "location"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kamelet-component.html#_endpoint_path_option_templateId",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kamelet",
+        "lvl3": "templateId"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kamelet-component.html#_endpoint_query_option_lazyStartProducer",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kamelet",
+        "lvl3": "lazyStartProducer"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kamelet-component.html#_endpoint_query_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kamelet",
+        "lvl3": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kamelet-component.html#_component_option_autowiredEnabled",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kamelet",
+        "lvl3": "autowiredEnabled"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kamelet-component.html#_endpoint_path_option_routeId",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kamelet",
+        "lvl3": "routeId"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kamelet-component.html#_component_option_noErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kamelet",
+        "lvl3": "noErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kamelet-component.html#_component_option_block",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kamelet",
+        "lvl3": "block"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kamelet-component.html#_component_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kamelet",
+        "lvl3": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kamelet-component.html#_endpoint_query_option_exchangePattern",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kamelet",
+        "lvl3": "exchangePattern"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kamelet-component.html#_endpoint_query_option_failIfNoConsumers",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kamelet",
+        "lvl3": "failIfNoConsumers"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kamelet-component.html#_component_option_templateProperties",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kamelet",
+        "lvl3": "templateProperties"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kamelet-component.html#_component_option_lazyStartProducer",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kamelet",
+        "lvl3": "lazyStartProducer"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-spring-boot/4.22.x/starters/kamelet.html#_maven_coordinates",
+      "hierarchy": {
+        "lvl0": "Camel Spring Boot",
+        "lvl1": "Starters",
+        "lvl2": "Kamelet",
+        "lvl3": "Maven coordinates"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-spring-boot/4.22.x/starters/kamelet.html#_whats_inside",
+      "hierarchy": {
+        "lvl0": "Camel Spring Boot",
+        "lvl1": "Starters",
+        "lvl2": "Kamelet",
+        "lvl3": "What\u2019s inside"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-spring-boot/4.22.x/starters/kamelet.html#_spring_boot_auto_configuration",
+      "hierarchy": {
+        "lvl0": "Camel Spring Boot",
+        "lvl1": "Starters",
+        "lvl2": "Kamelet",
+        "lvl3": "Spring Boot Auto-Configuration"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-spring-boot/4.22.x/starters/kamelet.html",
+      "hierarchy": {
+        "lvl0": "Camel Spring Boot",
+        "lvl1": "Starters",
+        "lvl2": "Kamelet"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-k/next/apis/camel-k.html#_camel_apache_org_v1_Kamelet",
+      "hierarchy": {
+        "lvl0": "Camel K",
+        "lvl1": "API",
+        "lvl2": "Camel K v1",
+        "lvl3": "Kamelet"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-quarkus/next/reference/extensions/kamelet.html#extensions-kamelet-additional-camel-quarkus-configuration",
+      "hierarchy": {
+        "lvl0": "Camel Quarkus",
+        "lvl1": "Reference",
+        "lvl2": "Extensions",
+        "lvl3": "Kamelet",
+        "lvl4": "Additional Camel Quarkus configuration"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-quarkus/next/reference/extensions/kamelet.html#extensions-kamelet-maven-coordinates",
+      "hierarchy": {
+        "lvl0": "Camel Quarkus",
+        "lvl1": "Reference",
+        "lvl2": "Extensions",
+        "lvl3": "Kamelet",
+        "lvl4": "Maven coordinates"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-quarkus/next/reference/extensions/kamelet.html#extensions-kamelet-usage",
+      "hierarchy": {
+        "lvl0": "Camel Quarkus",
+        "lvl1": "Reference",
+        "lvl2": "Extensions",
+        "lvl3": "Kamelet",
+        "lvl4": "Usage"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-quarkus/next/reference/extensions/kamelet.html#extensions-kamelet-whats-inside",
+      "hierarchy": {
+        "lvl0": "Camel Quarkus",
+        "lvl1": "Reference",
+        "lvl2": "Extensions",
+        "lvl3": "Kamelet",
+        "lvl4": "What\u2019s inside"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-quarkus/next/reference/extensions/kamelet.html",
+      "hierarchy": {
+        "lvl0": "Camel Quarkus",
+        "lvl1": "Reference",
+        "lvl2": "Extensions",
+        "lvl3": "Kamelet"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/manual/camel-jbang-mcp.html#_kamelet_catalog",
+      "hierarchy": {
+        "lvl0": "User manual",
+        "lvl1": "Resources & Guides",
+        "lvl2": "Camel CLI",
+        "lvl3": "Camel MCP Server",
+        "lvl4": "Kamelet Catalog"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/apis/spec.html#_camel_apache_org_v1_KameletConditionType",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": "Camel Kamelets API",
+        "lvl2": "KameletConditionType(string alias)"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/apis/spec.html#_camel_apache_org_v1_KameletSpecBase",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": "Camel Kamelets API",
+        "lvl2": "KameletSpecBase"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/apis/spec.html#_camel_apache_org_v1_KameletCondition",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": "Camel Kamelets API",
+        "lvl2": "KameletCondition"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/apis/spec.html#_camel_apache_org_v1_KameletProperty",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": "Camel Kamelets API",
+        "lvl2": "KameletProperty"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/apis/spec.html#_camel_apache_org_v1_KameletStatus",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": "Camel Kamelets API",
+        "lvl2": "KameletStatus"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/apis/spec.html#_camel_apache_org_v1_KameletPhase",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": "Camel Kamelets API",
+        "lvl2": "KameletPhase(string alias)"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/apis/spec.html#_camel_apache_org_v1_KameletSpec",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": "Camel Kamelets API",
+        "lvl2": "KameletSpec"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/mqtt5-sink.html#_kamelet_source_file",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": " MQTT v5 Sink",
+        "lvl2": "Kamelet source file"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/aws-lambda-sink.html#_kamelet_source_file",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": " AWS Lambda Sink",
+        "lvl2": "Kamelet source file"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/solr-source.html#_kamelet_source_file",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": " Solr Source",
+        "lvl2": "Kamelet source file"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/counter-source.html#_kamelet_source_file",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": " Counter Source",
+        "lvl2": "Kamelet source file"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/protobuf-serialize-action.html#_kamelet_source_file",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": " Protobuf Serialize Action",
+        "lvl2": "Kamelet source file"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/nats-sink.html#_kamelet_source_file",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": " NATS Sink",
+        "lvl2": "Kamelet source file"
+      }
+    }
+  ]
+}
