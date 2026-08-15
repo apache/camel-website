@@ -1,4 +1,7 @@
-footer {
+/* NOTE scoped to the site footer, which is always a direct child of body. DocSearch renders its
+   modal footer as a bare <footer> element, and min-height here stretched it to 23rem, taking up
+   half the screen on mobile. */
+body > footer {
   display: flex;
   justify-content: center;
   background-color: var(--footer-background);

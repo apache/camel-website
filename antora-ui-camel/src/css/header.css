@@ -254,9 +254,14 @@ html:not([data-scroll='0']) .navbar {
   height: 0;
 }
 
+/* NOTE centred rather than left to padding alone: the DocSearch button is a fixed 38px, which sat
+   8.5px above the nav links in the 73px desktop bar. justify-content keeps it right-aligned, which
+   text-align no longer does once this is a flex container. */
 .navbar-search {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   padding: 0.5rem;
-  text-align: right;
   order: 4;
 }
 
