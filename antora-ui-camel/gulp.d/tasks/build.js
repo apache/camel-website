@@ -28,6 +28,10 @@ const { objectTransform: map } = require('through2')
 module.exports = (src, dest, preview) => async () => {
   const opts = { base: src, cwd: src }
   const sourcemaps = preview || process.env.SOURCEMAPS === 'true'
+  const docsearchUmdPath = ospath.resolve(
+    ospath.dirname(require.resolve('@docsearch/js/docsearch')),
+    '../umd/docsearch.js'
+  )
   // NOTE these are PostCSS 8 visitor plugins; the bare `(css, result) => ...` form these
   // used to take is the PostCSS 7 API and is no longer invoked.
   const trackImportMtimes = {
@@ -131,6 +135,11 @@ module.exports = (src, dest, preview) => async () => {
       .pipe(terser())
       // NOTE use this statement to bundle a JavaScript library that cannot be browserified, like jQuery
       //vfs.src(require.resolve('<package-name-or-require-path>'), opts).pipe(concat('js/vendor/<library-name>.js')),
+      .pipe(rev()),
+    vfs
+      .src(docsearchUmdPath)
+      .pipe(rename({ dirname: 'js/vendor', basename: 'docsearch', extname: '.js' }))
+      .pipe(terser())
       .pipe(rev()),
     vfs
       .src('css/site.css', { ...opts, sourcemaps })
