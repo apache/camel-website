@@ -103,6 +103,13 @@ runtime:
 antora:
   extensions:
     - ./extensions/promote-deprecated-attribute.js
+
+    # Registers the [asciinema] block and injects the player assets plus the asciinema-styles,
+    # asciinema-load-scripts and asciinema-create-scripts partials into the UI catalog. The UI
+    # references those partials from head-styles.hbs and footer-scripts.hbs, guarded on the
+    # page-asciinemacasts attribute this extension sets.
+    - require: '@springio/antora-extensions/asciinema-extension'
+
     - require: '@djencks/antora-aggregate-collector'
 #      log_level: trace
       componentversions:
@@ -132,3 +139,8 @@ antora:
         - local:
             component: camel-kamelets
             path: indexPages.yml
+
+    # Reports unreferenced images to build/unused-media.txt. Logs at info, not warn: this playbook
+    # sets runtime.log.failure_level to warn, and @bonitasoft/antora-detect-unused-media-extension
+    # warns once per unused file, which fails the site build over a housekeeping issue.
+    - ./extensions/detect-unused-media.js

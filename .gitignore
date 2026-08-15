@@ -32,3 +32,6 @@ antora-playbook-*.yml
 local-antora-playbook-*
 antora-playbook.yml
 /.hugo_build.lock
+
+.playwright-cli/
+skills-lock.json

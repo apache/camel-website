@@ -1,0 +1,66 @@
+= Asciinema
+:idprefix:
+:idseparator: -
+:!example-caption:
+:!table-caption:
+:page-pagination:
+
+https://asciinema.org/[Asciinema] records a terminal session as a `.cast` file and replays it as selectable text rather than video, which suits command-line walkthroughs such as a `camel-jbang` session.
+
+[IMPORTANT]
+====
+This page does not render a player in `gulp preview`.
+
+`[asciinema]` is registered by `@springio/antora-extensions/asciinema-extension`, an *Antora* extension: it hooks `contentClassified` and `uiLoaded` to register the block and to inject the player assets into the UI catalog.
+The preview runs plain Asciidoctor with no Antora around it, so the blocks below stay literal blocks.
+Build the site to see them play.
+====
+
+== Inline cast
+
+A short cast can be written straight into the page, which keeps the example self-contained.
+
+[asciinema,rows=10]
+....
+{"version": 2, "width": 80, "height": 24}
+[0.5, "o", "$ camel run route.yaml\r\n"]
+[1.5, "o", "Routes startup (total:1)\r\n"]
+[2.0, "o", "    Started route1 (timer://tick)\r\n"]
+[2.5, "o", "Apache Camel 4.22.0 started in 412ms\r\n"]
+....
+
+== Cast from a file
+
+A recording of any length belongs in `assets/images` alongside the page, referenced with an include.
+The `@bonitasoft/antora-detect-unused-media-extension` ignores `.cast` by default, so a recording is not reported as an unused asset.
+
+[source,asciidoc]
+----
+[asciinema,rows=30,autoPlay=true]
+....
+\include::image$camel-jbang.cast[]
+....
+----
+
+== Options
+
+`rows` and `cols` size the terminal; `autoPlay` starts playback as soon as the page loads.
+Defaults can be set once in the playbook rather than repeated on every block:
+
+[source,yaml]
+----
+antora:
+  extensions:
+    - require: '@springio/antora-extensions/asciinema-extension'
+      rows: 20
+      autoPlay: false
+----
+
+Per-block attributes win over the playbook defaults.
+
+== How it renders
+
+The extension replaces the block with an empty `div` carrying an id derived from the MD5 of the cast source, writes the cast to `_asciinema/<id>.cast`, and records the id in the page's `asciinemacasts` attribute.
+`asciinema-create-scripts` then emits one `AsciinemaPlayer.create(...)` call per id.
+
+Because the UI guards those partials on that attribute, a page with no cast loads neither the player script nor its stylesheet.

@@ -119,11 +119,17 @@ page:
       - content: Admonitions
         url: /admonitions.html
         urlType: internal
+      - content: Asciinema
+        url: /asciinema.html
+        urlType: internal
       - content: Source Code
         url: /code.html
         urlType: internal
       - content: Tables
         url: /tables.html
+        urlType: internal
+      - content: Tabs
+        url: /tabs.html
         urlType: internal
     - content: Reference
       items:

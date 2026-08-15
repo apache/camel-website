@@ -299,7 +299,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@antora/content-classifier@npm:3.1.15":
+"@antora/content-classifier@npm:3.1.15, @antora/content-classifier@npm:^3.0.0":
   version: 3.1.15
   resolution: "@antora/content-classifier@npm:3.1.15"
   dependencies:
@@ -583,7 +583,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.29.2":
+"@babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.29.2":
   version: 7.29.7
   resolution: "@babel/runtime@npm:7.29.7"
   checksum: 10/9883b4951787779fd382b121f22f92966d85f19434841f65fb00b2dfec232107e139683f47c6f252891826ad8ee18317b46c3a0e4819116a9885f47b46d7126a
@@ -642,6 +642,15 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 10/4255c133bf1aa1a251474161e33fd0c8f4bb424c5b9f951cd982acd4af412a3bd1c5d87c55e54dfa568134774dd384f34023361053780d4622c62618ffbd0434
+  languageName: node
+  linkType: hard
+
+"@bonitasoft/antora-detect-unused-media-extension@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@bonitasoft/antora-detect-unused-media-extension@npm:1.0.0"
+  dependencies:
+    "@antora/content-classifier": "npm:^3.0.0"
+  checksum: 10/c7f543ee35aae7562b3ffdb737ea014ccea014691e7f019b077515dab2e1f48740cd2494ca339c648fb2415c2c7e35c4cadab6fc59d8614aeca7f9c8dd76235e
   languageName: node
   linkType: hard
 
@@ -3255,6 +3264,51 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@solid-primitives/refs@npm:^1.0.5":
+  version: 1.1.4
+  resolution: "@solid-primitives/refs@npm:1.1.4"
+  dependencies:
+    "@solid-primitives/utils": "npm:^6.4.1"
+  peerDependencies:
+    solid-js: ^1.6.12
+  checksum: 10/b34d43fd6d944b1c66a51914c31ac6ff8b181aa522e0fe5c5bab369e95a853d18ae5113dc17123eedd3c9e64c5bb241e3691a9c2baf5c7756437c4585a7e1f8d
+  languageName: node
+  linkType: hard
+
+"@solid-primitives/transition-group@npm:^1.0.2":
+  version: 1.1.2
+  resolution: "@solid-primitives/transition-group@npm:1.1.2"
+  peerDependencies:
+    solid-js: ^1.6.12
+  checksum: 10/ae7d3f8dd16e8e5f0227b8153384aeeb2ff53f6b842df3a64d5b38faea9b1e9eeeb60a9a28a964f235558261f5a9ab3531469afb9d5279542568f31806fb23d2
+  languageName: node
+  linkType: hard
+
+"@solid-primitives/utils@npm:^6.4.1":
+  version: 6.4.1
+  resolution: "@solid-primitives/utils@npm:6.4.1"
+  peerDependencies:
+    solid-js: ^1.6.12
+  checksum: 10/e64701e6ab945c603a77e8f6d353e92cbdfa8b932950d5b5d4f5f8701097a5ac34e0f5a1a921a60e6ed8787aaf1dd77974b35ef1e285c7d5346772a9a154ada1
+  languageName: node
+  linkType: hard
+
+"@springio/antora-extensions@npm:^1.14.13":
+  version: 1.14.13
+  resolution: "@springio/antora-extensions@npm:1.14.13"
+  dependencies:
+    "@antora/expand-path-helper": "npm:~3.0"
+    archiver: "npm:^8.0.0"
+    asciinema-player: "npm:^3.6.1"
+    cache-directory: "npm:~2.0"
+    ci: "npm:^2.3.0"
+    decompress: "npm:4.2.1"
+    fast-xml-parser: "npm:^5.3.4"
+    handlebars: "npm:latest"
+  checksum: 10/275c1d8e5cbd85db04270fba11a4440a3a7cfdf8a9d9379dff963362b8d93f18b1a989f3e319efc53f9bba76b0244fbf07808faaee0f3c23f645e2e10c3312c7
+  languageName: node
+  linkType: hard
+
 "@standard-schema/spec@npm:^1.0.0":
   version: 1.1.0
   resolution: "@standard-schema/spec@npm:1.1.0"
@@ -4281,6 +4335,7 @@ __metadata:
     "@antora/cli": "npm:^3.1.15"
     "@antora/site-generator": "npm:^3.1.15"
     "@asciidoctor/tabs": "npm:^1.0.0-beta.3"
+    "@bonitasoft/antora-detect-unused-media-extension": "npm:^1.0.0"
     "@deadlinks/cargo-deadlinks": "github-release:deadlinks/cargo-deadlinks:0.8.1/deadlinks-linux"
     "@djencks/antora-aggregate-collector": "npm:^0.1.0-beta.1"
     "@djencks/antora-site-manifest": "npm:^0.0.3-rc.2"
@@ -4289,6 +4344,7 @@ __metadata:
     "@djencks/antora-timer": "npm:^0.0.1-beta.1"
     "@djencks/asciidoctor-antora-indexer": "npm:^0.1.3-rc.2"
     "@djencks/asciidoctor-jsonpath": "npm:^0.1.3-rc.2"
+    "@springio/antora-extensions": "npm:^1.14.13"
     antora-ui-camel: "workspace:antora-ui-camel"
     camel-website-util: "workspace:util"
     chalk: "npm:5.3.0"
@@ -4366,6 +4422,23 @@ __metadata:
     tar-stream: "npm:^3.0.0"
     zip-stream: "npm:^6.0.1"
   checksum: 10/81c6102db99d7ffd5cb2aed02a678f551c6603991a059ca66ef59249942b835a651a3d3b5240af4f8bec4e61e13790357c9d1ad4a99982bd2cc4149575c31d67
+  languageName: node
+  linkType: hard
+
+"archiver@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "archiver@npm:8.0.0"
+  dependencies:
+    async: "npm:^3.2.4"
+    buffer-crc32: "npm:^1.0.0"
+    is-stream: "npm:^4.0.0"
+    lazystream: "npm:^1.0.0"
+    normalize-path: "npm:^3.0.0"
+    readable-stream: "npm:^4.0.0"
+    readdir-glob: "npm:^3.0.0"
+    tar-stream: "npm:^3.0.0"
+    zip-stream: "npm:^7.0.2"
+  checksum: 10/d86b4de7c8cd49dc980194a9ce3b7bc09354082d080e063d289d5d588a8846c4ac970eff3fcc52abe458d8fea95391c737cdadb4d015abb4433598b1f84cd22f
   languageName: node
   linkType: hard
 
@@ -4599,6 +4672,17 @@ __metadata:
     glob: "npm:7.1.3"
     unxhr: "npm:1.0.1"
   checksum: 10/ded115b5f2a49e529b9029d4ee85fa3aeb6051365cb7360732e45d2c2cd1d2e3b80d6ffa5f5d27a9ea2c8d6182ca09ee9b92325044cb07d6a89dae9ef52c7526
+  languageName: node
+  linkType: hard
+
+"asciinema-player@npm:^3.6.1":
+  version: 3.17.0
+  resolution: "asciinema-player@npm:3.17.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.21.0"
+    solid-js: "npm:^1.3.0"
+    solid-transition-group: "npm:^0.2.3"
+  checksum: 10/a4688b372c374947ca1c157309ad0aa31af06a814507a94196bbac4e406716bd6c81f7262caef9f637b31f729f8884d1f452236c959f03c20698df585cbe176c
   languageName: node
   linkType: hard
 
@@ -5884,6 +5968,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ci@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "ci@npm:2.3.0"
+  bin:
+    ci: dist/cli.js
+  checksum: 10/9cbbe69d4107ab1e2e80b9c3c72fd981703eab5a8ed1e55dd721c50ce3e66c050f4fae7a3e9153e8bc091ef7ef0bae266c1d38eae6c4270e7e1b72d440f6228b
+  languageName: node
+  linkType: hard
+
 "cipher-base@npm:^1.0.0, cipher-base@npm:^1.0.1, cipher-base@npm:^1.0.3":
   version: 1.0.6
   resolution: "cipher-base@npm:1.0.6"
@@ -6284,6 +6377,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"compress-commons@npm:^7.0.0":
+  version: 7.0.1
+  resolution: "compress-commons@npm:7.0.1"
+  dependencies:
+    crc-32: "npm:^1.2.0"
+    crc32-stream: "npm:^7.0.1"
+    is-stream: "npm:^4.0.0"
+    normalize-path: "npm:^3.0.0"
+    readable-stream: "npm:^4.0.0"
+  checksum: 10/512736ab74efbe08c8d0aaaa14ecede33d25c476204722ab0f9ab6f0989fe8cb1f81aca09356102a1c671ea122fc33f47cb6419ff7af598c3a730a218253a533
+  languageName: node
+  linkType: hard
+
 "concat-stream@npm:^1.6.0, concat-stream@npm:^1.6.1, concat-stream@npm:~1.6.0":
   version: 1.6.2
   resolution: "concat-stream@npm:1.6.2"
@@ -6585,6 +6691,16 @@ __metadata:
     crc-32: "npm:^1.2.0"
     readable-stream: "npm:^4.0.0"
   checksum: 10/e6edc2f81bc387daef6d18b2ac18c2ffcb01b554d3b5c7d8d29b177505aafffba574658fdd23922767e8dab1183d1962026c98c17e17fb272794c33293ef607c
+  languageName: node
+  linkType: hard
+
+"crc32-stream@npm:^7.0.1":
+  version: 7.0.1
+  resolution: "crc32-stream@npm:7.0.1"
+  dependencies:
+    crc-32: "npm:^1.2.0"
+    readable-stream: "npm:^4.0.0"
+  checksum: 10/2866f36241996c8024ee86049ec2213e538e44fd0a54869fadb75b68fef53c65f2f5ccb0bbf82735aeaf919c5b246b3a0f0023c1f132295bd928bad241b08d70
   languageName: node
   linkType: hard
 
@@ -6905,6 +7021,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"csstype@npm:^3.1.0":
+  version: 3.2.3
+  resolution: "csstype@npm:3.2.3"
+  checksum: 10/ad41baf7e2ffac65ab544d79107bf7cd1a4bb9bab9ac3302f59ab4ba655d5e30942a8ae46e10ba160c6f4ecea464cc95b975ca2fefbdeeacd6ac63f12f99fe1f
+  languageName: node
+  linkType: hard
+
 "cuint@npm:^0.2.2":
   version: 0.2.2
   resolution: "cuint@npm:0.2.2"
@@ -7159,7 +7282,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decompress@npm:^4.0.0, decompress@npm:^4.2.0, decompress@npm:^4.2.1":
+"decompress@npm:4.2.1, decompress@npm:^4.0.0, decompress@npm:^4.2.0, decompress@npm:^4.2.1":
   version: 4.2.1
   resolution: "decompress@npm:4.2.1"
   dependencies:
@@ -11047,7 +11170,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"handlebars@npm:^4.7.9, handlebars@npm:~4.7":
+"handlebars@npm:^4.7.9, handlebars@npm:latest, handlebars@npm:~4.7":
   version: 4.7.9
   resolution: "handlebars@npm:4.7.9"
   dependencies:
@@ -12560,7 +12683,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-stream@npm:^4.0.1":
+"is-stream@npm:^4.0.0, is-stream@npm:^4.0.1":
   version: 4.0.1
   resolution: "is-stream@npm:4.0.1"
   checksum: 10/cbea3f1fc271b21ceb228819d0c12a0965a02b57f39423925f99530b4eb86935235f258f06310b67cd02b2d10b49e9a0998f5ececf110ab7d3760bae4055ad23
@@ -17566,6 +17689,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"readdir-glob@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "readdir-glob@npm:3.0.0"
+  dependencies:
+    minimatch: "npm:^10.2.2"
+  checksum: 10/438c23cc94d5ca0ca8266c7547f6aeb8cd556004994b8ac96e341c0b89162dceca8edd191b3259f204662c4d24ec37ad36a9228a993f1b0e19de0427550dc37e
+  languageName: node
+  linkType: hard
+
 "readdirp@npm:^4.0.0, readdirp@npm:^4.0.1, readdirp@npm:^4.1.2":
   version: 4.1.2
   resolution: "readdirp@npm:4.1.2"
@@ -18322,6 +18454,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"seroval-plugins@npm:~1.5.4":
+  version: 1.5.6
+  resolution: "seroval-plugins@npm:1.5.6"
+  peerDependencies:
+    seroval: ^1.0
+  checksum: 10/1254a565f3e630143e6eb0a51a1487dfcf3b05159d1586bbbbc4aaf541eede9f2c69a81ba338bda5625a177f44d1b54ee0f3a8978481e191e76d23cd341bdf07
+  languageName: node
+  linkType: hard
+
+"seroval@npm:~1.5.4":
+  version: 1.5.6
+  resolution: "seroval@npm:1.5.6"
+  checksum: 10/4d685bfdfd69b30c432f05b05a576d44ce50bbb80979988fcd29ebd8adb49598c597835b8c348cebb3559180e1b12643e29a6ecc913903a2105c651f13813646
+  languageName: node
+  linkType: hard
+
 "serve-index@npm:1.9.1, serve-index@npm:^1.9.1":
   version: 1.9.1
   resolution: "serve-index@npm:1.9.1"
@@ -18795,6 +18943,29 @@ __metadata:
     ip: "npm:^2.0.0"
     smart-buffer: "npm:^4.2.0"
   checksum: 10/5074f7d6a13b3155fa655191df1c7e7a48ce3234b8ccf99afa2ccb56591c195e75e8bb78486f8e9ea8168e95a29573cbaad55b2b5e195160ae4d2ea6811ba833
+  languageName: node
+  linkType: hard
+
+"solid-js@npm:^1.3.0":
+  version: 1.9.14
+  resolution: "solid-js@npm:1.9.14"
+  dependencies:
+    csstype: "npm:^3.1.0"
+    seroval: "npm:~1.5.4"
+    seroval-plugins: "npm:~1.5.4"
+  checksum: 10/1d379de1bf03046417cf9456a69bc034b00ab09bb707fba6ebae64d7c41d71dd3f05b290dc3326da7c6dff2ef59ec702976aecb841899b8246a831ed9fd4d64d
+  languageName: node
+  linkType: hard
+
+"solid-transition-group@npm:^0.2.3":
+  version: 0.2.3
+  resolution: "solid-transition-group@npm:0.2.3"
+  dependencies:
+    "@solid-primitives/refs": "npm:^1.0.5"
+    "@solid-primitives/transition-group": "npm:^1.0.2"
+  peerDependencies:
+    solid-js: ^1.6.12
+  checksum: 10/b89de30f2dd4eae0568905cde3085ef03c2623a4b3ba21e1d958c1ece2f3e080dab1e111a64a2efe184827948eef9fe2407c2adc1840e8da3d944f1f9558a547
   languageName: node
   linkType: hard
 
@@ -21907,6 +22078,17 @@ __metadata:
     compress-commons: "npm:^6.0.2"
     readable-stream: "npm:^4.0.0"
   checksum: 10/aa5abd6a89590eadeba040afbc375f53337f12637e5e98330012a12d9886cde7a3ccc28bd91aafab50576035bbb1de39a9a316eecf2411c8b9009c9f94f0db27
+  languageName: node
+  linkType: hard
+
+"zip-stream@npm:^7.0.2":
+  version: 7.0.5
+  resolution: "zip-stream@npm:7.0.5"
+  dependencies:
+    compress-commons: "npm:^7.0.0"
+    normalize-path: "npm:^3.0.0"
+    readable-stream: "npm:^4.0.0"
+  checksum: 10/6c9d870fca394fb17e2f4197569757e940c2c03c01922abf496024f11e0b9c1c3dd08ce75dc33f56fd3a12c071e78a6128d4d674cde680d2daf55a1a01b018ac
   languageName: node
   linkType: hard
 

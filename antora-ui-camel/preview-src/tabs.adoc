@@ -1,0 +1,158 @@
+= Tabs
+:idprefix:
+:idseparator: -
+:!example-caption:
+:!table-caption:
+:page-pagination:
+:tabs-sync-option:
+
+Tabs come from `@asciidoctor/tabs`, registered in `antora-playbook-production.yml` and styled by `css/tabs.css`, which imports the extension's own stylesheet.
+
+`:tabs-sync-option:` is set in the page header above.
+It makes every tab set on the page share a selection: choosing *YAML* in one block switches all the others to *YAML* as well, and the choice is remembered across pages.
+Component documentation uses this so a reader who works in one DSL is not forced to re-select it in every example.
+
+[IMPORTANT]
+====
+This page does not render as tabs in `gulp preview`.
+
+`@asciidoctor/tabs` 1.0.0-beta.3 targets the Opal runtime of asciidoctor.js 2 and throws on `require` under the `@asciidoctor/core` 3 that the UI build depends on, so the preview cannot register it and the blocks below fall back to description lists.
+The built site is unaffected, because Antora supplies its own Asciidoctor.
+====
+
+== A route in three DSLs
+
+[tabs]
+====
+Java::
++
+[source,java]
+----
+from("timer:tick?period=5000")
+    .setBody().constant("hello")
+    .to("log:example");
+----
+
+XML::
++
+[source,xml]
+----
+<route>
+  <from uri="timer:tick?period=5000"/>
+  <setBody>
+    <constant>hello</constant>
+  </setBody>
+  <to uri="log:example"/>
+</route>
+----
+
+YAML::
++
+[source,yaml]
+----
+- from:
+    uri: timer:tick?period=5000
+    steps:
+      - setBody:
+          constant: hello
+      - to: log:example
+----
+====
+
+== A second block, synchronised with the first
+
+Switching the tab above switches this one too, because both sets use the same labels and the page sets `:tabs-sync-option:`.
+
+[tabs]
+====
+Java::
++
+[source,java]
+----
+from("direct:in")
+    .filter(simple("${header.status} == 'NEW'"))
+    .to("direct:process");
+----
+
+XML::
++
+[source,xml]
+----
+<route>
+  <from uri="direct:in"/>
+  <filter>
+    <simple>${header.status} == 'NEW'</simple>
+    <to uri="direct:process"/>
+  </filter>
+</route>
+----
+
+YAML::
++
+[source,yaml]
+----
+- from:
+    uri: direct:in
+    steps:
+      - filter:
+          simple: "${header.status} == 'NEW'"
+          steps:
+            - to: direct:process
+----
+====
+
+== Unsynchronised labels
+
+A set whose labels do not match the others keeps its own selection, since there is nothing to sync with.
+
+[tabs]
+====
+Maven::
++
+[source,xml]
+----
+<dependency>
+  <groupId>org.apache.camel</groupId>
+  <artifactId>camel-timer</artifactId>
+</dependency>
+----
+
+Gradle::
++
+[source,groovy]
+----
+implementation 'org.apache.camel:camel-timer'
+----
+
+JBang::
++
+[source,bash]
+----
+camel run --deps=camel-timer route.yaml
+----
+====
+
+== Prose in a tab
+
+Tab content is not limited to source blocks; any block content works.
+
+[tabs]
+====
+Java::
++
+--
+The Java DSL is checked by the compiler, so a typo in a method name fails the build rather than the route start.
+
+* Refactoring tools follow the route
+* Predicates can be unit tested directly
+--
+
+YAML::
++
+--
+The YAML DSL needs no build step, which suits `camel-jbang` and Kubernetes resources.
+
+* Reloadable with `--dev`
+* No compiler to catch typos, so errors surface at route start
+--
+====

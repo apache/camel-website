@@ -18,6 +18,7 @@ const task = require('./gulp.d/tasks')
 const glob = {
   all: [srcDir, previewSrcDir],
   lintcss: `${srcDir}/css/**/*.css`,
+  test: 'test/**/*-test.js',
   formatcss: [
     `${srcDir}/css/**/*.css`,
     `!${srcDir}/css/**/typeface-droid-sans-mono.css`,
@@ -50,6 +51,12 @@ const lintTask = createTask({
   call: parallel(lintCssTask, lintJsTask),
 })
 
+const testTask = createTask({
+  name: 'test',
+  desc: 'Run the unit tests',
+  call: task.test(glob.test),
+})
+
 const formatCssTask = createTask({
   name: 'format:css',
   desc: 'Format the CSS source files using prettify (Standard Style)',
@@ -76,7 +83,7 @@ const buildTask = createTask({
 
 const bundleBuildTask = createTask({
   name: 'bundle:build',
-  call: series(cleanTask, lintTask, buildTask),
+  call: series(cleanTask, lintTask, testTask, buildTask),
 })
 
 const bundlePackTask = createTask({
@@ -128,6 +135,7 @@ module.exports = exportTasks(
   bundleTask,
   cleanTask,
   lintTask,
+  testTask,
   formatTask,
   buildTask,
   bundleTask,
