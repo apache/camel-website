@@ -1,31 +1,40 @@
 nav.pagination {
   display: flex;
-  border-top: 1px solid var(--toolbar-border-color);
+  gap: 1rem;
   line-height: 1;
-  margin: 2rem -1rem -1rem;
-  padding: 0.75rem 1rem 0;
+  margin: 2rem 0 0;
 }
 
+/* NOTE align-items keeps the anchor at its text width. .doc a draws its underline with a
+   repeating background-image gradient, so a stretched anchor paints that dashed line across the
+   whole half-width of the box instead of just under the label. */
 nav.pagination span {
   display: flex;
-  flex: 50%;
+  flex: 0 1 calc(50% - 0.5rem);
   flex-direction: column;
+  gap: 0.4rem;
+  border: 1px solid var(--panel-border-color);
+  border-radius: 0.4rem;
+  padding: 0.75rem 1.25rem;
+}
+
+nav.pagination span:hover {
+  border-color: var(--color-camel-orange);
 }
 
 nav.pagination .prev {
-  padding-right: 0.5rem;
+  align-items: flex-start;
 }
 
 nav.pagination .next {
   margin-left: auto;
-  padding-left: 0.5rem;
+  align-items: flex-end;
   text-align: right;
 }
 
 nav.pagination span::before {
   color: var(--toolbar-muted-color);
   font-size: 0.75em;
-  padding-bottom: 0.1em;
 }
 
 nav.pagination .prev::before {
