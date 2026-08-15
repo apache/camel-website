@@ -47,7 +47,7 @@ const manifest = {
   "img/tooling.svg": "img/tooling-f5e235c238.svg",
   "img/user-stories.svg": "img/user-stories-cccc5f7c8f.svg",
   "js/site.js": "js/site-8f57dbea6b.js",
-  "js/vendor/algoliasearch.js": "js/vendor/algoliasearch-6711ef4b37.js",
+  "js/vendor/algoliasearch.js": "js/vendor/algoliasearch-b1fe09c957.js",
   "js/vendor/highlight.js": "js/vendor/highlight-de2def4bea.js",
   "js/vendor/svg4everybody.js": "js/vendor/svg4everybody-a0c573f2b9.js",
   "js/vendor/tabs.js": "js/vendor/tabs-5aea11bcf5.js"

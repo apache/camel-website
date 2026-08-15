@@ -1,7 +1,7 @@
 ;(function () {
   'use strict'
 
-  const algoliasearch = require('algoliasearch/lite')
+  const { algoliasearch } = require('algoliasearch')
 
   const MAX_SNIPPET_LENGTH = 200
   const RESULTS_LIMIT = 10
@@ -209,7 +209,6 @@
 
   window.addEventListener('load', () => {
     const client = algoliasearch('V62SL4FFIW', '1b7e52df4759e32dd49adedb286997f6')
-    const index = client.initIndex('apache_camel')
     const search = document.querySelector('#search')
     const container = search.parentNode
     const results = document.querySelector('#search_results')
@@ -256,9 +255,13 @@
         }
         cancel.style.display = 'block'
         var searchQuery = search.value
-        index
-          .search(searchQuery, {
-            hitsPerPage: 50,
+        client
+          .searchSingleIndex({
+            indexName: 'apache_camel',
+            searchParams: {
+              query: searchQuery,
+              hitsPerPage: 50,
+            },
           })
           .then((results) => {
             // Filter out sub-project results to focus on camel-core documentation

@@ -73,7 +73,7 @@
     "vinyl-fs": "^4.0.2"
   },
   "dependencies": {
-    "algoliasearch": "^4.0.3"
+    "algoliasearch": "^5.0.0"
   },
   "dependenciesMeta": {
     "highlight.js@9.18.1": {
