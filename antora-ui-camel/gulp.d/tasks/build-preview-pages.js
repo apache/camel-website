@@ -23,6 +23,22 @@ const yaml = require('js-yaml')
 
 const ASCIIDOC_ATTRIBUTES = { experimental: '', icons: 'font', sectanchors: '', 'source-highlighter': 'highlight.js' }
 
+// NOTE the postprocessors antora-playbook-production.yml registers under asciidoc.extensions.
+// Without them the preview silently diverges from the built site: table.js is what wraps every
+// table in a div.table-wrapper, and its absence used to collapse the icon column of every
+// admonition rendered here. Keep this list in step with the playbook.
+// NOTE @asciidoctor/tabs is registered by the playbook too but is deliberately left out: the
+// 1.0.0-beta.3 build targets the Opal runtime of asciidoctor.js 2 and throws on require under the
+// @asciidoctor/core 3 this UI depends on. The site build is unaffected because Antora supplies its
+// own Asciidoctor, so tabs simply render as description lists in the preview.
+const ASCIIDOC_EXTENSIONS = [require('../../../extensions/table.js'), require('../../../extensions/inline-styles.js')]
+
+function createExtensionRegistry () {
+  const registry = asciidoctor.Extensions.create()
+  ASCIIDOC_EXTENSIONS.forEach((extension) => extension.register(registry))
+  return registry
+}
+
 module.exports = (src, previewSrc, previewDest, sink = () => map()) => async () => {
   const [baseUiModel, { layouts }] = await Promise.all([
     loadSampleUiModel(previewSrc),
@@ -47,7 +63,11 @@ module.exports = (src, previewSrc, previewDest, sink = () => map()) => async () 
     if (file.stem === '404') {
       uiModel.page = { layout: '404', title: 'Page Not Found' }
     } else {
-      const doc = asciidoctor.load(file.contents, { safe: 'safe', attributes: ASCIIDOC_ATTRIBUTES })
+      const doc = asciidoctor.load(file.contents, {
+        safe: 'safe',
+        attributes: ASCIIDOC_ATTRIBUTES,
+        extension_registry: createExtensionRegistry(),
+      })
       uiModel.page.attributes = Object.entries(doc.getAttributes())
         .filter(([name, val]) => name.startsWith('page-'))
         .reduce((accum, [name, val]) => {

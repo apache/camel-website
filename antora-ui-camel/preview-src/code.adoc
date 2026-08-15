@@ -1,0 +1,152 @@
+= Source Code
+:idprefix:
+:idseparator: -
+:!example-caption:
+:!table-caption:
+:page-pagination:
+
+Source blocks are highlighted by highlight.js, loaded from `js/vendor/highlight.js` and themed by `css/highlight.css`.
+The languages below are the ones Camel documentation uses most.
+
+== Java
+
+[source,java]
+----
+public class OrderRouteBuilder extends RouteBuilder {
+
+    @Override
+    public void configure() throws Exception {
+        onException(IOException.class)
+            .maximumRedeliveries(3)
+            .redeliveryDelay(500)
+            .handled(true)
+            .to("direct:deadLetter");
+
+        from("jms:queue:orders")
+            .routeId("orders")
+            .log("Received ${body.id}")
+            .choice()
+                .when(simple("${body.total} > 1000"))
+                    .to("direct:review")
+                .otherwise()
+                    .to("direct:accept")
+            .end();
+    }
+}
+----
+
+== XML
+
+[source,xml]
+----
+<routes xmlns="http://camel.apache.org/schema/spring">
+  <route id="orders">
+    <from uri="jms:queue:orders"/>
+    <choice>
+      <when>
+        <simple>${body.total} &gt; 1000</simple>
+        <to uri="direct:review"/>
+      </when>
+      <otherwise>
+        <to uri="direct:accept"/>
+      </otherwise>
+    </choice>
+  </route>
+</routes>
+----
+
+== YAML
+
+[source,yaml]
+----
+- route:
+    id: orders
+    from:
+      uri: jms:queue:orders
+      steps:
+        - choice:
+            when:
+              - simple: "${body.total} > 1000"
+                steps:
+                  - to: direct:review
+            otherwise:
+              steps:
+                - to: direct:accept
+----
+
+== Properties and shell
+
+[source,properties]
+----
+camel.main.name = orders
+camel.main.stream-caching-enabled = true
+camel.component.jms.concurrent-consumers = 5
+----
+
+[source,bash]
+----
+camel run orders.yaml --dev
+----
+
+A command shown with the leading dollar uses a literal paragraph rather than a source block:
+
+ $ camel run orders.yaml --dev
+
+== Callouts
+
+[source,java]
+----
+from("file:inbox?delete=true") // <1>
+    .unmarshal().json(JsonLibrary.Jackson, Order.class) // <2>
+    .idempotentConsumer(simple("${body.id}"), // <3>
+        MemoryIdempotentRepository.memoryIdempotentRepository(1000))
+    .to("direct:process");
+----
+<1> `delete=true` removes the file once the exchange completes successfully; on failure it is left in place.
+<2> Binds the JSON payload to a typed object so later steps can use `${body.id}`.
+<3> Duplicate ids are dropped.
+The repository is in-memory here, so the history is lost on restart.
+
+== Block title and no highlighting
+
+.A route that never terminates
+[source,java]
+----
+from("timer:tick?period=1000")
+    .to("log:tick");
+----
+
+A block with no language set is left unhighlighted:
+
+[source]
+----
+Exchange[
+  Id: ID-localhost-1700000000000-0-1
+  Pattern: InOnly
+  Body: {"id":"A-1","total":1200}
+]
+----
+
+== Long lines
+
+Lines wider than the content column scroll horizontally rather than wrapping.
+
+[source,java]
+----
+from("jms:queue:orders").routeId("orders").log(LoggingLevel.INFO, "Received ${body.id} worth ${body.total}").filter(simple("${body.total} > 1000")).to("direct:review").end();
+----
+
+== Inline code
+
+Inline literals such as `from("direct:start")`, `${body.id}`, and `camel.main.stream-caching-enabled` sit inside running text.
+Keyboard input renders differently again: press kbd:[Ctrl,C] to stop a route started with `camel run`.
+
+== Unstyled output
+
+Console output belongs in a literal block, which keeps whitespace and applies no highlighting.
+
+....
+Routes startup (total:1)
+    Started orders (jms://queue:orders)
+Apache Camel 4.22.0 started in 412ms
+....
