@@ -7,13 +7,11 @@
 
 https://asciinema.org/[Asciinema] records a terminal session as a `.cast` file and replays it as selectable text rather than video, which suits command-line walkthroughs such as a `camel-jbang` session.
 
-[IMPORTANT]
+[NOTE]
 ====
-This page does not render a player in `gulp preview`.
-
 `[asciinema]` is registered by `@springio/antora-extensions/asciinema-extension`, an *Antora* extension: it hooks `contentClassified` and `uiLoaded` to register the block and to inject the player assets into the UI catalog.
-The preview runs plain Asciidoctor with no Antora around it, so the blocks below stay literal blocks.
-Build the site to see them play.
+The preview runs plain Asciidoctor with no Antora around it, so `build-preview-pages.js` reproduces the block, the partials and the player assets locally.
+The markup, the cast ids and the partial names match the site build, but the two implementations are separate and can drift.
 ====
 
 == Inline cast
@@ -31,16 +29,23 @@ A short cast can be written straight into the page, which keeps the example self
 
 == Cast from a file
 
-A recording of any length belongs in `assets/images` alongside the page, referenced with an include.
+A recording of any length belongs in the module's `images` directory, referenced with an include.
 `extensions/detect-unused-media.js` ignores `.cast` by default, so a recording is not reported as an unused asset.
 
 [source,asciidoc]
 ----
-[asciinema,rows=30,autoPlay=true]
+[asciinema,rows=30]
 ....
-\include::image$camel-jbang.cast[]
+\include::image$camel-tui-demo.cast[]
 ....
 ----
+
+Which renders as:
+
+[asciinema,rows=30]
+....
+include::image$camel-tui-demo.cast[]
+....
 
 == Options
 
