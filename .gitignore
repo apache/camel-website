@@ -35,3 +35,4 @@ antora-playbook.yml
 
 .playwright-cli/
 skills-lock.json
+build/unused-media.txt

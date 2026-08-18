@@ -5,8 +5,8 @@ const { pipeline } = require('node:stream/promises')
 const { run } = require('node:test')
 const { spec: Spec } = require('node:test/reporters')
 const { Writable } = require('node:stream')
+const map = require('../lib/map')
 const vfs = require('vinyl-fs')
-const { objectTransform: map } = require('through2')
 
 // NOTE run() from node:test rather than spawning `node --test`, so gulp settles on the returned
 // promise and a failing test fails the task it is sequenced into. The reporter is piped to stdout

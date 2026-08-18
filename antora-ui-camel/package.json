@@ -9,7 +9,7 @@
     "url": "https://github.com/apache/camel-website.git"
   },
   "engines": {
-    "node": ">= 18.0.0"
+    "node": ">= 22.12.0"
   },
   "browserslist": [
     "last 2 versions"
@@ -66,7 +66,6 @@
     "stylelint": "^15.11.0",
     "stylelint-config-standard": "^34.0.0",
     "svg4everybody": "^2.1.9",
-    "through2": "^5.0.11",
     "toml": "^3.0.0",
     "typeface-droid-sans-mono": "^0.0.44",
     "undertaker": "^2.0.0",

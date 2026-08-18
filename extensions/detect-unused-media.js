@@ -27,19 +27,23 @@ module.exports.register = function ({ config }) {
   const excluded = new Set(excludeExtensions)
 
   this.on('contentClassified', ({ contentCatalog }) => {
-    const referenced = collectReferences(contentCatalog)
+    const { resources, unresolved } = collectReferences(contentCatalog)
     const unused = contentCatalog
       .getFiles()
       .filter(({ src }) => src.family === 'image' && !excluded.has(src.extname))
-      .filter(({ src }) => !(referenced.has(src.relative) || referenced.has(`${src.module}:${src.relative}`)))
+      .filter((file) => !resources.has(file))
+      .filter(({ src }) => !unresolved.some((pattern) => pattern.test(src.relative) || pattern.test(src.path)))
 
     logger.info(
       'Checked %s image assets against %s references, %s unused',
       contentCatalog.getFiles().filter(({ src }) => src.family === 'image').length,
-      referenced.size,
+      resources.size,
       unused.length
     )
-    if (!unused.length) return
+    if (!unused.length) {
+      if (reportPath !== false) fs.rmSync(reportPath, { force: true })
+      return
+    }
 
     const lines = unused.map(({ src }) => `${src.component} ${src.version} ${src.path}`).sort()
     lines.forEach((line) => logger[failOnUnused ? 'warn' : 'info'](line))
@@ -51,19 +55,58 @@ module.exports.register = function ({ config }) {
   })
 }
 
-// NOTE the same shapes the crawler-independent extension used: image:target[] and image::target[]
-// for images, video::target[] for video. Anything the reference cannot be resolved from, such as a
-// target built from an attribute, is simply not matched, so this under-reports rather than
-// reporting a used file as unused.
+// NOTE this only ever under-reports. A target it cannot resolve does not silently drop out of the
+// reference set, because that would report a file that IS referenced as unused; it becomes a
+// pattern in `unresolved` that suppresses every image it could possibly match instead.
 function collectReferences (contentCatalog) {
-  const references = new Set()
+  const resources = new Set()
+  const unresolved = []
   contentCatalog
     .getFiles()
     .filter(({ src }) => src.family === 'page' || src.family === 'partial')
     .forEach((file) => {
       if (!file.contents) return
-      const matches = file.contents.toString().match(/(?:image|video)::?([^[\s]+)/g) || []
-      matches.forEach((match) => references.add(match.replace(/^(?:image|video)::?/, '').trim()))
+      const contents = file.contents.toString()
+      const attributes = collectAttributes(contents, componentAttributes(contentCatalog, file.src))
+      const matches = contents.match(/(?:image|video)::?([^[\s]+)/g) || []
+      matches.forEach((match) => {
+        const target = resolveTarget(match.replace(/^(?:image|video)::?/, '').trim(), attributes)
+        if (/\{[^}]+\}/.test(target)) return unresolved.push(toPattern(target))
+        const resource = contentCatalog.resolveResource(target, file.src, 'image', ['image'])
+        if (resource) resources.add(resource)
+      })
     })
-  return references
+  return { resources, unresolved }
+}
+
+// NOTE attributes set in antora.yml or in the playbook, which Antora merges onto the component
+// version. Without these, a target such as image::{image-dir}/logo.svg[] is unresolvable in every
+// page that relies on them, which is the common case rather than the exception.
+function componentAttributes (contentCatalog, src) {
+  return contentCatalog.getComponentVersion(src.component, src.version)?.asciidoc?.attributes || {}
+}
+
+function collectAttributes (contents, inherited) {
+  const attributes = new Map(Object.entries(inherited))
+  for (const [, name, value] of contents.matchAll(/^:([^:!\s]+):\s*(.*)$/gm)) {
+    attributes.set(name, value)
+  }
+  return attributes
+}
+
+function resolveTarget (target, attributes) {
+  return target.replace(/\{([^}]+)\}/g, (match, name) => {
+    const value = attributes.get(name)
+    return value === undefined ? match : value
+  })
+}
+
+// Turns a target that still holds an attribute reference into a matcher for every path it could
+// name, so those candidates are suppressed rather than reported.
+function toPattern (target) {
+  const source = target
+    .split(/\{[^}]+\}/)
+    .map((literal) => literal.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+    .join('.*')
+  return new RegExp(`(?:^|/)${source}$`)
 }

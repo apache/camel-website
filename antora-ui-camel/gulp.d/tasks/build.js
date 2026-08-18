@@ -8,6 +8,7 @@ const cssnano = require('cssnano')
 const data = require('gulp-data')
 const dropResolvedCustomProperties = require('../lib/drop-resolved-custom-properties')
 const fs = require('fs-extra')
+const map = require('../lib/map')
 const ordered = require('ordered-read-streams')
 const ospath = require('path')
 const path = ospath.posix
@@ -24,7 +25,6 @@ const terser = require('gulp-terser')
 const vfs = require('vinyl-fs')
 const { Writable } = require('stream')
 const { pipeline } = require('stream/promises')
-const { objectTransform: map } = require('through2')
 
 module.exports = (src, dest, preview) => async () => {
   const opts = { base: src, cwd: src }
@@ -191,7 +191,7 @@ module.exports = (src, dest, preview) => async () => {
       })
     )
     .pipe(vfs.src('helpers/*.js.template', opts))
-    .pipe(data(() => ({ manifest: manifest })))
+    .pipe(data(() => ({ manifest })))
     .pipe(template())
     .pipe(
       rename((path) => {
