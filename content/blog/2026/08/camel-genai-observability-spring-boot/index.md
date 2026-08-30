@@ -1,7 +1,7 @@
 ---
 title: "GenAI Observability with Spring Boot and the Camel Observability Stack"
-date: 2026-08-29
-draft: true
+date: 2026-08-30
+draft: false
 authors: [atiaomar1978-hub]
 categories: ["AI", "Howtos"]
 keywords: ["apache camel", "genai", "observability", "spring boot", "prometheus", "opentelemetry", "victoriatraces", "perses", "ollama", "langchain4j", "camel 4.23"]

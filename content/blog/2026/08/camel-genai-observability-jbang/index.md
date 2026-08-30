@@ -1,7 +1,7 @@
 ---
 title: "Observe Your Camel AI Routes with GenAI OpenTelemetry"
-date: 2026-08-29
-draft: true
+date: 2026-08-30
+draft: false
 authors: [atiaomar1978-hub]
 categories: ["AI", "Howtos"]
 keywords: ["apache camel", "genai", "observability", "opentelemetry", "ollama", "langchain4j", "camel cli", "camel tui", "camel 4.23", "llm"]
@@ -92,7 +92,7 @@ camel run GenAiObservabilityRoute.java application.properties \
 ```
 
 > **Note:** Today you must pass `--dependency` for LangChain4j and GenAI observability components.
-> Camel CLI will auto-discover these dependencies in a future release.
+> A JIRA ticket will track auto-discovery of these dependencies in a future Camel CLI release.
 
 The `--observe` flag adds `camel-observability-services`, enables health checks, Micrometer metrics,
 OpenTelemetry tracing, and powers the TUI **Spans** tab on the management port (default `9876`).
@@ -138,6 +138,8 @@ camel tui
 2. Press **o** or navigate to **More → Spans**
 3. Wait for the next timer tick (~15s) and watch a new span appear
 
+![Camel TUI Spans — GenAI OpenTelemetry trace with gen_ai attributes for an Ollama chat call](./camel-genai-observability-spans.png)
+
 Each LLM call creates a child span with `gen_ai.operation.name=chat`, model attributes, and token usage.
 See the [OpenTelemetry Spans section](/manual/camel-jbang-tui.html#_opentelemetry_spans) in the TUI manual
 for a walkthrough of the Spans tab layout.
@@ -173,10 +175,12 @@ import static java.time.Duration.ofSeconds;
 public class GenAiObservabilityRoute extends RouteBuilder {
 
     @Override
-    public void configure() {
+    public void configure() throws Exception {
+        String baseUrl = getContext().resolvePropertyPlaceholders("{{ollama.baseUrl:http://localhost:11434}}");
+        String modelName = getContext().resolvePropertyPlaceholders("{{ollama.model:llama3.2}}");
         ChatModel chatModel = OllamaChatModel.builder()
-                .baseUrl("{{ollama.baseUrl:http://localhost:11434}}")
-                .modelName("{{ollama.model:llama3.2}}")
+                .baseUrl(baseUrl)
+                .modelName(modelName)
                 .temperature(0.2)
                 .timeout(ofSeconds(120))
                 .build();
