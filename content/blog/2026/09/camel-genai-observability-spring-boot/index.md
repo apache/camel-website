@@ -1,6 +1,6 @@
 ---
 title: "GenAI Observability with Spring Boot and the Camel Observability Stack"
-date: 2026-08-30
+date: 2026-09-01
 draft: false
 authors: [atiaomar1978-hub]
 categories: ["AI", "Howtos"]
@@ -8,7 +8,7 @@ keywords: ["apache camel", "genai", "observability", "spring boot", "prometheus"
 preview: "Take Camel GenAI observability from CLI/TUI prototypes to production — Spring Boot Actuator, Prometheus scraping, OTLP traces in VictoriaTraces, and optional Perses dashboards."
 ---
 
-In [Part 1](/blog/2026/08/camel-genai-observability-jbang/) we prototyped GenAI observability with the
+In [Part 1](/blog/2026/09/camel-genai-observability-jbang/) we prototyped GenAI observability with the
 Camel CLI and TUI. This follow-up — **Phase 3 (Operate)** — shows the same `gen_ai.*` telemetry in a
 **Spring Boot** application wired to the observability stack Camel uses in test-infra: **Prometheus**,
 **VictoriaTraces**, and **Perses**.
@@ -283,7 +283,7 @@ Disable globally with `camel.aiObservability.enabled=false` when running load te
 
 ## Learn more
 
-- [Part 1: CLI and TUI](/blog/2026/08/camel-genai-observability-jbang/)
+- [Part 1: CLI and TUI](/blog/2026/09/camel-genai-observability-jbang/)
 - [AI Observability component source](https://github.com/apache/camel/blob/main/components/camel-ai/camel-ai-observability/src/main/docs/ai-observability.adoc) (4.23+)
 - [Observability Services](/components/next/others/observability-services.html)
 - [LangChain4j Spring Boot Integration](/manual/langchain4j-spring-boot-integration.html)

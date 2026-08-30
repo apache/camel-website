@@ -1,6 +1,6 @@
 ---
 title: "Observe Your Camel AI Routes with GenAI OpenTelemetry"
-date: 2026-08-30
+date: 2026-09-01
 draft: false
 authors: [atiaomar1978-hub]
 categories: ["AI", "Howtos"]
@@ -26,7 +26,7 @@ and the Camel TUI — no Spring Boot required.
 | 3 | **Operate** | Run in production with guardrails, RAG, and **GenAI observability** |
 
 This post covers Phase 1 plus the first observability prototype.
-[Part 2](/blog/2026/08/camel-genai-observability-spring-boot/) moves to Spring Boot and a full observability
+[Part 2](/blog/2026/09/camel-genai-observability-spring-boot/) moves to Spring Boot and a full observability
 stack (Prometheus, VictoriaTraces, Perses).
 
 ## What you'll build
@@ -232,7 +232,7 @@ GenAI observability also covers `openai:` — run with `--dependency=camel-opena
 
 ## Next up — Spring Boot and the observability stack
 
-[Part 2](/blog/2026/08/camel-genai-observability-spring-boot/) wires the same `gen_ai.*` signals into
+[Part 2](/blog/2026/09/camel-genai-observability-spring-boot/) wires the same `gen_ai.*` signals into
 Spring Boot Actuator, Prometheus, VictoriaTraces, and Perses — the pattern most teams use in production.
 
 When you are ready to move from CLI prototyping to Spring Boot, export the route with:
@@ -241,7 +241,7 @@ When you are ready to move from CLI prototyping to Spring Boot, export the route
 camel export GenAiObservabilityRoute.java --runtime spring-boot --dir ./genai-sb
 ```
 
-Then continue in the generated Maven project (see [Part 2](/blog/2026/08/camel-genai-observability-spring-boot/)).
+Then continue in the generated Maven project (see [Part 2](/blog/2026/09/camel-genai-observability-spring-boot/)).
 
 ## Learn more
 
