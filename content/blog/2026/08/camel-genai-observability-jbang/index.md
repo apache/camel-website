@@ -1,11 +1,11 @@
 ---
 title: "Observe Your Camel AI Routes with GenAI OpenTelemetry"
 date: 2026-08-29
-draft: false
+draft: true
 authors: [atiaomar1978-hub]
 categories: ["AI", "Howtos"]
-keywords: ["apache camel", "genai", "observability", "opentelemetry", "ollama", "langchain4j", "camel jbang", "camel tui", "camel 4.23", "llm"]
-preview: "Apache Camel 4.23 adds GenAI observability — OpenTelemetry spans and Micrometer metrics for LLM routes. Prototype it in minutes with JBang, Ollama, and the Camel TUI."
+keywords: ["apache camel", "genai", "observability", "opentelemetry", "ollama", "langchain4j", "camel cli", "camel tui", "camel 4.23", "llm"]
+preview: "Apache Camel 4.23 adds GenAI observability — OpenTelemetry spans and Micrometer metrics for LLM routes. Prototype it in minutes with the Camel CLI, Ollama, and the Camel TUI."
 ---
 
 Once LLMs live inside Camel routes, the next question is always the same: *how much are we spending, and
@@ -13,10 +13,9 @@ where is latency coming from?* Apache Camel **4.23** introduces **GenAI observab
 and Micrometer metrics for LLM producers, aligned with the
 [OpenTelemetry GenAI semantic conventions](https://opentelemetry.io/docs/specs/semconv/gen-ai/).
 
-This is **Blog 1** in a two-part series. We start with the fastest path to visible AI telemetry: Camel JBang,
-a LangChain4j chat route, [Ollama](https://ollama.com/), and the Camel CLI/TUI — no Spring Boot required.
-
-Special thanks to **Claus Ibsen** for guidance on shaping this material.
+This is **Blog 1** in a two-part series. We start with the fastest path to visible AI telemetry: the
+[Camel CLI](/manual/camel-jbang-jdk-installation.html), a LangChain4j chat route, [Ollama](https://ollama.com/),
+and the Camel TUI — no Spring Boot required.
 
 ## The three phases of Camel Gen AI
 
@@ -60,7 +59,7 @@ camel tui
 
 ## Prerequisites
 
-- Camel JBang **4.23+** (`camel version`)
+- Camel CLI **4.23+** (`camel version`)
 - Ollama installed and running
 
 ```shell
@@ -70,13 +69,21 @@ ollama serve
 
 ## Run the example
 
-The bundled example ships with Camel 4.23 at
-`dsl/camel-jbang/camel-jbang-core/src/main/resources/examples/ai/genai-observability/`
-([source on GitHub](https://github.com/apache/camel/pull/25891/files)).
+The example lives in the [camel-jbang-examples](https://github.com/apache/camel-jbang-examples) repository at
+[`ai/genai-observability`](https://github.com/apache/camel-jbang-examples/tree/main/ai/genai-observability).
+It is registered in the CLI example catalog so you can also browse and launch it from the
+[Camel TUI](/manual/camel-jbang-tui.html) example browser.
+
+Clone the example:
 
 ```shell
-cd ai/genai-observability
+git clone https://github.com/apache/camel-jbang-examples.git
+cd camel-jbang-examples/ai/genai-observability
+```
 
+Run with observability enabled:
+
+```shell
 camel run GenAiObservabilityRoute.java application.properties \
   --observe \
   --dependency=camel-langchain4j-chat \
@@ -84,8 +91,15 @@ camel run GenAiObservabilityRoute.java application.properties \
   --dependency=langchain4j-ollama
 ```
 
+> **Note:** Today you must pass `--dependency` for LangChain4j and GenAI observability components.
+> Camel CLI will auto-discover these dependencies in a future release.
+
 The `--observe` flag adds `camel-observability-services`, enables health checks, Micrometer metrics,
 OpenTelemetry tracing, and powers the TUI **Spans** tab on the management port (default `9876`).
+
+Alternatively, start the bundled observability stack with
+[`camel infra run observability`](/blog/2026/08/camel422-whatsnew/#observability-stack) and run the route
+with `--observe` — metrics and traces flow to Prometheus and VictoriaTraces without extra setup.
 
 Wait for log lines like:
 
@@ -124,6 +138,10 @@ camel tui
 2. Press **o** or navigate to **More → Spans**
 3. Wait for the next timer tick (~15s) and watch a new span appear
 
+Each LLM call creates a child span with `gen_ai.operation.name=chat`, model attributes, and token usage.
+See the [OpenTelemetry Spans section](/manual/camel-jbang-tui.html#_opentelemetry_spans) in the TUI manual
+for a walkthrough of the Spans tab layout.
+
 Key span attributes:
 
 | Attribute | Meaning |
@@ -140,6 +158,10 @@ Press **Ctrl+U** in the AI panel to toggle the **AI Usage** view — token consu
 TUI `camel ask` prompts and route LLM calls on one screen.
 
 ## Example route
+
+The example uses Java today. Camel is also on a mission to make LLM routes approachable in YAML DSL and
+Kamelets for non-Java developers — expect GenAI observability to work the same way once those DSLs support
+the same components.
 
 ```java
 import dev.langchain4j.model.chat.ChatModel;
@@ -179,7 +201,7 @@ ollama.model=llama3.2
 genai.period=15000
 
 # GenAI observability — enabled by default when backends present
-camel.ai.observability.enabled=true
+camel.aiObservability.enabled=true
 ```
 
 GenAI observability also covers `openai:` — run with `--dependency=camel-openai` and the same
@@ -209,14 +231,23 @@ GenAI observability also covers `openai:` — run with `--dependency=camel-opena
 [Part 2](/blog/2026/08/camel-genai-observability-spring-boot/) wires the same `gen_ai.*` signals into
 Spring Boot Actuator, Prometheus, VictoriaTraces, and Perses — the pattern most teams use in production.
 
+When you are ready to move from CLI prototyping to Spring Boot, export the route with:
+
+```shell
+camel export GenAiObservabilityRoute.java --runtime spring-boot --dir ./genai-sb
+```
+
+Then continue in the generated Maven project (see [Part 2](/blog/2026/08/camel-genai-observability-spring-boot/)).
+
 ## Learn more
 
 - [AI Observability component source](https://github.com/apache/camel/blob/main/components/camel-ai/camel-ai-observability/src/main/docs/ai-observability.adoc) (4.23+)
 - [Camel TUI manual](/manual/camel-jbang-tui.html)
 - [`camel ask` command](/manual/jbang-commands/camel-jbang-ask.html)
 - [Camel AI components](/components/next/ai-summary.html)
-- [Observability Services](/components/others/observability-services.html)
+- [Observability Services](/components/next/others/observability-services.html)
+- [JBang example](https://github.com/apache/camel-jbang-examples/pull/73)
 
 ---
 
-*This post was written by Omar Atie ([@atiaomar1978-hub](https://github.com/atiaomar1978-hub)) with assistance from Cursor Cloud Agent. Special thanks to Claus Ibsen for guidance on this series.*
+*This post was written by Omar Atie ([@atiaomar1978-hub](https://github.com/atiaomar1978-hub)) with assistance from Cursor Cloud Agent.*
