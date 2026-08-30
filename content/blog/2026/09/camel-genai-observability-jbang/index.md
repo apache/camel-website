@@ -14,7 +14,7 @@ and Micrometer metrics for LLM producers, aligned with the
 [OpenTelemetry GenAI semantic conventions](https://opentelemetry.io/docs/specs/semconv/gen-ai/).
 
 This is **Blog 1** in a two-part series. We start with the fastest path to visible AI telemetry: the
-[Camel CLI](/manual/camel-jbang-jdk-installation.html), a LangChain4j chat route, [Ollama](https://ollama.com/),
+[Camel CLI](/manual/camel-jbang.html), a LangChain4j chat route, [Ollama](https://ollama.com/),
 and the Camel TUI — no Spring Boot required.
 
 ## The three phases of Camel Gen AI
