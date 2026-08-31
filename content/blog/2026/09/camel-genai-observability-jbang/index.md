@@ -26,8 +26,8 @@ and the Camel TUI — no Spring Boot required.
 | 3 | **Operate** | Run in production with guardrails, RAG, and **GenAI observability** |
 
 This post covers Phase 1 plus the first observability prototype.
-[Part 2](/blog/2026/09/camel-genai-observability-spring-boot/) moves to Spring Boot and a full observability
-stack (Prometheus, VictoriaTraces, Perses).
+[Part 2](/blog/2026/09/camel-genai-observability-spring-boot/) moves to Spring Boot with
+`camel infra run observability`, per-model Perses dashboards, and VictoriaTraces.
 
 ## What you'll build
 
@@ -205,7 +205,7 @@ ollama.model=llama3.2
 genai.period=15000
 
 # GenAI observability — enabled by default when backends present
-camel.aiObservability.enabled=true
+camel.aiobservability.enabled=true
 ```
 
 GenAI observability also covers `openai:` — run with `--dependency=camel-openai` and the same
@@ -233,7 +233,8 @@ GenAI observability also covers `openai:` — run with `--dependency=camel-opena
 ## Next up — Spring Boot and the observability stack
 
 [Part 2](/blog/2026/09/camel-genai-observability-spring-boot/) wires the same `gen_ai.*` signals into
-Spring Boot Actuator, Prometheus, VictoriaTraces, and Perses — the pattern most teams use in production.
+Spring Boot with the shared observability stack, per-model Perses dashboards, and VictoriaTraces —
+the pattern most teams use in production.
 
 When you are ready to move from CLI prototyping to Spring Boot, export the route with:
 
