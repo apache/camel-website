@@ -18,7 +18,7 @@ Camel Quarkus 1.5.0 is based on Camel 3.7.0 LTS bringing new features and improv
 
 ### CSimple language
 
-[CSimple language](/components/next/languages/csimple-language.html) is a new variant of the well known [Simple language](/components/next/languages/simple-language.html). The "C" in its name stands for "compiled" and indeed, the expressions are compiled into Java byte code or native code at application build time. This brings significant performance boost at runtime. Camel Quarkus 1.5.0 brings experimental support for the CSimple language in both JVM and native modes.
+CSimple language is a new variant of the well known [Simple language](/components/next/languages/simple-language.html). The "C" in its name stands for "compiled" and indeed, the expressions are compiled into Java byte code or native code at application build time. This brings significant performance boost at runtime. Camel Quarkus 1.5.0 brings experimental support for the CSimple language in both JVM and native modes.
 
 ### Lightweight mode
 

@@ -29,7 +29,7 @@ Then we worked on compiled simple.
 
 ### Compiled Simple
 
-The [csimple language](/components/next/languages/csimple-language.html)
+The csimple language
 is parsed into regular Java source code and compiled together with all the other source code, or compiled once during
 bootstrap via jOOR.
 
