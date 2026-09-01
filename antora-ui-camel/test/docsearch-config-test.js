@@ -81,7 +81,7 @@ test('over-fetches so the client-side filtering has material to work with', () =
   // "timer" is left with hits from a single page. See the index-settings follow-up.
   const { searchParameters } = loadConfig().indices[0]
 
-  assert.ok(searchParameters.hitsPerPage >= 50, 'expected to fetch well past the default of 20')
+  assert.equal(searchParameters.hitsPerPage, 75, 'expected to fetch well past the default of 20')
 })
 
 for (const name of FIXTURES) {
