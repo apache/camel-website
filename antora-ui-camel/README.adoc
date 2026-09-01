@@ -183,3 +183,6 @@ to {url-opendevise}[OpenDevise Inc] and the {url-antora}[Antora project].
 As such, use of the software is granted under the terms of the
 https://www.mozilla.org/en-US/MPL/2.0/[Mozilla Public License Version 2.0] (MPL-2.0). See link:LICENSE[] to find the full license text.
 
+Some of the sample content in [.path]_preview-src/_ (the AsciiDoc showcase pages and their supporting `ui-model.yml` and images) is adapted from
+https://github.com/bonitasoft/bonita-documentation-theme[bonita-documentation-theme], copyright its authors and also licensed under MPL-2.0.
+
