@@ -14,7 +14,6 @@ const manifest = {
   "img/brand-logos.svg": "img/brand-logos-a2b35bbdec.svg",
   "img/bugfix.svg": "img/bugfix-4280bf9490.svg",
   "img/calendar.svg": "img/calendar-b4b3ab1bf7.svg",
-  "img/cancel.svg": "img/cancel-1ed239489b.svg",
   "img/caret.svg": "img/caret-d6dacc711e.svg",
   "img/chevron.svg": "img/chevron-63cb534773.svg",
   "img/cli.svg": "img/cli-9cede0128a.svg",
