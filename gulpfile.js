@@ -1,5 +1,6 @@
 const cheerio = require('gulp-cheerio');
 const env = process.env.CAMEL_ENV || 'development';
+const fs = require('fs/promises');
 const gulp = require('gulp');
 const htmlmin = require('gulp-htmlmin');
 const inject = require('gulp-inject');
@@ -44,7 +45,7 @@ gulp.task('minify', (done) => {
  * Sitemaps are used by search engines (Google, Algolia, ...) to help them crawl
  * and index the website.
  */
-gulp.task('sitemap', (done) => {
+gulp.task('sitemap', () => {
   return gulp.src('public/sitemap.xml')
     .pipe(cheerio(($, f) =>
       $('sitemapindex').append(`<sitemap>
@@ -54,7 +55,7 @@ gulp.task('sitemap', (done) => {
     .pipe(gulp.dest('public'));
 });
 
-gulp.task('htaccess', (done) => {
+gulp.task('htaccess', () => {
   return gulp.src(`static/.htaccess`)
     .pipe(
       inject(
@@ -115,14 +116,14 @@ function versionlessRedirects (text) {
 
 // Register the generate-markdown task with lazy loading to avoid requiring
 // node-html-parser when running other tasks (like clean or sitemap)
-gulp.task('generate-markdown', (done) => {
+gulp.task('generate-markdown', () => {
   const generateMarkdown = require('./gulp/tasks/generate-markdown');
-  return generateMarkdown(done);
+  return generateMarkdown();
 });
 
 /*
  * Removes the content from the `public` directory.
  */
 gulp.task('clean', () => {
-  return require('del')('public');
+  return fs.rm('public', { recursive: true, force: true });
 });

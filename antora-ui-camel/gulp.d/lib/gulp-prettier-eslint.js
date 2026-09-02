@@ -1,7 +1,7 @@
 'use strict'
 
 const log = require('fancy-log')
-const { obj: map } = require('through2')
+const map = require('./map')
 const PluginError = require('plugin-error')
 const prettierEslint = require('prettier-eslint')
 

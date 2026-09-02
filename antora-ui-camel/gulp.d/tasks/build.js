@@ -6,8 +6,10 @@ const buffer = require('vinyl-buffer')
 const concat = require('gulp-concat')
 const cssnano = require('cssnano')
 const data = require('gulp-data')
+const dropResolvedCustomProperties = require('../lib/drop-resolved-custom-properties')
 const fs = require('fs-extra')
-const merge = require('merge-stream')
+const map = require('../lib/map')
+const ordered = require('ordered-read-streams')
 const ospath = require('path')
 const path = ospath.posix
 const postcss = require('gulp-postcss')
@@ -21,22 +23,51 @@ const rewrite = require('gulp-rev-rewrite')
 const template = require('gulp-template')
 const terser = require('gulp-terser')
 const vfs = require('vinyl-fs')
-const { obj: map } = require('through2')
+const { Writable } = require('stream')
+const { pipeline } = require('stream/promises')
 
 module.exports = (src, dest, preview) => async () => {
   const opts = { base: src, cwd: src }
   const sourcemaps = preview || process.env.SOURCEMAPS === 'true'
-  const postcssPlugins = [
-    postcssImport,
-    (css, { messages, opts: { file } }) =>
-      Promise.all(
+  // NOTE @docsearch/js only exports its ESM entry points, so the UMD bundle the browser loads
+  // has to be located relative to one of them; check it up front because vinyl-fs would
+  // otherwise fail deep in the pipeline with an opaque singular glob error.
+  const docsearchUmdPath = ospath.resolve(
+    ospath.dirname(require.resolve('@docsearch/js/docsearch')),
+    '../umd/docsearch.js'
+  )
+  if (!fs.pathExistsSync(docsearchUmdPath)) {
+    throw new Error(`@docsearch/js UMD bundle not found at ${docsearchUmdPath}; check the installed package layout`)
+  }
+  const docsearchCssPath = require.resolve('@docsearch/css/dist/style.css')
+  // NOTE these are PostCSS 8 visitor plugins; the bare `(css, result) => ...` form these
+  // used to take is the PostCSS 7 API and is no longer invoked.
+  const trackImportMtimes = {
+    postcssPlugin: 'camel-track-import-mtimes',
+    OnceExit (css, { result }) {
+      const { messages, opts: { file } } = result
+      return Promise.all(
         messages
           .reduce((accum, { file: depPath, type }) => (type === 'dependency' ? accum.concat(depPath) : accum), [])
           .map((importedPath) => fs.stat(importedPath).then(({ mtime }) => mtime))
       ).then((mtimes) => {
         const newestMtime = mtimes.reduce((max, curr) => (!max || curr > max ? curr : max), file.stat.mtime)
         if (newestMtime > file.stat.mtime) file.stat.mtimeMs = +(file.stat.mtime = newestMtime)
-      }),
+      })
+    },
+  }
+
+  const pseudoElementFixer = {
+    postcssPlugin: 'camel-pseudo-element-fixer',
+    OnceExit: (css) => postcssPseudoElementFixer(css),
+  }
+
+  // NOTE postcss-custom-properties substitutes :root var() references but, unlike the
+  // postcss 7 release, keeps the :root definitions. Once preserve is false nothing reads
+  // those definitions any more, so drop them without touching unresolved scoped properties.
+  const postcssPlugins = [
+    postcssImport,
+    trackImportMtimes,
     postcssUrl([
       {
         filter: '**/*.@(woff|woff2)',
@@ -51,18 +82,24 @@ module.exports = (src, dest, preview) => async () => {
       },
     ]),
     postcssVar({ preserve: preview }),
-    preview ? postcssCalc : () => {},
+    ...(preview ? [postcssCalc()] : [dropResolvedCustomProperties]),
     autoprefixer,
-    preview
-      ? () => {}
-      : (css, result) => cssnano({ preset: 'default' })(css, result).then(() => postcssPseudoElementFixer(css, result)),
+    ...(preview ? [] : [cssnano({ preset: 'default' }), pseudoElementFixer]),
   ]
+
+  // NOTE @docsearch/css resolves its custom properties in the browser, so its responsive and
+  // theme overrides only work if they survive the build. Keep it out of the postcssVar pass
+  // above and ship it as a vendor stylesheet, the way the DocSearch UMD bundle is shipped as
+  // vendor JavaScript.
+  const vendorCssPlugins = [autoprefixer, ...(preview ? [] : [cssnano({ preset: 'default' })])]
 
   const imagemin = await import('gulp-imagemin')
 
   let manifest
 
-  return merge(
+  // NOTE merge-stream is a node-core PassThrough and silently drops files from the streamx
+  // streams vinyl-fs 4 produces; ordered-read-streams is the streamx-native equivalent.
+  const staged = ordered([
     vfs
       .src('js/+([0-9])-*.js', { ...opts, sourcemaps })
       .pipe(terser())
@@ -105,12 +142,24 @@ module.exports = (src, dest, preview) => async () => {
       //vfs.src(require.resolve('<package-name-or-require-path>'), opts).pipe(concat('js/vendor/<library-name>.js')),
       .pipe(rev()),
     vfs
+      .src(docsearchUmdPath)
+      .pipe(rename({ dirname: 'js/vendor', basename: 'docsearch', extname: '.js' }))
+      .pipe(terser())
+      .pipe(rev()),
+    vfs
+      .src(docsearchCssPath)
+      .pipe(postcss(vendorCssPlugins))
+      .pipe(rename({ dirname: 'css/vendor', basename: 'docsearch', extname: '.css' }))
+      .pipe(rev()),
+    vfs
       .src('css/site.css', { ...opts, sourcemaps })
       .pipe(postcss((file) => ({ plugins: postcssPlugins, options: { file } })))
       .pipe(rev()),
-    vfs.src('font/*.{ttf,woff*(2)}', opts),
+    // NOTE fonts are not staged from src; the postcssUrl handler above copies them straight
+    // into dest/font from their npm packages, and vinyl-fs 4 errors on a missing src/font.
+    // NOTE gulp 5 decodes contents as UTF-8 by default, which would corrupt binary assets
     vfs
-      .src('img/**/*.{jpg,ico,png,svg}', opts)
+      .src('img/**/*.{jpg,ico,png,svg}', { ...opts, encoding: false })
       .pipe(
         imagemin.default([
           imagemin.gifsicle(),
@@ -129,8 +178,8 @@ module.exports = (src, dest, preview) => async () => {
       .pipe(rev()),
     vfs.src('helpers/*.js', opts),
     vfs.src('layouts/*.hbs', opts),
-    vfs.src('partials/*.hbs', opts)
-  )
+    vfs.src('partials/*.hbs', opts),
+  ])
     .pipe(rewrite())
     .pipe(vfs.dest(dest, { sourcemaps: sourcemaps && '.' }))
     .pipe(rev.manifest())
@@ -142,7 +191,7 @@ module.exports = (src, dest, preview) => async () => {
       })
     )
     .pipe(vfs.src('helpers/*.js.template', opts))
-    .pipe(data(() => ({ manifest: manifest })))
+    .pipe(data(() => ({ manifest })))
     .pipe(template())
     .pipe(
       rename((path) => {
@@ -150,6 +199,13 @@ module.exports = (src, dest, preview) => async () => {
       })
     )
     .pipe(vfs.dest(dest))
+
+  // NOTE gulp settles an async task on its promise, and a stream is not a thenable, so the
+  // pipeline must be awaited here or bundle:pack packs a partly written dest into
+  // ui-bundle.zip. The sink consumes what the final vfs.dest re-emits so the pipeline keeps
+  // draining instead of stalling once its object buffer fills. pipeline() is used over
+  // finished() so a failure in any stage rejects rather than hanging the task.
+  await pipeline(staged, new Writable({ objectMode: true, write: (file, enc, next) => next() }))
 }
 
 function postcssPseudoElementFixer (css, result) {

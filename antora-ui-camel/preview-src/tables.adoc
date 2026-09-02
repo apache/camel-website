@@ -1,0 +1,179 @@
+= Tables
+:idprefix:
+:idseparator: -
+:!example-caption:
+:!table-caption:
+:page-pagination:
+
+Every table is wrapped in a `div.table-wrapper` by `extensions/table.js`, which is what gives wide tables their horizontal scrollbar instead of letting them overflow the page.
+The preview registers the same postprocessor, so the markup here matches the built site.
+
+== Component options
+
+The common case in Camel documentation: a reference table of endpoint options.
+
+.Timer component, endpoint options
+[%autowidth]
+|===
+|Name |Type |Default |Description
+
+|`period`
+|long
+|1000
+|Delay in milliseconds between firings.
+
+|`repeatCount`
+|long
+|0
+|Number of firings before the timer stops. Zero means unlimited.
+
+|`fixedRate`
+|boolean
+|false
+|Schedule at a fixed rate rather than a fixed delay.
+
+|`includeMetadata`
+|boolean
+|false
+|Add timer metadata headers to the exchange.
+|===
+
+== Full width
+
+Without `%autowidth` the table stretches to the content column.
+
+|===
+|DSL |File extension |Loaded by
+
+|Java
+|`.java`
+|`RouteBuilder` subclass
+
+|XML
+|`.xml`
+|`camel-xml-io-dsl`
+
+|YAML
+|`.yaml`
+|`camel-yaml-dsl`
+|===
+
+== Wide table
+
+More columns than the content column can hold. This is the case the wrapper exists for: the table should scroll sideways within its own box rather than push the page wider.
+
+[%autowidth]
+|===
+|Component |Scheme |Direction |Since |Artifact |Transport |Streaming |Notes
+
+|Timer
+|`timer`
+|consumer
+|1.0
+|`camel-timer`
+|in-memory
+|no
+|Fires on a schedule with no external system involved.
+
+|File
+|`file`
+|both
+|1.0
+|`camel-file`
+|filesystem
+|yes
+|Polls a directory; supports move, delete, and idempotent read.
+
+|JMS
+|`jms`
+|both
+|1.0
+|`camel-jms`
+|broker
+|no
+|Requires a `ConnectionFactory` to be configured on the component.
+
+|Kafka
+|`kafka`
+|both
+|2.13
+|`camel-kafka`
+|broker
+|yes
+|Consumer group semantics apply; offsets are committed by the component.
+
+|HTTP
+|`http`
+|producer
+|1.0
+|`camel-http`
+|network
+|yes
+|Producer only; use `platform-http` to expose an endpoint.
+|===
+
+== Formatted cells
+
+An `a` column modifier lets a cell hold block content: lists, source, or an admonition.
+
+|===
+|Option |Detail
+
+|`bridgeErrorHandler`
+a|
+Routes consumer-side exceptions into the route's error handler instead of logging and ignoring them.
+
+[source,java]
+----
+from("file:inbox?bridgeErrorHandler=true")
+    .to("direct:process");
+----
+
+|`synchronous`
+a|
+[NOTE]
+====
+Forces the exchange onto the calling thread. Rarely needed outside tests.
+====
+
+|`lazyStartProducer`
+a|
+* defers producer creation to the first message
+* lets a route start while its target is unavailable
+* moves the failure from startup to runtime
+|===
+
+== Header, footer, and column alignment
+
+[cols="<3,^1,>1",options="header,footer"]
+|===
+|Route |Instances |Messages
+
+|orders
+|3
+|1,204
+
+|shipments
+|1
+|318
+
+|notifications
+|2
+|97
+
+|Total
+|6
+|1,619
+|===
+
+== No header
+
+A table with no header row, used for simple key/value pairs.
+
+[%autowidth,frame=none,grid=rows]
+|===
+|Camel version |4.22.0
+|Minimum Java |17
+|Spring Boot |3.4.x
+|Quarkus |3.17.x
+|===

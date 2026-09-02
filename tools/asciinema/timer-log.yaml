@@ -1,0 +1,6 @@
+- from:
+    uri: "timer:tick?period=1000"
+    steps:
+      - setBody:
+          simple: "Hello from Camel at ${date:now:HH:mm:ss}"
+      - log: "${body}"

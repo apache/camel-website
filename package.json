@@ -3,6 +3,7 @@
   "version": "1.0.0-SNAPSHOT",
   "license": "Apache-2.0",
   "scripts": {
+    "test": "node --test test/*-test.js",
     "build": "run-s -l build:antora build:hugo build:post build:minify",
     "build:post": "run-p -l build:sitemap build:htaccess build:markdown",
     "build-all": "yarn workspaces foreach --all --topological-dev run build",
@@ -35,8 +36,8 @@
     "build:antora-local-quick": "antora antora-playbook-local-quick.yml --stacktrace"
   },
   "devDependencies": {
-    "@antora/cli": "^3.1.7",
-    "@antora/site-generator": "^3.1.7",
+    "@antora/cli": "^3.1.15",
+    "@antora/site-generator": "^3.1.15",
     "@asciidoctor/tabs": "^1.0.0-beta.3",
     "@deadlinks/cargo-deadlinks": "github-release:deadlinks/cargo-deadlinks:0.8.1/deadlinks-linux",
     "@djencks/antora-aggregate-collector": "^0.1.0-beta.1",
@@ -46,13 +47,13 @@
     "@djencks/antora-timer": "^0.0.1-beta.1",
     "@djencks/asciidoctor-antora-indexer": "^0.1.3-rc.2",
     "@djencks/asciidoctor-jsonpath": "^0.1.3-rc.2",
+    "@springio/antora-extensions": "^1.14.13",
     "antora-ui-camel": "workspace:antora-ui-camel",
     "camel-website-util": "workspace:util",
     "chalk": "5.3.0",
-    "del": "^6.0.0",
     "escape-string-regexp": "~2.0",
     "glob": "^13.0.6",
-    "gulp": "~4.0",
+    "gulp": "^5.0.1",
     "gulp-cheerio": "~1.0",
     "gulp-htmlmin": "~5.0",
     "gulp-inject": "^5.0.2",
@@ -74,7 +75,7 @@
     "antora-ui-camel",
     "util"
   ],
-  "packageManager": "yarn@4.1.0",
+  "packageManager": "yarn@4.18.0",
   "resolutions": {
     "http-cache-semantics": "4.1.1",
     "shell-quote": "^1.8.4",

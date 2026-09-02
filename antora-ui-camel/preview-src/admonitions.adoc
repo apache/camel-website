@@ -1,0 +1,135 @@
+= Admonitions
+:idprefix:
+:idseparator: -
+:!example-caption:
+:!table-caption:
+:page-pagination:
+
+Admonitions render as a coloured label bar down the left edge of the block.
+The label comes from the `title` attribute of the icon element, set through CSS `content: attr(title)`, so the styling depends on the icon cell keeping its width.
+
+== The five styles
+
+[NOTE]
+====
+Camel routes are defined in a `RouteBuilder`, which is where the DSL methods are available.
+====
+
+[TIP]
+====
+Use `camel-jbang` to run a single route file without setting up a full project first.
+====
+
+[IMPORTANT]
+====
+Set `autoStartup` to `false` if the route must not begin consuming as soon as the context starts.
+====
+
+[WARNING]
+====
+Changing the endpoint URI of a running route requires the route to be stopped and removed first.
+====
+
+[CAUTION]
+====
+`convertBodyTo` reads the whole stream into memory.
+Avoid it on large payloads unless stream caching is enabled.
+====
+
+== With a title
+
+A titled admonition renders the title above the body, inside the content cell.
+
+.Prefer the Java DSL for conditional routing
+[TIP]
+====
+The XML DSL supports `choice` and `when`, but predicates that need real logic are easier to read, test, and refactor in Java.
+====
+
+== Paragraph form
+
+The single-paragraph form takes the style as a block attribute and needs no delimiters.
+
+[NOTE]
+Endpoints are singletons within a `CamelContext`; two routes consuming the same URI share one endpoint instance.
+
+== Longer content
+
+A body that wraps across several lines shows whether the label bar stretches to the full height of the block.
+
+[IMPORTANT]
+====
+An exception thrown from a processor propagates back through the route until something handles it.
+
+`onException` clauses are matched by exception type, most specific first.
+A clause marked `handled(true)` stops the propagation and the exchange continues as if the failure had not happened, which means the original route does *not* resume from the point of failure.
+
+Use `doTry` / `doCatch` instead when the recovery is local to one step.
+====
+
+== Nested content
+
+Admonitions can hold lists, source blocks, and tables.
+
+[TIP]
+====
+Three ways to run a route during development:
+
+. `camel-jbang run route.yaml`, no project required
+. `mvn camel:run`, using the Camel Maven plugin
+. A plain `main` method calling `Main.run()`
+
+[source,java]
+----
+Main main = new Main();
+main.configure().addRoutesBuilder(new MyRouteBuilder());
+main.run(args);
+----
+====
+
+== Inside other blocks
+
+Known limitation, kept here deliberately: the label bar is sized by the table's auto layout, so it stays a tight 33px in the main content column but widens once the admonition sits in a narrower container.
+The two below measure 63px and 137px.
+No page on the site currently nests an admonition this way, so it has never been noticed.
+
+An admonition inside a list item indents with the item.
+
+. Add the component dependency to the build.
++
+[NOTE]
+====
+Components resolve by scheme name at route start, so a missing dependency fails at startup, not at build time.
+====
+
+. Declare the endpoint URI in the route.
+
+And inside a table cell:
+
+|===
+|Setting |Notes
+
+|`stream-caching`
+a|
+[CAUTION]
+====
+Off by default on some runtimes. Re-reading a stream body without it yields an empty message.
+====
+
+|`allowUseOriginalMessage`
+|Keeps a copy of the inbound message for error handlers.
+|===
+
+== Consecutive admonitions
+
+Two admonitions in a row show the spacing between blocks.
+
+[NOTE]
+====
+The `direct` component is synchronous and shares the caller's thread.
+====
+
+[WARNING]
+====
+`seda` is not persistent. Messages queued in memory are lost if the JVM stops.
+====

@@ -1,0 +1,2 @@
+// Keep this empty page to generate and test the 404 page.
+// Adapted from https://github.com/bonitasoft/bonita-documentation-theme (MPL-2.0).

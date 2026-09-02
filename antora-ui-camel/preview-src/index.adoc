@@ -6,6 +6,22 @@ Author Name
 :!table-caption:
 :page-pagination:
 
+****
+This page is the generic UI showcase inherited from the default Antora UI.
+The pages below cover the parts of the Camel UI that need a closer look:
+
+* xref:admonitions.adoc[Admonitions] -- the five styles, titles, nesting, and placement inside other blocks
+* xref:code.adoc[Source Code] -- highlighting for the languages Camel documentation uses, callouts, and long lines
+* xref:tables.adoc[Tables] -- option tables, wide tables and their scrolling, and block content in cells
+* xref:tabs.adoc[Tabs] -- synchronised DSL tabs, as component documentation uses them
+* xref:asciinema.adoc[Asciinema] -- terminal session recordings embedded in a page
+
+The preview registers the same Asciidoctor postprocessors as
+`antora-playbook-production.yml`, so this markup matches the built site.
+It does *not* run Antora itself, so anything resolved by Antora (page xrefs across
+components, the version selector, `@asciidoctor/tabs`) is approximated here.
+****
+
 image:multirepo-ssg.svg[Multirepo SSG,200,float=right]
 Platonem complectitur mediocritatem ea eos.
 Ei nonumy deseruisse ius.

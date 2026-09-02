@@ -1,6 +1,10 @@
-<script src="{{uiRootPath}}/js/vendor/algoliasearch.js"></script>
+<script src="{{uiRootPath}}/js/vendor/docsearch.js"></script>
 <script src="{{uiRootPath}}/js/site.js"></script>
 <script async src="{{uiRootPath}}/js/vendor/highlight.js"></script>
 <script async src="{{uiRootPath}}/js/vendor/svg4everybody.js"></script>
 <script async src="{{{uiRootPath}}}/js/vendor/tabs.js" data-sync-storage-key="preferred-tab"></script>
+{{#if page.attributes.asciinemacasts}}
+{{> asciinema-load-scripts}}
+{{> asciinema-create-scripts}}
+{{/if}}
 {{> seo-main}}

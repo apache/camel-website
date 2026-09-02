@@ -1,0 +1,452 @@
+{
+  "query": "routing",
+  "hits": [
+    {
+      "url": "https://camel.apache.org/components/4.22.x/spring-rabbitmq-component.html#_endpoint_query_option_routingKey",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Spring",
+        "lvl3": "Spring RabbitMQ",
+        "lvl4": "routingKey"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/spring-rabbitmq-component.html#_component_option_deadLetterRoutingKey",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Spring",
+        "lvl3": "Spring RabbitMQ",
+        "lvl4": "deadLetterRoutingKey"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/spring-rabbitmq-component.html#_endpoint_query_option_deadLetterRoutingKey",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Spring",
+        "lvl3": "Spring RabbitMQ",
+        "lvl4": "deadLetterRoutingKey"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/eips/routingSlip-eip.html",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "AI Patterns",
+        "lvl2": "Routing Slip"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/blog/2021/05/multicast-failure-routing/",
+      "hierarchy": {
+        "lvl0": "Blog",
+        "lvl1": "2021",
+        "lvl2": "Routing multicast output after encountering partial failures"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/camel-kamelets/4.18.x/spring-rabbitmq-sink.html#_exchange_and_routing",
+      "hierarchy": {
+        "lvl0": "Kamelet Catalog",
+        "lvl1": " RabbitMQ Sink",
+        "lvl2": "Exchange and Routing"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/blog/2022/10/ContentBasedRoutingWithCamelDroolsQuarkusKogitoAltasMapApacheKafka/",
+      "hierarchy": {
+        "lvl0": "Blog",
+        "lvl1": "2022",
+        "lvl2": "Content Based Routing with Camel, Drools, Quarkus, Kogito, AtlasMap and Apache Kafka!"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/community/books/#instant-apache-camel-message-routing",
+      "hierarchy": {
+        "lvl0": "Other Books",
+        "lvl1": "Other Books",
+        "lvl2": "Instant Apache Camel Message Routing"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/manual/camelcontext.html#_routing_engine",
+      "hierarchy": {
+        "lvl0": "User manual",
+        "lvl1": "Architecture",
+        "lvl2": "CamelContext",
+        "lvl3": "Routing Engine"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/pulsar-component.html#_component_option_messageRoutingMode",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Pulsar",
+        "lvl3": "messageRoutingMode"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/pulsar-component.html#_endpoint_query_option_messageRoutingMode",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Pulsar",
+        "lvl3": "messageRoutingMode"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/manual/camel-3x-upgrade-guide-3_13.html#_using_transactions",
+      "hierarchy": {
+        "lvl0": "User manual",
+        "lvl1": "Apache Camel 3.x Upgrade Guide",
+        "lvl2": "Using Transactions"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/manual/exchange-pooling.html",
+      "hierarchy": {
+        "lvl0": "User manual",
+        "lvl1": "Architecture",
+        "lvl2": "Exchange Pooling"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/manual/jbang-commands/camel-jbang-get-error.html",
+      "hierarchy": {
+        "lvl0": "User manual",
+        "lvl1": "camel get error"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/manual/camel-jbang-tui.html#_http_probe",
+      "hierarchy": {
+        "lvl0": "User manual",
+        "lvl1": "Resources & Guides",
+        "lvl2": "Camel CLI",
+        "lvl3": "Camel TUI",
+        "lvl4": "HTTP Probe"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/blog/2024/09/camel-ai-examples/",
+      "hierarchy": {
+        "lvl0": "Blog",
+        "lvl1": "2024",
+        "lvl2": "Apache Camel AI: Leverage power of AI with DJL component"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/manual/exception-handling-patterns.html#_using_the_original_message_with_onexception",
+      "hierarchy": {
+        "lvl0": "User manual",
+        "lvl1": "Architecture",
+        "lvl2": "Exception Clause",
+        "lvl3": "Exception Clause handling patterns",
+        "lvl4": "Using the original message with onException"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/others/reactive-executor-vertx.html",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Miscellaneous Components",
+        "lvl2": "Reactive Executor Vert.x"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/manual/camel-4x-upgrade-guide-4_22.html#_camel_jfr",
+      "hierarchy": {
+        "lvl0": "User manual",
+        "lvl1": "Apache Camel 4.x Upgrade Guide",
+        "lvl2": "camel-jfr"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kafka-component.html#_component_option_workerPool",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kafka",
+        "lvl3": "workerPool"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/kafka-component.html#_endpoint_query_option_workerPool",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Kafka",
+        "lvl3": "workerPool"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/rocketmq-component.html#_component_option_waitForSendResult",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "RocketMQ",
+        "lvl3": "waitForSendResult"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/rocketmq-component.html#_endpoint_query_option_waitForSendResult",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "RocketMQ",
+        "lvl3": "waitForSendResult"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/manual/camelcontext.html#_variables",
+      "hierarchy": {
+        "lvl0": "User manual",
+        "lvl1": "Architecture",
+        "lvl2": "CamelContext",
+        "lvl3": "Variables"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/manual/exception-handling-patterns.html#_handle_and_continue_exceptions",
+      "hierarchy": {
+        "lvl0": "User manual",
+        "lvl1": "Architecture",
+        "lvl2": "Exception Clause",
+        "lvl3": "Exception Clause handling patterns",
+        "lvl4": "Handle and Continue Exceptions"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/manual/tracer.html",
+      "hierarchy": {
+        "lvl0": "User manual",
+        "lvl1": "Architecture",
+        "lvl2": "Tracer"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/eips/competing-consumers.html",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "AI Patterns",
+        "lvl2": "Competing Consumers"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/google-mail-stream-component.html#_endpoint_query_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Google",
+        "lvl3": "Google Mail Stream",
+        "lvl4": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/fhir-component.html#_component_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "FHIR",
+        "lvl3": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/cql-component.html#_endpoint_query_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Cassandra CQL",
+        "lvl3": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/pubnub-component.html#_component_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "PubNub",
+        "lvl3": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/olingo4-component.html#_component_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Olingo4",
+        "lvl3": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/hazelcast-instance-component.html#_component_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Hazelcast",
+        "lvl3": "Hazelcast Instance",
+        "lvl4": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/reactive-streams-component.html#_component_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Reactive Streams",
+        "lvl3": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.18.x/spring-ai-tools-component.html#_endpoint_query_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "AI",
+        "lvl3": "Spring AI Tools",
+        "lvl4": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/netty-http-component.html#_endpoint_query_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Netty HTTP",
+        "lvl3": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/cxfrs-component.html#_component_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "CXF-RS",
+        "lvl3": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/browse-component.html#_component_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Browse",
+        "lvl3": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/mina-sftp-component.html#_endpoint_query_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "MINA SFTP",
+        "lvl3": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/ehcache-component.html#_component_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Ehcache",
+        "lvl3": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/jgroups-component.html#_endpoint_query_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "JGroups",
+        "lvl3": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.18.x/github-component.html#_endpoint_query_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "GitHub",
+        "lvl3": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/google-sheets-component.html#_endpoint_query_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Google",
+        "lvl3": "Google Sheets",
+        "lvl4": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/nats-component.html#_component_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Nats",
+        "lvl3": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/wordpress-component.html#_endpoint_query_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "WordPress",
+        "lvl3": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/cxfrs-component.html#_endpoint_query_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "CXF-RS",
+        "lvl3": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/google-calendar-stream-component.html#_endpoint_query_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Google",
+        "lvl3": "Google Calendar Stream",
+        "lvl4": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/disruptor-vm-component.html#_endpoint_query_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Disruptor VM",
+        "lvl3": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/milo-client-component.html#_endpoint_query_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "OPC UA Client",
+        "lvl3": "bridgeErrorHandler"
+      }
+    },
+    {
+      "url": "https://camel.apache.org/components/4.22.x/paho-mqtt5-component.html#_component_option_bridgeErrorHandler",
+      "hierarchy": {
+        "lvl0": "Camel Components",
+        "lvl1": "Components",
+        "lvl2": "Paho MQTT 5",
+        "lvl3": "bridgeErrorHandler"
+      }
+    }
+  ]
+}

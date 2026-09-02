@@ -254,165 +254,15 @@ html:not([data-scroll='0']) .navbar {
   height: 0;
 }
 
+/* NOTE centred rather than left to padding alone: the DocSearch button is a fixed 38px, which sat
+   8.5px above the nav links in the 73px desktop bar. justify-content keeps it right-aligned, which
+   text-align no longer does once this is a flex container. */
 .navbar-search {
-  padding: 0.5rem;
-  text-align: right;
-  order: 4;
-}
-
-.navbar-search input {
-  border: 1px solid var(--nav-panel-divider-color);
-  border-radius: 4px;
-  width: 14rem;
-  margin-top: 0.5rem;
-  padding: 0.4rem 1.5rem 0.4rem 1.9rem;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
-  caret-color: #ed8225;
-  background: no-repeat 0.4rem/1rem url("../img/search.svg");
-  background-color: var(--color-smoke-50);
-  outline: 0;
-}
-
-.navbar-search input:focus-within {
-  background-color: var(--navbar-background);
-  border-color: #eaeaec;
-  outline: 0;
-
-  @media screen and (prefers-reduced-motion: reduce) {
-    box-shadow: none;
-    transform: none;
-  }
-}
-
-#search-cancel {
-  position: relative;
-  bottom: calc(50% + 0.1rem);
-  left: calc(100% - 1.25rem);
-  height: 1rem;
-  display: none;
-  cursor: pointer;
-}
-
-#search_results {
-  top: 3.38rem;
-  background: var(--navbar-background);
-  text-align: left;
-  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
-  position: absolute;
-  margin-right: 10px;
-  overflow-y: auto;
-  max-height: 80vh;
-  max-width: min(600px, 90vw);
-  min-width: 300px;
-  scrollbar-width: thin; /* Firefox */
-}
-
-#search_results::-webkit-scrollbar {
-  width: var(--scrollbar-thickness);
-}
-
-#search_results::-webkit-scrollbar-track {
-  background: var(--scrollbar-track-color);
-  border-radius: var(--scrollbar-radius);
-}
-
-#search_results::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb-color);
-  border-radius: var(--scrollbar-radius);
-}
-
-#search_results::-webkit-scrollbar-thumb:hover,
-#search_results::-webkit-scrollbar-thumb:active {
-  background: var(--scrollbar-thumb-active-color);
-}
-
-.result_header {
-  font-weight: 600;
-  color: var(--color-asf-dark-blue);
-  padding-right: 0.5rem;
-}
-
-#search_results div.result {
-  padding: 0.25rem;
-  pointer-events: none;
-}
-
-#search_results div.result:hover {
-  background: var(--color-smoke-50);
-}
-
-#search_results div.heading {
   display: flex;
-  flex-wrap: wrap;
-}
-
-#search_results dt {
-  padding: 0.5rem 0 0.5rem 0.5rem;
-  color: var(--color-camel-orange);
-  text-transform: uppercase;
-  font-weight: 700;
-  flex-grow: 1;
-}
-
-#search_results dt.version {
-  height: 1.75rem;
-  padding: 0.3rem;
-  border: 2px solid var(--color-camel-orange);
-  border-radius: 25px;
-  text-align: center;
-  flex-grow: 0;
-}
-
-#search_results dd {
-  margin-right: 2rem;
-  word-break: break-word;
-}
-
-#search_results a {
-  pointer-events: auto;
+  align-items: center;
+  justify-content: flex-end;
   padding: 0.5rem;
-}
-
-#search_results a:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--color-gray-10);
-}
-
-.result_summary {
-  color: var(--color-jet-50);
-  padding-top: 0.3rem;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
-}
-
-#search_results div.footer-search {
-  display: inline-flex;
-  width: 100%;
-  padding: 0.75rem;
-}
-
-div.footer-search h4 {
-  color: var(--color-asf-dark-blue);
-  width: 5rem;
-}
-
-.no_search_results {
-  padding: 1rem;
-  font-weight: bold;
-  color: var(--color-asf-dark-blue);
-  border-bottom: 2px solid var(--color-smoke-50);
-}
-
-.algolia-docsearch-suggestion--highlight {
-  font-weight: bold;
-  color: var(--color-jet-50);
-}
-
-.results-hidden #search_results {
-  display: none;
+  order: 4;
 }
 
 .navbar-tools {
@@ -470,21 +320,7 @@ div.footer-search h4 {
     order: 7;
   }
 
-  .navbar-search input {
-    width: calc(100vw - 4rem);
-  }
-
   .navbar-burger {
     display: block;
-  }
-
-  #search-cancel {
-    margin-top: 0.75rem;
-  }
-
-  #search_results {
-    left: 0;
-    width: 100vw;
-    top: var(--navbar-mobile-height);
   }
 }
