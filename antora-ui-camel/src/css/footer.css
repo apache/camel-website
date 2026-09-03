@@ -10,7 +10,6 @@ body > footer {
   line-height: var(--footer-line-height);
   padding: 1.5rem 0;
   flex-shrink: 0;
-  min-height: var(--footer-height);
 }
 
 footer .footer {
