@@ -205,9 +205,9 @@
      "correct" this back up to a desktop-only reading. */
   --footer-height: 39rem;
   /* dimensions */
-  --navbar-height: calc(73 / var(--rem-base) * 1rem);
+  --navbar-height: calc(66 / var(--rem-base) * 1rem);
   --navbar-burger-height: calc(54 / var(--rem-base) * 1rem);
-  --navbar-mobile-height: calc(4rem + var(--navbar-height));
+  --navbar-mobile-height: var(--navbar-height);
   --toolbar-height: calc(45 / var(--rem-base) * 1rem);
   --drawer-height: var(--toolbar-height);
   --body-top: calc(var(--navbar-height) + 1rem);
