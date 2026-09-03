@@ -32,9 +32,10 @@
   --body-font-size--print: 0.9375em; /* 15px */
   --body-line-height: 1.15;
   --body-font-color: var(--color-jet-50);
-  --body-font-family: 'Open Sans', sans-serif;
+  --body-font-family: 'Open Sans', system-ui, sans-serif;
+  --display-font-family: 'Archivo', sans-serif;
   --body-font-weight-bold: bold;
-  --monospace-font-family: 'Droid Sans Mono', 'DejaVu Sans Mono', monospace;
+  --monospace-font-family: 'JetBrains Mono', ui-monospace, monospace;
   --monospace-font-weight-bold: 500;
   /* base */
   --body-background: var(--color-white);
