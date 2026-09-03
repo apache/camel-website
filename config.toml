@@ -41,53 +41,34 @@ defaultMarkdownHandler = "goldmark"
   filename = "sitemap-website.xml"
 
 [[menu.main]]
-    name = "Blog"
-    weight = 2
-    identifier = "blog"
-    url = "/blog/"
-    pre = "img/blog.svg"
-
-[[menu.main]]
     name = "Documentation"
     identifier = "docs"
-    weight = 3
+    weight = 1
     url = "/docs/"
-    pre = "img/documentation.svg"
+
+[[menu.main]]
+    name = "Tooling"
+    identifier = "tooling"
+    weight = 2
+    url = "/tooling/"
+
+[[menu.main]]
+    name = "Security"
+    identifier = "security"
+    weight = 3
+    url = "/security/"
 
 [[menu.main]]
     name = "Community"
     identifier = "community"
     weight = 4
     url = "/community/"
-    pre = "img/community.svg"
 
 [[menu.main]]
-    name = "Tooling"
+    name = "Blog"
+    identifier = "blog"
     weight = 5
-    identifier = "tooling"
-    url = "/tooling/"
-    pre = "img/tooling.svg"
-
-[[menu.main]]
-    name = "Download"
-    weight = 6
-    identifier = "download"
-    url = "/download/"
-    pre = "img/download.svg"
-
-[[menu.main]]
-    name = "Security"
-    weight = 7
-    identifier = "security"
-    url = "/security/"
-    pre = "img/security.svg"
-
-[[menu.main]]
-    name = "Trust"
-    weight = 8
-    identifier = "trust"
-    url = "/trust/"
-    pre = "img/security.svg"
+    url = "/blog/"
 
 [module]
 
