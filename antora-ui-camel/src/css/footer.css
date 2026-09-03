@@ -54,7 +54,7 @@ footer .footer {
 footer .footer p.remark {
   grid-column: 1 / -1;
   border-top: 1px solid var(--color-dark-line);
-  margin: calc(40 / var(--rem-base) * 1rem) 0 0;
+  margin: 0;
   padding: calc(22 / var(--rem-base) * 1rem) 0 0;
   font-size: calc(12.5 / var(--rem-base) * 1rem);
   color: var(--color-on-dark-muted);
