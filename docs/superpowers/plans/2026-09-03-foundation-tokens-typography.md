@@ -20,6 +20,8 @@
 - `highlight.css` is not touched by this plan. Piece 6 owns it and lands immediately after this piece.
 - Every task ends with `yarn workspace antora-ui-camel run build` succeeding. That task runs stylelint, so a lint failure is a build failure.
 - American English. No em dashes in code comments or docs.
+- **Line numbers are hints; the quoted text is authoritative.** Every line number in this plan was read against `vars.css` as it stands at the plan's commit. Tasks 2 and 3 insert nineteen lines into that file between them, so from Task 4 onward the numbers drift. Every edit below also quotes the exact declaration it replaces, and each is unique in its file. Locate by the quoted text, use the line number only to find the neighborhood, and never edit a line whose current content does not match the quoted "From" text.
+- **Do not pin assertions to the minifier's output shape.** `gulp.d/tasks/build.js:57` runs `postcss-calc` only in preview mode, so a production bundle may carry either `calc(1200 / 18 * 1rem)` or a reduced `66.66…rem`, depending on cssnano. Assertions on computed lengths accept both forms.
 
 ## Deviations from the spec
 
@@ -455,10 +457,10 @@ Independent of color, and it fails in a visibly different way (layout, not contr
 
 - [ ] **Step 1: Write the failing assertion**
 
-1200 at `--rem-base: 18` is `66.6667rem`. 1366 is `75.8889rem`. After `postcss-custom-properties` and `cssnano`, the built CSS carries the computed value.
+1200 at `--rem-base: 18` is `66.6667rem`; 1366 is `75.8889rem`. `postcss-custom-properties` inlines the token, and cssnano may or may not reduce the `calc()`, so match either form.
 
 ```bash
-grep -o "66\.66[0-9]*rem" antora-ui-camel/public/_/css/*.css | head; echo "exit: $?"
+grep -o -E "66\.66[0-9]*rem|1200 ?/ ?18|1200 / var" antora-ui-camel/public/_/css/*.css | head; echo "exit: $?"
 ```
 
 Expected: nothing, `exit: 1`.
@@ -498,7 +500,7 @@ Leave `--doc-max-width--desktop` on line 158 at 1366. The Antora article area is
 
 ```bash
 yarn workspace antora-ui-camel run build
-grep -o "66\.66[0-9]*rem" antora-ui-camel/public/_/css/*.css | head
+grep -o -E "66\.66[0-9]*rem|1200 ?/ ?18|1200 / var" antora-ui-camel/public/_/css/*.css | head
 ```
 
 Expected: at least one match. `--static-max-width--desktop` has five consumers (`static.css:41`, `projects.css:13`, `footer.css:17`, `blog.css:249`, `blog.css:306`) and `--frontpage-max-width` one (`frontpage.css:18`), so several are expected.
@@ -506,10 +508,10 @@ Expected: at least one match. `--static-max-width--desktop` has five consumers (
 - [ ] **Step 5: Confirm the docs width is untouched**
 
 ```bash
-grep -o "75\.88[0-9]*rem" antora-ui-camel/public/_/css/*.css | head
+grep -o -E "75\.88[0-9]*rem|1366 ?/ ?18|1366 / var" antora-ui-camel/public/_/css/*.css | head
 ```
 
-Expected: at least one match, from `--doc-max-width--desktop`. Zero matches means line 158 was changed by mistake.
+Expected: at least one match, from `--doc-max-width--desktop`. Zero matches means the `--doc-max-width--desktop` declaration was changed by mistake.
 
 - [ ] **Step 6: Commit**
 
@@ -884,8 +886,10 @@ Expected: `check:links`, `check:html`, and `check:redirects` all pass. This piec
 - [ ] **Step 3: Confirm ASF blue is gone from the rendered output**
 
 ```bash
-grep -ro -E "#303284|#4f51ae|#7375bf" public/_/css/ | sort | uniq -c; echo "exit: $?"
+find public -name '*.css' -exec grep -o -E "#303284|#4f51ae|#7375bf" {} + | sort | uniq -c; echo "exit: $?"
 ```
+
+Search `public/` recursively rather than a pinned path: the exact publish layout of the UI bundle under the Hugo output was not verified when this plan was written, and a wrong path makes the assertion pass on zero files. Confirm the search actually found stylesheets with `find public -name '*.css' | head` before trusting an empty result.
 
 Expected: nothing, `exit: 1`. The ASF logo is an image asset and is unaffected.
 
