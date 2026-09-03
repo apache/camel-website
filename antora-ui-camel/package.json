@@ -69,7 +69,6 @@
     "stylelint-config-standard": "^34.0.0",
     "svg4everybody": "^2.1.9",
     "toml": "^3.0.0",
-    "typeface-droid-sans-mono": "^0.0.44",
     "undertaker": "^2.0.0",
     "vinyl-buffer": "~1.0",
     "vinyl-fs": "^4.0.2"
