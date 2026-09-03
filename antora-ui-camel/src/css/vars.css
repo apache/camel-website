@@ -189,7 +189,7 @@
   --footer-font-color: var(--color-on-dark-soft);
   --footer-after-background: var(--color-dark-line);
   --footer-link-font-color: var(--color-on-dark-soft);
-  --footer-height: 23rem; /* empirically corresponding current design of the foooter */
+  --footer-height: 40rem; /* empirically measured on the five-column footer, desktop viewport */
   /* dimensions */
   --navbar-height: calc(73 / var(--rem-base) * 1rem);
   --navbar-burger-height: calc(54 / var(--rem-base) * 1rem);
