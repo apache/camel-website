@@ -11,8 +11,8 @@
 }
 
 .download tr td em.kind {
-  color: var(--body-background);
-  background: var(--color-asf-light-blue);
+  color: var(--color-on-dark);
+  background: var(--color-ink);
   border-radius: 3px;
   font-style: normal;
   font-size: 0.75rem;
@@ -21,5 +21,5 @@
 }
 
 .download .tableblock tbody tr:nth-child(2n) {
-  background: var(--color-smoke-50);
+  background: var(--color-paper-2);
 }
