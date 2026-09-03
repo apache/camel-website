@@ -944,17 +944,21 @@ Criteria 1, 2, 3, and 6 are met and were verified mechanically. Criterion 4 (`ya
 
 Run `yarn preview:hugo`, then work through Task 7 steps 5 and 6 above. Two things must not be judged during that pass: syntax-highlighted code, because `highlight.css` still carries the old light theme and piece 6 owns it, and heading case, because `.doc` headings still carry `text-transform: uppercase` and piece 3 owns it.
 
-### 3. The rebuilt UI bundle is deliberately uncommitted
+### 3. The rebuilt UI bundle is committed and reproducible
 
-`antora-ui-camel/public/_` is tracked (115 files) and this repo's history carries dedicated regen commits, so by convention a `src/css` change ships with its rebuilt bundle. The tracked manifest still points at the stale `site-f06a797174.css`, which means **the branch as committed does not yet serve the redesign**.
+Resolved. `antora-ui-camel/public/_` is tracked (115 files) and this repo's history carries dedicated regen commits, so by convention a `src/css` change ships with its rebuilt bundle. That regen is commit `22630dee`, producing `site-a08aeff1d4.css`.
 
-The regen was left undone on purpose: the freshly built bundle has the uncommitted `projects.css` compiled into it, so committing it would bake unreviewed source into a tracked artifact. Commit or drop the projects work first, then rebuild and commit the bundle.
+It was built from committed source only. A later clean rebuild against a clean working tree reproduced the identical hash and left `git status` empty, so the tracked artifact is byte-for-byte what tracked source produces.
 
-### 4. Two pre-existing build failures, neither caused by this work
+### 4. Build status, and the GITHUB_TOKEN requirement
 
-`yarn build:antora` fails on broken upstream xrefs in fetched `apache/camel` content under a `failure_level: warn` policy.
+`yarn build:hugo` **passes**: 861 pages, exit 0, zero errors. Verified end to end, with the rendered pages referencing `site-a08aeff1d4.css`, all seven new woff2 files present, no Droid Sans Mono, and zero ASF blue anywhere in the served stylesheet.
 
-`yarn build:hugo` fails on `layouts/projects/list.html:3`, which reads `{{- $manifest := .Site.Data "rev-manifest" }}`. That is invalid Go template syntax, since `.Site.Data` is a map rather than a method, and the variable is never used because the template resolves the manifest inline at lines 21 and 35. Deleting the line is the whole fix. It sits in untracked work in progress, so it was left alone.
+**A Hugo build needs `GITHUB_TOKEN` set.** Without it, `getJSON` calls to `api.github.com` in `layouts/blog/*` and `layouts/partials/releases/*` hit the anonymous rate limit and the build dies with over a hundred errors that look alarming but are purely environmental. `config.toml:28` already whitelists the variable for `getenv` and the partials send it as a Bearer header, so `GITHUB_TOKEN="$(gh auth token)" yarn build:hugo` is enough locally.
+
+`yarn build:antora` still fails, for reasons entirely outside this repo: two broken xrefs in `apache/camel`'s own `docs/user-manual/modules/ROOT/pages/key-value-repository.adoc`, targeting `components:eips:cache-eip.adoc` and `components:ROOT:state-store-component.adoc`. Since `yarn build` is sequential, this masks the now-passing Hugo step.
+
+`check:links` cannot run on macOS at all: `check:links` invokes `deadlinks-linux`, a Linux-only binary.
 
 ### 5. Deferred minors
 
