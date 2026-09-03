@@ -11,11 +11,19 @@ builds directly on the tokens they settled.
 Design source: `Apache Camel Home.dc.html` and `Apache Camel Site Pages.dc.html`,
 with decisions recorded in the design handoff `SCOPE.md` (2026-09-03), section 3.
 
-**The artboard files are not available on the implementing machine.** Everything
-below derives from `SCOPE.md`'s prose plus the decisions recorded under
-"Resolved ambiguities". Where `SCOPE.md` is silent or self-contradictory, this
-document states what was chosen and who chose it, rather than inferring a design
-that could not be checked.
+**Correction, made during implementation.** This document was written believing
+the artboard files were not available on the implementing machine, and everything
+below was derived from `SCOPE.md`'s prose plus the decisions recorded under
+"Resolved ambiguities". The design owner then supplied
+`Apache Camel website reference.zip`, which contains both artboards along with a
+drop-in `integration/` package for `/projects/`. The artboards are therefore
+authoritative for measurements, and the reconciliation is recorded in
+"Artboard reconciliation" below. Where `SCOPE.md` is silent or self-contradictory,
+this document still states what was chosen and who chose it.
+
+One resolution the artboards confirm rather than overturn: the footer really does
+show four columns with no Documentation column, so ambiguity 5 below was a genuine
+conflict in the source and its five-column resolution stands.
 
 ## Why this is its own piece
 
@@ -129,12 +137,12 @@ because consolidating the two files is not a license to edit their contents:
 - Overview's "Community" points at `/community/support/`, not `/community/`,
   even though the header's Community link points at `/community/`. That is
   today's Hugo behavior in both files.
-- The brand column's blurb has no source. `SCOPE.md` says "brand + blurb" and
-  gives no copy, and the artboards are unavailable. The implementation uses
-  the first sentence of `config.toml`'s `params.organizationDescription`,
-  "Apache Camel is an open source integration framework with 350+ connectors
-  for databases, APIs, message brokers, and cloud services." If the design owner
-  wants different copy, it is a one-line change in `data/chrome.yaml`.
+- The brand column's blurb had no source when this was written, so the
+  implementation used the first sentence of `config.toml`'s
+  `params.organizationDescription`. The artboards supply the real copy:
+  "Open source integration framework. An Apache Software Foundation project,
+  available under the Apache v2 license." That is what `data/chrome.yaml` now
+  carries. See "Artboard reconciliation".
 
 The copyright paragraph stays in the templates rather than the data file,
 because it interpolates the current year through two different helpers
@@ -277,6 +285,51 @@ margin-inline: auto;
 This applies on documentation pages too. The Antora article area keeps its wider
 `--doc-max-width--desktop`, per piece 1's spec: the chrome aligns across Hugo
 and Antora even though the docs body is wider.
+
+## Artboard reconciliation
+
+Added during implementation, once `Apache Camel website reference.zip` arrived.
+Measurements come from `design/Apache Camel Home.dc.html`. Every px value is
+still written `calc(N / var(--rem-base) * 1rem)`, and every color still resolves
+through a token; the artboard's literal hex values are only used to confirm which
+token applies.
+
+Header, artboard lines 34 to 49:
+
+| property | artboard | what this spec had said |
+|---|---|---|
+| `.navbar` position | `sticky`, `top: 0` | `fixed` |
+| `.navbar-inner` gap | 28px | 24px |
+| `.navbar-brand` gap | 11px | 10px |
+| `.navbar-wordmark` | adds `letter-spacing: -0.02em` | omitted |
+| `.navbar-cta` | `padding: 9px 18px`, `border-radius: 7px` | inherited the body button |
+
+The header CTA is deliberately smaller than both the body button (13px by 24px,
+8px radius, artboard line 193) and the hero button (14px by 26px, 8px radius,
+line 64). It therefore needs its own rule rather than inheriting `.button.dark`.
+
+The artboard header carries no search field and no GitHub icon. Both stay, under
+resolved ambiguities 1 and 3, which the design owner ruled on. The consequence is
+that the right-hand cluster holds two more items than the artboard's spacing was
+measured for, so it reads tighter than the design at narrow desktop widths. This
+is a known, accepted deviation rather than an oversight.
+
+Footer, artboard lines 247 to 287:
+
+| property | artboard | first implementation |
+|---|---|---|
+| grid gap | 40px | 32px |
+| container padding | `56px 32px 40px` | `1.5rem 0` plus `--page-padding-x` |
+| `.footer-logo` | 34px | 40px |
+| `.footer-wordmark` | 18px | 19px |
+| `.footer-blurb` | 13.5px, `line-height: 1.6`, `margin: 16px 0 0`, `max-width: 280px` | 14px, `max-width: 28ch` |
+| column title | `margin-bottom: 14px` | 12px |
+| link spacing | 10px gap | `margin-bottom: 8px` |
+| legal rule | full-bleed `border-top` **above** the copyright | hairline **below** it |
+| copyright | 12.5px, `--color-on-dark-muted` | inherited |
+
+The footer logo and wordmark are one step smaller than the header's 36px and
+19px. That is intentional in the artboard, not a rounding difference.
 
 ## Files touched
 
