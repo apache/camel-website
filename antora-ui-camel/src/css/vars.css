@@ -146,7 +146,7 @@
   /* static */
   --static-margin: 0 auto;
   /* frontpage */
-  --frontpage-max-width: calc(1366 / var(--rem-base) * 1rem);
+  --frontpage-max-width: var(--static-max-width--desktop);
   /* footer */
   --footer-line-height: var(--doc-line-height);
   --footer-background: var(--color-smoke-50);
@@ -174,7 +174,8 @@
   --toc-width: calc(162 / var(--rem-base) * 1rem);
   --toc-width--widescreen: calc(216 / var(--rem-base) * 1rem);
   --doc-max-width--desktop: calc(1366 / var(--rem-base) * 1rem);
-  --static-max-width--desktop: calc(1366 / var(--rem-base) * 1rem);
+  --static-max-width--desktop: calc(1200 / var(--rem-base) * 1rem);
+  --page-padding-x: calc(32 / var(--rem-base) * 1rem);
   /* stacking */
   --z-index-nav: 1;
   --z-index-toolbar: 2;
