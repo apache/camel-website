@@ -64,7 +64,7 @@ header.frontpage .main-heading {
 
 header.frontpage h1 {
   font-size: 5vw;
-  color: var(--color-asf-dark-blue);
+  color: var(--color-ink);
   margin-bottom: 0.5rem;
 }
 
@@ -169,7 +169,7 @@ li.blog-post:last-child {
 li.blog-post time.date {
   margin-top: 1rem;
   text-align: center;
-  color: var(--color-asf-dark-blue);
+  color: var(--color-ink);
   text-transform: uppercase;
 }
 

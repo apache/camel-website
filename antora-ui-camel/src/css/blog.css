@@ -66,7 +66,7 @@ article.blog p {
 
 .blog header {
   margin-bottom: 0.4rem;
-  border-image: linear-gradient(to right, #303284, #303284 50px, #fff 50px) 1 / 0 0 1px 0;
+  border-image: linear-gradient(to right, var(--color-ink), var(--color-ink) 50px, #fff 50px) 1 / 0 0 1px 0;
 }
 
 .blog header h1 {
@@ -324,7 +324,7 @@ article.blog p {
 
 .blog .page-item.active {
   border-radius: 3px;
-  background: var(--color-asf-moderate-blue);
+  background: var(--color-ink);
 }
 
 .blog .page-item.active a {
