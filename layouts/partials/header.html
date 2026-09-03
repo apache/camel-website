@@ -54,31 +54,32 @@
 </head>
 
 <body class="{{ if .Page.IsHome }}homepage {{ end }}article">
+    {{ $ctaLabel := "Download" }}
+    {{ $ctaURL := "/download/" }}
+    {{ if or .Page.IsHome (eq .Page.RelPermalink "/projects/") }}
+        {{ $ctaLabel = "Get Started" }}
+        {{ $ctaURL = "/manual/getting-started.html" }}
+    {{ end }}
     <header class="header" aria-label="Header">
         <nav class="navbar" aria-label="Main menu">
-            <div class="navbar-brand">
-                <a class="nav-logo" href="{{ .Site.BaseURL | relURL }}" title="{{ .Site.Title }}"></a>
+            <div class="navbar-inner">
+                <a class="navbar-brand" href="{{ .Site.BaseURL | relURL }}" title="{{ .Site.Title }}">
+                    <img class="navbar-logo" src="{{ path.Join "_" (index .Site.Data "rev-manifest" "img/logo-d.svg") | relURL }}" alt="">
+                    <span class="navbar-wordmark">Apache Camel</span>
+                </a>
                 <div id="topbar-nav" class="navbar-menu">
-                    <div class="navbar-end">
-                        {{ range .Site.Menus.main }}
-                        <a class="navbar-item-section navbar-item navbar-topics" href="{{ .URL | relURL }}">
-                            <img alt="{{ .Name }}" src="{{ path.Join "_" (index site.Data "rev-manifest" (string .Pre)) | relURL }}">
-                            {{ .Name }}
-                        </a>
-                        {{ end }}
+                    {{ range .Site.Menus.main }}
+                    <a class="navbar-item" href="{{ .URL | relURL }}">{{ .Name }}</a>
+                    {{ end }}
+                </div>
+                <div class="navbar-actions">
+                    <div class="navbar-search results-hidden">
+                        <input id="search" class="search" placeholder="Search" autocomplete="off" maxlength="200">
+                        <img src="{{ path.Join "_" (index .Site.Data "rev-manifest" "img/cancel.svg") | relURL }}" alt="Clear" id="search-cancel">
+                        <div id="search_results"></div>
                     </div>
-                </div>
-                <div class="navbar-fill"></div>
-                <div class="break-row"></div>
-                <div class="navbar-search">
-                    <div id="docsearch"></div>
-                </div>
-                <div class="navbar-tools">
-                  <a rel="noopener noreferrer nofollow" href="https://github.com/apache/camel/" title="Collaborate on GitHub"><svg focusable="false" class="brand-icon"><use href="{{ path.Join "_" (index .Site.Data "rev-manifest" "img/brand-logos.svg") | relURL }}#github" /></svg></a>
-                  <a rel="noopener noreferrer nofollow" href="https://camel.zulipchat.com" title="Chat on Zulip"><svg focusable="false" class="brand-icon"><use href="{{ path.Join "_" (index .Site.Data "rev-manifest" "img/brand-logos.svg") | relURL }}#zulip" /></svg></a>
-                  <a rel="noopener noreferrer nofollow" href="https://twitter.com/ApacheCamel" title="Follow Apache Camel on Twitter"><svg focusable="false" class="brand-icon"><use href="{{ path.Join "_" (index .Site.Data "rev-manifest" "img/brand-logos.svg") | relURL }}#twitter" /></svg></a>
-                  <a rel="noopener noreferrer nofollow" href="https://www.linkedin.com/groups/2447439/" title="Apache Camel group on Linkedin"><svg focusable="false" class="brand-icon"><use href="{{ path.Join "_" (index .Site.Data "rev-manifest" "img/brand-logos.svg") | relURL }}#linkedin" /></svg></a>
-                  <a href="{{ "blog/index.xml" | relURL }}" title="Subscribe to RSS Feed"><svg focusable="false" class="brand-icon"><use href="{{ path.Join "_" (index .Site.Data "rev-manifest" "img/brand-logos.svg") | relURL }}#rss" /></svg></a>
+                    <a class="navbar-github" rel="noopener noreferrer nofollow" href="https://github.com/apache/camel/" title="Collaborate on GitHub"><svg focusable="false" class="brand-icon"><use href="{{ path.Join "_" (index .Site.Data "rev-manifest" "img/brand-logos.svg") | relURL }}#github" /></svg></a>
+                    <a class="button dark navbar-cta" href="{{ $ctaURL | relURL }}">{{ $ctaLabel }}</a>
                 </div>
                 <button class="navbar-burger" data-target="topbar-nav" type="button" aria-label="Menu">
                     <span></span>
