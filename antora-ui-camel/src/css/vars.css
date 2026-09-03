@@ -142,7 +142,7 @@
   --quote-background: var(--panel-background);
   --quote-border-color: var(--color-gray-70);
   --quote-font-color: var(--color-gray-70);
-  --quote-attribution-font-color: var(--color-gray-30);
+  --quote-attribution-font-color: var(--color-ink-soft);
   --sidebar-background: var(--color-paper-2);
   --table-border-color: var(--color-line);
   /* static */
