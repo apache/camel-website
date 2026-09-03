@@ -365,10 +365,17 @@ Expected: nothing, `exit: 1`. If a stale `droid-sans-mono` file is still listed,
 
 - [ ] **Step 8: Commit**
 
+Do **not** use `git add -A`. The working tree carries unrelated in-progress work that must stay uncommitted: `antora-ui-camel/src/css/projects.css` is untracked, and `site.css` already holds an uncommitted `@import url('projects.css');` line from that work. A blanket add sweeps both into this commit.
+
+`site.css` therefore needs a partial stage. Its two changes are far apart, so `git add -p` offers them as separate hunks: accept the hunk near the top that removes the Droid Sans Mono import, and decline the one near the bottom that adds the `projects.css` import.
+
 ```bash
-git add -A antora-ui-camel
+git add antora-ui-camel/src/css/vars.css antora-ui-camel/src/css/base.css antora-ui-camel/gulpfile.js antora-ui-camel/package.json yarn.lock
+git add -p antora-ui-camel/src/css/site.css
 git commit -m "style(ui): switch monospace to JetBrains Mono, add Archivo display family"
 ```
+
+The deletion of `typeface-droid-sans-mono.css` is already staged by the `git rm` in Step 5. Before committing, confirm the staged set with `git status --short` and check that `projects.css` is still listed as untracked and `site.css` still shows unstaged changes.
 
 ---
 
@@ -918,6 +925,40 @@ If everything holds, say so and move to the piece 6 plan. If documentation legib
 Remember that **this piece cannot merge on its own.** Piece 6 stacks directly on it so that no reviewer ever sees the branch with broken code blocks.
 
 ---
+
+## Open items after implementation
+
+All nine implementation commits landed (`7aada581` through `08bbc4a9`) and every review is clean. Four things remain, recorded here because they outlive the scratch workspace.
+
+### 1. Two link colors fail WCAG AA, and the spec mandates them
+
+`--link-font-color: var(--color-orange-deep)` is `#c95f12` on `#faf7f1`, which measures **3.83:1** against a 4.5:1 threshold for normal text. `--link_hover-font-color: var(--color-camel-orange)` is `#e97826` on `#faf7f1`, **2.73:1**, and is *lighter* than the resting color, so hovering weakens the link instead of strengthening it. The values the redesign replaced were 5.83:1, so this is a regression rather than an inherited problem.
+
+Both values come from `SCOPE.md` section 2 and both are brand palette colors. They were left exactly as specified: silently darkening a designer's color is not a decision an implementer should make quietly. Resolving this needs a human, and it is the one open item that blocks calling this piece good.
+
+The narrowest fix is to darken `--color-orange-deep` until it clears 4.5:1 and give hover a *darker* value than rest. `--color-ink-soft` at 6.36:1 shows the headroom available in the warm range.
+
+### 2. The verification gate has not been run
+
+Criteria 1, 2, 3, and 6 are met and were verified mechanically. Criterion 4 (`yarn build && yarn checks`) cannot pass for reasons outside this work, listed in item 4. **Criterion 5, the visual comparison against the artboards, has not been performed** and no agent can perform it.
+
+Run `yarn preview:hugo`, then work through Task 7 steps 5 and 6 above. Two things must not be judged during that pass: syntax-highlighted code, because `highlight.css` still carries the old light theme and piece 6 owns it, and heading case, because `.doc` headings still carry `text-transform: uppercase` and piece 3 owns it.
+
+### 3. The rebuilt UI bundle is deliberately uncommitted
+
+`antora-ui-camel/public/_` is tracked (115 files) and this repo's history carries dedicated regen commits, so by convention a `src/css` change ships with its rebuilt bundle. The tracked manifest still points at the stale `site-f06a797174.css`, which means **the branch as committed does not yet serve the redesign**.
+
+The regen was left undone on purpose: the freshly built bundle has the uncommitted `projects.css` compiled into it, so committing it would bake unreviewed source into a tracked artifact. Commit or drop the projects work first, then rebuild and commit the bundle.
+
+### 4. Two pre-existing build failures, neither caused by this work
+
+`yarn build:antora` fails on broken upstream xrefs in fetched `apache/camel` content under a `failure_level: warn` policy.
+
+`yarn build:hugo` fails on `layouts/projects/list.html:3`, which reads `{{- $manifest := .Site.Data "rev-manifest" }}`. That is invalid Go template syntax, since `.Site.Data` is a map rather than a method, and the variable is never used because the template resolves the manifest inline at lines 21 and 35. Deleting the line is the whole fix. It sits in untracked work in progress, so it was left alone.
+
+### 5. Deferred minors
+
+None block a merge. In rough priority order: `blog.css:70` keeps a `#fff` gradient stop that now shows as a faint white line against paper; `header.css:299` gives the search panel the navbar's 90% alpha with no `backdrop-filter` in the bundle; `header.css:332` puts `.result_header` in ink inside an anchor, weakening link affordance; `blog.css:328` renders the active pagination pill in near-black; `--nav-panel-divider-color` is now lighter than the panel it divides. The last four are all header, nav, or pagination chrome that pieces 2 and 3 repaint anyway.
 
 ## Deferred to later pieces
 
