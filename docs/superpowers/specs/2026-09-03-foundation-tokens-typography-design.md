@@ -5,6 +5,12 @@ Piece 1 of 6 of the camel-website redesign. Branch `feature/new-website-design`.
 The six pieces: 1 foundation (this document), 2 shared chrome, 3 Antora docs UI,
 4 designed Hugo pages, 5 undesigned template sweep, 6 syntax highlighting theme.
 
+Piece numbers are identities, not sequence. Landing order is **1, 6, 2, 3, 4,
+5**: piece 6 stacks directly on piece 1 so the branch is never left in a
+reviewable state with broken code blocks. Piece 6 is specified in `SCOPE.md`
+section 2a, which gives the full hljs class-to-color table and the chroma
+mapping for Hugo blog posts.
+
 Design source: `Apache Camel Home.dc.html` and `Apache Camel Site Pages.dc.html`,
 with decisions recorded in the design handoff `SCOPE.md` (2026-09-03).
 
@@ -37,7 +43,9 @@ Out of scope, deferred to later pieces:
 - Antora nav, toolbar, article, and TOC treatments (piece 3).
 - Any Hugo page layout, including the home page and `/projects/` (piece 4).
 - Release notes and release partials (piece 5).
-- The syntax highlighting theme in `highlight.css` (piece 6).
+- The syntax highlighting theme in `highlight.css` and the chroma mapping for
+  Hugo blog posts (piece 6, specified in `SCOPE.md` section 2a, landing
+  immediately after this piece).
 
 ## Decisions
 
@@ -207,20 +215,24 @@ legibility regresses, that is a finding to report and resolve before piece 2,
 not something to work around in later pieces. Syntax-highlighted code is
 excluded from item 5; see below.
 
-## Accepted temporary regression
+## Code blocks between piece 1 and piece 6
 
 `highlight.css` is tuned against a light `--pre-background`. This piece sets
-`--pre-background` to `--color-ink` without touching that theme, so highlighted
-code renders light-on-dark token colors against a dark ground and will look
-wrong on every page that carries a code block. That is a known and accepted
-consequence, scoped to piece 6, not a defect to report during review of this
-piece.
+`--pre-background` to `--color-ink` without touching that theme, so at the end
+of piece 1 in isolation, highlighted code renders dark token colors against a
+dark ground on every page carrying a code block.
 
-The reason for splitting it: choosing a dark highlight theme is a design
-decision with no reference in the artboards, and folding it into the token swap
-would make the riskiest piece of the redesign larger and harder to review. The
-cost of the split is that the branch carries visibly broken code blocks between
-piece 1 and piece 6, so piece 6 should not be deferred far.
+Piece 6 stacks directly on this one to close that window, so no reviewer sees a
+branch state with broken code blocks. The consequence for this piece is narrow
+but real: piece 1 cannot be merged on its own, and its verification pass has to
+ignore syntax-highlighted code. Anything else about code blocks is in scope
+here, including the `pre` background and radius, the `--pre-font-color` binding,
+and inline `code`, none of which depend on the highlight theme.
+
+The split is kept rather than merging the two because the token swap and the
+highlight theme fail in different ways and are worth reviewing separately: one
+is a mechanical re-point across a shared stylesheet, the other is a color
+palette that has to hold contrast across a dozen token classes.
 
 ## Risks
 
