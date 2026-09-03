@@ -23,6 +23,8 @@
   "devDependencies": {
     "@asciidoctor/core": "^3.0.2",
     "@asciidoctor/tabs": "1.0.0-beta.3",
+    "@fontsource/archivo": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
     "@openfonts/open-sans_latin-ext": "^1.44.0",
     "@ronilaukkarinen/gulp-stylelint": "^14.1.2",
     "@vscode/gulp-vinyl-zip": "^2.5.0",
