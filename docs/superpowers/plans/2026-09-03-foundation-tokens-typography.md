@@ -977,6 +977,37 @@ It was built from committed source only. A later clean rebuild against a clean w
 
 None block a merge. In rough priority order: `blog.css:70` keeps a `#fff` gradient stop that now shows as a faint white line against paper; `header.css:299` gives the search panel the navbar's 90% alpha with no `backdrop-filter` in the bundle; `header.css:332` puts `.result_header` in ink inside an anchor, weakening link affordance; `blog.css:328` renders the active pagination pill in near-black; `--nav-panel-divider-color` is now lighter than the panel it divides. The last four are all header, nav, or pagination chrome that pieces 2 and 3 repaint anyway.
 
+### 6. Findings from piece 6, syntax highlighting
+
+Piece 6 landed on top of this one. Three things it turned up are worth recording
+because they are not obvious from `SCOPE.md` and outlive the piece.
+
+**The hljs bundle ships 191 languages and is not trimmed.**
+`src/js/vendor/highlight.bundle.js` calls `require('highlight.js')`, the full
+package entry point, which auto-registers every language. Its nine explicit
+`registerLanguage` calls are therefore redundant no-ops. The built artifact is
+**903 KB raw, 286 KB gzipped**, served on every documentation page, for roughly
+20 languages actually in use. Switching to `highlight.js/lib/core` with an
+explicit registration list would cut about 90 percent of it.
+
+Deliberately left for its own change. The language list can only be enumerated
+from the built tree, and this site aggregates documentation from `apache/camel`
+and sibling repositories, so a language used by a repository not represented in
+the local build would silently lose highlighting. That needs its own
+verification pass rather than a ride-along in a color-theme commit.
+
+**Twenty-seven code blocks cannot be highlighted at all.** `uri` (11), `log`
+(7), `java-properties` (3), `edi` (2), `dataweave` (2), and `datasonnet` (2)
+have no highlight.js grammar. They render as flat base-color text, which is
+correct and legible. Nothing to do unless someone writes grammars.
+
+**The bash prompt glyph is unreachable from CSS.** `SCOPE.md` section 2a asks
+for `#e0805a` on the shell `$`. Only the `shell`, `console`, and `shellsession`
+grammars tokenize it, as a plain `.hljs-meta`; the `bash` grammar leaves it as
+text. Since `.hljs-meta` also covers Java annotations and XML declarations, the
+rule is scoped by language in `highlight.css`. The 1075 `bash` blocks keep an
+uncolored prompt, and no stylesheet can change that.
+
 ## Deferred to later pieces
 
 Recorded here so nothing in this plan gets mistaken for an oversight.
@@ -984,5 +1015,7 @@ Recorded here so nothing in this plan gets mistaken for an oversight.
 - **Piece 2, shared chrome:** applying `--page-padding-x` to the header, footer, and page containers; binding those containers to `--static-max-width--desktop` on documentation pages too; the `.button.dark` and `.button.light` pill radius.
 - **Piece 3, Antora docs UI:** the admonition treatment. `SCOPE.md` keeps the semantic hues but moves TIP and NOTE to an orange tint with an orange left rule. That guidance is easy to miss, because a markdown glitch at `SCOPE.md:74` crams it into the last cell of the Widths table. Also `text-transform: uppercase` on `.doc` headings, and the navbar and nav-panel greys left on `--color-smoke-70` by Task 6.
 - **Piece 4, designed Hugo pages:** binding `--heading-font-weight-display` to h1, and deleting the `--projects-*` page-scoped tokens now duplicated at `:root`.
-- **Piece 6, syntax highlighting:** `highlight.css` and the Hugo chroma mapping, both specified in `SCOPE.md` section 2a.
+- **Piece 6, syntax highlighting:** done. `highlight.css` rewritten onto shared
+  `--syntax-*` tokens and a new `chroma.css` added for Hugo blog posts, both per
+  `SCOPE.md` section 2a. See "Findings from piece 6" above for what it turned up.
 - **Cleanup, unscheduled:** removing the `--color-smoke-*`, `--color-gray-*`, and `--color-jet-*` ramps once later pieces prove nothing binds them, and deciding whether `--color-camel-orange-light` survives.
