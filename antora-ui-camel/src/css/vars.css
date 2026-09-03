@@ -35,7 +35,16 @@
   --color-ink-2: #3a332b;
   --color-ink-soft: #5c554c;
   --color-ink-muted: #8a8074;
-  --color-orange-deep: #c95f12;
+  /* Deviates from SCOPE.md section 2, which specifies #c95f12. That value measures
+     3.83:1 on --color-paper and 3.55:1 on --color-paper-2, failing WCAG AA for normal
+     text, and links land on both surfaces. #a84e0d is the same hue (25deg) and
+     saturation stepped down in lightness only, giving 5.22:1 and 4.84:1. */
+  --color-orange-deep: #a84e0d;
+  /* Hover for --color-orange-deep. SCOPE.md hovers links to --color-camel-orange,
+     but that is 2.74:1 and lighter than rest, so hover weakened the link. No orange
+     bright enough to read as brighter can clear 4.5:1, so hover darkens instead:
+     7.42:1 on paper, 6.87:1 on paper-2. */
+  --color-orange-deeper: #853c09;
   --color-orange-tint: #fbead8;
   --color-orange-glow: #f2a05a;
   --color-dark-2: #2b2620;
@@ -120,7 +129,7 @@
   --alt-heading-font-weight: var(--body-font-weight-bold);
   --section-divider-color: var(--panel-border-color);
   --link-font-color: var(--color-orange-deep);
-  --link_hover-font-color: var(--color-camel-orange);
+  --link_hover-font-color: var(--color-orange-deeper);
   --link_unresolved-font-color: var(--important-color);
   --abstract-background: var(--color-paper-2);
   --abstract-font-color: var(--color-jet-20);
