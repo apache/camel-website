@@ -388,13 +388,3 @@ html.is-clipped--nav {
   content: " (latest)";
 }
 */
-
-.nav-logo {
-  background-image: url('../img/logo-camel-medium.png');
-  background-repeat: no-repeat;
-  background-size: 9.5rem;
-  background-position-x: 10px;
-  background-position-y: 10px;
-  width: 4rem;
-  order: 1;
-}
