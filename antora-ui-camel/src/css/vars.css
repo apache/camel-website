@@ -122,7 +122,7 @@
   --link-font-color: var(--color-orange-deep);
   --link_hover-font-color: var(--color-camel-orange);
   --link_unresolved-font-color: var(--important-color);
-  --abstract-background: var(--color-smoke-70);
+  --abstract-background: var(--color-paper-2);
   --abstract-font-color: var(--color-jet-20);
   --abstract-border-color: var(--panel-border-color);
   --admonition-background: var(--panel-background);
@@ -131,19 +131,19 @@
   --caption-font-weight: var(--body-font-weight-bold);
   --code-background: var(--color-paper-2);
   --code-font-color: var(--color-ink);
-  --example-background: var(--color-white);
-  --example-border-color: var(--color-gray-10);
+  --example-background: var(--color-paper);
+  --example-border-color: var(--color-line);
   --kbd-background: var(--panel-background);
   --kbd-border-color: var(--color-gray-10);
   --pre-background: var(--color-ink);
   --pre-font-color: var(--color-on-dark);
   --pre-border-color: var(--color-dark-line);
-  --pre-annotation-font-color: var(--color-gray-10);
+  --pre-annotation-font-color: var(--color-on-dark-muted);
   --quote-background: var(--panel-background);
   --quote-border-color: var(--color-gray-70);
   --quote-font-color: var(--color-gray-70);
   --quote-attribution-font-color: var(--color-gray-30);
-  --sidebar-background: var(--color-smoke-70);
+  --sidebar-background: var(--color-paper-2);
   --table-border-color: var(--color-line);
   /* static */
   --static-margin: 0 auto;
@@ -153,7 +153,7 @@
   --footer-line-height: var(--doc-line-height);
   --footer-background: var(--color-ink);
   --footer-font-color: var(--color-on-dark-soft);
-  --footer-after-background: var(--color-gray-50);
+  --footer-after-background: var(--color-dark-line);
   --footer-link-font-color: var(--color-on-dark-soft);
   --footer-height: 23rem; /* empirically corresponding current design of the foooter */
   /* dimensions */

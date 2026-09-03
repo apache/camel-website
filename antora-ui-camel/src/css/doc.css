@@ -599,18 +599,18 @@
 }
 
 .doc pre.highlight code::-webkit-scrollbar-track {
-  background: var(--scrollbar-track-color);
+  background: var(--color-dark-2);
   border-radius: var(--scrollbar-radius);
 }
 
 .doc pre.highlight code::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb-color);
+  background: var(--color-dark-line);
   border-radius: var(--scrollbar-radius);
 }
 
 .doc pre.highlight code::-webkit-scrollbar-thumb:hover,
 .doc pre.highlight code::-webkit-scrollbar-thumb:active {
-  background: var(--scrollbar-thumb-active-color);
+  background: var(--color-on-dark-muted);
 }
 
 /* NOTE assume pre.highlight contains code[data-lang] */
@@ -862,7 +862,7 @@
 }
 
 table.tableblock thead {
-  background: var(--color-smoke-90);
+  background: var(--color-paper-2);
   font-weight: var(--body-font-weight-bold);
 }
 
