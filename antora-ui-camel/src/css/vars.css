@@ -189,7 +189,21 @@
   --footer-font-color: var(--color-on-dark-soft);
   --footer-after-background: var(--color-dark-line);
   --footer-link-font-color: var(--color-on-dark-soft);
-  --footer-height: 40rem; /* empirically measured on the five-column footer, desktop viewport */
+  /* Used only by .body's min-height calc in body.css (no longer by footer's own
+     min-height, which was deleted: it never bound at desktop and was the sole
+     cause of an oversized empty band at narrow widths). Must be at or below the
+     footer's real rendered height at EVERY width, in pixels, or short pages get
+     a gap below the footer instead of a properly sized one. Measured 716px at
+     1400px wide (root font-size 18px there) versus 964px at 390px and 933px at
+     1000px (root font-size 17px below the 1025px breakpoint) -- the desktop
+     figure is the tighter constraint once the differing root font-size is
+     accounted for (39.78rem * 18px = 716px, vs 964px / 17px = 56.7rem of
+     headroom at mobile), even though the mobile footer is the visually shorter
+     one post-accordion-collapse. Rounded down to stay safe: an underestimate
+     only makes a short page a little taller than 100vh, which costs nothing;
+     an overestimate reopens the gap this comment exists to prevent. Do not
+     "correct" this back up to a desktop-only reading. */
+  --footer-height: 39rem;
   /* dimensions */
   --navbar-height: calc(73 / var(--rem-base) * 1rem);
   --navbar-burger-height: calc(54 / var(--rem-base) * 1rem);
