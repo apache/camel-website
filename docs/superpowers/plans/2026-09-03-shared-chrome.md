@@ -1245,6 +1245,38 @@ git commit -m "docs: record open items after piece 2 implementation"
 
 ---
 
+---
+
+### Task 4R: Footer artboard reconciliation
+
+Added mid-run, not part of the original seven. The design owner supplied
+`Apache Camel website reference.zip` after Tasks 1 to 4 had landed, and it
+contains the two artboards this plan's spec recorded as unavailable. Tasks 2 and
+3 built the footer from `SCOPE.md` prose; this task brings it onto the measured
+design.
+
+The full step list lives in the run workspace at `task-4R-brief.md`. It covers:
+grid gap 32px to 40px, container padding to the artboard's `56px 32px 40px`,
+the logo and wordmark onto one line at 34px and 18px, the blurb to 13.5px with a
+280px measure, column title and link rhythm to 14px and 10px, and the legal rule
+inverted from an `::after` below the copyright to a `border-top` above it.
+
+Two changes in it are not artboard deltas:
+
+- The footer social icons were filled with `var(--navbar-font-color)`, which
+  resolves to `--color-ink-soft`, an ink color on the ink footer at about 1.9:1.
+  They were very nearly invisible. Fixed to `--color-on-dark-soft` with a hover.
+- The brand blurb copy moves from `config.toml`'s `organizationDescription` to
+  the artboard's own line, which the spec had recorded as having no source.
+
+The artboard's bottom strip carries only the copyright. Ours also carries the
+legal links and the social icons, by spec, so that strip is reconciled in intent
+rather than matched literally.
+
+**Files:** `antora-ui-camel/src/css/footer.css`, `data/chrome.yaml`.
+
+---
+
 ## Deferred, not this plan
 
 - The second search field in the Antora nav panel (`SCOPE.md` section 5), piece 3.
