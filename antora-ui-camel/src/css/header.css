@@ -94,6 +94,7 @@ body {
   position: relative;
   /* width: var(--navbar-height); */
   width: 2rem;
+  flex-shrink: 0;
   top: 0.75rem;
   padding: 0;
   order: 8;
@@ -176,18 +177,6 @@ body {
   .navbar-burger {
     display: none;
   }
-}
-
-.navbar .button {
-  display: inline-flex;
-  align-items: center;
-  background: var(--navbar-button-background);
-  border: 1px solid var(--navbar-button-border-color);
-  border-radius: 0.15rem;
-  height: 1.75rem;
-  color: var(--navbar-button-font-color);
-  padding: 0 0.75em;
-  white-space: nowrap;
 }
 
 .navbar-actions {
@@ -358,6 +347,15 @@ div.footer-search h4 {
     flex-wrap: wrap;
   }
 
+  /* The field gives up its fixed 200px and shrinks with the bar. */
+  .navbar-search {
+    min-width: 0;
+  }
+
+  .navbar-search input {
+    width: 100%;
+  }
+
   .navbar-burger {
     display: block;
   }
@@ -370,5 +368,22 @@ div.footer-search h4 {
     left: 0;
     width: 100vw;
     top: var(--navbar-height);
+  }
+}
+
+@media (width <= 500px) {
+  /* Below this, the brand, CTA and burger alone fill the bar. Search and the
+     GitHub link are dropped rather than pushing the burger off-screen. GitHub
+     stays reachable in the footer. */
+  .navbar-search,
+  .navbar-github {
+    display: none;
+  }
+
+  /* Even with search and GitHub gone, the full wordmark plus the CTA and
+     burger still overflow a 390px phone (measured). The mark alone carries
+     the brand at this width; the wordmark returns above the breakpoint. */
+  .navbar-wordmark {
+    display: none;
   }
 }
