@@ -145,7 +145,9 @@
   --kbd-background: var(--panel-background);
   --kbd-border-color: var(--color-gray-10);
   --pre-background: var(--color-ink);
-  --pre-font-color: var(--color-on-dark);
+  /* SCOPE.md section 2a gives base code text as #f0e9df and reserves #faf7f1
+     (--color-on-dark) for .hljs-title, so the two must not be the same token. */
+  --pre-font-color: var(--syntax-text);
   --pre-border-color: var(--color-dark-line);
   --pre-annotation-font-color: var(--color-on-dark-muted);
   --quote-background: var(--panel-background);
@@ -154,6 +156,29 @@
   --quote-attribution-font-color: var(--color-ink-soft);
   --sidebar-background: var(--color-paper-2);
   --table-border-color: var(--color-line);
+  /* syntax highlighting, one token per row of SCOPE.md section 2a.
+     Bound by both highlight.css (highlight.js, Antora) and chroma.css (Hugo blog
+     posts) so the two systems cannot drift apart. All values sit on
+     --pre-background (#211c17) and clear 4.5:1 there. */
+  --syntax-text: #f0e9df;
+  --syntax-comment: #8f867a;
+  --syntax-keyword: var(--color-camel-orange);
+  --syntax-string: var(--color-orange-glow);
+  --syntax-number: #e8c87a;
+  --syntax-title: var(--color-on-dark);
+  --syntax-type: #d9b6f0;
+  --syntax-tag: var(--color-on-dark-soft);
+  --syntax-attr: #e8c87a;
+  --syntax-regexp: #9fd3b0;
+  --syntax-symbol: var(--color-orange-glow);
+  --syntax-built-in: #8ec5e6;
+  --syntax-meta: #8f867a;
+  --syntax-prompt: #e0805a;
+  --syntax-deletion-background: rgb(224 82 58 / 25%);
+  --syntax-addition-background: rgb(159 211 176 / 25%);
+  /* section 2a asks for 600; --monospace-font-weight-bold is 500 and has other
+     consumers, so it cannot be reused here. */
+  --syntax-font-weight-strong: 600;
   /* static */
   --static-margin: 0 auto;
   /* frontpage */

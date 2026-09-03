@@ -1,15 +1,17 @@
-/*! Adapted from the GitHub style by Vasily Polovnyov <vast@whiteants.net> */
+/*! highlight.js theme for the 2026 redesign, per SCOPE.md section 2a.
+    Replaces the GitHub light theme; --pre-background is now --color-ink.
+    Colors live in vars.css as --syntax-*, shared with chroma.css. */
 .hljs-comment,
 .hljs-quote {
-  color: #998;
+  color: var(--syntax-comment);
   font-style: italic;
 }
 
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-subst {
-  color: #333;
-  font-weight: var(--monospace-font-weight-bold);
+  color: var(--syntax-keyword);
+  font-weight: var(--syntax-font-weight-strong);
 }
 
 .hljs-number,
@@ -17,19 +19,25 @@
 .hljs-variable,
 .hljs-template-variable,
 .hljs-tag .hljs-attr {
-  color: #008080;
+  color: var(--syntax-number);
+}
+
+/* Bare .hljs-attr is YAML and JSON keys. Section 2a has no row for it; it takes
+   the attr color so those keys read consistently with XML attributes. */
+.hljs-attr {
+  color: var(--syntax-attr);
 }
 
 .hljs-string,
 .hljs-doctag {
-  color: #d14;
+  color: var(--syntax-string);
 }
 
 .hljs-title,
 .hljs-section,
 .hljs-selector-id {
-  color: #900;
-  font-weight: var(--monospace-font-weight-bold);
+  color: var(--syntax-title);
+  font-weight: var(--syntax-font-weight-strong);
 }
 
 .hljs-subst {
@@ -38,43 +46,53 @@
 
 .hljs-type,
 .hljs-class .hljs-title {
-  color: #458;
-  font-weight: var(--monospace-font-weight-bold);
+  color: var(--syntax-type);
+  font-weight: var(--syntax-font-weight-strong);
 }
 
 .hljs-tag,
 .hljs-name,
 .hljs-attribute {
-  color: #000080;
+  color: var(--syntax-tag);
   font-weight: normal;
 }
 
 .hljs-regexp,
 .hljs-link {
-  color: #009926;
+  color: var(--syntax-regexp);
 }
 
 .hljs-symbol,
 .hljs-bullet {
-  color: #990073;
+  color: var(--syntax-symbol);
 }
 
 .hljs-built_in,
 .hljs-builtin-name {
-  color: #0086b3;
+  color: var(--syntax-built-in);
 }
 
 .hljs-meta {
-  color: var(--color-gray-50);
-  font-weight: var(--monospace-font-weight-bold);
+  color: var(--syntax-meta);
+  font-weight: var(--syntax-font-weight-strong);
+}
+
+/* The shell prompt glyph. highlight.js emits it as a plain .hljs-meta, which
+   also covers Java annotations and XML declarations, so section 2a's two rows
+   for that class can only be separated by language. The bash grammar leaves its
+   own prompt untokenized, so it is unreachable from CSS and not listed here. */
+.doc code.language-shell .hljs-meta,
+.doc code.language-console .hljs-meta,
+.doc code.language-shellsession .hljs-meta {
+  color: var(--syntax-prompt);
 }
 
 .hljs-deletion {
-  background: #fdd;
+  background: var(--syntax-deletion-background);
 }
 
 .hljs-addition {
-  background: #dfd;
+  background: var(--syntax-addition-background);
 }
 
 .hljs-emphasis {
@@ -82,5 +100,5 @@
 }
 
 .hljs-strong {
-  font-weight: var(--monospace-font-weight-bold);
+  font-weight: var(--syntax-font-weight-strong);
 }
