@@ -8,59 +8,56 @@ body > footer {
   color: var(--footer-font-color);
   font-size: calc(15 / var(--rem-base) * 1rem);
   line-height: var(--footer-line-height);
-  padding: 1.5rem 0;
+  padding: 0;
   flex-shrink: 0;
 }
 
 footer .footer {
   display: grid;
   grid-template-columns: 1.4fr repeat(4, 1fr);
-  gap: calc(32 / var(--rem-base) * 1rem);
+  gap: calc(40 / var(--rem-base) * 1rem);
   width: 100%;
   max-width: var(--static-max-width--desktop);
   margin-inline: auto;
+  padding-block: calc(56 / var(--rem-base) * 1rem) calc(40 / var(--rem-base) * 1rem);
   padding-inline: var(--page-padding-x);
 }
 
 .footer-brand {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: calc(12 / var(--rem-base) * 1rem);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: calc(11 / var(--rem-base) * 1rem);
 }
 
 .footer-logo {
-  width: calc(40 / var(--rem-base) * 1rem);
+  width: calc(34 / var(--rem-base) * 1rem);
+  height: calc(34 / var(--rem-base) * 1rem);
 }
 
 .footer-wordmark {
   font-family: var(--display-font-family);
   font-weight: 800;
-  font-size: calc(19 / var(--rem-base) * 1rem);
+  font-size: calc(18 / var(--rem-base) * 1rem);
   color: var(--color-on-dark);
 }
 
 .footer-blurb {
-  font-size: calc(14 / var(--rem-base) * 1rem);
+  grid-column: 1 / -1;
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  line-height: 1.6;
   color: var(--color-on-dark-muted);
-  margin: 0;
-  max-width: 28ch;
+  margin: calc(16 / var(--rem-base) * 1rem) 0 0;
+  max-width: calc(280 / var(--rem-base) * 1rem);
 }
 
 footer .footer p.remark {
   grid-column: 1 / -1;
-  margin: 3rem 0 0.5rem;
-  padding: 0 1rem;
-}
-
-footer .footer p.remark::after {
-  content: '';
-  display: block;
-  position: relative;
-  height: 1px;
-  width: 100%;
-  margin: 2rem 0 1rem;
-  background: var(--footer-after-background);
+  border-top: 1px solid var(--color-dark-line);
+  margin: calc(40 / var(--rem-base) * 1rem) 0 0;
+  padding: calc(22 / var(--rem-base) * 1rem) 0 0;
+  font-size: calc(12.5 / var(--rem-base) * 1rem);
+  color: var(--color-on-dark-muted);
 }
 
 footer .footer a {
@@ -102,7 +99,7 @@ footer .footer .footer-column dt {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-on-dark);
-  margin-bottom: calc(12 / var(--rem-base) * 1rem);
+  margin-bottom: calc(14 / var(--rem-base) * 1rem);
 }
 
 footer .footer .footer-column dt label:first-of-type::after {
@@ -117,7 +114,7 @@ footer .footer .footer-column dt label:first-of-type::after {
 }
 
 footer .footer .footer-column dd {
-  margin: 0 0 calc(8 / var(--rem-base) * 1rem);
+  margin: 0 0 calc(10 / var(--rem-base) * 1rem);
 }
 
 footer .footer .footer-column dd a {
@@ -169,7 +166,11 @@ footer .footer .footer-icons .brand-icon {
   height: 2em;
   width: 1.75em;
   margin: 0.35rem;
-  fill: var(--navbar-font-color);
+  fill: var(--color-on-dark-soft);
+}
+
+footer .footer .footer-icons a:hover .brand-icon {
+  fill: var(--color-on-dark);
 }
 
 footer .footer input[type='checkbox'],
@@ -214,10 +215,6 @@ footer .footer dl dt label:nth-child(2) {
 
   footer .footer dl dd:first-of-type {
     margin-top: 1rem;
-  }
-
-  footer .footer p.remark::after {
-    width: auto;
   }
 
   footer .footer .footer-icons .brand-icon {
