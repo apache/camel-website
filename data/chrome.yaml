@@ -3,8 +3,8 @@
 brand:
   name: Apache Camel
   blurb: >-
-    Apache Camel is an open source integration framework with 350+ connectors
-    for databases, APIs, message brokers, and cloud services.
+    Open source integration framework. An Apache Software Foundation project,
+    available under the Apache v2 license.
 
 columns:
   - title: Overview
