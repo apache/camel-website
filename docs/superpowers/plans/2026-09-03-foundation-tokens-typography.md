@@ -930,13 +930,24 @@ Remember that **this piece cannot merge on its own.** Piece 6 stacks directly on
 
 All nine implementation commits landed (`7aada581` through `08bbc4a9`) and every review is clean. Four things remain, recorded here because they outlive the scratch workspace.
 
-### 1. Two link colors fail WCAG AA, and the spec mandates them
+### 1. Two link colors failed WCAG AA — resolved
 
-`--link-font-color: var(--color-orange-deep)` is `#c95f12` on `#faf7f1`, which measures **3.83:1** against a 4.5:1 threshold for normal text. `--link_hover-font-color: var(--color-camel-orange)` is `#e97826` on `#faf7f1`, **2.73:1**, and is *lighter* than the resting color, so hovering weakens the link instead of strengthening it. The values the redesign replaced were 5.83:1, so this is a regression rather than an inherited problem.
+`--link-font-color: var(--color-orange-deep)` was `#c95f12` on `#faf7f1`, which measures **3.83:1** against a 4.5:1 threshold for normal text. `--link_hover-font-color: var(--color-camel-orange)` was `#e97826` on `#faf7f1`, **2.73:1**, and is *lighter* than the resting color, so hovering weakened the link instead of strengthening it. The values the redesign replaced were 5.83:1, so this was a regression rather than an inherited problem.
 
-Both values come from `SCOPE.md` section 2 and both are brand palette colors. They were left exactly as specified: silently darkening a designer's color is not a decision an implementer should make quietly. Resolving this needs a human, and it is the one open item that blocks calling this piece good.
+Both values came from `SCOPE.md` section 2 and both are brand palette colors, so they were left exactly as specified until the design owner ruled on them. **The design owner approved darkening them on 2026-09-03.**
 
-The narrowest fix is to darken `--color-orange-deep` until it clears 4.5:1 and give hover a *darker* value than rest. `--color-ink-soft` at 6.36:1 shows the headroom available in the warm range.
+Both surfaces were held to the threshold, not just paper: links land on `--color-paper-2` (`#f4eee3`) in nav panels, table heads, and tinted blocks, and that is the harsher of the two.
+
+| token | was | now | paper | paper-2 |
+|---|---|---|---|---|
+| `--color-orange-deep` (rest) | `#c95f12` | `#a84e0d` | 5.22 | 4.84 |
+| `--link_hover-font-color` | `#e97826` | `#853c09` (new `--color-orange-deeper`) | 7.42 | 6.87 |
+
+Both new values sit at hue 25° and ~92% saturation, matching `#c95f12`, so they are pure lightness steps down the existing brand ramp rather than a different color. `#b0520e` was rejected: 4.84 on paper but **4.48** on paper-2, missing AA by a hair. `--color-camel-orange` is untouched and remains the primary brand orange for CTAs, chips, and accents.
+
+Hover now *darkens*. No orange bright enough to read as brighter than rest can clear 4.5:1, so the design's brighten-on-hover intent cannot survive an AA requirement. The gradient underline is painted with `--link-font-color`, so it darkens in step and the hover affordance strengthens on two channels at once.
+
+`--color-orange-deep` had exactly one consumer, and `SCOPE.md` gives its purpose as "links, hover on CTA". Piece 2's CTA hover uses it as a background under white text, where the darkening improves white-on-it from 4.09 to 5.58, so it was redefined in place rather than shadowed by a link-only token. Both deviations from `SCOPE.md` are commented at their declaration sites in `vars.css`.
 
 ### 2. The verification gate has not been run
 
@@ -949,6 +960,8 @@ Run `yarn preview:hugo`, then work through Task 7 steps 5 and 6 above. Two thing
 Resolved. `antora-ui-camel/public/_` is tracked (115 files) and this repo's history carries dedicated regen commits, so by convention a `src/css` change ships with its rebuilt bundle. That regen is commit `22630dee`, producing `site-a08aeff1d4.css`.
 
 It was built from committed source only. A later clean rebuild against a clean working tree reproduced the identical hash and left `git status` empty, so the tracked artifact is byte-for-byte what tracked source produces.
+
+**The tracked bundle is now one commit stale**, by decision: the item 1 link-color fix changed `vars.css` without regenerating it, because piece 6 lands immediately after and touches CSS again. One regen commit covers both. Piece 1 was never independently mergeable anyway. Regenerate at the end of piece 6 with `cd antora-ui-camel && yarn build`, and confirm `git status` is empty on a second run before trusting the artifact.
 
 ### 4. Build status, and the GITHUB_TOKEN requirement
 
