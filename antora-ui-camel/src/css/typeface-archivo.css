@@ -1,0 +1,44 @@
+/* archivo-500normal - latin */
+@font-face {
+  font-family: Archivo;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src:
+    local('Archivo Medium'),
+    local('Archivo-Medium'),
+    url('~@fontsource/archivo/files/archivo-latin-500-normal.woff2') format('woff2');
+}
+/* archivo-600normal - latin */
+@font-face {
+  font-family: Archivo;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src:
+    local('Archivo SemiBold'),
+    local('Archivo-SemiBold'),
+    url('~@fontsource/archivo/files/archivo-latin-600-normal.woff2') format('woff2');
+}
+/* archivo-700normal - latin */
+@font-face {
+  font-family: Archivo;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src:
+    local('Archivo Bold'),
+    local('Archivo-Bold'),
+    url('~@fontsource/archivo/files/archivo-latin-700-normal.woff2') format('woff2');
+}
+/* archivo-800normal - latin */
+@font-face {
+  font-family: Archivo;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
+  src:
+    local('Archivo ExtraBold'),
+    local('Archivo-ExtraBold'),
+    url('~@fontsource/archivo/files/archivo-latin-800-normal.woff2') format('woff2');
+}
