@@ -26,8 +26,12 @@ const mapLink = (link, siteRootPath) => {
 
 module.exports = (options) => {
   const siteRootPath = options.data.root.siteRootPath
+  // Merge onto the existing data frame instead of replacing it outright:
+  // replacing it drops inherited private variables such as @root, which
+  // Handlebars templates inside this block need to reach the top-level
+  // context (e.g. uiRootPath) from any depth, including inside {{#each}}.
   return options.fn(this, {
-    data: {
+    data: Object.assign({}, options.data, {
       brand: chromeData.brand,
       columns: chromeData.columns.map((column) => ({
         title: column.title,
@@ -36,6 +40,6 @@ module.exports = (options) => {
       })),
       social: chromeData.social.map((link) => mapLink(link, siteRootPath)),
       legal: chromeData.legal.map((link) => mapLink(link, siteRootPath)),
-    },
+    }),
   })
 }
