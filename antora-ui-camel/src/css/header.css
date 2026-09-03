@@ -49,7 +49,7 @@ html:not([data-scroll='0']) .navbar {
     position: absolute;
     height: 2px;
     width: 0;
-    background-color: var(--color-asf-dark-blue);
+    background-color: var(--color-ink);
   }
 
   .navbar-end > .navbar-item:hover::after {
@@ -258,11 +258,139 @@ html:not([data-scroll='0']) .navbar {
    8.5px above the nav links in the 73px desktop bar. justify-content keeps it right-aligned, which
    text-align no longer does once this is a flex container. */
 .navbar-search {
+  padding: 0.5rem;
+  text-align: right;
+  order: 4;
+}
+
+.navbar-search input {
+  border: 1px solid var(--nav-panel-divider-color);
+  border-radius: 4px;
+  width: 14rem;
+  margin-top: 0.5rem;
+  padding: 0.4rem 1.5rem 0.4rem 1.9rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  caret-color: #ed8225;
+  background: no-repeat 0.4rem/1rem url("../img/search.svg");
+  background-color: var(--color-smoke-50);
+  outline: 0;
+}
+
+.navbar-search input:focus-within {
+  background-color: var(--navbar-background);
+  border-color: #eaeaec;
+  outline: 0;
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    box-shadow: none;
+    transform: none;
+  }
+}
+
+#search-cancel {
+  position: relative;
+  bottom: calc(50% + 0.1rem);
+  left: calc(100% - 1.25rem);
+  height: 1rem;
+  display: none;
+  cursor: pointer;
+}
+
+#search_results {
+  top: 3.38rem;
+  background: var(--navbar-background);
+  text-align: left;
+  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
+  position: absolute;
+  margin-right: 10px;
+  overflow-y: auto;
+  max-height: 80vh;
+  max-width: min(600px, 90vw);
+  min-width: 300px;
+  scrollbar-width: thin; /* Firefox */
+}
+
+#search_results::-webkit-scrollbar {
+  width: var(--scrollbar-thickness);
+}
+
+#search_results::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color);
+  border-radius: var(--scrollbar-radius);
+}
+
+#search_results::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color);
+  border-radius: var(--scrollbar-radius);
+}
+
+#search_results::-webkit-scrollbar-thumb:hover,
+#search_results::-webkit-scrollbar-thumb:active {
+  background: var(--scrollbar-thumb-active-color);
+}
+
+.result_header {
+  font-weight: 600;
+  color: var(--color-ink);
+  padding-right: 0.5rem;
+}
+
+#search_results div.result {
+  padding: 0.25rem;
+  pointer-events: none;
+}
+
+#search_results div.result:hover {
+  background: var(--color-smoke-50);
+}
+
+#search_results div.heading {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: 0.5rem;
-  order: 4;
+}
+
+#search_results a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-gray-10);
+}
+
+.result_summary {
+  color: var(--color-jet-50);
+  padding-top: 0.3rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+#search_results div.footer-search {
+  display: inline-flex;
+  width: 100%;
+  padding: 0.75rem;
+}
+
+div.footer-search h4 {
+  color: var(--color-ink);
+  width: 5rem;
+}
+
+.no_search_results {
+  padding: 1rem;
+  font-weight: bold;
+  color: var(--color-ink);
+  border-bottom: 2px solid var(--color-smoke-50);
+}
+
+.algolia-docsearch-suggestion--highlight {
+  font-weight: bold;
+  color: var(--color-jet-50);
+}
+
+.results-hidden #search_results {
+  display: none;
 }
 
 .navbar-tools {
