@@ -8,20 +8,48 @@ body > footer {
   color: var(--footer-font-color);
   font-size: calc(15 / var(--rem-base) * 1rem);
   line-height: var(--footer-line-height);
-  padding: 1.5rem;
+  padding: 1.5rem 0;
   flex-shrink: 0;
   min-height: var(--footer-height);
 }
 
 footer .footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1.4fr repeat(4, 1fr);
+  gap: calc(32 / var(--rem-base) * 1rem);
+  width: 100%;
   max-width: var(--static-max-width--desktop);
+  margin-inline: auto;
+  padding-inline: var(--page-padding-x);
 }
 
-footer .footer p {
-  flex-basis: 100%;
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: calc(12 / var(--rem-base) * 1rem);
+}
+
+.footer-logo {
+  width: calc(40 / var(--rem-base) * 1rem);
+}
+
+.footer-wordmark {
+  font-family: var(--display-font-family);
+  font-weight: 800;
+  font-size: calc(19 / var(--rem-base) * 1rem);
+  color: var(--color-on-dark);
+}
+
+.footer-blurb {
+  font-size: calc(14 / var(--rem-base) * 1rem);
+  color: var(--color-on-dark-muted);
+  margin: 0;
+  max-width: 28ch;
+}
+
+footer .footer p.remark {
+  grid-column: 1 / -1;
   margin: 3rem 0 0.5rem;
   padding: 0 1rem;
 }
@@ -31,8 +59,8 @@ footer .footer p.remark::after {
   display: block;
   position: relative;
   height: 1px;
-  width: 25rem;
-  margin: 2rem auto 1rem;
+  width: 100%;
+  margin: 2rem 0 1rem;
   background: var(--footer-after-background);
 }
 
@@ -64,38 +92,21 @@ footer .footer .context:last-child a::after {
   display: none;
 }
 
-footer .footer figure.logo {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-  place-content: center center;
-  margin-inline-start: 0;
-  align-items: center;
+footer .footer .footer-column {
+  margin: 0;
 }
 
-footer .footer figure.logo img {
-  width: 6rem;
+footer .footer .footer-column dt {
+  font-family: var(--display-font-family);
+  font-weight: 700;
+  font-size: calc(13 / var(--rem-base) * 1rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-on-dark);
+  margin-bottom: calc(12 / var(--rem-base) * 1rem);
 }
 
-footer .footer dl {
-  flex-direction: row;
-  flex-grow: 1;
-  align-items: flex-start;
-  justify-content: center;
-  margin: 3rem 0 0 1rem;
-}
-
-footer .footer dl:first-child {
-  margin-top: 0;
-}
-
-footer .footer dl dt {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-}
-
-footer .footer dl dt label:first-of-type::after {
+footer .footer .footer-column dt label:first-of-type::after {
   content: '';
   display: block;
   position: relative;
@@ -106,8 +117,17 @@ footer .footer dl dt label:first-of-type::after {
   background: var(--footer-font-color);
 }
 
-footer .footer dl dd {
-  margin: 0;
+footer .footer .footer-column dd {
+  margin: 0 0 calc(8 / var(--rem-base) * 1rem);
+}
+
+footer .footer .footer-column dd a {
+  font-size: calc(14 / var(--rem-base) * 1rem);
+  color: var(--color-on-dark-soft);
+}
+
+footer .footer .footer-column dd a:hover {
+  color: var(--color-on-dark);
 }
 
 .footer-tools {
@@ -115,19 +135,24 @@ footer .footer dl dd {
   top: -2rem;
   height: 0;
   text-align: right;
+  color: var(--color-ink-muted);
+  font-size: calc(13 / var(--rem-base) * 1rem);
 }
 
 .footer-tools a {
   display: inline-block;
   padding: 0.4rem;
-  background-color: var(--footer-background);
-  color: black;
   border-radius: 0.4rem 0.4rem 0 0;
   height: 2rem;
+  color: var(--color-ink-soft);
+}
+
+.footer-tools a:hover {
+  color: var(--color-ink);
 }
 
 footer .resources {
-  flex-basis: 100%;
+  grid-column: 1 / -1;
   text-align: center;
 }
 
@@ -135,6 +160,7 @@ footer .footer .footer-icons {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+  grid-column: 1 / -1;
   line-height: 1.6;
   padding: 0.5rem;
   font-weight: bold;
@@ -157,12 +183,11 @@ footer .footer dl dt label:nth-child(2) {
     flex-direction: column;
   }
 
-  footer .footer dl {
-    flex-basis: 100%;
-    margin-top: 0;
+  footer .footer {
+    grid-template-columns: 1fr;
   }
 
-  footer .footer dl dt {
+  footer .footer .footer-column dt {
     margin-bottom: 1rem;
     display: flex;
   }
@@ -190,16 +215,6 @@ footer .footer dl dt label:nth-child(2) {
 
   footer .footer dl dd:first-of-type {
     margin-top: 1rem;
-  }
-
-  footer .footer figure.logo {
-    margin: 0.5rem auto;
-    text-align: center;
-    flex-basis: 100%;
-  }
-
-  footer .footer figure.logo img {
-    width: 4.5rem;
   }
 
   footer .footer p.remark::after {
