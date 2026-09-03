@@ -25,6 +25,24 @@
   --color-highlight: #cf7428;
   --color-glow: #fff7a3;
   --color-wheat: #f5deb3;
+  /* redesign palette, 2026 site design */
+  --color-paper: #faf7f1;
+  --color-paper-2: #f4eee3;
+  --color-line: #e7e0d5;
+  --color-line-soft: #f0e9dd;
+  --color-line-hover: #d9ccb8;
+  --color-ink: #211c17;
+  --color-ink-2: #3a332b;
+  --color-ink-soft: #5c554c;
+  --color-ink-muted: #8a8074;
+  --color-orange-deep: #c95f12;
+  --color-orange-tint: #fbead8;
+  --color-orange-glow: #f2a05a;
+  --color-dark-2: #2b2620;
+  --color-dark-line: #34302a;
+  --color-on-dark: #faf7f1;
+  --color-on-dark-soft: #c4bbac;
+  --color-on-dark-muted: #8f867a;
   /* fonts */
   --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
   --body-font-size: 1.0625em; /* 17px */
