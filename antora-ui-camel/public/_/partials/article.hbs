@@ -9,6 +9,9 @@
 If you typed the URL of this page manually, please double check that you entered the address correctly.</p>
 </div>
 {{else}}
+{{#with page.component.title}}
+<div class="doc-eyebrow">{{this}}</div>
+{{/with}}
 {{#with page.title}}
 <h1 class="page">{{{this}}}</h1>
 {{/with}}

@@ -1,7 +1,7 @@
 'use strict'
 
 const manifest = {
-  "css/site.css": "css/site-ceb08b7c70.css",
+  "css/site.css": "css/site-9b75e46910.css",
   "img/algolia.svg": "img/algolia-f4ab98e0de.svg",
   "img/apache-kafka.svg": "img/apache-kafka-88809b7472.svg",
   "img/apache-karaf.svg": "img/apache-karaf-7bdb5ce2e3.svg",
@@ -13,7 +13,8 @@ const manifest = {
   "img/brand-logos.svg": "img/brand-logos-a2b35bbdec.svg",
   "img/bugfix.svg": "img/bugfix-4280bf9490.svg",
   "img/calendar.svg": "img/calendar-b4b3ab1bf7.svg",
-  "img/caret.svg": "img/caret-d6dacc711e.svg",
+  "img/cancel.svg": "img/cancel-1ed239489b.svg",
+  "img/caret.svg": "img/caret-8823676a4b.svg",
   "img/chevron.svg": "img/chevron-63cb534773.svg",
   "img/cli.svg": "img/cli-9cede0128a.svg",
   "img/close.svg": "img/close-af0b99e31b.svg",
@@ -45,8 +46,8 @@ const manifest = {
   "img/team.svg": "img/team-899f1050c2.svg",
   "img/tooling.svg": "img/tooling-f5e235c238.svg",
   "img/user-stories.svg": "img/user-stories-cccc5f7c8f.svg",
-  "js/site.js": "js/site-72c5696123.js",
-  "js/vendor/docsearch.js": "js/vendor/docsearch-f8ce9408ec.js",
+  "js/site.js": "js/site-319f1b41a2.js",
+  "js/vendor/algoliasearch.js": "js/vendor/algoliasearch-6711ef4b37.js",
   "js/vendor/highlight.js": "js/vendor/highlight-de2def4bea.js",
   "js/vendor/svg4everybody.js": "js/vendor/svg4everybody-a0c573f2b9.js",
   "js/vendor/tabs.js": "js/vendor/tabs-5aea11bcf5.js"
