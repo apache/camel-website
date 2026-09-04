@@ -591,3 +591,67 @@ a.button.on-dark:hover {
 .home-closing-actions .button {
   margin: 0;
 }
+
+/* Tablet */
+
+@media screen and (width <= 1024px) {
+  .home-hero {
+    gap: calc(36 / var(--rem-base) * 1rem);
+    grid-template-columns: minmax(0, 1fr);
+    padding-top: calc(40 / var(--rem-base) * 1rem);
+  }
+
+  .home-hero h1 {
+    font-size: calc(44 / var(--rem-base) * 1rem);
+  }
+
+  .home-hero-art {
+    order: -1;
+  }
+
+  .home-section-head h2 {
+    font-size: calc(30 / var(--rem-base) * 1rem);
+  }
+
+  .home-grid--three,
+  .home-grid--features,
+  .home-grid--four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-closing-inner {
+    padding: calc(36 / var(--rem-base) * 1rem) calc(32 / var(--rem-base) * 1rem);
+  }
+}
+
+/* Mobile */
+
+@media screen and (width <= 626px) {
+  .home-hero h1 {
+    font-size: calc(36 / var(--rem-base) * 1rem);
+  }
+
+  .home-hero-actions {
+    flex-wrap: wrap;
+  }
+
+  .home-grid--three,
+  .home-grid--features,
+  .home-grid--four {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home-stats-list {
+    gap: calc(24 / var(--rem-base) * 1rem);
+    flex-wrap: wrap;
+  }
+
+  .home-closing-actions {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .home-tabpanel pre {
+    font-size: calc(12 / var(--rem-base) * 1rem);
+  }
+}
