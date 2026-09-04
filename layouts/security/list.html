@@ -2,19 +2,49 @@
 
 <div class="body">
     <main>
-        <article class="static doc security">
+        <article class="security">
 
-            {{ .Content }}
+            <div class="security-hero">
+                <h1 class="page-hero-title">{{ .Title }}</h1>
+                <p class="page-hero-lead">{{ .Params.lead }}</p>
+            </div>
+
+            <div class="security-grid">
+                <div class="card card--lg security-card--feature">
+                    <div class="security-eyebrow">{{ .Params.read_first.eyebrow }}</div>
+                    <h2>{{ .Params.read_first.title }}</h2>
+                    {{ .Params.read_first.body | markdownify }}
+                </div>
+
+                <div class="card card--flat security-card">
+                    <h3>{{ .Params.sbom.title }}</h3>
+                    {{ .Params.sbom.body | markdownify }}
+                </div>
+
+                <div class="card card--flat security-card">
+                    <h3>{{ .Params.policy_enforcement.title }}</h3>
+                    {{ .Params.policy_enforcement.body | markdownify }}
+                </div>
+
+                <div class="security-band">
+                    <div class="security-band-copy">
+                        <h2>{{ .Params.reporting.title }}</h2>
+                        {{ .Params.reporting.body | markdownify }}
+                    </div>
+                    <a class="button dark" href="{{ .Params.reporting.cta_url }}">{{ .Params.reporting.cta_label }} &rarr;</a>
+                </div>
+            </div>
+
+            <h2 class="section-label">Security advisories</h2>
             <div class="table-wrapper">
-              <table class="tableblock frame-all grid-all stretch">
-                <caption>Security advisories by year</caption>
+              <table class="security-advisories">
                 <thead>
                   <tr>
-                    <td>Reference</td>
-                    <td>Affected</td>
-                    <td>Fixed</td>
-                    <td>CVSS score</td>
-                    <td>Description</td>
+                    <th>Reference</th>
+                    <th>Affected</th>
+                    <th>Fixed</th>
+                    <th>CVSS</th>
+                    <th>Description</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -32,14 +62,14 @@
                   {{ range $pages }}
                     {{ if eq $year (int .Key) }}
                       <tr>
-                        <th colspan="5" scope="row"><strong>{{ .Key }}</strong></th>
+                        <th colspan="5" scope="row">{{ .Key }}</th>
                       </tr>
                       {{ range .Pages }}
-                        <tr>
+                        <tr class="security-row">
                           <td><a href="{{ .RelPermalink }}">{{ .Params.cve }}</a></td>
                           <td>{{ .Params.affected }}</td>
                           <td>{{ .Params.fixed }}</td>
-                          <td>{{ .Params.severity }}</td>
+                          <td><span class="severity-chip security-severity severity-chip--{{ .Params.severity | lower }}">{{ .Params.severity }}</span></td>
                           <td>{{ .Params.summary }}</td>
                         </tr>
                       {{ end }}
@@ -47,7 +77,7 @@
                   {{ end }}
                 {{ else }}
                   <tr>
-                    <th colspan="5" scope="row"><strong>{{ $year }}</strong></th>
+                    <th colspan="5" scope="row">{{ $year }}</th>
                   </tr>
                   <tr>
                     <td colspan="5"><em>No issues reported</em></td>
