@@ -1,36 +1,75 @@
 {{ partial "header.html" . }}
 
 <div class="body">
-    <main>
-        <article class="static doc">
+  <main>
+    <article class="advisory" aria-labelledby="advisory-title">
+      <a class="advisory-back" href="{{ "security/" | relURL }}">&larr; Security advisories</a>
 
-            <h2>Apache Camel security advisory: {{ .Params.cve }}</h2>
-            <h3>Severity</h3>
-            {{ .Params.severity }}
-            <h3>Summary</h3>
-            {{ .Params.summary }}
-            <h3>Versions affected</h3>
-            {{ .Params.affected }}
-            <h3>Versions fixed</h3>
-            {{ .Params.fixed }}
-            <h3>Description</h3>
-            {{ .Params.description }}
-            {{ with .Content }}
-            <h3>Notes</h3>
-            {{ . }}
-            {{ end }}
-            <h3>Mitigation</h3>
-            {{ .Params.mitigation | markdownify }}
-            <h3>Credit</h3>
-            {{ .Params.credit }}
-            <h3>References</h3>
-            <dl>
-              <dt>PGP signed advisory data: <a href="{{ .Params.cve }}.txt.asc">{{ .Params.cve }}.txt.asc</a></dt>
-              <dt>Mitre CVE Entry: <a href="https://www.cve.org/CVERecord?id={{ .Params.cve }}">https://www.cve.org/CVERecord?id={{ .Params.cve }}</a></dt>
-            </dl>
+      <div class="advisory-layout">
+        <div class="advisory-article">
+          <div class="advisory-eyebrow">Apache Camel security advisory</div>
+          <h1 id="advisory-title" class="advisory-title">{{ .Params.cve }}</h1>
+          <p class="detail-lead">{{ .Params.summary }}</p>
 
-        </article>
-    </main>
+          {{ with .Params.description }}
+          <section class="advisory-section">
+            <h2 class="advisory-section-title">Description</h2>
+            <p class="advisory-section-body">{{ . }}</p>
+          </section>
+          {{ end }}
+
+          {{ with .Params.mitigation }}
+          <section class="advisory-section">
+            <h2 class="advisory-section-title">Mitigation</h2>
+            <p class="advisory-section-body">{{ . | markdownify }}</p>
+          </section>
+          {{ end }}
+
+          {{ with .Params.credit }}
+          <section class="advisory-section">
+            <h2 class="advisory-section-title">Credit</h2>
+            <p class="advisory-section-body">{{ . }}</p>
+          </section>
+          {{ end }}
+
+          {{ with .Content }}
+          <section class="advisory-section">
+            <h2 class="advisory-section-title">Notes</h2>
+            <div class="advisory-section-body">{{ . }}</div>
+          </section>
+          {{ end }}
+
+          <section class="advisory-section">
+            <h2 class="advisory-section-title">References</h2>
+            <div class="advisory-references">
+              <a class="advisory-reference" href="{{ .Params.cve }}.txt.asc">{{ .Params.cve }}.txt.asc &mdash; PGP signed advisory data</a>
+              <a class="advisory-reference" href="https://www.cve.org/CVERecord?id={{ .Params.cve }}">cve.org/CVERecord?id={{ .Params.cve }}</a>
+            </div>
+          </section>
+        </div>
+
+        <aside class="advisory-facts">
+          <div class="advisory-facts-field">
+            <div class="advisory-facts-label">Severity</div>
+            <span class="severity-chip advisory-severity-chip severity-chip--{{ .Params.severity | lower }}">{{ .Params.severity | lower | title }}</span>
+          </div>
+          <div class="advisory-facts-field">
+            <div class="advisory-facts-label">Versions affected</div>
+            <div class="advisory-facts-value">{{ .Params.affected }}</div>
+          </div>
+          <div class="advisory-facts-field">
+            <div class="advisory-facts-label">Versions fixed</div>
+            <div class="advisory-facts-value advisory-facts-value--mono">{{ .Params.fixed }}</div>
+          </div>
+          <div class="advisory-facts-field">
+            <div class="advisory-facts-label">Published</div>
+            <div class="advisory-facts-value">{{ dateFormat "January 2, 2006" .Date }}</div>
+          </div>
+          <a class="button dark advisory-facts-cta" href="{{ "download/" | relURL }}">Get a fixed version</a>
+        </aside>
+      </div>
+    </article>
+  </main>
 </div>
 
 {{ partial "footer.html" . }}
