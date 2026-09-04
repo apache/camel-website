@@ -258,7 +258,7 @@ above the footer and is restyled to tokens only.
 `.button.dark` and `.button.light` in `frontpage.css:77-105`:
 
 - radius `3rem` becomes `8px`
-- padding becomes `calc(13 / var(--rem-base) * 1rem) calc(25 / var(--rem-base) *
+- padding becomes `calc(13 / var(--rem-base) * 1rem) calc(24 / var(--rem-base) *
   1rem)`
 - weight becomes 700
 - `.button.dark`: `--color-camel-orange` ground, white text, hover
