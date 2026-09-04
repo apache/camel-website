@@ -137,6 +137,21 @@
   </section>
   {{- end }}
 
+  {{- with $home.closing }}
+  <section class="home-closing" aria-labelledby="home-closing-title">
+    <div class="home-closing-inner">
+      <div class="home-closing-copy">
+        <h2 id="home-closing-title">{{ .heading }}</h2>
+        <p>{{ .body }}</p>
+      </div>
+      <p class="home-closing-actions">
+        <a class="button dark" href="{{ .primary_cta.url | relURL }}">{{ .primary_cta.label }}</a>
+        <a class="button on-dark" href="{{ .secondary_cta.url | relURL }}">{{ .secondary_cta.label }}</a>
+      </p>
+    </div>
+  </section>
+  {{- end }}
+
 </main>
 
 {{ partial "footer.html" . }}

@@ -541,3 +541,53 @@ a.button.on-dark:hover {
   margin: calc(34 / var(--rem-base) * 1rem) 0 0;
   text-align: center;
 }
+
+/* Closing band */
+
+.home-closing {
+  margin: calc(72 / var(--rem-base) * 1rem) auto 0;
+  max-width: var(--frontpage-max-width);
+  padding: 0 var(--page-padding-x);
+}
+
+.home-closing-inner {
+  align-items: center;
+  background: var(--color-ink);
+  border-radius: calc(18 / var(--rem-base) * 1rem);
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(24 / var(--rem-base) * 1rem);
+  padding: calc(52 / var(--rem-base) * 1rem) calc(48 / var(--rem-base) * 1rem);
+}
+
+.home-closing-copy {
+  flex: 1;
+  min-width: calc(280 / var(--rem-base) * 1rem);
+}
+
+.home-closing-copy h2 {
+  color: var(--color-on-dark);
+  font-family: var(--display-font-family);
+  font-size: calc(30 / var(--rem-base) * 1rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.home-closing-copy p {
+  color: var(--color-on-dark-soft);
+  font-size: calc(16 / var(--rem-base) * 1rem);
+  line-height: 1.55;
+  margin: calc(12 / var(--rem-base) * 1rem) 0 0;
+  max-width: calc(560 / var(--rem-base) * 1rem);
+}
+
+.home-closing-actions {
+  display: flex;
+  gap: calc(14 / var(--rem-base) * 1rem);
+  margin: 0;
+}
+
+.home-closing-actions .button {
+  margin: 0;
+}
