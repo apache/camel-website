@@ -62,6 +62,7 @@ toolGroups:
     intro: >-
       Camel provides <a href="/manual/camel-maven-archetypes.html">Maven
       Archetypes</a> to quickly scaffold new projects.
+    htmlIntro: true
     mono: true
     items:
       - name: camel-archetype-java
@@ -88,6 +89,7 @@ toolGroups:
         desc: A set of VS Code extensions for developing Camel applications — language support, debugging, and more.
       - name: Camel Language Server
         url: https://github.com/camel-tooling/camel-language-server
+        htmlDesc: true
         desc: >-
           LSP implementation providing completion, validation, hover, and
           outline. Packaged for
@@ -96,6 +98,7 @@ toolGroups:
           <a href="https://marketplace.eclipse.org/content/language-support-apache-camel">Eclipse Desktop</a>.
       - name: Camel Debug Adapter
         url: https://github.com/camel-tooling/camel-debug-adapter
+        htmlDesc: true
         desc: >-
           DAP implementation providing Camel textual route debugging.
           Packaged for
