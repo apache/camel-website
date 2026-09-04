@@ -96,8 +96,6 @@
   /* toolbar */
   --toolbar-background: rgb(250 247 241 / 92%);
   --toolbar-border-color: var(--panel-border-color);
-  --toolbar-font-color: var(--color-jet-80);
-  --toolbar-muted-color: var(--color-jet-80);
   --page-version-menu-background: var(--color-white);
   --page-version-missing-font-color: var(--color-gray-30);
   /* toc */
@@ -107,15 +105,10 @@
   --toc-line-height: 1.2;
   /* admonitions */
   --caution-color: #a0439c;
-  --caution-on-color: var(--color-white);
   --important-color: #d32f2f;
-  --important-on-color: var(--color-white);
   --note-color: #217ee7;
-  --note-on-color: var(--color-white);
   --tip-color: #4d4fb7;
-  --tip-on-color: var(--color-white);
   --warning-color: #e18114;
-  --warning-on-color: var(--color-white);
   /* Admonition chip pairs. Each chip's text is measured at or above 4.5:1 on
      its own tint. TIP and NOTE use the orange pair per SCOPE.md section 2. */
   --caution-tint: #f7e9f6;
@@ -135,15 +128,12 @@
   --heading-font-weight: 700;
   --heading-font-weight-display: 800;
   --alt-heading-font-weight: var(--body-font-weight-bold);
-  --section-divider-color: var(--panel-border-color);
   --link-font-color: var(--color-orange-deep);
   --link_hover-font-color: var(--color-orange-deeper);
   --link_unresolved-font-color: var(--important-color);
   --abstract-background: var(--color-paper-2);
   --abstract-font-color: var(--color-jet-20);
   --abstract-border-color: var(--panel-border-color);
-  --admonition-background: var(--panel-background);
-  --admonition-label-font-weight: var(--body-font-weight-bold);
   --caption-font-color: var(--color-gray-70);
   --caption-font-weight: var(--body-font-weight-bold);
   --code-background: var(--color-paper-2);
@@ -163,7 +153,6 @@
   --quote-font-color: var(--color-gray-70);
   --quote-attribution-font-color: var(--color-ink-soft);
   --sidebar-background: var(--color-paper-2);
-  --table-border-color: var(--color-line);
   /* syntax highlighting, one token per row of SCOPE.md section 2a.
      Bound by both highlight.css (highlight.js, Antora) and chroma.css (Hugo blog
      posts) so the two systems cannot drift apart. All values sit on
