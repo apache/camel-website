@@ -102,6 +102,7 @@
       <div class="home-tabpanel" role="tabpanel"
            id="home-panel-{{ $tab.id }}"
            aria-labelledby="home-tab-{{ $tab.id }}"
+           tabindex="0"
            {{ if ne $i 0 }}hidden{{ end }}><pre>{{ $tab.code }}</pre></div>
       {{- end }}
       <p class="home-example-run">
