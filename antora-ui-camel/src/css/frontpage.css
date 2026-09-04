@@ -609,6 +609,12 @@ a.button.on-dark:hover {
     aspect-ratio: 1 / 0.45;
   }
 
+  /* The logo is square, so the base 62% width would make the image taller than
+     the banner ratio above and size the panel itself. Keep it under the ratio. */
+  .home-hero-art img {
+    width: 40%;
+  }
+
   .home-section-head h2 {
     font-size: calc(30 / var(--rem-base) * 1rem);
   }
