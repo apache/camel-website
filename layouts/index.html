@@ -25,6 +25,22 @@
   </section>
   {{- end }}
 
+  {{- with $home.stats }}
+  <section class="home-stats" aria-label="Project activity">
+    <div class="home-stats-inner">
+      <p class="home-stats-label">{{ .label }}</p>
+      <ul class="home-stats-list">
+        {{- range .items }}
+        <li>
+          <span class="home-stat-num">{{ .num }}</span>
+          <span class="home-stat-label">{{ .label }}</span>
+        </li>
+        {{- end }}
+      </ul>
+    </div>
+  </section>
+  {{- end }}
+
 </main>
 
 {{ partial "footer.html" . }}
