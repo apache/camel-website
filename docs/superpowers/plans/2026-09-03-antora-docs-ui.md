@@ -39,8 +39,14 @@ grid geometry is scoped to `main.article` so it does not.
 - **American English. No em dashes** in code comments or commit messages. Use
   commas, periods, semicolons, parentheses, or colons.
 - `stylelint-config-standard` runs in the `antora-ui-camel` bundle task and must
-  pass. `no-descending-specificity` and `selector-class-pattern` are disabled in
-  `.stylelintrc`, so a later rule may have lower specificity than an earlier one.
+  pass. `.stylelintrc` disables exactly five rules: `comment-empty-line-before`,
+  `no-descending-specificity`, `custom-property-pattern`, `selector-id-pattern`
+  and `selector-class-pattern`, and customizes `property-no-vendor-prefix`.
+  Everything else in the standard config is live. Two consequences worth knowing
+  before you write CSS: a later rule may legitimately have lower specificity than
+  an earlier one, and `declaration-block-no-redundant-longhand-properties` **is**
+  active, so writing `top`, `right`, `bottom` and `left` together fails the build.
+  Use `inset` instead. The same applies to any other complete longhand set.
 - Run yarn as `node .yarn/releases/yarn-4.1.0.cjs <script>` from the repository
   root. `yarn` is not on `PATH`.
 
