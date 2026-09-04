@@ -11,6 +11,8 @@
 #   tests/hugo/build.sh                            build only
 #   tests/hugo/build.sh --shots / projects/        build, then screenshot each path
 #   tests/hugo/build.sh --measure / 'sel@color'    build, then print computed styles
+#   tests/hugo/build.sh --measure / 'sel@color' 'sel-to-click'
+#                                                   ...after clicking an element first
 #
 # Env: HUGO_OUT, HUGO_PORT (default 8899), SHOT_WIDTHS, SHOT_HEIGHT (default 2400)
 set -euo pipefail
@@ -118,10 +120,11 @@ case "${1:-}" in
     shift
     path="${1:-/}"
     query="${2:-}"
+    click="${3:-}"
     cp tests/hugo/_measure.html "$SITE/_measure.html"
     start_server
     "$CHROME" --headless --disable-gpu --virtual-time-budget=5000 --dump-dom \
-      "http://localhost:$PORT/_measure.html#$(printf '%s|%s' "$path" "$query")" \
+      "http://localhost:$PORT/_measure.html#$(printf '%s|%s|%s' "$path" "$query" "$click")" \
       2>/dev/null | sed -n '/<pre id="out">/,/<\/pre>/p' | sed 's/<[^>]*>//g'
     ;;
 esac
