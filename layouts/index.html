@@ -127,7 +127,7 @@
              src="{{ path.Join "_" (index site.Data "rev-manifest" (printf "img/%s.svg" .icon)) | relURL }}">
         <h3>{{ .name }}</h3>
         <p>{{ .description }}</p>
-        <a class="home-tile-link" href="{{ .url | relURL }}">Read more &rarr;</a>
+        <a class="home-tile-link" href="{{ .url | relURL }}" aria-label="Read more about {{ .name }}">Read more &rarr;</a>
       </li>
       {{- end }}
     </ul>
