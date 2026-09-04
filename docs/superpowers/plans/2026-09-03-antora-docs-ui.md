@@ -1596,8 +1596,8 @@ radius and padding.
 
 - [ ] **Step 1: Add the eyebrow to the template**
 
-In `article.hbs`, insert immediately after `{{#with page.title}}...{{/with}}`'s
-closing tag and before the `{{#if page.attributes.deprecated}}` block:
+In `article.hbs`, insert the eyebrow **immediately before** the
+`{{#with page.title}}...{{/with}}` block, so it precedes the `h1` in the DOM:
 
 ```hbs
 {{#with page.component.title}}
@@ -1606,9 +1606,17 @@ closing tag and before the `{{#if page.attributes.deprecated}}` block:
 ```
 
 It must sit inside the `{{else}}` branch, so the 404 layout does not get one.
-Placing it after the `h1` rather than before keeps `h1.page:first-child`
-matching, which several existing rules depend on; the eyebrow is moved above the
-heading visually in Step 3.
+
+**This is DOM order, not a CSS reorder, and that is deliberate.** An earlier
+draft of this plan put the eyebrow after the `h1` and lifted it visually with
+`display: flex; flex-direction: column` on `.doc` plus `order: -1`, in order to
+keep `h1.page:first-child` matching. That approach is wrong and must not be used.
+Making `.doc` a flex container turns `.sect1` into a flex item, which establishes
+a block formatting context, which stops its first child's margin from collapsing
+through it. `#preamble + .sect1, .doc .sect1 + .sect1` sets `margin-top: 2rem`
+(36px) and Step 5 gives `h2` a `margin-top` of 44px. Today those collapse to 44px;
+under flex they would sum to 80px at **every section boundary**, on every
+documentation page and on the eight-plus Hugo pages that share `.doc`.
 
 - [ ] **Step 2: Stop shouting the headings**
 
@@ -1620,11 +1628,16 @@ In `doc.css`, in the `.doc h1, .doc h2, ... .doc h6` rule, delete the line:
 
 - [ ] **Step 3: Style the h1 and the eyebrow**
 
+The `h1` is no longer the first child of `.doc`, because the eyebrow now precedes
+it, so the two `:first-child` qualifiers on the `.doc` half must be dropped or the
+rules stop matching entirely. Leave the `.static` half alone: Hugo static pages
+have no eyebrow and their `h1` is still first.
+
 Replace the `.static > h1:first-child, .doc > h1.page:first-child` rule:
 
 ```css
 .static > h1:first-child,
-.doc > h1.page:first-child {
+.doc > h1.page {
   font-size: calc(42 / var(--rem-base) * 1rem);
   font-weight: var(--heading-font-weight-display);
   letter-spacing: -0.03em;
@@ -1632,6 +1645,21 @@ Replace the `.static > h1:first-child, .doc > h1.page:first-child` rule:
   margin: calc(10 / var(--rem-base) * 1rem) 0 0;
 }
 ```
+
+and the image rule just below it, for the same reason:
+
+```css
+.doc > h1.page img {
+  width: 2rem;
+}
+```
+
+Relaxing these is safe: `article.hbs` renders `h1.page` exactly once, so
+`:first-child` was only ever describing its position, never discriminating between
+candidates. Those two are the only `:first-child` selectors in `doc.css` that
+apply to a direct child of `.doc`; the rest sit inside tables, admonitions,
+checklists, example blocks, sidebar blocks, colists and `kbd` sequences, none of
+which this change touches.
 
 Add, immediately after it:
 
@@ -1642,36 +1670,18 @@ Add, immediately after it:
   font-size: calc(12 / var(--rem-base) * 1rem);
   font-weight: 600;
   letter-spacing: 0.08em;
-  order: -1;
   text-transform: uppercase;
 }
 ```
 
-Then **merge** these two declarations into the existing `.doc` rule at the top of
-`doc.css`. Do not write a second `.doc { }` rule: `stylelint-config-standard`
-enables `no-duplicate-selectors` and the bundle build would fail.
+Do **not** add `display: flex`, `flex-direction: column`, or `order: -1` anywhere.
+`.doc` stays in normal block flow. The eyebrow sits above the `h1` because it
+precedes it in the DOM, per Step 1.
 
-```css
-  display: flex;
-  flex-direction: column;
-```
-
-`order: -1` on the eyebrow inside a flex `.doc` puts it above the `h1` without
-moving it in the DOM, which keeps `h1.page:first-child` matching.
-
-**This is the riskiest change in the piece, so treat the fallback as a live
-option rather than a last resort.** Making `.doc` a flex container turns every
-direct child into a flex item, which disables margin collapsing between them, on
-Antora pages and on the eight-plus Hugo `.static.doc` pages alike. Step 9 asks you
-to check the h2 gap against 44px. Widen that check: if **any** vertical gap on the
-page is materially wrong, take the fallback rather than papering over it with
-compensating margins.
-
-The fallback: move the eyebrow *before* the `h1` in `article.hbs`, drop
-`display: flex`, `flex-direction: column` and `order: -1` entirely, and relax the
-two `h1.page:first-child` selectors to `h1.page`. Then re-check that nothing else
-depended on `h1.page:first-child` (grep `doc.css` and `static.css` for
-`first-child`). Record it as a deviation in your report if you take it.
+Because `.doc` stays block-level, margins between its children still collapse, so
+`.sect1`'s 36px `margin-top` and the `h2`'s 44px collapse to 44px as they do
+today. Step 9 verifies that number; if it reads 80px, something reintroduced a
+block formatting context on `.sect1` and that is the first thing to look for.
 
 - [ ] **Step 4: Style the lead paragraph**
 
@@ -1820,10 +1830,12 @@ On the rendered page at 1400px:
 | `pre.highlight code` `padding` | 18px 20px |
 | `pre.highlight code` `box-shadow` | `none` |
 | `.ulist > ul` `padding-left` | 22px |
+| gap between one `.sect1` and the next section's `h2` | 44px, not 80px |
 
-Then check for margin-collapse damage from Step 3: compare the gap between the
-last paragraph of one section and the next `h2` against 44px. If it is materially
-larger, take the fallback described in Step 3.
+That last row is the margin-collapse check. 44px means `.sect1`'s 36px `margin-top`
+collapsed with the `h2`'s 44px, as it should in normal block flow. 80px means the
+two summed, which would mean `.doc` or `.sect1` acquired a block formatting
+context somewhere. Measure it, do not assume it.
 
 - [ ] **Step 10: Check a Hugo static page**
 
