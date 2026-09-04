@@ -198,14 +198,11 @@ a.button.navbar-cta {
   font-size: calc(14.5 / var(--rem-base) * 1rem);
 }
 
-/* NOTE centred rather than left to padding alone: the DocSearch button is a fixed 38px, which sat
-   8.5px above the nav links in the 73px desktop bar. justify-content keeps it right-aligned, which
-   text-align no longer does once this is a flex container. */
-.navbar-search {
+.header .navbar-search {
   padding: 0;
 }
 
-.navbar-search input {
+.header .navbar-search input {
   border: 1px solid var(--color-line);
   border-radius: calc(7 / var(--rem-base) * 1rem);
   width: calc(200 / var(--rem-base) * 1rem);
@@ -221,12 +218,12 @@ a.button.navbar-cta {
   outline: 0;
 }
 
-.navbar-search input:focus-within {
+.header .navbar-search input:focus-within {
   background-color: var(--color-white);
   border-color: var(--color-line-hover);
 }
 
-#search-cancel {
+.header #search-cancel {
   position: relative;
   bottom: calc(50% + 0.1rem);
   left: calc(100% - 1.25rem);
@@ -235,7 +232,7 @@ a.button.navbar-cta {
   cursor: pointer;
 }
 
-#search_results {
+.header #search_results {
   top: var(--navbar-height);
   background: var(--navbar-background);
   text-align: left;
@@ -334,19 +331,19 @@ div.footer-search h4 {
 /* Styling for mobile use */
 @media (width <= 1024px) {
   /* The field gives up its fixed 200px and shrinks with the bar. */
-  .navbar-search {
+  .header .navbar-search {
     min-width: 0;
   }
 
-  .navbar-search input {
+  .header .navbar-search input {
     width: 100%;
   }
 
-  #search-cancel {
+  .header #search-cancel {
     margin-top: 0.75rem;
   }
 
-  #search_results {
+  .header #search_results {
     left: 0;
     width: 100vw;
     top: var(--navbar-height);
@@ -356,8 +353,9 @@ div.footer-search h4 {
 @media (width <= 500px) {
   /* Below this, the brand, CTA and burger alone fill the bar. Search and the
      GitHub link are dropped rather than pushing the burger off-screen. GitHub
-     stays reachable in the footer. */
-  .navbar-search,
+     stays reachable in the footer. The docs nav panel keeps its own copy of
+     search, which is why this is scoped to the header. */
+  .header .navbar-search,
   .navbar-github {
     display: none;
   }
