@@ -325,7 +325,7 @@ a.button.on-dark:hover {
 }
 
 .home-badge {
-  background: var(--color-camel-orange);
+  background: var(--color-orange-deep);
   border-radius: calc(20 / var(--rem-base) * 1rem);
   color: var(--color-white);
   font-family: var(--monospace-font-family);
