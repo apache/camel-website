@@ -386,6 +386,7 @@
   line-height: 1.4;
   padding: calc(3 / var(--rem-base) * 1rem) calc(8 / var(--rem-base) * 1rem);
   text-transform: uppercase;
+  vertical-align: top;
 }
 
 .doc .admonitionblock .icon i::after {
