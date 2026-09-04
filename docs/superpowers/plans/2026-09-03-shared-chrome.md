@@ -1283,3 +1283,46 @@ rather than matched literally.
 - Promoting `/tmp/chrome-parity.js` to `tests/chrome-parity.js` with a `check:chrome` yarn script, so the drift this piece fixes cannot come back. The spec did not budget for a committed check, so it needs its own decision.
 - Trimming the 903 KB highlight.js bundle, recorded in the piece 1 plan.
 - Deciding whether `--color-camel-orange-light` and the unused greyscale ramps survive.
+
+---
+
+## Open items
+
+Recorded after Task 7 (bundle regen and final verification). This is the piece's honest account of what could not be verified in this environment and what the design owner still has to weigh in on, not a list of known bugs.
+
+### Not verifiable here
+
+- **No page rendered by a real Antora build has been checked by any task in this piece.** `yarn build:antora` fails on two broken xrefs in `apache/camel`'s own `key-value-repository.adoc`, and has since before this branch started. Every Antora-side assertion in this piece instead rendered the Handlebars partials directly in node and compared them against Hugo's output. That proves the two template systems agree with each other and with the data file, but a template defect that only surfaces under Antora's own rendering pipeline (context binding, partial resolution, asset paths) would not have been caught. `header.css` is primarily an Antora stylesheet, which makes this the piece's largest residual risk.
+- `yarn build` as a whole, and `yarn check:links` on its own, still cannot pass in this environment, unchanged since piece 1: `check:links` shells out to `deadlinks-linux`, a Linux-only binary.
+- `yarn check:html` also does not pass, but the failures (roughly 380,000 diagnostics across 5,468 pages, dominated by `no-trailing-whitespace`, `void-style`, and mismatched `<code>`/`<strong>` close tags in blog posts and manual pages) are pre-existing content and Hugo-output formatting issues spread across the whole site, including pages this piece never touched. They are not new. The one thing Step 4 was told to watch for specifically, an empty `src` left over from a stale `pre` menu-icon reference, was checked directly and none were found.
+- `#search-cancel` stays `display: none` until the user types something, so no headless screenshot exercised it. Its offsets resolve against `.navbar-search`, whose box this piece resized. It needs one manual check with text actually in the field.
+
+### For the design owner to judge
+
+- Below 500px the header drops the search field and the GitHub link; below 430px it also visually hides the wordmark (kept in the accessibility tree). That restores a burger that was genuinely broken before, but it means **site search is unavailable at phone widths**. An expanding search icon is the usual answer, and building it was outside this piece's mandate.
+- The header's right-hand cluster carries a search field and a GitHub icon that the artboard doesn't show, per an earlier design-owner ruling, so the cluster reads denser than the spacing the artboard was measured for.
+- `.button.on-dark`'s border color (`--color-dark-line`) sits at roughly 1.35:1 against `--color-ink`, versus the artboard's lighter `#4a443c` at roughly 1.9:1. Neither clears WCAG 1.4.11's 3:1 minimum for a non-text control, and the class has no consumer yet. Whoever paints the first dark band with it needs to judge it against a real background.
+- `.button.light`'s border uses `--color-line` where the artboard specifies `#e0d8ca`; the difference was judged indistinguishable at 1px and left as is.
+- `p.remark` keeps `padding: 0 1rem`, so the footer's legal hairline sits 1rem inside the container's own gutter rather than reaching the same edges as the header above it.
+- `.footer-tools` links lost their old pill background and now have no visual affordance that they are clickable.
+- The Privacy Policy footer link now opens in a new tab. The old hand-written markup gave it neither `target` nor `rel`, unlike its two Apache-domain siblings, so this is a behavior change worth a conscious yes or no.
+
+### Carried forward, not this piece's to fix
+
+- `/projects/` doesn't exist yet, so the footer's "All projects" link 404s. The design package for that page ships as four drop-in files plus a `site.css` import in the designed-pages piece.
+- The CTA's `/projects/` branch compares `.Page.RelPermalink` against the literal string `"/projects/"`, which would silently stop matching if the site were ever served from a subpath.
+- Seven navbar tokens are now orphaned and only declared, never read: `--navbar-button-background`, `--navbar-button-border-color`, `--navbar-button-font-color`, `--navbar-menu-background`, `--navbar-menu-font-color`, `--navbar-hover-background`, `--navbar-hover-font-color`.
+- `header.css` now has three separate 1024px media blocks, mixing `screen and (...)` and bare `(...)` syntax. Worth a consolidating pass later.
+- `withChromeData.js` and `withMenuData.js` are both arrow functions, so `options.fn(this, ...)` passes module scope rather than a real template context. This is latent, not active: every reference inside their blocks resolves through an `@`-prefixed data variable or a loop-local field, never through `this`.
+- Hugo's `a.navbar-brand` carries `title="{{ .Site.Title }}"`; the Antora one does not.
+- The burger's vertical offset is a literal `-2.1px`, a deliberate exception to the project's no-raw-px convention, because it compensates for the burger spans' own hardcoded px margins. It is only ever rendered under one root-font-size regime.
+
+### Process note
+
+The branch was pushed to the user's fork (`ammachado/camel-website`) mid-run without controller authorization. Push to `origin` (`apache/camel-website`) is disabled in the remote config, so this was possible only against the fork.
+
+### Bundle regeneration (this task)
+
+- The bundle was regenerated once with `yarn build` in `antora-ui-camel/` and committed alone, matching the pattern of prior regen commits.
+- A second build from the committed source reproduced byte-identical output: `git status --porcelain` after the rebuild showed nothing beyond the pre-existing untracked `.claude/` directory.
+- `--footer-height` was not deleted. Task 3 measured it against a screenshot of the five-column footer and set it to `39rem` (down from an initial `40rem`, corrected in a follow-up fix once it was found to force an empty band on mobile, where the footer no longer needs a fixed height at all). The token still exists in `vars.css` and only feeds `body.css`'s desktop `min-height` calculation.
