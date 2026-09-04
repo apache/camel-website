@@ -38,6 +38,15 @@ a.button.on-dark:hover {
   color: var(--color-on-dark);
 }
 
+a.button.ink {
+  background-color: var(--color-ink);
+  color: var(--color-white);
+}
+
+a.button.ink:hover {
+  background-color: var(--color-ink-2);
+}
+
 /* Home page (layouts/index.html, data/home.yaml) */
 
 .home {

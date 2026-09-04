@@ -1,0 +1,159 @@
+/* Shared primitives for the redesigned content pages (docs, download, security,
+   community, tooling, blog/post/category, releases/advisory). Consolidated from
+   the piece-4b screen specs; see .superpowers/sdd/4b/00-primitives.md for the
+   full inventory and rationale behind each class. Each consuming page's own
+   CSS file supplies page-specific layout on top of these (an icon slot, a
+   fixed grid-column span, a header-row layout) - never the shell/typography
+   again. */
+
+/* ---- page-hero (index/list screens) --------------------------------- */
+
+.page-hero-title {
+  font-family: var(--display-font-family);
+  font-weight: 800;
+  font-size: calc(46 / var(--rem-base) * 1rem);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin: 0;
+  color: var(--color-ink);
+}
+
+.page-hero-lead {
+  font-size: calc(17.5 / var(--rem-base) * 1rem);
+  line-height: 1.55;
+  color: var(--color-ink-soft);
+  margin: calc(14 / var(--rem-base) * 1rem) 0 0;
+  text-wrap: pretty;
+}
+
+/* ---- detail-lead (single-item detail screens: post, advisory) ------- */
+
+.detail-lead {
+  font-family: var(--display-font-family);
+  font-weight: 500;
+  font-size: calc(21 / var(--rem-base) * 1rem);
+  line-height: 1.4;
+  color: var(--color-ink-2);
+  margin: calc(16 / var(--rem-base) * 1rem) 0 0;
+  text-wrap: pretty;
+}
+
+/* ---- section-label (uppercase eyebrow + rule) ------------------------ */
+
+.section-label {
+  font-family: var(--display-font-family);
+  font-weight: 700;
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-ink-muted);
+  margin: calc(56 / var(--rem-base) * 1rem) 0 0;
+  padding-bottom: calc(14 / var(--rem-base) * 1rem);
+  border-bottom: 1px solid var(--color-line);
+}
+
+/* ---- card / card-grid ------------------------------------------------ */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: 13px; /* radius exemption: raw px */
+  padding: calc(24 / var(--rem-base) * 1rem);
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+
+.card:hover {
+  border-color: var(--color-line-hover);
+  box-shadow: 0 14px 34px -22px rgb(33 28 23 / 35%);
+  transform: translateY(-2px);
+}
+
+.card--flat {
+  transition: none;
+}
+
+.card--flat:hover {
+  border-color: var(--color-line);
+  box-shadow: none;
+  transform: none;
+}
+
+.card--lg {
+  border-radius: 16px; /* radius exemption: raw px */
+  padding: calc(32 / var(--rem-base) * 1rem);
+}
+
+.card--dark {
+  background: var(--color-ink);
+  border-color: var(--color-dark-line);
+  color: var(--color-on-dark);
+}
+
+.card-grid {
+  display: grid;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: calc(18 / var(--rem-base) * 1rem);
+}
+
+.card-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.card-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.card-grid--feature { grid-template-columns: 1.2fr 1fr; }
+
+@media screen and (width <= 1024px) {
+  .card-grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .card-grid--feature { grid-template-columns: 1fr; }
+}
+
+@media screen and (width <= 626px) {
+  .card-grid--2,
+  .card-grid--3,
+  .card-grid--feature {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---- lts-chip ---------------------------------------------------------- */
+
+.lts-chip {
+  display: inline-block;
+  font-family: var(--monospace-font-family);
+  font-size: calc(10.5 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  color: var(--color-white);
+  background: var(--color-camel-orange);
+  padding: calc(2 / var(--rem-base) * 1rem) calc(7 / var(--rem-base) * 1rem);
+  border-radius: 20px; /* radius exemption: raw px */
+}
+
+/* ---- severity-chip: color mapping is shared; size is not -------------- */
+
+.severity-chip {
+  display: inline-block;
+  font-family: var(--monospace-font-family);
+  font-weight: 600;
+  border-radius: 20px; /* radius exemption: raw px */
+}
+
+.severity-chip--low {
+  background: var(--color-paper-2);
+  color: var(--color-ink-soft);
+}
+
+.severity-chip--medium {
+  background: var(--color-orange-tint);
+  color: var(--color-orange-deep);
+}
+
+.severity-chip--high {
+  background: var(--warning-tint);
+  color: var(--warning-chip-font-color);
+}
+
+.severity-chip--critical {
+  background: var(--important-tint);
+  color: var(--important-chip-font-color);
+}
