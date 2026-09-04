@@ -1,0 +1,59 @@
+{{ partial "header.html" . }}
+{{- $data := index site.Data "docs-projects" }}
+
+<div class="body">
+  <main>
+    <div class="content">
+      <article class="docs" aria-labelledby="docs-title">
+
+        <header class="docs-hero">
+          <h1 id="docs-title" class="page-hero-title">{{ .Title }}</h1>
+          <p class="page-hero-lead">{{ $data.lead }}</p>
+        </header>
+
+        <div class="card-grid card-grid--feature docs-features">
+          <div class="card card--lg card--dark docs-feature docs-feature--dark">
+            <p class="docs-feature-eyebrow">{{ $data.manual.eyebrow }}</p>
+            <h2 class="docs-feature-title">{{ $data.manual.title }}</h2>
+            <p class="docs-feature-desc">{{ $data.manual.desc }}</p>
+            <p class="docs-feature-actions">
+              <a class="button dark" href="{{ $data.manual.primary_cta.url | relURL }}">{{ $data.manual.primary_cta.label }}</a>
+              <a class="button on-dark" href="{{ $data.manual.secondary_cta.url | relURL }}">{{ $data.manual.secondary_cta.label }}</a>
+            </p>
+          </div>
+          <div class="card card--lg docs-feature docs-feature--light">
+            <p class="docs-feature-eyebrow">{{ $data.components.eyebrow }}</p>
+            <h2 class="docs-feature-title">{{ $data.components.title }}</h2>
+            <p class="docs-feature-desc">{{ $data.components.desc }}</p>
+            <p class="docs-feature-actions">
+              <a class="button ink" href="{{ $data.components.primary_cta.url | relURL }}">{{ $data.components.primary_cta.label }}</a>
+              <a class="button light" href="{{ $data.components.secondary_cta.url }}">{{ $data.components.secondary_cta.label }}</a>
+            </p>
+          </div>
+        </div>
+
+        <h2 id="docs-projects-title" class="section-label">By runtime and project</h2>
+        <ul class="card-grid card-grid--3 docs-projects">
+          {{- range $data.projects }}
+          {{- $p := . }}
+          <li class="card docs-project-card">
+            <div class="docs-project-card-head">
+              <img class="docs-project-card-icon" alt="" src="{{ path.Join "_" (index site.Data "rev-manifest" (printf "img/%s.svg" .icon)) | relURL }}">
+              <h3 class="docs-project-card-title">{{ .name }}</h3>
+            </div>
+            <p class="docs-project-card-desc">{{ .desc }}</p>
+            <div class="docs-project-card-links">
+              {{- with .docs }}<a class="docs-project-card-link" href="{{ . | relURL }}" aria-label="{{ $p.name }} documentation">Documentation &rarr;</a>{{ end }}
+              {{- with .source }}<a class="docs-project-card-link docs-project-card-link--muted" rel="noopener noreferrer" href="{{ . }}" aria-label="{{ $p.name }} source code">Source</a>{{ end }}
+              {{- with .examples }}<a class="docs-project-card-link docs-project-card-link--muted" rel="noopener noreferrer" href="{{ . }}" aria-label="{{ $p.name }} examples">Examples</a>{{ end }}
+            </div>
+          </li>
+          {{- end }}
+        </ul>
+
+      </article>
+    </div>
+  </main>
+</div>
+
+{{ partial "footer.html" . }}
