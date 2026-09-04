@@ -75,7 +75,7 @@
           {{- $g := . }}
           <section class="tooling-section">
             <h2 id="{{ .id }}">{{ .title }}</h2>
-            {{- with .intro }}<p class="tooling-section-intro">{{ . | safeHTML }}</p>{{ end }}
+            {{- with .intro }}<p class="tooling-section-intro">{{ if $g.htmlIntro }}{{ . | safeHTML }}{{ else }}{{ . }}{{ end }}</p>{{ end }}
             <div class="tooling-rows">
               {{- range .items }}
               <div class="tooling-row">
@@ -85,7 +85,7 @@
                 {{- else }}
                 <span class="tooling-row-name{{ if $g.mono }} tooling-row-name--mono{{ end }}">{{ .name }}</span>
                 {{- end }}
-                <p class="tooling-row-desc">{{ .desc | safeHTML }}</p>
+                <p class="tooling-row-desc">{{ if .htmlDesc }}{{ .desc | safeHTML }}{{ else }}{{ .desc }}{{ end }}</p>
               </div>
               {{- end }}
             </div>
