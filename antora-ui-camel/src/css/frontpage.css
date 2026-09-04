@@ -238,3 +238,58 @@ a.button.on-dark:hover {
 .home-cli-copy:hover {
   background: #3a342c;
 }
+
+/* Stat strip */
+
+.home-stats {
+  background: var(--color-paper-2);
+  border-bottom: 1px solid var(--color-line);
+  border-top: 1px solid var(--color-line);
+}
+
+.home-stats-inner {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(12 / var(--rem-base) * 1rem) calc(48 / var(--rem-base) * 1rem);
+  margin: 0 auto;
+  max-width: var(--frontpage-max-width);
+  padding: calc(30 / var(--rem-base) * 1rem) var(--page-padding-x);
+}
+
+.home-stats-label {
+  color: var(--color-ink-2);
+  font-family: var(--display-font-family);
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  font-weight: 700;
+  margin: 0;
+  margin-right: auto;
+}
+
+.home-stats-list {
+  display: flex;
+  gap: calc(44 / var(--rem-base) * 1rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.home-stat-num {
+  color: var(--color-orange-deep);
+  display: block;
+  font-family: var(--display-font-family);
+  font-size: calc(26 / var(--rem-base) * 1rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.home-stat-label {
+  color: var(--color-ink-soft);
+  display: block;
+  font-size: calc(12 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin-top: calc(5 / var(--rem-base) * 1rem);
+  text-transform: uppercase;
+}
