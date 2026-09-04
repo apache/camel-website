@@ -13,7 +13,9 @@ section.frontpage h2 {
 section.frontpage {
   color: var(--doc-font-color);
   font-size: var(--doc-font-size);
-  line-height: var(--doc-line-height);
+  /* Pinned rather than tracking --doc-line-height, which moved to 1.7 for the
+     article. The home page is redesigned in piece 4. */
+  line-height: 1.6;
   margin: 0 auto;
   max-width: var(--frontpage-max-width);
 }
