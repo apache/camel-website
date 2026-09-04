@@ -2503,6 +2503,53 @@ git commit -m "docs: record corrections and open items for the docs UI redesign"
 
 ---
 
+## Open items
+
+Left unresolved at the end of this piece. Each entry says what it costs to
+leave as is and who decides whether to change it.
+
+1. **Search lives in two different places depending on section.** Docs pages
+   have it in the nav panel and regain it at phone widths through the drawer;
+   Hugo pages keep it in the header, where piece 2 hides it below 500px. This
+   is what the design handoff asked for, but it is a real inconsistency. Cost
+   of leaving it: a phone visitor on a Hugo page below 500px cannot search the
+   site at all, while a phone visitor on a docs page can. Decision: the design
+   owner should see it on a phone before piece 4 closes.
+2. **The active TOC row and the last breadcrumb both give no hover feedback.**
+   Both are deliberate and consistent with each other: neither is a link a
+   pointer should invite a click on (the active TOC row is already the
+   current position; the last breadcrumb is already the current page). Cost of
+   leaving it: a user may wonder why hovering there does nothing, though
+   nothing is lost functionally. Decision: the design owner can reverse either
+   in one rule each, at any time, with no dependency on other work.
+3. **The harness fixture does not cover every construct.** It has no `colist`,
+   `sidebarblock`, `exampleblock`, `quoteblock`, or Camel Quarkus `div.badges`
+   markup. Those inherit the new typography without having been looked at.
+   Cost of leaving it: an undiscovered layout defect on one of those
+   constructs, on any page that uses them, in production. Decision: whoever
+   finds the defect adds the construct to the fixture at that time; growing
+   the fixture speculatively, without a known defect to chase, is more work
+   than the risk currently justifies.
+4. **No clean `yarn build:hugo` has run at any point in this piece.** Six
+   release-notes partials call `api.github.com`, which is blocked in every
+   environment this piece was built and verified in. This is pre-existing and
+   unrelated to the piece. Cost of leaving it: every Hugo-side claim in this
+   piece rests on partial Hugo output (pages are written before the aggregate
+   failure is reported) or on reading CSS and markup, not on a full live
+   render. Decision: this needs a GitHub token or a mocked API response
+   reachable from CI and from contributor machines; it is infrastructure work
+   outside this piece's scope.
+5. **`.doc .listingblock` wins its margin by source order, not specificity,
+   against the shared block-margin group rule.** Both rules have equal
+   specificity; `.listingblock`'s own rule happens to come later in the
+   cascade. Cost of leaving it: reordering the two rules, for an unrelated
+   reason in a future edit, would silently add or remove 4px above every code
+   block. Decision: whoever next touches that part of `doc.css` should raise
+   `.listingblock`'s specificity (or add a comment pinning the order) rather
+   than assume order is incidental.
+
+---
+
 ## Self-review
 
 **Spec coverage.** Every decision in the spec maps to a task: decision 1 to Task 1,

@@ -564,6 +564,49 @@ useful on a tree of several hundred entries. Algolia search is not a replacement
 for filtering a visible tree. The design owner chose this; it is recorded so the
 loss is not discovered later as a bug.
 
+## Corrections, made during implementation
+
+Found after the four corrections already recorded above, while implementing and
+verifying the piece.
+
+1. **Eyebrow margin collapse.** The plan called for a flex-based lift to place
+   the eyebrow above the h1 without a margin-collapse gap. That approach was
+   removed before Task 7 ran: making `.doc` a flex container turns each
+   `.sect1` into a flex item, which establishes a block formatting context and
+   stops its first child's margin from collapsing through it. That would have
+   made `.sect1`'s 36px top margin and the following `h2`'s 44px top margin sum
+   to 80px at every section boundary instead of collapsing to 44px. What
+   shipped instead: the eyebrow precedes the `h1` in the DOM and the
+   `:first-child` qualifiers on the `.doc` half of the rule were dropped.
+   Measured at 43.98px after the change.
+2. **Pagination arrow escape.** The spec and plan describe the previous-link
+   eyebrow as `content: '\2190 Previous'`. Written that way, it renders as
+   `←Previous` with no space: a CSS hex escape consumes one trailing
+   whitespace character as its terminator (CSS Syntax Module Level 3, section
+   4.3.7). It is written as two concatenated strings instead:
+   `content: '\2190' ' Previous';`. The sibling `content: 'Next \2192'` does
+   not share the defect, because its escape sits at the end of the string with
+   nothing after it to consume.
+3. **Admonition chip baseline.** The admonition chip (`.admonitionblock .icon
+   i`) needed `vertical-align: top`. Without it, the pill baseline-aligns
+   inside `td.icon` and sits about 5px below the content cell's text on all
+   five admonition types. `td.icon`'s own `vertical-align: top` aligns the
+   cell box within the table row; it does nothing for the inline chip's
+   position within the cell.
+4. **Orphaned tokens.** Eleven tokens were orphaned by this piece and deleted
+   in Task 9: `--toolbar-font-color`, `--toolbar-muted-color`,
+   `--section-divider-color`, `--admonition-background`,
+   `--admonition-label-font-weight`, the five `--*-on-color` tokens, and
+   `--table-border-color`. The five `--*-color` admonition tokens (`--tip-color`,
+   `--note-color`, `--caution-color`, `--important-color`, `--warning-color`)
+   are not part of that list: they still have live consumers, feeding the
+   admonition left rules and the Camel Quarkus badge styling.
+5. **Grid cap reachability.** The content grid reaches its 1180px cap only at
+   1460px of viewport, because the nav panel takes a fixed 280px. The spec's
+   geometry is correct; an early measurement table paired the 1180px cap with
+   a 1400px viewport, which cannot reach it (1400px minus the 280px nav leaves
+   1120px for the grid's own box, before its own padding).
+
 ## Follow-ups, not this piece
 
 - Restoring a nav-tree filter alongside site search, if the loss above proves to
