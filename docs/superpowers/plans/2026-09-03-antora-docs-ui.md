@@ -1524,12 +1524,15 @@ Expected: both exit 0.
 
 - [ ] **Step 5: Measure**
 
-On the rendered page at 1400px:
+On the rendered page **at 1460px**, not 1400px. The nav panel takes a fixed 280px,
+so the content column can only reach its 1180px cap at 280 + 1180 = 1460px of
+viewport. At 1400px it correctly measures 1120px. Measure the cap at 1460px and,
+if you want a second data point, confirm it tracks the viewport below that.
 
 | assertion | expected |
 |---|---|
 | `main.article > .content` `display` | `grid` |
-| `main.article > .content` width | 1180px |
+| `main.article > .content` width at 1460px | 1180px |
 | `aside.toc.sidebar` width | 220px |
 | gap between `.doc` right edge and `aside.toc.sidebar` left edge | 56px |
 | `.doc` left edge to `main.article > .content` left edge | 40px |
