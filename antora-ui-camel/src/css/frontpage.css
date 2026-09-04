@@ -298,3 +298,73 @@ a.button.on-dark:hover {
   margin-top: calc(5 / var(--rem-base) * 1rem);
   text-transform: uppercase;
 }
+
+/* Get started */
+
+.home-grid--three {
+  gap: calc(22 / var(--rem-base) * 1rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.home-started-card {
+  padding: calc(28 / var(--rem-base) * 1rem);
+}
+
+.home-started-head {
+  align-items: center;
+  display: flex;
+  gap: calc(10 / var(--rem-base) * 1rem);
+}
+
+.home-started-head h3 {
+  color: var(--color-ink);
+  font-family: var(--display-font-family);
+  font-size: calc(20 / var(--rem-base) * 1rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+.home-badge {
+  background: var(--color-camel-orange);
+  border-radius: calc(20 / var(--rem-base) * 1rem);
+  color: var(--color-white);
+  font-family: var(--monospace-font-family);
+  font-size: calc(10.5 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: calc(3 / var(--rem-base) * 1rem) calc(8 / var(--rem-base) * 1rem);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.home-started-desc {
+  color: var(--color-ink-soft);
+  flex: 1;
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  line-height: 1.55;
+  margin: calc(12 / var(--rem-base) * 1rem) 0 calc(20 / var(--rem-base) * 1rem);
+  text-wrap: pretty;
+}
+
+.home-started-code {
+  background: var(--color-ink);
+  border-radius: calc(9 / var(--rem-base) * 1rem);
+  color: var(--syntax-text);
+  font-family: var(--monospace-font-family);
+  font-size: calc(12.5 / var(--rem-base) * 1rem);
+  line-height: 1.6;
+  margin: 0 0 calc(20 / var(--rem-base) * 1rem);
+  overflow-x: auto;
+  padding: calc(14 / var(--rem-base) * 1rem) calc(15 / var(--rem-base) * 1rem);
+}
+
+.home-started-link {
+  align-self: flex-start;
+  color: var(--link-font-color);
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+  font-weight: 700;
+}
+
+.home-started-link:hover {
+  color: var(--link_hover-font-color);
+}

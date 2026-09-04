@@ -41,6 +41,28 @@
   </section>
   {{- end }}
 
+  {{- with $home.get_started }}
+  <section class="home-section home-started" aria-labelledby="home-started-title">
+    <div class="home-section-head">
+      <p class="home-eyebrow">{{ .eyebrow }}</p>
+      <h2 id="home-started-title">{{ .heading }}</h2>
+    </div>
+    <ul class="home-grid home-grid--three">
+      {{- range .items }}
+      <li class="home-card home-started-card">
+        <div class="home-started-head">
+          <h3>{{ .name }}</h3>
+          {{- with .badge }}<span class="home-badge">{{ . }}</span>{{ end }}
+        </div>
+        <p class="home-started-desc">{{ .description }}</p>
+        <pre class="home-started-code">{{ .code }}</pre>
+        <a class="home-started-link" href="{{ .url | relURL }}">Start with {{ .name }} &rarr;</a>
+      </li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
+
 </main>
 
 {{ partial "footer.html" . }}
