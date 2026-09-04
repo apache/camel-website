@@ -81,6 +81,37 @@
   </section>
   {{- end }}
 
+  {{- with $home.example }}
+  <section class="home-section" aria-labelledby="home-example-title">
+    <div class="home-section-head">
+      <p class="home-eyebrow">{{ .eyebrow }}</p>
+      <h2 id="home-example-title">{{ .heading }}</h2>
+      <p class="home-section-sub">{{ .subhead }}</p>
+    </div>
+    <div class="home-example">
+      <div class="home-tablist" role="tablist" aria-label="Route syntax">
+        {{- range $i, $tab := .tabs }}
+        <button class="home-tab" type="button" role="tab"
+                id="home-tab-{{ $tab.id }}"
+                aria-controls="home-panel-{{ $tab.id }}"
+                aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}"
+                tabindex="{{ if eq $i 0 }}0{{ else }}-1{{ end }}">{{ $tab.label }}</button>
+        {{- end }}
+      </div>
+      {{- range $i, $tab := .tabs }}
+      <div class="home-tabpanel" role="tabpanel"
+           id="home-panel-{{ $tab.id }}"
+           aria-labelledby="home-tab-{{ $tab.id }}"
+           {{ if ne $i 0 }}hidden{{ end }}><pre>{{ $tab.code }}</pre></div>
+      {{- end }}
+      <p class="home-example-run">
+        <span class="home-example-prompt">$</span>
+        <span class="home-example-command">{{ .run_command }}</span>
+      </p>
+    </div>
+  </section>
+  {{- end }}
+
 </main>
 
 {{ partial "footer.html" . }}

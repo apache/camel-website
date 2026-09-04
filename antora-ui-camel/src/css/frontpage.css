@@ -411,3 +411,82 @@ a.button.on-dark:hover {
   margin: calc(9 / var(--rem-base) * 1rem) 0 0;
   text-wrap: pretty;
 }
+
+/* Code example */
+
+.home-example {
+  background: var(--color-ink);
+  border: 1px solid var(--color-dark-line);
+  border-radius: calc(14 / var(--rem-base) * 1rem);
+  box-shadow: 0 24px 60px -30px rgb(33 28 23 / 50%);
+  margin: 0 auto;
+  max-width: calc(820 / var(--rem-base) * 1rem);
+  overflow: hidden;
+}
+
+.home-tablist {
+  border-bottom: 1px solid var(--color-dark-line);
+  display: flex;
+  gap: calc(2 / var(--rem-base) * 1rem);
+  padding: calc(12 / var(--rem-base) * 1rem) calc(14 / var(--rem-base) * 1rem) 0;
+}
+
+.home-tab {
+  background: none;
+  border: 0;
+  color: var(--code-tab-idle-font-color);
+  cursor: pointer;
+  font-family: var(--monospace-font-family);
+  font-size: calc(13 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  padding: calc(9 / var(--rem-base) * 1rem) calc(16 / var(--rem-base) * 1rem)
+           calc(13 / var(--rem-base) * 1rem);
+  position: relative;
+}
+
+.home-tab[aria-selected='true'] {
+  color: var(--syntax-text);
+}
+
+.home-tab[aria-selected='true']::after {
+  background: var(--color-camel-orange);
+  bottom: -1px;
+  content: '';
+  height: 2px;
+  left: calc(12 / var(--rem-base) * 1rem);
+  position: absolute;
+  right: calc(12 / var(--rem-base) * 1rem);
+}
+
+.home-tabpanel pre {
+  color: var(--syntax-text);
+  font-family: var(--monospace-font-family);
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  line-height: 1.7;
+  margin: 0;
+  min-height: calc(200 / var(--rem-base) * 1rem);
+  overflow-x: auto;
+  padding: calc(22 / var(--rem-base) * 1rem) calc(24 / var(--rem-base) * 1rem);
+}
+
+.home-example-run {
+  align-items: center;
+  background: var(--color-dark-3);
+  border-top: 1px solid var(--color-dark-line);
+  display: flex;
+  gap: calc(10 / var(--rem-base) * 1rem);
+  margin: 0;
+  padding: calc(14 / var(--rem-base) * 1rem) calc(24 / var(--rem-base) * 1rem);
+}
+
+.home-example-prompt {
+  color: var(--color-prompt);
+  font-family: var(--monospace-font-family);
+  font-size: calc(12.5 / var(--rem-base) * 1rem);
+}
+
+.home-example-command {
+  color: var(--color-on-dark-dim);
+  font-family: var(--monospace-font-family);
+  font-size: calc(12.5 / var(--rem-base) * 1rem);
+}
