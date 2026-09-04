@@ -21,9 +21,6 @@
 }
 
 .security-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: calc(18 / var(--rem-base) * 1rem);
   margin-top: calc(40 / var(--rem-base) * 1rem);
 }
 
