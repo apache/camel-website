@@ -1,0 +1,212 @@
+/* All Camel Projects page (content/projects, layouts/projects/list.html) */
+
+.projects {
+  width: 100%;
+  max-width: var(--static-max-width--desktop);
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+  color: var(--color-ink);
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  line-height: 1.55;
+}
+
+/* hero */
+
+.projects-hero {
+  max-width: 44rem;
+  margin-bottom: 2.5rem;
+}
+
+.projects-back {
+  font-family: var(--monospace-font-family);
+  font-size: calc(13 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  color: var(--color-ink-soft);
+}
+
+.projects-back:hover {
+  color: var(--link_hover-font-color);
+  text-decoration: none;
+}
+
+.projects h1 {
+  margin: 1rem 0 0;
+  font-size: calc(46 / var(--rem-base) * 1rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--color-ink);
+}
+
+.projects-intro {
+  margin: 0.8rem 0 0;
+  font-size: calc(17.5 / var(--rem-base) * 1rem);
+  color: var(--color-ink-soft);
+  text-wrap: pretty;
+}
+
+/* groups */
+
+.projects-group + .projects-group {
+  margin-top: 2.9rem;
+}
+
+.projects-group-title {
+  margin: 0 0 1.1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--color-line);
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+}
+
+.projects-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.projects-grid--four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.projects-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* cards */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.35rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: calc(13 / var(--rem-base) * 1rem);
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+
+.project-card:hover {
+  border-color: var(--color-line-hover);
+  box-shadow: 0 14px 34px -22px rgb(33 28 23 / 35%);
+  transform: translateY(-2px);
+}
+
+.project-card--row {
+  flex-direction: row;
+  gap: 1.1rem;
+  align-items: flex-start;
+  padding: 1.45rem 1.55rem;
+}
+
+.project-card-icon {
+  height: calc(34 / var(--rem-base) * 1rem);
+  width: calc(34 / var(--rem-base) * 1rem);
+  flex: none;
+  object-fit: contain;
+}
+
+.project-card-icon--lg {
+  height: calc(44 / var(--rem-base) * 1rem);
+  width: calc(44 / var(--rem-base) * 1rem);
+}
+
+.project-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.project-card-title {
+  margin: 0.9rem 0 0;
+  font-size: calc(17 / var(--rem-base) * 1rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-ink);
+}
+
+.project-card--row .project-card-title {
+  margin-top: 0;
+  font-size: calc(19 / var(--rem-base) * 1rem);
+}
+
+.project-card-desc {
+  margin: 0.45rem 0 0.8rem;
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  color: var(--color-ink-soft);
+  text-wrap: pretty;
+}
+
+.project-card--row .project-card-desc {
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+}
+
+.project-card-stats {
+  margin: 0;
+  font-family: var(--monospace-font-family);
+  font-size: calc(11.5 / var(--rem-base) * 1rem);
+  line-height: 1.7;
+  color: var(--color-ink-soft);
+}
+
+.project-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.project-card-link {
+  color: var(--link-font-color);
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  font-weight: 700;
+}
+
+.project-card-link:hover {
+  color: var(--link_hover-font-color);
+  text-decoration: none;
+}
+
+.project-card-link--muted {
+  color: var(--color-ink-soft);
+}
+
+.projects-footnote {
+  margin: 1.4rem 0 0;
+  font-size: calc(14 / var(--rem-base) * 1rem);
+  color: var(--color-ink-soft);
+  text-wrap: pretty;
+}
+
+/* responsive */
+
+@media screen and (width <= 1024px) {
+  .projects {
+    padding: 2rem 1.25rem 3rem;
+  }
+
+  .projects-grid--four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .projects-grid--two {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .projects h1 {
+    font-size: calc(36 / var(--rem-base) * 1rem);
+  }
+}
+
+@media screen and (width <= 626px) {
+  .projects-grid--four {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .project-card--row {
+    flex-direction: column;
+  }
+}
