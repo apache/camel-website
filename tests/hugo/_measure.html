@@ -12,15 +12,28 @@
 <iframe id="frame" title="measured page"></iframe>
 <pre id="out">pending</pre>
 <script>
-  // Hash format: <path>|<selector>@<prop>,<prop>;<selector>@<prop>
+  // Hash format: <path>|<selector>@<prop>,<prop>;<selector>@<prop>|<click-selector>
+  // The optional third segment names an element to click inside the iframe
+  // before the queries are evaluated, so a measurement can capture state
+  // after an interaction instead of only the state after initial load.
   var raw = decodeURIComponent(window.location.hash.slice(1))
   var parts = raw.split('|')
   var path = parts[0] || '/'
   var queries = (parts[1] || '').split(';').filter(Boolean)
+  var clickSelector = parts[2] || ''
   var frame = document.getElementById('frame')
   frame.onload = function () {
     var doc = frame.contentDocument
     var win = frame.contentWindow
+    var clickLines = []
+    if (clickSelector) {
+      var target = doc.querySelector(clickSelector)
+      if (!target) {
+        clickLines.push(clickSelector + ' => NOT FOUND (click target)')
+      } else {
+        target.click()
+      }
+    }
     var lines = queries.map(function (query) {
       var bits = query.split('@')
       var selector = bits[0]
@@ -34,7 +47,7 @@
       out.push('at=' + Math.round(rect.left) + ',' + Math.round(rect.top))
       return selector + ' => ' + out.join(' ')
     })
-    document.getElementById('out').textContent = lines.join('\n') || 'no queries'
+    document.getElementById('out').textContent = clickLines.concat(lines).join('\n') || 'no queries'
   }
   frame.src = path
 </script>
