@@ -10,6 +10,7 @@
 set -euo pipefail
 
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+cd "$REPO"
 OUT="$REPO/tests/antora-ui/out"
 STAGE="$(mktemp -d)"
 trap 'rm -rf "$STAGE"' EXIT
@@ -18,16 +19,20 @@ cp -R "$REPO/tests/antora-ui/fixture" "$STAGE/fixture"
 git -C "$STAGE" init -q
 git -C "$STAGE" add -A
 git -C "$STAGE" -c user.email=fixture@example.invalid -c user.name=fixture \
-  -c commit.gpgsign=false commit -q -m fixture
+  -c commit.gpgsign=false commit -q -m fixture --no-verify
 
 # A second version so the page version switcher and the nav version list have
 # something to render.
 git -C "$STAGE" checkout -q -b v4.17
 sed -i.bak "s/version: '4.18'/version: '4.17'/" "$STAGE/fixture/antora.yml"
+if cmp -s "$STAGE/fixture/antora.yml" "$STAGE/fixture/antora.yml.bak"; then
+  echo "error: sed did not change antora.yml -- fixture version is no longer '4.18'; update this script" >&2
+  exit 1
+fi
 rm -f "$STAGE/fixture/antora.yml.bak"
 git -C "$STAGE" add -A
 git -C "$STAGE" -c user.email=fixture@example.invalid -c user.name=fixture \
-  -c commit.gpgsign=false commit -q -m v4.17
+  -c commit.gpgsign=false commit -q -m v4.17 --no-verify
 git -C "$STAGE" checkout -q -
 
 cat > "$STAGE/playbook.yml" <<EOF
@@ -40,6 +45,9 @@ content:
       branches: [HEAD, v4.17]
       start_path: fixture
 ui:
+  # Points at the committed bundle in public/_, not src/. Rebuild the bundle
+  # (yarn build in antora-ui-camel) before running this script, or you will
+  # measure stale CSS/JS against fresh source changes.
   bundle:
     url: $REPO/antora-ui-camel/public/_
 asciidoc:
