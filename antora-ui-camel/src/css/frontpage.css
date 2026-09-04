@@ -81,18 +81,12 @@ section.frontpage a.button {
   background-image: none;
   border-radius: calc(8 / var(--rem-base) * 1rem);
   font-weight: 700;
+  font-size: calc(15 / var(--rem-base) * 1rem);
   padding: calc(13 / var(--rem-base) * 1rem) calc(24 / var(--rem-base) * 1rem);
   display: inline-flex;
   align-items: center;
   gap: calc(8 / var(--rem-base) * 1rem);
   line-height: 1;
-}
-
-/* navbar-cta keeps the font-size it inherits from .navbar (header.css owns
-   its size); only the body/hero buttons get the artboard's explicit sizes. */
-a.button:not(.navbar-cta),
-section.frontpage a.button:not(.navbar-cta) {
-  font-size: calc(15 / var(--rem-base) * 1rem);
 }
 
 header.frontpage a.button {
