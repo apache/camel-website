@@ -55,7 +55,14 @@ start_server() {
   SERVER_PID=$!
   trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
   for _ in 1 2 3 4 5 6 7 8 9 10; do
-    if curl -fsS -o /dev/null "http://localhost:$PORT/"; then return 0; fi
+    if ! kill -0 "$SERVER_PID" 2>/dev/null; then
+      echo "server process for port $PORT exited before it became ready (port may already be in use)" >&2
+      exit 1
+    fi
+    if curl -fsS -o /dev/null "http://localhost:$PORT/" \
+       && lsof -ti tcp:"$PORT" -sTCP:LISTEN 2>/dev/null | grep -qx "$SERVER_PID"; then
+      return 0
+    fi
     sleep 0.5
   done
   echo "server did not come up on port $PORT" >&2
