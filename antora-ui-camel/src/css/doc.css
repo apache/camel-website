@@ -337,6 +337,14 @@
   overflow: visible;
 }
 
+.doc .colist .table-wrapper {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  overflow: visible;
+}
+
 .doc .admonitionblock p,
 .doc .admonitionblock td.content {
   font-size: calc(14.5 / var(--rem-base) * 1rem);
@@ -483,7 +491,7 @@
 .doc table.tableblock .admonitionblock,
 .doc .ulist .admonitionblock,
 .doc .olist .admonitionblock {
-  padding: 0;
+  padding: calc(16 / var(--rem-base) * 1rem) calc(20 / var(--rem-base) * 1rem);
 }
 
 .doc ol,
