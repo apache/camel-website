@@ -32,7 +32,5 @@ antora-playbook-*.yml
 local-antora-playbook-*
 antora-playbook.yml
 /.hugo_build.lock
+/tests/antora-ui/out
 
-.playwright-cli/
-skills-lock.json
-build/unused-media.txt
