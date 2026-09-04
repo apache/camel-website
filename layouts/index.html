@@ -63,6 +63,24 @@
   </section>
   {{- end }}
 
+  {{- with $home.features }}
+  <section class="home-section" aria-labelledby="home-features-title">
+    <div class="home-section-head">
+      <p class="home-eyebrow">{{ .eyebrow }}</p>
+      <h2 id="home-features-title">{{ .heading }}</h2>
+    </div>
+    <ul class="home-grid home-grid--features">
+      {{- range .items }}
+      <li class="home-card home-feature">
+        <span class="home-feature-tag">{{ .tag }}</span>
+        <h3>{{ .title }}</h3>
+        <p>{{ .body }}</p>
+      </li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
+
 </main>
 
 {{ partial "footer.html" . }}

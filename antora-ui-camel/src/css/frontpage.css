@@ -368,3 +368,46 @@ a.button.on-dark:hover {
 .home-started-link:hover {
   color: var(--link_hover-font-color);
 }
+
+/* Features */
+
+.home-grid--features {
+  gap: calc(20 / var(--rem-base) * 1rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.home-feature {
+  padding: calc(26 / var(--rem-base) * 1rem);
+}
+
+.home-feature-tag {
+  align-items: center;
+  align-self: flex-start;
+  background: var(--color-orange-tint);
+  border-radius: calc(9 / var(--rem-base) * 1rem);
+  color: var(--color-orange-deep);
+  display: inline-flex;
+  font-family: var(--display-font-family);
+  font-size: calc(16 / var(--rem-base) * 1rem);
+  font-weight: 800;
+  height: calc(38 / var(--rem-base) * 1rem);
+  justify-content: center;
+  min-width: calc(38 / var(--rem-base) * 1rem);
+  padding: 0 calc(7 / var(--rem-base) * 1rem);
+}
+
+.home-feature h3 {
+  color: var(--color-ink);
+  font-family: var(--display-font-family);
+  font-size: calc(18 / var(--rem-base) * 1rem);
+  font-weight: 700;
+  margin: calc(16 / var(--rem-base) * 1rem) 0 0;
+}
+
+.home-feature p {
+  color: var(--color-ink-soft);
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+  line-height: 1.55;
+  margin: calc(9 / var(--rem-base) * 1rem) 0 0;
+  text-wrap: pretty;
+}
