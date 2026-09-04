@@ -1,0 +1,41 @@
+{{ partial "header.html" . }}
+{{- $data := .Site.Data.community }}
+
+<div class="body">
+  <main>
+    <div class="content">
+      <article class="community" aria-labelledby="community-title">
+
+        <header class="community-hero">
+          <h1 id="community-title" class="page-hero-title">{{ .Title }}</h1>
+          <p class="page-hero-lead">{{ $data.lead }}</p>
+        </header>
+
+        <ul class="card-grid card-grid--3 community-grid">
+          {{- range $data.cards }}
+          <li class="card community-card">
+            <span class="community-card-tag">{{ .tag }}</span>
+            <h3 class="community-card-title">{{ .title }}</h3>
+            <p class="community-card-body">{{ .body }}</p>
+            <a class="community-card-link" href="{{ .url | relURL }}">Read more &rarr;</a>
+          </li>
+          {{- end }}
+
+          <li class="card card--dark community-cta">
+            <p class="community-cta-eyebrow">{{ $data.cta.eyebrow }}</p>
+            <h3 class="community-cta-title">{{ $data.cta.title }}</h3>
+            <p class="community-cta-body">{{ $data.cta.body }}</p>
+            <p class="community-cta-actions">
+              <a class="button dark" rel="noopener noreferrer" href="{{ $data.cta.zulip_url }}">{{ $data.cta.zulip_label }}</a>
+              <a class="button on-dark" href="mailto:{{ $data.cta.mail }}">{{ $data.cta.mail }}</a>
+              <a class="button on-dark" rel="noopener noreferrer" href="{{ $data.cta.github_url }}">GitHub</a>
+            </p>
+          </li>
+        </ul>
+
+      </article>
+    </div>
+  </main>
+</div>
+
+{{ partial "footer.html" . }}

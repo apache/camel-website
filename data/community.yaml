@@ -1,0 +1,60 @@
+# Community (/community/) - drives layouts/community/list.html
+
+lead: >-
+  Camel is your project. Get help, share what you've built, and help make
+  Camel better.
+
+cards:
+  - tag: "?"
+    title: Support
+    body: >-
+      If you are experiencing problems using Camel, there are several
+      channels available to seek help from the community.
+    url: /community/support/
+  - tag: "@"
+    title: Mailing List
+    body: >-
+      One way to get help is to use the Camel mailing lists. This allows
+      the entire community to help with your problem.
+    url: /community/mailing-list/
+  - tag: PR
+    title: Contributing
+    body: >-
+      There are many ways you can help make Camel better. You don't have to
+      be an expert; the Apache Camel developers are available to offer help
+      and guidance.
+    url: /community/contributing/
+  - tag: 100+
+    title: Who Uses Apache Camel
+    body: >-
+      Over 100 companies use Apache Camel in production, from UPS and CERN
+      to SAP and Korean Air. Commercial products from Red Hat, SAP, Huawei,
+      Talend, and others are built on Apache Camel.
+    url: /community/user-stories/
+  - tag: A
+    title: Articles
+    body: >-
+      Articles are divided into several sections, including Camel videos,
+      general articles, and other categories.
+    url: /community/articles/
+  - tag: B
+    title: Books
+    body: >-
+      The known books about Apache Camel. If you happen to know a book
+      which is not listed, please contact us.
+    url: /community/books/
+  - tag: T
+    title: Team
+    body: "Who we are. By all means add yourself to the list, in alphabetical order."
+    url: /community/team/
+
+cta:
+  eyebrow: Talk to us
+  title: Zulip chat, mailing lists, and GitHub
+  body: >-
+    Everything is fully open. When posting to the mailing lists, please use
+    plain text mails.
+  zulip_url: https://camel.zulipchat.com/
+  zulip_label: Join Zulip
+  mail: users@camel.apache.org
+  github_url: https://github.com/apache/camel/
