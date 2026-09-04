@@ -2355,11 +2355,63 @@ and confirm the first tab still reads as selected: light text and an orange
 underline, not the package's white-on-grey default. If it does not, an
 `is-loading` variant is missing from one of the override rules.
 
-- [ ] **Step 5: Commit**
+- [ ] **Step 5: Commit the repaint**
 
 ```bash
 git add antora-ui-camel/src/css/pagination.css antora-ui-camel/src/css/tabs.css
 git commit -m "style(docs): repaint pagination and put code tabs on dark"
+```
+
+- [ ] **Step 6: Delete the tokens this piece orphaned**
+
+Tasks 5, 7 and 8 each removed the last consumer of one or more tokens in
+`vars.css`, and Step 1 of this task removes the last two consumers of
+`--toolbar-muted-color`. This step is deliberately last in the piece, so that every
+token below is provably dead at the moment it is deleted rather than merely
+expected to be. That ordering matters: `--nav-panel-height` looked dead at Task 2
+but its consumers lived until Task 4.
+
+**Re-verify each one before deleting it.** Do not trust this list.
+
+```bash
+for t in toolbar-font-color toolbar-muted-color section-divider-color \
+         admonition-background admonition-label-font-weight \
+         caution-on-color important-on-color note-on-color tip-on-color \
+         warning-on-color table-border-color; do
+  n=$(grep -rn "var(--$t)" antora-ui-camel/src/ layouts/ assets/ 2>/dev/null \
+      | grep -v '/public/' | wc -l | tr -d ' ')
+  echo "$t: $n"
+done
+```
+
+Expected: every one reports `0`. `public/` is excluded because it is generated
+output that Task 10 regenerates. If any token reports more than zero, **leave that
+token in place** and say so in your report; do not chase down and rewrite the
+consumer, which would be scope creep into a file this task does not own.
+
+Then delete the declaration for each token that reported zero, and nothing else.
+
+**Do not delete `--caution-color`, `--important-color`, `--note-color`,
+`--tip-color` or `--warning-color`.** They look like they belong to the same family
+and they do not: all five still have live consumers, feeding the admonition left
+rules and the Camel Quarkus `div.badges` styling. Deleting a family because most of
+it looks dead is the exact trap this step is ordered to avoid.
+
+- [ ] **Step 7: Confirm the deletion broke nothing**
+
+Run: `cd antora-ui-camel && node ../.yarn/releases/yarn-4.1.0.cjs build`
+
+Expected: exits 0, stylelint clean. Then re-render the harness and confirm the page
+still paints: an undefined custom property does not fail the build, it silently
+resolves to nothing, so the build passing is necessary but not sufficient. Spot
+check that admonition left rules, table borders and the badge colors all still have
+color.
+
+- [ ] **Step 8: Commit the cleanup**
+
+```bash
+git add antora-ui-camel/src/css/vars.css
+git commit -m "chore(docs): drop tokens orphaned by the docs UI repaint"
 ```
 
 ---
