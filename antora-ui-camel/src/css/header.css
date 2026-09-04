@@ -40,10 +40,6 @@ body {
   text-decoration: none;
 }
 
-.navbar-brand .separator {
-  padding: 0 0.375rem;
-}
-
 .navbar-menu {
   display: flex;
   align-items: center;
@@ -95,7 +91,13 @@ body {
   /* width: var(--navbar-height); */
   width: 2rem;
   flex-shrink: 0;
-  top: 0.75rem;
+  /* Compensates for the span geometry below (top: 60% plus fixed -10/-3/+4px
+     margins), which is hardcoded in raw px and not tied to --rem-base, so the
+     glyph's own optical center sits below the button's true vertical center
+     by a fixed amount, not a percentage of the button's height. Measured:
+     with no offset the glyph sits ~2.1px below the bar's centerline once
+     align-items:center places the button itself; -2.1px is the correction. */
+  top: -2.1px;
   padding: 0;
   order: 8;
 }
@@ -207,7 +209,6 @@ a.button.navbar-cta {
    8.5px above the nav links in the 73px desktop bar. justify-content keeps it right-aligned, which
    text-align no longer does once this is a flex container. */
 .navbar-search {
-  position: relative;
   padding: 0;
 }
 
@@ -343,10 +344,6 @@ div.footer-search h4 {
     height: var(--navbar-mobile-height);
   }
 
-  .navbar-brand {
-    flex-wrap: wrap;
-  }
-
   /* The field gives up its fixed 200px and shrinks with the bar. */
   .navbar-search {
     min-width: 0;
@@ -354,10 +351,6 @@ div.footer-search h4 {
 
   .navbar-search input {
     width: 100%;
-  }
-
-  .navbar-burger {
-    display: block;
   }
 
   #search-cancel {
@@ -379,11 +372,20 @@ div.footer-search h4 {
   .navbar-github {
     display: none;
   }
+}
 
+@media (width <= 430px) {
   /* Even with search and GitHub gone, the full wordmark plus the CTA and
      burger still overflow a 390px phone (measured). The mark alone carries
-     the brand at this width; the wordmark returns above the breakpoint. */
+     the brand at this width; the wordmark returns above the breakpoint with
+     30px to spare (measured). Visually hidden rather than display:none so
+     the brand link keeps an accessible name (its alt text is empty by
+     design, relying on the wordmark to name the link). */
   .navbar-wordmark {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
   }
 }
