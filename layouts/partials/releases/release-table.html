@@ -1,22 +1,20 @@
-<table class="tableblock frame-all grid-all stretch">
-  <caption>
-    Releases by release date
-  </caption>
+<table class="releases-table">
   <thead>
     <tr>
-      <td>Version</td>
-      <td>Release date</td>
-      <td>Description</td>
+      <th class="releases-col-version">Version</th>
+      <th class="releases-col-date">Release date</th>
+      <th>Description</th>
     </tr>
   </thead>
   <tbody>
     {{ range . }}
     <tr>
       <td>
-        <a href="{{ .RelPermalink }}">{{ .Params.version }}</a>
+        <a href="{{ .RelPermalink }}" class="releases-version">{{ .Params.version }}</a>
+        {{ if eq .Params.kind "lts" }}<span class="lts-chip">LTS</span>{{ end }}
       </td>
-      <td>{{ .Date | dateFormat "2006-01-02" }}</td>
-      <td>{{ .Params.preview }}</td>
+      <td class="releases-date">{{ .Date | dateFormat "2006-01-02" }}</td>
+      <td class="releases-desc">{{ .Params.preview }}</td>
     </tr>
     {{ end }}
   </tbody>

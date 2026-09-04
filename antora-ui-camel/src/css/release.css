@@ -1,3 +1,328 @@
+/* Releases archive (content/releases/_index.md, layouts/releases/list.html) and
+   Security advisory (content/security/CVE-*.md, layouts/security-advisory/single.html).
+   Grouped in one file per the piece-4b build plan (both are release/advisory data
+   views; see .superpowers/sdd/4b/00-primitives.md). H1/lead on the archive screen
+   use the shared .page-hero-title/.page-hero-lead primitives; the advisory lead
+   uses the shared .detail-lead primitive; the LTS chip and the severity chip use
+   the shared .lts-chip/.severity-chip primitives from primitives.css -- only
+   page-scoped sizing is added here, per the primitives contract. Advisory styling
+   lives in this file rather than a separate advisory.css because the task's file
+   ownership list for this screen group names only release.css. */
+
+/* ======================================================================
+   Releases archive
+   ====================================================================== */
+
+.releases {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) calc(220 / var(--rem-base) * 1rem);
+  gap: calc(56 / var(--rem-base) * 1rem);
+  align-items: start;
+  padding: calc(56 / var(--rem-base) * 1rem) calc(32 / var(--rem-base) * 1rem) calc(40 / var(--rem-base) * 1rem);
+}
+
+.releases-intro {
+  max-width: calc(720 / var(--rem-base) * 1rem);
+}
+
+.releases-lead a {
+  color: var(--link-font-color);
+}
+
+.releases-lead a:hover {
+  color: var(--link_hover-font-color);
+  text-decoration: none;
+}
+
+.releases-group {
+  margin-top: calc(48 / var(--rem-base) * 1rem);
+}
+
+.releases-content > .releases-group:first-child {
+  margin-top: calc(40 / var(--rem-base) * 1rem);
+}
+
+.releases-group-title {
+  font-family: var(--display-font-family);
+  font-weight: 800;
+  font-size: calc(26 / var(--rem-base) * 1rem);
+  letter-spacing: -0.02em;
+  margin: 0 0 calc(14 / var(--rem-base) * 1rem);
+  color: var(--heading-font-color);
+}
+
+/* table */
+
+.releases-table {
+  width: 100%;
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: 12px; /* radius exemption: raw px */
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+.releases-table thead tr {
+  background: var(--color-paper-2);
+}
+
+.releases-table th {
+  text-align: left;
+  font-family: var(--monospace-font-family);
+  font-size: calc(11.5 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-ink-muted);
+  padding: calc(11 / var(--rem-base) * 1rem) calc(16 / var(--rem-base) * 1rem);
+}
+
+.releases-col-version {
+  width: calc(140 / var(--rem-base) * 1rem);
+}
+
+.releases-col-date {
+  width: calc(150 / var(--rem-base) * 1rem);
+}
+
+.releases-table tbody tr {
+  border-top: 1px solid var(--color-line-soft);
+}
+
+.releases-table tbody tr:first-child {
+  border-top: 0;
+}
+
+.releases-table td {
+  padding: calc(12 / var(--rem-base) * 1rem) calc(16 / var(--rem-base) * 1rem);
+}
+
+.releases-version {
+  font-family: var(--monospace-font-family);
+  font-weight: 600;
+  font-size: calc(14 / var(--rem-base) * 1rem);
+  color: var(--link-font-color);
+}
+
+.releases-version:hover {
+  color: var(--link_hover-font-color);
+  text-decoration: none;
+}
+
+.releases-table .lts-chip {
+  margin-left: calc(8 / var(--rem-base) * 1rem);
+}
+
+.releases-date {
+  font-family: var(--monospace-font-family);
+  font-size: calc(13 / var(--rem-base) * 1rem);
+  color: var(--color-ink-soft);
+}
+
+.releases-desc {
+  color: var(--color-ink-soft);
+  line-height: 1.5;
+}
+
+/* sticky "Projects" rail -- deliberately not .toc-menu (see
+   .superpowers/sdd/4b/00-primitives.md 1.8b): 02-on-this-page.js only ever looks
+   for aside.toc.sidebar, which this markup never carries, but the class names
+   below stay distinct from the TOC component on purpose, not by accident. */
+
+.releases-rail {
+  position: sticky;
+  top: calc(var(--navbar-height) + calc(24 / var(--rem-base) * 1rem));
+}
+
+.releases-rail-heading {
+  font-family: var(--monospace-font-family);
+  font-size: calc(12 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  color: var(--color-ink-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-bottom: calc(12 / var(--rem-base) * 1rem);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.releases-rail-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: calc(10 / var(--rem-base) * 1rem);
+}
+
+.releases-rail-link {
+  display: block;
+  padding: calc(6 / var(--rem-base) * 1rem) 0 calc(6 / var(--rem-base) * 1rem) calc(12 / var(--rem-base) * 1rem);
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  color: var(--color-ink-soft);
+  border-left: 2px solid var(--color-line);
+  text-decoration: none;
+}
+
+.releases-rail-link:hover,
+.releases-rail-link:focus-visible {
+  border-left-color: var(--color-line-hover);
+  color: var(--color-ink);
+}
+
+/* ======================================================================
+   Security advisory (single CVE page)
+   ====================================================================== */
+
+.advisory {
+  width: 100%;
+  max-width: var(--static-max-width--desktop);
+  margin: 0 auto;
+  padding: calc(56 / var(--rem-base) * 1rem) calc(32 / var(--rem-base) * 1rem) calc(40 / var(--rem-base) * 1rem);
+}
+
+.advisory-back {
+  display: inline-block;
+  font-family: var(--monospace-font-family);
+  font-size: calc(13 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  color: var(--color-ink-muted);
+  text-decoration: none;
+}
+
+.advisory-back:hover {
+  color: var(--link_hover-font-color);
+}
+
+.advisory-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) calc(320 / var(--rem-base) * 1rem);
+  gap: calc(56 / var(--rem-base) * 1rem);
+  align-items: start;
+  margin-top: calc(18 / var(--rem-base) * 1rem);
+}
+
+.advisory-article {
+  max-width: calc(760 / var(--rem-base) * 1rem);
+}
+
+.advisory-eyebrow {
+  font-family: var(--monospace-font-family);
+  font-size: calc(12 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  color: var(--color-orange-deep);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.advisory-title {
+  font-family: var(--display-font-family);
+  font-weight: 800;
+  font-size: calc(42 / var(--rem-base) * 1rem);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin: calc(10 / var(--rem-base) * 1rem) 0 0;
+  color: var(--heading-font-color);
+}
+
+.advisory-section {
+  margin-top: calc(36 / var(--rem-base) * 1rem);
+}
+
+.advisory-section-title {
+  font-family: var(--display-font-family);
+  font-weight: 700;
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-ink-muted);
+  margin: 0 0 calc(10 / var(--rem-base) * 1rem);
+}
+
+.advisory-section-body {
+  font-size: calc(16.5 / var(--rem-base) * 1rem);
+  line-height: 1.7;
+  color: var(--color-ink-2);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.advisory-references {
+  display: flex;
+  flex-direction: column;
+  gap: calc(8 / var(--rem-base) * 1rem);
+  font-size: calc(15 / var(--rem-base) * 1rem);
+}
+
+.advisory-reference {
+  font-family: var(--monospace-font-family);
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  color: var(--link-font-color);
+  text-decoration: none;
+}
+
+.advisory-reference:hover {
+  color: var(--link_hover-font-color);
+  text-decoration: none;
+}
+
+/* facts card */
+
+.advisory-facts {
+  position: sticky;
+  top: calc(var(--navbar-height) + calc(24 / var(--rem-base) * 1rem));
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: 14px; /* radius exemption: raw px */
+  padding: calc(24 / var(--rem-base) * 1rem);
+  display: flex;
+  flex-direction: column;
+  gap: calc(18 / var(--rem-base) * 1rem);
+}
+
+.advisory-facts-label {
+  font-family: var(--monospace-font-family);
+  font-size: calc(11.5 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  color: var(--color-ink-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.advisory-severity-chip {
+  margin-top: calc(8 / var(--rem-base) * 1rem);
+  font-size: calc(12 / var(--rem-base) * 1rem);
+  padding: calc(4 / var(--rem-base) * 1rem) calc(10 / var(--rem-base) * 1rem);
+}
+
+.advisory-facts-value {
+  margin-top: calc(6 / var(--rem-base) * 1rem);
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+  line-height: 1.6;
+  color: var(--color-ink-2);
+}
+
+.advisory-facts-value--mono {
+  font-family: var(--monospace-font-family);
+  font-size: calc(14 / var(--rem-base) * 1rem);
+  line-height: 1.7;
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+a.advisory-facts-cta {
+  display: block;
+  margin: calc(4 / var(--rem-base) * 1rem) 0 0;
+  padding: calc(11 / var(--rem-base) * 1rem) calc(18 / var(--rem-base) * 1rem);
+  font-size: calc(14 / var(--rem-base) * 1rem);
+  text-align: center;
+}
+
+/* ======================================================================
+   Release detail (release-note/single.html) -- undesigned template, token
+   sweep only. Its h1/h2/pre/table typography already comes free from the
+   shared .static/.doc rules (doc.css, base.css); only the Resolved-Issues
+   <dl> grid and the floated Note <aside> are page-owned and kept as-is,
+   since neither references a color or a removed token.
+   ====================================================================== */
+
 .release dl {
   display: grid;
   grid-template-columns: max-content auto;
@@ -13,22 +338,38 @@
   word-break: break-word;
 }
 
-.release .tableblock thead tr th {
-  text-align: left;
-}
-
-.release .tableblock tbody tr:nth-child(2n) {
-  background: var(--color-smoke-50);
-}
-
 .release aside {
   float: right;
   margin-left: 1rem;
   width: 25rem;
 }
 
-/* for mobile screens */
+/* responsive */
+
+@media screen and (width <= 1024px) {
+  .releases {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .releases-rail {
+    position: static;
+    margin-top: calc(48 / var(--rem-base) * 1rem);
+  }
+
+  .advisory-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .advisory-facts {
+    position: static;
+  }
+}
+
 @media screen and (width <= 626px) {
+  .releases-table {
+    font-size: calc(13 / var(--rem-base) * 1rem);
+  }
+
   .release aside {
     width: 100%;
     margin: 0 auto;
