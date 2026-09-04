@@ -606,7 +606,7 @@ a.button.on-dark:hover {
   }
 
   .home-hero-art {
-    order: -1;
+    aspect-ratio: 1 / 0.45;
   }
 
   .home-section-head h2 {

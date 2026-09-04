@@ -16,11 +16,16 @@
           <h2 id="projects-primary" class="projects-group-title">Primary projects</h2>
           <ul class="projects-grid projects-grid--four">
             {{- range $data.primary }}
+            {{- $project := . }}
             <li class="project-card">
               <img class="project-card-icon" alt="" src="{{ path.Join "_" (index site.Data "rev-manifest" (printf "img/%s.svg" .icon)) | relURL }}">
               <h3 class="project-card-title">{{ .name }}</h3>
               <p class="project-card-desc">{{ .description }}</p>
               <p class="project-card-stats">{{ .stats }}</p>
+              <div class="project-card-meta">
+                {{- with .docs }}<a class="project-card-link" href="{{ . | relURL }}" aria-label="Read more about {{ $project.name }}">Read more &rarr;</a>{{ end }}
+                {{- with .source }}<a class="project-card-link project-card-link--muted" rel="noopener noreferrer" href="{{ . }}" aria-label="{{ $project.name }} source code">Source</a>{{ end }}
+              </div>
             </li>
             {{- end }}
           </ul>
@@ -30,6 +35,7 @@
           <h2 id="projects-specialized" class="projects-group-title">Specialized &amp; ecosystem projects</h2>
           <ul class="projects-grid projects-grid--two">
             {{- range $data.specialized }}
+            {{- $project := . }}
             <li class="project-card project-card--row">
               <img class="project-card-icon project-card-icon--lg" alt="" src="{{ path.Join "_" (index site.Data "rev-manifest" (printf "img/%s.svg" .icon)) | relURL }}">
               <div class="project-card-body">
@@ -37,8 +43,8 @@
                 <p class="project-card-desc">{{ .description }}</p>
                 <div class="project-card-meta">
                   <span class="project-card-stats">{{ .stats }}</span>
-                  {{- with .docs }}<a class="project-card-link" href="{{ . | relURL }}">Read more &rarr;</a>{{ end }}
-                  {{- with .source }}<a class="project-card-link project-card-link--muted" rel="noopener noreferrer" href="{{ . }}">Source</a>{{ end }}
+                  {{- with .docs }}<a class="project-card-link" href="{{ . | relURL }}" aria-label="Read more about {{ $project.name }}">Read more &rarr;</a>{{ end }}
+                  {{- with .source }}<a class="project-card-link project-card-link--muted" rel="noopener noreferrer" href="{{ . }}" aria-label="{{ $project.name }} source code">Source</a>{{ end }}
                 </div>
               </div>
             </li>
