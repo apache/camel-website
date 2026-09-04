@@ -1,0 +1,55 @@
+{{ partial "header.html" . }}
+{{- $data := .Site.Data.projects }}
+
+<div class="body">
+  <main>
+    <div class="content">
+      <article class="projects" aria-labelledby="projects-title">
+
+        <header class="projects-hero">
+          <a class="projects-back" href="{{ "/" | relURL }}">&larr; Back to home</a>
+          <h1 id="projects-title">{{ .Title }}</h1>
+          <p class="projects-intro">{{ $data.intro }}</p>
+        </header>
+
+        <section class="projects-group" aria-labelledby="projects-primary">
+          <h2 id="projects-primary" class="projects-group-title">Primary projects</h2>
+          <ul class="projects-grid projects-grid--four">
+            {{- range $data.primary }}
+            <li class="project-card">
+              <img class="project-card-icon" alt="" src="{{ path.Join "_" (index site.Data "rev-manifest" (printf "img/%s.svg" .icon)) | relURL }}">
+              <h3 class="project-card-title">{{ .name }}</h3>
+              <p class="project-card-desc">{{ .description }}</p>
+              <p class="project-card-stats">{{ .stats }}</p>
+            </li>
+            {{- end }}
+          </ul>
+        </section>
+
+        <section class="projects-group" aria-labelledby="projects-specialized">
+          <h2 id="projects-specialized" class="projects-group-title">Specialized &amp; ecosystem projects</h2>
+          <ul class="projects-grid projects-grid--two">
+            {{- range $data.specialized }}
+            <li class="project-card project-card--row">
+              <img class="project-card-icon project-card-icon--lg" alt="" src="{{ path.Join "_" (index site.Data "rev-manifest" (printf "img/%s.svg" .icon)) | relURL }}">
+              <div class="project-card-body">
+                <h3 class="project-card-title">{{ .name }}</h3>
+                <p class="project-card-desc">{{ .description }}</p>
+                <div class="project-card-meta">
+                  <span class="project-card-stats">{{ .stats }}</span>
+                  {{- with .docs }}<a class="project-card-link" href="{{ . | relURL }}">Read more &rarr;</a>{{ end }}
+                  {{- with .source }}<a class="project-card-link project-card-link--muted" rel="noopener noreferrer" href="{{ . }}">Source</a>{{ end }}
+                </div>
+              </div>
+            </li>
+            {{- end }}
+          </ul>
+          <p class="projects-footnote">{{ $data.footnote }}</p>
+        </section>
+
+      </article>
+    </div>
+  </main>
+</div>
+
+{{ partial "footer.html" . }}

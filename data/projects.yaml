@@ -1,0 +1,71 @@
+# All Camel Projects — drives layouts/projects/list.html
+# Icons resolve through the Antora UI rev-manifest: antora-ui-camel/src/img/<icon>.svg
+# Activity figures are maintained by hand (commits · contributors · GitHub stars, 2025–2026).
+
+intro: >-
+  Every Camel project, with descriptions and current activity. The primary
+  runtimes are featured on the home page; the projects below serve more
+  specialized needs.
+
+primary:
+  - name: Camel Core
+    icon: logo-d
+    description: The integration framework and routing engine.
+    stats: 7,641 commits · 192 contributors · 6,222 ★
+    docs: /camel-core/
+    source: https://github.com/apache/camel/
+  - name: Camel Spring Boot
+    icon: spring-boot
+    description: Camel on Spring Boot with component starters.
+    stats: 859 commits · 42 contributors · 187 ★
+    docs: /camel-spring-boot/latest/
+    source: https://github.com/apache/camel-spring-boot
+  - name: Camel Quarkus
+    icon: quarkus
+    description: Camel as cloud-native Quarkus extensions.
+    stats: 1,285 commits · 40 contributors · 292 ★
+    docs: /camel-quarkus/latest/
+    source: https://github.com/apache/camel-quarkus/
+  - name: Camel CLI
+    icon: cli
+    description: Terminal tooling; ships with Camel Core.
+    stats: Part of the Camel Core project
+    docs: /manual/camel-jbang.html
+    source: https://github.com/apache/camel/tree/main/dsl/camel-jbang
+
+specialized:
+  - name: Camel K
+    icon: kubernetes
+    description: A lightweight integration framework that runs natively on Kubernetes, built for serverless workloads.
+    stats: 634 commits · 22 contributors · 917 ★
+    docs: /camel-k/latest/
+    source: https://github.com/apache/camel-k/
+  - name: Camel Kamelets
+    icon: logo-d
+    description: Reusable, high-level connectors that snap together to build routes with minimal configuration.
+    stats: 578 commits · 15 contributors · 69 ★
+    docs: /camel-kamelets/latest/
+    source: https://github.com/apache/camel-kamelets
+  - name: Camel Karavan
+    icon: karavan
+    description: A low-code, visual data-integration platform for designing and managing Camel routes.
+    stats: 210 commits · 14 contributors · 590 ★
+    docs: ""
+    source: https://github.com/apache/camel-karavan
+  - name: Camel Kafka Connector
+    icon: apache-kafka
+    description: Embeds Camel within Kafka Connect, exposing every Camel component as a Kafka connector.
+    stats: See GitHub for current activity
+    docs: /camel-kafka-connector/latest/
+    source: https://github.com/apache/camel-kafka-connector/
+  - name: Camel Karaf
+    icon: apache-karaf
+    description: Runs Camel inside the Apache Karaf OSGi container for modular deployments.
+    stats: See GitHub for current activity
+    docs: /camel-karaf/latest/
+    source: https://github.com/apache/camel-karaf
+
+footnote: >-
+  Nothing has been removed — these projects remain fully supported and
+  documented. Activity figures reflect commits, contributors, and GitHub stars
+  over 2025–2026.
