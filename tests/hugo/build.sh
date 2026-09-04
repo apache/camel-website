@@ -37,6 +37,32 @@ if [ -z "${GITHUB_TOKEN:-}" ]; then
   fi
 fi
 
+# config.toml serves the site's "_" assets from documentation/_ (staticDir and the
+# "data" module mount both point there), but `yarn workspace antora-ui-camel run
+# build` only writes to antora-ui-camel/public/_. Nothing else connects the two, so
+# without this sync the site would silently serve a stale bundle and every --measure
+# reading below would be a confident lie.
+BUNDLE="$REPO/antora-ui-camel/public/_"
+MANIFEST="$BUNDLE/data/rev-manifest.json"
+
+if [ ! -f "$MANIFEST" ]; then
+  echo "missing $MANIFEST -- run 'yarn workspace antora-ui-camel run build' first" >&2
+  exit 1
+fi
+
+if find "$REPO/antora-ui-camel/src" -newer "$MANIFEST" -print -quit | grep -q .; then
+  echo "antora-ui-camel bundle is stale (source newer than rev-manifest.json) -- run 'yarn workspace antora-ui-camel run build'" >&2
+  exit 1
+fi
+
+mkdir -p "$REPO/documentation/_"
+for asset_dir in css js img font data; do
+  if [ -d "$BUNDLE/$asset_dir" ]; then
+    mkdir -p "$REPO/documentation/_/$asset_dir"
+    cp -R "$BUNDLE/$asset_dir/." "$REPO/documentation/_/$asset_dir/"
+  fi
+done
+
 if ! node_modules/.bin/hugo --cacheDir "$REPO/.hugo_data" -d "$SITE" >"$LOG" 2>&1; then
   echo "hugo build FAILED. Last 20 lines of $LOG:" >&2
   tail -20 "$LOG" >&2
