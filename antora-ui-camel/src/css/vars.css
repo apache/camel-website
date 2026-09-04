@@ -47,10 +47,14 @@
   --color-orange-tint: #fbead8;
   --color-orange-glow: #f2a05a;
   --color-dark-2: #2b2620;
+  --color-dark-3: #1c1813;
+  --color-prompt: #e0805a;
   --color-dark-line: #34302a;
   --color-on-dark: #faf7f1;
   --color-on-dark-soft: #c4bbac;
+  --color-on-dark-dim: #cabfb0;
   --color-on-dark-muted: #8f867a;
+  --color-button-on-dark-border: #4a443c;
   /* fonts */
   --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
   --body-font-size: 1.0625em; /* 17px */

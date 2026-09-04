@@ -1,48 +1,30 @@
 {{ partial "header.html" . }}
+{{- $home := .Site.Data.home }}
 
-<header class="frontpage" aria-label="Apache Camel front page">
-  <div class="main-heading">
-    <h1>Apache Camel</h1>
-    <p>
-      Camel is an Open Source integration framework that empowers you
-      to quickly and easily integrate various systems consuming or producing data.
-    </p>
-    <p>
-    <a class="button dark" href="/docs/index.html">Get Started</a> <a class="button light" href="/what-is-apache-camel/">What is Camel?</a>
-    </p>
-  </div>
-  <img alt="Computer with gears depicting data processing" src="./img/camel-gears.svg" />
-</header>
+<main class="home">
 
-<div class="frontpage news">
-  <h2>What's New?</h2>
-</div>
+  {{- with $home.hero }}
+  <section class="home-hero" aria-label="Apache Camel">
+    <div class="home-hero-copy">
+      <p class="home-hero-badge">{{ .eyebrow }}</p>
+      <h1>{{ .title }}</h1>
+      <p class="home-hero-tagline">{{ .tagline }}</p>
+      <p class="home-hero-lead">{{ .lead }}</p>
+      <p class="home-hero-actions">
+        <a class="button dark" href="{{ .primary_cta.url | relURL }}">{{ .primary_cta.label }}</a>
+        <a class="button light" href="{{ .secondary_cta.url | relURL }}">{{ .secondary_cta.label }}</a>
+      </p>
+      <div class="home-cli" data-home-copy>
+        <code class="home-cli-command"><span class="home-cli-prompt">$</span> {{ .command }}</code>
+        <button class="home-cli-copy" type="button" data-command="{{ .command }}">Copy</button>
+      </div>
+    </div>
+    <div class="home-hero-art">
+      <img src="{{ path.Join "_" (index site.Data "rev-manifest" "img/logo-d.svg") | relURL }}" alt="Apache Camel">
+    </div>
+  </section>
+  {{- end }}
 
-<section class="frontpage columns blog-posts">
-  <ul>
-    {{with .Site.GetPage "section" "blog"}}
-      {{range .Pages | first 3}}
-
-      <li class="blog-post">
-        <time datetime="{{ dateFormat "2006-01-02" .PublishDate }}" class="date">
-          <data class="day">
-              {{ dateFormat "2" .PublishDate }}
-          </data>
-          <data class="month">
-              {{ dateFormat "Jan" .PublishDate }}
-              {{ dateFormat "2006" .PublishDate }}
-          </data>
-        </time>
-        <div class="content">
-          <h2>{{ .Title }}</h2>
-          <p>{{ .Params.preview }}... <a href="{{ .RelPermalink }}">Read More</a></p>
-        </div>
-      </li>
-      {{end}}
-    {{end}}
-  </ul>
-</section>
-
-{{ .Content }}
+</main>
 
 {{ partial "footer.html" . }}
