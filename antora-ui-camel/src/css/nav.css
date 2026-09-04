@@ -318,7 +318,7 @@ html.is-clipped--nav {
 }
 
 .nav-panel-explore .components {
-  line-height: var(--doc-line-height);
+  line-height: 1.6;
   box-shadow: inset 0 1px 5px var(--nav-panel-divider-color);
   background: var(--nav-secondary-background);
   padding: 0.5rem 0.75rem 0;

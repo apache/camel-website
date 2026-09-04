@@ -94,11 +94,11 @@
   --nav-panel-divider-color: var(--color-smoke-50);
   --nav-secondary-background: var(--color-smoke-70);
   /* toolbar */
-  --toolbar-background: var(--panel-background);
+  --toolbar-background: rgb(250 247 241 / 92%);
   --toolbar-border-color: var(--panel-border-color);
   --toolbar-font-color: var(--color-jet-80);
   --toolbar-muted-color: var(--color-jet-80);
-  --page-version-menu-background: var(--color-smoke-70);
+  --page-version-menu-background: var(--color-white);
   --page-version-missing-font-color: var(--color-gray-30);
   /* toc */
   --toc-font-color: var(--nav-muted-color);
@@ -116,11 +116,19 @@
   --tip-on-color: var(--color-white);
   --warning-color: #e18114;
   --warning-on-color: var(--color-white);
+  /* Admonition chip pairs. Each chip's text is measured at or above 4.5:1 on
+     its own tint. TIP and NOTE use the orange pair per SCOPE.md section 2. */
+  --caution-tint: #f7e9f6;
+  --caution-chip-font-color: #8e3b8a; /* 5.71:1 on --caution-tint */
+  --important-tint: #fce9e9;
+  --important-chip-font-color: #b02525; /* 5.73:1 on --important-tint */
+  --warning-tint: #fdf0dc;
+  --warning-chip-font-color: #8a5209; /* 5.67:1 on --warning-tint */
   /* doc */
   --doc-font-color: var(--color-ink-2);
   --doc-font-size: inherit;
-  --doc-font-size--desktop: calc(17 / var(--rem-base) * 1rem);
-  --doc-line-height: 1.6;
+  --doc-font-size--desktop: calc(16 / var(--rem-base) * 1rem);
+  --doc-line-height: 1.7;
   --doc-margin: 0 auto;
   --doc-margin--desktop: 0 2rem;
   --heading-font-color: var(--color-ink);
@@ -174,6 +182,9 @@
   --syntax-built-in: #8ec5e6;
   --syntax-meta: #8f867a;
   --syntax-prompt: #e0805a;
+  /* Idle tab label in a code tab bar. SCOPE.md section 2a; 6.47:1 on
+     --pre-background. */
+  --code-tab-idle-font-color: #a89f92;
   --syntax-deletion-background: rgb(224 82 58 / 25%);
   --syntax-addition-background: rgb(159 211 176 / 25%);
   /* section 2a asks for 600; --monospace-font-weight-bold is 500 and has other
@@ -184,7 +195,10 @@
   /* frontpage */
   --frontpage-max-width: var(--static-max-width--desktop);
   /* footer */
-  --footer-line-height: var(--doc-line-height);
+  /* Pinned rather than tracking --doc-line-height, which moved to 1.7 for the
+     article. --footer-height was measured against the footer at 1.6 and must
+     not drift. */
+  --footer-line-height: 1.6;
   --footer-background: var(--color-ink);
   --footer-font-color: var(--color-on-dark-soft);
   --footer-after-background: var(--color-dark-line);
@@ -208,7 +222,7 @@
   --navbar-height: calc(66 / var(--rem-base) * 1rem);
   --navbar-burger-height: calc(54 / var(--rem-base) * 1rem);
   --navbar-mobile-height: var(--navbar-height);
-  --toolbar-height: calc(45 / var(--rem-base) * 1rem);
+  --toolbar-height: calc(46 / var(--rem-base) * 1rem);
   --drawer-height: var(--toolbar-height);
   --body-top: calc(var(--navbar-height) + 1rem);
   --body-mobile-top: calc(var(--navbar-mobile-height) + 1rem);
@@ -217,12 +231,12 @@
   --nav-height--desktop: var(--body-min-height);
   --nav-panel-height: calc(var(--nav-height) - var(--drawer-height));
   --nav-panel-height--desktop: calc(var(--nav-height--desktop) - var(--drawer-height));
-  --nav-width: calc(270 / var(--rem-base) * 1rem);
+  --nav-width: calc(280 / var(--rem-base) * 1rem);
   --toc-top: calc(var(--body-top) + var(--toolbar-height));
   --toc-mobile-top: calc(3rem + var(--toc-top));
   --toc-height: calc(100vh - var(--toc-top) - 2.5rem);
-  --toc-width: calc(162 / var(--rem-base) * 1rem);
-  --toc-width--widescreen: calc(216 / var(--rem-base) * 1rem);
+  --toc-width: calc(220 / var(--rem-base) * 1rem);
+  --toc-width--widescreen: calc(220 / var(--rem-base) * 1rem);
   --doc-max-width--desktop: calc(1366 / var(--rem-base) * 1rem);
   --static-max-width--desktop: calc(1200 / var(--rem-base) * 1rem);
   --page-padding-x: calc(32 / var(--rem-base) * 1rem);
