@@ -158,12 +158,6 @@ html.is-clipped--nav {
   position: relative;
 }
 
-@media screen and (width <= 1024px) {
-  .nav-panel-menu {
-    margin-top: var(--navbar-height);
-  }
-}
-
 .nav-panel-menu:not(.is-active) .nav-menu {
   opacity: 0.75;
 }
