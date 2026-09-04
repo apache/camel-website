@@ -6,12 +6,6 @@ body {
   padding-top: var(--navbar-height);
 }
 
-@media screen and (width <= 1024px) {
-  body {
-    padding-top: var(--navbar-mobile-height);
-  }
-}
-
 .navbar {
   background: var(--navbar-background);
   backdrop-filter: blur(10px);
@@ -50,7 +44,6 @@ body {
   font-weight: 600;
   font-size: calc(14.5 / var(--rem-base) * 1rem);
   color: var(--color-ink-soft);
-  text-transform: none;
   white-space: nowrap;
 }
 
@@ -99,7 +92,6 @@ body {
      align-items:center places the button itself; -2.1px is the correction. */
   top: -2.1px;
   padding: 0;
-  order: 8;
 }
 
 .navbar-burger:focus {
@@ -341,10 +333,6 @@ div.footer-search h4 {
 
 /* Styling for mobile use */
 @media (width <= 1024px) {
-  .navbar {
-    height: var(--navbar-mobile-height);
-  }
-
   /* The field gives up its fixed 200px and shrinks with the bar. */
   .navbar-search {
     min-width: 0;
