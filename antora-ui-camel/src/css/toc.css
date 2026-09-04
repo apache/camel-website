@@ -9,7 +9,7 @@
 }
 
 .toc .toc-menu h3 {
-  color: var(--color-ink-soft);
+  color: var(--color-ink-muted);
   font-family: var(--monospace-font-family);
   font-size: calc(12 / var(--rem-base) * 1rem);
   font-weight: 600;

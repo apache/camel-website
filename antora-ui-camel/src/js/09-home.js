@@ -36,23 +36,27 @@
     })
   }
 
-  // Copy button on the hero CLI bar.
-  var copy = document.querySelector('.home-cli-copy')
-  if (copy) {
+  // Copy-to-clipboard buttons: the home page's hero CLI bar, plus any later
+  // page's copy button wired up via [data-copy-value] (e.g. download's CLI
+  // install line, post's "Copy link"). Falls back to data-command so the
+  // home page's existing markup keeps working with zero changes.
+  var copyButtons = [].slice.call(document.querySelectorAll('.home-cli-copy, [data-copy-value]'))
+  copyButtons.forEach(function (copy) {
     if (!(window.navigator && window.navigator.clipboard)) {
       copy.remove()
-    } else {
-      var idle = copy.textContent
-      var timer
-      copy.addEventListener('click', function () {
-        window.navigator.clipboard.writeText(copy.dataset.command).then(function () {
-          copy.textContent = 'Copied!'
-          clearTimeout(timer)
-          timer = setTimeout(function () {
-            copy.textContent = idle
-          }, COPIED_MS)
-        })
-      })
+      return
     }
-  }
+    var idle = copy.textContent
+    var timer
+    copy.addEventListener('click', function () {
+      var value = copy.dataset.copyValue || copy.dataset.command
+      window.navigator.clipboard.writeText(value).then(function () {
+        copy.textContent = 'Copied!'
+        clearTimeout(timer)
+        timer = setTimeout(function () {
+          copy.textContent = idle
+        }, COPIED_MS)
+      })
+    })
+  })
 })()
