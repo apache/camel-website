@@ -17,7 +17,7 @@
             <span class="community-card-tag">{{ .tag }}</span>
             <h3 class="community-card-title">{{ .title }}</h3>
             <p class="community-card-body">{{ .body }}</p>
-            <a class="community-card-link" href="{{ .url | relURL }}">Read more &rarr;</a>
+            <a class="community-card-link" href="{{ .url | relURL }}" aria-label="Read more about {{ .title }}">Read more &rarr;</a>
           </li>
           {{- end }}
 
