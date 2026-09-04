@@ -1,41 +1,41 @@
 {{ partial "header.html" . }}
 
 <div class="body">
-    <nav class="toolbar" aria-label="Submenu">
-        <button class="nav-toggle" type="button" aria-label="Toggle submenu">
-        </button>
-    </nav>
-    <nav class="nav-container doc blog list" aria-label="Blog topics">
-        <aside class="nav" aria-label="Categories">
-            <div class="nav-category">
-                <h3>Categories</h3>
-                <ul>
-                    {{ range .Site.Taxonomies.categories.Alphabetical }}
-                    <li><a class="category"
-                            href="{{ "/categories/" | relURL }}{{ .Name | urlize }}/">{{ .Name | upper }}<span>{{ .Count }}</span></a>
-                    </li>
-                    {{ end }}
-                </ul>
-            </div>
-            <div class="blog-rss">
-                <a href="{{ "blog/index.xml" | relURL }}" title="Subscribe to RSS Feed"><svg focusable="false" class="brand-icon"><use href="{{ path.Join "_" (index .Site.Data "rev-manifest" "img/brand-logos.svg") | relURL }}#rss" /></svg> RSS Feed</a>
-            </div>
-        </aside>
-    </nav>
-    <main class="doc blog list">
-        <div>
-            {{ $filtered := slice }}
-            {{ range .Pages }}
-              {{/* hide posts where Releases is the only category */}}
-              {{ $cats := default slice .Params.categories }}
-              {{ if not (and (in $cats "Releases") (eq (len $cats) 1)) }}
-                {{ $filtered = $filtered | append . }}
+  <main>
+    <div class="content">
+      <article class="blog-list" aria-labelledby="blog-title">
+        <div class="blog-layout">
+          <aside class="blog-rail" aria-label="Categories">
+            <div class="blog-rail-eyebrow">Categories</div>
+            <div class="blog-categories">
+              {{ range .Site.Taxonomies.categories.Alphabetical }}
+              <a class="blog-category" href="{{ "/categories/" | relURL }}{{ .Name | urlize }}/">
+                <span>{{ .Name }}</span><span class="blog-category-count">{{ .Count }}</span>
+              </a>
               {{ end }}
-            {{ end }}
-            {{ $pages := (.Paginate $filtered 3).Pages }}
-            {{ range $pages }}
-            {{ .Render "summary" }}
-            {{ end }}
+            </div>
+            <a class="blog-rss" href="{{ "blog/index.xml" | relURL }}" title="Subscribe to RSS Feed">
+              <svg focusable="false" class="brand-icon"><use href="{{ path.Join "_" (index .Site.Data "rev-manifest" "img/brand-logos.svg") | relURL }}#rss" /></svg> RSS feed &rarr;
+            </a>
+          </aside>
+          <div class="blog-main">
+            <h1 id="blog-title" class="page-hero-title">Blog</h1>
+            <p class="page-hero-lead">Release notes, roadmap updates, and engineering notes from the Camel team and community.</p>
+
+            <div class="blog-posts">
+              {{ $filtered := slice }}
+              {{ range .Pages }}
+                {{/* hide posts where Releases is the only category */}}
+                {{ $cats := default slice .Params.categories }}
+                {{ if not (and (in $cats "Releases") (eq (len $cats) 1)) }}
+                  {{ $filtered = $filtered | append . }}
+                {{ end }}
+              {{ end }}
+              {{ $pages := (.Paginate $filtered 3).Pages }}
+              {{ range $pages }}
+              {{ .Render "summary" }}
+              {{ end }}
+            </div>
 
             {{ $page := .Paginator }}
             {{ if gt $page.TotalPages 1 }}
@@ -70,8 +70,7 @@
 
                     {{ if $page.HasNext }}
                     <li class="page-item">
-                        <a href="{{ $page.Next.URL }}" class="page-link" aria-label="Next"><span
-                                aria-hidden="true">&raquo;</span></a>
+                        <a href="{{ $page.Next.URL }}" class="page-link page-link--next" aria-label="Next">Next &rarr;</a>
                     </li>
                     {{ end }}
 
@@ -84,8 +83,11 @@
                 </ul>
             </nav>
             {{ end }}
+          </div>
         </div>
-    </main>
+      </article>
+    </div>
+  </main>
 </div>
 
 {{ partial "footer.html" . }}
