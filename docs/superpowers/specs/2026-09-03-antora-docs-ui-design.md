@@ -119,6 +119,14 @@ blocks render.
 The harness is a verification tool, not a test suite. It has no assertions. Its
 job is to produce a real page to measure.
 
+Two details the fixture has to get right, both found by rendering it. Antora's
+pagination partial is gated on `page.attributes.pagination`, which requires the
+AsciiDoc attribute **`:page-pagination:`**; the unprefixed `:pagination:` is not
+exposed and the prev/next block silently never renders. And the fixture needs a
+second version, which `build.sh` produces by committing a second branch in the
+staging repository, or `page-versions` and the nav's version list have nothing to
+show.
+
 ### 2. Nav panel
 
 280px, `--color-paper-2`, 1px `--color-line` right rule, sticky under the header,
@@ -303,7 +311,7 @@ deliberately repainted them.
 **Tables.** `width: 100%`, `margin-top: 16px`, font-size 15px, radius 10px,
 `background: var(--color-white)`, `1px solid var(--color-line)`. Header row:
 `background: var(--color-paper-2)`, mono 11.5px, uppercase, `letter-spacing: 0.06em`,
-`--color-ink-muted`, weight 600, padding `11px 16px`, left-aligned. Body cells:
+`--color-ink-soft`, weight 600, padding `11px 16px`, left-aligned. Body cells:
 padding `12px 16px`, `border-top: 1px solid var(--color-line-soft)`. The border,
 radius and background go on `.doc .table-wrapper` where one is present, because a
 `border-radius` on a `table` element does not clip its children reliably.
@@ -352,6 +360,15 @@ here so a reviewer does not have to re-derive it.
 The existing `.doc .admonitionblock .icon i::after` uses `writing-mode: tb-rl` to
 run the label vertically. That goes; the chip is horizontal.
 
+Antora emits the admonition as a two-cell table, `td.icon` beside `td.content`,
+which already gives the chip-left, text-right arrangement with no structural
+change. One correction falls out of that: `extensions/table.js` is a postprocessor
+that wraps **every** table in `<div class="table-wrapper">`, admonition tables
+included, so the existing rule `.doc .admonitionblock > table` never matches and
+is dead in production. It becomes `.doc .admonitionblock table`, and the card
+treatment that `.table-wrapper` now carries has to be cancelled inside
+`.admonitionblock`.
+
 ### 8. TOC, pagination, tabs
 
 **TOC.** 220px, sticky at `--toc-top`. Its existing formula
@@ -367,7 +384,7 @@ the difference there does not surface. "Contents" becomes an eyebrow: mono
 `--color-ink`, `border-left-color: var(--color-line-hover)`.
 
 **Pagination.** The prev/next links become two-line: a mono 11.5px
-`--color-ink-muted` eyebrow reading `← Previous` and `Next →`, over the page title
+`--color-ink-soft` eyebrow reading `← Previous` and `Next →`, over the page title
 in weight 700 `--color-ink`. The existing `::after` chevrons are removed, since
 the arrows move into the eyebrow text. `border-top: 1px solid var(--color-line)`,
 `margin-top: 56px`, `padding-top: 24px`.
@@ -446,10 +463,11 @@ article:
 It measures 3.62:1 on `--color-paper` and 3.35:1 on `--color-paper-2`, below the
 4.5:1 that 12-to-14px text needs. The artboard uses it for breadcrumbs, the
 "Contents" eyebrow, the search placeholder, and tree carets. This piece uses
-`--color-ink-soft` (`#5c554c`, 6.87:1 and 6.36:1) for all four text uses, and
-keeps `--color-ink-muted` only for the carets, which are glyphs beside a text
-label. This follows the precedent piece 1 set when it moved `SCOPE.md`'s
-`#c95f12` to `#a84e0d` for the same reason.
+`--color-ink-soft` (`#5c554c`, 6.87:1 and 6.36:1) for **every** small-text use in
+this piece, which is those four plus the table header row and the pagination
+eyebrow, and keeps `--color-ink-muted` only for the nav tree carets, which are
+glyphs beside a text label. This follows the precedent piece 1 set when it moved
+`SCOPE.md`'s `#c95f12` to `#a84e0d` for the same reason.
 
 ## Files touched
 
@@ -465,7 +483,7 @@ Modified:
 
 - `antora-ui-camel/src/css/`: `vars.css`, `nav.css`, `toolbar.css`,
   `breadcrumbs.css`, `page-versions.css`, `toc.css`, `main.css`, `doc.css`,
-  `pagination.css`, `tabs.css`, `frontpage.css`
+  `pagination.css`, `tabs.css`, `frontpage.css`, `header.css`
 - `antora-ui-camel/src/partials/`: `nav.hbs`, `nav-menu.hbs`, `article.hbs`,
   `toolbar.hbs`, `header-content.hbs`
 - `package.json`, `.gitignore`
@@ -475,8 +493,15 @@ Deleted:
 
 - `antora-ui-camel/src/js/99-nav-search.js`
 
-Not touched: `header.css` and `footer.css`. The Antora header loses its search
-markup, but the CSS rules stay because Hugo still renders that markup.
+`header.css` is touched for one reason only. The nav panel's copy of search keeps
+the class `navbar-search` so the vendored Algolia bundle needs no change, which
+means `header.css`'s rules would reach it. One of them,
+`@media (width <= 500px) { .navbar-search { display: none } }`, would hide search
+in the nav panel at phone widths and defeat the move. The search *layout* rules
+therefore move under `.header`; the rules that style the contents of the results
+panel stay global, because both contexts want them.
+
+Not touched: `footer.css`.
 
 ## Verification
 
