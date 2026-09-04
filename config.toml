@@ -41,7 +41,7 @@ defaultMarkdownHandler = "goldmark"
   filename = "sitemap-website.xml"
 
 [[menu.main]]
-    name = "Documentation"
+    name = "Docs"
     identifier = "docs"
     weight = 1
     url = "/docs/"

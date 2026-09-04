@@ -210,10 +210,10 @@ a.button.navbar-cta {
   padding: calc(6 / var(--rem-base) * 1rem) calc(10 / var(--rem-base) * 1rem)
            calc(6 / var(--rem-base) * 1rem) calc(30 / var(--rem-base) * 1rem);
   font-family: var(--body-font-family);
-  font-size: calc(14 / var(--rem-base) * 1rem);
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
   caret-color: var(--color-camel-orange);
   background: no-repeat 0.5rem center / 0.9rem url('../img/search.svg');
-  background-color: var(--color-paper-2);
+  background-color: var(--color-white);
   color: var(--color-ink);
   outline: 0;
 }
