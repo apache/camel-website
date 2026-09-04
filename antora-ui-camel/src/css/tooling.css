@@ -1,0 +1,294 @@
+/* Tooling (/tooling/, content/tooling/_index.md, layouts/tooling/list.html,
+   data/tooling.yaml). Same two-column "site page" shell as Blog/Documentation/
+   Download/Security/Community (max-width 1200px), but the sticky "On this page"
+   rail reuses the Antora aside.toc.sidebar + 02-on-this-page.js scroll-spy
+   unchanged (see toc.css) rather than a page-owned rail. That script requires
+   `article.doc` with real h1[id]/h2[id]/h3[id] headings and either `.static`
+   or `.sectN>hN` nesting to find them (see antora-ui-camel/src/js/
+   02-on-this-page.js) - so this is the one "site page" article that must also
+   carry `doc static`. That pulls in doc.css's/static.css's generic heading,
+   paragraph, and link rules, several of which meet or beat the specificity of
+   a bare element selector. Every rule below that needs to win against them is
+   deliberately written at >= their specificity (never !important); see the
+   per-rule notes. See .superpowers/sdd/4b/extract/tooling.md sections 3 and 6
+   for the full reasoning (C-toc-color/-border already fixed in toc.css by an
+   earlier group; C-aspect resolved below as "letterbox", see .tooling-media).
+
+   Card usage: the MCP section reuses the shared .card/.card--lg primitive
+   (primitives.css) exactly as security's read-first card and docs' feature
+   cards do. The nested "AI tool" tiles inside it (10px radius, 16/18px
+   padding) do NOT match either .card size tier (13px/24px or 16px/32px) and
+   are single-use, non-interactive, and nested one level deeper than every
+   other card consumer - see 00-primitives.md section 1.4's two named tiers.
+   Rather than silently forcing them into .card--flat with overridden radius/
+   padding (a fork wearing the primitive's name), they get their own small,
+   page-owned .tooling-ai-card shape. Flagged in the implementation report. */
+
+.tooling {
+  width: 100%;
+  max-width: var(--static-max-width--desktop);
+  margin: 0 auto;
+  padding: calc(56 / var(--rem-base) * 1rem) calc(32 / var(--rem-base) * 1rem) calc(40 / var(--rem-base) * 1rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--toc-width);
+  gap: calc(56 / var(--rem-base) * 1rem);
+  align-items: start;
+}
+
+/* .doc h1..h6 (specificity 0,1,1) sets margin/font-weight/line-height that
+   the page-hero-title primitive (0,1,0) can't outrank; re-assert the
+   primitive's own values here, matching specificity, so the primitive stays
+   the single source of truth for what the numbers *are*. */
+.tooling h1 {
+  font-weight: 800;
+  line-height: 1.05;
+  margin: 0;
+}
+
+/* .doc p / .static p (both 0,1,1) set their own margin; beat them here too
+   so the page-hero-lead primitive's 14px top margin actually wins. */
+.tooling .tooling-lead {
+  max-width: calc(760 / var(--rem-base) * 1rem);
+  margin: calc(14 / var(--rem-base) * 1rem) 0 0;
+}
+
+.tooling-section {
+  margin-top: calc(48 / var(--rem-base) * 1rem);
+}
+
+.tooling-cli-section {
+  margin-top: calc(52 / var(--rem-base) * 1rem);
+}
+
+/* .doc h2:not(.discrete) is (0,2,1); match it so tooling.css (imported after
+   doc.css) reliably wins the tie for every h2 on this page. */
+.tooling .tooling-section h2 {
+  font-weight: 800;
+  font-size: calc(28 / var(--rem-base) * 1rem);
+  letter-spacing: -0.02em;
+  margin: 0;
+  padding: 0;
+}
+
+.tooling .tooling-section-intro {
+  font-size: calc(15.5 / var(--rem-base) * 1rem);
+  line-height: 1.6;
+  color: var(--color-ink-soft);
+  margin: calc(10 / var(--rem-base) * 1rem) 0 0;
+  max-width: calc(760 / var(--rem-base) * 1rem);
+  text-wrap: pretty;
+}
+
+.tooling-cli-section .tooling-section-intro {
+  margin-bottom: calc(20 / var(--rem-base) * 1rem);
+}
+
+.tooling code {
+  font-size: calc(14 / var(--rem-base) * 1rem);
+  padding: calc(2 / var(--rem-base) * 1rem) calc(6 / var(--rem-base) * 1rem);
+  border-radius: 4px; /* radius exemption: raw px */
+}
+
+/* ---- Camel CLI: dark command list --------------------------------------- */
+
+.tooling-cli {
+  background: var(--color-ink);
+  border: 1px solid var(--color-dark-line);
+  border-radius: 12px; /* radius exemption: raw px */
+  overflow: hidden;
+}
+
+.tooling-cli-row {
+  display: grid;
+  grid-template-columns: calc(170 / var(--rem-base) * 1rem) minmax(0, 1fr);
+  gap: calc(20 / var(--rem-base) * 1rem);
+  padding: calc(13 / var(--rem-base) * 1rem) calc(20 / var(--rem-base) * 1rem);
+  border-top: 1px solid var(--color-dark-line);
+  font-size: calc(14 / var(--rem-base) * 1rem);
+}
+
+.tooling-cli-cmd {
+  color: var(--color-orange-glow);
+  font-weight: 600;
+}
+
+.tooling-cli-desc {
+  color: var(--color-on-dark-soft);
+  line-height: 1.5;
+}
+
+/* ---- Camel TUI: text + screenshot split --------------------------------- */
+
+.tooling-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(28 / var(--rem-base) * 1rem);
+}
+
+/* C-aspect (tooling.md sec 6): the real screenshot is ~2.33:1; the design's
+   box is 16:10 (1.6:1). Letterboxing (object-fit: contain against the same
+   dark background) shows the whole real screenshot without cropping content,
+   at the cost of visible bars - chosen over cover-crop, which would hide
+   real UI. Flagged as a implementation decision, not a transcribed value. */
+.tooling-media {
+  aspect-ratio: 16 / 10;
+  border-radius: 12px; /* radius exemption: raw px */
+  background: var(--color-ink);
+  border: 1px solid var(--color-dark-line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.tooling-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ---- Camel MCP Server: card + AI tool grid ------------------------------ */
+/* .tooling-mcp also carries .tooling-section, which already supplies the
+   48px margin-top shared by every other section on this page. */
+
+/* .doc p / .static p (both 0,1,1) beat a bare class for margin; every .tooling
+   <p> below is compound-scoped (.tooling .foo, 0,2,0) for the same reason. */
+.tooling .tooling-eyebrow {
+  font-family: var(--monospace-font-family);
+  font-size: calc(12 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  color: var(--color-orange-deep);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.tooling-mcp .tooling-eyebrow + h2 {
+  margin-top: calc(10 / var(--rem-base) * 1rem);
+}
+
+.tooling-ai-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(14 / var(--rem-base) * 1rem);
+  margin-top: calc(22 / var(--rem-base) * 1rem);
+}
+
+.tooling-ai-card {
+  border: 1px solid var(--color-line);
+  border-radius: 10px; /* radius exemption: raw px */
+  padding: calc(16 / var(--rem-base) * 1rem) calc(18 / var(--rem-base) * 1rem);
+}
+
+.tooling .tooling-ai-name {
+  font-family: var(--display-font-family);
+  font-weight: 700;
+  font-size: calc(16 / var(--rem-base) * 1rem);
+  color: var(--color-ink);
+  text-decoration: none;
+  background: none;
+}
+
+.tooling .tooling-ai-name:hover {
+  color: var(--link_hover-font-color);
+  text-decoration: underline;
+}
+
+.tooling .tooling-ai-desc {
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  line-height: 1.5;
+  color: var(--color-ink-soft);
+  margin: calc(6 / var(--rem-base) * 1rem) 0 0;
+}
+
+/* ---- looped tool groups: name/description rows -------------------------- */
+
+.tooling-rows {
+  display: flex;
+  flex-direction: column;
+  margin-top: calc(18 / var(--rem-base) * 1rem);
+  border-top: 1px solid var(--color-line);
+}
+
+.tooling-row {
+  display: grid;
+  grid-template-columns: calc(260 / var(--rem-base) * 1rem) minmax(0, 1fr);
+  gap: calc(24 / var(--rem-base) * 1rem);
+  padding: calc(16 / var(--rem-base) * 1rem) 0;
+  border-bottom: 1px solid var(--color-line-soft);
+}
+
+.tooling .tooling-row-name {
+  font-weight: 700;
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  color: var(--color-ink);
+  text-decoration: none;
+  background: none;
+}
+
+.tooling .tooling-row-name:hover {
+  color: var(--link_hover-font-color);
+  text-decoration: underline;
+}
+
+.tooling-row-name--mono {
+  font-family: var(--monospace-font-family);
+}
+
+.tooling .tooling-row-desc {
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+  line-height: 1.55;
+  color: var(--color-ink-soft);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+/* ---- footnote ------------------------------------------------------------ */
+
+.tooling .tooling-footnote {
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+  line-height: 1.6;
+  color: var(--color-ink-muted);
+  margin: calc(48 / var(--rem-base) * 1rem) 0 0;
+  padding-top: calc(24 / var(--rem-base) * 1rem);
+  border-top: 1px solid var(--color-line);
+}
+
+/* ---- "On this page" sticky rail: page-scoped top offset only ------------ */
+
+/* This page has no secondary toolbar (unlike the Antora docs screen, which
+   is why the shared .toc.sidebar default bakes in --toolbar-height). Derive
+   the design's 90px literal from existing tokens instead of a new one:
+   --navbar-height (66px) + 24px = 90px exactly. */
+.tooling .toc.sidebar .toc-menu {
+  top: calc(var(--navbar-height) + calc(24 / var(--rem-base) * 1rem));
+}
+
+/* ---- responsive: 1024px / 626px (no new breakpoints) --------------------- */
+
+@media screen and (width <= 1024px) {
+  .tooling {
+    grid-template-columns: minmax(0, 1fr);
+    padding: calc(32 / var(--rem-base) * 1rem) calc(20 / var(--rem-base) * 1rem) calc(48 / var(--rem-base) * 1rem);
+  }
+
+  .tooling-split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tooling-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: calc(6 / var(--rem-base) * 1rem);
+  }
+}
+
+@media screen and (width <= 626px) {
+  .tooling-cli-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: calc(6 / var(--rem-base) * 1rem);
+  }
+
+  .tooling-ai-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
