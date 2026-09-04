@@ -26,10 +26,15 @@ grid geometry is scoped to `main.article` so it does not.
 - **Layout dimensions are written as `calc(N / var(--rem-base) * 1rem)`**, never
   raw `px`. Three kinds of value are deliberately exempt because they are not
   layout dimensions and must not scale with the type ramp:
-  - **Hairline borders**, written as plain `1px`. This is the established
-    convention in this codebase (17 occurrences across `blog.css`, `catalog.css`,
-    `doc.css`, `footer.css`, `frontpage.css` and `header.css`), and scaling one
-    would compute to 1.06px at the 17px mobile root and render blurry.
+  - **Rule and indicator widths**, written as plain `1px` or `2px`, whether they
+    are drawn as a border or as a small `::after` box. This is the established
+    convention in this codebase: 17 hairline `1px` borders across `blog.css`,
+    `catalog.css`, `doc.css`, `footer.css`, `frontpage.css` and `header.css`, plus
+    every 2px rule in the tree without exception (`footer.css:108`,
+    `header.css:299`, `header.css:344`, `toc.css:60`, `tabs.css:49`). Scaling a
+    hairline would compute to 1.06px at the 17px mobile root and render blurry,
+    and a 2px indicator is the same kind of object: it marks a boundary or a
+    state, it does not participate in the type ramp.
   - **Filter radii**, such as `blur(8px)`.
   - **Offsets that track a border rather than the type ramp**, such as the
     `bottom: -1px` on the tab underline in Task 9.
