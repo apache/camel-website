@@ -1,0 +1,133 @@
+# Tooling (/tooling/) — drives layouts/tooling/list.html
+
+lead: >-
+  Apache Camel ships with a rich set of built-in developer tools and is
+  supported by a growing ecosystem of third-party tooling. Whether you
+  prefer the command line, an IDE, a visual editor, or AI-assisted
+  development — there is tooling to help you build, test, debug, and
+  manage your Camel integrations.
+
+cliCommands:
+  - cmd: camel run
+    desc: Run Camel routes from source files (Java, YAML, XML, etc.) with automatic classpath management
+  - cmd: camel dev
+    desc: Run in developer mode with hot-reload — changes are picked up automatically without restarting
+  - cmd: camel trace
+    desc: Live message tracing, step by step through your routes to see how messages are processed
+  - cmd: camel send
+    desc: Send test messages to running Camel routes for quick testing and debugging
+  - cmd: camel test
+    desc: Run tests for your Camel routes
+  - cmd: camel export
+    desc: Export your Camel project to Spring Boot, Quarkus, or standalone Java for production deployment
+
+aiTools:
+  - name: Camel Kit
+    url: https://github.com/luigidemasi/camel-kit
+    desc: >-
+      Structured slash commands for AI coding assistants that guide you
+      through the complete integration lifecycle. Supports Claude Code,
+      Gemini CLI, and more.
+  - name: Wanaku
+    url: https://wanaku.ai
+    desc: >-
+      The Wanaku MCP Router is a router for AI-enabled applications
+      powered by the Model Context Protocol and Apache Camel.
+
+toolGroups:
+  - id: maven-plugins
+    title: Maven Plugins
+    intro: >-
+      For production projects, Camel provides a set of Maven plugins that
+      integrate with your existing build workflow.
+    items:
+      - name: Camel Maven Plugin
+        url: /manual/camel-maven-plugin.html
+        desc: "Run and develop Camel applications from Maven: camel:run, camel:dev (hot-reload), camel:debug, camel:prepare-fatjar."
+      - name: Camel Report Maven Plugin
+        url: /manual/camel-report-maven-plugin.html
+        desc: Validates endpoint URIs, Simple expressions, duplicate route IDs, and generates route coverage reports after unit testing.
+      - name: Camel YAML DSL Validator Maven Plugin
+        url: /manual/camel-yaml-dsl-validator-maven-plugin.html
+        desc: Validates YAML DSL route files for syntax errors according to the spec, without needing to run Camel.
+      - name: Camel Component Maven Plugin
+        url: /manual/camel-component-maven-plugin.html
+        desc: Generates metadata and configuration Java classes for custom Camel components.
+      - name: Camel REST DSL OpenAPI Plugin
+        url: /manual/rest-dsl-openapi.html
+        desc: Generates REST DSL routes and DTOs from OpenAPI v3 specification files for a contract-first approach.
+
+  - id: archetypes
+    title: Maven Archetypes
+    intro: >-
+      Camel provides <a href="/manual/camel-maven-archetypes.html">Maven
+      Archetypes</a> to quickly scaffold new projects.
+    mono: true
+    items:
+      - name: camel-archetype-java
+        desc: Creates a new Camel project using Java DSL
+      - name: camel-archetype-main
+        desc: Creates a new Camel project using standalone Camel Main
+      - name: camel-archetype-spring
+        desc: Creates a new Camel project with Spring DSL support
+      - name: camel-archetype-component
+        desc: Creates a new Camel component
+      - name: camel-archetype-dataformat
+        desc: Creates a new Camel data format
+      - name: camel-archetype-api-component
+        desc: Creates a new Camel component that wraps one or more API proxies
+
+  - id: ide
+    title: IDE Plugins and Extensions
+    items:
+      - name: Apache Camel IDEA Plugin
+        url: https://github.com/camel-idea-plugin/camel-idea-plugin
+        desc: Camel editing capabilities for IntelliJ IDEA, including textual route debugging.
+      - name: VS Code Extension Pack for Camel
+        url: https://marketplace.visualstudio.com/items?itemName=redhat.apache-camel-extension-pack
+        desc: A set of VS Code extensions for developing Camel applications — language support, debugging, and more.
+      - name: Camel Language Server
+        url: https://github.com/camel-tooling/camel-language-server
+        desc: >-
+          LSP implementation providing completion, validation, hover, and
+          outline. Packaged for
+          <a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-apache-camel">VS Code</a>
+          and
+          <a href="https://marketplace.eclipse.org/content/language-support-apache-camel">Eclipse Desktop</a>.
+      - name: Camel Debug Adapter
+        url: https://github.com/camel-tooling/camel-debug-adapter
+        desc: >-
+          DAP implementation providing Camel textual route debugging.
+          Packaged for
+          <a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-debug-adapter-apache-camel">VS Code</a>
+          and
+          <a href="https://marketplace.eclipse.org/content/textual-debugging-apache-camel">Eclipse Desktop</a>.
+
+  - id: visual
+    title: Visual Editing
+    items:
+      - name: Camel Karavan
+        url: https://karavan.space/
+        desc: A rich graphical editor for designing and deploying integration routes.
+      - name: Kaoto
+        url: https://kaoto.io/
+        desc: >-
+          An integration editor to create and deploy workflows in a
+          visual, low-code way; with a code editor and deployments to the
+          cloud.
+
+  - id: monitoring
+    title: Monitoring and Management
+    items:
+      - name: Camel Monitor Operator
+        url: https://camel-tooling.github.io/camel-dashboard/docs/installation-guide/advanced/operator/
+        desc: A Kubernetes operator that discovers and monitors Camel applications, with a GUI dashboard and Prometheus integration.
+      - name: hawt.io
+        url: http://hawt.io
+        desc: An open source HTML5 web application for visualizing, managing and tracing Camel routes & endpoints, ActiveMQ brokers, JMX, and more.
+      - name: Forage
+        url: https://kaotoio.github.io/forage/
+        desc: >-
+          Opinionated bean factories for Apache Camel — configure data
+          sources, connection factories, AI models, and more via
+          properties. Works with Camel JBang, Spring Boot, and Quarkus.
