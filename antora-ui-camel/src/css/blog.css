@@ -53,7 +53,7 @@
 }
 
 .blog-category:hover {
-  color: var(--color-camel-orange);
+  color: var(--link_hover-font-color);
 }
 
 /* .blog-category.is-current lives in category.css: it only ever applies
@@ -78,7 +78,7 @@
 }
 
 .blog-rss:hover {
-  color: var(--color-camel-orange);
+  color: var(--link_hover-font-color);
 }
 
 .blog-rss .brand-icon {
@@ -103,7 +103,7 @@
 }
 
 .blog-back-link:hover {
-  color: var(--color-camel-orange);
+  color: var(--link_hover-font-color);
 }
 
 .blog-posts {
@@ -130,7 +130,7 @@
   font-size: calc(40 / var(--rem-base) * 1rem);
   line-height: 1;
   letter-spacing: -0.03em;
-  color: var(--color-camel-orange);
+  color: var(--color-orange-deep);
 }
 
 .blog-post-month {
@@ -180,7 +180,7 @@
 }
 
 .blog-post-title a:hover {
-  color: var(--color-camel-orange);
+  color: var(--link_hover-font-color);
 }
 
 .blog-post-summary {
@@ -207,7 +207,7 @@
 }
 
 .blog-post-continue:hover {
-  color: var(--color-camel-orange);
+  color: var(--link_hover-font-color);
 }
 
 /* Numbered pager: mono, ink active pill (blog.md §4). Scoped by the shared
@@ -438,6 +438,10 @@
   font-size: calc(17 / var(--rem-base) * 1rem);
   line-height: 1.75;
   color: var(--color-ink-2);
+}
+
+.blog .post-content p + p {
+  margin-top: calc(12 / var(--rem-base) * 1rem);
 }
 
 .blog .post-content blockquote {
