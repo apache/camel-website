@@ -70,7 +70,7 @@ footer .footer .context {
 }
 
 footer .footer .context a {
-  font-size: 15px;
+  font-size: calc(15 / var(--rem-base) * 1rem);
   text-transform: uppercase;
 }
 
