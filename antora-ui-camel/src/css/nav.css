@@ -122,6 +122,9 @@
   inset: 50% calc(27 / var(--rem-base) * 1rem) auto auto;
   margin: 0;
   transform: translateY(-50%);
+  display: none;
+  height: calc(16 / var(--rem-base) * 1rem);
+  cursor: pointer;
 }
 
 .nav-search #search_results {
@@ -135,6 +138,11 @@
   border: 1px solid var(--color-line);
   border-radius: calc(7 / var(--rem-base) * 1rem);
   background: var(--color-white);
+  z-index: var(--z-index-nav-search);
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
+  scrollbar-width: thin;
 }
 
 html.is-clipped--nav {
