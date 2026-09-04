@@ -15,7 +15,6 @@
   --color-jet-30: #424242;
   --color-jet-50: #333;
   --color-jet-70: #222;
-  --color-jet-80: #191919;
   --color-black: #000;
   --color-asf-dark-blue: #303284;
   --color-asf-moderate-blue: #4f51ae;
@@ -100,8 +99,6 @@
   --page-version-missing-font-color: var(--color-gray-30);
   /* toc */
   --toc-font-color: var(--nav-muted-color);
-  --toc-heading-font-color: var(--color-ink);
-  --toc-border-color: var(--panel-border-color);
   --toc-line-height: 1.2;
   /* admonitions */
   --caution-color: #a0439c;
@@ -146,7 +143,6 @@
   /* SCOPE.md section 2a gives base code text as #f0e9df and reserves #faf7f1
      (--color-on-dark) for .hljs-title, so the two must not be the same token. */
   --pre-font-color: var(--syntax-text);
-  --pre-border-color: var(--color-dark-line);
   --pre-annotation-font-color: var(--color-on-dark-muted);
   --quote-background: var(--panel-background);
   --quote-border-color: var(--color-gray-70);
