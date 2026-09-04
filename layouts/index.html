@@ -113,6 +113,30 @@
   </section>
   {{- end }}
 
+  {{- with $home.tiles }}
+  <section class="home-section" aria-labelledby="home-tiles-title">
+    <div class="home-section-head">
+      <p class="home-eyebrow">{{ .eyebrow }}</p>
+      <h2 id="home-tiles-title">{{ .heading }}</h2>
+      <p class="home-section-sub">{{ .subhead }}</p>
+    </div>
+    <ul class="home-grid home-grid--four">
+      {{- range .items }}
+      <li class="home-card home-tile">
+        <img class="home-tile-icon" alt=""
+             src="{{ path.Join "_" (index site.Data "rev-manifest" (printf "img/%s.svg" .icon)) | relURL }}">
+        <h3>{{ .name }}</h3>
+        <p>{{ .description }}</p>
+        <a class="home-tile-link" href="{{ .url | relURL }}">Read more &rarr;</a>
+      </li>
+      {{- end }}
+    </ul>
+    <p class="home-tiles-cta">
+      <a class="button light" href="{{ .cta.url | relURL }}">{{ .cta.label }}</a>
+    </p>
+  </section>
+  {{- end }}
+
 </main>
 
 {{ partial "footer.html" . }}

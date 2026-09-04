@@ -490,3 +490,54 @@ a.button.on-dark:hover {
   font-family: var(--monospace-font-family);
   font-size: calc(12.5 / var(--rem-base) * 1rem);
 }
+
+/* Project tiles */
+
+.home-grid--four {
+  gap: calc(18 / var(--rem-base) * 1rem);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.home-tile {
+  padding: calc(24 / var(--rem-base) * 1rem);
+}
+
+.home-tile-icon {
+  display: block;
+  height: calc(34 / var(--rem-base) * 1rem);
+  object-fit: contain;
+  width: calc(34 / var(--rem-base) * 1rem);
+}
+
+.home-tile h3 {
+  color: var(--color-ink);
+  font-family: var(--display-font-family);
+  font-size: calc(17 / var(--rem-base) * 1rem);
+  font-weight: 700;
+  margin: calc(16 / var(--rem-base) * 1rem) 0 0;
+}
+
+.home-tile p {
+  color: var(--color-ink-soft);
+  flex: 1;
+  font-size: calc(14 / var(--rem-base) * 1rem);
+  line-height: 1.5;
+  margin: calc(8 / var(--rem-base) * 1rem) 0 calc(16 / var(--rem-base) * 1rem);
+  text-wrap: pretty;
+}
+
+.home-tile-link {
+  align-self: flex-start;
+  color: var(--link-font-color);
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  font-weight: 700;
+}
+
+.home-tile-link:hover {
+  color: var(--link_hover-font-color);
+}
+
+.home-tiles-cta {
+  margin: calc(34 / var(--rem-base) * 1rem) 0 0;
+  text-align: center;
+}
