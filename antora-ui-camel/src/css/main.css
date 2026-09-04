@@ -15,13 +15,28 @@
     display: flex;
   }
 
+  main.article > .content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) var(--toc-width);
+    gap: calc(56 / var(--rem-base) * 1rem);
+    max-width: calc(1180 / var(--rem-base) * 1rem);
+    padding: calc(44 / var(--rem-base) * 1rem) calc(40 / var(--rem-base) * 1rem)
+             calc(80 / var(--rem-base) * 1rem);
+  }
+
+  main.article > .content > .doc {
+    margin: 0;
+    max-width: none;
+    padding: 0;
+  }
+
   aside.toc.embedded {
     display: none;
   }
 
   aside.toc.sidebar {
     flex: 0 0 var(--toc-width);
-    min-width: 15rem;
+    min-width: 0;
   }
 
   .toc.sidebar .toc-menu ul {
