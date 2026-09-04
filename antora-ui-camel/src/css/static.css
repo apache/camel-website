@@ -30,9 +30,7 @@
   margin-right: 0.5rem;
 }
 
-.static .icon a,
-.static a.button-light,
-.static a.button-dark {
+.static .icon a {
   background-image: none;
 }
 
@@ -75,10 +73,6 @@
 
   .static .box.right {
     flex-direction: column-reverse;
-  }
-
-  .static .button-light {
-    line-height: 4rem;
   }
 
   .static a.icon {
