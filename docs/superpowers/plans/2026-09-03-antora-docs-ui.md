@@ -632,7 +632,8 @@ still in the header.
 - [ ] **Step 6: Scope the header's search layout rules**
 
 In `header.css`, add a `.header ` prefix to exactly these selectors, and to no
-others:
+others. **The selector text is authoritative, not the line number**: you edit
+`nav.css` and `header.css` in this same task, so lines shift under you.
 
 | line | from | to |
 |---|---|---|
@@ -752,14 +753,15 @@ button is `display: none` until a query exists, and the vendored bundle sets
 `cancel.style.display = 'block'` only then. Hide the hint at the same moment:
 
 ```css
-.nav-search .navbar-search:focus-within .nav-search-hint {
+.nav-search:focus-within .nav-search-hint {
   display: none;
 }
 ```
 
-Place that rule after `.nav-search-hint`. It is a sibling selector problem
-otherwise, because `#search-cancel` is inside `.navbar-search` and the hint is
-outside it.
+Place that rule after `.nav-search-hint`. The `:focus-within` has to sit on
+`.nav-search`, not on `.navbar-search`: `#search-cancel` is inside
+`.navbar-search` but `.nav-search-hint` is its sibling, so a selector rooted at
+`.navbar-search` cannot reach the hint at all.
 
 - [ ] **Step 8: Rebuild the UI and the harness**
 
@@ -846,9 +848,11 @@ lives in `.nav-search`, a sibling.
 
 Run: `grep -rn 'nav-panel-height' antora-ui-camel/ assets/ layouts/ --include='*.css' --include='*.hbs' --include='*.html' --include='*.js' | grep -v '/public/'`
 
-Expected: exactly three hits, all in files you are about to edit: `vars.css`
-(two declarations) and `nav.css:73` and `nav.css:78`. If anything else appears,
-stop and keep the tokens.
+Expected: exactly **four** hits, all in files you are about to edit: two
+declarations in `vars.css`, and two usages in `nav.css` (the `.nav-panel-menu`
+rule and its desktop media variant). If anything beyond those four appears, stop
+and keep the tokens. Line numbers will have shifted since the plan was written,
+so match on the selector, not the line.
 
 - [ ] **Step 2: Switch the tree to flex sizing**
 
@@ -971,10 +975,16 @@ The old `.nav-menu` rule's `top: 2.5rem` and `margin-bottom: var(--drawer-height
 go away: the row is positioned by flex now, and `.nav-panel-menu`'s
 `padding-bottom` already clears the pinned context bar.
 
-Delete the four depth rules that set `line-height` and `padding-left` per level
-(`.nav-item[data-depth="1"] > a.nav-link`, `[data-depth="1"] > .nav-list a`,
-`[data-depth="2"] > a.nav-link`, `[data-depth="2"] > .nav-list a`,
-`[data-depth="3"] > a.nav-link`), and replace them with a single indent rule:
+Delete the depth rules that set `line-height` and `padding-left` per level. The
+list is authoritative; there are five of them:
+
+- `.nav-item[data-depth="1"] > a.nav-link, .nav-item[data-depth="1"] > .nav-text`
+- `.nav-item[data-depth="1"] > .nav-list a`
+- `.nav-item[data-depth="2"] > a.nav-link`
+- `.nav-item[data-depth="2"] > .nav-list a`
+- `.nav-item[data-depth="3"] > a.nav-link`
+
+Replace them with a single indent rule:
 
 ```css
 .nav-item .nav-list {
@@ -982,9 +992,9 @@ Delete the four depth rules that set `line-height` and `padding-left` per level
 }
 ```
 
-Keep `.nav-item[data-depth="1"] > a.nav-link, .nav-item[data-depth="1"] > .nav-text`
-deleted as well: the artboard gives every level the same weight except the current
-page.
+The first of those five is the one that bolded every top-level entry. It goes with
+the rest: the artboard gives every level the same weight, and only the current
+page is distinguished.
 
 - [ ] **Step 5: Style the caret**
 
@@ -1619,25 +1629,33 @@ Add, immediately after it:
   order: -1;
   text-transform: uppercase;
 }
+```
 
-.doc {
+Then **merge** these two declarations into the existing `.doc` rule at the top of
+`doc.css`. Do not write a second `.doc { }` rule: `stylelint-config-standard`
+enables `no-duplicate-selectors` and the bundle build would fail.
+
+```css
   display: flex;
   flex-direction: column;
-}
 ```
 
 `order: -1` on the eyebrow inside a flex `.doc` puts it above the `h1` without
-moving it in the DOM, which keeps `h1.page:first-child` matching. Adding
-`display: flex; flex-direction: column` to `.doc` makes every direct child a flex
-item; because they are all full-width blocks in a single column, the visual result
-is the same as block flow, except that adjacent margins no longer collapse.
-Compensate by setting the h1's top margin to zero when the eyebrow precedes it,
-which the `margin: 10px 0 0` above already expresses relative to the eyebrow.
+moving it in the DOM, which keeps `h1.page:first-child` matching.
 
-Verify in Step 9 that no block gained unexpected vertical space from the loss of
-margin collapsing. If it did, the fallback is to move the eyebrow before the `h1`
-in `article.hbs` and change the two `h1.page:first-child` selectors to
-`h1.page` instead; record that as a deviation if you take it.
+**This is the riskiest change in the piece, so treat the fallback as a live
+option rather than a last resort.** Making `.doc` a flex container turns every
+direct child into a flex item, which disables margin collapsing between them, on
+Antora pages and on the eight-plus Hugo `.static.doc` pages alike. Step 9 asks you
+to check the h2 gap against 44px. Widen that check: if **any** vertical gap on the
+page is materially wrong, take the fallback rather than papering over it with
+compensating margins.
+
+The fallback: move the eyebrow *before* the `h1` in `article.hbs`, drop
+`display: flex`, `flex-direction: column` and `order: -1` entirely, and relax the
+two `h1.page:first-child` selectors to `h1.page`. Then re-check that nothing else
+depended on `h1.page:first-child` (grep `doc.css` and `static.css` for
+`first-child`). Record it as a deviation in your report if you take it.
 
 - [ ] **Step 4: Style the lead paragraph**
 
@@ -1900,11 +1918,22 @@ Replace `.doc table.tableblock`, `.doc table.tableblock thead th`, and
 .doc table.tableblock tbody tr:first-child > th {
   border-top: 0;
 }
+```
 
+The first column also gains `font-weight: 700`. Add it by **editing the existing**
+`.doc table.tableblock tbody tr td:first-child` rule in place, so it reads:
+
+```css
+/* breaks long property names */
 .doc table.tableblock tbody tr td:first-child {
+  width: 25%;
+  overflow-wrap: anywhere;
   font-weight: 700;
 }
 ```
+
+Do not add a second rule with that selector: `stylelint-config-standard` enables
+`no-duplicate-selectors` and the bundle build would fail.
 
 The header text is `--color-ink-soft`, not the `--color-ink-muted` the artboard
 uses. `#8a8074` is 3.35:1 on `--color-paper-2` at 11.5px, which fails. This is one
@@ -1919,11 +1948,10 @@ table.tableblock thead {
 }
 ```
 
-**Keep** `.doc table.tableblock tbody tr td:first-child { width: 25%; overflow-wrap: anywhere; }`.
-The artboard's first column is `white-space: nowrap`, which is not adopted: the
-component reference has over three hundred pages of option tables whose names
-would blow the column out. Merge the new `font-weight: 700` into that existing
-rule rather than writing a second one.
+Note what is deliberately **not** adopted: the artboard's first column is
+`white-space: nowrap`. The existing `width: 25%; overflow-wrap: anywhere` stays
+instead, because the component reference has over three hundred pages of option
+tables whose names would blow the column out under `nowrap`.
 
 - [ ] **Step 3: Turn admonitions into cards**
 
