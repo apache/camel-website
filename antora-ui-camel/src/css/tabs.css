@@ -1,9 +1,67 @@
 @import url('@asciidoctor/tabs/dist/css/tabs.css');
 
-.tabs {
-  margin-top: 1.25em;
+.doc .tabs {
+  margin: calc(14 / var(--rem-base) * 1rem) 0 0;
 }
 
-.tablist > ul li {
-  font-weight: normal;
+.doc .tabs > .content {
+  background: var(--color-ink);
+  border: 1px solid var(--color-dark-line);
+  border-radius: calc(10 / var(--rem-base) * 1rem);
+  overflow: hidden;
+}
+
+.doc .tabs .tablist > ul {
+  border-bottom: 1px solid var(--color-dark-line);
+  gap: calc(2 / var(--rem-base) * 1rem);
+  padding: calc(10 / var(--rem-base) * 1rem) calc(12 / var(--rem-base) * 1rem) 0;
+}
+
+.doc .tabs .tablist > ul li {
+  background: none;
+  border: 0;
+  color: var(--code-tab-idle-font-color);
+  font-family: var(--monospace-font-family);
+  font-size: calc(12.5 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  padding: calc(7 / var(--rem-base) * 1rem) calc(14 / var(--rem-base) * 1rem)
+           calc(11 / var(--rem-base) * 1rem);
+}
+
+.doc .tabs .tablist.ulist > ul li + li {
+  margin-left: 0;
+}
+
+.doc .tabs.is-loading .tablist li:not(:first-child),
+.doc .tabs:not(.is-loading) .tablist li:not(.is-selected) {
+  background: none;
+}
+
+.doc .tabs.is-loading .tablist li:first-child,
+.doc .tabs:not(.is-loading) .tablist li.is-selected {
+  color: var(--syntax-text);
+}
+
+.doc .tabs.is-loading .tablist li:first-child::after,
+.doc .tabs:not(.is-loading) .tablist li.is-selected::after {
+  background: var(--color-camel-orange);
+  bottom: -1px;
+  height: 2px;
+  left: calc(10 / var(--rem-base) * 1rem);
+  right: calc(10 / var(--rem-base) * 1rem);
+}
+
+.doc .tabs .tabpanel {
+  background: none;
+  border: 0;
+  padding: 0;
+}
+
+.doc .tabs .tabpanel .listingblock {
+  margin: 0;
+}
+
+.doc .tabs .tabpanel pre:not(.highlight),
+.doc .tabs .tabpanel pre.highlight code {
+  border-radius: 0;
 }
