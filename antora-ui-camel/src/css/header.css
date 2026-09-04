@@ -203,6 +203,7 @@ a.button.navbar-cta {
   margin: 0;
   padding: calc(9 / var(--rem-base) * 1rem) calc(18 / var(--rem-base) * 1rem);
   border-radius: calc(7 / var(--rem-base) * 1rem);
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
 }
 
 /* NOTE centred rather than left to padding alone: the DocSearch button is a fixed 38px, which sat
