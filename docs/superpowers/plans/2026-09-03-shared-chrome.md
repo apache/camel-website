@@ -1303,7 +1303,6 @@ Recorded after Task 7 (bundle regen and final verification). This is the piece's
 - The header's right-hand cluster carries a search field and a GitHub icon that the artboard doesn't show, per an earlier design-owner ruling, so the cluster reads denser than the spacing the artboard was measured for.
 - `.button.on-dark`'s border color (`--color-dark-line`) sits at roughly 1.35:1 against `--color-ink`, versus the artboard's lighter `#4a443c` at roughly 1.9:1. Neither clears WCAG 1.4.11's 3:1 minimum for a non-text control, and the class has no consumer yet. Whoever paints the first dark band with it needs to judge it against a real background.
 - `.button.light`'s border uses `--color-line` where the artboard specifies `#e0d8ca`; the difference was judged indistinguishable at 1px and left as is.
-- `p.remark` keeps `padding: 0 1rem`, so the footer's legal hairline sits 1rem inside the container's own gutter rather than reaching the same edges as the header above it.
 - `.footer-tools` links lost their old pill background and now have no visual affordance that they are clickable.
 - The Privacy Policy footer link now opens in a new tab. The old hand-written markup gave it neither `target` nor `rel`, unlike its two Apache-domain siblings, so this is a behavior change worth a conscious yes or no.
 
@@ -1311,7 +1310,7 @@ Recorded after Task 7 (bundle regen and final verification). This is the piece's
 
 - `/projects/` doesn't exist yet, so the footer's "All projects" link 404s. The design package for that page ships as four drop-in files plus a `site.css` import in the designed-pages piece.
 - The CTA's `/projects/` branch compares `.Page.RelPermalink` against the literal string `"/projects/"`, which would silently stop matching if the site were ever served from a subpath.
-- Seven navbar tokens are now orphaned and only declared, never read: `--navbar-button-background`, `--navbar-button-border-color`, `--navbar-button-font-color`, `--navbar-menu-background`, `--navbar-menu-font-color`, `--navbar-hover-background`, `--navbar-hover-font-color`.
+- Eight tokens are now orphaned and only declared, never read. Six navbar tokens were newly orphaned by this piece's header rewrite: `--navbar-button-background`, `--navbar-button-border-color`, `--navbar-button-font-color`, `--navbar-menu-background`, `--navbar-menu-font-color`, `--navbar-hover-font-color`. `--navbar-hover-background` was already orphaned before this piece started. `--footer-link-font-color` (`vars.css:192`) has zero consumers repo-wide and was missed from the original count.
 - `header.css` now has three separate 1024px media blocks, mixing `screen and (...)` and bare `(...)` syntax. Worth a consolidating pass later.
 - `withChromeData.js` and `withMenuData.js` are both arrow functions, so `options.fn(this, ...)` passes module scope rather than a real template context. This is latent, not active: every reference inside their blocks resolves through an `@`-prefixed data variable or a loop-local field, never through `this`.
 - Hugo's `a.navbar-brand` carries `title="{{ .Site.Title }}"`; the Antora one does not.
