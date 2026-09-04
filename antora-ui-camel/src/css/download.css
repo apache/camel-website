@@ -1,25 +1,266 @@
-.download thead tr th {
-  text-align: left;
+/* Download page (content/download, layouts/download/list.html).
+   H1 uses the shared .page-hero-title primitive (components.css); the
+   "Supported releases" heading uses the shared .section-label primitive; the
+   LTS chip uses the shared .lts-chip primitive; the SBOM/Verify cards use the
+   shared .card/.card--flat primitives with only a page-scoped padding
+   override. Everything below is genuinely page-owned layout. */
+
+.download {
+  width: 100%;
+  max-width: var(--static-max-width--desktop);
+  margin: 0 auto;
+  padding: calc(56 / var(--rem-base) * 1rem) calc(32 / var(--rem-base) * 1rem) calc(40 / var(--rem-base) * 1rem);
 }
 
-.download tr td:first-child {
+/* hero: intro copy + CLI launcher card */
+
+.download-hero {
+  display: grid;
+  grid-template-columns: 1fr calc(380 / var(--rem-base) * 1rem);
+  gap: calc(56 / var(--rem-base) * 1rem);
+  align-items: start;
+}
+
+.download-intro p {
+  font-size: calc(16.5 / var(--rem-base) * 1rem);
+  line-height: 1.6;
+  color: var(--color-ink-soft);
+  margin: calc(14 / var(--rem-base) * 1rem) 0 0;
+  text-wrap: pretty;
+}
+
+.download-intro p:first-of-type {
+  margin-top: calc(16 / var(--rem-base) * 1rem);
+}
+
+.download-intro strong {
+  color: var(--color-ink);
+}
+
+.download-cli-card {
+  background: var(--color-ink);
+  border-radius: 16px; /* radius exemption: raw px */
+  padding: calc(28 / var(--rem-base) * 1rem);
+  color: var(--color-on-dark);
+}
+
+.download-cli-eyebrow {
+  font-family: var(--monospace-font-family);
+  font-size: calc(12 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  color: var(--color-prompt);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.download-cli-desc {
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+  line-height: 1.55;
+  color: var(--color-on-dark-soft);
+  margin: calc(10 / var(--rem-base) * 1rem) 0 calc(16 / var(--rem-base) * 1rem);
+}
+
+.download-cli-bar {
+  display: flex;
+  background: var(--color-dark-3);
+  border: 1px solid var(--color-dark-line);
+  border-radius: 8px; /* radius exemption: raw px */
+  overflow: hidden;
+}
+
+.download-cli-command {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--monospace-font-family);
+  font-size: calc(12.5 / var(--rem-base) * 1rem);
+  color: var(--syntax-text);
+  padding: calc(12 / var(--rem-base) * 1rem) calc(14 / var(--rem-base) * 1rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.download-cli-prompt {
+  color: var(--color-prompt);
+}
+
+.download-cli-copy {
+  border: 0;
+  border-left: 1px solid var(--color-dark-line);
+  background: var(--color-dark-2);
+  color: var(--syntax-text);
+  font-family: var(--monospace-font-family);
+  font-size: calc(12 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  padding: 0 calc(14 / var(--rem-base) * 1rem);
+  cursor: pointer;
+}
+
+.download-cli-copy:hover {
+  /* matches the existing, already-shipped .home-cli-copy:hover one-off shade */
+  background: #3a342c;
+}
+
+.download-cli-guide {
+  display: inline-block;
+  margin-top: calc(14 / var(--rem-base) * 1rem);
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  font-weight: 700;
+  color: var(--color-orange-glow);
+}
+
+.download-cli-guide:hover {
+  color: var(--color-on-dark);
+  text-decoration: none;
+}
+
+/* release rows */
+
+.download-row {
+  display: grid;
+  grid-template-columns: calc(220 / var(--rem-base) * 1rem) calc(130 / var(--rem-base) * 1rem) 1fr auto;
+  gap: calc(24 / var(--rem-base) * 1rem);
+  align-items: center;
+  padding: calc(22 / var(--rem-base) * 1rem) 0;
+  border-bottom: 1px solid var(--color-line-soft);
+}
+
+.download-row-project {
+  font-family: var(--display-font-family);
+  font-weight: 700;
+  font-size: calc(17 / var(--rem-base) * 1rem);
+  color: var(--color-ink);
+}
+
+.download-row-date {
+  font-size: calc(13 / var(--rem-base) * 1rem);
+  color: var(--color-ink-muted);
+  margin-top: calc(3 / var(--rem-base) * 1rem);
+}
+
+.download-row-version {
+  display: flex;
+  align-items: center;
+  gap: calc(8 / var(--rem-base) * 1rem);
+}
+
+.download-row-version-num {
+  font-family: var(--monospace-font-family);
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.download-row-note {
+  font-size: calc(14 / var(--rem-base) * 1rem);
+  color: var(--color-ink-soft);
+}
+
+.download-row-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: calc(6 / var(--rem-base) * 1rem) calc(16 / var(--rem-base) * 1rem);
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  font-weight: 700;
+}
+
+.download-row-artifact {
+  display: inline-flex;
+  align-items: baseline;
+  gap: calc(6 / var(--rem-base) * 1rem);
   white-space: nowrap;
 }
 
-.download tr td:first-child strong {
-  font-size: 0.9rem;
+.download-row-link {
+  color: var(--color-ink-muted);
 }
 
-.download tr td em.kind {
-  color: var(--color-on-dark);
-  background: var(--color-ink);
-  border-radius: 3px;
-  font-style: normal;
-  font-size: 0.75rem;
-  font-weight: bold;
-  padding: 0.1rem 0.3rem;
+.download-row-link:hover {
+  color: var(--color-camel-orange);
+  text-decoration: none;
 }
 
-.download .tableblock tbody tr:nth-child(2n) {
-  background: var(--color-paper-2);
+.download-row-link--primary {
+  color: var(--color-orange-deep);
+}
+
+.download-row-link--primary:hover {
+  color: var(--color-camel-orange);
+}
+
+.download-row-sub {
+  font-size: calc(11 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  color: var(--color-ink-muted);
+}
+
+.download-row-sub::before {
+  content: '(';
+}
+
+.download-row-sub::after {
+  content: ')';
+}
+
+.download-row-sublink {
+  color: inherit;
+}
+
+.download-row-sublink:hover {
+  color: var(--color-camel-orange);
+  text-decoration: none;
+}
+
+.download-row-sublink + .download-row-sublink::before {
+  content: ' \00b7 ';
+  color: var(--color-ink-muted);
+}
+
+/* SBOM + verify cards */
+
+.download-cards {
+  margin-top: calc(48 / var(--rem-base) * 1rem);
+}
+
+.download-card {
+  padding: calc(26 / var(--rem-base) * 1rem);
+}
+
+.download-card h3 {
+  font-family: var(--display-font-family);
+  font-weight: 700;
+  font-size: calc(18 / var(--rem-base) * 1rem);
+  margin: 0;
+}
+
+.download-card p {
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+  line-height: 1.6;
+  color: var(--color-ink-soft);
+  margin: calc(10 / var(--rem-base) * 1rem) 0 0;
+  text-wrap: pretty;
+}
+
+/* responsive */
+
+@media screen and (width <= 1024px) {
+  .download-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .download {
+    padding: calc(40 / var(--rem-base) * 1rem) calc(24 / var(--rem-base) * 1rem) calc(48 / var(--rem-base) * 1rem);
+  }
+}
+
+@media screen and (width <= 626px) {
+  .download-row {
+    grid-template-columns: 1fr;
+    gap: calc(8 / var(--rem-base) * 1rem);
+  }
+
+  .download-row-links {
+    margin-top: calc(4 / var(--rem-base) * 1rem);
+  }
 }
