@@ -183,7 +183,7 @@
   font-family: var(--monospace-font-family);
   font-size: calc(13 / var(--rem-base) * 1rem);
   font-weight: 600;
-  color: var(--color-ink-muted);
+  color: var(--color-ink-soft);
   text-decoration: none;
 }
 
@@ -242,6 +242,29 @@
   color: var(--color-ink-2);
   margin: 0;
   text-wrap: pretty;
+}
+
+.advisory-section-body a {
+  color: var(--link-font-color);
+}
+
+.advisory-section-body a:hover {
+  color: var(--link_hover-font-color);
+}
+
+.advisory-section-body pre {
+  background: var(--pre-background);
+  border-radius: calc(10 / var(--rem-base) * 1rem);
+  color: var(--pre-font-color);
+  display: block;
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  line-height: 1.7;
+  overflow-x: auto;
+  padding: calc(18 / var(--rem-base) * 1rem) calc(20 / var(--rem-base) * 1rem);
+}
+
+.advisory-section-body pre code {
+  color: inherit;
 }
 
 .advisory-references {
