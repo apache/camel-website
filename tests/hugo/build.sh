@@ -13,6 +13,8 @@
 #   tests/hugo/build.sh --measure / 'sel@color'    build, then print computed styles
 #   tests/hugo/build.sh --measure / 'sel@color' 'sel-to-click'
 #                                                   ...after clicking an element first
+#   tests/hugo/build.sh --measure / 'sel@color' '' 626
+#                                                   ...at a given iframe width (default 1440)
 #
 # Env: HUGO_OUT, HUGO_PORT (default 8899), SHOT_WIDTHS, SHOT_HEIGHT (default 2400)
 set -euo pipefail
@@ -121,10 +123,11 @@ case "${1:-}" in
     path="${1:-/}"
     query="${2:-}"
     click="${3:-}"
+    width="${4:-1440}"
     cp tests/hugo/_measure.html "$SITE/_measure.html"
     start_server
     "$CHROME" --headless --disable-gpu --virtual-time-budget=5000 --dump-dom \
-      "http://localhost:$PORT/_measure.html#$(printf '%s|%s|%s' "$path" "$query" "$click")" \
+      "http://localhost:$PORT/_measure.html#$(printf '%s|%s|%s|%s' "$path" "$query" "$click" "$width")" \
       2>/dev/null | sed -n '/<pre id="out">/,/<\/pre>/p' | sed 's/<[^>]*>//g'
     ;;
 esac

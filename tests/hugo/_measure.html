@@ -5,23 +5,27 @@
 <title>measure</title>
 <style>
   html, body { margin: 0; }
-  iframe { width: 1440px; height: 2400px; border: 0; }
+  iframe { height: 2400px; border: 0; }
 </style>
 </head>
 <body>
 <iframe id="frame" title="measured page"></iframe>
 <pre id="out">pending</pre>
 <script>
-  // Hash format: <path>|<selector>@<prop>,<prop>;<selector>@<prop>|<click-selector>
+  // Hash format: <path>|<selector>@<prop>,<prop>;<selector>@<prop>|<click-selector>|<width>
   // The optional third segment names an element to click inside the iframe
   // before the queries are evaluated, so a measurement can capture state
   // after an interaction instead of only the state after initial load.
+  // The optional fourth segment sets the iframe width (default 1440), so a
+  // breakpoint other than desktop can be measured.
   var raw = decodeURIComponent(window.location.hash.slice(1))
   var parts = raw.split('|')
   var path = parts[0] || '/'
   var queries = (parts[1] || '').split(';').filter(Boolean)
   var clickSelector = parts[2] || ''
+  var width = parts[3] || '1440'
   var frame = document.getElementById('frame')
+  frame.style.width = width + 'px'
   frame.onload = function () {
     var doc = frame.contentDocument
     var win = frame.contentWindow
