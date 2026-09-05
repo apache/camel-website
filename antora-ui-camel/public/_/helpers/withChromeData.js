@@ -6,12 +6,19 @@ const yaml = require('js-yaml')
 
 const absolute = /^(?:https?:)?\/\//
 
-let dataPath = path.join(process.cwd(), 'data', 'chrome.yaml')
-try {
-  fs.accessSync(dataPath)
-} catch (err) {
-  dataPath = path.resolve(process.cwd(), '..', 'data', 'chrome.yaml')
-  fs.accessSync(dataPath)
+// Antora evaluates UI helpers in its own process, so this runs against the
+// cwd of the Antora (or `gulp preview`) run: the repository root, or
+// antora-ui-camel for the preview.
+const candidates = [
+  path.join(process.cwd(), 'data', 'chrome.yaml'),
+  path.resolve(process.cwd(), '..', 'data', 'chrome.yaml'),
+]
+const dataPath = candidates.find((candidate) => fs.existsSync(candidate))
+if (!dataPath) {
+  throw new Error(
+    'withChromeData: data/chrome.yaml not found; run Antora from the camel-website repository root ' +
+    '(cwd: ' + process.cwd() + ')'
+  )
 }
 
 // js-yaml 4's load() uses the safe schema by default; safeLoad was removed in
