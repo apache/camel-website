@@ -34,6 +34,11 @@ components:
   secondary_cta:
     label: API docs
     url: https://www.javadoc.io/doc/org.apache.camel/camel-api/latest/index.html
+  links:
+    - label: EIP catalog
+      url: /components/latest/eips/enterprise-integration-patterns.html
+    - label: Data formats
+      url: /components/latest/dataformats/
 
 projects:
   - name: Camel K
