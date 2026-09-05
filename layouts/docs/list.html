@@ -34,6 +34,11 @@
               <a class="button ink" href="{{ $data.components.primary_cta.url | relURL }}">{{ $data.components.primary_cta.label }}</a>
               <a class="button light" href="{{ $data.components.secondary_cta.url }}">{{ $data.components.secondary_cta.label }}</a>
             </p>
+            {{- with $data.components.links }}
+            <div class="docs-project-card-links docs-feature-links">
+              {{- range . }}<a class="docs-project-card-link" href="{{ .url | relURL }}">{{ .label }} &rarr;</a>{{ end }}
+            </div>
+            {{- end }}
           </div>
         </div>
 

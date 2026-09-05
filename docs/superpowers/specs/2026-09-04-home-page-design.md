@@ -336,12 +336,14 @@ not see, because measuring an element says nothing about what is painted on top 
   with their deep links (EIP catalog, component reference, data formats, `/community/sources/`),
   the "50 data formats" and "280+ Quarkus extensions" claims, the ASF wide logo and the license
   links. Feature cards are text-only per Sections; the shared footer still reaches mailing lists,
-  support, the component reference, apache.org and the license. Open for the owner: the EIP
-  catalog, data formats and sources links now have no home on the page.
+  support, the component reference, apache.org and the license. The EIP catalog and data
+  formats links moved to the components card on `/docs/`, and `/community/sources/` got its own
+  card on `/community/`; the unreferenced ASF wide logo and the other orphaned images were deleted.
 - **Shortcodes**: `section` and `downloads` were deleted (no callers left); `div` and `icon` stay.
-- **Stat copy**: "Proven across millions of production deployments" (features) has no recorded
-  source, unlike the four figures; open for the owner.
+- **Stat copy**: "Proven across millions of production deployments" (features) had no recorded
+  source, unlike the four figures; replaced with the EIP catalog and "in production since 2007".
 - **Contrast, site-wide**: `--color-ink-muted` moved to `#6f675c` and the LTS chip to
   `--color-orange-deep` so 12px to 15px text and the chip clear 4.5:1 (see the comments in
-  `vars.css` and `primitives.css`). The primary CTA keeps white on `--color-camel-orange`
-  (2.93:1) as the memo's unchanged brand color; open for the owner.
+  `vars.css` and `primitives.css`). The primary CTA keeps the memo's `--color-camel-orange`
+  ground but paints its label in ink (5.78:1) instead of white (2.93:1); hover lifts to
+  `--color-camel-orange-light`, where ink reads at 7.30:1.

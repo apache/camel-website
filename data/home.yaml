@@ -93,8 +93,8 @@ features:
     - tag: EIP
       title: Battle-tested routing
       body: >-
-        Route, transform, filter, split, and aggregate. Proven across millions
-        of production deployments.
+        Route, transform, filter, split, and aggregate with the Enterprise
+        Integration Patterns catalog, in production since 2007.
     - tag: CI
       title: Standard build
       body: >-
