@@ -69,7 +69,7 @@
                           <td><a href="{{ .RelPermalink }}">{{ .Params.cve }}</a></td>
                           <td>{{ .Params.affected }}</td>
                           <td>{{ .Params.fixed }}</td>
-                          <td><span class="severity-chip security-severity severity-chip--{{ .Params.severity | lower }}">{{ .Params.severity }}</span></td>
+                          <td><span class="severity-chip security-severity severity-chip--{{ .Params.severity | lower }}">{{ .Params.severity | lower | title }}</span></td>
                           <td>{{ .Params.summary }}</td>
                         </tr>
                       {{ end }}
