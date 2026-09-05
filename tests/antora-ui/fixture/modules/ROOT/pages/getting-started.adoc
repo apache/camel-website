@@ -1,0 +1,78 @@
+= Getting Started
+:page-pagination:
+
+Apache Camel is an open source integration framework. This guide shows the
+quickest path to a running route, then points you to the concepts you will
+need next.
+
+TIP: The fastest way to try Camel is the Camel CLI, no project setup required.
+
+NOTE: Upgrading from Camel 3? Read the Camel 4.x upgrade guide first.
+
+WARNING: This fixture exists only to render the UI. It is not documentation.
+
+CAUTION: Changing the tokens repaints the whole site, not just this page.
+
+IMPORTANT: Every value on this page is measured, not eyeballed.
+
+== Install the Camel CLI
+
+Install JBang, then install the `camel` command:
+
+[source,bash]
+----
+jbang app install camel@apache/camel
+camel --version
+----
+
+=== A third level heading
+
+Body text under a third level heading.
+
+== Your first route
+
+Create a route file and run it.
+
+[tabs]
+====
+YAML::
++
+[source,yaml]
+----
+- from:
+    uri: timer:tick
+    steps:
+      - log: ${body}
+----
+
+Java::
++
+[source,java]
+----
+from("timer:tick?period=1000")
+    .log("${body}");
+----
+====
+
+== Key concepts
+
+[cols="1,3"]
+|===
+|Concept |What it is
+
+|Route |A path a message follows from a source endpoint to one or more destinations.
+|Endpoint |A URI that names a component and its options, such as `kafka:orders`.
+|Component |A factory for endpoints. Over 300 are available.
+|===
+
+== Where to go next
+
+* Enterprise Integration Patterns, for route, transform, split and aggregate.
+* Component Reference, for the connectors and their options.
+
+. First numbered step.
+. Second numbered step.
+
+.A definition list
+Exchange:: The message container that travels a route.
+Processor:: A node that acts on an exchange.

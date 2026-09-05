@@ -1,15 +1,257 @@
+/* Documentation index (/docs/, layouts/docs/list.html, data/docs-projects.yaml)
+   and Community (/community/, layouts/community/list.html, data/community.yaml).
+   Both are card-grid-over-a-page-header screens; grouped in one file per the
+   piece-4b build plan. Page shell, hero typography, card shell/hover, and the
+   "By runtime and project" eyebrow all come from the shared primitives in
+   primitives.css (.page-hero-title, .page-hero-lead, .card, .card-grid,
+   .section-label) - only page-specific layout lives here. */
+
+/* ---- shared page shell ------------------------------------------------- */
+
 .docs,
 .community {
-  padding: 1rem 3rem 2rem;
-  display: flex;
-  width: 80%;
-  flex-direction: column;
+  width: 100%;
+  max-width: var(--static-max-width--desktop);
+  margin: 0 auto;
+  padding: calc(56 / var(--rem-base) * 1rem) var(--page-padding-x) calc(40 / var(--rem-base) * 1rem);
 }
+
+.docs-hero,
+.community-hero {
+  max-width: calc(760 / var(--rem-base) * 1rem);
+}
+
+/* ---- docs: feature-card pair ------------------------------------------- */
+
+.docs-features {
+  margin-top: calc(40 / var(--rem-base) * 1rem);
+}
+
+/* .docs-feature-eyebrow: shared shape lives in primitives.css - see M5,
+   final-review.md. */
+
+.docs-feature--dark .docs-feature-eyebrow {
+  color: var(--color-prompt);
+}
+
+.docs-feature--light .docs-feature-eyebrow {
+  color: var(--color-orange-deep);
+}
+
+.docs-feature-title {
+  font-family: var(--display-font-family);
+  font-weight: 800;
+  font-size: calc(30 / var(--rem-base) * 1rem);
+  letter-spacing: -0.02em;
+  margin: calc(12 / var(--rem-base) * 1rem) 0 0;
+}
+
+.docs-feature--light .docs-feature-title {
+  color: var(--color-ink);
+}
+
+.docs-feature-desc {
+  font-size: calc(15.5 / var(--rem-base) * 1rem);
+  line-height: 1.6;
+  margin: calc(12 / var(--rem-base) * 1rem) 0 calc(26 / var(--rem-base) * 1rem);
+  flex: 1;
+  text-wrap: pretty;
+}
+
+.docs-feature--dark .docs-feature-desc {
+  color: var(--color-on-dark-soft);
+}
+
+.docs-feature--light .docs-feature-desc {
+  color: var(--color-ink-soft);
+}
+
+.docs-feature-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(10 / var(--rem-base) * 1rem);
+  margin: 0;
+}
+
+.docs-feature-actions .button {
+  margin: 0;
+  padding: calc(11 / var(--rem-base) * 1rem) calc(20 / var(--rem-base) * 1rem);
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+}
+
+/* ---- docs: project grid ------------------------------------------------- */
+
+.docs-projects {
+  margin-top: calc(20 / var(--rem-base) * 1rem);
+}
+
+.docs-project-card-head {
+  display: flex;
+  align-items: center;
+  gap: calc(12 / var(--rem-base) * 1rem);
+}
+
+.docs-project-card-icon {
+  width: calc(30 / var(--rem-base) * 1rem);
+  height: calc(30 / var(--rem-base) * 1rem);
+  display: block;
+  flex: none;
+  object-fit: contain;
+}
+
+.docs-project-card-title {
+  font-family: var(--display-font-family);
+  font-weight: 700;
+  font-size: calc(18 / var(--rem-base) * 1rem);
+  margin: 0;
+  color: var(--color-ink);
+}
+
+.docs-project-card-desc {
+  font-size: calc(14 / var(--rem-base) * 1rem);
+  line-height: 1.55;
+  color: var(--color-ink-soft);
+  margin: calc(12 / var(--rem-base) * 1rem) 0 calc(18 / var(--rem-base) * 1rem);
+  flex: 1;
+  text-wrap: pretty;
+}
+
+.docs-project-card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(14 / var(--rem-base) * 1rem);
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  font-weight: 700;
+}
+
+.docs-project-card-link {
+  color: var(--link-font-color);
+}
+
+.docs-project-card-link:hover {
+  color: var(--link_hover-font-color);
+  text-decoration: none;
+}
+
+.docs-project-card-link--muted {
+  color: var(--color-ink-muted);
+}
+
+/* The dark User Manual card carries the same link row for Camel Core. */
+.docs-feature-links {
+  margin-top: calc(18 / var(--rem-base) * 1rem);
+}
+
+.docs-feature--dark .docs-project-card-link {
+  color: var(--color-orange-glow);
+}
+
+.docs-feature--dark .docs-project-card-link--muted {
+  color: var(--color-on-dark-soft);
+}
+
+.docs-feature--dark .docs-project-card-link:hover {
+  color: var(--color-on-dark);
+}
+
+/* ---- community: card grid ---------------------------------------------- */
+
+.community-grid {
+  margin-top: calc(40 / var(--rem-base) * 1rem);
+}
+
+.community-card-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(38 / var(--rem-base) * 1rem);
+  height: calc(38 / var(--rem-base) * 1rem);
+  border-radius: 9px; /* radius exemption: raw px */
+  background: var(--color-orange-tint);
+  font-family: var(--display-font-family);
+  font-weight: 800;
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  color: var(--link-font-color);
+}
+
+.community-card-title {
+  font-family: var(--display-font-family);
+  font-weight: 700;
+  font-size: calc(19 / var(--rem-base) * 1rem);
+  margin: calc(16 / var(--rem-base) * 1rem) 0 0;
+  color: var(--color-ink);
+}
+
+.community-card-body {
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+  line-height: 1.55;
+  color: var(--color-ink-soft);
+  margin: calc(9 / var(--rem-base) * 1rem) 0 calc(18 / var(--rem-base) * 1rem);
+  flex: 1;
+  text-wrap: pretty;
+}
+
+.community-card-link {
+  color: var(--link-font-color);
+  font-weight: 700;
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+}
+
+.community-card-link:hover {
+  color: var(--link_hover-font-color);
+  text-decoration: none;
+}
+
+/* ---- community: "Talk to us" dark CTA card ----------------------------- */
+
+.community-cta {
+  grid-column: span 2;
+}
+
+/* .community-cta-eyebrow: shared shape lives in primitives.css - see M5,
+   final-review.md. */
+
+.community-cta-title {
+  font-family: var(--display-font-family);
+  font-weight: 800;
+  font-size: calc(24 / var(--rem-base) * 1rem);
+  letter-spacing: -0.02em;
+  margin: calc(12 / var(--rem-base) * 1rem) 0 0;
+}
+
+.community-cta-body {
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+  line-height: 1.55;
+  color: var(--color-on-dark-soft);
+  margin: calc(10 / var(--rem-base) * 1rem) 0 calc(20 / var(--rem-base) * 1rem);
+  flex: 1;
+  max-width: calc(560 / var(--rem-base) * 1rem);
+}
+
+.community-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(10 / var(--rem-base) * 1rem);
+  margin: 0;
+}
+
+.community-cta-actions .button {
+  margin: 0;
+  padding: calc(10 / var(--rem-base) * 1rem) calc(18 / var(--rem-base) * 1rem);
+  font-size: calc(14 / var(--rem-base) * 1rem);
+}
+
+/* ---- responsive: 1024px / 626px (no new breakpoints) ------------------- */
 
 @media screen and (width <= 1024px) {
   .docs,
   .community {
-    padding: 0 1rem 4rem;
-    width: 100%;
+    padding: calc(32 / var(--rem-base) * 1rem) calc(20 / var(--rem-base) * 1rem) calc(48 / var(--rem-base) * 1rem);
+  }
+}
+
+@media screen and (width <= 626px) {
+  .community-cta {
+    grid-column: span 1;
   }
 }

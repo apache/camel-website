@@ -278,7 +278,7 @@ This is the recommended starting point for all developers, including those who a
 - [`camel dev`](https://camel.apache.org/manual/camel-jbang.md): **Hot-reload development mode.** Edit a YAML route, save, and the running integration updates in seconds. Live feedback loop — same experience as modern web frameworks (Next.js, Vite). This is the fastest way to build and iterate on integrations.
 - [`camel run`](https://camel.apache.org/manual/camel-jbang.md): Run one or more Camel routes from YAML, Java, XML, or Groovy files. No Maven, no build step, no project structure required.
 - [`camel trace`](https://camel.apache.org/manual/camel-jbang.md): **Live message tracing.** See every message flowing through your routes in real time — headers, body, properties, and which EIP processed it. Essential for debugging and understanding message flow.
-- [`camel send`](https://camel.apache.org/manual/camel-jbang.md): Send a test message to any endpoint in a running integration. Test routes interactively without writing test code — send a message and watch it flow through `camel trace`.
+- [`camel cmd send`](https://camel.apache.org/manual/camel-jbang.md): Send a test message to any endpoint in a running integration. Test routes interactively without writing test code — send a message and watch it flow through `camel trace`.
 - [`camel test`](https://camel.apache.org/manual/camel-jbang.md): Run integration tests directly from the CLI. Supports JUnit-style assertions, mock endpoints, and test profiles.
 - [`camel export`](https://camel.apache.org/manual/camel-jbang.md): **Bridge from development to production.** Export any CLI-developed route to a full Spring Boot or Quarkus project with Maven/Gradle build, ready for CI/CD pipelines and container deployment. Start fast with the CLI, ship to production on an enterprise runtime.
 
@@ -291,7 +291,7 @@ This is the recommended starting point for all developers, including those who a
 ### AI-Assisted Development
 
 - [Camel MCP Server](https://camel.apache.org/manual/camel-jbang-mcp.md): Model Context Protocol server for AI coding assistants (Claude Code, GitHub Copilot, Cursor, Gemini CLI). The MCP server gives AI agents access to the full Camel catalog — 350+ component schemas, EIP metadata, and YAML validation — so AI can generate correct, validated Camel routes.
-- The CLI and TUI are designed for AI pair programming. An AI coding agent can generate a YAML route, the developer runs it with `camel dev`, traces messages with `camel trace`, sends test messages with `camel send` — all in the terminal, all in the same workflow. The MCP server connects the AI agent to the Camel catalog so generated routes use correct syntax and valid options.
+- The CLI and TUI are designed for AI pair programming. An AI coding agent can generate a YAML route, the developer runs it with `camel dev`, traces messages with `camel trace`, sends test messages with `camel cmd send` — all in the terminal, all in the same workflow. The MCP server connects the AI agent to the Camel catalog so generated routes use correct syntax and valid options.
 
 ### CLI Examples
 

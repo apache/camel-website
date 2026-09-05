@@ -1,0 +1,187 @@
+# Home page copy and figures. Rendered by layouts/index.html.
+#
+# The four figures under `stats` were measured on 2026-09-04 against
+# apache/camel. The design reference's numbers were illustrative: two of them
+# overstated the project and one understated it. Recheck with:
+#   gh api "repos/apache/camel/commits?per_page=1&sha=main" -i | grep -i '^link:'
+#   gh api "repos/apache/camel/contributors?per_page=1&anon=true" -i | grep -i '^link:'
+#   gh api "repos/apache/camel/tags?per_page=1" -i | grep -i '^link:'
+#   ls public/components/next/*-component.html | wc -l
+
+hero:
+  eyebrow: "In production since 2007 · Apache License 2.0"
+  title: Apache Camel
+  tagline: The Open Source Integration Framework
+  lead: >-
+    Connect anything. Route everything. 350+ connectors, written in Java, YAML,
+    or XML, deployed on Spring Boot, Quarkus, or standalone with the Camel CLI.
+  primary_cta:
+    label: "Get Started →"
+    url: /manual/getting-started.html
+  secondary_cta:
+    label: What is Camel?
+    url: /what-is-apache-camel/
+  command: camel init hello.yaml && camel run hello.yaml
+
+stats:
+  label: Used by thousands of companies worldwide
+  items:
+    - num: 83,000+
+      label: commits
+      source: 83,428 on apache/camel main, GitHub API, 2026-09-04
+    - num: 1,500+
+      label: contributors
+      source: 1,583 distinct authors (anon=true), GitHub API, 2026-09-04
+    - num: 350+
+      label: components
+      source: 398 component pages in the built docs, 2026-09-04
+    - num: 300+
+      label: releases
+      source: 307 tags on apache/camel, GitHub API, 2026-09-04
+
+get_started:
+  eyebrow: Get Started Your Way
+  heading: Three clear paths
+  items:
+    - name: Spring Boot
+      badge: Most popular
+      description: >-
+        Add Camel to your existing Spring Boot project with a single starter
+        dependency. Starters for 350+ components.
+      code: |
+        # pom.xml
+        camel-spring-boot-starter
+      url: /camel-spring-boot/latest/
+    - name: Quarkus
+      badge: ""
+      description: >-
+        Cloud-native Camel with fast startup and native compilation. Add
+        extensions to your Quarkus project.
+      code: |
+        quarkus ext add
+          camel-quarkus-kafka
+      url: /camel-quarkus/latest/
+    - name: Camel CLI
+      badge: fastest
+      description: >-
+        Zero project setup. Just YAML and a terminal, perfect for prototyping,
+        learning, and AI-assisted workflows.
+      code: |
+        camel init hello.yaml
+        camel run hello.yaml
+      url: /manual/camel-jbang.html
+
+features:
+  eyebrow: Why developers choose Camel
+  heading: Built for real integration work
+  items:
+    - tag: 350+
+      title: Connectors out of the box
+      body: >-
+        Kafka, REST, JDBC, AWS, Azure, GCP, SAP, Salesforce. Connect to
+        anything, all out of the box.
+    - tag: "3"
+      title: Write it your way
+      body: >-
+        Java DSL, YAML, or XML. The same routes, your choice of syntax, mixed
+        and matched across a project.
+    - tag: AI
+      title: AI-ready integration
+      body: >-
+        MCP server for AI coding assistants. Use camel trace and camel test to
+        verify AI-generated routes.
+    - tag: EIP
+      title: Battle-tested routing
+      body: >-
+        Route, transform, filter, split, and aggregate with the Enterprise
+        Integration Patterns catalog, in production since 2007.
+    - tag: CI
+      title: Standard build
+      body: >-
+        Export to Maven or Gradle and deploy with any CI/CD pipeline. A standard
+        Java app, no special runtime.
+    - tag: OSS
+      title: Open source
+      body: >-
+        Apache License 2.0, 1,500+ contributors. Fully open community, no vendor
+        lock-in.
+
+example:
+  eyebrow: See it in action
+  heading: Route messages from Kafka to a database
+  subhead: The same route, in your choice of syntax. No boilerplate.
+  run_command: camel run kafka-to-db.yaml
+  tabs:
+    - id: yaml
+      label: YAML
+      code: |
+        # Route messages from Kafka into a database
+        - from:
+            uri: kafka:orders
+            steps:
+              - unmarshal:
+                  json: {}
+              - to:
+                  uri: >-
+                    sql:INSERT INTO orders (id, amount)
+                    VALUES (:#id, :#amount)
+    - id: java
+      label: Java
+      code: |
+        from("kafka:orders")
+            .unmarshal().json()
+            .to("sql:INSERT INTO orders (id, amount) "
+              + "VALUES (:#id, :#amount)");
+    - id: xml
+      label: XML
+      code: |
+        <route>
+          <from uri="kafka:orders"/>
+          <unmarshal><json/></unmarshal>
+          <to uri="sql:INSERT INTO orders (id, amount)
+                   VALUES (:#id, :#amount)"/>
+        </route>
+
+tiles:
+  eyebrow: Core Projects
+  heading: Start with what most teams use
+  subhead: The framework and its two primary runtimes, plus the CLI.
+  items:
+    - name: Camel Core
+      icon: logo-d
+      description: >-
+        The integration framework itself: routing engine, EIPs, and the
+        component model.
+      url: /camel-core/
+    - name: Camel Spring Boot
+      icon: spring-boot
+      description: >-
+        Camel on Spring Boot with auto-configured starters for 350+ components.
+      url: /camel-spring-boot/latest/
+    - name: Camel Quarkus
+      icon: quarkus
+      description: >-
+        Cloud-native Camel packaged as Quarkus extensions with native-image
+        support.
+      url: /camel-quarkus/latest/
+    - name: Camel CLI
+      icon: cli
+      description: >-
+        Terminal tooling for dev, test, trace, and AI. Get started in seconds.
+      url: /manual/camel-jbang.html
+  cta:
+    label: "Explore all Camel projects →"
+    url: /projects/
+
+closing:
+  heading: Camel is your project
+  body: >-
+    An Apache Software Foundation project under the Apache v2 license. A
+    complete open community, always listening to proposals, comments, and
+    contributions.
+  primary_cta:
+    label: Be involved
+    url: /community/
+  secondary_cta:
+    label: How to contribute
+    url: /community/contributing/

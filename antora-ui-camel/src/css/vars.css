@@ -1,8 +1,6 @@
 :root {
   /* colors */
   --color-white: #fff;
-  --color-smoke-10: #fefefe;
-  --color-smoke-30: #fafafa;
   --color-smoke-50: #f5f5f5;
   --color-smoke-70: #f0f0f0;
   --color-smoke-90: #e1e1e1;
@@ -12,154 +10,208 @@
   --color-gray-60: #555;
   --color-gray-70: #5d5d5d;
   --color-jet-20: #4a4a4a;
-  --color-jet-30: #424242;
   --color-jet-50: #333;
-  --color-jet-70: #222;
-  --color-jet-80: #191919;
-  --color-black: #000;
-  --color-asf-dark-blue: #303284;
-  --color-asf-moderate-blue: #4f51ae;
-  --color-asf-light-blue: #7375bf;
   --color-camel-orange: #e97826;
-  --color-camel-orange-light: #f39421;
+  --color-camel-orange-light: #f39421; /* a.button.dark hover ground; ink reads at 7.30:1 */
   --color-highlight: #cf7428;
-  --color-glow: #fff7a3;
-  --color-wheat: #f5deb3;
+  /* redesign palette, 2026 site design */
+  --color-paper: #faf7f1;
+  --color-paper-2: #f4eee3;
+  --color-line: #e7e0d5;
+  --color-line-soft: #f0e9dd;
+  --color-line-hover: #d9ccb8;
+  --color-ink: #211c17;
+  --color-ink-2: #3a332b;
+  --color-ink-soft: #5c554c;
+  /* Deviates from SCOPE.md section 2, which specifies #8a8074. That value measures
+     3.62:1 on --color-paper and 3.35:1 on --color-paper-2, failing WCAG AA for the
+     12px to 15px eyebrows and meta text it carries. #6f675c keeps the same hue and
+     reads as a lighter tier than --color-ink-soft: 5.21:1 on paper, 4.82:1 on
+     paper-2. */
+  --color-ink-muted: #6f675c;
+  /* Deviates from SCOPE.md section 2, which specifies #c95f12. That value measures
+     3.83:1 on --color-paper and 3.55:1 on --color-paper-2, failing WCAG AA for normal
+     text, and links land on both surfaces. #a84e0d is the same hue (25deg) and
+     saturation stepped down in lightness only, giving 5.22:1 and 4.84:1. */
+  --color-orange-deep: #a84e0d;
+  /* Hover for --color-orange-deep. SCOPE.md hovers links to --color-camel-orange,
+     but that is 2.74:1 and lighter than rest, so hover weakened the link. No orange
+     bright enough to read as brighter can clear 4.5:1, so hover darkens instead:
+     7.42:1 on paper, 6.87:1 on paper-2. */
+  --color-orange-deeper: #853c09;
+  --color-orange-tint: #fbead8;
+  --color-orange-glow: #f2a05a;
+  --color-dark-2: #2b2620;
+  --color-dark-3: #1c1813;
+  --color-prompt: #e0805a;
+  --color-dark-line: #34302a;
+  --color-on-dark: #faf7f1;
+  --color-on-dark-soft: #c4bbac;
+  --color-on-dark-muted: #8f867a;
+  --color-button-on-dark-border: #4a443c;
   /* fonts */
   --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
   --body-font-size: 1.0625em; /* 17px */
   --body-font-size--desktop: 1.125em; /* 18px */
   --body-font-size--print: 0.9375em; /* 15px */
   --body-line-height: 1.15;
-  --body-font-color: var(--color-jet-50);
-  --body-font-family: 'Open Sans', sans-serif;
+  --body-font-color: var(--color-ink-2);
+  --body-font-family: 'Open Sans', system-ui, sans-serif;
+  --display-font-family: 'Archivo', sans-serif;
   --body-font-weight-bold: bold;
-  --monospace-font-family: 'Droid Sans Mono', 'DejaVu Sans Mono', monospace;
+  --monospace-font-family: 'JetBrains Mono', ui-monospace, monospace;
   --monospace-font-weight-bold: 500;
   /* base */
-  --body-background: var(--color-white);
-  --panel-background: var(--color-smoke-10);
-  --panel-border-color: var(--color-smoke-90);
+  --body-background: var(--color-paper);
+  --panel-background: var(--color-paper-2);
+  --panel-border-color: var(--color-line);
   --scrollbar-track-color: var(--color-gray-10);
   --scrollbar-thumb-color: var(--color-gray-30);
   --scrollbar-thumb-active-color: var(--color-gray-50);
   --scrollbar-thickness: 0.425em; /* 6.8px */
   --scrollbar-radius: 3.125em; /* 50px */
   /* navbar */
-  --navbar-background: var(--color-white);
-  --navbar-font-color: var(--color-camel-orange);
-  --navbar-hover-font-color: var(--color-camel-orange);
-  --navbar-hover-background: var(--color-white);
-  --navbar-button-background: var(--color-white);
-  --navbar-button-border-color: var(--panel-border-color);
-  --navbar-button-font-color: var(--body-font-color);
-  --navbar-menu-border-color: var(--panel-border-color);
-  --navbar-menu-background: var(--color-white);
-  --navbar-menu-font-color: var(--body-font-color);
-  --navbar-menu-hover-background: var(--color-smoke-70);
+  --navbar-background: rgb(250 247 241 / 90%);
+  --navbar-font-color: var(--color-ink-soft);
   /* nav */
   --nav-background: var(--panel-background);
-  --nav-border-color: var(--color-smoke-50);
+  --nav-border-color: var(--color-line);
   --nav-line-height: 1.35;
-  --nav-heading-font-color: var(--color-asf-dark-blue);
+  --nav-heading-font-color: var(--color-ink);
   --nav-muted-color: var(--color-jet-50);
   --nav-panel-divider-color: var(--color-smoke-50);
   --nav-secondary-background: var(--color-smoke-70);
   /* toolbar */
-  --toolbar-background: var(--panel-background);
+  --toolbar-background: rgb(250 247 241 / 92%);
   --toolbar-border-color: var(--panel-border-color);
-  --toolbar-font-color: var(--color-jet-80);
-  --toolbar-muted-color: var(--color-jet-80);
-  --page-version-menu-background: var(--color-smoke-70);
+  --page-version-menu-background: var(--color-white);
   --page-version-missing-font-color: var(--color-gray-30);
   /* toc */
   --toc-font-color: var(--nav-muted-color);
-  --toc-heading-font-color: var(--doc-font-color);
-  --toc-border-color: var(--panel-border-color);
   --toc-line-height: 1.2;
   /* admonitions */
   --caution-color: #a0439c;
-  --caution-on-color: var(--color-white);
   --important-color: #d32f2f;
-  --important-on-color: var(--color-white);
   --note-color: #217ee7;
-  --note-on-color: var(--color-white);
   --tip-color: #4d4fb7;
-  --tip-on-color: var(--color-white);
   --warning-color: #e18114;
-  --warning-on-color: var(--color-white);
+  /* Admonition chip pairs. Each chip's text is measured at or above 4.5:1 on
+     its own tint. TIP and NOTE use the orange pair per SCOPE.md section 2. */
+  --caution-tint: #f7e9f6;
+  --caution-chip-font-color: #8e3b8a; /* 5.71:1 on --caution-tint */
+  --important-tint: #fce9e9;
+  --important-chip-font-color: #b02525; /* 5.73:1 on --important-tint */
+  --warning-tint: #fdf0dc;
+  --warning-chip-font-color: #8a5209; /* 5.67:1 on --warning-tint */
   /* doc */
-  --doc-font-color: var(--color-jet-50);
+  --doc-font-color: var(--color-ink-2);
   --doc-font-size: inherit;
-  --doc-font-size--desktop: calc(17 / var(--rem-base) * 1rem);
-  --doc-line-height: 1.6;
+  --doc-font-size--desktop: calc(16 / var(--rem-base) * 1rem);
+  --doc-line-height: 1.7;
   --doc-margin: 0 auto;
   --doc-margin--desktop: 0 2rem;
-  --heading-font-color: var(--color-asf-dark-blue);
-  --heading-font-weight: bold;
+  --heading-font-color: var(--color-ink);
+  --heading-font-weight: 700;
+  --heading-font-weight-display: 800;
   --alt-heading-font-weight: var(--body-font-weight-bold);
-  --section-divider-color: var(--panel-border-color);
-  --link-font-color: #585ac2;
-  --link_hover-font-color: #104d92;
+  --link-font-color: var(--color-orange-deep);
+  --link_hover-font-color: var(--color-orange-deeper);
   --link_unresolved-font-color: var(--important-color);
-  --abstract-background: var(--color-smoke-70);
+  --abstract-background: var(--color-paper-2);
   --abstract-font-color: var(--color-jet-20);
   --abstract-border-color: var(--panel-border-color);
-  --admonition-background: var(--panel-background);
-  --admonition-label-font-weight: var(--body-font-weight-bold);
   --caption-font-color: var(--color-gray-70);
   --caption-font-weight: var(--body-font-weight-bold);
-  --code-background: var(--panel-background);
-  --code-font-color: var(--color-asf-moderate-blue);
-  --example-background: var(--color-white);
-  --example-border-color: var(--color-gray-10);
+  --code-background: var(--color-paper-2);
+  --code-font-color: var(--color-ink);
+  --example-background: var(--color-paper);
+  --example-border-color: var(--color-line);
   --kbd-background: var(--panel-background);
   --kbd-border-color: var(--color-gray-10);
-  --pre-background: var(--panel-background);
-  --pre-border-color: var(--panel-border-color);
-  --pre-annotation-font-color: var(--color-gray-10);
+  --pre-background: var(--color-ink);
+  /* SCOPE.md section 2a gives base code text as #f0e9df and reserves #faf7f1
+     (--color-on-dark) for .hljs-title, so the two must not be the same token. */
+  --pre-font-color: var(--syntax-text);
+  --pre-annotation-font-color: var(--color-on-dark-muted);
   --quote-background: var(--panel-background);
   --quote-border-color: var(--color-gray-70);
   --quote-font-color: var(--color-gray-70);
-  --quote-attribution-font-color: var(--color-gray-30);
-  --sidebar-background: var(--color-smoke-70);
-  --table-border-color: var(--color-asf-moderate-blue);
+  --quote-attribution-font-color: var(--color-ink-soft);
+  --sidebar-background: var(--color-paper-2);
+  /* syntax highlighting, one token per row of SCOPE.md section 2a.
+     Bound by both highlight.css (highlight.js, Antora) and chroma.css (Hugo blog
+     posts) so the two systems cannot drift apart. All values sit on
+     --pre-background (#211c17) and clear 4.5:1 there. */
+  --syntax-text: #f0e9df;
+  --syntax-comment: #8f867a;
+  --syntax-keyword: var(--color-camel-orange);
+  --syntax-string: var(--color-orange-glow);
+  --syntax-number: #e8c87a;
+  --syntax-title: var(--color-on-dark);
+  --syntax-type: #d9b6f0;
+  --syntax-tag: var(--color-on-dark-soft);
+  --syntax-attr: #e8c87a;
+  --syntax-regexp: #9fd3b0;
+  --syntax-symbol: var(--color-orange-glow);
+  --syntax-built-in: #8ec5e6;
+  --syntax-meta: #8f867a;
+  --syntax-prompt: #e0805a;
+  /* Idle tab label in a code tab bar. SCOPE.md section 2a; 6.47:1 on
+     --pre-background. */
+  --code-tab-idle-font-color: #a89f92;
+  --syntax-deletion-background: rgb(224 82 58 / 25%);
+  --syntax-addition-background: rgb(159 211 176 / 25%);
+  /* section 2a asks for 600; --monospace-font-weight-bold is 500 and has other
+     consumers, so it cannot be reused here. */
+  --syntax-font-weight-strong: 600;
   /* static */
   --static-margin: 0 auto;
   /* frontpage */
-  --frontpage-max-width: calc(1366 / var(--rem-base) * 1rem);
+  --frontpage-max-width: var(--static-max-width--desktop);
   /* footer */
-  --footer-line-height: var(--doc-line-height);
-  --footer-background: var(--color-smoke-50);
-  --footer-font-color: var(--color-gray-70);
-  --footer-after-background: var(--color-gray-50);
-  --footer-link-font-color: var(--color-jet-80);
-  --footer-height: 23rem; /* empirically corresponding current design of the foooter */
+  /* Pinned rather than tracking --doc-line-height, which moved to 1.7 for the
+     article. --footer-height was measured against the footer at 1.6 and must
+     not drift. */
+  --footer-line-height: 1.6;
+  --footer-background: var(--color-ink);
+  --footer-font-color: var(--color-on-dark-soft);
+  --footer-after-background: var(--color-dark-line);
+  /* Used only by .body's min-height calc in body.css (no longer by footer's own
+     min-height, which was deleted: it never bound at desktop and was the sole
+     cause of an oversized empty band at narrow widths). Must be at or below the
+     footer's real rendered height at EVERY width, in pixels, or short pages get
+     a gap below the footer instead of a properly sized one. Measured 716px at
+     1400px wide (root font-size 18px there) versus 964px at 390px and 933px at
+     1000px (root font-size 17px below the 1025px breakpoint) -- the desktop
+     figure is the tighter constraint once the differing root font-size is
+     accounted for (39.78rem * 18px = 716px, vs 964px / 17px = 56.7rem of
+     headroom at mobile), even though the mobile footer is the visually shorter
+     one post-accordion-collapse. Rounded down to stay safe: an underestimate
+     only makes a short page a little taller than 100vh, which costs nothing;
+     an overestimate reopens the gap this comment exists to prevent. Do not
+     "correct" this back up to a desktop-only reading. */
+  --footer-height: 39rem;
   /* dimensions */
-  --navbar-height: calc(73 / var(--rem-base) * 1rem);
+  --navbar-height: calc(66 / var(--rem-base) * 1rem);
   --navbar-burger-height: calc(54 / var(--rem-base) * 1rem);
-  --navbar-mobile-height: calc(4rem + var(--navbar-height));
-  --toolbar-height: calc(45 / var(--rem-base) * 1rem);
+  --navbar-mobile-height: var(--navbar-height);
+  --toolbar-height: calc(46 / var(--rem-base) * 1rem);
   --drawer-height: var(--toolbar-height);
   --body-top: calc(var(--navbar-height) + 1rem);
-  --body-mobile-top: calc(var(--navbar-mobile-height) + 1rem);
   --body-min-height: calc(100vh - var(--navbar-height));
   --nav-height: calc(var(--body-min-height) - var(--toolbar-height));
   --nav-height--desktop: var(--body-min-height);
-  --nav-panel-height: calc(var(--nav-height) - var(--drawer-height));
-  --nav-panel-height--desktop: calc(var(--nav-height--desktop) - var(--drawer-height));
-  --nav-width: calc(270 / var(--rem-base) * 1rem);
+  --nav-width: calc(280 / var(--rem-base) * 1rem);
   --toc-top: calc(var(--body-top) + var(--toolbar-height));
-  --toc-mobile-top: calc(3rem + var(--toc-top));
   --toc-height: calc(100vh - var(--toc-top) - 2.5rem);
-  --toc-width: calc(162 / var(--rem-base) * 1rem);
-  --toc-width--widescreen: calc(216 / var(--rem-base) * 1rem);
+  --toc-width: calc(220 / var(--rem-base) * 1rem);
+  --toc-width--widescreen: calc(220 / var(--rem-base) * 1rem);
   --doc-max-width--desktop: calc(1366 / var(--rem-base) * 1rem);
-  --static-max-width--desktop: calc(1366 / var(--rem-base) * 1rem);
+  --static-max-width--desktop: calc(1200 / var(--rem-base) * 1rem);
+  --page-padding-x: calc(32 / var(--rem-base) * 1rem);
   /* stacking */
   --z-index-nav: 1;
   --z-index-toolbar: 2;
   --z-index-page-version-menu: 3;
   --z-index-navbar: 4;
-  --z-index-nav-search: 5;
 }

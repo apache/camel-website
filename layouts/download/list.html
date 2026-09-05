@@ -1,0 +1,47 @@
+{{ partial "header.html" . }}
+
+<div class="body">
+  <main>
+    <article class="download">
+
+      <div class="download-hero">
+        <div class="download-intro">
+          <h1 class="page-hero-title">{{ .Title }}</h1>
+          {{ .Content }}
+        </div>
+
+        <div class="download-cli-card">
+          <div class="download-cli-eyebrow">Camel CLI Launcher</div>
+          <p class="download-cli-desc">Install on a single machine with a one-line command, without a package manager.</p>
+          {{ with .Params.cli_command }}
+          <div class="download-cli-bar">
+            <code class="download-cli-command"><span class="download-cli-prompt">$</span> {{ . }}</code>
+            <button class="download-cli-copy" type="button" data-copy-value="{{ . }}">Copy</button>
+          </div>
+          {{ end }}
+          <a class="download-cli-guide" href="{{ "/download/camel-cli-launcher/" | relURL }}">Installation guide &rarr;</a>
+        </div>
+      </div>
+
+      <h2 class="section-label">Supported releases</h2>
+
+      {{ range sort (index site.Data "release-categories") "order" }}
+        {{ partial "download/rows.html" (dict "Category" . "Pages" site.Pages) }}
+      {{ end }}
+
+      <div class="card-grid card-grid--2 download-cards">
+        <div class="card card--flat download-card">
+          <h3>SBOMs</h3>
+          <p>{{ .Params.sbom_card_body | markdownify }}</p>
+        </div>
+        <div class="card card--flat download-card">
+          <h3>Verify your download</h3>
+          <p>{{ .Params.verify_card_body | markdownify }}</p>
+        </div>
+      </div>
+
+    </article>
+  </main>
+</div>
+
+{{ partial "footer.html" . }}

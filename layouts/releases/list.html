@@ -1,23 +1,33 @@
 {{ partial "header.html" . }}
 
-<main class="main">
-  <article class="static doc">
-    {{ .Content }}
+<div class="body">
+  <main>
+    <article class="static releases" aria-labelledby="releases-title">
+      <aside class="releases-rail">
+        <div class="releases-rail-heading">Projects</div>
+        <nav class="releases-rail-links" aria-label="Projects">
+          {{ range $category := sort (index site.Data "release-categories") ".order" }}
+          <a class="releases-rail-link" href="#{{ $category.id }}">{{ $category.name }}</a>
+          {{ end }}
+        </nav>
+      </aside>
 
-    <p>
-        On this page you'll find archived releases of:
-        <dl>
-            {{ range $category := sort (index .Site.Data "release-categories") ".order" }}
-                <dd><a href="#{{ $category.id }}">Apache {{ $category.name }}</a></dd>
-            {{ end }}
-        </dl>
-    </p>
+      <div class="releases-content">
+        <div class="releases-intro">
+          <h1 id="releases-title" class="page-hero-title">{{ .Title }}</h1>
+          <p class="page-hero-lead releases-lead">Every release of every Camel project, newest first.
+            Supported releases are on the <a href="{{ "download/" | relURL }}">Download</a> page.</p>
+        </div>
 
-    {{ range $category := sort (index .Site.Data "release-categories") ".order" }}
-        <h2 id="{{ $category.id }}"><a class="anchor" href="#{{ $category.id }}"></a>Releases of {{ $category.name }}</h2>
-        {{ partial "releases/release-table.html" (where (where $.Site.Pages "Section" "releases") ".Params.category" $category.id) }}
-    {{ end }}
-  </article>
-</main>
+        {{ range $category := sort (index site.Data "release-categories") ".order" }}
+        <section id="{{ $category.id }}" class="releases-group">
+          <h2 class="releases-group-title">Releases of {{ $category.name }}</h2>
+          {{ partial "releases/release-table.html" (where (where site.Pages "Section" "releases") ".Params.category" $category.id) }}
+        </section>
+        {{ end }}
+      </div>
+    </article>
+  </main>
+</div>
 
 {{ partial "footer.html" . }}

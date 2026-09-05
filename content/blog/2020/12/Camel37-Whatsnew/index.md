@@ -29,7 +29,7 @@ Then we worked on compiled simple.
 
 ### Compiled Simple
 
-The csimple language
+The [csimple language](/components/4.22.x/languages/csimple-language.html)
 is parsed into regular Java source code and compiled together with all the other source code, or compiled once during
 bootstrap via jOOR.
 

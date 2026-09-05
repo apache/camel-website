@@ -33,7 +33,9 @@
     "build:antora-local-partial": "antora local-antora-playbook-partial.yml --stacktrace",
     "build:antora-local-full2": "antora antora-playbook-local-full.yml --stacktrace --clean --fetch",
     "build:antora-local-partial2": "antora antora-playbook-local-partial.yml --stacktrace",
-    "build:antora-local-quick": "antora antora-playbook-local-quick.yml --stacktrace"
+    "build:antora-local-quick": "antora antora-playbook-local-quick.yml --stacktrace",
+    "build:antora-ui": "tests/antora-ui/build.sh",
+    "check:hugo": "bash tests/hugo/build.sh"
   },
   "devDependencies": {
     "@antora/cli": "^3.1.15",

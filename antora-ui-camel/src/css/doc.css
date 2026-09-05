@@ -27,17 +27,35 @@
   hyphens: none;
   line-height: 1.3;
   margin: 1rem 0 0;
-  text-transform: uppercase;
 }
 
 .static > h1:first-child,
-.doc > h1.page:first-child {
-  font-size: calc(36 / var(--rem-base) * 1rem);
-  margin: 1.5rem 0;
+.doc > h1.page {
+  font-size: calc(42 / var(--rem-base) * 1rem);
+  font-weight: var(--heading-font-weight-display);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin: calc(10 / var(--rem-base) * 1rem) 0 0;
 }
 
-.doc > h1.page:first-child img {
+.doc > h1.page img {
   width: 2rem;
+}
+
+.doc .doc-eyebrow {
+  color: var(--color-orange-deep);
+  font-family: var(--monospace-font-family);
+  font-size: calc(12 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.doc > h1.page + .paragraph > p,
+.doc > #preamble > .sectionbody > .paragraph:first-child > p {
+  font-size: calc(16.5 / var(--rem-base) * 1rem);
+  line-height: 1.7;
+  margin: calc(20 / var(--rem-base) * 1rem) 0 0;
 }
 
 #preamble + .sect1,
@@ -53,19 +71,11 @@
 }
 
 .doc h2:not(.discrete) {
-  margin-top: 1rem;
-  margin-left: -1rem;
-  margin-right: -1rem;
-  padding: 0.4rem 1rem 0.1rem;
+  font-size: calc(26 / var(--rem-base) * 1rem);
+  letter-spacing: -0.02em;
+  margin: calc(44 / var(--rem-base) * 1rem) 0 0;
   overflow-wrap: break-word;
-}
-
-.doc h2:not(.discrete)::after {
-  content: '';
-  display: block;
-  position: relative;
-  height: 1px;
-  background-color: var(--section-divider-color);
+  padding: calc(8 / var(--rem-base) * 1rem) 0 0;
 }
 
 .doc h3:not(.discrete) {
@@ -116,6 +126,10 @@
 }
 
 .doc .table-wrapper {
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: calc(10 / var(--rem-base) * 1rem);
+  margin: calc(16 / var(--rem-base) * 1rem) 0 0;
   overflow-x: auto;
 }
 
@@ -157,7 +171,7 @@
   color: var(--link-font-color);
   word-break: break-word;
   text-decoration: none;
-  background-image: linear-gradient(to right, #583ac2 50%, transparent 50%);
+  background-image: linear-gradient(to right, var(--link-font-color) 50%, transparent 50%);
   background-position: 0 1.1em;
   background-repeat: repeat-x;
   background-size: 7px 1px;
@@ -179,6 +193,7 @@
 .doc table.tableblock tbody tr td:first-child {
   width: 25%;
   overflow-wrap: anywhere;
+  font-weight: 700;
 }
 
 .doc a:hover {
@@ -195,17 +210,17 @@
 
 .doc p code,
 .doc thead code {
-  color: var(--code-font-color);
   background: var(--code-background);
-  border-radius: 0.2rem;
-  font-size: calc(14 / var(--rem-base) * 1rem);
-  padding: 0.075rem 0.25rem 0.125rem;
+  border-radius: calc(4 / var(--rem-base) * 1rem);
+  color: var(--code-font-color);
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
   overflow-wrap: break-word;
+  padding: calc(2 / var(--rem-base) * 1rem) calc(6 / var(--rem-base) * 1rem);
 }
 
 .doc pre {
-  font-size: calc(14 / var(--rem-base) * 1rem);
-  line-height: 1.5;
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  line-height: 1.7;
   margin: 0;
 }
 
@@ -248,10 +263,7 @@
 .doc table.tableblock {
   border-collapse: collapse;
   font-size: calc(15 / var(--rem-base) * 1rem);
-  margin: 2rem 0;
-  /* enable table-layout: fixed if you want the table width to be enforced strictly */
-  /* alternative is to wrap table in div and set overflow-x: auto on the wrapper */
-  /* table-layout: fixed; */
+  margin: 0;
 }
 
 .doc table.stretch {
@@ -259,15 +271,28 @@
 }
 
 .doc table.tableblock thead th {
-  border-bottom: 2.5px solid var(--table-border-color);
-  padding: 0.5rem;
+  background: var(--color-paper-2);
+  border-bottom: 1px solid var(--color-line);
+  color: var(--color-ink-soft);
+  font-family: var(--monospace-font-family);
+  font-size: calc(11.5 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: calc(11 / var(--rem-base) * 1rem) calc(16 / var(--rem-base) * 1rem);
+  text-align: left;
+  text-transform: uppercase;
 }
 
 .doc table.tableblock td,
 .doc table.tableblock > :not(thead) th {
-  border-top: 1px solid var(--table-border-color);
-  border-bottom: 1px solid var(--table-border-color);
-  padding: 0.5rem;
+  border-top: 1px solid var(--color-line-soft);
+  border-bottom: 0;
+  padding: calc(12 / var(--rem-base) * 1rem) calc(16 / var(--rem-base) * 1rem);
+}
+
+.doc table.tableblock tbody tr:first-child > td,
+.doc table.tableblock tbody tr:first-child > th {
+  border-top: 0;
 }
 
 .doc .halign-left {
@@ -295,13 +320,35 @@
 }
 
 .doc .admonitionblock {
-  margin: 1.4rem 0 0;
-  box-shadow: inset 0 0 1.75px var(--abstract-border-color);
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-left: calc(3 / var(--rem-base) * 1rem) solid var(--color-camel-orange);
+  border-radius: 0 calc(12 / var(--rem-base) * 1rem) calc(12 / var(--rem-base) * 1rem) 0;
+  box-shadow: none;
+  margin: calc(28 / var(--rem-base) * 1rem) 0 0;
+  padding: calc(16 / var(--rem-base) * 1rem) calc(20 / var(--rem-base) * 1rem);
+}
+
+.doc .admonitionblock .table-wrapper {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.doc .colist .table-wrapper {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  overflow: visible;
 }
 
 .doc .admonitionblock p,
 .doc .admonitionblock td.content {
-  font-size: calc(16 / var(--rem-base) * 1rem);
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+  line-height: 1.6;
 }
 
 .doc .admonitionblock td.content > :first-child {
@@ -312,70 +359,75 @@
   font-size: calc(15 / var(--rem-base) * 1rem);
 }
 
-/* NOTE no table-layout: fixed here, unlike the default Antora UI. That UI positions td.icon
-   absolutely, so collapsing the icon column costs it nothing; this one keeps the icon in flow as a
-   vertical label bar, and fixed layout gives it zero width because td.content is width: 100%.
-   The rule matches nothing in production anyway, since extensions/table.js wraps every table in a
-   div.table-wrapper and breaks the child combinator. */
-.doc .admonitionblock > table {
+.doc .admonitionblock table {
   border-collapse: collapse;
   position: relative;
+  table-layout: auto;
   width: 100%;
 }
 
 .doc .admonitionblock td.content {
-  padding: 1rem 1rem 0.75rem;
-  background: var(--admonition-background);
-  width: 100%;
+  background: none;
+  color: var(--color-ink-soft);
+  padding: 0;
+  width: auto;
 }
 
-.doc .admonitionblock .icon {
-  position: relative;
-  top: 0;
-  left: 0;
-  font-size: calc(15 / var(--rem-base) * 1rem);
-  padding: 0 0.5rem;
-  height: 1.25rem;
-  line-height: 1;
-  font-weight: var(--admonition-label-font-weight);
-  text-transform: uppercase;
-}
-
-.doc .admonitionblock.caution .icon {
-  background-color: var(--caution-color);
-  color: var(--caution-on-color);
-}
-
-.doc .admonitionblock.important .icon {
-  background-color: var(--important-color);
-  color: var(--important-on-color);
-}
-
-.doc .admonitionblock.note .icon {
-  background-color: var(--note-color);
-  color: var(--note-on-color);
-}
-
-.doc .admonitionblock.tip .icon {
-  background-color: var(--tip-color);
-  color: var(--tip-on-color);
-}
-
-.doc .admonitionblock.warning .icon {
-  background-color: var(--warning-color);
-  color: var(--warning-on-color);
+.doc .admonitionblock td.icon {
+  padding: 0 calc(14 / var(--rem-base) * 1rem) 0 0;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .doc .admonitionblock .icon i {
-  display: inline-flex;
-  align-items: center;
-  height: 100%;
+  background: var(--color-orange-tint);
+  border-radius: calc(20 / var(--rem-base) * 1rem);
+  color: var(--color-orange-deep);
+  display: inline-block;
+  font-family: var(--monospace-font-family);
+  font-size: calc(11 / var(--rem-base) * 1rem);
+  font-style: normal;
+  font-weight: 600;
+  height: auto;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  padding: calc(3 / var(--rem-base) * 1rem) calc(8 / var(--rem-base) * 1rem);
+  text-transform: uppercase;
+  vertical-align: top;
 }
 
 .doc .admonitionblock .icon i::after {
   content: attr(title);
   hyphens: none;
-  writing-mode: tb-rl;
+  writing-mode: horizontal-tb;
+}
+
+.doc .admonitionblock.caution {
+  border-left-color: var(--caution-color);
+}
+
+.doc .admonitionblock.caution .icon i {
+  background: var(--caution-tint);
+  color: var(--caution-chip-font-color);
+}
+
+.doc .admonitionblock.important {
+  border-left-color: var(--important-color);
+}
+
+.doc .admonitionblock.important .icon i {
+  background: var(--important-tint);
+  color: var(--important-chip-font-color);
+}
+
+.doc .admonitionblock.warning {
+  border-left-color: var(--warning-color);
+}
+
+.doc .admonitionblock.warning .icon i {
+  background: var(--warning-tint);
+  color: var(--warning-chip-font-color);
 }
 
 .doc .imageblock {
@@ -439,13 +491,18 @@
 .doc table.tableblock .admonitionblock,
 .doc .ulist .admonitionblock,
 .doc .olist .admonitionblock {
-  padding: 0;
+  padding: calc(16 / var(--rem-base) * 1rem) calc(20 / var(--rem-base) * 1rem);
 }
 
 .doc ol,
 .doc ul {
   margin: 0;
-  padding: 0 0 0 2rem;
+  padding: 0 0 0 calc(22 / var(--rem-base) * 1rem);
+}
+
+.doc .olist > ol,
+.doc .ulist > ul {
+  line-height: 1.8;
 }
 
 .doc ol.arabic {
@@ -583,10 +640,20 @@
 .doc pre:not(.highlight),
 .doc pre.highlight code {
   background: var(--pre-background);
-  box-shadow: inset 0 0 1.75px var(--pre-border-color);
+  border-radius: calc(10 / var(--rem-base) * 1rem);
+  box-shadow: none;
+  color: var(--pre-font-color);
   display: block;
   overflow-x: auto;
-  padding: 0.75rem;
+  padding: calc(18 / var(--rem-base) * 1rem) calc(20 / var(--rem-base) * 1rem);
+}
+
+.doc .listingblock {
+  margin-top: calc(14 / var(--rem-base) * 1rem);
+}
+
+.doc pre code {
+  color: inherit;
 }
 
 .doc pre.highlight code::-webkit-scrollbar {
@@ -594,18 +661,18 @@
 }
 
 .doc pre.highlight code::-webkit-scrollbar-track {
-  background: var(--scrollbar-track-color);
+  background: var(--color-dark-2);
   border-radius: var(--scrollbar-radius);
 }
 
 .doc pre.highlight code::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb-color);
+  background: var(--color-dark-line);
   border-radius: var(--scrollbar-radius);
 }
 
 .doc pre.highlight code::-webkit-scrollbar-thumb:hover,
 .doc pre.highlight code::-webkit-scrollbar-thumb:active {
-  background: var(--scrollbar-thumb-active-color);
+  background: var(--color-on-dark-muted);
 }
 
 /* NOTE assume pre.highlight contains code[data-lang] */
@@ -847,18 +914,6 @@
   .doc .sect1 + .sect1 {
     overflow-wrap: break-word;
   }
-}
-
-@media screen and (width <= 1024px) and (width >= 480px) {
-  .doc p code,
-  .doc thead code {
-    font-size: var(--body-font-size);
-  }
-}
-
-table.tableblock thead {
-  background: var(--color-smoke-90);
-  font-weight: var(--body-font-weight-bold);
 }
 
 /* Status badges used in Camel Quarkus extension pages */

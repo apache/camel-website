@@ -1,48 +1,165 @@
 {{ partial "header.html" . }}
+{{- $home := .Site.Data.home }}
 
-<header class="frontpage" aria-label="Apache Camel front page">
-  <div class="main-heading">
-    <h1>Apache Camel</h1>
-    <p>
-      Camel is an Open Source integration framework that empowers you
-      to quickly and easily integrate various systems consuming or producing data.
-    </p>
-    <p>
-    <a class="button dark" href="/docs/index.html">Get Started</a> <a class="button light" href="/what-is-apache-camel/">What is Camel?</a>
-    </p>
-  </div>
-  <img alt="Computer with gears depicting data processing" src="./img/camel-gears.svg" />
-</header>
+<main class="home">
 
-<div class="frontpage news">
-  <h2>What's New?</h2>
-</div>
+  {{- with $home.hero }}
+  <section class="home-hero" aria-label="Apache Camel">
+    <div class="home-hero-copy">
+      <p class="home-hero-badge">{{ .eyebrow }}</p>
+      <h1>{{ .title }}</h1>
+      <p class="home-hero-tagline">{{ .tagline }}</p>
+      <p class="home-hero-lead">{{ .lead }}</p>
+      <p class="home-hero-actions">
+        <a class="button dark" href="{{ .primary_cta.url | relURL }}">{{ .primary_cta.label }}</a>
+        <a class="button light" href="{{ .secondary_cta.url | relURL }}">{{ .secondary_cta.label }}</a>
+      </p>
+      <div class="home-cli" data-home-copy>
+        <code class="home-cli-command"><span class="home-cli-prompt">$</span> {{ .command }}</code>
+        <button class="home-cli-copy" type="button" data-command="{{ .command }}">Copy</button>
+      </div>
+    </div>
+    <div class="home-hero-art">
+      <img src="{{ path.Join "_" (index site.Data "rev-manifest" "img/logo-d.svg") | relURL }}" alt="Apache Camel">
+    </div>
+  </section>
+  {{- end }}
 
-<section class="frontpage columns blog-posts">
-  <ul>
-    {{with .Site.GetPage "section" "blog"}}
-      {{range .Pages | first 3}}
+  {{- with $home.stats }}
+  <section class="home-stats" aria-label="Project activity">
+    <div class="home-stats-inner">
+      <p class="home-stats-label">{{ .label }}</p>
+      <ul class="home-stats-list">
+        {{- range .items }}
+        <li>
+          <span class="home-stat-num">{{ .num }}</span>
+          <span class="home-stat-label">{{ .label }}</span>
+        </li>
+        {{- end }}
+      </ul>
+    </div>
+  </section>
+  {{- end }}
 
-      <li class="blog-post">
-        <time datetime="{{ dateFormat "2006-01-02" .PublishDate }}" class="date">
-          <data class="day">
-              {{ dateFormat "2" .PublishDate }}
-          </data>
-          <data class="month">
-              {{ dateFormat "Jan" .PublishDate }}
-              {{ dateFormat "2006" .PublishDate }}
-          </data>
-        </time>
-        <div class="content">
-          <h2>{{ .Title }}</h2>
-          <p>{{ .Params.preview }}... <a href="{{ .RelPermalink }}">Read More</a></p>
+  {{- with $home.get_started }}
+  <section class="home-section home-started" aria-labelledby="home-started-title">
+    <div class="home-section-head">
+      <p class="home-eyebrow">{{ .eyebrow }}</p>
+      <h2 id="home-started-title">{{ .heading }}</h2>
+    </div>
+    <ul class="home-grid home-grid--three">
+      {{- range .items }}
+      <li class="home-card home-started-card">
+        <div class="home-started-head">
+          <h3>{{ .name }}</h3>
+          {{- with .badge }}<span class="home-badge">{{ . }}</span>{{ end }}
         </div>
+        <p class="home-started-desc">{{ .description }}</p>
+        <pre class="home-started-code">{{ .code }}</pre>
+        <a class="home-started-link" href="{{ .url | relURL }}">Start with {{ .name }} &rarr;</a>
       </li>
-      {{end}}
-    {{end}}
-  </ul>
-</section>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
 
-{{ .Content }}
+  {{- with $home.features }}
+  <section class="home-section" aria-labelledby="home-features-title">
+    <div class="home-section-head">
+      <p class="home-eyebrow">{{ .eyebrow }}</p>
+      <h2 id="home-features-title">{{ .heading }}</h2>
+    </div>
+    <ul class="home-grid home-grid--features">
+      {{- range .items }}
+      <li class="home-card home-feature">
+        <span class="home-feature-tag">{{ .tag }}</span>
+        <h3>{{ .title }}</h3>
+        <p>{{ .body }}</p>
+      </li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
+
+  {{- with $home.example }}
+  <section class="home-section" aria-labelledby="home-example-title">
+    <div class="home-section-head">
+      <p class="home-eyebrow">{{ .eyebrow }}</p>
+      <h2 id="home-example-title">{{ .heading }}</h2>
+      <p class="home-section-sub">{{ .subhead }}</p>
+    </div>
+    <div class="home-example">
+      <div class="home-tablist" role="tablist" aria-label="Route syntax">
+        {{- range $i, $tab := .tabs }}
+        <button class="home-tab" type="button" role="tab"
+                id="home-tab-{{ $tab.id }}"
+                aria-controls="home-panel-{{ $tab.id }}"
+                aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}"
+                tabindex="{{ if eq $i 0 }}0{{ else }}-1{{ end }}">{{ $tab.label }}</button>
+        {{- end }}
+      </div>
+      {{- range $i, $tab := .tabs }}
+      <div class="home-tabpanel" role="tabpanel"
+           id="home-panel-{{ $tab.id }}"
+           aria-labelledby="home-tab-{{ $tab.id }}"
+           tabindex="0"
+           {{ if ne $i 0 }}hidden{{ end }}><pre>{{ $tab.code }}</pre></div>
+      {{- end }}
+      <p class="home-example-run">
+        <span class="home-example-prompt">$</span>
+        <span class="home-example-command">{{ .run_command }}</span>
+      </p>
+    </div>
+  </section>
+  {{- end }}
+
+  {{- with $home.tiles }}
+  {{/*
+    id="apache-camel-projects" is a compatibility anchor, not a styling hook. The old
+    home page carried a "# Apache Camel Projects" heading, which blackfriday heading
+    IDs (config.toml autoHeadingIDType) rendered as this id. Inbound links point at
+    /#apache-camel-projects, including a 2022 post under content/blog/2022/10/ (grep
+    the tree for the anchor). Dropping it turns `yarn check:links` red. Keep it on
+    whichever element holds the project tiles.
+  */}}
+  <section id="apache-camel-projects" class="home-section" aria-labelledby="home-tiles-title">
+    <div class="home-section-head">
+      <p class="home-eyebrow">{{ .eyebrow }}</p>
+      <h2 id="home-tiles-title">{{ .heading }}</h2>
+      <p class="home-section-sub">{{ .subhead }}</p>
+    </div>
+    <ul class="home-grid home-grid--four">
+      {{- range .items }}
+      <li class="home-card home-tile">
+        <img class="home-tile-icon" alt=""
+             src="{{ path.Join "_" (index site.Data "rev-manifest" (printf "img/%s.svg" .icon)) | relURL }}">
+        <h3>{{ .name }}</h3>
+        <p>{{ .description }}</p>
+        <a class="home-tile-link" href="{{ .url | relURL }}" aria-label="Read more about {{ .name }}">Read more &rarr;</a>
+      </li>
+      {{- end }}
+    </ul>
+    <p class="home-tiles-cta">
+      <a class="button light" href="{{ .cta.url | relURL }}">{{ .cta.label }}</a>
+    </p>
+  </section>
+  {{- end }}
+
+  {{- with $home.closing }}
+  <section class="home-closing" aria-labelledby="home-closing-title">
+    <div class="home-closing-inner">
+      <div class="home-closing-copy">
+        <h2 id="home-closing-title">{{ .heading }}</h2>
+        <p>{{ .body }}</p>
+      </div>
+      <p class="home-closing-actions">
+        <a class="button dark" href="{{ .primary_cta.url | relURL }}">{{ .primary_cta.label }}</a>
+        <a class="button on-dark" href="{{ .secondary_cta.url | relURL }}">{{ .secondary_cta.label }}</a>
+      </p>
+    </div>
+  </section>
+  {{- end }}
+
+</main>
 
 {{ partial "footer.html" . }}

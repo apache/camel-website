@@ -1,0 +1,61 @@
+# Shared site chrome. Read by Hugo as .Site.Data.chrome and by the Antora UI
+# through src/helpers/withChromeData.js. Edit here, never in the templates.
+brand:
+  name: Apache Camel
+  blurb: >-
+    Open source integration framework. An Apache Software Foundation project,
+    available under the Apache v2 license.
+
+columns:
+  - title: Overview
+    id: overview
+    links:
+      - { name: Blog, url: /blog/ }
+      - { name: Documentation, url: /docs/ }
+      - { name: Tooling, url: /tooling/ }
+      - { name: Community, url: /community/ }
+      - { name: Download, url: /download/ }
+      - { name: All projects, url: /projects/ }
+  - title: Documentation
+    id: documentation
+    links:
+      - { name: User Manual, url: /manual/ }
+      - { name: Components, url: /components/next/index.html }
+      - { name: Camel-K, url: /camel-k/next/ }
+      - { name: Camel Kafka Connector, url: /camel-kafka-connector/next/ }
+      - { name: Camel Quarkus, url: /camel-quarkus/next/ }
+      - { name: Camel Spring Boot, url: /camel-spring-boot/next/ }
+      - { name: Camel Karaf, url: /camel-karaf/latest/ }
+      - { name: FAQ, url: /manual/faq/index.html }
+  - title: Community
+    id: community
+    links:
+      - { name: Support, url: /community/support/ }
+      - { name: Contributing, url: /community/contributing/ }
+      - { name: Mailing Lists, url: /community/mailing-list/ }
+      - { name: Who Uses Camel, url: /community/user-stories/ }
+      - { name: Articles, url: /community/articles/ }
+      - { name: Books, url: /community/books/ }
+      - { name: Team, url: /community/team/ }
+  - title: About
+    id: about
+    links:
+      - { name: Acknowledgments, url: /acknowledgments/ }
+      - { name: Apache Events, url: 'https://www.apache.org/events/current-event.html', external: true }
+      - { name: License, url: 'https://www.apache.org/licenses/', external: true }
+      - { name: Security, url: 'https://www.apache.org/security/', external: true }
+      - { name: Sponsorship, url: 'https://www.apache.org/foundation/sponsorship.html', external: true }
+      - { name: Thanks, url: 'https://www.apache.org/foundation/thanks.html', external: true }
+      - { name: Trust, url: /trust/ }
+
+social:
+  - { name: GitHub, icon: github, url: 'https://github.com/apache/camel/', title: Collaborate on GitHub, external: true }
+  - { name: Zulip, icon: zulip, url: 'https://camel.zulipchat.com', title: Chat on Zulip, external: true }
+  - { name: Twitter, icon: twitter, url: 'https://twitter.com/ApacheCamel', title: Follow Apache Camel on Twitter, external: true }
+  - { name: LinkedIn, icon: linkedin, url: 'https://www.linkedin.com/groups/2447439/', title: Apache Camel group on Linkedin, external: true }
+  - { name: RSS, icon: rss, url: /blog/index.xml, title: Subscribe to RSS Feed }
+
+legal:
+  - { name: Privacy Policy, url: 'https://privacy.apache.org/policies/privacy-policy-public.html', external: true }
+  - { name: Code of Conduct, url: 'https://www.apache.org/foundation/policies/conduct', external: true }
+  - { name: Sitemap, url: /sitemap/ }

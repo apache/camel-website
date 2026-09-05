@@ -1,7 +1,216 @@
+/* Security page (content/security, layouts/security/list.html).
+   H1/lead use the shared .page-hero-title/.page-hero-lead primitives; the
+   "Security advisories" heading uses .section-label; the three light cards
+   use .card/.card--lg/.card--flat with only page-scoped header/eyebrow
+   typography; the severity chip uses the shared .severity-chip color
+   mapping with page-scoped sizing (components.css deliberately leaves
+   size/padding local per consumer). The dark "Reporting" band is NOT a
+   .card variant -- see .superpowers/sdd/4b/00-primitives.md section 1.9: a
+   horizontal, wrapping layout is a genuinely different shape from the card
+   system, not a --dark modifier of it. */
+
+/* .security page shell: shared with .download/.advisory in primitives.css
+   - see M5, final-review.md. */
+
+.security-hero {
+  max-width: calc(760 / var(--rem-base) * 1rem);
+}
+
+.security-grid {
+  margin-top: calc(40 / var(--rem-base) * 1rem);
+}
+
+.security-card--feature {
+  grid-column: 1 / -1;
+}
+
+.security-card--feature h2 {
+  font-family: var(--display-font-family);
+  font-weight: 800;
+  font-size: calc(26 / var(--rem-base) * 1rem);
+  letter-spacing: -0.02em;
+  margin: calc(10 / var(--rem-base) * 1rem) 0 0;
+}
+
+.security-card--feature p {
+  font-size: calc(15.5 / var(--rem-base) * 1rem);
+  line-height: 1.6;
+  color: var(--color-ink-soft);
+  margin: calc(12 / var(--rem-base) * 1rem) 0 0;
+  max-width: calc(820 / var(--rem-base) * 1rem);
+}
+
+/* .security-eyebrow: shared shape lives in primitives.css - see M5,
+   final-review.md. */
+
+.security-card {
+  padding: calc(26 / var(--rem-base) * 1rem);
+}
+
+.security-card h3 {
+  font-family: var(--display-font-family);
+  font-weight: 700;
+  font-size: calc(18 / var(--rem-base) * 1rem);
+  margin: 0;
+}
+
+.security-card p {
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+  line-height: 1.6;
+  color: var(--color-ink-soft);
+  margin: calc(10 / var(--rem-base) * 1rem) 0 0;
+}
+
+.security-card--feature a,
+.security-card a,
+.security-band a {
+  color: var(--link-font-color);
+}
+
+.security-card--feature a:hover,
+.security-card a:hover,
+.security-band a:hover {
+  color: var(--link_hover-font-color);
+}
+
+/* dark "reporting" band */
+
+.security-band {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: calc(24 / var(--rem-base) * 1rem);
+  background: var(--color-ink);
+  border-radius: 16px; /* radius exemption: raw px */
+  padding: calc(32 / var(--rem-base) * 1rem);
+  color: var(--color-on-dark);
+}
+
+.security-band-copy {
+  flex: 1;
+  min-width: calc(300 / var(--rem-base) * 1rem);
+}
+
+.security-band-copy h2 {
+  font-family: var(--display-font-family);
+  font-weight: 800;
+  font-size: calc(24 / var(--rem-base) * 1rem);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.security-band-copy p {
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  line-height: 1.6;
+  color: var(--color-on-dark-soft);
+  margin: calc(10 / var(--rem-base) * 1rem) 0 0;
+  max-width: calc(640 / var(--rem-base) * 1rem);
+}
+
+.security-band .button {
+  white-space: nowrap;
+}
+
+/* advisories table */
+
+.security-advisories {
+  width: 100%;
+  font-size: calc(14 / var(--rem-base) * 1rem);
+  border-collapse: collapse;
+}
+
+.security-advisories thead tr {
+  font-family: var(--monospace-font-family);
+  font-size: calc(11.5 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  color: var(--color-ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: left;
+}
+
+.security-advisories thead th {
+  padding: calc(14 / var(--rem-base) * 1rem) calc(12 / var(--rem-base) * 1rem) calc(10 / var(--rem-base) * 1rem);
+}
+
+.security-advisories thead th:first-child {
+  padding-left: 0;
+}
+
+.security-advisories thead th:last-child {
+  padding-right: 0;
+}
+
+.security-advisories tbody th {
+  text-align: left;
+  padding: calc(26 / var(--rem-base) * 1rem) 0 calc(8 / var(--rem-base) * 1rem);
+  font-family: var(--display-font-family);
+  font-weight: 800;
+  font-size: calc(22 / var(--rem-base) * 1rem);
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+}
+
+.security-advisories .security-row {
+  border-top: 1px solid var(--color-line-soft);
+}
+
+.security-advisories td {
+  padding: calc(12 / var(--rem-base) * 1rem);
+  color: var(--color-ink-soft);
+}
+
+.security-advisories td:first-child {
+  padding-left: 0;
+  font-family: var(--monospace-font-family);
+  font-size: calc(13 / var(--rem-base) * 1rem);
+  color: var(--body-font-color);
+}
+
+.security-advisories td:first-child a {
+  font-weight: 600;
+  color: var(--link-font-color);
+}
+
+.security-advisories td:first-child a:hover {
+  color: var(--link_hover-font-color);
+  text-decoration: none;
+}
+
+.security-advisories td:last-child {
+  padding-right: 0;
+  line-height: 1.5;
+}
+
+.security-severity {
+  font-size: calc(11.5 / var(--rem-base) * 1rem);
+  padding: calc(3 / var(--rem-base) * 1rem) calc(8 / var(--rem-base) * 1rem);
+}
+
+.security .table-wrapper {
+  overflow-x: auto;
+}
+
 .security td:only-child {
   text-align: center;
 }
 
 .security td:first-child {
   white-space: nowrap;
+}
+
+/* responsive */
+
+@media screen and (width <= 1024px) {
+  .security-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (width <= 626px) {
+  .security-band {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }

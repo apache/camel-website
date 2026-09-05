@@ -50,29 +50,23 @@
     {{ end }}
 {{ end }}
 
-{{/* if the version we're asked to render ($.Version is specifically set) and that version is contained within $versions, i.e. it will be featured on the downloads page, that version is current */}}
-{{ if $.Version }}
-    {{/* when version is specified, this is included from the release page */}}
-    {{ range $version := $versions }}
-        {{ range $kind, $v := $version }}
-            {{ if eq $v $.Version }}
-                {{ $is_current_versions = true }}
-            {{ end }}
+{{/* if the version we're asked to render ($.Version, always set by the release-page partials that include this one) is contained within $versions, i.e. it is featured on the downloads page, that version is current */}}
+{{ range $version := $versions }}
+    {{ range $kind, $v := $version }}
+        {{ if eq $v $.Version }}
+            {{ $is_current_versions = true }}
         {{ end }}
     {{ end }}
-
-    {{/* we have determined that the $.Version will not be rendered on the downloads page, so we need to link to archive */}}
-    {{ if not $is_current_versions }}
-        {{ $artifact_base_url = "https://archive.apache.org/dist/" }}
-        {{ $meta_base_url = "https://archive.apache.org/dist/" }}
-    {{ end }}
-
-    {{/* we're rendering a specific version, we don't need all collected kinds/versions above */}}
-    {{ $versions = slice (dict "" $.Version) }}
-{{ else }}
-    {{/* no $.Version requested, we're rendering the downloads page, all versions should be current */}}
-    {{ $is_current_versions = true }}
 {{ end }}
+
+{{/* we have determined that the $.Version will not be rendered on the downloads page, so we need to link to archive */}}
+{{ if not $is_current_versions }}
+    {{ $artifact_base_url = "https://archive.apache.org/dist/" }}
+    {{ $meta_base_url = "https://archive.apache.org/dist/" }}
+{{ end }}
+
+{{/* we're rendering a specific version, we don't need all collected kinds/versions above */}}
+{{ $versions = slice (dict "" $.Version) }}
 
 {{/* the same version can be matched by two kinds (say be latest and lts at the same time), this merges the multiple version entries into single */}}
 {{ $versions_grouped := slice }}
@@ -117,10 +111,6 @@
 <table class="tableblock frame-all grid-all stretch">
     <thead>
         <tr>
-            {{ if eq $.Section "download" }}
-                <th>Version</th>
-                <th>Note</th>
-            {{ end }}
             <th>Download</th>
             <th>Signature and checksum</th>
         </tr>
@@ -144,37 +134,6 @@
             {{ end }}
 
             <tr>
-                {{ if eq $.Section "download" }}
-                    {{ if gt (len $downloads) 1 }}
-                    <td rowspan="{{ len $downloads }}">
-                    {{ else }}
-                    <td>
-                    {{ end }}
-                        <strong><a href="{{ $release_note.Permalink | relURL }}">{{ $v }}</a></strong>
-                        {{ with $kind }}
-                            <br/>
-                            <em class="kind">{{ . }}</em>
-                        {{ end }}
-                    </td>
-                    {{ if gt (len $downloads) 1 }}
-                    <td rowspan="{{ len $downloads }}">
-                    {{ else }}
-                    <td>
-                    {{ end }}
-                        <a href="{{ $release_note.Permalink | relURL }}">Release notes</a>
-                        <br/>
-                        {{ with (index (where (where (where $.Pages "Section" "releases") ".Params.category" $.Category.id) ".Params.version" $v) 0) }}
-                        <small>
-                            {{ with .Params.jdk }}
-                              Supports Java {{ delimit . ", " " and " }}
-                              <br>
-                            {{ end }}
-                            Released in {{ (.Param "date").Format "Jan 2006" }}{{ if .Param "eol" }}, end of life in {{ dateFormat "Jan 2006" (.Param "eol") }}
-                            {{ end }}
-                        </small>
-                        {{ end }}
-                    </td>
-                {{ end }}
                 {{ range $idx, $download := $downloads }}
                     {{ if ne $idx 0 }}
                     </tr><tr>
@@ -185,7 +144,7 @@
                         <td><a href="{{ $artifact_base_url }}{{ $path }}">{{ $filename }}</a> ({{ $download.name}})</td>
                         <td><a href="{{ $meta_base_url }}{{ $path }}.asc">PGP Signature</a>, <a href="{{ $meta_base_url }}{{ $path }}{{ $hash_extension }}">SHA512 Checksum</a></td>
                     {{ else }}
-                         <td colspan="3"><a href="{{ .link }}">{{ replace .title "{version}" $v }}</a></td>
+                         <td colspan="2"><a href="{{ .link }}">{{ replace .title "{version}" $v }}</a></td>
                     {{ end }}
                 {{ end }}
             </tr>

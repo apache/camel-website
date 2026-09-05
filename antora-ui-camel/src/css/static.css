@@ -30,9 +30,7 @@
   margin-right: 0.5rem;
 }
 
-.static .icon a,
-.static a.button-light,
-.static a.button-dark {
+.static .icon a {
   background-image: none;
 }
 
@@ -77,12 +75,27 @@
     flex-direction: column-reverse;
   }
 
-  .static .button-light {
-    line-height: 4rem;
-  }
-
   .static a.icon {
     margin: 0;
     width: 100%;
   }
+}
+
+.static.doc:not(.tooling) {
+  padding: calc(56 / var(--rem-base) * 1rem) var(--page-padding-x) calc(40 / var(--rem-base) * 1rem);
+}
+
+@media screen and (width <= 1024px) {
+  .static.doc:not(.tooling) {
+    padding: calc(32 / var(--rem-base) * 1rem) calc(20 / var(--rem-base) * 1rem) calc(48 / var(--rem-base) * 1rem);
+  }
+}
+
+.static.doc:not(.tooling) > h2,
+.static.doc:not(.tooling) > h3,
+.static.doc:not(.tooling) > p,
+.static.doc:not(.tooling) > pre,
+.static.doc:not(.tooling) > ul,
+.static.doc:not(.tooling) > .table-wrapper {
+  max-width: calc(760 / var(--rem-base) * 1rem);
 }

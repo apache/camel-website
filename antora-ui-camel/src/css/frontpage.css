@@ -1,420 +1,674 @@
-/* common css for sections */
+/* Buttons, shared by the header, the home page, and static content pages. */
 
-section.frontpage h1,
-section.frontpage h2 {
-  font-weight: var(--heading-font-weight);
-  color: var(--heading-font-color);
-  line-height: 1.3;
-  margin: 1rem 0 0;
-  text-transform: uppercase;
-  word-wrap: break-word;
-}
-
-section.frontpage {
-  color: var(--doc-font-color);
-  font-size: var(--doc-font-size);
-  line-height: var(--doc-line-height);
-  margin: 0 auto;
-  max-width: var(--frontpage-max-width);
-}
-
-section.frontpage a {
-  color: var(--link-font-color);
-  text-decoration: none;
-  background-image: linear-gradient(to right, #583ac2 50%, transparent 50%);
-  background-position: 0 1.1em;
-  background-repeat: repeat-x;
-  background-size: 7px 1px;
-}
-
-section.frontpage a:hover {
-  color: var(--link_hover-font-color);
-}
-
-section.frontpage h1 {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
-}
-
-section.frontpage h2 {
-  text-align: center;
-}
-
-/* css for header section */
-
-header.frontpage {
-  display: flex;
-  flex-direction: row;
-  margin: 2rem 3rem 2.5rem;
-}
-
-header.frontpage img {
-  width: 45vw;
-  max-height: 50vh;
-}
-
-header.frontpage .main-heading {
-  width: 50vw;
-  display: flex;
-  flex-direction: column;
-  margin-left: 2rem;
-}
-
-header.frontpage h1 {
-  font-size: 5vw;
-  color: var(--color-asf-dark-blue);
-  margin-bottom: 0.5rem;
-}
-
-header.frontpage p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  line-height: 1.7rem;
-}
-
-a.button,
-section.frontpage a.button {
-  white-space: nowrap;
-  margin: 0.5rem;
+a.button {
+  align-items: center;
   background-image: none;
-  border-radius: 3rem;
-  font-weight: bold;
-  padding: 0.4rem 1rem;
-  display: inline-block;
+  border-radius: calc(8 / var(--rem-base) * 1rem);
+  display: inline-flex;
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  font-weight: 700;
+  gap: calc(8 / var(--rem-base) * 1rem);
+  line-height: 1;
+  margin: 0.5rem;
+  padding: calc(13 / var(--rem-base) * 1rem) calc(24 / var(--rem-base) * 1rem);
+  white-space: nowrap;
 }
 
-header.frontpage a.button {
-  padding: 0.7rem 1rem;
-}
-
-a.button.dark,
-section.frontpage a.button.dark,
-section.frontpage a.button.dark:hover,
-a.button.dark:hover {
+/* Ink on the brand orange: white on #e97826 is 2.93:1, ink is 5.78:1, and the
+   memo keeps the orange itself. Hover lifts to the lighter orange, where ink
+   reads at 7.30:1 (a darker hover would drop ink below 4.5:1). */
+a.button.dark {
   background-color: var(--color-camel-orange);
-  color: white;
+  color: var(--color-ink);
+}
+
+a.button.dark:hover {
+  background-color: var(--color-camel-orange-light);
+  color: var(--color-ink);
 }
 
 a.button.light,
 a.button.light:hover {
-  border: 1px solid var(--color-gray-70);
-  color: var(--color-gray-70);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-line);
+  color: var(--color-ink);
 }
 
-/* css for blog section */
+a.button.on-dark,
+a.button.on-dark:hover {
+  background-color: transparent;
+  border: 1px solid var(--color-button-on-dark-border);
+  color: var(--color-on-dark);
+}
 
-div.frontpage.news {
-  padding: 0.2rem 0;
-  width: 20%;
+a.button.ink {
+  background-color: var(--color-ink);
+  color: var(--color-white);
+}
+
+a.button.ink:hover {
+  background-color: var(--color-ink-2);
+}
+
+/* Home page (layouts/index.html, data/home.yaml) */
+
+.home {
+  color: var(--color-ink-2);
+  /* footer.css pulls .footer-tools up 2rem (36px at --rem-base: 18) into
+     whatever ends <main>. Clear that here, on .home itself, so the utility
+     line always lands on plain page background regardless of which section
+     is last in the page (see footer.css:126-141). */
+  padding-bottom: calc(48 / var(--rem-base) * 1rem);
+}
+
+.home a {
+  background-image: none;
+  text-decoration: none;
+}
+
+/* Shared section vocabulary, reused by every home section. */
+
+.home-section {
+  margin: 0 auto;
+  max-width: var(--frontpage-max-width);
+  padding: calc(66 / var(--rem-base) * 1rem) var(--page-padding-x)
+           calc(20 / var(--rem-base) * 1rem);
+}
+
+.home-section-head {
+  margin-bottom: calc(44 / var(--rem-base) * 1rem);
   text-align: center;
-  margin-left: 3rem;
-  background-color: var(--color-smoke-50);
-  border-radius: 1rem 1rem 0 0;
 }
 
-div.frontpage.news h2 {
-  margin-bottom: 0.5rem;
-}
-
-section.frontpage.columns.blog-posts {
+.home-eyebrow {
+  color: var(--color-orange-deep);
+  font-family: var(--monospace-font-family);
+  font-size: calc(12.5 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
   margin: 0;
-  display: flex;
-  flex-direction: row;
-  padding: 1rem 1rem 1rem 3rem;
-  max-width: none;
-  border-top: none;
-  background-color: var(--color-smoke-50);
-}
-
-section.frontpage.blog-posts ul {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-}
-
-li.blog-post .content {
-  padding: 1rem;
-  padding-right: 0.5rem;
-}
-
-li.blog-post .content h2 {
-  text-align: left;
-  margin: 0;
-}
-
-li.blog-post .content p {
-  margin: 0.2rem 0;
-}
-
-li.blog-post .content a {
-  font-weight: bold;
-  white-space: nowrap;
-  background: none;
-}
-
-li.blog-post {
-  display: flex;
-  width: 30vw;
-  margin: 0;
-  padding-right: 1rem;
-}
-
-li.blog-post:last-child {
-  padding-right: 0;
-}
-
-li.blog-post time.date {
-  margin-top: 1rem;
-  text-align: center;
-  color: var(--color-asf-dark-blue);
   text-transform: uppercase;
 }
 
-li.blog-post time.date .day {
-  font-size: 3.2rem;
-  font-weight: bold;
+.home-section-head h2 {
+  font-family: var(--display-font-family);
+  font-size: calc(38 / var(--rem-base) * 1rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin: calc(12 / var(--rem-base) * 1rem) 0 0;
+}
+
+.home-section-sub {
+  color: var(--color-ink-soft);
+  font-size: calc(16 / var(--rem-base) * 1rem);
+  margin: calc(6 / var(--rem-base) * 1rem) 0 0;
+}
+
+.home-grid {
+  display: grid;
+  list-style: none;
+  margin: 0;
   padding: 0;
-  line-height: 1;
-  display: block;
 }
 
-li.blog-post time.date .month {
-  font-size: 1.5rem;
-  font-weight: bold;
+.home-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: calc(13 / var(--rem-base) * 1rem);
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+
+/* .home-card:hover: shared hover lift lives in primitives.css (.card:hover
+   selector group) - see M5, final-review.md. */
+
+/* Hero */
+
+.home-hero {
+  align-items: center;
+  display: grid;
+  gap: calc(56 / var(--rem-base) * 1rem);
+  grid-template-columns: 1.05fr 0.95fr;
+  margin: 0 auto;
+  max-width: var(--frontpage-max-width);
+  padding: calc(64 / var(--rem-base) * 1rem) var(--page-padding-x)
+           calc(56 / var(--rem-base) * 1rem);
+}
+
+.home-hero-badge {
+  align-items: center;
+  background: var(--color-orange-tint);
+  border-radius: calc(20 / var(--rem-base) * 1rem);
+  color: var(--color-orange-deep);
+  display: inline-flex;
+  font-family: var(--monospace-font-family);
+  font-size: calc(12.5 / var(--rem-base) * 1rem);
+  font-weight: 500;
+  gap: calc(8 / var(--rem-base) * 1rem);
+  letter-spacing: 0.02em;
+  margin: 0;
+  padding: calc(6 / var(--rem-base) * 1rem) calc(12 / var(--rem-base) * 1rem);
+}
+
+.home-hero h1 {
+  color: var(--color-ink);
+  font-family: var(--display-font-family);
+  font-size: calc(60 / var(--rem-base) * 1rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  margin: calc(20 / var(--rem-base) * 1rem) 0 0;
+}
+
+.home-hero-tagline {
+  color: var(--color-ink-2);
+  font-family: var(--display-font-family);
+  font-size: calc(25 / var(--rem-base) * 1rem);
+  font-weight: 600;
   line-height: 1.2;
+  margin: calc(14 / var(--rem-base) * 1rem) 0 0;
+}
+
+.home-hero-lead {
+  color: var(--color-ink-soft);
+  font-size: calc(17.5 / var(--rem-base) * 1rem);
+  line-height: 1.55;
+  margin: calc(20 / var(--rem-base) * 1rem) 0 0;
+  max-width: calc(520 / var(--rem-base) * 1rem);
+  text-wrap: pretty;
+}
+
+.home-hero-actions {
+  display: flex;
+  gap: calc(14 / var(--rem-base) * 1rem);
+  margin: calc(30 / var(--rem-base) * 1rem) 0 0;
+}
+
+.home-hero-actions .button {
+  font-size: calc(15.5 / var(--rem-base) * 1rem);
+  margin: 0;
+  padding: calc(14 / var(--rem-base) * 1rem) calc(26 / var(--rem-base) * 1rem);
+}
+
+.home-hero-art {
+  align-items: center;
+  aspect-ratio: 1 / 0.86;
+  background: radial-gradient(circle at 50% 50%, var(--color-paper-2) 0%, var(--color-paper) 70%);
+  border: 1px solid var(--color-line);
+  border-radius: calc(16 / var(--rem-base) * 1rem);
+  display: flex;
+  justify-content: center;
+}
+
+.home-hero-art img {
   display: block;
+  filter: drop-shadow(0 30px 50px rgb(233 120 38 / 30%));
+  height: auto;
+  width: 62%;
 }
 
-/* common css for columns section */
+/* Hero CLI bar */
 
-section.frontpage.columns.functionalities p,
-section.frontpage.projects .project .content p {
-  margin-bottom: 1.5rem;
+.home-cli {
+  align-items: stretch;
+  background: var(--color-ink);
+  border: 1px solid var(--color-dark-line);
+  border-radius: calc(9 / var(--rem-base) * 1rem);
+  display: flex;
+  margin: calc(26 / var(--rem-base) * 1rem) 0 0;
+  max-width: calc(520 / var(--rem-base) * 1rem);
+  overflow: hidden;
 }
 
-section.frontpage.projects,
-section.frontpage.apache,
-section.frontpage.functionalities {
+.home-cli-command {
+  color: var(--syntax-text);
+  flex: 1;
+  font-family: var(--monospace-font-family);
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  /* Wraps like the download CLI card: nowrap plus ellipsis hid the second
+     half of the command below about 510px. */
+  min-width: 0;
+  padding: calc(14 / var(--rem-base) * 1rem) calc(16 / var(--rem-base) * 1rem);
+  white-space: normal;
+  word-break: break-word;
+}
+
+.home-cli-prompt {
+  color: var(--color-prompt);
+}
+
+.home-cli-copy {
+  background: var(--color-dark-2);
+  border: 0;
+  border-left: 1px solid var(--color-dark-line);
+  color: var(--syntax-text);
+  cursor: pointer;
+  font-family: var(--monospace-font-family);
+  font-size: calc(12 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  padding: 0 calc(16 / var(--rem-base) * 1rem);
+}
+
+.home-cli-copy:hover {
+  background: #3a342c;
+}
+
+/* Stat strip */
+
+.home-stats {
+  background: var(--color-paper-2);
+  border-bottom: 1px solid var(--color-line);
+  border-top: 1px solid var(--color-line);
+}
+
+.home-stats-inner {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
-  border-top: 1px solid var(--color-smoke-50);
-  padding: 2rem 1rem 1rem;
-}
-
-section.frontpage.columns.functionalities {
-  border: none;
-}
-
-section.frontpage.columns.functionalities h2,
-section.frontpage.projects .project .content h2,
-section.frontpage.projects .project .content p {
-  text-align: left;
-  text-transform: none;
-}
-
-/* css for functionalities section */
-
-section.frontpage.columns.functionalities .box {
-  width: 70%;
-  display: flex;
-  margin: 2vw auto;
-}
-
-section.frontpage.columns.functionalities .box .content {
-  width: 55vw;
-  margin: 0 1vw;
-}
-
-section.frontpage.columns.functionalities .box .icon {
-  width: 30vw;
-  text-align: center;
-}
-
-section.frontpage.columns.functionalities img {
-  height: 12rem;
-  margin: 0 1vw;
-}
-
-/* css for projects section */
-section.frontpage.projects {
-  width: 80%;
-  max-width: none;
+  gap: calc(12 / var(--rem-base) * 1rem) calc(48 / var(--rem-base) * 1rem);
   margin: 0 auto;
+  max-width: var(--frontpage-max-width);
+  padding: calc(30 / var(--rem-base) * 1rem) var(--page-padding-x);
 }
 
-section.frontpage.projects .project {
+.home-stats-label {
+  color: var(--color-ink-2);
+  font-family: var(--display-font-family);
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  font-weight: 700;
+  margin: 0;
+  margin-right: auto;
+}
+
+.home-stats-list {
   display: flex;
-  width: 50%;
-  padding: 1rem;
+  gap: calc(44 / var(--rem-base) * 1rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-section.frontpage.projects .project .icon {
-  min-width: 8rem;
-  margin-right: 1rem;
+.home-stat-num {
+  color: var(--color-orange-deep);
+  display: block;
+  font-family: var(--display-font-family);
+  font-size: calc(26 / var(--rem-base) * 1rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.home-stat-label {
+  color: var(--color-ink-soft);
+  display: block;
+  font-size: calc(12 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin-top: calc(5 / var(--rem-base) * 1rem);
+  text-transform: uppercase;
+}
+
+/* Get started */
+
+.home-grid--three {
+  gap: calc(22 / var(--rem-base) * 1rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.home-started-card {
+  padding: calc(28 / var(--rem-base) * 1rem);
+}
+
+.home-started-head {
+  align-items: center;
+  display: flex;
+  gap: calc(10 / var(--rem-base) * 1rem);
+}
+
+.home-started-head h3 {
+  color: var(--color-ink);
+  font-family: var(--display-font-family);
+  font-size: calc(20 / var(--rem-base) * 1rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+.home-badge {
+  background: var(--color-orange-deep);
+  border-radius: calc(20 / var(--rem-base) * 1rem);
+  color: var(--color-white);
+  font-family: var(--monospace-font-family);
+  font-size: calc(10.5 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: calc(3 / var(--rem-base) * 1rem) calc(8 / var(--rem-base) * 1rem);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.home-started-desc {
+  color: var(--color-ink-soft);
+  flex: 1;
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  line-height: 1.55;
+  margin: calc(12 / var(--rem-base) * 1rem) 0 calc(20 / var(--rem-base) * 1rem);
+  text-wrap: pretty;
+}
+
+.home-started-code {
+  background: var(--color-ink);
+  border-radius: calc(9 / var(--rem-base) * 1rem);
+  color: var(--syntax-text);
+  font-family: var(--monospace-font-family);
+  font-size: calc(12.5 / var(--rem-base) * 1rem);
+  line-height: 1.6;
+  margin: 0 0 calc(20 / var(--rem-base) * 1rem);
+  overflow-x: auto;
+  padding: calc(14 / var(--rem-base) * 1rem) calc(15 / var(--rem-base) * 1rem);
+}
+
+.home-started-link {
+  align-self: flex-start;
+  color: var(--link-font-color);
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+  font-weight: 700;
+}
+
+.home-started-link:hover {
+  color: var(--link_hover-font-color);
+}
+
+/* Features */
+
+.home-grid--features {
+  gap: calc(20 / var(--rem-base) * 1rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.home-feature {
+  padding: calc(26 / var(--rem-base) * 1rem);
+}
+
+.home-feature-tag {
+  align-items: center;
+  align-self: flex-start;
+  background: var(--color-orange-tint);
+  border-radius: calc(9 / var(--rem-base) * 1rem);
+  color: var(--color-orange-deep);
+  display: inline-flex;
+  font-family: var(--display-font-family);
+  font-size: calc(16 / var(--rem-base) * 1rem);
+  font-weight: 800;
+  height: calc(38 / var(--rem-base) * 1rem);
+  justify-content: center;
+  min-width: calc(38 / var(--rem-base) * 1rem);
+  padding: 0 calc(7 / var(--rem-base) * 1rem);
+}
+
+.home-feature h3 {
+  color: var(--color-ink);
+  font-family: var(--display-font-family);
+  font-size: calc(18 / var(--rem-base) * 1rem);
+  font-weight: 700;
+  margin: calc(16 / var(--rem-base) * 1rem) 0 0;
+}
+
+.home-feature p {
+  color: var(--color-ink-soft);
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+  line-height: 1.55;
+  margin: calc(9 / var(--rem-base) * 1rem) 0 0;
+  text-wrap: pretty;
+}
+
+/* Code example */
+
+.home-example {
+  background: var(--color-ink);
+  border: 1px solid var(--color-dark-line);
+  border-radius: calc(14 / var(--rem-base) * 1rem);
+  box-shadow: 0 24px 60px -30px rgb(33 28 23 / 50%);
+  margin: 0 auto;
+  max-width: calc(820 / var(--rem-base) * 1rem);
+  overflow: hidden;
+}
+
+.home-tablist {
+  border-bottom: 1px solid var(--color-dark-line);
+  display: flex;
+  gap: calc(2 / var(--rem-base) * 1rem);
+  padding: calc(12 / var(--rem-base) * 1rem) calc(14 / var(--rem-base) * 1rem) 0;
+}
+
+.home-tab {
+  background: none;
+  border: 0;
+  color: var(--code-tab-idle-font-color);
+  cursor: pointer;
+  font-family: var(--monospace-font-family);
+  font-size: calc(13 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  padding: calc(9 / var(--rem-base) * 1rem) calc(16 / var(--rem-base) * 1rem)
+           calc(13 / var(--rem-base) * 1rem);
+  position: relative;
+}
+
+.home-tab[aria-selected='true'] {
+  color: var(--syntax-text);
+}
+
+.home-tab[aria-selected='true']::after {
+  background: var(--color-camel-orange);
+  bottom: -1px;
+  content: '';
+  height: 2px;
+  left: calc(12 / var(--rem-base) * 1rem);
+  position: absolute;
+  right: calc(12 / var(--rem-base) * 1rem);
+}
+
+.home-tabpanel pre {
+  color: var(--syntax-text);
+  font-family: var(--monospace-font-family);
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  line-height: 1.7;
+  margin: 0;
+  min-height: calc(200 / var(--rem-base) * 1rem);
+  overflow-x: auto;
+  padding: calc(22 / var(--rem-base) * 1rem) calc(24 / var(--rem-base) * 1rem);
+}
+
+.home-example-run {
+  align-items: center;
+  background: var(--color-dark-3);
+  border-top: 1px solid var(--color-dark-line);
+  display: flex;
+  gap: calc(10 / var(--rem-base) * 1rem);
+  margin: 0;
+  padding: calc(14 / var(--rem-base) * 1rem) calc(24 / var(--rem-base) * 1rem);
+}
+
+.home-example-prompt {
+  color: var(--color-prompt);
+  font-family: var(--monospace-font-family);
+  font-size: calc(12.5 / var(--rem-base) * 1rem);
+}
+
+.home-example-command {
+  color: var(--color-on-dark-soft);
+  font-family: var(--monospace-font-family);
+  font-size: calc(12.5 / var(--rem-base) * 1rem);
+}
+
+/* Project tiles */
+
+.home-grid--four {
+  gap: calc(18 / var(--rem-base) * 1rem);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.home-tile {
+  padding: calc(24 / var(--rem-base) * 1rem);
+}
+
+.home-tile-icon {
+  display: block;
+  height: calc(34 / var(--rem-base) * 1rem);
+  object-fit: contain;
+  width: calc(34 / var(--rem-base) * 1rem);
+}
+
+.home-tile h3 {
+  color: var(--color-ink);
+  font-family: var(--display-font-family);
+  font-size: calc(17 / var(--rem-base) * 1rem);
+  font-weight: 700;
+  margin: calc(16 / var(--rem-base) * 1rem) 0 0;
+}
+
+.home-tile p {
+  color: var(--color-ink-soft);
+  flex: 1;
+  font-size: calc(14 / var(--rem-base) * 1rem);
+  line-height: 1.5;
+  margin: calc(8 / var(--rem-base) * 1rem) 0 calc(16 / var(--rem-base) * 1rem);
+  text-wrap: pretty;
+}
+
+.home-tile-link {
+  align-self: flex-start;
+  color: var(--link-font-color);
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  font-weight: 700;
+}
+
+.home-tile-link:hover {
+  color: var(--link_hover-font-color);
+}
+
+.home-tiles-cta {
+  margin: calc(34 / var(--rem-base) * 1rem) 0 0;
   text-align: center;
 }
 
-section.frontpage.projects .project img {
-  height: 6rem;
-  margin-top: 2rem;
+/* Closing band */
+
+.home-closing {
+  margin: calc(72 / var(--rem-base) * 1rem) auto 0;
+  max-width: var(--frontpage-max-width);
+  padding: 0 var(--page-padding-x);
 }
 
-/* css for apache section */
-
-.split {
-  flex: 50%;
-  padding: 1rem 0 2rem;
+.home-closing-inner {
+  align-items: center;
+  background: var(--color-ink);
+  border-radius: calc(18 / var(--rem-base) * 1rem);
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(24 / var(--rem-base) * 1rem);
+  padding: calc(52 / var(--rem-base) * 1rem) calc(48 / var(--rem-base) * 1rem);
 }
 
-.split img {
-  max-width: 100%;
+.home-closing-copy {
+  flex: 1;
+  min-width: calc(280 / var(--rem-base) * 1rem);
 }
 
-/* css for tablet view */
+.home-closing-copy h2 {
+  color: var(--color-on-dark);
+  font-family: var(--display-font-family);
+  font-size: calc(30 / var(--rem-base) * 1rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.home-closing-copy p {
+  color: var(--color-on-dark-soft);
+  font-size: calc(16 / var(--rem-base) * 1rem);
+  line-height: 1.55;
+  margin: calc(12 / var(--rem-base) * 1rem) 0 0;
+  max-width: calc(560 / var(--rem-base) * 1rem);
+}
+
+.home-closing-actions {
+  display: flex;
+  gap: calc(14 / var(--rem-base) * 1rem);
+  margin: 0;
+}
+
+.home-closing-actions .button {
+  margin: 0;
+}
+
+/* Tablet */
 
 @media screen and (width <= 1024px) {
-  header.frontpage h1 {
-    font-size: 3rem;
-    text-align: center;
+  .home-hero {
+    gap: calc(36 / var(--rem-base) * 1rem);
+    grid-template-columns: minmax(0, 1fr);
+    padding-top: calc(40 / var(--rem-base) * 1rem);
   }
 
-  section.frontpage h1 {
-    font-size: 2.5rem;
+  .home-hero h1 {
+    font-size: calc(44 / var(--rem-base) * 1rem);
   }
 
-  .split {
-    margin: 0 1rem;
-    flex: 100%;
+  .home-hero-art {
+    aspect-ratio: 1 / 0.45;
   }
 
-  .split img {
-    display: block;
-    margin: auto;
+  /* The logo is square, so the base 62% width would make the image taller than
+     the banner ratio above and size the panel itself. Keep it under the ratio. */
+  .home-hero-art img {
+    width: 40%;
   }
 
-  header.frontpage .main-heading,
-  section.frontpage.columns.functionalities,
-  section.frontpage.columns.projects,
-  section.frontpage.apache,
-  section.frontpage.blog-posts .blog-post {
-    width: 90%;
-    margin: 0 auto;
+  .home-section-head h2 {
+    font-size: calc(30 / var(--rem-base) * 1rem);
   }
 
-  section.frontpage.columns.blog-posts ul {
-    flex-direction: column;
+  .home-grid--three,
+  .home-grid--features,
+  .home-grid--four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  section.frontpage.blog-posts .blog-post .date,
-  section.frontpage.projects .project .icon {
-    min-width: 25%;
-  }
-
-  section.frontpage.projects .project,
-  section.frontpage.columns.functionalities .box {
-    width: 100%;
-  }
-
-  section.frontpage.functionalities .icon img,
-  section.frontpage.projects .icon img {
-    max-width: 25vw;
-    margin: auto;
-  }
-
-  section.frontpage.functionalities .content {
-    width: 70vw;
-  }
-
-  header.frontpage p {
-    font-size: inherit;
-    text-align: center;
-  }
-
-  header.frontpage {
-    flex-direction: column-reverse;
-    margin: 0;
-  }
-
-  header.frontpage img {
-    width: 60%;
-    max-height: 45vh;
-    margin: 0 auto;
-  }
-
-  div.frontpage.news {
-    width: 100%;
-    margin: 1.5rem 0 0;
-    text-transform: uppercase;
-    border-radius: 0;
-  }
-
-  a.button,
-  section.frontpage a.button {
-    line-height: 1.5rem;
+  .home-closing-inner {
+    padding: calc(36 / var(--rem-base) * 1rem) calc(32 / var(--rem-base) * 1rem);
   }
 }
 
-/* css for mobile view */
+/* Mobile */
 
 @media screen and (width <= 626px) {
-  header.frontpage .main-heading,
-  section.frontpage.columns.functionalities,
-  section.frontpage.columns.blog-posts,
-  section.frontpage.projects,
-  section.frontpage.apache {
-    width: 100%;
-    margin: 0;
-    padding: 1rem;
+  .home-hero h1 {
+    font-size: calc(36 / var(--rem-base) * 1rem);
   }
 
-  header.frontpage a.button-light {
-    line-height: 5rem;
+  .home-hero-actions {
+    flex-wrap: wrap;
   }
 
-  section.frontpage.projects .project,
-  section.frontpage.columns.functionalities .box.left {
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
+  .home-grid--three,
+  .home-grid--features,
+  .home-grid--four {
+    grid-template-columns: minmax(0, 1fr);
   }
 
-  section.frontpage.columns.functionalities .box.right {
-    flex-direction: column-reverse;
-    margin: 0;
-    padding: 0;
+  .home-stats-list {
+    gap: calc(24 / var(--rem-base) * 1rem);
+    flex-wrap: wrap;
   }
 
-  section.frontpage.projects .project .content h2,
-  section.frontpage.projects .project .icon,
-  section.frontpage.columns.functionalities .box .content h2,
-  section.frontpage.columns.functionalities .box .content,
-  section.frontpage.columns.functionalities .box .icon,
-  section.frontpage.columns.functionalities p,
-  section.frontpage.projects .project .content p {
-    text-align: center;
-    margin: 0;
+  .home-closing-actions {
+    flex-wrap: wrap;
     width: 100%;
   }
 
-  section.frontpage.columns.functionalities .box .content p,
-  section.frontpage.projects .project .content p {
-    margin: 1rem 0 1.5rem;
-  }
-
-  section.frontpage.columns.functionalities .box .icon img {
-    max-width: 50%;
-    height: auto;
-    margin-top: 2rem;
-  }
-
-  section.frontpage h1 {
-    font-size: 2rem;
-  }
-
-  header.frontpage h1 {
-    font-size: 2.5rem;
+  .home-tabpanel pre {
+    font-size: calc(12 / var(--rem-base) * 1rem);
   }
 }

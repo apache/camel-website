@@ -1,21 +1,26 @@
-<article class="blog doc">
-
-    <header aria-label="Blog post">
-        <a href="{{ .RelPermalink }}"><h1>{{ .Title }}</h1></a>
-        {{ $headers := dict }}
-        {{ with os.Getenv "GITHUB_TOKEN" }}
-          {{ $headers = dict "Authorization" (printf "Bearer %s" .) }}
-        {{ else }}
-          {{ $headers = dict "Authorization" (printf "Basic %s" (printf "%s:%s" $.Site.Params.GitHubUsername $.Site.Params.GitHubToken | base64Encode)) }}
+<article class="blog-post">
+    <time class="blog-post-date" itemprop="published" datetime="{{ dateFormat "2006-01-02" .PublishDate }}" title="{{ dateFormat "Monday, January 2, 2006" .PublishDate }}">
+        <span class="blog-post-day">{{ dateFormat "02" .PublishDate }}</span>
+        <span class="blog-post-month">{{ dateFormat "Jan 2006" .PublishDate }}</span>
+    </time>
+    <div>
+        {{ with .Params.categories }}
+        <div class="blog-post-tags">
+            {{ range . }}<a class="tag-chip" href="{{ "/categories/" | relURL }}{{ . | urlize }}/">{{ . }}</a>{{ end }}
+        </div>
         {{ end }}
-        <time itemprop="published" datetime="{{ dateFormat "2006-01-02" .PublishDate }}" title="{{ dateFormat "Monday, January 2, 2006" .PublishDate }}">{{ dateFormat "January 2, 2006" .PublishDate }}</time>, by {{ range $idx, $author := .Params.authors }}{{ if gt $idx 0 }}, {{ end }}<span rel="author">{{ (getJSON "https://api.github.com/users/" $author $headers).name }}</span>{{ end }}
-    </header>
-    <p>{{ .Summary }}</p>
-    <p><a class="continue" href="{{ .RelPermalink }}">Continue reading &#10095;</a></p>
-    <p>
-        {{ if .Params.categories }}
-            {{ range .Params.categories }}<a class="category" href="{{ "/categories/" | relURL }}{{ . | urlize }}/">{{ upper . }}</a>{{ end }}
-        {{end}}
-    </p>
-
+        <h2 class="blog-post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <p class="blog-post-summary">{{ with .Params.preview }}{{ . }}{{ else }}{{ $.Summary | plainify }}{{ end }}</p>
+        <div class="blog-post-meta">
+            <span>by
+                {{ $headers := dict }}
+                {{ with os.Getenv "GITHUB_TOKEN" }}
+                  {{ $headers = dict "Authorization" (printf "Bearer %s" .) }}
+                {{ else }}
+                  {{ $headers = dict "Authorization" (printf "Basic %s" (printf "%s:%s" $.Site.Params.GitHubUsername $.Site.Params.GitHubToken | base64Encode)) }}
+                {{ end }}
+                {{ range $idx, $author := .Params.authors }}{{ if gt $idx 0 }}, {{ end }}<span rel="author">{{ (getJSON "https://api.github.com/users/" $author $headers).name }}</span>{{ end }}</span>
+            <a class="blog-post-continue" href="{{ .RelPermalink }}" aria-label="Continue reading {{ .Title }}">Continue reading &rarr;</a>
+        </div>
+    </div>
 </article>

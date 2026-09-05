@@ -6,66 +6,71 @@ body {
   padding-top: var(--navbar-height);
 }
 
-@media screen and (width <= 1024px) {
-  body {
-    padding-top: var(--navbar-mobile-height);
-  }
-}
-
 .navbar {
   background: var(--navbar-background);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-line);
   color: var(--navbar-font-color);
-  font-size: calc(16 / var(--rem-base) * 1rem);
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
   height: var(--navbar-height);
   position: fixed;
   top: 0;
   width: 100%;
-  word-wrap: break-word;
   z-index: var(--z-index-navbar);
-  box-shadow: none;
 }
 
-html:not([data-scroll='0']) .navbar {
-  box-shadow: 0 0 30px 0 rgb(0 0 0 / 10%);
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  gap: calc(28 / var(--rem-base) * 1rem);
+  height: 100%;
+  width: 100%;
+  max-width: var(--static-max-width--desktop);
+  margin-inline: auto;
+  padding-inline: var(--page-padding-x);
 }
 
 .navbar a {
   text-decoration: none;
 }
 
-.navbar-brand .separator {
-  padding: 0 0.375rem;
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: calc(22 / var(--rem-base) * 1rem);
 }
 
-@media screen and (width >= 1025px) {
-  .navbar-end > .navbar-item {
-    color: var(--navbar-font-color);
-    text-transform: uppercase;
-  }
+.navbar-item {
+  font-weight: 600;
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+  color: var(--color-ink-soft);
+  white-space: nowrap;
+}
 
-  .navbar-end > .navbar-item::after {
-    transition: all ease-in-out 0.2s;
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 0;
-    background-color: var(--color-asf-dark-blue);
-  }
-
-  .navbar-end > .navbar-item:hover::after {
-    width: calc(100% - 2rem);
-  }
-
-  .navbar-item img {
-    display: none;
-  }
+.navbar-item:hover {
+  color: var(--color-ink);
 }
 
 .navbar-brand {
-  align-items: stretch;
   display: flex;
-  flex-grow: 1;
-  height: var(--navbar-height);
+  align-items: center;
+  gap: calc(11 / var(--rem-base) * 1rem);
+  flex: none;
+  height: auto;
+}
+
+.navbar-logo {
+  width: calc(36 / var(--rem-base) * 1rem);
+  height: calc(36 / var(--rem-base) * 1rem);
+}
+
+.navbar-wordmark {
+  font-family: var(--display-font-family);
+  font-weight: 800;
+  font-size: calc(19 / var(--rem-base) * 1rem);
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+  white-space: nowrap;
 }
 
 .navbar-burger {
@@ -78,9 +83,15 @@ html:not([data-scroll='0']) .navbar {
   position: relative;
   /* width: var(--navbar-height); */
   width: 2rem;
-  top: 0.75rem;
+  flex-shrink: 0;
+  /* Compensates for the span geometry below (top: 60% plus fixed -10/-3/+4px
+     margins), which is hardcoded in raw px and not tied to --rem-base, so the
+     glyph's own optical center sits below the button's true vertical center
+     by a fixed amount, not a percentage of the button's height. Measured:
+     with no offset the glyph sits ~2.1px below the bar's centerline once
+     align-items:center places the button itself; -2.1px is the correction. */
+  top: -2.1px;
   padding: 0;
-  order: 8;
 }
 
 .navbar-burger:focus {
@@ -125,202 +136,155 @@ html:not([data-scroll='0']) .navbar {
   transform-origin: left bottom;
 }
 
-.navbar-menu {
-  display: none;
-  order: 2;
-}
-
-.navbar-item {
-  color: var(--navbar-menu-font-color);
-  display: block;
-  line-height: var(--doc-line-height);
-  position: relative;
-}
-
 @media screen and (width <= 1024px) {
+  .navbar-menu {
+    display: none;
+  }
+
   .navbar-menu.is-active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
     position: absolute;
-    height: calc(100vh - 8rem);
-    box-shadow: 0 16px 16px 0 rgb(10 10 10 / 10%);
-    overflow-y: auto;
-    top: 8rem;
+    top: var(--navbar-height);
     left: 0;
     right: 0;
-    padding: 1rem;
+    max-height: calc(100vh - var(--navbar-height));
+    overflow-y: auto;
+    background: var(--color-paper);
+    border-bottom: 1px solid var(--color-line);
+    padding: calc(8 / var(--rem-base) * 1rem) var(--page-padding-x);
   }
 
-  .navbar-item {
-    width: calc(50% - 1rem);
-    height: 10rem;
-    background: var(--color-camel-orange);
-    border-radius: 15px;
-    margin: 0.5rem;
-    font-weight: bold;
-    flex: none;
+  .navbar-menu.is-active .navbar-item {
+    padding: calc(12 / var(--rem-base) * 1rem) 0;
+    border-bottom: 1px solid var(--color-line-soft);
   }
 
-  .navbar-item img {
+  .navbar-burger {
     display: block;
-    margin-left: calc(50% - 2.5rem);
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    height: 5rem;
-    width: 5rem;
-  }
-
-  .navbar-item.navbar-topics {
-    text-align: center;
-    color: var(--navbar-background);
-    text-transform: uppercase;
-    font-size: 1.25rem;
-  }
-
-  @media screen and (width >= 480px) and (width <= 626px) {
-    .navbar-item.navbar-topics {
-      font-size: 1.125rem;
-    }
-  }
-
-  @media screen and (width <= 480px) {
-    .navbar-item.navbar-topics {
-      font-size: 0.9rem;
-    }
-  }
-
-  @media screen and (width <= 375px) {
-    .navbar-item.navbar-topics {
-      font-size: 0.85rem;
-    }
-  }
-
-  a.navbar-item.navbar-topics:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--navbar-hover-font-color);
-  }
-
-  .navbar-menu {
-    background: var(--navbar-menu-background);
-    padding: 0.5rem 0;
   }
 }
 
 @media screen and (width >= 1025px) {
-  .navbar,
-  .navbar-menu,
-  .navbar-end {
-    align-items: stretch;
-    display: flex;
-  }
-
   .navbar-burger {
     display: none;
   }
-
-  .navbar-item {
-    align-items: flex-end;
-    display: flex;
-    font-weight: bold;
-    padding: 1.5rem 1rem 1rem;
-    text-transform: uppercase;
-  }
-
-  .navbar-end {
-    justify-content: flex-end;
-    margin-left: 1rem;
-  }
 }
 
-.navbar .button {
-  display: inline-flex;
-  align-items: center;
-  background: var(--navbar-button-background);
-  border: 1px solid var(--navbar-button-border-color);
-  border-radius: 0.15rem;
-  height: 1.75rem;
-  color: var(--navbar-button-font-color);
-  padding: 0 0.75em;
-  white-space: nowrap;
-}
-
-.navbar-fill {
-  flex-grow: 1;
-  order: 3;
-}
-
-.break-row {
-  display: none;
-  flex-basis: 100%;
-  height: 0;
-}
-
-/* NOTE centred rather than left to padding alone: the DocSearch button is a fixed 38px, which sat
-   8.5px above the nav links in the 73px desktop bar. justify-content keeps it right-aligned, which
-   text-align no longer does once this is a flex container. */
-.navbar-search {
+.navbar-actions {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding: 0.5rem;
-  order: 4;
+  gap: calc(14 / var(--rem-base) * 1rem);
+  margin-left: auto;
 }
 
-.navbar-tools {
+.navbar-github .brand-icon {
+  height: calc(20 / var(--rem-base) * 1rem);
+  width: calc(20 / var(--rem-base) * 1rem);
+  fill: var(--color-ink-soft);
+  display: block;
+}
+
+.navbar-github:hover .brand-icon {
+  fill: var(--color-ink);
+}
+
+a.button.navbar-cta {
+  margin: 0;
+  padding: calc(9 / var(--rem-base) * 1rem) calc(18 / var(--rem-base) * 1rem);
+  border-radius: calc(7 / var(--rem-base) * 1rem);
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+}
+
+/* Site search is the DocSearch v5 launcher (main, PR #1729): a button that
+   opens a modal, mounted in #docsearch on both renderers. The button is
+   dressed as the 200px field the artboard shows; docsearch.css themes the
+   modal and the key hints. */
+.header .navbar-search {
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  line-height: 1.6;
-  padding: 0.5rem;
-  font-weight: bold;
-  order: 5;
+  align-items: center;
+  padding: 0;
 }
 
-.navbar-tools .brand-icon {
-  height: 1.5em;
-  width: 1.5em;
-  margin: 0.35rem;
-  fill: var(--navbar-font-color);
+.header .navbar-search .DocSearch-Button {
+  box-sizing: border-box;
+  width: calc(200 / var(--rem-base) * 1rem);
+  height: calc(32 / var(--rem-base) * 1rem);
+  margin: 0;
+  padding: 0 calc(8 / var(--rem-base) * 1rem) 0 calc(10 / var(--rem-base) * 1rem);
+  border: 1px solid var(--color-line);
+  border-radius: calc(7 / var(--rem-base) * 1rem);
+  background: var(--color-white);
+  color: var(--color-ink-soft);
+  font-family: var(--body-font-family);
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  font-weight: 400;
+}
+
+.header .navbar-search .DocSearch-Button:hover,
+.header .navbar-search .DocSearch-Button:focus,
+.header .navbar-search .DocSearch-Button:active {
+  border-color: var(--color-line-hover);
+  background: var(--color-white);
+  color: var(--color-ink);
+  box-shadow: none;
+}
+
+/* The vendor sheet sets outline: none on focus; keyboard focus needs a
+   visible ring (--color-orange-deep is 5.58:1 on white). */
+.header .navbar-search .DocSearch-Button:focus-visible {
+  outline: 2px solid var(--color-orange-deep);
+  outline-offset: 2px;
+}
+
+.header .navbar-search .DocSearch-Search-Icon {
+  width: calc(14 / var(--rem-base) * 1rem);
+  height: calc(14 / var(--rem-base) * 1rem);
+  color: var(--color-ink-soft);
+}
+
+.header .navbar-search .DocSearch-Button-Placeholder {
+  padding: 0 calc(8 / var(--rem-base) * 1rem);
+  font-size: inherit;
 }
 
 /* Styling for mobile use */
 @media (width <= 1024px) {
-  .navbar {
-    height: var(--navbar-mobile-height);
+  /* The button gives up its fixed 200px and shrinks with the bar; below
+     768px the vendor sheet drops its label and key hints, leaving the icon. */
+  .header .navbar-search {
+    min-width: 0;
   }
 
-  .navbar-end {
-    display: flex;
-    flex-wrap: wrap;
+  .header .navbar-search .DocSearch-Button {
+    width: auto;
+    min-width: calc(32 / var(--rem-base) * 1rem);
   }
+}
 
-  .navbar-brand {
-    flex-wrap: wrap;
+@media (width <= 500px) {
+  /* Below this, the brand, CTA, burger and the icon-only search fill the
+     bar. The GitHub link is dropped rather than pushing the burger
+     off-screen; it stays reachable in the footer. */
+  .navbar-github {
+    display: none;
   }
+}
 
-  .break-row {
-    display: block;
-    order: 6;
-  }
-
-  .navbar-tools {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding: 0.3 0.5rem;
-    order: 5;
-  }
-
-  .navbar-tools .brand-icon {
-    height: 2rem;
-    width: 1.75rem;
-    margin: 0.75rem 0.35rem -0.5rem;
-  }
-
-  .navbar-search {
-    order: 7;
-  }
-
-  .navbar-burger {
-    display: block;
+@media (width <= 430px) {
+  /* Even with search and GitHub gone, the full wordmark plus the CTA and
+     burger still overflow a 390px phone (measured). The mark alone carries
+     the brand at this width; the wordmark returns above the breakpoint with
+     30px to spare (measured). Visually hidden rather than display:none so
+     the brand link keeps an accessible name (its alt text is empty by
+     design, relying on the wordmark to name the link). */
+  .navbar-wordmark {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
   }
 }

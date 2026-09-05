@@ -1,5 +1,6 @@
 @import url('typeface-open-sans.css');
-@import url('typeface-droid-sans-mono.css');
+@import url('typeface-archivo.css');
+@import url('typeface-jetbrains-mono.css');
 @import url('fa-emulated.css');
 @import url('vars.css');
 @import url('base.css');
@@ -15,7 +16,9 @@
 @import url('header.css');
 @import url('footer.css');
 @import url('highlight.css');
+@import url('chroma.css');
 @import url('frontpage.css');
+@import url('primitives.css');
 @import url('print.css');
 @import url('pagination.css');
 @import url('blog.css');
@@ -23,6 +26,8 @@
 @import url('release.css');
 @import url('misc.css');
 @import url('docs.css');
+@import url('projects.css');
+@import url('tooling.css');
 @import url('sitemap.css');
 @import url('videos.css');
 @import url('download.css');

@@ -1,42 +1,71 @@
-.blog {
-  margin: var(--static-margin);
+/* Blog list, Category and Blog post screens (piece 4b, "blog" group). See
+   .superpowers/sdd/4b/extract/{blog,post,category}.md for the transcribed
+   design values this file implements. Shared primitives (.page-hero-title,
+   .page-hero-lead, .detail-lead, .card, .card-grid) live in primitives.css
+   and are reused directly rather than re-declared here. */
+
+/* ==========================================================================
+   Blog list / Category (shared rail + post-card + pagination markup)
+   ========================================================================== */
+
+.blog-layout {
+  display: grid;
+  grid-template-columns: calc(240 / var(--rem-base) * 1rem) 1fr;
+  gap: calc(56 / var(--rem-base) * 1rem);
+  max-width: var(--static-max-width--desktop);
+  margin: 0 auto;
+  padding: calc(56 / var(--rem-base) * 1rem) var(--page-padding-x) calc(40 / var(--rem-base) * 1rem);
+  align-items: start;
 }
 
-.blog.list {
+/* .blog-rail / .blog-rail-eyebrow: shared base (sticky offset; mono
+   eyebrow shape + color) lives in primitives.css - see M5, final-review.md. */
+
+.blog-categories {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  margin-top: calc(8 / var(--rem-base) * 1rem);
 }
 
-.blog.list aside {
-  margin-top: 2.5rem;
-  padding-right: 2rem;
-  line-height: 2rem;
-  align-self: flex-start;
-  position: sticky;
-  top: 2rem;
+.blog-category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: calc(8 / var(--rem-base) * 1rem) 0;
+  font-size: calc(14 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  color: var(--color-ink-2);
+  border-bottom: 1px solid var(--color-line-soft);
+  text-decoration: none;
 }
 
-@media screen and (width <= 1024px) {
-  .blog.list aside {
-    margin-top: 0;
-  }
+.blog-category:hover {
+  color: var(--link_hover-font-color);
 }
 
-.blog.list aside ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 1rem;
-  max-height: calc(100vh - 300px);
-  overflow-y: auto;
-  display: inline-block;
+/* .blog-category.is-current lives in category.css: it only ever applies
+   on a Category page, and that file's the one place the piece-4b spec asks
+   to keep for this exact reason (see category.md §3d). */
+
+.blog-category-count {
+  font-family: var(--monospace-font-family);
+  font-size: calc(11.5 / var(--rem-base) * 1rem);
+  color: var(--color-ink-muted);
 }
 
 .blog-rss {
-  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: calc(8 / var(--rem-base) * 1rem);
+  margin-top: calc(20 / var(--rem-base) * 1rem);
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  font-weight: 700;
+  color: var(--color-orange-deep);
+  text-decoration: none;
 }
 
-.blog-rss a {
-  text-decoration: none;
+.blog-rss:hover {
+  color: var(--link_hover-font-color);
 }
 
 .blog-rss .brand-icon {
@@ -46,89 +75,405 @@
   fill: currentcolor;
 }
 
-article.blog:first-child {
-  margin-top: 3rem;
+.blog-main {
+  min-width: 0;
 }
 
-article.blog {
-  padding-bottom: 1rem;
-}
-
-article.blog p {
-  padding-bottom: 1rem;
-}
-
-.blog a.continue {
-  font-weight: bold;
+.blog-back-link {
+  display: inline-block;
+  font-family: var(--monospace-font-family);
+  font-size: calc(13 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  color: var(--color-ink-muted);
+  margin-bottom: calc(14 / var(--rem-base) * 1rem);
   text-decoration: none;
-  background: none;
 }
 
-.blog header {
-  margin-bottom: 0.4rem;
-  border-image: linear-gradient(to right, #303284, #303284 50px, #fff 50px) 1 / 0 0 1px 0;
+.blog-back-link:hover {
+  color: var(--link_hover-font-color);
 }
 
-.blog header h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  padding-bottom: 0.2rem;
-}
-
-.blog header time {
-  color: var(--color-gray-60);
-  font-style: italc;
-}
-
-.blog .post {
-  margin-top: 1rem;
+.blog-posts {
   display: flex;
   flex-direction: column;
-  padding-bottom: 2rem;
+  margin-top: calc(36 / var(--rem-base) * 1rem);
 }
 
-.blog .post aside .summary {
-  font-size: 1.2rem;
-  font-style: italic;
+.blog-post {
+  display: grid;
+  grid-template-columns: calc(96 / var(--rem-base) * 1rem) 1fr;
+  gap: calc(28 / var(--rem-base) * 1rem);
+  padding: calc(30 / var(--rem-base) * 1rem) 0;
+  border-top: 1px solid var(--color-line);
 }
 
-.blog .post aside time {
-  color: var(--color-gray-60);
+.blog-post-date {
+  text-align: center;
 }
 
-.blog .post aside p {
-  padding-top: 1.5rem;
-  color: var(--color-gray-60);
+.blog-post-day {
+  display: block;
+  font-family: var(--display-font-family);
+  font-weight: 800;
+  font-size: calc(40 / var(--rem-base) * 1rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--color-orange-deep);
 }
 
-.blog .post aside p span[rel='author'] {
+.blog-post-month {
+  display: block;
+  font-family: var(--monospace-font-family);
+  font-size: calc(12 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  color: var(--color-ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: calc(6 / var(--rem-base) * 1rem);
+}
+
+.blog-post-tags {
+  display: flex;
+  gap: calc(8 / var(--rem-base) * 1rem);
+  flex-wrap: wrap;
+}
+
+/* Shared by the blog-list/category post-card tags and the blog-post hero
+   tags (post.md §2.3): one primitive, per the piece-4b inventory §1.7. */
+.tag-chip {
   display: inline-block;
-}
-
-.blog .post aside {
-  width: 100%;
-}
-
-.blog a.arrow {
-  font-size: 1rem;
+  font-family: var(--monospace-font-family);
+  font-size: calc(11 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  color: var(--color-orange-deep);
+  background: var(--color-orange-tint);
+  padding: calc(3 / var(--rem-base) * 1rem) calc(9 / var(--rem-base) * 1rem);
+  border-radius: 20px; /* radius exemption: raw px, see hard constraints */
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   text-decoration: none;
+}
+
+.blog-post-title {
+  font-family: var(--display-font-family);
+  font-weight: 700;
+  font-size: calc(24 / var(--rem-base) * 1rem);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: calc(12 / var(--rem-base) * 1rem) 0 0;
+}
+
+.blog-post-title a {
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+.blog-post-title a:hover {
+  color: var(--link_hover-font-color);
+}
+
+.blog-post-summary {
+  font-size: calc(15.5 / var(--rem-base) * 1rem);
+  line-height: 1.6;
+  color: var(--color-ink-soft);
+  margin: calc(10 / var(--rem-base) * 1rem) 0 0;
+  text-wrap: pretty;
+}
+
+.blog-post-meta {
+  display: flex;
+  align-items: center;
+  gap: calc(16 / var(--rem-base) * 1rem);
+  margin-top: calc(14 / var(--rem-base) * 1rem);
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  color: var(--color-ink-muted);
+}
+
+.blog-post-continue {
+  font-weight: 700;
+  color: var(--color-orange-deep);
+  text-decoration: none;
+}
+
+.blog-post-continue:hover {
+  color: var(--link_hover-font-color);
+}
+
+/* Numbered pager: mono, ink active pill (blog.md §4). Scoped by the shared
+   .blog-list root so it never leaks into an unrelated future ".pagination". */
+.blog-list .pagination {
+  display: flex;
+  gap: calc(6 / var(--rem-base) * 1rem);
+  justify-content: center;
+  margin: calc(28 / var(--rem-base) * 1rem) 0 0;
+  padding: calc(28 / var(--rem-base) * 1rem) 0 0;
+  border-top: 1px solid var(--color-line);
+  font-family: var(--monospace-font-family);
+  font-size: calc(13 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  list-style: none;
+}
+
+.blog-list .page-item {
+  display: contents;
+}
+
+.blog-list .page-link {
+  display: inline-block;
+  padding: calc(8 / var(--rem-base) * 1rem) calc(12 / var(--rem-base) * 1rem);
+  border-radius: 6px; /* radius exemption: raw px */
+  color: var(--color-ink-soft);
+  text-decoration: none;
+}
+
+.blog-list .page-link:hover {
+  background: var(--color-line-soft);
+}
+
+.blog-list .page-link--next {
+  color: var(--color-orange-deep);
+}
+
+.blog-list .page-item.active .page-link {
+  background: var(--color-ink);
+  color: var(--color-on-dark);
+}
+
+.blog-list .page-item.active .page-link:hover {
+  background: var(--color-ink);
+}
+
+.blog-list .page-item.disabled .page-link {
+  padding: calc(8 / var(--rem-base) * 1rem) calc(6 / var(--rem-base) * 1rem);
+  color: var(--color-ink-muted);
+  cursor: default;
+}
+
+.blog-list .page-item.disabled .page-link:hover {
   background: none;
 }
 
-.blog a.arrow.prev::after {
-  content: '\00A0previous';
+@media screen and (width <= 1024px) {
+  .blog-layout {
+    grid-template-columns: minmax(0, 1fr);
+    padding: calc(40 / var(--rem-base) * 1rem) calc(24 / var(--rem-base) * 1rem) calc(32 / var(--rem-base) * 1rem);
+  }
+
+  .blog-rail {
+    position: static;
+  }
 }
 
-.blog a.arrow.next::before {
-  content: 'next\00A0';
+/* ==========================================================================
+   Blog post (single)
+   ========================================================================== */
+
+.post {
+  max-width: var(--static-max-width--desktop);
+  margin: 0 auto;
+  padding: calc(56 / var(--rem-base) * 1rem) var(--page-padding-x) calc(40 / var(--rem-base) * 1rem);
 }
 
-.blog .post .post-content {
-  margin-left: 0;
-  width: auto;
+/* The post article also carries the Antora .doc class (for the shared code
+   block and copy-button scripts), so doc.css's .doc a / .doc h1 / .doc p
+   rules (0,1,1) outrank single-class rules here. The .post-scoped selectors
+   below win at (0,2,0) and drop the dotted link underline .doc a paints. */
+.post .post-back {
+  font-family: var(--monospace-font-family);
+  font-size: calc(13 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  color: var(--color-ink-muted);
+  text-decoration: none;
+  background-image: none;
 }
 
-.blog .post-content img {
+.post .post-back:hover {
+  color: var(--link_hover-font-color);
+}
+
+.post .tag-chip,
+.post .post-toc a {
+  background-image: none;
+}
+
+.post .detail-lead {
+  margin-top: calc(16 / var(--rem-base) * 1rem);
+}
+
+.post-hero {
+  max-width: calc(820 / var(--rem-base) * 1rem);
+  margin-top: calc(18 / var(--rem-base) * 1rem);
+}
+
+.post-tags {
+  display: flex;
+  gap: calc(8 / var(--rem-base) * 1rem);
+  flex-wrap: wrap;
+}
+
+.post .post-title {
+  font-family: var(--display-font-family);
+  font-weight: 800;
+  font-size: calc(46 / var(--rem-base) * 1rem);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin: calc(16 / var(--rem-base) * 1rem) 0 0;
+  color: var(--color-ink);
+}
+
+.post-layout {
+  display: grid;
+  grid-template-columns: calc(260 / var(--rem-base) * 1rem) minmax(0, 1fr);
+  gap: calc(56 / var(--rem-base) * 1rem);
+  margin-top: calc(40 / var(--rem-base) * 1rem);
+  align-items: start;
+}
+
+.post-rail {
+  position: sticky;
+  top: var(--body-top);
+  display: flex;
+  flex-direction: column;
+  gap: calc(22 / var(--rem-base) * 1rem);
+}
+
+.post-authors {
+  display: flex;
+  flex-direction: column;
+  gap: calc(14 / var(--rem-base) * 1rem);
+}
+
+.post-author {
+  display: flex;
+  align-items: center;
+  gap: calc(12 / var(--rem-base) * 1rem);
+}
+
+.post-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-line);
+}
+
+.post-author-name {
+  font-weight: 700;
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+}
+
+.post-date {
+  font-size: calc(13 / var(--rem-base) * 1rem);
+  color: var(--color-ink-muted);
+}
+
+/* Shared eyebrow typography for the rail's Share / In this post labels
+   (post.md §2.7b/§2.7c call these "identical typography"). */
+.post-eyebrow {
+  color: var(--color-ink-muted);
+  padding-bottom: calc(10 / var(--rem-base) * 1rem);
+}
+
+.post-share-links {
+  display: flex;
+  gap: calc(8 / var(--rem-base) * 1rem);
+  flex-wrap: wrap;
+}
+
+.post-adjacent {
+  display: flex;
+  justify-content: space-between;
+  padding-top: calc(18 / var(--rem-base) * 1rem);
+  border-top: 1px solid var(--color-line);
+  font-size: calc(13 / var(--rem-base) * 1rem);
+}
+
+.post-adjacent a {
+  color: var(--color-ink-soft);
+  font-weight: 600;
+  text-decoration: none;
+  background-image: none;
+}
+
+.post-adjacent a:hover {
+  color: var(--link_hover-font-color);
+}
+
+.post-content {
+  max-width: calc(760 / var(--rem-base) * 1rem);
+}
+
+/* .blog .post-content is also the legacy selector chain that
+   07-image-zoom.js (out of this screen's owned files) queries for
+   zoomable body images; the article/content wrapper keep the "blog" /
+   "post-content" hook classes for that reason, see impl report. */
+.blog .post-content img.featured {
+  aspect-ratio: 16 / 8;
+  object-fit: cover;
+  width: 100%;
+  /* Beats the img's width/height HTML attributes, which otherwise act as a
+     low-priority "height" declaration in the cascade and make aspect-ratio
+     inert since height would no longer be auto. */
+  height: auto;
+  border-radius: 14px; /* radius exemption: raw px */
+  display: block;
+  margin-bottom: calc(34 / var(--rem-base) * 1rem);
+}
+
+.blog .post-content h2 {
+  font-family: var(--display-font-family);
+  font-weight: 700;
+  font-size: calc(28 / var(--rem-base) * 1rem);
+  letter-spacing: -0.02em;
+  margin: calc(40 / var(--rem-base) * 1rem) 0 0;
+  /* doc.css's .doc h2:not(.discrete) sets an 8px top padding this rule
+     doesn't otherwise reset - final-review.md L7 item 7. */
+  padding-top: 0;
+}
+
+.blog .post-content p {
+  font-size: calc(17 / var(--rem-base) * 1rem);
+  line-height: 1.75;
+  color: var(--color-ink-2);
+}
+
+.blog .post-content p + p {
+  margin-top: calc(12 / var(--rem-base) * 1rem);
+}
+
+/* Replaces the pre-redesign .blog ul/ol { padding-bottom: 1rem } dropped with
+   the article rewrite - final-review.md L7 item 8. .doc ol/ul supplies no
+   bottom spacing on its own, so a list with no gap before the next block. */
+.blog .post-content ul,
+.blog .post-content ol {
+  padding-bottom: 1rem;
+}
+
+.blog .post-content li ul,
+.blog .post-content li ol {
+  padding-bottom: 0;
+}
+
+.blog .post-content blockquote {
+  margin: calc(24 / var(--rem-base) * 1rem) 0 0;
+  padding: calc(18 / var(--rem-base) * 1rem) calc(22 / var(--rem-base) * 1rem);
+  border-left: 3px solid var(--color-camel-orange);
+  background: var(--color-white);
+  border-radius: 0 12px 12px 0; /* radius exemption: raw px */
+  font-family: var(--display-font-family);
+  font-weight: 500;
+  font-size: calc(19 / var(--rem-base) * 1rem);
+  line-height: 1.45;
+  color: var(--color-ink-2);
+}
+
+/* goldmark wraps the quote in <p>, which .blog .post-content p would otherwise
+   reset to body size and leading. */
+.blog .post-content blockquote p {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.blog .post-content img:not(.featured) {
   width: auto;
   max-width: 800px;
   height: auto;
@@ -136,18 +481,38 @@ article.blog p {
   margin-left: auto;
   margin-right: auto;
   display: block;
-}
-
-.blog .post-content img:not(.featured) {
   cursor: zoom-in;
 }
 
-
 @media screen and (width <= 1024px) {
-  .blog .post-content img {
+  .blog .post-content img:not(.featured) {
     max-width: 100%;
     max-height: none;
   }
+}
+
+.blog .post-content figcaption {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.blog .post-content table {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.blog .post-content tr:nth-child(even) {
+  background: var(--color-smoke-50);
+}
+
+.blog .post-content td {
+  padding: 0.5rem;
+}
+
+.blog .post-content th {
+  padding: 0.7rem;
+  background: var(--color-smoke-90);
 }
 
 .image-zoom-overlay {
@@ -199,172 +564,62 @@ article.blog p {
   }
 }
 
-.blog .post-content figcaption {
-  font-size: 0.8rem;
-  text-align: center;
+.post-related {
+  margin-top: calc(56 / var(--rem-base) * 1rem);
+  padding-top: calc(28 / var(--rem-base) * 1rem);
+  border-top: 1px solid var(--color-line);
 }
 
-.blog .post-content pre {
-  max-width: 800px;
+.post .post-related-heading {
+  font-family: var(--display-font-family);
+  font-weight: 700;
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-ink-muted);
+  margin: 0 0 calc(18 / var(--rem-base) * 1rem);
 }
 
-.blog .post .post-content table {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 1rem;
+.post-related-grid {
+  gap: calc(14 / var(--rem-base) * 1rem);
 }
 
-.blog .post .post-content tr:nth-child(even) {
-  background: var(--color-smoke-50);
+/* Reuses the .card primitive's shell/hover recipe (primitives.css); only
+   the radius/padding/color deltas below are page-specific (piece-4b
+   inventory §1.4). */
+.post .post-related-card,
+.post .post-related-card:hover {
+  border-radius: 12px; /* radius exemption: raw px */
+  padding: calc(18 / var(--rem-base) * 1rem) calc(20 / var(--rem-base) * 1rem);
+  color: var(--color-ink);
+  text-decoration: none;
+  background-image: none;
 }
 
-.blog .post .post-content td {
-  padding: 0.5rem;
+.post-related-date {
+  font-family: var(--monospace-font-family);
+  font-size: calc(11.5 / var(--rem-base) * 1rem);
+  color: var(--color-ink-muted);
 }
 
-.blog .post .post-content th {
-  padding: 0.7rem;
-  background: var(--color-smoke-90);
-}
-
-.blog .post aside figure img {
-  margin-right: 1rem;
-  vertical-align: middle;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-}
-
-.blog .post aside figure {
-  margin: 1rem 0;
-}
-
-.blog .post aside figure figcaption {
-  display: inline;
-}
-
-@media screen and (width >= 1025px) {
-  .blog {
-    max-width: var(--static-max-width--desktop);
-  }
-
-  .blog .post {
-    flex-direction: row;
-    padding-bottom: 2rem;
-  }
-
-  .blog .post aside {
-    width: 30rem;
-    min-width: 16rem;
-  }
-
-  .blog a.arrow {
-    font-size: 3rem;
-  }
-
-  .blog a.arrow.prev::after {
-    content: '';
-  }
-
-  .blog a.arrow.next::before {
-    content: '';
-  }
-
-  .blog .post .post-content {
-    margin-left: 2rem;
-    width: 60%;
-  }
-
-  .blog.list {
-    flex-direction: row;
-  }
-
-  main.blog.list {
-    margin-left: 0;
-  }
-}
-
-.blog ul,
-.blog ol {
-  padding-bottom: 1rem;
-}
-
-.blog li ul,
-.blog li ol {
-  padding-bottom: 0;
-}
-
-.blog .pagination {
-  margin: var(--static-margin);
-  list-style: none;
-  padding: 1rem;
-}
-
-@media screen and (width >= 1025px) {
-  .blog .pagination {
-    max-width: var(--static-max-width--desktop);
-  }
-}
-
-.blog .page-item {
-  display: inline;
-  padding: 0;
-  margin: 0;
-}
-
-.blog .page-item a {
-  color: var(--color-gray-30);
-  font-weight: bold;
-  padding: 0.5rem;
-}
-
-.blog .page-item.disabled a {
-  color: var(--color-gray-30);
-}
-
-.blog .page-item.active {
-  border-radius: 3px;
-  background: var(--color-asf-moderate-blue);
-}
-
-.blog .page-item.active a {
-  color: var(--color-white);
+.post-related-card-title {
+  font-family: var(--display-font-family);
+  font-weight: 700;
+  font-size: calc(16.5 / var(--rem-base) * 1rem);
+  margin-top: calc(6 / var(--rem-base) * 1rem);
+  line-height: 1.3;
 }
 
 @media screen and (width <= 1024px) {
-  .blog.list aside {
-    margin-top: 4.5rem;
+  .post {
+    padding: calc(40 / var(--rem-base) * 1rem) calc(24 / var(--rem-base) * 1rem) calc(32 / var(--rem-base) * 1rem);
   }
-}
 
-.blog .related {
-  display: flex;
-  flex-wrap: wrap;
-  border-top: 1px solid var(--color-camel-orange);
-  margin-top: 3rem;
-}
+  .post-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
 
-.blog .related > h3 {
-  min-width: 100%;
-}
-
-.blog .related article {
-  padding-right: 0;
-  width: 50%;
-  margin: 0;
-}
-
-.blog .related article:nth-child(2n) {
-  padding-left: 0;
-}
-
-.blog .related article header h1 {
-  font-size: 1rem;
-}
-
-@media screen and (width <= 1024px) {
-  .blog .related article {
-    width: 100%;
-    padding-left: 0;
+  .post-rail {
+    position: static;
   }
 }

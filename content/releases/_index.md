@@ -1,5 +1,3 @@
 ---
-title: "Releases"
+title: "Releases archive"
 ---
-
-# Apache Camel releases archive

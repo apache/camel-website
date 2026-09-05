@@ -1,0 +1,164 @@
+/*! Chroma theme for the 2026 redesign, per SCOPE.md section 2a.
+    Hugo highlights markdown code fences with chroma (noClasses = false in
+    config.toml), emitting <div class="highlight"><pre class="chroma">. Antora
+    uses highlight.js instead, themed in highlight.css. Both bind the same
+    --syntax-* tokens from vars.css so the two systems stay in step.
+
+    pre.chroma already picks up --pre-background and --pre-font-color from
+    doc.css, because blog content carries class="blog doc". Only token colors
+    are set here.
+
+    Chroma classes are mapped to the highlight.js class with the same meaning.
+    Classes left deliberately unstyled, inheriting the base code color, mirror
+    constructs highlight.js also leaves unstyled: .n and .nx (plain
+    identifiers), .o and .ow (operators), .p (punctuation), .w (whitespace),
+    .line and .cl (line wrappers), and .err (a lexer hiccup is not worth a
+    color). .go, generic command output, is content the reader needs rather
+    than chrome, so it stays at the base color too. */
+
+/* comments */
+.chroma .c,
+.chroma .ch,
+.chroma .cm,
+.chroma .c1,
+.chroma .cs {
+  color: var(--syntax-comment);
+  font-style: italic;
+}
+
+/* preprocessor, the chroma analogue of .hljs-meta */
+.chroma .cp,
+.chroma .cpf,
+.chroma .nd {
+  color: var(--syntax-meta);
+  font-weight: var(--syntax-font-weight-strong);
+}
+
+/* keywords */
+.chroma .k,
+.chroma .kd,
+.chroma .kn,
+.chroma .kp,
+.chroma .kr {
+  color: var(--syntax-keyword);
+  font-weight: var(--syntax-font-weight-strong);
+}
+
+/* types */
+.chroma .kt,
+.chroma .nc,
+.chroma .ne {
+  color: var(--syntax-type);
+  font-weight: var(--syntax-font-weight-strong);
+}
+
+/* function and section names */
+.chroma .nf,
+.chroma .fm,
+.chroma .gh,
+.chroma .gu {
+  color: var(--syntax-title);
+  font-weight: var(--syntax-font-weight-strong);
+}
+
+/* strings */
+.chroma .s,
+.chroma .sa,
+.chroma .sb,
+.chroma .sc,
+.chroma .dl,
+.chroma .sd,
+.chroma .s2,
+.chroma .sh,
+.chroma .si,
+.chroma .sx,
+.chroma .s1 {
+  color: var(--syntax-string);
+}
+
+/* numbers, literals and variables, the .hljs-number group */
+.chroma .m,
+.chroma .mb,
+.chroma .mf,
+.chroma .mh,
+.chroma .mi,
+.chroma .mo,
+.chroma .il,
+.chroma .kc,
+.chroma .l,
+.chroma .no,
+.chroma .nv,
+.chroma .vc,
+.chroma .vg,
+.chroma .vi,
+.chroma .vm {
+  color: var(--syntax-number);
+}
+
+/* markup tags and namespaces */
+.chroma .nt,
+.chroma .nn {
+  color: var(--syntax-tag);
+}
+
+/* attributes, labels and properties */
+.chroma .na,
+.chroma .nl,
+.chroma .py {
+  color: var(--syntax-attr);
+}
+
+/* built-ins */
+.chroma .nb,
+.chroma .bp {
+  color: var(--syntax-built-in);
+}
+
+/* YAML and JSON keys. Chroma classes them .nt, the same class it uses for XML
+   tags, while highlight.js classes them .hljs-attr. Without this the same YAML
+   file reads differently on a blog post than in the documentation, so the two
+   are aligned by language, as with the shell prompt in highlight.css. */
+.chroma code.language-yaml .nt,
+.chroma code.language-json .nt {
+  color: var(--syntax-attr);
+}
+
+/* Unquoted YAML scalars, which chroma classes as generic literals and
+   highlight.js classes as strings. Aligned for the same reason. */
+.chroma code.language-yaml .l {
+  color: var(--syntax-string);
+}
+
+/* regular expressions */
+.chroma .sr {
+  color: var(--syntax-regexp);
+}
+
+/* symbols and escape sequences */
+.chroma .ss,
+.chroma .se,
+.chroma .ni {
+  color: var(--syntax-symbol);
+}
+
+/* the shell prompt glyph */
+.chroma .gp {
+  color: var(--syntax-prompt);
+}
+
+/* diffs */
+.chroma .gd {
+  background: var(--syntax-deletion-background);
+}
+
+.chroma .gi {
+  background: var(--syntax-addition-background);
+}
+
+.chroma .ge {
+  font-style: italic;
+}
+
+.chroma .gs {
+  font-weight: var(--syntax-font-weight-strong);
+}

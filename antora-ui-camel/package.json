@@ -12,7 +12,9 @@
     "node": ">= 22.12.0"
   },
   "browserslist": [
-    "last 2 versions"
+    "last 2 versions",
+    "safari >= 16.4",
+    "ios_saf >= 16.4"
   ],
   "scripts": {
     "build": "gulp bundle",
@@ -23,6 +25,8 @@
   "devDependencies": {
     "@asciidoctor/core": "^3.0.2",
     "@asciidoctor/tabs": "1.0.0-beta.3",
+    "@fontsource/archivo": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
     "@openfonts/open-sans_latin-ext": "^1.44.0",
     "@ronilaukkarinen/gulp-stylelint": "^14.1.2",
     "@vscode/gulp-vinyl-zip": "^2.5.0",
@@ -67,7 +71,6 @@
     "stylelint-config-standard": "^34.0.0",
     "svg4everybody": "^2.1.9",
     "toml": "^3.0.0",
-    "typeface-droid-sans-mono": "^0.0.44",
     "undertaker": "^2.0.0",
     "vinyl-buffer": "~1.0",
     "vinyl-fs": "^4.0.2"
