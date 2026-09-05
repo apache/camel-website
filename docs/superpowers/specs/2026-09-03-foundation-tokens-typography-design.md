@@ -184,12 +184,12 @@ this piece only defines the tokens it needs.
 
 ## Files touched
 
-- `antora-ui-camel/package.json` — add two deps, remove one.
-- `antora-ui-camel/src/css/vars.css` — the palette, semantic re-points, type,
+- `antora-ui-camel/package.json`: add two deps, remove one.
+- `antora-ui-camel/src/css/vars.css`: the palette, semantic re-points, type,
   containers.
-- `antora-ui-camel/src/css/typeface-archivo.css` — new.
-- `antora-ui-camel/src/css/typeface-jetbrains-mono.css` — new.
-- `antora-ui-camel/src/css/site.css` — import changes.
+- `antora-ui-camel/src/css/typeface-archivo.css`: new.
+- `antora-ui-camel/src/css/typeface-jetbrains-mono.css`: new.
+- `antora-ui-camel/src/css/site.css`: import changes.
 - Existing stylesheets, for repaint repair only, expected to be `doc.css`,
   `nav.css`, and `base.css`. `highlight.css` is deliberately not touched; see
   "Accepted temporary regression" below.

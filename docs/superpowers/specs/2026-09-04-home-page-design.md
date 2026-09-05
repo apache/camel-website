@@ -38,7 +38,9 @@ limited to keeping the existing 1024px and 626px breakpoints working.
 This follows the pattern the handoff's `/projects/` slice already establishes with
 `data/projects.yaml`, and the one SCOPE names for `data/docs-projects.yaml`. It also removes the
 `section`, `div`, and `icon` shortcode nesting that makes the current page unreadable. Those
-shortcodes stay in the repo; other pages still use them.
+`div` and `icon` shortcodes stay in the repo; other pages still use them. `section`
+(and `downloads`, orphaned by the download page rewrite) had no remaining callers and were
+deleted.
 
 ### D2. The four headline statistics are verified, not copied
 
@@ -48,7 +50,7 @@ The design's figures are illustrative. Measured on 2026-09-04 against `apache/ca
 |---|---|---|
 | 100k+ commits | 83,428 commits on `main` | **83,000+** |
 | 1,600+ contributors | 1,583 distinct authors (329 GitHub accounts) | **1,500+** |
-| 311 components | 398 `*-component.html` pages in the built docs | **390+** |
+| 311 components | 398 `*-component.html` pages in the built docs | **350+** (site-wide figure, see Corrections) |
 | 300+ releases | 307 tags | **300+** |
 
 Two of the four overstated the project. `data/home.yaml` carries a comment recording the source
@@ -58,8 +60,8 @@ and the date for each, so the next person to touch them knows what they are and 
 figures. That was an explicit decision: those numbers are the owner's, not the design file's.
 
 **Copy consistency:** the design's hero lead and the first feature chip both say "300+
-connectors". Both become "390+" to agree with the stat strip. `config.toml`'s
-`organizationDescription` says "350+ connectors" and is left alone; see Open Items.
+connectors". Both become "350+", the figure `config.toml`'s `organizationDescription` and the
+rest of the site already use (commit 8cf4cd07); see Corrections.
 
 ### D3. Header search stays on Hugo pages
 
@@ -165,7 +167,8 @@ art panel, `aspect-ratio: 1/0.86`, 16px radius, `radial-gradient(circle at 50% 5
 1px line border, mark at 62% with `drop-shadow(0 30px 50px rgb(233 120 38 / 30%))`.
 
 **CLI bar.** Max-width 520px, ink background, 9px radius, 1px dark-line border, overflow hidden.
-Code in mono 13.5px, padding 14px 16px, `white-space: nowrap` with ellipsis; the `$` glyph in
+Code in mono 13.5px, padding 14px 16px, wrapping onto a second line on narrow viewports (see
+Corrections); the `$` glyph in
 `--color-prompt`. Copy button: `--color-dark-2` background, 1px dark-line left border, mono
 12px/600, padding 0 16px, `align-self: stretch`, hover `#3a342c`. Command:
 `camel init hello.yaml && camel run hello.yaml`.
@@ -311,11 +314,34 @@ not see, because measuring an element says nothing about what is painted on top 
    links are all below 4.5:1. The palette is the owner's and shipped site-wide in pieces 1
    through 3, so this piece does not change it, but the home page makes it prominent. Darkening
    the accent to about `#b4530c` would clear 4.5:1 on paper.
-2. **Connector count.** This page says "390+"; `config.toml`'s `organizationDescription` says
-   "350+". Both are true against 398, but they disagree. The description is used for SEO and
-   structured data and was left alone.
+2. **Connector count.** Resolved by commit 8cf4cd07: every page, this one included, says "350+"
+   (rounded down from the measured 398 so dated blog posts need no rewrite), matching
+   `config.toml`'s `organizationDescription`.
 3. **Stat maintenance.** The four figures are hand-maintained with a recorded date. Nothing
    refreshes them automatically.
 4. **No-JS tabs.** Java and XML are unreachable without JavaScript.
 5. **Deferred pages.** Docs index, Download, Security, Community, Tooling, and Blog list remain
    on the old styling and will look inconsistent with Home until the next piece.
+
+## Corrections, made during review
+
+- **Connector count** shipped as "350+" everywhere (commit 8cf4cd07), not "390+".
+- **CLI bar** wraps on narrow viewports instead of `white-space: nowrap` with ellipsis: below
+  about 510px the ellipsis hid all of `camel run hello.yaml`, the same truncation the download
+  page's CLI card had already fixed.
+- **`/projects/`** was shadowed in production by `static/.htaccess`'s pre-existing
+  `Redirect 301 /projects/ /docs/`; that rule is gone and the three `/projects/camel-*` legacy
+  redirects now land on `/projects/`.
+- **Dropped content**: the old "Why Camel?" and "Apache & OpenSource" sections left the page
+  with their deep links (EIP catalog, component reference, data formats, `/community/sources/`),
+  the "50 data formats" and "280+ Quarkus extensions" claims, the ASF wide logo and the license
+  links. Feature cards are text-only per Sections; the shared footer still reaches mailing lists,
+  support, the component reference, apache.org and the license. Open for the owner: the EIP
+  catalog, data formats and sources links now have no home on the page.
+- **Shortcodes**: `section` and `downloads` were deleted (no callers left); `div` and `icon` stay.
+- **Stat copy**: "Proven across millions of production deployments" (features) has no recorded
+  source, unlike the four figures; open for the owner.
+- **Contrast, site-wide**: `--color-ink-muted` moved to `#6f675c` and the LTS chip to
+  `--color-orange-deep` so 12px to 15px text and the chip clear 4.5:1 (see the comments in
+  `vars.css` and `primitives.css`). The primary CTA keeps white on `--color-camel-orange`
+  (2.93:1) as the memo's unchanged brand color; open for the owner.

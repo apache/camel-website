@@ -88,17 +88,17 @@ and four others) that **do not exist in the repository**. They are dead entries.
 
 New files:
 
-- `tests/antora-ui/fixture/antora.yml` — component `fixture`, title `Camel Core`,
+- `tests/antora-ui/fixture/antora.yml`: component `fixture`, title `Camel Core`,
   version `4.18`.
-- `tests/antora-ui/fixture/modules/ROOT/nav.adoc` — a tree deep enough to exercise
+- `tests/antora-ui/fixture/modules/ROOT/nav.adoc`: a tree deep enough to exercise
   nesting, carets, and the current-page pill.
-- `tests/antora-ui/fixture/modules/ROOT/pages/*.adoc` — pages covering: h1, lead
+- `tests/antora-ui/fixture/modules/ROOT/pages/*.adoc`: pages covering: h1, lead
   paragraph, h2/h3, inline code, a source block, a `[tabs]` block, a table with a
   header row, all five admonition types, an ordered and an unordered list, and
   prev/next pagination.
-- `tests/antora-ui/build.sh` — stages, builds, and reports the output path.
-- `package.json` — a `build:antora-local` script calling it.
-- `.gitignore` — ignore `tests/antora-ui/out`.
+- `tests/antora-ui/build.sh`: stages, builds, and reports the output path.
+- `package.json`: a `build:antora-local` script calling it.
+- `.gitignore`: ignore `tests/antora-ui/out`.
 
 **The fixture must be staged outside the repository before Antora reads it.**
 Antora's git layer cannot read a git worktree, whose `.git` is a file rather than

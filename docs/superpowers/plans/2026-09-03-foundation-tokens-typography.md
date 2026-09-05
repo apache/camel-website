@@ -584,7 +584,7 @@ Line 78 changes from an alias to a direct token on purpose. TOC headings previou
 
 - [ ] **Step 4: Invert the footer**
 
-The footer goes from a light grey band to a dark ink one, so its two text tokens invert with it. All three must change together; a light-grey text token on an ink ground is unreadable.
+The footer goes from a light gray band to a dark ink one, so its two text tokens invert with it. All three must change together; a light-gray text token on an ink ground is unreadable.
 
 | Line | From | To |
 |---|---|---|
@@ -740,7 +740,7 @@ Expected: matches for all three. **Record the counts**; Step 7 compares against 
 
 Leave `--navbar-menu-hover-background` (line 59), `--nav-secondary-background` (line 68), and `--page-version-menu-background` (line 74) on `--color-smoke-70`. They are navbar and documentation chrome, owned by pieces 2 and 3.
 
-- [ ] **Step 3: Fix the grey blocks left inside the inverted footer**
+- [ ] **Step 3: Fix the gray blocks left inside the inverted footer**
 
 `antora-ui-camel/src/css/vars.css:136`, replace:
 
@@ -754,7 +754,7 @@ with:
   --footer-after-background: var(--color-dark-line);
 ```
 
-`--color-gray-50` is `#808080`. Task 5 turned the footer ink, and `footer.css:33` and `footer.css:57` paint this token as a background inside it, so mid-grey slabs now sit on near-black. `--color-dark-line` is the palette's dark-on-dark separator and is what those two surfaces are for.
+`--color-gray-50` is `#808080`. Task 5 turned the footer ink, and `footer.css:33` and `footer.css:57` paint this token as a background inside it, so mid-gray slabs now sit on near-black. `--color-dark-line` is the palette's dark-on-dark separator and is what those two surfaces are for.
 
 - [ ] **Step 4: Re-point the annotation color for the dark ground**
 
@@ -770,7 +770,7 @@ with:
   --pre-annotation-font-color: var(--color-on-dark-muted);
 ```
 
-`--color-gray-10` is `#c1c1c1`, a cool grey. Its two consumers, the language label at `doc.css:612-625` and the source toolbox at `doc.css:630-640`, both sit on the now-dark `pre`. `#8f867a` on `#211c17` measures about 4.7:1, above the 4.5:1 threshold, and matches the warm cast of the rest of the dark surface.
+`--color-gray-10` is `#c1c1c1`, a cool gray. Its two consumers, the language label at `doc.css:612-625` and the source toolbox at `doc.css:630-640`, both sit on the now-dark `pre`. `#8f867a` on `#211c17` measures about 4.7:1, above the 4.5:1 threshold, and matches the warm cast of the rest of the dark surface.
 
 - [ ] **Step 5: Fix the table head in `antora-ui-camel/src/css/doc.css`**
 
@@ -908,7 +908,7 @@ yarn preview:hugo
 
 - [ ] **Step 5: Compare a Hugo page against its artboard**
 
-Open the home page and `/projects/`. Compare against the `Apache Camel Home` artboard and the projects screen. Check, in order: page background is warm paper and not white; body text is ink-2 and not grey; headings render in Archivo, not Open Sans; links are `#c95f12` and turn `#e97826` on hover; the container is 1200px wide with even gutters; the footer is a dark ink band with warm off-white text.
+Open the home page and `/projects/`. Compare against the `Apache Camel Home` artboard and the projects screen. Check, in order: page background is warm paper and not white; body text is ink-2 and not gray; headings render in Archivo, not Open Sans; links are `#c95f12` and turn `#e97826` on hover; the container is 1200px wide with even gutters; the footer is a dark ink band with warm off-white text.
 
 Note that `projects.css` still carries its own page-scoped `--projects-*` tokens duplicating the new `:root` values. That is expected. Piece 4 deletes them.
 
@@ -930,7 +930,7 @@ Remember that **this piece cannot merge on its own.** Piece 6 stacks directly on
 
 All nine implementation commits landed (`7aada581` through `08bbc4a9`) and every review is clean. Four things remain, recorded here because they outlive the scratch workspace.
 
-### 1. Two link colors failed WCAG AA — resolved
+### 1. Two link colors failed WCAG AA (resolved)
 
 `--link-font-color: var(--color-orange-deep)` was `#c95f12` on `#faf7f1`, which measures **3.83:1** against a 4.5:1 threshold for normal text. `--link_hover-font-color: var(--color-camel-orange)` was `#e97826` on `#faf7f1`, **2.73:1**, and is *lighter* than the resting color, so hovering weakened the link instead of strengthening it. The values the redesign replaced were 5.83:1, so this was a regression rather than an inherited problem.
 

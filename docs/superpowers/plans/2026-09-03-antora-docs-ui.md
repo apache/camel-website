@@ -2357,7 +2357,7 @@ On the rendered page at 1400px:
 
 Reload the page with JavaScript disabled, so `.tabs` keeps its `is-loading` class,
 and confirm the first tab still reads as selected: light text and an orange
-underline, not the package's white-on-grey default. If it does not, an
+underline, not the package's white-on-gray default. If it does not, an
 `is-loading` variant is missing from one of the override rules.
 
 - [ ] **Step 5: Commit the repaint**
