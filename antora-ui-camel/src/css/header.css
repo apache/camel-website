@@ -198,172 +198,76 @@ a.button.navbar-cta {
   font-size: calc(14.5 / var(--rem-base) * 1rem);
 }
 
+/* Site search is the DocSearch v5 launcher (main, PR #1729): a button that
+   opens a modal, mounted in #docsearch on both renderers. The button is
+   dressed as the 200px field the artboard shows; docsearch.css themes the
+   modal and the key hints. */
 .header .navbar-search {
+  display: flex;
+  align-items: center;
   padding: 0;
-  position: relative;
 }
 
-.header .navbar-search input {
+.header .navbar-search .DocSearch-Button {
+  box-sizing: border-box;
+  width: calc(200 / var(--rem-base) * 1rem);
+  height: calc(32 / var(--rem-base) * 1rem);
+  margin: 0;
+  padding: 0 calc(8 / var(--rem-base) * 1rem) 0 calc(10 / var(--rem-base) * 1rem);
   border: 1px solid var(--color-line);
   border-radius: calc(7 / var(--rem-base) * 1rem);
-  width: calc(200 / var(--rem-base) * 1rem);
-  margin: 0;
-  padding: calc(6 / var(--rem-base) * 1rem) calc(30 / var(--rem-base) * 1rem)
-           calc(6 / var(--rem-base) * 1rem) calc(30 / var(--rem-base) * 1rem);
+  background: var(--color-white);
+  color: var(--color-ink-soft);
   font-family: var(--body-font-family);
   font-size: calc(13.5 / var(--rem-base) * 1rem);
-  caret-color: var(--color-camel-orange);
-  background: no-repeat 0.5rem center / 0.9rem url('../img/search.svg');
-  background-color: var(--color-white);
-  color: var(--color-ink);
-  outline: 0;
+  font-weight: 400;
 }
 
-.header .navbar-search input:focus-within {
-  background-color: var(--color-white);
+.header .navbar-search .DocSearch-Button:hover,
+.header .navbar-search .DocSearch-Button:focus,
+.header .navbar-search .DocSearch-Button:active {
   border-color: var(--color-line-hover);
+  background: var(--color-white);
+  color: var(--color-ink);
+  box-shadow: none;
 }
 
-.header .navbar-search input:focus-visible {
+/* The vendor sheet sets outline: none on focus; keyboard focus needs a
+   visible ring (--color-orange-deep is 5.58:1 on white). */
+.header .navbar-search .DocSearch-Button:focus-visible {
   outline: 2px solid var(--color-orange-deep);
   outline-offset: 2px;
 }
 
-/* Absolute inside the (relative) field, like the docs nav search: the old
-   relative box with a percentage bottom resolved to auto once .navbar-search
-   stopped being a stretched flex item, dropping the icon under the input. */
-.header #search-cancel {
-  position: absolute;
-  top: 50%;
-  right: calc(10 / var(--rem-base) * 1rem);
-  transform: translateY(-50%);
-  height: 1rem;
-  display: none;
-  cursor: pointer;
+.header .navbar-search .DocSearch-Search-Icon {
+  width: calc(14 / var(--rem-base) * 1rem);
+  height: calc(14 / var(--rem-base) * 1rem);
+  color: var(--color-ink-soft);
 }
 
-.header #search_results {
-  top: var(--navbar-height);
-  background: var(--navbar-background);
-  text-align: left;
-  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
-  /* fixed, not absolute: .navbar-search is now positioned for the clear icon,
-     and the results must keep hanging off the fixed navbar instead. */
-  position: fixed;
-  margin-right: 10px;
-  overflow-y: auto;
-  max-height: 80vh;
-  max-width: min(600px, 90vw);
-  min-width: 300px;
-  scrollbar-width: thin; /* Firefox */
-}
-
-#search_results::-webkit-scrollbar {
-  width: var(--scrollbar-thickness);
-}
-
-#search_results::-webkit-scrollbar-track {
-  background: var(--scrollbar-track-color);
-  border-radius: var(--scrollbar-radius);
-}
-
-#search_results::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb-color);
-  border-radius: var(--scrollbar-radius);
-}
-
-#search_results::-webkit-scrollbar-thumb:hover,
-#search_results::-webkit-scrollbar-thumb:active {
-  background: var(--scrollbar-thumb-active-color);
-}
-
-.result_header {
-  font-weight: 600;
-  color: var(--color-ink);
-  padding-right: 0.5rem;
-}
-
-#search_results div.result {
-  padding: 0.25rem;
-  pointer-events: none;
-}
-
-#search_results div.result:hover {
-  background: var(--color-smoke-50);
-}
-
-#search_results div.heading {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0.5rem;
-}
-
-#search_results a:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--color-gray-10);
-}
-
-.result_summary {
-  color: var(--color-jet-50);
-  padding-top: 0.3rem;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
-}
-
-#search_results div.footer-search {
-  display: inline-flex;
-  width: 100%;
-  padding: 0.75rem;
-}
-
-div.footer-search h4 {
-  color: var(--color-ink);
-  width: 5rem;
-}
-
-.no_search_results {
-  padding: 1rem;
-  font-weight: bold;
-  color: var(--color-ink);
-  border-bottom: 2px solid var(--color-smoke-50);
-}
-
-.algolia-docsearch-suggestion--highlight {
-  font-weight: bold;
-  color: var(--color-jet-50);
-}
-
-.results-hidden #search_results {
-  display: none;
+.header .navbar-search .DocSearch-Button-Placeholder {
+  padding: 0 calc(8 / var(--rem-base) * 1rem);
+  font-size: inherit;
 }
 
 /* Styling for mobile use */
 @media (width <= 1024px) {
-  /* The field gives up its fixed 200px and shrinks with the bar. */
+  /* The button gives up its fixed 200px and shrinks with the bar; below
+     768px the vendor sheet drops its label and key hints, leaving the icon. */
   .header .navbar-search {
     min-width: 0;
   }
 
-  .header .navbar-search input {
-    width: 100%;
-  }
-
-  .header #search_results {
-    left: 0;
-    width: 100vw;
-    top: var(--navbar-height);
+  .header .navbar-search .DocSearch-Button {
+    width: auto;
+    min-width: calc(32 / var(--rem-base) * 1rem);
   }
 }
 
 @media (width <= 500px) {
-  /* Below this, the brand, CTA and burger alone fill the bar. Search and the
-     GitHub link are dropped rather than pushing the burger off-screen. GitHub
-     stays reachable in the footer. The docs nav panel keeps its own copy of
-     search, which is why this is scoped to the header. */
-  .header .navbar-search,
+  /* Below this, the brand, CTA, burger and the icon-only search fill the
+     bar. The GitHub link is dropped rather than pushing the burger
+     off-screen; it stays reachable in the footer. */
   .navbar-github {
     display: none;
   }

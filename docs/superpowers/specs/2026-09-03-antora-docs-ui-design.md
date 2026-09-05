@@ -174,6 +174,11 @@ Measurements from the artboard:
 
 ### 3. Moving search into the nav panel
 
+**Superseded on the rebase onto main (2026-09-05).** Main's PR #1729 replaced the Algolia
+field with the DocSearch v5 launcher, so the nav-panel field below no longer exists: the
+launcher sits in `header-content.hbs` again, inside `.navbar-actions`, and `nav.hbs` starts
+with the tree. See the home page spec, D3, for the shared treatment.
+
 `header-content.hbs` loses its `div.navbar-search` block. `nav.hbs` gains it,
 wrapped in `.nav-search`:
 
