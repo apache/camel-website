@@ -69,8 +69,8 @@
 }
 
 /* ---- eyebrow (mono, uppercase, 0.08em) -------------------------------- */
-/* Shared shape only (M5, final-review.md): colour is a per-consumer design
-   decision and is intentionally NOT unified here. Three colours ship on
+/* Shared shape only (M5, final-review.md): color is a per-consumer design
+   decision and is intentionally NOT unified here. Three colors ship on
    purpose (--color-prompt, --color-orange-deep, --color-ink-muted).
    frontpage.css's .home-eyebrow is a near-match (12.5px, not 12px, plus its
    own margin: 0) and is deliberately left out: folding it in would shift
@@ -190,7 +190,9 @@
   font-size: calc(10.5 / var(--rem-base) * 1rem);
   font-weight: 600;
   color: var(--color-white);
-  background: var(--color-camel-orange);
+  /* --color-orange-deep, not --color-camel-orange: white on #e97826 is 2.93:1
+     at this size; on #a84e0d it is 5.58:1 (same choice as .home-badge). */
+  background: var(--color-orange-deep);
   padding: calc(2 / var(--rem-base) * 1rem) calc(7 / var(--rem-base) * 1rem);
   border-radius: 20px; /* radius exemption: raw px */
 }

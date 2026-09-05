@@ -178,8 +178,10 @@
   color: var(--color-ink-muted);
 }
 
+/* Hover darkens like every other link (vars.css): camel-orange is 2.74:1 on
+   paper and lighter than the rest state. */
 .download-row-link:hover {
-  color: var(--color-camel-orange);
+  color: var(--link_hover-font-color);
   text-decoration: none;
 }
 
@@ -188,7 +190,7 @@
 }
 
 .download-row-link--primary:hover {
-  color: var(--color-camel-orange);
+  color: var(--link_hover-font-color);
 }
 
 .download-row-sub {
@@ -258,9 +260,10 @@
   .download {
     padding: calc(40 / var(--rem-base) * 1rem) calc(24 / var(--rem-base) * 1rem) calc(48 / var(--rem-base) * 1rem);
   }
-}
 
-@media screen and (width <= 626px) {
+  /* The four-column row needs about 590px of fixed tracks plus the nowrap
+     artifact links, which overflowed the page between 627px and about 890px
+     when it only stacked at 626px. */
   .download-row {
     grid-template-columns: 1fr;
     gap: calc(8 / var(--rem-base) * 1rem);

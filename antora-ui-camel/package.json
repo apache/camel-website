@@ -12,7 +12,9 @@
     "node": ">= 22.12.0"
   },
   "browserslist": [
-    "last 2 versions"
+    "last 2 versions",
+    "safari >= 16.4",
+    "ios_saf >= 16.4"
   ],
   "scripts": {
     "build": "gulp bundle",

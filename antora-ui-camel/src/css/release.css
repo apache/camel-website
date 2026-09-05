@@ -139,7 +139,7 @@
    below stay distinct from the TOC component on purpose, not by accident. */
 
 /* .releases-rail / .releases-rail-heading: shared base (sticky offset;
-   mono eyebrow shape + colour) lives in primitives.css - see M5,
+   mono eyebrow shape + color) lives in primitives.css - see M5,
    final-review.md. .releases-rail is first in DOM order (M1, so the mobile
    jump-nav precedes the content it links to) but pinned to the second grid
    column here so desktop rendering is unchanged. */

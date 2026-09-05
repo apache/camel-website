@@ -29,12 +29,6 @@
   padding: 0;
 }
 
-@media screen and (width <= 1024px) {
-  .nav-category {
-    margin-left: 1rem;
-  }
-}
-
 .nav {
   background: var(--nav-background);
   border-right: 1px solid var(--nav-border-color);
@@ -99,6 +93,13 @@
   border-color: var(--color-line-hover);
 }
 
+/* The border change alone is 1.58:1 against the field; keyboard focus needs a
+   visible ring (--color-orange-deep is 5.58:1 on white). */
+.nav-search input.search:focus-visible {
+  outline: 2px solid var(--color-orange-deep);
+  outline-offset: 2px;
+}
+
 .nav-search-hint {
   position: absolute;
   top: 50%;
@@ -114,6 +115,12 @@
 }
 
 .nav-search:focus-within .nav-search-hint {
+  display: none;
+}
+
+/* The clear icon sits in the same slot and stays shown while the field holds
+   a query, including after a click outside dismissed the results. */
+.nav-search:has(input.search:not(:placeholder-shown)) .nav-search-hint {
   display: none;
 }
 
