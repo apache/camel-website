@@ -16,19 +16,32 @@
 #   tests/hugo/build.sh --measure / 'sel@color' '' 626
 #                                                   ...at a given iframe width (default 1440)
 #
-# Env: HUGO_OUT, HUGO_PORT (default 8899), SHOT_WIDTHS, SHOT_HEIGHT (default 2400)
+# Env: HUGO_OUT, HUGO_PORT (default 8899), SHOT_WIDTHS, SHOT_HEIGHT (default 2400),
+#      HUGO_OPTIONS and HUGO_CACHE_DIR (forwarded to hugo like package.json's
+#      build:hugo; HUGO_OPTIONS='--buildFuture' reproduces the PR preview,
+#      HUGO_OPTIONS='-D' the local preview)
 set -euo pipefail
 
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$REPO"
 
 OUT="${HUGO_OUT:-$(mktemp -d)}"
+mkdir -p "$OUT"
 SITE="$OUT/site"
 LOG="$OUT/hugo-build.log"
 SHOTS="$OUT/shots"
 PORT="${HUGO_PORT:-8899}"
 SHOT_HEIGHT="${SHOT_HEIGHT:-2400}"
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+
+# The Hugo output carries a copy of staticDir (documentation/ alone is about
+# 500 MB), so a temporary site is removed on exit; a caller-supplied HUGO_OUT
+# is kept. The log and screenshots live next to it and survive either way.
+cleanup() {
+  if [ -n "${SERVER_PID:-}" ]; then kill "$SERVER_PID" 2>/dev/null || true; fi
+  if [ -z "${HUGO_OUT:-}" ]; then rm -rf "$SITE"; fi
+}
+trap cleanup EXIT
 
 if [ -z "${GITHUB_TOKEN:-}" ]; then
   if command -v gh >/dev/null 2>&1 && _tok="$(gh auth token 2>/dev/null)" && [ -n "$_tok" ]; then
@@ -54,8 +67,15 @@ if [ ! -f "$MANIFEST" ]; then
   exit 1
 fi
 
-if find "$REPO/antora-ui-camel/src" -newer "$MANIFEST" -print -quit | grep -q .; then
-  echo "antora-ui-camel bundle is stale (source newer than rev-manifest.json) -- run 'yarn workspace antora-ui-camel run build'" >&2
+# git does not restore mtimes, so comparing every source file against the
+# manifest flags each fresh checkout as stale; only files git reports as
+# modified or untracked can be newer than the committed bundle for a reason.
+# Committed source without a committed bundle is not detected here.
+stale="$(git -C "$REPO" status --porcelain --untracked-files=all -- antora-ui-camel/src | cut -c4- | while IFS= read -r f; do
+  if [ "$REPO/$f" -nt "$MANIFEST" ]; then printf '%s\n' "$f"; fi
+done)"
+if [ -n "$stale" ]; then
+  echo "antora-ui-camel bundle is stale (uncommitted source newer than rev-manifest.json) -- run 'yarn workspace antora-ui-camel run build'" >&2
   exit 1
 fi
 
@@ -67,7 +87,7 @@ for asset_dir in css js img font data; do
   fi
 done
 
-if ! node_modules/.bin/hugo --cacheDir "$REPO/.hugo_data" -d "$SITE" >"$LOG" 2>&1; then
+if ! node_modules/.bin/hugo --cacheDir "${HUGO_CACHE_DIR:-$REPO/.hugo_data}" ${HUGO_OPTIONS:-} -d "$SITE" >"$LOG" 2>&1; then
   echo "hugo build FAILED. Last 20 lines of $LOG:" >&2
   tail -20 "$LOG" >&2
   exit 1
@@ -79,11 +99,11 @@ if [ "$errors" != "0" ]; then
   exit 1
 fi
 echo "hugo: 0 errors -> $SITE"
+if [ -z "${HUGO_OUT:-}" ]; then echo "(temporary; removed on exit, set HUGO_OUT to keep it)" >&2; fi
 
 start_server() {
   python3 -m http.server "$PORT" --directory "$SITE" >/dev/null 2>&1 &
   SERVER_PID=$!
-  trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
   for _ in 1 2 3 4 5 6 7 8 9 10; do
     if ! kill -0 "$SERVER_PID" 2>/dev/null; then
       echo "server process for port $PORT exited before it became ready (port may already be in use)" >&2
