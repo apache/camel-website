@@ -27,13 +27,8 @@
   margin-top: calc(40 / var(--rem-base) * 1rem);
 }
 
-.docs-feature-eyebrow {
-  font-family: var(--monospace-font-family);
-  font-size: calc(12 / var(--rem-base) * 1rem);
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
+/* .docs-feature-eyebrow: shared shape lives in primitives.css - see M5,
+   final-review.md. */
 
 .docs-feature--dark .docs-feature-eyebrow {
   color: var(--color-prompt);
@@ -196,14 +191,8 @@
   grid-column: span 2;
 }
 
-.community-cta-eyebrow {
-  font-family: var(--monospace-font-family);
-  font-size: calc(12 / var(--rem-base) * 1rem);
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-prompt);
-}
+/* .community-cta-eyebrow: shared shape lives in primitives.css - see M5,
+   final-review.md. */
 
 .community-cta-title {
   font-family: var(--display-font-family);

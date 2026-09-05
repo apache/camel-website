@@ -9,12 +9,8 @@
    horizontal, wrapping layout is a genuinely different shape from the card
    system, not a --dark modifier of it. */
 
-.security {
-  width: 100%;
-  max-width: var(--static-max-width--desktop);
-  margin: 0 auto;
-  padding: calc(56 / var(--rem-base) * 1rem) var(--page-padding-x) calc(40 / var(--rem-base) * 1rem);
-}
+/* .security page shell: shared with .download/.advisory in primitives.css
+   - see M5, final-review.md. */
 
 .security-hero {
   max-width: calc(760 / var(--rem-base) * 1rem);
@@ -44,14 +40,8 @@
   max-width: calc(820 / var(--rem-base) * 1rem);
 }
 
-.security-eyebrow {
-  font-family: var(--monospace-font-family);
-  font-size: calc(12 / var(--rem-base) * 1rem);
-  font-weight: 600;
-  color: var(--color-orange-deep);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
+/* .security-eyebrow: shared shape lives in primitives.css - see M5,
+   final-review.md. */
 
 .security-card {
   padding: calc(26 / var(--rem-base) * 1rem);

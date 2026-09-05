@@ -153,13 +153,11 @@
 
 /* .doc p / .static p (both 0,1,1) beat a bare class for margin; every .tooling
    <p> below is compound-scoped (.tooling .foo, 0,2,0) for the same reason. */
+/* .tooling-eyebrow: shared mono/uppercase shape lives in primitives.css
+   (compound .tooling .tooling-eyebrow selector, to keep the specificity
+   this file's header comment explains) - see M5, final-review.md. */
 .tooling .tooling-eyebrow {
-  font-family: var(--monospace-font-family);
-  font-size: calc(12 / var(--rem-base) * 1rem);
-  font-weight: 600;
   color: var(--color-orange-deep);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
   margin: 0;
 }
 

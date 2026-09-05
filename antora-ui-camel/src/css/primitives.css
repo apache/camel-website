@@ -6,6 +6,22 @@
    fixed grid-column span, a header-row layout) - never the shell/typography
    again. */
 
+/* ---- page-shell (single-column content pages) ------------------------ */
+/* Byte-identical across download.css/.download, security.css/.security and
+   release.css/.advisory before this extraction (M5, final-review.md). Not
+   extended to docs.css's .docs/.community or blog.css's .post, which share
+   the same four declarations but were left in place (out of the finding's
+   named scope). */
+
+.download,
+.security,
+.advisory {
+  width: 100%;
+  max-width: var(--static-max-width--desktop);
+  margin: 0 auto;
+  padding: calc(56 / var(--rem-base) * 1rem) var(--page-padding-x) calc(40 / var(--rem-base) * 1rem);
+}
+
 /* ---- page-hero (index/list screens) --------------------------------- */
 
 .page-hero-title {
@@ -52,6 +68,47 @@
   border-bottom: 1px solid var(--color-line);
 }
 
+/* ---- eyebrow (mono, uppercase, 0.08em) -------------------------------- */
+/* Shared shape only (M5, final-review.md): colour is a per-consumer design
+   decision and is intentionally NOT unified here. Three colours ship on
+   purpose (--color-prompt, --color-orange-deep, --color-ink-muted).
+   frontpage.css's .home-eyebrow is a near-match (12.5px, not 12px, plus its
+   own margin: 0) and is deliberately left out: folding it in would shift
+   its rendered font-size. */
+
+.docs-feature-eyebrow,
+.tooling .tooling-eyebrow,
+.post-eyebrow,
+.security-eyebrow,
+.advisory-eyebrow,
+.community-cta-eyebrow,
+.download-cli-eyebrow,
+.blog-rail-eyebrow,
+.releases-rail-heading {
+  font-family: var(--monospace-font-family);
+  font-size: calc(12 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.security-eyebrow,
+.advisory-eyebrow {
+  color: var(--color-orange-deep);
+}
+
+.community-cta-eyebrow,
+.download-cli-eyebrow {
+  color: var(--color-prompt);
+}
+
+.blog-rail-eyebrow,
+.releases-rail-heading {
+  color: var(--color-ink-muted);
+  padding-bottom: calc(12 / var(--rem-base) * 1rem);
+  border-bottom: 1px solid var(--color-line);
+}
+
 /* ---- card / card-grid ------------------------------------------------ */
 
 .card {
@@ -64,7 +121,12 @@
   transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
 }
 
-.card:hover {
+/* Byte-identical fork in frontpage.css/.home-card:hover and
+   projects.css/.project-card:hover before this extraction (M5). Each
+   consumer keeps its own radius/padding; only the hover lift is shared. */
+.card:hover,
+.home-card:hover,
+.project-card:hover {
   border-color: var(--color-line-hover);
   box-shadow: 0 14px 34px -22px rgb(33 28 23 / 35%);
   transform: translateY(-2px);
@@ -160,4 +222,15 @@
 .severity-chip--critical {
   background: var(--important-tint);
   color: var(--important-chip-font-color);
+}
+
+/* ---- sticky rail base: position + offset only ------------------------- */
+/* Byte-identical in blog.css/.blog-rail and release.css/.releases-rail
+   before this extraction (M5). Each file keeps its own <=1024px override
+   (blog goes static; releases goes static with an added margin-top). */
+
+.blog-rail,
+.releases-rail {
+  position: sticky;
+  top: calc(var(--navbar-height) + calc(24 / var(--rem-base) * 1rem));
 }

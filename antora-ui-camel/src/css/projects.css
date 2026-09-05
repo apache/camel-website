@@ -90,11 +90,8 @@
   transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
 }
 
-.project-card:hover {
-  border-color: var(--color-line-hover);
-  box-shadow: 0 14px 34px -22px rgb(33 28 23 / 35%);
-  transform: translateY(-2px);
-}
+/* .project-card:hover: shared hover lift lives in primitives.css
+   (.card:hover selector group) - see M5, final-review.md. */
 
 .project-card--row {
   flex-direction: row;
