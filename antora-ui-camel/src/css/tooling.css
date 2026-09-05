@@ -28,7 +28,7 @@
   width: 100%;
   max-width: var(--static-max-width--desktop);
   margin: 0 auto;
-  padding: calc(56 / var(--rem-base) * 1rem) calc(32 / var(--rem-base) * 1rem) calc(40 / var(--rem-base) * 1rem);
+  padding: calc(56 / var(--rem-base) * 1rem) var(--page-padding-x) calc(40 / var(--rem-base) * 1rem);
   display: grid;
   grid-template-columns: minmax(0, 1fr) var(--toc-width);
   gap: calc(56 / var(--rem-base) * 1rem);
