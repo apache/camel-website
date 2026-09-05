@@ -125,6 +125,7 @@
 }
 
 .blog-post-day {
+  display: block;
   font-family: var(--display-font-family);
   font-weight: 800;
   font-size: calc(40 / var(--rem-base) * 1rem);
@@ -134,6 +135,7 @@
 }
 
 .blog-post-month {
+  display: block;
   font-family: var(--monospace-font-family);
   font-size: calc(12 / var(--rem-base) * 1rem);
   font-weight: 600;
