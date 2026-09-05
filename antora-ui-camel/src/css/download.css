@@ -5,12 +5,8 @@
    shared .card/.card--flat primitives with only a page-scoped padding
    override. Everything below is genuinely page-owned layout. */
 
-.download {
-  width: 100%;
-  max-width: var(--static-max-width--desktop);
-  margin: 0 auto;
-  padding: calc(56 / var(--rem-base) * 1rem) var(--page-padding-x) calc(40 / var(--rem-base) * 1rem);
-}
+/* .download page shell: shared with .security/.advisory in primitives.css
+   - see M5, final-review.md. */
 
 /* hero: intro copy + CLI launcher card */
 
@@ -54,14 +50,8 @@
   color: var(--color-on-dark);
 }
 
-.download-cli-eyebrow {
-  font-family: var(--monospace-font-family);
-  font-size: calc(12 / var(--rem-base) * 1rem);
-  font-weight: 600;
-  color: var(--color-prompt);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
+/* .download-cli-eyebrow: shared shape lives in primitives.css - see M5,
+   final-review.md. */
 
 .download-cli-desc {
   font-size: calc(14.5 / var(--rem-base) * 1rem);

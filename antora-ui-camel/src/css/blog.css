@@ -18,21 +18,8 @@
   align-items: start;
 }
 
-.blog-rail {
-  position: sticky;
-  top: calc(var(--navbar-height) + calc(24 / var(--rem-base) * 1rem));
-}
-
-.blog-rail-eyebrow {
-  font-family: var(--monospace-font-family);
-  font-size: calc(12 / var(--rem-base) * 1rem);
-  font-weight: 600;
-  color: var(--color-ink-muted);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding-bottom: calc(12 / var(--rem-base) * 1rem);
-  border-bottom: 1px solid var(--color-line);
-}
+/* .blog-rail / .blog-rail-eyebrow: shared base (sticky offset; mono
+   eyebrow shape + colour) lives in primitives.css - see M5, final-review.md. */
 
 .blog-categories {
   display: flex;
@@ -368,12 +355,7 @@
 /* Shared eyebrow typography for the rail's Share / In this post labels
    (post.md §2.7b/§2.7c call these "identical typography"). */
 .post-eyebrow {
-  font-family: var(--monospace-font-family);
-  font-size: calc(12 / var(--rem-base) * 1rem);
-  font-weight: 600;
   color: var(--color-ink-muted);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
   padding-bottom: calc(10 / var(--rem-base) * 1rem);
 }
 

@@ -130,21 +130,9 @@
    for aside.toc.sidebar, which this markup never carries, but the class names
    below stay distinct from the TOC component on purpose, not by accident. */
 
-.releases-rail {
-  position: sticky;
-  top: calc(var(--navbar-height) + calc(24 / var(--rem-base) * 1rem));
-}
-
-.releases-rail-heading {
-  font-family: var(--monospace-font-family);
-  font-size: calc(12 / var(--rem-base) * 1rem);
-  font-weight: 600;
-  color: var(--color-ink-muted);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding-bottom: calc(12 / var(--rem-base) * 1rem);
-  border-bottom: 1px solid var(--color-line);
-}
+/* .releases-rail / .releases-rail-heading: shared base (sticky offset;
+   mono eyebrow shape + colour) lives in primitives.css - see M5,
+   final-review.md. */
 
 .releases-rail-links {
   display: flex;
@@ -171,12 +159,8 @@
    Security advisory (single CVE page)
    ====================================================================== */
 
-.advisory {
-  width: 100%;
-  max-width: var(--static-max-width--desktop);
-  margin: 0 auto;
-  padding: calc(56 / var(--rem-base) * 1rem) var(--page-padding-x) calc(40 / var(--rem-base) * 1rem);
-}
+/* .advisory page shell: shared with .download/.security in primitives.css
+   - see M5, final-review.md. */
 
 .advisory-back {
   display: inline-block;
@@ -203,14 +187,8 @@
   max-width: calc(760 / var(--rem-base) * 1rem);
 }
 
-.advisory-eyebrow {
-  font-family: var(--monospace-font-family);
-  font-size: calc(12 / var(--rem-base) * 1rem);
-  font-weight: 600;
-  color: var(--color-orange-deep);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
+/* .advisory-eyebrow: shared shape lives in primitives.css - see M5,
+   final-review.md. */
 
 .advisory-title {
   font-family: var(--display-font-family);
