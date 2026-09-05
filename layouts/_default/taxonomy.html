@@ -1,5 +1,4 @@
 {{ partial "header.html" . }}
-{{ $current := .Data.Term }}
 
 <div class="body">
   <main>
@@ -10,7 +9,7 @@
             <div class="blog-rail-eyebrow">Categories</div>
             <div class="blog-categories">
               {{ range .Site.Taxonomies.categories.Alphabetical }}
-              <a class="blog-category{{ if eq .Name $current }} is-current{{ end }}" href="{{ "/categories/" | relURL }}{{ .Name | urlize }}/">
+              <a class="blog-category{{ if eq .Page.RelPermalink $.RelPermalink }} is-current{{ end }}" href="{{ "/categories/" | relURL }}{{ .Name | urlize }}/">
                 <span>{{ .Name }}</span><span class="blog-category-count">{{ .Count }}</span>
               </a>
               {{ end }}
@@ -25,15 +24,7 @@
             <p class="page-hero-lead">{{ printf "Posts in the %s category." .Title }}</p>
 
             <div class="blog-posts">
-              {{ $filtered := slice }}
-              {{ range .Pages }}
-                {{/* hide posts where Releases is the only category */}}
-                {{ $cats := default slice .Params.categories }}
-                {{ if not (and (in $cats "Releases") (eq (len $cats) 1)) }}
-                  {{ $filtered = $filtered | append . }}
-                {{ end }}
-              {{ end }}
-              {{ $pages := (.Paginate $filtered 3).Pages }}
+              {{ $pages := (.Paginate .Pages 3).Pages }}
               {{ range $pages }}
               {{ .Render "summary" }}
               {{ end }}
