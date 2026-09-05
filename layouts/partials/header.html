@@ -73,10 +73,8 @@
                     {{ end }}
                 </div>
                 <div class="navbar-actions">
-                    <div class="navbar-search results-hidden">
-                        <input id="search" class="search" placeholder="Search" autocomplete="off" maxlength="200">
-                        <img src="{{ path.Join "_" (index .Site.Data "rev-manifest" "img/cancel.svg") | relURL }}" alt="Clear" id="search-cancel">
-                        <div id="search_results"></div>
+                    <div class="navbar-search">
+                        <div id="docsearch"></div>
                     </div>
                     <a class="navbar-github" rel="noopener noreferrer nofollow" href="https://github.com/apache/camel/" title="Collaborate on GitHub"><svg focusable="false" class="brand-icon"><use href="{{ path.Join "_" (index .Site.Data "rev-manifest" "img/brand-logos.svg") | relURL }}#github" /></svg></a>
                     <a class="button dark navbar-cta" href="{{ $ctaURL | relURL }}">{{ $ctaLabel }}</a>

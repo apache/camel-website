@@ -70,6 +70,13 @@ panel to host it, so removing it from the header would leave them with no search
 header field stays and is restyled to the new tokens. Docs pages keep the nav-panel field.
 Search therefore appears in one place per section, never two on the same page.
 
+**Superseded on the rebase onto main (2026-09-05).** Main's PR #1729 replaced the hand-built
+Algolia field with the DocSearch v5 launcher, a button that opens a modal. Both renderers now
+mount it in the header (`div.navbar-search > #docsearch`), dressed in `header.css` as the 200px
+field the artboard shows; `docsearch.css` themes the modal with the redesign palette. The
+Antora nav-panel field, the clear icon and the "/" hotkey are gone. Below 768px the vendor
+sheet collapses the launcher to its icon, so search stays in the bar at phone widths.
+
 ### D4. Hero art is the camel mark in the gradient panel
 
 `logo-d.svg` at 62% width inside the rounded radial-gradient panel, as the design shows.

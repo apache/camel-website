@@ -62,6 +62,10 @@ runtime:
 EOF
 
 rm -rf "$OUT"
-"$REPO/node_modules/.bin/antora" "$STAGE/playbook.yml"
+# Antora 3.1.15 evaluates UI helpers as if they lived under the playbook's
+# directory, so a helper's require() (js-yaml in withChromeData.js) would
+# resolve from the staging dir instead of the repository. NODE_PATH points it
+# back at the repository's modules.
+NODE_PATH="$REPO/node_modules" "$REPO/node_modules/.bin/antora" "$STAGE/playbook.yml"
 
 echo "Rendered: $OUT/fixture/4.18/getting-started.html"
