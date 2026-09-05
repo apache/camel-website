@@ -1,4 +1,7 @@
-.misc p {
+/* Only the image-and-caption paragraph shape wants flex. Applied to every <p>,
+   it turns the text node and each inline link into separate flex items, which
+   renders prose links as narrow vertical letter-stacks. */
+.misc p:has(img) {
   display: flex;
   align-items: center;
 }
