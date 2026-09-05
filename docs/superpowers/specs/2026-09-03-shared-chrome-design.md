@@ -386,12 +386,13 @@ broken xrefs in `apache/camel`'s own `key-value-repository.adoc`, and
   documentation pages already present in `public/` from an earlier successful
   build. A template change that breaks only under a fresh Antora run would not
   be caught here. This is the largest risk in the piece.
-- **`withChromeData.js` runs at UI-bundle time, not at Antora time.** Like
-  `withMenuData.js`, it resolves its path relative to the working directory. If
-  the bundle is ever built from a directory other than `antora-ui-camel` or the
-  repository root, the fallback fails. The existing helper has the same
-  constraint, so this adds no new failure mode, but the new helper must reuse
-  the same fallback rather than inventing one.
+- **`withChromeData.js` runs in the Antora process, not at UI-bundle time.**
+  Antora evaluates UI helpers with `requireFromString` while composing pages,
+  so the helper resolves `data/chrome.yaml` against the cwd of the Antora (or
+  `gulp preview`) run: the repository root, or `antora-ui-camel`. Like
+  `withMenuData.js`, it fails from any other cwd (a consumer of the packaged
+  bundle included); it throws an error naming the file and the cwd rather than
+  a bare ENOENT, and reuses the same two-location fallback.
 - **Removing `pre` from `config.toml` touches a file Antora also parses.**
   `withMenuData.js` reads `config.toml` directly, so a malformed edit breaks the
   documentation build as well as the Hugo build.
