@@ -224,10 +224,12 @@ a.button.ink:hover {
   flex: 1;
   font-family: var(--monospace-font-family);
   font-size: calc(13.5 / var(--rem-base) * 1rem);
-  overflow: hidden;
+  /* Wraps like the download CLI card: nowrap plus ellipsis hid the second
+     half of the command below about 510px. */
+  min-width: 0;
   padding: calc(14 / var(--rem-base) * 1rem) calc(16 / var(--rem-base) * 1rem);
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
 }
 
 .home-cli-prompt {

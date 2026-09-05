@@ -33,7 +33,12 @@
   --color-ink: #211c17;
   --color-ink-2: #3a332b;
   --color-ink-soft: #5c554c;
-  --color-ink-muted: #8a8074;
+  /* Deviates from SCOPE.md section 2, which specifies #8a8074. That value measures
+     3.62:1 on --color-paper and 3.35:1 on --color-paper-2, failing WCAG AA for the
+     12px to 15px eyebrows and meta text it carries. #6f675c keeps the same hue and
+     reads as a lighter tier than --color-ink-soft: 5.21:1 on paper, 4.82:1 on
+     paper-2. */
+  --color-ink-muted: #6f675c;
   /* Deviates from SCOPE.md section 2, which specifies #c95f12. That value measures
      3.83:1 on --color-paper and 3.55:1 on --color-paper-2, failing WCAG AA for normal
      text, and links land on both surfaces. #a84e0d is the same hue (25deg) and
@@ -78,14 +83,7 @@
   /* navbar */
   --navbar-background: rgb(250 247 241 / 90%);
   --navbar-font-color: var(--color-ink-soft);
-  --navbar-hover-font-color: var(--color-ink);
-  --navbar-hover-background: var(--color-white);
-  --navbar-button-background: var(--color-white);
-  --navbar-button-border-color: var(--panel-border-color);
-  --navbar-button-font-color: var(--body-font-color);
   --navbar-menu-border-color: var(--panel-border-color);
-  --navbar-menu-background: var(--color-white);
-  --navbar-menu-font-color: var(--body-font-color);
   --navbar-menu-hover-background: var(--color-smoke-70);
   /* nav */
   --nav-background: var(--panel-background);
@@ -190,7 +188,6 @@
   --footer-background: var(--color-ink);
   --footer-font-color: var(--color-on-dark-soft);
   --footer-after-background: var(--color-dark-line);
-  --footer-link-font-color: var(--color-on-dark-soft);
   /* Used only by .body's min-height calc in body.css (no longer by footer's own
      min-height, which was deleted: it never bound at desktop and was the sole
      cause of an oversized empty band at narrow widths). Must be at or below the

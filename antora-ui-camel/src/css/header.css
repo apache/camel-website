@@ -200,6 +200,7 @@ a.button.navbar-cta {
 
 .header .navbar-search {
   padding: 0;
+  position: relative;
 }
 
 .header .navbar-search input {
@@ -207,7 +208,7 @@ a.button.navbar-cta {
   border-radius: calc(7 / var(--rem-base) * 1rem);
   width: calc(200 / var(--rem-base) * 1rem);
   margin: 0;
-  padding: calc(6 / var(--rem-base) * 1rem) calc(10 / var(--rem-base) * 1rem)
+  padding: calc(6 / var(--rem-base) * 1rem) calc(30 / var(--rem-base) * 1rem)
            calc(6 / var(--rem-base) * 1rem) calc(30 / var(--rem-base) * 1rem);
   font-family: var(--body-font-family);
   font-size: calc(13.5 / var(--rem-base) * 1rem);
@@ -223,10 +224,19 @@ a.button.navbar-cta {
   border-color: var(--color-line-hover);
 }
 
+.header .navbar-search input:focus-visible {
+  outline: 2px solid var(--color-orange-deep);
+  outline-offset: 2px;
+}
+
+/* Absolute inside the (relative) field, like the docs nav search: the old
+   relative box with a percentage bottom resolved to auto once .navbar-search
+   stopped being a stretched flex item, dropping the icon under the input. */
 .header #search-cancel {
-  position: relative;
-  bottom: calc(50% + 0.1rem);
-  left: calc(100% - 1.25rem);
+  position: absolute;
+  top: 50%;
+  right: calc(10 / var(--rem-base) * 1rem);
+  transform: translateY(-50%);
   height: 1rem;
   display: none;
   cursor: pointer;
@@ -237,7 +247,9 @@ a.button.navbar-cta {
   background: var(--navbar-background);
   text-align: left;
   box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
-  position: absolute;
+  /* fixed, not absolute: .navbar-search is now positioned for the clear icon,
+     and the results must keep hanging off the fixed navbar instead. */
+  position: fixed;
   margin-right: 10px;
   overflow-y: auto;
   max-height: 80vh;
@@ -337,10 +349,6 @@ div.footer-search h4 {
 
   .header .navbar-search input {
     width: 100%;
-  }
-
-  .header #search-cancel {
-    margin-top: 0.75rem;
   }
 
   .header #search_results {
