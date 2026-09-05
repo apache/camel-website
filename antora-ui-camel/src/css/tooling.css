@@ -89,6 +89,13 @@
   border-radius: 4px; /* radius exemption: raw px */
 }
 
+/* .doc p code (0,1,2) otherwise outranks the bare .tooling code (0,1,1) for
+   the inline <code> in the section-intro paragraphs; beat it with an extra
+   class instead of !important - final-review.md L7 item 5. */
+.tooling .tooling-section-intro code {
+  font-size: calc(14 / var(--rem-base) * 1rem);
+}
+
 /* ---- Camel CLI: dark command list --------------------------------------- */
 
 .tooling-cli {
@@ -107,9 +114,12 @@
   font-size: calc(14 / var(--rem-base) * 1rem);
 }
 
-.tooling-cli-cmd {
+/* Compound-scoped (0,2,0) to beat .tooling code (0,1,1) for font-size -
+   final-review.md L7 item 4. */
+.tooling .tooling-cli-cmd {
   color: var(--color-orange-glow);
   font-weight: 600;
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
 }
 
 .tooling-cli-desc {
@@ -123,6 +133,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: calc(28 / var(--rem-base) * 1rem);
+  align-items: start;
 }
 
 /* C-aspect (tooling.md sec 6): the real screenshot is ~2.33:1; the design's
