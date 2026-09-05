@@ -17,10 +17,10 @@ cliCommands:
     desc: Run in developer mode with hot-reload — changes are picked up automatically without restarting
   - cmd: camel trace
     desc: Live message tracing, step by step through your routes to see how messages are processed
-  - cmd: camel send
+  - cmd: camel cmd send
     desc: Send test messages to running Camel routes for quick testing and debugging
   - cmd: camel test
-    desc: Run tests for your Camel routes
+    desc: Run tests for your Camel routes (a plugin, installed with camel plugin add test)
   - cmd: camel export
     desc: Export your Camel project to Spring Boot, Quarkus, or standalone Java for production deployment
 
@@ -72,8 +72,8 @@ toolGroups:
         desc: Creates a new Camel project using Java DSL
       - name: camel-archetype-main
         desc: Creates a new Camel project using standalone Camel Main
-      - name: camel-archetype-spring
-        desc: Creates a new Camel project with Spring DSL support
+      - name: camel-archetype-spring-boot
+        desc: Creates a new Camel project using Spring Boot
       - name: camel-archetype-component
         desc: Creates a new Camel component
       - name: camel-archetype-dataformat
@@ -85,7 +85,7 @@ toolGroups:
     title: IDE Plugins and Extensions
     items:
       - name: Apache Camel IDEA Plugin
-        url: https://github.com/camel-idea-plugin/camel-idea-plugin
+        url: https://github.com/camel-tooling/camel-idea-plugin
         desc: Camel editing capabilities for IntelliJ IDEA, including textual route debugging.
       - name: VS Code Extension Pack for Camel
         url: https://marketplace.visualstudio.com/items?itemName=redhat.apache-camel-extension-pack
