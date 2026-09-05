@@ -75,9 +75,11 @@
   font-size: calc(12.5 / var(--rem-base) * 1rem);
   color: var(--syntax-text);
   padding: calc(12 / var(--rem-base) * 1rem) calc(14 / var(--rem-base) * 1rem);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  /* L1, final-review.md: the extracted spec's nowrap/ellipsis truncated the
+     host out of a command piped to `sh`. The 380px card width is a spec'd
+     value (download.md), so wrap the command instead of widening the card. */
+  white-space: normal;
+  word-break: break-word;
 }
 
 .download-cli-prompt {
@@ -160,7 +162,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: calc(6 / var(--rem-base) * 1rem) calc(16 / var(--rem-base) * 1rem);
+  gap: calc(14 / var(--rem-base) * 1rem);
   font-size: calc(13.5 / var(--rem-base) * 1rem);
   font-weight: 700;
 }
@@ -190,8 +192,8 @@
 }
 
 .download-row-sub {
-  font-size: calc(11 / var(--rem-base) * 1rem);
-  font-weight: 600;
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  font-weight: 700;
   color: var(--color-ink-muted);
 }
 
@@ -246,6 +248,10 @@
 
 @media screen and (width <= 1024px) {
   .download-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .download-cards {
     grid-template-columns: 1fr;
   }
 
