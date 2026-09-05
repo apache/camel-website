@@ -137,6 +137,23 @@
   color: var(--color-ink-muted);
 }
 
+/* The dark User Manual card carries the same link row for Camel Core. */
+.docs-feature-links {
+  margin-top: calc(18 / var(--rem-base) * 1rem);
+}
+
+.docs-feature--dark .docs-project-card-link {
+  color: var(--color-orange-glow);
+}
+
+.docs-feature--dark .docs-project-card-link--muted {
+  color: var(--color-on-dark-soft);
+}
+
+.docs-feature--dark .docs-project-card-link:hover {
+  color: var(--color-on-dark);
+}
+
 /* ---- community: card grid ---------------------------------------------- */
 
 .community-grid {

@@ -1,4 +1,4 @@
-# All Camel Projects — drives layouts/projects/list.html
+# All Camel Projects: drives layouts/projects/list.html
 # Icons resolve through the Antora UI rev-manifest: antora-ui-camel/src/img/<icon>.svg
 # Activity figures are maintained by hand (commits · contributors · GitHub stars, 2025–2026).
 
@@ -66,6 +66,6 @@ specialized:
     source: https://github.com/apache/camel-karaf
 
 footnote: >-
-  Nothing has been removed — these projects remain fully supported and
+  Nothing has been removed; these projects remain fully supported and
   documented. Activity figures reflect commits, contributors, and GitHub stars
   over 2025–2026.

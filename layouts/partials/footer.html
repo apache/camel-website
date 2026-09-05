@@ -1,6 +1,11 @@
     <div class="footer-tools">
-        {{ with .File }}
-            <a title="Improve this document, receive free virtual hugs &hearts;" href="https://github.com/apache/camel-website/edit/main/content/{{ .Path | replaceRE "^/" "" }}">Edit this Page</a>
+        {{/* Pages whose copy lives in a data file name it in an editPath front
+             matter param (repo-relative); every other page links its own
+             content file. */}}
+        {{ $editPath := .Params.editPath }}
+        {{ if not $editPath }}{{ with .File }}{{ $editPath = printf "content/%s" (replaceRE "^/" "" .Path) }}{{ end }}{{ end }}
+        {{ with $editPath }}
+            <a title="Improve this document, receive free virtual hugs &hearts;" href="https://github.com/apache/camel-website/edit/main/{{ . }}">Edit this Page</a>
         {{ end }}
         <a href="#top" title="Reach the top of the page">Back to top</a>
     </div>

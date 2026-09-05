@@ -1,6 +1,7 @@
 ---
 title: "All Camel Projects"
-description: Every Apache Camel project — Camel Core, Spring Boot, Quarkus, CLI, Camel K, Kamelets, Karavan, Kafka Connector and Karaf — with descriptions, documentation links and activity.
+editPath: data/projects.yaml
+description: Every Apache Camel project (Camel Core, Spring Boot, Quarkus, CLI, Camel K, Kamelets, Karavan, Kafka Connector and Karaf) with descriptions, documentation links and activity.
 layout: list
 keywords:
 - apache camel

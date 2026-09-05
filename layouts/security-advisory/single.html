@@ -21,7 +21,8 @@
           {{ with .Params.mitigation }}
           <section class="advisory-section">
             <h2 class="advisory-section-title">Mitigation</h2>
-            <p class="advisory-section-body">{{ . | markdownify }}</p>
+            {{/* div, not p: markdownify emits block elements for multi-paragraph bodies */}}
+            <div class="advisory-section-body">{{ . | markdownify }}</div>
           </section>
           {{ end }}
 
