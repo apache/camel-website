@@ -151,7 +151,7 @@
               </span>
             {{ end }}
           {{ end }}
-          <a class="download-row-link" href="{{ $release_note.Permalink }}" aria-label="Release notes for {{ $category.name }} {{ $v }}">Release notes</a>
+          <a class="download-row-link" href="{{ $release_note.Permalink | relURL }}" aria-label="Release notes for {{ $category.name }} {{ $v }}">Release notes</a>
         </div>
       </div>
     {{ end }}
