@@ -492,7 +492,7 @@ a.button.ink:hover {
 }
 
 .home-example-command {
-  color: var(--color-on-dark-dim);
+  color: var(--color-on-dark-soft);
   font-family: var(--monospace-font-family);
   font-size: calc(12.5 / var(--rem-base) * 1rem);
 }
