@@ -18,7 +18,7 @@
 
                 <div class="card card--flat security-card">
                     <h3>{{ .Params.sbom.title }}</h3>
-                    {{ .Params.sbom.body | markdownify }}
+                    <p>{{ .Params.sbom.body | markdownify }}</p>
                 </div>
 
                 <div class="card card--flat security-card">
