@@ -410,6 +410,9 @@
   font-size: calc(28 / var(--rem-base) * 1rem);
   letter-spacing: -0.02em;
   margin: calc(40 / var(--rem-base) * 1rem) 0 0;
+  /* doc.css's .doc h2:not(.discrete) sets an 8px top padding this rule
+     doesn't otherwise reset - final-review.md L7 item 7. */
+  padding-top: 0;
 }
 
 .blog .post-content p {
@@ -420,6 +423,19 @@
 
 .blog .post-content p + p {
   margin-top: calc(12 / var(--rem-base) * 1rem);
+}
+
+/* Replaces the pre-redesign .blog ul/ol { padding-bottom: 1rem } dropped with
+   the article rewrite - final-review.md L7 item 8. .doc ol/ul supplies no
+   bottom spacing on its own, so a list with no gap before the next block. */
+.blog .post-content ul,
+.blog .post-content ol {
+  padding-bottom: 1rem;
+}
+
+.blog .post-content li ul,
+.blog .post-content li ol {
+  padding-bottom: 0;
 }
 
 .blog .post-content blockquote {

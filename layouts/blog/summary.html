@@ -20,7 +20,7 @@
                   {{ $headers = dict "Authorization" (printf "Basic %s" (printf "%s:%s" $.Site.Params.GitHubUsername $.Site.Params.GitHubToken | base64Encode)) }}
                 {{ end }}
                 {{ range $idx, $author := .Params.authors }}{{ if gt $idx 0 }}, {{ end }}<span rel="author">{{ (getJSON "https://api.github.com/users/" $author $headers).name }}</span>{{ end }}</span>
-            <a class="blog-post-continue" href="{{ .RelPermalink }}">Continue reading &rarr;</a>
+            <a class="blog-post-continue" href="{{ .RelPermalink }}" aria-label="Continue reading {{ .Title }}">Continue reading &rarr;</a>
         </div>
     </div>
 </article>
