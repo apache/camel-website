@@ -90,9 +90,21 @@ jobs:
         run: yarn workspaces foreach --all install
       - name: Check cache
         run: yarn check:dependencies
+      # Antora spends most of the build cloning content repositories: a green
+      # run measured 426s of 606s in contentAggregated, against 165s of actual
+      # conversion. Restoring the clones turns those into incremental fetches.
+      # The key is deliberately stable, so the cache is written once per
+      # playbook revision rather than on every run, which would churn the
+      # repository's shared 10 GB cache budget.
+      - name: Cache Antora content
+        uses: actions/cache@v4
+        with:
+          path: ${{ github.workspace }}/.antora-cache
+          key: antora-content-v1-${{ hashFiles('antora-playbook-snippets/antora-playbook.yml') }}
       - name: Build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTORA_CACHE_DIR: ${{ github.workspace }}/.antora-cache
         run: yarn build-all
       - name: Run checks
         run: yarn checks

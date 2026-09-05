@@ -36,3 +36,6 @@ antora-playbook.yml
 .playwright-cli/
 skills-lock.json
 build/unused-media.txt
+
+# CI relocates ANTORA_CACHE_DIR here so it can be cached between runs
+/.antora-cache
