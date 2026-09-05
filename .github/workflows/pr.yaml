@@ -43,7 +43,9 @@ jobs:
       - name: Check if PR only changes draft blog posts
         id: check
         run: |
-          CHANGED=$(gh pr diff ${{ github.event.pull_request.number }} --name-only)
+          CHANGED=$(gh api --paginate \
+            "repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/files" \
+            --jq '.[].filename')
           DRAFTS_ONLY=true
           for file in $CHANGED; do
             case "$file" in
