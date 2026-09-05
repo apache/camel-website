@@ -29,10 +29,8 @@
     "preview": "run-s -l build:antora preview:hugo",
     "preview:hugo": "hugo server --bind=0.0.0.0 -D",
     "preview:netlify": "netlify deploy --dir public --cwd .",
-    "build:antora-local-full": "antora local-antora-playbook-full.yml --stacktrace --clean --fetch",
-    "build:antora-local-partial": "antora local-antora-playbook-partial.yml --stacktrace",
-    "build:antora-local-full2": "antora antora-playbook-local-full.yml --stacktrace --clean --fetch",
-    "build:antora-local-partial2": "antora antora-playbook-local-partial.yml --stacktrace",
+    "build:antora-local-full": "antora antora-playbook-local-full.yml --stacktrace --clean --fetch",
+    "build:antora-local-partial": "antora antora-playbook-local-partial.yml --stacktrace",
     "build:antora-local-quick": "antora antora-playbook-local-quick.yml --stacktrace",
     "build:antora-ui": "tests/antora-ui/build.sh",
     "check:hugo": "bash tests/hugo/build.sh"

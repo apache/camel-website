@@ -106,6 +106,11 @@ runtime:
 
 antora:
   extensions:
+    # First, so it times the phases that follow. Antora suppresses its own
+    # progress output whenever stdout is not a TTY, which is always the case
+    # under `yarn build-all` and on CI.
+    - ./extensions/build-progress.js
+
     - ./extensions/promote-deprecated-attribute.js
 
     # Registers the [asciinema] block and injects the player assets plus the asciinema-styles,

@@ -35,10 +35,10 @@ antora-playbook-snippets/assemble-playbook.sh antora-playbook-local-quick.yml ..
 
 if [ "$2" = "full" ]
 then
-  yarn build:antora-local-full2
+  yarn build:antora-local-full
 elif [ "$2" = "quick" ]
 then
   yarn build:antora-local-quick
 else
-  yarn build:antora-local-partial2
+  yarn build:antora-local-partial
 fi
