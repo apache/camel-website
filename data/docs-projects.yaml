@@ -18,6 +18,9 @@ manual:
   secondary_cta:
     label: Camel 4.x upgrade guide
     url: /manual/camel-4x-upgrade-guide.html
+  docs: /camel-core/
+  source: https://github.com/apache/camel/
+  examples: https://github.com/apache/camel-examples
 
 components:
   eyebrow: 350+ components

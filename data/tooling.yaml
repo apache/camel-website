@@ -1,4 +1,4 @@
-# Tooling (/tooling/) — drives layouts/tooling/list.html
+# Tooling (/tooling/): drives layouts/tooling/list.html
 
 lead: >-
   Apache Camel ships with a rich set of built-in developer tools and is
@@ -6,6 +6,9 @@ lead: >-
   prefer the command line, an IDE, a visual editor, or AI-assisted
   development — there is tooling to help you build, test, debug, and
   manage your Camel integrations.
+
+cliDocs: /manual/camel-jbang.html
+tuiDocs: /manual/camel-jbang-tui.html
 
 cliCommands:
   - cmd: camel run

@@ -1,5 +1,6 @@
 ---
 title: "Documentation"
+editPath: data/docs-projects.yaml
 description: Apache Camel documentation - the User Manual, Component
   Reference, and per-runtime docs for Camel K, Camel Quarkus, Camel Spring
   Boot, Camel Kafka Connector, Camel Karaf, and more.

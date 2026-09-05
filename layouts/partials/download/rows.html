@@ -85,7 +85,7 @@
 <div class="download-group" id="{{ $category.id }}">
   {{ range $version := $versions }}
     {{ range $kind, $v := $version }}
-      {{ $release_note := index (where (where (where $pages "Section" "releases") ".Params.category" $category.id) ".Params.version" $v) 0 }}
+      {{ $release_note := index (where $category_releases ".Params.version" $v) 0 }}
       {{ $hash_extension := ".sha512" }}
       {{ if le $release_note.Date $sha1_cutoff }}
         {{ $hash_extension = ".sha1" }}
