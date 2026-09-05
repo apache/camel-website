@@ -154,6 +154,11 @@ test "$BASE_URL/components/next/" 200
 test "$BASE_URL/components/next/languages/csimple-language.html" 301 "$BASE_URL/components/4.22.x/languages/csimple-language.html"
 test "$BASE_URL/projects/" 200
 test "$BASE_URL/projects/camel-k" 301 "$BASE_URL/projects/"
+test "$BASE_URL/projects/camel-k/" 301 "$BASE_URL/projects/"
+test "$BASE_URL/projects/camel-quarkus" 301 "$BASE_URL/projects/"
+test "$BASE_URL/projects/camel-quarkus/" 301 "$BASE_URL/projects/"
+test "$BASE_URL/projects/camel-kafka-connector" 301 "$BASE_URL/projects/"
+test "$BASE_URL/projects/camel-kafka-connector/" 301 "$BASE_URL/projects/"
 test "$BASE_URL/components/latest" 302 "$BASE_URL/components/${COMPONENTS_VERSION}"
 test "$BASE_URL/components/latest/" 302 "$BASE_URL/components/${COMPONENTS_VERSION}/"
 test "$BASE_URL/components/jms-component.html" 302 "$BASE_URL/components/${COMPONENTS_VERSION}/jms-component.html"

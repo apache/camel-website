@@ -13,7 +13,7 @@ columns:
       - { name: Blog, url: /blog/ }
       - { name: Documentation, url: /docs/ }
       - { name: Tooling, url: /tooling/ }
-      - { name: Community, url: /community/support/ }
+      - { name: Community, url: /community/ }
       - { name: Download, url: /download/ }
       - { name: All projects, url: /projects/ }
   - title: Documentation
