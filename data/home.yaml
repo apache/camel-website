@@ -13,7 +13,7 @@ hero:
   title: Apache Camel
   tagline: The Open Source Integration Framework
   lead: >-
-    Connect anything. Route everything. 390+ connectors, written in Java, YAML,
+    Connect anything. Route everything. 350+ connectors, written in Java, YAML,
     or XML, deployed on Spring Boot, Quarkus, or standalone with the Camel CLI.
   primary_cta:
     label: "Get Started →"
@@ -32,7 +32,7 @@ stats:
     - num: 1,500+
       label: contributors
       source: 1,583 distinct authors (anon=true), GitHub API, 2026-09-04
-    - num: 390+
+    - num: 350+
       label: components
       source: 398 component pages in the built docs, 2026-09-04
     - num: 300+
@@ -47,7 +47,7 @@ get_started:
       badge: Most popular
       description: >-
         Add Camel to your existing Spring Boot project with a single starter
-        dependency. Starters for 390+ components.
+        dependency. Starters for 350+ components.
       code: |
         # pom.xml
         camel-spring-boot-starter
@@ -75,7 +75,7 @@ features:
   eyebrow: Why developers choose Camel
   heading: Built for real integration work
   items:
-    - tag: 390+
+    - tag: 350+
       title: Connectors out of the box
       body: >-
         Kafka, REST, JDBC, AWS, Azure, GCP, SAP, Salesforce. Connect to
@@ -156,7 +156,7 @@ tiles:
     - name: Camel Spring Boot
       icon: spring-boot
       description: >-
-        Camel on Spring Boot with auto-configured starters for 390+ components.
+        Camel on Spring Boot with auto-configured starters for 350+ components.
       url: /camel-spring-boot/latest/
     - name: Camel Quarkus
       icon: quarkus
