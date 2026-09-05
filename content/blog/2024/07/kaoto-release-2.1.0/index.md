@@ -14,8 +14,9 @@ preview: "Kaoto 2.1 has been released"
 
 <br/><strong>
 After the previous 2.0 GA release, we are happy to announce the release of Kaoto 2.1, packed with exciting new features, bug fixes, and various improvements to enhance the user experience.
+</strong>
 
-This update introduces the capability to choose your preferred Runtime version among other notable upgrades. Read on to discover the key highlights of this release and how they can improve your workflow with Kaoto.
+<strong>This update introduces the capability to choose your preferred Runtime version among other notable upgrades. Read on to discover the key highlights of this release and how they can improve your workflow with Kaoto.
 </strong>
 
 ## New Features

@@ -53,7 +53,8 @@ Kaoto 2.8 brings improvements to XML Schema handling in the DataMapper:
 
 ### Canvas Enhancements
 - **Contextual Menu**: Right-click on canvas nodes to access relevant actions directly where you need them
-{{< youtube id="92WqknAa7K4" class="video" >}}
+
+  {{< youtube id="92WqknAa7K4" class="video" >}}
 
 - **Keyboard Support**: Delete steps quickly by selecting them and pressing the Delete key
 - **Improved Drag Feedback**: Different mouse pointer styles clearly indicate which nodes are draggable and which are not
