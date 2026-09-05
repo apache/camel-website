@@ -114,7 +114,15 @@
   {{- end }}
 
   {{- with $home.tiles }}
-  <section class="home-section" aria-labelledby="home-tiles-title">
+  {{/*
+    id="apache-camel-projects" is a compatibility anchor, not a styling hook. The old
+    home page carried a "# Apache Camel Projects" heading, which blackfriday heading
+    IDs (config.toml autoHeadingIDType) rendered as this id. Inbound links point at
+    /#apache-camel-projects, including a 2022 post under content/blog/2022/10/ (grep
+    the tree for the anchor). Dropping it turns `yarn check:links` red. Keep it on
+    whichever element holds the project tiles.
+  */}}
+  <section id="apache-camel-projects" class="home-section" aria-labelledby="home-tiles-title">
     <div class="home-section-head">
       <p class="home-eyebrow">{{ .eyebrow }}</p>
       <h2 id="home-tiles-title">{{ .heading }}</h2>
