@@ -144,7 +144,7 @@
                         <td><a href="{{ $artifact_base_url }}{{ $path }}">{{ $filename }}</a> ({{ $download.name}})</td>
                         <td><a href="{{ $meta_base_url }}{{ $path }}.asc">PGP Signature</a>, <a href="{{ $meta_base_url }}{{ $path }}{{ $hash_extension }}">SHA512 Checksum</a></td>
                     {{ else }}
-                         <td colspan="3"><a href="{{ .link }}">{{ replace .title "{version}" $v }}</a></td>
+                         <td colspan="2"><a href="{{ .link }}">{{ replace .title "{version}" $v }}</a></td>
                     {{ end }}
                 {{ end }}
             </tr>

@@ -878,9 +878,9 @@ Redirect 301 /polling-consumer.html /components/next/eips/polling-consumer.html
 Redirect 301 /predicate.html /manual/predicate.html
 Redirect 301 /processor.html /manual/processor.html
 Redirect 301 /producertemplate.html /manual/producertemplate.html
-Redirect 301 /projects/camel-k /projects/
-Redirect 301 /projects/camel-quarkus /projects/
-Redirect 301 /projects/camel-kafka-connector /projects/
+# Anchored: a plain Redirect is a prefix match, so /projects/camel-k would also catch
+# /projects/camel-kafka-connector and append the remainder to the target.
+RedirectMatch 301 ^/projects/camel-(k|quarkus|kafka-connector)/?$ /projects/
 Redirect 301 /properties /components/next/properties-component.html
 # csimple was deprecated and removed in Camel 4.23, so the "next" page is gone
 Redirect 301 /components/next/languages/csimple-language.html /components/4.22.x/languages/csimple-language.html

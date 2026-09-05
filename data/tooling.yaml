@@ -131,6 +131,10 @@ toolGroups:
       - name: hawt.io
         url: http://hawt.io
         desc: An open source HTML5 web application for visualizing, managing and tracing Camel routes & endpoints, ActiveMQ brokers, JMX, and more.
+
+  - id: libraries
+    title: Libraries
+    items:
       - name: Forage
         url: https://kaotoio.github.io/forage/
         desc: >-
