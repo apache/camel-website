@@ -97,7 +97,7 @@ jobs:
       # playbook revision rather than on every run, which would churn the
       # repository's shared 10 GB cache budget.
       - name: Cache Antora content
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ${{ github.workspace }}/.antora-cache
           key: antora-content-v1-${{ hashFiles('antora-playbook-snippets/antora-playbook.yml') }}
