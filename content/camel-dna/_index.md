@@ -64,7 +64,7 @@ Endpoint → Processor → Processor → Processor → Endpoint
 
 This simple pipeline model turned out to be powerful enough to express any integration pattern. A content-based router is a processor that picks the next endpoint. A splitter is a processor that turns one message into many. An aggregator collects messages until a condition is met. Every pattern in the [Enterprise Integration Patterns](https://www.enterpriseintegrationpatterns.com/) book by Gregor Hohpe and Bobby Woolf maps cleanly onto this model — and Camel turned all of them into code.
 
-The `from().to()` syntax is the user-facing expression of this architecture. But underneath, it's always been endpoints and processors — a design so composable that it scaled from 19 components to 390+ without ever needing to change the core model.
+The `from().to()` syntax is the user-facing expression of this architecture. But underneath, it's always been endpoints and processors — a design so composable that it scaled from 19 components to 350+ without ever needing to change the core model.
 
 ## That same route today
 
@@ -104,7 +104,7 @@ No Maven project. No build step. No manual wiring. Just one YAML file and one co
 | **Component setup** | Manual ConnectionFactory wiring | Auto-configured via properties |
 | **Run command** | `mvn camel:run` | `camel run *` |
 | **Dependencies** | Declared in pom.xml | Auto-downloaded |
-| **Components** | 19 | 390+ |
+| **Components** | 19 | 350+ |
 | **Patterns (EIPs)** | ~20 | 65+ |
 | **Contributors** | A handful | 1,600+ |
 | **Lines of code** | Tens of thousands | Millions |
@@ -138,7 +138,7 @@ SQL has `SELECT * FROM`. Camel has `from().to()`.
 
 Both are ideas so fundamental that they outlasted every technology shift around them — new languages, new runtimes, new architectures, cloud, containers, AI. The world changed; the abstraction didn't need to.
 
-Thousands of companies. Billions of messages. 390+ connectors. 65+ patterns. 100,000+ commits. 1,600+ contributors. Nearly two decades of production use.
+Thousands of companies. Billions of messages. 350+ connectors. 65+ patterns. 100,000+ commits. 1,600+ contributors. Nearly two decades of production use.
 
 It all started with one line:
 

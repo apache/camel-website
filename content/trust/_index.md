@@ -201,7 +201,7 @@ major release.
 
 The community has fixed [7,070 out of 7,081 reported bugs](/blog/2026/06/camel-bug-fix-track-record/)
 — a **99.8% resolution rate** — with a median fix time of **1 day**. That track record has been
-sustained for 17 of the last 19 years across 390+ connectors and 272 production releases. Only 6
+sustained for 17 of the last 19 years across 350+ connectors and 272 production releases. Only 6
 bugs are open today. When something breaks, it gets fixed fast, and the data is there to prove it.
 
 <p>
@@ -297,7 +297,7 @@ are logged as warnings so existing applications are not broken.
 AI coding assistants are remarkably good at Apache Camel — and it is not an accident. [Nineteen
 years of stable APIs](/blog/2026/06/camel-ai-trained/) mean training data does not go stale,
 11,700+ Stack Overflow answers provide real-world examples, and a predictable component model
-lets LLMs generalize across 390+ connectors. Add a built-in [MCP server](/manual/camel-jbang-mcp.html),
+lets LLMs generalize across 350+ connectors. Add a built-in [MCP server](/manual/camel-jbang-mcp.html),
 machine-readable catalog metadata, a schema-validated YAML DSL, and dedicated
 [AI integration patterns](/components/next/eips/ai-patterns.html) for building AI-powered
 routes, and Camel is one of the best-trained integration frameworks for AI-assisted development today.

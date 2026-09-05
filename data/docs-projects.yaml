@@ -20,7 +20,7 @@ manual:
     url: /manual/camel-4x-upgrade-guide.html
 
 components:
-  eyebrow: 390+ components
+  eyebrow: 350+ components
   title: Component Reference
   desc: >-
     Functionality and configuration for every component, data format,

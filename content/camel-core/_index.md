@@ -53,7 +53,7 @@ The Apache Camel Core is the foundation for all other projects. Ideal for experi
 ## Reference Documentation
 
 <p>
-	The comprehensive <b>reference documentation</b> for all 390+ Camel <b>components, enterprise integration patterns (EIPs)</b> and links to the <b>JavaDoc</b> documentation.
+	The comprehensive <b>reference documentation</b> for all 350+ Camel <b>components, enterprise integration patterns (EIPs)</b> and links to the <b>JavaDoc</b> documentation.
 </p>
 
 <a class="button dark" href="/camel-core/reference/index.html">Learn More</a>
