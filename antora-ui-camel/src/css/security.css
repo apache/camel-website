@@ -71,6 +71,18 @@
   margin: calc(10 / var(--rem-base) * 1rem) 0 0;
 }
 
+.security-card--feature a,
+.security-card a,
+.security-band a {
+  color: var(--link-font-color);
+}
+
+.security-card--feature a:hover,
+.security-card a:hover,
+.security-band a:hover {
+  color: var(--link_hover-font-color);
+}
+
 /* dark "reporting" band */
 
 .security-band {
