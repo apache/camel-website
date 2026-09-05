@@ -3,6 +3,15 @@
 <div class="body">
   <main>
     <article class="static releases" aria-labelledby="releases-title">
+      <aside class="releases-rail">
+        <div class="releases-rail-heading">Projects</div>
+        <nav class="releases-rail-links" aria-label="Projects">
+          {{ range $category := sort (index site.Data "release-categories") ".order" }}
+          <a class="releases-rail-link" href="#{{ $category.id }}">{{ $category.name }}</a>
+          {{ end }}
+        </nav>
+      </aside>
+
       <div class="releases-content">
         <div class="releases-intro">
           <h1 id="releases-title" class="page-hero-title">{{ .Title }}</h1>
@@ -17,15 +26,6 @@
         </section>
         {{ end }}
       </div>
-
-      <aside class="releases-rail">
-        <div class="releases-rail-heading">Projects</div>
-        <nav class="releases-rail-links" aria-label="Projects">
-          {{ range $category := sort (index site.Data "release-categories") ".order" }}
-          <a class="releases-rail-link" href="#{{ $category.id }}">{{ $category.name }}</a>
-          {{ end }}
-        </nav>
-      </aside>
     </article>
   </main>
 </div>

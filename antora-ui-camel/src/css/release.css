@@ -21,6 +21,10 @@
   padding: calc(56 / var(--rem-base) * 1rem) var(--page-padding-x) calc(40 / var(--rem-base) * 1rem);
 }
 
+.releases-content {
+  grid-column: 1;
+}
+
 .releases-intro {
   max-width: calc(720 / var(--rem-base) * 1rem);
 }
@@ -132,7 +136,13 @@
 
 /* .releases-rail / .releases-rail-heading: shared base (sticky offset;
    mono eyebrow shape + colour) lives in primitives.css - see M5,
-   final-review.md. */
+   final-review.md. .releases-rail is first in DOM order (M1, so the mobile
+   jump-nav precedes the content it links to) but pinned to the second grid
+   column here so desktop rendering is unchanged. */
+
+.releases-rail {
+  grid-column: 2;
+}
 
 .releases-rail-links {
   display: flex;
@@ -352,9 +362,13 @@ a.advisory-facts-cta {
     grid-template-columns: minmax(0, 1fr);
   }
 
+  .releases-content,
+  .releases-rail {
+    grid-column: 1;
+  }
+
   .releases-rail {
     position: static;
-    margin-top: calc(48 / var(--rem-base) * 1rem);
   }
 
   .advisory-layout {
