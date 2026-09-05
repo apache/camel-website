@@ -10,7 +10,7 @@
         </div>
         {{ end }}
         <h2 class="blog-post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        <p class="blog-post-summary">{{ .Params.preview }}</p>
+        <p class="blog-post-summary">{{ with .Params.preview }}{{ . }}{{ else }}{{ $.Summary | plainify }}{{ end }}</p>
         <div class="blog-post-meta">
             <span>by
                 {{ $headers := dict }}

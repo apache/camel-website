@@ -8,7 +8,8 @@
    outside this screen's owned files (see impl report), so the file is
    repurposed in place rather than deleted. */
 
-.post-share-link {
+/* .post-scoped so the rule outranks doc.css's .doc a on the post page. */
+.post .post-share-link {
   font-family: inherit;
   font-size: calc(13 / var(--rem-base) * 1rem);
   font-weight: 700;
@@ -21,6 +22,7 @@
   cursor: pointer;
 }
 
-.post-share-link:hover {
+.post .post-share-link:hover {
   border-color: var(--color-line-hover);
+  color: var(--color-ink-soft);
 }

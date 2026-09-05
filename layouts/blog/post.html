@@ -1,7 +1,3 @@
-{{ partial "header.html" . }}
-
-<div class="body">
-  <main>
     <div class="content">
       <article class="post blog doc" aria-labelledby="post-title">
         <a class="post-back" href="{{ "/blog/" | relURL }}">&larr; All posts</a>
@@ -29,13 +25,11 @@
                 {{ with getJSON "https://api.github.com/users/" $author $headers }}
                 <div class="post-author">
                   <img class="post-avatar" src="{{ .avatar_url }}" alt="">
-                  <div>
-                    <div class="post-author-name">{{ .name }}</div>
-                    <div class="post-date">{{ dateFormat "January 2, 2006" $.PublishDate }}</div>
-                  </div>
+                  <div class="post-author-name">{{ .name }}</div>
                 </div>
                 {{ end }}
               {{ end }}
+              <time class="post-date" datetime="{{ dateFormat "2006-01-02" .PublishDate }}">{{ dateFormat "January 2, 2006" .PublishDate }}</time>
             </div>
 
             <div class="post-share">
@@ -50,15 +44,23 @@
             </div>
 
             {{/* .Fragments.Headings' top-level entry is a synthetic root
-                 for the whole article (empty ID/Title); the real, flat
-                 list of h2 sections lives one level down, in its own
-                 .Headings -- same tree shape layouts/_default/single.html
-                 already relies on. Collect them into a plain slice so an
-                 empty post can be detected and skips the section. */}}
+                 for the whole article (empty ID/Title); the h2 sections
+                 live one level down, in its .Headings. When a post skips
+                 h2 and starts at h3, Hugo inserts an empty placeholder
+                 level-2 node whose own .Headings hold the real headings,
+                 so nodes without an ID are skipped and descended into.
+                 Collect into a plain slice so an empty post can be
+                 detected and skips the section. */}}
             {{ $tocHeadings := slice }}
             {{ range .Fragments.Headings }}
               {{ range .Headings }}
-                {{ $tocHeadings = $tocHeadings | append . }}
+                {{ if .ID }}
+                  {{ $tocHeadings = $tocHeadings | append . }}
+                {{ else }}
+                  {{ range .Headings }}
+                    {{ if .ID }}{{ $tocHeadings = $tocHeadings | append . }}{{ end }}
+                  {{ end }}
+                {{ end }}
               {{ end }}
             {{ end }}
             {{ if $tocHeadings }}
@@ -67,7 +69,7 @@
               <div class="toc-menu">
                 <ul>
                   {{ range $tocHeadings }}
-                  <li><a href="#{{ anchorize .ID }}">{{ .Title }}</a></li>
+                  <li><a href="#{{ .ID }}">{{ .Title | safeHTML }}</a></li>
                   {{ end }}
                 </ul>
               </div>
@@ -115,7 +117,3 @@
         </div>
       </article>
     </div>
-  </main>
-</div>
-
-{{ partial "footer.html" . }}

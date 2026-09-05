@@ -19,7 +19,7 @@
 }
 
 /* .blog-rail / .blog-rail-eyebrow: shared base (sticky offset; mono
-   eyebrow shape + colour) lives in primitives.css - see M5, final-review.md. */
+   eyebrow shape + color) lives in primitives.css - see M5, final-review.md. */
 
 .blog-categories {
   display: flex;
@@ -274,16 +274,30 @@
   padding: calc(56 / var(--rem-base) * 1rem) var(--page-padding-x) calc(40 / var(--rem-base) * 1rem);
 }
 
-.post-back {
+/* The post article also carries the Antora .doc class (for the shared code
+   block and copy-button scripts), so doc.css's .doc a / .doc h1 / .doc p
+   rules (0,1,1) outrank single-class rules here. The .post-scoped selectors
+   below win at (0,2,0) and drop the dotted link underline .doc a paints. */
+.post .post-back {
   font-family: var(--monospace-font-family);
   font-size: calc(13 / var(--rem-base) * 1rem);
   font-weight: 600;
   color: var(--color-ink-muted);
   text-decoration: none;
+  background-image: none;
 }
 
-.post-back:hover {
+.post .post-back:hover {
   color: var(--link_hover-font-color);
+}
+
+.post .tag-chip,
+.post .post-toc a {
+  background-image: none;
+}
+
+.post .detail-lead {
+  margin-top: calc(16 / var(--rem-base) * 1rem);
 }
 
 .post-hero {
@@ -297,7 +311,7 @@
   flex-wrap: wrap;
 }
 
-.post-title {
+.post .post-title {
   font-family: var(--display-font-family);
   font-weight: 800;
   font-size: calc(46 / var(--rem-base) * 1rem);
@@ -377,6 +391,7 @@
   color: var(--color-ink-soft);
   font-weight: 600;
   text-decoration: none;
+  background-image: none;
 }
 
 .post-adjacent a:hover {
@@ -449,6 +464,13 @@
   font-size: calc(19 / var(--rem-base) * 1rem);
   line-height: 1.45;
   color: var(--color-ink-2);
+}
+
+/* goldmark wraps the quote in <p>, which .blog .post-content p would otherwise
+   reset to body size and leading. */
+.blog .post-content blockquote p {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .blog .post-content img:not(.featured) {
@@ -548,7 +570,7 @@
   border-top: 1px solid var(--color-line);
 }
 
-.post-related-heading {
+.post .post-related-heading {
   font-family: var(--display-font-family);
   font-weight: 700;
   font-size: calc(15 / var(--rem-base) * 1rem);
@@ -565,11 +587,13 @@
 /* Reuses the .card primitive's shell/hover recipe (primitives.css); only
    the radius/padding/color deltas below are page-specific (piece-4b
    inventory §1.4). */
-.post-related-card {
+.post .post-related-card,
+.post .post-related-card:hover {
   border-radius: 12px; /* radius exemption: raw px */
   padding: calc(18 / var(--rem-base) * 1rem) calc(20 / var(--rem-base) * 1rem);
   color: var(--color-ink);
   text-decoration: none;
+  background-image: none;
 }
 
 .post-related-date {
