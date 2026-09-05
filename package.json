@@ -101,7 +101,7 @@
     "@eslint/plugin-kit": "^0.3.4",
     "copy-props": "^2.0.5",
     "express-rate-limit": "^8.2.2",
-    "immutable": "^3.8.3",
+    "immutable": "^3.8.4",
     "bl": "^4.1.0",
     "semver-regex": "^4.0.5",
     "is-svg": "^4.4.0",
