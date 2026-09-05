@@ -114,6 +114,10 @@
   .card-grid--feature {
     grid-template-columns: minmax(0, 1fr);
   }
+
+  .page-hero-title {
+    font-size: calc(36 / var(--rem-base) * 1rem);
+  }
 }
 
 /* ---- lts-chip ---------------------------------------------------------- */
