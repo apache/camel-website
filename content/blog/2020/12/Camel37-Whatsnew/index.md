@@ -30,6 +30,8 @@ Then we worked on compiled simple.
 ### Compiled Simple
 
 The csimple language
+||||||| parent of 13eed0ab (fix(blog): pin the csimple docs link to 4.22.x)
+The [csimple language](/components/next/languages/csimple-language.html)
 is parsed into regular Java source code and compiled together with all the other source code, or compiled once during
 bootstrap via jOOR.
 
