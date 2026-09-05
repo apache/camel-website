@@ -14,14 +14,17 @@ a.button {
   white-space: nowrap;
 }
 
+/* Ink on the brand orange: white on #e97826 is 2.93:1, ink is 5.78:1, and the
+   memo keeps the orange itself. Hover lifts to the lighter orange, where ink
+   reads at 7.30:1 (a darker hover would drop ink below 4.5:1). */
 a.button.dark {
   background-color: var(--color-camel-orange);
-  color: var(--color-white);
+  color: var(--color-ink);
 }
 
 a.button.dark:hover {
-  background-color: var(--color-orange-deep);
-  color: var(--color-white);
+  background-color: var(--color-camel-orange-light);
+  color: var(--color-ink);
 }
 
 a.button.light,
