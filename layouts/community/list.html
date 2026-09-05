@@ -15,7 +15,7 @@
           {{- range $data.cards }}
           <li class="card community-card">
             <span class="community-card-tag">{{ .tag }}</span>
-            <h3 class="community-card-title">{{ .title }}</h3>
+            <h2 class="community-card-title">{{ .title }}</h2>
             <p class="community-card-body">{{ .body }}</p>
             <a class="community-card-link" href="{{ .url | relURL }}" aria-label="Read more about {{ .title }}">Read more &rarr;</a>
           </li>
@@ -23,7 +23,7 @@
 
           <li class="card card--dark community-cta">
             <p class="community-cta-eyebrow">{{ $data.cta.eyebrow }}</p>
-            <h3 class="community-cta-title">{{ $data.cta.title }}</h3>
+            <h2 class="community-cta-title">{{ $data.cta.title }}</h2>
             <p class="community-cta-body">{{ $data.cta.body }}</p>
             <p class="community-cta-actions">
               <a class="button dark" rel="noopener noreferrer" href="{{ $data.cta.zulip_url }}">{{ $data.cta.zulip_label }}</a>
