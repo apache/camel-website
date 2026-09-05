@@ -42,6 +42,10 @@
   margin-top: calc(48 / var(--rem-base) * 1rem);
 }
 
+/* 40px, not the flat 48px every other .releases-group uses: this group sits
+   directly under the H1/lead intro rather than a full release table, so a
+   tighter gap reads better against that shorter block - final-review.md
+   L7 item 10. */
 .releases-content > .releases-group:first-child {
   margin-top: calc(40 / var(--rem-base) * 1rem);
 }
