@@ -1,14 +1,6 @@
 <div class="nav-container"{{#if page.component}} data-component="{{page.component.name}}" data-version="{{page.version}}"{{/if}}>
   <aside class="nav" aria-label="Side menu">
     <div class="panels">
-      <div class="nav-search">
-        <div class="navbar-search results-hidden">
-          <input id="search" class="search" placeholder="Search the manual" autocomplete="off" maxlength="200">
-          <img src="{{uiRootPath}}/img/cancel-1ed239489b.svg" alt="Clear" id="search-cancel">
-          <div id="search_results"></div>
-        </div>
-        <kbd class="nav-search-hint" aria-hidden="true">/</kbd>
-      </div>
 {{> nav-menu}}
 {{> nav-explore}}
     </div>
