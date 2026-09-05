@@ -1,6 +1,6 @@
 ---
 title: "What is Apache Camel?"
-description: "Apache Camel is an open-source integration framework with 350+ connectors, 65+ enterprise integration patterns, and multiple DSLs including Java, YAML, and XML. It connects applications, services, APIs, and data — whether they live in the cloud, on-premise, or both."
+description: "Apache Camel is an open-source integration framework with 390+ connectors, 65+ enterprise integration patterns, and multiple DSLs including Java, YAML, and XML. It connects applications, services, APIs, and data — whether they live in the cloud, on-premise, or both."
 keywords:
 - apache camel
 - integration framework
@@ -21,7 +21,7 @@ keywords:
 
 It connects your applications, services, APIs, and data — whether they live in the cloud, on-premise, or both.
 You describe what should happen — read from Kafka, transform the data, write to a database — and Camel
-handles the protocols, formats, and error handling. With 350+ ready-made connectors and 65+ proven
+handles the protocols, formats, and error handling. With 390+ ready-made connectors and 65+ proven
 integration patterns, you write the logic once and run it on Spring Boot, Quarkus, or standalone.
 Routes can be written in Java, YAML, or XML — or designed visually with Kaoto or Karavan.
 
@@ -86,7 +86,7 @@ Camel supports multiple ways to work:
 
 Pick the style that fits your team. Mix them in the same project if you want.
 
-### 350+ connectors — included, not extra
+### 390+ connectors — included, not extra
 
 Kafka, AWS (S3, SQS, Lambda, DynamoDB), Azure, GCP, Salesforce, ServiceNow, Slack, databases (JDBC, MongoDB, Cassandra), messaging (JMS, AMQP, MQTT), file protocols (FTP, SFTP), AI services, and hundreds more.
 
@@ -111,7 +111,7 @@ These aren't theoretical — they're production-tested patterns used by thousand
 
 ## The origin story
 
-The very first Camel route ever written was `from("jms:queue:test.queue").to("file://test")` — one line, June 2007. Nearly two decades later, that same idea powers every Camel route: take data from here, send it there. The framework grew from 19 components to 350+, from a handful of contributors to 1,500+ — but the DNA never changed.
+The very first Camel route ever written was `from("jms:queue:test.queue").to("file://test")` — one line, June 2007. Nearly two decades later, that same idea powers every Camel route: take data from here, send it there. The framework grew from 19 components to 390+, from a handful of contributors to 1,500+ — but the DNA never changed.
 
 **[Read the full origin story — Camel DNA →](/camel-dna/)**
 
@@ -129,16 +129,18 @@ Camel also provides an **MCP server** (Model Context Protocol) that connects AI 
 
 ## The numbers
 
+{{< table >}}
 | Metric | Value |
 |---|---|
-| **Connectors** | 350+ |
+| **Connectors** | 390+ |
 | **Integration patterns** | 65+ |
 | **Contributors** | 1,500+ |
 | **Commits** | 100,000+ |
 | **Years in production** | Nearly two decades |
 | **Median bug fix time** | 1–2 days |
-| **Open bugs** | Typically 10 or fewer (across 350+ connectors) |
+| **Open bugs** | Typically 10 or fewer (across 390+ connectors) |
 | **License** | Apache License 2.0 — free, no cost, forever |
+{{< /table >}}
 
 ## Try it in 60 seconds
 
@@ -183,7 +185,7 @@ Or design visually: [Kaoto](https://kaoto.io) | [Karavan](https://github.com/apa
 
 - [When to use Apache Camel](/when-to-use/) — common use cases and when Camel is the right fit
 - [Getting Started Guide](/manual/getting-started.html) — build your first integration
-- [Component Catalog](/components/next/) — browse 350+ connectors
+- [Component Catalog](/components/next/) — browse 390+ connectors
 - [Enterprise Integration Patterns](/components/next/eips/enterprise-integration-patterns.html) — the pattern library
 - [Camel on Spring Boot](/camel-spring-boot/latest/) — the most popular runtime
 - [Camel on Quarkus](/camel-quarkus/latest/) — cloud-native, fast startup

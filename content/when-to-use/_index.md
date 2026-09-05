@@ -74,7 +74,7 @@ Poll a directory, FTP server, or cloud storage bucket. Pick up new files, transf
 
 ### API mediation
 
-Sit between API consumers and providers. Transform request/response formats, handle authentication, throttle traffic, and route to different backends based on content. Camel provides REST DSL for exposing APIs and 350+ components for calling backends.
+Sit between API consumers and providers. Transform request/response formats, handle authentication, throttle traffic, and route to different backends based on content. Camel provides REST DSL for exposing APIs and 390+ components for calling backends.
 
 ### Data pipelines and ETL
 
@@ -172,11 +172,11 @@ Camel isn't the right tool for everything.
 
 ### vs custom integration code
 
-Custom code gives you full control but no reuse. Every new integration — Kafka, FTP, database, cloud service — means writing and maintaining protocol-specific code, error handling, retry logic, and connection management from scratch. Camel provides this out of the box for 350+ systems with significantly less code, and the error handling is more robust. Camel also includes a built-in test framework — mock endpoints, adviceWith, and auto-wired test support — so you can unit test routes without deploying them.
+Custom code gives you full control but no reuse. Every new integration — Kafka, FTP, database, cloud service — means writing and maintaining protocol-specific code, error handling, retry logic, and connection management from scratch. Camel provides this out of the box for 390+ systems with significantly less code, and the error handling is more robust. Camel also includes a built-in test framework — mock endpoints, adviceWith, and auto-wired test support — so you can unit test routes without deploying them.
 
 ### vs Spring Integration
 
-Spring Integration is a good choice when integration is a small part of a larger Spring application — polling an SFTP folder, processing a JMS queue. Camel is the better choice when integration is your core problem: many systems, complex routing, diverse protocols. Camel has 350+ connectors vs Spring Integration's ~40 adapters, richer EIP support (saga, circuit breaker, dynamic routing), and the YAML DSL for non-Java use. Both run on Spring Boot — they're not mutually exclusive.
+Spring Integration is a good choice when integration is a small part of a larger Spring application — polling an SFTP folder, processing a JMS queue. Camel is the better choice when integration is your core problem: many systems, complex routing, diverse protocols. Camel has 390+ connectors vs Spring Integration's ~40 adapters, richer EIP support (saga, circuit breaker, dynamic routing), and the YAML DSL for non-Java use. Both run on Spring Boot — they're not mutually exclusive.
 
 ### vs managed iPaaS platforms
 
@@ -186,7 +186,7 @@ Managed platforms (MuleSoft, Dell Boomi, Informatica) provide a cloud-hosted env
 
 - [What is Apache Camel?](/what-is-apache-camel/) — introduction, architecture, and getting started
 - [Getting Started Guide](/manual/getting-started.html) — build your first integration
-- [Component Catalog](/components/next/) — browse 350+ connectors
+- [Component Catalog](/components/next/) — browse 390+ connectors
 - [Enterprise Integration Patterns](/components/next/eips/enterprise-integration-patterns.html) — the pattern library
 - [User Stories](/community/user-stories/) — companies using Camel in production
 - [Camel CLI](/manual/camel-jbang.html) — prototype integrations from the command line
