@@ -37,6 +37,16 @@
   color: var(--color-ink);
 }
 
+.download-intro a,
+.download-card a {
+  color: var(--link-font-color);
+}
+
+.download-intro a:hover,
+.download-card a:hover {
+  color: var(--link_hover-font-color);
+}
+
 .download-cli-card {
   background: var(--color-ink);
   border-radius: 16px; /* radius exemption: raw px */
