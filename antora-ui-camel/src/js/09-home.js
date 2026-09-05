@@ -48,14 +48,21 @@
     }
     var idle = copy.textContent
     var timer
+    var show = function (text) {
+      copy.textContent = text
+      clearTimeout(timer)
+      timer = setTimeout(function () {
+        copy.textContent = idle
+      }, COPIED_MS)
+    }
     copy.addEventListener('click', function () {
       var value = copy.dataset.copyValue || copy.dataset.command
+      // writeText rejects when the page is not focused or the embedder denies
+      // clipboard access; say so instead of leaving the button silent.
       window.navigator.clipboard.writeText(value).then(function () {
-        copy.textContent = 'Copied!'
-        clearTimeout(timer)
-        timer = setTimeout(function () {
-          copy.textContent = idle
-        }, COPIED_MS)
+        show('Copied!')
+      }, function () {
+        show('Copy failed')
       })
     })
   })
