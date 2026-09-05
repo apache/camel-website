@@ -862,6 +862,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@deadlinks/cargo-deadlinks-macos@github-release:deadlinks/cargo-deadlinks:0.8.1/deadlinks-macos":
+  version: 0.8.1
+  resolution: "@deadlinks/cargo-deadlinks-macos@github-release:deadlinks/cargo-deadlinks:0.8.1/deadlinks-macos"
+  dependencies:
+    "@yarnpkg/fslib": "npm:3.0.1"
+  bin:
+    deadlinks-macos: exec.js
+  checksum: 10/22be5262eab401d58b2ee01c048b661eb9251323161c63c80019f30e633b27594db174451d4cb3578770325061eb52126f8150882b1b11290dac2cead6051b0d
+  languageName: node
+  linkType: hard
+
+"@deadlinks/cargo-deadlinks-windows@github-release:deadlinks/cargo-deadlinks:0.8.1/deadlinks-windows":
+  version: 0.8.1
+  resolution: "@deadlinks/cargo-deadlinks-windows@github-release:deadlinks/cargo-deadlinks:0.8.1/deadlinks-windows"
+  dependencies:
+    "@yarnpkg/fslib": "npm:3.0.1"
+  bin:
+    deadlinks-windows: exec.js
+  checksum: 10/976428be72ea3b01892c5294862a2075aa02dd2983125c6dd9e31d1192024a4a90797e3706a2355261cc82d0eba0fd2eae2b48632fe1f89f2af47bfaddfb1c7c
+  languageName: node
+  linkType: hard
+
 "@deadlinks/cargo-deadlinks@github-release:deadlinks/cargo-deadlinks:0.8.1/deadlinks-linux":
   version: 0.8.1
   resolution: "@deadlinks/cargo-deadlinks@github-release:deadlinks/cargo-deadlinks:0.8.1/deadlinks-linux"
@@ -869,7 +891,7 @@ __metadata:
     "@yarnpkg/fslib": "npm:3.0.1"
   bin:
     deadlinks-linux: exec.js
-  checksum: 10/4f6e38b06d529c9822e50a2ac89bb8d2dee3c4b6658bdfdd043abcd4f0dedbc886667349435eefa81ed56ccb2f8485758b0511412e3d557549828ffb80c17a72
+  checksum: 10/4372e9fd8c2f626b7d06987c9db2be0ea593a3e93b0b96a6d37f24639fefd05c4340d12d3a60eaa7f811f0d7e874f4e817ae6a02ec846a1b91e75697313bfb55
   languageName: node
   linkType: hard
 
@@ -4341,6 +4363,8 @@ __metadata:
     "@antora/site-generator": "npm:^3.1.15"
     "@asciidoctor/tabs": "npm:^1.0.0-beta.3"
     "@deadlinks/cargo-deadlinks": "github-release:deadlinks/cargo-deadlinks:0.8.1/deadlinks-linux"
+    "@deadlinks/cargo-deadlinks-macos": "github-release:deadlinks/cargo-deadlinks:0.8.1/deadlinks-macos"
+    "@deadlinks/cargo-deadlinks-windows": "github-release:deadlinks/cargo-deadlinks:0.8.1/deadlinks-windows"
     "@djencks/antora-aggregate-collector": "npm:^0.1.0-beta.1"
     "@djencks/antora-site-manifest": "npm:^0.0.3-rc.2"
     "@djencks/antora-source-map": "npm:^0.0.1-rc.2"
