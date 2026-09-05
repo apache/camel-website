@@ -20,7 +20,7 @@
 
       <aside class="releases-rail">
         <div class="releases-rail-heading">Projects</div>
-        <nav class="releases-rail-links">
+        <nav class="releases-rail-links" aria-label="Projects">
           {{ range $category := sort (index site.Data "release-categories") ".order" }}
           <a class="releases-rail-link" href="#{{ $category.id }}">{{ $category.name }}</a>
           {{ end }}
