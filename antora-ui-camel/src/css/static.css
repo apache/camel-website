@@ -80,3 +80,22 @@
     width: 100%;
   }
 }
+
+.static.doc:not(.tooling) {
+  padding: calc(56 / var(--rem-base) * 1rem) var(--page-padding-x) calc(40 / var(--rem-base) * 1rem);
+}
+
+@media screen and (width <= 1024px) {
+  .static.doc:not(.tooling) {
+    padding: calc(32 / var(--rem-base) * 1rem) calc(20 / var(--rem-base) * 1rem) calc(48 / var(--rem-base) * 1rem);
+  }
+}
+
+.static.doc:not(.tooling) > h2,
+.static.doc:not(.tooling) > h3,
+.static.doc:not(.tooling) > p,
+.static.doc:not(.tooling) > pre,
+.static.doc:not(.tooling) > ul,
+.static.doc:not(.tooling) > .table-wrapper {
+  max-width: calc(760 / var(--rem-base) * 1rem);
+}
