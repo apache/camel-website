@@ -4,6 +4,8 @@
 body > footer {
   display: flex;
   justify-content: center;
+  /* Anchors .footer-tools, which paints above this element's top edge. */
+  position: relative;
   background-color: var(--footer-background);
   color: var(--footer-font-color);
   font-size: calc(15 / var(--rem-base) * 1rem);
@@ -126,9 +128,13 @@ footer .footer .footer-column dd a:hover {
   color: var(--color-on-dark);
 }
 
+/* A child of the footer, for the landmark, but painted 2rem above it on the
+   page background. Out of flow so it is not a flex item alongside .footer. */
 .footer-tools {
-  position: relative;
+  position: absolute;
   top: -2rem;
+  left: 0;
+  right: 0;
   height: 0;
   text-align: right;
   color: var(--color-ink-muted);

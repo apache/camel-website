@@ -54,10 +54,10 @@ a.button.ink:hover {
 
 .home {
   color: var(--color-ink-2);
-  /* footer.css pulls .footer-tools up 2rem (36px at --rem-base: 18) into
-     whatever ends <main>. Clear that here, on .home itself, so the utility
-     line always lands on plain page background regardless of which section
-     is last in the page (see footer.css:126-141). */
+  /* footer.css paints .footer-tools 2rem (36px at --rem-base: 18) above the
+     footer, over whatever ends <main>. Clear that here, on .home itself, so
+     the utility line always lands on plain page background regardless of
+     which section is last in the page. */
   padding-bottom: calc(48 / var(--rem-base) * 1rem);
 }
 
