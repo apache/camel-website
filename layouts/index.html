@@ -101,7 +101,13 @@
                 sets markup.highlight.noClasses = false and chroma.css themes
                 the emitted classes, so this panel was the only code on the
                 page rendering as flat monospace. */}}
-           {{ if ne $i 0 }}hidden{{ end }}>{{ highlight (trim $tab.code "\n") $tab.id "" }}</div>
+           {{/* One button per panel rather than one for the section: the hidden
+                panels hide their own button, so the visible one always carries
+                the source on screen and no script has to track the active tab.
+                09-home.js already handles any [data-copy-value]. */}}
+           {{ if ne $i 0 }}hidden{{ end }}><button class="home-tab-copy" type="button"
+                   data-copy-value="{{ trim $tab.code "\n" }}"
+                   aria-label="Copy the {{ $tab.label }} example">Copy</button>{{ highlight (trim $tab.code "\n") $tab.id "" }}</div>
       {{- end }}
       <p class="home-example-run">
         <span class="home-example-prompt">$</span>
@@ -175,13 +181,19 @@
       <li class="home-card home-news">
         <time class="home-news-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
         <h3 class="home-news-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        {{/* Release announcements often set preview to the post title verbatim,
-             which renders the heading twice in the same card. Drop it rather
-             than repeat it. Bound to a variable because `with` would rebind .
-             and $ is the home page here, not the post. */}}
+        {{/* Release announcements often set preview to the post title verbatim.
+             Printing that repeats the heading inside its own card; dropping it
+             leaves the card visibly shorter than its neighbours. Fall back to
+             the post's own summary instead, which is the first prose in the
+             body. Bound to variables because `with` would rebind . and $ is the
+             home page here, not the post. */}}
+        {{- $title := trim .Title " " }}
         {{- $preview := trim (.Params.preview | default "") " " }}
-        {{- if and $preview (ne $preview (trim .Title " ")) }}
-        <p>{{ $preview | plainify | truncate 150 }}</p>
+        {{- if or (not $preview) (eq $preview $title) }}
+        {{- $preview = trim (.Summary | plainify | htmlUnescape) " \n" }}
+        {{- end }}
+        {{- if and $preview (ne $preview $title) }}
+        <p>{{ $preview | truncate 150 }}</p>
         {{- end }}
       </li>
       {{- end }}

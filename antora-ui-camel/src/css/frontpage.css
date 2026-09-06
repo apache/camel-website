@@ -482,6 +482,35 @@ a.button.ink:hover {
   right: calc(12 / var(--rem-base) * 1rem);
 }
 
+/* Anchors the copy button, which is positioned against this panel. */
+.home-tabpanel {
+  position: relative;
+}
+
+/* Mirrors home-cli-copy in the hero, but floated over the panel's top right
+   rather than sitting in the tab row, so it reads as belonging to the code it
+   copies. Sits above the code's own padding, so it does not overlap the first
+   line. */
+.home-tab-copy {
+  background: var(--color-dark-2);
+  border: 1px solid var(--color-dark-line);
+  border-radius: calc(6 / var(--rem-base) * 1rem);
+  color: var(--syntax-text);
+  cursor: pointer;
+  font-family: var(--monospace-font-family);
+  font-size: calc(12 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  padding: calc(4 / var(--rem-base) * 1rem) calc(10 / var(--rem-base) * 1rem);
+  position: absolute;
+  right: calc(12 / var(--rem-base) * 1rem);
+  top: calc(12 / var(--rem-base) * 1rem);
+  z-index: 1;
+}
+
+.home-tab-copy:hover {
+  background: #3a342c;
+}
+
 /* The highlighter wraps the source in <code>, which matches the code/kbd/pre
    rule in base.css and so takes --code-font-color: that resolves to
    --color-ink, the exact colour of this panel's background. Tokens chroma
