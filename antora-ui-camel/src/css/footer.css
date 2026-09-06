@@ -194,6 +194,27 @@ footer .footer dl dt label:nth-child(2) {
 
   footer .footer dl dt label {
     user-select: none;
+    cursor: pointer;
+  }
+
+  /* The rule above the media query sets display:none on this toggle, which
+     takes it out of the tab order and out of the accessibility tree, so these
+     sections could only be opened with a pointer. Hide it visually instead,
+     which keeps it focusable and still announced, and show its focus ring on
+     the heading the reader actually sees. */
+  footer .footer input[type='checkbox'] {
+    clip-path: inset(50%);
+    display: block;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  footer .footer input[type='checkbox']:focus-visible + dl dt {
+    outline: 2px solid var(--color-camel-orange);
+    outline-offset: 3px;
   }
 
   footer .footer dl dt label:nth-child(1) {
