@@ -561,6 +561,43 @@ a.button.ink:hover {
   color: var(--link_hover-font-color);
 }
 
+/* Latest posts */
+
+.home-news {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-news-date {
+  color: var(--color-ink-muted);
+  display: block;
+  font-size: calc(13 / var(--rem-base) * 1rem);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.home-news-title {
+  font-size: calc(17 / var(--rem-base) * 1rem);
+  line-height: 1.35;
+  margin: calc(8 / var(--rem-base) * 1rem) 0 0;
+}
+
+.home-news-title a {
+  color: var(--color-ink);
+}
+
+.home-news-title a:hover {
+  color: var(--color-orange-deep);
+}
+
+.home-news p {
+  color: var(--color-ink-soft);
+  flex: 1;
+  font-size: calc(14 / var(--rem-base) * 1rem);
+  line-height: 1.55;
+  margin: calc(10 / var(--rem-base) * 1rem) 0 0;
+}
+
 .home-tiles-cta {
   margin: calc(34 / var(--rem-base) * 1rem) 0 0;
   text-align: center;

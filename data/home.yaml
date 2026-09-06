@@ -193,6 +193,16 @@ tiles:
     label: "Explore all Camel projects →"
     url: /projects/
 
+# The posts themselves come from content/blog, so there is nothing to keep in
+# step here. The stats strip near the top counts cumulative activity; this shows
+# what that activity actually produced.
+news:
+  eyebrow: From the Blog
+  heading: What the project has been working on
+  cta:
+    label: "Read the blog →"
+    url: /blog/
+
 closing:
   heading: Camel is your project
   body: >-

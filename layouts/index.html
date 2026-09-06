@@ -157,6 +157,27 @@
   </div>
   {{- end }}
 
+  {{- with $home.news }}
+  <section class="home-section" aria-labelledby="home-news-title">
+    <div class="home-section-head">
+      <p class="home-eyebrow">{{ .eyebrow }}</p>
+      <h2 id="home-news-title">{{ .heading }}</h2>
+    </div>
+    <ul class="home-grid home-grid--three">
+      {{- range first 3 (where site.RegularPages "Section" "blog").ByDate.Reverse }}
+      <li class="home-card home-news">
+        <time class="home-news-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+        <h3 class="home-news-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Params.preview | plainify | truncate 150 }}</p>
+      </li>
+      {{- end }}
+    </ul>
+    <p class="home-tiles-cta">
+      <a class="button light" href="{{ .cta.url | relURL }}">{{ .cta.label }}</a>
+    </p>
+  </section>
+  {{- end }}
+
   {{- with $home.closing }}
   <section class="home-closing" aria-labelledby="home-closing-title">
     <div class="home-closing-inner">
