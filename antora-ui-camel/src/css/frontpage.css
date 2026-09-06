@@ -286,6 +286,17 @@ a.button.ink:hover {
   padding: calc(30 / var(--rem-base) * 1rem) var(--page-padding-x);
 }
 
+/* base.css sets no colour on <a>, only decoration, so a link here would fall
+   through to the browser's default blue and break the palette. Use the site's
+   link tokens, which are the burnt orange used everywhere else. */
+.home-stats-label a {
+  color: var(--link-font-color);
+}
+
+.home-stats-label a:hover {
+  color: var(--link_hover-font-color);
+}
+
 .home-stats-label {
   color: var(--color-ink-2);
   font-family: var(--display-font-family);
@@ -754,6 +765,18 @@ a.button.ink:hover {
   .home-stats-list {
     gap: calc(24 / var(--rem-base) * 1rem);
     flex-wrap: wrap;
+  }
+
+  /* The 280px floor on the copy column is wider than the space left inside the
+     panel at 320px, and a flex item will not shrink past its own min-width, so
+     the panel pushed the document past the viewport. Release the floor and trim
+     the panel's own padding to buy back the difference. */
+  .home-closing-copy {
+    min-width: 0;
+  }
+
+  .home-closing-inner {
+    padding: calc(28 / var(--rem-base) * 1rem) calc(20 / var(--rem-base) * 1rem);
   }
 
   .home-closing-actions {
