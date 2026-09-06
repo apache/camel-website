@@ -108,7 +108,12 @@
            id="home-panel-{{ $tab.id }}"
            aria-labelledby="home-tab-{{ $tab.id }}"
            tabindex="0"
-           {{ if ne $i 0 }}hidden{{ end }}><pre>{{ $tab.code }}</pre></div>
+           {{/* Each tab's id doubles as its chroma lexer (yaml, java, xml). The
+                site already highlights markdown fences this way: config.toml
+                sets markup.highlight.noClasses = false and chroma.css themes
+                the emitted classes, so this panel was the only code on the
+                page rendering as flat monospace. */}}
+           {{ if ne $i 0 }}hidden{{ end }}>{{ highlight (trim $tab.code "\n") $tab.id "" }}</div>
       {{- end }}
       <p class="home-example-run">
         <span class="home-example-prompt">$</span>
