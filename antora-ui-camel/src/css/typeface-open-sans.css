@@ -22,6 +22,30 @@
     url('~@openfonts/open-sans_latin-ext/files/open-sans-latin-ext-300-italic.woff2') format('woff2'),
     url('~@openfonts/open-sans_latin-ext/files/open-sans-latin-ext-300-italic.woff') format('woff');
 }
+/* open-sans-400normal - latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local('Open Sans Regular'),
+    local('OpenSans-Regular'),
+    url('~@openfonts/open-sans_latin-ext/files/open-sans-latin-ext-400.woff2') format('woff2'),
+    url('~@openfonts/open-sans_latin-ext/files/open-sans-latin-ext-400.woff') format('woff');
+}
+/* open-sans-400italic - latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local('Open Sans Italic'),
+    local('OpenSans-Italic'),
+    url('~@openfonts/open-sans_latin-ext/files/open-sans-latin-ext-400-italic.woff2') format('woff2'),
+    url('~@openfonts/open-sans_latin-ext/files/open-sans-latin-ext-400-italic.woff') format('woff');
+}
 /* open-sans-700normal - latin-ext */
 @font-face {
   font-family: 'Open Sans';
