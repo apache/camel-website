@@ -28,7 +28,10 @@
   {{- with $home.stats }}
   <section class="home-stats" aria-label="Project activity">
     <div class="home-stats-inner">
-      <p class="home-stats-label">{{ .label }}</p>
+      {{/* `if` rather than `with` so . stays bound to the stats map. */}}
+      <p class="home-stats-label">
+        {{- if .url }}<a href="{{ .url | relURL }}">{{ .label }}</a>{{ else }}{{ .label }}{{ end -}}
+      </p>
       <ul class="home-stats-list">
         {{- range .items }}
         <li>
@@ -63,30 +66,15 @@
   </section>
   {{- end }}
 
-  {{- with $home.features }}
+  {{/* The worked example comes before the feature grid: a visitor who has just
+       picked a runtime above should see what a route actually looks like
+       before being asked to read another set of cards. It carries the band so
+       the cream/sand alternation still runs down the page. */}}
+  {{- with $home.example }}
   {{/* home-band is the full-bleed wrapper: home-section keeps its own max-width
        and centring, so the tint has to come from an element outside it. Same
        split as home-stats / home-stats-inner. */}}
   <div class="home-band">
-  <section class="home-section" aria-labelledby="home-features-title">
-    <div class="home-section-head">
-      <p class="home-eyebrow">{{ .eyebrow }}</p>
-      <h2 id="home-features-title">{{ .heading }}</h2>
-    </div>
-    <ul class="home-grid home-grid--features">
-      {{- range .items }}
-      <li class="home-card home-feature">
-        <span class="home-feature-tag">{{ .tag }}</span>
-        <h3>{{ .title }}</h3>
-        <p>{{ .body }}</p>
-      </li>
-      {{- end }}
-    </ul>
-  </section>
-  </div>
-  {{- end }}
-
-  {{- with $home.example }}
   <section class="home-section" aria-labelledby="home-example-title">
     <div class="home-section-head">
       <p class="home-eyebrow">{{ .eyebrow }}</p>
@@ -120,6 +108,25 @@
         <span class="home-example-command">{{ .run_command }}</span>
       </p>
     </div>
+  </section>
+  </div>
+  {{- end }}
+
+  {{- with $home.features }}
+  <section class="home-section" aria-labelledby="home-features-title">
+    <div class="home-section-head">
+      <p class="home-eyebrow">{{ .eyebrow }}</p>
+      <h2 id="home-features-title">{{ .heading }}</h2>
+    </div>
+    <ul class="home-grid home-grid--features">
+      {{- range .items }}
+      <li class="home-card home-feature">
+        <span class="home-feature-tag">{{ .tag }}</span>
+        <h3>{{ .title }}</h3>
+        <p>{{ .body }}</p>
+      </li>
+      {{- end }}
+    </ul>
   </section>
   {{- end }}
 
@@ -168,7 +175,14 @@
       <li class="home-card home-news">
         <time class="home-news-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
         <h3 class="home-news-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        <p>{{ .Params.preview | plainify | truncate 150 }}</p>
+        {{/* Release announcements often set preview to the post title verbatim,
+             which renders the heading twice in the same card. Drop it rather
+             than repeat it. Bound to a variable because `with` would rebind .
+             and $ is the home page here, not the post. */}}
+        {{- $preview := trim (.Params.preview | default "") " " }}
+        {{- if and $preview (ne $preview (trim .Title " ")) }}
+        <p>{{ $preview | plainify | truncate 150 }}</p>
+        {{- end }}
       </li>
       {{- end }}
     </ul>

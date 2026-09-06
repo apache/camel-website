@@ -25,6 +25,9 @@ hero:
 
 stats:
   label: Used by thousands of companies worldwide
+  # The counts beside this label evidence activity, not adoption. Point the
+  # claim at the page that actually substantiates it.
+  url: /community/user-stories/
   items:
     - num: 83,000+
       label: commits
@@ -198,7 +201,7 @@ tiles:
 # what that activity actually produced.
 news:
   eyebrow: From the Blog
-  heading: What the project has been working on
+  heading: Latest from Camel
   cta:
     label: "Read the blog →"
     url: /blog/
