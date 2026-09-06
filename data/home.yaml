@@ -83,7 +83,7 @@ features:
       body: >-
         Kafka, REST, JDBC, AWS, Azure, GCP, SAP, Salesforce. Connect to
         anything, all out of the box.
-    - tag: "3"
+    - tag: 3 DSL
       title: Write it your way
       body: >-
         Java DSL, YAML, or XML. The same routes, your choice of syntax, mixed
