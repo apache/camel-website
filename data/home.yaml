@@ -142,10 +142,16 @@ example:
                    VALUES (:#id, :#amount)"/>
         </route>
 
+# The three runtimes a newcomer picks between are already the subject of
+# get_started above, so this section covers the rest of the ecosystem instead of
+# repeating them. Icons and copy follow data/projects.yaml so the two pages
+# describe each project the same way.
 tiles:
-  eyebrow: Core Projects
-  heading: Start with what most teams use
-  subhead: The framework and its two primary runtimes, plus the CLI.
+  eyebrow: The Ecosystem
+  heading: What else Camel gives you
+  subhead: >-
+    The framework underneath the runtimes above, and the projects built around
+    it.
   items:
     - name: Camel Core
       icon: logo-d
@@ -153,22 +159,36 @@ tiles:
         The integration framework itself: routing engine, EIPs, and the
         component model.
       url: /camel-core/
-    - name: Camel Spring Boot
-      icon: spring-boot
+    - name: Camel Kamelets
+      icon: logo-d
       description: >-
-        Camel on Spring Boot with auto-configured starters for 350+ components.
-      url: /camel-spring-boot/latest/
-    - name: Camel Quarkus
-      icon: quarkus
+        Reusable, high-level connectors that snap together to build routes with
+        minimal configuration.
+      url: /camel-kamelets/latest/
+    - name: Camel K
+      icon: kubernetes
       description: >-
-        Cloud-native Camel packaged as Quarkus extensions with native-image
-        support.
-      url: /camel-quarkus/latest/
-    - name: Camel CLI
-      icon: cli
+        A lightweight integration framework that runs natively on Kubernetes,
+        built for serverless workloads.
+      url: /camel-k/latest/
+    - name: Camel Karavan
+      icon: karavan
       description: >-
-        Terminal tooling for dev, test, trace, and AI. Get started in seconds.
-      url: /manual/camel-jbang.html
+        A low-code, visual data-integration platform for designing and managing
+        Camel routes.
+      url: https://github.com/apache/camel-karavan
+    - name: Camel Kafka Connector
+      icon: apache-kafka
+      description: >-
+        Embeds Camel within Kafka Connect, exposing every Camel component as a
+        Kafka connector.
+      url: /camel-kafka-connector/latest/
+    - name: Camel Karaf
+      icon: apache-karaf
+      description: >-
+        Runs Camel inside the Apache Karaf OSGi container for modular
+        deployments.
+      url: /camel-karaf/latest/
   cta:
     label: "Explore all Camel projects →"
     url: /projects/
