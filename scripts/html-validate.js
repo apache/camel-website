@@ -17,6 +17,7 @@ const path = require('path');
 // do not need to filter anything themselves.
 
 const FILES_PER_SHARD = 200;
+const PROGRESS_INTERVAL_MS = 30000;
 
 const target = process.argv[2] || 'public';
 
@@ -113,17 +114,34 @@ const runShard = (files, index) =>
 
   let next = 0;
   let failed = 0;
+  let done = 0;
+
+  // A clean run prints nothing between the header and the summary, which on CI
+  // is around six minutes of dead air and looks identical to a hung job. Report
+  // progress periodically instead. A line per shard would be 32 lines of noise
+  // on a green run; a tick is a handful. unref so it can never hold the process
+  // open on its own.
+  const ticker = setInterval(() => {
+    const elapsed = ((Date.now() - started) / 1000).toFixed(0);
+    const validated = shards.slice(0, done).reduce((n, s) => n + s.length, 0);
+    process.stdout.write(
+      `check:html: ${done}/${shards.length} shards, ${validated}/${files.length} files, ${elapsed}s\n`
+    );
+  }, PROGRESS_INTERVAL_MS);
+  ticker.unref();
 
   const worker = async () => {
     while (next < shards.length) {
       const index = next++;
       const { code, out } = await runShard(shards[index], index);
+      done++;
       if (out) process.stdout.write(out);
       if (code !== 0) failed++;
     }
   };
 
   await Promise.all(Array.from({ length: workers }, worker));
+  clearInterval(ticker);
 
   const elapsed = ((Date.now() - started) / 1000).toFixed(1);
   process.stdout.write(`check:html: ${files.length} files in ${elapsed}s\n`);
