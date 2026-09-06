@@ -8,7 +8,6 @@ brand:
 
 columns:
   - title: Overview
-    id: overview
     links:
       - { name: Blog, url: /blog/ }
       - { name: Documentation, url: /docs/ }
@@ -17,7 +16,6 @@ columns:
       - { name: Download, url: /download/ }
       - { name: All projects, url: /projects/ }
   - title: Documentation
-    id: documentation
     links:
       - { name: User Manual, url: /manual/ }
       - { name: Components, url: /components/next/index.html }
@@ -28,7 +26,6 @@ columns:
       - { name: Camel Karaf, url: /camel-karaf/latest/ }
       - { name: FAQ, url: /manual/faq/index.html }
   - title: Community
-    id: community
     links:
       - { name: Support, url: /community/support/ }
       - { name: Contributing, url: /community/contributing/ }
@@ -38,7 +35,6 @@ columns:
       - { name: Books, url: /community/books/ }
       - { name: Team, url: /community/team/ }
   - title: About
-    id: about
     links:
       - { name: Acknowledgments, url: /acknowledgments/ }
       - { name: Apache Events, url: 'https://www.apache.org/events/current-event.html', external: true }

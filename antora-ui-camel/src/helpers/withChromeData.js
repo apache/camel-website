@@ -42,7 +42,6 @@ module.exports = (options) => {
       brand: chromeData.brand,
       columns: chromeData.columns.map((column) => ({
         title: column.title,
-        id: column.id,
         links: column.links.map((link) => mapLink(link, siteRootPath)),
       })),
       social: chromeData.social.map((link) => mapLink(link, siteRootPath)),
