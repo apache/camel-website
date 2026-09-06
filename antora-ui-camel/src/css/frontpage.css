@@ -541,7 +541,11 @@ a.button.ink:hover {
   margin: 0;
   min-height: calc(200 / var(--rem-base) * 1rem);
   overflow-x: auto;
-  padding: calc(22 / var(--rem-base) * 1rem) calc(24 / var(--rem-base) * 1rem);
+  /* Top padding clears the copy button rather than merely sitting behind it.
+     The code does not wrap, so a right inset would not help: a long first line
+     would slide back under the button as soon as the panel is scrolled. */
+  padding: calc(46 / var(--rem-base) * 1rem) calc(24 / var(--rem-base) * 1rem)
+           calc(22 / var(--rem-base) * 1rem);
 }
 
 .home-example-run {
