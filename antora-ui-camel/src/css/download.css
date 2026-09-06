@@ -212,8 +212,10 @@
 }
 
 .download-row-sublink:hover {
-  color: var(--color-camel-orange);
-  text-decoration: none;
+  /* Deep orange rather than the bright one: 5.22:1 against the page instead of
+     2.74:1. The underline is left to the site-wide a:hover rule, since dropping
+     it here removed the only non-colour hover cue. */
+  color: var(--color-orange-deep);
 }
 
 .download-row-sublink + .download-row-sublink::before {
