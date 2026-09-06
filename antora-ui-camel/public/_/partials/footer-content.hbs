@@ -1,7 +1,10 @@
-    <div class="footer-tools">
-        <a href="#top" title="Reach the top of the page">Back to top</a>
-    </div>
     <footer>
+      {{!-- Inside the footer so this line belongs to the contentinfo landmark
+      rather than sitting between two of them. It is positioned out of flow, so
+      it still paints above the footer's dark band. --}}
+        <div class="footer-tools">
+            <a href="#top" title="Reach the top of the page">Back to top</a>
+        </div>
       {{#withChromeData}}
         <div class="footer">
             <div class="footer-brand">
