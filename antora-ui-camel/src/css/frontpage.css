@@ -75,6 +75,16 @@ a.button.ink:hover {
            calc(20 / var(--rem-base) * 1rem);
 }
 
+/* Alternating ground. Sections otherwise sit on one continuous cream, so the
+   page reads as a single column of white cards with no rhythm. Banding every
+   other section in the sand tint gives the eye a boundary, the same way the
+   stat strip already does. Cards stay white so they keep lifting off both. */
+.home-band {
+  background: var(--color-paper-2);
+  border-bottom: 1px solid var(--color-line);
+  border-top: 1px solid var(--color-line);
+}
+
 .home-section-head {
   margin-bottom: calc(44 / var(--rem-base) * 1rem);
   text-align: center;
@@ -192,11 +202,12 @@ a.button.ink:hover {
   padding: calc(14 / var(--rem-base) * 1rem) calc(26 / var(--rem-base) * 1rem);
 }
 
+/* No border: the radial wash alone is enough to seat the illustration, and the
+   hard edge boxed it in against the headline and call to action beside it. */
 .home-hero-art {
   align-items: center;
   aspect-ratio: 1 / 0.86;
   background: radial-gradient(circle at 50% 50%, var(--color-paper-2) 0%, var(--color-paper) 70%);
-  border: 1px solid var(--color-line);
   border-radius: calc(16 / var(--rem-base) * 1rem);
   display: flex;
   justify-content: center;
@@ -204,9 +215,11 @@ a.button.ink:hover {
 
 .home-hero-art img {
   display: block;
-  filter: drop-shadow(0 30px 50px rgb(233 120 38 / 30%));
+  /* Softer and tighter than the original 0 30px 50px at 30%, which read as a
+     glow in its own right rather than as depth. */
+  filter: drop-shadow(0 18px 34px rgb(233 120 38 / 18%));
   height: auto;
-  width: 62%;
+  width: 54%;
 }
 
 /* Hero CLI bar */

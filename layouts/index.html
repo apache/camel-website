@@ -64,6 +64,10 @@
   {{- end }}
 
   {{- with $home.features }}
+  {{/* home-band is the full-bleed wrapper: home-section keeps its own max-width
+       and centring, so the tint has to come from an element outside it. Same
+       split as home-stats / home-stats-inner. */}}
+  <div class="home-band">
   <section class="home-section" aria-labelledby="home-features-title">
     <div class="home-section-head">
       <p class="home-eyebrow">{{ .eyebrow }}</p>
@@ -79,6 +83,7 @@
       {{- end }}
     </ul>
   </section>
+  </div>
   {{- end }}
 
   {{- with $home.example }}
@@ -122,6 +127,7 @@
     the tree for the anchor). Dropping it turns `yarn check:links` red. Keep it on
     whichever element holds the project tiles.
   */}}
+  <div class="home-band">
   <section id="apache-camel-projects" class="home-section" aria-labelledby="home-tiles-title">
     <div class="home-section-head">
       <p class="home-eyebrow">{{ .eyebrow }}</p>
@@ -143,6 +149,7 @@
       <a class="button light" href="{{ .cta.url | relURL }}">{{ .cta.label }}</a>
     </p>
   </section>
+  </div>
   {{- end }}
 
   {{- with $home.closing }}
