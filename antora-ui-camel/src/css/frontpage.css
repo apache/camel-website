@@ -482,6 +482,17 @@ a.button.ink:hover {
   right: calc(12 / var(--rem-base) * 1rem);
 }
 
+/* The highlighter wraps the source in <code>, which matches the code/kbd/pre
+   rule in base.css and so takes --code-font-color: that resolves to
+   --color-ink, the exact colour of this panel's background. Tokens chroma
+   colours are fine, but everything it deliberately leaves unstyled (
+   punctuation, plain identifiers, whitespace) turns invisible. Colour the
+   element that actually carries the text rather than relying on the <pre>,
+   since a rule matching <code> directly beats anything it inherits. */
+.home-tabpanel pre code {
+  color: var(--syntax-text);
+}
+
 .home-tabpanel pre {
   color: var(--syntax-text);
   font-family: var(--monospace-font-family);
@@ -563,9 +574,12 @@ a.button.ink:hover {
 
 /* Latest posts */
 
+/* home-card carries no padding of its own; each variant supplies it, which is
+   why home-tile sets 24px. Match it so the two card grids line up. */
 .home-news {
   display: flex;
   flex-direction: column;
+  padding: calc(24 / var(--rem-base) * 1rem);
 }
 
 .home-news-date {
