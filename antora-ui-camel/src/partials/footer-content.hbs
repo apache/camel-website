@@ -13,7 +13,10 @@
             {{#each @columns}}
             <input id="footer-toggle-{{id}}" type="checkbox" title="Show/Hide {{title}} section" />
             <dl class="footer-column">
-                <dt><label for="footer-toggle-{{id}}">{{title}}</label><label for="footer-toggle-{{id}}">&#65291;</label></dt>
+                {{!-- Both labels point at the same input, so both feed its accessible name and
+      a screen reader read the decorative glyph as part of it ("OVERVIEW ＋").
+      aria-hidden keeps the visible affordance without naming it. --}}
+                <dt><label for="footer-toggle-{{id}}">{{title}}</label><label for="footer-toggle-{{id}}" aria-hidden="true">&#65291;</label></dt>
                 {{#each links}}
                 <dd><a href="{{url}}"{{#if external}} target="_blank" rel="noopener noreferrer nofollow" title="{{name}}"{{/if}}>{{name}}</a></dd>
                 {{/each}}
