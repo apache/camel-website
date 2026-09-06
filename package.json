@@ -15,7 +15,7 @@
     "build:minify": "gulp minify",
     "build:sitemap": "gulp sitemap",
     "build:htaccess": "gulp htaccess",
-    "check:html": "html-validate public",
+    "check:html": "node scripts/html-validate.js public",
     "check:links": "node scripts/deadlinks.js public",
     "check:redirects": "tests/redirect.sh -s",
     "checks": "run-p -l check:links check:html check:redirects",
