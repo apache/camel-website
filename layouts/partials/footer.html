@@ -19,12 +19,12 @@
                 <p class="footer-blurb">{{ $chrome.brand.blurb }}</p>
             </div>
             {{ range $chrome.columns }}
-            <input id="footer-toggle-{{ .id }}" type="checkbox" title="Show/Hide {{ .title }} section" />
             <dl class="footer-column">
-                {{/* Both labels point at the same input, so both feed its accessible name and
-     a screen reader read the decorative glyph as part of it ("OVERVIEW ＋").
-     aria-hidden keeps the visible affordance without naming it. */}}
-                <dt><label for="footer-toggle-{{ .id }}">{{ .title }}</label><label for="footer-toggle-{{ .id }}" aria-hidden="true">&#65291;</label></dt>
+                {{/* Below 1024px these columns collapse, and 10-footer.js turns this heading
+     into a button so the state is announced as expanded/collapsed. Above that
+     width there is nothing to disclose, so the heading stays plain text. The
+     glyph is the visible affordance only, hence aria-hidden. */}}
+                <dt><span class="footer-column-title">{{ .title }}</span><span class="footer-column-plus" aria-hidden="true">&#65291;</span></dt>
                 {{ range .links }}
                 <dd><a href="{{ .url | relURL }}"{{ if .external }} target="_blank" rel="noopener noreferrer nofollow" title="{{ .name }}"{{ end }}>{{ .name }}</a></dd>
                 {{ end }}
