@@ -14,7 +14,7 @@ We're happy to announce the availability of Apache Camel K version 2.11.0. This 
 
 ## Camel Quarkus (`plain-quarkus`) default runtime
 
-In the very first days of the Camel K project (even before Camel Quarkus existed), the team decided to create a special Java runtime, [Camel K Runtime]((https://github.com/apache/camel-k-runtime)) which was the unique available runtime back in time. We have supported and defaulted to this runtime until Camel version 4.8.5. [We decided to **move to a plain regular Camel Quarkus** runtime](https://lists.apache.org/thread/8gfbsz0fzf7p0g9hox525qnqhtk6vdq3) which will provide a smoother experience 100% compatible with regular Camel Quarkus applications, deprecating and eventually remove the old Camel K Runtime project.
+In the very first days of the Camel K project (even before Camel Quarkus existed), the team decided to create a special Java runtime, [Camel K Runtime](https://github.com/apache/camel-k-runtime) which was the unique available runtime back in time. We have supported and defaulted to this runtime until Camel version 4.8.5. [We decided to **move to a plain regular Camel Quarkus** runtime](https://lists.apache.org/thread/8gfbsz0fzf7p0g9hox525qnqhtk6vdq3) which will provide a smoother experience 100% compatible with regular Camel Quarkus applications, deprecating and eventually remove the old Camel K Runtime project.
 
 From now on, Camel K will run, by default such a runtime.
 
