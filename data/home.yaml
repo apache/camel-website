@@ -46,6 +46,15 @@ get_started:
   eyebrow: Get Started Your Way
   heading: Three clear paths
   items:
+    - name: Camel CLI
+      badge: fastest
+      description: >-
+        Zero project setup. Just YAML and a terminal, perfect for prototyping,
+        learning, and AI-assisted workflows.
+      code: |
+        camel init hello.yaml
+        camel run hello.yaml
+      url: /manual/camel-jbang.html
     - name: Spring Boot
       badge: Most popular
       description: >-
@@ -64,15 +73,6 @@ get_started:
         quarkus ext add
           camel-quarkus-kafka
       url: /camel-quarkus/latest/
-    - name: Camel CLI
-      badge: fastest
-      description: >-
-        Zero project setup. Just YAML and a terminal, perfect for prototyping,
-        learning, and AI-assisted workflows.
-      code: |
-        camel init hello.yaml
-        camel run hello.yaml
-      url: /manual/camel-jbang.html
 
 features:
   eyebrow: Why developers choose Camel
