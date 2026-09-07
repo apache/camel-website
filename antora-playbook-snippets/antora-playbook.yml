@@ -30,6 +30,8 @@ content:
       # Let's keep latest active development + LTS active versions only
       branches:
         - main
+        - release-2.11.x
+        - release-2.10.x
       start_path: docs
 
     - url: https://github.com/apache/camel-kamelets.git
