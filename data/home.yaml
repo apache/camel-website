@@ -52,6 +52,7 @@ get_started:
         Zero project setup. Just YAML and a terminal, perfect for prototyping,
         learning, and AI-assisted workflows.
       code: |
+        curl -fsSL https://camel.apache.org/install.sh | sh
         camel init hello.yaml
         camel run hello.yaml
       url: /manual/camel-jbang.html
