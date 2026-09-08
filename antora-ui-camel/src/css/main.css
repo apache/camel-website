@@ -19,7 +19,7 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     gap: calc(56 / var(--rem-base) * 1rem);
-    max-width: calc(1180 / var(--rem-base) * 1rem);
+    max-width: calc(1340 / var(--rem-base) * 1rem);
     padding: calc(44 / var(--rem-base) * 1rem) calc(40 / var(--rem-base) * 1rem)
              calc(80 / var(--rem-base) * 1rem);
   }
