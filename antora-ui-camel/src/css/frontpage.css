@@ -315,7 +315,7 @@ a.button.ink:hover {
 }
 
 .home-stat-num {
-  color: var(--color-orange-deep);
+  color: var(--color-teal-deep);
   display: block;
   font-family: var(--display-font-family);
   font-size: calc(26 / var(--rem-base) * 1rem);
@@ -627,7 +627,7 @@ a.button.ink:hover {
 }
 
 .home-news-date {
-  color: var(--color-ink-muted);
+  color: var(--color-teal-deep);
   display: block;
   font-size: calc(13 / var(--rem-base) * 1rem);
   letter-spacing: 0.02em;

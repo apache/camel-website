@@ -41,6 +41,11 @@
   --color-orange-deeper: #853c09;
   --color-orange-tint: #fbead8;
   --color-orange-glow: #f2a05a;
+  /* Cool accent: split-complementary (167deg) to the brand orange. Breaks the
+     single-hue warmth without clashing. 6.18:1 on paper, 5.72:1 on paper-2. */
+  --color-teal-deep: #1f6858;
+  --color-teal-light: #5cbfa6;
+  --color-teal-tint: #d8efe9;
   --color-dark-2: #2b2620;
   --color-dark-3: #1c1813;
   --color-prompt: #e0805a;

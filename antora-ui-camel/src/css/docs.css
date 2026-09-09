@@ -167,11 +167,11 @@
   width: calc(38 / var(--rem-base) * 1rem);
   height: calc(38 / var(--rem-base) * 1rem);
   border-radius: 9px; /* radius exemption: raw px */
-  background: var(--color-orange-tint);
+  background: var(--color-teal-tint);
   font-family: var(--display-font-family);
   font-weight: 800;
   font-size: calc(15 / var(--rem-base) * 1rem);
-  color: var(--link-font-color);
+  color: var(--color-teal-deep);
 }
 
 .community-card-title {
