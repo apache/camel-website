@@ -59,11 +59,12 @@ get_started:
     - name: Spring Boot
       badge: Most popular
       description: >-
-        Add Camel to your existing Spring Boot project with a single starter
-        dependency. Starters for 350+ components.
+        Generate a Spring Boot project with Camel from Spring Initializr, then
+        add starters for any of the 350+ components as you need them.
       code: |
-        # pom.xml
-        camel-spring-boot-starter
+        curl https://start.spring.io/starter.tgz -d dependencies=camel \
+          -d type=maven-project -d baseDir=camel-app | tar -xzf -
+        cd camel-app && ./mvnw spring-boot:run
       url: /camel-spring-boot/latest/
     - name: Quarkus
       badge: Cloud native
@@ -71,8 +72,7 @@ get_started:
         Cloud-native Camel with fast startup and native compilation. Add
         extensions to your Quarkus project.
       code: |
-        quarkus ext add
-          camel-quarkus-kafka
+        quarkus ext add camel-quarkus-kafka
       url: /camel-quarkus/latest/
 
 features:
