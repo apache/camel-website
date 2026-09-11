@@ -4276,7 +4276,7 @@ __metadata:
     gulp-terser: "npm:^1.2.0"
     handlebars: "npm:^4.7.9"
     highlight.js: "npm:~11"
-    js-yaml: "npm:^4.3.1"
+    js-yaml: "npm:^4.3.2"
     ordered-read-streams: "npm:^2.0.0"
     plugin-error: "npm:~1.0"
     postcss: "npm:^8.5.26"
@@ -4345,7 +4345,7 @@ __metadata:
     gulp-inject: "npm:^5.0.2"
     html-validate: "npm:^8.9.1"
     hugo-extended: "npm:^0.121.2"
-    js-yaml: "npm:^4.3.1"
+    js-yaml: "npm:^4.3.2"
     jsdom: "npm:^27.1.0"
     netlify-cli: "npm:^26.1.0"
     node-html-parser: "npm:^7.0.1"
@@ -12983,7 +12983,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"js-yaml@npm:^4.1.0, js-yaml@npm:^4.1.1, js-yaml@npm:^4.3.1":
+"js-yaml@npm:^4.1.0, js-yaml@npm:^4.1.1":
   version: 4.3.1
   resolution: "js-yaml@npm:4.3.1"
   dependencies:
@@ -12991,6 +12991,17 @@ __metadata:
   bin:
     js-yaml: bin/js-yaml.js
   checksum: 10/2ce71b5d632abbd77da80447bf860e8a0264e54bffe94840984887d58b023761495b523727547904517a6107a1ef189854b361e0fc44995ee13a84f222d7bd42
+  languageName: node
+  linkType: hard
+
+"js-yaml@npm:^4.3.2":
+  version: 4.3.2
+  resolution: "js-yaml@npm:4.3.2"
+  dependencies:
+    argparse: "npm:^2.0.1"
+  bin:
+    js-yaml: bin/js-yaml.js
+  checksum: 10/05c44b9c73e4901d92703b155e76518df64bf01ac62e4c036b47de4b391e19b72e32656e8954d51b436307f08cc9d0c0d4ec617d061cf2f65fffee9f3114bee7
   languageName: node
   linkType: hard
 
