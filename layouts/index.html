@@ -50,19 +50,32 @@
       <p class="home-eyebrow">{{ .eyebrow }}</p>
       <h2 id="home-started-title">{{ .heading }}</h2>
     </div>
-    <ul class="home-grid home-grid--three">
-      {{- range .items }}
-      <li class="home-card home-started-card">
-        <div class="home-started-head">
-          <h3>{{ .name }}</h3>
-          {{- with .badge }}<span class="home-badge">{{ . }}</span>{{ end }}
-        </div>
-        <p class="home-started-desc">{{ .description }}</p>
-        <pre class="home-started-code">{{ .code }}</pre>
-        <a class="home-started-link" href="{{ .url | relURL }}">Start with {{ .name }} &rarr;</a>
-      </li>
-      {{- end }}
-    </ul>
+    {{/* One path per slide. The track is a native scroll-snap scroller, so it
+         still swipes without JS; 09-home.js unhides the arrows and dots and
+         keeps them in step with the visible slide. */}}
+    {{- $count := len .items }}
+    <div class="home-carousel" role="group" aria-roledescription="carousel" aria-label="Ways to get started">
+      <button class="home-carousel-arrow home-carousel-prev" type="button" aria-label="Previous path" hidden><span aria-hidden="true">&lsaquo;</span></button>
+      <ul class="home-carousel-track">
+        {{- range $i, $item := .items }}
+        <li class="home-card card--flat home-started-card" id="home-started-{{ $i }}" role="group" aria-roledescription="slide" aria-label="{{ add $i 1 }} of {{ $count }}: {{ .name }}">
+          <div class="home-started-head">
+            <h3>{{ .name }}</h3>
+            {{- with .badge }}<span class="home-badge">{{ . }}</span>{{ end }}
+          </div>
+          <p class="home-started-desc">{{ .description }}</p>
+          <pre class="home-started-code">{{ .code }}</pre>
+          <a class="home-started-link" href="{{ .url | relURL }}">Start with {{ .name }} &rarr;</a>
+        </li>
+        {{- end }}
+      </ul>
+      <button class="home-carousel-arrow home-carousel-next" type="button" aria-label="Next path" hidden><span aria-hidden="true">&rsaquo;</span></button>
+      <div class="home-carousel-dots" hidden>
+        {{- range $i, $item := .items }}
+        <button class="home-carousel-dot" type="button" aria-controls="home-started-{{ $i }}" aria-label="Show {{ .name }}"></button>
+        {{- end }}
+      </div>
+    </div>
   </section>
   {{- end }}
 

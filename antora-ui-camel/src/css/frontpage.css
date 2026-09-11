@@ -341,6 +341,115 @@ a.button.ink:hover {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+/* One slide at a time, capped so a three-line code block does not float in a
+   1200px-wide card. The arrows flank the slide and the dots sit under it; the
+   empty auto columns collapse when JS has not unhidden the controls. */
+.home-carousel {
+  display: grid;
+  gap: calc(16 / var(--rem-base) * 1rem);
+  grid-template-areas:
+    'prev track next'
+    '.    dots  .';
+  grid-template-columns: auto minmax(0, calc(720 / var(--rem-base) * 1rem)) auto;
+  justify-content: center;
+}
+
+/* Author display values beat the UA [hidden] rule, so restate it. */
+.home-carousel [hidden] {
+  display: none;
+}
+
+/* position: relative makes each slide's offsetLeft relative to the track,
+   which is what 09-home.js scrolls to. */
+.home-carousel-track {
+  display: flex;
+  gap: calc(22 / var(--rem-base) * 1rem);
+  grid-area: track;
+  list-style: none;
+  margin: 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  padding: 0;
+  position: relative;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+/* Keep the scrollbar until the arrows and dots exist to replace it. */
+.home-carousel--ready .home-carousel-track {
+  scrollbar-width: none;
+}
+
+/* min-width: 0 stops the long curl line from widening the slide past the
+   track; the code block scrolls on its own instead. */
+.home-carousel-track > li {
+  flex: 0 0 100%;
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+.home-carousel-arrow {
+  align-items: center;
+  align-self: center;
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: 50%;
+  color: var(--color-ink);
+  cursor: pointer;
+  display: flex;
+  font-size: calc(26 / var(--rem-base) * 1rem);
+  height: calc(44 / var(--rem-base) * 1rem);
+  justify-content: center;
+  line-height: 1;
+  padding: 0 0 calc(3 / var(--rem-base) * 1rem);
+  width: calc(44 / var(--rem-base) * 1rem);
+}
+
+.home-carousel-prev {
+  grid-area: prev;
+}
+
+.home-carousel-next {
+  grid-area: next;
+}
+
+.home-carousel-arrow:hover {
+  border-color: var(--color-line-hover);
+}
+
+.home-carousel-arrow[aria-disabled='true'] {
+  cursor: default;
+  opacity: 0.35;
+}
+
+.home-carousel-dots {
+  align-items: center;
+  display: flex;
+  gap: calc(14 / var(--rem-base) * 1rem);
+  grid-area: dots;
+  justify-content: center;
+}
+
+.home-carousel-dot {
+  background: var(--color-line-hover);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  height: calc(10 / var(--rem-base) * 1rem);
+  padding: 0;
+  width: calc(10 / var(--rem-base) * 1rem);
+}
+
+.home-carousel-dot[aria-current='true'] {
+  background: var(--color-camel-orange);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-carousel-track {
+    scroll-behavior: auto;
+  }
+}
+
 .home-started-card {
   padding: calc(28 / var(--rem-base) * 1rem);
 }
@@ -769,6 +878,14 @@ a.button.ink:hover {
   .home-stats-list {
     gap: calc(24 / var(--rem-base) * 1rem);
     flex-wrap: wrap;
+  }
+
+  /* Give the slide the full width and move the arrows down beside the dots. */
+  .home-carousel {
+    grid-template-areas:
+      'track track track'
+      'prev  dots  next';
+    grid-template-columns: auto minmax(0, 1fr) auto;
   }
 
   /* The 280px floor on the copy column is wider than the space left inside the

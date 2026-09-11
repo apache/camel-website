@@ -36,6 +36,66 @@
     })
   }
 
+  // Get-started carousel. The track already scrolls and snaps on its own; this
+  // shows the arrows and dots and keeps them in step with the visible slide,
+  // whether it got there by a click, a swipe, or focus moving into it.
+  var carousel = document.querySelector('.home-carousel')
+  if (carousel && 'IntersectionObserver' in window) {
+    var track = carousel.querySelector('.home-carousel-track')
+    var slides = [].slice.call(track.children)
+    var prev = carousel.querySelector('.home-carousel-prev')
+    var next = carousel.querySelector('.home-carousel-next')
+    var dotRow = carousel.querySelector('.home-carousel-dots')
+    var dots = [].slice.call(dotRow.children)
+    var current = 0
+
+    var goTo = function (index) {
+      if (index < 0 || index >= slides.length) return
+      track.scrollTo({ left: slides[index].offsetLeft })
+    }
+
+    var show = function (index) {
+      current = index
+      dots.forEach(function (dot, i) {
+        if (i === index) dot.setAttribute('aria-current', 'true')
+        else dot.removeAttribute('aria-current')
+      })
+      // aria-disabled rather than disabled, so focus stays on the button when
+      // it reaches the last slide instead of dropping back to the page.
+      prev.setAttribute('aria-disabled', index === 0 ? 'true' : 'false')
+      next.setAttribute('aria-disabled', index === slides.length - 1 ? 'true' : 'false')
+    }
+
+    // A slide leaving the view also crosses the threshold, so check the ratio
+    // rather than isIntersecting, which stays true for any partial overlap.
+    var observer = new window.IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.intersectionRatio >= 0.6) show(slides.indexOf(entry.target))
+      })
+    }, { root: track, threshold: 0.6 })
+    slides.forEach(function (slide) {
+      observer.observe(slide)
+    })
+
+    prev.addEventListener('click', function () {
+      goTo(current - 1)
+    })
+    next.addEventListener('click', function () {
+      goTo(current + 1)
+    })
+    dots.forEach(function (dot, index) {
+      dot.addEventListener('click', function () {
+        goTo(index)
+      })
+    })
+
+    show(0)
+    prev.hidden = false
+    next.hidden = false
+    dotRow.hidden = false
+    carousel.classList.add('home-carousel--ready')
+  }
+
   // Copy-to-clipboard buttons: the home page's hero CLI bar, plus any later
   // page's copy button wired up via [data-copy-value] (e.g. download's CLI
   // install line, post's "Copy link"). Falls back to data-command so the
