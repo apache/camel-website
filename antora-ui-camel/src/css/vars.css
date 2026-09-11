@@ -211,8 +211,8 @@
   --toc-height: calc(100vh - var(--toc-top) - 2.5rem);
   --toc-width: calc(220 / var(--rem-base) * 1rem);
   --toc-width--widescreen: calc(220 / var(--rem-base) * 1rem);
-  --doc-max-width--desktop: calc(1366 / var(--rem-base) * 1rem);
-  --static-max-width--desktop: calc(1200 / var(--rem-base) * 1rem);
+  --doc-max-width--desktop: none;
+  --static-max-width--desktop: clamp(calc(1200 / var(--rem-base) * 1rem), 85vw, calc(1800 / var(--rem-base) * 1rem));
   --page-padding-x: calc(32 / var(--rem-base) * 1rem);
   /* stacking */
   --z-index-nav: 1;

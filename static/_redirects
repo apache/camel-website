@@ -1,0 +1,3 @@
+# Netlify redirects (Apache uses .htaccess; Netlify ignores it)
+# "latest" is an Antora version alias that Apache resolves via .htaccess
+/components/latest/*  /components/4.22.x/:splat  302

@@ -189,10 +189,8 @@
   word-break: normal;
 }
 
-/* breaks long property names */
 .doc table.tableblock tbody tr td:first-child {
-  width: 25%;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
   font-weight: 700;
 }
 
