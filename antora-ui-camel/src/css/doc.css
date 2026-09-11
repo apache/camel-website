@@ -189,9 +189,27 @@
   word-break: normal;
 }
 
+/* The first column usually holds a property name. Floor its width so it cannot
+   collapse to a few characters per line when the table is under pressure (the
+   wrapper scrolls instead) and never auto-hyphenate inside an identifier.
+   11-table-breaks.js inserts soft break points after dots and before camel-case
+   humps, so with break-word a long name wraps there and nowhere else. */
 .doc table.tableblock tbody tr td:first-child {
+  min-width: calc(220 / var(--rem-base) * 1rem);
   overflow-wrap: break-word;
+  hyphens: none;
   font-weight: 700;
+}
+
+/* Pages that write the property name as `code` (e.g. OpenTelemetry) render it the
+   same as the generated option tables, which use bold text, instead of as a chip.
+   This is the inconsistency @claudio4j reported above. */
+.doc table.tableblock tbody tr td:first-child p code {
+  background: none;
+  border-radius: 0;
+  color: inherit;
+  font: inherit;
+  padding: 0;
 }
 
 .doc a:hover {
