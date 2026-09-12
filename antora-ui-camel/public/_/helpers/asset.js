@@ -35,7 +35,7 @@ const manifest = {
   "img/spring-boot.svg": "img/spring-boot-0a7cb95564.svg",
   "img/tooling.svg": "img/tooling-f5e235c238.svg",
   "img/user-stories.svg": "img/user-stories-cccc5f7c8f.svg",
-  "js/site.js": "js/site-83fcbd0c3a.js",
+  "js/site.js": "js/site-623595f54e.js",
   "js/vendor/docsearch.js": "js/vendor/docsearch-f8ce9408ec.js",
   "js/vendor/highlight.js": "js/vendor/highlight-de2def4bea.js",
   "js/vendor/svg4everybody.js": "js/vendor/svg4everybody-a0c573f2b9.js",

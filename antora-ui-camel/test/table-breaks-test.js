@@ -63,6 +63,15 @@ test('leaves identifiers inside prose alone', () => {
   assert.equal(breaks(description), prose)
 })
 
+test('still breaks a token in prose that is too long to wrap whole', () => {
+  // Left unbroken, a token this long sets the Description column's minimum width and the table
+  // overflows the doc column (main.html at a 1440px window: 884px of table in a 696px column).
+  const prose = 'Directories to scan, by default classpath:camel/,classpath:camel-template/,classpath:camel-rest/* in that order.'
+  const [, description] = render(['<strong>routesIncludePattern</strong>', prose, '', 'String'])
+  // No break after the hyphens: the browser already breaks there.
+  assert.equal(breaks(description), 'Directories to scan, by default classpath:|camel/|,|classpath:|camel-template/|,|classpath:|camel-rest/|* in that order.')
+})
+
 test('still breaks a long value a description quotes as code', () => {
   const [, description] = render(['<strong>headerFilterStrategy</strong>', 'Defaults to <code>org.apache.camel.spi.HeaderFilterStrategy</code>.', '', 'String'])
   assert.equal(breaks(description), 'Defaults to org.|apache.|camel.|spi.|Header|Filter|Strategy.')

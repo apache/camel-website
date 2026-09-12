@@ -13,11 +13,17 @@
   // wraps at a sensible place first. The page is still correct if this never
   // runs; doc.css keeps a floor on the first column.
   //
-  // Text that runs as prose (more than one word, as in Description) is left
-  // alone. It already wraps between words, and the browser takes a <wbr> as
-  // readily as a space, so "Use the excludePattern property" would split as
-  // exclude|Pattern across two lines and read as two words.
+  // Text that runs as prose (more than one word, as in Description) only gets
+  // breaks in tokens of PROSE_MIN_TOKEN characters or more. It already wraps
+  // between words, and the browser takes a <wbr> as readily as a space, so
+  // "Use the excludePattern property" would split as exclude|Pattern across
+  // two lines and read as two words. A token of PROSE_MIN_TOKEN is about as
+  // wide as the narrowest Description column, so it cannot wrap whole anyway,
+  // and leaving it unbroken overflows the table (on the Main page:
+  // classpath:camel/,classpath:camel-template/,classpath:camel-rest/*,
+  // org.apache.camel.support.PatternHelper#matchPattern, docs URLs).
   var MIN_TOKEN = 12
+  var PROSE_MIN_TOKEN = 24
   var SEPARATOR = /([.,/:_])/
   var HUMP = /([a-z0-9])(?=[A-Z])/g
   var HAS_HUMP = /[a-z0-9][A-Z]/
@@ -43,11 +49,11 @@
 
   var breakTextNode = function (node) {
     var text = node.nodeValue
-    if (!new RegExp('[^\\s]{' + MIN_TOKEN + ',}').test(text)) return
-    if (/\S\s+\S/.test(text)) return
+    var min = /\S\s+\S/.test(text) ? PROSE_MIN_TOKEN : MIN_TOKEN
+    if (!new RegExp('[^\\s]{' + min + ',}').test(text)) return
     var fragment = document.createDocumentFragment()
     text.split(/(\s+)/).forEach(function (token) {
-      if (token.length >= MIN_TOKEN && (SEPARATOR.test(token) || HAS_HUMP.test(token))) {
+      if (token.length >= min && (SEPARATOR.test(token) || HAS_HUMP.test(token))) {
         breakToken(token, fragment)
       } else if (token) {
         fragment.appendChild(document.createTextNode(token))
