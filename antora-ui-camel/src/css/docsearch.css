@@ -13,8 +13,9 @@
    would have resolved against is gone from the built stylesheet. The vars.css token each value
    comes from is named alongside it; keep the two in step.
 
-   The launch button itself is styled in header.css (.header .navbar-search .DocSearch-Button),
-   where it is dressed as the field the artboard shows. */
+   The launch button is themed by the .header .DocSearch-Button block below. header.css only sizes
+   its icon and adds the focus ring: the vendor's all: unset beats every layered declaration on the
+   button itself. */
 .DocSearch {
   --docsearch-font-family: 'Open Sans', system-ui, sans-serif; /* --body-font-family */
 

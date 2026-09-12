@@ -199,68 +199,41 @@ a.button.navbar-cta {
 }
 
 /* Site search is the DocSearch v5 launcher (main, PR #1729): a button that
-   opens a modal, mounted in #docsearch on both renderers. The button is
-   dressed as the 200px field the artboard shows; docsearch.css themes the
-   modal and the key hints. */
+   opens a modal, mounted in #docsearch on both renderers. docsearch.css themes
+   the button, the modal and the key hints through --docsearch-* properties.
+
+   NOTE the vendor stylesheet is unlayered and opens its button rule with
+   all: unset, and an unlayered declaration outranks every layered one
+   whatever its specificity. So nothing here can restyle the button itself;
+   only what the vendor leaves alone (the wrapper, the icon size) is set
+   below. */
 .header .navbar-search {
   display: flex;
   align-items: center;
   padding: 0;
 }
 
-.header .navbar-search .DocSearch-Button {
-  box-sizing: border-box;
-  width: calc(200 / var(--rem-base) * 1rem);
-  height: calc(32 / var(--rem-base) * 1rem);
-  margin: 0;
-  padding: 0 calc(8 / var(--rem-base) * 1rem) 0 calc(10 / var(--rem-base) * 1rem);
-  border: 1px solid var(--color-line);
-  border-radius: calc(7 / var(--rem-base) * 1rem);
-  background: var(--color-white);
-  color: var(--color-ink-soft);
-  font-family: var(--body-font-family);
-  font-size: calc(13.5 / var(--rem-base) * 1rem);
-  font-weight: 400;
-}
-
-.header .navbar-search .DocSearch-Button:hover,
-.header .navbar-search .DocSearch-Button:focus,
-.header .navbar-search .DocSearch-Button:active {
-  border-color: var(--color-line-hover);
-  background: var(--color-white);
-  color: var(--color-ink);
-  box-shadow: none;
-}
-
-/* The vendor sheet sets outline: none on focus; keyboard focus needs a
-   visible ring (--color-orange-deep is 5.58:1 on white). */
+/* The vendor sheet has no focus style, and its all: unset removes the
+   browser's, so keyboard focus showed no ring at all. !important is the one
+   way a layered declaration beats an unlayered one. --color-orange-glow is
+   7.6:1 on the bar over the cream pages and 8.4:1 over the home page's dark
+   band. */
 .header .navbar-search .DocSearch-Button:focus-visible {
-  outline: 2px solid var(--color-orange-deep);
-  outline-offset: 2px;
+  outline: 2px solid var(--color-orange-glow) !important;
+  outline-offset: 2px !important;
 }
 
 .header .navbar-search .DocSearch-Search-Icon {
   width: calc(14 / var(--rem-base) * 1rem);
   height: calc(14 / var(--rem-base) * 1rem);
-  color: var(--color-ink-soft);
-}
-
-.header .navbar-search .DocSearch-Button-Placeholder {
-  padding: 0 calc(8 / var(--rem-base) * 1rem);
-  font-size: inherit;
 }
 
 /* Styling for mobile use */
 @media (width <= 1024px) {
-  /* The button gives up its fixed 200px and shrinks with the bar; below
-     768px the vendor sheet drops its label and key hints, leaving the icon. */
+  /* Lets the launcher shrink with the bar; below 768px the vendor sheet
+     drops its label and key hints, leaving the icon. */
   .header .navbar-search {
     min-width: 0;
-  }
-
-  .header .navbar-search .DocSearch-Button {
-    width: auto;
-    min-width: calc(32 / var(--rem-base) * 1rem);
   }
 }
 
