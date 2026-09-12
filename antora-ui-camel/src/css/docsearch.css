@@ -74,11 +74,11 @@
   --docsearch-menu-trigger-active-text-color: #a84e0d; /* --color-orange-deep */
 }
 
-/* Home page: the launcher sits on the dark header (header.css .homepage .navbar). It lives here
+/* The launcher sits on the dark header (header.css .navbar). It lives here
    rather than in header.css because this sheet's layer (pages) outranks header.css's (chrome),
    and the unlayered vendor sheet paints the button only from these properties. Scoped to the
    button, so the modal, which mounts outside .header, stays light. */
-.homepage .header .DocSearch-Button {
+.header .DocSearch-Button {
   --docsearch-search-button-background: #2b2620; /* --color-dark-2 */
   --docsearch-search-button-text-color: #c4bbac; /* --color-on-dark-soft */
   --docsearch-subtle-color: #4a443c; /* --color-button-on-dark-border */

@@ -76,8 +76,11 @@
   --scrollbar-thickness: 0.425em; /* 6.8px */
   --scrollbar-radius: 3.125em; /* 50px */
   /* navbar */
-  --navbar-background: rgb(250 247 241 / 90%);
-  --navbar-font-color: var(--color-ink-soft);
+  /* The bar is dark on every page, Hugo and Antora alike. 96% rather than a
+     lighter tint: over the cream pages 88% came out a muddy taupe instead of
+     the near-black the bar shows over the home page's dark band. */
+  --navbar-background: rgb(28 24 19 / 96%);
+  --navbar-font-color: var(--color-on-dark-soft);
   /* nav */
   --nav-background: var(--panel-background);
   --nav-border-color: var(--color-line);
