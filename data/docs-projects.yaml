@@ -1,0 +1,116 @@
+# Documentation index (/docs/) - drives layouts/docs/list.html
+# Icons resolve through the Antora UI rev-manifest: antora-ui-camel/src/img/<icon>.svg
+
+lead: >-
+  Start with the User Manual and Component Reference, then pick the runtime
+  that matches how you deploy.
+
+manual:
+  eyebrow: Start here
+  title: User Manual
+  desc: >-
+    A comprehensive guide to the key concepts of Apache Camel and software
+    integration: getting started, upgrading to Camel 4.x, architecture, and
+    integration patterns.
+  primary_cta:
+    label: Getting started
+    url: /manual/getting-started.html
+  secondary_cta:
+    label: Camel 4.x upgrade guide
+    url: /manual/camel-4x-upgrade-guide.html
+  docs: /camel-core/
+  source: https://github.com/apache/camel/
+  examples: https://github.com/apache/camel-examples
+
+components:
+  eyebrow: 350+ components
+  title: Component Reference
+  desc: >-
+    Functionality and configuration for every component, data format,
+    language, and EIP.
+  primary_cta:
+    label: Browse components
+    url: /components/latest/
+  secondary_cta:
+    label: API docs
+    url: https://www.javadoc.io/doc/org.apache.camel/camel-api/latest/index.html
+  links:
+    - label: EIP catalog
+      url: /components/latest/eips/enterprise-integration-patterns.html
+    - label: Data formats
+      url: /components/latest/dataformats/
+
+projects:
+  - name: Camel K
+    icon: kubernetes
+    desc: >-
+      Apache Camel K is a lightweight integration framework built on Apache
+      Camel that runs natively on Kubernetes and is specifically designed
+      for serverless and microservice architectures. It allows you to run
+      integration code written in Camel DSL on your cloud.
+    docs: /camel-k/latest/
+    source: https://github.com/apache/camel-k/
+    examples: https://github.com/apache/camel-k-examples
+  - name: Camel Kafka Connector
+    icon: apache-kafka
+    desc: >-
+      Camel Kafka Connector allows you to use all Camel components as
+      Kafka Connect connectors, expanding Kafka Connect compatibility by
+      allowing Camel components to be used in the Kafka ecosystem.
+    docs: /camel-kafka-connector/latest/
+    source: https://github.com/apache/camel-kafka-connector/
+    examples: https://github.com/apache/camel-kafka-connector-examples/
+  - name: Camel Quarkus
+    icon: quarkus
+    desc: >-
+      This project hosts the efforts to port and package most of the Camel
+      components as Quarkus extensions, a Java platform offering fast boot
+      times and low memory footprint that targets both stock JVMs and
+      GraalVM.
+    docs: /camel-quarkus/latest/
+    source: https://github.com/apache/camel-quarkus/
+    examples: https://github.com/apache/camel-quarkus-examples/
+  - name: Camel Spring Boot
+    icon: spring-boot
+    desc: >-
+      Camel support for Spring Boot, including autoconfiguration of the
+      Camel context by auto-detecting Camel routes and registering the key
+      Camel utilities as beans, plus starters for the Camel components.
+    docs: /camel-spring-boot/latest/
+    source: https://github.com/apache/camel-spring-boot
+    examples: https://github.com/apache/camel-spring-boot-examples
+  - name: Camel Karaf
+    icon: apache-karaf
+    desc: Apache Karaf makes running Apache Camel in the Karaf OSGi container.
+    docs: /camel-karaf/latest/
+    source: https://github.com/apache/camel-karaf
+  - name: Camel Karavan
+    icon: karavan
+    desc: >-
+      A low-code, visual data-integration platform for designing and
+      managing Camel routes.
+    source: https://github.com/apache/camel-karavan
+  - name: Camel CLI
+    icon: cli
+    desc: >-
+      The Camel CLI, powered by JBang, lets you easily install and get
+      started with Apache Camel in only a few minutes - excellent for
+      no-code/low-code use cases and quick prototypes.
+    docs: /manual/camel-jbang.html
+    source: https://github.com/apache/camel/tree/main/dsl/camel-jbang
+    examples: https://github.com/apache/camel-jbang-examples
+  - name: Tooling
+    icon: logo-d
+    desc: >-
+      A rich ecosystem of developer tooling - IDE plugins, visual editors,
+      AI-assisted development tools, Maven plugins, and monitoring
+      solutions.
+    docs: /tooling/
+  - name: Kamelets
+    icon: logo-d
+    desc: >-
+      A catalog of connectors called "Kamelets" (Kamel route snippets) that
+      let you create sources or sinks to external systems via a simplified
+      interface, hiding the low-level connection details.
+    docs: /camel-kamelets/latest/
+    source: https://github.com/apache/camel-kamelets

@@ -129,6 +129,7 @@ Camel also provides an **MCP server** (Model Context Protocol) that connects AI 
 
 ## The numbers
 
+{{< table >}}
 | Metric | Value |
 |---|---|
 | **Connectors** | 350+ |
@@ -139,6 +140,7 @@ Camel also provides an **MCP server** (Model Context Protocol) that connects AI 
 | **Median bug fix time** | 1–2 days |
 | **Open bugs** | Typically 10 or fewer (across 350+ connectors) |
 | **License** | Apache License 2.0 — free, no cost, forever |
+{{< /table >}}
 
 ## Try it in 60 seconds
 

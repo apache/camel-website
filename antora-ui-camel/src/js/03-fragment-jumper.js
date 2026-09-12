@@ -1,8 +1,11 @@
 ;(function () {
   'use strict'
 
-  var article = document.querySelector('article.doc')
-  var toolbar = document.querySelector('.toolbar')
+  // Hugo pages with in-page anchors (tooling rail, post TOC, releases rail)
+  // have no .toolbar and may have no article.doc; fall back to the fixed
+  // navbar so the target still clears the header.
+  var article = document.querySelector('article.doc') || document.body
+  var toolbar = document.querySelector('.toolbar') || document.querySelector('.navbar')
 
   function decodeFragment (hash) {
     return hash && (~hash.indexOf('%') ? decodeURIComponent(hash) : hash).slice(1)
@@ -21,7 +24,7 @@
       window.location.hash = '#' + this.id
       e.preventDefault()
     }
-    window.scrollTo(0, computePosition(this, 0) - toolbar.getBoundingClientRect().bottom)
+    window.scrollTo(0, computePosition(this, 0) - (toolbar ? toolbar.getBoundingClientRect().bottom : 0))
   }
 
   window.addEventListener('load', function jumpOnLoad (e) {

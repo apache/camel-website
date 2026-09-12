@@ -1,0 +1,159 @@
+{{/*
+  Renders the "Supported releases" flat row list for a single release category
+  on the /download/ page.
+
+  This is a deliberate FORK of layouts/partials/releases/downloads.html's
+  version-selection algorithm, not a call into it: that shared partial is still
+  used, unmodified, by the per-release "single" page templates
+  (layouts/partials/releases/camel.html and friends) to render a table on the
+  release-note detail page, a screen this piece does not touch. Forking here
+  keeps that screen's behavior byte-for-byte unchanged while letting this
+  screen emit a completely different row shape (flat rows, no <table>, no
+  rowspan) around the same underlying data.
+
+  Params: Category (a value from site.Data.release-categories), Pages (site.Pages)
+*/}}
+{{ $category := .Category }}
+{{ $pages := .Pages }}
+
+{{ $sha1_cutoff := time "2018-11-10" }}
+{{ $sbom_cutoff := time "2023-11-14" }}
+{{ $artifact_base_url := "https://www.apache.org/dyn/closer.lua/" }}
+{{ $meta_base_url := "https://downloads.apache.org/" }}
+
+{{ $versions := slice }}
+{{ $category_releases := where (where $pages "Section" "releases") ".Params.category" $category.id }}
+
+{{ range $kind := $category.kinds }}
+  {{ if eq $kind.filter "latest" }}
+    {{ $released_versions := partial "releases/version_sort.html" $category_releases }}
+    {{ $version := (index $released_versions 0).Param "version" }}
+    {{ $versions = $versions | append (dict $kind.name $version) }}
+  {{ else }}
+    {{ $released_versions := partial "releases/version_sort.html" $category_releases }}
+    {{ if $kind.last }}
+      {{ $last_major_minor := "" }}
+      {{ $no_last := 0 }}
+      {{ range $release := where $released_versions ".Params.kind" $kind.filter }}
+        {{ $version := $release.Param "version" }}
+        {{ $major_minor := replaceRE "\\.\\d+$" "" $version }}
+        {{ if (and (ne $last_major_minor $major_minor) (lt $no_last $kind.last)) }}
+          {{ $versions = $versions | append (dict $kind.name $version) }}
+          {{ $no_last = $no_last | add 1 }}
+        {{ end }}
+        {{ $last_major_minor = $major_minor }}
+      {{ end }}
+    {{ else }}
+      {{ $version := (index (where $released_versions ".Params.kind" $kind.filter) 0).Param "version" }}
+      {{ $versions = $versions | append (dict $kind.name $version) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* same version can be matched by two kinds (e.g. latest is also the newest LTS); merge */}}
+{{ $versions_grouped := slice }}
+{{ range $version1 := $versions }}
+  {{ $groupped := false }}
+  {{ range $k1, $v1 := $version1 }}
+    {{ range $version2 := $versions }}
+      {{ range $k2, $v2 := $version2 }}
+        {{ if and (eq $v1 $v2) (ne $k1 $k2) }}
+          {{ $groupped = true }}
+          {{ $kind := printf "%s, %s" $k1 $k2 }}
+          {{ $contained := false }}
+          {{ range $g := $versions_grouped }}
+            {{ range $x, $v := $g }}
+              {{ if eq $v $v1 }}
+                {{ $contained = true }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+          {{ if not $contained }}
+            {{ $versions_grouped = $versions_grouped | append (dict $kind $v1) }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ if not $groupped }}
+    {{ $versions_grouped = $versions_grouped | append $version1 }}
+  {{ end }}
+{{ end }}
+{{ $versions = $versions_grouped }}
+
+{{/* wrapping id preserves the pre-existing per-category anchor (e.g. /download/#camel-k) */}}
+<div class="download-group" id="{{ $category.id }}">
+  {{ range $version := $versions }}
+    {{ range $kind, $v := $version }}
+      {{ $release_note := index (where $category_releases ".Params.version" $v) 0 }}
+      {{ $hash_extension := ".sha512" }}
+      {{ if le $release_note.Date $sha1_cutoff }}
+        {{ $hash_extension = ".sha1" }}
+      {{ end }}
+
+      {{ $downloads := $category.downloads }}
+      {{ if lt $release_note.Date $sbom_cutoff }}
+        {{ $downloads = collections.Where $downloads "name" "not in" "SBOM, CycloneDX XML" }}
+        {{ $downloads = collections.Where $downloads "name" "not in" "SBOM, CycloneDX JSON" }}
+        {{ $downloads = collections.Where $downloads "name" "not in" "SBOM" }}
+      {{ end }}
+
+      {{ $is_lts := in $kind "LTS" }}
+
+      {{ $note := "" }}
+      {{ with $release_note.Params.jdk }}
+        {{ $note = printf "Supports Java %s" (delimit . ", " " and ") }}
+      {{ end }}
+      {{ with $release_note.Params.eol }}
+        {{ $note = print $note (printf ", end of life %s" (dateFormat "Jan 2006" .)) }}
+      {{ end }}
+
+      <div class="download-row">
+        <div>
+          <div class="download-row-project">{{ $category.name }}</div>
+          <div class="download-row-date">{{ ($release_note.Param "date").Format "Jan 2006" }}</div>
+        </div>
+        <div class="download-row-version">
+          <span class="download-row-version-num">{{ $v }}</span>
+          {{ if $is_lts }}<span class="lts-chip">LTS</span>{{ end }}
+        </div>
+        <div class="download-row-note">{{ $note }}</div>
+        <div class="download-row-links">
+          {{ range $download := $downloads }}
+            {{ $path := "" }}
+            {{ if $download.path_format }}
+              {{ $path = replace $download.path_format "{version}" $v }}
+            {{ end }}
+            {{ if $path }}
+              {{ $is_primary := eq $download.name "Sources" }}
+              {{ $label := $download.name }}
+              {{ if $is_primary }}
+                {{ $ext := "" }}
+                {{ if hasSuffix $path ".tar.gz" }}
+                  {{ $ext = " (tar.gz)" }}
+                {{ else if hasSuffix $path ".zip" }}
+                  {{ $ext = " (zip)" }}
+                {{ end }}
+                {{ $label = printf "Source%s" $ext }}
+              {{ else if hasPrefix $download.name "SBOM, CycloneDX " }}
+                {{ $label = printf "SBOM (%s)" (replace $download.name "SBOM, CycloneDX " "") }}
+              {{ end }}
+              <span class="download-row-artifact">
+                <a class="download-row-link{{ if $is_primary }} download-row-link--primary{{ end }}" href="{{ $artifact_base_url }}{{ $path }}" aria-label="{{ $label }} for {{ $category.name }} {{ $v }}">{{ $label }}</a>
+                <span class="download-row-sub">
+                  <a class="download-row-sublink" href="{{ $meta_base_url }}{{ $path }}.asc" aria-label="Signature for {{ $category.name }} {{ $v }} {{ $label }}">Signature</a>
+                  <a class="download-row-sublink" href="{{ $meta_base_url }}{{ $path }}{{ $hash_extension }}" aria-label="Checksum for {{ $category.name }} {{ $v }} {{ $label }}">Checksum</a>
+                </span>
+              </span>
+            {{ else }}
+              <span class="download-row-artifact">
+                <a class="download-row-link" href="{{ $download.link }}" aria-label="{{ replace $download.title "{version}" $v }} for {{ $category.name }} {{ $v }}">{{ replace $download.title "{version}" $v }}</a>
+              </span>
+            {{ end }}
+          {{ end }}
+          <a class="download-row-link" href="{{ $release_note.Permalink | relURL }}" aria-label="Release notes for {{ $category.name }} {{ $v }}">Release notes</a>
+        </div>
+      </div>
+    {{ end }}
+  {{ end }}
+</div>

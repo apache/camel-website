@@ -1,420 +1,892 @@
-/* common css for sections */
+/* Buttons, shared by the header, the home page, and static content pages. */
 
-section.frontpage h1,
-section.frontpage h2 {
-  font-weight: var(--heading-font-weight);
-  color: var(--heading-font-color);
-  line-height: 1.3;
-  margin: 1rem 0 0;
-  text-transform: uppercase;
-  word-wrap: break-word;
-}
-
-section.frontpage {
-  color: var(--doc-font-color);
-  font-size: var(--doc-font-size);
-  line-height: var(--doc-line-height);
-  margin: 0 auto;
-  max-width: var(--frontpage-max-width);
-}
-
-section.frontpage a {
-  color: var(--link-font-color);
-  text-decoration: none;
-  background-image: linear-gradient(to right, #583ac2 50%, transparent 50%);
-  background-position: 0 1.1em;
-  background-repeat: repeat-x;
-  background-size: 7px 1px;
-}
-
-section.frontpage a:hover {
-  color: var(--link_hover-font-color);
-}
-
-section.frontpage h1 {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
-}
-
-section.frontpage h2 {
-  text-align: center;
-}
-
-/* css for header section */
-
-header.frontpage {
-  display: flex;
-  flex-direction: row;
-  margin: 2rem 3rem 2.5rem;
-}
-
-header.frontpage img {
-  width: 45vw;
-  max-height: 50vh;
-}
-
-header.frontpage .main-heading {
-  width: 50vw;
-  display: flex;
-  flex-direction: column;
-  margin-left: 2rem;
-}
-
-header.frontpage h1 {
-  font-size: 5vw;
-  color: var(--color-asf-dark-blue);
-  margin-bottom: 0.5rem;
-}
-
-header.frontpage p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  line-height: 1.7rem;
-}
-
-a.button,
-section.frontpage a.button {
-  white-space: nowrap;
+a.button {
+  align-items: center;
+  border-radius: calc(8 / var(--rem-base) * 1rem);
+  display: inline-flex;
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  font-weight: 700;
+  gap: calc(8 / var(--rem-base) * 1rem);
+  line-height: 1;
   margin: 0.5rem;
-  background-image: none;
-  border-radius: 3rem;
-  font-weight: bold;
-  padding: 0.4rem 1rem;
-  display: inline-block;
+  padding: calc(13 / var(--rem-base) * 1rem) calc(24 / var(--rem-base) * 1rem);
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-header.frontpage a.button {
-  padding: 0.7rem 1rem;
+/* The header's call to action (header-content.hbs and the Hugo header partial)
+   is a smaller button. It is set here rather than in header.css because
+   header.css is in the chrome layer, below this sheet's pages layer, so
+   a.button above wins there whatever the selector. It did: the header button
+   rendered about 28px wider, with a.button's margins, and pushed the burger
+   off 320px and 460px screens. */
+a.button.navbar-cta {
+  border-radius: calc(7 / var(--rem-base) * 1rem);
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+  margin: 0;
+  padding: calc(9 / var(--rem-base) * 1rem) calc(18 / var(--rem-base) * 1rem);
 }
 
-a.button.dark,
-section.frontpage a.button.dark,
-section.frontpage a.button.dark:hover,
-a.button.dark:hover {
+/* Ink on the brand orange: white on #e97826 is 2.93:1, ink is 5.78:1, and the
+   memo keeps the orange itself. Hover lifts to the lighter orange, where ink
+   reads at 7.30:1 (a darker hover would drop ink below 4.5:1). */
+a.button.dark {
   background-color: var(--color-camel-orange);
-  color: white;
+  color: var(--color-ink);
+}
+
+a.button.dark:hover {
+  background-color: var(--color-camel-orange-light);
+  color: var(--color-ink);
 }
 
 a.button.light,
 a.button.light:hover {
-  border: 1px solid var(--color-gray-70);
-  color: var(--color-gray-70);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-line);
+  color: var(--color-ink);
 }
 
-/* css for blog section */
+a.button.on-dark,
+a.button.on-dark:hover {
+  background-color: transparent;
+  border: 1px solid var(--color-button-on-dark-border);
+  color: var(--color-on-dark);
+}
 
-div.frontpage.news {
-  padding: 0.2rem 0;
-  width: 20%;
+a.button.ink {
+  background-color: var(--color-ink);
+  color: var(--color-white);
+}
+
+a.button.ink:hover {
+  background-color: var(--color-ink-2);
+}
+
+/* Home page (layouts/index.html, data/home.yaml) */
+
+.home {
+  color: var(--color-ink-2);
+  /* footer.css paints .footer-tools 2rem (36px at --rem-base: 18) above the
+     footer, over whatever ends <main>. Clear that here, on .home itself, so
+     the utility line always lands on plain page background regardless of
+     which section is last in the page. */
+  padding-bottom: calc(48 / var(--rem-base) * 1rem);
+}
+
+.home a {
+  text-decoration: none;
+}
+
+/* Shared section vocabulary, reused by every home section. */
+
+.home-section {
+  margin: 0 auto;
+  max-width: var(--frontpage-max-width);
+  padding: calc(66 / var(--rem-base) * 1rem) var(--page-padding-x)
+           calc(20 / var(--rem-base) * 1rem);
+}
+
+/* Alternating ground. Sections otherwise sit on one continuous cream, so the
+   page reads as a single column of white cards with no rhythm. Banding every
+   other section in the sand tint gives the eye a boundary, the same way the
+   stat strip already does. Cards stay white so they keep lifting off both. */
+.home-band {
+  background: var(--color-paper-2);
+  border-bottom: 1px solid var(--color-line);
+  border-top: 1px solid var(--color-line);
+}
+
+.home-section-head {
+  margin-bottom: calc(44 / var(--rem-base) * 1rem);
   text-align: center;
-  margin-left: 3rem;
-  background-color: var(--color-smoke-50);
-  border-radius: 1rem 1rem 0 0;
 }
 
-div.frontpage.news h2 {
-  margin-bottom: 0.5rem;
-}
-
-section.frontpage.columns.blog-posts {
+.home-eyebrow {
+  color: var(--color-orange-deep);
+  font-family: var(--monospace-font-family);
+  font-size: calc(12.5 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
   margin: 0;
-  display: flex;
-  flex-direction: row;
-  padding: 1rem 1rem 1rem 3rem;
-  max-width: none;
-  border-top: none;
-  background-color: var(--color-smoke-50);
-}
-
-section.frontpage.blog-posts ul {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-}
-
-li.blog-post .content {
-  padding: 1rem;
-  padding-right: 0.5rem;
-}
-
-li.blog-post .content h2 {
-  text-align: left;
-  margin: 0;
-}
-
-li.blog-post .content p {
-  margin: 0.2rem 0;
-}
-
-li.blog-post .content a {
-  font-weight: bold;
-  white-space: nowrap;
-  background: none;
-}
-
-li.blog-post {
-  display: flex;
-  width: 30vw;
-  margin: 0;
-  padding-right: 1rem;
-}
-
-li.blog-post:last-child {
-  padding-right: 0;
-}
-
-li.blog-post time.date {
-  margin-top: 1rem;
-  text-align: center;
-  color: var(--color-asf-dark-blue);
   text-transform: uppercase;
 }
 
-li.blog-post time.date .day {
-  font-size: 3.2rem;
-  font-weight: bold;
+.home-section-head h2 {
+  font-family: var(--display-font-family);
+  font-size: calc(38 / var(--rem-base) * 1rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin: calc(12 / var(--rem-base) * 1rem) 0 0;
+}
+
+.home-section-sub {
+  color: var(--color-ink-soft);
+  font-size: calc(16 / var(--rem-base) * 1rem);
+  margin: calc(6 / var(--rem-base) * 1rem) 0 0;
+}
+
+.home-grid {
+  display: grid;
+  list-style: none;
+  margin: 0;
   padding: 0;
-  line-height: 1;
-  display: block;
 }
 
-li.blog-post time.date .month {
-  font-size: 1.5rem;
-  font-weight: bold;
+.home-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: calc(13 / var(--rem-base) * 1rem);
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+
+/* .home-card:hover: shared hover lift lives in primitives.css (.card:hover
+   selector group) - see M5, final-review.md. */
+
+/* Hero. home-lead is a full-bleed dark band that starts under the fixed
+   navbar, so the header (dark on this page, see header.css) sits on the same
+   ground. Its bottom padding is the strip the get-started tiles overlap. */
+
+.home-lead {
+  background: var(--color-dark-3);
+  margin-top: calc(-1 * var(--navbar-height));
+  overflow: hidden;
+  padding: var(--navbar-height) 0 calc(120 / var(--rem-base) * 1rem);
+  position: relative;
+}
+
+/* Decoration, cropped off the right edge. Anchored to the band rather than
+   the content column so it stays at the edge on wide screens, and capped at
+   54vw so it clears the copy column down to the tablet breakpoint. */
+.home-hero-art {
+  filter: drop-shadow(0 40px 80px rgb(233 120 38 / 25%));
+  pointer-events: none;
+  position: absolute;
+  right: calc(-140 / var(--rem-base) * 1rem);
+  top: calc(20 / var(--rem-base) * 1rem);
+  width: min(calc(760 / var(--rem-base) * 1rem), 54vw);
+}
+
+/* position: relative paints the copy above the absolutely placed art. */
+.home-hero {
+  margin: 0 auto;
+  max-width: var(--frontpage-max-width);
+  padding: calc(72 / var(--rem-base) * 1rem) var(--page-padding-x) 0;
+  position: relative;
+}
+
+.home-hero-badge {
+  align-items: center;
+  background: rgb(233 120 38 / 16%);
+  border-radius: calc(20 / var(--rem-base) * 1rem);
+  color: var(--color-orange-glow);
+  display: inline-flex;
+  font-family: var(--monospace-font-family);
+  font-size: calc(12.5 / var(--rem-base) * 1rem);
+  font-weight: 500;
+  gap: calc(8 / var(--rem-base) * 1rem);
+  letter-spacing: 0.02em;
+  margin: 0;
+  padding: calc(6 / var(--rem-base) * 1rem) calc(12 / var(--rem-base) * 1rem);
+}
+
+.home-hero h1 {
+  color: var(--color-on-dark);
+  font-family: var(--display-font-family);
+  font-size: calc(84 / var(--rem-base) * 1rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+  margin: calc(22 / var(--rem-base) * 1rem) 0 0;
+}
+
+.home-hero-tagline {
+  color: var(--color-orange-glow);
+  font-family: var(--display-font-family);
+  font-size: calc(27 / var(--rem-base) * 1rem);
+  font-weight: 600;
   line-height: 1.2;
-  display: block;
+  margin: calc(16 / var(--rem-base) * 1rem) 0 0;
 }
 
-/* common css for columns section */
-
-section.frontpage.columns.functionalities p,
-section.frontpage.projects .project .content p {
-  margin-bottom: 1.5rem;
+.home-hero-lead {
+  color: var(--color-on-dark-soft);
+  font-size: calc(17.5 / var(--rem-base) * 1rem);
+  line-height: 1.55;
+  margin: calc(20 / var(--rem-base) * 1rem) 0 0;
+  max-width: calc(540 / var(--rem-base) * 1rem);
+  text-wrap: pretty;
 }
 
-section.frontpage.projects,
-section.frontpage.apache,
-section.frontpage.functionalities {
+.home-hero-actions {
+  display: flex;
+  gap: calc(14 / var(--rem-base) * 1rem);
+  margin: calc(30 / var(--rem-base) * 1rem) 0 0;
+}
+
+.home-hero-actions .button {
+  font-size: calc(15.5 / var(--rem-base) * 1rem);
+  margin: 0;
+  padding: calc(14 / var(--rem-base) * 1rem) calc(26 / var(--rem-base) * 1rem);
+}
+
+.home-visually-hidden {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Stat strip */
+
+/* Cream with a top rule, not sand: the strip now follows the get-started
+   paths and sits directly on the example's sand band, and two sand bands in a
+   row would merge and break the alternation. The band's own top border closes
+   the strip. */
+.home-stats {
+  border-top: 1px solid var(--color-line);
+}
+
+.home-stats-inner {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
-  border-top: 1px solid var(--color-smoke-50);
-  padding: 2rem 1rem 1rem;
-}
-
-section.frontpage.columns.functionalities {
-  border: none;
-}
-
-section.frontpage.columns.functionalities h2,
-section.frontpage.projects .project .content h2,
-section.frontpage.projects .project .content p {
-  text-align: left;
-  text-transform: none;
-}
-
-/* css for functionalities section */
-
-section.frontpage.columns.functionalities .box {
-  width: 70%;
-  display: flex;
-  margin: 2vw auto;
-}
-
-section.frontpage.columns.functionalities .box .content {
-  width: 55vw;
-  margin: 0 1vw;
-}
-
-section.frontpage.columns.functionalities .box .icon {
-  width: 30vw;
-  text-align: center;
-}
-
-section.frontpage.columns.functionalities img {
-  height: 12rem;
-  margin: 0 1vw;
-}
-
-/* css for projects section */
-section.frontpage.projects {
-  width: 80%;
-  max-width: none;
+  gap: calc(12 / var(--rem-base) * 1rem) calc(48 / var(--rem-base) * 1rem);
   margin: 0 auto;
+  max-width: var(--frontpage-max-width);
+  padding: calc(30 / var(--rem-base) * 1rem) var(--page-padding-x);
 }
 
-section.frontpage.projects .project {
+/* base.css sets no colour on <a>, only decoration, so a link here would fall
+   through to the browser's default blue and break the palette. Use the site's
+   link tokens, which are the burnt orange used everywhere else. */
+.home-stats-label a {
+  color: var(--link-font-color);
+}
+
+.home-stats-label a:hover {
+  color: var(--link_hover-font-color);
+}
+
+.home-stats-label {
+  color: var(--color-ink-2);
+  font-family: var(--display-font-family);
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  font-weight: 700;
+  margin: 0;
+  margin-right: auto;
+}
+
+.home-stats-list {
   display: flex;
-  width: 50%;
-  padding: 1rem;
+  gap: calc(44 / var(--rem-base) * 1rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-section.frontpage.projects .project .icon {
-  min-width: 8rem;
-  margin-right: 1rem;
+.home-stat-num {
+  color: var(--color-teal-deep);
+  display: block;
+  font-family: var(--display-font-family);
+  font-size: calc(26 / var(--rem-base) * 1rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.home-stat-label {
+  color: var(--color-ink-soft);
+  display: block;
+  font-size: calc(12 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin-top: calc(5 / var(--rem-base) * 1rem);
+  text-transform: uppercase;
+}
+
+/* Shared by the projects and news grids. */
+
+.home-grid--three {
+  gap: calc(22 / var(--rem-base) * 1rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Get started: three tiles as tabs over one terminal. The negative margin
+   pulls the tiles up over the bottom of the hero band. */
+
+.home-paths {
+  margin: calc(-92 / var(--rem-base) * 1rem) auto 0;
+  max-width: var(--frontpage-max-width);
+  padding: 0 var(--page-padding-x) calc(56 / var(--rem-base) * 1rem);
+  position: relative;
+}
+
+.home-paths-tabs {
+  display: grid;
+  gap: calc(16 / var(--rem-base) * 1rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.home-path {
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: calc(13 / var(--rem-base) * 1rem);
+  box-shadow: 0 14px 34px rgb(28 24 19 / 16%);
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font: inherit;
+  padding: calc(20 / var(--rem-base) * 1rem) calc(22 / var(--rem-base) * 1rem)
+           calc(22 / var(--rem-base) * 1rem);
+  position: relative;
+  text-align: left;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.home-path:hover {
+  border-color: var(--color-line-hover);
+}
+
+/* The ring is a second 1px in box-shadow rather than a 2px border, so the
+   selected tile's text does not shift by a pixel. */
+.home-path[aria-selected='true'] {
+  border-color: var(--color-camel-orange);
+  box-shadow: 0 0 0 1px var(--color-camel-orange), 0 10px 24px rgb(233 120 38 / 14%);
+}
+
+/* A notch pointing down at the terminal the tile controls. */
+.home-path[aria-selected='true']::after {
+  background: var(--color-dark-2);
+  border-radius: 3px;
+  bottom: calc(-11 / var(--rem-base) * 1rem);
+  content: '';
+  height: calc(18 / var(--rem-base) * 1rem);
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%) rotate(45deg);
+  width: calc(18 / var(--rem-base) * 1rem);
+}
+
+.home-path:focus-visible {
+  outline: 2px solid var(--color-orange-deep);
+  outline-offset: 3px;
+}
+
+.home-path-head {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(10 / var(--rem-base) * 1rem);
+}
+
+.home-path-name {
+  color: var(--color-ink);
+  font-family: var(--display-font-family);
+  font-size: calc(20 / var(--rem-base) * 1rem);
+  font-weight: 700;
+}
+
+.home-badge {
+  background: var(--color-orange-deep);
+  border-radius: calc(20 / var(--rem-base) * 1rem);
+  color: var(--color-white);
+  font-family: var(--monospace-font-family);
+  font-size: calc(10.5 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: calc(3 / var(--rem-base) * 1rem) calc(8 / var(--rem-base) * 1rem);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.home-path-desc {
+  color: var(--color-ink-soft);
+  display: block;
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+  line-height: 1.55;
+  margin-top: calc(10 / var(--rem-base) * 1rem);
+  text-wrap: pretty;
+}
+
+.home-path-panel {
+  background: var(--color-dark-2);
+  border-radius: calc(13 / var(--rem-base) * 1rem);
+  margin-top: calc(18 / var(--rem-base) * 1rem);
+  overflow: hidden;
+}
+
+.home-path-bar {
+  align-items: center;
+  border-bottom: 1px solid var(--color-dark-line);
+  display: flex;
+  gap: calc(16 / var(--rem-base) * 1rem);
+  padding: calc(10 / var(--rem-base) * 1rem) calc(14 / var(--rem-base) * 1rem)
+           calc(10 / var(--rem-base) * 1rem) calc(18 / var(--rem-base) * 1rem);
+}
+
+.home-path-dots {
+  display: flex;
+  gap: calc(8 / var(--rem-base) * 1rem);
+}
+
+.home-path-dots span {
+  background: var(--color-button-on-dark-border);
+  border-radius: 50%;
+  height: calc(10 / var(--rem-base) * 1rem);
+  width: calc(10 / var(--rem-base) * 1rem);
+}
+
+.home-path-title {
+  color: var(--color-on-dark-soft);
+  font-family: var(--monospace-font-family);
+  font-size: calc(12.5 / var(--rem-base) * 1rem);
+  font-weight: 600;
+}
+
+/* home-tab-copy floats over the example's code; here it sits in the bar. Two
+   classes, because .home-tab-copy comes later in this file. */
+.home-path-bar .home-path-copy {
+  margin-left: auto;
+  position: static;
+}
+
+.home-path-code {
+  color: var(--syntax-text);
+  font-size: calc(14 / var(--rem-base) * 1rem);
+  line-height: 1.6;
+  margin: 0;
+  overflow-x: auto;
+  overflow-wrap: normal;
+  padding: calc(18 / var(--rem-base) * 1rem) calc(22 / var(--rem-base) * 1rem)
+           calc(6 / var(--rem-base) * 1rem);
+  white-space: pre;
+}
+
+.home-path-prompt {
+  color: var(--color-prompt);
+  user-select: none;
+}
+
+.home-path-link {
+  color: var(--color-orange-glow);
+  display: inline-block;
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+  font-weight: 700;
+  padding: calc(10 / var(--rem-base) * 1rem) calc(22 / var(--rem-base) * 1rem)
+           calc(18 / var(--rem-base) * 1rem);
+}
+
+.home-path-link:hover {
+  color: var(--color-camel-orange-light);
+}
+
+/* Features */
+
+.home-grid--features {
+  gap: calc(20 / var(--rem-base) * 1rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.home-feature {
+  padding: calc(26 / var(--rem-base) * 1rem);
+}
+
+.home-feature-tag {
+  align-items: center;
+  align-self: flex-start;
+  background: var(--color-orange-tint);
+  border-radius: calc(9 / var(--rem-base) * 1rem);
+  color: var(--color-orange-deep);
+  display: inline-flex;
+  font-family: var(--display-font-family);
+  font-size: calc(16 / var(--rem-base) * 1rem);
+  font-weight: 800;
+  height: calc(38 / var(--rem-base) * 1rem);
+  justify-content: center;
+  min-width: calc(38 / var(--rem-base) * 1rem);
+  padding: 0 calc(7 / var(--rem-base) * 1rem);
+}
+
+.home-feature h3 {
+  color: var(--color-ink);
+  font-family: var(--display-font-family);
+  font-size: calc(18 / var(--rem-base) * 1rem);
+  font-weight: 700;
+  margin: calc(16 / var(--rem-base) * 1rem) 0 0;
+}
+
+.home-feature p {
+  color: var(--color-ink-soft);
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+  line-height: 1.55;
+  margin: calc(9 / var(--rem-base) * 1rem) 0 0;
+  text-wrap: pretty;
+}
+
+/* Code example */
+
+.home-example {
+  background: var(--color-ink);
+  border: 1px solid var(--color-dark-line);
+  border-radius: calc(14 / var(--rem-base) * 1rem);
+  box-shadow: 0 24px 60px -30px rgb(33 28 23 / 50%);
+  margin: 0 auto;
+  max-width: calc(820 / var(--rem-base) * 1rem);
+  overflow: hidden;
+}
+
+.home-tablist {
+  border-bottom: 1px solid var(--color-dark-line);
+  display: flex;
+  gap: calc(2 / var(--rem-base) * 1rem);
+  padding: calc(12 / var(--rem-base) * 1rem) calc(14 / var(--rem-base) * 1rem) 0;
+}
+
+.home-tab {
+  background: none;
+  border: 0;
+  color: var(--code-tab-idle-font-color);
+  cursor: pointer;
+  font-family: var(--monospace-font-family);
+  font-size: calc(13 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  padding: calc(9 / var(--rem-base) * 1rem) calc(16 / var(--rem-base) * 1rem)
+           calc(13 / var(--rem-base) * 1rem);
+  position: relative;
+}
+
+.home-tab[aria-selected='true'] {
+  color: var(--syntax-text);
+}
+
+.home-tab[aria-selected='true']::after {
+  background: var(--color-camel-orange);
+  bottom: -1px;
+  content: '';
+  height: 2px;
+  left: calc(12 / var(--rem-base) * 1rem);
+  position: absolute;
+  right: calc(12 / var(--rem-base) * 1rem);
+}
+
+/* Anchors the copy button, which is positioned against this panel. */
+.home-tabpanel {
+  position: relative;
+}
+
+/* Mirrors home-cli-copy in the hero, but floated over the panel's top right
+   rather than sitting in the tab row, so it reads as belonging to the code it
+   copies. Sits above the code's own padding, so it does not overlap the first
+   line. */
+.home-tab-copy {
+  background: var(--color-dark-2);
+  border: 1px solid var(--color-dark-line);
+  border-radius: calc(6 / var(--rem-base) * 1rem);
+  color: var(--syntax-text);
+  cursor: pointer;
+  font-family: var(--monospace-font-family);
+  font-size: calc(12 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  padding: calc(4 / var(--rem-base) * 1rem) calc(10 / var(--rem-base) * 1rem);
+  position: absolute;
+  right: calc(12 / var(--rem-base) * 1rem);
+  top: calc(12 / var(--rem-base) * 1rem);
+  z-index: 1;
+}
+
+.home-tab-copy:hover {
+  background: #3a342c;
+}
+
+/* The highlighter wraps the source in <code>, which matches the code/kbd/pre
+   rule in base.css and so takes --code-font-color: that resolves to
+   --color-ink, the exact colour of this panel's background. Tokens chroma
+   colours are fine, but everything it deliberately leaves unstyled (
+   punctuation, plain identifiers, whitespace) turns invisible. Colour the
+   element that actually carries the text rather than relying on the <pre>,
+   since a rule matching <code> directly beats anything it inherits. */
+.home-tabpanel pre code {
+  color: var(--syntax-text);
+}
+
+.home-tabpanel pre {
+  color: var(--syntax-text);
+  font-family: var(--monospace-font-family);
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  line-height: 1.7;
+  margin: 0;
+  min-height: calc(200 / var(--rem-base) * 1rem);
+  overflow-x: auto;
+  /* Top padding clears the copy button rather than merely sitting behind it.
+     The code does not wrap, so a right inset would not help: a long first line
+     would slide back under the button as soon as the panel is scrolled. */
+  padding: calc(46 / var(--rem-base) * 1rem) calc(24 / var(--rem-base) * 1rem)
+           calc(22 / var(--rem-base) * 1rem);
+}
+
+.home-example-run {
+  align-items: center;
+  background: var(--color-dark-3);
+  border-top: 1px solid var(--color-dark-line);
+  display: flex;
+  gap: calc(10 / var(--rem-base) * 1rem);
+  margin: 0;
+  padding: calc(14 / var(--rem-base) * 1rem) calc(24 / var(--rem-base) * 1rem);
+}
+
+.home-example-prompt {
+  color: var(--color-prompt);
+  font-family: var(--monospace-font-family);
+  font-size: calc(12.5 / var(--rem-base) * 1rem);
+}
+
+.home-example-command {
+  color: var(--color-on-dark-soft);
+  font-family: var(--monospace-font-family);
+  font-size: calc(12.5 / var(--rem-base) * 1rem);
+}
+
+/* Project tiles */
+
+.home-grid--four {
+  gap: calc(18 / var(--rem-base) * 1rem);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.home-tile {
+  padding: calc(24 / var(--rem-base) * 1rem);
+}
+
+.home-tile-icon {
+  display: block;
+  height: calc(34 / var(--rem-base) * 1rem);
+  object-fit: contain;
+  width: calc(34 / var(--rem-base) * 1rem);
+}
+
+.home-tile h3 {
+  color: var(--color-ink);
+  font-family: var(--display-font-family);
+  font-size: calc(17 / var(--rem-base) * 1rem);
+  font-weight: 700;
+  margin: calc(16 / var(--rem-base) * 1rem) 0 0;
+}
+
+.home-tile p {
+  color: var(--color-ink-soft);
+  flex: 1;
+  font-size: calc(14 / var(--rem-base) * 1rem);
+  line-height: 1.5;
+  margin: calc(8 / var(--rem-base) * 1rem) 0 calc(16 / var(--rem-base) * 1rem);
+  text-wrap: pretty;
+}
+
+.home-tile-link {
+  align-self: flex-start;
+  color: var(--link-font-color);
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  font-weight: 700;
+}
+
+.home-tile-link:hover {
+  color: var(--link_hover-font-color);
+}
+
+/* Latest posts */
+
+/* home-card carries no padding of its own; each variant supplies it, which is
+   why home-tile sets 24px. Match it so the two card grids line up. */
+.home-news {
+  display: flex;
+  flex-direction: column;
+  padding: calc(24 / var(--rem-base) * 1rem);
+}
+
+.home-news-date {
+  color: var(--color-teal-deep);
+  display: block;
+  font-size: calc(13 / var(--rem-base) * 1rem);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.home-news-title {
+  font-size: calc(17 / var(--rem-base) * 1rem);
+  line-height: 1.35;
+  margin: calc(8 / var(--rem-base) * 1rem) 0 0;
+}
+
+.home-news-title a {
+  color: var(--color-ink);
+}
+
+.home-news-title a:hover {
+  color: var(--color-orange-deep);
+}
+
+.home-news p {
+  color: var(--color-ink-soft);
+  flex: 1;
+  font-size: calc(14 / var(--rem-base) * 1rem);
+  line-height: 1.55;
+  margin: calc(10 / var(--rem-base) * 1rem) 0 0;
+}
+
+.home-tiles-cta {
+  margin: calc(34 / var(--rem-base) * 1rem) 0 0;
   text-align: center;
 }
 
-section.frontpage.projects .project img {
-  height: 6rem;
-  margin-top: 2rem;
+/* Closing band */
+
+.home-closing {
+  margin: calc(72 / var(--rem-base) * 1rem) auto 0;
+  max-width: var(--frontpage-max-width);
+  padding: 0 var(--page-padding-x);
 }
 
-/* css for apache section */
-
-.split {
-  flex: 50%;
-  padding: 1rem 0 2rem;
+.home-closing-inner {
+  align-items: center;
+  background: var(--color-ink);
+  border-radius: calc(18 / var(--rem-base) * 1rem);
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(24 / var(--rem-base) * 1rem);
+  padding: calc(52 / var(--rem-base) * 1rem) calc(48 / var(--rem-base) * 1rem);
 }
 
-.split img {
-  max-width: 100%;
+.home-closing-copy {
+  flex: 1;
+  min-width: calc(280 / var(--rem-base) * 1rem);
 }
 
-/* css for tablet view */
+.home-closing-copy h2 {
+  color: var(--color-on-dark);
+  font-family: var(--display-font-family);
+  font-size: calc(30 / var(--rem-base) * 1rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.home-closing-copy p {
+  color: var(--color-on-dark-soft);
+  font-size: calc(16 / var(--rem-base) * 1rem);
+  line-height: 1.55;
+  margin: calc(12 / var(--rem-base) * 1rem) 0 0;
+  max-width: calc(560 / var(--rem-base) * 1rem);
+}
+
+.home-closing-actions {
+  display: flex;
+  gap: calc(14 / var(--rem-base) * 1rem);
+  margin: 0;
+}
+
+.home-closing-actions .button {
+  margin: 0;
+}
+
+/* Tablet */
 
 @media screen and (width <= 1024px) {
-  header.frontpage h1 {
-    font-size: 3rem;
-    text-align: center;
+  .home-hero {
+    padding-top: calc(40 / var(--rem-base) * 1rem);
   }
 
-  section.frontpage h1 {
-    font-size: 2.5rem;
+  .home-hero h1 {
+    font-size: calc(56 / var(--rem-base) * 1rem);
   }
 
-  .split {
-    margin: 0 1rem;
-    flex: 100%;
+  /* The copy now runs close to the right edge, so the art moves up behind it
+     and fades far enough for the text to read over it. */
+  .home-hero-art {
+    opacity: 0.3;
+    right: calc(-120 / var(--rem-base) * 1rem);
+    top: calc(var(--navbar-height) + calc(20 / var(--rem-base) * 1rem));
+    width: calc(420 / var(--rem-base) * 1rem);
   }
 
-  .split img {
-    display: block;
-    margin: auto;
+  .home-section-head h2 {
+    font-size: calc(30 / var(--rem-base) * 1rem);
   }
 
-  header.frontpage .main-heading,
-  section.frontpage.columns.functionalities,
-  section.frontpage.columns.projects,
-  section.frontpage.apache,
-  section.frontpage.blog-posts .blog-post {
-    width: 90%;
-    margin: 0 auto;
+  .home-grid--three,
+  .home-grid--features,
+  .home-grid--four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  section.frontpage.columns.blog-posts ul {
-    flex-direction: column;
-  }
-
-  section.frontpage.blog-posts .blog-post .date,
-  section.frontpage.projects .project .icon {
-    min-width: 25%;
-  }
-
-  section.frontpage.projects .project,
-  section.frontpage.columns.functionalities .box {
-    width: 100%;
-  }
-
-  section.frontpage.functionalities .icon img,
-  section.frontpage.projects .icon img {
-    max-width: 25vw;
-    margin: auto;
-  }
-
-  section.frontpage.functionalities .content {
-    width: 70vw;
-  }
-
-  header.frontpage p {
-    font-size: inherit;
-    text-align: center;
-  }
-
-  header.frontpage {
-    flex-direction: column-reverse;
-    margin: 0;
-  }
-
-  header.frontpage img {
-    width: 60%;
-    max-height: 45vh;
-    margin: 0 auto;
-  }
-
-  div.frontpage.news {
-    width: 100%;
-    margin: 1.5rem 0 0;
-    text-transform: uppercase;
-    border-radius: 0;
-  }
-
-  a.button,
-  section.frontpage a.button {
-    line-height: 1.5rem;
+  .home-closing-inner {
+    padding: calc(36 / var(--rem-base) * 1rem) calc(32 / var(--rem-base) * 1rem);
   }
 }
 
-/* css for mobile view */
+/* Mobile */
 
 @media screen and (width <= 626px) {
-  header.frontpage .main-heading,
-  section.frontpage.columns.functionalities,
-  section.frontpage.columns.blog-posts,
-  section.frontpage.projects,
-  section.frontpage.apache {
+  .home-hero h1 {
+    font-size: calc(40 / var(--rem-base) * 1rem);
+  }
+
+  .home-hero-tagline {
+    font-size: calc(21 / var(--rem-base) * 1rem);
+  }
+
+  .home-hero-actions {
+    flex-wrap: wrap;
+  }
+
+  /* Stacked, the terminal sits under the last tile rather than the selected
+     one, so the notch would point at the wrong thing. The ring alone marks it. */
+  .home-paths-tabs {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home-path[aria-selected='true']::after {
+    display: none;
+  }
+
+  .home-path-code {
+    font-size: calc(12.5 / var(--rem-base) * 1rem);
+  }
+
+  .home-grid--three,
+  .home-grid--features,
+  .home-grid--four {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home-stats-list {
+    gap: calc(24 / var(--rem-base) * 1rem);
+    flex-wrap: wrap;
+  }
+
+  /* The 280px floor on the copy column is wider than the space left inside the
+     panel at 320px, and a flex item will not shrink past its own min-width, so
+     the panel pushed the document past the viewport. Release the floor and trim
+     the panel's own padding to buy back the difference. */
+  .home-closing-copy {
+    min-width: 0;
+  }
+
+  .home-closing-inner {
+    padding: calc(28 / var(--rem-base) * 1rem) calc(20 / var(--rem-base) * 1rem);
+  }
+
+  .home-closing-actions {
+    flex-wrap: wrap;
     width: 100%;
-    margin: 0;
-    padding: 1rem;
   }
 
-  header.frontpage a.button-light {
-    line-height: 5rem;
-  }
-
-  section.frontpage.projects .project,
-  section.frontpage.columns.functionalities .box.left {
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-  }
-
-  section.frontpage.columns.functionalities .box.right {
-    flex-direction: column-reverse;
-    margin: 0;
-    padding: 0;
-  }
-
-  section.frontpage.projects .project .content h2,
-  section.frontpage.projects .project .icon,
-  section.frontpage.columns.functionalities .box .content h2,
-  section.frontpage.columns.functionalities .box .content,
-  section.frontpage.columns.functionalities .box .icon,
-  section.frontpage.columns.functionalities p,
-  section.frontpage.projects .project .content p {
-    text-align: center;
-    margin: 0;
-    width: 100%;
-  }
-
-  section.frontpage.columns.functionalities .box .content p,
-  section.frontpage.projects .project .content p {
-    margin: 1rem 0 1.5rem;
-  }
-
-  section.frontpage.columns.functionalities .box .icon img {
-    max-width: 50%;
-    height: auto;
-    margin-top: 2rem;
-  }
-
-  section.frontpage h1 {
-    font-size: 2rem;
-  }
-
-  header.frontpage h1 {
-    font-size: 2.5rem;
+  .home-tabpanel pre {
+    font-size: calc(12 / var(--rem-base) * 1rem);
   }
 }

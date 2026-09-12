@@ -1,0 +1,13 @@
+# Secret-scanner allowlist (gitleaks v8 format; also read by leaktk).
+#
+# The DocSearch widget needs Algolia's search-only API key in the browser, so
+# antora-ui-camel/src/js/08-docsearch.js embeds it and the built bundle under
+# antora-ui-camel/public/_/js/ carries it minified. It is a public, read-only
+# key by design, not a credential; scanners flag the bundle as a "Generic
+# Secret" every time the hashed filename changes.
+
+[[allowlists]]
+description = "Algolia DocSearch search-only API key for the apache_camel index"
+condition = "AND"
+paths = ['''^antora-ui-camel/(src/js/08-docsearch\.js|public/_/js/site-[0-9a-f]+\.js)$''']
+regexes = ['''1b7e52df4759e32dd49adedb286997f6''']

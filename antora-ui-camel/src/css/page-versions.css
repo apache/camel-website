@@ -1,6 +1,6 @@
 .page-versions {
   display: none;
-  margin-right: 0.7rem;
+  margin: 0;
   position: relative;
   line-height: 1;
 }
@@ -12,26 +12,33 @@
 }
 
 .page-versions .version-menu-toggle {
-  color: inherit;
-  background: url("../img/chevron.svg") no-repeat;
-  background-position: right 0.5rem top 50%;
-  background-size: auto 0.75em;
-  border: none;
+  border: 1px solid var(--color-line);
+  border-radius: calc(6 / var(--rem-base) * 1rem);
+  background: var(--color-white) url("../img/chevron.svg") no-repeat
+              right calc(8 / var(--rem-base) * 1rem) top 50% / auto calc(7 / var(--rem-base) * 1rem);
+  color: var(--color-ink-soft);
+  cursor: pointer;
+  font-family: var(--monospace-font-family);
+  font-size: calc(12 / var(--rem-base) * 1rem);
   outline: none;
-  line-height: inherit;
-  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  padding: calc(3 / var(--rem-base) * 1rem) calc(22 / var(--rem-base) * 1rem)
+           calc(3 / var(--rem-base) * 1rem) calc(9 / var(--rem-base) * 1rem);
   position: relative;
   z-index: var(--z-index-page-version-menu);
 }
 
 .page-versions .version-menu {
-  border: 1px solid transparent;
+  border: 1px solid var(--color-line);
+  border-radius: calc(6 / var(--rem-base) * 1rem);
   background-color: var(--page-version-menu-background);
-  padding: 1.25rem 0.5rem 0.5rem;
+  padding: calc(30 / var(--rem-base) * 1rem) calc(9 / var(--rem-base) * 1rem)
+           calc(8 / var(--rem-base) * 1rem);
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  min-width: 100%;
+  font-family: var(--monospace-font-family);
+  font-size: calc(12 / var(--rem-base) * 1rem);
 }
 
 .page-versions:not(.is-active) .version-menu {

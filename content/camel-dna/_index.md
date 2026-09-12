@@ -95,6 +95,7 @@ No Maven project. No build step. No manual wiring. Just one YAML file and one co
 
 ## What changed, what didn't
 
+{{< table >}}
 | | **Camel 1.0** (2007) | **Camel CLI** (today) |
 |---|---|---|
 | **Language** | Java (40+ lines) | YAML, Java, XML — your choice |
@@ -107,6 +108,7 @@ No Maven project. No build step. No manual wiring. Just one YAML file and one co
 | **Patterns (EIPs)** | ~20 | 65+ |
 | **Contributors** | A handful | 1,600+ |
 | **Lines of code** | Tens of thousands | Millions |
+{{< /table >}}
 
 What stayed the same: **`from("jms:queue:test.queue").to("file://test")`**
 

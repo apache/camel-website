@@ -1,29 +1,23 @@
-<header class="header">
+<header class="header" aria-label="Header">
   <nav class="navbar" aria-label="Main menu">
-    <div class="navbar-brand">
-      <a class="nav-logo" href="{{siteRootPath}}"></a>
+    <div class="navbar-inner">
+      <a class="navbar-brand" href="{{siteRootPath}}">
+        <img class="navbar-logo" src="{{uiRootPath}}/img/logo-d.svg" alt="">
+        <span class="navbar-wordmark">Apache Camel</span>
+      </a>
       <div id="topbar-nav" class="navbar-menu">
-        <div class="navbar-end">
-          {{#withMenuData}}
-            {{#each @items}}
-                <a class="navbar-item-section navbar-item navbar-topics" href="{{url}}">
-                  <img alt="{{name}}" src="{{uiRootPath}}/_{{asset pre}}">
-                  {{name}}
-                </a>
-            {{/each}}
-          {{/withMenuData}}
+        {{#withMenuData}}
+          {{#each @items}}
+            <a class="navbar-item" href="{{url}}">{{name}}</a>
+          {{/each}}
+        {{/withMenuData}}
+      </div>
+      <div class="navbar-actions">
+        <div class="navbar-search">
+          <div id="docsearch"></div>
         </div>
-      </div>
-      <div class="navbar-fill"></div>
-      <div class="break-row"></div>
-      <div class="navbar-search">
-        <div id="docsearch"></div>
-      </div>
-      <div class="navbar-tools">
-        <a rel="noopener noreferrer nofollow" href="https://github.com/apache/camel/" title="Collaborate on GitHub"><svg focusable="false" class="brand-icon"><use xlink:href="{{uiRootPath}}/img/brand-logos.svg#github" /></svg></a>
-        <a rel="noopener noreferrer nofollow" href="https://camel.zulipchat.com" title="Chat on Zulip"><svg focusable="false" class="brand-icon"><use xlink:href="{{uiRootPath}}/img/brand-logos.svg#zulip" /></svg></a>
-        <a rel="noopener noreferrer nofollow" href="https://twitter.com/ApacheCamel" title="Follow Apache Camel on Twitter"><svg focusable="false" class="brand-icon"><use xlink:href="{{uiRootPath}}/img/brand-logos.svg#twitter" /></svg></a>
-        <a rel="noopener noreferrer nofollow" href="https://www.linkedin.com/groups/2447439/" title="Apache Camel group on Linkedin"><svg focusable="false" class="brand-icon"><use xlink:href="{{uiRootPath}}/img/brand-logos.svg#linkedin" /></svg></a>
+        <a class="navbar-github" rel="noopener noreferrer nofollow" href="https://github.com/apache/camel/" title="Collaborate on GitHub"><svg focusable="false" class="brand-icon"><use xlink:href="{{uiRootPath}}/img/brand-logos.svg#github" /></svg></a>
+        <a class="button dark navbar-cta" href="{{siteRootPath}}/download/">Download</a>
       </div>
       <button class="navbar-burger" data-target="topbar-nav" type="button" aria-label="Menu">
         <span></span>

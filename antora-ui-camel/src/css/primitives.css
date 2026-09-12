@@ -1,0 +1,238 @@
+/* Shared primitives for the redesigned content pages (docs, download, security,
+   community, tooling, blog/post/category, releases/advisory). Consolidated from
+   the piece-4b screen specs; see .superpowers/sdd/4b/00-primitives.md for the
+   full inventory and rationale behind each class. Each consuming page's own
+   CSS file supplies page-specific layout on top of these (an icon slot, a
+   fixed grid-column span, a header-row layout) - never the shell/typography
+   again. */
+
+/* ---- page-shell (single-column content pages) ------------------------ */
+/* Byte-identical across download.css/.download, security.css/.security and
+   release.css/.advisory before this extraction (M5, final-review.md). Not
+   extended to docs.css's .docs/.community or blog.css's .post, which share
+   the same four declarations but were left in place (out of the finding's
+   named scope). */
+
+.download,
+.security,
+.advisory {
+  width: 100%;
+  max-width: var(--static-max-width--desktop);
+  margin: 0 auto;
+  padding: calc(56 / var(--rem-base) * 1rem) var(--page-padding-x) calc(40 / var(--rem-base) * 1rem);
+}
+
+/* ---- page-hero (index/list screens) --------------------------------- */
+
+.page-hero-title {
+  font-family: var(--display-font-family);
+  font-weight: 800;
+  font-size: calc(46 / var(--rem-base) * 1rem);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin: 0;
+  color: var(--color-ink);
+}
+
+.page-hero-lead {
+  font-size: calc(17.5 / var(--rem-base) * 1rem);
+  line-height: 1.55;
+  color: var(--color-ink-soft);
+  margin: calc(14 / var(--rem-base) * 1rem) 0 0;
+  text-wrap: pretty;
+}
+
+/* ---- detail-lead (single-item detail screens: post, advisory) ------- */
+
+.detail-lead {
+  font-family: var(--display-font-family);
+  font-weight: 500;
+  font-size: calc(21 / var(--rem-base) * 1rem);
+  line-height: 1.4;
+  color: var(--color-ink-2);
+  margin: calc(16 / var(--rem-base) * 1rem) 0 0;
+  text-wrap: pretty;
+}
+
+/* ---- section-label (uppercase eyebrow + rule) ------------------------ */
+
+.section-label {
+  font-family: var(--display-font-family);
+  font-weight: 700;
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-ink-muted);
+  margin: calc(56 / var(--rem-base) * 1rem) 0 0;
+  padding-bottom: calc(14 / var(--rem-base) * 1rem);
+  border-bottom: 1px solid var(--color-line);
+}
+
+/* ---- eyebrow (mono, uppercase, 0.08em) -------------------------------- */
+/* Shared shape only (M5, final-review.md): color is a per-consumer design
+   decision and is intentionally NOT unified here. Three colors ship on
+   purpose (--color-prompt, --color-orange-deep, --color-ink-muted).
+   frontpage.css's .home-eyebrow is a near-match (12.5px, not 12px, plus its
+   own margin: 0) and is deliberately left out: folding it in would shift
+   its rendered font-size. */
+
+.docs-feature-eyebrow,
+.tooling .tooling-eyebrow,
+.post-eyebrow,
+.security-eyebrow,
+.advisory-eyebrow,
+.community-cta-eyebrow,
+.download-cli-eyebrow,
+.blog-rail-eyebrow,
+.releases-rail-heading {
+  font-family: var(--monospace-font-family);
+  font-size: calc(12 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.security-eyebrow,
+.advisory-eyebrow {
+  color: var(--color-orange-deep);
+}
+
+.community-cta-eyebrow,
+.download-cli-eyebrow {
+  color: var(--color-prompt);
+}
+
+.blog-rail-eyebrow,
+.releases-rail-heading {
+  color: var(--color-ink-muted);
+  padding-bottom: calc(12 / var(--rem-base) * 1rem);
+  border-bottom: 1px solid var(--color-line);
+}
+
+/* ---- card / card-grid ------------------------------------------------ */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: 13px; /* radius exemption: raw px */
+  padding: calc(24 / var(--rem-base) * 1rem);
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+
+/* Byte-identical fork in frontpage.css/.home-card:hover and
+   projects.css/.project-card:hover before this extraction (M5). Each
+   consumer keeps its own radius/padding; only the hover lift is shared. */
+.card:hover,
+.home-card:hover,
+.project-card:hover {
+  border-color: var(--color-line-hover);
+  box-shadow: 0 14px 34px -22px rgb(33 28 23 / 35%);
+  transform: translateY(-2px);
+}
+
+.card--flat {
+  transition: none;
+}
+
+.card--flat:hover {
+  border-color: var(--color-line);
+  box-shadow: none;
+  transform: none;
+}
+
+.card--lg {
+  border-radius: 16px; /* radius exemption: raw px */
+  padding: calc(32 / var(--rem-base) * 1rem);
+}
+
+.card--dark {
+  background: var(--color-ink);
+  border-color: var(--color-dark-line);
+  color: var(--color-on-dark);
+}
+
+.card-grid {
+  display: grid;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: calc(18 / var(--rem-base) * 1rem);
+}
+
+.card-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.card-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.card-grid--feature { grid-template-columns: 1.2fr 1fr; }
+
+@media screen and (width <= 1024px) {
+  .card-grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .card-grid--feature { grid-template-columns: 1fr; }
+}
+
+@media screen and (width <= 626px) {
+  .card-grid--2,
+  .card-grid--3,
+  .card-grid--feature {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .page-hero-title {
+    font-size: calc(36 / var(--rem-base) * 1rem);
+  }
+}
+
+/* ---- lts-chip ---------------------------------------------------------- */
+
+.lts-chip {
+  display: inline-block;
+  font-family: var(--monospace-font-family);
+  font-size: calc(10.5 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  color: var(--color-white);
+  /* --color-orange-deep, not --color-camel-orange: white on #e97826 is 2.93:1
+     at this size; on #a84e0d it is 5.58:1 (same choice as .home-badge). */
+  background: var(--color-orange-deep);
+  padding: calc(2 / var(--rem-base) * 1rem) calc(7 / var(--rem-base) * 1rem);
+  border-radius: 20px; /* radius exemption: raw px */
+}
+
+/* ---- severity-chip: color mapping is shared; size is not -------------- */
+
+.severity-chip {
+  display: inline-block;
+  font-family: var(--monospace-font-family);
+  font-weight: 600;
+  border-radius: 20px; /* radius exemption: raw px */
+}
+
+.severity-chip--low {
+  background: var(--color-paper-2);
+  color: var(--color-ink-soft);
+}
+
+.severity-chip--medium {
+  background: var(--color-orange-tint);
+  color: var(--color-orange-deep);
+}
+
+.severity-chip--high {
+  background: var(--warning-tint);
+  color: var(--warning-chip-font-color);
+}
+
+.severity-chip--critical {
+  background: var(--important-tint);
+  color: var(--important-chip-font-color);
+}
+
+/* ---- sticky rail base: position + offset only ------------------------- */
+/* Byte-identical in blog.css/.blog-rail and release.css/.releases-rail
+   before this extraction (M5). Each file keeps its own <=1024px override
+   (blog goes static; releases goes static with an added margin-top). */
+
+.blog-rail,
+.releases-rail {
+  position: sticky;
+  top: calc(var(--navbar-height) + calc(24 / var(--rem-base) * 1rem));
+}

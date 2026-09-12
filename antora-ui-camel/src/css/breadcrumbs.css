@@ -1,7 +1,8 @@
 .breadcrumbs {
   display: none;
   flex: 1 1;
-  padding: 0 0.5rem 0 0.75rem;
+  min-width: 0;
+  padding: 0;
   line-height: var(--nav-line-height);
 }
 
@@ -9,10 +10,6 @@
   .breadcrumbs {
     display: block;
   }
-}
-
-a + .breadcrumbs {
-  padding-left: 0.05rem;
 }
 
 .breadcrumbs ul {
@@ -30,9 +27,23 @@ a + .breadcrumbs {
 
 .breadcrumbs li::after {
   content: '/';
-  padding: 0 0.5rem;
+  padding: 0 calc(8 / var(--rem-base) * 1rem);
 }
 
 .breadcrumbs li:last-of-type::after {
   content: none;
+}
+
+.toolbar .breadcrumbs a {
+  color: var(--color-ink-soft);
+}
+
+.toolbar .breadcrumbs a:hover {
+  color: var(--link-font-color);
+}
+
+.toolbar .breadcrumbs li:last-of-type a {
+  color: var(--color-ink);
+  font-weight: 600;
+  text-decoration: none;
 }

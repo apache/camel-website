@@ -17,28 +17,28 @@ Enjoy!
 
 by 陈映初 (Chen Yingchu)
 
-{{< youtube id="-prMcpvbmcU" class="video" >}}¬
+{{< youtube id="-prMcpvbmcU" class="video" >}}
 
 ### Citizen Streaming Engineer - A How To
 
 by [Timothy Spann](https://twitter.com/paasdev)
 
-{{< youtube id="hPZS1ocmWhM" class="video" >}}¬
+{{< youtube id="hPZS1ocmWhM" class="video" >}}
 
 ### Camel K goes Quarkus Native
 
 by [Pasquale Congiusti](https://twitter.com/Squ4k3)
 
-{{< youtube id="Wmg7-PZgQJI" class="video" >}}¬
+{{< youtube id="Wmg7-PZgQJI" class="video" >}}
 
 ###  Integrating systems in the age of Quarkus, serverless and Kafka
 
 by [Zineb Bendhiba](https://twitter.com/ZinebBendhiba)
 
-{{< youtube id="Owl9bOhPx8o" class="video" >}}¬
+{{< youtube id="Owl9bOhPx8o" class="video" >}}
 
 ###  Up & Running: Low Code Cloud-Native Integrations
 
 by [Rachel Yordán](https://twitter.com/nerdycode)
 
-{{< youtube id="EHC-W3RtBb4" class="video" >}}¬
+{{< youtube id="EHC-W3RtBb4" class="video" >}}

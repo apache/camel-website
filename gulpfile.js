@@ -13,6 +13,12 @@ const inject = require('gulp-inject');
  */
 gulp.task('minify', (done) => {
   if (env !== 'production') {
+    // Without this pass the output keeps Hugo's uppercase doctype, self-closing
+    // void elements and trailing whitespace, so `yarn check:html` reports a
+    // doctype-style, void-style or no-trailing-whitespace error on essentially
+    // every page. Say so, rather than let that look like broken markup.
+    console.log(`minify: skipped because CAMEL_ENV is '${env}', not 'production'.`);
+    console.log('minify: check:html only gives meaningful results on a production build.');
     done();
     return;
   }

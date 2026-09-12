@@ -33,7 +33,7 @@
 }
 
 .catalog .item a {
-  background-image: none;
+  text-decoration: none;
   display: block;
   text-align: center;
 }

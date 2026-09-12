@@ -12,5 +12,6 @@ Karavan is an Integration Toolkit for Apache Camel, which makes integration easy
 This is a short Karavan introduction aimed to help to understand if this tool is right for your needs.
 
 {{< youtube id="RA8sH3AH8Gg" class="video" >}}
+
 <br/>
 

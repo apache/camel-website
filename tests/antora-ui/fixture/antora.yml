@@ -1,0 +1,5 @@
+name: fixture
+title: Camel Core
+version: '4.18'
+nav:
+  - modules/ROOT/nav.adoc

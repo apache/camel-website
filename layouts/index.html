@@ -1,48 +1,252 @@
 {{ partial "header.html" . }}
+{{- $home := .Site.Data.home }}
 
-<header class="frontpage" aria-label="Apache Camel front page">
-  <div class="main-heading">
-    <h1>Apache Camel</h1>
-    <p>
-      Camel is an Open Source integration framework that empowers you
-      to quickly and easily integrate various systems consuming or producing data.
-    </p>
-    <p>
-    <a class="button dark" href="/docs/index.html">Get Started</a> <a class="button light" href="/what-is-apache-camel/">What is Camel?</a>
-    </p>
+<main class="home">
+
+  {{/* home-lead is the full-bleed dark band behind the header and hero. It
+       reaches up under the fixed navbar, which header.css darkens on the home
+       page to match, and its bottom padding is the ground the get-started
+       tiles overlap. The logo is decoration here, cropped off the right edge;
+       the h1 already names the page. */}}
+  {{- with $home.hero }}
+  <div class="home-lead">
+    <img class="home-hero-art" src="{{ path.Join "_" (index site.Data "rev-manifest" "img/logo-d.svg") | relURL }}" alt="" aria-hidden="true">
+    <section class="home-hero" aria-label="Apache Camel">
+      <p class="home-hero-badge">{{ .eyebrow }}</p>
+      <h1>{{ .title }}</h1>
+      <p class="home-hero-tagline">{{ .tagline }}</p>
+      <p class="home-hero-lead">{{ .lead }}</p>
+      <p class="home-hero-actions">
+        <a class="button dark" href="{{ .primary_cta.url | relURL }}">{{ .primary_cta.label }}</a>
+        <a class="button on-dark" href="{{ .secondary_cta.url | relURL }}">{{ .secondary_cta.label }}</a>
+      </p>
+    </section>
   </div>
-  <img alt="Computer with gears depicting data processing" src="./img/camel-gears.svg" />
-</header>
+  {{- end }}
 
-<div class="frontpage news">
-  <h2>What's New?</h2>
-</div>
+  {{/* Three tiles as tabs over one terminal, so every path is visible at once
+       and each command gets the full width instead of scrolling in a third of
+       it. Same tab pattern as the route example below: 09-home.js drives every
+       tablist on the page, and without JS the first panel shows. */}}
+  {{- with $home.get_started }}
+  <section class="home-paths" aria-labelledby="home-paths-title">
+    <h2 id="home-paths-title" class="home-visually-hidden">{{ .eyebrow }}</h2>
+    <div class="home-paths-tabs" role="tablist" aria-label="{{ .eyebrow }}">
+      {{- range $i, $item := .items }}
+      <button class="home-path" type="button" role="tab"
+              id="home-path-tab-{{ $i }}"
+              aria-controls="home-path-panel-{{ $i }}"
+              aria-labelledby="home-path-name-{{ $i }}"
+              aria-describedby="home-path-desc-{{ $i }}"
+              aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}"
+              tabindex="{{ if eq $i 0 }}0{{ else }}-1{{ end }}">
+        <span class="home-path-head">
+          <span class="home-path-name" id="home-path-name-{{ $i }}">{{ .name }}</span>
+          {{- with .badge }}<span class="home-badge">{{ . }}</span>{{ end }}
+        </span>
+        <span class="home-path-desc" id="home-path-desc-{{ $i }}">{{ .description }}</span>
+      </button>
+      {{- end }}
+    </div>
+    {{- range $i, $item := .items }}
+    {{- $code := trim .code "\n" }}
+    <div class="home-path-panel" role="tabpanel"
+         id="home-path-panel-{{ $i }}"
+         aria-labelledby="home-path-tab-{{ $i }}"
+         tabindex="0"
+         {{ if ne $i 0 }}hidden{{ end }}>
+      <div class="home-path-bar">
+        <span class="home-path-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="home-path-title">{{ .name }}</span>
+        <button class="home-tab-copy home-path-copy" type="button"
+                data-copy-value="{{ $code }}"
+                aria-label="Copy the {{ .name }} commands">Copy</button>
+      </div>
+      {{/* A prompt on each command, not on the indented lines that continue
+           one. user-select: none keeps it out of a manual copy. */}}
+      <pre class="home-path-code">
+        {{- range split $code "\n" -}}
+        {{ if not (hasPrefix . " ") }}<span class="home-path-prompt">$ </span>{{ end }}{{ . }}
+{{ end -}}
+      </pre>
+      <a class="home-path-link" href="{{ .url | relURL }}">Start with {{ .name }} &rarr;</a>
+    </div>
+    {{- end }}
+  </section>
+  {{- end }}
 
-<section class="frontpage columns blog-posts">
-  <ul>
-    {{with .Site.GetPage "section" "blog"}}
-      {{range .Pages | first 3}}
+  {{- with $home.stats }}
+  <section class="home-stats" aria-label="Project activity">
+    <div class="home-stats-inner">
+      {{/* `if` rather than `with` so . stays bound to the stats map. */}}
+      <p class="home-stats-label">
+        {{- if .url }}<a href="{{ .url | relURL }}">{{ .label }}</a>{{ else }}{{ .label }}{{ end -}}
+      </p>
+      <ul class="home-stats-list">
+        {{- range .items }}
+        <li>
+          <span class="home-stat-num">{{ .num }}</span>
+          <span class="home-stat-label">{{ .label }}</span>
+        </li>
+        {{- end }}
+      </ul>
+    </div>
+  </section>
+  {{- end }}
 
-      <li class="blog-post">
-        <time datetime="{{ dateFormat "2006-01-02" .PublishDate }}" class="date">
-          <data class="day">
-              {{ dateFormat "2" .PublishDate }}
-          </data>
-          <data class="month">
-              {{ dateFormat "Jan" .PublishDate }}
-              {{ dateFormat "2006" .PublishDate }}
-          </data>
-        </time>
-        <div class="content">
-          <h2>{{ .Title }}</h2>
-          <p>{{ .Params.preview }}... <a href="{{ .RelPermalink }}">Read More</a></p>
-        </div>
+  {{/* The worked example comes before the feature grid: a visitor who has just
+       picked a runtime above should see what a route actually looks like
+       before being asked to read another set of cards. It carries the band so
+       the cream/sand alternation still runs down the page. */}}
+  {{- with $home.example }}
+  {{/* home-band is the full-bleed wrapper: home-section keeps its own max-width
+       and centring, so the tint has to come from an element outside it. Same
+       split as home-stats / home-stats-inner. */}}
+  <div class="home-band">
+  <section class="home-section" aria-labelledby="home-example-title">
+    <div class="home-section-head">
+      <p class="home-eyebrow">{{ .eyebrow }}</p>
+      <h2 id="home-example-title">{{ .heading }}</h2>
+      <p class="home-section-sub">{{ .subhead }}</p>
+    </div>
+    <div class="home-example">
+      <div class="home-tablist" role="tablist" aria-label="Route syntax">
+        {{- range $i, $tab := .tabs }}
+        <button class="home-tab" type="button" role="tab"
+                id="home-tab-{{ $tab.id }}"
+                aria-controls="home-panel-{{ $tab.id }}"
+                aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}"
+                tabindex="{{ if eq $i 0 }}0{{ else }}-1{{ end }}">{{ $tab.label }}</button>
+        {{- end }}
+      </div>
+      {{- range $i, $tab := .tabs }}
+      <div class="home-tabpanel" role="tabpanel"
+           id="home-panel-{{ $tab.id }}"
+           aria-labelledby="home-tab-{{ $tab.id }}"
+           tabindex="0"
+           {{/* Each tab's id doubles as its chroma lexer (yaml, java, xml). The
+                site already highlights markdown fences this way: config.toml
+                sets markup.highlight.noClasses = false and chroma.css themes
+                the emitted classes, so this panel was the only code on the
+                page rendering as flat monospace. */}}
+           {{/* One button per panel rather than one for the section: the hidden
+                panels hide their own button, so the visible one always carries
+                the source on screen and no script has to track the active tab.
+                09-home.js already handles any [data-copy-value]. */}}
+           {{ if ne $i 0 }}hidden{{ end }}><button class="home-tab-copy" type="button"
+                   data-copy-value="{{ trim $tab.code "\n" }}"
+                   aria-label="Copy the {{ $tab.label }} example">Copy</button>{{ highlight (trim $tab.code "\n") $tab.id "" }}</div>
+      {{- end }}
+      <p class="home-example-run">
+        <span class="home-example-prompt">$</span>
+        <span class="home-example-command">{{ .run_command }}</span>
+      </p>
+    </div>
+  </section>
+  </div>
+  {{- end }}
+
+  {{- with $home.features }}
+  <section class="home-section" aria-labelledby="home-features-title">
+    <div class="home-section-head">
+      <p class="home-eyebrow">{{ .eyebrow }}</p>
+      <h2 id="home-features-title">{{ .heading }}</h2>
+    </div>
+    <ul class="home-grid home-grid--features">
+      {{- range .items }}
+      <li class="home-card home-feature">
+        <span class="home-feature-tag">{{ .tag }}</span>
+        <h3>{{ .title }}</h3>
+        <p>{{ .body }}</p>
       </li>
-      {{end}}
-    {{end}}
-  </ul>
-</section>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
 
-{{ .Content }}
+  {{- with $home.tiles }}
+  {{/*
+    id="apache-camel-projects" is a compatibility anchor, not a styling hook. The old
+    home page carried a "# Apache Camel Projects" heading, which blackfriday heading
+    IDs (config.toml autoHeadingIDType) rendered as this id. Inbound links point at
+    /#apache-camel-projects, including a 2022 post under content/blog/2022/10/ (grep
+    the tree for the anchor). Dropping it turns `yarn check:links` red. Keep it on
+    whichever element holds the project tiles.
+  */}}
+  <div class="home-band">
+  <section id="apache-camel-projects" class="home-section" aria-labelledby="home-tiles-title">
+    <div class="home-section-head">
+      <p class="home-eyebrow">{{ .eyebrow }}</p>
+      <h2 id="home-tiles-title">{{ .heading }}</h2>
+      <p class="home-section-sub">{{ .subhead }}</p>
+    </div>
+    <ul class="home-grid home-grid--three">
+      {{- range .items }}
+      <li class="home-card home-tile">
+        <img class="home-tile-icon" alt=""
+             src="{{ path.Join "_" (index site.Data "rev-manifest" (printf "img/%s.svg" .icon)) | relURL }}">
+        <h3>{{ .name }}</h3>
+        <p>{{ .description }}</p>
+        <a class="home-tile-link" href="{{ .url | relURL }}" aria-label="Read more about {{ .name }}">Read more &rarr;</a>
+      </li>
+      {{- end }}
+    </ul>
+    <p class="home-tiles-cta">
+      <a class="button light" href="{{ .cta.url | relURL }}">{{ .cta.label }}</a>
+    </p>
+  </section>
+  </div>
+  {{- end }}
+
+  {{- with $home.news }}
+  <section class="home-section" aria-labelledby="home-news-title">
+    <div class="home-section-head">
+      <p class="home-eyebrow">{{ .eyebrow }}</p>
+      <h2 id="home-news-title">{{ .heading }}</h2>
+    </div>
+    <ul class="home-grid home-grid--three">
+      {{- range first 3 (where site.RegularPages "Section" "blog").ByDate.Reverse }}
+      <li class="home-card home-news">
+        <time class="home-news-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+        <h3 class="home-news-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        {{/* Release announcements often set preview to the post title verbatim.
+             Printing that repeats the heading inside its own card; dropping it
+             leaves the card visibly shorter than its neighbours. Fall back to
+             the post's own summary instead, which is the first prose in the
+             body. Bound to variables because `with` would rebind . and $ is the
+             home page here, not the post. */}}
+        {{- $title := trim .Title " " }}
+        {{- $preview := trim (.Params.preview | default "") " " }}
+        {{- if or (not $preview) (eq $preview $title) }}
+        {{- $preview = trim (.Summary | plainify | htmlUnescape) " \n" }}
+        {{- end }}
+        {{- if and $preview (ne $preview $title) }}
+        <p>{{ $preview | truncate 150 }}</p>
+        {{- end }}
+      </li>
+      {{- end }}
+    </ul>
+    <p class="home-tiles-cta">
+      <a class="button light" href="{{ .cta.url | relURL }}">{{ .cta.label }}</a>
+    </p>
+  </section>
+  {{- end }}
+
+  {{- with $home.closing }}
+  <section class="home-closing" aria-labelledby="home-closing-title">
+    <div class="home-closing-inner">
+      <div class="home-closing-copy">
+        <h2 id="home-closing-title">{{ .heading }}</h2>
+        <p>{{ .body }}</p>
+      </div>
+      <p class="home-closing-actions">
+        <a class="button dark" href="{{ .primary_cta.url | relURL }}">{{ .primary_cta.label }}</a>
+        <a class="button on-dark" href="{{ .secondary_cta.url | relURL }}">{{ .secondary_cta.label }}</a>
+      </p>
+    </div>
+  </section>
+  {{- end }}
+
+</main>
 
 {{ partial "footer.html" . }}

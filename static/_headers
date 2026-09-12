@@ -1,0 +1,35 @@
+# Cache policy for Netlify PR previews.
+#
+# Previews are deployed with `netlify deploy --no-build --dir public`, so Netlify
+# treats every file as an unmanaged upload and serves it with
+# `cache-control: public, max-age=0, must-revalidate`. That makes the browser
+# revalidate each font on every navigation. Measured against a preview, that
+# round trip is ~190ms, and because every @font-face here is declared
+# `font-display: swap`, the fallback face is painted for its duration. The
+# result is a visible font flash on each internal link.
+#
+# It does not happen in production, which is served by Apache from ASF infra:
+#
+#   /_/css/site-<hash>.css   cache-control: max-age=31536000
+#   /_/font/<face>.woff2     cache-control: max-age=2592000
+#
+# Those are the values mirrored below, so a preview behaves like the real site
+# instead of being unrepresentative in a way reviewers notice. Apache ignores
+# this file, so it changes nothing outside Netlify.
+#
+# The long lifetime on css and js is safe because gulp fingerprints those
+# filenames, so any change ships under a new URL. Font filenames carry a weight
+# and style rather than a content hash, which is why they get 30 days and not a
+# year: replacing a face in place would otherwise stay stale on a preview.
+
+/_/css/*
+  Cache-Control: public, max-age=31536000
+
+/_/js/*
+  Cache-Control: public, max-age=31536000
+
+/_/font/*
+  Cache-Control: public, max-age=2592000
+
+/_/img/*
+  Cache-Control: public, max-age=2592000

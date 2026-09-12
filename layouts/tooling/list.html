@@ -1,0 +1,116 @@
+{{ partial "header.html" . }}
+{{- $data := site.Data.tooling }}
+{{- $tui := .Resources.GetMatch "camel-tui-overview.png" }}
+
+<div class="body">
+  <main>
+    <div class="content">
+      <article class="doc static tooling" aria-label="Tooling">
+        <div class="tooling-main">
+          <h1 class="page-hero-title">{{ .Title }}</h1>
+          <p class="page-hero-lead tooling-lead">{{ $data.lead }}</p>
+
+          <section class="tooling-section tooling-cli-section">
+            <h2 id="cli">Camel CLI</h2>
+            <p class="tooling-section-intro">
+              The Camel CLI, powered by <a href="https://www.jbang.dev/">JBang</a>,
+              lets you get started with Camel instantly — no project setup, no
+              build tool configuration. Install it once, then use the
+              <code>camel</code> command to develop, run, test, and export your
+              integrations.
+            </p>
+            <div class="tooling-cli">
+              {{- range $data.cliCommands }}
+              <div class="tooling-cli-row">
+                <code class="tooling-cli-cmd">{{ .cmd }}</code>
+                <span class="tooling-cli-desc">{{ .desc }}</span>
+              </div>
+              {{- end }}
+            </div>
+            <p class="tooling-section-intro">
+              See the <a href="{{ $data.cliDocs }}">Camel CLI documentation</a>
+              for installation instructions and detailed usage.
+            </p>
+          </section>
+
+          <section class="tooling-section tooling-split">
+            <div>
+              <h2 id="tui">Camel TUI</h2>
+              <p class="tooling-section-intro">
+                The <code>camel tui</code> command launches a full terminal-based
+                UI with route status, message flow, and tracing in a single view
+                — plus a built-in mini source editor for YAML DSL routes with
+                context-aware Tab completion, validation on save, and inline
+                quick docs.
+              </p>
+              <p class="tooling-section-intro">
+                See the <a href="{{ $data.tuiDocs }}">Camel TUI documentation</a> for more details.
+              </p>
+            </div>
+            <div class="tooling-media">
+              {{- with $tui }}
+              <img src="{{ .RelPermalink }}"
+                   alt="Camel TUI Overview — four running integrations with live throughput chart and log">
+              {{- end }}
+            </div>
+          </section>
+
+          <section class="tooling-section card card--lg tooling-mcp">
+            <p class="tooling-eyebrow">AI-assisted development</p>
+            <h2 id="mcp">Camel MCP Server</h2>
+            <p class="tooling-section-intro">
+              Connects Apache Camel to AI coding assistants through the
+              <a href="https://modelcontextprotocol.io/">Model Context Protocol</a>.
+              It gives AI tools access to Camel's component catalog, DSL
+              documentation, and integration patterns — so they can help you
+              write, debug, and optimize Camel routes with full context.
+              Supported tools include Claude Code, GitHub Copilot, Gemini CLI,
+              Cursor, Windsurf, and any MCP-compatible assistant. See the
+              <a href="/manual/camel-jbang-mcp.html">Camel MCP Server documentation</a>.
+            </p>
+            <div class="tooling-ai-grid">
+              {{- range $data.aiTools }}
+              <div class="tooling-ai-card">
+                <a class="tooling-ai-name" href="{{ .url }}">{{ .name }}</a>
+                <p class="tooling-ai-desc">{{ .desc }}</p>
+              </div>
+              {{- end }}
+            </div>
+          </section>
+
+          {{- range $data.toolGroups }}
+          {{- $g := . }}
+          <section class="tooling-section">
+            <h2 id="{{ .id }}">{{ .title }}</h2>
+            {{- with .intro }}<p class="tooling-section-intro">{{ if $g.htmlIntro }}{{ . | safeHTML }}{{ else }}{{ . }}{{ end }}</p>{{ end }}
+            <div class="tooling-rows">
+              {{- range .items }}
+              <div class="tooling-row">
+                {{- if .url }}
+                <a class="tooling-row-name{{ if $g.mono }} tooling-row-name--mono{{ end }}"
+                   href="{{ .url }}">{{ .name }}</a>
+                {{- else }}
+                <span class="tooling-row-name{{ if $g.mono }} tooling-row-name--mono{{ end }}">{{ .name }}</span>
+                {{- end }}
+                <p class="tooling-row-desc">{{ if .htmlDesc }}{{ .desc | safeHTML }}{{ else }}{{ .desc }}{{ end }}</p>
+              </div>
+              {{- end }}
+            </div>
+          </section>
+          {{- end }}
+
+          <p class="tooling-footnote">If you are using or have developed
+            tooling for Apache Camel please add an entry via a
+            <a href="https://github.com/apache/camel-website">pull request</a>;
+            or post to the <a href="/community/mailing-list/">mailing list</a>.</p>
+        </div>
+
+        <aside class="toc sidebar" data-title="On this page" data-levels="2" aria-label="On this page">
+          <div class="toc-menu"></div>
+        </aside>
+      </article>
+    </div>
+  </main>
+</div>
+
+{{ partial "footer.html" . }}

@@ -21,7 +21,8 @@ const glob = {
   test: 'test/**/*-test.js',
   formatcss: [
     `${srcDir}/css/**/*.css`,
-    `!${srcDir}/css/**/typeface-droid-sans-mono.css`,
+    `!${srcDir}/css/**/typeface-archivo.css`,
+    `!${srcDir}/css/**/typeface-jetbrains-mono.css`,
     `!${srcDir}/css/**/typeface-open-sans.css`,
   ],
   js: ['gulpfile.js', 'gulp.d/**/*.js', `${srcDir}/{helpers,js}/**/*.js`],

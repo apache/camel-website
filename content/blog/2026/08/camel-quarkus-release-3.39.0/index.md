@@ -4,7 +4,7 @@ date: 2026-08-24
 authors: ["jiriondrusek"]
 categories: ["Releases"]
 keywords: ["apache camel", "camel quarkus", "release", "quarkus", "3.39.0"]
-preview: "Camel Quarkus 3.39.0 Released"
+preview: "Camel Quarkus 3.39.0 aligns with the Camel 4.22.0 and Quarkus 3.39.0 releases."
 summary: "Camel Quarkus 3.39.0 release"
 ---
 
