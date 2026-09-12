@@ -27,7 +27,12 @@ function render (cells) {
 
 // Where the soft breaks landed, written as | between the pieces.
 function breaks (cell) {
-  return cell.querySelector('p').innerHTML.replace(/<wbr>/g, '|').replace(/<\/?(code|strong)>/g, '')
+  return cell.querySelector('p').innerHTML.replace(/<wbr>/g, '|').replace(/<\/?(code|strong|span)[^>]*>/g, '')
+}
+
+// The tokens the script marked as identifiers, which doc.css never hyphenates.
+function identifiers (cell) {
+  return [...cell.querySelectorAll('span.identifier')].map((span) => span.textContent)
 }
 
 test('breaks a class name in the Type column before each camel-case hump', () => {
@@ -54,18 +59,33 @@ test('leaves short tokens and plain prose words alone', () => {
   assert.equal(breaks(type), 'String')
 })
 
-test('leaves identifiers inside prose alone', () => {
-  // A <wbr> is as good a break as a space to the browser, so a break inside prose splits the
-  // identifier across two lines where it reads as two words (opentelemetry.html at a 1440px
-  // window: "Use the exclude" / "Pattern property"). Prose already wraps between words.
+test('breaks an identifier in prose at its humps rather than leaving it to hyphenation', () => {
+  // Left without break points, an identifier in prose does not wrap whole: doc.css hyphenates the
+  // docs, so the browser split it at a syllable instead (opentelemetry.html at a 1440px window:
+  // "Use the ex-" / "cludePattern property"). A break at the hump carries no false hyphen.
   const prose = 'Setting this to true will create new OpenTelemetry Spans for each Camel Processors. Use the excludePattern property to filter out Processors'
   const [, , description] = render(['<strong>traceProcessors</strong>', '<code>false</code>', prose])
-  assert.equal(breaks(description), prose)
+  assert.equal(breaks(description), prose.replace('OpenTelemetry', 'Open|Telemetry').replace('excludePattern', 'exclude|Pattern'))
+  assert.deepEqual(identifiers(description), ['OpenTelemetry', 'excludePattern'])
+})
+
+test('marks identifiers, short ones included, so the browser never hyphenates them', () => {
+  // activemq6-component.html at a 390px window rendered local-host:61616 and JmsTem-plate.
+  const [, description] = render(['<strong>brokerURL</strong>', 'If none configured then localhost:61616 is used by the JmsTemplate bean.', '', 'String'])
+  assert.deepEqual(identifiers(description), ['localhost:61616', 'JmsTemplate'])
+  assert.equal(breaks(description), 'If none configured then localhost:|61616 is used by the JmsTemplate bean.')
+})
+
+test('leaves plain words, trailing punctuation included, free to hyphenate', () => {
+  // A separator only marks an identifier between two characters: "configuration." is a word.
+  const [, description] = render(['<strong>name</strong>', 'Sets the configuration. Defaults to the component configuration, if any.', '', 'String'])
+  assert.deepEqual(identifiers(description), [])
 })
 
 test('still breaks a token in prose that is too long to wrap whole', () => {
   // Left unbroken, a token this long sets the Description column's minimum width and the table
-  // overflows the doc column (main.html at a 1440px window: 884px of table in a 696px column).
+  // overflows the doc column (main.html at a 1440px window: 884px of table in a 696px column,
+  // when prose only got break points from 24 characters).
   const prose = 'Directories to scan, by default classpath:camel/,classpath:camel-template/,classpath:camel-rest/* in that order.'
   const [, description] = render(['<strong>routesIncludePattern</strong>', prose, '', 'String'])
   // No break after the hyphens: the browser already breaks there.

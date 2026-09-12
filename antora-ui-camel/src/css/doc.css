@@ -2,6 +2,12 @@
   color: var(--doc-font-color);
   font-size: var(--doc-font-size);
   hyphens: auto;
+  /* Only words of 10+ characters, with 4+ on each side of the hyphen. The
+     browser default (5, 2, 2) hyphenated about 600 words on an option-heavy
+     page at 1440px, many as val-ue, top-ic, of-ten; this keeps about a fifth,
+     split sensibly (config-ured). Chrome, Edge and Firefox; Safari ignores
+     it and hyphenates as before. */
+  hyphenate-limit-chars: 10 4 4;
   line-height: var(--doc-line-height);
   margin: var(--doc-margin);
   padding: 0 1rem 4rem;
@@ -188,6 +194,13 @@
 
 .doc table.tableblock td a {
   word-break: normal;
+}
+
+/* 11-table-breaks.js wraps identifiers in table cells in span.identifier, so
+   they wrap at a camel-case hump or separator and are never hyphenated at a
+   syllable (local-host:61616). */
+.doc table.tableblock .identifier {
+  hyphens: none;
 }
 
 /* The first column usually holds a property name. Floor its width so it cannot
