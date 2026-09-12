@@ -25,9 +25,9 @@
             <div class="blog-posts">
               {{ $filtered := slice }}
               {{ range .Pages }}
-                {{/* hide posts where Releases is the only category */}}
+                {{/* hide release posts; they stay listed under the Releases category */}}
                 {{ $cats := default slice .Params.categories }}
-                {{ if not (and (in $cats "Releases") (eq (len $cats) 1)) }}
+                {{ if not (in $cats "Releases") }}
                   {{ $filtered = $filtered | append . }}
                 {{ end }}
               {{ end }}
