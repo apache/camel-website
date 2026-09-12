@@ -250,6 +250,52 @@ a.button.navbar-cta {
   font-size: inherit;
 }
 
+/* Home page: the bar sits on the hero's dark band (frontpage.css .home-lead)
+   and stays dark while the page scrolls under it. body.homepage is set by the
+   Hugo header partial on the home page only, so Antora and every other page
+   keep the cream bar. */
+.homepage .navbar {
+  background: rgb(28 24 19 / 88%);
+  border-bottom-color: var(--color-dark-line);
+  color: var(--color-on-dark-soft);
+}
+
+.homepage .navbar-item {
+  color: var(--color-on-dark-soft);
+}
+
+.homepage .navbar-item:hover,
+.homepage .navbar-wordmark {
+  color: var(--color-on-dark);
+}
+
+.homepage .navbar-burger span {
+  background: var(--color-on-dark-soft);
+}
+
+.homepage .navbar-github .brand-icon {
+  fill: var(--color-on-dark-soft);
+}
+
+.homepage .navbar-github:hover .brand-icon {
+  fill: var(--color-on-dark);
+}
+
+/* The search launcher's dark colors are in docsearch.css: the vendor sheet
+   is unlayered and paints the button from --docsearch-* properties, so rules
+   here cannot reach it.
+
+   The open menu drops a cream panel below the bar; its items go back to ink. */
+@media screen and (width <= 1024px) {
+  .homepage .navbar-menu.is-active .navbar-item {
+    color: var(--color-ink-soft);
+  }
+
+  .homepage .navbar-menu.is-active .navbar-item:hover {
+    color: var(--color-ink);
+  }
+}
+
 /* Styling for mobile use */
 @media (width <= 1024px) {
   /* The button gives up its fixed 200px and shrinks with the bar; below

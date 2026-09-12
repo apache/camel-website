@@ -21,7 +21,6 @@ hero:
   secondary_cta:
     label: What is Camel?
     url: /what-is-apache-camel/
-  command: camel init hello.yaml && camel run hello.yaml
 
 stats:
   label: Used by thousands of companies worldwide
@@ -44,7 +43,6 @@ stats:
 
 get_started:
   eyebrow: Get Started Your Way
-  heading: Three clear paths
   items:
     - name: Camel CLI
       badge: fastest
