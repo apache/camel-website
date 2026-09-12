@@ -54,6 +54,20 @@ test('leaves short tokens and plain prose words alone', () => {
   assert.equal(breaks(type), 'String')
 })
 
+test('leaves identifiers inside prose alone', () => {
+  // A <wbr> is as good a break as a space to the browser, so a break inside prose splits the
+  // identifier across two lines where it reads as two words (opentelemetry.html at a 1440px
+  // window: "Use the exclude" / "Pattern property"). Prose already wraps between words.
+  const prose = 'Setting this to true will create new OpenTelemetry Spans for each Camel Processors. Use the excludePattern property to filter out Processors'
+  const [, , description] = render(['<strong>traceProcessors</strong>', '<code>false</code>', prose])
+  assert.equal(breaks(description), prose)
+})
+
+test('still breaks a long value a description quotes as code', () => {
+  const [, description] = render(['<strong>headerFilterStrategy</strong>', 'Defaults to <code>org.apache.camel.spi.HeaderFilterStrategy</code>.', '', 'String'])
+  assert.equal(breaks(description), 'Defaults to org.|apache.|camel.|spi.|Header|Filter|Strategy.')
+})
+
 test('never changes the text a reader sees or copies', () => {
   const cells = ['<strong>camel.main.streamCachingRemoveSpoolDirectoryWhenStopping</strong>', 'Uses classpath:camel/,classpath:camel-rest/* by default.', '<code>DUPS_OK_ACKNOWLEDGE</code>', 'org.apache.camel.spi.HeaderFilterStrategy']
   const before = new JSDOM(`<table><tr>${cells.map((c) => `<td>${c}</td>`).join('')}</tr></table>`)
