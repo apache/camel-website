@@ -102,8 +102,10 @@ body {
   background: var(--navbar-font-color);
   display: block;
   height: 1px;
-  left: 50%;
-  margin-left: -7px;
+  /* Flush with the button's right edge, which is the content edge, so the
+     glyph lines up with the page. left: 50% with margin-left: -7px put the
+     25px bars 5.5px right of center and 1px past the 34px button. */
+  right: 0;
   position: absolute;
   top: 60%;
   width: 25px;
@@ -191,12 +193,8 @@ body {
   fill: var(--color-on-dark);
 }
 
-a.button.navbar-cta {
-  margin: 0;
-  padding: calc(9 / var(--rem-base) * 1rem) calc(18 / var(--rem-base) * 1rem);
-  border-radius: calc(7 / var(--rem-base) * 1rem);
-  font-size: calc(14.5 / var(--rem-base) * 1rem);
-}
+/* The call to action's size (a.button.navbar-cta) is set in frontpage.css,
+   next to the shared a.button rule it overrides; see the note there. */
 
 /* Site search is the DocSearch v5 launcher (main, PR #1729): a button that
    opens a modal, mounted in #docsearch on both renderers. docsearch.css themes
@@ -246,18 +244,31 @@ a.button.navbar-cta {
   }
 }
 
-@media (width <= 430px) {
-  /* Even with search and GitHub gone, the full wordmark plus the CTA and
-     burger still overflow a 390px phone (measured). The mark alone carries
-     the brand at this width; the wordmark returns above the breakpoint with
-     30px to spare (measured). Visually hidden rather than display:none so
-     the brand link keeps an accessible name (its alt text is empty by
-     design, relying on the wordmark to name the link). */
+@media (width <= 540px) {
+  /* The full row (wordmark, search, GitHub, CTA, burger) needs about 506px
+     with the home page's wider "Get Started" CTA (measured), and below that
+     it pushed the burger off-screen. The mark alone carries the brand at
+     this width; the wordmark returns above the breakpoint with about 35px
+     to spare. Visually hidden rather than display:none so the brand link
+     keeps an accessible name (its alt text is empty by design, relying on
+     the wordmark to name the link). */
   .navbar-wordmark {
     position: absolute;
     width: 1px;
     height: 1px;
     overflow: hidden;
     clip-path: inset(50%);
+  }
+}
+
+@media (width <= 374px) {
+  /* Mark, search, CTA and burger overflow a 320px phone at the regular gaps
+     by about 20px (measured); the tighter gaps leave 14px to spare. */
+  .navbar-inner {
+    gap: calc(14 / var(--rem-base) * 1rem);
+  }
+
+  .navbar-actions {
+    gap: calc(8 / var(--rem-base) * 1rem);
   }
 }

@@ -14,6 +14,19 @@ a.button {
   white-space: nowrap;
 }
 
+/* The header's call to action (header-content.hbs and the Hugo header partial)
+   is a smaller button. It is set here rather than in header.css because
+   header.css is in the chrome layer, below this sheet's pages layer, so
+   a.button above wins there whatever the selector. It did: the header button
+   rendered about 28px wider, with a.button's margins, and pushed the burger
+   off 320px and 460px screens. */
+a.button.navbar-cta {
+  border-radius: calc(7 / var(--rem-base) * 1rem);
+  font-size: calc(14.5 / var(--rem-base) * 1rem);
+  margin: 0;
+  padding: calc(9 / var(--rem-base) * 1rem) calc(18 / var(--rem-base) * 1rem);
+}
+
 /* Ink on the brand orange: white on #e97826 is 2.93:1, ink is 5.78:1, and the
    memo keeps the orange itself. Hover lifts to the lighter orange, where ink
    reads at 7.30:1 (a darker hover would drop ink below 4.5:1). */
