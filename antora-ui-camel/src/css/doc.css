@@ -98,7 +98,6 @@
   font-size: 0.8em;
   font-weight: normal;
   padding-top: 0.05em;
-  background-image: none;
 }
 
 .doc h1 .anchor::before,
@@ -170,11 +169,13 @@
 .doc a {
   color: var(--link-font-color);
   word-break: break-word;
-  text-decoration: none;
-  background-image: linear-gradient(to right, var(--link-font-color) 50%, transparent 50%);
-  background-position: 0 1.1em;
-  background-repeat: repeat-x;
-  background-size: 7px 1px;
+  /* A real underline rather than the old dashed background gradient, which sat at a fixed 1.1em
+     from the top of the line box: in Open Sans the baseline is at 1.07em, so the dashes ran
+     through every descender. text-decoration skips the descenders and follows the font. */
+  text-decoration: underline;
+  text-decoration-color: rgb(168 78 13 / 40%); /* --color-orange-deep at 40% */
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
 }
 
 .doc li a,
@@ -182,7 +183,7 @@
 .doc .section .links a,
 .doc .camel-project .links a,
 .doc .sect2 h3 a {
-  background: none;
+  text-decoration: none;
 }
 
 .doc table.tableblock td a {
@@ -214,6 +215,7 @@
 
 .doc a:hover {
   color: var(--link_hover-font-color);
+  text-decoration-color: currentcolor;
 }
 
 .doc a.unresolved {

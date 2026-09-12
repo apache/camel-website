@@ -31,7 +31,7 @@
 }
 
 .static .icon a {
-  background-image: none;
+  text-decoration: none;
 }
 
 @media screen and (width >= 1025px) {

@@ -277,14 +277,13 @@
 /* The post article also carries the Antora .doc class (for the shared code
    block and copy-button scripts), so doc.css's .doc a / .doc h1 / .doc p
    rules (0,1,1) outrank single-class rules here. The .post-scoped selectors
-   below win at (0,2,0) and drop the dotted link underline .doc a paints. */
+   below win at (0,2,0) and drop the link underline .doc a paints. */
 .post .post-back {
   font-family: var(--monospace-font-family);
   font-size: calc(13 / var(--rem-base) * 1rem);
   font-weight: 600;
   color: var(--color-ink-muted);
   text-decoration: none;
-  background-image: none;
 }
 
 .post .post-back:hover {
@@ -293,7 +292,7 @@
 
 .post .tag-chip,
 .post .post-toc a {
-  background-image: none;
+  text-decoration: none;
 }
 
 .post .detail-lead {
@@ -391,7 +390,6 @@
   color: var(--color-ink-soft);
   font-weight: 600;
   text-decoration: none;
-  background-image: none;
 }
 
 .post-adjacent a:hover {
@@ -593,7 +591,6 @@
   padding: calc(18 / var(--rem-base) * 1rem) calc(20 / var(--rem-base) * 1rem);
   color: var(--color-ink);
   text-decoration: none;
-  background-image: none;
 }
 
 .post-related-date {

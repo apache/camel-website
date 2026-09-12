@@ -6,9 +6,7 @@ nav.pagination {
   padding: calc(24 / var(--rem-base) * 1rem) 0 0;
 }
 
-/* NOTE align-items keeps the anchor at its text width. .doc a draws its underline with a
-   repeating background-image gradient, so a stretched anchor paints that dashed line across the
-   whole half-width of the box instead of just under the label. */
+/* NOTE align-items keeps the anchor at its text width. */
 nav.pagination span {
   display: flex;
   flex: 0 1 calc(50% - 0.5rem);
@@ -53,7 +51,7 @@ nav.pagination .next::before {
 }
 
 nav.pagination a {
-  background: none;
+  text-decoration: none;
   color: var(--color-ink);
   font-weight: 700;
   line-height: 1.3;

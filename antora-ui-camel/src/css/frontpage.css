@@ -2,7 +2,6 @@
 
 a.button {
   align-items: center;
-  background-image: none;
   border-radius: calc(8 / var(--rem-base) * 1rem);
   display: inline-flex;
   font-size: calc(15 / var(--rem-base) * 1rem);
@@ -11,6 +10,7 @@ a.button {
   line-height: 1;
   margin: 0.5rem;
   padding: calc(13 / var(--rem-base) * 1rem) calc(24 / var(--rem-base) * 1rem);
+  text-decoration: none;
   white-space: nowrap;
 }
 
@@ -62,7 +62,6 @@ a.button.ink:hover {
 }
 
 .home a {
-  background-image: none;
   text-decoration: none;
 }
 
