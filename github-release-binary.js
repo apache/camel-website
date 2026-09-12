@@ -140,7 +140,7 @@ const execute = (path, args) => {
 (async () => {
   const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'github-release-binary'));
   process.on('exit', () => {
-    fs.rmSync(tmpDir, { recursive: true, force: true });
+    fs.rmdirSync(tmpDir, { recursive: true });
   })
 
   const binary = process.argv[1].replace('exec.js', '${parts.binary}');
