@@ -2,7 +2,7 @@
    pagination markup are Blog List's (see blog.css) and are reused
    byte-for-byte, not reimplemented here. This is the one rule that only
    ever applies on a category page: highlighting the current category's
-   row in the shared rail. See .superpowers/sdd/4b/extract/category.md §3d. */
+   row in the shared rail. */
 
 .blog-category.is-current {
   color: var(--color-orange-deep);
