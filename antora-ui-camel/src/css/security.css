@@ -5,9 +5,8 @@
    typography; the severity chip uses the shared .severity-chip color
    mapping with page-scoped sizing (components.css deliberately leaves
    size/padding local per consumer). The dark "Reporting" band is NOT a
-   .card variant -- see .superpowers/sdd/4b/00-primitives.md section 1.9: a
-   horizontal, wrapping layout is a genuinely different shape from the card
-   system, not a --dark modifier of it. */
+   .card variant: a horizontal, wrapping layout is a genuinely different
+   shape from the card system, not a --dark modifier of it. */
 
 /* .security page shell: shared with .download/.advisory in primitives.css
    - see M5, final-review.md. */

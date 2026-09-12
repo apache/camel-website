@@ -1,10 +1,8 @@
 /* Shared primitives for the redesigned content pages (docs, download, security,
    community, tooling, blog/post/category, releases/advisory). Consolidated from
-   the piece-4b screen specs; see .superpowers/sdd/4b/00-primitives.md for the
-   full inventory and rationale behind each class. Each consuming page's own
-   CSS file supplies page-specific layout on top of these (an icon slot, a
-   fixed grid-column span, a header-row layout) - never the shell/typography
-   again. */
+   the piece-4b screen specs. Each consuming page's own CSS file supplies
+   page-specific layout on top of these (an icon slot, a fixed grid-column
+   span, a header-row layout) - never the shell/typography again. */
 
 /* ---- page-shell (single-column content pages) ------------------------ */
 /* Byte-identical across download.css/.download, security.css/.security and
