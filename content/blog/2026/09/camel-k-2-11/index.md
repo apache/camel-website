@@ -3,7 +3,7 @@ title: "Camel K 2.11.0"
 date: 2026-09-08
 draft: false
 authors: [squakez]
-categories: ["Releases", "Roadmap"]
+categories: ["Releases"]
 keywords: ["apache camel", "camel k", "kubernetes"]
 preview: "What's new in Camel K 2.11.0!"
 ---
