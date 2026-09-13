@@ -1,5 +1,6 @@
 const fs = require('fs');
-const { parse } = require('node-html-parser');
+const { JSDOM } = require('jsdom');
+const { parse, valid } = require('node-html-parser');
 const { createTurndownService } = require('../helpers/turndown-config');
 const { generateToonSitemaps } = require('../helpers/toon-format');
 const { generateLlmsTxt } = require('../helpers/llms-txt');
@@ -42,49 +43,16 @@ async function generateMarkdown() {
     for (const htmlFile of batch) {
       try {
         const htmlContent = fs.readFileSync(htmlFile, 'utf8');
-        const root = parse(htmlContent);
+        const { markdown, repaired } = convertPage(htmlContent, turndownService);
 
-        // Extract only the main article content
-        // Try different selectors based on Antora and Hugo structure
-        let mainContent = root.querySelector('article.doc') ||
-                         root.querySelector('main') ||
-                         root.querySelector('.article') ||
-                         root.querySelector('article');
-
-        if (!mainContent) {
-          // Silently skip files without main content
-          continue;
+        if (repaired) {
+          console.warn(`Repaired malformed HTML in ${htmlFile}, fix the mis-nested markup in its source`);
         }
 
-        // Remove navigation elements, headers, and footers from the content
-        const elementsToRemove = mainContent.querySelectorAll('nav, header, footer, .nav, .navbar, .toolbar');
-        elementsToRemove.forEach(el => el.remove());
-
-        // Remove anchor links (they are just UI navigation aids)
-        const anchors = mainContent.querySelectorAll('a.anchor');
-        anchors.forEach(el => el.remove());
-
-        // Clean up table cells by unwrapping div.content and div.paragraph wrappers
-        const tableCells = mainContent.querySelectorAll('td.tableblock, th.tableblock');
-        tableCells.forEach(cell => {
-          let html = cell.innerHTML;
-          // Unwrap <div class="content"><div class="paragraph"><p>...</p></div></div>
-          html = html.replace(/<div class="content"><div class="paragraph">\s*<p>(.*?)<\/p>\s*<\/div><\/div>/gs, '$1');
-          // Unwrap <div class="content"><div id="..." class="paragraph"><p>...</p></div></div>
-          html = html.replace(/<div class="content"><div[^>]*class="paragraph"[^>]*>\s*<p>(.*?)<\/p>\s*<\/div><\/div>/gs, '$1');
-          // Also handle simple <p class="tableblock">...</p> wrappers
-          html = html.replace(/<p class="tableblock">(.*?)<\/p>/gs, '$1');
-          cell.set_content(html);
-        });
-
-        // Convert to Markdown
-        let markdown = turndownService.turndown(mainContent.innerHTML);
-
-        // Update links to point to .md files instead of .html
-        // Replace https://camel.apache.org/**/*.html with https://camel.apache.org/**/*.md
-        markdown = markdown.replace(/(https:\/\/camel\.apache\.org\/[^)\s]*?)\.html/g, '$1.md');
-        // Replace relative links *.html with *.md
-        markdown = markdown.replace(/\[([^\]]+)\]\(([^)]+?)\.html\)/g, '[$1]($2.md)');
+        if (markdown === null) {
+          console.warn(`Skipping ${htmlFile}: no main content found`);
+          continue;
+        }
 
         // Write .md file (replace .html extension with .md)
         const mdFile = htmlFile.replace(/\.html$/, '.md');
@@ -119,4 +87,64 @@ async function generateMarkdown() {
   await generateAllIndexes();
 }
 
+/**
+ * Converts the main content of one rendered HTML page to Markdown.
+ *
+ * @param {string} htmlContent the full HTML page
+ * @param {TurndownService} turndownService configured Turndown instance
+ * @returns {{markdown: string|null, repaired: boolean}} the Markdown (null when the page has no
+ *   main content), and whether the HTML was malformed and had to be repaired before parsing
+ */
+function convertPage(htmlContent, turndownService) {
+  // node-html-parser cannot repair mis-nested inline tags (Asciidoctor emits them for a `*` inside
+  // backticks): it unwraps every unclosed ancestor, article.doc included. Let jsdom's HTML5 parser
+  // repair such pages the way browsers do; it is much slower, so only malformed pages go through it.
+  const repaired = !valid(htmlContent);
+  const root = parse(repaired ? new JSDOM(htmlContent).serialize() : htmlContent);
+
+  // Extract only the main article content
+  // Try different selectors based on Antora and Hugo structure
+  let mainContent = root.querySelector('article.doc') ||
+                   root.querySelector('main') ||
+                   root.querySelector('.article') ||
+                   root.querySelector('article');
+
+  if (!mainContent) {
+    return { markdown: null, repaired };
+  }
+
+  // Remove navigation elements, headers, and footers from the content
+  const elementsToRemove = mainContent.querySelectorAll('nav, header, footer, .nav, .navbar, .toolbar');
+  elementsToRemove.forEach(el => el.remove());
+
+  // Remove anchor links (they are just UI navigation aids)
+  const anchors = mainContent.querySelectorAll('a.anchor');
+  anchors.forEach(el => el.remove());
+
+  // Clean up table cells by unwrapping div.content and div.paragraph wrappers
+  const tableCells = mainContent.querySelectorAll('td.tableblock, th.tableblock');
+  tableCells.forEach(cell => {
+    let html = cell.innerHTML;
+    // Unwrap <div class="content"><div class="paragraph"><p>...</p></div></div>
+    html = html.replace(/<div class="content"><div class="paragraph">\s*<p>(.*?)<\/p>\s*<\/div><\/div>/gs, '$1');
+    // Unwrap <div class="content"><div id="..." class="paragraph"><p>...</p></div></div>
+    html = html.replace(/<div class="content"><div[^>]*class="paragraph"[^>]*>\s*<p>(.*?)<\/p>\s*<\/div><\/div>/gs, '$1');
+    // Also handle simple <p class="tableblock">...</p> wrappers
+    html = html.replace(/<p class="tableblock">(.*?)<\/p>/gs, '$1');
+    cell.set_content(html);
+  });
+
+  // Convert to Markdown
+  let markdown = turndownService.turndown(mainContent.innerHTML);
+
+  // Update links to point to .md files instead of .html
+  // Replace https://camel.apache.org/**/*.html with https://camel.apache.org/**/*.md
+  markdown = markdown.replace(/(https:\/\/camel\.apache\.org\/[^)\s]*?)\.html/g, '$1.md');
+  // Replace relative links *.html with *.md
+  markdown = markdown.replace(/\[([^\]]+)\]\(([^)]+?)\.html\)/g, '[$1]($2.md)');
+
+  return { markdown, repaired };
+}
+
 module.exports = generateMarkdown;
+module.exports.convertPage = convertPage;
