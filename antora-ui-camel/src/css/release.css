@@ -1,7 +1,7 @@
 /* Releases archive (content/releases/_index.md, layouts/releases/list.html) and
    Security advisory (content/security/CVE-*.md, layouts/security-advisory/single.html).
    Grouped in one file per the piece-4b build plan (both are release/advisory data
-   views; see .superpowers/sdd/4b/00-primitives.md). H1/lead on the archive screen
+   views). H1/lead on the archive screen
    use the shared .page-hero-title/.page-hero-lead primitives; the advisory lead
    uses the shared .detail-lead primitive; the LTS chip and the severity chip use
    the shared .lts-chip/.severity-chip primitives from primitives.css -- only
@@ -133,10 +133,10 @@
   line-height: 1.5;
 }
 
-/* sticky "Projects" rail -- deliberately not .toc-menu (see
-   .superpowers/sdd/4b/00-primitives.md 1.8b): 02-on-this-page.js only ever looks
-   for aside.toc.sidebar, which this markup never carries, but the class names
-   below stay distinct from the TOC component on purpose, not by accident. */
+/* sticky "Projects" rail -- deliberately not .toc-menu: 02-on-this-page.js
+   only ever looks for aside.toc.sidebar, which this markup never carries, but
+   the class names below stay distinct from the TOC component on purpose, not
+   by accident. */
 
 /* .releases-rail / .releases-rail-heading: shared base (sticky offset;
    mono eyebrow shape + color) lives in primitives.css - see M5,

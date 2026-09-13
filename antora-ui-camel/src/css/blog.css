@@ -1,8 +1,7 @@
-/* Blog list, Category and Blog post screens (piece 4b, "blog" group). See
-   .superpowers/sdd/4b/extract/{blog,post,category}.md for the transcribed
-   design values this file implements. Shared primitives (.page-hero-title,
-   .page-hero-lead, .detail-lead, .card, .card-grid) live in primitives.css
-   and are reused directly rather than re-declared here. */
+/* Blog list, Category and Blog post screens (piece 4b, "blog" group). Shared
+   primitives (.page-hero-title, .page-hero-lead, .detail-lead, .card,
+   .card-grid) live in primitives.css and are reused directly rather than
+   re-declared here. */
 
 /* ==========================================================================
    Blog list / Category (shared rail + post-card + pagination markup)

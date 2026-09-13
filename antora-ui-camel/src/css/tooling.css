@@ -10,16 +10,15 @@
    paragraph, and link rules, several of which meet or beat the specificity of
    a bare element selector. Every rule below that needs to win against them is
    deliberately written at >= their specificity (never !important); see the
-   per-rule notes. See .superpowers/sdd/4b/extract/tooling.md sections 3 and 6
-   for the full reasoning (C-toc-color/-border already fixed in toc.css by an
-   earlier group; C-aspect resolved below as "letterbox", see .tooling-media).
+   per-rule notes. The TOC color/border overrides live in toc.css; the media
+   aspect ratio is resolved below as "letterbox" (see .tooling-media).
 
    Card usage: the MCP section reuses the shared .card/.card--lg primitive
    (primitives.css) exactly as security's read-first card and docs' feature
    cards do. The nested "AI tool" tiles inside it (10px radius, 16/18px
    padding) do NOT match either .card size tier (13px/24px or 16px/32px) and
    are single-use, non-interactive, and nested one level deeper than every
-   other card consumer - see 00-primitives.md section 1.4's two named tiers.
+   other card consumer.
    Rather than silently forcing them into .card--flat with overridden radius/
    padding (a fork wearing the primitive's name), they get their own small,
    page-owned .tooling-ai-card shape. Flagged in the implementation report. */
