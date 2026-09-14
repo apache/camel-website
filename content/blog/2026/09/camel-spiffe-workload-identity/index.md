@@ -5,7 +5,7 @@ draft: false
 authors: [oscerd]
 categories: ["Security", "Camel"]
 keywords: ["apache camel", "spiffe", "spire", "workload identity", "zero trust", "mtls", "jwt-svid", "x509-svid", "camel 4.23", "security", "camel-spiffe"]
-preview: "Camel 4.23 adds camel-spiffe. Routes can fetch and validate SPIFFE identity documents from the local Workload API, and an SSLContextParameters backed by SPIFFE gives rotating mutual TLS to the components that already support TLS. There is an example in camel-examples that runs the whole thing with Docker Compose."
+preview: "Camel 4.23 adds camel-spiffe. Routes can fetch and validate SPIFFE identity documents from the local Workload API, and an SSLContextParameters backed by SPIFFE gives rotating mutual TLS to the components that already support TLS. There is an example in camel-examples that runs the whole thing with Docker Compose, with Open Policy Agent deciding what each identity may do."
 ---
 
 Camel 4.23 is planned for [October](/blog/2026/08/camel422-whatsnew/) and it adds a new component,
@@ -153,19 +153,29 @@ and shares the Workload API socket with them. The applications never see a crede
 that connects to the socket and issues the identity registered for it.
 
 The backend exposes the orders and an audit trail, the inventory exposes stock levels. Both use the same policy, a
-Camel route configuration whose `interceptFrom` validates the JWT-SVID, checks the caller against a per-route
-allow-list in `application.properties`, and records the decision, all before the route itself runs. The routes
-contain business logic only. Who may do what is three lines:
+Camel route configuration whose `interceptFrom` validates the JWT-SVID, asks Open Policy Agent whether the caller
+may use the route, and records the decision, all before the route itself runs. The routes contain business logic
+only. Who may do what is a Rego policy per service in the `opa` directory. This is the one of the backend:
 
-```properties
-backend.allow.orders = spiffe://example.org/frontend
-backend.allow.audit = spiffe://example.org/auditor
-inventory.allow.stock = spiffe://example.org/backend
+```rego
+package camel.spiffe.backend
+
+default allow := false
+
+permissions := {
+	"orders": {"spiffe://example.org/frontend"},
+	"audit": {"spiffe://example.org/auditor"},
+}
+
+allow if {
+	input.headers.CamelSpiffeSpiffeId in permissions[input.routeId]
+}
 ```
 
 Serving the orders takes a second hop. The backend mints a JWT-SVID with the inventory as audience and calls it,
-passing the original caller along in a header for the audit trail of the inventory. The inventory trusts that header
-because the backend is authenticated and on its allow-list.
+passing the original caller along in a header for the audit trail of the inventory. The policy of the inventory
+accepts the backend, and only on behalf of a caller who may read the orders, which it checks against the
+permissions of the backend in the same OPA server.
 
 The frontend reads the orders every ten seconds (HTTP 200) and is turned away from the audit trail (403). The
 auditor runs the same code and the same image, but as another Unix user, so it gets another identity with the
@@ -177,8 +187,40 @@ certificates ten minutes, so you can watch the serial number change while the SP
 
 Build it with Maven, start it with `docker compose up --build`, and read the logs. The README lists a few things to
 try, like calling the services yourself (you have no identity, so you get a 401) or letting the auditor read the
-orders by changing one property. The unit tests run without SPIRE: they mock the Workload API client and drive the
-two HTTP services over a real embedded server.
+orders by editing one line of Rego, which OPA reloads on the fly. The unit tests run without SPIRE and without OPA:
+they mock the Workload API client and the OPA client, and drive the two HTTP services over a real embedded server.
+
+## Authorization with Open Policy Agent
+
+*Added on 14 September, after the example moved its authorization to camel-opa.*
+
+SPIFFE answers one question, who is calling. What that caller may do is a separate question, and it is a bad idea
+to answer it with `if` statements in the route. Camel 4.23 also adds `camel-opa`
+([CAMEL-24634](https://issues.apache.org/jira/browse/CAMEL-24634)), a component that sends an input document built
+from the exchange to [Open Policy Agent](https://www.openpolicyagent.org/) and records the verdict on the exchange.
+The rules live in Rego, next to the deployment, and change without touching the application.
+
+In the example the policy of each service calls OPA right after the token is validated. It only sends the two
+headers the policy needs, so the bearer token never leaves the application:
+
+```java
+.to("spiffe:backend?operation=validateJwtSvid&audience={{backend.audience}}")
+.to("opa:camel/spiffe/backend/allow?serverUrl={{opa.url}}&includeHeaders=CamelSpiffeSpiffeId,X-On-Behalf-Of")
+.choice()
+    .when(header(OpaConstants.DECISION_ALLOW).isEqualTo(true))
+```
+
+OPA receives this and evaluates the `allow` rule shown above:
+
+```json
+{"headers": {"CamelSpiffeSpiffeId": "spiffe://example.org/frontend"}, "routeId": "orders", "exchangeId": "..."}
+```
+
+The verdict comes back in the `CamelOpaDecisionAllow` header, and a deny becomes an HTTP 403. The component fails
+closed: if OPA cannot be reached or cannot evaluate the policy, it throws instead of answering, and the example turns
+that into an HTTP 503. Stop the OPA container and nobody gets in until it is back. The Rego files have unit tests of
+their own, run with `opa test`, and the OPA container watches the directory, so editing a policy takes effect
+without a rebuild or a restart.
 
 ## What is next
 
@@ -197,4 +239,5 @@ If you use SPIFFE and have a use case, or something in the Preview does not work
 * [The example in camel-examples](https://github.com/apache/camel-examples/tree/main/spiffe)
 * [CAMEL-23305](https://issues.apache.org/jira/browse/CAMEL-23305), the component
 * [CAMEL-24571](https://issues.apache.org/jira/browse/CAMEL-24571), the SSLContextParameters backed by the Workload API
+* [camel-opa component documentation](/components/next/opa-component.html) and [CAMEL-24634](https://issues.apache.org/jira/browse/CAMEL-24634)
 * [SPIFFE](https://spiffe.io/), [SPIRE](https://spiffe.io/docs/latest/spire-about/) and [java-spiffe](https://github.com/spiffe/java-spiffe)
