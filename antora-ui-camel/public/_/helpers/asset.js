@@ -1,7 +1,7 @@
 'use strict'
 
 const manifest = {
-  "css/site.css": "css/site-d17a3954ba.css",
+  "css/site.css": "css/site-8b1f35b7a5.css",
   "css/vendor/docsearch.css": "css/vendor/docsearch-5db8a73adb.css",
   "img/algolia.svg": "img/algolia-f4ab98e0de.svg",
   "img/apache-kafka.svg": "img/apache-kafka-88809b7472.svg",
