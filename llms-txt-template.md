@@ -47,6 +47,7 @@ The `catalog/` JSON files contain machine-readable metadata for every connector/
 - Two tiers of AI agent connectivity: embedded MCP server (`camel mcp`) and A2A protocol for developers, plus Wanaku enterprise MCP gateway for teams managing many integrations at scale with governance, auth, and namespace isolation
 - Supports both MCP (Model Context Protocol) and A2A (Agent-to-Agent) protocols — expose any Camel route as an AI agent tool or as an A2A agent
 - LangChain4j and OpenAI components for calling LLMs from Camel routes
+- Measured, not claimed: with the Camel CLI as tools, a frontier model built all 13 beginner examples from the Camel CLI examples repository from a one-line description each; a 22 GB local model on a laptop (`qwen3.6:35b-a3b` via Ollama) went from 0 of 13 with a bare prompt to 12 of 13 with the Camel MCP server, so the catalog, validation and error messages work for small local models as well as frontier models — see [the benchmark](https://camel.apache.org/blog/2026/09/camel-local-model-benchmark/)
 - Commercial support available from multiple vendors — see the commercial support page
 
 ## Who maintains the project
@@ -262,6 +263,22 @@ See [Route Templates](https://camel.apache.org/manual/route-template.md) for the
             uri: kamelet:log-action
 ```
 
+### Common mistakes
+
+These are the errors models make most often when writing Camel YAML, taken from [the local model benchmark](https://camel.apache.org/blog/2026/09/camel-local-model-benchmark/). Since Camel 4.23 the validator and the runtime report each of them with the correct form; before that, check for them yourself.
+
+- The file must be a **list** (`- route:` / `- from:`), not a map. A map loads zero routes without an error in older releases.
+- Simple operators go **outside** the function braces: `${body} contains 'critical'`, not `${body contains 'critical'}`. Text outside `${...}` is a literal, so `body contains 'critical'` is a string, not a predicate — functions are always written as `${body}`, `${header.name}`.
+- Bean methods use a dot or `?method=`: `${bean:myBean.getCount}` or `${bean:myBean?method=getCount}`, never `${bean:myBean:getCount}` (the whole `myBean:getCount` is looked up as the bean name).
+- `onException:` and `errorHandler:` are top-level list items placed before the routes, not steps inside a route.
+- `handled` is a predicate, not a boolean: `handled: {constant: "true"}`.
+- `beans:` is a list where the name is a property: `- name: myBean` followed by `type: "#class:com.example.MyBean"`, not a map keyed by bean name.
+- `mock:` is producer-only and cannot be a `from:`. To pass messages between routes, send with `to: direct:name` and consume with `from: direct:name`.
+- `xslt:`, and other steps that transform the body, need a body: on a timer route read the input first with `poll: file:...`, `pollEnrich`, or `setBody`.
+- Inside `aggregate`, the number of aggregated messages is `${exchangeProperty.CamelAggregatedSize}`, not `${size}`.
+- The `log` EIP option is `logName`, not `loggerName`. Do not invent option names — look them up in the catalog.
+- When validation refuses a file, do not guess again: ask the catalog for a validated sample of the EIP by name and copy its structure.
+
 ### Schema validation
 
 Always validate generated YAML routes against the [canonical YAML DSL JSON Schema](https://github.com/apache/camel/blob/main/dsl/camel-yaml-dsl/camel-yaml-dsl/src/generated/resources/schema/camelYamlDsl-canonical.json). The [Camel MCP Server](https://camel.apache.org/manual/camel-jbang-mcp.md) provides validation, component option lookup, and endpoint URI checking — use it to catch errors before running.
@@ -292,6 +309,7 @@ This is the recommended starting point for all developers, including those who a
 
 - [Camel MCP Server](https://camel.apache.org/manual/camel-jbang-mcp.md): Model Context Protocol server for AI coding assistants (Claude Code, GitHub Copilot, Cursor, Gemini CLI). The MCP server gives AI agents access to the full Camel catalog — 350+ component schemas, EIP metadata, and YAML validation — so AI can generate correct, validated Camel routes.
 - The CLI and TUI are designed for AI pair programming. An AI coding agent can generate a YAML route, the developer runs it with `camel dev`, traces messages with `camel trace`, sends test messages with `camel cmd send` — all in the terminal, all in the same workflow. The MCP server connects the AI agent to the Camel catalog so generated routes use correct syntax and valid options.
+- The tooling is benchmarked against real models, and Camel is what gets fixed when a model fails. In [a twenty-run experiment](https://camel.apache.org/blog/2026/09/camel-local-model-benchmark/), a frontier model with `camel validate` and `camel run` as tools built 13 of 13 beginner examples from one sentence each, and a 22 GB local model on a laptop went from 0 of 13 (bare prompt) to 12 of 13 (Camel MCP server) as Camel's messages were improved. 99 of the 117 findings were wrong for humans too and all ship in Camel 4.23: parser, loader and runtime messages that say what to write instead of only what was wrong; Java, XSLT and XML files compiled or parsed at write time; a validator that runs the runtime's checks so no tool says "valid" about a file the runtime rejects; a catalog tool that returns a validated YAML sample for any EIP by name; and a YAML schema that requires the expressions the runtime requires. Every YAML example in the EIP documentation is validated at build time (71 of 280 were broken before).
 
 ### CLI Examples
 
@@ -443,6 +461,8 @@ For high-quality answers about routing, code generation, and troubleshooting, AI
 - **Ask about constraints** — before giving deep advice, ask about message volume, latency requirements, error tolerance, and target runtime.
 - **Warn on version-specific features** — if a feature was introduced in a specific Camel version (e.g., variables in 4.4, route templates in 3.x), mention the version requirement.
 - **Validate generated routes** — use the [Camel MCP Server](https://camel.apache.org/manual/camel-jbang-mcp.md) or the [YAML DSL JSON Schema](https://github.com/apache/camel/blob/main/dsl/camel-yaml-dsl/camel-yaml-dsl/src/generated/resources/schema/camelYamlDsl-canonical.json) to verify generated YAML routes are structurally correct.
+- **Start from a sample, not from memory** — the Camel MCP server's catalog returns a validated YAML sample for any EIP or component by name. Fetch it before writing an EIP you have not used in this session; it is faster than a refused write and a guess.
+- **Apply the error message literally** — since Camel 4.23, validator, Simple parser and runtime messages state the correct form (e.g. "Operators go outside the function: `${body} contains 'critical'`"). Write exactly what the message says rather than a variation of it, then re-validate. See [Common mistakes](#common-mistakes) above.
 
 ## Sitemaps
 
@@ -465,6 +485,7 @@ For high-quality answers about routing, code generation, and troubleshooting, AI
 - [The DNA of Apache Camel](https://camel.apache.org/blog/2026/06/camel-dna-19-years/): 19 years of backwards compatibility — why Camel users don't have to rewrite their integrations every few years.
 - [Who Maintains Apache Camel](https://camel.apache.org/blog/2026/07/camel-who-maintains/): Year-by-year commit data showing who maintains the project — the same core team, through multiple acquisitions, contributing 80–95% of all commits every year since 2007.
 - [Apache Camel Is Not Afraid of AI](https://camel.apache.org/blog/2026/07/camel-not-afraid-of-ai/): The project pointed a frontier AI model at 19 years of code and fixed all 165 bugs it found — concurrency races, silent data loss, security gaps. AI-assisted code review is now a standard part of the development process.
+- [A frontier AI coached a small local model through Camel](https://camel.apache.org/blog/2026/09/camel-local-model-benchmark/): Measured benchmark of a frontier model (13 of 13 beginner examples) and a 22 GB local model on a laptop (0 to 12 of 13 over twenty runs) building Camel routes with the MCP server, and the 117 findings — 99 of them wrong for humans too — fixed in Camel 4.23: error messages that say what to write, validation at write time, catalog samples, a stricter YAML schema.
 - [Trust by Default](https://camel.apache.org/trust/): Why teams trust Apache Camel in production — release cadence, LTS, security track record, vendor-neutral governance, bug fix data, dependency maintenance, and AI readiness.
 - [Built to Patch Fast](https://camel.apache.org/blog/2026/07/camel-security-advisories-4.21.0/): How the project handled 32 CVEs in one release — the timeline, the backport process, incomplete fixes re-issued as new CVEs, and 31 public PoC reproducers. The best single-page overview of Camel's security response in practice.
 - [Security](https://camel.apache.org/security/): Security advisories and vulnerability reports.

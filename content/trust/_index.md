@@ -22,6 +22,10 @@ keywords:
 - startup validation
 - production mode
 - insecure configuration
+- AI-assisted development
+- coding agents
+- MCP server
+- local models
 ---
 
 Apache Camel has been running in production since 2007. Some of the largest organizations in
@@ -301,10 +305,16 @@ lets LLMs generalize across 350+ connectors. Add a built-in [MCP server](/manual
 machine-readable catalog metadata, a schema-validated YAML DSL, and dedicated
 [AI integration patterns](/components/next/eips/ai-patterns.html) for building AI-powered
 routes, and Camel is one of the best-trained integration frameworks for AI-assisted development today.
-And it works both ways: for the upcoming 4.22 LTS release, we
-[pointed a frontier AI model at the codebase](/blog/2026/07/camel-not-afraid-of-ai/) and fixed
-165 bugs it found — concurrency races, silent data loss, and security gaps that are hard for
-humans to spot.
+
+We measure that rather than claim it. Given the Camel CLI as tools, a frontier model
+[built all 13 beginner examples](/blog/2026/09/camel-local-model-benchmark/) from a one-line
+description each. A 22 GB local model running on a laptop went from 0 of 13 with a bare prompt to
+12 of 13 once it had the Camel MCP server and error messages that say what to write — and 99 of
+the 117 things it tripped over along the way were wrong for people too, so they were fixed for
+everyone and ship in Camel 4.23. It works in the other direction as well: for the 4.22 LTS
+release, we [pointed a frontier AI model at the codebase](/blog/2026/07/camel-not-afraid-of-ai/)
+and fixed 165 bugs it found — concurrency races, silent data loss, and security gaps that are
+hard for humans to spot.
 
 <p>
 <a class="button dark" href="/blog/2026/06/camel-ai-trained/">Read why</a>
