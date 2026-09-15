@@ -54,11 +54,17 @@
 .doc .tabs .tabpanel {
   background: none;
   border: 0;
+  color: var(--color-on-dark-soft);
   padding: 0;
 }
 
 .doc .tabs .tabpanel .listingblock {
   margin: 0;
+}
+
+.doc .tabs .tabpanel > .paragraph {
+  padding: calc(6 / var(--rem-base) * 1rem) calc(20 / var(--rem-base) * 1rem)
+           calc(2 / var(--rem-base) * 1rem);
 }
 
 .doc .tabs .tabpanel pre:not(.highlight),
