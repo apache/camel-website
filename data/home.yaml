@@ -109,10 +109,10 @@ example:
   eyebrow: See it in action
   heading: Route messages from Kafka to a database
   subhead: The same route, in your choice of syntax. No boilerplate.
-  run_command: camel run kafka-to-db.yaml
   tabs:
     - id: yaml
       label: YAML
+      run: camel run kafka-to-db.yaml
       code: |
         # Route messages from Kafka into a database
         - from:
@@ -126,6 +126,7 @@ example:
                     VALUES (:#id, :#amount)
     - id: java
       label: Java
+      run: camel run KafkaToDb.java
       code: |
         from("kafka:orders")
             .unmarshal().json()
@@ -133,6 +134,7 @@ example:
               + "VALUES (:#id, :#amount)");
     - id: xml
       label: XML
+      run: camel run kafka-to-db.xml
       code: |
         <route>
           <from uri="kafka:orders"/>

@@ -134,12 +134,16 @@
                 09-home.js already handles any [data-copy-value]. */}}
            {{ if ne $i 0 }}hidden{{ end }}><button class="home-tab-copy" type="button"
                    data-copy-value="{{ trim $tab.code "\n" }}"
-                   aria-label="Copy the {{ $tab.label }} example">Copy</button>{{ highlight (trim $tab.code "\n") $tab.id "" }}</div>
+                   aria-label="Copy the {{ $tab.label }} example">Copy</button>{{ highlight (trim $tab.code "\n") $tab.id "" }}
+        {{- /* The run line lives inside the panel for the same reason as the
+             copy button: each DSL has its own file name, and a hidden panel
+             hides its own command. */}}
+        <p class="home-example-run">
+          <span class="home-example-prompt">$</span>
+          <span class="home-example-command">{{ $tab.run }}</span>
+        </p>
+      </div>
       {{- end }}
-      <p class="home-example-run">
-        <span class="home-example-prompt">$</span>
-        <span class="home-example-command">{{ .run_command }}</span>
-      </p>
     </div>
   </section>
   </div>
