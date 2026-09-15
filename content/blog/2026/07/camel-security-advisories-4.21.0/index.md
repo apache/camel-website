@@ -287,7 +287,7 @@ the one with no exploit path at all. We would rather have those on the record th
 - [Camel 4.21 What's New](/blog/2026/07/camel421-whatsnew/), the rest of the release
 - [4.21 upgrade guide](/manual/camel-4x-upgrade-guide-4_21.html), the header renames and changed defaults
 - [SBOMs and supply chain](/blog/2026/06/camel-sbom-supply-chain/), scanning your own dependency tree
-- [Trust](/trust/), the wider picture
+- [Why Apache Camel](/trust/), the wider picture
 
 ---
 

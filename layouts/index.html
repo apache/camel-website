@@ -164,6 +164,11 @@
       </li>
       {{- end }}
     </ul>
+    {{- with .cta }}
+    <p class="home-tiles-cta">
+      <a class="button light" href="{{ .url | relURL }}">{{ .label }}</a>
+    </p>
+    {{- end }}
   </section>
   {{- end }}
 
