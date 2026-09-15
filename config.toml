@@ -41,33 +41,39 @@ defaultMarkdownHandler = "goldmark"
   filename = "sitemap-website.xml"
 
 [[menu.main]]
+    name = "Why Camel"
+    identifier = "why"
+    weight = 1
+    url = "/trust/"
+
+[[menu.main]]
     name = "Docs"
     identifier = "docs"
-    weight = 1
+    weight = 2
     url = "/docs/"
 
 [[menu.main]]
     name = "Tooling"
     identifier = "tooling"
-    weight = 2
+    weight = 3
     url = "/tooling/"
 
 [[menu.main]]
     name = "Security"
     identifier = "security"
-    weight = 3
+    weight = 4
     url = "/security/"
 
 [[menu.main]]
     name = "Community"
     identifier = "community"
-    weight = 4
+    weight = 5
     url = "/community/"
 
 [[menu.main]]
     name = "Blog"
     identifier = "blog"
-    weight = 5
+    weight = 6
     url = "/blog/"
 
 [module]

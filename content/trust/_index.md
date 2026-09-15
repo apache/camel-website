@@ -1,5 +1,5 @@
 ---
-title: "Trust by Default"
+title: "Why Apache Camel"
 description: "Why teams trust Apache Camel in production: a predictable, near-monthly release cadence with long term support, security vulnerabilities fixed proactively and disclosed openly through the Apache process, and a vendor-neutral community. In production since 2007 at UPS, CERN, SAP, banks, governments, and healthcare providers worldwide."
 keywords:
 - apache camel
@@ -35,8 +35,8 @@ business-critical traffic through Camel every second of every day.
 That kind of reliance has to be earned, and it cannot be claimed with a logo or a badge. We earn
 it the same way on every release: in the open, on a predictable schedule, with security handled
 transparently, and as a community that answers to no single vendor. Everything below is a matter
-of public record: you do not have to take our word for any of it. That is what *trust by
-default* means for Apache Camel.
+of public record: you do not have to take our word for any of it. That is what we mean by
+*trust by default*, and it is the reason to choose Apache Camel.
 
 {{< div "box" >}}
 

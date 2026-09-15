@@ -42,7 +42,7 @@ columns:
       - { name: Security, url: 'https://www.apache.org/security/', external: true }
       - { name: Sponsorship, url: 'https://www.apache.org/foundation/sponsorship.html', external: true }
       - { name: Thanks, url: 'https://www.apache.org/foundation/thanks.html', external: true }
-      - { name: Trust, url: /trust/ }
+      - { name: Why Camel, url: /trust/ }
 
 social:
   - { name: GitHub, icon: github, url: 'https://github.com/apache/camel/', title: Collaborate on GitHub, external: true }

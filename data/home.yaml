@@ -104,6 +104,9 @@ features:
       body: >-
         Apache License 2.0, 1,500+ contributors. Fully open community, no vendor
         lock-in.
+  cta:
+    label: "Why teams trust Camel in production →"
+    url: /trust/
 
 example:
   eyebrow: See it in action

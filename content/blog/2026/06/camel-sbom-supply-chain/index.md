@@ -130,5 +130,5 @@ SBOMs are one piece of Camel's supply chain security story. The full picture inc
   day
 
 When someone asks whether Camel is ready for regulated environments, the answer is in the public
-record — including, now, every dependency in every release. See the [Trust](/trust/) page for the
+record — including, now, every dependency in every release. See the [Why Apache Camel](/trust/) page for the
 complete picture.
