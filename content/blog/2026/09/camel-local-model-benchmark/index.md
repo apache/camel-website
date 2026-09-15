@@ -10,7 +10,7 @@ preview: "A frontier model ran the harness, a 22 GB local model on a laptop did 
 
 Everyone claims their tool "works with any LLM". We wanted a number instead of a claim, so we measured two very different models on the same Camel tasks, on one laptop, with the same tooling. Then we did something more useful than reporting the score: we ran the weaker model twenty times over two days, and between every run we fixed whatever in Camel had made it fail.
 
-The interesting result is not which model won. It is that nearly everything the losing model tripped over was also wrong for a person.
+The interesting result is not which model won. It is that nearly everything the losing model tripped over was a problem in Camel, an unclear message or a tool that did not say what to write, that would have tripped up a person as well.
 
 ## The setup
 
