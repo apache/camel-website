@@ -45,7 +45,6 @@ get_started:
   eyebrow: Get Started Your Way
   items:
     - name: Camel CLI
-      badge: fastest
       description: >-
         Zero project setup. Just YAML and a terminal, perfect for prototyping,
         learning, and AI-assisted workflows.
@@ -55,7 +54,6 @@ get_started:
         camel run hello.yaml
       url: /manual/camel-jbang.html
     - name: Spring Boot
-      badge: Most popular
       description: >-
         Generate a Spring Boot project with Camel from Spring Initializr, then
         add starters for any of the 350+ components as you need them.
@@ -65,7 +63,6 @@ get_started:
         cd camel-app && ./mvnw spring-boot:run
       url: /camel-spring-boot/latest/
     - name: Quarkus
-      badge: Cloud native
       description: >-
         Cloud-native Camel with fast startup and native compilation. Add
         extensions to your Quarkus project.

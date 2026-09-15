@@ -42,7 +42,6 @@
               tabindex="{{ if eq $i 0 }}0{{ else }}-1{{ end }}">
         <span class="home-path-head">
           <span class="home-path-name" id="home-path-name-{{ $i }}">{{ .name }}</span>
-          {{- with .badge }}<span class="home-badge">{{ . }}</span>{{ end }}
         </span>
         <span class="home-path-desc" id="home-path-desc-{{ $i }}">{{ .description }}</span>
       </button>
