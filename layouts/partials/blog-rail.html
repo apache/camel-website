@@ -1,7 +1,20 @@
-{{- /* Shared rail for the blog list and the category pages: categories
-     (marking the current one on a category page) and the RSS link. Called
-     with the page as context. */ -}}
-<aside class="blog-rail" aria-label="Categories">
+{{- /* Shared rail for the blog list and the category pages: curated picks
+     from data/blog-picks.yaml, categories (marking the current one on a
+     category page) and the RSS link. Called with the page as context. */ -}}
+<aside class="blog-rail" aria-label="Blog navigation">
+  {{ with (index .Site.Data "blog-picks").picks }}
+  <div class="blog-rail-eyebrow">Start here</div>
+  <div class="blog-picks">
+    {{ range . }}
+    {{ $pick := . }}
+    {{ with site.GetPage .path }}
+    <a class="blog-pick" href="{{ .RelPermalink }}" title="{{ .Title }}">{{ $pick.label }}</a>
+    {{ else }}
+    {{ errorf "blog-picks: no page at %q" $pick.path }}
+    {{ end }}
+    {{ end }}
+  </div>
+  {{ end }}
   <div class="blog-rail-eyebrow">Categories</div>
   <div class="blog-categories">
     {{ range .Site.Taxonomies.categories.Alphabetical }}

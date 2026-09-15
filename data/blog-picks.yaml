@@ -1,0 +1,23 @@
+# Hand-picked evergreen posts shown under "Start here" in the blog rail, so
+# the best reads are one click away instead of buried under pagination.
+# path is the post's content file (index.md, so that a directory name with
+# dots such as ...-4.21.0 resolves too), looked up with site.GetPage at build
+# time so a wrong path fails the build; label is a short title that fits the
+# 240px rail.
+picks:
+  - label: Camel by the numbers
+    path: blog/2026/06/camel-by-the-numbers/index.md
+  - label: The DNA of Camel, 19 years on
+    path: blog/2026/06/camel-dna-19-years/index.md
+  - label: "The bug fix track record: 99.8% fixed, median 1 day"
+    path: blog/2026/06/camel-bug-fix-track-record/index.md
+  - label: AI already knows Camel
+    path: blog/2026/06/camel-ai-trained/index.md
+  - label: "Not afraid of AI: 165 bugs fixed"
+    path: blog/2026/07/camel-not-afraid-of-ai/index.md
+  - label: A local model as usability tester
+    path: blog/2026/09/camel-local-model-benchmark/index.md
+  - label: "Built to patch fast: 32 CVEs in one release"
+    path: blog/2026/07/camel-security-advisories-4.21.0/index.md
+  - label: "Echonect: fifteen years on Camel"
+    path: blog/2026/07/echonect-fifteen-years-apache-camel/index.md

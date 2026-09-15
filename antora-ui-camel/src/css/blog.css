@@ -18,7 +18,38 @@
 }
 
 /* .blog-rail / .blog-rail-eyebrow: shared base (sticky offset; mono
-   eyebrow shape + color) lives in primitives.css - see M5, final-review.md. */
+   eyebrow shape + color) lives in primitives.css - see M5, final-review.md.
+   With the picks above the categories the rail can be taller than a short
+   viewport; let it scroll in place rather than stick with its bottom cut
+   off. Matches the sticky top offset in primitives.css. */
+.blog-rail {
+  max-height: calc(100vh - var(--navbar-height) - calc(48 / var(--rem-base) * 1rem));
+  overflow-y: auto;
+}
+
+/* "Start here" picks (data/blog-picks.yaml): same list shape as the
+   categories below, without the count, so the rail reads as one column. */
+.blog-picks {
+  display: flex;
+  flex-direction: column;
+  margin-top: calc(8 / var(--rem-base) * 1rem);
+  margin-bottom: calc(32 / var(--rem-base) * 1rem);
+}
+
+.blog-pick {
+  display: block;
+  padding: calc(8 / var(--rem-base) * 1rem) 0;
+  font-size: calc(14 / var(--rem-base) * 1rem);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--color-ink-2);
+  border-bottom: 1px solid var(--color-line-soft);
+  text-decoration: none;
+}
+
+.blog-pick:hover {
+  color: var(--link_hover-font-color);
+}
 
 .blog-categories {
   display: flex;
@@ -250,6 +281,8 @@
 
   .blog-rail {
     position: static;
+    max-height: none;
+    overflow-y: visible;
   }
 }
 
