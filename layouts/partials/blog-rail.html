@@ -1,0 +1,16 @@
+{{- /* Shared rail for the blog list and the category pages: categories
+     (marking the current one on a category page) and the RSS link. Called
+     with the page as context. */ -}}
+<aside class="blog-rail" aria-label="Categories">
+  <div class="blog-rail-eyebrow">Categories</div>
+  <div class="blog-categories">
+    {{ range .Site.Taxonomies.categories.Alphabetical }}
+    <a class="blog-category{{ if eq .Page.RelPermalink $.RelPermalink }} is-current{{ end }}" href="{{ "/categories/" | relURL }}{{ .Name | urlize }}/">
+      <span>{{ .Name }}</span><span class="blog-category-count">{{ .Count }}</span>
+    </a>
+    {{ end }}
+  </div>
+  <a class="blog-rss" href="{{ "blog/index.xml" | relURL }}" title="Subscribe to RSS Feed">
+    <svg focusable="false" class="brand-icon"><use href="{{ path.Join "_" (index .Site.Data "rev-manifest" "img/brand-logos.svg") | relURL }}#rss" /></svg> RSS feed &rarr;
+  </a>
+</aside>

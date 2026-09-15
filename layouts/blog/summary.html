@@ -10,7 +10,10 @@
         </div>
         {{ end }}
         <h2 class="blog-post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        <p class="blog-post-summary">{{ with .Params.preview }}{{ . }}{{ else }}{{ $.Summary | plainify }}{{ end }}</p>
+        {{/* Previews are written as one or two sentences (median ~70 chars); the
+             few long ones are cut so every card stays about the same height and
+             ten fit on a page. */}}
+        <p class="blog-post-summary">{{ with .Params.preview }}{{ . | truncate 180 }}{{ else }}{{ $.Summary | plainify | truncate 180 }}{{ end }}</p>
         <div class="blog-post-meta">
             <span>by
                 {{ $headers := dict }}
@@ -20,7 +23,6 @@
                   {{ $headers = dict "Authorization" (printf "Basic %s" (printf "%s:%s" $.Site.Params.GitHubUsername $.Site.Params.GitHubToken | base64Encode)) }}
                 {{ end }}
                 {{ range $idx, $author := .Params.authors }}{{ if gt $idx 0 }}, {{ end }}<span rel="author">{{ (getJSON "https://api.github.com/users/" $author $headers).name }}</span>{{ end }}</span>
-            <a class="blog-post-continue" href="{{ .RelPermalink }}" aria-label="Continue reading {{ .Title }}">Continue reading &rarr;</a>
         </div>
     </div>
 </article>

@@ -5,26 +5,14 @@
     <div class="content">
       <article class="blog-list" aria-labelledby="blog-title">
         <div class="blog-layout">
-          <aside class="blog-rail" aria-label="Categories">
-            <div class="blog-rail-eyebrow">Categories</div>
-            <div class="blog-categories">
-              {{ range .Site.Taxonomies.categories.Alphabetical }}
-              <a class="blog-category{{ if eq .Page.RelPermalink $.RelPermalink }} is-current{{ end }}" href="{{ "/categories/" | relURL }}{{ .Name | urlize }}/">
-                <span>{{ .Name }}</span><span class="blog-category-count">{{ .Count }}</span>
-              </a>
-              {{ end }}
-            </div>
-            <a class="blog-rss" href="{{ "blog/index.xml" | relURL }}" title="Subscribe to RSS Feed">
-              <svg focusable="false" class="brand-icon"><use href="{{ path.Join "_" (index .Site.Data "rev-manifest" "img/brand-logos.svg") | relURL }}#rss" /></svg> RSS feed &rarr;
-            </a>
-          </aside>
+          {{ partial "blog-rail.html" . }}
           <div class="blog-main">
             <a class="blog-back-link" href="{{ "/blog/" | relURL }}">&larr; All posts</a>
             <h1 id="blog-title" class="page-hero-title">{{ .Title }}</h1>
             <p class="page-hero-lead">{{ printf "Posts in the %s category." .Title }}</p>
 
             <div class="blog-posts">
-              {{ $pages := (.Paginate .Pages 3).Pages }}
+              {{ $pages := (.Paginate .Pages 10).Pages }}
               {{ range $pages }}
               {{ .Render "summary" }}
               {{ end }}
