@@ -3,7 +3,7 @@ title: "A New Look for the Camel Website"
 date: 2026-09-16
 draft: false
 authors: [ammachado]
-categories: ["Website"]
+categories: ["Community"]
 keywords: ["apache camel", "website", "redesign", "design"]
 preview: "The Camel website has a new look: self-hosted Archivo and JetBrains Mono fonts, a new color palette, and reworked home, blog, download, docs, and trust pages."
 ---
@@ -12,9 +12,9 @@ The Camel website has a new look. Over the last few weeks we rebuilt the design 
 
 ## Type and color
 
-The text now renders using the Archivo typeface for headings and body copy, and JetBrains Mono for code, both self-hosted instead of pulled from a font CDN. The color palette was rebuilt from the ground up at the CSS variable level, so the change reaches every page rather than a handful of components someone remembered to update.
+Headings now render in the Archivo typeface and code in JetBrains Mono, replacing Droid Sans Mono; body copy stays in Open Sans. Both new families are self-hosted, like the fonts before them. The color palette was rebuilt from the ground up at the CSS variable level, so the change reaches every page rather than a handful of components someone remembered to update.
 
-Our marketing pages (home, downloads, community) now sit in a 1200px container. Docs pages kept their wider 1366px container, since a documentation article needs the room a landing page doesn't.
+Pages no longer sit in a fixed 1366px box. Marketing pages (home, downloads, community) scale with the viewport between 1200px and 1800px, and docs pages have no cap at all, since a documentation article with a sidebar and a table of contents needs the room a landing page doesn't.
 
 ## Search moved to DocSearch v5
 
