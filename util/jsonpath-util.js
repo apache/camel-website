@@ -38,8 +38,10 @@ module.exports = {
   },
 
   boldLink: (text, idPrefix, suffix = '') => {
-    // Remove all the formatting characters from the id to prevent invalid url generation
-    const idText = `_${idPrefix}_${text.split(/[*_`#~^]*/g).join('').split('.').join('_')}`
+    // Remove all the formatting characters from the id to prevent invalid url generation.
+    // A trailing dot (header prefixes such as "CamelBox.") would end the id in "_", and
+    // "_..._" inside the xref target is then rendered as emphasis, breaking the fragment.
+    const idText = `_${idPrefix}_${text.split(/[*_`#~^]*/g).join('').split('.').join('_')}`.replace(/_+$/, '')
     text = suffix ? `*${text}* (${suffix})` : `*${text}*`
     return  `[[${idText}]]\nxref:#${idText}['',role=anchor]${text}`
   },

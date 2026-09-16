@@ -100,7 +100,7 @@ Yet another release where we reduced using reflections in a few spots in Camel c
 As mentioned in the optimization section we moved initialization of languages to an earlier phase.
 Camel now pre compile languages when its applicable, for example JSonPath, and XPath language.
 
-And speaking of pre-compiled languages then Camel 3.7 introduces the [jOOR language](/components/next/languages/joor-language.html)
+And speaking of pre-compiled languages then Camel 3.7 introduces the jOOR language
 to use runtime compile Java in the Camel DSL. A compiled simple language is also on the roadmap.
 
 

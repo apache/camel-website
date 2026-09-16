@@ -21,7 +21,7 @@ This release introduces a set of new features and noticeable improvements that w
 We continued our avenue of making Camel faster and smaller. This time we focused on the built-in Simple scripting
 language.
 
-First we added the [jOOR language](/components/next/languages/joor-language.html). jOOR is a small Java tool for
+First we added the jOOR language. jOOR is a small Java tool for
 performing runtime compilation of Java source code in-memory. It has some limitations but generally works well for small
 scripting code (requires Java 11 onwards).
 

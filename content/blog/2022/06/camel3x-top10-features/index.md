@@ -161,7 +161,7 @@ Now you can configure a number of route configurations, and then specify on each
 
 In Camel 2 it was possible to run JavaScript code from a Camel route. With Camel supporting Java 11 (and now also 17) this is unfortunately no longer possible as the JavaScript engine (Nashorn) was deprecated since Java 9 (and removed altogether from Java since version 15).
 
-The good news it's now possible to run Java code (with some limitations) through the [jOOR language](/components/next/languages/joor-language.html)
+The good news it's now possible to run Java code (with some limitations) through the jOOR language
 
 ## 10. Load properties from vault/secrets cloud services
 
