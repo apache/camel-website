@@ -8,7 +8,13 @@ keywords: ["apache camel", "website", "redesign", "front page", "documentation",
 preview: "camel.apache.org has a new front page and a new job: tell a person, or an AI agent, what Camel is and get them to a running route in a minute. What changed, and what comes next."
 ---
 
-The Camel website has needed a modern front page for years. The old one said that Camel "is an Open Source integration framework that empowers you to quickly and easily integrate various systems", showed a picture of gears, and left the rest to you. True, but it could describe any integration product, and it did not tell a first-time visitor how to start.
+The Camel website has needed a modern front page for years. The old one said that Camel "is an Open Source integration framework that empowers you to quickly and easily integrate various systems", showed a picture of gears, and left the rest to you.
+
+![The front page until September 2026: a title, one sentence, and gears](front-page-before.jpg)
+
+*The front page as it was until September 2026.*
+
+True, but it could describe any integration product, and it did not tell a first-time visitor how to start.
 
 Since that page was written, the visitor has changed. A growing share of the readers of camel.apache.org are not people but AI coding assistants and crawlers, reading the site on a developer's behalf. When someone asks their assistant how to get messages from Kafka into a database, the answer is shaped by what the assistant has read about Camel. The front page is the most authoritative page there is about Camel, so it has to answer that question for a person and for a model alike.
 
@@ -16,9 +22,11 @@ That is the mission of the new front page, and it is the most important change i
 
 ## The front page
 
-![The old front page: a title, one generic sentence, and gears](front-page-before.jpg)
+This is the page that replaces it:
 
-![The new front page: three ways to start, the commands to run, and the numbers](front-page-after.jpg)
+![The new front page: what Camel is, three ways to start with the commands to run, the numbers, and one route in three syntaxes](front-page-after.jpg)
+
+*The new front page, September 2026.*
 
 Read it from the top, the way a visitor does:
 
