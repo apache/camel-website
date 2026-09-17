@@ -1,14 +1,14 @@
 ---
-title: "A new front page for Camel, written for humans and for AI"
+title: "The Camel website, rebuilt for humans and for AI"
 date: 2026-09-17
 draft: false
 authors: [davsclaus, ammachado]
 categories: ["Community"]
 keywords: ["apache camel", "website", "redesign", "front page", "documentation", "llms.txt", "ai agents"]
-preview: "camel.apache.org has a new front page and a new job: tell a person, or an AI agent, what Camel is and get them to a running route in a minute. What changed, and what comes next."
+preview: "camel.apache.org has a new design and a new job: tell a person, or an AI agent, what Camel is and get them to a running route in a minute. What changed, and what comes next."
 ---
 
-The Camel website has needed a modern front page for years. The old one said that Camel "is an Open Source integration framework that empowers you to quickly and easily integrate various systems", showed a picture of gears, and left the rest to you.
+The Camel website has needed a modern design for years. Its front page said that Camel "is an Open Source integration framework that empowers you to quickly and easily integrate various systems", showed a picture of gears, and left the rest to you.
 
 ![The front page until September 2026: a title, one sentence, and gears](front-page-before.jpg)
 
@@ -18,7 +18,7 @@ True, but it could describe any integration product, and it did not tell a first
 
 Since that page was written, the visitor has changed. A growing share of the readers of camel.apache.org are not people but AI coding assistants and crawlers, reading the site on a developer's behalf. When someone asks their assistant how to get messages from Kafka into a database, the answer is shaped by what the assistant has read about Camel. The front page is the most authoritative page there is about Camel, so it has to answer that question for a person and for a model alike.
 
-That is the mission of the new front page, and it is the most important change in the redesign.
+That is the mission of the new site, and the front page, where it shows most, is the most important change in the redesign.
 
 ## The front page
 
