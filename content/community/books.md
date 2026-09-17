@@ -14,6 +14,7 @@ If you happen to know a book which is not listed, then please contact us
 
 ## Other Books
 
+* [Ultimate Apache Camel for Enterprise AI Integrations](https://www.amazon.com/Ultimate-Apache-Camel-Enterprise-Integrations/dp/8169646553)
 * [Cloud Native Integration with Apache Camel](https://www.apress.com/gp/book/9781484272107)
 * [Mastering Apache Camel](https://www.packtpub.com/application-development/mastering-apache-camel)
 * [Apache Camel Developer's Cookbook](http://www.packtpub.com/apache-camel-developers-cookbook/book)
@@ -48,6 +49,15 @@ This book provides a consistent vocabulary and visual notation framework to desc
 Patterns, Principles, and Practices for designing Apache Camel applications. A developer friendly guide with real world use cases and practical tips for designing and architecting Apache Camel applications.
 
 Driven by real world experiences, this book consolidates the most commonly used patterns and principles for designing Camel applications. For each pattern, there is a problem description with a context, a proposed solution, and Camel specifics and tips around the implementation. Patterns range from individual Camel route design for happy path scenarios, to error handling and prevention practices, to principles used in the deployment of multiple routes and applications for scalability and high availability purposes.
+
+### Ultimate Apache Camel for Enterprise AI Integrations
+
+[Ultimate Apache Camel for Enterprise AI Integrations](https://www.amazon.com/Ultimate-Apache-Camel-Enterprise-Integrations/dp/8169646553) by Vignesh Durai.
+Published by [Orange Education (AVA)](https://orangeava.com/) in September 2026.
+
+![Ultimate Apache Camel for Enterprise AI Integrations book cover](/img/books/ultimate_camel_enterprise_ai.jpg)
+
+Build AI-powered enterprise integrations with Apache Camel 4.x, LangChain4j, RAG, vector databases, Neo4j, and LLM workflows. Starting from Camel fundamentals and its AI ecosystem, the book builds up LLM invocation patterns with LangChain4j, RAG pipelines with Qdrant, online scoring with KServe and TensorFlow Serving, and graph-enriched decision-making with Neo4j, and closes with AI integration design patterns, testing, observability, cost control, security, and governance.
 
 ### Cloud Native Integration with Apache Camel
 
