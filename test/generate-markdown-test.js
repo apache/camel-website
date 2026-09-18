@@ -19,7 +19,8 @@ const LATER_SECTION = `<div class="sect2">
 </div>`
 
 test('a well-formed page converts its article, dropping anchors and rewriting .html links', () => {
-  const html = page(`<h2 id="_intro"><a class="anchor" href="#_intro"></a>Intro</h2>
+  const html = page(`<div class="doc-eyebrow">User manual</div>
+<h2 id="_intro"><a class="anchor" href="#_intro"></a>Intro</h2>
 <div class="paragraph">
 <p>Use <code>camel run</code>, see <a href="other.html">Other</a>.</p>
 </div>`)
