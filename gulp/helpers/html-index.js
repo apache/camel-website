@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { parse } = require('node-html-parser');
+const { convertPage } = require('./convert-page');
 const { createTurndownService } = require('./turndown-config');
 
 /**
@@ -21,50 +21,11 @@ async function generateHtmlIndex(config) {
     }
 
     const htmlContent = fs.readFileSync(htmlPath, 'utf8');
-    const root = parse(htmlContent);
+    let { markdown } = convertPage(htmlContent, createTurndownService());
 
-    // Create turndown service
-    const turndownService = createTurndownService();
-
-    // Extract only the main article content
-    let mainContent = root.querySelector('article.doc') ||
-                     root.querySelector('main') ||
-                     root.querySelector('.article') ||
-                     root.querySelector('article');
-
-    if (!mainContent) {
+    if (markdown === null) {
       return;
     }
-
-    // Remove navigation elements and the eyebrow label above the title
-    const elementsToRemove = mainContent.querySelectorAll('nav, header, footer, .nav, .navbar, .toolbar, .doc-eyebrow');
-    elementsToRemove.forEach(el => el.remove());
-
-    // Remove anchor links
-    const anchors = mainContent.querySelectorAll('a.anchor');
-    anchors.forEach(el => el.remove());
-
-    // Clean up table cells by unwrapping div.content and div.paragraph wrappers
-    const tableCells = mainContent.querySelectorAll('td.tableblock, th.tableblock');
-    tableCells.forEach(cell => {
-      let html = cell.innerHTML;
-      // Unwrap <div class="content"><div class="paragraph"><p>...</p></div></div>
-      html = html.replace(/<div class="content"><div class="paragraph">\s*<p>(.*?)<\/p>\s*<\/div><\/div>/gs, '$1');
-      // Unwrap <div class="content"><div id="..." class="paragraph"><p>...</p></div></div>
-      html = html.replace(/<div class="content"><div[^>]*class="paragraph"[^>]*>\s*<p>(.*?)<\/p>\s*<\/div><\/div>/gs, '$1');
-      // Also handle simple <p class="tableblock">...</p> wrappers
-      html = html.replace(/<p class="tableblock">(.*?)<\/p>/gs, '$1');
-      cell.set_content(html);
-    });
-
-    // Convert to Markdown
-    let markdown = turndownService.turndown(mainContent.innerHTML);
-
-    // Update links to point to .md files instead of .html
-    // Replace https://camel.apache.org/**/*.html with https://camel.apache.org/**/*.md
-    markdown = markdown.replace(/(https:\/\/camel\.apache\.org\/[^)\s]*?)\.html/g, '$1.md');
-    // Replace relative links *.html with *.md
-    markdown = markdown.replace(/\[([^\]]+)\]\(([^)]+?)\.html\)/g, '[$1]($2.md)');
 
     // Add header if title and description provided
     if (title && description) {
