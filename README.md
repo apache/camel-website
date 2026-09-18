@@ -477,7 +477,7 @@ Or trigger it from the command line using the [GitHub CLI](https://cli.github.co
 
 1. Checks out the repository and builds the full website (`yarn build`)
 2. Runs `scripts/generate-offline-bundle.js` which:
-   - Collects version-specific `.md` files from `public/components/<version>.x/` and `public/manual/`
+   - Collects version-specific `.md` files from `public/components/<version>.x/`, and the unversioned ones from `public/manual/`, the "Start here" website pages (`what-is-apache-camel`, `when-to-use`, `trust`, `camel-dna`), `public/community/` and every blog post under `public/blog/`
    - Fetches the Camel Catalog (JSON metadata for all connectors, data formats, languages, and EIPs) from the `camel-<version>.x` branch in [`apache/camel`](https://github.com/apache/camel) via the GitHub API
    - Fetches the YAML DSL canonical JSON Schema
    - Includes `llms.txt` if present

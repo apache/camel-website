@@ -21,6 +21,10 @@ Download the zip matching your Camel version, unzip it locally, and read the fil
 ```
 components/<version>/      — 350+ connector/component docs (Markdown)
 manual/                    — user manual (Markdown)
+what-is-apache-camel/, when-to-use/, trust/, camel-dna/
+                           — the "Start here" website pages, as index.md
+community/                 — team, support, user stories, articles, books (index.md per page)
+blog/                      — every blog post as <year>/<month>/<post>/index.md; blog/index.md lists them
 catalog/
   components/              — 350+ connector/component metadata (JSON)
   dataformats/             — data format metadata (JSON)
