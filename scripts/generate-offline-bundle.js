@@ -13,8 +13,16 @@ const VERSION_DIRS = [
   'components'
 ];
 
+// unversioned Markdown: the user manual, the website pages written for a first-time reader, the
+// community pages and every blog post (blog/index.md lists them); all published as <page>/index.md
 const SHARED_DIRS = [
-  'manual'
+  'manual',
+  'what-is-apache-camel',
+  'when-to-use',
+  'trust',
+  'camel-dna',
+  'community',
+  'blog'
 ];
 
 function fetchCatalogAndSchema(version) {
