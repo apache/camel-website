@@ -9,10 +9,10 @@ For example:
 
 ## Offline documentation bundles
 
-For agents or environments with no or restricted internet access, versioned offline documentation bundles are available as zip archives of all Markdown files:
-- [Camel 4.18](https://github.com/apache/camel-website/releases/download/docs-4.18/camel-docs-4.18.zip) (does not include the canonical YAML DSL JSON Schema — use the [online schema](https://github.com/apache/camel/blob/camel-4.18.x/dsl/camel-yaml-dsl/camel-yaml-dsl/src/generated/resources/schema/camelYamlDsl.json) instead)
+For agents or environments with no or restricted internet access, versioned offline documentation bundles are available as zip archives of all Markdown files, one per documented Camel version:
+<!-- offline-bundles -->
 
-Download the zip matching your Camel version, unzip it locally, and read the files from there. Each bundle contains:
+Download the zip matching your Camel version, unzip it locally, and read the files from there. There is no bundle for `next` (the unreleased main branch): that documentation changes daily, read it online under `https://camel.apache.org/components/next/`. Each bundle contains:
 
 ```
 components/<version>/      — 350+ connector/component docs (Markdown)
