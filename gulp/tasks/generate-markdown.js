@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { convertPage } = require('../helpers/convert-page');
+const { convertPage, rewriteDirectoryLinks } = require('../helpers/convert-page');
 const { createTurndownService } = require('../helpers/turndown-config');
 const { generateToonSitemaps } = require('../helpers/toon-format');
 const { generateLlmsTxt } = require('../helpers/llms-txt');
@@ -81,6 +81,18 @@ async function generateMarkdown() {
   }
 
   console.log(`\nSuccessfully generated ${processedCount} Markdown files`);
+
+  // Website pages and blog posts link to each other by directory; now that every mirror is
+  // written, point such links at the mirror where there is one
+  const mirrors = new Set(processedPages);
+  for (const urlPath of processedPages.filter(p => p.endsWith('/index.md'))) {
+    const mdFile = `public${urlPath}`;
+    const markdown = fs.readFileSync(mdFile, 'utf8');
+    const rewritten = rewriteDirectoryLinks(markdown, urlPath, p => mirrors.has(p));
+    if (rewritten !== markdown) {
+      fs.writeFileSync(mdFile, rewritten, 'utf8');
+    }
+  }
 
   // Generate llms.txt file
   generateLlmsTxt(processedPages);

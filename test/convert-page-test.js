@@ -147,3 +147,26 @@ test('a blog post without the rail details still converts', () => {
 
   assert.equal(convertPage(html, createTurndownService()).markdown, '# Bare\n\nBody.')
 })
+
+const { rewriteDirectoryLinks } = require('../gulp/helpers/convert-page')
+
+test('directory links to pages that have a Markdown mirror get index.md appended', () => {
+  const mirrors = new Set(['/camel-dna/index.md', '/blog/2026/07/some-post/index.md', '/trust/index.md'])
+  const markdown = 'See [Camel DNA](../camel-dna/), [a post](/blog/2026/07/some-post/#section), ' +
+    '[Why Camel](https://camel.apache.org/trust/), [downloads](../download/), ' +
+    '[docs](../manual/getting-started.md), [external](https://kaoto.io/) and ![img](../img/x.png).'
+
+  assert.equal(rewriteDirectoryLinks(markdown, '/what-is-apache-camel/index.md', p => mirrors.has(p)),
+    'See [Camel DNA](../camel-dna/index.md), [a post](/blog/2026/07/some-post/index.md#section), ' +
+    '[Why Camel](https://camel.apache.org/trust/index.md), [downloads](../download/), ' +
+    '[docs](../manual/getting-started.md), [external](https://kaoto.io/) and ![img](../img/x.png).')
+})
+
+test('directory links resolve relative to the page that carries them', () => {
+  const mirrors = new Set(['/blog/2026/07/other/index.md'])
+
+  assert.equal(rewriteDirectoryLinks('[other](../other/)', '/blog/2026/07/this/index.md', p => mirrors.has(p)),
+    '[other](../other/index.md)')
+  assert.equal(rewriteDirectoryLinks('[other](../other/)', '/blog/2026/08/this/index.md', p => mirrors.has(p)),
+    '[other](../other/)')
+})
