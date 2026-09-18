@@ -90,6 +90,10 @@ jobs:
         run: yarn workspaces foreach --all install
       - name: Check cache
         run: yarn check:dependencies
+      # The unit tests for the gulp helpers and scripts take a second; run them
+      # before the 10-minute site build so a broken helper fails fast.
+      - name: Run unit tests
+        run: yarn test
       # Antora spends most of the build cloning content repositories: a green
       # run measured 426s of 606s in contentAggregated, against 165s of actual
       # conversion. Restoring the clones turns those into incremental fetches.
