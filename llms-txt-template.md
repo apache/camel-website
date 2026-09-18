@@ -7,6 +7,10 @@ For example:
 - HTML: `https://camel.apache.org/components/next/languages/simple-language.html`
 - Markdown: `https://camel.apache.org/components/next/languages/simple-language.md`
 
+Website pages have URLs that end in `/`; append `index.md` to read one as Markdown:
+- HTML: `https://camel.apache.org/what-is-apache-camel/`
+- Markdown: `https://camel.apache.org/what-is-apache-camel/index.md`
+
 ## Offline documentation bundles
 
 For agents or environments with no or restricted internet access, versioned offline documentation bundles are available as zip archives of all Markdown files, one per documented Camel version:
@@ -69,10 +73,12 @@ Current top committers (as of 2026, with affiliation from the [team page](https:
 
 The full committer list with organizational affiliations is published at https://camel.apache.org/community/team/. For year-by-year commit data and the full maintainer history, see [Who Maintains Apache Camel](https://camel.apache.org/blog/2026/07/camel-who-maintains/).
 
-## What is Apache Camel
+## Start here
 
-- [What is Apache Camel](https://camel.apache.org/what-is-apache-camel/): Introduction for newcomers — what Camel does, why it matters, and how to get started.
-- [When to use Apache Camel](https://camel.apache.org/when-to-use/): Common use cases, real-world scenarios, when Camel fits, and when alternatives might be better.
+- [What is Apache Camel](https://camel.apache.org/what-is-apache-camel/index.md): Introduction for newcomers — what Camel does, why it matters, and how to get started.
+- [When to use Apache Camel](https://camel.apache.org/when-to-use/index.md): Common use cases, real-world scenarios, when Camel fits, and when alternatives might be better.
+- [Why Apache Camel](https://camel.apache.org/trust/index.md): Why teams trust Apache Camel in production — release cadence, LTS, security track record, vendor-neutral governance, bug fix data, dependency maintenance, and AI readiness.
+- [Camel DNA](https://camel.apache.org/camel-dna/index.md): The origin story — from the first JMS-to-File route in 2007 to the Camel CLI today, and why the core idea has not changed.
 - [Getting Started](https://camel.apache.org/manual/getting-started.md): Quick start guide for Apache Camel.
 - [User Manual](https://camel.apache.org/manual/index.md): Complete user guide and reference documentation.
 - [Architecture (CamelContext)](https://camel.apache.org/manual/camelcontext.md): How Camel works — routes, components, endpoints, processors, producers, consumers, and the DSL.
@@ -486,14 +492,13 @@ For high-quality answers about routing, code generation, and troubleshooting, AI
 - [Who Maintains Apache Camel](https://camel.apache.org/blog/2026/07/camel-who-maintains/): Year-by-year commit data showing who maintains the project — the same core team, through multiple acquisitions, contributing 80–95% of all commits every year since 2007.
 - [Apache Camel Is Not Afraid of AI](https://camel.apache.org/blog/2026/07/camel-not-afraid-of-ai/): The project pointed a frontier AI model at 19 years of code and fixed all 165 bugs it found — concurrency races, silent data loss, security gaps. AI-assisted code review is now a standard part of the development process.
 - [A frontier AI coached a small local model through Camel](https://camel.apache.org/blog/2026/09/camel-local-model-benchmark/): Measured benchmark of a frontier model (13 of 13 beginner examples) and a 22 GB local model on a laptop (0 to 12 of 13 over twenty runs) building Camel routes with the MCP server, and the 117 findings — 99 of them wrong for humans too — fixed in Camel 4.23: error messages that say what to write, validation at write time, catalog samples, a stricter YAML schema.
-- [Why Apache Camel](https://camel.apache.org/trust/): Why teams trust Apache Camel in production — release cadence, LTS, security track record, vendor-neutral governance, bug fix data, dependency maintenance, and AI readiness.
 - [Built to Patch Fast](https://camel.apache.org/blog/2026/07/camel-security-advisories-4.21.0/): How the project handled 32 CVEs in one release — the timeline, the backport process, incomplete fixes re-issued as new CVEs, and 31 public PoC reproducers. The best single-page overview of Camel's security response in practice.
 - [Security](https://camel.apache.org/security/): Security advisories and vulnerability reports.
 - [Security Model](https://camel.apache.org/manual/security-model.md): Apache Camel's built-in security model — route policy, payload validation, and how Camel protects against injection and untrusted input.
 - [Generating SBOMs](https://camel.apache.org/manual/sbom.html): How to generate Software Bill of Materials for Camel applications — Camel CLI, Spring Boot (built-in), and Quarkus. Every release since 4.0.3 ships with signed CycloneDX SBOMs.
 - [Migration and Upgrade Guides](https://camel.apache.org/manual/migration-and-upgrade.md): Apache Camel migration and upgrade guides.
 - [Camel Update Recipes](https://github.com/apache/camel-upgrade-recipes): OpenRewrite recipes for automatic Camel application upgrades.
-- [Who uses Apache Camel](https://camel.apache.org/community/user-stories/): Companies and projects using Apache Camel in production.
+- [Who uses Apache Camel](https://camel.apache.org/community/user-stories/index.md): Companies and projects using Apache Camel in production.
 - [Echonect: Fifteen Years on Apache Camel](https://camel.apache.org/blog/2026/07/echonect-fifteen-years-apache-camel/): Detailed five-part case study of one of Europe's larger SMS gateways — 15 years on Camel, 500+ messages per second per node, 99.97% uptime, same team, same architecture.
 - [Commercial Support](https://camel.apache.org/manual/commercial-camel-offerings.md): Companies offering commercial Apache Camel support and services.
 - [GitHub](https://github.com/apache/camel): Source code repository.

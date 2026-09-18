@@ -16,6 +16,11 @@ const { generateAllIndexes } = require('../helpers/html-index');
  * - Only the main article content (excluding nav, header, footer)
  * - Clean Markdown formatting using Turndown
  * - GitHub-flavored Markdown for tables and code blocks
+ *
+ * Hugo renders every website page as <page>/index.html, so an index.html is converted too
+ * when it is a content page (has an article.doc): the .md then sits next to it as
+ * <page>/index.md, which keeps the page's relative links valid. List and section pages
+ * (home, download, community, ...) have no article.doc and are skipped.
  */
 async function generateMarkdown() {
   const turndownService = createTurndownService();
@@ -27,7 +32,11 @@ async function generateMarkdown() {
 
   // Get all HTML files
   const htmlFiles = glob.sync('public/**/*.html', {
-    ignore: ['public/404.html', 'public/**/index.html'] // Skip error pages and index pages
+    ignore: [
+      'public/404.html',
+      'public/blog/**/index.html', // blog posts: their Markdown is to come from the source, see #1763
+      'public/releases/**/index.html' // release pages are converted by generateAllIndexes below
+    ]
   });
 
   let processedCount = 0;
@@ -43,14 +52,17 @@ async function generateMarkdown() {
     for (const htmlFile of batch) {
       try {
         const htmlContent = fs.readFileSync(htmlFile, 'utf8');
-        const { markdown, repaired } = convertPage(htmlContent, turndownService);
+        const articleOnly = htmlFile.endsWith('/index.html');
+        const { markdown, repaired } = convertPage(htmlContent, turndownService, { articleOnly });
 
         if (repaired) {
           console.warn(`Repaired malformed HTML in ${htmlFile}, fix the mis-nested markup in its source`);
         }
 
         if (markdown === null) {
-          console.warn(`Skipping ${htmlFile}: no main content found`);
+          if (!articleOnly) {
+            console.warn(`Skipping ${htmlFile}: no main content found`);
+          }
           continue;
         }
 
@@ -92,10 +104,12 @@ async function generateMarkdown() {
  *
  * @param {string} htmlContent the full HTML page
  * @param {TurndownService} turndownService configured Turndown instance
+ * @param {{articleOnly?: boolean}} [options] articleOnly: only accept an article.doc as the main
+ *   content, so list and section pages that merely have a <main> are not converted
  * @returns {{markdown: string|null, repaired: boolean}} the Markdown (null when the page has no
  *   main content), and whether the HTML was malformed and had to be repaired before parsing
  */
-function convertPage(htmlContent, turndownService) {
+function convertPage(htmlContent, turndownService, { articleOnly = false } = {}) {
   // node-html-parser cannot repair mis-nested inline tags (Asciidoctor emits them for a `*` inside
   // backticks): it unwraps every unclosed ancestor, article.doc included. Let jsdom's HTML5 parser
   // repair such pages the way browsers do; it is much slower, so only malformed pages go through it.
@@ -104,17 +118,19 @@ function convertPage(htmlContent, turndownService) {
 
   // Extract only the main article content
   // Try different selectors based on Antora and Hugo structure
-  let mainContent = root.querySelector('article.doc') ||
-                   root.querySelector('main') ||
-                   root.querySelector('.article') ||
-                   root.querySelector('article');
+  let mainContent = root.querySelector('article.doc');
+  if (!mainContent && !articleOnly) {
+    mainContent = root.querySelector('main') ||
+                  root.querySelector('.article') ||
+                  root.querySelector('article');
+  }
 
   if (!mainContent) {
     return { markdown: null, repaired };
   }
 
-  // Remove navigation elements, headers, and footers from the content
-  const elementsToRemove = mainContent.querySelectorAll('nav, header, footer, .nav, .navbar, .toolbar');
+  // Remove navigation elements, headers, footers and the embedded table of contents from the content
+  const elementsToRemove = mainContent.querySelectorAll('nav, header, footer, .nav, .navbar, .toolbar, aside.toc');
   elementsToRemove.forEach(el => el.remove());
 
   // Remove anchor links (they are just UI navigation aids)

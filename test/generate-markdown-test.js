@@ -88,3 +88,28 @@ test('a page that needed repair is flagged so its source can be fixed upstream',
 
   assert.equal(convertPage(html, createTurndownService()).repaired, true)
 })
+
+// Hugo renders website pages as <page>/index.html with the content in article.doc (the "static"
+// layouts), and list pages (home, download, community) with only a <main>. Only the former have a
+// Markdown mirror, so their embedded table of contents must not leak into the Markdown either.
+test('a Hugo content page converts its article without the embedded table of contents', () => {
+  const html = `<!DOCTYPE html><html><head><title>t</title></head><body><main>
+<article class="static doc community"><h1>Team</h1>
+<aside class="toc embedded" aria-label="Table of contents"><div class="toc-menu"><h3 id="toc-heading">Contents</h3>
+<nav id="TableOfContents"><ul><li><a href="#committers">Committers</a></li></ul></nav></div></aside>
+<p>This page lists who we are.</p>
+<h2 id="committers">Committers</h2></article>
+<aside class="toc sidebar"><div class="toc-menu"></div></aside></main></body></html>`
+
+  assert.deepEqual(convertPage(html, createTurndownService(), { articleOnly: true }), {
+    markdown: '# Team\n\nThis page lists who we are.\n\n## Committers',
+    repaired: false,
+  })
+})
+
+test('a page with only a main is converted by default but skipped when an article is required', () => {
+  const html = '<!DOCTYPE html><html><head><title>t</title></head><body><main><h1>Downloads</h1><p>Cards.</p></main></body></html>'
+
+  assert.equal(convertPage(html, createTurndownService()).markdown, '# Downloads\n\nCards.')
+  assert.deepEqual(convertPage(html, createTurndownService(), { articleOnly: true }), { markdown: null, repaired: false })
+})
