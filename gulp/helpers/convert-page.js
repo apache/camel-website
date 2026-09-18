@@ -96,4 +96,31 @@ function trimBlogPost(article) {
   }
 }
 
-module.exports = { convertPage };
+/**
+ * Points links at other website pages and blog posts to their Markdown mirror. Hugo pages link
+ * to each other by directory (`../camel-dna/`, `/blog/2026/07/some-post/#section`); where that
+ * page has a mirror, the link gets `index.md` appended so a reader stays in Markdown, like the
+ * `.html` links that convertPage already rewrites to `.md`.
+ *
+ * @param {string} markdown the converted page
+ * @param {string} pagePath site-relative path of this page's Markdown, e.g. /trust/index.md
+ * @param {(path: string) => boolean} hasMirror whether a site-relative Markdown path exists
+ * @returns {string} the Markdown with the links rewritten
+ */
+function rewriteDirectoryLinks(markdown, pagePath, hasMirror) {
+  const site = 'https://camel.apache.org';
+  return markdown.replace(/\]\(([^)\s]*\/)(#[^)\s]*)?\)/g, (match, target, fragment = '') => {
+    let resolved;
+    try {
+      resolved = new URL(target, site + pagePath);
+    } catch {
+      return match;
+    }
+    if (resolved.origin !== site || !hasMirror(`${resolved.pathname}index.md`)) {
+      return match;
+    }
+    return `](${target}index.md${fragment})`;
+  });
+}
+
+module.exports = { convertPage, rewriteDirectoryLinks };
