@@ -3,7 +3,7 @@
 const assert = require('node:assert/strict')
 const test = require('node:test')
 
-const { convertPage } = require('../gulp/tasks/generate-markdown')
+const { convertPage } = require('../gulp/helpers/convert-page')
 const { createTurndownService } = require('../gulp/helpers/turndown-config')
 
 function page (body) {
