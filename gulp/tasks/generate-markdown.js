@@ -20,7 +20,8 @@ const { generateAllIndexes } = require('../helpers/html-index');
  * Hugo renders every website page as <page>/index.html, so an index.html is converted too
  * when it is a content page (has an article.doc): the .md then sits next to it as
  * <page>/index.md, which keeps the page's relative links valid. List and section pages
- * (home, download, community, ...) have no article.doc and are skipped.
+ * (home, download, community, ...) have no article.doc and are skipped. Blog posts are
+ * content pages too and are reduced to their title, byline and body, see trimBlogPost.
  */
 async function generateMarkdown() {
   const turndownService = createTurndownService();
@@ -34,7 +35,6 @@ async function generateMarkdown() {
   const htmlFiles = glob.sync('public/**/*.html', {
     ignore: [
       'public/404.html',
-      'public/blog/**/index.html', // blog posts: their Markdown is to come from the source, see #1763
       'public/releases/**/index.html' // release pages are converted by generateAllIndexes below
     ]
   });
@@ -129,6 +129,10 @@ function convertPage(htmlContent, turndownService, { articleOnly = false } = {})
     return { markdown: null, repaired };
   }
 
+  if (mainContent.classList.contains('post')) {
+    trimBlogPost(mainContent);
+  }
+
   // Remove navigation elements, headers, footers and the embedded table of contents from the content
   const elementsToRemove = mainContent.querySelectorAll('nav, header, footer, .nav, .navbar, .toolbar, aside.toc');
   elementsToRemove.forEach(el => el.remove());
@@ -160,6 +164,33 @@ function convertPage(htmlContent, turndownService, { articleOnly = false } = {})
   markdown = markdown.replace(/\[([^\]]+)\]\(([^)]+?)\.html\)/g, '[$1]($2.md)');
 
   return { markdown, repaired };
+}
+
+/**
+ * Reduces a rendered blog post (layouts/blog/post.html) to its title, lead and body, with the
+ * date, authors and categories from the rail folded into one line under the title. The rail
+ * itself (avatars, share links, table of contents, previous/next), the "All posts" link, the
+ * featured image and the related posts are page chrome and are dropped.
+ *
+ * @param {HTMLElement} article the article.post element
+ */
+function trimBlogPost(article) {
+  const date = article.querySelector('time.post-date')?.getAttribute('datetime');
+  const authors = article.querySelectorAll('.post-author-name').map(el => el.text.trim());
+  const categories = article.querySelectorAll('.post-tags a').map(el => el.text.trim());
+
+  article.querySelectorAll('a.post-back, .post-tags, aside.post-rail, img.featured, section.post-related')
+    .forEach(el => el.remove());
+
+  const byline = [
+    date && `Published ${date}`,
+    authors.length && `by ${authors.join(', ')}`,
+    categories.length && `in ${categories.join(', ')}`
+  ].filter(Boolean).join(' ');
+  const title = article.querySelector('h1.post-title');
+  if (byline && title) {
+    title.insertAdjacentHTML('afterend', `<p>${byline}</p>`);
+  }
 }
 
 module.exports = generateMarkdown;

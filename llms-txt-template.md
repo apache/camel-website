@@ -486,7 +486,7 @@ For high-quality answers about routing, code generation, and troubleshooting, AI
 
 - [Download](https://camel.apache.org/download/): Current versions, LTS releases, and which version to use.
 - [Releases](https://camel.apache.org/releases/index.md): Apache Camel releases and version history.
-- [Blog](https://camel.apache.org/blog/index.md): Latest blog posts about Apache Camel.
+- [Blog](https://camel.apache.org/blog/index.md): Index of every blog post with its date and summary; each post is available as Markdown at its URL plus `index.md`, for example `https://camel.apache.org/blog/2026/09/camel-local-model-benchmark/index.md`.
 - [Camel by the Numbers](https://camel.apache.org/blog/2026/06/camel-by-the-numbers/): Data-driven overview — commits, contributors, release cadence, bug fix times, and community health metrics.
 - [The DNA of Apache Camel](https://camel.apache.org/blog/2026/06/camel-dna-19-years/): 19 years of backwards compatibility — why Camel users don't have to rewrite their integrations every few years.
 - [Who Maintains Apache Camel](https://camel.apache.org/blog/2026/07/camel-who-maintains/): Year-by-year commit data showing who maintains the project — the same core team, through multiple acquisitions, contributing 80–95% of all commits every year since 2007.

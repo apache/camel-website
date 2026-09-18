@@ -113,3 +113,36 @@ test('a page with only a main is converted by default but skipped when an articl
   assert.equal(convertPage(html, createTurndownService()).markdown, '# Downloads\n\nCards.')
   assert.deepEqual(convertPage(html, createTurndownService(), { articleOnly: true }), { markdown: null, repaired: false })
 })
+// Fixture after layouts/blog/post.html: the rail holds date, authors, share links, TOC and
+// previous/next, the content starts with the featured image and ends with the related posts.
+test('a blog post keeps its title, byline, lead and body and drops the page chrome', () => {
+  const html = `<!DOCTYPE html><html><head><title>t</title></head><body><main role="main blog">
+<article class="post blog doc" aria-labelledby="post-title">
+<a class="post-back" href="/blog/">&larr; All posts</a>
+<div class="post-hero"><div class="post-tags"><a class="tag-chip" href="/categories/ai/">AI</a><a class="tag-chip" href="/categories/tooling/">Tooling</a></div>
+<h1 id="post-title" class="post-title">A post</h1><p class="detail-lead">The lead.</p></div>
+<div class="post-layout"><aside class="post-rail" aria-label="Post details">
+<div class="post-authors"><div class="post-author"><img class="post-avatar" src="a.png" alt=""><div class="post-author-name">Ada Lovelace</div></div>
+<div class="post-author"><div class="post-author-name">Grace Hopper</div></div>
+<time class="post-date" datetime="2026-09-15">September 15, 2026</time></div>
+<div class="post-share"><a class="post-share-link" href="https://twitter.com/">X</a></div>
+<div class="post-toc toc"><ul><li><a href="#setup">Setup</a></li></ul></div>
+<div class="post-adjacent"><a href="/blog/2026/09/other/">&larr; Previous</a></div></aside>
+<div class="post-content"><img class="featured" alt="Blog post featured image" src="featured.jpg">
+<p>Body text.</p><h2 id="setup">Setup</h2><iframe src="https://www.youtube-nocookie.com/embed/x1" allowfullscreen title="YouTube Video"></iframe>
+<section class="post-related"><h3>Related posts</h3><a class="card" href="/blog/2026/09/other/">Other</a></section></div></div>
+</article></main></body></html>`
+
+  assert.deepEqual(convertPage(html, createTurndownService()), {
+    markdown: '# A post\n\nPublished 2026-09-15 by Ada Lovelace, Grace Hopper in AI, Tooling\n\nThe lead.\n\n' +
+      'Body text.\n\n## Setup\n\n[YouTube Video](https://www.youtube-nocookie.com/embed/x1)',
+    repaired: false,
+  })
+})
+
+test('a blog post without the rail details still converts', () => {
+  const html = '<!DOCTYPE html><html><head><title>t</title></head><body><main><article class="post blog doc">' +
+    '<h1 class="post-title">Bare</h1><div class="post-content"><p>Body.</p></div></article></main></body></html>'
+
+  assert.equal(convertPage(html, createTurndownService()).markdown, '# Bare\n\nBody.')
+})

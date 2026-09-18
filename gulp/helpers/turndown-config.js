@@ -81,6 +81,16 @@ function createTurndownService() {
     }
   });
 
+  // Embedded videos (the youtube shortcode renders an iframe) become a link, Turndown would drop them
+  turndownService.addRule('iframeLink', {
+    filter: 'iframe',
+    replacement: function (content, node) {
+      const src = node.getAttribute('src');
+      if (!src) return '';
+      return `[${node.getAttribute('title') || 'Embedded content'}](${src})`;
+    }
+  });
+
   return turndownService;
 }
 
