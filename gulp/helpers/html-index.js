@@ -36,8 +36,8 @@ async function generateHtmlIndex(config) {
       return;
     }
 
-    // Remove navigation elements
-    const elementsToRemove = mainContent.querySelectorAll('nav, header, footer, .nav, .navbar, .toolbar');
+    // Remove navigation elements and the eyebrow label above the title
+    const elementsToRemove = mainContent.querySelectorAll('nav, header, footer, .nav, .navbar, .toolbar, .doc-eyebrow');
     elementsToRemove.forEach(el => el.remove());
 
     // Remove anchor links

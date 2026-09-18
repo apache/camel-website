@@ -133,8 +133,9 @@ function convertPage(htmlContent, turndownService, { articleOnly = false } = {})
     trimBlogPost(mainContent);
   }
 
-  // Remove navigation elements, headers, footers and the embedded table of contents from the content
-  const elementsToRemove = mainContent.querySelectorAll('nav, header, footer, .nav, .navbar, .toolbar, aside.toc');
+  // Remove navigation elements, headers, footers, the embedded table of contents and the eyebrow
+  // label above the title (the Antora UI puts the component title there, e.g. "User manual")
+  const elementsToRemove = mainContent.querySelectorAll('nav, header, footer, .nav, .navbar, .toolbar, aside.toc, .doc-eyebrow');
   elementsToRemove.forEach(el => el.remove());
 
   // Remove anchor links (they are just UI navigation aids)
