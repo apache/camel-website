@@ -497,6 +497,13 @@ For example, the 4.18 bundle would be at `https://github.com/apache/camel-websit
 Trigger this after each Camel release. For example, when Camel `4.18.1` ships, run the workflow
 with version `4.18` to update the `docs-4.18` bundle with the latest documentation.
 
+The bundle list in [`/llms.txt`](https://camel.apache.org/llms.txt) is not maintained by hand:
+`gulp/helpers/llms-txt.js` fills the `<!-- offline-bundles -->` placeholder in
+`llms-txt-template.md` with one link per versioned directory under `public/components/`, that is
+per branch listed for the component docs in `antora-playbook-production.yml`. So when a new LTS
+branch is added to the playbook, run this workflow for that version too, otherwise `llms.txt`
+links to a bundle that does not exist yet. There is no bundle for `next`.
+
 ## Search Indexing Configuration
 
 The website uses [Algolia DocSearch](https://docsearch.algolia.com/) to provide site-wide search functionality. The search configuration is defined in [`.docsearch.config.json`](.docsearch.config.json).
