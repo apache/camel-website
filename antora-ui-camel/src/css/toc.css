@@ -33,9 +33,13 @@
   padding: 0;
 }
 
+/* No negative margin to match: this is the last column, so the lane has no
+   gap to bleed into and long entries simply wrap 12px earlier. Keeps an
+   overlay scrollbar off the text - see issue #1772. */
 .toc.sidebar .toc-menu ul {
   max-height: var(--toc-height);
   overflow-y: auto;
+  padding-right: var(--scrollbar-overlay-lane);
 }
 
 .toc .toc-menu li {

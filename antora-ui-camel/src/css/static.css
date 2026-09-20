@@ -122,12 +122,16 @@
   }
 }
 
+/* padding-right + the matching negative margin keep an overlay scrollbar
+   off the link text without narrowing the column; the lane bleeds into the
+   32px grid gap. Same shape as .blog-rail - see issue #1772. */
 .community-nav {
   position: sticky;
   top: var(--navbar-height);
   height: calc(100vh - var(--navbar-height) - 2rem);
   overflow-y: auto;
-  padding: calc(14 / var(--rem-base) * 1rem) 0;
+  padding: calc(14 / var(--rem-base) * 1rem) var(--scrollbar-overlay-lane) calc(14 / var(--rem-base) * 1rem) 0;
+  margin-right: calc(-1 * var(--scrollbar-overlay-lane));
 }
 
 .community-nav-title {
