@@ -118,15 +118,16 @@ example:
       run: camel run kafka-to-db.yaml
       code: |
         # Route messages from Kafka into a database
-        - from:
-            uri: kafka:orders
-            steps:
-              - unmarshal:
-                  json: {}
-              - to:
-                  uri: >-
-                    sql:INSERT INTO orders (id, amount)
-                    VALUES (:#id, :#amount)
+        - route:
+            from:
+              uri: kafka:orders
+              steps:
+                - unmarshal:
+                    json: {}
+                - to:
+                    uri: >-
+                      sql:INSERT INTO orders (id, amount)
+                      VALUES (:#id, :#amount)
     - id: java
       label: Java
       run: camel run KafkaToDb.java
