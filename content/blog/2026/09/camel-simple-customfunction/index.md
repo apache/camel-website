@@ -884,8 +884,8 @@ ${maskEmail(...)}
 
 **Use Simple wherever it keeps the route clear. Compose what you can. Add Java where it actually provides value.**
 
-[1]: https://camel.apache.org/components/languages/simple-language.html "Apache Camel - Simple Language"
-[2]: https://camel.apache.org/components/languages/simple-advanced.html "Apache Camel - Simple Advanced Features"
-[3]: https://camel.apache.org/manual/camel-jbang-beans.html "Apache Camel - Java Beans"
+[1]: /components/next/languages/simple-language.html "Apache Camel - Simple Language"
+[2]: /components/next/languages/simple-advanced.html "Apache Camel - Simple Advanced Features"
+[3]: /manual/camel-jbang-beans.html "Apache Camel - Java Beans"
 [4]: https://issues.apache.org/jira/browse/CAMEL-24486 "CAMEL-24486"
-[5]: https://camel.apache.org/manual/camel-jbang-running.html#_using_profiles "Apache Camel CLI - Using Profiles"
+[5]: /manual/camel-jbang-running.html#_using_profiles "Apache Camel CLI - Using Profiles"
