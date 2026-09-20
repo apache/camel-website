@@ -1,0 +1,6 @@
+{{- /* Chroma's YAML lexer emits a whitespace token at the end of the last line of
+       every literal block scalar (`key: |`), which leaves trailing whitespace in
+       the highlighted HTML and fails html-validate's no-trailing-whitespace rule.
+       Strip trailing whitespace from every line of the highlighted output. */ -}}
+{{- $result := transform.HighlightCodeBlock . -}}
+{{- $result.Wrapped | replaceRE `[ \t]+\n` "\n" | safeHTML -}}
