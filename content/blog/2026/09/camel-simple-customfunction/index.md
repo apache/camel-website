@@ -1,6 +1,6 @@
 ---
 title: "Extending Apache Camel Simple with Your Own Functions"
-date: 2026-09-19
+date: 2026-09-20
 draft: false
 authors: [SiHartl]
 categories: ["Howtos"]
@@ -29,15 +29,22 @@ custom-simple-function/
 └── MaskEmailFunction.java
 ```
 
-With Camel 4.22.0, we will run it using:
+The examples below have been tested with Camel 4.22.1 and can be run using:
+
+```shell
+camel run route.camel.yaml MaskEmailFunction.java
+```
+
+The important part is that the integration flow remains a regular YAML route. We use Simple for the logic it already handles well and add a small piece of Java only where it provides additional value.
+
+***NOTE for Camel 4.22.0:***
+
+Camel 4.22.0 contains a bug, [CAMEL-24486][4], that affects custom functions declared in `$init{}` blocks when Camel is running with the `dev` profile. The issue is fixed in Camel 4.22.1. To run the example with Camel 4.22.0, use the `test` profile instead: ([Apache Camel – Using Profiles][5])
 
 ```shell
 camel run --profile test route.camel.yaml MaskEmailFunction.java
 ```
 
-The `--profile test` option is currently required because of a Camel 4.22.0 bug affecting `$init{}` functions in the default development profile. We will come back to that when we run the example.
-
-The important part is that the integration flow remains a regular YAML route. We use Simple for the logic it already handles well and add a small piece of Java only where it provides additional value.
 
 ## Quick start: custom functions in a few steps
 
@@ -120,12 +127,6 @@ and run them with Camel CLI:
 
 ```shell
 camel run route.camel.yaml MaskEmailFunction.java
-```
-
-When using Camel 4.22.0 together with the `$init{}` function shown above, use the following command instead because of [CAMEL-24486][4]:
-
-```shell
-camel run --profile test route.camel.yaml MaskEmailFunction.java
 ```
 
 That's the short version. The rest of the article walks through the example step by step, explains how both types of functions work, and discusses when each approach is useful.
@@ -444,33 +445,7 @@ custom-simple-function/
 └── MaskEmailFunction.java
 ```
 
-Camel CLI can run multiple files together, including YAML route definitions and regular Java source files. Normally, both files can therefore simply be started using: ([Apache Camel – Java Beans][3])
-
-```shell
-camel run route.camel.yaml MaskEmailFunction.java
-```
-
-There is, however, a temporary issue to be aware of when running this particular example with Camel 4.22.0.
-
-### Camel 4.22.0: use the test profile
-
-Camel 4.22.0 contains a bug tracked as [CAMEL-24486][4] that affects custom functions declared in `$init{}` blocks when Camel is running with the `dev` profile. Because Camel CLI uses the `dev` profile by default, the `cleanName` function in our example can fail during route creation even though the expression itself is valid. ([Apache Camel – Using Profiles][5])
-
-A typical error looks like:
-
-```text
-No custom simple function with name: cleanName
-```
-
-Until using a release containing the fix, start the example with the `test` profile instead:
-
-```shell
-camel run --profile test route.camel.yaml MaskEmailFunction.java
-```
-
-Camel CLI supports `dev`, `test` and `prod` profiles, with `dev` being the default when running integrations through the CLI. ([Apache Camel – Using Profiles][5])
-
-This is only a workaround for the affected Camel version; `--profile test` is not a general requirement for using `$init{}`. [CAMEL-24486][4] is marked as fixed for Camel 4.22.1 and 4.23.0, so with a release containing that fix the regular command can be used again:
+Camel CLI can run multiple files together, including YAML route definitions and regular Java source files. Both files can therefore simply be started using: ([Apache Camel – Java Beans][3])
 
 ```shell
 camel run route.camel.yaml MaskEmailFunction.java
@@ -478,17 +453,11 @@ camel run route.camel.yaml MaskEmailFunction.java
 
 ## Expected result
 
-With Camel 4.22.0, run:
-
-```shell
-camel run --profile test route.camel.yaml MaskEmailFunction.java
-```
-
 The route executes once and should produce output similar to:
 
 ```text
 Original customer:
-Name:   John   Doe
+Name: John   Doe
 Email: john.doe@example.com
 ```
 
@@ -880,34 +849,22 @@ public class MaskEmailFunction implements SimpleFunction {
               ${body}
 ```
 
-### Run with Camel 4.22.0
-
-Because of [CAMEL-24486][4], use a non-dev profile with Camel 4.22.0:
+### Run with Camel CLI
 
 ```shell
-cd custom-simple-function
-
-camel run --profile test route.camel.yaml MaskEmailFunction.java
+camel run route.camel.yaml MaskEmailFunction.java
 ```
-
-Camel CLI profiles can be selected explicitly with `--profile`; for this example, `test` avoids the issue in the affected `dev` profile. ([Apache Camel – Using Profiles][5])
 
 The output should look similar to:
 
 ```text
 Original customer:
-Name:   John   Doe
+Name: John   Doe
 Email: john.doe@example.com
 
 Processed customer:
 Customer: JOHN DOE
 Contact: j***@example.com
-```
-
-Once you are using a Camel release containing the fix for CAMEL-24486, the profile workaround is no longer required:
-
-```shell
-camel run route.camel.yaml MaskEmailFunction.java
 ```
 
 With two files and one command, the example demonstrates both extension mechanisms: reusable logic composed directly from Simple functions and application-specific Java logic exposed back to the route as another Simple function.
