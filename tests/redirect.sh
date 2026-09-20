@@ -183,10 +183,10 @@ test "$BASE_URL/camel-k/next" 301 "$BASE_URL/camel-k/next/"
 test "$BASE_URL/camel-k/next/" 200
 test "$BASE_URL/camel-k/latest" 302 "$BASE_URL/camel-k/${CAMEL_K_VERSION}"
 test "$BASE_URL/camel-k/latest/" 302 "$BASE_URL/camel-k/${CAMEL_K_VERSION}/"
-test "$BASE_URL/camel-k/traits/master.html" 302 "$BASE_URL/camel-k/${CAMEL_K_VERSION}/traits/master.html"
-test "$BASE_URL/camel-k/latest/traits/master.html" 302 "$BASE_URL/camel-k/${CAMEL_K_VERSION}/traits/master.html"
-test "$BASE_URL/camel-k/${CAMEL_K_VERSION}/traits/master.html" 200
-test "$BASE_URL/camel-k/next/traits/master.html" 200
+test "$BASE_URL/camel-k/traits/container.html" 302 "$BASE_URL/camel-k/${CAMEL_K_VERSION}/traits/container.html"
+test "$BASE_URL/camel-k/latest/traits/container.html" 302 "$BASE_URL/camel-k/${CAMEL_K_VERSION}/traits/container.html"
+test "$BASE_URL/camel-k/${CAMEL_K_VERSION}/traits/container.html" 200
+test "$BASE_URL/camel-k/next/traits/container.html" 200
 
 #test "$BASE_URL/camel-karaf" 302 "$BASE_URL/camel-karaf/${COMPONENTS_VERSION}/"
 #test "$BASE_URL/camel-karaf/" 302 "$BASE_URL/camel-karaf/${COMPONENTS_VERSION}/"
