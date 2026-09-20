@@ -10,7 +10,7 @@ preview: "Camel K: how to configure Distributed Tracing for an Integration"
 
 Tracing is an important approach for controlling and monitoring the experience of users, it allows us to gather more information about an integration's performance.
 
-Camel K has been providing support for distributed tracing using OpenTracing since long time. At the beginning of 2022, the [CNCF](https://www.cncf.io) announced that they were [archiving the OpenTracing project](https://www.cncf.io/blog/2022/01/31/cncf-archives-the-opentracing-project/) in favor of the [OpenTelemetry project](https://opentelemetry.io/). OpenTelemetry is the latest solution created by merging OpenTracing and OpenCensus. As a result, we decided in Camel K 1.12 to introduce the [`telemetry` trait](/camel-k/next/traits/telemetry.html) based on OpenTelemetry. At the same time we decided to deprecate the `tracing` trait based on OpenTracing.
+Camel K has been providing support for distributed tracing using OpenTracing since long time. At the beginning of 2022, the [CNCF](https://www.cncf.io) announced that they were [archiving the OpenTracing project](https://www.cncf.io/blog/2022/01/31/cncf-archives-the-opentracing-project/) in favor of the [OpenTelemetry project](https://opentelemetry.io/). OpenTelemetry is the latest solution created by merging OpenTracing and OpenCensus. As a result, we decided in Camel K 1.12 to introduce the [`telemetry` trait](/camel-k/2.11.x/traits/telemetry.html) based on OpenTelemetry. At the same time we decided to deprecate the `tracing` trait based on OpenTracing.
 
 I'll walk you through the configurations needed to support Distributed tracing for your Camel integrations in this blog post.
 
