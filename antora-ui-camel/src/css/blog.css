@@ -25,6 +25,14 @@
 .blog-rail {
   max-height: calc(100vh - var(--navbar-height) - calc(48 / var(--rem-base) * 1rem));
   overflow-y: auto;
+
+  /* Keep the scrollbar off the rail's text. The category counts sit flush
+     right (justify-content: space-between), so an overlay scrollbar - what
+     Firefox uses on Windows 11, where hiding scrollbars is the default -
+     paints straight over them. The negative margin lets the box bleed the
+     lane back into the 56px grid gap, so the text measure stays 240px. */
+  padding-right: var(--scrollbar-overlay-lane);
+  margin-right: calc(-1 * var(--scrollbar-overlay-lane));
 }
 
 /* "Start here" picks (data/blog-picks.yaml): same list shape as the
@@ -283,6 +291,12 @@
     position: static;
     max-height: none;
     overflow-y: visible;
+
+    /* Single column here, so there is no gap to bleed the lane into and
+       nothing scrolls in place: drop it rather than pull the rail 12px
+       past the layout padding. */
+    padding-right: 0;
+    margin-right: 0;
   }
 }
 

@@ -75,6 +75,13 @@
   --scrollbar-thumb-active-color: var(--color-gray-50);
   --scrollbar-thickness: 0.425em; /* 6.8px */
   --scrollbar-radius: 3.125em; /* 50px */
+  /* Lane kept clear on the right of a scroll container so an overlay
+     scrollbar never paints over its content. Overlay scrollbars take no
+     layout width, so scrollbar-gutter is a no-op against them (it only
+     reserves space for classic scrollbars) and explicit padding is the
+     only thing that works. Sized for Firefox's expanded overlay
+     scrollbar, the widest of them. See issue #1772. */
+  --scrollbar-overlay-lane: calc(12 / var(--rem-base) * 1rem);
   /* navbar */
   /* The bar is dark on every page, Hugo and Antora alike. 96% rather than a
      lighter tint: over the cream pages 88% came out a muddy taupe instead of
