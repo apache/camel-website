@@ -16,7 +16,9 @@ Jev is gaining momentum, and there is a reason why: it addresses a practical pro
 
 [TypeSafe AI built Jev as a System One model](https://typesafe.ai/blog/introducing-system-one-models-and-jev), designed for **fast, structured decisions**. Give it the relevant state and a question, and it returns a category, a score or a probability that your application can use directly.
 
-That is useful when an AI evaluation sits in the path of a message: the result needs to fit into the next routing decision, validation step or comparison.
+When every message needs a decision, inference latency becomes part of the route's processing time.
+A general-purpose generative LLM can answer these questions, but its generation overhead can be costly for a small judgment repeated throughout a workflow.
+System One models target this role with structured decisions designed for low latency.
 
 For an integration developer, the appeal is concrete. We can use a model to judge the meaning of a customer message, then let ordinary code decide what happens next. A category selects a support team. A probability feeds a validation predicate. A score helps order retrieved passages. **Camel still controls the workflow:** destinations, permissions, retry budgets and failure handling.
 
@@ -24,10 +26,13 @@ An ecosystem is starting to form around this approach:
 
 - **[Jev](https://typesafe.ai/)** provides typed decisions through TypeSafe's hosted service.
 - **[Laya](https://github.com/NandhaKishorM/laya)** offers open model weights for typed decisions.
-- The **[System One SDK](https://github.com/asynq-io/system-one)** provides a Python interface to hosted and local backends.
+- **[System One SDK](https://github.com/asynq-io/system-one)** provides a Python interface to hosted and local backends.
 - **[System One Models](https://systemonemodels.org/)** is an independent directory of models, use cases, examples and guides.
 
-These are early signs of a broader interest in making semantic judgments available as ordinary software operations. Each model's capabilities, deployment requirements and behavior still need to be evaluated for the task.
+Open-weight models such as [Laya](https://huggingface.co/convaiinnovations/laya) also make local deployment practical.
+With checkpoints containing hundreds of millions of parameters and support for CPU and GPU execution,
+they can run as an inference service alongside Camel—even on the same machine.
+This avoids a round trip to a hosted provider, while performance still depends on the hardware and the amount of context being evaluated.
 
 Camel brings these decisions into integration routes through `camel-semantic`, an abstraction layer above System One model providers. It makes semantic decisions available to existing EIPs and control flow. The [`camel-typesafe-ai` component](/components/next/typesafe-ai-component.html) supplies the adapter that connects this abstraction to TypeSafe AI's Jev models.
 
@@ -45,13 +50,17 @@ We'll follow a support workflow through six practical examples, using YAML throu
 | --- | --- | --- |
 | Choice | One supplied category, with probabilities and confidence | Store the category, then route on it |
 | Noul | A probability that a statement is true | Apply a threshold to obtain a predicate |
-| Score | A position on an ordered rubric, with probabilities and confidence | Store the score, then compare or sort |
+| Score | A position on a predefined rating scale, with probabilities and confidence | Store the score, then compare or sort |
+
+A general-purpose LLM with structured output can also perform these classifications. **System One models are designed around focused, typed decisions**, with probability information the application can use. With `camel-semantic`, those results become ordinary Camel expressions and predicates.
+
+**Camel makes this straightforward:** once the provider is configured, you declare a question and reference it from a Filter or Validate step. The route keeps control of what happens next, including business rules and failure handling.
 
 For example:
 
 - *“Which department handles this request?”* has a small, predefined answer set.
 - *“Does this answer address the request?”* is a yes/no judgment.
-- *“How useful is this passage?”* needs an ordered rubric.
+- *“How useful is this passage?”* uses a rating scale such as *not useful → partly useful → very useful*.
 
 **Keep questions narrow** and give the model the relevant context. Separate questions can evaluate separate concerns; Camel combines their results and controls the workflow. A structured result can still be wrong, so evaluate questions and thresholds against representative messages before relying on them.
 
@@ -119,7 +128,10 @@ The first useful decision is ownership. Pass a string such as *“I was charged 
     question:
       department:
         type: choice
-        instructions: Which team should handle this support request?
+        instructions: >-
+          Which team should handle this support request? If the state is
+          an envelope, classify `message` and use `serviceScope` only
+          as background context.
         criteria:
           billing: Invoices, payments, subscriptions and refunds
           technical: Product failures, outages and configuration problems
@@ -153,7 +165,7 @@ The route has three responsibilities:
 
 1. **Evaluate once:** Set Variable stores the category and preserves the message body.
 2. **Reuse the result:** Choice compares the stored category, so additional branches do not add provider calls.
-3. **Handle other requests:** the `other` criterion covers requests outside the two specialist teams; `otherwise` sends them for review.
+3. **Handle the third category, `other`:** the question defines this category for requests that belong to neither `billing` nor `technical`. When the model selects `other`, the Choice EIP's `otherwise` branch sends the message to `direct:review`.
 
 This also gives us a reusable department variable for metrics or later routing. Exchange variables hold application state without adding message headers; copy a value into a header only when a destination needs it. It stays valid only as long as the relevant input stays the same. Reevaluate if a later step changes the content on which the decision depends.
 
@@ -161,22 +173,42 @@ The same approach works for Recipient List, Routing Slip, Enrich and To Dynamic:
 
 ## 2. Filter messages before doing more work
 
-Some messages never need to enter the support workflow. Use the boolean `relevant` question directly as a Filter predicate:
+A relevance check needs both the customer message and a description of the service. Here, a support intake application sends an envelope to `support.incoming`. The body contains the following fields, shown as JSON:
+
+```json
+{
+  "message": "I can't access my subscription invoices.",
+  "serviceScope": "Acme Billing manages subscriptions, invoices, payments, and account access."
+}
+```
+
+**The intake application supplies `serviceScope` from trusted configuration.** The customer supplies the message. The model judges whether that message contains a support request relevant to the supplied scope; it does not establish product ownership.
+
+This example takes a conservative approach: a generic “I can't log in” with no identifiable connection to the service goes to manual triage. The question and its criteria make that policy explicit.
+
+The route uses `camel-jms` with a connection factory configured for your broker. The envelope can arrive as JSON text or as a map; both are supported semantic state types:
 
 ```yaml
 - semantic:
     question:
       relevant:
         type: boolean
-        instructions: Does this message ask for help with our product or account?
+        instructions: >-
+          Does `message` request help with the service described in
+          `serviceScope`? A generic account question with no identifiable
+          connection to this service is not enough.
+        state: "${body}"
+        criteria:
+          "true": A support request with a clear connection to the capabilities described in serviceScope
+          "false": Another service, an unsolicited promotion, or insufficient information to establish relevance
         threshold: 0.8
         uncertainty: 0.05
         uncertaintyPolicy: non-match
 
 - route:
-    id: filter-ticket
+    id: filter-support-ticket
     from:
-      uri: direct:incoming
+      uri: jms:queue:support.incoming
       steps:
         - filter:
             expression:
@@ -185,17 +217,19 @@ Some messages never need to enter the support workflow. Use the boolean `relevan
                 expression: ref:relevant
             steps:
               - to: direct:classify
+              - stop: {}
+        - to: jms:queue:support.manual-triage
 ```
+
+**The complete envelope stays in the body.** Both the Filter and the classifier receive the customer message and service scope. The classifier from the first example explicitly evaluates `message`, using `serviceScope` as background context.
 
 With this question's `non-match` policy:
 
-- A **positive decision** reaches classification.
-- A **negative or uncertain decision** skips the Filter's child steps.
-- A **timeout or malformed response** fails the exchange.
+- A **positive decision** reaches classification. The following `stop` prevents it from also reaching manual triage.
+- A **negative or uncertain decision** skips the Filter's child steps. The complete envelope goes to `support.manual-triage`.
+- A **timeout or malformed provider response** fails the exchange and follows normal Camel error handling. It does not automatically become a manual-triage decision.
 
-There are no steps after Filter in this route, so processing ends there. In a longer route, **steps following Filter would still run**.
-
-If rejected messages need an audit trail or human review, use Choice with an explicit rejection branch instead of discarding them.
+**Steps following Filter still run when its predicate does not match.** This route uses that behavior to retain requests that need a human decision.
 
 This predicate can also run inside Split when an existing collection contains records that need individual checks. The split supplies the records; semantic evaluation does not extract a collection from prose.
 
