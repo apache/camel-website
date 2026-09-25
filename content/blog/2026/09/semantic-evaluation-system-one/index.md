@@ -5,22 +5,34 @@ draft: false
 authors: [ luigidemasi ]
 categories: ["AI", "EIP"]
 keywords: ["apache camel", "typesafe ai", "jev", "system one", "semantic evaluation", "yaml", "routing", "validation"]
-preview: "Use Camel's Semantic language with Jev to classify messages, validate answers and actions, collect enough context for an investigation, and review outgoing messages in YAML routes."
+preview: "Use Camel's Semantic language with Jev to classify messages, score ticket severity, validate actions, group related feedback, and review outgoing messages in camel routes."
 ---
 
 Jev is gaining momentum, and there is a reason why: it addresses a practical problem in automation. Many workflows need a model to make a small, specific judgment:
 
 - *Which team should handle this request?*
-- *Does this answer address the question?*
+- *How severe is this reported issue?*
 - *Does this action fit the approved task?*
 
 [TypeSafe AI built Jev as a System One model](https://typesafe.ai/blog/introducing-system-one-models-and-jev), designed for **fast, structured decisions**. Give it the relevant state and a question, and it returns a category, a score or a probability that your application can use directly.
 
 When every message needs a decision, inference latency becomes part of the route's processing time.
-A general-purpose generative LLM can answer these questions, but its generation overhead can be costly for a small judgment repeated throughout a workflow.
+A general-purpose generative LLM can answer these questions, but its generation overhead can be costly for a small judgment
+repeated throughout a workflow.
 System One models target this role with structured decisions designed for low latency.
 
-For an integration developer, the appeal is concrete. We can use a model to judge the meaning of a customer message, then let ordinary code decide what happens next. A category selects a support team. A probability feeds a validation predicate. A score helps order retrieved passages. **Camel still controls the workflow:** destinations, permissions, retry budgets and failure handling.
+For an integration developer, the appeal is concrete. We can use a model to judge the meaning of a customer message,
+then let ordinary code decide what happens next.
+<br/>
+<br/>
+A **category** selects a support team.
+<br/>
+A **probability** feeds a validation predicate.
+<br/>
+A **score** helps prioritize support tickets.
+<br/>
+<br/>
+**Camel still controls the workflow:** destinations, permissions, retry budgets and failure handling.
 
 An ecosystem is starting to form around this approach:
 
@@ -34,9 +46,11 @@ With checkpoints containing hundreds of millions of parameters and support for C
 they can run as an inference service alongside Camel—even on the same machine.
 This avoids a round trip to a hosted provider, while performance still depends on the hardware and the amount of context being evaluated.
 
-Camel brings these decisions into integration routes through `camel-semantic`, an abstraction layer above System One model providers. It makes semantic decisions available to existing EIPs and control flow. The [`camel-typesafe-ai` component](/components/next/typesafe-ai-component.html) supplies the adapter that connects this abstraction to TypeSafe AI's Jev models.
+**`camel-semantic` is the abstraction your routes use.** It exposes semantic decisions as Camel expressions and predicates, making them available to existing EIPs and control flow independently of the model provider.
 
-We'll follow a support workflow through six practical examples, using YAML throughout: classify and filter requests, validate answers and proposed actions, collect enough context for an investigation, and check outgoing replies.
+Provider integration happens behind an adapter. In these examples, [`camel-typesafe-ai`](/components/next/typesafe-ai-component.html) supplies that adapter and delegates inference to TypeSafe AI’s Jev models. **Other System One model providers can plug into the same abstraction through compatible adapters**, keeping provider-specific APIs and request handling out of your routes.
+
+We'll follow a support workflow through six practical examples, using YAML throughout: classify and filter requests, score ticket severity, validate proposed actions, group related feedback, and check outgoing replies.
 
 > **Version requirement:** These examples require **Camel 4.23 or later**. Before the 4.23 release, use a current `4.23.0-SNAPSHOT` build and keep all Camel dependencies on the same version.
 >
@@ -59,10 +73,12 @@ A general-purpose LLM with structured output can also perform these classificati
 For example:
 
 - *“Which department handles this request?”* has a small, predefined answer set.
-- *“Does this answer address the request?”* is a yes/no judgment.
-- *“How useful is this passage?”* uses a rating scale such as *not useful → partly useful → very useful*.
+- *“Does this action fit the approved task?”* is a yes/no judgment.
+- *“How severe is the reported issue?”* uses an ordered scale with descriptions of the impact at each level.
 
 **Keep questions narrow** and give the model the relevant context. Separate questions can evaluate separate concerns; Camel combines their results and controls the workflow. A structured result can still be wrong, so evaluate questions and thresholds against representative messages before relying on them.
+
+Treat incoming messages and generated proposals as untrusted data. [Jev 1.13 can be influenced by misleading or adversarial wording](https://docs.typesafe.ai/model-jaggedness/jev-1.13#adversarial-content). Semantic evaluation supplements deterministic checks; it does not establish identity or grant permissions.
 
 ## A common Camel layer for System One models
 
@@ -73,7 +89,7 @@ For example:
 - **Loop:** decide whether another iteration is needed.
 - **Redelivery:** decide whether an operation is worth retrying.
 
-Routes define the questions, select the state to evaluate and set the decision policy. A provider adapter performs the evaluation and returns the result through a common contract. This keeps provider-specific request and response handling out of the route's decision logic.
+Question declarations define the instructions, select the state to evaluate and set the decision policy. Routes reference those questions by name. A provider adapter performs the evaluation and returns the result through a common contract. This keeps provider-specific request and response handling out of the route's decision logic.
 
 `camel-typesafe-ai` supplies **the Jev adapter for `camel-semantic`**. The component handles communication with TypeSafe AI, including credentials, HTTP transport, timeouts and concurrency limits. Its adapter:
 
@@ -102,11 +118,15 @@ camel.component.typesafe-ai.max-concurrent-requests=8
 
 Provide `TYPESAFE_API_KEY` through your deployment environment. The five-second timeout is an example budget, not a latency claim.
 
+The limit of eight concurrent requests is shared by semantic questions using the adapter's endpoint. Excess evaluations fail immediately instead of being queued. HTTP errors, timeouts and malformed responses follow Camel's normal error handling.
+
 **Pin the [model version](https://docs.typesafe.ai/models)** when tuning decision thresholds: an alias such as `jev-latest` can move independently of your routes.
 
 Each example keeps its question beside the route or interceptor for readability. Questions can also be declared in separate YAML resources, or after the routes that refer to them. **Question names must be unique across the CamelContext.** Reloading a resource replaces that resource's questions, including removing declarations no longer present. Loading a question definition does not call the provider.
 
-A question reads the **body by default**. Its `state` option can select a variable, header or exchange property using Simple. The selected value must be a string, map or list.
+A question reads the **body by default**. Its `state` option can select a variable, header or exchange property using Simple.
+The selected value must be a string, map or list.
+A map is sent as a JSON object with named fields; JSON text remains a string and is not parsed automatically.
 
 For an HTTP stream, convert explicitly with `state: ${bodyAs(String)}`. Use stream caching if subsequent processors also need that stream.
 
@@ -116,6 +136,20 @@ For a boolean question, `threshold: 0.8` selects the decision boundary. With `un
 - **`non-match`** returns false within that band.
 
 These values are *illustrative policy choices*, not an 80% accuracy guarantee. Provider errors remain errors under either policy.
+
+After a successful evaluation, Camel stores the detailed result in the **`CamelSemanticResult` exchange property**. The EIP receives the category, score or boolean decision directly; the property makes the supporting information available to later route steps.
+
+With the TypeSafe adapter, it contains:
+
+| Field | Contents |
+| --- | --- |
+| `value` | The selected category or numeric score; `null` for boolean questions |
+| `probability` | The probability that a boolean question is true; `null` for Choice and Score |
+| `probabilities` | Probabilities for each category or score level; empty for boolean questions |
+| `confidence` | Provider confidence for Choice and Score, from 0 to 1; `null` for boolean questions |
+| `metadata` | Provider name, model identifier and token usage |
+
+Read these fields with Simple, for example `${exchangeProperty.CamelSemanticResult.confidence}`. Camel clears the property before the next semantic evaluation, so store a copy if you need to retain an earlier result.
 
 Each `direct:` destination such as `direct:billing` or `direct:performAction` represents an application route you supply. They make the integration boundary explicit; these fragments are not a complete support application.
 
@@ -150,15 +184,22 @@ The first useful decision is ownership. Pass a string such as *“I was charged 
                 expression: ref:department
         - choice:
             when:
-              - simple: "${variable.department} == 'billing'"
+              - expression:
+                  simple:
+                    expression: "${variable.department} == 'billing'"
                 steps:
-                  - to: direct:billing
-              - simple: "${variable.department} == 'technical'"
+                  - to:
+                      uri: direct:billing
+              - expression:
+                  simple:
+                    expression: "${variable.department} == 'technical'"
                 steps:
-                  - to: direct:technical
+                  - to:
+                      uri: direct:technical
             otherwise:
               steps:
-                - to: direct:review
+                - to:
+                    uri: direct:review
 ```
 
 The route has three responsibilities:
@@ -216,12 +257,16 @@ The route uses `camel-jms` with a connection factory configured for your broker.
                 language: semantic
                 expression: ref:relevant
             steps:
-              - to: direct:classify
+              - to:
+                  uri: direct:classify
               - stop: {}
-        - to: jms:queue:support.manual-triage
+        - to:
+            uri: jms:queue:support.manual-triage
 ```
 
 **The complete envelope stays in the body.** Both the Filter and the classifier receive the customer message and service scope. The classifier from the first example explicitly evaluates `message`, using `serviceScope` as background context.
+
+A message that passes the Filter makes two provider calls: one for relevance and one for classification. A negative or uncertain relevance result makes only the first call.
 
 With this question's `non-match` policy:
 
@@ -233,52 +278,61 @@ With this question's `non-match` policy:
 
 This predicate can also run inside Split when an existing collection contains records that need individual checks. The split supplies the records; semantic evaluation does not extract a collection from prose.
 
-## 3. Check an answer before delivering it
+## 3. Score the severity of a ticket
 
-A generated answer may be fluent but miss the customer's actual request. Supply both pieces of information in the body:
+A support queue contains everything from a misaligned button to a feature that nobody can use. A Score question assesses the reported severity against an ordered scale, and Camel uses the result to select a handling route.
 
-```json
-{
-  "request": "How do I download the invoice for last month's payment?",
-  "answer": "Open Billing, select the payment, and choose Download invoice."
-}
-```
-
-Then validate it before the delivery route:
+Pass the ticket text in the body to `direct:prioritize`, for example: *“The export button fails, but I can still download the data from the reports page.”*
 
 ```yaml
 - semantic:
     question:
-      answersRequest:
-        type: boolean
-        instructions: Does the proposed answer address the supplied customer request?
-        threshold: 0.8
-        uncertainty: 0.05
-        uncertaintyPolicy: fail
+      severity:
+        type: score
+        instructions: How severe is the reported issue?
+        criteria:
+          - Cosmetic issue with no impact on functionality
+          - Broken functionality with a workaround
+          - Blocking issue with no workaround
 
 - route:
-    id: check-answer
+    id: prioritize-ticket
     from:
-      uri: direct:checkAnswer
+      uri: direct:prioritize
       steps:
-        - validate:
+        - setVariable:
+            name: severity
             expression:
               language:
                 language: semantic
-                expression: ref:answersRequest
-        - to: direct:deliverAnswer
+                expression: ref:severity
+        - choice:
+            when:
+              - expression:
+                  simple:
+                    expression: "${variable.severity} >= 1.5"
+                steps:
+                  - to:
+                      uri: direct:urgent
+              - expression:
+                  simple:
+                    expression: "${variable.severity} >= 0.5"
+                steps:
+                  - to:
+                      uri: direct:normal
+            otherwise:
+              steps:
+                - to:
+                    uri: direct:lowPriority
 ```
 
-The delivery step runs only after validation succeeds:
+The three criteria define levels **0, 1 and 2**, in that order. Scores can fall between levels, so the route uses decimal boundaries:
 
-- A **false result** raises Camel's normal validation exception.
-- An **uncertain result, timeout or invalid response** also prevents delivery.
+- **1.5 or higher:** send to `direct:urgent`.
+- **0.5 up to, but not including, 1.5:** send to `direct:normal`.
+- **Below 0.5:** send to `direct:lowPriority`.
 
-Configure the application's error handling to request a revision or send the case for review.
-
-This checks whether the answer *addresses the request*. It does not, by itself, verify every factual claim in the answer. Add authoritative reference material and a separate, narrowly defined check when factual support matters.
-
-The same pattern can validate the input before calling a generative AI component. It works at the route boundary; it does not install a LangChain4j internal guardrail implementation.
+The question is evaluated once. Set Variable stores the score while preserving the original ticket body for the selected route. The boundaries are application policy choices to tune against representative tickets; the score is a position on the scale, not a percentage.
 
 ## 4. Check whether an allowed action fits the task
 
@@ -291,7 +345,7 @@ An action can be permitted by the user's role and still be the wrong action for 
     question:
       withinScope:
         type: boolean
-        instructions: Does the proposed action serve the supplied approved task?
+        instructions: Does `proposedAction` serve the task described in `approvedTask`?
         threshold: 0.8
         uncertainty: 0.05
         uncertaintyPolicy: fail
@@ -301,27 +355,32 @@ An action can be permitted by the user's role and still be the wrong action for 
     from:
       uri: direct:checkAction
       steps:
-        - to: direct:checkPermissions
-        - to: direct:loadApprovedTask
+        - to:
+            uri: direct:checkPermissions
+        - to:
+            uri: direct:loadApprovedTask
         - validate:
             expression:
               language:
                 language: semantic
                 expression: ref:withinScope
-        - to: direct:performAction
+        - to:
+            uri: direct:performAction
 ```
 
 The first two steps are application responsibilities:
 
 - **`direct:checkPermissions`** checks identity, permissions and tenant boundaries. It must reject unauthorized requests.
-- **`direct:loadApprovedTask`** loads the task from trusted application state and produces a body such as:
+- **`direct:loadApprovedTask`** loads the task from trusted application state and produces a map in the body, shown here as JSON:
 
 ```json
 {
   "approvedTask": "Explain the duplicate subscription charge; do not change the account.",
   "proposedAction": {
     "operation": "cancelSubscription",
-    "reason": "Avoid another charge"
+    "parameters": {
+      "subscriptionId": "sub-123"
+    }
   }
 }
 ```
@@ -330,76 +389,57 @@ The first two steps are application responsibilities:
 
 This is useful for AI tool and MCP-backed routes as well as ordinary application commands; [Camel's tool authorization example](/blog/2026/09/securing-ai-agent-tools/) shows the underlying permission pattern.
 
-> **Stop before the action.** A negative decision, uncertainty or evaluation failure must stop execution or divert it to review. Do not configure `continued: true` on those failures, because that would resume processing toward the action.
+> **Stop before the action.** A negative decision, uncertainty or evaluation failure must stop execution or divert it to review. Do not configure the error handler to continue processing after those failures, because that would resume the route toward the action.
 
 Semantic validation adds a contextual judgment; **identity and permissions remain authoritative**.
 
-## 5. Collect enough context to investigate a problem
+## 5. Group related feedback into batches
 
-A useful bug report often arrives in pieces. A customer might send:
+Customers describe the same issue in different words. “You took my money twice” and “My card shows two identical charges” both concern billing, while “I cannot find the export button” concerns usability. A semantic category can group those messages without maintaining a list of keyword rules.
 
-1. “The export is broken.”
-2. “In Chrome, I open Billing → Invoices, select last month and click Export CSV.”
-3. “The page shows 230 invoices, but the downloaded CSV contains only the first 50. I need every invoice in that period.”
-
-**The useful decision is whether the messages together explain the problem well enough to investigate.** A message count cannot tell us that: three messages saying “it still doesn't work” add little, while one detailed message might be sufficient.
-
-[Aggregate](/components/next/eips/aggregate-eip.html) can collect the messages for each case and use a semantic completion predicate to decide when to send them onward. The application supplies a `caseKey` that identifies the tenant and case, and each incoming body contains one message as text.
+[Aggregate](/components/next/eips/aggregate-eip.html) accepts an expression for its correlation key. Here, that expression asks which topic best describes each incoming feedback message:
 
 ```yaml
 - semantic:
     question:
-      readyForInvestigation:
-        type: boolean
-        instructions: >-
-          Do these messages together describe a problem well enough to
-          start an investigation? Require concrete steps or a triggering
-          action, relevant environment or context, the expected outcome,
-          and the observed outcome. Vague statements such as "it is broken"
-          are not enough. Details may be spread across several messages.
-        state: "${exchangeProperty.CamelGroupedExchange}"
-        threshold: 0.8
-        uncertainty: 0.05
-        uncertaintyPolicy: non-match
+      feedbackTopic:
+        type: choice
+        instructions: Which topic best describes this customer feedback?
+        criteria:
+          billing: Payments, invoices and subscription charges
+          reliability: Failures, crashes and outages
+          usability: Difficulty finding or using a product feature
+          other: Feedback that does not fit the other topics
 
 - route:
-    id: collect-support-details
+    id: group-customer-feedback
     from:
-      uri: direct:supportDetail
+      uri: direct:feedback
       steps:
         - aggregate:
             aggregationStrategy: "#class:org.apache.camel.processor.aggregate.GroupedBodyAggregationStrategy"
             correlationExpression:
-              simple: "${header.caseKey}"
-            completionPredicate:
-              expression:
-                language:
-                  language: semantic
-                  expression: ref:readyForInvestigation
-            completionSize: 8
-            completionTimeout: 60000
+              language:
+                language: semantic
+                expression: ref:feedbackTopic
+            completionSize: 5
+            completionTimeout: "60000"
             steps:
-              - choice:
-                  when:
-                    - simple: "${exchangeProperty.CamelAggregatedCompletedBy} == 'predicate'"
-                      steps:
-                        - to: direct:investigateCase
-                  otherwise:
-                    steps:
-                      - to: direct:caseReview
+              - to:
+                  uri: direct:reviewFeedbackBatch
 ```
 
-`GroupedBodyAggregationStrategy` collects the message bodies into a list. While the group is open, that list lives in `CamelGroupedExchange`, so the question's `state` selects it explicitly. When aggregation completes, the list becomes the outgoing body.
+**This example processes feedback for one tenant and product.** If a shared deployment handles several tenants or products, its correlation key must also include their authoritative identities. A topic alone does not provide that isolation.
 
-The question is evaluated against the accumulated messages after each arrival:
+Each incoming body is one feedback message as text. The semantic expression evaluates it once, and Aggregate uses the returned category as the group key. `GroupedBodyAggregationStrategy` collects the original bodies into a list:
 
-- **Enough detail:** the predicate completes the group and sends it to `direct:investigateCase`.
-- **Missing detail or an uncertain decision:** Camel keeps collecting messages for that case.
-- **Eight messages or about one minute of inactivity:** Camel completes the group even if the predicate has not matched, and sends it to `direct:caseReview` for follow-up. A timeout does not imply that the report is ready.
+- **Same topic:** messages join the same open group, even when their wording differs.
+- **Five messages or about one minute of inactivity:** that topic's group completes and its list is sent to `direct:reviewFeedbackBatch`, an application route that stores or reviews the batch.
+- **Evaluation failure:** the incoming message is not added to a group and follows normal Camel error handling.
 
-Both destinations are application routes that receive the collected messages. Provider failures propagate through normal Camel error handling. The application owns case identity and lifecycle, including how late messages are handled after a group completes.
+The size and inactivity limits apply independently to each topic. Later messages start a new group after the previous one completes. The destination can read the topic from Camel's `CamelAggregatedCorrelationKey` exchange property.
 
-Here, **the semantic predicate controls when Aggregate has enough information to proceed**. Camel supplies the grouping, limits and dispatch; there is no separate step to store the semantic result in a variable, header or property.
+Here, **Aggregate consumes the semantic category directly**. No intermediate variable, header or property is needed to pass the decision to the EIP, and completed groups use ordinary deterministic completion rules.
 
 ## 6. Share a check across outgoing messages
 
@@ -413,7 +453,7 @@ Here the body contains the prepared reply text. A semantic predicate checks whet
       needsReview:
         type: boolean
         instructions: Does this outgoing reply promise a refund, discount or other financial compensation?
-        threshold: 0.8
+        threshold: 0.3
         uncertainty: 0.05
         uncertaintyPolicy: fail
 
@@ -426,7 +466,8 @@ Here the body contains the prepared reply text. A semantic predicate checks whet
           language: semantic
           expression: ref:needsReview
     steps:
-      - to: direct:humanReview
+      - to:
+          uri: direct:humanReview
       - stop: {}
 
 - route:
@@ -434,15 +475,19 @@ Here the body contains the prepared reply text. A semantic predicate checks whet
     from:
       uri: direct:replyByEmail
       steps:
-        - to: direct:outbound-email
+        - to:
+            uri: direct:outbound-email
 
 - route:
     id: reply-by-chat
     from:
       uri: direct:replyByChat
       steps:
-        - to: direct:outbound-chat
+        - to:
+            uri: direct:outbound-chat
 ```
+
+The action-validation example requires a strong positive answer before allowing an action. Here, a positive answer requests human review, so the lower threshold favors catching possible compensation promises. The illustrative uncertainty band is **0.25 through 0.35**, inclusive; results inside it fail before delivery. Tune these values against representative replies.
 
 The interceptor covers matching sends from both routes:
 
@@ -452,11 +497,11 @@ The interceptor covers matching sends from both routes:
 
 `direct:outbound-email` and `direct:outbound-chat` are application routes that perform the actual delivery. The review route must retain the reply for a separate approval workflow; it does not send it automatically.
 
-**Keep the interceptor before the routes in the YAML file.** It evaluates each matching send, so a route that sends twice performs two checks. Avoid continuing past evaluation failures in the error handler, just as in the action-validation example.
+**Keep the interceptor before any routes in its YAML file.** If you combine these examples into one file, move the interceptor above all route declarations. It can also affect matching sends from routes in other YAML files in the same CamelContext. Each matching send performs a check, so sending twice performs two evaluations. Avoid continuing past evaluation failures in the error handler, just as in the action-validation example.
 
 ## Choosing the next integration point
 
-The same approach extends to other parts of a Camel workflow. The six examples above cover classification, filtering, validation, aggregation and shared checks. Other useful integration points include:
+The same approach extends to other parts of a Camel workflow. The six examples above cover classification, filtering, scoring, validation, aggregation and shared checks. Other useful integration points include:
 
 | If the workflow needs… | Apply the same idea through… | Keep in application control |
 | --- | --- | --- |
@@ -472,7 +517,7 @@ The practical benefit is that a semantic judgment becomes a small, visible part 
 
 For me, `camel-semantic` is a starting point for a closer relationship between semantic evaluation and Camel's EIPs.
 
-Filter, Validate and Aggregate already consume semantic predicates directly. The classification example shows where I would like that integration to go further: it uses a separate step to evaluate the question and store its answer before Choice uses it.
+Filter and Validate already consume semantic predicates directly, and the Aggregate example uses a semantic expression as its correlation key. The classification example shows where I would like that integration to go further: it uses a separate step to evaluate the question and store its answer before Choice uses it.
 
 My vision is for **the semantic question to become a parameter of the EIP itself**. The route author would supply the question, the state to evaluate and the rules for using the answer. The EIP would request the evaluation through `camel-semantic` and consume the result internally, without requiring an intermediate variable, header or exchange property.
 
