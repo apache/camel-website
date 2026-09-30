@@ -97,6 +97,8 @@ pipeline {
                 dir('deploy/live') {
                     deleteDir()
                     sh 'git clone -b asf-site https://gitbox.apache.org/repos/asf/camel-website-pub.git .'
+                    // catch up with the GitHub mirror in case a previous push reached GitHub but not gitbox, which would make the gitbox sync hook reject every push
+                    sh 'git pull --ff-only https://github.com/apache/camel-website-pub.git asf-site || true'
                     sh "rsync -a --delete --exclude='.git' --exclude='.asf.yaml' $WORKSPACE/camel-website/public/ ."
                     sh 'git add -A'
                     sh "git checkout $VALID_ASF_YAML -- ./.asf.yaml" // force revert to commit containing the valid .asf.yml
