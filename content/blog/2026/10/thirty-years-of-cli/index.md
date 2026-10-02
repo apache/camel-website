@@ -5,7 +5,7 @@ draft: false
 authors: [davsclaus]
 categories: ["AI", "Tooling"]
 keywords: ["apache camel", "AI", "cli", "mcp", "camel catalog", "connectors", "integration"]
-preview: "My Mac mini ran warm, and an AI found the cause with Unix tools older than most of my colleagues. Camel has the same shape: twenty years of connectors and options that no single person knows, and an AI that can use all of them."
+preview: "My Mac mini ran warm, and an AI found the cause with Unix tools that have been around for most of my career. Camel has the same shape: twenty years of connectors and options that no single person knows, and an AI that can use all of them."
 ---
 
 This afternoon my Mac mini felt warm. Not hot, just warmer than an idle computer should be. So I typed one sentence into my AI coding assistant: *my mac mini is warm, what is it doing?*
