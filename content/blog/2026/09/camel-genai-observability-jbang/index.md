@@ -141,7 +141,7 @@ camel tui
 ![Camel TUI Spans — GenAI OpenTelemetry trace with gen_ai attributes for an Ollama chat call](./camel-genai-observability-spans.png)
 
 Each LLM call creates a child span with `gen_ai.operation.name=chat`, model attributes, and token usage.
-See the [OpenTelemetry Spans section](/manual/camel-jbang-tui.html#_opentelemetry_spans) in the TUI manual
+See the [OpenTelemetry Spans section](/manual/camel-jbang-tui-observe.html#_opentelemetry_spans) in the TUI manual
 for a walkthrough of the Spans tab layout.
 
 Key span attributes:

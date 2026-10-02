@@ -32,7 +32,7 @@ MCP gives that agent tools for working with Camel. When the ACP session opens, t
 There is no separate TUI MCP configuration to copy into the agent, and no need to launch the TUI with `--mcp`.
 
 The implementation requires ACP v1 and HTTP MCP support. Presets cover IBM Bob, Claude Code, Codex, Qwen Code, OpenCode, and DeepSeek Harness (developer preview).
-Other compatible agents can be configured through `acp:custom`. The [TUI manual](/manual/camel-jbang-tui.html#_using_a_coding_agent_acp) lists the commands and prerequisites for each preset.
+Other compatible agents can be configured through `acp:custom`. The [TUI manual](/manual/camel-jbang-tui-ai-agents.html#_using_a_coding_agent_acp) lists the commands and prerequisites for each preset.
 
 ## What Camel Kit adds
 
@@ -275,7 +275,7 @@ Try it with your preferred compatible agent, and let us know how it fits your wo
 
 ## References
 
-For the development tools, see [Camel Kit](https://luigidemasi.github.io/camel-kit-web/), [Camel TUI and its ACP support](/manual/camel-jbang-tui.html#_using_a_coding_agent_acp), [Camel JBang](/manual/camel-jbang.html), and [IBM Bob Shell](https://bob.ibm.com/docs/shell).
+For the development tools, see [Camel Kit](https://luigidemasi.github.io/camel-kit-web/), [Camel TUI and its ACP support](/manual/camel-jbang-tui-ai-agents.html#_using_a_coding_agent_acp), [Camel JBang](/manual/camel-jbang.html), and [IBM Bob Shell](https://bob.ibm.com/docs/shell).
 <br/>
 For the integration, refer to [Camel Main](/components/next/others/main.html), [YAML DSL](/components/next/others/yaml-dsl.html), the [Paho MQTT 5 component](/components/next/paho-mqtt5-component.html), the [InfluxDB 2 component](/components/next/influxdb2-component.html), and the [Circuit Breaker EIP](/components/next/eips/circuitBreaker-eip.html).
 <br/>
