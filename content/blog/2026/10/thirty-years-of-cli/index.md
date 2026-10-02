@@ -39,3 +39,5 @@ I don't think the lesson is "AI knows everything". The two runaway processes on 
 But I do think something changed. For thirty years we have built powerful tools and then expected humans to remember them. Maybe the tools were fine all along, and we just needed a better way to ask.
 
 Have a nice weekend.
+
+*PS: The underlying OS is the point, of course. I have watched frontier models use the Camel CLI, the catalog and the MCP server to do work that was not possible six to twelve months ago, and certainly not a few years back. And it does not feel like "AI slop" at all: the routes are real Camel, checked against real Camel. In one or two years I think even local models will be great at doing Camel work. Okay, that is my opinion.*
