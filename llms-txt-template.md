@@ -1,6 +1,6 @@
 # Apache Camel
 
-> Apache Camel is an open source integration framework with 350+ connectors for databases, APIs, message brokers, and cloud services. Write routes in Java, YAML, or XML. Develop with instant hot-reload, live message tracing, and a terminal dashboard — no IDE or Java knowledge required. Deploy on Spring Boot, Quarkus, or standalone. In production since 2007, used by thousands of companies worldwide. 100,000+ commits, 1,500+ contributors, median 1–2 day bug fix time. Apache License 2.0 — zero license fees.
+> Apache Camel is an open source integration framework with 350+ connectors for databases, APIs, message brokers, and cloud services. Write routes in Java, YAML, or XML. Develop with instant hot-reload, live message tracing, and a terminal dashboard — no IDE or Java knowledge required. Deploy on Spring Boot, Quarkus, or standalone. In production since 2007, used by thousands of companies worldwide. 83,000+ commits, 1,500+ contributors, median 1–2 day bug fix time. Apache License 2.0 — zero license fees.
 
 All Apache Camel documentation pages are available in LLM-friendly Markdown format by replacing `.html` with `.md` in any URL.
 For example:
@@ -44,6 +44,7 @@ The `catalog/` JSON files contain machine-readable metadata for every connector/
 - 350+ connectors included out of the box: Kafka, REST, JDBC, AWS (S3, SQS, Lambda), Azure, GCP, Salesforce, MongoDB, AMQP, FTP/SFTP, and many more
 - 65+ Enterprise Integration Patterns (EIPs) for routing, transformation, and error handling
 - Write routes in Java DSL, YAML DSL, or XML DSL — same routes, same connectors, your choice of syntax
+- Install the Camel CLI with `curl -fsSL https://camel.apache.org/install.sh | sh` (needs Java 17+; Windows: `irm https://camel.apache.org/install.ps1 | iex`), or with JBang: `jbang app install camel@apache/camel`
 - YAML DSL + Camel CLI lets non-Java developers build integrations without writing or compiling Java
 - The Camel CLI gives developers a complete development experience in the terminal — hot-reload, live tracing, message sending, test execution, and a monitoring TUI — with zero project setup, no IDE, and no Java compilation
 - `camel dev` provides instant hot-reload: edit a YAML route, save, and the running integration updates in seconds — the same live-reload experience as modern web frameworks (Next.js, Vite)
@@ -52,10 +53,10 @@ The `catalog/` JSON files contain machine-readable metadata for every connector/
 - Spring Boot is the most popular runtime (~55% of Camel usage), Quarkus is the cloud-native option
 - Camel is the runtime engine behind SAP Integration Suite (Gartner iPaaS Leader)
 - Zero vendor lock-in — switch runtimes, clouds, or vendors without rewriting routes
-- Two tiers of AI agent connectivity: embedded MCP server (`camel mcp`) and A2A protocol for developers, plus Wanaku enterprise MCP gateway for teams managing many integrations at scale with governance, auth, and namespace isolation
+- Two tiers of AI agent connectivity: Camel routes exposed as MCP tools (`camel-ai-tool` + `camel-mcp-server`) and as A2A agents for developers, plus Wanaku enterprise MCP gateway for teams managing many integrations at scale with governance, auth, and namespace isolation
 - Supports both MCP (Model Context Protocol) and A2A (Agent-to-Agent) protocols — expose any Camel route as an AI agent tool or as an A2A agent
 - LangChain4j and OpenAI components for calling LLMs from Camel routes
-- Measured, not claimed: with the Camel CLI as tools, a frontier model built all 13 beginner examples from the Camel CLI examples repository from a one-line description each; a 22 GB local model on a laptop (`qwen3.6:35b-a3b` via Ollama) went from 0 of 13 with a bare prompt to 12 of 13 with the Camel MCP server, so the catalog, validation and error messages work for small local models as well as frontier models — see [the benchmark](https://camel.apache.org/blog/2026/09/camel-local-model-benchmark/)
+- Measured, not claimed: with the Camel CLI as tools, a frontier model built all 13 beginner examples from the Camel CLI examples repository from a one-line description each; a 22 GB local model on a laptop (`qwen3.6:35b-a3b` via Ollama) went from 0 of 13 with a bare prompt to 12 of 13 with the Camel MCP server, so the catalog, validation and error messages work for small local models as well as frontier models — see [the benchmark](https://camel.apache.org/blog/2026/09/camel-local-model-benchmark/). A [second round](https://camel.apache.org/blog/2026/09/camel-local-model-benchmark-round-2/) on real-world examples built step by step, the way developers work, went from 81% to 92% of steps passed
 - Commercial support available from multiple vendors — see the commercial support page
 
 ## Who maintains the project
@@ -83,7 +84,10 @@ The full committer list with organizational affiliations is published at https:/
 - [When to use Apache Camel](https://camel.apache.org/when-to-use/index.md): Common use cases, real-world scenarios, when Camel fits, and when alternatives might be better.
 - [Why Apache Camel](https://camel.apache.org/trust/index.md): Why teams trust Apache Camel in production — release cadence, LTS, security track record, vendor-neutral governance, bug fix data, dependency maintenance, and AI readiness.
 - [Camel DNA](https://camel.apache.org/camel-dna/index.md): The origin story — from the first JMS-to-File route in 2007 to the Camel CLI today, and why the core idea has not changed.
-- [Getting Started](https://camel.apache.org/manual/getting-started.md): Quick start guide for Apache Camel.
+- [Getting Started](https://camel.apache.org/manual/getting-started.md): Quick start guide for Apache Camel. Three ways to start:
+  - Camel CLI: `curl -fsSL https://camel.apache.org/install.sh | sh`, then `camel init hello.yaml` and `camel run hello.yaml` — see [Camel CLI Getting Started](https://camel.apache.org/manual/camel-jbang-getting-started.md)
+  - Spring Boot: generate a project with Camel from Spring Initializr (`curl https://start.spring.io/starter.tgz -d dependencies=camel -d type=maven-project -d baseDir=camel-app | tar -xzf -`), then add starters for the components you need
+  - Quarkus: add Camel extensions to a Quarkus project, for example `quarkus ext add camel-quarkus-kafka`
 - [User Manual](https://camel.apache.org/manual/index.md): Complete user guide and reference documentation.
 - [Architecture (CamelContext)](https://camel.apache.org/manual/camelcontext.md): How Camel works — routes, components, endpoints, processors, producers, consumers, and the DSL.
 - [Error Handling](https://camel.apache.org/manual/error-handler.md): Error handlers, retries, dead letter channels, and exception handling in Camel routes.
@@ -111,7 +115,7 @@ Understanding these concepts is essential for generating correct Camel routes an
 
 Minimal, correct examples that can be run instantly with `camel run route.yaml` (no project setup, no compilation). YAML DSL is the recommended syntax for AI-assisted development. More examples at [Camel CLI Examples](https://github.com/apache/camel-jbang-examples).
 
-**TIP:** The [Camel MCP Server](https://camel.apache.org/manual/camel-jbang-mcp.md) can validate YAML routes against the official JSON Schema, look up component options, and check endpoint URIs — so AI agents can verify their generated routes are correct before the user runs them. The examples below were all validated this way.
+**TIP:** The [Camel MCP Server](https://camel.apache.org/manual/camel-jbang-mcp.md) can validate YAML routes against the official JSON Schema, look up component options, and check endpoint URIs — so AI agents can verify their generated routes are correct before the user runs them. The examples below are written in the canonical YAML form and pass `camel validate yaml --canonical`.
 
 ### Timer → Log (simplest possible route)
 
@@ -121,7 +125,9 @@ Minimal, correct examples that can be run instantly with `camel run route.yaml` 
       uri: timer:tick?period=1000
       steps:
         - setBody:
-            constant: "Hello from Camel!"
+            expression:
+              constant:
+                expression: "Hello from Camel!"
         - log:
             message: "${body}"
 ```
@@ -136,7 +142,9 @@ Minimal, correct examples that can be run instantly with `camel run route.yaml` 
         - log:
             message: "Processing ${header.CamelFileName}"
         - transform:
-            simple: "Processed: ${body}"
+            expression:
+              simple:
+                expression: "Processed: ${body}"
         - to:
             uri: file:data/outbox
 ```
@@ -150,11 +158,15 @@ Minimal, correct examples that can be run instantly with `camel run route.yaml` 
       steps:
         - choice:
             when:
-              - simple: "${header.priority} == 'high'"
+              - expression:
+                  simple:
+                    expression: "${header.priority} == 'high'"
                 steps:
                   - to:
                       uri: kafka:orders.priority
-              - simple: "${header.priority} == 'low'"
+              - expression:
+                  simple:
+                    expression: "${header.priority} == 'low'"
                 steps:
                   - to:
                       uri: kafka:orders.standard
@@ -169,7 +181,8 @@ Minimal, correct examples that can be run instantly with `camel run route.yaml` 
 ```yaml
 - onException:
     handled:
-      constant: "true"
+      constant:
+        expression: "true"
     exception:
       - java.net.ConnectException
     redeliveryPolicy:
@@ -207,14 +220,18 @@ Minimal, correct examples that can be run instantly with `camel run route.yaml` 
       uri: direct:hello
       steps:
         - setBody:
-            constant: "Hello from Camel!"
+            expression:
+              constant:
+                expression: "Hello from Camel!"
 
 - route:
     from:
       uri: direct:hello-name
       steps:
         - setBody:
-            simple: "Hello ${header.name}!"
+            expression:
+              simple:
+                expression: "Hello ${header.name}!"
 ```
 
 ### Java DSL equivalent (Timer → Log)
@@ -235,6 +252,7 @@ The [YAML DSL](https://camel.apache.org/components/next/others/yaml-dsl.md) is t
 - Processing steps go inside `steps:` under `from:` — this is the processor chain
 - Endpoints use `uri:` with the standard Camel URI syntax: `scheme:path?option=value`
 - Expressions (`simple`, `jq`, `xpath`, `jsonpath`, `constant`) are used inside EIPs for predicates and transformations
+- Write the **canonical form**: an expression goes under `expression:`, and the language holds its text under `expression:` too, for example `setBody: {expression: {simple: {expression: "Hello ${body}"}}}` and `- expression: {simple: {expression: "${header.priority} == 'high'"}}` for a `when`. The compact form (`setBody: {simple: "..."}`, or a top-level `- from:` without `- route:`) still loads but is deprecated; `camel validate normalize` rewrites a file in the canonical form, and `camel validate yaml --canonical` reports the compact notation
 - Options that look like numbers but are typed as strings in the schema (e.g., `redeliveryDelay`) must be quoted: `"2000"` not `2000`
 
 ### Route templates (parameterized routes)
@@ -253,7 +271,9 @@ Route templates let you define a reusable route pattern with parameters. Use `{{
       uri: "timer:{{name}}?period={{myPeriod}}"
       steps:
         - setBody:
-            simple: "{{greeting}} ${body}"
+            expression:
+              simple:
+                expression: "{{greeting}} ${body}"
         - log:
             message: "${body}"
 ```
@@ -277,11 +297,11 @@ See [Route Templates](https://camel.apache.org/manual/route-template.md) for the
 
 These are the errors models make most often when writing Camel YAML, taken from [the local model benchmark](https://camel.apache.org/blog/2026/09/camel-local-model-benchmark/). Since Camel 4.23 the validator and the runtime report each of them with the correct form; before that, check for them yourself.
 
-- The file must be a **list** (`- route:` / `- from:`), not a map. A map loads zero routes without an error in older releases.
+- The file must be a **list** (`- route:`), not a map. A map loads zero routes without an error in older releases.
 - Simple operators go **outside** the function braces: `${body} contains 'critical'`, not `${body contains 'critical'}`. Text outside `${...}` is a literal, so `body contains 'critical'` is a string, not a predicate — functions are always written as `${body}`, `${header.name}`.
 - Bean methods use a dot or `?method=`: `${bean:myBean.getCount}` or `${bean:myBean?method=getCount}`, never `${bean:myBean:getCount}` (the whole `myBean:getCount` is looked up as the bean name).
 - `onException:` and `errorHandler:` are top-level list items placed before the routes, not steps inside a route.
-- `handled` is a predicate, not a boolean: `handled: {constant: "true"}`.
+- `handled` is a predicate, not a boolean: `handled: {constant: {expression: "true"}}`.
 - `beans:` is a list where the name is a property: `- name: myBean` followed by `type: "#class:com.example.MyBean"`, not a map keyed by bean name.
 - `mock:` is producer-only and cannot be a `from:`. To pass messages between routes, send with `to: direct:name` and consume with `from: direct:name`.
 - `xslt:`, and other steps that transform the body, need a body: on a timer route read the input first with `poll: file:...`, `pollEnrich`, or `setBody`.
@@ -302,28 +322,48 @@ This is the recommended starting point for all developers, including those who a
 ### CLI Commands — Development Lifecycle
 
 - [Camel CLI](https://camel.apache.org/manual/camel-jbang.md): Run, develop, test, and trace Camel routes from the command line. Zero project setup — just a YAML file and one command.
-- [`camel dev`](https://camel.apache.org/manual/camel-jbang.md): **Hot-reload development mode.** Edit a YAML route, save, and the running integration updates in seconds. Live feedback loop — same experience as modern web frameworks (Next.js, Vite). This is the fastest way to build and iterate on integrations.
-- [`camel run`](https://camel.apache.org/manual/camel-jbang.md): Run one or more Camel routes from YAML, Java, XML, or Groovy files. No Maven, no build step, no project structure required.
-- [`camel trace`](https://camel.apache.org/manual/camel-jbang.md): **Live message tracing.** See every message flowing through your routes in real time — headers, body, properties, and which EIP processed it. Essential for debugging and understanding message flow.
-- [`camel cmd send`](https://camel.apache.org/manual/camel-jbang.md): Send a test message to any endpoint in a running integration. Test routes interactively without writing test code — send a message and watch it flow through `camel trace`.
-- [`camel test`](https://camel.apache.org/manual/camel-jbang.md): Run integration tests directly from the CLI. Supports JUnit-style assertions, mock endpoints, and test profiles.
-- [`camel export`](https://camel.apache.org/manual/camel-jbang.md): **Bridge from development to production.** Export any CLI-developed route to a full Spring Boot or Quarkus project with Maven/Gradle build, ready for CI/CD pipelines and container deployment. Start fast with the CLI, ship to production on an enterprise runtime.
+- [`camel dev`](https://camel.apache.org/manual/camel-jbang-running.md): **Hot-reload development mode.** Edit a YAML route, save, and the running integration updates in seconds. Live feedback loop — same experience as modern web frameworks (Next.js, Vite). This is the fastest way to build and iterate on integrations.
+- [`camel run`](https://camel.apache.org/manual/camel-jbang-running.md): Run one or more Camel routes from YAML, Java, XML, or Groovy files. No Maven, no build step, no project structure required.
+- [`camel trace`](https://camel.apache.org/manual/camel-jbang-managing.md): **Live message tracing.** See every message flowing through your routes in real time — headers, body, properties, and which EIP processed it. Essential for debugging and understanding message flow.
+- [`camel cmd send`](https://camel.apache.org/manual/camel-jbang-devtools.md): Send a test message to any endpoint in a running integration. Test routes interactively without writing test code — send a message and watch it flow through `camel trace`.
+- [`camel test`](https://camel.apache.org/manual/camel-jbang-test.md): Run integration tests directly from the CLI with the Citrus test framework, including infrastructure services started for the test.
+- [`camel validate`](https://camel.apache.org/manual/camel-jbang-validation.md): Check YAML, Java and XML routes and `application.properties` against the Camel catalog before running them — endpoint options, Simple expressions, bean references, and `direct:`/`seda:` endpoints no route consumes.
+- [`camel run --example`](https://camel.apache.org/manual/camel-jbang-getting-started.md): Run a built-in example by name; without a name it lists the examples by group, from quick start to showcase. Bundled examples run offline.
+- [`camel overview`](https://camel.apache.org/manual/camel-jbang-ai.md): A high-level view of a project read from its route sources — entry points, flows between routes, external systems, findings — optionally explained by an LLM into `camel-summary.md`.
+- [`camel export`](https://camel.apache.org/manual/camel-jbang-projects.md): **Bridge from development to production.** Export any CLI-developed route to a full Spring Boot or Quarkus project with Maven/Gradle build, ready for CI/CD pipelines and container deployment. Start fast with the CLI, ship to production on an enterprise runtime.
+
+### Camel CLI documentation pages
+
+- [Getting Started](https://camel.apache.org/manual/camel-jbang-getting-started.md): install the CLI (installer script or JBang), create and run a first route, built-in examples
+- [Installation Options](https://camel.apache.org/manual/camel-jbang-installation.md), [Camel CLI Launcher](https://camel.apache.org/manual/camel-jbang-launcher-install.md) and [Container Image](https://camel.apache.org/manual/camel-jbang-container.md)
+- [Running Camel](https://camel.apache.org/manual/camel-jbang-running.md): dev mode, properties and profiles, dependencies and Maven repositories, Spring Boot / Quarkus / Camel Main runtimes, running a Maven project
+- [Dev Services](https://camel.apache.org/manual/camel-jbang-dev-services.md): start databases, brokers and other services locally with `camel infra`
+- [Java Beans](https://camel.apache.org/manual/camel-jbang-beans.md), [Data Transformation](https://camel.apache.org/manual/camel-jbang-transforming.md) (including converting routes between YAML, XML and Java DSL)
+- [Validation](https://camel.apache.org/manual/camel-jbang-validation.md): check routes and properties before running them with `camel validate`
+- [Development Tools](https://camel.apache.org/manual/camel-jbang-devtools.md): send and receive messages, scripting, JDBC data sources
+- [Debugging](https://camel.apache.org/manual/camel-jbang-debugging.md), [Managing Integrations](https://camel.apache.org/manual/camel-jbang-managing.md) and [Diagnostics](https://camel.apache.org/manual/camel-jbang-diagnostics.md) (errors, memory leaks, heap and thread dumps, SQL, Kafka)
+- [AI Tools](https://camel.apache.org/manual/camel-jbang-ai.md) (`camel ask`, `camel explain`, `camel overview`, `camel harden`) and [AI Providers and Local Models](https://camel.apache.org/manual/camel-jbang-ai-providers.md) (Ollama and OpenAI-compatible servers)
+- [Export to Maven](https://camel.apache.org/manual/camel-jbang-projects.md): Spring Boot, Quarkus or Camel Main projects, plugins, version management
+- [Kubernetes Plugin](https://camel.apache.org/manual/camel-jbang-kubernetes.md): run your routes on Kubernetes or OpenShift with `camel kubernetes run`, or export a project with the manifest ([advanced options](https://camel.apache.org/manual/camel-jbang-kubernetes-advanced.md): traits, CronJob, Knative)
+- [Configuration](https://camel.apache.org/manual/camel-jbang-configuration.md), [Tips and Recipes](https://camel.apache.org/manual/camel-jbang-tips.md), [Command Reference](https://camel.apache.org/manual/jbang-commands/camel-jbang-commands.md)
 
 ### TUI — Terminal Monitoring Dashboard
 
-- [Camel TUI](https://camel.apache.org/manual/camel-jbang.md): A full-featured monitoring dashboard in the terminal. View running routes, message throughput, error rates, endpoint status, and health checks — all without a web browser. Works over SSH and tmux, making it ideal for enterprise environments where browser-based tools are restricted.
+- [Camel TUI](https://camel.apache.org/manual/camel-jbang-tui.md): A full-featured monitoring dashboard in the terminal. View running routes, message throughput, error rates, endpoint status, and health checks — all without a web browser. Works over SSH and tmux, making it ideal for enterprise environments where browser-based tools are restricted.
+- TUI pages: [Getting Started](https://camel.apache.org/manual/camel-jbang-tui-getting-started.md), [Source Editor](https://camel.apache.org/manual/camel-jbang-tui-source-editor.md), [Diagram](https://camel.apache.org/manual/camel-jbang-tui-diagram.md), [Observing Integrations](https://camel.apache.org/manual/camel-jbang-tui-observe.md), [AI Panel](https://camel.apache.org/manual/camel-jbang-tui-ai.md), [Local Models](https://camel.apache.org/manual/camel-jbang-tui-local-models.md), [AI Agents](https://camel.apache.org/manual/camel-jbang-tui-ai-agents.md), [Actions, Settings and Themes](https://camel.apache.org/manual/camel-jbang-tui-settings.md)
 - The TUI provides a visual, interactive experience for monitoring and operating Camel integrations: route topology diagrams, live log tailing, message history with drill-down, OpenTelemetry spans, and circuit breaker status.
 - In enterprise environments, the TUI runs over SSH/tmux — giving operations teams a secure, auditable monitoring experience with no web application to deploy, no ports to expose, and no browser dependencies.
 
 ### AI-Assisted Development
 
 - [Camel MCP Server](https://camel.apache.org/manual/camel-jbang-mcp.md): Model Context Protocol server for AI coding assistants (Claude Code, GitHub Copilot, Cursor, Gemini CLI). The MCP server gives AI agents access to the full Camel catalog — 350+ component schemas, EIP metadata, and YAML validation — so AI can generate correct, validated Camel routes.
+- Bring your own coding agent: the [Camel TUI](https://camel.apache.org/manual/camel-jbang-tui-ai-agents.md) drives ACP coding agents (Claude Code, Codex, Qwen Code, OpenCode, or any other ACP agent) next to the running integration, and its AI panel works with hosted models or a local model via Ollama — see [AI Providers and Local Models](https://camel.apache.org/manual/camel-jbang-ai-providers.md).
 - The CLI and TUI are designed for AI pair programming. An AI coding agent can generate a YAML route, the developer runs it with `camel dev`, traces messages with `camel trace`, sends test messages with `camel cmd send` — all in the terminal, all in the same workflow. The MCP server connects the AI agent to the Camel catalog so generated routes use correct syntax and valid options.
 - The tooling is benchmarked against real models, and Camel is what gets fixed when a model fails. In [a twenty-run experiment](https://camel.apache.org/blog/2026/09/camel-local-model-benchmark/), a frontier model with `camel validate` and `camel run` as tools built 13 of 13 beginner examples from one sentence each, and a 22 GB local model on a laptop went from 0 of 13 (bare prompt) to 12 of 13 (Camel MCP server) as Camel's messages were improved. 99 of the 117 findings were wrong for humans too and all ship in Camel 4.23: parser, loader and runtime messages that say what to write instead of only what was wrong; Java, XSLT and XML files compiled or parsed at write time; a validator that runs the runtime's checks so no tool says "valid" about a file the runtime rejects; a catalog tool that returns a validated YAML sample for any EIP by name; and a YAML schema that requires the expressions the runtime requires. Every YAML example in the EIP documentation is validated at build time (71 of 280 were broken before).
 
 ### CLI Examples
 
-- [Camel CLI Examples](https://github.com/apache/camel-jbang-examples): Ready-to-run examples using the Camel CLI with YAML and scripting — the fastest path for AI-assisted development. Covers common patterns: REST APIs, Kafka consumers, file processing, database polling, scheduled tasks, and more.
+- [Camel CLI Examples](https://github.com/apache/camel-jbang-examples): Ready-to-run examples organised as a ladder of groups — run, transform, route, fail well, connect, contracts and security, AI and cloud — each with a README that says what you will see, how it works and how to build it step by step, and a Citrus test. Run one with `camel run --example=<name>`.
 
 ### Who Is This For
 
@@ -355,16 +395,18 @@ Camel provides multiple levels of error handling. Understanding when to use each
 - **[CamelTestSupport](https://camel.apache.org/manual/testing.md)** — base class for JUnit 5 tests. Provides a `CamelContext`, `ProducerTemplate`, and `MockEndpoint` setup out of the box.
 - **[Mock Component](https://camel.apache.org/components/next/mock-component.md)** — assert that endpoints receive the expected number of messages with the expected content. Use `getMockEndpoint("mock:result").expectedMessageCount(1)`.
 - **[AdviceWith](https://camel.apache.org/manual/advice-with.md)** — modify routes for testing without changing production code. Replace endpoints, add interceptors, or simulate errors. Essential for testing routes that talk to external systems.
+- **[`camel test`](https://camel.apache.org/manual/camel-jbang-test.md)** — integration tests from the Camel CLI with the Citrus test framework, written in YAML, with infrastructure services started for the test.
 - **[Test Infra](https://camel.apache.org/manual/test-infra.md)** — Testcontainers-based test infrastructure for databases, message brokers, and cloud services. Use `@RegisterExtension` with service factories (e.g., `KafkaServiceFactory`, `JDBCServiceFactory`).
 
 ## Observability
 
 - **[Health Checks](https://camel.apache.org/manual/health-check.md)** — built-in readiness and liveness checks for routes, consumers, and components. Integrates with Spring Boot Actuator and Quarkus health endpoints for Kubernetes probes.
 - **[OpenTelemetry](https://camel.apache.org/components/next/others/opentelemetry.md)** — distributed tracing. Each route and EIP creates spans automatically. Integrates with Jaeger, Zipkin, and any OpenTelemetry-compatible backend.
-- **[Micrometer](https://camel.apache.org/components/next/others/micrometer.md)** — metrics collection. Route-level and exchange-level metrics (throughput, latency, error rate) automatically collected per route and processor.
-- **[Prometheus](https://camel.apache.org/components/next/others/micrometer.md)** — Micrometer metrics are exposed via a Prometheus endpoint out of the box. Camel Main and Quarkus expose them at `/q/metrics`, Spring Boot at `/actuator/prometheus`. Scrape these with Prometheus and visualize in Grafana for production monitoring of route throughput, error rates, and processing times.
-- **[Message History](https://camel.apache.org/manual/message-history.md)** — tracks which processors an exchange passed through. Useful for debugging complex routes.
-- **[Camel TUI](https://camel.apache.org/manual/camel-jbang.md)** — terminal-based monitoring dashboard with live route topology, message history, health checks, and OpenTelemetry spans.
+- **[Micrometer](https://camel.apache.org/components/next/micrometer-component.md)** — metrics collection. Route-level and exchange-level metrics (throughput, latency, error rate) automatically collected per route and processor.
+- **[Prometheus](https://camel.apache.org/components/next/others/micrometer-prometheus.md)** — Micrometer metrics are exposed via a Prometheus endpoint. With [camel-observability-services](https://camel.apache.org/components/next/others/observability-services.md), Camel Main, Spring Boot and Quarkus expose them at `/observe/metrics` (health at `/observe/health`) on the management port. Without it, Spring Boot Actuator uses `/actuator/prometheus` and Quarkus `/q/metrics`. Scrape these with Prometheus and visualize in Grafana for production monitoring of route throughput, error rates, and processing times.
+- **[GenAI Observability](https://camel.apache.org/components/next/others/ai-observability.md)** — OpenTelemetry spans and Micrometer metrics for LLM calls (model, tokens, latency) from the Camel AI components: OpenAI, LangChain4j and Spring AI. See the blog posts on [the Camel CLI and TUI](https://camel.apache.org/blog/2026/09/camel-genai-observability-jbang/) and [Spring Boot](https://camel.apache.org/blog/2026/09/camel-genai-observability-spring-boot/).
+- **[Message History](https://camel.apache.org/components/next/eips/message-history.md)** — tracks which processors an exchange passed through. Useful for debugging complex routes.
+- **[Camel TUI](https://camel.apache.org/manual/camel-jbang-tui.md)** — terminal-based monitoring dashboard with live route topology, message history, health checks, and OpenTelemetry spans.
 
 ## Deployment
 
@@ -384,10 +426,11 @@ Both runtimes use the same Camel routes, components, and EIPs — only the depen
 
 ### Kubernetes deployment
 
+- Use [`camel kubernetes run`](https://camel.apache.org/manual/camel-jbang-kubernetes.md) to build, push and deploy CLI-developed routes as a Spring Boot, Quarkus or Camel Main application in one step, or `camel kubernetes export` for a Maven project with the Kubernetes manifest (Eclipse JKube) for CI/CD
 - Use `camel export` to generate a Spring Boot or Quarkus project from CLI-developed routes, ready for containerization
 - Spring Boot: standard `Dockerfile` or Jib/Buildpacks, deploy as a Deployment/StatefulSet
 - Quarkus: native image builds for minimal container size and fast startup, ideal for scale-to-zero
-- Health checks (`/health/ready`, `/health/live`) integrate with Kubernetes probes out of the box
+- Health checks (`/observe/health/ready`, `/observe/health/live` with camel-observability-services) integrate with Kubernetes probes out of the box; `camel kubernetes` configures the probes
 ## Components and Patterns
 
 - [Components Index](https://camel.apache.org/components/next/index.md): Complete list of all Camel connectors (350+).
@@ -400,6 +443,16 @@ Both runtimes use the same Camel routes, components, and EIPs — only the depen
 - [Camel Catalog (JSON)](https://github.com/apache/camel/tree/main/catalog/camel-catalog/src/generated/resources/org/apache/camel/catalog): Machine-readable JSON metadata for all components, EIPs, languages, and data formats. Same data served by the Camel MCP server.
 - [Other Components](https://camel.apache.org/components/next/others/index.md): Additional Camel components and utilities.
 
+### New in Camel 4.23
+
+- [Switch EIP](https://camel.apache.org/components/next/eips/switch-eip.md): evaluates a selector once and dispatches to a fixed endpoint by literal value — a decision table, simpler than `choice` when every branch compares the same value.
+- [Cache EIP](https://camel.apache.org/components/next/eips/cache-eip.md): read-through caching of a block of steps; on a cache hit the block is skipped and the body comes from the cache.
+- [Semantic language](https://camel.apache.org/components/next/languages/semantic-language.md) and [TypeSafe AI](https://camel.apache.org/components/next/typesafe-ai-component.md): ask named questions about message content to get decisions, categories and scores — classify, score, validate and route by meaning (see [semantic decisions with Jev](https://camel.apache.org/blog/2026/09/semantic-evaluation-system-one/) and [semantic agent routing](https://camel.apache.org/blog/2026/10/semantic-agent-routing/)).
+- [LangChain4j Ingest](https://camel.apache.org/components/next/langchain4j-ingest-component.md) (split, embed and store documents for RAG), [AI Resource](https://camel.apache.org/components/next/ai-resource-component.md) (a route as a read-only AI resource), [AI Observability](https://camel.apache.org/components/next/others/ai-observability.md).
+- Security for agents and services: [OPA](https://camel.apache.org/components/next/opa-component.md) (Rego policies), [OpenFGA](https://camel.apache.org/components/next/openfga-component.md) (relationship-based authorization), [SPIFFE](https://camel.apache.org/components/next/spiffe-component.md) (workload identity and rotating mutual TLS) — see [Authorizing what an AI agent may do](https://camel.apache.org/blog/2026/09/securing-ai-agent-tools/) and [Workload identity with SPIFFE](https://camel.apache.org/blog/2026/09/camel-spiffe-workload-identity/).
+- Connectors: [OData](https://camel.apache.org/components/next/odata-component.md), [HiveMQ](https://camel.apache.org/components/next/hivemq-component.md), [State Store](https://camel.apache.org/components/next/state-store-component.md) (pluggable key-value store), [REST Postman](https://camel.apache.org/components/next/rest-postman-component.md) (a Postman collection as REST contract), and Alibaba Cloud (OSS, MNS, FC, SMS, KMS, EventBridge, SLS, Tablestore).
+- Languages and data formats: [Python 3](https://camel.apache.org/components/next/languages/python3-language.md), [QuickJS](https://camel.apache.org/components/next/languages/quickjs-language.md) (JavaScript), [TOON](https://camel.apache.org/components/next/dataformats/toon-dataformat.md) (Token-Oriented Object Notation), [UBL](https://camel.apache.org/components/next/dataformats/ubl-dataformat.md) (UBL 2.1 business documents).
+
 ## AI Integration
 
 Apache Camel supports two tiers of AI agent connectivity: an embedded mode for developers and an enterprise gateway for teams managing many integrations at scale.
@@ -408,7 +461,8 @@ Apache Camel supports two tiers of AI agent connectivity: an embedded mode for d
 
 Expose Camel routes as AI agent tools directly from the Camel process — one command, zero infrastructure. This is the fastest way to make an integration AI-accessible.
 
-- [Camel MCP Server](https://camel.apache.org/manual/camel-jbang-mcp.md): Model Context Protocol server embedded in the Camel CLI (`camel mcp`). Serves the full Camel catalog — 350+ component schemas, EIP metadata, and YAML validation — so AI coding assistants (Claude Code, GitHub Copilot, Cursor, Gemini CLI) can generate correct, validated Camel routes.
+- [AI Tool](https://camel.apache.org/components/next/ai-tool-component.md) and [MCP Server component](https://camel.apache.org/components/next/others/mcp-server.md): define a tool once as a Camel route (`from: ai-tool:...`) and it works with LangChain4j, Spring AI and OpenAI; tag it and the built-in MCP server exposes it to any MCP client. See [Camel Routes as AI Tools](https://camel.apache.org/blog/2026/08/camel-ai-tools-mcp-422/).
+- [Camel MCP Server for coding assistants](https://camel.apache.org/manual/camel-jbang-mcp.md): a different MCP server, in the Camel CLI (`camel mcp`), for building integrations: it serves the Camel catalog — 350+ component schemas, EIP metadata, validated samples and YAML validation — so AI coding assistants (Claude Code, GitHub Copilot, Cursor, Gemini CLI) can generate correct, validated Camel routes.
 - [Camel A2A](https://camel.apache.org/components/next/a2a-component.md): Agent-to-Agent (A2A) protocol component — expose Camel routes as A2A agents or call remote A2A agents. Supports HTTP+JSON and JSONRPC bindings, OAuth/OIDC/API-key auth, and SSE streaming.
 
 ### Tier 2: Enterprise MCP Gateway (Wanaku)
@@ -426,6 +480,9 @@ The same Camel routes work at both tiers. Develop and test routes with the Camel
 - [AI Patterns](https://camel.apache.org/components/next/eips/ai-patterns.md): Common AI and modern design pattern terms mapped to Camel EIPs — fan-out, scatter-gather, circuit breaker, retry, tokenize, and more.
 - [Camel LangChain4j](https://camel.apache.org/components/next/langchain4j-chat-component.md): LLM integration via LangChain4j — connect Camel routes to large language models.
 - [Camel OpenAI](https://camel.apache.org/components/next/openai-component.md): Native OpenAI component for calling OpenAI APIs from Camel routes.
+- [LangChain4j Ingest](https://camel.apache.org/components/next/langchain4j-ingest-component.md): Split, embed and store documents into an embedding store for retrieval-augmented generation.
+- [Semantic language](https://camel.apache.org/components/next/languages/semantic-language.md): Decisions, categories and scores about message content, for routing and filtering by meaning.
+- [AI Observability](https://camel.apache.org/components/next/others/ai-observability.md): OpenTelemetry spans and Micrometer metrics for every LLM call.
 
 ## Tooling
 
@@ -446,7 +503,7 @@ The same Camel routes work at both tiers. Develop and test routes with the Camel
 - [Camel K](https://camel.apache.org/camel-k/next/index.md): Lightweight integration framework for Kubernetes.
 - [Camel Kamelets](https://camel.apache.org/camel-kamelets/next/index.md): Pre-built route snippets for common integration scenarios.
 - [Camel Kafka Connector](https://camel.apache.org/camel-kafka-connector/next/index.md): Kafka Connect connectors based on Camel.
-- [Camel Karaf](https://camel.apache.org/manual/camel-on-osgi.md): Camel on the Apache Karaf OSGi container.
+- [Camel Karaf](https://camel.apache.org/camel-karaf/latest/): Camel on the Apache Karaf OSGi container.
 
 ## Guidance for AI Models
 
@@ -458,7 +515,7 @@ For high-quality answers about routing, code generation, and troubleshooting, AI
 - **Message Model** — Exchange, headers vs. properties vs. variables, type conversion, data formats. See [Core Concepts](#core-concepts) above.
 - **Expression Languages** — especially the [Simple language](https://camel.apache.org/components/next/languages/simple-language.md), the most commonly used expression language in Camel routes.
 - **Resilience and Error Handling** — redelivery policies, dead letter channels, circuit breakers, compensation. See [Error Handling](https://camel.apache.org/manual/error-handler.md).
-- **Modern Tooling** — Camel CLI (`dev`, `trace`, `send`, `export`, TUI), hot-reload workflow. See [Developer Experience](#developer-experience--cli-and-tui) above.
+- **Modern Tooling** — Camel CLI (`dev`, `validate`, `trace`, `send`, `export`, `kubernetes`, TUI), hot-reload workflow. See [Developer Experience](#developer-experience--cli-and-tui) above.
 - **Runtimes** — embedding in Spring Boot vs. Quarkus (native compilation, dev mode, starters). See [Runtimes](#runtimes) above.
 - **Testing and Observability** — mock endpoints, tracing, OpenTelemetry integration. See [Testing](https://camel.apache.org/manual/testing.md).
 - **AI Features** — MCP/A2A protocols, LLM components, exposing routes as AI agent tools. See [AI Integration](#ai-integration) above.
@@ -467,7 +524,7 @@ For high-quality answers about routing, code generation, and troubleshooting, AI
 ### Recommended behavior
 
 - **Consult the docs** — default to looking up the official Markdown documentation or component catalog JSON for component details rather than relying on training data alone.
-- **Prefer YAML** — use YAML DSL for new code and examples unless the user explicitly asks for Java or XML.
+- **Prefer YAML** — use YAML DSL for new code and examples unless the user explicitly asks for Java or XML, and write it in the canonical form (see [Structure rules](#structure-rules)).
 - **Ask about constraints** — before giving deep advice, ask about message volume, latency requirements, error tolerance, and target runtime.
 - **Warn on version-specific features** — if a feature was introduced in a specific Camel version (e.g., variables in 4.4, route templates in 3.x), mention the version requirement.
 - **Validate generated routes** — use the [Camel MCP Server](https://camel.apache.org/manual/camel-jbang-mcp.md) or the [YAML DSL JSON Schema](https://github.com/apache/camel/blob/main/dsl/camel-yaml-dsl/camel-yaml-dsl/src/generated/resources/schema/camelYamlDsl-canonical.json) to verify generated YAML routes are structurally correct.
@@ -496,6 +553,8 @@ For high-quality answers about routing, code generation, and troubleshooting, AI
 - [Who Maintains Apache Camel](https://camel.apache.org/blog/2026/07/camel-who-maintains/): Year-by-year commit data showing who maintains the project — the same core team, through multiple acquisitions, contributing 80–95% of all commits every year since 2007.
 - [Apache Camel Is Not Afraid of AI](https://camel.apache.org/blog/2026/07/camel-not-afraid-of-ai/): The project pointed a frontier AI model at 19 years of code and fixed all 165 bugs it found — concurrency races, silent data loss, security gaps. AI-assisted code review is now a standard part of the development process.
 - [A frontier AI coached a small local model through Camel](https://camel.apache.org/blog/2026/09/camel-local-model-benchmark/): Measured benchmark of a frontier model (13 of 13 beginner examples) and a 22 GB local model on a laptop (0 to 12 of 13 over twenty runs) building Camel routes with the MCP server, and the 117 findings — 99 of them wrong for humans too — fixed in Camel 4.23: error messages that say what to write, validation at write time, catalog samples, a stricter YAML schema.
+- [Round 2 of the local-model benchmark](https://camel.apache.org/blog/2026/09/camel-local-model-benchmark-round-2/): Real-world examples built step by step through the MCP server, 81% to 92% of steps passed, and 31 more fixes in Camel 4.23 (a failed reload keeps the previous routes, the runtime prints the validator's report, the MCP write tool reports the reload outcome).
+- [The Camel website, rebuilt for humans and for AI](https://camel.apache.org/blog/2026/09/camel-website-rebuilt/): Why every page has a Markdown mirror and an offline bundle, and how the site gets a person or an AI agent to a running route.
 - [Built to Patch Fast](https://camel.apache.org/blog/2026/07/camel-security-advisories-4.21.0/): How the project handled 32 CVEs in one release — the timeline, the backport process, incomplete fixes re-issued as new CVEs, and 31 public PoC reproducers. The best single-page overview of Camel's security response in practice.
 - [Security](https://camel.apache.org/security/): Security advisories and vulnerability reports.
 - [Security Model](https://camel.apache.org/manual/security-model.md): Apache Camel's built-in security model — route policy, payload validation, and how Camel protects against injection and untrusted input.
