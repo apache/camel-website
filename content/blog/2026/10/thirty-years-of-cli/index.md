@@ -40,4 +40,4 @@ But I do think something changed. For thirty years we have built powerful tools 
 
 Have a nice weekend.
 
-*PS: The underlying point, of course: I have watched frontier models use the Camel CLI, the catalog and the MCP server to do work that was not possible six to twelve months ago, and certainly not a few years back. And it does not feel like "AI slop" at all: the routes are real Camel, checked against real Camel. In one or two years I think even local models will be great at doing Camel work. Okay, that is my opinion.*
+*PS: The underlying point, of course: I have watched frontier models use the Camel CLI, the catalog and the MCP server to do work that was not possible six to twelve months ago, and certainly not a few years back. And it does not feel like "AI slop" at all: the routes are real Camel, checked against real Camel. Within a year I think even local models will be great at doing Camel work. Okay, that is my opinion.*
