@@ -56,10 +56,6 @@
 <body class="{{ if .Page.IsHome }}homepage {{ end }}article">
     {{ $ctaLabel := "Download" }}
     {{ $ctaURL := "/download/" }}
-    {{ if or .Page.IsHome (eq .Page.RelPermalink "/projects/") }}
-        {{ $ctaLabel = "Get Started" }}
-        {{ $ctaURL = "/manual/getting-started.html" }}
-    {{ end }}
     <header class="header" aria-label="Header">
         <nav class="navbar" aria-label="Main menu">
             <div class="navbar-inner">
