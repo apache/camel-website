@@ -18,7 +18,9 @@ The AI did. After the cleanup the CPU sat at 40 °C, drawing less than half a wa
 
 ## The tools were never the problem
 
-That moment made something clear to me. The command-line tools of the last thirty years were never closed or hard to reach. They are documented, scriptable, and they all speak plain text. The problem was always us: `find`, `awk`, `lsof` and their friends each have dozens of options, and the useful combinations run into the thousands. Everyone learns their own ten percent and searches for the rest.
+That moment made something clear to me. The command-line tools of the last thirty years were never closed or hard to reach. They are documented, scriptable, and they all speak plain text. The problem was always us: `find`, `awk`, `lsof` and their friends each have dozens of options, and the useful combinations run into the thousands. Most of us know less than five percent of it, and search for the rest.
+
+It is the same with every big tool we use. You write documents in a word processor with a handful of menus you know by heart. You code in your IDE with twenty shortcuts and actions, and every now and then you go hunting for "that one action you can't really remember, but know is there somewhere".
 
 An AI does not have that limit. It has read the manuals, and it can try a command, read the output, and decide the next one. We humans just say what we want in English.
 
