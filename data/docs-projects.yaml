@@ -39,6 +39,8 @@ components:
       url: /components/latest/eips/enterprise-integration-patterns.html
     - label: Data formats
       url: /components/latest/dataformats/
+    - label: AI components
+      url: /components/latest/ai-summary.html
 
 projects:
   - name: Camel K

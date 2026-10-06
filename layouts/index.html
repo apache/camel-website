@@ -161,6 +161,9 @@
         <span class="home-feature-tag">{{ .tag }}</span>
         <h3>{{ .title }}</h3>
         <p>{{ .body }}</p>
+        {{- if .url }}
+        <p><a class="home-tile-link" href="{{ .url | relURL }}" aria-label="Read more about {{ .title }}">Read more &rarr;</a></p>
+        {{- end }}
       </li>
       {{- end }}
     </ul>
