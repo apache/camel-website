@@ -29,13 +29,14 @@ aiTools:
     url: https://github.com/luigidemasi/camel-kit
     desc: >-
       Structured slash commands for AI coding assistants that guide you
-      through the complete integration lifecycle. Supports Claude Code,
-      Gemini CLI, and more.
+      through the complete integration lifecycle. Supports IBM Bob,
+      Claude Code, Codex, GitHub Copilot CLI, and more.
   - name: Wanaku
     url: https://wanaku.ai
     desc: >-
-      The Wanaku MCP Router is a router for AI-enabled applications
-      powered by the Model Context Protocol and Apache Camel.
+      A governed action proxy for AI agents (formerly the Wanaku MCP
+      Router). Publish Camel routes as tools; agents call them through
+      Wanaku, which enforces policy, identity, and audit.
 
 toolGroups:
   - id: maven-plugins

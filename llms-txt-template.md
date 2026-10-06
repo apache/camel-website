@@ -53,7 +53,7 @@ The `catalog/` JSON files contain machine-readable metadata for every connector/
 - Spring Boot is the most popular runtime (~55% of Camel usage), Quarkus is the cloud-native option
 - Camel is the runtime engine behind SAP Integration Suite (Gartner iPaaS Leader)
 - Zero vendor lock-in — switch runtimes, clouds, or vendors without rewriting routes
-- Two tiers of AI agent connectivity: Camel routes exposed as MCP tools (`camel-ai-tool` + `camel-mcp-server`) and as A2A agents for developers, plus Wanaku enterprise MCP gateway for teams managing many integrations at scale with governance, auth, and namespace isolation
+- Two tiers of AI agent connectivity: Camel routes exposed as MCP tools (`camel-ai-tool` + `camel-mcp-server`) and as A2A agents for developers, plus Wanaku, a governed action proxy that sits between AI agents and backend systems and publishes Camel routes as tools under policy, identity, and audit controls
 - Supports both MCP (Model Context Protocol) and A2A (Agent-to-Agent) protocols — expose any Camel route as an AI agent tool or as an A2A agent
 - LangChain4j and OpenAI components for calling LLMs from Camel routes
 - Measured, not claimed: with the Camel CLI as tools, a frontier model built all 13 beginner examples from the Camel CLI examples repository from a one-line description each; a 22 GB local model on a laptop (`qwen3.6:35b-a3b` via Ollama) went from 0 of 13 with a bare prompt to 12 of 13 with the Camel MCP server, so the catalog, validation and error messages work for small local models as well as frontier models — see [the benchmark](https://camel.apache.org/blog/2026/09/camel-local-model-benchmark/). A [second round](https://camel.apache.org/blog/2026/09/camel-local-model-benchmark-round-2/) on real-world examples built step by step, the way developers work, went from 81% to 92% of steps passed
@@ -447,7 +447,7 @@ Both runtimes use the same Camel routes, components, and EIPs — only the depen
 
 - [Switch EIP](https://camel.apache.org/components/next/eips/switch-eip.md): evaluates a selector once and dispatches to a fixed endpoint by literal value — a decision table, simpler than `choice` when every branch compares the same value.
 - [Cache EIP](https://camel.apache.org/components/next/eips/cache-eip.md): read-through caching of a block of steps; on a cache hit the block is skipped and the body comes from the cache.
-- [Semantic language](https://camel.apache.org/components/next/languages/semantic-language.md) and [TypeSafe AI](https://camel.apache.org/components/next/typesafe-ai-component.md): ask named questions about message content to get decisions, categories and scores — classify, score, validate and route by meaning (see [semantic decisions with Jev](https://camel.apache.org/blog/2026/09/semantic-evaluation-system-one/) and [semantic agent routing](https://camel.apache.org/blog/2026/10/semantic-agent-routing/)).
+- [Semantic language](https://camel.apache.org/components/next/languages/semantic-language.md) and [TypeSafe AI](https://camel.apache.org/components/next/typesafe-ai-component.md): ask named questions about message content to get decisions, categories and scores — classify, score, validate and route by meaning. Jev, TypeSafe AI's System One model, answers these as fast, structured decisions instead of generated text (see [semantic decisions with Jev](https://camel.apache.org/blog/2026/09/semantic-evaluation-system-one/) and [semantic agent routing](https://camel.apache.org/blog/2026/10/semantic-agent-routing/)).
 - [LangChain4j Ingest](https://camel.apache.org/components/next/langchain4j-ingest-component.md) (split, embed and store documents for RAG), [AI Resource](https://camel.apache.org/components/next/ai-resource-component.md) (a route as a read-only AI resource), [AI Observability](https://camel.apache.org/components/next/others/ai-observability.md).
 - Security for agents and services: [OPA](https://camel.apache.org/components/next/opa-component.md) (Rego policies), [OpenFGA](https://camel.apache.org/components/next/openfga-component.md) (relationship-based authorization), [SPIFFE](https://camel.apache.org/components/next/spiffe-component.md) (workload identity and rotating mutual TLS) — see [Authorizing what an AI agent may do](https://camel.apache.org/blog/2026/09/securing-ai-agent-tools/) and [Workload identity with SPIFFE](https://camel.apache.org/blog/2026/09/camel-spiffe-workload-identity/).
 - Connectors: [OData](https://camel.apache.org/components/next/odata-component.md), [HiveMQ](https://camel.apache.org/components/next/hivemq-component.md), [State Store](https://camel.apache.org/components/next/state-store-component.md) (pluggable key-value store), [REST Postman](https://camel.apache.org/components/next/rest-postman-component.md) (a Postman collection as REST contract), and Alibaba Cloud (OSS, MNS, FC, SMS, KMS, EventBridge, SLS, Tablestore).
@@ -455,7 +455,7 @@ Both runtimes use the same Camel routes, components, and EIPs — only the depen
 
 ## AI Integration
 
-Apache Camel supports two tiers of AI agent connectivity: an embedded mode for developers and an enterprise gateway for teams managing many integrations at scale.
+Apache Camel supports two tiers of AI agent connectivity: an embedded mode, where the Camel route itself exposes, identifies, authorizes and observes every agent tool call, and a governed proxy (Wanaku) in front of many routes across teams.
 
 ### Tier 1: Embedded AI protocols (developer mode)
 
@@ -465,15 +465,23 @@ Expose Camel routes as AI agent tools directly from the Camel process — one co
 - [Camel MCP Server for coding assistants](https://camel.apache.org/manual/camel-jbang-mcp.md): a different MCP server, in the Camel CLI (`camel mcp`), for building integrations: it serves the Camel catalog — 350+ component schemas, EIP metadata, validated samples and YAML validation — so AI coding assistants (Claude Code, GitHub Copilot, Cursor, Gemini CLI) can generate correct, validated Camel routes.
 - [Camel A2A](https://camel.apache.org/components/next/a2a-component.md): Agent-to-Agent (A2A) protocol component — expose Camel routes as A2A agents or call remote A2A agents. Supports HTTP+JSON and JSONRPC bindings, OAuth/OIDC/API-key auth, and SSE streaming.
 
-### Tier 2: Enterprise MCP Gateway (Wanaku)
+### Governed and secured AI agents, in the route
 
-When you need governance, namespace isolation, authentication, and fleet management for exposing dozens or hundreds of Camel routes as MCP tools across teams — Wanaku is the enterprise control plane built on Apache Camel.
+The model is not a security boundary, so the decision about what an agent may do sits below it, on the tool call itself, evaluated in-process by the Camel route that does the work. No extra gateway is needed for this.
 
-- [Wanaku MCP Router](https://www.wanaku.ai/): Enterprise MCP gateway that manages Camel routes as AI agent tools at scale. Provides namespace isolation across teams, Keycloak-based authentication and RBAC, service registry and discovery, monitoring dashboard, and a Kubernetes operator with CRDs for declarative deployment. Built on Apache Camel and Quarkus.
-- [Wanaku Service Catalogs](https://github.com/wanaku-ai/wanaku): Bundle Camel routes, MCP tool definitions, and dependencies into deployable units. Service templates provide parameterized Camel routes for common patterns (Kafka, Jira, S3, SFTP, email) — non-developers can instantiate an integration by filling in a form.
-- [Camel Integration Capability](https://github.com/wanaku-ai/camel-integration-capability): Bridges the Wanaku router to Apache Camel — exposes dynamically executed Camel routes as MCP tools and resources. Runs standalone, as a plugin in existing Camel applications, or on Kubernetes via the Wanaku operator.
+- **Who is calling:** [SPIFFE](https://camel.apache.org/components/next/spiffe-component.md) gives every workload a cryptographic identity from the local SPIRE agent, plus rotating mutual TLS for the components that already support TLS. See [Workload identity with SPIFFE and SPIRE](https://camel.apache.org/blog/2026/09/camel-spiffe-workload-identity/).
+- **What they may do:** set an `authorizationPolicy` on an `ai-tool:` route and every tool call is authorized before it runs; a denied call is returned to the model as a short refusal it can relay. Policies with [Open Policy Agent](https://camel.apache.org/components/next/opa-component.md) (Rego) or [OpenFGA](https://camel.apache.org/components/next/openfga-component.md) (relationship-based). See [Authorizing what an AI agent may do](https://camel.apache.org/blog/2026/09/securing-ai-agent-tools/).
+- **Fast guard decisions:** the [Semantic language](https://camel.apache.org/components/next/languages/semantic-language.md) with Jev, a System One model ([TypeSafe AI](https://camel.apache.org/components/next/typesafe-ai-component.md)) checks whether an action fits the approved task, or scores a contribution, as a yes/no, category or score inside `choice`, `switch` or `filter`.
+- **What happened:** [AI Observability](https://camel.apache.org/components/next/others/ai-observability.md) records OpenTelemetry GenAI spans and Micrometer metrics for every LLM call, next to the route's own traces. See [Observe your Camel AI routes](https://camel.apache.org/blog/2026/09/camel-genai-observability-jbang/).
 
-The same Camel routes work at both tiers. Develop and test routes with the Camel CLI (Tier 1), then deploy unchanged to a Wanaku-managed environment (Tier 2) when you need enterprise governance.
+### Tier 2: Governed agent access (Wanaku)
+
+When AI agents must never reach backend systems directly, and every tool call needs policy, identity, and audit enforced in between, put a governed proxy in front of your Camel routes.
+
+- [Wanaku](https://wanaku.ai/): A governed action proxy for AI agents (formerly the Wanaku MCP Router). It sits between agents and the systems they act on, intercepting MCP tool calls, agent-to-agent messages, and inference traffic. Policy evaluators, authentication and authorization, namespace isolation per team or tenant, and an admin dashboard. Apache License 2.0.
+- [Integration Capability for Apache Camel](https://github.com/wanaku-ai/camel-integration-capability): Publishes Camel routes as tools through Wanaku. It runs the routes with Camel's built-in MCP server, so routes using the `ai-tool:` URI become tools that agents call through the proxy.
+
+The same `ai-tool:` routes work at both tiers. Develop and test them with the Camel CLI (Tier 1), then publish them through Wanaku (Tier 2) when agents need governed access.
 
 ### AI components
 
@@ -481,7 +489,7 @@ The same Camel routes work at both tiers. Develop and test routes with the Camel
 - [Camel LangChain4j](https://camel.apache.org/components/next/langchain4j-chat-component.md): LLM integration via LangChain4j — connect Camel routes to large language models.
 - [Camel OpenAI](https://camel.apache.org/components/next/openai-component.md): Native OpenAI component for calling OpenAI APIs from Camel routes.
 - [LangChain4j Ingest](https://camel.apache.org/components/next/langchain4j-ingest-component.md): Split, embed and store documents into an embedding store for retrieval-augmented generation.
-- [Semantic language](https://camel.apache.org/components/next/languages/semantic-language.md): Decisions, categories and scores about message content, for routing and filtering by meaning.
+- [Semantic language](https://camel.apache.org/components/next/languages/semantic-language.md): Decisions, categories and scores about message content, for routing and filtering by meaning. Answered by a provider adapter; today that is Jev, a System One model, via [TypeSafe AI](https://camel.apache.org/components/next/typesafe-ai-component.md).
 - [AI Observability](https://camel.apache.org/components/next/others/ai-observability.md): OpenTelemetry spans and Micrometer metrics for every LLM call.
 
 ## Tooling
