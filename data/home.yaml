@@ -87,8 +87,9 @@ features:
     - tag: AI
       title: AI-ready integration
       body: >-
-        MCP server for AI coding assistants. Use camel trace and camel test to
-        verify AI-generated routes.
+        40+ AI components for agents, tools, MCP and A2A. An MCP server helps
+        AI coding assistants write correct routes.
+      url: /components/latest/ai-summary.html
     - tag: EIP
       title: Battle-tested routing
       body: >-

@@ -59,14 +59,21 @@
             <p class="tooling-eyebrow">AI-assisted development</p>
             <h2 id="mcp">Camel MCP Server</h2>
             <p class="tooling-section-intro">
-              Connects Apache Camel to AI coding assistants through the
-              <a href="https://modelcontextprotocol.io/">Model Context Protocol</a>.
+              The Camel CLI's MCP server (<code>camel mcp</code>) connects Apache Camel to AI coding assistants
+              through the <a href="https://modelcontextprotocol.io/">Model Context Protocol</a>.
               It gives AI tools access to Camel's component catalog, DSL
               documentation, and integration patterns — so they can help you
               write, debug, and optimize Camel routes with full context.
               Supported tools include Claude Code, GitHub Copilot, Gemini CLI,
               Cursor, Windsurf, and any MCP-compatible assistant. See the
               <a href="/manual/camel-jbang-mcp.html">Camel MCP Server documentation</a>.
+            </p>
+            <p class="tooling-section-intro">
+              Not to be confused with the
+              <a href="/components/latest/others/mcp-server.html">MCP Server component</a>, which works the
+              other way round: it exposes your own Camel routes (<code>ai-tool</code> and
+              <code>ai-resource</code>) as MCP tools and resources that AI agents call. The first helps you
+              write routes; the second lets agents use them.
             </p>
             <div class="tooling-ai-grid">
               {{- range $data.aiTools }}
