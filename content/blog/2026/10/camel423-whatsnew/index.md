@@ -594,4 +594,6 @@ You can find additional information about this release in the list of resolved J
 
 ## Roadmap
 
-The next release is 4.24.
+The next 4.24 release is planned for December.
+
+In Camel 4.24 we plan to upgrade to Quarkus 4 and drop support for Java 17, which makes Java 21 the minimum version.
