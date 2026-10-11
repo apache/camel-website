@@ -10,12 +10,12 @@ preview: "Details of what we have done in the Camel 4.23 release."
 
 Apache Camel 4.23 has just been [released](/blog/2026/10/RELEASE-4.23.0/).
 
-This is the biggest Camel release in a long time. Since 4.22 we have resolved **1029 JIRA tickets**
-(nearly twice as many as in 4.22): 503 bug fixes, 362 improvements and 52 new features,
+This is the biggest Camel release in a long time. Since 4.22 we have resolved **1030 JIRA tickets**
+(nearly twice as many as in 4.22): 503 bug fixes, 362 improvements and 53 new features,
 made in over 2000 commits by 63 contributors.
 
-It is also the first Camel release where AI-assisted development is the norm rather than the exception:
-more than 80% of the commits that were not made by bots carry an AI co-author trailer. Every change
+As in Camel 4.22, AI-assisted development is now the norm rather than the exception:
+almost 90% of the commits that were not made by bots were made with an AI coding assistant. Every change
 still went through the usual Apache process -- JIRA, pull request, CI and review by the Camel committers --
 but having AI coding assistants on the team has allowed us to go much deeper on bug fixing, security hardening
 and documentation than we could before, and still have time for new features.
