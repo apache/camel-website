@@ -10,8 +10,8 @@ preview: "Details of what we have done in the Camel 4.23 release."
 
 Apache Camel 4.23 has just been [released](/blog/2026/10/RELEASE-4.23.0/).
 
-This is the biggest Camel release in a long time. Since 4.22 we have resolved **1019 JIRA tickets**
-(nearly twice as many as in 4.22): 493 bug fixes, 362 improvements and 52 new features,
+This is the biggest Camel release in a long time. Since 4.22 we have resolved **1029 JIRA tickets**
+(nearly twice as many as in 4.22): 503 bug fixes, 362 improvements and 52 new features,
 made in over 2000 commits by 63 contributors.
 
 It is also the first Camel release where AI-assisted development is the norm rather than the exception:
@@ -498,6 +498,19 @@ The language pages also show their examples in Java, XML and YAML tabs.
 The DataWeave to DataSonnet converter (`camel transform dataweave`) has been rewritten to convert real-world MuleSoft DataWeave scripts faithfully.
 A converted script either gives the same result as DataWeave or fails at startup -- it no longer converts silently into something that gives a wrong result.
 The converter is tested against a corpus of 332 DataWeave snippets, with expected outputs produced by the DataWeave CLI.
+
+## Other Component Fixes
+
+The last days before the release brought another round of consumer and vault fixes:
+
+- The object storage consumers (AWS S3, AWS S3 Vectors, Google Storage, Azure Storage Blob, IBM COS, Huawei OBS, Alibaba OSS and MinIO)
+  and the Google Mail stream consumer no longer pick up an object or message again while its exchange is still in flight (asynchronous routes).
+  With `fileName`, the AWS S3 and IBM COS consumers also pick up the objects of a batch that was cut short by a route stop again after a restart.
+- The Slack consumer pages through the history, so it no longer skips messages when many are posted between two polls,
+  and the Keycloak events consumer no longer routes the latest events of a poll twice.
+- The MyBatis and SQL consumers no longer mark a row as consumed when its exchange failed or was marked rollback only.
+- The vault property functions (AWS Secrets Manager, Azure Key Vault, Google Secret Manager, IBM Secrets Manager and CyberArk) are now thread safe,
+  and the HashiCorp Vault secret refresh detects updates in any secrets engine.
 
 ## Camel Spring Boot
 
