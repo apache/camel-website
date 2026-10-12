@@ -152,7 +152,7 @@ Exchange data between agencies — citizen records, tax filings, benefits, permi
 
 ### Energy and utilities
 
-Collect meter readings and SCADA data from field devices. Route smart grid events to analytics and control systems. Integrate customer billing, outage management, and asset management platforms.
+Collect meter readings and telemetry from PLCs and OPC UA servers. Route smart grid events to analytics and control systems. Integrate customer billing, outage management, and asset management platforms.
 
 ### Insurance
 
