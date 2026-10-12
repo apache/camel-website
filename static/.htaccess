@@ -3,8 +3,13 @@ RewriteEngine on
 RewriteBase "/"
 
 # Content negotiation for LLM-friendly Markdown
-# When Accept header requests text/markdown, serve .md instead of .html
+# When Accept header requests text/markdown, serve llms.txt for the home page,
+# and the .md copy of any other page that has one (pages without a copy stay HTML)
 RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+RewriteRule ^index\.html$ llms.txt [L]
+RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+RewriteCond %{REQUEST_FILENAME} ^(.+)\.html$
+RewriteCond %1.md -f
 RewriteRule ^(.+)\.html$ $1.md [L]
 
 RewriteRule "^security-advisories.data/(.+)$" "security/$1" [R=permanent,L]
