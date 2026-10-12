@@ -2,7 +2,7 @@
 title: "Apache Camel 4.23 What's New"
 date: 2026-10-15
 draft: false
-authors: [ davsclaus ]
+authors: [ davsclaus, croway ]
 categories: [ "Releases" ]
 keywords: ["apache camel", "whats new", "camel 4", "release", "camel 4.23", "integration framework", "ai", "security"]
 preview: "Details of what we have done in the Camel 4.23 release."
