@@ -3,7 +3,7 @@ title: 'Talk to Your CRM: Connecting Local AI to Business Systems with Apache Ca
 subtitle: 'Camel YAML routes let a local AI assistant read and update a CRM, without a custom MCP server'
 date: 2026-10-12
 draft: false
-excerpt: 'What if looking up customer history and recording follow-ups were as easy as a conversation? See how Apache Camel exposes three CRM operations to a local LLM through MCP.'
+preview: 'What if looking up customer history and recording follow-ups were as easy as a conversation? See how Apache Camel exposes three CRM operations to a local LLM through MCP.'
 authors: [SiHartl]
 categories: ["AI", "Community", "Usecases"]
 keywords: ["apache camel", "usecases", "ai", "local llm", "crm", "mcp"]
@@ -103,7 +103,7 @@ cd camel-ai-mcp-crm-demo
 camel run init.camel.yaml crm-mcp.camel.yaml
 ```
 
-You need **Git, Apache Camel CLI 4.22 or newer, and Java 17 or newer. See the [Camel CLI documentation][4] if Camel is not installed yet. The example's `application.properties` supplies the SQLite JDBC dependency and MCP server configuration, so there is no separate database service to install.
+You need **Git, Apache Camel CLI 4.22 or newer, and Java 17 or newer**. See the [Camel CLI documentation][4] if Camel is not installed yet. The example's `application.properties` supplies the SQLite JDBC dependency and MCP server configuration, so there is no separate database service to install.
 
 After the database initialization message appears, the MCP server is available at `http://localhost:12380/mcp`. Later, in [Step 4](#step-4-connect-lm-studio-and-a-local-llm), we will point LM Studio at that address to let the local model use the tools.
 
@@ -205,22 +205,22 @@ from:
     parameter.customer_id: integer
     parameter.customer_id.required: true
     readOnlyHint: true
-    steps:
-        - log:
-            message: "Loading CRM notes for customer ${header.customer_id}"
-        - to:
-            uri: >-
-              sql:SELECT
-                n.id, n.customer_id, c.name AS customer_name, n.note,
-                strftime('%Y-%m-%dT%H:%M:%SZ', n.created_at) AS created_at
-              FROM crm_notes n
-              JOIN customers c
-                ON c.id = n.customer_id
-              WHERE n.customer_id = :#customer_id
-              ORDER BY n.created_at DESC
-              LIMIT 20
-        - marshal:
-            json: {}
+  steps:
+    - log:
+        message: "Loading CRM notes for customer ${header.customer_id}"
+    - to:
+        uri: >-
+          sql:SELECT
+            n.id, n.customer_id, c.name AS customer_name, n.note,
+            strftime('%Y-%m-%dT%H:%M:%SZ', n.created_at) AS created_at
+          FROM crm_notes n
+          JOIN customers c
+            ON c.id = n.customer_id
+          WHERE n.customer_id = :#customer_id
+          ORDER BY n.created_at DESC
+          LIMIT 20
+    - marshal:
+        json: {}
 ```
 
 The route executes a query joining `crm_notes` with `customers`, filters by `customer_id`, sorts by creation time, and returns the latest 20 notes as JSON.
