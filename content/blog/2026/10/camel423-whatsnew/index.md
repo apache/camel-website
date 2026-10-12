@@ -2,7 +2,7 @@
 title: "Apache Camel 4.23 What's New"
 date: 2026-10-15
 draft: false
-authors: [ davsclaus, croway ]
+authors: [ davsclaus, croway, christophd ]
 categories: [ "Releases" ]
 keywords: ["apache camel", "whats new", "camel 4", "release", "camel 4.23", "integration framework", "ai", "security"]
 preview: "Details of what we have done in the Camel 4.23 release."
@@ -30,6 +30,8 @@ The headline features in this release are:
   to the line in your source file, and a much more robust dev mode reload.
 - **Camel CLI and TUI** -- The TUI source editor now supports Java and XML routes (not only YAML), routes can be converted
   between YAML, XML and Java without running them, and the validator explains *what to write* in many more cases.
+- **Feature flags with OpenFeature** -- A new component and language for vendor-neutral feature flagging using the
+  OpenFeature specification, with support for boolean toggles, A/B testing and fractional rollout.
 - **Secure out of the box** -- Around 145 tickets in this release are about security hardening and secure defaults.
 - **Validated documentation** -- Every YAML, XML and Java DSL code snippet in the documentation is now validated,
   and the build fails if an invalid snippet is added.
@@ -627,6 +629,98 @@ repository._
 The DataWeave to DataSonnet converter (`camel transform dataweave`) has been rewritten to convert real-world MuleSoft DataWeave scripts faithfully.
 A converted script either gives the same result as DataWeave or fails at startup -- it no longer converts silently into something that gives a wrong result.
 The converter is tested against a corpus of 332 DataWeave snippets, with expected outputs produced by the DataWeave CLI.
+
+## Feature Flags with OpenFeature
+
+The new [OpenFeature](/components/next/openfeature-component.html) component evaluates feature flags using the
+[OpenFeature specification](https://openfeature.dev/), a vendor-neutral standard for feature flagging.
+It supports boolean flags for toggle and detour patterns, and string flags
+for A/B testing, fractional targeting and targeted rollout. Out of the box it uses
+[flagd](https://flagd.dev/) for local or remote flag evaluation, but any OpenFeature provider
+(LaunchDarkly, Split, Flagsmith, GrowthBook and others) can be plugged in.
+
+Flag definitions use the standard flagd JSON format. The simplest case is a boolean toggle:
+
+```json
+{
+  "flags": {
+    "enrichment-enabled": {
+      "state": "ENABLED",
+      "variants": { "on": true, "off": false },
+      "defaultVariant": "on"
+    }
+  }
+}
+```
+
+A route evaluates the flag, stores the result in an exchange property and branches on it:
+
+```yaml
+- route:
+    from:
+      uri: direct:start
+      steps:
+        - to:
+            uri: openfeature:flags
+            parameters:
+              flagKey: enrichment-enabled
+              resultProperty: enrichEnabled
+        - choice:
+            when:
+              - expression:
+                  simple:
+                    expression: "${exchangeProperty.enrichEnabled} == true"
+                steps:
+                  - to:
+                      uri: direct:enrich-order
+            otherwise:
+              steps:
+                - to:
+                    uri: direct:skip-enrichment
+```
+
+For boolean predicates in Choice, Filter and Validate, the [OpenFeature language](/components/next/languages/openfeature-language.html)
+is a shorter alternative that does not modify the exchange:
+
+```java
+from("direct:start")
+    .filter().language("openfeature", "enrichment-enabled")
+        .to("direct:enrich-order")
+    .end();
+```
+
+String flags with fractional targeting rules support A/B testing and gradual rollout.
+In this example, 10% of the traffic is routed to a new routing algorithm while 90% stays on the legacy one.
+The provider uses the targeting key (an order ID in this case) for consistent assignment,
+so the same order always gets the same variant:
+
+```json
+{
+  "flags": {
+    "routing-algorithm": {
+      "state": "ENABLED",
+      "variants": {
+        "legacy": "content-based-router",
+        "new": "dynamic-router"
+      },
+      "defaultVariant": "legacy",
+      "targeting": {
+        "fractional": [
+          ["legacy", 90],
+          ["new", 10]
+        ]
+      }
+    }
+  }
+}
+```
+
+```java
+from("direct:start")
+    .setHeader("CamelOpenFeatureTargetingKey", simple("${header.orderId}"))
+    .setProperty("algorithm").language("openfeature", "routing-algorithm")
+    .toD("direct:route-${exchangeProperty.algorithm}");
+```
 
 ## Other Component Fixes
 
