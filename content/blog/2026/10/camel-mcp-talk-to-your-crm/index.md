@@ -4,7 +4,7 @@ subtitle: 'Camel YAML routes let a local AI assistant read and update a CRM, wit
 date: 2026-10-12
 draft: false
 excerpt: 'What if looking up customer history and recording follow-ups were as easy as a conversation? See how Apache Camel exposes three CRM operations to a local LLM through MCP.'
-author: [SiHartl]
+authors: [SiHartl]
 categories: ["AI", "Community", "Usecases"]
 keywords: ["apache camel", "usecases", "ai", "local llm", "crm", "mcp"]
 ---
