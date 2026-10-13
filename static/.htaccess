@@ -3,8 +3,16 @@ RewriteEngine on
 RewriteBase "/"
 
 # Content negotiation for LLM-friendly Markdown
-# When Accept header requests text/markdown, serve .md instead of .html
+# Coding agents ask for Markdown in the Accept header; Claude Code, for example, sends
+# "Accept: text/markdown, text/html, */*" when it fetches a page. An agent that opens the
+# home page gets llms.txt, the Markdown index of the documentation, instead of the HTML
+# home page, so it finds the docs and their Markdown copies from there.
 RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+RewriteRule ^index\.html$ llms.txt [L]
+# Any other page is served as its .md copy when it has one; pages without a copy stay HTML
+RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+RewriteCond %{REQUEST_FILENAME} ^(.+)\.html$
+RewriteCond %1.md -f
 RewriteRule ^(.+)\.html$ $1.md [L]
 
 RewriteRule "^security-advisories.data/(.+)$" "security/$1" [R=permanent,L]
