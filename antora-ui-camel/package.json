@@ -54,7 +54,7 @@
     "gulp-rev-rewrite": "^5.0.0",
     "gulp-template": "~5.0",
     "gulp-terser": "^1.2.0",
-    "handlebars": "^4.7.9",
+    "handlebars": "^4.7.10",
     "highlight.js": "~11",
     "js-yaml": "^4.3.1",
     "ordered-read-streams": "^2.0.0",
