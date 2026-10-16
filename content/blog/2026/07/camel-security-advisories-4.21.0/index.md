@@ -221,7 +221,7 @@ work is the reason the header family turned up in twenty-two components rather t
 methodical sweep across the component set, not a one-off report, and it saved us a lot of time.
 
 Everyone here is named in the advisory they reported. If you find something, mail
-[security@camel.apache.org](mailto:security@camel.apache.org) privately, and see the
+[security@apache.org](mailto:security@apache.org) privately, and see the
 [ASF security policy](https://www.apache.org/security/) for how the process works.
 
 ## The full batch
@@ -293,4 +293,4 @@ the one with no exploit path at all. We would rather have those on the record th
 
 *Release dates and advisory data in this post come from the published
 [Apache Camel release announcements](/blog/) and [security advisories](/security/). Report
-vulnerabilities privately to [security@camel.apache.org](mailto:security@camel.apache.org).*
+vulnerabilities privately to [security@apache.org](mailto:security@apache.org).*
