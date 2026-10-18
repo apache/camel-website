@@ -216,7 +216,7 @@
       <h2 id="home-news-title">{{ .heading }}</h2>
     </div>
     <ul class="home-grid home-grid--three">
-      {{- range first 3 (where site.RegularPages "Section" "blog").ByDate.Reverse }}
+      {{- range first 6 (where site.RegularPages "Section" "blog").ByDate.Reverse }}
       <li class="home-card home-news">
         <time class="home-news-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
         <h3 class="home-news-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>

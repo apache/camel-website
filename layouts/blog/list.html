@@ -13,9 +13,11 @@
             <div class="blog-posts">
               {{ $filtered := slice }}
               {{ range .Pages }}
-                {{/* hide release posts; they stay listed under the Releases category */}}
+                {{/* hide release posts; they stay listed under the Releases category.
+                     A release post also tagged Camel (the core What's New posts)
+                     stays, while Camel K, Kaoto and tooling releases are hidden. */}}
                 {{ $cats := default slice .Params.categories }}
-                {{ if not (in $cats "Releases") }}
+                {{ if or (not (in $cats "Releases")) (in $cats "Camel") }}
                   {{ $filtered = $filtered | append . }}
                 {{ end }}
               {{ end }}
