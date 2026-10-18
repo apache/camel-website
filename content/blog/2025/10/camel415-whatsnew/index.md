@@ -3,7 +3,7 @@ title: "Apache Camel 4.15 What's New"
 date: 2025-10-09
 draft: false
 authors: [ davsclaus,cunningt,squakez]
-categories: [ "Releases" ]
+categories: [ "Releases", "Camel" ]
 keywords: ["apache camel", "whats new", "camel 4", "release", "camel 4.15", "integration framework"]
 preview: "Details of what we have done in the Camel 4.15 release."
 ---

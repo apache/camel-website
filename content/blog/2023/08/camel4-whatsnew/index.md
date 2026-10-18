@@ -2,7 +2,7 @@
 title: "Apache Camel 4 What's New (top 10)"
 date: 2023-08-15
 authors: [davsclaus,gzurowski,orpiske]
-categories: ["Releases"]
+categories: ["Releases", "Camel"]
 keywords: ["apache camel", "whats new", "release", "camel ", "integration framework"]
 preview: Top 10 of what's new in Apache Camel version 4
 ---
