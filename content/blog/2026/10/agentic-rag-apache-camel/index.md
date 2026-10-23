@@ -3,7 +3,7 @@ title: "Building an Agentic RAG Application with Apache Camel and LangChain4j"
 date: 2026-10-23
 draft: false
 authors: [akashSurwase]
-categories: ["AI", "Integration", "Usecases"]
+categories: ["AI", "Usecases"]
 preview: "Explore how Apache Camel components connect LangChain4j agents, Milvus vector search, and web search to build an Agentic RAG application for historical incident investigation."
 ---
 
