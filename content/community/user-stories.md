@@ -133,6 +133,7 @@ If you are using Apache Camel and would like to be listed here, please add an en
 |[bwin (Entain)](https://www.jfokus.se/jfokus10/speakers.html)|Online gaming company used Apache Camel and Spring Integration for real-time poker information processing and distribution to 30 receivers. Presented "Enterprise Integration Patterns i praktiken" at Jfokus 2010.|
 |[Arla Foods](https://www.arla.com)|Uses Camel to integrate business backend with web application for farmers to access information about quality of their delivered milk. Application used in numerous european countries.|
 |[Mifos](https://mifos.org/)|An [open core-banking platform](https://github.com/openMF), uses Camel.|
+|[Wordfully](https://wordfully.ai)|Wordfully uses Camel routes to connect billing webhooks and account events with its internal APIs and email workflows. The routes transform messages and retry failures according to their configuration. Messages that still fail go to a separate destination.|
 {{< /table >}}
 
 ## Commercial Products Built on Apache Camel
