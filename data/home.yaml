@@ -1,12 +1,14 @@
 # Home page copy and figures. Rendered by layouts/index.html.
 #
 # The four figures under `stats` were measured on 2026-09-04 against
-# apache/camel. The design reference's numbers were illustrative: two of them
-# overstated the project and one understated it. Recheck with:
+# apache/camel (releases rechecked on 2026-10-25). The design reference's
+# numbers were illustrative: two of them overstated the project and one
+# understated it. Recheck with:
 #   gh api "repos/apache/camel/commits?per_page=1&sha=main" -i | grep -i '^link:'
 #   gh api "repos/apache/camel/contributors?per_page=1&anon=true" -i | grep -i '^link:'
-#   gh api "repos/apache/camel/tags?per_page=1" -i | grep -i '^link:'
+#   gh api repos/apache/camel/tags --paginate --jq '.[].name' | grep -cE '^camel-[0-9]+\.[0-9]+\.[0-9]+$'
 #   ls public/components/next/*-component.html | wc -l
+# The tags command counts releases only: RC and milestone tags are not releases.
 
 hero:
   eyebrow: "In production since 2007 · Apache License 2.0"
@@ -37,9 +39,9 @@ stats:
     - num: 350+
       label: components
       source: 398 component pages in the built docs, 2026-09-04
-    - num: 300+
+    - num: 280+
       label: releases
-      source: 307 tags on apache/camel, GitHub API, 2026-09-04
+      source: 282 release tags on apache/camel (RC and milestone tags not counted), GitHub API, 2026-10-25
 
 get_started:
   eyebrow: Get Started Your Way
@@ -87,7 +89,7 @@ features:
     - tag: AI
       title: AI-ready integration
       body: >-
-        40+ AI components for agents, tools, MCP and A2A. An MCP server helps
+        20+ AI components for agents, tools, MCP and A2A. An MCP server helps
         AI coding assistants write correct routes.
       url: /components/latest/ai-summary.html
     - tag: EIP
@@ -98,8 +100,8 @@ features:
     - tag: CI
       title: Standard build
       body: >-
-        Export to Maven or Gradle and deploy with any CI/CD pipeline. A standard
-        Java app, no special runtime.
+        Export to Maven and deploy with any CI/CD pipeline. A standard Java
+        app, no special runtime.
     - tag: OSS
       title: Open source
       body: >-
@@ -186,8 +188,7 @@ tiles:
     - name: Camel Kafka Connector
       icon: apache-kafka
       description: >-
-        Embeds Camel within Kafka Connect, exposing every Camel component as a
-        Kafka connector.
+        Runs Camel Kamelets as Kafka Connect source and sink connectors.
       url: /camel-kafka-connector/latest/
     - name: Camel Karaf
       icon: apache-karaf

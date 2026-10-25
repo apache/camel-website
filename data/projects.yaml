@@ -56,7 +56,7 @@ specialized:
     source: https://github.com/apache/camel-karavan
   - name: Camel Kafka Connector
     icon: apache-kafka
-    description: Embeds Camel within Kafka Connect, exposing every Camel component as a Kafka connector.
+    description: Runs Camel Kamelets as Kafka Connect source and sink connectors.
     stats: See GitHub for current activity
     docs: /camel-kafka-connector/latest/
     source: https://github.com/apache/camel-kafka-connector/

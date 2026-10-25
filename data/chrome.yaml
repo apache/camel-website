@@ -18,11 +18,12 @@ columns:
   - title: Documentation
     links:
       - { name: User Manual, url: /manual/ }
-      - { name: Components, url: /components/next/index.html }
-      - { name: Camel-K, url: /camel-k/next/ }
-      - { name: Camel Kafka Connector, url: /camel-kafka-connector/next/ }
-      - { name: Camel Quarkus, url: /camel-quarkus/next/ }
-      - { name: Camel Spring Boot, url: /camel-spring-boot/next/ }
+      - { name: Camel CLI, url: /manual/camel-jbang.html }
+      - { name: Components, url: /components/latest/ }
+      - { name: Camel Spring Boot, url: /camel-spring-boot/latest/ }
+      - { name: Camel Quarkus, url: /camel-quarkus/latest/ }
+      - { name: Camel K, url: /camel-k/latest/ }
+      - { name: Camel Kafka Connector, url: /camel-kafka-connector/latest/ }
       - { name: Camel Karaf, url: /camel-karaf/latest/ }
       - { name: FAQ, url: /manual/faq/index.html }
   - title: Community
