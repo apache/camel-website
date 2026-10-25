@@ -106,11 +106,11 @@ No Maven project. No build step. No manual wiring. Just one YAML file and one co
 | **Dependencies** | Declared in pom.xml | Auto-downloaded |
 | **Components** | 19 | 350+ |
 | **Patterns (EIPs)** | ~20 | 65+ |
-| **Contributors** | A handful | 1,600+ |
+| **Contributors** | A handful | 1,500+ |
 | **Lines of code** | Tens of thousands | Millions |
 {{< /table >}}
 
-What stayed the same: **`from("jms:queue:test.queue").to("file://test")`**
+What stayed the same: **`from("test-jms:queue:test.queue").to("file://test")`**
 
 The core routing idea — take data from here, transform it if needed, send it there — is unchanged. It's the DNA of every Camel route ever written, from a simple file transfer to a complex multi-system integration handling billions of messages.
 
@@ -125,12 +125,12 @@ We recreated the original Camel 1.0 example as a modern Camel CLI example. Run i
 camel infra run artemis
 
 # Run the tribute example
-camel run https://github.com/apache/camel-jbang-examples/tree/main/camel-1-tribute
+camel run https://github.com/apache/camel-jbang-examples/tree/main/connect-service/camel-1-tribute
 ```
 
 It sends 10 test messages to a JMS queue and saves them to files — exactly like the original, nearly two decades later.
 
-[See the tribute example on GitHub →](https://github.com/apache/camel-jbang-examples/tree/main/camel-1-tribute)
+[See the tribute example on GitHub →](https://github.com/apache/camel-jbang-examples/tree/main/connect-service/camel-1-tribute)
 
 ## The DNA
 
@@ -138,7 +138,7 @@ SQL has `SELECT * FROM`. Camel has `from().to()`.
 
 Both are ideas so fundamental that they outlasted every technology shift around them — new languages, new runtimes, new architectures, cloud, containers, AI. The world changed; the abstraction didn't need to.
 
-Thousands of companies. Billions of messages. 350+ connectors. 65+ patterns. 100,000+ commits. 1,600+ contributors. Nearly two decades of production use.
+Thousands of companies. Billions of messages. 350+ connectors. 65+ patterns. 83,000+ commits. 1,500+ contributors. Nearly two decades of production use.
 
 It all started with one line:
 
