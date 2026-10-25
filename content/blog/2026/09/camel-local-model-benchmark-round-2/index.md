@@ -10,7 +10,7 @@ preview: "The second round of the local-model benchmark moved from thirteen begi
 
 Two weeks ago we [let a frontier model coach a small local model through Camel](/blog/2026/09/camel-local-model-benchmark/) and fixed Camel between every run: twelve of thirteen beginner examples in the end, and 99 findings that were wrong for humans too. That post ended with a promise: the next runs use a different set of examples, so the fixes land in the parts of Camel the first thirteen did not reach.
 
-This is that round. Same laptop, same 22 GB local model (`qwen3.6:35b-a3b` in Ollama), same frontier model running the harness and reading every failed attempt, Camel 4.23 on the main branch. What changed is the examples, the way the model is asked to work, and 31 more things in Camel.
+This is that round. Same Mac mini, same 22 GB local model (`qwen3.6:35b-a3b` in Ollama), same frontier model running the harness and reading every failed attempt, Camel 4.23 on the main branch. What changed is the examples, the way the model is asked to work, and 31 more things in Camel.
 
 ## A more realistic example set
 

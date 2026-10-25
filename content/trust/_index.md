@@ -51,7 +51,7 @@ than years. Designated **Long Term Support (LTS)** releases receive bug and secu
 to a year, giving you a stable target you can plan around. We treat backward compatibility as a
 feature: the rare breaking change is always documented in the
 [Migration and Upgrade](/manual/migration-and-upgrade.html) guide, so an upgrade never holds a
-surprise. The data backs this up: [272 releases over 19 years with zero gaps](/blog/2026/06/camel-always-on/)
+surprise. The data backs this up: [280+ releases over 19 years with zero gaps](/blog/2026/06/camel-always-on/)
 and a core API so stable that [code from the first commit in 2007 still compiles unchanged](/blog/2026/06/camel-dna-19-years/).
 
 <p>
@@ -105,7 +105,7 @@ follows.
 Each one costs work you never see: triage against the [Security Model](/manual/security-model.html),
 a fix with regression tests, a CVE assignment, and a written, signed advisory carrying the affected
 version ranges and a workaround you can apply today — and then the backport. **26 of those 32 fixes
-were carried all the way back to the 4.14.x LTS line**, so teams on the older LTS get them without a
+were carried all the way back to the 4.14.x LTS line**, so teams on the older LTS got them without a
 major upgrade. None of it becomes public until the fixes have shipped, and we publish even when a
 hardening change has no known exploit path — because the alternative is asking you to trust a silence
 you cannot check. For the full timeline and the process behind the July 2026 batch — including two
@@ -134,7 +134,7 @@ it away from you. Development happens entirely in the open on public mailing lis
 anyone is free to read the code, propose a change, review a release, or verify a fix for
 themselves. The numbers tell the story: [1,500+ contributors from 450+ companies across 20+ countries](/blog/2026/06/camel-by-the-numbers/).
 And behind those contributors, the [same core engineering team](/blog/2026/07/camel-who-maintains/)
-has maintained Camel since 2009 — through multiple acquisitions — contributing 80–95% of all
+has maintained Camel since 2009 — through multiple acquisitions — contributing 78–96% of all
 commits every single year. When you hit a bug in a component written ten years ago, the person
 who wrote it is likely still an active committer.
 
@@ -203,10 +203,10 @@ major release.
 
 ## A proven bug fix track record
 
-The community has fixed [7,070 out of 7,081 reported bugs](/blog/2026/06/camel-bug-fix-track-record/)
+When we counted in June 2026, the community had fixed [7,070 out of 7,081 reported bugs](/blog/2026/06/camel-bug-fix-track-record/)
 — a **99.8% resolution rate** — with a median fix time of **1 day**. That track record has been
-sustained for 17 of the last 19 years across 350+ connectors and 272 production releases. Only 6
-bugs are open today. When something breaks, it gets fixed fast, and the data is there to prove it.
+sustained for 17 of the last 19 years across 350+ connectors and 272 production releases, and only 6
+bugs were open at the time. When something breaks, it gets fixed fast, and the data is there to prove it.
 
 <p>
 <a class="button dark" href="/blog/2026/06/camel-bug-fix-track-record/">See the data</a>
@@ -300,7 +300,7 @@ are logged as warnings so existing applications are not broken.
 
 AI coding assistants are remarkably good at Apache Camel — and it is not an accident. [Nineteen
 years of stable APIs](/blog/2026/06/camel-ai-trained/) mean training data does not go stale,
-11,700+ Stack Overflow answers provide real-world examples, and a predictable component model
+11,600+ Stack Overflow questions provide real-world examples, and a predictable component model
 lets LLMs generalize across 350+ connectors. Add a built-in [MCP server](/manual/camel-jbang-mcp.html),
 machine-readable catalog metadata, a schema-validated YAML DSL, and dedicated
 [AI integration patterns](/components/next/eips/ai-patterns.html) for building AI-powered
@@ -308,7 +308,7 @@ routes, and Camel is one of the best-trained integration frameworks for AI-assis
 
 We measure that rather than claim it. Given the Camel CLI as tools, a frontier model
 [built all 13 beginner examples](/blog/2026/09/camel-local-model-benchmark/) from a one-line
-description each. A 22 GB local model running on a laptop went from 0 of 13 with a bare prompt to
+description each. A 22 GB local model running on a 64 GB Mac mini went from 0 of 13 with a bare prompt to
 12 of 13 once it had the Camel MCP server and error messages that say what to write — and 99 of
 the 117 things it tripped over along the way were wrong for people too, so they were fixed for
 everyone and ship in Camel 4.23. It works in the other direction as well: for the 4.22 LTS

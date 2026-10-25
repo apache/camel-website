@@ -5,10 +5,10 @@ draft: false
 authors: [davsclaus]
 categories: ["AI", "Tooling"]
 keywords: ["apache camel", "AI", "local model", "ollama", "coding agent", "MCP", "camel cli", "yaml dsl", "validation", "error messages", "camel 4.23"]
-preview: "A frontier model ran the harness, a 22 GB local model on a laptop did the work, and Camel was what we changed between runs: from 0 to 12 of 13 beginner examples over twenty runs, and 99 of the findings were wrong for humans too. All of it ships in Camel 4.23."
+preview: "A frontier model ran the harness, a 22 GB local model on a Mac mini did the work, and Camel was what we changed between runs: from 0 to 12 of 13 beginner examples over twenty runs, and 99 of the findings were wrong for humans too. All of it ships in Camel 4.23."
 ---
 
-Everyone claims their tool "works with any LLM". We wanted a number instead of a claim, so we measured two very different models on the same Camel tasks, on one laptop, with the same tooling. Then we did something more useful than reporting the score: we ran the weaker model twenty times over two days, and between every run we fixed whatever in Camel had made it fail.
+Everyone claims their tool "works with any LLM". We wanted a number instead of a claim, so we measured two very different models on the same Camel tasks, on one Mac mini, with the same tooling. Then we did something more useful than reporting the score: we ran the weaker model twenty times over two days, and between every run we fixed whatever in Camel had made it fail.
 
 The interesting result is not which model won. It is that nearly everything the losing model tripped over was a problem in Camel, an unclear message or a tool that did not say what to write, that would have tripped up a person as well.
 
@@ -152,7 +152,7 @@ Twelve of 117 are about a small model's particular weaknesses: things a frontier
 
 ## What it means
 
-A frontier model with Camel's tools builds the beginner examples from one sentence each. A local model on a laptop got there too, once Camel told it what to write instead of only what was wrong: twelve of thirteen, in a third of the tokens and less than half the time of the first attempt.
+A frontier model with Camel's tools builds the beginner examples from one sentence each. A local model on a Mac mini got there too, once Camel told it what to write instead of only what was wrong: twelve of thirteen, in a third of the tokens and less than half the time of the first attempt.
 
 The Camel side of that ships in Camel 4.23, and none of it is an AI feature. Better messages from the Simple parser, the YAML loader and the runtime; a validator that says what to write; catalog tools that answer the question asked; a schema that requires what the runtime requires. And one thing we did not go looking for: validating every YAML example in the EIP documentation, 71 of 280 failed. They all pass in 4.23, the build now checks them, and the component pages are next ([CAMEL-24698](https://issues.apache.org/jira/browse/CAMEL-24698) has the full list). The next runs use a different set of examples, so the fixes land in the parts of Camel these thirteen did not reach; the harness and every failed attempt live with the results, for anyone who wants to repeat it with another model.
 

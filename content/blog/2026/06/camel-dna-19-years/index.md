@@ -133,7 +133,7 @@ Every component — whether it's JMS (2007), Kafka (2014), or LangChain4j (2024)
 
 The Enterprise Integration Patterns from Hohpe and Woolf's [book](https://www.enterpriseintegrationpatterns.com/) mapped perfectly to the `Processor` chain. Every pattern — splitter, aggregator, content-based router, wire tap — was just a `Processor` that manipulated an `Exchange`. The component model meant adding JBI, CXF, or SOAP support didn't require touching the core.
 
-**Camel 1.0** shipped January 2009. **Camel 2.0** followed just 7 months later in August 2009. The 2.x line would run for a decade — 26 minor releases.
+**Camel 1.0** shipped in 2007. **Camel 2.0** followed two years later, in August 2009. The 2.x line would run for a decade — 26 minor releases.
 
 ### Era 2: Cloud and Big Data (2011–2018)
 
@@ -328,7 +328,7 @@ camel run *
 
 No Maven project. No manual component wiring. No embedded broker — just `camel infra run artemis` to start one in a container. The route reads from `jms:queue:test.queue` and writes to `file://test`, exactly like the original.
 
-[Run the Camel 1.0 Tribute example →](https://github.com/apache/camel-jbang-examples/tree/main/camel-1-tribute)
+[Run the Camel 1.0 Tribute example →](https://github.com/apache/camel-jbang-examples/tree/main/connect-service/camel-1-tribute)
 
 ## Why It Lasted
 

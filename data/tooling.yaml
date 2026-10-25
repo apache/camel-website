@@ -141,4 +141,4 @@ toolGroups:
         desc: >-
           Opinionated bean factories for Apache Camel — configure data
           sources, connection factories, AI models, and more via
-          properties. Works with Camel JBang, Spring Boot, and Quarkus.
+          properties. Works with the Camel CLI, Spring Boot, and Quarkus.

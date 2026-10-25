@@ -111,7 +111,7 @@ These aren't theoretical — they're production-tested patterns used by thousand
 
 ## The origin story
 
-The very first Camel route ever written was `from("jms:queue:test.queue").to("file://test")` — one line, June 2007. Nearly two decades later, that same idea powers every Camel route: take data from here, send it there. The framework grew from 19 components to 350+, from a handful of contributors to 1,500+ — but the DNA never changed.
+The example that shipped with Camel 1.0 was `from("test-jms:queue:test.queue").to("file://test")` — one line, June 2007. Nearly two decades later, that same idea powers every Camel route: take data from here, send it there. The framework grew from 19 components to 350+, from a handful of contributors to 1,500+ — but the DNA never changed.
 
 **[Read the full origin story — Camel DNA →](/camel-dna/)**
 
@@ -135,10 +135,10 @@ Camel also provides an **MCP server** (Model Context Protocol) that connects AI 
 | **Connectors** | 350+ |
 | **Integration patterns** | 65+ |
 | **Contributors** | 1,500+ |
-| **Commits** | 100,000+ |
+| **Commits** | 83,000+ |
 | **Years in production** | Nearly two decades |
-| **Median bug fix time** | 1–2 days |
-| **Open bugs** | Typically 10 or fewer (across 350+ connectors) |
+| **Median bug fix time** | 1 day |
+| **Open bugs** | 6 in June 2026 (across 350+ connectors) |
 | **License** | Apache License 2.0 — free, no cost, forever |
 {{< /table >}}
 

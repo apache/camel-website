@@ -63,7 +63,7 @@ But not only that. Remember to also include information such as:
 *  what platform and JDK?
 *  any particular container being used? and if so, what version?
 *  stack traces generally really help! (Remember to post which version of Camel you use, this is important to know when posting stacktraces.) If in doubt, include the whole thing; often exceptions get wrapped in other exceptions and the exception right near the bottom explains the actual error, not the first few lines at the top. It's very easy for us to skim-read past unnecessary parts of a stack trace.
-*  log output can be useful too; sometimes [enabling DEBUG logging] (/manual/faq/how-do-i-change-the-logging.html) can help
+*  log output can be useful too; sometimes enabling DEBUG logging for the `org.apache.camel` package can help
 *  your code & configuration files are often useful
 *  did it work before? what have you changed to break it?
 *  try upgrading to the latest release and see if it's fixed there
