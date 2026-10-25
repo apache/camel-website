@@ -56,9 +56,8 @@ projects:
   - name: Camel Kafka Connector
     icon: apache-kafka
     desc: >-
-      Camel Kafka Connector allows you to use all Camel components as
-      Kafka Connect connectors, expanding Kafka Connect compatibility by
-      allowing Camel components to be used in the Kafka ecosystem.
+      Camel Kafka Connector runs Camel Kamelets as Kafka Connect source and
+      sink connectors, bringing Camel connectivity to the Kafka ecosystem.
     docs: /camel-kafka-connector/latest/
     source: https://github.com/apache/camel-kafka-connector/
     examples: https://github.com/apache/camel-kafka-connector-examples/

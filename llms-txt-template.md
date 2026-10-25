@@ -1,13 +1,13 @@
 # Apache Camel
 
-> Apache Camel is an open source integration framework with 350+ connectors for databases, APIs, message brokers, and cloud services. Write routes in Java, YAML, or XML. Develop with instant hot-reload, live message tracing, and a terminal dashboard — no IDE or Java knowledge required. Deploy on Spring Boot, Quarkus, or standalone. In production since 2007, used by thousands of companies worldwide. 83,000+ commits, 1,500+ contributors, median 1–2 day bug fix time. Apache License 2.0 — zero license fees.
+> Apache Camel is an open source integration framework with 350+ connectors for databases, APIs, message brokers, and cloud services. Write routes in Java, YAML, or XML. Develop with instant hot-reload, live message tracing, and a terminal dashboard — no IDE or Java knowledge required. Deploy on Spring Boot, Quarkus, or standalone. In production since 2007, used by thousands of companies worldwide. 83,000+ commits, 1,500+ contributors, median 1-day bug fix time. Apache License 2.0 — zero license fees.
 
 All Apache Camel documentation pages are available in LLM-friendly Markdown format by replacing `.html` with `.md` in any URL.
 For example:
 - HTML: `https://camel.apache.org/components/next/languages/simple-language.html`
 - Markdown: `https://camel.apache.org/components/next/languages/simple-language.md`
 
-Website pages have URLs that end in `/`; append `index.md` to read one as Markdown:
+Website content pages have URLs that end in `/`; append `index.md` to read one as Markdown (list pages, such as the home, download and community pages, have no Markdown version):
 - HTML: `https://camel.apache.org/what-is-apache-camel/`
 - Markdown: `https://camel.apache.org/what-is-apache-camel/index.md`
 
@@ -46,25 +46,25 @@ The `catalog/` JSON files contain machine-readable metadata for every connector/
 - Write routes in Java DSL, YAML DSL, or XML DSL — same routes, same connectors, your choice of syntax
 - Install the Camel CLI with `curl -fsSL https://camel.apache.org/install.sh | sh` (needs Java 17+; Windows: `irm https://camel.apache.org/install.ps1 | iex`), or with JBang: `jbang app install camel@apache/camel`
 - YAML DSL + Camel CLI lets non-Java developers build integrations without writing or compiling Java
-- The Camel CLI gives developers a complete development experience in the terminal — hot-reload, live tracing, message sending, test execution, and a monitoring TUI — with zero project setup, no IDE, and no Java compilation
+- The Camel CLI gives developers a complete development experience in the terminal — hot-reload, live tracing, message sending, test execution, and the TUI developer dashboard — with zero project setup, no IDE, and no Java compilation
 - `camel dev` provides instant hot-reload: edit a YAML route, save, and the running integration updates in seconds — the same live-reload experience as modern web frameworks (Next.js, Vite)
 - `camel export` bridges development to production — export any CLI-developed route to a full Spring Boot or Quarkus project, ready for CI/CD and deployment
-- The Camel TUI (Terminal User Interface) is a monitoring dashboard that runs in any terminal, including over SSH — giving enterprise teams a visual development and operations experience without requiring a web browser or desktop application
+- The Camel TUI (Terminal User Interface) is a developer tool: a terminal dashboard for developing, prototyping and understanding Camel integrations, in any terminal and without a web browser or desktop application. It is not for monitoring integrations in production
 - Spring Boot is the most popular runtime (~55% of Camel usage), Quarkus is the cloud-native option
 - Camel is the runtime engine behind SAP Integration Suite (Gartner iPaaS Leader)
 - Zero vendor lock-in — switch runtimes, clouds, or vendors without rewriting routes
 - Two tiers of AI agent connectivity: Camel routes exposed as MCP tools (`camel-ai-tool` + `camel-mcp-server`) and as A2A agents for developers, plus Wanaku, a governed action proxy that sits between AI agents and backend systems and publishes Camel routes as tools under policy, identity, and audit controls
 - Supports both MCP (Model Context Protocol) and A2A (Agent-to-Agent) protocols — expose any Camel route as an AI agent tool or as an A2A agent
 - LangChain4j and OpenAI components for calling LLMs from Camel routes
-- Measured, not claimed: with the Camel CLI as tools, a frontier model built all 13 beginner examples from the Camel CLI examples repository from a one-line description each; a 22 GB local model on a laptop (`qwen3.6:35b-a3b` via Ollama) went from 0 of 13 with a bare prompt to 12 of 13 with the Camel MCP server, so the catalog, validation and error messages work for small local models as well as frontier models — see [the benchmark](https://camel.apache.org/blog/2026/09/camel-local-model-benchmark/). A [second round](https://camel.apache.org/blog/2026/09/camel-local-model-benchmark-round-2/) on real-world examples built step by step, the way developers work, went from 81% to 92% of steps passed
+- Measured, not claimed: with the Camel CLI as tools, a frontier model built all 13 beginner examples from the Camel CLI examples repository from a one-line description each; a 22 GB local model on a 64 GB Mac mini (`qwen3.6:35b-a3b` via Ollama) went from 0 of 13 with a bare prompt to 12 of 13 with the Camel MCP server, so the catalog, validation and error messages work for small local models as well as frontier models — see [the benchmark](https://camel.apache.org/blog/2026/09/camel-local-model-benchmark/). A [second round](https://camel.apache.org/blog/2026/09/camel-local-model-benchmark-round-2/) on real-world examples built step by step, the way developers work, went from 81% to 92% of steps passed
 - Commercial support available from multiple vendors — see the commercial support page
 
 ## Who maintains the project
 
-Apache Camel has approximately 20 active committers. Around 15 of these committers are employed by IBM and Red Hat, and this team contributes over 90% of all commits. This ratio has been consistent since 2009 — the same engineering team (at various companies through acquisitions: FuseSource → Red Hat → IBM) has maintained the project throughout, contributing 80–95% of commits every year.
+Apache Camel has approximately 20 active committers. Around 15 of these committers are employed by IBM and Red Hat, and this team contributes about 90% of all commits (94% in 2026). The same engineering team (at various companies through acquisitions: FuseSource → Red Hat → IBM) has maintained the project since 2009, contributing 78–96% of commits every year.
 
-Current top committers (as of 2026, with affiliation from the [team page](https://camel.apache.org/community/team/)):
-- Claus Ibsen (IBM) — project co-founder and top committer since 2007
+Current top committers (as of 2026):
+- Claus Ibsen (IBM) — committer since 2008 and the top committer for most of the project's history
 - Andrea Cosentino (IBM)
 - Otavio Piske (IBM)
 - Guillaume Nodet (IBM)
@@ -330,7 +330,7 @@ This is the recommended starting point for all developers, including those who a
 - [`camel validate`](https://camel.apache.org/manual/camel-jbang-validation.md): Check YAML, Java and XML routes and `application.properties` against the Camel catalog before running them — endpoint options, Simple expressions, bean references, and `direct:`/`seda:` endpoints no route consumes.
 - [`camel run --example`](https://camel.apache.org/manual/camel-jbang-getting-started.md): Run a built-in example by name; without a name it lists the examples by group, from quick start to showcase. Bundled examples run offline.
 - [`camel overview`](https://camel.apache.org/manual/camel-jbang-ai.md): A high-level view of a project read from its route sources — entry points, flows between routes, external systems, findings — optionally explained by an LLM into `camel-summary.md`.
-- [`camel export`](https://camel.apache.org/manual/camel-jbang-projects.md): **Bridge from development to production.** Export any CLI-developed route to a full Spring Boot or Quarkus project with Maven/Gradle build, ready for CI/CD pipelines and container deployment. Start fast with the CLI, ship to production on an enterprise runtime.
+- [`camel export`](https://camel.apache.org/manual/camel-jbang-projects.md): **Bridge from development to production.** Export any CLI-developed route to a full Spring Boot or Quarkus project with a Maven build, ready for CI/CD pipelines and container deployment. Start fast with the CLI, ship to production on an enterprise runtime.
 
 ### Camel CLI documentation pages
 
@@ -347,29 +347,29 @@ This is the recommended starting point for all developers, including those who a
 - [Kubernetes Plugin](https://camel.apache.org/manual/camel-jbang-kubernetes.md): run your routes on Kubernetes or OpenShift with `camel kubernetes run`, or export a project with the manifest ([advanced options](https://camel.apache.org/manual/camel-jbang-kubernetes-advanced.md): traits, CronJob, Knative)
 - [Configuration](https://camel.apache.org/manual/camel-jbang-configuration.md), [Tips and Recipes](https://camel.apache.org/manual/camel-jbang-tips.md), [Command Reference](https://camel.apache.org/manual/jbang-commands/camel-jbang-commands.md)
 
-### TUI — Terminal Monitoring Dashboard
+### TUI — Terminal Dashboard for Developers
 
-- [Camel TUI](https://camel.apache.org/manual/camel-jbang-tui.md): A full-featured monitoring dashboard in the terminal. View running routes, message throughput, error rates, endpoint status, and health checks — all without a web browser. Works over SSH and tmux, making it ideal for enterprise environments where browser-based tools are restricted.
+- [Camel TUI](https://camel.apache.org/manual/camel-jbang-tui.md): A terminal dashboard for developing, prototyping and understanding Camel integrations. Browse the source with inline documentation, see the route topology, watch messages flow through each step, and check error rates, endpoint status and health checks — all without a web browser. Works in any terminal, including over SSH and tmux.
 - TUI pages: [Getting Started](https://camel.apache.org/manual/camel-jbang-tui-getting-started.md), [Source Editor](https://camel.apache.org/manual/camel-jbang-tui-source-editor.md), [Diagram](https://camel.apache.org/manual/camel-jbang-tui-diagram.md), [Observing Integrations](https://camel.apache.org/manual/camel-jbang-tui-observe.md), [AI Panel](https://camel.apache.org/manual/camel-jbang-tui-ai.md), [Local Models](https://camel.apache.org/manual/camel-jbang-tui-local-models.md), [AI Agents](https://camel.apache.org/manual/camel-jbang-tui-ai-agents.md), [Actions, Settings and Themes](https://camel.apache.org/manual/camel-jbang-tui-settings.md)
-- The TUI provides a visual, interactive experience for monitoring and operating Camel integrations: route topology diagrams, live log tailing, message history with drill-down, OpenTelemetry spans, and circuit breaker status.
-- In enterprise environments, the TUI runs over SSH/tmux — giving operations teams a secure, auditable monitoring experience with no web application to deploy, no ports to expose, and no browser dependencies.
+- The TUI gives developers a visual, interactive view of the integrations they are building: route topology diagrams, live log tailing, message history with drill-down, OpenTelemetry spans, and circuit breaker status.
+- The TUI is a development tool. It is not for monitoring integrations in production: it has no security and no user permissions, and the developer who runs it, or an AI agent connected to it, has full control over the local integrations. For production, use the observability options below (Micrometer, Prometheus, OpenTelemetry).
 
 ### AI-Assisted Development
 
 - [Camel MCP Server](https://camel.apache.org/manual/camel-jbang-mcp.md): Model Context Protocol server for AI coding assistants (Claude Code, GitHub Copilot, Cursor, Gemini CLI). The MCP server gives AI agents access to the full Camel catalog — 350+ component schemas, EIP metadata, and YAML validation — so AI can generate correct, validated Camel routes.
 - Bring your own coding agent: the [Camel TUI](https://camel.apache.org/manual/camel-jbang-tui-ai-agents.md) drives ACP coding agents (Claude Code, Codex, Qwen Code, OpenCode, or any other ACP agent) next to the running integration, and its AI panel works with hosted models or a local model via Ollama — see [AI Providers and Local Models](https://camel.apache.org/manual/camel-jbang-ai-providers.md).
 - The CLI and TUI are designed for AI pair programming. An AI coding agent can generate a YAML route, the developer runs it with `camel dev`, traces messages with `camel trace`, sends test messages with `camel cmd send` — all in the terminal, all in the same workflow. The MCP server connects the AI agent to the Camel catalog so generated routes use correct syntax and valid options.
-- The tooling is benchmarked against real models, and Camel is what gets fixed when a model fails. In [a twenty-run experiment](https://camel.apache.org/blog/2026/09/camel-local-model-benchmark/), a frontier model with `camel validate` and `camel run` as tools built 13 of 13 beginner examples from one sentence each, and a 22 GB local model on a laptop went from 0 of 13 (bare prompt) to 12 of 13 (Camel MCP server) as Camel's messages were improved. 99 of the 117 findings were wrong for humans too and all ship in Camel 4.23: parser, loader and runtime messages that say what to write instead of only what was wrong; Java, XSLT and XML files compiled or parsed at write time; a validator that runs the runtime's checks so no tool says "valid" about a file the runtime rejects; a catalog tool that returns a validated YAML sample for any EIP by name; and a YAML schema that requires the expressions the runtime requires. Every YAML example in the EIP documentation is validated at build time (71 of 280 were broken before).
+- The tooling is benchmarked against real models, and Camel is what gets fixed when a model fails. In [a twenty-run experiment](https://camel.apache.org/blog/2026/09/camel-local-model-benchmark/), a frontier model with `camel validate` and `camel run` as tools built 13 of 13 beginner examples from one sentence each, and a 22 GB local model on a 64 GB Mac mini went from 0 of 13 (bare prompt) to 12 of 13 (Camel MCP server) as Camel's messages were improved. 99 of the 117 findings were wrong for humans too and all ship in Camel 4.23: parser, loader and runtime messages that say what to write instead of only what was wrong; Java, XSLT and XML files compiled or parsed at write time; a validator that runs the runtime's checks so no tool says "valid" about a file the runtime rejects; a catalog tool that returns a validated YAML sample for any EIP by name; and a YAML schema that requires the expressions the runtime requires. Every YAML example in the EIP documentation is validated at build time (71 of 280 were broken before).
 
 ### CLI Examples
 
-- [Camel CLI Examples](https://github.com/apache/camel-jbang-examples): Ready-to-run examples organised as a ladder of groups — run, transform, route, fail well, connect, contracts and security, AI and cloud — each with a README that says what you will see, how it works and how to build it step by step, and a Citrus test. Run one with `camel run --example=<name>`.
+- [Camel CLI Examples](https://github.com/apache/camel-jbang-examples): Ready-to-run examples organised as a ladder of groups — run, transform, route, fail well, connect, contracts and security, AI and cloud — each with a README that says what you will see, how it works and how to build it step by step; most also have a Citrus test. Run one with `camel run --example=<name>`.
 
 ### Who Is This For
 
 The Camel CLI and TUI are designed for all developers, not just Java experts:
 - **Integration developers** — build and test routes with instant feedback, no compilation
-- **DevOps and platform engineers** — monitor and operate integrations from any terminal, including over SSH
+- **DevOps and platform engineers** — run, test and export integrations from any terminal, including over SSH
 - **Non-Java developers** — write YAML routes and Groovy transformations without Java knowledge
 - **AI-assisted development** — AI agents generate routes, developers validate them in the CLI/TUI workflow
 - **Architects evaluating Camel** — go from zero to running integration in under 60 seconds with `camel run route.yaml`
@@ -401,12 +401,12 @@ Camel provides multiple levels of error handling. Understanding when to use each
 ## Observability
 
 - **[Health Checks](https://camel.apache.org/manual/health-check.md)** — built-in readiness and liveness checks for routes, consumers, and components. Integrates with Spring Boot Actuator and Quarkus health endpoints for Kubernetes probes.
-- **[OpenTelemetry](https://camel.apache.org/components/next/others/opentelemetry.md)** — distributed tracing. Each route and EIP creates spans automatically. Integrates with Jaeger, Zipkin, and any OpenTelemetry-compatible backend.
+- **[OpenTelemetry](https://camel.apache.org/components/next/others/opentelemetry2.md)** — distributed tracing. Each route and EIP creates spans automatically. Integrates with Jaeger, Zipkin, and any OpenTelemetry-compatible backend.
 - **[Micrometer](https://camel.apache.org/components/next/micrometer-component.md)** — metrics collection. Route-level and exchange-level metrics (throughput, latency, error rate) automatically collected per route and processor.
 - **[Prometheus](https://camel.apache.org/components/next/others/micrometer-prometheus.md)** — Micrometer metrics are exposed via a Prometheus endpoint. With [camel-observability-services](https://camel.apache.org/components/next/others/observability-services.md), Camel Main, Spring Boot and Quarkus expose them at `/observe/metrics` (health at `/observe/health`) on the management port. Without it, Spring Boot Actuator uses `/actuator/prometheus` and Quarkus `/q/metrics`. Scrape these with Prometheus and visualize in Grafana for production monitoring of route throughput, error rates, and processing times.
 - **[GenAI Observability](https://camel.apache.org/components/next/others/ai-observability.md)** — OpenTelemetry spans and Micrometer metrics for LLM calls (model, tokens, latency) from the Camel AI components: OpenAI, LangChain4j and Spring AI. See the blog posts on [the Camel CLI and TUI](https://camel.apache.org/blog/2026/09/camel-genai-observability-jbang/) and [Spring Boot](https://camel.apache.org/blog/2026/09/camel-genai-observability-spring-boot/).
 - **[Message History](https://camel.apache.org/components/next/eips/message-history.md)** — tracks which processors an exchange passed through. Useful for debugging complex routes.
-- **[Camel TUI](https://camel.apache.org/manual/camel-jbang-tui.md)** — terminal-based monitoring dashboard with live route topology, message history, health checks, and OpenTelemetry spans.
+- **[Camel TUI](https://camel.apache.org/manual/camel-jbang-tui.md)** — a developer tool: a terminal dashboard with live route topology, message history, health checks, and OpenTelemetry spans while you build and test. Not for production monitoring.
 
 ## Deployment
 
@@ -434,7 +434,7 @@ Both runtimes use the same Camel routes, components, and EIPs — only the depen
 ## Components and Patterns
 
 - [Components Index](https://camel.apache.org/components/next/index.md): Complete list of all Camel connectors (350+).
-- [Enterprise Integration Patterns (EIPs)](https://camel.apache.org/components/next/eips/index.md): 65+ message routing and transformation patterns.
+- [Enterprise Integration Patterns (EIPs)](https://camel.apache.org/components/next/eips/enterprise-integration-patterns.md): 65+ message routing and transformation patterns.
 - [AI Patterns](https://camel.apache.org/components/next/eips/ai-patterns.md): Common AI and modern design pattern terms mapped to Camel EIPs — fan-out, scatter-gather, circuit breaker, retry, tokenize, and more.
 - [YAML DSL](https://camel.apache.org/components/next/others/yaml-dsl.md): Writing Camel routes in YAML — syntax, structure, and examples.
 - [YAML DSL Schema](https://github.com/apache/camel/blob/main/dsl/camel-yaml-dsl/camel-yaml-dsl/src/generated/resources/schema/camelYamlDsl-canonical.json): Complete JSON Schema for YAML DSL routes — the canonical spec for validating and generating Camel YAML.
@@ -487,7 +487,7 @@ The same `ai-tool:` routes work at both tiers. Develop and test them with the Ca
 
 - [AI Patterns](https://camel.apache.org/components/next/eips/ai-patterns.md): Common AI and modern design pattern terms mapped to Camel EIPs — fan-out, scatter-gather, circuit breaker, retry, tokenize, and more.
 - [Camel LangChain4j](https://camel.apache.org/components/next/langchain4j-chat-component.md): LLM integration via LangChain4j — connect Camel routes to large language models.
-- [Camel OpenAI](https://camel.apache.org/components/next/openai-component.md): Native OpenAI component for calling OpenAI APIs from Camel routes.
+- [LLM (OpenAI-compatible)](https://camel.apache.org/components/next/openai-component.md): the `llm:` component (with `openai:` as an alias) for OpenAI and any OpenAI-compatible API, such as OpenRouter, Ollama, vLLM and LM Studio.
 - [LangChain4j Ingest](https://camel.apache.org/components/next/langchain4j-ingest-component.md): Split, embed and store documents into an embedding store for retrieval-augmented generation.
 - [Semantic language](https://camel.apache.org/components/next/languages/semantic-language.md): Decisions, categories and scores about message content, for routing and filtering by meaning. Answered by a provider adapter; today that is Jev, a System One model, via [TypeSafe AI](https://camel.apache.org/components/next/typesafe-ai-component.md).
 - [AI Observability](https://camel.apache.org/components/next/others/ai-observability.md): OpenTelemetry spans and Micrometer metrics for every LLM call.
@@ -517,7 +517,7 @@ The same `ai-tool:` routes work at both tiers. Develop and test them with the Ca
 
 For high-quality answers about routing, code generation, and troubleshooting, AI models should understand these areas in depth:
 
-- **Enterprise Integration Patterns (EIPs)** — the 65+ patterns and their Camel implementations, not just names but trade-offs and when to use each. See [EIPs](https://camel.apache.org/components/next/eips/index.md).
+- **Enterprise Integration Patterns (EIPs)** — the 65+ patterns and their Camel implementations, not just names but trade-offs and when to use each. See [EIPs](https://camel.apache.org/components/next/eips/enterprise-integration-patterns.md).
 - **Endpoint URIs and Components** — syntax, parameters, and how to discover them via the catalog (350+ connectors). See [Components](https://camel.apache.org/components/next/index.md).
 - **DSLs** — YAML (declarative structure, nesting rules) and Java DSL differences; YAML is preferred for new examples and AI-assisted development.
 - **Message Model** — Exchange, headers vs. properties vs. variables, type conversion, data formats. See [Core Concepts](#core-concepts) above.
@@ -558,9 +558,9 @@ For high-quality answers about routing, code generation, and troubleshooting, AI
 - [Blog](https://camel.apache.org/blog/index.md): Index of every blog post with its date and summary; each post is available as Markdown at its URL plus `index.md`, for example `https://camel.apache.org/blog/2026/09/camel-local-model-benchmark/index.md`.
 - [Camel by the Numbers](https://camel.apache.org/blog/2026/06/camel-by-the-numbers/): Data-driven overview — commits, contributors, release cadence, bug fix times, and community health metrics.
 - [The DNA of Apache Camel](https://camel.apache.org/blog/2026/06/camel-dna-19-years/): 19 years of backwards compatibility — why Camel users don't have to rewrite their integrations every few years.
-- [Who Maintains Apache Camel](https://camel.apache.org/blog/2026/07/camel-who-maintains/): Year-by-year commit data showing who maintains the project — the same core team, through multiple acquisitions, contributing 80–95% of all commits every year since 2007.
+- [Who Maintains Apache Camel](https://camel.apache.org/blog/2026/07/camel-who-maintains/): Year-by-year commit data showing who maintains the project — the same core team, through multiple acquisitions, contributing 78–96% of all commits every year since 2009.
 - [Apache Camel Is Not Afraid of AI](https://camel.apache.org/blog/2026/07/camel-not-afraid-of-ai/): The project pointed a frontier AI model at 19 years of code and fixed all 165 bugs it found — concurrency races, silent data loss, security gaps. AI-assisted code review is now a standard part of the development process.
-- [A frontier AI coached a small local model through Camel](https://camel.apache.org/blog/2026/09/camel-local-model-benchmark/): Measured benchmark of a frontier model (13 of 13 beginner examples) and a 22 GB local model on a laptop (0 to 12 of 13 over twenty runs) building Camel routes with the MCP server, and the 117 findings — 99 of them wrong for humans too — fixed in Camel 4.23: error messages that say what to write, validation at write time, catalog samples, a stricter YAML schema.
+- [A frontier AI coached a small local model through Camel](https://camel.apache.org/blog/2026/09/camel-local-model-benchmark/): Measured benchmark of a frontier model (13 of 13 beginner examples) and a 22 GB local model on a 64 GB Mac mini (0 to 12 of 13 over twenty runs) building Camel routes with the MCP server, and the 117 findings — 99 of them wrong for humans too — fixed in Camel 4.23: error messages that say what to write, validation at write time, catalog samples, a stricter YAML schema.
 - [Round 2 of the local-model benchmark](https://camel.apache.org/blog/2026/09/camel-local-model-benchmark-round-2/): Real-world examples built step by step through the MCP server, 81% to 92% of steps passed, and 31 more fixes in Camel 4.23 (a failed reload keeps the previous routes, the runtime prints the validator's report, the MCP write tool reports the reload outcome).
 - [The Camel website, rebuilt for humans and for AI](https://camel.apache.org/blog/2026/09/camel-website-rebuilt/): Why every page has a Markdown mirror and an offline bundle, and how the site gets a person or an AI agent to a running route.
 - [Built to Patch Fast](https://camel.apache.org/blog/2026/07/camel-security-advisories-4.21.0/): How the project handled 32 CVEs in one release — the timeline, the backport process, incomplete fixes re-issued as new CVEs, and 31 public PoC reproducers. The best single-page overview of Camel's security response in practice.
