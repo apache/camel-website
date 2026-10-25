@@ -89,7 +89,7 @@ features:
     - tag: AI
       title: AI-ready integration
       body: >-
-        40+ AI components for agents, tools, MCP and A2A. An MCP server helps
+        20+ AI components for agents, tools, MCP and A2A. An MCP server helps
         AI coding assistants write correct routes.
       url: /components/latest/ai-summary.html
     - tag: EIP
