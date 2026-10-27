@@ -12,6 +12,18 @@
 #    delegates to scripts/WebsiteManifestGenerator.java (a vendored copy of the
 #    apache/camel tool) to compute SHA-256 and write the release manifests.
 # 3. With --latest, updates latest.properties, but only if <version> is newer.
+#    Always advances <X.Y>.properties (the newest patch of the release line) and,
+#    when content/releases/release-<version>.md has `kind: lts`, lts.properties.
+#    Both only move forward: a patch on an older LTS line leaves lts.properties
+#    alone. The release page must exist and must not be a draft.
+# 4. Checks that every alias matches the exact-version manifests
+#    (scripts/camel-cli-aliases.sh check, also run in CI).
+#
+# For local work, take the sources from a local apache/camel checkout instead of
+# apache/camel main:
+#   CAMEL_GENERATOR_SRC=/path/to/WebsiteManifestGenerator.java
+#   CAMEL_INSTALL_SRC_DIR=/path/to/dir/with/install.sh+install.ps1
+#     (e.g. dsl/camel-jbang/camel-launcher/src/install)
 #
 # The manifest format (format=1, version, tar_sha256, zip_sha256) and all
 # immutability / forward-only rules live in the single Java implementation;
@@ -47,6 +59,17 @@ echo "$version" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$' || die "version must be X.
 
 command -v java >/dev/null 2>&1 || die "java (JDK 17+) is required to run $generator"
 [ -f "$generator" ] || die "generator not found: $generator"
+if [ -n "${CAMEL_GENERATOR_SRC:-}" ]; then
+    [ -f "$CAMEL_GENERATOR_SRC" ] || die "CAMEL_GENERATOR_SRC not found: $CAMEL_GENERATOR_SRC"
+fi
+if [ -n "${CAMEL_INSTALL_SRC_DIR:-}" ]; then
+    [ -d "$CAMEL_INSTALL_SRC_DIR" ] || die "CAMEL_INSTALL_SRC_DIR not found: $CAMEL_INSTALL_SRC_DIR"
+fi
+
+# Fails if the release page is missing, a draft, or not a Camel release.
+kind=$("$repo_root/scripts/camel-cli-aliases.sh" kind "$version") || exit 1
+if [ "$kind" = "lts" ]; then lts=true; else lts=false; fi
+echo "Release $version is $kind (content/releases/release-$version.md)"
 
 tmp=$(mktemp -d)
 trap 'rm -rf "$tmp"' EXIT INT TERM
@@ -54,16 +77,28 @@ trap 'rm -rf "$tmp"' EXIT INT TERM
 # --- 1. Vendor the installer scripts and manifest generator from apache/camel main ------
 mkdir -p "$static_dir"
 for script in install.sh install.ps1; do
-    echo "Fetching $script from apache/camel main"
-    curl -fsSL "$MAIN_RAW/$script" -o "$tmp/$script" \
-        || die "could not download $script from $MAIN_RAW/$script"
+    if [ -n "${CAMEL_INSTALL_SRC_DIR:-}" ]; then
+        echo "Copying $script from $CAMEL_INSTALL_SRC_DIR"
+        cp "$CAMEL_INSTALL_SRC_DIR/$script" "$tmp/$script" \
+            || die "could not copy $script from $CAMEL_INSTALL_SRC_DIR"
+    else
+        echo "Fetching $script from apache/camel main"
+        curl -fsSL "$MAIN_RAW/$script" -o "$tmp/$script" \
+            || die "could not download $script from $MAIN_RAW/$script"
+    fi
     mv "$tmp/$script" "$static_dir/$script"
     echo "  wrote static/$script"
 done
 
-echo "Fetching WebsiteManifestGenerator.java from apache/camel main"
-curl -fsSL "$GENERATOR_RAW_URL" -o "$tmp/WebsiteManifestGenerator.java" \
-    || die "could not download WebsiteManifestGenerator.java from $GENERATOR_RAW_URL"
+if [ -n "${CAMEL_GENERATOR_SRC:-}" ]; then
+    echo "Copying WebsiteManifestGenerator.java from $CAMEL_GENERATOR_SRC"
+    cp "$CAMEL_GENERATOR_SRC" "$tmp/WebsiteManifestGenerator.java" \
+        || die "could not copy $CAMEL_GENERATOR_SRC"
+else
+    echo "Fetching WebsiteManifestGenerator.java from apache/camel main"
+    curl -fsSL "$GENERATOR_RAW_URL" -o "$tmp/WebsiteManifestGenerator.java" \
+        || die "could not download WebsiteManifestGenerator.java from $GENERATOR_RAW_URL"
+fi
 {
     printf '// VENDORED COPY - do not edit here.\n'
     printf '// Source of truth: apache/camel\n'
@@ -86,7 +121,9 @@ curl -fsSL "$zip_url" -o "$tmp/archive.zip" || die "could not download $zip_url"
 
 # --- 3. Write the manifests via the vendored Java generator ------------------
 # The generator computes checksums, writes static/camel-cli/releases/<version>.properties
-# (immutable) and, when --latest is given, advances latest.properties forward-only.
+# (immutable), advances <X.Y>.properties forward-only, with --lts true advances
+# lts.properties forward-only and, when --latest is given, advances latest.properties
+# forward-only.
 if [ "$update_latest" -eq 1 ]; then latest=true; else latest=false; fi
 echo "Generating manifests via scripts/WebsiteManifestGenerator.java"
 java "$generator" \
@@ -95,8 +132,12 @@ java "$generator" \
     --zip "$tmp/archive.zip" \
     --output "$static_dir/camel-cli" \
     --latest "$latest" \
+    --lts "$lts" \
     --install-sh "$static_dir/install.sh" \
     --install-ps1 "$static_dir/install.ps1" \
     || die "WebsiteManifestGenerator failed"
+
+# --- 4. Check every alias against the exact-version manifests ---------------
+"$repo_root/scripts/camel-cli-aliases.sh" check || die "alias manifests are inconsistent"
 
 echo "Done."

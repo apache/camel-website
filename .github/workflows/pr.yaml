@@ -75,6 +75,23 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+  # latest.properties, lts.properties and every X.Y.properties under
+  # static/camel-cli/releases must be copies of the exact-version manifests
+  # they select (lts from `kind: lts` in content/releases). Fails on drift;
+  # fix it with `scripts/camel-cli-aliases.sh rebuild`.
+  camel-cli-manifests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+      - name: Set up JDK
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Check Camel CLI alias manifests
+        run: scripts/camel-cli-aliases.sh check
+
   checks:
     needs: detect-drafts
     if: needs.detect-drafts.outputs.drafts-only != 'true'
