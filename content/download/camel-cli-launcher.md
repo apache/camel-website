@@ -10,13 +10,15 @@ or elevation.
 
 ## Requirements
 
-- A Java 17 or newer runtime discoverable on your system.
+- A Java runtime discoverable on your system: Java 21 or newer for Camel 4.24 onwards, Java 17 or newer
+  for older versions such as 4.22.x.
 - `curl` (macOS and Linux) or PowerShell 5.1+ (Windows).
 
 ## Quick install
 
 With no arguments the installer resolves and installs the latest published
-release.
+release. The latest release is not always an LTS release: to install an LTS
+release, pin its exact version (for example `4.22.2`) as shown below.
 
 ### macOS and Linux
 
@@ -60,8 +62,21 @@ but verifies it against a SHA-256 checksum recorded in a manifest served from
 hosts, so tampering would require compromising both at once. The installer also
 rejects archives containing absolute paths, `../` traversal, escaping symlinks,
 or more than one top-level directory, and runs the staged launcher once to
-confirm a Java 17+ runtime before activating it. If that check fails, any
+confirm a suitable Java runtime before activating it. If that check fails, any
 previously installed version is left untouched.
+
+The manifests live under `https://camel.apache.org/camel-cli/releases/`:
+
+| Manifest | Selects |
+| --- | --- |
+| `X.Y.Z.properties` (e.g. `4.22.2.properties`) | That exact release. It never changes once published. |
+| `latest.properties` | The newest release. This is what the installer uses by default. |
+| `lts.properties` | The newest LTS release. |
+| `X.Y.properties` (e.g. `4.22.properties`) | The newest patch release of the `X.Y` line. |
+
+`latest.properties`, `lts.properties` and `X.Y.properties` are copies of the
+exact-version manifest they select, and only move forward to a newer version:
+a patch on an older LTS line does not move `lts.properties` back.
 
 The installers are maintained in the Apache Camel repository
 ([apache/camel#24682](https://github.com/apache/camel/pull/24682)).
