@@ -290,6 +290,37 @@ The content of the created markdown file is added to the _New and Noteworthy_ se
 
 Make sure that you set the `draft: false` property to have the page published.
 
+##### Camel CLI installers and release manifests
+
+The web installers (`static/install.sh`, `static/install.ps1`) and `camel self-update` read the release manifests in
+`static/camel-cli/releases`:
+
+- `X.Y.Z.properties`: one per release, with the SHA-256 of the `camel-launcher` archives. Never changed once written.
+- `latest.properties`: the newest release.
+- `X.Y.properties`: the newest patch of the `X.Y` release line.
+- `lts.properties`: the newest release of the newest LTS line.
+
+After each Camel release, once the `camel-launcher-<version>-bin` archives are on Maven Central:
+
+1. Publish the release note first (see above): it must exist with `draft: false`, and have `kind: lts` for a release
+   of an LTS line. The manifest script refuses a release without a published release note, and `kind: lts` decides
+   whether `lts.properties` moves.
+2. Run the script (it needs `curl` and JDK 21+):
+
+       $ ./update-camel-cli-manifest.sh x.y.z            # a patch of an older line, such as an LTS patch
+       $ ./update-camel-cli-manifest.sh x.y.z --latest   # the newest release
+
+   It copies the installers and `scripts/WebsiteManifestGenerator.java` from apache/camel `main`, writes
+   `x.y.z.properties` and `static/install.sha256`, and moves `x.y.properties` and, for an LTS release,
+   `lts.properties`. With `--latest` it also moves `latest.properties`; without it, a release that would be the newest
+   is rejected before anything is written. The aliases only move forward, so a patch of an older line leaves
+   `latest.properties` and a newer LTS line alone.
+3. Commit the changed files under `static/` and `scripts/WebsiteManifestGenerator.java`, and open a pull request.
+
+The `camel-cli-manifests` check in CI runs `scripts/camel-cli-aliases.sh check`, which fails when an alias does not
+match the release manifests. `scripts/camel-cli-aliases.sh rebuild` regenerates all the aliases, for example after a
+release note changed `kind`. See the comments at the top of both scripts for the details.
+
 ##### Sub-project release
 
 Use the `release-{category}` archetype to create a new markdown content file in `content/releases/{category}-{version with underscores}/index.md`.
