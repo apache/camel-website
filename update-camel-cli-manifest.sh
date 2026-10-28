@@ -57,7 +57,7 @@ done
 
 echo "$version" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$' || die "version must be X.Y.Z: $version"
 
-command -v java >/dev/null 2>&1 || die "java (JDK 17+) is required to run $generator"
+command -v java >/dev/null 2>&1 || die "java (JDK 21+) is required to run $generator"
 [ -f "$generator" ] || die "generator not found: $generator"
 if [ -n "${CAMEL_GENERATOR_SRC:-}" ]; then
     [ -f "$CAMEL_GENERATOR_SRC" ] || die "CAMEL_GENERATOR_SRC not found: $CAMEL_GENERATOR_SRC"

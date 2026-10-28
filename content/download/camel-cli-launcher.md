@@ -10,7 +10,8 @@ or elevation.
 
 ## Requirements
 
-- A Java 17 or newer runtime discoverable on your system.
+- A Java runtime discoverable on your system: Java 21 or newer for Camel 4.24 onwards, Java 17 or newer
+  for older versions such as 4.22.x.
 - `curl` (macOS and Linux) or PowerShell 5.1+ (Windows).
 
 ## Quick install
@@ -61,7 +62,7 @@ but verifies it against a SHA-256 checksum recorded in a manifest served from
 hosts, so tampering would require compromising both at once. The installer also
 rejects archives containing absolute paths, `../` traversal, escaping symlinks,
 or more than one top-level directory, and runs the staged launcher once to
-confirm a Java 17+ runtime before activating it. If that check fails, any
+confirm a suitable Java runtime before activating it. If that check fails, any
 previously installed version is left untouched.
 
 The manifests live under `https://camel.apache.org/camel-cli/releases/`:

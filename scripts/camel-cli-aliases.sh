@@ -80,7 +80,7 @@ lts_versions() {
 }
 
 rebuild_aliases() {
-    command -v java >/dev/null 2>&1 || die "java (JDK 17+) is required to run $generator"
+    command -v java >/dev/null 2>&1 || die "java (JDK 21+) is required to run $generator"
     [ -f "$generator" ] || die "generator not found: $generator"
     lts=$(lts_versions) || exit 1
     java "$generator" --rebuild-aliases "$@" \
