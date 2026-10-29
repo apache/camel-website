@@ -4047,7 +4047,7 @@ __metadata:
     npm-run-all: "npm:~4"
     opal-runtime: "npm:1.0.11"
     pino-pretty: "npm:^5.0.0"
-    toml: "npm:~4.2"
+    toml: "npm:~5.0"
     turndown: "npm:^7.2.2"
     turndown-plugin-gfm: "npm:^1.0.2"
     xml2js: "npm:^0.6.2"
@@ -19629,10 +19629,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"toml@npm:~4.2":
-  version: 4.2.0
-  resolution: "toml@npm:4.2.0"
-  checksum: 10/6d7b1df9ce13ec1713136552e7831b245f7a9ba2252f652d1c17441161315db118cedece1011e044a356be6712d8ff4df54e46f9cfe8a681c4fca35fde620e00
+"toml@npm:~5.0":
+  version: 5.0.1
+  resolution: "toml@npm:5.0.1"
+  checksum: 10/cd4e3007779dc293748589577ce99a02b52416b6d43c04e9f985e208abc04ebd94c735beb2fa371ce938a48c3b929e414933d1096df5a082e9a88b14e01a331b
   languageName: node
   linkType: hard
 

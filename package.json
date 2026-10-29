@@ -68,7 +68,7 @@
     "npm-run-all": "~4",
     "opal-runtime": "1.0.11",
     "pino-pretty": "^5.0.0",
-    "toml": "~4.2",
+    "toml": "~5.0",
     "turndown": "^7.2.2",
     "turndown-plugin-gfm": "^1.0.2",
     "xml2js": "^0.6.2"
