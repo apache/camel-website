@@ -664,11 +664,18 @@ a.button.ink:hover {
   padding: calc(24 / var(--rem-base) * 1rem);
 }
 
+.home-tile-head {
+  align-items: center;
+  display: flex;
+  gap: calc(14 / var(--rem-base) * 1rem);
+}
+
 .home-tile-icon {
   display: block;
-  height: calc(34 / var(--rem-base) * 1rem);
+  flex: none;
+  height: calc(48 / var(--rem-base) * 1rem);
   object-fit: contain;
-  width: calc(34 / var(--rem-base) * 1rem);
+  width: calc(48 / var(--rem-base) * 1rem);
 }
 
 .home-tile h3 {
@@ -676,7 +683,7 @@ a.button.ink:hover {
   font-family: var(--display-font-family);
   font-size: calc(17 / var(--rem-base) * 1rem);
   font-weight: 700;
-  margin: calc(16 / var(--rem-base) * 1rem) 0 0;
+  margin: 0;
 }
 
 .home-tile p {
