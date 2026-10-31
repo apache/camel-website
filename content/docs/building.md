@@ -8,5 +8,6 @@ To learn how to build Camel, please check the documentation specific to the proj
 * [Camel K](/camel-k/latest/)
 * [Camel Kafka Connector](/camel-kafka-connector/latest/)
 * [Camel Karaf](/camel-karaf/latest/)
+* [Camel Kit](/camel-kit/next/contributing.html#build)
 * [Camel Quarkus](/camel-quarkus/latest)
 * [Camel Spring Boot](/camel-spring-boot/latest)

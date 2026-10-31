@@ -1,7 +1,7 @@
 'use strict'
 
 const manifest = {
-  "css/site.css": "css/site-fcc1ff1ab1.css",
+  "css/site.css": "css/site-30351b85a4.css",
   "css/vendor/docsearch.css": "css/vendor/docsearch-5db8a73adb.css",
   "img/algolia.svg": "img/algolia-f4ab98e0de.svg",
   "img/apache-kafka.svg": "img/apache-kafka-88809b7472.svg",
@@ -11,6 +11,7 @@ const manifest = {
   "img/brand-logos.svg": "img/brand-logos-a2b35bbdec.svg",
   "img/bugfix.svg": "img/bugfix-4280bf9490.svg",
   "img/calendar.svg": "img/calendar-b4b3ab1bf7.svg",
+  "img/camel-kit.svg": "img/camel-kit-9c8f16c70f.svg",
   "img/caret.svg": "img/caret-8823676a4b.svg",
   "img/chevron.svg": "img/chevron-63cb534773.svg",
   "img/cli.svg": "img/cli-9cede0128a.svg",
@@ -35,7 +36,7 @@ const manifest = {
   "img/spring-boot.svg": "img/spring-boot-0a7cb95564.svg",
   "img/tooling.svg": "img/tooling-e94e534b2d.svg",
   "img/user-stories.svg": "img/user-stories-cccc5f7c8f.svg",
-  "js/site.js": "js/site-2aad2f7ea4.js",
+  "js/site.js": "js/site-1fe1b00373.js",
   "js/vendor/docsearch.js": "js/vendor/docsearch-5c0cf4ef3a.js",
   "js/vendor/highlight.js": "js/vendor/highlight-34ee5f32ef.js",
   "js/vendor/svg4everybody.js": "js/vendor/svg4everybody-8ce71b89ac.js",

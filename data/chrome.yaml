@@ -25,6 +25,7 @@ columns:
       - { name: Camel K, url: /camel-k/latest/ }
       - { name: Camel Kafka Connector, url: /camel-kafka-connector/latest/ }
       - { name: Camel Karaf, url: /camel-karaf/latest/ }
+      - { name: Camel Kit, url: /camel-kit/next/ }
       - { name: FAQ, url: /manual/faq/index.html }
   - title: Community
     links:
