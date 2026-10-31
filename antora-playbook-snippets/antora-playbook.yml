@@ -75,6 +75,11 @@ content:
         - main
       start_path: docs
 
+    - url: https://github.com/apache/camel-kit.git
+      branches:
+        - main
+      start_path: docs
+
 ui:
   bundle:
     url: ./antora-ui-camel/public/_

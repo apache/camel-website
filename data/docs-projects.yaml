@@ -85,6 +85,14 @@ projects:
     desc: Apache Karaf makes running Apache Camel in the Karaf OSGi container.
     docs: /camel-karaf/latest/
     source: https://github.com/apache/camel-karaf
+  - name: Camel Kit
+    icon: camel-kit
+    desc: >-
+      Structured workflows for AI coding agents that take an integration from
+      requirements to generated, verified Camel routes, with every component
+      checked against the Camel catalog.
+    docs: /camel-kit/next/
+    source: https://github.com/apache/camel-kit
   - name: Camel Karavan
     icon: karavan
     desc: >-

@@ -22,6 +22,7 @@
     '/camel-kafka-connector/',
     '/camel-kamelets/',
     '/camel-karaf/',
+    '/camel-kit/',
   ]
 
   // Core docs patterns - these should rank higher than component pages

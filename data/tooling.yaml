@@ -26,11 +26,13 @@ cliCommands:
 
 aiTools:
   - name: Camel Kit
-    url: https://github.com/luigidemasi/camel-kit
+    url: /camel-kit/next/
     desc: >-
-      Structured slash commands for AI coding assistants that guide you
-      through the complete integration lifecycle. Supports IBM Bob,
-      Claude Code, Codex, GitHub Copilot CLI, and more.
+      An Apache Camel subproject: structured workflows for AI coding agents
+      that guide you through the complete integration lifecycle, with every
+      component verified against the Camel catalog. Supports IBM Bob 2,
+      Claude Code, Codex CLI, GitHub Copilot CLI, Antigravity, Pi, Qwen Code
+      and OpenCode.
   - name: Wanaku
     url: https://wanaku.ai
     desc: >-

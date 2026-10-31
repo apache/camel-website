@@ -66,6 +66,12 @@ specialized:
     stats: See GitHub for current activity
     docs: /camel-karaf/latest/
     source: https://github.com/apache/camel-karaf
+  - name: Camel Kit
+    icon: camel-kit
+    description: Guides AI coding agents through the Camel integration lifecycle, from design to verified routes, with every component checked against the catalog.
+    stats: See GitHub for current activity
+    docs: /camel-kit/next/
+    source: https://github.com/apache/camel-kit
 
 footnote: >-
   Nothing has been removed; these projects remain fully supported and

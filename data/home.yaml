@@ -185,6 +185,13 @@ tiles:
         A low-code, visual data-integration platform for designing and managing
         Camel routes.
       url: https://github.com/apache/camel-karavan
+    - name: Camel Kit
+      icon: camel-kit
+      description: >-
+        Guides AI coding agents through the Camel integration lifecycle, from
+        design to verified routes, with every component checked against the
+        catalog.
+      url: /camel-kit/next/
     - name: Camel Kafka Connector
       icon: apache-kafka
       description: >-

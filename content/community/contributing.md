@@ -12,6 +12,7 @@ Check the pages for each of the subprojects for details about how to contribute:
 * [Camel K](/camel-k/latest/)
 * [Camel Kafka Connector](/camel-kafka-connector/latest/)
 * [Camel Karaf](/camel-karaf/latest/)
+* [Camel Kit](/camel-kit/next/contributing.html)
 * [Camel Quarkus](/camel-quarkus/latest)
 * [Camel Spring Boot](/camel-spring-boot/latest)
 

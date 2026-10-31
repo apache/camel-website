@@ -61,6 +61,7 @@ const SUB_PROJECT_PATHS = [
   '/camel-kafka-connector/',
   '/camel-kamelets/',
   '/camel-karaf/',
+  '/camel-kit/',
 ]
 
 const FIXTURES = ['timer', 'kamelet', 'routing']
