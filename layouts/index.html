@@ -194,9 +194,11 @@
     <ul class="home-grid home-grid--three">
       {{- range .items }}
       <li class="home-card home-tile">
-        <img class="home-tile-icon" alt=""
-             src="{{ path.Join "_" (index site.Data "rev-manifest" (printf "img/%s.svg" .icon)) | relURL }}">
-        <h3>{{ .name }}</h3>
+        <div class="home-tile-head">
+          <img class="home-tile-icon" alt=""
+               src="{{ path.Join "_" (index site.Data "rev-manifest" (printf "img/%s.svg" .icon)) | relURL }}">
+          <h3>{{ .name }}</h3>
+        </div>
         <p>{{ .description }}</p>
         <a class="home-tile-link" href="{{ .url | relURL }}" aria-label="Read more about {{ .name }}">Read more &rarr;</a>
       </li>

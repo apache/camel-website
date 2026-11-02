@@ -566,6 +566,7 @@ See [semantic decisions with Jev](https://camel.apache.org/blog/2026/09/semantic
 - [Camel Kamelets](https://camel.apache.org/camel-kamelets/next/index.md): Pre-built route snippets for common integration scenarios.
 - [Camel Kafka Connector](https://camel.apache.org/camel-kafka-connector/next/index.md): Kafka Connect connectors based on Camel.
 - [Camel Karaf](https://camel.apache.org/camel-karaf/latest/): Camel on the Apache Karaf OSGi container.
+- [Camel Kit](https://camel.apache.org/camel-kit/next/index.md): Workflows for AI coding agents that take a Camel integration from requirements to generated, verified routes.
 
 ## Guidance for AI Models
 
