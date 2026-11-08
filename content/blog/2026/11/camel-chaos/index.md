@@ -114,11 +114,34 @@ the rules you tried by hand as such a file.
 
 ## Chaos found a bug on its first day
 
-While writing the example, one order in `shipping` went to the dead letter channel after a single failure, without
-the two retries it should have had. It was an order whose payment had needed two retries earlier, in route `orders`.
+The example was written by an AI agent, which ran it with the Camel CLI, added chaos rules and read the log. It saw
+one order in `shipping` go to the dead letter channel after a single failure, without the two retries it should have
+had. It was an order whose payment had needed two retries earlier, in route `orders`.
 The redelivery counter of that first error handler stayed on the message, and the error handler in `shipping` started
 counting from it ([CAMEL-26734](https://issues.apache.org/jira/browse/CAMEL-26734)). That is exactly the kind of thing
 chaos is for: a bug that hides until two failures meet.
+
+## Testing is not only JUnit anymore
+
+Chaos in Camel has been a dream of mine for a long time. But it would have taken a lot of effort to build by hand, and
+the old world had settled the question anyway: testing is programming, and programming tests means JUnit. To prove
+that a route survives a payment outage, you wrote a test class, mocked the payment service, and simulated the outage
+in a few hundred lines of Java.
+
+Today that is no longer the only pony in town.
+
+The Camel CLI and TUI have in recent years been about trying things out quickly, and seeing with your own eyes what
+happens: `camel run` a file, watch the routes in the TUI, change something, and look again. And lately the AI can be
+your eyes, and act on your behalf with its thousand hands typing very fast on the keyboard: run the integration, read
+the log, add a chaos rule, and look again. That is how the bug above was found.
+
+Together this makes you much quicker, and it opens another way to test: for real. Run the integration as it is, break
+it with chaos, and check what it did. The example has a [Citrus](https://citrusframework.org/) test that runs the
+scenario and checks the log, with `camel test run`. And for the timing bugs of a consumer, the deterministic simulation
+tests of `camel-test-dst` run the real consumer under virtual time. A test is then a few lines of rules and
+expectations, not hundreds of lines of Java.
+
+It is not all there yet, but this is part of the way.
 
 ## There is more
 
