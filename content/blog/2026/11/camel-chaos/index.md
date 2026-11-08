@@ -117,8 +117,8 @@ the rules you tried by hand as such a file.
 While writing the example, one order in `shipping` went to the dead letter channel after a single failure, without
 the two retries it should have had. It was an order whose payment had needed two retries earlier, in route `orders`.
 The redelivery counter of that first error handler stayed on the message, and the error handler in `shipping` started
-counting from it. That is exactly the kind of thing chaos is for: a bug that hides until two failures meet.
-<!-- TODO Claus: JIRA for the redelivery counter that carries over to the next error handler -->
+counting from it ([CAMEL-26734](https://issues.apache.org/jira/browse/CAMEL-26734)). That is exactly the kind of thing
+chaos is for: a bug that hides until two failures meet.
 
 ## There is more
 
