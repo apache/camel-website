@@ -90,8 +90,9 @@ chaos (pid 58473): FAIL
 
 ## A scenario as a gate in your build
 
-Rules typed at the command line are an experiment. Rules in a file are a test. A scenario is a `.chaos` file with one
-rule per line and a seed, so it fails the same messages every time it runs:
+Rules typed at the command line are an experiment. Rules in a file are a test. A scenario is a `.chaos` file in
+`test/chaos`, next to the other tests of the project, with one rule per line and a seed, so it fails the same messages
+every time it runs:
 
 ```text
 seed=42
@@ -105,7 +106,7 @@ route=payment stall duration=10s from=+20s expect=orders:failed<=0 within=15s
 ```
 
 ```shell
-camel run * --chaos=chaos/payment-outage.chaos --max-seconds=45
+camel run * --chaos=test/chaos/payment-outage.chaos --max-seconds=45
 ```
 
 It ends with `Chaos verdict: PASS (3 expectations met)`, and the verdict is the exit code: 0 for PASS, 1 for FAIL.
