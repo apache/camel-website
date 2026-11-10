@@ -57,10 +57,27 @@ The log fills with retries, and once in a while an order fails three times in a 
 shows the effect of the rule as it runs: `60 recovered, 4 handled`. Sixty orders were saved by a retry, four went to
 the dead letter channel. Nothing was lost.
 
-## Watch it happen
+## Watch it happen in the Camel TUI
 
-The Camel TUI has a chaos screen with the rules, their live rate, the faults per second, and what the faults did to
-the exchanges they hit. You can add, change and remove rules there too, and press `w` for what to try.
+You can do all of this in the [Camel TUI](/manual/camel-jbang-tui.html) too, without a command to remember. Start
+`camel tui`, press `F2` and choose *Run an Example...*, pick the chaos example, and in the run options tick
+*[x] Chaos testing*. That is `camel run --chaos`: the example starts with chaos switched on, and no rules yet. (With
+profile `prod` it cannot be ticked, as chaos is never on in production.)
+
+Then open the chaos screen (`0` for More, then *Chaos*) and press `a` to add a rule. You do not need to know the
+syntax of a rule: pick what should go wrong from the faults camel-chaos knows, grouped by what they hit: the services
+downstream, the messages, the consumers and routes, and the error handling. Each one says what it can uncover, when
+not to use it, and what to watch while it runs. Press `Enter` to fill in its values: the endpoints and routes of the
+integration are there to pick with the arrow keys, and the rule is shown as it is built. Another `Enter` adds it,
+after you confirm.
+
+![Adding a chaos rule in the Camel TUI: what should go wrong, and the rule built from it](camel-tui-chaos-add-rule.png)
+
+Not sure what to pick? Press `w` for what to try: the same suggestions as `camel cmd chaos-suggest`, and `Enter` types
+the selected one in.
+
+The chaos screen shows the rules, their live rate, the faults per second, and what the faults did to the exchanges
+they hit. You can change and remove rules there too.
 
 ![The chaos screen of the Camel TUI with four rules](camel-tui-chaos-rules.png)
 
