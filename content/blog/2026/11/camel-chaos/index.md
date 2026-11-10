@@ -41,7 +41,7 @@ Chaos rules to try, the most worth trying first:
 
 1. route orders: Returns an error (HTTP status) (errors)
    an HTTP call to http://localhost:8080/payment without a circuit breaker: what does the route do when the service answers 503?
-   camel cmd chaos-add --rule='endpoint=http://localhost:8080/payment error status=503 rate=0.25 until=10m'
+   camel cmd chaos-add --rule='endpoint=http://localhost:8080/payment error status=503 rate=0.25 until=10m expect=orders:failed<=0'
 
 2. route orders: The route after a hand-off fails (lost)
    route orders hands the message to route shipping over seda and does not wait: when shipping fails, is the message lost?
