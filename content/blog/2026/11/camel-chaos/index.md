@@ -1,6 +1,6 @@
 ---
-title: "Chaos in Camel 4.24: break your routes on purpose, before production does"
-date: 2026-11-08
+title: "Chaos in Camel 4.24, part 1: break your routes on purpose, before production does"
+date: 2026-11-15
 draft: false
 authors: [davsclaus]
 categories: ["Camel", "Tooling"]
@@ -18,6 +18,9 @@ develop it, and see how the routes cope. "Fail 25% of the calls to the payment s
 recovered by a retry, what the dead letter channel handled, and what was lost.
 
 Chaos is for development only: it is on with profile `dev`, the default of `camel run`, and never with profile `prod`.
+
+This is part 1 of two: how chaos works, hands on. In [part 2](/blog/2026/11/let-there-be-chaos/) you hand it to an AI,
+which breaks the routes by itself.
 
 ## Try it with the example
 
@@ -180,6 +183,12 @@ The example shows a few of the faults. Some more of what chaos can do:
   extension is on its way.
 
 The [documentation](/components/next/others/chaos.html) has all of it.
+
+## Next: let there be chaos
+
+So far you picked the faults yourself. In [part 2](/blog/2026/11/let-there-be-chaos/) you give an AI ten minutes
+instead: it reads the routes, tries faults by itself, measures what held and what broke, and comes back with a report
+and scenarios you can replay.
 
 ## Try it
 
