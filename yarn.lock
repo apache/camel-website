@@ -3984,7 +3984,7 @@ __metadata:
     stylelint: "npm:^15.11.0"
     stylelint-config-standard: "npm:^34.0.0"
     svg4everybody: "npm:^2.1.9"
-    toml: "npm:^4.2.0"
+    toml: "npm:^5.0.1"
     undertaker: "npm:^2.0.0"
     vinyl-buffer: "npm:~1.0"
     vinyl-fs: "npm:^4.0.2"
@@ -19629,7 +19629,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"toml@npm:~5.0":
+"toml@npm:^5.0.1, toml@npm:~5.0":
   version: 5.0.1
   resolution: "toml@npm:5.0.1"
   checksum: 10/cd4e3007779dc293748589577ce99a02b52416b6d43c04e9f985e208abc04ebd94c735beb2fa371ce938a48c3b929e414933d1096df5a082e9a88b14e01a331b
