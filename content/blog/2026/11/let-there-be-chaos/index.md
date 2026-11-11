@@ -1,6 +1,6 @@
 ---
 title: "Chaos in Camel 4.24, part 2: let there be chaos, an AI that breaks your routes on purpose"
-date: 2026-11-15
+date: 2026-11-22
 draft: false
 authors: [davsclaus]
 categories: ["Camel", "Tooling", "AI"]
