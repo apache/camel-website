@@ -168,7 +168,8 @@ agent named: a runtime tool takes the integration as `nameOrPid`, `name` or `pid
 tool acted on the only integration that ran, which could be another app. `camel_get_files` reads a large file in parts,
 instead of an answer of a million tokens, and `camel_edit_file` keeps a `replace` of only whitespace, which matters in
 YAML. The lines of source code in the answers are as they are in the file, without `\"`, and a misspelled name in the
-catalog, such as `kafak`, suggests `kafka`.
+catalog, such as `kafak`, suggests `kafka`, and asking for it a third time says so again, rather than to go on with
+the options the answer gave.
 
 ### Keeping up with the agent
 
@@ -229,6 +230,11 @@ Nightly builds are development builds for testing, not Apache releases.
   reloaded the routes every 2 seconds. Log files, `target`, `.git` and the `.camel` folders are not watched.
 * In dev mode, a change of `application.properties` is reloaded, and with files in two folders, such as
   `camel run a.camel.yaml other/b.camel.yaml --dev`, both are watched: only the folder of `b.camel.yaml` was.
+* `camel run '*'` works when the shell does not expand the `*`, such as the Windows command prompt: it said "No
+  routes found in: *".
+* A value in the configuration that an option does not take, such as `runtime=springboot`, says which file, key and
+  value; every command with `--runtime` failed with "DefaultValueProvider failed for option runtime". `camel config
+  set` refuses such a value, and `camel config unset` of a key that is not set exits with `3`.
 * `--exclude` takes a folder, such as `--exclude=sub/**`, and works for `camel run .`, `--source-dir` and `camel dev`,
   where it was left out.
 * In dev mode, a reload applies changed `camel.beans` and `camel.component` properties, and a dependency added to
