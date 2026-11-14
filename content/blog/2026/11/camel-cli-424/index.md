@@ -149,6 +149,10 @@ And with it:
 * `camel validate` exits with `66` for a file that does not exist, and for nothing to validate. It said "Validation
   success (files:0)" for a `notes.txt`. So do `camel export`, `camel dependency` and `camel transform route` for a
   file that does not exist, with the message on stderr.
+* A `--camel-version` that was never released says `Camel version 9.9.9 not found` and exits with `3`, in `camel
+  catalog`, `camel doc` and `camel validate`. It said "Cannot resolve dependencies", which reads like a network
+  problem, and that still exits with `1`. `camel version set 9.9.9` refuses it, where it stored it for every later
+  command to fail on.
 * `X=$(camel eval expression ...)` is only the value. The Camel that `camel eval` starts for itself printed its state
   first.
 * The `--timeout` of `camel cmd send` bounds the send, not only the wait of the CLI. A send to `direct:nope` waited
@@ -223,6 +227,10 @@ Nightly builds are development builds for testing, not Apache releases.
 * `camel run --data-dir` names the folders with data files under the source directory, which dev mode does not watch,
   so writing a file there does not reload the routes. Nor do the files a run writes itself: `camel dev > run.log`
   reloaded the routes every 2 seconds. Log files, `target`, `.git` and the `.camel` folders are not watched.
+* In dev mode, a change of `application.properties` is reloaded, and with files in two folders, such as
+  `camel run a.camel.yaml other/b.camel.yaml --dev`, both are watched: only the folder of `b.camel.yaml` was.
+* `--exclude` takes a folder, such as `--exclude=sub/**`, and works for `camel run .`, `--source-dir` and `camel dev`,
+  where it was left out.
 * In dev mode, a reload applies changed `camel.beans` and `camel.component` properties, and a dependency added to
   `camel.jbang.dependencies` while the app runs is downloaded.
 * The log of the previous run is kept, also for the Spring Boot and Quarkus runtimes, so you can read why it failed
