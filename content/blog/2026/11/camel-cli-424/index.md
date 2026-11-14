@@ -148,6 +148,14 @@ And with it:
   --reply | cat` had them.
 * `camel validate` exits with `66` for a file that does not exist, and for nothing to validate. It said "Validation
   success (files:0)" for a `notes.txt`.
+* `X=$(camel eval expression ...)` is only the value. The Camel that `camel eval` starts for itself printed its state
+  first.
+* The `--timeout` of `camel cmd send` bounds the send, not only the wait of the CLI. A send to `direct:nope` waited
+  30 seconds for a consumer and ended in a timeout of the CLI; now it fails at once with "No consumers available".
+* Options do with `--json` what they do without: `camel cmd route-structure --json --filter=orders` printed every
+  route, and a filter that matches nothing exits with `3`. `camel cmd receive --output=json` has only JSON on stdout.
+* A row of a JSON listing says which integration it is of, with `pid` as a number and `name`, and a list is a list
+  also for one integration.
 
 The AI tools of the Camel CLI, the [MCP server](/manual/camel-jbang-mcp.html) and `camel ask`, pass these failures on
 to the agent as errors, so the model sees what went wrong instead of guessing it. And they act on the integration the
@@ -211,7 +219,8 @@ Nightly builds are development builds for testing, not Apache releases.
   ```
 
 * `camel run --data-dir` names the folders with data files under the source directory, which dev mode does not watch,
-  so writing a file there does not reload the routes.
+  so writing a file there does not reload the routes. Nor do the files a run writes itself: `camel dev > run.log`
+  reloaded the routes every 2 seconds. Log files, `target`, `.git` and the `.camel` folders are not watched.
 * In dev mode, a reload applies changed `camel.beans` and `camel.component` properties, and a dependency added to
   `camel.jbang.dependencies` while the app runs is downloaded.
 * The log of the previous run is kept, also for the Spring Boot and Quarkus runtimes, so you can read why it failed
@@ -226,7 +235,15 @@ Nightly builds are development builds for testing, not Apache releases.
 * From the launcher, `camel export` exports the Citrus tests, `--jvm-debug` and `--jvm-args` work without JBang,
   and `camel.bat` has Windows line endings.
 * `camel kubernetes` honours `--kube-config` in all commands, and `camel kubernetes logs` stops at a pod that has
-  finished.
+  finished. `camel kubernetes export` puts `--env`, `--config`, `--volume`, `--label` and `--annotation` in a CronJob
+  and a Knative Service too, where they were dropped without a word.
+* `camel debug --breakpoint tick` and `--source-dir` work; the debug options were taken apart wrongly before they went
+  to `camel run`.
+* `camel init` gives a Kamelet its kind from the file name, puts `./x.yaml` in `--dir`, and refuses a Java file whose
+  name is not a class name, such as `my-route.java`.
+* `camel doctor` checks a nightly build against the Apache snapshots, where it reported Maven as failed.
+* `camel cmd logger --logging-level=BOGUS` is a usage error instead of setting the level to `ERROR`, and
+  `camel cmd browse --endpoint=seda:foo`, the example of its own help, finds `seda://foo`.
 * `camel generate rest --routes` writes routes that validate and run, with a log step to replace, and `camel test init`
   does not overwrite a test you edited, unless `--force`.
 
