@@ -137,9 +137,42 @@ And with it:
   in time.
 * `camel run --background` waits for the integration to start, and a file that does not exist fails before anything
   starts.
+* A route that fails to start exits with `1`, which says "fix the route", with one line on stderr: the stack trace
+  is in the log already. Before, it was `70`, which says "a bug in Camel, do not retry", so an agent gave up instead of
+  fixing its route.
+* With `orders` and `orders-v2` running, `camel stop orders` stops `orders`. A name was a prefix only, so it stopped
+  both, and every command for one integration failed for `orders`. A name that no integration has is still a prefix.
+* An option given on the command line wins over `application.properties`. With `camel.main.tracing=false` in the
+  file, `camel run --trace` printed no trace.
+* No ANSI color codes when the output is a file or a pipe, unless `--logging-color` is given: `camel cmd send
+  --reply | cat` had them.
+* `camel validate` exits with `66` for a file that does not exist, and for nothing to validate. It said "Validation
+  success (files:0)" for a `notes.txt`.
 
 The AI tools of the Camel CLI, the [MCP server](/manual/camel-jbang-mcp.html) and `camel ask`, pass these failures on
-to the agent as errors, so the model sees what went wrong instead of guessing it.
+to the agent as errors, so the model sees what went wrong instead of guessing it. And they act on the integration the
+agent named: a runtime tool takes the integration as `nameOrPid`, `name` or `pid`, where a `name` was ignored and the
+tool acted on the only integration that ran, which could be another app. `camel_get_files` reads a large file in parts,
+instead of an answer of a million tokens, and `camel_edit_file` keeps a `replace` of only whitespace, which matters in
+YAML.
+
+### Keeping up with the agent
+
+An agent does not only start commands, it talks to the integration it is building: it sends a message, reloads a
+changed route, and asks how the integration is doing. In Camel 4.24 those got faster, and some of them got a command
+of their own:
+
+* **An action is answered in about 25 ms**, such as `camel cmd send` or `camel get route`, where it took about 110 ms.
+  The CLI and the integration looked for each other's files every 100 ms; now they look much more often, but only
+  read the folder when it changed.
+* **`camel run --background` returns when the routes are up**, about 0.4 s after Camel started, where it was about
+  1.3 s. The integration writes its status at once when it has started, instead of on the next tick of a second.
+* **`camel cmd reload --wait --json`** reloads the changed files of an integration in dev mode at once, and says how it
+  went: `reloaded`, `unchanged` or `failed`, with the error. Before, an agent wrote a file and then had to guess when
+  the reload had happened.
+* **`camel status <name> --json`** is the state of an integration in one call: its routes, the problems first, the
+  last errors and log lines, the HTTP endpoints, and the oldest exchange in flight. In about 0.3 s, where `camel get
+  route`, `get health`, `get error` and `camel log` took about a second together.
 
 Fast and trustworthy go together: the agent calls the CLI often because each call is cheap, and it can act on what
 comes back because the answer is right.
@@ -185,6 +218,17 @@ Nightly builds are development builds for testing, not Apache releases.
   at startup. `camel dirty --clean` removes those logs too.
 * `camel cmd route-diagram`, `route-structure` and `route-topology` read Java routes with the Java DSL parser, without
   compiling them.
+* `camel cmd send --body=...` without a name sends to the integration that runs, such as after `camel run --stub=jms`.
+  It sent to an empty Camel of its own, and said "Sent (success)". An endpoint of a system outside the integrations,
+  such as `kafka:topic`, is still sent from the CLI.
+* A `camel-cli.properties` in the current directory is laid over the global `~/.camel-cli.properties`, rather than
+  hiding all of it.
+* From the launcher, `camel export` exports the Citrus tests, `--jvm-debug` and `--jvm-args` work without JBang,
+  and `camel.bat` has Windows line endings.
+* `camel kubernetes` honours `--kube-config` in all commands, and `camel kubernetes logs` stops at a pod that has
+  finished.
+* `camel generate rest --routes` writes routes that validate and run, with a log step to replace, and `camel test init`
+  does not overwrite a test you edited, unless `--force`.
 
 ## Try it
 
