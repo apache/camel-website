@@ -147,7 +147,8 @@ And with it:
 * No ANSI color codes when the output is a file or a pipe, unless `--logging-color` is given: `camel cmd send
   --reply | cat` had them.
 * `camel validate` exits with `66` for a file that does not exist, and for nothing to validate. It said "Validation
-  success (files:0)" for a `notes.txt`.
+  success (files:0)" for a `notes.txt`. So do `camel export`, `camel dependency` and `camel transform route` for a
+  file that does not exist, with the message on stderr.
 * `X=$(camel eval expression ...)` is only the value. The Camel that `camel eval` starts for itself printed its state
   first.
 * The `--timeout` of `camel cmd send` bounds the send, not only the wait of the CLI. A send to `direct:nope` waited
@@ -162,7 +163,8 @@ to the agent as errors, so the model sees what went wrong instead of guessing it
 agent named: a runtime tool takes the integration as `nameOrPid`, `name` or `pid`, where a `name` was ignored and the
 tool acted on the only integration that ran, which could be another app. `camel_get_files` reads a large file in parts,
 instead of an answer of a million tokens, and `camel_edit_file` keeps a `replace` of only whitespace, which matters in
-YAML.
+YAML. The lines of source code in the answers are as they are in the file, without `\"`, and a misspelled name in the
+catalog, such as `kafak`, suggests `kafka`.
 
 ### Keeping up with the agent
 
@@ -242,6 +244,7 @@ Nightly builds are development builds for testing, not Apache releases.
 * `camel init` gives a Kamelet its kind from the file name, puts `./x.yaml` in `--dir`, and refuses a Java file whose
   name is not a class name, such as `my-route.java`.
 * `camel doctor` checks a nightly build against the Apache snapshots, where it reported Maven as failed.
+* `camel infra stop --kill` no longer kills a process that got the pid of a service that was killed hard.
 * `camel cmd logger --logging-level=BOGUS` is a usage error instead of setting the level to `ERROR`, and
   `camel cmd browse --endpoint=seda:foo`, the example of its own help, finds `seda://foo`.
 * `camel generate rest --routes` writes routes that validate and run, with a log step to replace, and `camel test init`
