@@ -60,6 +60,10 @@ Where did the second go? Not into one big fix, but many small ones, found by mea
   256 ms.
 * **aesh.** More about that below.
 
+And there is more to come. At the start of each command, aesh looks through all 344 jars of the CLI for its registry
+of commands, which only its own jar has. We asked for a way to skip that search
+([aesh#779](https://github.com/aeshell/aesh/issues/779)), which should take about another 40 ms off every command.
+
 ## On aesh instead of picocli
 
 The Camel CLI has used [picocli](https://picocli.info/) from its start. picocli served us well, but it moves slowly
