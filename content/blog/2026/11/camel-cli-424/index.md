@@ -5,14 +5,14 @@ draft: false
 authors: [davsclaus]
 categories: ["Camel", "Tooling"]
 keywords: ["apache camel", "camel cli", "camel 4.24", "aesh", "picocli", "startup", "class data sharing", "exit codes", "ai agents", "self-update"]
-preview: "The Camel CLI in Camel 4.24 runs a command in about 150 ms, where 4.23 took more than a second. It parses its command lines with aesh instead of picocli, and it is a CLI an AI agent can trust and keep up with: documented exit codes, errors on stderr, JSON output and timeouts."
+preview: "The Camel CLI in Camel 4.24 runs a command in about 125 ms, where 4.23 took more than a second. It parses its command lines with aesh instead of picocli, and it is a CLI an AI agent can trust and keep up with: documented exit codes, errors on stderr, JSON output and timeouts."
 ---
 
 You type `camel` many times a day: `camel run`, `camel ps`, `camel get route`, `camel log`. And now so do AI agents,
 which call the CLI over and over in a loop. In Camel 4.24 the Camel CLI got a lot of attention. This post is about
 three changes:
 
-* it is fast: a command such as `camel version` or `camel ps` takes about 150 ms, where 4.23 took more than a second
+* it is fast: a command such as `camel version` or `camel ps` takes about 125 ms, where 4.23 took more than a second
 * it runs on [aesh](https://github.com/aeshell/aesh) instead of picocli
 * it is a CLI an AI agent can trust: exit codes, errors on stderr, JSON output and timeouts
 
@@ -21,18 +21,19 @@ And then some of the smaller things that make the day better.
 ## Fast
 
 This is the time a command takes, from typing it to the prompt coming back. It is the median of 15 runs of the
-`camel` launcher of the distribution (4.23.0, and a nightly build of 4.24), on an Apple M4 Pro with Java 25:
+`camel` launcher of the distribution (4.23.0, and 4.24 built from main), after 3 runs to warm up, on an Apple M4 Pro
+with Java 25:
 
 | Command            | Camel 4.23 | Camel 4.24 |
 |--------------------|-----------:|-----------:|
-| `camel version`    | 1251 ms    | 146 ms     |
-| `camel ps`         | 1292 ms    | 188 ms     |
-| `camel init --help`| 1234 ms    | 149 ms     |
-| `camel get --help` | 1232 ms    | 179 ms     |
-| `camel run --help` | 1239 ms    | 326 ms     |
-| `camel --help`     | 1242 ms    | 329 ms     |
+| `camel version`    | 1233 ms    | 128 ms     |
+| `camel ps`         | 1223 ms    | 122 ms     |
+| `camel init --help`| 1196 ms    | 138 ms     |
+| `camel get --help` | 1182 ms    | 167 ms     |
+| `camel run --help` | 1202 ms    | 256 ms     |
+| `camel --help`     | 1198 ms    | 256 ms     |
 
-That is about 8 times faster for the commands you use the most. A `camel ps` now comes back before you notice it
+That is about 10 times faster for the commands you use the most. A `camel ps` now comes back before you notice it
 was gone. For you that is nice. For an AI agent it matters much more, as we will see below.
 
 Where did the second go? Not into one big fix, but many small ones, found by measuring first:
@@ -41,7 +42,11 @@ Where did the second go? Not into one big fix, but many small ones, found by mea
   with all their options, and those of every plugin, before it ran one. Now `camel ps` creates `camel ps`, and a
   plugin command creates only that plugin.
 * **No logging unless something logs.** Most commands log nothing, yet log4j was started for each of them. Also the
-  check for a newer version of the CLI started log4j, before every command.
+  check for a newer version of the CLI started log4j, before every command. And a Camel class that only has a logger
+  no longer starts it either. `camel ps` loads 1,591 classes, and none of log4j or Jackson. In 4.23 it loaded 5,373,
+  of which 704 were of log4j.
+* **No terminal when there is none.** A command whose output goes to a file or a pipe built a terminal only to find
+  out that there was none, to leave out the colors.
 * **The launcher script no longer runs `java -version`** to find out the Java version. It reads the release file of
   the JDK instead, which saves starting a second JVM.
 * **The JVM no longer waits at exit** for the thread of an HTTP client that a command created but never used, or
@@ -51,8 +56,8 @@ Where did the second go? Not into one big fix, but many small ones, found by mea
 * **Class data sharing.** Because the jars are plain jars now, the JVM can keep the classes a command loads in an
   archive, and map it in on the next run. The `camel` script does this by itself: the first run of a command writes
   the archive (under `~/.cache/camel-cli/cds/`), and the runs after it are faster. Set `CAMEL_CDS=false` to turn it
-  off. Without the archive, `camel version` takes 186 ms instead of 146 ms, and `camel --help` 559 ms instead of
-  329 ms.
+  off. Without the archive, `camel version` takes 154 ms instead of 128 ms, and `camel --help` 411 ms instead of
+  256 ms.
 * **aesh.** More about that below.
 
 ## On aesh instead of picocli
@@ -95,7 +100,7 @@ goes around again. That is easily 50 or 100 calls of the CLI for one task.
 
 When you type a command, one second is a short pause. You were reading the last output anyway. For an agent, every
 call is a stop: the loop waits for the CLI before the model can think about the next step. 100 calls of a CLI that
-takes 1.25 seconds is more than two minutes of waiting. At 150 ms it is 15 seconds.
+takes 1.2 seconds is two minutes of waiting. At 125 ms it is less than 13 seconds.
 
 And it is not only about time. When a check is cheap, an agent does it: it looks up the option instead of guessing
 it, it validates after each change, and it checks the routes once more after the reload. When every call costs a
@@ -135,6 +140,11 @@ And with it:
   not follow, and a command that needs a terminal, such as `camel debug`, exits with `2` instead of hanging a CI job.
 * `camel stop` and `camel restart` wait until the integration has stopped, and exit with `124` when it did not stop
   in time.
+* `camel stop` without a name stops the integration that runs. When several run, it stops none, lists them, and exits
+  with `2`: give the name, or `--all` to stop them all. When we had agents test the CLI, the bare `camel stop` of one
+  agent stopped the integrations of the others.
+* A kill of `camel run --jvm-args=...` or `--jvm-debug`, as a supervisor or an agent sends it, stops the JVM that runs
+  the integration too. It kept running, with nothing left to stop it.
 * `camel run --background` waits for the integration to start, and a file that does not exist fails before anything
   starts.
 * A route that fails to start exits with `1`, which says "fix the route", with one line on stderr: the stack trace
@@ -154,13 +164,21 @@ And with it:
   problem, and that still exits with `1`. `camel version set 9.9.9` refuses it, where it stored it for every later
   command to fail on.
 * `X=$(camel eval expression ...)` is only the value. The Camel that `camel eval` starts for itself printed its state
-  first.
+  first. A syntax error prints what is wrong, without the 30 lines of stack trace before it, and `--json` gives the
+  value or the error as JSON.
 * The `--timeout` of `camel cmd send` bounds the send, not only the wait of the CLI. A send to `direct:nope` waited
   30 seconds for a consumer and ended in a timeout of the CLI; now it fails at once with "No consumers available".
 * Options do with `--json` what they do without: `camel cmd route-structure --json --filter=orders` printed every
   route, and a filter that matches nothing exits with `3`. `camel cmd receive --output=json` has only JSON on stdout.
 * A row of a JSON listing says which integration it is of, with `pid` as a number and `name`, and a list is a list
   also for one integration.
+* `camel cmd send --json` prints the outcome of the send, and the reply, as one JSON object, and `camel trace
+  --action=dump --json` prints one JSON object per trace, a line each.
+* Only the result goes to stdout: `camel generate schema --verbose` tells what it does on stderr, and `camel generate
+  rest` prints only the REST DSL, where the banner of the OpenAPI generator made `> rest.xml` invalid XML.
+* A missing argument says `Missing argument: ...`, with the usage line under it, where `camel doc` printed its whole
+  description.
+* `camel mcp` without JBang says how to run the MCP server without it, where it exited with `70` and a stack trace.
 
 The AI tools of the Camel CLI, the [MCP server](/manual/camel-jbang-mcp.html) and `camel ask`, pass these failures on
 to the agent as errors, so the model sees what went wrong instead of guessing it. And they act on the integration the
@@ -170,6 +188,13 @@ instead of an answer of a million tokens, and `camel_edit_file` keeps a `replace
 YAML. The lines of source code in the answers are as they are in the file, without `\"`, and a misspelled name in the
 catalog, such as `kafak`, suggests `kafka`, and asking for it a third time says so again, rather than to go on with
 the options the answer gave.
+
+The MCP server names its own tools in its answers: some answers named the tools of `camel ask`, which the server does
+not have. Every tool costs context in every session, so `camel_dependency_check` now does the security audit as well,
+and four tools that were stale are gone. `camel_render_route_diagram` works when it is called several times at once,
+and is a second faster. In `camel ask`, the code of an answer is checked, and an option that does not exist is marked.
+A chat keeps its history bounded, and a question that fails leaves no trace in it. And the AI clients of the CLI work
+with the current Claude models.
 
 ### Keeping up with the agent
 
@@ -188,6 +213,12 @@ of their own:
 * **`camel status <name> --json`** is the state of an integration in one call: its routes, the problems first, the
   last errors and log lines, the HTTP endpoints, and the oldest exchange in flight. In about 0.3 s, where `camel get
   route`, `get health`, `get error` and `camel log` took about a second together.
+* **A send that waits does not hold up the rest.** A `camel cmd send` that waits, such as a `--poll` of an empty
+  endpoint, held up `camel stop` (22 seconds in our test) and the status of the integration. A send now runs on a
+  thread of its own.
+* **The trace file stays small.** With tracing on, the trace file grew without end, about 15 MB a minute at 100
+  messages a second, and `camel trace` read it all each time. It starts again at 10 MB, and `camel trace` follows the
+  new file.
 
 Fast and trustworthy go together: the agent calls the CLI often because each call is cheap, and it can act on what
 comes back because the answer is right.
@@ -252,7 +283,10 @@ Nightly builds are development builds for testing, not Apache releases.
   and `camel.bat` has Windows line endings.
 * `camel kubernetes` honours `--kube-config` in all commands, and `camel kubernetes logs` stops at a pod that has
   finished. `camel kubernetes export` puts `--env`, `--config`, `--volume`, `--label` and `--annotation` in a CronJob
-  and a Knative Service too, where they were dropped without a word.
+  and a Knative Service too, where they were dropped without a word. A configmap and a secret of the same name are two
+  volumes, a cron schedule such as `0 1,13 * * *` keeps its comma, `--profile` keeps the traits of
+  `application.properties`, and `--trait route.annotations=k=v` gives an annotation. `camel kubernetes delete` deletes
+  the CronJob too.
 * `camel debug --breakpoint tick` and `--source-dir` work; the debug options were taken apart wrongly before they went
   to `camel run`.
 * `camel init` gives a Kamelet its kind from the file name, puts `./x.yaml` in `--dir`, and refuses a Java file whose
@@ -261,8 +295,21 @@ Nightly builds are development builds for testing, not Apache releases.
 * `camel infra stop --kill` no longer kills a process that got the pid of a service that was killed hard.
 * `camel cmd logger --logging-level=BOGUS` is a usage error instead of setting the level to `ERROR`, and
   `camel cmd browse --endpoint=seda:foo`, the example of its own help, finds `seda://foo`.
-* `camel generate rest --routes` writes routes that validate and run, with a log step to replace, and `camel test init`
-  does not overwrite a test you edited, unless `--force`.
+* `camel generate rest --routes` writes routes that validate and run, with a log step to replace, and the DTOs it
+  generates compile in a Camel 4 project, with `jakarta` imports. `camel test init` does not overwrite a test you
+  edited, unless `--force`.
+* `camel get consumer` and `camel get producer` work again: in 4.23 they failed with exit `70` for an integration with
+  a consumer. `camel get transformer` no longer warns for each integration without transformers.
+* `camel dependency copy` resolves the dependencies together, so `lib/` has one version of each library, and `camel
+  dependency update` keeps the line endings of the file.
+* A plugin built for another Camel version no longer stops `camel run` and `camel export`: they warn and go on without
+  it.
+* `camel run --example ... --background` deletes the folder of the example when the integration stops. `--profile`
+  reads `application-<profile>.properties` next to `application.properties`, not from the current directory, and the
+  port of `platform-http` is the one of the run, not of an earlier run in the same directory.
+* `camel catalog --filter=aws2` matches a part of a name, the options of `camel update run` are kebab-case (`--dry-run`,
+  the camelCase names still work), `camel transform route --output=Out.java` names the class `Out`, and a completion in
+  `camel edit` keeps the rest of the line.
 
 ## Try it
 
