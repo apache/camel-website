@@ -48,6 +48,14 @@ This is the time a command takes, from typing it to the prompt coming back (medi
 
 That is about 10 times faster for the commands you, and your agent, use the most.
 
+We use commands such as `camel version` and `--help` to compare, because they do nothing but start the CLI, so the
+numbers show the CLI itself. The same second is gone from every command: `camel run foo.java` starts the CLI the
+same way, and saves that second too, before your route even starts.
+
+And `camel run` got faster on top of that, as the Maven downloader of the CLI is faster in general: it resolves the
+dependencies together and downloads them in parallel, it does not download what the CLI already has, and it does not
+keep asking a Maven repository that cannot be reached.
+
 There was no one big fix, but many small ones, found by measuring first. The biggest:
 
 * **Only the command you run is created.** The CLI has more than 160 commands, and 4.23 created all of them, and
