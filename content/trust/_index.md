@@ -26,6 +26,8 @@ keywords:
 - coding agents
 - MCP server
 - local models
+- continuous integration
+- test stability
 ---
 
 Apache Camel has been running in production since 2007. Some of the largest organizations in
@@ -210,6 +212,33 @@ bugs were open at the time. When something breaks, it gets fixed fast, and the d
 
 <p>
 <a class="button dark" href="/blog/2026/06/camel-bug-fix-track-record/">See the data</a>
+</p>
+
+{{< /div >}}
+
+{{< /div >}}
+
+{{< div "box" >}}
+
+<a href="/blog/2026/11/camel-core-ci-improvements/" class="icon" title="Continuous integration">{{< icon "cli" "Terminal" >}}</a>
+
+{{< div "content" >}}
+
+## Every change tested, on every supported branch
+
+Every pull request and every commit to `main` and the LTS branches is built and tested on GitHub
+Actions and the ASF Jenkins, across multiple JDK versions and on x86_64, ppc64le, and s390x. The
+load keeps growing: through October 2026 alone, more than 6,000 pull requests were merged on `main`
+and 820 fixes were backported to the LTS lines, five times the year before. So we
+[invested in the CI](/blog/2026/11/camel-core-ci-improvements/). A year ago, the full Jenkins test
+matrix came up green only one to four times a year. Today it is green several times a day, and a
+full build of `main` takes **1h24 instead of 5h45**. Flaky tests are tracked in Develocity and
+fixed rather than tolerated, and a small pull request gets its feedback in 20 minutes instead of 35.
+Fast, reliable feedback is what lets a security fix be reviewed, merged, and backported to every
+LTS line within days.
+
+<p>
+<a class="button dark" href="/blog/2026/11/camel-core-ci-improvements/">How we did it</a>
 </p>
 
 {{< /div >}}
