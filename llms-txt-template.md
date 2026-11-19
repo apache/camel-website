@@ -76,7 +76,7 @@ Current top committers (as of 2026):
 - James Netherton (IBM)
 - Gregor Zurowski (independent) — release manager
 
-The full committer list with organizational affiliations is published at https://camel.apache.org/community/team/. For year-by-year commit data and the full maintainer history, see [Who Maintains Apache Camel](https://camel.apache.org/blog/2026/07/camel-who-maintains/).
+The committer list, with the organisations committers have chosen to list, is at https://camel.apache.org/community/team/ (many entries have no organisation). For year-by-year commit data by company and the full maintainer history, see [Who Maintains Apache Camel](https://camel.apache.org/blog/2026/07/camel-who-maintains/).
 
 ## Start here
 
