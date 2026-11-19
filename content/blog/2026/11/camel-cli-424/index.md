@@ -35,20 +35,21 @@ So being fast was not a nice side effect. It was the goal.
 
 ## Fast
 
-This is the time a command takes, from typing it to the prompt coming back (median of 15 runs, Apple M4 Pro, Java 25):
+This is the time a command takes, from typing it to the prompt coming back (median of 15 runs, Apple M4 Pro,
+Java 25.0.5):
 
 | Command                   | Camel 4.23 | Camel 4.24 |
 |---------------------------|-----------:|-----------:|
-| `camel version`           | 1209 ms    | 90 ms      |
-| `camel ps`                | 1223 ms    | 95 ms      |
-| `camel get route`         | 1230 ms    | 126 ms     |
-| `camel catalog component` | 1440 ms    | 159 ms     |
-| `camel init --help`       | 1177 ms    | 97 ms      |
-| `camel get --help`        | 1178 ms    | 127 ms     |
-| `camel run --help`        | 1194 ms    | 201 ms     |
-| `camel --help`            | 1179 ms    | 250 ms     |
+| `camel version`           | 1185 ms    | 73 ms      |
+| `camel ps`                | 1201 ms    | 80 ms      |
+| `camel get route`         | 1223 ms    | 120 ms     |
+| `camel catalog component` | 1434 ms    | 153 ms     |
+| `camel init --help`       | 1173 ms    | 85 ms      |
+| `camel get --help`        | 1183 ms    | 98 ms      |
+| `camel run --help`        | 1183 ms    | 193 ms     |
+| `camel --help`            | 1167 ms    | 222 ms     |
 
-That is about 10 times faster for the commands you, and your agent, use the most (`camel get route` asks a running
+That is 10 to 15 times faster for the commands you, and your agent, use the most (`camel get route` asks a running
 integration for its routes).
 
 We use commands such as `camel version` and `--help` to compare, because they do nothing but start the CLI, so the
@@ -64,7 +65,7 @@ There was no one big fix, but many small ones, found by measuring first. The big
 * **Only the command you run is created.** The CLI has more than 160 commands, and 4.23 created all of them, and
   those of every plugin, before it ran one. Now `camel ps` creates only `camel ps`.
 * **Only the jars and classes it needs.** A short command no longer looks through all 283 jars of the CLI, and no
-  longer starts log4j when nothing logs. `camel ps` loads 1,415 classes, where 4.23 loaded 5,371.
+  longer starts log4j when nothing logs. `camel ps` loads 1,487 classes, where 4.23 loaded 5,461.
 * **Plain jars and class data sharing.** The distribution runs from plain jars instead of a Spring Boot fat jar, so
   the JVM can keep the classes a command loads in an archive, and map it in on the next run. The `camel` script does
   this by itself (set `CAMEL_CDS=false` to turn it off).
@@ -105,12 +106,14 @@ sees what went wrong instead of guessing it.
 
 An agent does not only start commands, it talks to the integration it is building. Those got faster too:
 
-* **An action is answered in about 25 ms**, such as `camel cmd send` or `camel get route`, where it took about 110 ms.
-* **`camel run --background` returns when the routes are up**, about 0.4 s after Camel started, where it was 1.3 s.
+* **An action is answered in about 20 ms**, such as `camel cmd send` or `camel get route`, where Camel 4.23 took about
+  half a second, and up to a second.
+* **`camel run --background` returns when the routes are up**, about 0.4 s after Camel started, where
+  Camel 4.23 took 1.6 s.
 * **`camel cmd reload --wait --json`** reloads the changed files in dev mode at once, and says if it was `reloaded`,
   `unchanged` or `failed`. Before, an agent wrote a file and had to guess when the reload had happened.
 * **`camel status <name> --json`** is the state of an integration in one call: its routes, the problems first, the
-  last errors and log lines, and the HTTP endpoints. In about 0.3 s, where four commands took about a second.
+  last errors and log lines, and the HTTP endpoints. In about 0.1 s, where four commands take about 0.4 s.
 
 Fast and trustworthy go together: the agent calls the CLI often because each call is cheap, and it can act on what
 comes back because the answer is right.
@@ -135,6 +138,10 @@ of commands, which only its own jar has. We asked for a way to skip that search
 ([aesh#779](https://github.com/aeshell/aesh/issues/779)), and for aesh to start its logging only when it logs
 ([aesh#782](https://github.com/aeshell/aesh/issues/782)). Ståle added both, and released them in aesh 3.19.2, which
 Camel 4.24 uses. They take another 30 to 40 ms off most commands: `camel ps` went from 134 ms to 95 ms.
+
+Camel 4.24 also uses the annotation processor of aesh, which writes what aesh needs to know about each command at
+build time, so the CLI no longer reads the annotations of its commands with reflection when it starts. That takes
+another 10 to 25 ms off: `camel ps` went from 92 ms to 81 ms, and `camel get --help` from 125 ms to 98 ms.
 
 This is what open source at its best looks like: two projects that find a problem, talk about it, and fix it
 together, in days. Thank you, Ståle!
