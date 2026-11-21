@@ -10,7 +10,7 @@ This page lists who we are. By all means add yourself to the list. Let's sort it
 | Name                           | ID               | Organisation           |
 |--------------------------------|------------------|------------------------|
 | Aaron Mulder                   | ammulder         | Chariot Solutions      |
-| Adriano Machado                | amachado         |                        |
+| Adriano Machado                | amachado         | Red Hat                |
 | Akitoshi Yoshida               | ay               | SAP                    |
 | Alex Dettinger                 | aldettinger      |                        |
 | Andrea Cosentino               | acosentino       | IBM                    |
@@ -18,7 +18,7 @@ This page lists who we are. By all means add yourself to the list. Let's sort it
 | Antonin Stefanutti             | astefanutti      | Red Hat                |
 | Arno Noordover                 | anoordover       | het CAK                |
 | Ashwin J. Karpe                | akarpe           |                        |
-| Aurélien Pupier                | apupier          |                        |
+| Aurélien Pupier                | apupier          | IBM                    |
 | Babak Vahdat                   | bvahdat          | Cyberlogic Consulting  |
 | Ben O'Day                      | boday            | Initek Consulting      |
 | Bilgin Ibryam                  | bibryam          |                        |
