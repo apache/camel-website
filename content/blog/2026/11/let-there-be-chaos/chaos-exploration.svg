@@ -1,0 +1,317 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 652" width="1200" height="652" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Timeline of a ten minute chaos exploration of the shop integration: ten experiments, one failed; refunds lost 5 messages on the same payment fault that orders survived">
+<rect width="1200" height="652" fill="#fcfcfb"/>
+<text x="24.0" y="34.0" font-size="19" fill="#0b0b0b" font-weight="600" text-anchor="start">Ten minutes of chaos: what the AI tried on the shop, and what each route did</text>
+<text x="24.0" y="56.0" font-size="13" fill="#52514e" font-weight="normal" text-anchor="start">10 experiments chosen by a local model (qwen3.6:35b-mlx), one at a time, within a 10 minute budget</text>
+<line x1="96" y1="114" x2="1176" y2="114" stroke="#e4e3df" stroke-width="1"/>
+<line x1="96.0" y1="114" x2="96.0" y2="118" stroke="#8a8984"/>
+<text x="96.0" y="131.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">0 min</text>
+<line x1="204.0" y1="114" x2="204.0" y2="118" stroke="#8a8984"/>
+<text x="204.0" y="131.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">1 min</text>
+<line x1="312.0" y1="114" x2="312.0" y2="118" stroke="#8a8984"/>
+<text x="312.0" y="131.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">2 min</text>
+<line x1="420.0" y1="114" x2="420.0" y2="118" stroke="#8a8984"/>
+<text x="420.0" y="131.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">3 min</text>
+<line x1="528.0" y1="114" x2="528.0" y2="118" stroke="#8a8984"/>
+<text x="528.0" y="131.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">4 min</text>
+<line x1="636.0" y1="114" x2="636.0" y2="118" stroke="#8a8984"/>
+<text x="636.0" y="131.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">5 min</text>
+<line x1="744.0" y1="114" x2="744.0" y2="118" stroke="#8a8984"/>
+<text x="744.0" y="131.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">6 min</text>
+<line x1="852.0" y1="114" x2="852.0" y2="118" stroke="#8a8984"/>
+<text x="852.0" y="131.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">7 min</text>
+<line x1="960.0" y1="114" x2="960.0" y2="118" stroke="#8a8984"/>
+<text x="960.0" y="131.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">8 min</text>
+<line x1="1068.0" y1="114" x2="1068.0" y2="118" stroke="#8a8984"/>
+<text x="1068.0" y="131.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">9 min</text>
+<line x1="1176.0" y1="114" x2="1176.0" y2="118" stroke="#8a8984"/>
+<text x="1176.0" y="131.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">10 min</text>
+<text x="84.0" y="107.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="end">when</text>
+<rect x="142.3" y="96" width="74.2" height="16" rx="3" fill="#0ca30c"><title>experiment 1: PASS, 0:26 to 1:07</title></rect>
+<path d="M179.4,136 C179.4,150 150.0,144 150.0,158" fill="none" stroke="#e4e3df" stroke-width="1.5"/>
+<rect x="223.9" y="96" width="74.2" height="16" rx="3" fill="#0ca30c"><title>experiment 2: PASS, 1:11 to 1:52</title></rect>
+<path d="M261.0,136 C261.0,150 258.0,144 258.0,158" fill="none" stroke="#e4e3df" stroke-width="1.5"/>
+<rect x="307.3" y="96" width="11.1" height="16" rx="3" fill="#d03b3b"><title>experiment 3: FAIL, 1:57 to 2:04</title></rect>
+<path d="M312.9,136 C312.9,150 366.0,144 366.0,158" fill="none" stroke="#e4e3df" stroke-width="1.5"/>
+<rect x="348.1" y="96" width="74.2" height="16" rx="3" fill="#0ca30c"><title>experiment 4: PASS, 2:20 to 3:01</title></rect>
+<path d="M385.2,136 C385.2,150 474.0,144 474.0,158" fill="none" stroke="#e4e3df" stroke-width="1.5"/>
+<rect x="431.5" y="96" width="74.2" height="16" rx="3" fill="#0ca30c"><title>experiment 5: PASS, 3:06 to 3:48</title></rect>
+<path d="M468.6,136 C468.6,150 582.0,144 582.0,158" fill="none" stroke="#e4e3df" stroke-width="1.5"/>
+<rect x="515.0" y="96" width="163.4" height="16" rx="3" fill="#a3a29c"><title>experiment 6: INCONCLUSIVE, 3:53 to 5:24</title></rect>
+<path d="M596.7,136 C596.7,150 690.0,144 690.0,158" fill="none" stroke="#e4e3df" stroke-width="1.5"/>
+<rect x="687.6" y="96" width="165.2" height="16" rx="3" fill="#0ca30c"><title>experiment 7: PASS, 5:29 to 7:00</title></rect>
+<path d="M770.2,136 C770.2,150 798.0,144 798.0,158" fill="none" stroke="#e4e3df" stroke-width="1.5"/>
+<rect x="863.9" y="96" width="74.3" height="16" rx="3" fill="#0ca30c"><title>experiment 8: PASS, 7:07 to 7:48</title></rect>
+<path d="M901.0,136 C901.0,150 906.0,144 906.0,158" fill="none" stroke="#e4e3df" stroke-width="1.5"/>
+<rect x="949.3" y="96" width="74.2" height="16" rx="3" fill="#0ca30c"><title>experiment 9: PASS, 7:54 to 8:35</title></rect>
+<path d="M986.4,136 C986.4,150 1014.0,144 1014.0,158" fill="none" stroke="#e4e3df" stroke-width="1.5"/>
+<rect x="1032.7" y="96" width="74.3" height="16" rx="3" fill="#0ca30c"><title>experiment 10: PASS, 8:40 to 9:22</title></rect>
+<path d="M1069.9,136 C1069.9,150 1122.0,144 1122.0,158" fill="none" stroke="#e4e3df" stroke-width="1.5"/>
+<line x1="1112.6" y1="92" x2="1112.6" y2="114" stroke="#52514e" stroke-dasharray="2 2"/>
+<text x="1108.6" y="90.0" font-size="10" fill="#52514e" font-weight="normal" text-anchor="end">report</text>
+<circle cx="120.0" cy="174" r="11" fill="#0ca30c"/>
+<text x="120.0" y="178.5" font-size="13" fill="#ffffff" font-weight="700" text-anchor="middle">✓</text>
+<text x="136.0" y="172.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="start">#1</text>
+<text x="136.0" y="185.0" font-size="11" fill="#0b0b0b" font-weight="600" text-anchor="start">PASS</text>
+<text x="150.0" y="206.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="middle">payment answers</text>
+<text x="150.0" y="220.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="middle">503, 25%</text>
+<circle cx="228.0" cy="174" r="11" fill="#0ca30c"/>
+<text x="228.0" y="178.5" font-size="13" fill="#ffffff" font-weight="700" text-anchor="middle">✓</text>
+<text x="244.0" y="172.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="start">#2</text>
+<text x="244.0" y="185.0" font-size="11" fill="#0b0b0b" font-weight="600" text-anchor="start">PASS</text>
+<text x="258.0" y="206.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="middle">shipping route</text>
+<text x="258.0" y="220.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="middle">fails, 20%</text>
+<circle cx="336.0" cy="174" r="11" fill="#d03b3b"/>
+<text x="336.0" y="178.5" font-size="13" fill="#ffffff" font-weight="700" text-anchor="middle">✗</text>
+<text x="352.0" y="172.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="start">#3</text>
+<text x="352.0" y="185.0" font-size="11" fill="#0b0b0b" font-weight="600" text-anchor="start">FAIL</text>
+<text x="366.0" y="206.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="middle">payment answers</text>
+<text x="366.0" y="220.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="middle">503, 25%</text>
+<circle cx="444.0" cy="174" r="11" fill="#0ca30c"/>
+<text x="444.0" y="178.5" font-size="13" fill="#ffffff" font-weight="700" text-anchor="middle">✓</text>
+<text x="460.0" y="172.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="start">#4</text>
+<text x="460.0" y="185.0" font-size="11" fill="#0b0b0b" font-weight="600" text-anchor="start">PASS</text>
+<text x="474.0" y="206.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="middle">payment times</text>
+<text x="474.0" y="220.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="middle">out (5s), 10%</text>
+<circle cx="552.0" cy="174" r="11" fill="#0ca30c"/>
+<text x="552.0" y="178.5" font-size="13" fill="#ffffff" font-weight="700" text-anchor="middle">✓</text>
+<text x="568.0" y="172.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="start">#5</text>
+<text x="568.0" y="185.0" font-size="11" fill="#0b0b0b" font-weight="600" text-anchor="start">PASS</text>
+<text x="582.0" y="206.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="middle">payment gets</text>
+<text x="582.0" y="220.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="middle">duplicates, 10%</text>
+<circle cx="660.0" cy="174" r="11" fill="#a3a29c"/>
+<text x="660.0" y="178.5" font-size="13" fill="#ffffff" font-weight="700" text-anchor="middle">?</text>
+<text x="676.0" y="172.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="start">#6</text>
+<text x="676.0" y="185.0" font-size="11" fill="#0b0b0b" font-weight="600" text-anchor="start">UNDECIDED</text>
+<text x="690.0" y="206.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="middle">payment down,</text>
+<text x="690.0" y="220.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="middle">dead letter fails</text>
+<circle cx="768.0" cy="174" r="11" fill="#0ca30c"/>
+<text x="768.0" y="178.5" font-size="13" fill="#ffffff" font-weight="700" text-anchor="middle">✓</text>
+<text x="784.0" y="172.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="start">#7</text>
+<text x="784.0" y="185.0" font-size="11" fill="#0b0b0b" font-weight="600" text-anchor="start">PASS</text>
+<text x="818.4" y="185.0" font-size="11" fill="#d03b3b" font-weight="700" text-anchor="start">b</text>
+<text x="798.0" y="206.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="middle">the same,</text>
+<text x="798.0" y="220.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="middle">waits longer</text>
+<circle cx="876.0" cy="174" r="11" fill="#0ca30c"/>
+<text x="876.0" y="178.5" font-size="13" fill="#ffffff" font-weight="700" text-anchor="middle">✓</text>
+<text x="892.0" y="172.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="start">#8</text>
+<text x="892.0" y="185.0" font-size="11" fill="#0b0b0b" font-weight="600" text-anchor="start">PASS</text>
+<text x="906.0" y="206.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="middle">parked file</text>
+<text x="906.0" y="220.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="middle">write fails, 25%</text>
+<circle cx="984.0" cy="174" r="11" fill="#0ca30c"/>
+<text x="984.0" y="178.5" font-size="13" fill="#ffffff" font-weight="700" text-anchor="middle">✓</text>
+<text x="1000.0" y="172.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="start">#9</text>
+<text x="1000.0" y="185.0" font-size="11" fill="#0b0b0b" font-weight="600" text-anchor="start">PASS</text>
+<text x="1034.4" y="185.0" font-size="11" fill="#d03b3b" font-weight="700" text-anchor="start">a</text>
+<text x="1014.0" y="206.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="middle">payment times</text>
+<text x="1014.0" y="220.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="middle">out (5s), 10%</text>
+<circle cx="1092.0" cy="174" r="11" fill="#0ca30c"/>
+<text x="1092.0" y="178.5" font-size="13" fill="#ffffff" font-weight="700" text-anchor="middle">✓</text>
+<text x="1108.0" y="172.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="start">#10</text>
+<text x="1108.0" y="185.0" font-size="11" fill="#0b0b0b" font-weight="600" text-anchor="start">PASS</text>
+<text x="1142.4" y="185.0" font-size="11" fill="#d03b3b" font-weight="700" text-anchor="start">c</text>
+<text x="1122.0" y="206.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="middle">payment route</text>
+<text x="1122.0" y="220.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="middle">fails, 5%</text>
+<text x="84.0" y="261.0" font-size="13" fill="#0b0b0b" font-weight="600" text-anchor="end">orders</text>
+<g><title>experiment 1, orders: 41 completed, 0 failed, 11 redeliveries</title>
+<rect x="98.0" y="236" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="150.0" y="255.0" font-size="12" fill="#0b0b0b" font-weight="normal" text-anchor="middle">41 ok</text>
+<text x="150.0" y="269.0" font-size="10" fill="#52514e" font-weight="normal" text-anchor="middle">11 retried</text>
+</g>
+<g><title>experiment 2, orders: 41 completed, 0 failed, 0 redeliveries</title>
+<rect x="206.0" y="236" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="258.0" y="261.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">41 ok</text>
+</g>
+<g><title>experiment 3, orders: 6 completed, 0 failed, 3 redeliveries</title>
+<rect x="314.0" y="236" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="366.0" y="255.0" font-size="12" fill="#0b0b0b" font-weight="normal" text-anchor="middle">6 ok</text>
+<text x="366.0" y="269.0" font-size="10" fill="#52514e" font-weight="normal" text-anchor="middle">3 retried</text>
+</g>
+<g><title>experiment 4, orders: 32 completed, 0 failed, 2 redeliveries</title>
+<rect x="422.0" y="236" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="474.0" y="255.0" font-size="12" fill="#0b0b0b" font-weight="normal" text-anchor="middle">32 ok</text>
+<text x="474.0" y="269.0" font-size="10" fill="#52514e" font-weight="normal" text-anchor="middle">2 retried</text>
+</g>
+<g><title>experiment 5, orders: 41 completed, 0 failed, 0 redeliveries</title>
+<rect x="530.0" y="236" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="582.0" y="261.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">41 ok</text>
+</g>
+<g><title>experiment 6, orders: 90 completed, 0 failed, 118 redeliveries, 58 lost at the dead letter channel</title>
+<rect x="638.0" y="236" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<rect x="638.0" y="236" width="4" height="42" rx="2" fill="#ec835a"/>
+<text x="692.0" y="255.0" font-size="13" fill="#0b0b0b" font-weight="700" text-anchor="middle">58 lost</text>
+<text x="692.0" y="269.0" font-size="10" fill="#52514e" font-weight="normal" text-anchor="middle">at dead letter</text>
+</g>
+<g><title>experiment 7, orders: 90 completed, 0 failed, 117 redeliveries, 58 lost at the dead letter channel</title>
+<rect x="746.0" y="236" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<rect x="746.0" y="236" width="4" height="42" rx="2" fill="#ec835a"/>
+<text x="800.0" y="255.0" font-size="13" fill="#0b0b0b" font-weight="700" text-anchor="middle">58 lost</text>
+<text x="800.0" y="269.0" font-size="10" fill="#52514e" font-weight="normal" text-anchor="middle">at dead letter</text>
+</g>
+<g><title>experiment 8, orders: 41 completed, 0 failed, 0 redeliveries</title>
+<rect x="854.0" y="236" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="906.0" y="261.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">41 ok</text>
+</g>
+<g><title>experiment 9, orders: 36 completed, 0 failed, 1 redeliveries</title>
+<rect x="962.0" y="236" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="1014.0" y="255.0" font-size="12" fill="#0b0b0b" font-weight="normal" text-anchor="middle">36 ok</text>
+<text x="1014.0" y="269.0" font-size="10" fill="#52514e" font-weight="normal" text-anchor="middle">1 retried</text>
+</g>
+<g><title>experiment 10, orders: 41 completed, 0 failed, 0 redeliveries</title>
+<rect x="1070.0" y="236" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="1122.0" y="261.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">41 ok</text>
+</g>
+<text x="84.0" y="307.0" font-size="13" fill="#0b0b0b" font-weight="600" text-anchor="end">refunds</text>
+<rect x="98.0" y="282" width="104.0" height="42" rx="4" fill="none" stroke="#e4e3df" stroke-dasharray="3 3"/>
+<text x="150.0" y="307.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">no traffic</text>
+<rect x="206.0" y="282" width="104.0" height="42" rx="4" fill="none" stroke="#e4e3df" stroke-dasharray="3 3"/>
+<text x="258.0" y="307.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">no traffic</text>
+<g><title>experiment 3, refunds: 15 completed, 5 failed, 0 redeliveries</title>
+<rect x="314.0" y="282" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<rect x="314.0" y="282" width="4" height="42" rx="2" fill="#d03b3b"/>
+<text x="368.0" y="301.0" font-size="13" fill="#0b0b0b" font-weight="700" text-anchor="middle">5 failed</text>
+<text x="368.0" y="315.0" font-size="10" fill="#52514e" font-weight="normal" text-anchor="middle">gone</text>
+</g>
+<rect x="422.0" y="282" width="104.0" height="42" rx="4" fill="none" stroke="#e4e3df" stroke-dasharray="3 3"/>
+<text x="474.0" y="307.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">no traffic</text>
+<g><title>experiment 5, refunds: 20 completed, 0 failed, 0 redeliveries</title>
+<rect x="530.0" y="282" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="582.0" y="307.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">20 ok</text>
+</g>
+<rect x="638.0" y="282" width="104.0" height="42" rx="4" fill="none" stroke="#e4e3df" stroke-dasharray="3 3"/>
+<text x="690.0" y="307.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">no traffic</text>
+<rect x="746.0" y="282" width="104.0" height="42" rx="4" fill="none" stroke="#e4e3df" stroke-dasharray="3 3"/>
+<text x="798.0" y="307.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">no traffic</text>
+<rect x="854.0" y="282" width="104.0" height="42" rx="4" fill="none" stroke="#e4e3df" stroke-dasharray="3 3"/>
+<text x="906.0" y="307.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">no traffic</text>
+<g><title>experiment 9, refunds: 18 completed, 2 failed, 0 redeliveries</title>
+<rect x="962.0" y="282" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<rect x="962.0" y="282" width="4" height="42" rx="2" fill="#d03b3b"/>
+<text x="1016.0" y="301.0" font-size="13" fill="#0b0b0b" font-weight="700" text-anchor="middle">2 failed</text>
+<text x="1016.0" y="315.0" font-size="10" fill="#52514e" font-weight="normal" text-anchor="middle">gone</text>
+</g>
+<rect x="1070.0" y="282" width="104.0" height="42" rx="4" fill="none" stroke="#e4e3df" stroke-dasharray="3 3"/>
+<text x="1122.0" y="307.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">no traffic</text>
+<text x="84.0" y="353.0" font-size="13" fill="#0b0b0b" font-weight="600" text-anchor="end">shipping</text>
+<g><title>experiment 1, shipping: 41 completed, 0 failed, 0 redeliveries</title>
+<rect x="98.0" y="328" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="150.0" y="353.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">41 ok</text>
+</g>
+<g><title>experiment 2, shipping: 41 completed, 0 failed, 5 redeliveries</title>
+<rect x="206.0" y="328" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="258.0" y="347.0" font-size="12" fill="#0b0b0b" font-weight="normal" text-anchor="middle">41 ok</text>
+<text x="258.0" y="361.0" font-size="10" fill="#52514e" font-weight="normal" text-anchor="middle">5 retried</text>
+</g>
+<g><title>experiment 3, shipping: 6 completed, 0 failed, 0 redeliveries</title>
+<rect x="314.0" y="328" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="366.0" y="353.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">6 ok</text>
+</g>
+<g><title>experiment 4, shipping: 32 completed, 0 failed, 0 redeliveries</title>
+<rect x="422.0" y="328" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="474.0" y="353.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">32 ok</text>
+</g>
+<g><title>experiment 5, shipping: 41 completed, 0 failed, 0 redeliveries</title>
+<rect x="530.0" y="328" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="582.0" y="353.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">41 ok</text>
+</g>
+<g><title>experiment 6, shipping: 32 completed, 0 failed, 0 redeliveries</title>
+<rect x="638.0" y="328" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="690.0" y="353.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">32 ok</text>
+</g>
+<g><title>experiment 7, shipping: 32 completed, 0 failed, 0 redeliveries</title>
+<rect x="746.0" y="328" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="798.0" y="353.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">32 ok</text>
+</g>
+<g><title>experiment 8, shipping: 41 completed, 0 failed, 0 redeliveries</title>
+<rect x="854.0" y="328" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="906.0" y="353.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">41 ok</text>
+</g>
+<g><title>experiment 9, shipping: 36 completed, 0 failed, 0 redeliveries</title>
+<rect x="962.0" y="328" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="1014.0" y="353.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">36 ok</text>
+</g>
+<g><title>experiment 10, shipping: 41 completed, 0 failed, 0 redeliveries</title>
+<rect x="1070.0" y="328" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="1122.0" y="353.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">41 ok</text>
+</g>
+<text x="84.0" y="399.0" font-size="13" fill="#0b0b0b" font-weight="600" text-anchor="end">parked</text>
+<rect x="98.0" y="374" width="104.0" height="42" rx="4" fill="none" stroke="#e4e3df" stroke-dasharray="3 3"/>
+<text x="150.0" y="399.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">no traffic</text>
+<rect x="206.0" y="374" width="104.0" height="42" rx="4" fill="none" stroke="#e4e3df" stroke-dasharray="3 3"/>
+<text x="258.0" y="399.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">no traffic</text>
+<rect x="314.0" y="374" width="104.0" height="42" rx="4" fill="none" stroke="#e4e3df" stroke-dasharray="3 3"/>
+<text x="366.0" y="399.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">no traffic</text>
+<rect x="422.0" y="374" width="104.0" height="42" rx="4" fill="none" stroke="#e4e3df" stroke-dasharray="3 3"/>
+<text x="474.0" y="399.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">no traffic</text>
+<rect x="530.0" y="374" width="104.0" height="42" rx="4" fill="none" stroke="#e4e3df" stroke-dasharray="3 3"/>
+<text x="582.0" y="399.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">no traffic</text>
+<rect x="638.0" y="374" width="104.0" height="42" rx="4" fill="none" stroke="#e4e3df" stroke-dasharray="3 3"/>
+<text x="690.0" y="399.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">no traffic</text>
+<rect x="746.0" y="374" width="104.0" height="42" rx="4" fill="none" stroke="#e4e3df" stroke-dasharray="3 3"/>
+<text x="798.0" y="399.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">no traffic</text>
+<g><title>experiment 8, parked: 20 completed, 0 failed, 0 redeliveries</title>
+<rect x="854.0" y="374" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="906.0" y="399.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">20 ok</text>
+</g>
+<rect x="962.0" y="374" width="104.0" height="42" rx="4" fill="none" stroke="#e4e3df" stroke-dasharray="3 3"/>
+<text x="1014.0" y="399.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">no traffic</text>
+<rect x="1070.0" y="374" width="104.0" height="42" rx="4" fill="none" stroke="#e4e3df" stroke-dasharray="3 3"/>
+<text x="1122.0" y="399.0" font-size="10" fill="#8a8984" font-weight="normal" text-anchor="middle">no traffic</text>
+<text x="84.0" y="445.0" font-size="13" fill="#0b0b0b" font-weight="600" text-anchor="end">payment</text>
+<g><title>experiment 1, payment: 41 completed, 0 failed, 0 redeliveries</title>
+<rect x="98.0" y="420" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="150.0" y="445.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">41 ok</text>
+</g>
+<g><title>experiment 2, payment: 41 completed, 0 failed, 0 redeliveries</title>
+<rect x="206.0" y="420" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="258.0" y="445.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">41 ok</text>
+</g>
+<g><title>experiment 3, payment: 21 completed, 0 failed, 0 redeliveries</title>
+<rect x="314.0" y="420" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="366.0" y="445.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">21 ok</text>
+</g>
+<g><title>experiment 4, payment: 32 completed, 0 failed, 0 redeliveries</title>
+<rect x="422.0" y="420" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="474.0" y="445.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">32 ok</text>
+</g>
+<g><title>experiment 5, payment: 69 completed, 0 failed, 0 redeliveries</title>
+<rect x="530.0" y="420" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="582.0" y="445.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">69 ok</text>
+</g>
+<g><title>experiment 6, payment: 32 completed, 0 failed, 0 redeliveries</title>
+<rect x="638.0" y="420" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="690.0" y="445.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">32 ok</text>
+</g>
+<g><title>experiment 7, payment: 32 completed, 0 failed, 0 redeliveries</title>
+<rect x="746.0" y="420" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="798.0" y="445.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">32 ok</text>
+</g>
+<g><title>experiment 8, payment: 41 completed, 0 failed, 0 redeliveries</title>
+<rect x="854.0" y="420" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="906.0" y="445.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">41 ok</text>
+</g>
+<g><title>experiment 9, payment: 54 completed, 0 failed, 0 redeliveries</title>
+<rect x="962.0" y="420" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="1014.0" y="445.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">54 ok</text>
+</g>
+<g><title>experiment 10, payment: 41 completed, 0 failed, 0 redeliveries</title>
+<rect x="1070.0" y="420" width="104.0" height="42" rx="4" fill="#f3f2ef"/>
+<text x="1122.0" y="445.0" font-size="11" fill="#8a8984" font-weight="normal" text-anchor="middle">41 ok</text>
+</g>
+<rect x="96.0" y="158" width="108.0" height="308" rx="7" fill="none" stroke="#0b0b0b" stroke-width="1.5"/>
+<rect x="312.0" y="158" width="108.0" height="308" rx="7" fill="none" stroke="#0b0b0b" stroke-width="1.5"/>
+<path d="M150.0,466 V482 H366.0 V466" fill="none" stroke="#0b0b0b" stroke-width="1.5"/>
+<text x="24.0" y="504.0" font-size="14" fill="#0b0b0b" font-weight="700" text-anchor="start">Same fault, two routes.</text>
+<text x="212.0" y="504.0" font-size="14" fill="#0b0b0b" font-weight="normal" text-anchor="start">Orders retries through its dead letter channel and loses none; refunds has no error handling and loses 5 of 20.</text>
+<rect x="24" y="524" width="4" height="13" rx="2" fill="#d03b3b"/>
+<text x="34.0" y="535.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="start">failed: the message is gone</text>
+<rect x="222.7" y="524" width="4" height="13" rx="2" fill="#ec835a"/>
+<text x="232.7" y="535.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="start">lost at the dead letter channel</text>
+<text x="445.8" y="535.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="start">ok: completed (retried: redelivered and then completed)</text>
+<text x="24.0" y="562.0" font-size="11" fill="#0b0b0b" font-weight="600" text-anchor="start">Read afterwards:</text>
+<text x="24.0" y="580.0" font-size="11" fill="#d03b3b" font-weight="700" text-anchor="start">a</text>
+<text x="38.0" y="580.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="start">The expectation measured time, so the 2 failed refunds did not fail the experiment (the AI saw them, but put them down to an earlier experiment).</text>
+<text x="24.0" y="596.0" font-size="11" fill="#d03b3b" font-weight="700" text-anchor="start">b</text>
+<text x="38.0" y="596.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="start">Passed in this run; it fails since CAMEL-26789, as an experiment now counts what the dead letter channel lost.</text>
+<text x="24.0" y="612.0" font-size="11" fill="#d03b3b" font-weight="700" text-anchor="start">c</text>
+<text x="38.0" y="612.0" font-size="11" fill="#52514e" font-weight="normal" text-anchor="start">The fault never fired: the rule matched nothing, so the PASS says nothing.</text>
+</svg>
