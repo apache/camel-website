@@ -101,9 +101,10 @@ The red letters in the picture mark the mistakes:
 
 - **a**: In experiment 9 it measured time, not failures, so 2 failed refunds passed. It saw them and blamed an earlier
   experiment.
-- **b**: Experiments 6 and 7 passed while orders were lost at the dead letter channel. That was Camel, which did not
-  count those losses yet. It is fixed, and such an experiment now fails. Another run reported 2 messages lost at the
-  dead letter channel.
+- **b**: Experiment 7 passed while 58 orders were lost at the dead letter channel (experiment 6 lost the same, but
+  was undecided). That was Camel, which did not count those losses yet. It is fixed in
+  [CAMEL-26789](https://issues.apache.org/jira/browse/CAMEL-26789), and such an experiment now fails. Another run
+  reported 2 messages lost at the dead letter channel.
 - **c**: In experiment 10 the fault never fired, so the PASS means nothing.
 
 Earlier runs also fed messages to endpoints no route reads from, or added rules that matched nothing. Camel now
