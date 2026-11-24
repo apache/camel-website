@@ -5,35 +5,29 @@ draft: false
 authors: [davsclaus]
 categories: ["Camel", "Tooling"]
 keywords: ["apache camel", "chaos", "chaos engineering", "error handling", "dead letter channel", "camel cli", "camel tui", "camel 4.24", "resilience", "testing"]
-preview: "Camel has had redelivery, the dead letter channel and the circuit breaker for many years. But how do you know they work, before production tells you? Camel 4.24 brings camel-chaos: add faults to a running integration while you develop it, and see how the routes cope."
+preview: "Camel 4.24 brings camel-chaos: add faults to a running integration while you develop it, and see whether redelivery, the dead letter channel and the circuit breaker do what you expect."
 ---
 
-Camel has had error handling for as long as Camel has existed: redelivery, `onException`, the dead letter channel, and
-later the circuit breaker. You configure them, and then you hope. The day you find out whether they work is the day
-the payment service is down in production.
+Camel has had error handling for a long time: redelivery, `onException`, the dead letter channel and the circuit
+breaker. Usually you only find out whether your configuration works when a remote service is down in production.
 
-Camel 4.24 brings [camel-chaos](/components/next/others/chaos.html): turn on faults in a running integration while you
-develop it, and see how the routes cope. "Fail 25% of the calls to the payment service for 10 minutes." "Stall route
-`payment` for 10 seconds." "Fail the dead letter channel too." Then a report says per route what completed, what was
-recovered by a retry, what the dead letter channel handled, and what was lost.
+Camel 4.24 brings [camel-chaos](/components/next/others/chaos.html), which adds faults to a running integration while
+you develop it, and reports per route what completed, what a retry recovered, what the dead letter channel handled, and
+what was lost. Chaos is only on with profile `dev` (the default of `camel run`), never with `prod`.
 
-Chaos is for development only: it is on with profile `dev`, the default of `camel run`, and never with profile `prod`.
-
-This is part 1 of two: how chaos works, hands on. In [part 2](/blog/2026/11/let-there-be-chaos/) you hand it to an AI,
-which breaks the routes by itself.
+In [part 2](/blog/2026/11/let-there-be-chaos/) an AI picks and runs the faults by itself.
 
 ## Try it with the example
 
-The new [chaos example](https://github.com/apache/camel-jbang-examples/tree/main/fail-well/chaos) is a small web
-shop. It takes an order every second, charges it at a payment service over HTTP, and hands it to shipping. A dead
-letter channel with two retries parks the orders it could not charge as files. Nothing in it fails on its own.
+The [chaos example](https://github.com/apache/camel-jbang-examples/tree/main/fail-well/chaos) is a small web shop. It
+takes an order every second, charges it at a payment service over HTTP, and hands it to shipping. A dead letter channel
+with two retries parks the orders it could not charge as files.
 
 ```shell
 camel run * --chaos
 ```
 
-Where do you start, with routes you did not write? Ask the integration. Chaos reads the routes and suggests what is
-worth trying first:
+Chaos can read the routes and suggest what to try first:
 
 ```text
 $ camel cmd chaos-suggest
@@ -48,59 +42,44 @@ Chaos rules to try, the most worth trying first:
    camel cmd chaos-add --rule='route=shipping error rate=0.2 until=2m expect=orders->shipping:lost<=0 within=3m'
 ```
 
-A rule is one line: what it targets, the fault, how often and for how long, and what must still hold. Add the first
-one, and the payment service answers 503 to one call in four:
+A rule is one line: target, fault, how often, for how long, and optionally what must still hold:
 
 ```text
 $ camel cmd chaos-add --rule='endpoint=http://localhost:8080/payment error status=503 rate=0.25 until=10m'
 Added chaos rule r1: fail 25% of the sends to http://localhost:8080/payment with HTTP status 503, for 10 minutes
 ```
 
-The log fills with retries, and once in a while an order fails three times in a row and is parked. `camel get chaos`
-shows the effect of the rule as it runs: `60 recovered, 4 handled`. Sixty orders were saved by a retry, four went to
-the dead letter channel. Nothing was lost.
+`camel get chaos` shows the effect while it runs, here `60 recovered, 4 handled`: 60 orders were saved by a retry and
+4 went to the dead letter channel. None were lost.
 
-## Watch it happen in the Camel TUI
+## In the Camel TUI
 
-You can do all of this in the [Camel TUI](/manual/camel-jbang-tui.html) too, without a command to remember. Start
-`camel tui`, press `F2` and choose *Run an Example...*, pick the chaos example, and in the run options tick
-*[x] Chaos testing*. That is `camel run --chaos`: the example starts with chaos switched on, and no rules yet. (With
-profile `prod` it cannot be ticked, as chaos is never on in production.)
-
-Then open the chaos screen (`0` for More, then *Chaos*) and press `a` to add a rule. You do not need to know the
-syntax of a rule: pick what should go wrong from the faults camel-chaos knows, grouped by what they hit: the services
-downstream, the messages, the consumers and routes, and the error handling. Each one says what it can uncover, when
-not to use it, and what to watch while it runs. Press `Enter` to fill in its values: the endpoints and routes of the
-integration are there to pick with the arrow keys, and the rule is shown as it is built. Another `Enter` adds it,
-after you confirm.
+In the [Camel TUI](/manual/camel-jbang-tui.html), press `F2`, choose *Run an Example...*, pick the chaos example and
+tick *[x] Chaos testing*. On the chaos screen (`0` for More, then *Chaos*), `a` adds a rule: you pick the fault from a
+list and the endpoints and routes with the arrow keys, so you do not need to know the rule syntax. `w` shows the
+suggestions.
 
 ![Adding a chaos rule in the Camel TUI: what should go wrong, and the rule built from it](camel-tui-chaos-add-rule.png)
 
-Not sure what to pick? Press `w` for what to try: the same suggestions as `camel cmd chaos-suggest`, and `Enter` types
-the selected one in.
-
-The chaos screen shows the rules, their live rate, the faults per second, and what the faults did to the exchanges
-they hit. You can change and remove rules there too.
+The chaos screen lists the rules, their live rate and what the faults did:
 
 ![The chaos screen of the Camel TUI with four rules](camel-tui-chaos-rules.png)
 
-The timeline shows per second the faults of each rule and what each route did. Here route `payment` was taken down
-for six seconds, twice, and you can see the redeliveries in `orders` while it was gone:
+On the timeline, route `payment` was taken down twice for six seconds, with redeliveries in `orders` meanwhile:
 
 ![The timeline of the Camel TUI with the chaos rules as a layer](camel-tui-chaos-timeline.png)
 
-## When the last safety net fails
+## When the dead letter channel fails too
 
-The dead letter channel is the last safety net. So what if it fails too? Take the payment service down for ten
-seconds, and fail the dead letter channel at the same time:
+Take the payment service down for ten seconds and fail the dead letter channel too:
 
 ```shell
 camel cmd chaos-add --rule='endpoint=http://localhost:8080/payment error status=503 until=10s' \
   --rule='endpoint=direct:parked error at=dlq until=10s'
 ```
 
-The orders of those ten seconds are neither charged nor parked. They are gone, and all the log has for each of them is
-one more WARN among the retries. This is how messages get lost in production without anyone noticing. Chaos notices:
+The orders from those ten seconds are neither charged nor parked, and the log only has a WARN for each. Chaos reports
+them as lost:
 
 ```text
 chaos (pid 58473): FAIL
@@ -110,9 +89,7 @@ chaos (pid 58473): FAIL
 
 ## A scenario as a gate in your build
 
-Rules typed at the command line are an experiment. Rules in a file are a test. A scenario is a `.chaos` file in
-`test/chaos`, next to the other tests of the project, with one rule per line and a seed, so it fails the same messages
-every time it runs:
+A scenario is a `.chaos` file in `test/chaos` with one rule per line and a seed, so it fails the same messages each run:
 
 ```text
 seed=42
@@ -129,71 +106,43 @@ route=payment stall duration=10s from=+20s expect=orders:failed<=0 within=15s
 camel run * --chaos=test/chaos/payment-outage.chaos --max-seconds=45
 ```
 
-It ends with `Chaos verdict: PASS (3 expectations met)`, and the verdict is the exit code: 0 for PASS, 1 for FAIL.
-So a CI pipeline can run it, and fail the build when a change to the error handling loses orders. In the TUI, `s` saves
-the rules you tried by hand as such a file.
+It ends with `Chaos verdict: PASS (3 expectations met)` and exits with 0 for PASS and 1 for FAIL, so CI can fail the
+build when a change to the error handling loses orders. In the TUI, `s` saves the rules you tried
+by hand as such a file.
 
-## Chaos found a bug on its first day
+## It found a bug on the first day
 
-The example was written by an AI agent, which ran it with the Camel CLI, added chaos rules and read the log. It saw
-one order in `shipping` go to the dead letter channel after a single failure, without the two retries it should have
-had. It was an order whose payment had needed two retries earlier, in route `orders`.
-The redelivery counter of that first error handler stayed on the message, and the error handler in `shipping` started
-counting from it ([CAMEL-26734](https://issues.apache.org/jira/browse/CAMEL-26734)). That is exactly the kind of thing
-chaos is for: a bug that hides until two failures meet.
+An AI agent wrote the example, ran it with chaos rules and read the log. An order in `shipping` went to the dead
+letter channel after one failure instead of two retries: its payment had needed two retries in route `orders`, and the
+error handler in `shipping` kept counting from that redelivery counter
+([CAMEL-26734](https://issues.apache.org/jira/browse/CAMEL-26734)).
 
-> **Author's note.** Chaos in Camel has been a dream of mine for a long time. But it would have taken a lot of effort
-> to build by hand, and the old world had settled the question anyway: testing is programming, and programming tests
-> means JUnit. Today that is no longer the only pony in town.
->
-> The Camel CLI and TUI have in recent years been about trying things out quickly, and seeing with your own eyes what
-> happens. And lately the AI can be your eyes, and act on your behalf with its thousand hands typing very fast on the
-> keyboard. That makes you much quicker, and it opens another way to test: for real. Instead of hundreds of lines of
-> Java, run the integration as it is, break it with chaos, and check it with a
-> [Citrus](https://citrusframework.org/) test, or with the deterministic simulation tests of `camel-test-dst`.
->
-> It is not all there yet, but this is part of the way.
+I have wanted chaos in Camel for a long time. Now you can run the integration as it is, break it with chaos, and check
+it with a [Citrus](https://citrusframework.org/) test or the deterministic simulation tests of `camel-test-dst`.
 
 ## There is more
 
-The example shows a few of the faults. Some more of what chaos can do:
+- **More faults**: `delay` with a range (`duration=100ms..2s`), `drop` a send or a poll, `duplicate` a send to test an
+  idempotent receiver, and `corrupt` a message (headers, charset or body).
+- **Where**: the reply of a call (`at=reply`), the polls of a consumer (`at=poll`), a route, a single step or the
+  dead letter channel (`at=dlq`), narrowed with `in=orders` or `when="${header.country} == 'ES'"`.
+- **When**: a probability (`rate=0.3`), every Nth message (`rate=every:5`), outage windows (`rate=burst:5s/30s`) or
+  after a warm-up (`from=+30s`), always for a limited time.
+- **Routes that flap**: `stall`, and `lifecycle` to stop or remove and re-add a route, with `repeat=3 every=1m`.
+- **Expectations**: on completed, handled or redelivered exchanges, on exchange time (`expect=orders:meanTime<=2s`),
+  and on messages lost between two routes.
+- **From a real error to a regression test**: on the Errors screen of the TUI, `!` turns a real error into a rule that
+  fails the same way, and `t` on a rule asks the AI panel to write a JUnit test with `ChaosAssertions`, or a scenario.
+- **MCP**: the Camel MCP server has the chaos operations as tools.
+- **In tests**: `Main`, `CamelTestSupport`, and `camel-test-dst`, where a ten minute stall takes milliseconds of virtual time.
+- **Spring Boot**: `camel run --chaos` works with `--runtime=spring-boot`. A camel-quarkus-chaos extension is on its
+  way.
 
-- **More faults.** `delay` with a range (`duration=100ms..2s`), `drop` a send or a poll, `duplicate` a send to test
-  that the receiver is idempotent, and `corrupt` a message (random headers, a wrong charset, a truncated or empty
-  body, a missing header).
-- **Where it hits.** At the send, at the reply of a call that succeeded (`at=reply`), at the polls of a consumer
-  (`at=poll`), at the entry of a route, at a single step, or at the dead letter channel (`at=dlq`). Narrow a rule to
-  the calls of one route with `in=orders`, or to some messages with `when="${header.country} == 'ES'"`.
-- **When it hits.** A probability (`rate=0.3`), every Nth message (`rate=every:5`), outage windows
-  (`rate=burst:5s/30s`), after the warm-up (`from=+30s`), and always for a limited time: a forgotten rule cannot keep
-  breaking your development instance.
-- **Routes that flap.** `stall` suspends a route, `lifecycle` stops it or removes it and adds it back, and
-  `repeat=3 every=1m` does it again and again.
-- **Expectations.** At least so many orders completed, nothing handled by the dead letter channel
-  (`expect=orders:handled<=0`), a limit on the redeliveries, the mean or max time of an exchange
-  (`expect=orders:meanTime<=2s`), and no message lost between two routes.
-- **From a real error to a regression test.** On the Errors screen of the TUI, `!` turns a real error into a rule
-  that fails the same way again: fix the bug, then prove the fix against the same failure. And `t` on a rule asks the
-  AI panel to make a test of it: a JUnit test with `ChaosAssertions`, or a scenario.
-- **For AI agents.** The Camel MCP server has the chaos operations as tools, so an agent can ask what to try, check a
-  rule before it adds it, and read the report.
-- **In tests.** Chaos runs in a plain `Main`, a `CamelTestSupport` test, and in the deterministic simulation tests of
-  `camel-test-dst`, where a ten minute stall takes milliseconds of virtual time.
-- **Spring Boot.** `camel run --chaos` works with `--runtime=spring-boot` too, and for Quarkus a camel-quarkus-chaos
-  extension is on its way.
-
-The [documentation](/components/next/others/chaos.html) has all of it.
-
-## Next: let there be chaos
-
-So far you picked the faults yourself. In [part 2](/blog/2026/11/let-there-be-chaos/) you give an AI ten minutes
-instead: it reads the routes, tries faults by itself, measures what held and what broke, and comes back with a report
-and scenarios you can replay.
+See the [documentation](/components/next/others/chaos.html) for the details.
 
 ## Try it
 
-Camel 4.24 is not released yet. If you want to try chaos now, the example runs with a 4.24 snapshot of the Camel CLI.
-We would love to hear what chaos finds in your routes, and what you miss: tell us on the
-[mailing list or Zulip chat](/community/support/), or in [Jira](https://issues.apache.org/jira/projects/CAMEL).
-
-Happy breaking.
+Camel 4.24 is not released yet, but the example runs with a 4.24 snapshot of the Camel CLI. Next, in
+[part 2](/blog/2026/11/let-there-be-chaos/), an AI explores the same shop for ten minutes. Let us know what chaos
+finds in your routes on the [mailing list or Zulip chat](/community/support/), or in
+[Jira](https://issues.apache.org/jira/projects/CAMEL).
