@@ -57,3 +57,4 @@ legal:
   - { name: Privacy Policy, url: 'https://privacy.apache.org/policies/privacy-policy-public.html', external: true }
   - { name: Code of Conduct, url: 'https://www.apache.org/foundation/policies/conduct', external: true }
   - { name: Sitemap, url: /sitemap/ }
+  - { name: llms.txt, url: /llms.txt }
