@@ -572,7 +572,6 @@ And an option under a prefix that was removed or renamed is now reported at star
 - Java 17 -- Java 21 is now the minimum version.
 - `camel-ognl` -- Use `simple`.
 - The `wasm` language.
-- YAML DSL `kind: Pipe` (aka KameletBinding) and the `camel bind` command -- Use a regular route; Kamelets are not affected.
 - The `route-parser` plugin of the Camel CLI -- Use `camel cmd route-structure`.
 
 ## Upgrading
