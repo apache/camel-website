@@ -13,7 +13,8 @@ Apache Camel 4.24 has just been [released](/blog/2026/12/RELEASE-4.24.0/).
 Camel 4.23 was the biggest Camel release in a long time, and Camel 4.24 is twice as big again. Since 4.23 we have resolved
 **2076 JIRA tickets**: 1233 bug fixes, 533 improvements and 46 new features, made in over 3100 commits by 63 contributors.
 
-More than 80% of the commits that were not made by bots were made with an AI coding assistant. Every change still went
+More than 90% of the commits that were not made by bots were made with an AI coding assistant -- the rest are mostly
+dependency and container image upgrades. Every change still went
 through the usual Apache process -- JIRA, pull request, CI and review by the Camel committers. A large part of the work
 in this release comes from AI-assisted scans of the components: an AI reads a component, its documentation and its tests,
 and reports what does not work as documented. Each finding becomes a JIRA ticket and a fix with a test.
