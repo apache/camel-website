@@ -116,4 +116,5 @@ journal has the evidence to check each finding.
 The same playbook is an MCP prompt, `camel_chaos_explore`, so Claude Code or any agent with the Camel MCP server can
 run it with the `camel_runtime_chaos_*` tools.
 
-Try it with Camel 4.24, and tell us what it found in your routes.
+Camel 4.24 is not released yet, but you can try it with a 4.24 snapshot of the Camel CLI. Tell us what it found in
+your routes.

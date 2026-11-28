@@ -65,7 +65,7 @@ The chaos screen lists the rules, their live rate and what the faults did:
 
 ![The chaos screen of the Camel TUI with four rules](camel-tui-chaos-rules.png)
 
-On the timeline, route `payment` was taken down twice for six seconds, with redeliveries in `orders` meanwhile:
+The timeline shows the chaos rules as a layer, so you see when a fault was on and what the routes did meanwhile:
 
 ![The timeline of the Camel TUI with the chaos rules as a layer](camel-tui-chaos-timeline.png)
 
@@ -117,30 +117,23 @@ letter channel after one failure instead of two retries: its payment had needed 
 error handler in `shipping` kept counting from that redelivery counter
 ([CAMEL-26734](https://issues.apache.org/jira/browse/CAMEL-26734)).
 
-I have wanted chaos in Camel for a long time. Now you can run the integration as it is, break it with chaos, and check
-it with a [Citrus](https://citrusframework.org/) test or the deterministic simulation tests of `camel-test-dst`.
-
 ## There is more
 
-- **More faults**: `delay` with a range (`duration=100ms..2s`), `drop` a send or a poll, `duplicate` a send to test an
-  idempotent receiver, and `corrupt` a message (headers, charset or body).
-- **Where**: the reply of a call (`at=reply`), the polls of a consumer (`at=poll`), a route, a single step or the
-  dead letter channel (`at=dlq`), narrowed with `in=orders` or `when="${header.country} == 'ES'"`.
-- **When**: a probability (`rate=0.3`), every Nth message (`rate=every:5`), outage windows (`rate=burst:5s/30s`) or
-  after a warm-up (`from=+30s`), always for a limited time.
-- **Routes that flap**: `stall`, and `lifecycle` to stop or remove and re-add a route, with `repeat=3 every=1m`.
-- **Expectations**: on completed, handled or redelivered exchanges, on exchange time (`expect=orders:meanTime<=2s`),
-  and on messages lost between two routes.
+- **More faults**: delays, dropped or duplicated sends, corrupted messages, and routes that stall or stop and come back.
+- **Where and when**: the reply of a call, the polls of a consumer, a single step or the dead letter channel; by
+  probability, every Nth message, in outage windows or after a warm-up, always for a limited time.
 - **From a real error to a regression test**: on the Errors screen of the TUI, `!` turns a real error into a rule that
   fails the same way, and `t` on a rule asks the AI panel to write a JUnit test with `ChaosAssertions`, or a scenario.
-- **MCP**: the Camel MCP server has the chaos operations as tools.
-- **In tests**: `Main`, `CamelTestSupport`, and `camel-test-dst`, where a ten minute stall takes milliseconds of virtual time.
-- **Spring Boot**: `camel run --chaos` works with `--runtime=spring-boot`. A camel-quarkus-chaos extension is on its
-  way.
+- **Beyond the CLI**: the chaos operations are tools of the Camel MCP server, they work in `Main`, `CamelTestSupport`
+  and `camel-test-dst`, and `camel run --chaos` works with `--runtime=spring-boot`. A camel-quarkus-chaos extension is
+  on its way.
 
-See the [documentation](/components/next/others/chaos.html) for the details.
+See the [documentation](/components/next/others/chaos.html) for the rule syntax and all the options.
 
 ## Try it
+
+I have wanted chaos in Camel for a long time. Now you can run the integration as it is, break it with chaos, and check
+it with a [Citrus](https://citrusframework.org/) test or the deterministic simulation tests of `camel-test-dst`.
 
 Camel 4.24 is not released yet, but the example runs with a 4.24 snapshot of the Camel CLI. Next, in
 [part 2](/blog/2026/11/let-there-be-chaos/), an AI explores the same shop for ten minutes. Let us know what chaos
