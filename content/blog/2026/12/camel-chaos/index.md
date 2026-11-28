@@ -1,6 +1,6 @@
 ---
 title: "Chaos in Camel 4.24, part 1: break your routes on purpose, before production does"
-date: 2026-11-22
+date: 2026-12-08
 draft: false
 authors: [davsclaus]
 categories: ["Camel", "Tooling"]
@@ -15,7 +15,7 @@ Camel 4.24 brings [camel-chaos](/components/next/others/chaos.html), which adds 
 you develop it. It reports per route what completed, what a retry recovered, what the dead letter channel handled, and
 what was lost. Chaos is only on with profile `dev` (the default of `camel run`), never with `prod`.
 
-In [part 2](/blog/2026/11/let-there-be-chaos/) an AI picks and runs the faults by itself.
+In [part 2](/blog/2026/12/let-there-be-chaos/) an AI picks and runs the faults by itself.
 
 ## Try it with the example
 
@@ -137,6 +137,6 @@ I have wanted chaos in Camel for a long time. Now you can run the integration as
 it with a [Citrus](https://citrusframework.org/) test or the new deterministic simulation tests.
 
 The example runs with Camel 4.24. Next, in
-[part 2](/blog/2026/11/let-there-be-chaos/), an AI explores the same shop for ten minutes. Let us know what chaos
+[part 2](/blog/2026/12/let-there-be-chaos/), an AI explores the same shop for ten minutes. Let us know what chaos
 finds in your routes on the [mailing list or Zulip chat](/community/support/), or in
 [Jira](https://issues.apache.org/jira/projects/CAMEL).

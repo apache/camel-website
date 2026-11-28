@@ -1,6 +1,6 @@
 ---
 title: "Chaos in Camel 4.24, part 2: let there be chaos, an AI that breaks your routes on purpose"
-date: 2026-11-22
+date: 2026-12-09
 draft: false
 authors: [davsclaus]
 categories: ["Camel", "Tooling", "AI"]
@@ -8,7 +8,7 @@ keywords: ["apache camel", "chaos", "chaos engineering", "ai", "camel cli", "mcp
 preview: "In Camel 4.24 the AI of camel ask can run chaos experiments by itself for a fixed time budget, and write a report and scenarios you can replay."
 ---
 
-In [part 1](/blog/2026/11/camel-chaos/) you added the chaos rules yourself, which means you have to know what to try.
+In [part 1](/blog/2026/12/camel-chaos/) you added the chaos rules yourself, which means you have to know what to try.
 In Camel 4.24 you can leave that to the AI of `camel ask`:
 
 ```shell
