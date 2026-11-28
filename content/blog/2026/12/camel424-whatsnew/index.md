@@ -541,24 +541,18 @@ And an option under a prefix that was removed or renamed is now reported at star
 - `camel-apicurio-registry` -- Manage artifacts, groups and versions in Apicurio Registry v3, and validate against its schemas.
 - `camel-azure-iothub` -- Send device-to-cloud telemetry and device twin properties to Azure IoT Hub.
 - `camel-cedar` -- Embedded Cedar authorization.
-- `camel-hibernate` -- HQL queries, natural-id lookups and polling consumers on the native Hibernate API, without JPA.
-- `camel-mtconnect` -- Read machine tools through their MTConnect agent.
-- `camel-test-citrus` -- Citrus message validation in route tests.
-- `camel-vertx-mqtt` -- MQTT 3.1.1 and 5 using the Vert.x MQTT client.
-
-## New Data Formats
-
-- `xsdJson` -- XML to JSON and back, driven by an XML Schema.
-
-## Other
-
 - `camel-chaos` -- Chaos testing of a running integration.
 - `camel-cxf-platform-http` -- Serve CXF consumers on the platform HTTP server.
+- `camel-hibernate` -- HQL queries, natural-id lookups and polling consumers on the native Hibernate API, without JPA.
+- `camel-mtconnect` -- Read machine tools through their MTConnect agent.
 - `camel-protobuf-schema` -- Protobuf from `.proto` text, without generated classes.
 - `camel-sanitizer` -- Exchange sanitizer.
 - `camel-semantic-openai` -- OpenAI Decisions API as a semantic expert.
 - `camel-semantic-typesafe-ai` and `camel-semantic-micrometer` -- TypeSafe AI expert and Micrometer metrics for the Semantic language.
+- `camel-test-citrus` -- Citrus message validation in route tests.
 - `camel-test-dst` -- Deterministic simulation testing.
+- `camel-vertx-mqtt` -- MQTT 3.1.1 and 5 using the Vert.x MQTT client.
+- `camel-xsd-json` -- XML to JSON and back, driven by an XML Schema (the `xsdJson` data format).
 
 ## Release Notes
 
