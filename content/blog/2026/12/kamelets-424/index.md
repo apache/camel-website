@@ -1,6 +1,6 @@
 ---
 title: "Kamelets 4.24: documented, tested, and with data types that fit together"
-date: 2026-12-01
+date: 2026-12-11
 draft: true
 authors: [ davsclaus ]
 categories: [ "Camel", "Kamelets" ]
