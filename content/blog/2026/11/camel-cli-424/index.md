@@ -31,8 +31,10 @@ Time from typing a command to the prompt coming back (median of 15 runs, Apple M
 | `camel --help`            | 1167 ms    | 222 ms     |
 
 The most used commands are 10 to 15 times faster. `camel version` and `--help` only start the CLI, so they show its
-own cost; every command, including `camel run`, saves that second. `camel run` also gains from a faster Maven downloader: it resolves dependencies together, downloads
-them in parallel, skips what the CLI already has, and stops asking a Maven repository that cannot be reached.
+own cost; every command, including `camel run`, saves that second.
+
+`camel run` also gains from a faster Maven downloader: it resolves dependencies together, downloads them in parallel,
+skips what the CLI already has, and stops asking a Maven repository that cannot be reached.
 
 The biggest of the many small fixes:
 
@@ -83,15 +85,11 @@ parsing, help and completion use aesh, the Java command line library by Ståle P
 We first ported the whole CLI on a branch and reported every gap and bug we found: 36 issues and 17 pull requests.
 Ståle fixed or merged nearly all of them within days, in aesh 3.19, 3.19.1 and 3.19.2.
 
-aesh also helped with startup time:
-
-* The port took about 20 ms off `camel version` and about 60 ms off `camel --help`.
-* aesh 3.19.2 can skip scanning all 283 jars for its command registry
-  ([aesh#779](https://github.com/aeshell/aesh/issues/779)) and starts logging only when it logs
-  ([aesh#782](https://github.com/aeshell/aesh/issues/782)): another 30 to 40 ms off most commands (`camel ps` from
-  134 ms to 95 ms).
-* The aesh annotation processor writes the command metadata at build time, so the CLI no longer reads annotations
-  with reflection at startup: another 10 to 25 ms (`camel ps` from 92 ms to 81 ms, `camel get --help` from 125 ms to 98 ms).
+aesh also helped with startup time. aesh 3.19.2 can skip scanning all 283 jars for its command registry
+([aesh#779](https://github.com/aeshell/aesh/issues/779)) and starts logging only when it logs
+([aesh#782](https://github.com/aeshell/aesh/issues/782)), and its annotation processor writes the command metadata at
+build time, so the CLI no longer reads annotations with reflection at startup. Together they took tens of milliseconds
+off every command.
 
 Thank you, Ståle!
 
