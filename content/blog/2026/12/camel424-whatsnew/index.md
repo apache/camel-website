@@ -87,34 +87,21 @@ part of Camel 4.24 so you can use them too.
 The AI-assisted component scans also looked for security problems, and around 180 tickets in this release are about security, including:
 
 - **Credentials go only where they belong** -- the credentials of GraphQL, Elasticsearch and OpenSearch are bound to the configured
-  host or cluster, and OAuth access tokens are sent only in the `Authorization` header (Google, IBM watsonx).
-- **TLS settings that had no effect are now applied** -- such as hostname verification in Netty, client authentication in Thrift,
-  and the TLS options of gRPC, MongoDB, Solr and Vert.x.
+  host or cluster, and OAuth access tokens are sent only in the `Authorization` header.
+- **TLS settings that had no effect are now applied** -- such as hostname verification in Netty, and the TLS options of gRPC, Thrift, MongoDB and Solr.
 - **Message input is not trusted as configuration** -- more components use a header that overrides credentials or the target
-  only when an option allows it (SSH, SMPP, Docker, Keycloak, DuckDB, Dapr, ClickHouse and more).
-- **Webhooks** verify their signatures by default (WhatsApp, Telegram, ClickUp), and in constant time.
-- **Secure defaults** -- the control bus `language` command is off by default, and PGP encrypts with AES-256 and signs with SHA-256.
+  only when an option allows it (SSH, SMPP, Docker, Keycloak, DuckDB and more).
+- **Secure defaults** -- webhooks verify their signatures by default, and the control bus `language` command is off by default.
 - **Secrets** are masked in more places, and the security policy now also checks the beans that route files define.
-- **MCP** -- every tool of the Camel CLI MCP server goes through the same audit, secret redaction and argument checks.
-- **Sagas** -- LRA participant callbacks can be verified with a shared secret, and Camel only joins LRAs of the configured coordinator.
 
 Many of these fixes are also backported to the 4.22.x and 4.18.x LTS releases.
 
 ### Security Model
 
 After the [38 security advisories](/blog/2026/10/camel-security-advisories-4.23.0/) published with Camel 4.23, we revisited the
-[security model](/manual/security-model.html) of Camel. It says what Camel trusts and what it does not: the roles and trust
-boundaries, the adversary model, the invariants of the routing engine, which security properties Camel provides (and which
-it does not, even if they look like it), and which classes of vulnerability are in scope -- from unsafe deserialization and
-XXE to credentials sent where the route did not choose. It helps you secure your integrations, and it tells security
-researchers what is a vulnerability in Camel and what is not.
-
-### Post-Quantum Cryptography
-
-- The SFTP and SCP clients propose the hybrid post-quantum key exchange `mlkem768x25519-sha256` first, and you can require it
-  with `keyExchangeProtocols=mlkem768x25519-sha256,sntrup761x25519-sha512@openssh.com`.
-- `SSLContextParameters` puts the hybrid post-quantum TLS groups (such as `X25519MLKEM768`) first when the JVM has them, and the
-  [PQC](/components/next/pqc-component.html) component has a new self-describing wire format (upgrade the readers before the writers).
+[security model](/manual/security-model.html) of Camel: what Camel trusts and what it does not, which security properties it provides
+(and which it does not), and which classes of vulnerability are in scope. It helps you secure your integrations, and it tells
+security researchers what is a vulnerability in Camel and what is not.
 
 ### Authorization
 
@@ -178,10 +165,6 @@ nothing extra, and an idle integration draws no frames. Press `w` to turn it off
   (such as `LinkedHashMap → json` where a Kamelet converts the body), so you can see how the body changes along a route.
 - **About** -- a new screen (and `camel get about`) says what an integration does and what has happened, at a glance and without AI.
 - **Timeline** -- the errors and route outcomes of an integration per second, with the chaos rules as a layer.
-- **Chaos** -- the Chaos screen, see [Chaos Testing](#chaos-testing) above.
-- **CVE Audit** -- by CVE or by artifact, with the version that fixes it, see [CVE Audit](#cve-audit) below.
-- **WSDL** -- a view of the services, ports and operations of a WSDL.
-- Better keyboard support (the Kitty keyboard protocol), word-wise text editing, and mouse commands in recorded demo tapes.
 
 ## CVE Audit
 
@@ -352,29 +335,10 @@ Camel Main is tested with the official MCP conformance suite.
 
 ## Camel Core
 
-### Jackson 3
-
-Camel now uses Jackson 3. The `camel-jackson3` artifacts are what the catalog, the Camel CLI and the Kamelets use for
-`json` and the related data formats. The `camel-jackson` artifacts stay on Jackson 2, and when both are on the classpath
-the Jackson 3 one is used. See the upgrade guide for the details.
-
 ### Simple Language
 
-New XML and JSON functions in [Simple](/components/next/languages/simple-functions.html): `stripXmlNamespaces`,
-`stripXmlComments`, `stripXmlDeclaration`, `canonicalXml`, `compact`, `isValidXml` and `isValidJson`, and `unescape`
-as the inverse of `escape`. None of them process a DTD.
-
-```java
-from("direct:soap")
-    .setBody(simple("${stripXmlNamespaces()}"))
-    .log("Price of ${xpath(/Envelope/Body/GetPrice/Item/text())}");
-```
-
-### Kamelet EIP
-
-- With `advancedOptions=true` a Kamelet passes extra options to the component it wraps, such as
-  `kamelet:aws-s3-source?advancedOptions=true&bucketNameOrArn=x&maxConnections=100`.
-- The new `application-x-unchanged` data type is for Kamelets that leave the body as it is, such as filters.
+[Simple](/components/next/languages/simple-functions.html) has new functions for XML and JSON, such as `stripXmlNamespaces`,
+`canonicalXml`, `isValidXml` and `isValidJson`, which come in handy with SOAP payloads.
 
 ### Performance
 
@@ -516,9 +480,7 @@ The Camel CLI downloads the serde JARs of the vendor. The `kafka-source` and `ka
 
 ### Other Kafka Changes
 
-- Many fixes for manual commits, rebalances and stopping consumers, some of them found by the new Kafka DST world.
-- Kafka 4.4 needs the Confluent serializers 8.4 or newer.
-- `partitionAssignor` now uses the Kafka default.
+Many fixes for manual commits, rebalances and stopping consumers, some of them found by the new Kafka DST world.
 
 ## Other Component Highlights
 
@@ -563,32 +525,16 @@ And while the integration runs, the Camel TUI shows the body type each step has 
 
 ## Camel Spring Boot
 
-Camel is upgraded to Spring Boot 4.2, Spring Framework 7.1 and Spring AI 2.1.
+Camel is upgraded to Spring Boot 4.2, Spring Framework 7.1 and Spring AI 2.1, and the Camel AI tools are now first class on Spring Boot.
+The [MCP server starter](/camel-spring-boot/next/starters/mcp-server.html) serves your Camel `ai-tool`, `ai-resource` and `ai-prompt`
+routes as the tools, resources and prompts of the Spring AI MCP server -- on par with Camel Main, including MCP protocol version 2026-07-28,
+serving without sessions, OAuth 2.0 with Spring Security, and the identity of the caller passed on to the routes.
+Camel routes and Spring-defined tools can be mixed in the same MCP server.
 
-### Spring AI and the Camel AI Tools
-
-The Camel AI tools are now first class on Spring Boot. The [MCP server starter](/camel-spring-boot/next/starters/mcp-server.html)
-serves your Camel `ai-tool`, `ai-resource` and `ai-prompt` routes as the tools, resources (including URI templates)
-and prompts of the Spring AI MCP server -- on par with Camel Main:
-
-- Resources, resource templates and prompts, in addition to tools, selected by the same `camel.mcp-server.tags`.
-- MCP protocol version 2026-07-28, and serving without sessions on the Spring AI stateless server.
-- OAuth 2.0 with Spring Security, Origin validation, and the identity of the caller passed on to the tool, resource and prompt routes.
-- Camel routes and Spring-defined tools can be mixed in the same MCP server.
-
-The Spring AI components follow Spring AI 2.1:
-
-- `spring-ai-chat` -- session memory with the new `sessionService` option, the streamable HTTP transport for the MCP servers it calls,
-  and headers for the finish reason and the reasoning of the model. Its integration tests run against any OpenAI-compatible server,
-  so also against a local model.
-- `spring-ai-vector-store` -- `UPSERT`, and similarity search with the vectors computed by `spring-ai-embeddings`.
-- The `camel-ai-observability-starter` brings the GenAI observability levels to Spring Boot.
-
-### Other Spring Boot Changes
-
-- The State Store and the key-value repositories can use a Spring Cache as their backend.
-- An option under a prefix that was removed or renamed is now reported at startup, instead of being silently ignored.
-- New starters for the new components, such as `camel-xsd-json-starter` and `camel-vertx-mqtt-starter`.
+The Spring AI components follow Spring AI 2.1: `spring-ai-chat` has session memory (`sessionService`), the streamable HTTP
+transport for the MCP servers it calls, and headers for the finish reason and the reasoning of the model, and
+`spring-ai-vector-store` has `UPSERT` and similarity search with the vectors of `spring-ai-embeddings`.
+And an option under a prefix that was removed or renamed is now reported at startup, instead of being silently ignored.
 
 ## New Components
 
@@ -635,15 +581,12 @@ Make sure to read the [upgrade guide](/manual/camel-4x-upgrade-guide-4_24.html) 
 Camel version. With more than two thousand tickets resolved, the upgrade guide for this release is long.
 Most entries are fixes that make Camel behave as documented, but some changes may affect you, such as:
 
-- Camel 4.24 requires **Java 21** as the minimum version.
-- Camel is upgraded to Spring Boot 4.2.
+- Camel 4.24 requires **Java 21** as the minimum version, and is upgraded to Spring Boot 4.2.
 - Camel uses Vert.x 5, so code that uses the Vert.x API directly (such as a custom `Router` handler) must be migrated.
-- Other upgrades include Spring AI 2.1, Kubernetes client 8, Debezium 3.7, Bouncy Castle 1.87, Lucene 10, PLC4X 1.0 and the Box Java SDK 5.
 - Camel uses Jackson 3, and the Camel CLI and Kamelets use the `camel-jackson3` artifacts.
-- With the Camel CLI, CXF consumers are served on the platform HTTP server, under `/services`.
-- YAML DSL `kind: Pipe` and `camel bind` are removed.
-- `camel-ognl` is removed.
+- Other upgrades include Spring AI 2.1, Kubernetes client 8, Debezium 3.7, Lucene 10 and the Box Java SDK 5.
 - The Camel CLI uses aesh instead of picocli, so CLI plugins must be built for Camel 4.24.
+- With the Camel CLI, CXF consumers are served on the platform HTTP server, under `/services`.
 - The control bus `language` command is off by default.
 - The security policy also checks the beans defined in route files, so a plain-text `username` in a YAML bean now logs a warning
   (and fails the startup with the `prod` profile).
