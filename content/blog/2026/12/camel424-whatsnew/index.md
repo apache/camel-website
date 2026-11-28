@@ -1,7 +1,7 @@
 ---
 title: "Apache Camel 4.24 What's New"
 date: 2026-12-04
-draft: true
+draft: false
 authors: [ davsclaus, croway, oscerd, allthingssecurity, luigidemasi, apupier ]
 categories: [ "Releases", "Camel" ]
 keywords: ["apache camel", "whats new", "camel 4", "release", "camel 4.24", "integration framework", "chaos", "testing", "security", "ai"]
