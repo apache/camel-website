@@ -98,17 +98,16 @@ did. Your own CLI plugins must be changed for aesh; see the [upgrade guide](/man
 
 ## Try it
 
-With the nightly build:
-
-```shell
-camel self-update --version SNAPSHOT
-```
-
-Nightly builds are for testing, not Apache releases; once 4.24 is out, `camel self-update --version 4.24` switches
-back. Or use the [web installer](/manual/camel-jbang-launcher-install.html):
+Install Camel 4.24 with the [web installer](/manual/camel-jbang-launcher-install.html):
 
 ```shell
 curl -fsSL https://camel.apache.org/install.sh | sh
 ```
 
-The release notes list the many smaller CLI fixes in 4.24.
+or, if you already have the Camel CLI, upgrade it:
+
+```shell
+camel self-update --version 4.24
+```
+
+The [release notes](/releases/release-4.24.0/) list the many smaller CLI fixes in 4.24.
