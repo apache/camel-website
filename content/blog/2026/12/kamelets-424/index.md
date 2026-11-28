@@ -20,7 +20,7 @@ Every Kamelet has a new description: a one-line summary, then what to use it for
 
 ## Removed and new Kamelets
 
-About 40 Kamelets are removed. Some could no longer work (the Twitter v1.1 API, Dropbox, MinIO), some were little used, and some were variants that the plain Kamelets now cover. For example, the Apicurio Registry variants of the Kafka Kamelets are gone because `kafka-source` and `kafka-sink` now take a schema registry.
+About 40 Kamelets are removed. Some could no longer work (the Twitter v1.1 API, Dropbox, MinIO), some were little used, and some were variants that the plain Kamelets now cover. For example, the Apicurio Registry variants of the Kafka Kamelets are gone, because the plain Kafka source and sink now take a schema registry.
 
 New Kamelets include:
 
@@ -28,13 +28,14 @@ New Kamelets include:
 - `debezium-postgresql-source`, the row changes of PostgreSQL tables as they happen
 - `openai-chat-action`, to call a chat model of OpenAI or any OpenAI-compatible server, such as Ollama
 - `ai-tool-source`, to offer a flow as a tool to AI agents over MCP
-- `smb-source` and `smb-sink`, `mllp-source` and `mllp-sink`, `csv-deserialize-action` and `csv-serialize-action`, `xslt-action`, `aws-eventbridge-source`, `kafka-share-source`, and `jms-apache-activemq-source` and `jms-apache-activemq-sink`
 
-New Kamelets start at the *Preview* support level.
+There are also sources and sinks for SMB, MLLP and ActiveMQ, actions for CSV and XSLT, and more. New Kamelets start at the *Preview* support level.
 
 ## Data types that fit together
 
-A Kamelet can declare the data type it takes in and the one it gives out, such as `text`, `json` or `binary`. In 4.24 many more Kamelets declare a default data type, and Camel core uses the data type transformers to convert the message body to that type. The body a Kamelet receives then has a known type, instead of whatever the previous component left behind (a stream, a `String`, a `Map`).
+Until now, putting two Kamelets one after the other meant knowing what kind of body the first one leaves behind: a stream, a string or a map. That is what this part of 4.24 fixes.
+
+A Kamelet can declare the data type it takes in and the one it gives out, such as `text`, `json` or `binary`. In 4.24 many more Kamelets declare a default data type, and Camel core converts the message body to that type for you. The body a Kamelet receives then has a known type.
 
 As an example, this route loads CSV files into a PostgreSQL table:
 
@@ -63,7 +64,7 @@ As an example, this route loads CSV files into a PostgreSQL table:
               - log: "inserted ${header.CamelSqlUpdateCount} row"
 ```
 
-`csv-deserialize-action` turns the CSV into a `List` of rows, each a `Map` from column name to value. `postgresql-sink` takes one JSON object and fills `:#id`, `:#item` and `:#qty` from its fields. After the split, a `Map` goes into a Kamelet that expects JSON.
+`csv-deserialize-action` turns the CSV into a list of rows, each a map from column name to value. `postgresql-sink` takes one JSON object and fills the parameters of the SQL from its fields. So after the split, a map goes into a Kamelet that expects JSON.
 
 To try it, start PostgreSQL in a container:
 
@@ -123,7 +124,7 @@ The right column is the Java type of the body when it reached the step. Where a 
 
 - a `Map` becomes a JSON object and a `List` a JSON array;
 - JSON text, bytes or a stream is kept as is;
-- a Jackson `JsonNode` or a POJO is written as JSON.
+- a Jackson JSON node or a POJO is written as JSON.
 
 The result is JSON as bytes, with the `Content-Type` header set to `application/json`. The first row reaches the sink as:
 
@@ -131,7 +132,7 @@ The result is JSON as bytes, with the `Content-Type` header set to `application/
 {"id":"1","item":"Camel plush","qty":"2"}
 ```
 
-In Camel 4.23 the `postgresql-sink` does not declare a data type, and the same `Map` rows fail on its first step:
+In Camel 4.23 the sink does not declare a data type, and the same rows fail on its first step:
 
 ```text
 org.apache.camel.NoTypeConversionAvailableException: No type converter available to convert from type: java.util.LinkedHashMap to the required type: java.io.InputStream
@@ -139,11 +140,11 @@ org.apache.camel.NoTypeConversionAvailableException: No type converter available
 
 No rows are written. In 4.23 you had to put `json-serialize-action` in front of the sink yourself. You still can in 4.24, but you no longer have to.
 
-Data types do not guess types inside the data. CSV values are text, so `id` and `qty` are JSON strings, and PostgreSQL refuses a string for an `int` column (`column "id" is of type integer but expression is of type character varying`). That is why the SQL has `CAST(:#id AS int)`.
+One thing to watch: data types do not guess types inside the data. CSV values are text, so `id` and `qty` become JSON strings. PostgreSQL refuses a string for an integer column (`column "id" is of type integer but expression is of type character varying`), which is why the SQL has `CAST(:#id AS int)`.
 
 ## Security model and SBOM
 
-The catalog now has a [security model](/camel-kamelets/next/security-model.html), which defines what counts as a vulnerability of a Kamelet and what is the responsibility of the route author and the operator. Following it, many Kamelets now remove incoming Camel headers that could change where they send the message, and secret options are marked as credentials.
+If you run Kamelets in production, you want to know what the catalog protects you from and what is up to you. The catalog now has a [security model](/camel-kamelets/next/security-model.html) that says exactly that: what counts as a vulnerability of a Kamelet, and what is the job of the route author and the operator. Following it, many Kamelets now remove incoming Camel headers that could change where they send the message, and secret options are marked as credentials.
 
 The catalog also publishes an SBOM of the libraries the Kamelets pin, such as JDBC drivers. It is checked against [OSV](https://osv.dev/) every week, as Dependabot cannot see versions inside Kamelet YAML.
 
