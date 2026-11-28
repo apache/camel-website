@@ -264,6 +264,16 @@ The final generated URL would be something like `https://camel.apache.org/blog/2
 
 Don't forget to remove `draft: true` to publish the blog post.
 
+##### Editorial bar
+
+You are welcome to write a post with AI, but a human must direct it. A post that is one-shot AI output published as-is will be sent back.
+
+- Read the whole post before you open the pull request. If you wouldn't read it to the end yourself, it isn't done.
+- Keep iterating, by prompting or by hand, until the post is short and readable. Cut the padding, the repetition and the paragraphs that only repeat what came before.
+- Check every claim, number and code sample. You are the one vouching for them.
+
+Reviewers will push back on bloated posts, just as they would on bloated code. The blog listing shows each post's reading time, so readers see the length before they open it.
+
 #### Adding new security advisory content
 
 Use the `security-advisory` archetype to create a new markdown content file in `content/security`:

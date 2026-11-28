@@ -23,6 +23,8 @@
                   {{ $headers = dict "Authorization" (printf "Basic %s" (printf "%s:%s" $.Site.Params.GitHubUsername $.Site.Params.GitHubToken | base64Encode)) }}
                 {{ end }}
                 {{ range $idx, $author := .Params.authors }}{{ if gt $idx 0 }}, {{ end }}<span rel="author">{{ (getJSON "https://api.github.com/users/" $author $headers).name }}</span>{{ end }}</span>
+            {{/* Show the length up front so readers can pick a post that fits their time (#1870). */}}
+            <span>{{ .ReadingTime }} min read</span>
         </div>
     </div>
 </article>
