@@ -135,7 +135,7 @@ See the [documentation](/components/next/others/chaos.html) for the rule syntax 
 I have wanted chaos in Camel for a long time. Now you can run the integration as it is, break it with chaos, and check
 it with a [Citrus](https://citrusframework.org/) test or the deterministic simulation tests of `camel-test-dst`.
 
-Camel 4.24 is not released yet, but the example runs with a 4.24 snapshot of the Camel CLI. Next, in
+The example runs with Camel 4.24. Next, in
 [part 2](/blog/2026/11/let-there-be-chaos/), an AI explores the same shop for ten minutes. Let us know what chaos
 finds in your routes on the [mailing list or Zulip chat](/community/support/), or in
 [Jira](https://issues.apache.org/jira/projects/CAMEL).
