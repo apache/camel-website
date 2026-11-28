@@ -20,15 +20,14 @@ through the usual Apache process -- JIRA, pull request, CI and review by the Cam
 Camel 4.24 is a release about reliability: tools that break your routes on purpose, tests that find the rare races
 in Camel itself, and over 1200 bug fixes. The headline features in this release are:
 
-- **Chaos testing** -- The new `camel-chaos` turns on faults in a running integration while you develop it, so you can see
-  whether redelivery, the dead letter channel and the circuit breaker do what you expect -- and an AI can do the exploring for you.
+- **Chaos testing** -- Break your routes on purpose while you develop them, and see whether your error handling does what you
+  expect. An AI can do the exploring for you.
 - **Bug fixes and security hardening** -- Over 1200 bug fixes in 233 components, and around 180 tickets about security.
 - **A 10 times faster Camel CLI** -- A command now takes about 100 ms instead of more than a second. The CLI has moved from picocli to aesh,
   and has documented exit codes, JSON output and timeouts, so scripts and AI agents can trust it.
 - **See the messages move** -- The route diagram of the Camel TUI shows the messages flowing through your routes live,
   and spots a stuck step for you.
-- **CVE audit** -- `camel dependency audit` and the `camel-report:audit` Maven goal tell you which version fixes a vulnerable JAR,
-  how it got onto your classpath, and whether your routes use it.
+- **CVE audit** -- Find out which version fixes a vulnerable JAR, how it got onto your classpath, and whether your routes use it.
 - **Kamelets overhaul** -- Every Kamelet is documented, almost all are tested, and their data types now fit together.
 - **SOAP without generated classes** -- XML to JSON driven by an XML Schema, and `camel generate wsdl` to scaffold a route from a WSDL.
 - **Deterministic simulation testing** -- How we found the bugs that only happen once in a while: we control time,
@@ -41,11 +40,10 @@ in Camel itself, and over 1200 bug fixes. The headline features in this release 
 Camel has had error handling for a long time: redelivery, `onException`, the dead letter channel and the circuit breaker.
 Usually you only find out whether your configuration works when a remote service is down in production.
 
-The new [Chaos](/components/next/others/chaos.html) module lets you break your routes on purpose while you develop them:
-"fail 30% of the sends to `kafka:orders` for one minute", or "stall the route `poller` for 20 seconds". A rule can say what
-must still hold, and a saved scenario gives a PASS or FAIL exit code, so it can be a gate in your build.
-Or let the AI of `camel ask` pick the faults: `camel cmd chaos-explore --budget=10m` reports what held and what broke.
-Chaos never turns on with the `prod` profile. Read more in [Chaos in Camel 4.24, part 1: break your routes on purpose](/blog/2026/11/camel-chaos/)
+The new [Chaos](/components/next/others/chaos.html) module lets you find out while you develop. You turn on faults in the
+running integration, such as "fail 30% of the sends to Kafka for one minute", and a rule can say what must still hold.
+Saved as a scenario, the rules give a PASS or FAIL, so they can be a gate in your build. If you do not know what to try,
+an AI can pick the faults and report what held and what broke. Chaos never turns on in production. Read more in [Chaos in Camel 4.24, part 1: break your routes on purpose](/blog/2026/11/camel-chaos/)
 and [part 2: let there be chaos](/blog/2026/11/let-there-be-chaos/).
 
 ## Bug Fixes and Security
@@ -54,8 +52,8 @@ and [part 2: let there be chaos](/blog/2026/11/let-there-be-chaos/).
 
 Most of the tickets in this release are bug fixes: 1233 of them, in 233 components. Many come from the AI-assisted scans of the
 components that we started in Camel 4.23. A scan reads a component, its documentation and its tests, and finds where they
-disagree: an option that has no effect, a header that is never set, a consumer that loses a message when it is stopped,
-a page that documents a default the code does not have. Every fix comes with a test.
+disagree. Typical finds are an option that has no effect, a header that is never set, a consumer that loses a message when it
+stops, or a documented default the code does not have. Every fix comes with a test.
 
 The bugs that only happen in a rare order of events are hard to find by reading code. For those we used
 [deterministic simulation testing](#deterministic-simulation-testing) and [chaos testing](#chaos-testing).
@@ -104,6 +102,7 @@ Other improvements:
 - `camel export --runtime=spring-boot --packaging=war` exports a WAR file for Tomcat.
 - `camel cmd send --repeat=100 --interval=200ms` feeds a route with many messages.
 - `camel export` and `camel run` are now also a Java API, so IDEs and other tools can export and run integrations the same way.
+- `camel dependency outdated` lists the dependencies that have newer releases.
 
 Read more in the blog post [The Camel CLI in Camel 4.24 is 10 times faster](/blog/2026/11/camel-cli-424/).
 
@@ -123,26 +122,27 @@ the diagram already loads, so it costs the integration nothing extra. Press `w` 
 
 ### Other TUI Improvements
 
-- **Body types** -- the Routes, Diagram and Source views show the body type each step has been reached with
-  (such as `LinkedHashMap → json` where a Kamelet converts the body), so you can see how the body changes along a route.
+- **Body types** -- the Routes, Diagram and Source views show the body type at each step, so you can see how the body
+  changes along a route (such as `LinkedHashMap → json` where a Kamelet converts it).
 - **About** -- a new screen (and `camel get about`) says what an integration does and what has happened, at a glance and without AI.
 - **Timeline** -- the errors and route outcomes of an integration per second, with the chaos rules as a layer.
 
 ## CVE Audit
 
-Any scanner gives you a list of CVEs in your dependencies. `camel dependency audit` also tells you which version fixes the JAR
-you have, how it got onto your classpath (such as `camel-kafka > kafka-clients > snappy-java`), and whether your routes use it.
-It checks against [OSV.dev](https://osv.dev/) and the [Apache Camel security advisories](/security/), or with `--osv-database`
-locally, so no coordinates leave the machine. It can fail your build, Maven builds get the same with the `camel-report:audit` goal,
-and `camel dependency outdated` lists the dependencies that have newer releases. Read more in the blog post [CVE audit in Camel 4.24](/blog/2026/11/camel-cve-audit/).
+Any scanner gives you a list of CVEs in your dependencies. `camel dependency audit` also answers the questions that come next:
+which version fixes the JAR you have, how it got onto your classpath, and whether your routes use it at all.
+It checks [OSV.dev](https://osv.dev/) and the [Apache Camel security advisories](/security/), or a local copy of the
+vulnerability database if your dependency list must not leave the machine. It can fail your build, and Maven builds get the
+same checks from the `camel-report:audit` goal. Read more in the blog post [CVE audit in Camel 4.24](/blog/2026/11/camel-cve-audit/).
 
 ## Kamelets
 
 The Kamelet catalog has its biggest overhaul since Kamelets were introduced. Every Kamelet has a new description,
-220 of the 236 are tested with Citrus against real brokers and databases in containers, about 40 old ones are removed,
-and new ones include `soap-source`, `debezium-postgresql-source`, `openai-chat-action` and `ai-tool-source`.
-Many more Kamelets declare the data type they take, and Camel converts the body for you: a `Map` from
-`csv-deserialize-action` now goes into `postgresql-sink`, which takes JSON, without any code in between.
+220 of the 236 are tested against real brokers and databases, about 40 old ones are gone, and there are new ones for SOAP,
+PostgreSQL change data capture, OpenAI and AI agent tools.
+
+Kamelets also fit together better. Camel now converts the message body to the type the next Kamelet expects, so CSV rows
+go straight into a database sink without any code in between.
 
 Read more in the blog post [Kamelets 4.24: documented, tested, and with data types that fit together](/blog/2026/12/kamelets-424/).
 
@@ -184,9 +184,9 @@ with a `curl` command to try it. The same is available as MCP tools, and as a WS
 ### SOAP on the Platform HTTP Server
 
 The new [CXF Platform HTTP](/components/next/others/cxf-platform-http.html) module serves CXF consumers on the
-platform HTTP server of Camel Main and the Camel CLI, sharing the same port, TLS and authentication, so there is no need
-for Jetty or Undertow. The CXF component also has first-class options for WS-Security UsernameToken (`wsSecurityUsername`,
-`wsSecurityPassword`, ...), and a producer with only a `wsdlURL` now calls the address from the WSDL.
+platform HTTP server of Camel Main and the Camel CLI. They share the same port, TLS and authentication, so there is no need
+for Jetty or Undertow. The CXF component also has first-class options for WS-Security UsernameToken, and a producer
+with only a WSDL URL now calls the address from the WSDL.
 
 ## Finding the Rare Bugs
 
@@ -197,12 +197,12 @@ lock expires during a slow poll. Neither a reviewer nor an AI reading the code f
 does not hit them, because a test cannot choose the order in which things happen.
 
 [Deterministic simulation testing](https://martinfowler.com/articles/deterministic-simulation-testing.html) (DST) turns this
-around: the test controls the clock and decides when each part runs, so a consumer that waits 30 seconds for a lock to expire
-costs nothing, and the same seed runs the same scenario again, in exactly the same order.
+around. The test controls the clock and decides when each part runs, so a consumer that waits 30 seconds for a lock to expire
+costs nothing. And the same seed runs the same scenario again, in exactly the same order.
 
 The new [Test DST](/components/next/others/test-dst.html) module brings this to Camel. It runs the real code of a Camel consumer
-under a seeded, virtual-time scheduler. Only the external system is faked, by a *world* that injects faults chosen by the seed
-and checks invariants at the end of each run, so thousands of scenarios run in seconds:
+under a seeded, virtual-time scheduler. Only the external system is faked, by a *world*. The world injects faults chosen by the seed
+and checks invariants at the end of each run, and thousands of runs take seconds:
 
 ```java
 @DstInstrument("org.apache.camel.component.aws2.sqs")
@@ -233,11 +233,11 @@ faults happen, instead of hoping they happen in a test.
 
 ### Exchange Sanitizer
 
-The new [Sanitizer](/components/next/others/sanitizer.html) checks the internal invariants of the Camel routing engine:
-that it behaves as specified in all situations. It watches every step of a route and reports when a rule is broken:
-an async callback that is called twice or never, a consumer commit that runs twice or not at all, or two threads that use
-the same exchange at the same time. We use it with the Camel core tests to keep the routing engine honest.
-It can also check your own custom processors and components. In a test you add one annotation:
+Some bugs are not in a component but in how code uses the routing engine. The new [Sanitizer](/components/next/others/sanitizer.html)
+watches every step of a route and reports when one of the engine's rules is broken. For example, an async callback that is
+called twice or never, a consumer commit that runs twice, or two threads that use the same exchange at the same time.
+We use it with the Camel core tests to keep the routing engine honest, and it can check your own custom processors and
+components too. In a test you add one annotation:
 
 ```java
 @CamelSanitizer
@@ -255,10 +255,10 @@ camel get sanitizer --report
 
 ### Testing with Citrus
 
-The new [Citrus](/components/next/citrus-component.html) test component validates the messages a route sends to it with
-[Citrus](https://citrusframework.org/) message validation (JSON, XML and YAML templates with `@ignore@` placeholders, JsonPath and XPath),
-like a mock endpoint that can also stand in for a backend. The Citrus YAML tests of the Camel CLI (`camel test run`) are upgraded to
-Citrus 5.2. These are the tests we use for the Kamelets and the Camel CLI examples, and there is more to come, see the [roadmap](#roadmap).
+The new [Citrus](/components/next/citrus-component.html) test component works like a mock endpoint that can also stand in
+for a backend. It checks the messages a route sends to it with [Citrus](https://citrusframework.org/) message validation:
+JSON, XML and YAML templates, JsonPath and XPath. The Citrus YAML tests of the Camel CLI (`camel test run`) are upgraded to
+Citrus 5.2. We use them to test the Kamelets and the Camel CLI examples, and there is more to come (see the [roadmap](#roadmap)).
 
 ## A Faster Camel CI
 
@@ -274,18 +274,18 @@ real cloud account. Read how it was done in [Scaling the Apache Camel Core CI](/
 
 ### Simple Language
 
-[Simple](/components/next/languages/simple-functions.html) has new functions for XML and JSON, such as `stripXmlNamespaces`,
-`canonicalXml`, `isValidXml` and `isValidJson`, which come in handy with SOAP payloads.
+[Simple](/components/next/languages/simple-functions.html) has new functions for XML and JSON, such as `stripXmlNamespaces` and `isValidJson`,
+which come in handy with SOAP payloads.
 
 ### Performance
 
 We analyzed the cost of every exchange in the hot path of the routing engine: the time and memory used per step,
 single- and multi-threaded, with JFR profiles. Each fix was prototyped and measured before it was made. The main ones:
 
-- **JMX statistics that scale with threads** -- with the default statistics level (which is on as soon as `camel-management`
-  is on the classpath), every step of every exchange updated several atomic counters and volatile fields of shared objects,
-  so adding threads did not add throughput. The counters now avoid that contention, write only when a value changes, and compute
-  the mean when it is read. On a 10-step route with 8 threads, the prototype ran 3.1 times faster (1.87 million instead of 604,000 exchanges a second).
+- **JMX statistics that scale with threads** -- the JMX statistics are on as soon as `camel-management` is on the classpath.
+  Every step of every exchange updated the same shared counters, so the threads fought over them, and adding threads did not
+  add throughput. The counters now avoid that contention: on a 10-step route with 8 threads, the prototype ran 3.1 times faster
+  (1.87 million instead of 604,000 exchanges a second).
 - **Redelivery copies the message, not the exchange** -- with redelivery enabled (a very common production setup), the error handler
   made a full copy of the exchange at every step, just in case. It now keeps a copy of the message only: on a 10-step route
   the prototype used 72% less memory per exchange (2.4 KB instead of 8.7 KB), and 25% less time.
@@ -358,8 +358,13 @@ so your error handling decides what happens to the parcels the model is not sure
 
 A new [Governed AI Agents](/manual/governed-ai-agents.html) page in the user manual brings the pieces from Camel 4.23 and 4.24 together.
 In Camel the tools of an AI agent are routes, so every tool call can be governed in the route that does the work:
-*who is calling* (SPIFFE), *may they do this* (authorization with OPA, OpenFGA, Cedar or roles), *does this action make sense*
-(a semantic guard decision), and *what happened* (GenAI observability). The page has examples in Java, XML and YAML.
+
+- *Who is calling?* -- SPIFFE
+- *May they do this?* -- authorization with OPA, OpenFGA, Cedar or roles
+- *Does this action make sense?* -- a semantic guard decision
+- *What happened?* -- GenAI observability
+
+The page has examples in Java, XML and YAML.
 
 ### MCP
 
@@ -374,9 +379,9 @@ In Camel the tools of an AI agent are routes, so every tool call can be governed
 ### GenAI Observability Levels
 
 The GenAI observability from Camel 4.23 can now record much more, for backends built around LLM traces such as Langfuse.
-With `camel.aiObservability.level=detailed` an agent run becomes a span with one `chat` span per model call and one
-`execute_tool` span per tool call, and `full` also records the messages and the tool arguments and results -- use it only when
-your tracing backend is allowed to store them. The agent runs, model calls and tool calls are also shown in a new `genai`
+With `camel.aiObservability.level=detailed`, an agent run becomes a span, with a child span for each model call and each
+tool call. The `full` level also records the messages and the tool arguments and results, so use it only when your tracing
+backend is allowed to store them. The agent runs, model calls and tool calls are also shown in a new `genai`
 dev console, in the Camel TUI and through the MCP server.
 
 ### Other AI Changes
@@ -404,8 +409,8 @@ See the [Kafka](/components/next/kafka-component.html) documentation for the req
 
 ### Schema Registry
 
-The new `schemaRegistryVendor` option (`confluent`, `apicurio`, `aws-glue` or `azure`) and `schemaFormat` (Avro, JSON or Protobuf)
-set up the serializer, the deserializer and the registry properties for you, including the login to the registry:
+Setting up a schema registry used to mean configuring the serializer, the deserializer and the registry login by hand.
+The new `schemaRegistryVendor` option does it for you, for Confluent, Apicurio, AWS Glue and Azure, with Avro, JSON or Protobuf:
 
 ```text
 kafka:orders?brokers=localhost:9092&schemaRegistryVendor=confluent&schemaRegistryURL=http://localhost:8081
@@ -431,8 +436,8 @@ We want Camel to work well with any AI model, not only the frontier models, but 
 A small model cannot guess what an option means, so what it reads has to be right and clear.
 
 In Camel 4.23 we validated every code snippet in the documentation. In Camel 4.24 we have started to rewrite the
-description of every component and every one of its options: what the component does, what each option is for,
-and when to use it, as we did for the EIPs before. This is what an AI model reads from the catalog and the MCP server,
+description of every component and every one of its options, as we did for the EIPs before. Each says what the component
+does, what each option is for, and when to use it. This is what an AI model reads from the catalog and the MCP server,
 and it helps humans just the same. About a third of the components are done, and we continue in Camel 4.25.
 
 We measure the effect with overnight benchmarks where local models build real Camel integrations, and fix every place
@@ -443,23 +448,22 @@ and [round 4: making Camel work for any AI model](/blog/2026/10/camel-local-mode
 
 ### Body Types
 
-The Camel catalog now also describes the message body each component, data format, language and EIP consumes and produces,
-using the same terms as the data types (such as `text`, `json` or `binary`). This is a win-win: visual tooling such as
-[Kaoto](https://kaoto.io/) and the Camel TUI, and AI models alike, can tell at design time -- without running anything --
-which steps fit together, and where the body does not fit and needs a data transformation in between.
-The YAML DSL validator already uses it to warn about such a mismatch, and `camel validate` walks the body through a route
-step by step, filling the gaps with the body types a running integration has observed.
+The Camel catalog now also describes the message body each component, data format, language and EIP takes and gives,
+in the same terms as the data types (such as `text`, `json` or `binary`). Visual tools such as [Kaoto](https://kaoto.io/)
+and the Camel TUI, and AI models alike, can then tell without running anything which steps fit together, and where the body
+needs a transformation in between. The YAML DSL validator already warns about such a mismatch. `camel validate` walks the
+body through a route step by step, and fills the gaps with the body types a running integration has observed.
 
-Next, we are bringing the body types further into the MCP and CLI tools, so an AI model knows what each step takes and gives
-while it writes the route, and builds routes that work the first time, instead of finding the mismatch when it runs.
+Next, we are bringing the body types further into the MCP and CLI tools. Then an AI model knows what each step takes and gives
+while it writes the route, and the route works the first time, instead of failing on a mismatch when it runs.
 
 ## Camel Spring Boot
 
 Camel is upgraded to Spring Boot 4.2, Spring Framework 7.1 and Spring AI 2.1.
 
-- **MCP server** -- the [MCP server starter](/camel-spring-boot/next/starters/mcp-server.html) serves your `ai-tool`, `ai-resource`
-  and `ai-prompt` routes through the Spring AI MCP server, on par with Camel Main: MCP protocol version 2026-07-28, OAuth 2.0
-  with Spring Security, and the caller's identity passed on to the routes. Camel routes and Spring-defined tools can share one server.
+- **MCP server** -- the [MCP server starter](/camel-spring-boot/next/starters/mcp-server.html) serves your AI tool, resource
+  and prompt routes through the Spring AI MCP server. It is on par with Camel Main, including OAuth 2.0 with Spring Security
+  and the caller's identity passed on to the routes. Camel routes and Spring-defined tools can share one server.
 - **Spring AI components** -- `spring-ai-chat` has session memory and the streamable HTTP transport, and `spring-ai-vector-store`
   has `UPSERT` and similarity search.
 - **Renamed options** -- a configuration option under a prefix that was removed or renamed is now reported at startup, instead of being silently ignored.
