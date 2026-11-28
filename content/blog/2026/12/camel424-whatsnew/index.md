@@ -43,8 +43,7 @@ Usually you only find out whether your configuration works when a remote service
 The new [Chaos](/components/next/others/chaos.html) module lets you find out while you develop. You turn on faults in the
 running integration, such as "fail 30% of the sends to Kafka for one minute", and a rule can say what must still hold.
 Saved as a scenario, the rules give a PASS or FAIL, so they can be a gate in your build. If you do not know what to try,
-an AI can pick the faults and report what held and what broke. Chaos never turns on in production. Read more in [Chaos in Camel 4.24, part 1: break your routes on purpose](/blog/2026/12/camel-chaos/)
-and [part 2: let there be chaos](/blog/2026/12/let-there-be-chaos/).
+an AI can pick the faults and report what held and what broke. Chaos never turns on in production. Two blog posts on chaos testing follow next week.
 
 ## Bug Fixes and Security
 
@@ -104,7 +103,7 @@ Other improvements:
 - `camel export` and `camel run` are now also a Java API, so IDEs and other tools can export and run integrations the same way.
 - `camel dependency outdated` lists the dependencies that have newer releases.
 
-Read more in the blog post [The Camel CLI in Camel 4.24 is 10 times faster](/blog/2026/12/camel-cli-424/).
+A blog post on the Camel CLI in 4.24 follows next week.
 
 ## Camel TUI
 
@@ -133,7 +132,7 @@ Any scanner gives you a list of CVEs in your dependencies. `camel dependency aud
 which version fixes the JAR you have, how it got onto your classpath, and whether your routes use it at all.
 It checks [OSV.dev](https://osv.dev/) and the [Apache Camel security advisories](/security/), or a local copy of the
 vulnerability database if your dependency list must not leave the machine. It can fail your build, and Maven builds get the
-same checks from the `camel-report:audit` goal. Read more in the blog post [CVE audit in Camel 4.24](/blog/2026/12/camel-cve-audit/).
+same checks from the `camel-report:audit` goal. A blog post on the CVE audit follows next week.
 
 ## Kamelets
 
@@ -144,7 +143,7 @@ PostgreSQL change data capture, OpenAI and AI agent tools.
 Kamelets also fit together better. Camel now converts the message body to the type the next Kamelet expects, so CSV rows
 go straight into a database sink without any code in between.
 
-Read more in the blog post [Kamelets 4.24: documented, tested, and with data types that fit together](/blog/2026/12/kamelets-424/).
+A blog post on the Kamelets in 4.24 follows next week.
 
 ## SOAP and XML
 
