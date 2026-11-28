@@ -560,19 +560,6 @@ And an option under a prefix that was removed or renamed is now reported at star
 - `camel-semantic-typesafe-ai` and `camel-semantic-micrometer` -- TypeSafe AI expert and Micrometer metrics for the Semantic language.
 - `camel-test-dst` -- Deterministic simulation testing.
 
-## Deprecated
-
-- `camel-openstack` -- The OpenStack components.
-- `camel-ibm-watson-language` -- IBM has deprecated Watson Natural Language Understanding.
-- The shared HTTP server of `camel-netty-http` (`nettySharedHttpServer`).
-
-## Removed
-
-- Java 17 support.
-- `camel-ognl`.
-- The `wasm` language.
-- The `route-parser` plugin of the Camel CLI.
-
 ## Release Notes
 
 You can find additional information about this release in the list of resolved JIRA tickets:
