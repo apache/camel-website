@@ -1,7 +1,7 @@
 ---
 title: "Kamelets 4.24: documented, tested, and with data types that fit together"
 date: 2026-12-10
-draft: true
+draft: false
 authors: [ davsclaus ]
 categories: [ "Camel", "Kamelets" ]
 keywords: ["apache camel", "kamelets", "camel 4.24", "data types", "camel cli", "citrus", "upgrade"]
