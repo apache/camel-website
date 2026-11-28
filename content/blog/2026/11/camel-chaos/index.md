@@ -12,7 +12,7 @@ Camel has had error handling for a long time: redelivery, `onException`, the dea
 breaker. Usually you only find out whether your configuration works when a remote service is down in production.
 
 Camel 4.24 brings [camel-chaos](/components/next/others/chaos.html), which adds faults to a running integration while
-you develop it, and reports per route what completed, what a retry recovered, what the dead letter channel handled, and
+you develop it. It reports per route what completed, what a retry recovered, what the dead letter channel handled, and
 what was lost. Chaos is only on with profile `dev` (the default of `camel run`), never with `prod`.
 
 In [part 2](/blog/2026/11/let-there-be-chaos/) an AI picks and runs the faults by itself.
@@ -71,7 +71,8 @@ The timeline shows the chaos rules as a layer, so you see when a fault was on an
 
 ## When the dead letter channel fails too
 
-Take the payment service down for ten seconds and fail the dead letter channel too:
+The dead letter channel is your last safety net. So what happens when it fails too? Take the payment service down for
+ten seconds and fail the dead letter channel as well:
 
 ```shell
 camel cmd chaos-add --rule='endpoint=http://localhost:8080/payment error status=503 until=10s' \
@@ -89,6 +90,7 @@ chaos (pid 58473): FAIL
 
 ## A scenario as a gate in your build
 
+Once your routes survive a fault, you want them to keep surviving it when someone changes the error handling.
 A scenario is a `.chaos` file in `test/chaos` with one rule per line and a seed, so it fails the same messages each run:
 
 ```text
@@ -112,9 +114,9 @@ by hand as such a file.
 
 ## It found a bug on the first day
 
-An AI agent wrote the example, ran it with chaos rules and read the log. An order in `shipping` went to the dead
-letter channel after one failure instead of two retries: its payment had needed two retries in route `orders`, and the
-error handler in `shipping` kept counting from that redelivery counter
+An AI agent wrote the example, ran it with chaos rules and read the log. An order in the shipping route went to the
+dead letter channel after one failure, instead of after two retries. Its payment had needed two retries in the orders
+route, and the error handler in shipping kept counting from that redelivery counter
 ([CAMEL-26734](https://issues.apache.org/jira/browse/CAMEL-26734)).
 
 ## There is more
@@ -123,17 +125,16 @@ error handler in `shipping` kept counting from that redelivery counter
 - **Where and when**: the reply of a call, the polls of a consumer, a single step or the dead letter channel; by
   probability, every Nth message, in outage windows or after a warm-up, always for a limited time.
 - **From a real error to a regression test**: on the Errors screen of the TUI, `!` turns a real error into a rule that
-  fails the same way, and `t` on a rule asks the AI panel to write a JUnit test with `ChaosAssertions`, or a scenario.
-- **Beyond the CLI**: the chaos operations are tools of the Camel MCP server, they work in `Main`, `CamelTestSupport`
-  and `camel-test-dst`, and `camel run --chaos` works with `--runtime=spring-boot`. A camel-quarkus-chaos extension is
-  on its way.
+  fails the same way, and `t` on a rule asks the AI panel to write a JUnit test or a scenario from it.
+- **Beyond the CLI**: the chaos operations are tools of the Camel MCP server, and they work in Camel Main and in your
+  unit tests. `camel run --chaos` also works with Spring Boot, and a Camel Quarkus extension is on its way.
 
 See the [documentation](/components/next/others/chaos.html) for the rule syntax and all the options.
 
 ## Try it
 
 I have wanted chaos in Camel for a long time. Now you can run the integration as it is, break it with chaos, and check
-it with a [Citrus](https://citrusframework.org/) test or the deterministic simulation tests of `camel-test-dst`.
+it with a [Citrus](https://citrusframework.org/) test or the new deterministic simulation tests.
 
 The example runs with Camel 4.24. Next, in
 [part 2](/blog/2026/11/let-there-be-chaos/), an AI explores the same shop for ten minutes. Let us know what chaos

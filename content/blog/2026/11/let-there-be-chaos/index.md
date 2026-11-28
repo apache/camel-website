@@ -74,15 +74,15 @@ camel cmd chaos-explore-finish
 
 ## Limits
 
-Chaos only runs with profile `dev`. The exploration has a deadline (10 minutes by default, 2 hours at most), and then
+Letting an AI break things on purpose needs fences. Chaos only runs with profile `dev`. The exploration has a deadline (10 minutes by default, 2 hours at most), and then
 all rules are removed, even if the AI has crashed. Remote systems are stubbed, and the AI only adds faults and sends
 test messages; it does not edit your project.
 
 ## What you keep
 
-The results go to `test/chaos`, which `camel run` and `camel export` leave alone: the report and journal in
-`test/chaos/reports/explore-<time>.md` (and a `.json` the picture above is drawn from), and each failed
-experiment as a scenario in `test/chaos/explore-<time>-<n>.chaos`:
+Ten minutes of chaos are only worth it if you can replay what they found. The results go to `test/chaos`, which
+`camel run` and `camel export` leave alone. You get the report and journal under `test/chaos/reports` (with the JSON
+the picture above is drawn from), and each failed experiment as a scenario file:
 
 ```text
 # From the chaos exploration of shop on 2026-11-09 18:14, experiment 3: FAIL
@@ -114,6 +114,6 @@ journal has the evidence to check each finding.
 ## Other agents
 
 The same playbook is an MCP prompt, `camel_chaos_explore`, so Claude Code or any agent with the Camel MCP server can
-run it with the `camel_runtime_chaos_*` tools.
+run it with the chaos tools of the server.
 
 Try it with Camel 4.24, and tell us what it found in your routes.
