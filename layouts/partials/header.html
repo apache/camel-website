@@ -43,6 +43,7 @@
     <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
     <link rel="canonical" href="{{ .Permalink }}">
     <link rel="alternate" type="application/rss+xml" title="Apache Camel Blog" href="{{ "blog/index.xml" | relURL }}">
+    <link rel="alternate" type="text/plain" title="llms.txt: documentation index for AI tools" href="{{ "llms.txt" | relURL }}">
     {{ if .Description}}
     <meta name="description" content="{{ .Description }}">
     {{ end }}
