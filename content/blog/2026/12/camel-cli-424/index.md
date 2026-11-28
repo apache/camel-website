@@ -1,6 +1,6 @@
 ---
 title: "The Camel CLI in Camel 4.24 is 10 times faster"
-date: 2026-11-17
+date: 2026-12-07
 draft: false
 authors: [davsclaus]
 categories: ["Camel", "Tooling"]
