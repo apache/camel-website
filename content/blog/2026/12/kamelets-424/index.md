@@ -65,6 +65,15 @@ As an example, this route loads CSV files into a PostgreSQL table:
 
 `csv-deserialize-action` turns the CSV into a `List` of rows, each a `Map` from column name to value. `postgresql-sink` takes one JSON object and fills `:#id`, `:#item` and `:#qty` from its fields. After the split, a `Map` goes into a Kamelet that expects JSON.
 
+To try it, start PostgreSQL in a container:
+
+```shell
+docker run -d --name shop-db -p 55432:5432 -e POSTGRES_USER=demo -e POSTGRES_PASSWORD=demo -e POSTGRES_DB=shop postgres:17
+docker exec shop-db psql -U demo -d shop -c "CREATE TABLE orders (id int primary key, item text, qty int)"
+```
+
+Save the route as `csv-to-db.camel.yaml`, run it with `camel run csv-to-db.camel.yaml`, and copy a CSV file into the `inbox` folder. `file-watch-source` only sees files created after it starts.
+
 With this file in the `inbox` folder:
 
 ```text
@@ -97,8 +106,6 @@ The [Camel TUI](/blog/2026/07/camel-tui/) shows the body type at each step. Run 
 
 The right column is the Java type of the body when it reached the step. Where a step calls a Kamelet with a data type, an arrow shows what Camel converts the body to first. On line 13, `LinkedHashMap → json` is where each row is turned into JSON before `postgresql-sink` sees it.
 
-Terms such as `text` and `json` are also used in the Camel catalog of 4.24 to describe message bodies, so tools and AI assistants can tell what a step takes and gives without running it. See for example `camel doc dataformat:csv`.
-
 ### From a LinkedHashMap to JSON
 
 `postgresql-sink` declares the data type it takes:
@@ -124,7 +131,7 @@ The result is JSON as bytes, with the `Content-Type` header set to `application/
 {"id":"1","item":"Camel plush","qty":"2"}
 ```
 
-In Camel 4.23 the same route fails. `csv-deserialize-action` is new in 4.24, so for the comparison we used the CSV data format with `useOrderedMaps: true`, which gives the same `Map` rows. The 4.23 `postgresql-sink` does not declare a data type and fails on its first step:
+In Camel 4.23 the `postgresql-sink` does not declare a data type, and the same `Map` rows fail on its first step:
 
 ```text
 org.apache.camel.NoTypeConversionAvailableException: No type converter available to convert from type: java.util.LinkedHashMap to the required type: java.io.InputStream
@@ -133,17 +140,6 @@ org.apache.camel.NoTypeConversionAvailableException: No type converter available
 No rows are written. In 4.23 you had to put `json-serialize-action` in front of the sink yourself. You still can in 4.24, but you no longer have to.
 
 Data types do not guess types inside the data. CSV values are text, so `id` and `qty` are JSON strings, and PostgreSQL refuses a string for an `int` column (`column "id" is of type integer but expression is of type character varying`). That is why the SQL has `CAST(:#id AS int)`.
-
-### Try it
-
-Start PostgreSQL in a container:
-
-```shell
-docker run -d --name shop-db -p 55432:5432 -e POSTGRES_USER=demo -e POSTGRES_PASSWORD=demo -e POSTGRES_DB=shop postgres:17
-docker exec shop-db psql -U demo -d shop -c "CREATE TABLE orders (id int primary key, item text, qty int)"
-```
-
-Save the route as `csv-to-db.camel.yaml`, run it with `camel run csv-to-db.camel.yaml`, and copy a CSV file into the `inbox` folder. `file-watch-source` only sees files created after it starts.
 
 ## Security model and SBOM
 
