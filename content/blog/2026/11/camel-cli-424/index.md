@@ -71,10 +71,12 @@ We tested this by letting AI agents use the CLI and fixed what tripped them up. 
 
 ## Talking to a running integration
 
+While you develop, you ask a running integration the same things again and again. Those calls got faster too:
+
 * `camel cmd send`, `camel get route` and similar actions answer in about 20 ms (4.23: half a second to a second).
 * `camel run --background` returns when the routes are up, about 0.4 s after Camel started (4.23: 1.6 s).
-* `camel cmd reload --wait --json` reloads the changed files in dev mode at once and reports `reloaded`, `unchanged`
-  or `failed`, so you no longer guess when the reload happened.
+* `camel cmd reload --wait --json` reloads the changed files in dev mode at once and reports whether they were
+  reloaded, unchanged or failed, so you no longer guess when the reload happened.
 * `camel status <name> --json` returns routes (problems first), last errors and log lines, and HTTP endpoints in one
   call of about 0.1 s, where four commands took about 0.4 s.
 
@@ -86,15 +88,15 @@ We first ported the whole CLI on a branch and reported every gap and bug we foun
 Ståle fixed or merged nearly all of them within days, in aesh 3.19, 3.19.1 and 3.19.2.
 
 aesh also helped with startup time. aesh 3.19.2 can skip scanning all 283 jars for its command registry
-([aesh#779](https://github.com/aeshell/aesh/issues/779)) and starts logging only when it logs
-([aesh#782](https://github.com/aeshell/aesh/issues/782)), and its annotation processor writes the command metadata at
+([aesh#779](https://github.com/aeshell/aesh/issues/779)), and starts logging only when it logs
+([aesh#782](https://github.com/aeshell/aesh/issues/782)). Its annotation processor writes the command metadata at
 build time, so the CLI no longer reads annotations with reflection at startup. Together they took tens of milliseconds
 off every command.
 
 Thank you, Ståle!
 
-Commands and options are unchanged: before the switch we wrote a test with 2207 command lines, and the aesh port had to parse them the same way picocli
-did. Your own CLI plugins must be changed for aesh; see the [upgrade guide](/manual/camel-4x-upgrade-guide-4_24.html).
+Commands and options are unchanged. Before the switch we wrote a test with 2207 command lines, and the aesh port had to
+parse them all the same way picocli did. Your own CLI plugins must be changed for aesh; see the [upgrade guide](/manual/camel-4x-upgrade-guide-4_24.html).
 
 ## Try it
 
