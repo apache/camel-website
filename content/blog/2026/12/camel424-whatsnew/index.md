@@ -127,8 +127,7 @@ In Camel 4.24 a Camel CLI command takes about 100 ms, where 4.23 took more than 
 This matters for AI agents, which call the CLI 50 or 100 times for one task: 100 calls at 1.2 seconds is two minutes of waiting,
 at 100 ms about 10 seconds. And when calls are cheap, an agent can verify instead of guess.
 
-The CLI has also moved from picocli to [aesh](https://github.com/aeshell/aesh). The commands are the same, but your own CLI plugins
-must be built for Camel 4.24. And it documents its [exit codes and output](/manual/camel-jbang-exit-codes.html) as a contract
+The CLI has also moved from picocli to [aesh](https://github.com/aeshell/aesh), and it documents its [exit codes and output](/manual/camel-jbang-exit-codes.html) as a contract
 for scripts, CI jobs and AI agents: errors on stderr, JSON output, timeouts, and no command that waits for a terminal that is not there.
 The web installers and `camel self-update` can follow the latest release, the latest LTS, an `X.Y` line, or a nightly build.
 
@@ -569,10 +568,10 @@ And an option under a prefix that was removed or renamed is now reported at star
 
 ## Removed
 
-- Java 17 -- Java 21 is now the minimum version.
-- `camel-ognl` -- Use `simple`.
+- Java 17 support.
+- `camel-ognl`.
 - The `wasm` language.
-- The `route-parser` plugin of the Camel CLI -- Use `camel cmd route-structure`.
+- The `route-parser` plugin of the Camel CLI.
 
 ## Upgrading
 
@@ -580,19 +579,11 @@ Make sure to read the [upgrade guide](/manual/camel-4x-upgrade-guide-4_24.html) 
 Camel version. With more than two thousand tickets resolved, the upgrade guide for this release is long.
 Most entries are fixes that make Camel behave as documented, but some changes may affect you, such as:
 
-- Camel 4.24 requires **Java 21** as the minimum version, and is upgraded to Spring Boot 4.2.
-- Camel uses Vert.x 5, so code that uses the Vert.x API directly (such as a custom `Router` handler) must be migrated.
-- Camel uses Jackson 3, and the Camel CLI and Kamelets use the `camel-jackson3` artifacts.
-- Other upgrades include Spring AI 2.1, Kubernetes client 8, Debezium 3.7, Lucene 10 and the Box Java SDK 5.
-- The Camel CLI uses aesh instead of picocli, so CLI plugins must be built for Camel 4.24.
-- With the Camel CLI, CXF consumers are served on the platform HTTP server, under `/services`.
-- The control bus `language` command is off by default.
-- The security policy also checks the beans defined in route files, so a plain-text `username` in a YAML bean now logs a warning
-  (and fails the startup with the `prod` profile).
-- In the YAML DSL, a value under `parameters:` that has an `&` is now kept whole.
-- Every Semantic evaluation must name its expert, and the experts are in their own artifacts.
-- The AWS SQS consumer receives up to 10 messages per poll, and the AWS Kinesis consumer up to 1000 records per shard,
-  instead of one at a time.
+- Camel 4.24 requires **Java 21** as the minimum version.
+- Camel is upgraded to Spring Boot 4.2, Spring AI 2.1, Vert.x 5 and Jackson 3.
+- The Camel CLI uses aesh instead of picocli.
+- The security policy also checks the beans defined in route files.
+- The AWS SQS and Kinesis consumers fetch in batches by default.
 
 If you are upgrading from, for example, 4.4 to 4.8, then make sure to follow the upgrade guides for each release
 in-between, i.e.
