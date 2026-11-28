@@ -25,7 +25,7 @@
                 {{ with getJSON "https://api.github.com/users/" $author $headers }}
                 <div class="post-author">
                   <img class="post-avatar" src="{{ .avatar_url }}" alt="">
-                  <div class="post-author-name">{{ .name }}</div>
+                  <div class="post-author-name">{{ .name | default .login }}</div>
                 </div>
                 {{ end }}
               {{ end }}
