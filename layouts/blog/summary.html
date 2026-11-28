@@ -22,7 +22,7 @@
                 {{ else }}
                   {{ $headers = dict "Authorization" (printf "Basic %s" (printf "%s:%s" $.Site.Params.GitHubUsername $.Site.Params.GitHubToken | base64Encode)) }}
                 {{ end }}
-                {{ range $idx, $author := .Params.authors }}{{ if gt $idx 0 }}, {{ end }}<span rel="author">{{ (getJSON "https://api.github.com/users/" $author $headers).name }}</span>{{ end }}</span>
+                {{ range $idx, $author := .Params.authors }}{{ if gt $idx 0 }}, {{ end }}<span rel="author">{{ with getJSON "https://api.github.com/users/" $author $headers }}{{ .name | default .login }}{{ end }}</span>{{ end }}</span>
         </div>
     </div>
 </article>
