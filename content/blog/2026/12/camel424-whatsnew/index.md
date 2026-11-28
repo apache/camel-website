@@ -573,30 +573,13 @@ And an option under a prefix that was removed or renamed is now reported at star
 - The `wasm` language.
 - The `route-parser` plugin of the Camel CLI.
 
-## Upgrading
-
-Make sure to read the [upgrade guide](/manual/camel-4x-upgrade-guide-4_24.html) if you are upgrading from a previous
-Camel version. With more than two thousand tickets resolved, the upgrade guide for this release is long.
-Most entries are fixes that make Camel behave as documented, but some changes may affect you, such as:
-
-- Camel 4.24 requires **Java 21** as the minimum version.
-- Camel is upgraded to Spring Boot 4.2, Spring AI 2.1, Vert.x 5 and Jackson 3.
-- The Camel CLI uses aesh instead of picocli.
-- The security policy also checks the beans defined in route files.
-- The AWS SQS and Kinesis consumers fetch in batches by default.
-
-If you are upgrading from, for example, 4.4 to 4.8, then make sure to follow the upgrade guides for each release
-in-between, i.e.
-4.4 -> 4.5, 4.5 -> 4.6, and so forth.
-
-The Camel Upgrade Recipes tool can also be used to automate upgrading.
-See more at: https://github.com/apache/camel-upgrade-recipes
-
 ## Release Notes
 
 You can find additional information about this release in the list of resolved JIRA tickets:
 
 - [Release notes 4.24](/releases/release-4.24.0/)
+
+If you are upgrading from a previous Camel version, make sure to read the [upgrade guide](/manual/camel-4x-upgrade-guide-4_24.html).
 
 ## Roadmap
 
